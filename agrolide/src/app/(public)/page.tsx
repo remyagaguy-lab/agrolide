@@ -51,7 +51,7 @@ export default async function HomePage() {
             alt="Terrain agricole africain" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/30 to-transparent z-10" />
         </div>
         
         <div className="container relative z-20 mx-auto px-4 text-center max-w-4xl text-white">
