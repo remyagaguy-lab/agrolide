@@ -1,259 +1,260 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/Button"
-import { StatCard } from "@/components/ui/StatCard"
-import { LatestArticles } from "@/components/modules/LatestArticles"
-import { Users, BookOpen, UserPlus, Network, GraduationCap, Briefcase } from "lucide-react"
-import { createClient } from "@/lib/supabase/server"
 
 export const revalidate = 3600 // ISR 1h
 
-async function getStats() {
-  const supabase = await createClient()
-  
-  const stats = {
-    membres: 0,
-    pays: 0,
-    documents: 0,
-    formations: 0
-  }
-
-  try {
-    const { count: membresCount } = await supabase.from('profiles').select('*', { count: 'exact', head: true })
-    if (membresCount) stats.membres = membresCount
-
-    // Note: Assuming these tables exist or will exist for the real MVP
-    const { count: paysCount } = await supabase.from('countries').select('*', { count: 'exact', head: true })
-    if (paysCount) stats.pays = paysCount
-
-    const { count: docsCount } = await supabase.from('documents').select('*', { count: 'exact', head: true })
-    if (docsCount) stats.documents = docsCount
-
-    const { count: formsCount } = await supabase.from('formations').select('*', { count: 'exact', head: true })
-    if (formsCount) stats.formations = formsCount
-  } catch (error) {
-    // Fail silently, defaults remain 0
-  }
-
-  return stats
-}
-
-export default async function HomePage() {
-  const stats = await getStats()
-
+export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Section 1 - Hero */}
-      <section className="relative w-full h-[900px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#0f3b21] via-[#1b5e38] to-[#0a2e16]">
-          {/* Subtle overlay pattern */}
-          <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
-        </div>
-        
-        <div className="container relative z-20 mx-auto px-4 text-center max-w-4xl text-white">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight !text-white">
-            Fédérer la chaîne agricole, pour conquérir la souveraineté alimentaire
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 text-gray-200">
-            Le réseau continental des acteurs de l'agriculture africaine — agronomes, chercheurs, agripreneurs, partenaires.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link href="/rejoindre">
-              <Button variant="accent" className="w-full sm:w-auto text-lg px-8 py-4 h-auto">
-                Rejoindre le réseau
-              </Button>
-            </Link>
-            <Link href="#actions">
-              <Button variant="outline" className="w-full sm:w-auto text-lg px-8 py-4 h-auto border-white text-white hover:bg-white hover:text-[var(--color-vert-principal)]">
-                Découvrir nos actions
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 2 - Les 4 freins */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[var(--color-vert-principal)] mb-6">
-              L'agriculture africaine face à 4 freins structurels
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-[var(--color-gris-clair)]">
-              <div className="text-[var(--color-orange-accent)] mb-4">
-                <Network size={40} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Isolement professionnel</h3>
-              <p className="text-[var(--color-gris-texte)]">Peu de réseaux solides existent pour les agronomes africains.</p>
+      
+      {/* SECTION 1 — HERO */}
+      <section className="bg-[#1b5e38] py-[80px] md:py-[120px]">
+        <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          {/* Gauche (60%) */}
+          <div className="md:col-span-7 flex flex-col items-start">
+            <div className="border border-[rgba(255,255,255,0.3)] rounded-[4px] px-[12px] py-[4px] text-[12px] text-[rgba(255,255,255,0.8)] inline-block mb-[20px]">
+              Réseau professionnel · Agriculture africaine
             </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-[var(--color-gris-clair)]">
-              <div className="text-[var(--color-orange-accent)] mb-4">
-                <BookOpen size={40} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Documentation inadaptée</h3>
-              <p className="text-[var(--color-gris-texte)]">La quasi-totalité des ressources techniques ignorent les réalités africaines.</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-[var(--color-gris-clair)]">
-              <div className="text-[var(--color-orange-accent)] mb-4">
-                <UserPlus size={40} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Déficit d'accompagnement</h3>
-              <p className="text-[var(--color-gris-texte)]">Trop d'agripreneurs avancent sans mentor, sans accès au financement.</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-[var(--color-gris-clair)]">
-              <div className="text-[var(--color-orange-accent)] mb-4">
-                <GraduationCap size={40} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Recherche sous-valorisée</h3>
-              <p className="text-[var(--color-gris-texte)]">Des milliers de thèses africaines restent inaccessibles aux praticiens.</p>
-            </div>
-          </div>
-          
-          <div className="mt-16 text-center">
-            <p className="text-xl font-medium text-[var(--color-vert-principal)]">
-              <strong className="font-bold">agrolide</strong> a été fondé pour briser ces quatre freins à la fois.
+            <h1 className="font-heading font-[800] text-[34px] md:text-[52px] text-[#fff] leading-[1.18] tracking-[-0.03em]">
+              Fédérer la chaîne agricole, pour conquérir la <span className="text-[#fcb726]">souveraineté alimentaire</span>
+            </h1>
+            <p className="font-sans text-[16px] text-[rgba(255,255,255,0.72)] max-w-[460px] leading-[1.7] mt-[20px] mb-[32px]">
+              Le réseau continental des acteurs de l'agriculture africaine — agronomes, chercheurs, agripreneurs, partenaires.
             </p>
+            <div className="flex flex-wrap gap-4">
+              <Link href="/rejoindre" className="bg-[#fff] text-[#1b5e38] font-[700] px-[28px] py-[12px] rounded-[7px] text-[15px] hover:bg-gray-100 transition-colors">
+                Rejoindre le réseau
+              </Link>
+              <Link href="#actions" className="bg-transparent border-[1.5px] border-[rgba(255,255,255,0.5)] text-[#fff] font-[600] px-[28px] py-[12px] rounded-[7px] text-[15px] hover:bg-white/10 transition-colors">
+                Découvrir nos actions
+              </Link>
+            </div>
+          </div>
+          
+          {/* Droite (40%) */}
+          <div className="md:col-span-5 w-full">
+            <div className="bg-white rounded-[12px] p-[28px] flex flex-col gap-[16px] shadow-lg">
+              <div className="flex items-center gap-3">
+                <span className="text-xl">🌍</span>
+                <span className="font-sans text-[#555] font-medium">Présent dans 12 pays</span>
+              </div>
+              <div className="h-[1px] w-full bg-[#e8e8e4]" />
+              <div className="flex items-center gap-3">
+                <span className="text-xl">✅</span>
+                <span className="font-sans text-[#555] font-medium">500+ membres actifs</span>
+              </div>
+              <div className="h-[1px] w-full bg-[#e8e8e4]" />
+              <div className="flex items-center gap-3">
+                <span className="text-xl">📚</span>
+                <span className="font-sans text-[#555] font-medium">80+ ressources techniques</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3 - Les 3 DAS */}
-      <section id="actions" className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[var(--color-vert-principal)] mb-6">
-              Notre réponse : un écosystème intégré en 3 domaines
+      {/* SECTION 2 — STATS */}
+      <section className="bg-[#f8f8f6] border-y border-[#e8e8e4]">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4">
+            <div className="py-[32px] md:border-r border-[#e8e8e4] flex flex-col items-center justify-center text-center">
+              <div className="font-heading font-[800] text-[40px] text-[#1b5e38]">500+</div>
+              <div className="font-heading font-[500] text-[12px] text-[#888] uppercase tracking-[0.06em] mt-1">Membres actifs</div>
+            </div>
+            <div className="py-[32px] md:border-r border-[#e8e8e4] flex flex-col items-center justify-center text-center">
+              <div className="font-heading font-[800] text-[40px] text-[#1b5e38]">12</div>
+              <div className="font-heading font-[500] text-[12px] text-[#888] uppercase tracking-[0.06em] mt-1">Pays couverts</div>
+            </div>
+            <div className="py-[32px] md:border-r border-[#e8e8e4] flex flex-col items-center justify-center text-center">
+              <div className="font-heading font-[800] text-[40px] text-[#1b5e38]">80+</div>
+              <div className="font-heading font-[500] text-[12px] text-[#888] uppercase tracking-[0.06em] mt-1">Documents</div>
+            </div>
+            <div className="py-[32px] flex flex-col items-center justify-center text-center">
+              <div className="font-heading font-[800] text-[40px] text-[#1b5e38]">15</div>
+              <div className="font-heading font-[500] text-[12px] text-[#888] uppercase tracking-[0.06em] mt-1">Formations</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3 — RAISON D'ÊTRE */}
+      <section className="bg-white py-[64px] md:py-[96px]">
+        <div className="max-w-[1100px] mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-6 lg:col-span-7 flex flex-col items-start">
+            <div className="text-[12px] font-[700] text-[#50a853] tracking-[0.1em] uppercase mb-[12px]">Notre raison d'être</div>
+            <h2 className="font-heading font-[800] text-[36px] text-[#1a1a1a] leading-[1.2] mb-6">
+              Transformer la fragmentation en cohésion continentale.
+            </h2>
+            <p className="font-sans text-[16px] text-[#555] leading-[1.8] mb-4">
+              L'agriculture représente jusqu'à 40% du PIB africain et emploie la majorité de notre population active. Pourtant, les acteurs de la chaîne de valeur évoluent souvent de manière fragmentée, sans cadre de collaboration pérenne.
+            </p>
+            <p className="font-sans text-[16px] text-[#555] leading-[1.8] mb-8">
+              agrolide est né d'une ambition collective : doter l'Afrique d'un écosystème professionnel intégré, capable de mobiliser les ressources, renforcer les compétences et incuber les projets qui feront notre souveraineté alimentaire.
+            </p>
+            <Link href="/qui-sommes-nous" className="text-[#1b5e38] font-[600] text-[15px] group flex items-center gap-2 hover:underline">
+              Découvrir notre histoire <span className="transition-transform group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+          <div className="md:col-span-6 lg:col-span-5 w-full">
+            <div className="bg-[#e8e8e4] rounded-[12px] aspect-[4/3] w-full overflow-hidden">
+              {/* Image placeholder as requested */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 — LES 4 FREINS */}
+      <section className="bg-[#f8f8f6] py-[64px] md:py-[96px]">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="text-[12px] font-[700] text-[#50a853] tracking-[0.1em] uppercase mb-[12px]">Constat</div>
+            <h2 className="font-heading font-[800] text-[36px] text-[#1a1a1a] leading-[1.2]">
+              L'agriculture africaine face à 4 freins
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Link href="/annuaire" className="group">
-              <div className="h-full bg-gray-50 p-8 rounded-xl border border-[var(--color-gris-clair)] transition-all hover:shadow-md hover:border-[var(--color-vert-principal)]">
-                <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center text-[var(--color-vert-principal)] mb-6 shadow-sm group-hover:bg-[var(--color-vert-principal)] group-hover:text-white transition-colors">
-                  <Network size={28} />
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-3 group-hover:text-[var(--color-vert-principal)] transition-colors">
-                  Mobilisation & Réseautage
-                </h3>
-                <p className="text-[var(--color-gris-texte)]">
-                  Un espace pour fédérer les compétences. Connectez-vous avec vos pairs et développez votre réseau.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] mb-12">
+            {[
+              { num: "01", title: "Isolement professionnel", desc: "Peu de réseaux solides existent pour permettre aux agronomes et praticiens d'échanger et de collaborer efficacement sur le continent." },
+              { num: "02", title: "Documentation inadaptée", desc: "La quasi-totalité des ressources techniques et scientifiques ignorent les réalités climatiques et pédologiques africaines." },
+              { num: "03", title: "Déficit d'accompagnement", desc: "Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré." },
+              { num: "04", title: "Recherche sous-valorisée", desc: "Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain par les producteurs." },
+            ].map((frein) => (
+              <div key={frein.num} className="bg-white border border-[#e8e8e4] rounded-[10px] p-[28px]">
+                <div className="text-[11px] font-[700] text-[#50a853] tracking-[0.1em] mb-[12px]">{frein.num}</div>
+                <h3 className="font-heading font-[700] text-[17px] text-[#1a1a1a] mb-[8px]">{frein.title}</h3>
+                <p className="font-sans text-[14px] text-[#666] leading-[1.6]">{frein.desc}</p>
               </div>
-            </Link>
-            
-            <Link href="/formations" className="group">
-              <div className="h-full bg-gray-50 p-8 rounded-xl border border-[var(--color-gris-clair)] transition-all hover:shadow-md hover:border-[var(--color-vert-principal)]">
-                <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center text-[var(--color-vert-principal)] mb-6 shadow-sm group-hover:bg-[var(--color-vert-principal)] group-hover:text-white transition-colors">
-                  <GraduationCap size={28} />
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-3 group-hover:text-[var(--color-vert-principal)] transition-colors">
-                  Formation & Insertion
-                </h3>
-                <p className="text-[var(--color-gris-texte)]">
-                  Renforcez vos capacités techniques et managériales. Des formations pratiques ancrées dans les réalités du terrain.
-                </p>
-              </div>
-            </Link>
-            
-            <Link href="/agrobusiness" className="group">
-              <div className="h-full bg-gray-50 p-8 rounded-xl border border-[var(--color-gris-clair)] transition-all hover:shadow-md hover:border-[var(--color-vert-principal)]">
-                <div className="w-14 h-14 bg-white rounded-lg flex items-center justify-center text-[var(--color-vert-principal)] mb-6 shadow-sm group-hover:bg-[var(--color-vert-principal)] group-hover:text-white transition-colors">
-                  <Briefcase size={28} />
-                </div>
-                <h3 className="text-xl font-heading font-bold mb-3 group-hover:text-[var(--color-vert-principal)] transition-colors">
-                  Agrobusiness & Consulting
-                </h3>
-                <p className="text-[var(--color-gris-texte)]">
-                  Accompagnement de projets et accès aux marchés. Transformez vos idées en entreprises viables et durables.
-                </p>
-              </div>
-            </Link>
+            ))}
           </div>
+          
+          <p className="text-center font-heading font-[700] text-[18px] text-[#1a1a1a]">
+            agrolide a été fondé pour briser ces quatre freins simultanément.
+          </p>
         </div>
       </section>
 
-      {/* Section 4 - Chiffres clés */}
-      <section className="py-20 bg-[var(--color-vert-principal)] text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <StatCard title="Membres actifs" value={stats.membres || "0+"} className="bg-transparent border-white/20 text-white [&>span:first-child]:text-white [&>span:last-child]:text-white/80" />
-            <StatCard title="Pays représentés" value={stats.pays || "0+"} className="bg-transparent border-white/20 text-white [&>span:first-child]:text-white [&>span:last-child]:text-white/80" />
-            <StatCard title="Documents bibliothèque" value={stats.documents || "0+"} className="bg-transparent border-white/20 text-white [&>span:first-child]:text-white [&>span:last-child]:text-white/80" />
-            <StatCard title="Formations disponibles" value={stats.formations || "0+"} className="bg-transparent border-white/20 text-white [&>span:first-child]:text-white [&>span:last-child]:text-white/80" />
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5 - Témoignages */}
-      <section className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-[var(--color-vert-principal)] mb-6">
-              Ils témoignent de l'impact du réseau
+      {/* SECTION 5 — NOS 3 DOMAINES D'ACTIVITÉ */}
+      <section id="actions" className="bg-white py-[64px] md:py-[96px]">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="mb-12">
+            <div className="text-[12px] font-[700] text-[#50a853] tracking-[0.1em] uppercase mb-[12px]">Notre approche</div>
+            <h2 className="font-heading font-[800] text-[36px] text-[#1a1a1a] leading-[1.2]">
+              Un écosystème intégré en 3 domaines
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-[var(--color-gris-clair)]">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-full bg-gray-200 relative overflow-hidden">
-                    <Image src={`https://placehold.co/150x150/e2e8f0/64748b?text=U${i}`} alt="Avatar" fill className="object-cover" />
+          <div className="flex flex-col">
+            {[
+              { num: "1", title: "Mobilisation & Réseautage", desc: "Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.", link: "/annuaire" },
+              { num: "2", title: "Formation & Insertion", desc: "Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.", link: "/formations" },
+              { num: "3", title: "Agrobusiness & Consulting", desc: "Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.", link: "/agrobusiness" },
+            ].map((domaine, idx) => (
+              <Link href={domaine.link} key={domaine.num} className={`flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-[40px] py-[32px] group ${idx !== 0 ? 'border-t border-[#e8e8e4]' : ''}`}>
+                <div className="font-heading font-[800] text-[48px] text-[#e8e8e4] min-w-[50px]">
+                  {domaine.num}
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-heading font-[700] text-[20px] text-[#1a1a1a] mb-[8px] group-hover:text-[#1b5e38] transition-colors">{domaine.title}</h3>
+                  <p className="font-sans text-[15px] text-[#666] leading-[1.7] max-w-[600px]">{domaine.desc}</p>
+                </div>
+                <div className="text-[#1b5e38] font-heading font-[600] text-[14px] whitespace-nowrap hidden md:block opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0">
+                  Découvrir →
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 — TÉMOIGNAGES */}
+      <section className="bg-[#f8f8f6] py-[64px] md:py-[96px]">
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="text-[12px] font-[700] text-[#50a853] tracking-[0.1em] uppercase mb-[12px]">Impact</div>
+            <h2 className="font-heading font-[800] text-[36px] text-[#1a1a1a] leading-[1.2]">
+              La voix du réseau
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="bg-white border border-[#e8e8e4] rounded-[10px] p-[28px] flex flex-col">
+                <span className="font-heading font-[800] text-[48px] text-[#e8f5e9] leading-[0.8] block mb-2">"</span>
+                <p className="font-sans italic text-[15px] text-[#444] leading-[1.8] mb-[20px] flex-1">
+                  agrolide m'a permis de structurer mon approche et de trouver des partenaires solides. L'accès aux ressources adaptées à notre continent change véritablement la donne pour les agripreneurs.
+                </p>
+                <div className="border-t border-[#f0f0f0] pt-[16px] mt-[16px] flex items-center gap-4">
+                  <div className="w-[40px] h-[40px] rounded-[50%] bg-[#e8f5e9] text-[#1b5e38] flex items-center justify-center font-heading font-[700] text-[14px]">
+                    JD
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Prénom Nom</h4>
-                    <p className="text-sm text-gray-500">Catégorie • Pays</p>
+                    <div className="font-heading font-[600] text-[14px] text-[#1a1a1a]">Jean Dupont</div>
+                    <div className="bg-[#f0f7f0] text-[#1b5e38] text-[11px] font-[700] px-[8px] py-[2px] rounded-[4px] inline-block mt-1">
+                      Agripreneur
+                    </div>
                   </div>
                 </div>
-                <blockquote className="text-[var(--color-gris-texte)] italic">
-                  "Agrolide m'a permis de structurer mon approche et de trouver des partenaires solides. L'accès aux ressources adaptées à notre continent change véritablement la donne pour les agripreneurs."
-                </blockquote>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Section 6 - Derniers articles */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
+      {/* SECTION 7 — BLOG */}
+      <section className="bg-white py-[64px] md:py-[96px]">
+        <div className="max-w-[1100px] mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">
+              <div className="text-[12px] font-[700] text-[#50a853] tracking-[0.1em] uppercase mb-[12px]">Ressources</div>
+              <h2 className="font-heading font-[800] text-[36px] text-[#1a1a1a] leading-[1.2]">
                 Derniers articles
               </h2>
-              <p className="text-[var(--color-gris-texte)] max-w-2xl">
-                Restez informés des dernières innovations, analyses et actualités du secteur agricole africain.
-              </p>
             </div>
-            <Link href="/blog" className="mt-6 md:mt-0">
-              <Button variant="outline">Tous les articles</Button>
+            <Link href="/blog" className="text-[#1b5e38] font-[600] text-[15px] hover:underline mt-4 md:mt-0">
+              Tous les articles →
             </Link>
           </div>
           
-          <LatestArticles />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="bg-white border border-[#e8e8e4] rounded-[10px] overflow-hidden opacity-35">
+                <div className="h-[180px] bg-[#f0f0ee] w-full" />
+                <div className="p-[20px]">
+                  <div className="bg-[#f0f7f0] text-[#1b5e38] text-[11px] font-[700] px-[8px] py-[2px] rounded-[4px] inline-block mb-3">
+                    Bientôt disponible
+                  </div>
+                  <h3 className="font-heading font-[700] text-[16px] text-[#1a1a1a] mb-2 leading-snug">
+                    Articles bientôt disponibles sur la plateforme
+                  </h3>
+                  <p className="font-sans text-[13px] text-[#666] line-clamp-2 mb-4">
+                    Notre équipe éditoriale prépare actuellement une série de contenus techniques et stratégiques pour vous.
+                  </p>
+                  <div className="font-sans text-[12px] text-[#999]">
+                    À venir • 0 min de lecture
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Section 7 - CTA final */}
-      <section className="py-24 bg-[var(--color-vert-principal)] text-center text-white">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 text-white">
-            Rejoignez le réseau continental de l'agriculture africaine.
+      {/* SECTION 8 — CTA FINAL */}
+      <section className="bg-[#1b5e38] py-[96px] text-center">
+        <div className="max-w-[1100px] mx-auto px-6 flex flex-col items-center">
+          <h2 className="font-heading font-[800] text-[32px] md:text-[40px] text-white max-w-[600px] mb-6 leading-tight">
+            Prêt à participer à la conquête de la souveraineté alimentaire ?
           </h2>
-          <Link href="/rejoindre">
-            <Button variant="accent" className="text-lg px-10 py-5 h-auto">
-              Devenir membre
-            </Button>
+          <p className="font-sans text-[16px] text-[rgba(255,255,255,0.65)] mb-10">
+            Annuaire • Formations • Agrobusiness • Bibliothèque • Événements
+          </p>
+          <Link href="/rejoindre" className="bg-[#f99e1d] text-white font-heading font-[800] text-[16px] px-[40px] py-[16px] rounded-[8px] hover:bg-[#fcb726] transition-colors inline-block">
+            Rejoindre le réseau
           </Link>
         </div>
       </section>
+      
     </div>
   )
 }
