@@ -7,9 +7,27 @@ import { Button } from "@/components/ui/Button"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener("scroll", handleScroll)
+    // Run once on mount to check initial position
+    handleScroll()
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <header className="sticky top-0 z-40 w-full bg-[var(--color-blanc)] shadow-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+    <header 
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled 
+          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-200" 
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image src="/agrolide-png.png" alt="agrolide" width={240} height={80} className="h-16 w-auto object-contain scale-[1.8] origin-left" priority />
