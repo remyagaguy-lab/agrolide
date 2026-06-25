@@ -51,7 +51,7 @@ export default async function HomePage() {
         </div>
         
         <div className="container relative z-20 mx-auto px-4 text-center max-w-4xl text-white">
-          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight text-white">
+          <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 leading-tight !text-white">
             Fédérer la chaîne agricole, pour conquérir la souveraineté alimentaire
           </h1>
           <p className="text-xl md:text-2xl mb-10 text-gray-200">
