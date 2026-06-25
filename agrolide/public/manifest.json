@@ -1,0 +1,13 @@
+{
+  "name": "agrolide — Réseau agricole africain",
+  "short_name": "agrolide",
+  "description": "Fédérer la chaîne agricole, pour conquérir la souveraineté alimentaire",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1b5e38",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,3 @@
+-- Le super_admin sera créé manuellement via l'interface Supabase Auth
+-- puis mis à jour dans la table profiles via le dashboard SQL Editor :
+-- UPDATE profiles SET role_plateforme = 'super_admin' WHERE email = 'superadmin@agrolide.org';

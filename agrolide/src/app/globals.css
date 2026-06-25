@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --color-vert-profond:   #1b5e38;
+  --color-vert-principal: #50a853;
+  --color-vert-olive:     #878e2c;
+  --color-orange-accent:  #f99e1d;
+  --color-jaune-dore:     #fcb726;
+  --color-blanc:          #ffffff;
+  --color-gris-clair:     #f5f5f5;
+  --color-gris-moyen:     #e0e0e0;
+  --color-gris-texte:     #4a4a4a;
+  --color-noir:           #1a1a1a;
+  --color-succes:         #50a853;
+  --color-erreur:         #d32f2f;
+}
+
+@theme inline {
+  --color-vert-profond: var(--color-vert-profond);
+  --color-vert-principal: var(--color-vert-principal);
+  --color-vert-olive: var(--color-vert-olive);
+  --color-orange-accent: var(--color-orange-accent);
+  --color-jaune-dore: var(--color-jaune-dore);
+  --color-blanc: var(--color-blanc);
+  --color-gris-clair: var(--color-gris-clair);
+  --color-gris-moyen: var(--color-gris-moyen);
+  --color-gris-texte: var(--color-gris-texte);
+  --color-noir: var(--color-noir);
+  --color-succes: var(--color-succes);
+  --color-erreur: var(--color-erreur);
+
+  --font-sans: var(--font-baskerville), Arial, Helvetica, sans-serif;
+  --font-heading: var(--font-urbanist), sans-serif;
+}
+
+body {
+  background-color: var(--color-blanc);
+  color: var(--color-gris-texte);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-vert-profond);
+}

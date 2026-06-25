@@ -1,0 +1,33 @@
+name = "agrolide-api"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+[vars]
+ENVIRONMENT = "production"
+
+[triggers]
+crons = [
+  "0 6 * * *",
+  "0 8 * * *",
+  "0 0 1 * *"
+]
+
+[[r2_buckets]]
+binding = "R2_BIBLIOTHEQUE"
+bucket_name = "agrolide-bibliotheque"
+
+[[r2_buckets]]
+binding = "R2_PROFILS"
+bucket_name = "agrolide-profils"
+
+[[r2_buckets]]
+binding = "R2_MEDIA"
+bucket_name = "agrolide-media"
+
+[[r2_buckets]]
+binding = "R2_DEMANDES"
+bucket_name = "agrolide-demandes"
+
+[[r2_buckets]]
+binding = "R2_CERTIFICATS"
+bucket_name = "agrolide-certificats"
