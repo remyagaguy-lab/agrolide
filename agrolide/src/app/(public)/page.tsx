@@ -46,12 +46,10 @@ export default async function HomePage() {
       {/* Section 1 - Hero */}
       <section className="relative w-full h-[900px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://placehold.co/1920x900/1b5e38/ffffff?text=Terrain+agricole+africain" 
+          <img 
+            src="https://images.unsplash.com/photo-1592982537447-6f23349635b7?q=80&w=1920&auto=format&fit=crop" 
             alt="Terrain agricole africain" 
-            fill
-            className="object-cover"
-            priority
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/60 z-10" />
         </div>

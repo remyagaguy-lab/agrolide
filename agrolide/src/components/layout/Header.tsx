@@ -12,7 +12,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/agrolide-png.png" alt="agrolide" width={120} height={40} className="h-10 w-auto" />
+          <Image src="/agrolide-png.png" alt="agrolide" width={180} height={60} className="h-16 w-auto object-contain py-1 scale-125 origin-left" priority />
         </Link>
 
         {/* Navigation Desktop */}
