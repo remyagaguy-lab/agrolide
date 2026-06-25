@@ -35,18 +35,18 @@ export function Header() {
 
         {/* Navigation Desktop */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-[var(--color-vert-principal)] transition-colors">Accueil</Link>
-          <Link href="/qui-sommes-nous" className="text-sm font-medium hover:text-[var(--color-vert-principal)] transition-colors">Qui sommes-nous</Link>
-          <Link href="/rejoindre" className="text-sm font-medium hover:text-[var(--color-vert-principal)] transition-colors">Rejoindre</Link>
-          <Link href="/blog" className="text-sm font-medium hover:text-[var(--color-vert-principal)] transition-colors">Blog</Link>
+          <Link href="/" className={`text-sm font-medium transition-colors ${isScrolled ? "text-gray-700 hover:text-[var(--color-vert-principal)]" : "text-white hover:text-gray-200"}`}>Accueil</Link>
+          <Link href="/qui-sommes-nous" className={`text-sm font-medium transition-colors ${isScrolled ? "text-gray-700 hover:text-[var(--color-vert-principal)]" : "text-white hover:text-gray-200"}`}>Qui sommes-nous</Link>
+          <Link href="/rejoindre" className={`text-sm font-medium transition-colors ${isScrolled ? "text-gray-700 hover:text-[var(--color-vert-principal)]" : "text-white hover:text-gray-200"}`}>Rejoindre</Link>
+          <Link href="/blog" className={`text-sm font-medium transition-colors ${isScrolled ? "text-gray-700 hover:text-[var(--color-vert-principal)]" : "text-white hover:text-gray-200"}`}>Blog</Link>
         </nav>
 
         {/* CTA Desktop */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/login" className="px-4 py-2 border-2 border-[var(--color-vert-principal)] text-[var(--color-vert-principal)] rounded-lg font-medium hover:bg-green-50 transition-colors">
+          <Link href="/login" className={`px-4 py-2 border-2 rounded-lg font-medium transition-colors ${isScrolled ? "border-[var(--color-vert-principal)] text-[var(--color-vert-principal)] hover:bg-green-50" : "border-white text-white hover:bg-white/10"}`}>
             Connexion
           </Link>
-          <Link href="/rejoindre" className="px-4 py-2 bg-[var(--color-vert-principal)] text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+          <Link href="/rejoindre" className="px-4 py-2 bg-[var(--color-orange-accent)] text-white rounded-lg font-medium hover:opacity-90 transition-opacity">
             Rejoindre
           </Link>
         </div>
