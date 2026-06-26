@@ -113,10 +113,9 @@ export default function HomePage() {
         <div className="max-w-[1100px] mx-auto px-6 pt-[80px] pb-0 md:pt-[120px] relative z-20">
           <div className="max-w-[700px]">
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
-              Fédérer la chaîne agricole,{" "}
-              <br className="hidden md:block" />
-              pour conquérir la{" "}
-              <span className="text-[#fcb726]">souveraineté alimentaire</span>
+              Fédérer la chaîne<br />
+              agricole, pour conquérir<br />
+              <span className="text-[#fcb726]">la souveraineté alimentaire</span>
             </h1>
             <p className="font-sans text-[16px] text-[rgba(255,255,255,0.62)] max-w-[480px] leading-[1.8] mb-10">
               Le réseau continental des acteurs de l'agriculture africaine — agronomes, chercheurs, agripreneurs, partenaires institutionnels.
