@@ -114,9 +114,9 @@ export default function HomePage() {
               agricole, pour conquérir<br />
               <span className="text-[#fcb726]">la souveraineté alimentaire</span>
             </h1>
-            <p className="font-sans text-[16px] text-[rgba(255,255,255,0.8)] max-w-[600px] leading-[1.8] mb-10">
+            <p className="font-sans text-[16px] text-white max-w-[600px] leading-[1.8] mb-10">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.{" "}
-              <strong className="text-white font-[700]">Étudiants en agronomie</strong>, <strong className="text-white font-[700]">Ingénieurs Agronomes</strong>, <strong className="text-white font-[700]">Chercheurs</strong>, <strong className="text-white font-[700]">Entreprises Agricoles</strong>, <strong className="text-white font-[700]">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
+              <strong className="text-[#878e2c] font-[700]">Étudiants en agronomie</strong>, <strong className="text-[#878e2c] font-[700]">Ingénieurs Agronomes</strong>, <strong className="text-[#878e2c] font-[700]">Chercheurs</strong>, <strong className="text-[#878e2c] font-[700]">Entreprises Agricoles</strong>, <strong className="text-[#878e2c] font-[700]">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
