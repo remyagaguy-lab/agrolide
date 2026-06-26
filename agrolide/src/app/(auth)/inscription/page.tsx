@@ -127,6 +127,10 @@ function InscriptionContent() {
           errorMsg = "Un compte existe déjà avec cette adresse email."
         }
         
+        if (errorMsg === "{}" || errorMsg === "[object Object]") {
+          errorMsg = "Erreur de la base de données. Le profil n'a pas pu être créé (Trigger)."
+        }
+        
         setError(errorMsg)
         setIsLoading(false)
         return
