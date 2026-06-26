@@ -10,6 +10,7 @@ import { paiementsRoute } from './routes/paiements'
 import { blogRoute } from './routes/blog'
 import { newsletterRoute } from './routes/newsletter'
 import { cronsRoute } from './routes/crons'
+import { bibliothequeRoute } from './routes/bibliotheque'
 import { requireRole } from './middleware/rbac'
 
 type Bindings = {
@@ -26,6 +27,7 @@ type Bindings = {
   RESEND_API_KEY: string
   R2_PROFILS: R2Bucket
   R2_MEDIA: R2Bucket
+  R2_BIBLIOTHEQUE: R2Bucket
 }
 
 const app = new Hono<{ Bindings: Bindings }>()
@@ -61,6 +63,9 @@ app.route('/api/auth', authRoute)
 // Membres
 app.use('/api/membres/*', authMiddleware)
 app.route('/api/membres', membresRoute)
+
+// Bibliothèque
+app.route('/api/bibliotheque', bibliothequeRoute)
 
 // Paiements
 app.use('/api/paiements/checkout', authMiddleware)
