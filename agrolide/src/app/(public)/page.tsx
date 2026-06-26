@@ -218,23 +218,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { num: "01", title: "Isolement professionnel", desc: "Peu de réseaux solides permettent aux agronomes et praticiens d'échanger et de collaborer efficacement sur le continent." },
               { num: "02", title: "Documentation inadaptée", desc: "La quasi-totalité des ressources techniques ignore les réalités climatiques et pédologiques africaines." },
               { num: "03", title: "Déficit d'accompagnement", desc: "Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré." },
               { num: "04", title: "Recherche sous-valorisée", desc: "Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain." },
             ].map((f) => (
-              <div key={f.num} className="group relative bg-white rounded-2xl p-10 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-                <div className="absolute -right-4 -top-8 font-heading font-[800] text-[120px] text-[#f8f8f8] group-hover:text-[#f0f7f0] transition-colors duration-300 z-0 select-none pointer-events-none">
+              <div key={f.num} className="group relative bg-white rounded-2xl p-6 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                <div className="absolute -right-2 -top-6 font-heading font-[800] text-[100px] text-[#f8f8f8] group-hover:text-[#f0f7f0] transition-colors duration-300 z-0 select-none pointer-events-none">
                   {f.num}
                 </div>
                 <div className="relative z-10">
-                  <div className="w-12 h-12 bg-[#f0f7f0] group-hover:bg-[#1b5e38] rounded-xl flex items-center justify-center text-[#1b5e38] group-hover:text-white transition-colors duration-300 mb-6 font-heading font-[800] text-[16px]">
+                  <div className="w-10 h-10 bg-[#f0f7f0] group-hover:bg-[#1b5e38] rounded-xl flex items-center justify-center text-[#1b5e38] group-hover:text-white transition-colors duration-300 mb-5 font-heading font-[800] text-[14px]">
                     {f.num}
                   </div>
-                  <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-4">{f.title}</h3>
-                  <p className="font-sans text-[15px] text-[#666] leading-[1.7]">{f.desc}</p>
+                  <h3 className="font-heading font-[800] text-[18px] text-[#1a1a1a] mb-3 leading-tight">{f.title}</h3>
+                  <p className="font-sans text-[14px] text-[#666] leading-[1.6]">{f.desc}</p>
                 </div>
               </div>
             ))}
