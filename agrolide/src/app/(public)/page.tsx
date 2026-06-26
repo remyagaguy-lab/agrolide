@@ -112,9 +112,6 @@ export default function HomePage() {
 
         <div className="max-w-[1100px] mx-auto px-6 pt-[80px] pb-0 md:pt-[120px] relative z-20">
           <div className="max-w-[700px]">
-            <p className="text-[10px] font-[700] tracking-[0.22em] text-[rgba(255,255,255,0.45)] uppercase mb-8">
-              Réseau professionnel · Agriculture africaine
-            </p>
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
               Fédérer la chaîne agricole,{" "}
               <br className="hidden md:block" />
@@ -169,25 +166,6 @@ export default function HomePage() {
                 <div className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.15em]">Techniques</div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── STATS ÉDITORIALES ────────────────────── */}
-      <section className="bg-white border-b border-[#e8e8e4]">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#e8e8e4]">
-            {[
-              { val: "500+", label: "Membres actifs" },
-              { val: "12",   label: "Pays couverts" },
-              { val: "80+",  label: "Documents" },
-              { val: "15",   label: "Formations" },
-            ].map((s) => (
-              <div key={s.label} className="py-10 flex flex-col items-center justify-center text-center px-4">
-                <div className="font-heading font-[800] text-[44px] leading-none text-[#1b5e38]">{s.val}</div>
-                <div className="font-heading font-[500] text-[10px] text-[#aaa] uppercase tracking-[0.12em] mt-2">{s.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
