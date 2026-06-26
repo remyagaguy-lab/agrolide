@@ -4,20 +4,21 @@ import { ArticleEditorForm } from "./DynamicEditorWrapper"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
-export default async function ArticleEditPage({ params }: { params: { id: string } }) {
+export default async function ArticleEditPage({ params }: { params: Promise<{ id: string }> }) {
   const supabase = await createClient()
   const { data: { session } } = await supabase.auth.getSession()
   
   if (!session) redirect("/login")
 
   let article = null
-  const isNew = params.id === "nouveau"
+  const resolvedParams = await params
+  const isNew = resolvedParams.id === "nouveau"
 
   if (!isNew) {
     const { data } = await supabase
       .from("articles")
       .select("*")
-      .eq("id", params.id)
+      .eq("id", resolvedParams.id)
       .single()
       
     if (!data) {
