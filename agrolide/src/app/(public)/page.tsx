@@ -243,7 +243,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 3 DOMAINES ───────────────────────────── */}
-      <section id="actions" className="bg-[#1a1a1a] py-[100px] md:py-[140px] text-white">
+      <section id="actions" className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[100px] md:py-[140px] text-white">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-[600px]">
@@ -265,7 +265,7 @@ export default function HomePage() {
                 title: "Mobilisation & Réseautage",
                 desc: "Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.",
                 link: "/annuaire",
-                color: "group-hover:border-[#1b5e38]"
+                color: "group-hover:border-[#fcb726]"
               },
               {
                 icon: <IconGraduation />,
@@ -281,22 +281,22 @@ export default function HomePage() {
                 title: "Agrobusiness & Consulting",
                 desc: "Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.",
                 link: "/agrobusiness",
-                color: "group-hover:border-[#1b5e38]"
+                color: "group-hover:border-[#fcb726]"
               },
             ].map((d) => (
               <Link
                 href={d.link}
                 key={d.num}
-                className={`group block bg-[#222] border border-[#333] rounded-2xl p-8 hover:bg-[#2a2a2a] transition-all duration-300 ${d.color} hover:-translate-y-1`}
+                className={`group block bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 ${d.color} hover:-translate-y-1`}
               >
-                <div className="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300 group-hover:bg-[#fcb726] group-hover:text-[#1a1a1a]">
                   {d.icon}
                 </div>
-                <div className="font-heading font-[800] text-[12px] text-[#666] tracking-[0.1em] mb-3">{d.num}</div>
+                <div className="font-heading font-[800] text-[12px] text-white/50 tracking-[0.1em] mb-3">{d.num}</div>
                 <h3 className="font-heading font-[800] text-[22px] text-white mb-4 group-hover:text-[#fcb726] transition-colors">
                   {d.title}
                 </h3>
-                <p className="font-sans text-[15px] text-[#999] leading-[1.7] mb-8">
+                <p className="font-sans text-[15px] text-white/70 leading-[1.7] mb-8">
                   {d.desc}
                 </p>
                 <div className="flex items-center gap-2 text-white font-heading font-[700] text-[13px] opacity-70 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
