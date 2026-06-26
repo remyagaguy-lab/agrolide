@@ -29,7 +29,8 @@ export default async function MembresRootLayout({
   if (profileError || !profile) {
     // Si pas de profil trouvé, il y a eu un problème avec le trigger ou l'inscription
     // On peut tenter de rediriger vers l'accueil ou le login
-    redirect("/login?error=Profil+introuvable")
+    const errDetails = profileError ? `${profileError.code} - ${profileError.message}` : "Aucune ligne trouvée"
+    redirect(`/login?error=Profil+introuvable&details=${encodeURIComponent(errDetails)}`)
   }
 
   // 3. Gestion des statuts d'adhésion (RG-007, RG-008)
