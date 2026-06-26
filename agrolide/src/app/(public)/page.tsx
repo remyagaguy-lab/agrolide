@@ -103,11 +103,11 @@ export default function HomePage() {
             alt="Agriculture africaine"
             fill
             priority
-            className="object-cover object-center opacity-100"
+            className="object-cover object-[center_80%] opacity-100"
           />
         </div>
 
-        <div className="max-w-[1100px] mx-auto px-6 pt-[20px] pb-0 md:pt-[30px] relative z-20">
+        <div className="max-w-[1100px] mx-auto px-6 pt-[40px] pb-0 md:pt-[60px] relative z-20">
           <div className="max-w-[900px]">
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
               Fédérer la chaîne<br />
