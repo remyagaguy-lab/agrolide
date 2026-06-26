@@ -192,15 +192,16 @@ async function runAgent() {
 
       const { error: dbError } = await supabase.from('documents').insert({
         titre: metadata.titre || file,
-        description: metadata.description || 'Description générée automatiquement.',
+        auteurs: "Auteur inconnu",
+        type_doc: 'article', // Force un type valide par défaut (l'IA peut renvoyer n'importe quoi)
+        resume: (metadata.description || 'Description générée automatiquement.').substring(0, 490),
         thematique: metadata.thematique || 'Non classé',
-        type: metadata.type || 'article',
-        fichier_url: publicUrl,
+        fichier_r2_key: cleanFileName,
         taille_octets: fileSize,
-        acces: 'public', // ou 'membres'
+        acces: 'public',
         statut: 'publie',
         file_hash: fileHash,
-        ajoute_par: auteur_id
+        depose_par: auteur_id
       });
 
       if (dbError) throw new Error(`Erreur DB: ${dbError.message}`);
