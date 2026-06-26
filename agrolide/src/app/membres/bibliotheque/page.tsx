@@ -22,7 +22,7 @@ export default async function MembresBibliothequePage({ searchParams }: { search
   const thematique = typeof params.thematique === 'string' ? params.thematique : ''
   
   if (search) query = query.ilike('titre', `%${search}%`)
-  if (type) query = query.in('type', type.split(','))
+  if (type) query = query.in('type_doc', type.split(','))
   if (thematique) query = query.in('thematique', thematique.split(','))
   
   const { data } = await query

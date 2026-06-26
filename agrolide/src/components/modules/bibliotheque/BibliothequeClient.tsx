@@ -67,7 +67,7 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey }
       let query = supabase.from('documents').select('*').eq('statut', 'publie').order('created_at', { ascending: false }).limit(20)
       
       if (search) query = query.ilike('titre', `%${search}%`)
-      if (type) query = query.in('type', type.split(','))
+      if (type) query = query.in('type_doc', type.split(','))
       if (thematique) query = query.in('thematique', thematique.split(','))
       
       const { data, error } = await query
@@ -98,7 +98,7 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey }
         .limit(20)
         
       if (search) query = query.ilike('titre', `%${search}%`)
-      if (type) query = query.in('type', type.split(','))
+      if (type) query = query.in('type_doc', type.split(','))
       if (thematique) query = query.in('thematique', thematique.split(','))
       
       const { data, error } = await query

@@ -4,8 +4,8 @@ import { FileText, Download, Calendar, MapPin } from 'lucide-react'
 export interface DocumentType {
   id: string
   titre: string
-  auteur: string
-  type: string
+  auteurs: string
+  type_doc: string
   annee?: number
   pays?: string
   nb_telechargements: number
@@ -19,8 +19,9 @@ interface DocumentCardProps {
 
 export function DocumentCard({ document, publicView = false }: DocumentCardProps) {
   // Couleur par type de document
-  const getBadgeColor = (type: string) => {
-    switch (type.toLowerCase()) {
+  const getBadgeColor = (type_doc: string) => {
+    if (!type_doc) return 'bg-gray-100 text-gray-800';
+    switch (type_doc.toLowerCase()) {
       case 'thèse': return 'bg-purple-100 text-purple-800'
       case 'mémoire': return 'bg-blue-100 text-blue-800'
       case 'fiche technique': return 'bg-emerald-100 text-emerald-800'
@@ -38,8 +39,8 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
       {/* En-tête miniature */}
       <div className="h-32 bg-gray-50 flex items-center justify-center border-b border-gray-100 relative group-hover:bg-gray-100 transition-colors">
         <FileText className="w-12 h-12 text-gray-400" strokeWidth={1.5} />
-        <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full ${getBadgeColor(document.type)}`}>
-          {document.type}
+        <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full ${getBadgeColor(document.type_doc)}`}>
+          {document.type_doc}
         </span>
       </div>
 
@@ -50,7 +51,7 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
         </h3>
         
         <p className="text-sm text-gray-500 mb-4 line-clamp-1">
-          {document.auteur || 'Auteur inconnu'}
+          {document.auteurs || 'Auteur inconnu'}
         </p>
         
         <div className="mt-auto space-y-2">
