@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
         ContentType: fichier_type,
       })
       
-      presignedUrl = await getSignedUrl(S3, command, { expiresIn: 3600 })
+      presignedUrl = await getSignedUrl(S3, command, { expiresIn: 300 })
     }
 
     const fichier_url = objectKey ? `https://${process.env.R2_BUCKET_NAME}.${process.env.CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com/${objectKey}` : null

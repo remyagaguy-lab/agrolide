@@ -70,8 +70,8 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
             <div className="flex flex-col md:flex-row gap-6 -mt-12">
               <div className="w-32 h-32 rounded-2xl bg-white p-1.5 shadow-sm shrink-0">
                 <div className="w-full h-full rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-4xl font-bold overflow-hidden border border-gray-100">
-                  {member.avatar_url ? (
-                    <img src={member.avatar_url} alt={displayName} className="w-full h-full object-cover" />
+                  {member.photo_url ? (
+                    <img src={member.photo_url} alt={displayName} className="w-full h-full object-cover" />
                   ) : (
                     member.prenom?.charAt(0) || '?'
                   )}

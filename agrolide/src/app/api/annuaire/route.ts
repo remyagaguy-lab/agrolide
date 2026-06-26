@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
     // Base query
     let query = supabase
       .from('profiles')
-      .select('id, prenom, nom, pays, specialite, categorie, avatar_url, secteurs_expertise, langues', { count: 'exact' })
+      .select('id, prenom, nom, pays, specialite, categorie, photo_url, secteurs_expertise, langues', { count: 'exact' })
       .eq('annuaire_visible', true)
 
     // TODO: Add statut_adhesion='actif' filter when implemented in the schema

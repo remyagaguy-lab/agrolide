@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 import { createClient } from "@/lib/supabase/server"
-import { ArticleEditorForm } from "./ArticleEditorForm"
+import { ArticleEditorForm } from "./DynamicEditorWrapper"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 

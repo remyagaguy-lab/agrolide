@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button"
 import { Check, X, User, GraduationCap, Building2, Star } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Rejoindre le réseau | agrolide",
+  title: "Rejoindre le réseau",
   description: "Rejoignez le réseau continental de l'agriculture africaine et accédez à des ressources, des formations et des opportunités.",
 }
 

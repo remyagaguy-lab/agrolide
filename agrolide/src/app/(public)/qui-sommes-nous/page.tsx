@@ -6,7 +6,7 @@ import { ValueCard } from "@/components/ui/ValueCard"
 import { Users, Crown, Star, Lightbulb, Target } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Qui sommes-nous | agrolide",
+  title: "Qui sommes-nous",
   description: "Découvrez l'histoire, la mission et les valeurs fondatrices du réseau agrolide, le réseau continental de l'agriculture africaine.",
 }
 

@@ -148,7 +148,9 @@ async function runAgent() {
 
       if (existingDoc) {
         console.log(`⏭️  Doublon détecté. Fichier ignoré.`);
-        fs.renameSync(filePath, path.join(DOUBLONS_DIR, file));
+        if (fs.existsSync(filePath)) {
+          fs.renameSync(filePath, path.join(DOUBLONS_DIR, file));
+        }
         continue;
       }
 
@@ -217,12 +219,16 @@ async function runAgent() {
       if (dbError) throw new Error(`Erreur DB: ${dbError.message}`);
 
       // 7. Déplacer dans traites
-      fs.renameSync(filePath, path.join(TRAITES_DIR, file));
+      if (fs.existsSync(filePath)) {
+        fs.renameSync(filePath, path.join(TRAITES_DIR, file));
+      }
       console.log(`🎉 Document indexé avec succès !`);
 
     } catch (error) {
       console.error(`❌ Erreur lors du traitement de ${file}:`, error.message);
-      fs.renameSync(filePath, path.join(ERREURS_DIR, file));
+      if (fs.existsSync(filePath)) {
+        fs.renameSync(filePath, path.join(ERREURS_DIR, file));
+      }
     }
   }
 

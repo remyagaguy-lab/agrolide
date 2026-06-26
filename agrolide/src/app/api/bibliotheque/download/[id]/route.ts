@@ -51,7 +51,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       ResponseContentType: 'application/pdf',
     })
     
-    const signedUrl = await getSignedUrl(s3Client, command, { expiresIn: 3600 })
+    const signedUrl = await getSignedUrl(s3Client, command, { expiresIn: 60 })
     
     return NextResponse.json({ url: signedUrl })
   } catch (error: any) {
