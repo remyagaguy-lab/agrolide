@@ -190,10 +190,20 @@ async function runAgent() {
       const { data: admin } = await supabase.from('profiles').select('id').eq('role_plateforme', 'super_admin').limit(1).single();
       const auteur_id = admin ? admin.id : null;
 
+      let typeDoc = 'article';
+      if (metadata.type) {
+        const t = metadata.type.toLowerCase();
+        if (t.includes('thès') || t.includes('these')) typeDoc = 'these';
+        else if (t.includes('mémoire') || t.includes('memoire')) typeDoc = 'memoire';
+        else if (t.includes('fiche')) typeDoc = 'fiche_technique';
+        else if (t.includes('guide')) typeDoc = 'guide_pratique';
+        else if (t.includes('rapport')) typeDoc = 'rapport';
+      }
+
       const { error: dbError } = await supabase.from('documents').insert({
         titre: metadata.titre || file,
         auteurs: "Auteur inconnu",
-        type_doc: 'article', // Force un type valide par défaut (l'IA peut renvoyer n'importe quoi)
+        type_doc: typeDoc,
         resume: (metadata.description || 'Description générée automatiquement.').substring(0, 490),
         thematique: metadata.thematique || 'Non classé',
         fichier_r2_key: cleanFileName,

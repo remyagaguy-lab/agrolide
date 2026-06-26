@@ -160,12 +160,12 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey }
                 className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-green-500 focus:border-green-500"
               >
                 <option value="">Tous les types</option>
-                <option value="Thèse">Thèse</option>
-                <option value="Mémoire">Mémoire</option>
-                <option value="Fiche technique">Fiche technique</option>
-                <option value="Guide">Guide</option>
-                <option value="Article">Article</option>
-                <option value="Rapport">Rapport</option>
+                <option value="these">Thèse</option>
+                <option value="memoire">Mémoire</option>
+                <option value="fiche_technique">Fiche technique</option>
+                <option value="guide_pratique">Guide pratique</option>
+                <option value="article">Article</option>
+                <option value="rapport">Rapport</option>
               </select>
             </div>
             
