@@ -27,9 +27,9 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
   const navItems = [
     { name: "Dashboard", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Mon profil", href: "/membres/profil", icon: User },
-    { name: "Annuaire", href: "/membres/annuaire", icon: Users },
+    // { name: "Annuaire", href: "/membres/annuaire", icon: Users },
     { name: "Bibliothèque", href: "/membres/bibliotheque", icon: Library },
-    { name: "Formations", href: "/membres/formations", icon: BookOpen },
+    // { name: "Formations", href: "/membres/formations", icon: BookOpen },
     { name: "Événements", href: "/membres/evenements", icon: Calendar },
     { name: "Forum", href: "/membres/forum", icon: MessageSquare },
     { name: "Opportunités", href: "/membres/opportunites", icon: Briefcase },
@@ -40,10 +40,11 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
   // Pour le mobile: on ne garde que 5 items principaux
   const mobileNavItems = [
     { name: "Accueil", href: "/membres/dashboard", icon: LayoutDashboard },
-    { name: "Annuaire", href: "/membres/annuaire", icon: Users },
+    // { name: "Annuaire", href: "/membres/annuaire", icon: Users },
     { name: "Biblio", href: "/membres/bibliotheque", icon: Library },
     { name: "Forum", href: "/membres/forum", icon: MessageSquare },
     { name: "Profil", href: "/membres/profil", icon: User },
+    { name: "Opportunités", href: "/membres/opportunites", icon: Briefcase }, // Remplacement
   ]
 
   return (

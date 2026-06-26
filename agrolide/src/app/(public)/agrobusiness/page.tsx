@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
 import { Briefcase, LineChart, FileText, ArrowRight } from "lucide-react"
+import DemandeServiceForm from "@/components/modules/agrobusiness/DemandeServiceForm"
 
 export const metadata: Metadata = {
   title: "Agrobusiness & Consulting | agrolide",
@@ -91,54 +92,7 @@ export default function AgrobusinessPage() {
             </p>
           </div>
 
-          <div className="bg-gray-50 p-8 md:p-10 rounded-2xl border border-[var(--color-gris-clair)] shadow-sm">
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="prenom">Prénom</label>
-                  <Input id="prenom" placeholder="Votre prénom" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="nom">Nom</label>
-                  <Input id="nom" placeholder="Votre nom" />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="email">Email</label>
-                  <Input id="email" type="email" placeholder="votre@email.com" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="telephone">Téléphone</label>
-                  <Input id="telephone" type="tel" placeholder="+228..." />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700" htmlFor="service">Type d'accompagnement souhaité</label>
-                <select id="service" className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-gray-700">
-                  <option value="">Sélectionnez un service...</option>
-                  <option value="business-plan">Étude & Business Plan</option>
-                  <option value="conseil">Conseil Stratégique / Appui technique</option>
-                  <option value="autre">Autre demande</option>
-                </select>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700" htmlFor="projet">Description de votre projet ou de votre besoin</label>
-                <Textarea 
-                  id="projet" 
-                  placeholder="Décrivez brièvement votre projet, vos objectifs et vos attentes..."
-                  className="min-h-[150px]"
-                />
-              </div>
-
-              <Button type="button" variant="primary" className="w-full text-lg h-14">
-                Envoyer ma demande
-              </Button>
-            </div>
-          </div>
+          <DemandeServiceForm />
         </div>
       </section>
     </div>

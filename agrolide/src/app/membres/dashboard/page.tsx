@@ -93,9 +93,9 @@ export default async function DashboardPage() {
           <Link href="/membres/profil" className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-lg transition-colors">
             Mon profil
           </Link>
-          <Link href="/membres/annuaire" className="px-4 py-2 bg-[var(--color-vert-principal)] hover:bg-green-800 text-white text-sm font-medium rounded-lg transition-colors">
+          {/* <Link href="/membres/annuaire" className="px-4 py-2 bg-[var(--color-vert-principal)] hover:bg-green-800 text-white text-sm font-medium rounded-lg transition-colors">
             Explorer le réseau
-          </Link>
+          </Link> */}
         </div>
       </div>
 
@@ -132,12 +132,12 @@ export default async function DashboardPage() {
 
           {/* Raccourcis */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/membres/annuaire" className="bg-white p-4 rounded-xl border border-[var(--color-gris-clair)] shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center text-center gap-2 group">
+            {/* <Link href="/membres/annuaire" className="bg-white p-4 rounded-xl border border-[var(--color-gris-clair)] shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center text-center gap-2 group">
               <div className="w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Users size={20} />
               </div>
               <span className="text-sm font-medium text-gray-700">Annuaire</span>
-            </Link>
+            </Link> */}
             
             <Link href="/membres/bibliotheque" className="bg-white p-4 rounded-xl border border-[var(--color-gris-clair)] shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center text-center gap-2 group">
               <div className="w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform">

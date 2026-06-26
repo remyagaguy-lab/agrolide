@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
 import { Rocket, Target, Users, BookOpen } from "lucide-react"
+import IncubationForm from "@/components/modules/agrobusiness/IncubationForm"
 
 export const metadata: Metadata = {
   title: "Incubation agrolide | Accélérateur de projets agricoles",
@@ -113,87 +114,7 @@ export default function IncubationPage() {
             </p>
           </div>
 
-          <div className="bg-white p-8 md:p-10 rounded-2xl border border-[var(--color-gris-clair)] shadow-sm">
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h3 className="font-bold text-lg text-gray-900 border-b pb-2">1. Porteur du projet</h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700" htmlFor="prenom">Prénom</label>
-                    <Input id="prenom" placeholder="Votre prénom" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700" htmlFor="nom">Nom</label>
-                    <Input id="nom" placeholder="Votre nom" />
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700" htmlFor="email">Email</label>
-                    <Input id="email" type="email" placeholder="votre@email.com" />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-semibold text-gray-700" htmlFor="telephone">Téléphone</label>
-                    <Input id="telephone" type="tel" placeholder="+228..." />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="pays">Pays de résidence</label>
-                  <Input id="pays" placeholder="Ex: Togo, Sénégal, Côte d'Ivoire..." />
-                </div>
-              </div>
-
-              <div className="space-y-4 pt-4">
-                <h3 className="font-bold text-lg text-gray-900 border-b pb-2">2. Le Projet</h3>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="nomProjet">Nom du projet / de la startup</label>
-                  <Input id="nomProjet" placeholder="Nom de votre entreprise" />
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="stade">Stade d'avancement</label>
-                  <select id="stade" className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-gray-700">
-                    <option value="">Sélectionnez un stade...</option>
-                    <option value="idee">Idée (Concept validé)</option>
-                    <option value="prototype">Prototype / POC</option>
-                    <option value="lancement">Phase de lancement (Premières ventes)</option>
-                    <option value="croissance">En croissance (Recherche de fonds)</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="pitch">Pitch du projet (Problème résolu, solution, marché)</label>
-                  <Textarea 
-                    id="pitch" 
-                    placeholder="Expliquez brièvement votre projet. Quel problème de l'agriculture africaine résolvez-vous et comment ?"
-                    className="min-h-[150px]"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700" htmlFor="equipe">Présentation de l'équipe</label>
-                  <Textarea 
-                    id="equipe" 
-                    placeholder="Qui sont les fondateurs et quelles sont leurs compétences clés ?"
-                    className="min-h-[100px]"
-                  />
-                </div>
-              </div>
-
-              <div className="pt-6">
-                <Button type="button" variant="primary" className="w-full text-lg h-14">
-                  Soumettre ma candidature
-                </Button>
-                <p className="text-center text-xs text-gray-500 mt-4">
-                  Vos données sont traitées de manière confidentielle et ne seront pas partagées avec des tiers sans votre accord.
-                </p>
-              </div>
-            </div>
-          </div>
+          <IncubationForm />
         </div>
       </section>
     </div>

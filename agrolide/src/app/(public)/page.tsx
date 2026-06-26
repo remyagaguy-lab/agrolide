@@ -265,7 +265,7 @@ export default function HomePage() {
             </div>
             <div className="md:col-span-8 flex flex-col divide-y divide-[#ddd]">
               {[
-                {
+                /* {
                   icon: <IconNetwork className="text-[#1b5e38]" />,
                   num: "01",
                   title: "Mobilisation & Réseautage",
@@ -278,7 +278,7 @@ export default function HomePage() {
                   title: "Formation & Insertion",
                   desc: "Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.",
                   link: "/formations",
-                },
+                }, */
                 {
                   icon: <IconBriefcase className="text-[#1b5e38]" />,
                   num: "03",
@@ -408,7 +408,7 @@ export default function HomePage() {
               Prêt à participer à la conquête de la souveraineté alimentaire ?
             </h2>
             <p className="font-sans text-[15px] text-[rgba(255,255,255,0.55)] mb-10 leading-[1.7]">
-              Annuaire · Formations · Agrobusiness · Bibliothèque · Événements
+              Agrobusiness · Bibliothèque · Événements
             </p>
             <Link
               href="/rejoindre"
