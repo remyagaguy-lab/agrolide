@@ -51,7 +51,7 @@ export function Header() {
 
   return (
     <header className={`sticky top-0 z-50 w-full transition-all duration-200 ${bgClass}`}>
-      <div className="max-w-[1100px] mx-auto flex h-[90px] items-center justify-between px-6">
+      <div className="max-w-[1100px] mx-auto flex h-[72px] items-center justify-between px-6">
 
         {/* Logo */}
         <Link href="/" className="flex items-center flex-shrink-0">
@@ -60,7 +60,7 @@ export function Header() {
             alt="agrolide"
             width={400}
             height={120}
-            className="h-[80px] md:h-[90px] w-auto object-contain scale-110 origin-left transition-all duration-200"
+            className="h-[72px] w-auto object-contain scale-[1.6] origin-left transition-all duration-200"
             priority
           />
         </Link>
