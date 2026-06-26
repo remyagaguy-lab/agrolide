@@ -107,9 +107,6 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Ligne accent dorée verticale */}
-        <div className="absolute left-0 top-0 h-full w-[3px] bg-[#fcb726] z-20" />
-
         <div className="max-w-[1100px] mx-auto px-6 pt-[80px] pb-0 md:pt-[120px] relative z-20">
           <div className="max-w-[900px]">
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
@@ -388,7 +385,6 @@ export default function HomePage() {
 
       {/* ── CTA FINAL ────────────────────────────── */}
       <section className="bg-[#1b5e38] relative overflow-hidden py-[100px]">
-        <div className="absolute left-0 top-0 h-full w-[3px] bg-[#fcb726]" />
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="max-w-[600px]">
             <p className="text-[10px] font-[700] tracking-[0.22em] text-[rgba(255,255,255,0.4)] uppercase mb-6">

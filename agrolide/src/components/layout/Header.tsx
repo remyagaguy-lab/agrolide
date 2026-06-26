@@ -58,9 +58,9 @@ export function Header() {
           <Image
             src="/agrolide-png.png"
             alt="agrolide"
-            width={160}
-            height={56}
-            className={`h-[56px] w-auto object-contain transition-all duration-200 ${
+            width={280}
+            height={80}
+            className={`h-[68px] w-auto object-contain transition-all duration-200 ${
               !scrolled && !open && isHeroPage ? "brightness-0 invert" : ""
             }`}
             priority
