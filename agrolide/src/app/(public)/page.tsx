@@ -111,7 +111,7 @@ export default function HomePage() {
         <div className="absolute left-0 top-0 h-full w-[3px] bg-[#fcb726] z-20" />
 
         <div className="max-w-[1100px] mx-auto px-6 pt-[80px] pb-0 md:pt-[120px] relative z-20">
-          <div className="max-w-[700px]">
+          <div className="max-w-[900px]">
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
               Fédérer la chaîne<br />
               agricole, pour conquérir<br />

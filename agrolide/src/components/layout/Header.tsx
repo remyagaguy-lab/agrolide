@@ -5,6 +5,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 
 const NAV_LINKS = [
+  { href: "/",                label: "Accueil" },
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
   { href: "/annuaire",        label: "Annuaire" },
   { href: "/formations",      label: "Formations" },
@@ -54,22 +55,17 @@ export function Header() {
       <div className="max-w-[1100px] mx-auto flex h-[72px] items-center justify-between px-6">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+        <Link href="/" className="flex items-center flex-shrink-0">
           <Image
             src="/agrolide-png.png"
             alt="agrolide"
-            width={120}
-            height={44}
-            className={`h-[44px] w-auto object-contain transition-all duration-200 ${
+            width={160}
+            height={56}
+            className={`h-[56px] w-auto object-contain transition-all duration-200 ${
               !scrolled && !open && isHeroPage ? "brightness-0 invert" : ""
             }`}
             priority
           />
-          <span className={`font-heading font-[800] text-[22px] tracking-tight transition-colors duration-200 ${
-            !scrolled && !open && isHeroPage ? "text-white" : "text-[#1b5e38]"
-          }`}>
-            agrolide
-          </span>
         </Link>
 
         {/* Nav Desktop */}
