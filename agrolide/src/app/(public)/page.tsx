@@ -116,7 +116,7 @@ export default function HomePage() {
             </h1>
             <div className="font-sans text-[16px] text-[rgba(255,255,255,0.8)] max-w-[600px] leading-[1.8] mb-10 space-y-4">
               <p>Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.</p>
-              <p>Étudiant en agronomie, Ingénieurs Agronomes, Chercheurs, Entreprises Agricoles, investisseurs construisons ensemble l'agriculture africaine que nous voulons.</p>
+              <p>Étudiant en agronomie, Ingénieurs Agronomes, Chercheurs, Entreprises Agricoles, investisseurs construisons... ensemble l'agriculture africaine que nous voulons.</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <Link
