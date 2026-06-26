@@ -168,31 +168,33 @@ export default function HomePage() {
       </section>
 
       {/* ── RAISON D'ÊTRE ────────────────────────── */}
-      <section className="bg-[#f8f8f6] py-[80px] md:py-[120px]">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
-            {/* Colonne gauche — étiquette + accroches */}
-            <div className="md:col-span-4">
-              <div className="text-[10px] font-[700] text-[#1b5e38] tracking-[0.2em] uppercase mb-4">Notre raison d'être</div>
-              <div className="w-8 h-[2px] bg-[#fcb726]" />
-            </div>
-            {/* Colonne droite — contenu éditorial */}
-            <div className="md:col-span-8">
-              <h2 className="font-heading font-[800] text-[32px] md:text-[42px] text-[#1a1a1a] leading-[1.15] tracking-[-0.02em] mb-8">
-                Transformer la fragmentation en cohésion continentale.
+      <section className="bg-gradient-to-br from-[#f8f8f6] to-white py-[100px] md:py-[160px] relative overflow-hidden">
+        {/* Subtle background decoration */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#fcb726]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="max-w-[1100px] mx-auto px-6 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+            <div className="md:col-span-5">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-8">
+                <span className="w-2 h-2 rounded-full bg-[#fcb726]" />
+                Notre raison d'être
+              </div>
+              <h2 className="font-heading font-[800] text-[36px] md:text-[48px] text-[#1a1a1a] leading-[1.15] tracking-[-0.02em] mb-6">
+                Transformer la fragmentation en <span className="text-[#1b5e38]">cohésion continentale.</span>
               </h2>
-              <p className="font-sans text-[16px] text-[#666] leading-[1.85] mb-5">
+            </div>
+            <div className="md:col-span-7 md:pl-10">
+              <p className="font-sans text-[17px] text-[#555] leading-[1.8] mb-6">
                 L'agriculture représente jusqu'à 40 % du PIB africain et emploie la majorité de notre population active. Pourtant, les acteurs de la chaîne de valeur évoluent souvent de manière fragmentée, sans cadre de collaboration pérenne.
               </p>
-              <p className="font-sans text-[16px] text-[#666] leading-[1.85] mb-10">
+              <p className="font-sans text-[17px] text-[#555] leading-[1.8] mb-10">
                 agrolide est né d'une ambition collective : doter l'Afrique d'un écosystème professionnel intégré, capable de mobiliser les ressources, renforcer les compétences et incuber les projets qui feront notre souveraineté alimentaire.
               </p>
               <Link
                 href="/qui-sommes-nous"
-                className="inline-flex items-center gap-2 text-[#1b5e38] font-heading font-[700] text-[14px] group"
+                className="inline-flex items-center gap-3 text-white bg-[#1a1a1a] font-heading font-[700] text-[14px] px-8 py-4 rounded-full group hover:bg-[#1b5e38] hover:shadow-[0_8px_30px_rgba(27,94,56,0.3)] transition-all duration-300"
               >
                 Découvrir notre histoire
-                <span className="transition-transform group-hover:translate-x-1">
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
                   <IconArrowRight />
                 </span>
               </Link>
@@ -202,181 +204,190 @@ export default function HomePage() {
       </section>
 
       {/* ── LES 4 FREINS ─────────────────────────── */}
-      <section className="bg-white py-[80px] md:py-[120px]">
+      <section className="bg-white py-[100px] md:py-[140px] relative">
         <div className="max-w-[1100px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-16">
-            <div className="md:col-span-4">
-              <div className="text-[10px] font-[700] text-[#1b5e38] tracking-[0.2em] uppercase mb-4">Constat</div>
-              <div className="w-8 h-[2px] bg-[#fcb726] mb-6" />
-              <h2 className="font-heading font-[800] text-[28px] md:text-[36px] text-[#1a1a1a] leading-[1.2]">
-                L'agriculture africaine face à 4 freins
-              </h2>
+          <div className="text-center max-w-[700px] mx-auto mb-20">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#fcb726]/10 text-[#d9970c] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
+              Constat
             </div>
-            <div className="md:col-span-8 flex flex-col divide-y divide-[#e8e8e4]">
-              {[
-                { num: "01", title: "Isolement professionnel", desc: "Peu de réseaux solides permettent aux agronomes et praticiens d'échanger et de collaborer efficacement sur le continent." },
-                { num: "02", title: "Documentation inadaptée", desc: "La quasi-totalité des ressources techniques ignore les réalités climatiques et pédologiques africaines." },
-                { num: "03", title: "Déficit d'accompagnement", desc: "Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré." },
-                { num: "04", title: "Recherche sous-valorisée", desc: "Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain." },
-              ].map((f) => (
-                <div key={f.num} className="py-8 flex gap-8">
-                  <div className="font-heading font-[700] text-[11px] text-[#ccc] tracking-[0.08em] pt-1 min-w-[28px]">
-                    {f.num}
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-[700] text-[17px] text-[#1a1a1a] mb-2">{f.title}</h3>
-                    <p className="font-sans text-[14px] text-[#777] leading-[1.7]">{f.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15] mb-6">
+              L'agriculture africaine face à 4 freins majeurs
+            </h2>
+            <p className="font-sans text-[16px] text-[#666] leading-[1.7]">
+              agrolide a été fondé pour briser ces quatre barrières simultanément et débloquer le potentiel de notre continent.
+            </p>
           </div>
 
-          <div className="border-t border-[#e8e8e4] pt-8">
-            <p className="font-heading font-[700] text-[17px] text-[#1b5e38]">
-              agrolide a été fondé pour briser ces quatre freins simultanément.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { num: "01", title: "Isolement professionnel", desc: "Peu de réseaux solides permettent aux agronomes et praticiens d'échanger et de collaborer efficacement sur le continent." },
+              { num: "02", title: "Documentation inadaptée", desc: "La quasi-totalité des ressources techniques ignore les réalités climatiques et pédologiques africaines." },
+              { num: "03", title: "Déficit d'accompagnement", desc: "Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré." },
+              { num: "04", title: "Recherche sous-valorisée", desc: "Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain." },
+            ].map((f) => (
+              <div key={f.num} className="group relative bg-white rounded-2xl p-10 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-2 transition-all duration-300 overflow-hidden">
+                <div className="absolute -right-4 -top-8 font-heading font-[800] text-[120px] text-[#f8f8f8] group-hover:text-[#f0f7f0] transition-colors duration-300 z-0 select-none pointer-events-none">
+                  {f.num}
+                </div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-[#f0f7f0] group-hover:bg-[#1b5e38] rounded-xl flex items-center justify-center text-[#1b5e38] group-hover:text-white transition-colors duration-300 mb-6 font-heading font-[800] text-[16px]">
+                    {f.num}
+                  </div>
+                  <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-4">{f.title}</h3>
+                  <p className="font-sans text-[15px] text-[#666] leading-[1.7]">{f.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── 3 DOMAINES ───────────────────────────── */}
-      <section id="actions" className="bg-[#f8f8f6] py-[80px] md:py-[120px]">
+      <section id="actions" className="bg-[#1a1a1a] py-[100px] md:py-[140px] text-white">
         <div className="max-w-[1100px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-12">
-            <div className="md:col-span-4">
-              <div className="text-[10px] font-[700] text-[#1b5e38] tracking-[0.2em] uppercase mb-4">Notre approche</div>
-              <div className="w-8 h-[2px] bg-[#fcb726] mb-6" />
-              <h2 className="font-heading font-[800] text-[28px] md:text-[36px] text-[#1a1a1a] leading-[1.2]">
-                Un écosystème intégré en 3 domaines
+          <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="max-w-[600px]">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#fcb726]" />
+                Notre approche
+              </div>
+              <h2 className="font-heading font-[800] text-[32px] md:text-[44px] leading-[1.15]">
+                Un écosystème intégré en 3 piliers d'action
               </h2>
             </div>
-            <div className="md:col-span-8 flex flex-col divide-y divide-[#ddd]">
-              {[
-                {
-                  icon: <IconNetwork className="text-[#1b5e38]" />,
-                  num: "01",
-                  title: "Mobilisation & Réseautage",
-                  desc: "Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.",
-                  link: "/annuaire",
-                },
-                {
-                  icon: <IconGraduation className="text-[#1b5e38]" />,
-                  num: "02",
-                  title: "Formation & Insertion",
-                  desc: "Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.",
-                  link: "/formations",
-                },
-                {
-                  icon: <IconBriefcase className="text-[#1b5e38]" />,
-                  num: "03",
-                  title: "Agrobusiness & Consulting",
-                  desc: "Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.",
-                  link: "/agrobusiness",
-                },
-              ].map((d) => (
-                <Link
-                  href={d.link}
-                  key={d.num}
-                  className="py-8 flex items-start gap-6 group"
-                >
-                  <div className="mt-1 flex-shrink-0 opacity-60 group-hover:opacity-100 transition-opacity">
-                    {d.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="font-heading font-[800] text-[11px] text-[#bbb] tracking-[0.1em] mb-2">{d.num}</div>
-                    <h3 className="font-heading font-[700] text-[19px] text-[#1a1a1a] mb-2 group-hover:text-[#1b5e38] transition-colors">
-                      {d.title}
-                    </h3>
-                    <p className="font-sans text-[14px] text-[#777] leading-[1.7] max-w-[500px]">{d.desc}</p>
-                  </div>
-                  <div className="hidden md:flex items-center gap-1 text-[#1b5e38] font-heading font-[600] text-[13px] pt-1 opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0 transition-all flex-shrink-0">
-                    Découvrir <IconArrowRight />
-                  </div>
-                </Link>
-              ))}
-            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <IconNetwork />,
+                num: "01",
+                title: "Mobilisation & Réseautage",
+                desc: "Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.",
+                link: "/annuaire",
+                color: "group-hover:border-[#1b5e38]"
+              },
+              {
+                icon: <IconGraduation />,
+                num: "02",
+                title: "Formation & Insertion",
+                desc: "Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.",
+                link: "/formations",
+                color: "group-hover:border-[#fcb726]"
+              },
+              {
+                icon: <IconBriefcase />,
+                num: "03",
+                title: "Agrobusiness & Consulting",
+                desc: "Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.",
+                link: "/agrobusiness",
+                color: "group-hover:border-[#1b5e38]"
+              },
+            ].map((d) => (
+              <Link
+                href={d.link}
+                key={d.num}
+                className={`group block bg-[#222] border border-[#333] rounded-2xl p-8 hover:bg-[#2a2a2a] transition-all duration-300 ${d.color} hover:-translate-y-1`}
+              >
+                <div className="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300">
+                  {d.icon}
+                </div>
+                <div className="font-heading font-[800] text-[12px] text-[#666] tracking-[0.1em] mb-3">{d.num}</div>
+                <h3 className="font-heading font-[800] text-[22px] text-white mb-4 group-hover:text-[#fcb726] transition-colors">
+                  {d.title}
+                </h3>
+                <p className="font-sans text-[15px] text-[#999] leading-[1.7] mb-8">
+                  {d.desc}
+                </p>
+                <div className="flex items-center gap-2 text-white font-heading font-[700] text-[13px] opacity-70 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
+                  Découvrir <IconArrowRight />
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── TÉMOIGNAGES ──────────────────────────── */}
-      <section className="bg-white py-[80px] md:py-[120px]">
+      <section className="bg-gradient-to-b from-white to-[#f8f8f6] py-[100px] md:py-[140px]">
         <div className="max-w-[1100px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-16">
-            <div className="md:col-span-4">
-              <div className="text-[10px] font-[700] text-[#1b5e38] tracking-[0.2em] uppercase mb-4">Impact</div>
-              <div className="w-8 h-[2px] bg-[#fcb726] mb-6" />
-              <h2 className="font-heading font-[800] text-[28px] md:text-[36px] text-[#1a1a1a] leading-[1.2]">
-                La voix du réseau
-              </h2>
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#1b5e38]" />
+              Impact
             </div>
-            <div className="md:col-span-8 grid grid-cols-1 gap-0 divide-y divide-[#e8e8e4]">
-              {[
-                { initials: "KA", name: "Kouamé A.", role: "Agronome", country: "Côte d'Ivoire" },
-                { initials: "FD", name: "Fatou D.",  role: "Chercheuse", country: "Sénégal" },
-                { initials: "EM", name: "Emmanuel M.", role: "Agripreneur", country: "Cameroun" },
-              ].map((t) => (
-                <div key={t.initials} className="py-8 flex gap-6">
-                  <div className="text-[#e0ede4] flex-shrink-0 mt-1">
-                    <IconQuote />
+            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15]">
+              La voix du réseau
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { initials: "KA", name: "Kouamé A.", role: "Agronome", country: "Côte d'Ivoire", delay: "md:mt-0" },
+              { initials: "FD", name: "Fatou D.",  role: "Chercheuse", country: "Sénégal", delay: "md:mt-12" },
+              { initials: "EM", name: "Emmanuel M.", role: "Agripreneur", country: "Cameroun", delay: "md:mt-24" },
+            ].map((t) => (
+              <div key={t.initials} className={`bg-white rounded-2xl p-8 border border-[#eaeaea] shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-shadow duration-300 ${t.delay}`}>
+                <div className="text-[#fcb726] mb-6">
+                  <IconQuote />
+                </div>
+                <p className="font-sans italic text-[16px] text-[#444] leading-[1.8] mb-8">
+                  "agrolide m'a permis de structurer mon approche et de trouver des partenaires solides. L'accès aux ressources adaptées à notre continent change véritablement la donne."
+                </p>
+                <div className="flex items-center gap-4 pt-6 border-t border-[#f0f0f0]">
+                  <div className="w-[44px] h-[44px] rounded-full bg-gradient-to-br from-[#1b5e38] to-[#124026] text-white flex items-center justify-center font-heading font-[700] text-[14px] shadow-[0_4px_10px_rgba(27,94,56,0.3)]">
+                    {t.initials}
                   </div>
                   <div>
-                    <p className="font-sans italic text-[15px] text-[#444] leading-[1.85] mb-5">
-                      agrolide m'a permis de structurer mon approche et de trouver des partenaires solides. L'accès aux ressources adaptées à notre continent change véritablement la donne pour les acteurs de terrain.
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-[36px] h-[36px] bg-[#e8f5e9] text-[#1b5e38] flex items-center justify-center font-heading font-[700] text-[12px]">
-                        {t.initials}
-                      </div>
-                      <div>
-                        <div className="font-heading font-[600] text-[14px] text-[#1a1a1a]">{t.name}</div>
-                        <div className="font-sans text-[12px] text-[#999]">{t.role} · {t.country}</div>
-                      </div>
-                    </div>
+                    <div className="font-heading font-[700] text-[15px] text-[#1a1a1a]">{t.name}</div>
+                    <div className="font-sans text-[13px] text-[#888]">{t.role} · {t.country}</div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── BLOG ─────────────────────────────────── */}
-      <section className="bg-[#f8f8f6] py-[80px] md:py-[120px]">
+      <section className="bg-white py-[100px] md:py-[140px]">
         <div className="max-w-[1100px] mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-              <div className="text-[10px] font-[700] text-[#1b5e38] tracking-[0.2em] uppercase mb-4">Ressources</div>
-              <div className="w-8 h-[2px] bg-[#fcb726] mb-6" />
-              <h2 className="font-heading font-[800] text-[28px] md:text-[36px] text-[#1a1a1a] leading-[1.2]">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#1b5e38]" />
+                Ressources
+              </div>
+              <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15]">
                 Derniers articles
               </h2>
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-[#1b5e38] font-heading font-[600] text-[14px] group flex-shrink-0"
+              className="inline-flex items-center gap-2 text-white bg-[#1b5e38] font-heading font-[600] text-[14px] px-6 py-3 rounded-full group hover:bg-[#124026] hover:shadow-lg transition-all duration-300 flex-shrink-0"
             >
               Tous les articles
-              <span className="transition-transform group-hover:translate-x-1"><IconArrowRight /></span>
+              <span className="transition-transform duration-300 group-hover:translate-x-1"><IconArrowRight /></span>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[#e8e8e4]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[1, 2, 3].map((item) => (
-              <div key={item} className="bg-[#f8f8f6] p-[28px] flex flex-col opacity-50">
-                <div className="h-[160px] bg-[#e8e8e4] w-full mb-6" />
-                <div className="text-[10px] font-[700] text-[#1b5e38] tracking-[0.15em] uppercase mb-3">
-                  Bientôt disponible
+              <div key={item} className="group cursor-pointer">
+                <div className="relative h-[220px] bg-[#f4f4f4] rounded-2xl mb-6 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
+                  <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full font-heading font-[700] text-[10px] text-[#1b5e38] tracking-[0.1em] uppercase shadow-sm">
+                    Bientôt disponible
+                  </div>
                 </div>
-                <h3 className="font-heading font-[700] text-[16px] text-[#1a1a1a] mb-3 leading-snug">
-                  Articles en cours de préparation
+                <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-3 leading-[1.4] group-hover:text-[#1b5e38] transition-colors">
+                  Articles en cours de préparation pour la communauté
                 </h3>
-                <p className="font-sans text-[13px] text-[#888] leading-[1.6] flex-1">
-                  Notre équipe éditoriale prépare une série de contenus techniques pour les acteurs de la chaîne agricole.
+                <p className="font-sans text-[15px] text-[#666] leading-[1.7] mb-4">
+                  Notre équipe éditoriale prépare une série de contenus techniques de haute valeur pour les acteurs de la chaîne agricole.
                 </p>
-                <div className="border-t border-[#e8e8e4] pt-4 mt-5 font-sans text-[11px] text-[#bbb]">
-                  À venir
+                <div className="font-sans text-[13px] font-[600] text-[#fcb726]">
+                  À venir très prochainement
                 </div>
               </div>
             ))}
@@ -385,25 +396,30 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="bg-[#1b5e38] relative overflow-hidden py-[100px]">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="max-w-[600px]">
-            <p className="text-[10px] font-[700] tracking-[0.22em] text-[rgba(255,255,255,0.4)] uppercase mb-6">
-              Rejoindre le réseau
-            </p>
-            <h2 className="font-heading font-[800] text-[32px] md:text-[46px] text-white leading-[1.1] tracking-[-0.02em] mb-6">
-              Prêt à participer à la conquête de la souveraineté alimentaire ?
-            </h2>
-            <p className="font-sans text-[15px] text-[rgba(255,255,255,0.55)] mb-10 leading-[1.7]">
-              Annuaire · Formations · Agrobusiness · Bibliothèque · Événements
-            </p>
-            <Link
-              href="/rejoindre"
-              className="inline-block bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[15px] px-[36px] py-[15px] rounded-md hover:bg-[#f99e1d] transition-colors"
-            >
-              Rejoindre le réseau
-            </Link>
+      <section className="relative overflow-hidden py-[120px] md:py-[160px] bg-[#1a1a1a]">
+        {/* Dynamic Abstract Background */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
+        </div>
+
+        <div className="max-w-[800px] mx-auto px-6 relative z-10 text-center">
+          <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-8">
+            Rejoindre le réseau
           </div>
+          <h2 className="font-heading font-[800] text-[36px] md:text-[56px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
+            Prêt à participer à la conquête de la souveraineté alimentaire ?
+          </h2>
+          <p className="font-sans text-[16px] md:text-[18px] text-[rgba(255,255,255,0.7)] mb-12 leading-[1.7]">
+            Annuaire · Formations · Agrobusiness · Bibliothèque · Événements
+          </p>
+          <Link
+            href="/rejoindre"
+            className="inline-flex items-center gap-3 bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[16px] px-[40px] py-[18px] rounded-full hover:bg-white hover:shadow-[0_0_40px_rgba(252,183,38,0.4)] transition-all duration-300 hover:-translate-y-1"
+          >
+            Rejoindre le réseau maintenant
+            <IconArrowRight />
+          </Link>
         </div>
       </section>
 
