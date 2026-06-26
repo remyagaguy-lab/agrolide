@@ -114,9 +114,10 @@ export default function HomePage() {
               agricole, pour conquérir<br />
               <span className="text-[#fcb726]">la souveraineté alimentaire</span>
             </h1>
-            <p className="font-sans text-[16px] text-[rgba(255,255,255,0.62)] max-w-[480px] leading-[1.8] mb-10">
-              Le réseau continental des acteurs de l'agriculture africaine — agronomes, chercheurs, agripreneurs, partenaires institutionnels.
-            </p>
+            <div className="font-sans text-[16px] text-[rgba(255,255,255,0.8)] max-w-[600px] leading-[1.8] mb-10 space-y-4">
+              <p>Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.</p>
+              <p>Étudiant en agronomie, Ingénieurs Agronomes, Chercheurs, Entreprises Agricoles, investisseurs construisons ensemble l'agriculture africaine que nous voulons.</p>
+            </div>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/rejoindre"
