@@ -141,7 +141,7 @@ export default function HomePage() {
                 <IconGlobe />
               </div>
               <div>
-                <div className="font-heading font-[800] text-[20px] text-white leading-none mb-1">12 pays</div>
+                <div className="font-heading font-[800] text-[20px] text-white leading-none mb-1">5 pays</div>
                 <div className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.15em]">Présence continentale</div>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function HomePage() {
                 <IconLibrary />
               </div>
               <div>
-                <div className="font-heading font-[800] text-[20px] text-white leading-none mb-1">80+ ressources</div>
+                <div className="font-heading font-[800] text-[20px] text-white leading-none mb-1">+ 700 ressources</div>
                 <div className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.15em]">Techniques</div>
               </div>
             </div>
