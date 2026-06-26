@@ -7,8 +7,8 @@ import { Check, X, Eye, FileText, Loader2, AlertCircle } from 'lucide-react'
 type DocumentAdmin = {
   id: string
   titre: string
-  auteur: string
-  type: string
+  auteurs: string
+  type_doc: string
   statut: string
   created_at: string
 }
@@ -33,7 +33,7 @@ export default function AdminDocumentsPage() {
       // On trie manuellement : d'abord 'en_attente_validation', puis par date décroissante
       const { data, error } = await supabase
         .from('documents')
-        .select('id, titre, auteur, type, statut, created_at')
+        .select('id, titre, auteurs, type_doc, statut, created_at')
         .order('created_at', { ascending: false })
         
       if (error) throw error
@@ -142,12 +142,12 @@ export default function AdminDocumentsPage() {
                         <FileText className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="text-sm font-medium text-gray-900 line-clamp-1">{doc.titre}</div>
-                          <div className="text-sm text-gray-500">{doc.auteur}</div>
+                          <div className="text-sm text-gray-500">{doc.auteurs}</div>
                         </div>
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="text-sm text-gray-900">{doc.type}</span>
+                      <span className="text-sm text-gray-900">{doc.type_doc}</span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       {new Date(doc.created_at).toLocaleDateString('fr-FR')}
