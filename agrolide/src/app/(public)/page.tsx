@@ -120,13 +120,13 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/rejoindre"
-                className="bg-white text-[#1b5e38] font-heading font-[700] px-[28px] py-[13px] text-[14px] hover:bg-[#f0f7f0] transition-colors"
+                className="bg-white text-[#1b5e38] font-heading font-[700] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-[#f0f7f0] transition-colors"
               >
                 Rejoindre le réseau
               </Link>
               <Link
                 href="#actions"
-                className="border border-[rgba(255,255,255,0.28)] text-white font-heading font-[600] px-[28px] py-[13px] text-[14px] hover:bg-white/8 transition-colors"
+                className="border border-[rgba(255,255,255,0.28)] text-white font-heading font-[600] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-white/10 transition-colors"
               >
                 Nos actions
               </Link>
@@ -398,7 +398,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/rejoindre"
-              className="inline-block bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[15px] px-[36px] py-[15px] hover:bg-[#f99e1d] transition-colors"
+              className="inline-block bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[15px] px-[36px] py-[15px] rounded-md hover:bg-[#f99e1d] transition-colors"
             >
               Rejoindre le réseau
             </Link>

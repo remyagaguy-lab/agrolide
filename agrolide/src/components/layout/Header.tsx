@@ -100,7 +100,7 @@ export function Header() {
           </Link>
           <Link
             href="/rejoindre"
-            className="bg-[#1b5e38] text-white font-heading font-[700] px-[18px] py-[9px] text-[13px] hover:bg-[#164d2e] transition-colors"
+            className="bg-[#1b5e38] text-white font-heading font-[700] px-[18px] py-[9px] text-[13px] rounded-md hover:bg-[#164d2e] transition-colors"
           >
             Rejoindre
           </Link>
@@ -137,7 +137,7 @@ export function Header() {
               </Link>
               <Link
                 href="/rejoindre"
-                className="bg-[#1b5e38] text-white font-heading font-[700] px-[20px] py-[12px] text-[14px] text-center hover:bg-[#164d2e] transition-colors"
+                className="bg-[#1b5e38] text-white font-heading font-[700] px-[20px] py-[12px] text-[14px] text-center rounded-md hover:bg-[#164d2e] transition-colors"
               >
                 Rejoindre le réseau
               </Link>
