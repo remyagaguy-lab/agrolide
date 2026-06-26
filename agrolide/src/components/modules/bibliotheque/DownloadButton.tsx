@@ -13,8 +13,8 @@ export function DownloadButton({ documentId }: { documentId: string }) {
     try {
       // In a real app, we need the auth token
       // For this demo, assuming the user is authenticated via some context or we fetch it
-      // Let's assume the Next.js API route or worker can be called. We use the worker directly.
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
+      // Utilisation de la route API Next.js interne
+      const API_URL = '';
       
       // We would normally get the token from supabase auth session
       const { createClient } = await import('@supabase/supabase-js')
