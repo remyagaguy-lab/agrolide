@@ -58,11 +58,9 @@ export function Header() {
           <Image
             src="/agrolide-png.png"
             alt="agrolide"
-            width={280}
-            height={80}
-            className={`h-[68px] w-auto object-contain transition-all duration-200 ${
-              !scrolled && !open && isHeroPage ? "brightness-0 invert" : ""
-            }`}
+            width={320}
+            height={90}
+            className="h-[72px] w-auto object-contain transition-all duration-200"
             priority
           />
         </Link>
@@ -76,8 +74,6 @@ export function Header() {
               className={`font-heading font-[600] text-[13px] tracking-[0.01em] transition-colors ${
                 pathname === l.href
                   ? "text-[#1b5e38]"
-                  : !scrolled && isHeroPage
-                  ? "text-[rgba(255,255,255,0.75)] hover:text-white"
                   : "text-[#666] hover:text-[#1b5e38]"
               }`}
             >
@@ -90,11 +86,7 @@ export function Header() {
         <div className="hidden md:flex items-center gap-5">
           <Link
             href="/login"
-            className={`font-heading font-[600] text-[13px] transition-colors ${
-              !scrolled && isHeroPage
-                ? "text-[rgba(255,255,255,0.7)] hover:text-white"
-                : "text-[#666] hover:text-[#1b5e38]"
-            }`}
+            className="font-heading font-[600] text-[13px] text-[#666] hover:text-[#1b5e38] transition-colors"
           >
             Connexion
           </Link>
@@ -108,9 +100,7 @@ export function Header() {
 
         {/* Hamburger Mobile */}
         <button
-          className={`md:hidden transition-colors ${
-            !scrolled && !open && isHeroPage ? "text-white" : "text-[#1a1a1a]"
-          }`}
+          className="md:hidden text-[#1a1a1a] transition-colors"
           onClick={() => setOpen((v) => !v)}
           aria-label="Menu"
         >
