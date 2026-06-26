@@ -117,12 +117,15 @@ function InscriptionContent() {
 
       if (authError) {
         console.error("Erreur d'inscription Supabase :", authError)
-        // Extrait le message proprement, ou convertit en string pour éviter l'affichage d'un objet {}
-        let errorMsg = "Erreur lors de l'inscription"
-        if (typeof authError === 'string') errorMsg = authError
-        else if (authError.message && typeof authError.message === 'string') errorMsg = authError.message
-        else if (authError.name) errorMsg = authError.name
-        else errorMsg = JSON.stringify(authError)
+        
+        let errorMsg = "Une erreur est survenue lors de l'inscription."
+        if (authError?.message) errorMsg = authError.message
+        else if ((authError as any)?.msg) errorMsg = (authError as any).msg
+        else if (typeof authError === 'string') errorMsg = authError
+        
+        if (errorMsg.toLowerCase().includes("already registered") || errorMsg.toLowerCase().includes("already exists")) {
+          errorMsg = "Un compte existe déjà avec cette adresse email."
+        }
         
         setError(errorMsg)
         setIsLoading(false)
@@ -133,7 +136,13 @@ function InscriptionContent() {
       router.push(`/inscription/attente?email=${encodeURIComponent(data.email)}`)
     } catch (err: any) {
       console.error("Exception inattendue :", err)
-      setError(err?.message || "Délai d'attente dépassé ou erreur réseau. Veuillez réessayer.")
+      let catchMsg = "Délai d'attente dépassé ou erreur réseau. Veuillez réessayer."
+      if (err?.message) catchMsg = err.message
+      else if (typeof err === 'string') catchMsg = err
+      
+      if (catchMsg === "{}") catchMsg = "Erreur de connexion inattendue."
+      
+      setError(catchMsg)
       setIsLoading(false)
     }
   }
