@@ -116,7 +116,7 @@ export default function HomePage() {
             </h1>
             <p className="font-sans text-[16px] text-white max-w-[600px] leading-[1.8] mb-10">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.{" "}
-              <strong className="text-[#878e2c] font-[700]">Étudiants en agronomie</strong>, <strong className="text-[#878e2c] font-[700]">Ingénieurs Agronomes</strong>, <strong className="text-[#878e2c] font-[700]">Chercheurs</strong>, <strong className="text-[#878e2c] font-[700]">Entreprises Agricoles</strong>, <strong className="text-[#878e2c] font-[700]">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
+              <strong className="text-[#f99e1d] font-[700]">Étudiants en agronomie</strong>, <strong className="text-[#f99e1d] font-[700]">Ingénieurs Agronomes</strong>, <strong className="text-[#f99e1d] font-[700]">Chercheurs</strong>, <strong className="text-[#f99e1d] font-[700]">Entreprises Agricoles</strong>, <strong className="text-[#f99e1d] font-[700]">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
