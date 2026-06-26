@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Download, Loader2 } from 'lucide-react'
+import { Eye, Loader2 } from 'lucide-react'
 
 export function DownloadButton({ documentId }: { documentId: string }) {
   const [loading, setLoading] = useState(false)
@@ -39,10 +39,10 @@ export function DownloadButton({ documentId }: { documentId: string }) {
       const data = await res.json()
       
       if (data.url) {
-        // Rediriger vers l'URL signée R2
-        window.open(data.url, '_blank')
+        // Rediriger vers l'URL signée R2, en cachant la barre d'outils du lecteur PDF (qui contient le bouton télécharger)
+        window.open(data.url + '#toolbar=0', '_blank')
       } else {
-        throw new Error('URL de téléchargement introuvable')
+        throw new Error('URL du document introuvable')
       }
     } catch (err: any) {
       console.error(err)
@@ -59,8 +59,8 @@ export function DownloadButton({ documentId }: { documentId: string }) {
         disabled={loading}
         className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors disabled:opacity-70"
       >
-        {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Download className="w-5 h-5" />}
-        {loading ? 'Préparation...' : 'Télécharger le document'}
+        {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Eye className="w-5 h-5" />}
+        {loading ? 'Préparation...' : 'Lire le document'}
       </button>
       {error && (
         <p className="mt-2 text-sm text-red-600 font-medium text-center">{error}</p>

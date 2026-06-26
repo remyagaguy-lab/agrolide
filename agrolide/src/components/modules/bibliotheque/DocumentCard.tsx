@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FileText, Download, Calendar, MapPin } from 'lucide-react'
+import { FileText, Eye, Calendar, MapPin } from 'lucide-react'
 
 export interface DocumentType {
   id: string
@@ -85,7 +85,7 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
           
           <div className="flex items-center justify-between pt-3 border-t border-gray-50">
             <div className="flex items-center gap-1.5 text-xs font-medium text-gray-500">
-              <Download className="w-3.5 h-3.5" />
+              <Eye className="w-3.5 h-3.5" />
               <span>{document.nb_telechargements || 0}</span>
             </div>
             

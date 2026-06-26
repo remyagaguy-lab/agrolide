@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
-import { ArrowLeft, Calendar, MapPin, Download, Tag, FileText, User } from 'lucide-react'
+import { ArrowLeft, Calendar, MapPin, Eye, Tag, FileText, User } from 'lucide-react'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton'
 
@@ -137,9 +137,9 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
                 <span className="font-medium text-gray-900">{document.taille ? `${(document.taille / 1024 / 1024).toFixed(2)} MB` : 'Inconnue'}</span>
               </div>
               <div className="flex justify-between items-center text-sm">
-                <span className="text-gray-500">Téléchargements</span>
+                <span className="text-gray-500">Consultations</span>
                 <span className="font-medium text-gray-900 flex items-center gap-1">
-                  <Download className="w-3.5 h-3.5" />
+                  <Eye className="w-3.5 h-3.5" />
                   {document.nb_telechargements || 0}
                 </span>
               </div>
@@ -148,7 +148,7 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
             <DownloadButton documentId={document.id} />
             
             <p className="mt-4 text-xs text-center text-gray-500">
-              En téléchargeant ce document, vous acceptez nos conditions d'utilisation de la bibliothèque.
+              En consultant ce document, vous acceptez nos conditions d'utilisation de la bibliothèque.
             </p>
           </div>
         </div>
