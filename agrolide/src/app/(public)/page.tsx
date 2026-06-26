@@ -96,14 +96,14 @@ export default function HomePage() {
       {/* ── HERO ─────────────────────────────────── */}
       <section className="bg-[#1b5e38] relative overflow-hidden">
         {/* Image de fond avec dégradé */}
-        <div className="absolute top-0 right-0 w-full md:w-2/3 h-full pointer-events-none z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1b5e38] via-[#1b5e38]/80 to-transparent z-10" />
+        <div className="absolute top-0 right-0 w-full md:w-1/2 h-full pointer-events-none z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1b5e38] via-[#1b5e38]/40 to-transparent z-10" />
           <Image
             src="/hero-background.jpg"
             alt="Agriculture africaine"
             fill
             priority
-            className="object-cover object-right opacity-30 md:opacity-80"
+            className="object-cover object-center opacity-100"
           />
         </div>
 
