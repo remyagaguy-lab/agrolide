@@ -56,9 +56,9 @@ export function Footer() {
             <Image
               src="/agrolide-png.png"
               alt="agrolide"
-              width={200}
-              height={60}
-              className="h-[60px] w-auto brightness-0 invert object-contain object-left"
+              width={350}
+              height={100}
+              className="h-[100px] w-auto brightness-0 invert object-contain object-left"
             />
             <p className="font-sans text-[14px] leading-[1.8] text-[rgba(255,255,255,0.45)] max-w-[300px]">
               Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire.
