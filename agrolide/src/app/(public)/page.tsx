@@ -1,5 +1,12 @@
 import Link from "next/link"
 
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Accueil | Agrolide",
+  description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire."
+}
+
 export const revalidate = 3600
 
 // --- Icônes SVG inline ---
