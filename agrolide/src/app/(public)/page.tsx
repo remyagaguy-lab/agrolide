@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 import { Metadata } from "next"
 
@@ -94,10 +95,22 @@ export default function HomePage() {
 
       {/* ── HERO ─────────────────────────────────── */}
       <section className="bg-[#1b5e38] relative overflow-hidden">
-        {/* Ligne accent dorée verticale */}
-        <div className="absolute left-0 top-0 h-full w-[3px] bg-[#fcb726]" />
+        {/* Image de fond avec dégradé */}
+        <div className="absolute top-0 right-0 w-full md:w-2/3 h-full pointer-events-none z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1b5e38] via-[#1b5e38]/80 to-transparent z-10" />
+          <Image
+            src="/hero-background.jpg"
+            alt="Agriculture africaine"
+            fill
+            priority
+            className="object-cover object-right opacity-30 md:opacity-80"
+          />
+        </div>
 
-        <div className="max-w-[1100px] mx-auto px-6 pt-[80px] pb-0 md:pt-[120px]">
+        {/* Ligne accent dorée verticale */}
+        <div className="absolute left-0 top-0 h-full w-[3px] bg-[#fcb726] z-20" />
+
+        <div className="max-w-[1100px] mx-auto px-6 pt-[80px] pb-0 md:pt-[120px] relative z-20">
           <div className="max-w-[700px]">
             <p className="text-[10px] font-[700] tracking-[0.22em] text-[rgba(255,255,255,0.45)] uppercase mb-8">
               Réseau professionnel · Agriculture africaine
