@@ -103,6 +103,7 @@ function InscriptionContent() {
         email: data.email,
         password: data.password,
         options: {
+          emailRedirectTo: `${window.location.origin}/callback`,
           data: {
             prenom: data.prenom,
             nom: data.nom,
