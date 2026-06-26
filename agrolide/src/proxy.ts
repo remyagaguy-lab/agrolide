@@ -39,19 +39,16 @@ export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   const membresPaths = [
-    '/dashboard', '/profil', '/cotisation', '/messages', '/notifications', 
-    '/bibliotheque', '/formations', '/webinaires', '/evenements', '/annuaire', 
-    '/opportunites', '/forum', '/services'
+    '/membres'
   ]
 
   const adminPaths = [
-    '/membres', '/contenus', '/paiements', '/analytics'
+    '/admin'
   ]
 
-  // Allow /annuaire without auth if it's the public overview (cahier des charges says /annuaire is public too, but /annuaire/[id] is member)
-  // We'll protect strictly what's required
-  const isMembreRoute = membresPaths.some(path => pathname.startsWith(path)) && pathname !== '/annuaire' && pathname !== '/bibliotheque' && pathname !== '/formations' && pathname !== '/webinaires' && pathname !== '/evenements'
-  const isAdminRoute = adminPaths.some(path => pathname.startsWith(path))
+  // Autoriser certaines routes même si on est sous /membres (ex: /membres/annuaire si c'est public)
+  const isMembreRoute = pathname.startsWith('/membres')
+  const isAdminRoute = pathname.startsWith('/admin')
 
   if ((isMembreRoute || isAdminRoute) && !user) {
     const url = request.nextUrl.clone()
@@ -63,7 +60,7 @@ export async function proxy(request: NextRequest) {
     const role = user.user_metadata?.role_plateforme
     if (role !== 'admin') {
       const url = request.nextUrl.clone()
-      url.pathname = '/dashboard'
+      url.pathname = '/membres/dashboard'
       return NextResponse.redirect(url)
     }
   }

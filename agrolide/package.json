@@ -17,6 +17,7 @@
     "@radix-ui/react-select": "^2.3.1",
     "@radix-ui/react-tabs": "latest",
     "@radix-ui/react-toast": "latest",
+    "@react-pdf/renderer": "^4.5.1",
     "@sentry/nextjs": "latest",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",

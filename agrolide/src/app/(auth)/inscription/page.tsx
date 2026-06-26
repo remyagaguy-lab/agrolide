@@ -98,29 +98,43 @@ function InscriptionContent() {
     setIsLoading(true)
     setError(null)
 
-    const { error: authError, data: authData } = await supabase.auth.signUp({
-      email: data.email,
-      password: data.password,
-      options: {
-        data: {
-          prenom: data.prenom,
-          nom: data.nom,
-          pays: data.pays,
-          ville: data.ville || "",
-          categorie: data.categorie,
-          specialite: data.specialite
+    try {
+      const { error: authError, data: authData } = await supabase.auth.signUp({
+        email: data.email,
+        password: data.password,
+        options: {
+          data: {
+            prenom: data.prenom,
+            nom: data.nom,
+            pays: data.pays,
+            ville: data.ville || "",
+            categorie: data.categorie,
+            specialite: data.specialite
+          }
         }
+      })
+
+      if (authError) {
+        console.error("Erreur d'inscription Supabase :", authError)
+        // Extrait le message proprement, ou convertit en string pour éviter l'affichage d'un objet {}
+        let errorMsg = "Erreur lors de l'inscription"
+        if (typeof authError === 'string') errorMsg = authError
+        else if (authError.message && typeof authError.message === 'string') errorMsg = authError.message
+        else if (authError.name) errorMsg = authError.name
+        else errorMsg = JSON.stringify(authError)
+        
+        setError(errorMsg)
+        setIsLoading(false)
+        return
       }
-    })
 
-    if (authError) {
-      setError(authError.message)
+      // Redirige vers la page d'attente avec l'email dans l'url (ou le state)
+      router.push(`/inscription/attente?email=${encodeURIComponent(data.email)}`)
+    } catch (err: any) {
+      console.error("Exception inattendue :", err)
+      setError(err?.message || "Délai d'attente dépassé ou erreur réseau. Veuillez réessayer.")
       setIsLoading(false)
-      return
     }
-
-    // Redirige vers la page d'attente avec l'email dans l'url (ou le state)
-    router.push(`/inscription/attente?email=${encodeURIComponent(data.email)}`)
   }
 
   const getCotisation = (cat: string) => {

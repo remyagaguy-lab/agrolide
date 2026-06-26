@@ -11,6 +11,8 @@ import { blogRoute } from './routes/blog'
 import { newsletterRoute } from './routes/newsletter'
 import { cronsRoute } from './routes/crons'
 import { bibliothequeRoute } from './routes/bibliotheque'
+import { formationsRoute } from './routes/formations'
+import { webinairesRoute } from './routes/webinaires'
 import { requireRole } from './middleware/rbac'
 
 type Bindings = {
@@ -66,6 +68,10 @@ app.route('/api/membres', membresRoute)
 
 // Bibliothèque
 app.route('/api/bibliotheque', bibliothequeRoute)
+
+// Formations & Webinaires
+app.route('/api/formations', formationsRoute)
+app.route('/api/webinaires', webinairesRoute)
 
 // Paiements
 app.use('/api/paiements/checkout', authMiddleware)
