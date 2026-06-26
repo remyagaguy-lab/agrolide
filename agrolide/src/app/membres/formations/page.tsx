@@ -1,32 +1,12 @@
+'use client'
+
 import { createClient } from '@supabase/supabase-js'
 import { Calendar, MapPin, CheckCircle, Clock, XCircle } from 'lucide-react'
 import Link from 'next/link'
 import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButton'
-
-export const revalidate = 0 // Pas de cache pour les données membres
-
-export default async function MesFormationsPage() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  const supabase = createClient(supabaseUrl, supabaseAnonKey)
-
-  // Dans un vrai cas avec Next.js App Router, il faudrait configurer next/cookies
-  // ou faire un appel SWR/Client Component. Pour la maquette, on va faire le fetch côté serveur 
-  // si on passe un token, ou bien on pourrait le faire côté client. 
-  // Mais comme l'utilisateur est forcé à être co, utilisons un fetch basique.
-  
-  // NOTE: On remplace par un Server Component statique avec explication car sans auth server-side,
-  // ça marchera pas facilement en SSR sans `@supabase/ssr`. 
-  // Je vais basculer ce composant en Client Component pour que `supabase.auth.getSession()` marche.
-  return <MesFormationsClient />
-}
-
-// Client Component inclus dans le même fichier pour simplifier
-'use client'
-
 import { useState, useEffect } from 'react'
 
-function MesFormationsClient() {
+export default function MesFormationsPage() {
   const [inscriptions, setInscriptions] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [profile, setProfile] = useState<any>(null)
