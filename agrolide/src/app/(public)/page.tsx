@@ -168,7 +168,7 @@ export default function HomePage() {
       </section>
 
       {/* ── RAISON D'ÊTRE ────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#f8f8f6] to-white py-[100px] md:py-[160px] relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#f8f8f6] to-white py-[60px] md:py-[100px] relative overflow-hidden">
         {/* Subtle background decoration */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#fcb726]/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="max-w-[1100px] mx-auto px-6 relative z-10">
@@ -204,7 +204,7 @@ export default function HomePage() {
       </section>
 
       {/* ── LES 4 FREINS ─────────────────────────── */}
-      <section className="bg-white py-[100px] md:py-[140px] relative">
+      <section className="bg-white py-[60px] md:py-[100px] relative">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-center max-w-[700px] mx-auto mb-20">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#fcb726]/10 text-[#d9970c] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
@@ -243,7 +243,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 3 DOMAINES ───────────────────────────── */}
-      <section id="actions" className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[100px] md:py-[140px] text-white">
+      <section id="actions" className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[60px] md:py-[100px] text-white">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-[600px]">
@@ -309,7 +309,7 @@ export default function HomePage() {
       </section>
 
       {/* ── TÉMOIGNAGES ──────────────────────────── */}
-      <section className="bg-gradient-to-b from-white to-[#f8f8f6] py-[100px] md:py-[140px]">
+      <section className="bg-gradient-to-b from-white to-[#f8f8f6] py-[60px] md:py-[100px]">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
@@ -350,7 +350,7 @@ export default function HomePage() {
       </section>
 
       {/* ── BLOG ─────────────────────────────────── */}
-      <section className="bg-white py-[100px] md:py-[140px]">
+      <section className="bg-white py-[60px] md:py-[100px]">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
@@ -396,7 +396,7 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="relative overflow-hidden py-[120px] md:py-[160px] bg-[#1a1a1a]">
+      <section className="relative overflow-hidden py-[80px] md:py-[120px] bg-[#1a1a1a]">
         {/* Dynamic Abstract Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
