@@ -57,8 +57,14 @@ export async function middleware(request: NextRequest) {
   }
 
   if (isAdminRoute && user) {
-    const role = user.user_metadata?.role_plateforme
-    if (role !== 'admin') {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("role_plateforme")
+      .eq("id", user.id)
+      .single()
+
+    const role = profile?.role_plateforme
+    if (role !== 'super_admin' && role !== 'admin_content') {
       const url = request.nextUrl.clone()
       url.pathname = '/membres/dashboard'
       return NextResponse.redirect(url)
