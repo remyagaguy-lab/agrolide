@@ -115,23 +115,34 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
     }
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8787"
-      const url = isNew ? `${apiUrl}/api/blog/articles` : `${apiUrl}/api/blog/articles/${initialData.id}`
-      const method = isNew ? "POST" : "PUT"
+      const { createClient } = await import("@/lib/supabase/client")
+      const supabase = createClient()
+      
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session) throw new Error("Non authentifié")
+      
+      const { data: profile } = await supabase.from("profiles").select("prenom, nom").eq("id", session.user.id).single()
 
-      const response = await fetch(url, {
-        method,
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${sessionToken}`
-        },
-        body: JSON.stringify(payload)
-      })
-
-      if (!response.ok) {
-        const errData = await response.json()
-        throw new Error(errData.error || "Erreur lors de l'enregistrement")
+      if (isNew) {
+        payload.author_id = session.user.id
+        payload.author_name = profile ? `${profile.prenom} ${profile.nom}` : "Admin"
       }
+
+      if (payload.status === "published" && !initialData?.published_at) {
+        payload.published_at = new Date().toISOString()
+      }
+
+      let resError;
+      if (isNew) {
+        const { error } = await supabase.from("articles").insert(payload)
+        resError = error
+      } else {
+        const { id, created_at, author_id, author_name, ...updateData } = payload
+        const { error } = await supabase.from("articles").update(updateData).eq("id", initialData.id)
+        resError = error
+      }
+
+      if (resError) throw resError
 
       router.push("/admin/contenus/articles")
       router.refresh()

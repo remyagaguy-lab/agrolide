@@ -2,7 +2,7 @@ import { createClient } from "@/lib/supabase/server"
 import { redirect } from "next/navigation"
 import { 
   Users, UserPlus, TrendingUp, CreditCard, BookOpen, FileText, 
-  MessageCircle, Calendar, Eye, Download, Target, Activity
+  MessageCircle, Calendar, Eye, Download, Target, Activity, Coins
 } from "lucide-react"
 
 import { AdminRevenueChart, AdminDonutChart } from "@/components/admin/ChartsWrapper"
@@ -29,11 +29,14 @@ function KpiCard({
   )
 }
 
-function SectionHeader({ title, sub }: { title: string; sub?: string }) {
+function SectionHeader({ title, sub, icon: Icon }: { title: string; sub?: string; icon?: React.ElementType }) {
   return (
     <div className="mb-4">
-      <h2 className="text-base font-semibold text-gray-800">{title}</h2>
-      {sub && <p className="text-xs text-gray-500">{sub}</p>}
+      <h2 className="text-base font-semibold text-gray-800 flex items-center gap-2">
+        {Icon && <Icon className="w-5 h-5 text-gray-500" />}
+        {title}
+      </h2>
+      {sub && <p className="text-xs text-gray-500 mt-1">{sub}</p>}
     </div>
   )
 }
@@ -183,7 +186,7 @@ export default async function AdminDashboardPage() {
 
       {/* ── Rangée 1 : Membres ─────────────────────────────────── */}
       <section>
-        <SectionHeader title="👥 Membres" sub="Statistiques d'adhésion" />
+        <SectionHeader title="Membres" sub="Statistiques d'adhésion" icon={Users} />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard label="Membres actifs" value={totalActifs || 0} icon={Users} color="bg-green-50 text-green-600" />
           <KpiCard label="Nouveaux ce mois" value={nouveauxMois || 0} icon={UserPlus} color="bg-blue-50 text-blue-600" />
@@ -199,7 +202,7 @@ export default async function AdminDashboardPage() {
 
       {/* ── Rangée 2 : Revenus ─────────────────────────────────── */}
       <section>
-        <SectionHeader title="💰 Revenus" sub="Cotisations et dons" />
+        <SectionHeader title="Revenus" sub="Cotisations et dons" icon={Coins} />
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
           <KpiCard label="Cotisations ce mois" value={formatFCFA(revenusMois)} icon={CreditCard} color="bg-green-50 text-green-600" />
           <KpiCard label="Revenus cumulés" value={formatFCFA(revenusCumules)} icon={TrendingUp} color="bg-purple-50 text-purple-600" />
@@ -217,7 +220,7 @@ export default async function AdminDashboardPage() {
 
       {/* ── Rangée 3 : Engagement ──────────────────────────────── */}
       <section>
-        <SectionHeader title="🚀 Engagement" sub="Activité des membres ce mois" />
+        <SectionHeader title="Engagement" sub="Activité des membres ce mois" icon={TrendingUp} />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard label="Docs téléchargés" value={docsTelecharges} icon={Download} color="bg-teal-50 text-teal-600" sub="ce mois" />
           <KpiCard label="Inscriptions formations" value={inscriptionsFormations || 0} icon={BookOpen} color="bg-blue-50 text-blue-600" sub="ce mois" />
@@ -228,7 +231,7 @@ export default async function AdminDashboardPage() {
 
       {/* ── Rangée 4 : Contenu ─────────────────────────────────── */}
       <section>
-        <SectionHeader title="📄 Contenu" sub="État de la plateforme" />
+        <SectionHeader title="Contenu" sub="État de la plateforme" icon={FileText} />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard label="Articles publiés" value={articlesPublies || 0} icon={FileText} color="bg-amber-50 text-amber-600" />
           <KpiCard label="Documents bibliothèque" value={documentsApprouves || 0} icon={Eye} color="bg-cyan-50 text-cyan-600" />
@@ -240,7 +243,7 @@ export default async function AdminDashboardPage() {
       {/* ── Derniers membres inscrits ──────────────────────────── */}
       <section>
         <div className="flex items-center justify-between mb-4">
-          <SectionHeader title="🆕 Derniers membres inscrits" />
+          <SectionHeader title="Derniers membres inscrits" icon={UserPlus} />
           <a href="/admin/membres" className="text-xs font-medium text-green-700 hover:underline">Voir tous →</a>
         </div>
         <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">

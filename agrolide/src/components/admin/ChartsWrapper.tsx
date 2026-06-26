@@ -11,10 +11,19 @@ const DonutChart = dynamic(
   { ssr: false, loading: () => <div className="h-[180px] bg-gray-50 rounded-lg animate-pulse" /> }
 )
 
+const LineChart = dynamic(
+  () => import("./LineChart").then(m => m.LineChart),
+  { ssr: false, loading: () => <div className="h-[250px] bg-gray-50 rounded-lg animate-pulse" /> }
+)
+
 export function AdminRevenueChart(props: React.ComponentProps<typeof RevenueChart>) {
   return <RevenueChart {...props} />
 }
 
 export function AdminDonutChart(props: React.ComponentProps<typeof DonutChart>) {
   return <DonutChart {...props} />
+}
+
+export function AdminLineChart(props: React.ComponentProps<typeof LineChart>) {
+  return <LineChart {...props} />
 }

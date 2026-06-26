@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server"
 import Link from "next/link"
-import { Plus, Edit2, Trash2 } from "lucide-react"
+import { Plus, Edit2 } from "lucide-react"
+import { ArticleDeleteButton } from "./ArticleDeleteButton"
 
 export default async function ArticlesListPage() {
   const supabase = await createClient()
@@ -71,16 +72,7 @@ export default async function ArticlesListPage() {
                         >
                           <Edit2 size={16} />
                         </Link>
-                        {/* 
-                          MVP: On simule le bouton de suppression, la logique complète
-                          nécessiterait une Server Action ou route API 
-                        */}
-                        <button 
-                          className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                          title="Supprimer"
-                        >
-                          <Trash2 size={16} />
-                        </button>
+                        <ArticleDeleteButton articleId={article.id} />
                       </div>
                     </td>
                   </tr>
