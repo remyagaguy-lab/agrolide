@@ -35,18 +35,9 @@ CREATE POLICY "profiles_admin_all" ON profiles
 -- =====================================================
 ALTER TABLE documents ENABLE ROW LEVEL SECURITY;
 
--- Lecture publique des documents publiés à accès public
-CREATE POLICY "documents_select_public" ON documents
-  FOR SELECT USING (statut = 'publie' AND acces = 'public');
-
--- Lecture membres actifs : tous documents publiés
-CREATE POLICY "documents_select_membres" ON documents
-  FOR SELECT USING (
-    statut = 'publie'
-    AND EXISTS (
-      SELECT 1 FROM profiles WHERE id = auth.uid() AND statut_adhesion = 'actif'
-    )
-  );
+-- Lecture pour tout le monde (membres cotisants ou non) des documents publiés
+CREATE POLICY "documents_select_all" ON documents
+  FOR SELECT USING (statut = 'publie');
 
 -- Dépôt : membres actifs non-Junior
 CREATE POLICY "documents_insert_membres" ON documents
