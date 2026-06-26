@@ -4,7 +4,7 @@ const crypto = require('crypto');
 const pdfParse = require('pdf-parse');
 const { createClient } = require('@supabase/supabase-js');
 const { S3Client, PutObjectCommand } = require('@aws-sdk/client-s3');
-require('dotenv').config();
+require('dotenv').config({ override: true });
 
 // Configuration
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
@@ -200,7 +200,7 @@ async function runAgent() {
         acces: 'public', // ou 'membres'
         statut: 'publie',
         file_hash: fileHash,
-        auteur_id: auteur_id
+        ajoute_par: auteur_id
       });
 
       if (dbError) throw new Error(`Erreur DB: ${dbError.message}`);
