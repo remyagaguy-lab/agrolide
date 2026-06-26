@@ -40,7 +40,7 @@ export default function NotificationsPage() {
     if (session) {
       await fetch('/api/notifications', {
         method: 'PUT',
-        headers: { 'Authorization': `Bearer ${session.token}` }
+        headers: { 'Authorization': `Bearer ${session.access_token}` }
       })
       fetchData()
     }
@@ -53,7 +53,7 @@ export default function NotificationsPage() {
       if (session) {
         await fetch(`/api/notifications/${id}`, {
           method: 'PUT',
-          headers: { 'Authorization': `Bearer ${session.token}` }
+          headers: { 'Authorization': `Bearer ${session.access_token}` }
         })
       }
     }

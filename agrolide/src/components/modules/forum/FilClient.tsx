@@ -194,7 +194,7 @@ export default function FilClient({ filId }: FilClientProps) {
               
               <div 
                 className="prose prose-sm md:prose-base max-w-none text-gray-800 flex-1"
-                dangerouslySetInnerHTML={{ __html: marked.parse(msg.contenu) }}
+                dangerouslySetInnerHTML={{ __html: marked.parse(msg.contenu) as string }}
               />
             </div>
           </div>

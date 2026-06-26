@@ -34,7 +34,7 @@ export default function MessagesClient() {
     const { data: { session } } = await supabase.auth.getSession()
     if (session) {
       setCurrentUser(session.user)
-      fetchConversations(session.token)
+      fetchConversations(session.access_token)
     }
   }
 
@@ -59,7 +59,7 @@ export default function MessagesClient() {
     if (session) {
       try {
         const res = await fetch(`/api/messages/${correspondantId}`, {
-          headers: { 'Authorization': `Bearer ${session.token}` }
+          headers: { 'Authorization': `Bearer ${session.access_token}` }
         })
         const data = await res.json()
         if (Array.isArray(data)) {
@@ -135,7 +135,7 @@ export default function MessagesClient() {
           method: 'POST',
           headers: { 
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${session.token}`
+            'Authorization': `Bearer ${session.access_token}`
           },
           body: JSON.stringify({
             destinataire_id: activeConvId,
@@ -151,7 +151,7 @@ export default function MessagesClient() {
           setNewMessage('')
           scrollToBottom()
           // Update conversation list
-          fetchConversations(session.token)
+          fetchConversations(session.access_token)
         }
       } catch (err: any) {
         setError(err.message)
