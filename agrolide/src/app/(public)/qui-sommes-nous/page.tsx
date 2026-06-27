@@ -184,71 +184,129 @@ export default function QuiSommesNousPage() {
 
       {/* ── CHRONOLOGIE ──────────────────────────── */}
       <section className="py-[60px] md:py-[100px] bg-[#f8f8f6] relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1000px] mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-heading font-[800] text-[36px] md:text-[44px] text-[#1a1a1a]">L'évolution du réseau</h2>
           </div>
           
           <div className="relative">
-            {/* Ligne horizontale (visible sur grands écrans) */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-[#eaeaea] transform -translate-y-1/2 z-0"></div>
+            {/* Ligne verticale centrale (desktop) ou à gauche (mobile) */}
+            <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-[#eaeaea] transform md:-translate-x-1/2 z-0"></div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
+            <div className="space-y-8 md:space-y-12 relative z-10">
+              
               {/* Étape 1 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mt-0 lg:mt-8">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#1b5e38] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">21 Octobre 2025</div>
-                <p className="font-sans text-[14px] text-[#666]">Création du groupe WhatsApp "Bibliothèque Agricole"</p>
+              <div className="relative flex flex-col md:flex-row items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
+                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">21 Octobre 2025</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1b5e38] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">21 Octobre 2025</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Création du groupe WhatsApp "Bibliothèque Agricole"</p>
+                  </div>
+                </div>
               </div>
 
               {/* Étape 2 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mb-0 lg:mb-16">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#fcb726] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#fcb726] mb-2">26 Novembre 2025</div>
-                <p className="font-sans text-[14px] text-[#666]">Début des réflexions pour trouver des solutions aux défis du monde agricole</p>
+              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
+                  <div className="font-heading font-[800] text-[22px] text-[#fcb726]">26 Novembre 2025</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#fcb726] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">26 Novembre 2025</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Début des réflexions pour trouver des solutions aux défis du monde agricole</p>
+                  </div>
+                </div>
               </div>
 
               {/* Étape 3 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mt-0 lg:mt-8">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">2 Décembre 2025</div>
-                <p className="font-sans text-[14px] text-[#666]">La "Bibliothèque Agricole" devient officiellement le groupe de réflexion BIFERA</p>
+              <div className="relative flex flex-col md:flex-row items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
+                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">2 Décembre 2025</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1a1a1a] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">2 Décembre 2025</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">La "Bibliothèque Agricole" devient officiellement le groupe de réflexion BIFERA</p>
+                  </div>
+                </div>
               </div>
 
               {/* Étape 4 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mb-0 lg:mb-16">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#1b5e38] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">20 Décembre 2025</div>
-                <p className="font-sans text-[14px] text-[#666]">Premier webinaire sur la gestion de projet agricole</p>
+              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
+                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">20 Décembre 2025</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1b5e38] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">20 Décembre 2025</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Premier webinaire sur la gestion de projet agricole</p>
+                  </div>
+                </div>
               </div>
               
               {/* Étape 5 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mt-0 lg:mt-8">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#fcb726] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#fcb726] mb-2">Janvier 2026</div>
-                <p className="font-sans text-[14px] text-[#666]">Mise en place d'une équipe d'appui</p>
+              <div className="relative flex flex-col md:flex-row items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
+                  <div className="font-heading font-[800] text-[22px] text-[#fcb726]">Janvier 2026</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#fcb726] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">Janvier 2026</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Mise en place d'une équipe d'appui</p>
+                  </div>
+                </div>
               </div>
 
               {/* Étape 6 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mb-0 lg:mb-16">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#1b5e38] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">31 Janvier 2026</div>
-                <p className="font-sans text-[14px] text-[#666]">2ème Webinaire sur la commercialisation des produits agricoles</p>
+              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
+                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">31 Janvier 2026</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1b5e38] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">31 Janvier 2026</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">2ème Webinaire sur la commercialisation des produits agricoles</p>
+                  </div>
+                </div>
               </div>
 
               {/* Étape 7 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mt-0 lg:mt-8">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">Février - Avril 2026</div>
-                <p className="font-sans text-[14px] text-[#666]">Structuration de BIFERA en un réseau : Gouvernance, activités stratégiques, pilotes...</p>
+              <div className="relative flex flex-col md:flex-row items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
+                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">Février - Avril 2026</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1a1a1a] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">Février - Avril 2026</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Structuration de BIFERA en un réseau : Gouvernance, activités stratégiques, pilotes...</p>
+                  </div>
+                </div>
               </div>
 
               {/* Étape 8 */}
-              <div className="bg-white p-6 rounded-3xl border border-[#eaeaea] shadow-sm relative pt-12 text-center lg:text-left mb-0 lg:mb-16">
-                <div className="absolute -top-5 left-1/2 lg:left-8 transform -translate-x-1/2 lg:-translate-x-0 w-10 h-10 bg-[#fcb726] rounded-full flex items-center justify-center border-4 border-white shadow-sm z-10"></div>
-                <div className="font-heading font-[800] text-[18px] text-[#fcb726] mb-2">Mai - Juin 2026</div>
-                <p className="font-sans text-[14px] text-[#666]">Relance des activités : BIFERA devient officiellement <strong className="text-[#1a1a1a]">agrolide</strong></p>
+              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
+                  <div className="font-heading font-[800] text-[22px] text-[#fcb726]">Mai - Juin 2026</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#fcb726] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">Mai - Juin 2026</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Relance des activités : BIFERA devient officiellement <strong className="text-[#1a1a1a]">agrolide</strong></p>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
