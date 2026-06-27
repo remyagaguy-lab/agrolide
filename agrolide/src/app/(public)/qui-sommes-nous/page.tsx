@@ -123,25 +123,23 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── LA SOLUTION ──────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[80px] md:py-[120px] text-white relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[40px] md:py-[60px] text-white relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20px 20px, rgba(255,255,255,0.2) 2px, transparent 0)', backgroundSize: '40px 40px' }}></div>
         <div className="max-w-[800px] mx-auto px-6 relative z-10 text-center">
-          <h2 className="font-heading font-[800] text-[36px] md:text-[48px] mb-8 leading-[1.15]">
+          <h2 className="font-heading font-[800] text-[32px] md:text-[40px] mb-4 leading-[1.15]">
             Un Réseau comme solution...
           </h2>
-          <p className="font-sans text-[20px] md:text-[24px] text-white/90 leading-[1.6] mb-12">
+          <p className="font-sans text-[18px] md:text-[20px] text-white/90 leading-[1.6] mb-8">
             Et si la solution à ces défis n'était pas une nouvelle technologie... <strong className="text-[#fcb726]">mais un réseau ?</strong>
           </p>
           
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 md:p-10 rounded-3xl shadow-xl text-left">
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-4">
-                <ArrowRight className="w-6 h-6 text-[#fcb726] flex-shrink-0 mt-1" />
-                <span className="font-sans text-[18px] text-white/90 leading-[1.6]">Un réseau qui <strong className="text-white">connecte</strong>, qui <strong className="text-white">forme</strong>, qui <strong className="text-white">accompagne</strong>, qui <strong className="text-white">valorise</strong> chaque acteur de la chaîne agricole africaine.</span>
-              </li>
-            </ul>
-            <div className="border-t border-white/20 pt-6 text-center">
-              <p className="font-heading font-[700] text-[20px] text-[#fcb726]">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-2xl shadow-xl text-left">
+            <div className="flex items-start gap-4 mb-6">
+              <ArrowRight className="w-5 h-5 text-[#fcb726] flex-shrink-0 mt-1" />
+              <p className="font-sans text-[16px] md:text-[18px] text-white/90 leading-[1.6] m-0">Un réseau qui <strong className="text-white">connecte</strong>, qui <strong className="text-white">forme</strong>, qui <strong className="text-white">accompagne</strong>, qui <strong className="text-white">valorise</strong> chaque acteur de la chaîne agricole africaine.</p>
+            </div>
+            <div className="border-t border-white/20 pt-4 text-center">
+              <p className="font-heading font-[700] text-[16px] md:text-[18px] text-[#fcb726] m-0 leading-[1.5]">
                 C'est exactement ce que nous construisons ensemble, pour vous, pour l'Afrique. <br className="hidden md:block" /> Bienvenue dans le Réseau agrolide.
               </p>
             </div>
