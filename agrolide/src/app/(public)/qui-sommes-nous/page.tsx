@@ -218,7 +218,7 @@ export default function QuiSommesNousPage() {
                 <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
                   <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
                     <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">26 Novembre 2025</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Début des réflexions pour trouver des solutions aux défis du monde agricole</p>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Début des réflexions pour trouver des solutions défis du monde agricole</p>
                   </div>
                 </div>
               </div>
@@ -226,13 +226,13 @@ export default function QuiSommesNousPage() {
               {/* Étape 3 */}
               <div className="relative flex flex-col md:flex-row items-start md:items-center">
                 <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
-                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">2 Décembre 2025</div>
+                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">2 Déc. 2025</div>
                 </div>
                 <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1a1a1a] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
                 <div className="pl-16 md:pl-12 md:w-1/2 w-full">
                   <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">2 Décembre 2025</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">La "Bibliothèque Agricole" devient officiellement le groupe de réflexion BIFERA</p>
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">2 Déc. 2025</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">La "Bibliothèque Agricole" devient BIFERA</p>
                   </div>
                 </div>
               </div>
@@ -240,12 +240,12 @@ export default function QuiSommesNousPage() {
               {/* Étape 4 */}
               <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
                 <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
-                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">20 Décembre 2025</div>
+                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">20 Déc. 2025</div>
                 </div>
                 <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1b5e38] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
                 <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
                   <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">20 Décembre 2025</div>
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">20 Déc. 2025</div>
                     <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Premier webinaire sur la gestion de projet agricole</p>
                   </div>
                 </div>
@@ -302,7 +302,21 @@ export default function QuiSommesNousPage() {
                 <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
                   <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
                     <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">Mai - Juin 2026</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Relance des activités : BIFERA devient officiellement <strong className="text-[#1a1a1a]">agrolide</strong></p>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Relance des activité du BIFERA de vient agrolide</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Étape 9 */}
+              <div className="relative flex flex-col md:flex-row items-start md:items-center">
+                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
+                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">Juil à Déc. 2026</div>
+                </div>
+                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1a1a1a] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
+                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
+                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
+                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">Juil à Déc. 2026</div>
+                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Mise en place de l'organe de gouvernance, Création formelle et lancement officiel des activités du réseau agrolide</p>
                   </div>
                 </div>
               </div>
