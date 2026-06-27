@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { Users, Crown, Star, Lightbulb, Target, Linkedin, Twitter } from "lucide-react"
+import { Users, Crown, Star, Lightbulb, Target } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Qui sommes-nous | agrolide",
