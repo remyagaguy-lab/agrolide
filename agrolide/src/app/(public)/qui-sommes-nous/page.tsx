@@ -34,34 +34,83 @@ export default function QuiSommesNousPage() {
 
       {/* ── NOTRE HISTOIRE ───────────────────────── */}
       <section className="py-[40px] md:py-[80px] bg-white">
-        <div className="max-w-[900px] mx-auto px-6">
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-8">
-            <span className="w-2 h-2 rounded-full bg-[#fcb726]" />
-            Notre Histoire
+        <div className="max-w-[1100px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
+              <span className="w-2 h-2 rounded-full bg-[#fcb726]" />
+              Origines du réseau
+            </div>
+            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15] max-w-[800px] mx-auto">
+              D'une fragmentation à une <span className="text-[#1b5e38]">cohésion continentale</span>
+            </h2>
           </div>
-          <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15] mb-10">
-            D'une fragmentation à une <span className="text-[#1b5e38]">cohésion continentale</span>
-          </h2>
           
-          <div className="space-y-6 font-sans text-[17px] text-[#555] leading-[1.8]">
-            <p>
-              L'agriculture constitue le pilier fondamental du développement économique en Afrique. Elle représente en moyenne 30 à 40 % du produit intérieur brut des pays africains et emploie plus de 60 % de la population active, jouant un rôle déterminant dans la sécurité alimentaire, la création d'emplois et la réduction de la pauvreté. Pourtant, malgré l'immensité de ce potentiel, les acteurs du secteur — agronomes, étudiants, entrepreneurs et producteurs — évoluent souvent de manière fragmentée, en dehors de tout cadre de collaboration structuré et pérenne.
-            </p>
-            <p>
-              Le réseau <strong className="text-[#1a1a1a] font-[700]">agrolide</strong> est né d'une ambition collective : transformer cette fragmentation en cohésion, et doter la chaîne agricole africaine d'un écosystème professionnel intégré capable de mobiliser les ressources, renforcer les compétences et incuber les projets entrepreneuriaux qui feront de l'agriculture africaine un véritable moteur de souveraineté alimentaire.
-            </p>
-            <p>
-              Une analyse approfondie conduite à travers des débats participatifs, des sondages communautaires et des recherches documentaires a permis d'identifier quatre freins structurels majeurs qui bloquent l'émergence d'une agriculture africaine forte et compétitive : l'isolement professionnel, le manque de documentation adaptée aux réalités locales, le déficit d'accompagnement entrepreneurial et de visibilité, ainsi que la sous-valorisation des connaissances scientifiques.
-            </p>
-            <div className="p-8 md:p-10 bg-gradient-to-br from-[#1b5e38] to-[#124026] text-white rounded-3xl mt-12 shadow-[0_20px_40px_rgba(27,94,56,0.15)] relative overflow-hidden">
-              {/* Decorative element */}
-              <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-2xl pointer-events-none" />
-              
-              <p className="font-heading font-[700] text-[20px] md:text-[24px] leading-[1.6] relative z-10">
-                "C'est précisément pour briser ces quatre freins structurels qu'agrolide a été fondé."
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-3 text-[#1b5e38] font-heading font-[800] text-[20px]">
+                <div className="w-10 h-10 rounded-full bg-[#1b5e38]/10 flex items-center justify-center">1</div>
+                Le Paradoxe
+              </div>
+              <p className="font-sans text-[16px] text-[#555] leading-[1.8] border-l-4 border-[#eaeaea] pl-6">
+                L'agriculture est le <strong className="text-[#1a1a1a]">pilier du développement africain</strong> (30-40% du PIB, 60% des emplois). Pourtant, malgré ce potentiel immense, ses acteurs évoluent souvent de manière fragmentée, freinant ainsi la conquête de la souveraineté alimentaire.
               </p>
             </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-[#f8f8f6] p-6 rounded-2xl border border-[#eaeaea] text-center">
+                <div className="font-heading font-[800] text-[32px] text-[#1b5e38] mb-2">40%</div>
+                <div className="font-sans text-[13px] text-[#666] font-[600] uppercase">du PIB en moyenne</div>
+              </div>
+              <div className="bg-[#f8f8f6] p-6 rounded-2xl border border-[#eaeaea] text-center">
+                <div className="font-heading font-[800] text-[32px] text-[#fcb726] mb-2">60%</div>
+                <div className="font-sans text-[13px] text-[#666] font-[600] uppercase">des emplois actifs</div>
+              </div>
+            </div>
           </div>
+
+          <div className="bg-gradient-to-br from-[#1b5e38] to-[#124026] rounded-3xl p-8 md:p-12 text-white relative overflow-hidden shadow-[0_20px_40px_rgba(27,94,56,0.15)] mb-16">
+            <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-[#fcb726]/10 rounded-full blur-[80px] pointer-events-none" />
+            <h3 className="font-heading font-[800] text-[24px] md:text-[28px] mb-8 relative z-10 text-center">
+              Les 4 freins structurels à briser
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-5 rounded-2xl flex items-start gap-4">
+                <div className="w-10 h-10 bg-[#fcb726] text-[#1a1a1a] rounded-xl flex items-center justify-center flex-shrink-0 font-heading font-[800]">01</div>
+                <div>
+                  <h4 className="font-heading font-[700] text-[18px] mb-1">Isolement professionnel</h4>
+                  <p className="font-sans text-[14px] text-white/80 leading-[1.6]">Manque de synergie et de réseau structuré entre les acteurs.</p>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-5 rounded-2xl flex items-start gap-4">
+                <div className="w-10 h-10 bg-[#fcb726] text-[#1a1a1a] rounded-xl flex items-center justify-center flex-shrink-0 font-heading font-[800]">02</div>
+                <div>
+                  <h4 className="font-heading font-[700] text-[18px] mb-1">Déficit documentaire</h4>
+                  <p className="font-sans text-[14px] text-white/80 leading-[1.6]">Manque d'informations adaptées aux réalités du terrain africain.</p>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-5 rounded-2xl flex items-start gap-4">
+                <div className="w-10 h-10 bg-[#fcb726] text-[#1a1a1a] rounded-xl flex items-center justify-center flex-shrink-0 font-heading font-[800]">03</div>
+                <div>
+                  <h4 className="font-heading font-[700] text-[18px] mb-1">Sous-valorisation</h4>
+                  <p className="font-sans text-[14px] text-white/80 leading-[1.6]">La recherche scientifique agricole peine à atteindre le producteur.</p>
+                </div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm border border-white/10 p-5 rounded-2xl flex items-start gap-4">
+                <div className="w-10 h-10 bg-[#fcb726] text-[#1a1a1a] rounded-xl flex items-center justify-center flex-shrink-0 font-heading font-[800]">04</div>
+                <div>
+                  <h4 className="font-heading font-[700] text-[18px] mb-1">Besoin d'accompagnement</h4>
+                  <p className="font-sans text-[14px] text-white/80 leading-[1.6]">Les entrepreneurs agricoles manquent de visibilité et de mentorat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center max-w-[800px] mx-auto">
+            <h3 className="font-heading font-[800] text-[28px] text-[#1a1a1a] mb-6">Notre Réponse : agrolide</h3>
+            <p className="font-sans text-[18px] text-[#555] leading-[1.8] bg-[#f8f8f6] p-8 rounded-3xl border border-[#eaeaea]">
+              Transformer cette fragmentation en un <strong className="text-[#1a1a1a]">écosystème professionnel intégré</strong>, capable de mobiliser les ressources, de renforcer les compétences et d'incuber les projets qui feront de l'agriculture un moteur de souveraineté.
+            </p>
+          </div>
+
         </div>
       </section>
 
