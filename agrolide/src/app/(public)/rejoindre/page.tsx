@@ -1,230 +1,259 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import { Check, X, User, GraduationCap, Building2, Star, ArrowRight } from "lucide-react"
+import { Check, X, UserPlus, ArrowRight, GraduationCap, Briefcase, Building2, Award, Lock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Rejoindre le réseau | agrolide",
-  description: "Rejoignez le réseau continental de l'agriculture africaine et accédez à des ressources, des formations et des opportunités.",
+  title: "Adhésion | agrolide",
+  description: "Choisissez votre profil dans le réseau continental de l'agriculture africaine.",
 }
 
 export default function RejoindrePage() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-[#1a1a1a]">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
-        </div>
+    <div className="bg-[#ffffff] min-h-screen pb-[64px] pt-[32px] md:pt-[64px] font-urbanist">
+      <div className="max-w-[840px] mx-auto px-6">
         
-        <div className="max-w-[900px] mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
-            Adhésion au réseau
-          </div>
-          <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
-            Votre réseau continental vous attend.
-          </h1>
-          <p className="font-sans text-[16px] md:text-[20px] text-[rgba(255,255,255,0.7)] max-w-[700px] mx-auto leading-[1.7]">
-            Choisissez la catégorie qui correspond à votre profil et rejoignez des milliers d'acteurs engagés pour la souveraineté alimentaire de l'Afrique.
-          </p>
+        {/* Header */}
+        <div className="text-center mb-[8px]">
+          <span className="text-[11px] font-[700] tracking-[0.1em] uppercase text-[#50a853]">Adhésion</span>
         </div>
-      </section>
-
-      {/* ── PROFILS ──────────────────────────────── */}
-      <section className="py-[40px] md:py-[80px] bg-[#f8f8f6]">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            {/* Junior */}
-            <div className="bg-white rounded-3xl p-8 border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
-              <div className="w-14 h-14 bg-[#f0f7f0] rounded-2xl flex items-center justify-center text-[#1b5e38] mb-6">
-                <GraduationCap size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[24px] text-[#1a1a1a] mb-2">Junior</h3>
-              <div className="text-[13px] font-[700] text-[#1b5e38] uppercase tracking-wider mb-4 px-3 py-1 bg-[#1b5e38]/10 rounded-full inline-block w-fit">
-                5 000 FCFA / an
-              </div>
-              <p className="font-sans text-[15px] text-[#666] leading-[1.6] mb-8 flex-grow">
-                Étudiants en agronomie et jeunes diplômés en insertion.
-              </p>
-              <Link
-                href="/inscription?categorie=junior"
-                className="w-full text-center py-3 rounded-xl border border-[#eaeaea] text-[#1a1a1a] font-heading font-[700] hover:bg-[#1a1a1a] hover:text-white hover:border-[#1a1a1a] transition-all duration-300"
-              >
-                S'inscrire
-              </Link>
-            </div>
-
-            {/* Professionnel */}
-            <div className="bg-gradient-to-b from-[#1b5e38] to-[#124026] rounded-3xl p-8 shadow-[0_20px_40px_rgba(27,94,56,0.15)] hover:-translate-y-1 transition-all duration-300 flex flex-col relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl pointer-events-none" />
-              
-              <div className="absolute top-6 right-6 px-3 py-1 bg-[#fcb726] text-[#1a1a1a] text-[10px] font-heading font-[800] uppercase tracking-wider rounded-full">
-                Populaire
-              </div>
-              
-              <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6">
-                <User size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[24px] text-white mb-2">Professionnel</h3>
-              <div className="text-[13px] font-[700] text-[#fcb726] uppercase tracking-wider mb-4 px-3 py-1 bg-[#fcb726]/10 rounded-full inline-block w-fit">
-                15 000 FCFA / an
-              </div>
-              <p className="font-sans text-[15px] text-white/70 leading-[1.6] mb-8 flex-grow">
-                Agronomes, chercheurs, consultants et entrepreneurs actifs.
-              </p>
-              <Link
-                href="/inscription?categorie=professionnel"
-                className="w-full text-center py-3 rounded-xl bg-[#fcb726] text-[#1a1a1a] font-heading font-[700] hover:bg-white hover:shadow-[0_0_20px_rgba(252,183,38,0.3)] transition-all duration-300"
-              >
-                S'inscrire
-              </Link>
-            </div>
-
-            {/* Partenaire */}
-            <div className="bg-white rounded-3xl p-8 border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
-              <div className="w-14 h-14 bg-[#fcb726]/10 rounded-2xl flex items-center justify-center text-[#d9970c] mb-6">
-                <Building2 size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[24px] text-[#1a1a1a] mb-2">Partenaire</h3>
-              <div className="text-[13px] font-[700] text-[#d9970c] uppercase tracking-wider mb-4 px-3 py-1 bg-[#fcb726]/10 rounded-full inline-block w-fit">
-                50 000 FCFA / an
-              </div>
-              <p className="font-sans text-[15px] text-[#666] leading-[1.6] mb-8 flex-grow">
-                Entreprises, coopératives et institutions agricoles.
-              </p>
-              <Link
-                href="/contact"
-                className="w-full text-center py-3 rounded-xl border border-[#eaeaea] text-[#1a1a1a] font-heading font-[700] hover:border-[#fcb726] hover:bg-[#fcb726]/5 hover:text-[#d9970c] transition-all duration-300"
-              >
-                Nous contacter
-              </Link>
-            </div>
-
-            {/* Sénior */}
-            <div className="bg-white rounded-3xl p-8 border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col">
-              <div className="w-14 h-14 bg-[#1a1a1a]/5 rounded-2xl flex items-center justify-center text-[#1a1a1a] mb-6">
-                <Star size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[24px] text-[#1a1a1a] mb-2">Sénior</h3>
-              <div className="text-[13px] font-[700] text-[#1a1a1a] uppercase tracking-wider mb-4 px-3 py-1 bg-[#1a1a1a]/5 rounded-full inline-block w-fit">
-                Gratuit
-              </div>
-              <p className="font-sans text-[15px] text-[#666] leading-[1.6] mb-8 flex-grow">
-                Experts mentors et chercheurs émérites bénévoles.
-              </p>
-              <Link
-                href="/candidature"
-                className="w-full text-center py-3 rounded-xl border border-[#eaeaea] text-[#1a1a1a] font-heading font-[700] hover:bg-[#1a1a1a] hover:text-white hover:border-[#1a1a1a] transition-all duration-300"
-              >
-                Candidater
-              </Link>
-            </div>
-
-          </div>
+        <h1 className="font-[900] text-[28px] md:text-[36px] text-center text-[#1a1a1a] tracking-[-0.02em] mb-[6px]">
+          Choisissez votre profil dans le réseau
+        </h1>
+        <div className="text-[13px] text-[#9a9a96] text-center mb-[32px]">
+          Rejoignez gratuitement ou accédez aux avantages complets selon votre parcours.
         </div>
-      </section>
 
-      {/* ── TABLEAU COMPARATIF ─────────────────────── */}
-      <section className="py-[40px] md:py-[80px] bg-white">
-        <div className="max-w-[1000px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] mb-4">
-              Comparez les avantages
-            </h2>
-            <p className="font-sans text-[16px] text-[#666]">
-              Découvrez ce que chaque catégorie vous offre au sein du réseau.
+        {/* Passionné Card */}
+        <div className="border border-[#e8e8e4] rounded-xl p-6 md:p-7 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white mb-8">
+          <div>
+            <div className="inline-flex items-center gap-[6px] bg-[#e8f5e9] rounded-[5px] px-[12px] py-[4px] mb-[12px]">
+              <span className="text-[11px] font-[700] text-[#1b5e38] tracking-[0.05em]">Gratuit · Sans engagement</span>
+            </div>
+            <h3 className="font-[800] text-[17px] text-[#1a1a1a] mb-[4px]">Passionné du domaine agricole</h3>
+            <p className="text-[12px] text-[#9a9a96] leading-[1.6] mb-[16px]">
+              Pour les curieux, les étudiants en exploration et toute personne attachée à l'agriculture africaine sans exercer professionnellement.
             </p>
-          </div>
-
-          <div className="overflow-x-auto rounded-3xl border border-[#f0f0f0] shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
-            <table className="w-full text-left border-collapse min-w-[700px]">
-              <thead>
-                <tr>
-                  <th className="py-6 px-6 bg-[#f8f8f6] border-b border-[#eaeaea] font-heading font-[800] text-[#1a1a1a] w-1/3">Avantages</th>
-                  <th className="py-6 px-4 bg-white border-b border-[#eaeaea] font-heading font-[800] text-center text-[#1a1a1a]">Junior</th>
-                  <th className="py-6 px-4 bg-[#f0f7f0] border-b border-[#1b5e38]/10 font-heading font-[800] text-center text-[#1b5e38]">Pro</th>
-                  <th className="py-6 px-4 bg-white border-b border-[#eaeaea] font-heading font-[800] text-center text-[#1a1a1a]">Partenaire</th>
-                  <th className="py-6 px-4 bg-white border-b border-[#eaeaea] font-heading font-[800] text-center text-[#1a1a1a]">Sénior</th>
-                </tr>
-              </thead>
-              <tbody className="font-sans text-[15px] text-[#555]">
-                <tr className="border-b border-[#f4f4f4] hover:bg-[#f8f8f6]/50 transition-colors">
-                  <td className="py-5 px-6 font-[600] text-[#1a1a1a]">Accès à l'Annuaire</td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center bg-[#f0f7f0]/50"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                </tr>
-                <tr className="border-b border-[#f4f4f4] hover:bg-[#f8f8f6]/50 transition-colors">
-                  <td className="py-5 px-6 font-[600] text-[#1a1a1a]">Bibliothèque Numérique</td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center bg-[#f0f7f0]/50"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                </tr>
-                <tr className="border-b border-[#f4f4f4] hover:bg-[#f8f8f6]/50 transition-colors">
-                  <td className="py-5 px-6 font-[600] text-[#1a1a1a]">Accès aux Formations</td>
-                  <td className="py-5 px-4 text-center text-[13px] text-[#666]">Tarif réduit</td>
-                  <td className="py-5 px-4 text-center text-[13px] font-[600] text-[#1b5e38] bg-[#f0f7f0]/50">Tarif préférentiel</td>
-                  <td className="py-5 px-4 text-center text-[13px] text-[#666]">Accès illimité</td>
-                  <td className="py-5 px-4 text-center text-[13px] text-[#666]">Intervenant</td>
-                </tr>
-                <tr className="border-b border-[#f4f4f4] hover:bg-[#f8f8f6]/50 transition-colors">
-                  <td className="py-5 px-6 font-[600] text-[#1a1a1a]">Accès au Forum</td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center bg-[#f0f7f0]/50"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                </tr>
-                <tr className="border-b border-[#f4f4f4] hover:bg-[#f8f8f6]/50 transition-colors">
-                  <td className="py-5 px-6 font-[600] text-[#1a1a1a]">Messagerie Privée</td>
-                  <td className="py-5 px-4 text-center"><X className="inline text-[#ccc]" size={20} /></td>
-                  <td className="py-5 px-4 text-center bg-[#f0f7f0]/50"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                  <td className="py-5 px-4 text-center"><Check className="inline text-[#1b5e38]" size={20} /></td>
-                </tr>
-                <tr className="hover:bg-[#f8f8f6]/50 transition-colors">
-                  <td className="py-5 px-6 font-[600] text-[#1a1a1a]">Opportunités</td>
-                  <td className="py-5 px-4 text-center text-[13px] text-[#666]">Stages / Emplois</td>
-                  <td className="py-5 px-4 text-center text-[13px] font-[600] text-[#1b5e38] bg-[#f0f7f0]/50">Marchés / Financements</td>
-                  <td className="py-5 px-4 text-center text-[13px] text-[#666]">Visibilité / B2B</td>
-                  <td className="py-5 px-4 text-center text-[13px] text-[#666]">Mentorat</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* ── FAQ ──────────────────────────────────── */}
-      <section className="py-[40px] md:py-[80px] bg-[#f8f8f6]">
-        <div className="max-w-[800px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
-              Assistance
+            <div className="font-[900] text-[28px] text-[#1b5e38] mb-[4px] leading-none">0 FCFA</div>
+            <div className="text-[11px] text-[#9a9a96]">Accès gratuit, pour toujours</div>
+            <div className="flex items-center flex-wrap gap-[12px] mt-[16px]">
+              <Link href="/inscription?categorie=passionne" className="inline-flex items-center gap-[6px] bg-[#1b5e38] text-white text-[13px] font-[700] px-[20px] py-[10px] rounded-[7px] hover:bg-[#145030] transition-colors">
+                <UserPlus size={14} /> Rejoindre gratuitement
+              </Link>
+              <button className="inline-flex items-center gap-[6px] text-[#1b5e38] text-[13px] font-[600] underline decoration-transparent hover:decoration-[#1b5e38] transition-colors">
+                Voir les avantages <ArrowRight size={13} />
+              </button>
             </div>
-            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] mb-4">
-              Questions fréquentes
-            </h2>
           </div>
-
-          <div className="space-y-4">
+          <div className="flex flex-col justify-center gap-[8px]">
             {[
-              { q: "Comment se déroule le processus d'adhésion ?", a: "Une fois que vous avez sélectionné votre catégorie, vous remplirez un formulaire avec vos informations professionnelles. Après validation de votre profil par l'équipe (24-48h), vous recevrez un lien pour régler votre cotisation annuelle et accéder à la plateforme." },
-              { q: "Puis-je changer de catégorie en cours d'année ?", a: "Oui, il est possible de passer de la catégorie Junior à Professionnel une fois que vous avez obtenu votre diplôme et commencé votre carrière. Le prorata de la cotisation sera appliqué." },
-              { q: "Quelles méthodes de paiement acceptez-vous ?", a: "Nous acceptons les paiements par carte bancaire (Visa, Mastercard) ainsi que le Mobile Money dans plusieurs pays d'Afrique de l'Ouest et Centrale." },
-              { q: "La catégorie Sénior est-elle ouverte à tous ?", a: "La catégorie Sénior est réservée aux experts justifiant d'une expérience significative dans le domaine agricole. L'adhésion se fait uniquement sur dossier de candidature ou par cooptation." },
-              { q: "Les formations sont-elles incluses dans l'adhésion ?", a: "L'adhésion vous donne accès gratuitement à certains webinaires et masterclasses. Pour les formations certifiantes longues, vous bénéficiez d'un tarif préférentiel exclusif aux membres." },
-            ].map((faq, i) => (
-              <div key={i} className="bg-white p-6 md:p-8 rounded-2xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
-                <h3 className="font-heading font-[800] text-[18px] text-[#1a1a1a] mb-3">{faq.q}</h3>
-                <p className="font-sans text-[15px] text-[#666] leading-[1.7]">{faq.a}</p>
+              { text: "Lecture du blog et des actualités agrolide", included: true },
+              { text: "Newsletter mensuelle du réseau", included: true },
+              { text: "Accès aux webinaires publics gratuits", included: true },
+              { text: "Calendrier des événements publics", included: true },
+              { text: "Annuaire professionnel (membres uniquement)", included: false },
+              { text: "Bibliothèque numérique", included: false },
+              { text: "Forum et messagerie membres", included: false },
+              { text: "Opportunités d'emploi et appels à projets", included: false },
+            ].map((feat, i) => (
+              <div key={i} className="flex items-start gap-[8px] text-[12px]">
+                <div className="mt-[2px] flex-shrink-0">
+                  {feat.included ? <Check size={14} className="text-[#50a853]" /> : <X size={14} className="text-[#d0d0d0]" />}
+                </div>
+                <span className={feat.included ? "text-[#1a1a1a]" : "text-[#9a9a96]"}>{feat.text}</span>
               </div>
             ))}
           </div>
         </div>
-      </section>
+
+        {/* Separator */}
+        <div className="flex items-center gap-[12px] mb-[24px]">
+          <div className="flex-1 h-[1px] bg-[#e8e8e4]"></div>
+          <div className="text-[11px] font-[700] text-[#9a9a96] uppercase tracking-[0.06em]">Profils membres avec accès complet</div>
+          <div className="flex-1 h-[1px] bg-[#e8e8e4]"></div>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[14px]">
+          
+          {/* Junior */}
+          <div className="border border-[#e8e8e4] rounded-xl p-[20px] flex flex-col bg-white">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#e8f5e9] text-[#1b5e38]">
+              <GraduationCap size={18} />
+            </div>
+            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Junior</div>
+            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Étudiants en agronomie, jeunes diplômés et passionnés en phase d'insertion.</div>
+            <div className="flex items-baseline gap-[3px] mb-[4px]">
+              <span className="font-[700] text-[13px] text-[#1b5e38]">FCFA</span>
+              <span className="font-[900] text-[26px] text-[#1b5e38] leading-none">5 000</span>
+            </div>
+            <div className="text-[11px] text-[#9a9a96] mb-[14px]">
+              par an · soit <span className="text-[#50a853] font-[600]">417 FCFA/mois</span>
+            </div>
+            <Link href="/inscription?categorie=junior" className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-[#e8e8e4] text-[#1a1a1a] hover:border-[#1b5e38] hover:text-[#1b5e38] hover:bg-[#f0f7f0] mb-[14px]">
+              S'inscrire comme Junior
+            </Link>
+            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
+            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Inclus dans Junior :</div>
+            <div className="flex flex-col gap-[6px] flex-1">
+              {[
+                { text: "Profil dans l'annuaire continental", included: true },
+                { text: <>Bibliothèque numérique <span className="text-[#50a853] font-[600]">(20 docs/mois)</span></>, included: true },
+                { text: "Webinaires publics et privés", included: true },
+                { text: "Forum communautaire", included: true },
+                { text: "Opportunités d'emploi et stages", included: true },
+                { text: "Messagerie interne membres", included: false },
+                { text: "Dépôt de documents bibliothèque", included: false },
+              ].map((feat, i) => (
+                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45]">
+                  <div className="mt-[1px] flex-shrink-0">
+                    {feat.included ? <Check size={13} className="text-[#50a853]" /> : <X size={13} className="text-[#d0d0d0]" />}
+                  </div>
+                  <span className={feat.included ? "text-[#1a1a1a]" : "text-[#9a9a96]"}>{feat.text}</span>
+                </div>
+              ))}
+            </div>
+            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+              Voir tous les avantages <ArrowRight size={12} />
+            </div>
+          </div>
+
+          {/* Professionnel */}
+          <div className="border-[2px] border-[#1b5e38] rounded-xl p-[20px] flex flex-col bg-white relative mt-[12px] md:mt-0">
+            <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 bg-[#1b5e38] text-white text-[10px] font-[800] px-[12px] py-[3px] rounded-full whitespace-nowrap tracking-[0.04em]">
+              Le plus populaire
+            </div>
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#1b5e38] text-white">
+              <Briefcase size={18} />
+            </div>
+            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Professionnel</div>
+            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Agronomes, ingénieurs, chercheurs, consultants et entrepreneurs actifs.</div>
+            <div className="flex items-baseline gap-[3px] mb-[4px]">
+              <span className="font-[700] text-[13px] text-[#1b5e38]">FCFA</span>
+              <span className="font-[900] text-[26px] text-[#1b5e38] leading-none">15 000</span>
+            </div>
+            <div className="text-[11px] text-[#9a9a96] mb-[14px]">
+              par an · soit <span className="text-[#50a853] font-[600]">1 250 FCFA/mois</span>
+            </div>
+            <Link href="/inscription?categorie=professionnel" className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-[#1b5e38] text-white hover:bg-[#145030] mb-[14px]">
+              S'inscrire comme Professionnel
+            </Link>
+            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
+            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Tout Junior, plus :</div>
+            <div className="flex flex-col gap-[6px] flex-1">
+              {[
+                { text: <>Bibliothèque numérique <span className="text-[#50a853] font-[600]">illimitée</span></> },
+                { text: "Messagerie interne membres" },
+                { text: "Dépôt de documents (thèses, guides...)" },
+                { text: "Sessions techniques privées" },
+                { text: "Appels à projets et partenariats" },
+                { text: "Certificats de formation téléchargeables" },
+                { text: "Visibilité dans l'annuaire complet" },
+              ].map((feat, i) => (
+                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-[#1a1a1a]">
+                  <div className="mt-[1px] flex-shrink-0">
+                    <Check size={13} className="text-[#50a853]" />
+                  </div>
+                  <span>{feat.text}</span>
+                </div>
+              ))}
+            </div>
+            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+              Voir tous les avantages <ArrowRight size={12} />
+            </div>
+          </div>
+
+          {/* Partenaire */}
+          <div className="border border-[#e8e8e4] rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#f0f7f0] text-[#1b5e38]">
+              <Building2 size={18} />
+            </div>
+            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Partenaire</div>
+            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Entreprises agricoles, coopératives, ONG, agritech et institutions de recherche.</div>
+            <div className="flex items-baseline gap-[3px] mb-[4px]">
+              <span className="font-[700] text-[13px] text-[#1b5e38]">FCFA</span>
+              <span className="font-[900] text-[26px] text-[#1b5e38] leading-none">50 000</span>
+            </div>
+            <div className="text-[11px] text-[#9a9a96] mb-[14px]">
+              par an · par organisation
+            </div>
+            <Link href="/contact" className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-[#e8e8e4] text-[#1a1a1a] hover:border-[#1b5e38] hover:text-[#1b5e38] hover:bg-[#f0f7f0] mb-[14px]">
+              Nous contacter
+            </Link>
+            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
+            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Tout Professionnel, plus :</div>
+            <div className="flex flex-col gap-[6px] flex-1">
+              {[
+                "Vitrine entreprise dans l'annuaire",
+                "Accès au vivier de talents agrolide",
+                "Publication d'offres d'emploi prioritaires",
+                "Co-organisation d'événements réseau",
+                "Logo dans l'espace partenaires",
+                "Montage d'appels à projets collectifs",
+                "Paiement par virement sur facture",
+              ].map((text, i) => (
+                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-[#1a1a1a]">
+                  <div className="mt-[1px] flex-shrink-0">
+                    <Check size={13} className="text-[#50a853]" />
+                  </div>
+                  <span>{text}</span>
+                </div>
+              ))}
+            </div>
+            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+              Voir tous les avantages <ArrowRight size={12} />
+            </div>
+          </div>
+
+          {/* Sénior */}
+          <div className="border border-[#e8e8e4] rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#fef3e2] text-[#8a4e00]">
+              <Award size={18} />
+            </div>
+            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Sénior</div>
+            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Experts, chercheurs émérites, mentors et investisseurs qui contribuent bénévolement.</div>
+            <div className="mb-[4px]">
+              <span className="font-[900] text-[22px] text-[#1b5e38] leading-none">Sur sélection</span>
+            </div>
+            <div className="text-[11px] text-[#9a9a96] mb-[14px]">
+              Contribution bénévole · <span className="text-[#50a853] font-[600]">Gratuit</span>
+            </div>
+            <Link href="/inscription?categorie=senior" className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-[#f99e1d] text-white hover:bg-[#fcb726] mb-[14px]">
+              Déposer ma candidature
+            </Link>
+            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
+            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Tout Professionnel, plus :</div>
+            <div className="flex flex-col gap-[6px] flex-1">
+              {[
+                "Espace mentorat dédié",
+                "Animation de webinaires réseau",
+                "Badge \"Expert\" visible dans l'annuaire",
+                "Accès illimité à toutes les ressources",
+                "Participation aux décisions du réseau",
+                "Valorisation de votre expertise africaine",
+                "Profil prioritaire dans les résultats",
+              ].map((text, i) => (
+                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-[#1a1a1a]">
+                  <div className="mt-[1px] flex-shrink-0">
+                    <Check size={13} className="text-[#50a853]" />
+                  </div>
+                  <span>{text}</span>
+                </div>
+              ))}
+            </div>
+            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+              Voir les critères de sélection <ArrowRight size={12} />
+            </div>
+          </div>
+
+        </div>
+
+        {/* Payment Note */}
+        <div className="flex items-center justify-center gap-[6px] text-center mt-[32px] text-[11px] text-[#9a9a96]">
+          <Lock size={14} className="flex-shrink-0" />
+          <span>Paiement sécurisé par Mobile Money (Orange, MTN, Moov, Wave) ou carte bancaire · Engagement annuel résiliable</span>
+        </div>
+
+      </div>
     </div>
   )
 }
