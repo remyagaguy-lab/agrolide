@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import { Users, Crown, Star, Lightbulb, Target } from "lucide-react"
+import Image from "next/image"
+import { Users, Crown, Star, Lightbulb, Target, Linkedin, Twitter } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Qui sommes-nous | agrolide",
@@ -11,7 +12,7 @@ export default function QuiSommesNousPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-[140px] pb-[80px] md:pt-[180px] md:pb-[100px] bg-[#1a1a1a]">
+      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-[#1a1a1a]">
         {/* Dynamic Abstract Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
@@ -32,7 +33,7 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── NOTRE HISTOIRE ───────────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-white">
+      <section className="py-[40px] md:py-[80px] bg-white">
         <div className="max-w-[900px] mx-auto px-6">
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-8">
             <span className="w-2 h-2 rounded-full bg-[#fcb726]" />
@@ -97,8 +98,40 @@ export default function QuiSommesNousPage() {
         </div>
       </section>
 
+      {/* ── NOTRE ÉQUIPE ───────────────────────────── */}
+      <section className="py-[40px] md:py-[80px] bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center max-w-[700px] mx-auto mb-16">
+            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] mb-6">
+              L'équipe fondatrice
+            </h2>
+            <p className="font-sans text-[16px] text-[#666] leading-[1.7]">
+              Une équipe de passionnés, alliant expertise agronomique, technologique et stratégique au service de l'agriculture africaine.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { name: "Remy Gaguy", role: "Fondateur & CEO", desc: "Visionnaire et leader, expert en développement d'écosystèmes agricoles." },
+              { name: "Alice K.", role: "Directrice des Opérations", desc: "Assure la structuration et le bon déploiement des actions sur le terrain." },
+              { name: "Marc D.", role: "Lead Tech", desc: "Architecte de la plateforme agrolide et de ses solutions digitales." },
+              { name: "Sarah N.", role: "Responsable Réseau", desc: "Anime la communauté et construit les partenariats stratégiques." }
+            ].map((member, i) => (
+              <div key={i} className="group text-center">
+                <div className="w-[160px] h-[160px] md:w-[200px] md:h-[200px] mx-auto mb-6 relative rounded-full bg-[#f8f8f6] border-4 border-[#eaeaea] group-hover:border-[#fcb726] transition-all duration-300 overflow-hidden flex items-center justify-center shadow-sm">
+                  <span className="font-heading font-[800] text-[40px] text-[#ccc] group-hover:text-[#fcb726] transition-colors">{member.name.substring(0, 2).toUpperCase()}</span>
+                </div>
+                <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-1">{member.name}</h3>
+                <p className="font-sans text-[14px] font-[600] text-[#1b5e38] uppercase tracking-wider mb-3">{member.role}</p>
+                <p className="font-sans text-[15px] text-[#666] leading-[1.6] max-w-[260px] mx-auto">{member.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── NOS VALEURS ──────────────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-white">
+      <section className="py-[40px] md:py-[80px] bg-[#f8f8f6]">
         <div className="max-w-[1100px] mx-auto px-6">
           <div className="text-center max-w-[700px] mx-auto mb-16">
             <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] mb-6">
@@ -130,7 +163,7 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[80px] md:py-[120px] text-center relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[60px] md:py-[100px] text-center relative overflow-hidden">
         <div className="absolute inset-0 z-0">
            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
         </div>

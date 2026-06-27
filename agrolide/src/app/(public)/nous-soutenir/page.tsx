@@ -53,7 +53,7 @@ export default async function NousSoutenirPage({ searchParams }: { searchParams:
   return (
     <div className="flex flex-col min-h-screen">
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-[140px] pb-[80px] md:pt-[180px] md:pb-[100px] bg-[#1a1a1a]">
+      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-[#1a1a1a]">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
@@ -88,7 +88,7 @@ export default async function NousSoutenirPage({ searchParams }: { searchParams:
       )}
 
       {/* ── CONTENU PRINCIPAL ────────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-[#f8f8f6]">
+      <section className="py-[40px] md:py-[80px] bg-[#f8f8f6]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             
