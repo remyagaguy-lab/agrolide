@@ -1,32 +1,32 @@
-import * as React from "react"
-import { cn } from "@/lib/utils/formatters"
+import React from 'react';
+import Image from 'next/image';
 
-export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
+export type AvatarSize = 'sm' | 'md' | 'lg' | 'xl';
+
+export interface AvatarProps {
   src?: string;
+  alt?: string;
   initials?: string;
+  size?: AvatarSize;
+  className?: string;
 }
 
-export function Avatar({ className, src, initials, ...props }: AvatarProps) {
+export function Avatar({ src, alt, initials, size = 'md', className = '' }: AvatarProps) {
+  const sizeClass = `avatar-${size}`;
+  
   return (
-    <div
-      className={cn(
-        "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full bg-[var(--color-gris-clair)] border border-[var(--color-gris-moyen)]",
-        className
-      )}
-      {...props}
-    >
+    <div className={`avatar ${sizeClass} ${className}`.trim()}>
       {src ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={src}
-          alt="Avatar"
-          className="aspect-square h-full w-full object-cover"
+        <Image 
+          src={src} 
+          alt={alt || 'Avatar'} 
+          width={80} 
+          height={80} 
+          className="w-full h-full object-cover"
         />
       ) : (
-        <span className="flex h-full w-full items-center justify-center text-sm font-medium text-[var(--color-gris-texte)] uppercase">
-          {initials?.substring(0, 2) || "U"}
-        </span>
+        <span>{initials?.substring(0, 2).toUpperCase()}</span>
       )}
     </div>
-  )
+  );
 }

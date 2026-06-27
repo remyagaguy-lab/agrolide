@@ -1,7 +1,11 @@
 import Link from "next/link"
 import Image from "next/image"
-
 import { Metadata } from "next"
+import { SectionLabel } from "@/components/ui/SectionLabel"
+import { Card } from "@/components/ui/Card"
+import { Badge } from "@/components/ui/Badge"
+import { Button } from "@/components/ui/Button"
+import { Users, BookOpen, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Accueil",
@@ -51,7 +55,7 @@ function IconArrowRight({ className = "" }: { className?: string }) {
 
 function IconNetwork({ className = "" }: { className?: string }) {
   return (
-    <svg className={className} width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <rect width="6" height="6" x="9" y="3" rx="1"/>
       <rect width="6" height="6" x="3" y="15" rx="1"/>
       <rect width="6" height="6" x="15" y="15" rx="1"/>
@@ -62,7 +66,7 @@ function IconNetwork({ className = "" }: { className?: string }) {
 
 function IconGraduation({ className = "" }: { className?: string }) {
   return (
-    <svg className={className} width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
       <path d="M6 12v5c3 3 9 3 12 0v-5"/>
     </svg>
@@ -71,18 +75,72 @@ function IconGraduation({ className = "" }: { className?: string }) {
 
 function IconBriefcase({ className = "" }: { className?: string }) {
   return (
-    <svg className={className} width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <rect width="20" height="14" x="2" y="7" rx="2"/>
       <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
     </svg>
   )
 }
 
-function IconQuote({ className = "" }: { className?: string }) {
+function IconCheck({ className = "" }: { className?: string }) {
   return (
-    <svg className={className} width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>
-      <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/>
+    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20 6L9 17l-5-5"/>
+    </svg>
+  )
+}
+
+function IconUsersGroup({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+      <circle cx="9" cy="7" r="4"/>
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+    </svg>
+  )
+}
+
+function IconBookOpen({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+    </svg>
+  )
+}
+
+function IconSeedling({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 20h10"/>
+      <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
+      <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
+      <path d="M14.1 6a7 7 0 0 1 1.1 7.17c-2.1-.1-3.6-.6-4.8-1.3-1.2-.7-2-1.9-2.4-4.4 2.7-.5 4.7-.2 6.1 1.6z"/>
+    </svg>
+  )
+}
+
+function IconStar({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  )
+}
+
+function IconTrendingUp({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+    </svg>
+  )
+}
+
+function IconHandshake({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l1.06 1.06L12 21.23l7.77-7.77 1.06-1.06a5.4 5.4 0 0 0-.41-7.82z"/>
     </svg>
   )
 }
@@ -134,292 +192,332 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Strip de stats au bas du hero */}
-          <div className="mt-16 border-t border-[rgba(255,255,255,0.12)] grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-[rgba(255,255,255,0.12)]">
-            <div className="py-6 flex items-center gap-4 sm:pr-8">
-              <div className="text-[rgba(255,255,255,0.35)]">
-                <IconGlobe />
+        </div>
+      </section>
+
+      {/* ── SECTION STATS ── */}
+      <section className="bg-blanc border-b border-gris-border !py-[28px]">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gris-border">
+            <div className="py-4 md:py-0 text-center">
+              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
+                500<span className="font-[400] text-[18px] text-vert-principal">+</span>
               </div>
-              <div>
-                <div className="font-heading font-[800] text-[20px] text-white leading-none mb-1">5 pays</div>
-                <div className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.15em]">Présence continentale</div>
-              </div>
+              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Membres actifs</div>
             </div>
-            <div className="py-6 flex items-center gap-4 sm:px-8">
-              <div className="text-[rgba(255,255,255,0.35)]">
-                <IconUsers />
+            <div className="py-4 md:py-0 text-center">
+              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
+                5<span className="font-[400] text-[18px] text-vert-principal"> pays</span>
               </div>
-              <div>
-                <div className="font-heading font-[800] text-[20px] text-white leading-none mb-1">500+ membres</div>
-                <div className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.15em]">Actifs</div>
-              </div>
+              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Pays africains</div>
             </div>
-            <div className="py-6 flex items-center gap-4 sm:pl-8">
-              <div className="text-[rgba(255,255,255,0.35)]">
-                <IconLibrary />
+            <div className="py-4 md:py-0 text-center">
+              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
+                700<span className="font-[400] text-[18px] text-vert-principal">+</span>
               </div>
-              <div>
-                <div className="font-heading font-[800] text-[20px] text-white leading-none mb-1">+ 700 ressources</div>
-                <div className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.15em]">Techniques</div>
+              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Ressources techniques</div>
+            </div>
+            <div className="py-4 md:py-0 text-center">
+              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
+                100<span className="font-[400] text-[18px] text-vert-principal">%</span>
               </div>
+              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Dédiés à l'Afrique</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── RAISON D'ÊTRE ────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#f8f8f6] to-white py-[60px] md:py-[100px] relative overflow-hidden">
-        {/* Subtle background decoration */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#fcb726]/5 rounded-full blur-[100px] pointer-events-none" />
-        <div className="max-w-[1100px] mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-            <div className="md:col-span-5">
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-8">
-                <span className="w-2 h-2 rounded-full bg-[#fcb726]" />
-                Notre raison d'être
-              </div>
-              <h2 className="font-heading font-[800] text-[36px] md:text-[48px] text-[#1a1a1a] leading-[1.15] tracking-[-0.02em] mb-6">
-                Transformer la fragmentation en <span className="text-[#1b5e38]">cohésion continentale.</span>
+      {/* ── RAISON D'ÊTRE ── */}
+      <section className="bg-blanc">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-[55%_1fr] gap-[48px] items-start">
+            {/* Colonne gauche */}
+            <div>
+              <SectionLabel>Notre raison d'être</SectionLabel>
+              <h2 className="text-h2 mb-6">
+                Transformer la fragmentation en{" "}
+                <span className="text-vert-profond">cohésion continentale</span>
               </h2>
-            </div>
-            <div className="md:col-span-7 md:pl-10">
-              <p className="font-sans text-[17px] text-[#555] leading-[1.8] mb-6">
-                L'agriculture représente jusqu'à 40 % du PIB africain et emploie la majorité de notre population active. Pourtant, les acteurs de la chaîne de valeur évoluent souvent de manière fragmentée, sans cadre de collaboration pérenne.
+              <p className="text-body-lg mb-4">
+                L'agriculture représente jusqu'à 40 % du PIB africain et emploie la majorité de notre population active. Pourtant, les acteurs de la chaîne de valeur évoluent de manière fragmentée, sans cadre de collaboration pérenne.
               </p>
-              <p className="font-sans text-[17px] text-[#555] leading-[1.8] mb-10">
+              <p className="text-body-lg mb-8">
                 agrolide est né d'une ambition collective : doter l'Afrique d'un écosystème professionnel intégré, capable de mobiliser les ressources, renforcer les compétences et incuber les projets qui feront notre souveraineté alimentaire.
               </p>
-              <Link
-                href="/qui-sommes-nous"
-                className="inline-flex items-center gap-3 text-white bg-[#1a1a1a] font-heading font-[700] text-[14px] px-8 py-4 rounded-full group hover:bg-[#1b5e38] hover:shadow-[0_8px_30px_rgba(27,94,56,0.3)] transition-all duration-300"
-              >
-                Découvrir notre histoire
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  <IconArrowRight />
-                </span>
+              <Link href="/qui-sommes-nous" className="btn-text">
+                En savoir plus <IconArrowRight />
               </Link>
+            </div>
+
+            {/* Colonne droite */}
+            <div className="hidden md:flex bg-gris-light rounded-card aspect-[4/3] items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c0c0bc" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-image">
+                <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                <circle cx="9" cy="9" r="2"/>
+                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+              </svg>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── LES 4 FREINS ─────────────────────────── */}
-      <section className="bg-white py-[60px] md:py-[100px] relative">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="text-center max-w-[700px] mx-auto mb-20">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#fcb726]/10 text-[#d9970c] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
-              Constat
-            </div>
-            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15] mb-6">
+      {/* ── LES 4 FREINS ── layout horizontal inspiré template Features ── */}
+      <section className="bg-gris-fond">
+        <div className="container">
+          <div className="text-center max-w-[640px] mx-auto mb-12">
+            <SectionLabel className="mx-auto flex justify-center text-center">Constat</SectionLabel>
+            <h2 className="text-h2 text-gris-titre">
               L'agriculture africaine face à 4 freins majeurs
             </h2>
-            <p className="font-sans text-[16px] text-[#666] leading-[1.7]">
-              agrolide a été fondé pour briser ces quatre barrières simultanément et débloquer le potentiel de notre continent.
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { num: "01", title: "Isolement professionnel", desc: "Peu de réseaux solides permettent aux agronomes et praticiens d'échanger et de collaborer efficacement sur le continent." },
-              { num: "02", title: "Documentation inadaptée", desc: "La quasi-totalité des ressources techniques ignore les réalités climatiques et pédologiques africaines." },
-              { num: "03", title: "Déficit d'accompagnement", desc: "Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré." },
-              { num: "04", title: "Recherche sous-valorisée", desc: "Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain." },
-            ].map((f) => (
-              <div key={f.num} className="group relative bg-white rounded-2xl p-6 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-2 transition-all duration-300 overflow-hidden">
-                <div className="absolute -right-2 -top-6 font-heading font-[800] text-[100px] text-[#f8f8f8] group-hover:text-[#f0f7f0] transition-colors duration-300 z-0 select-none pointer-events-none">
-                  {f.num}
-                </div>
-                <div className="relative z-10">
-                  <div className="w-10 h-10 bg-[#f0f7f0] group-hover:bg-[#1b5e38] rounded-xl flex items-center justify-center text-[#1b5e38] group-hover:text-white transition-colors duration-300 mb-5 font-heading font-[800] text-[14px]">
-                    {f.num}
-                  </div>
-                  <h3 className="font-heading font-[800] text-[18px] text-[#1a1a1a] mb-3 leading-tight">{f.title}</h3>
-                  <p className="font-sans text-[14px] text-[#666] leading-[1.6]">{f.desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Card>
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">01</div>
+              <h3 className="text-h3 text-gris-titre mb-2">Isolement professionnel</h3>
+              <p className="text-[14px] text-gris-texte leading-[1.65]">
+                Peu de réseaux solides permettent aux agronomes d'échanger et de collaborer efficacement sur le continent africain.
+              </p>
+            </Card>
+            <Card>
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">02</div>
+              <h3 className="text-h3 text-gris-titre mb-2">Documentation inadaptée</h3>
+              <p className="text-[14px] text-gris-texte leading-[1.65]">
+                La quasi-totalité des ressources techniques ignore les réalités climatiques et pédologiques propres à l'Afrique.
+              </p>
+            </Card>
+            <Card>
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">03</div>
+              <h3 className="text-h3 text-gris-titre mb-2">Déficit d'accompagnement</h3>
+              <p className="text-[14px] text-gris-texte leading-[1.65]">
+                Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré.
+              </p>
+            </Card>
+            <Card>
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">04</div>
+              <h3 className="text-h3 text-gris-titre mb-2">Recherche sous-valorisée</h3>
+              <p className="text-[14px] text-gris-texte leading-[1.65]">
+                Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain.
+              </p>
+            </Card>
           </div>
+
+          <p className="text-center font-heading font-[700] text-[17px] text-gris-titre mt-8">
+            agrolide a été fondé pour briser ces quatre barrières simultanément et débloquer le potentiel de notre continent.
+          </p>
         </div>
       </section>
 
-      {/* ── 3 DOMAINES ───────────────────────────── */}
-      <section id="actions" className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[60px] md:py-[100px] text-white">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <div className="max-w-[600px]">
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#fcb726]" />
-                Notre approche
-              </div>
-              <h2 className="font-heading font-[800] text-[32px] md:text-[44px] leading-[1.15]">
-                Un écosystème intégré en 3 piliers d'action
-              </h2>
-            </div>
+      {/* ── 3 DOMAINES D'ACTIVITÉ ── */}
+      <section id="actions" className="bg-blanc">
+        <div className="container">
+          <div className="text-center mb-12">
+            <SectionLabel className="mx-auto flex justify-center text-center">Notre approche</SectionLabel>
+            <h2 className="text-h2 text-gris-titre">
+              Un écosystème intégré en 3 piliers d'action
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <IconNetwork />,
-                num: "01",
-                title: "Mobilisation & Réseautage",
-                desc: "Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.",
-                link: "/annuaire",
-                color: "group-hover:border-[#fcb726]"
-              },
-              {
-                icon: <IconGraduation />,
-                num: "02",
-                title: "Formation & Insertion",
-                desc: "Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.",
-                link: "/formations",
-                color: "group-hover:border-[#fcb726]"
-              },
-              {
-                icon: <IconBriefcase />,
-                num: "03",
-                title: "Agrobusiness & Consulting",
-                desc: "Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.",
-                link: "/agrobusiness",
-                color: "group-hover:border-[#fcb726]"
-              },
-            ].map((d) => (
-              <Link
-                href={d.link}
-                key={d.num}
-                className={`group block bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 ${d.color} hover:-translate-y-1`}
-              >
-                <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-300 group-hover:bg-[#fcb726] group-hover:text-[#1a1a1a]">
-                  {d.icon}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+            <Link href="/annuaire" className="block group">
+              <Card variant="feature" className="h-full flex flex-col group-hover:border-[#c8c8c4] group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
+                <div className="card-feature-icon">
+                  <Users size={20} strokeWidth={1.5} color="#1b5e38" />
                 </div>
-                <div className="font-heading font-[800] text-[12px] text-white/50 tracking-[0.1em] mb-3">{d.num}</div>
-                <h3 className="font-heading font-[800] text-[22px] text-white mb-4 group-hover:text-[#fcb726] transition-colors">
-                  {d.title}
-                </h3>
-                <p className="font-sans text-[15px] text-white/70 leading-[1.7] mb-8">
-                  {d.desc}
+                <h3 className="text-h3 text-gris-titre mb-2">Mobilisation & Réseautage</h3>
+                <p className="text-[14px] text-gris-texte leading-[1.65] mb-6">
+                  Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.
                 </p>
-                <div className="flex items-center gap-2 text-white font-heading font-[700] text-[13px] opacity-70 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
-                  Découvrir <IconArrowRight />
+                <div className="btn-text mt-auto">Découvrir <IconArrowRight /></div>
+              </Card>
+            </Link>
+
+            <Link href="/formations" className="block group">
+              <Card variant="feature" className="h-full flex flex-col group-hover:border-[#c8c8c4] group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
+                <div className="card-feature-icon">
+                  <BookOpen size={20} strokeWidth={1.5} color="#1b5e38" />
                 </div>
-              </Link>
-            ))}
+                <h3 className="text-h3 text-gris-titre mb-2">Formation & Insertion</h3>
+                <p className="text-[14px] text-gris-texte leading-[1.65] mb-6">
+                  Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.
+                </p>
+                <div className="btn-text mt-auto">Découvrir <IconArrowRight /></div>
+              </Card>
+            </Link>
+
+            <Link href="/agrobusiness" className="block group">
+              <Card variant="feature" className="h-full flex flex-col group-hover:border-[#c8c8c4] group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
+                <div className="card-feature-icon">
+                  <TrendingUp size={20} strokeWidth={1.5} color="#1b5e38" />
+                </div>
+                <h3 className="text-h3 text-gris-titre mb-2">Agrobusiness & Consulting</h3>
+                <p className="text-[14px] text-gris-texte leading-[1.65] mb-6">
+                  Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.
+                </p>
+                <div className="btn-text mt-auto">Découvrir <IconArrowRight /></div>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* ── SECTION PLATEFORME ── */}
+      <section className="bg-[#0f1f17] py-[96px]">
+        <div className="container">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <SectionLabel className="mx-auto flex justify-center text-center !bg-[#1a2e22] !text-[#50a853] !border-[rgba(80,168,83,0.2)]">La plateforme</SectionLabel>
+            <h2 className="text-h2 text-white">
+              L'outil au service de votre croissance
+            </h2>
+          </div>
+
+          <div className="flex flex-col">
+            {/* Bloc 1 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)] mb-[64px]">
+              <div>
+                <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">01</div>
+                <h3 className="text-h3 text-white mb-4">Dashboard & Suivi</h3>
+                <p className="text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-6">
+                  Pilotez votre activité, suivez vos candidatures et gérez vos formations depuis une interface centralisée et intuitive.
+                </p>
+                <Link href="/dashboard" className="btn-text !text-[#50a853]">En savoir plus <IconArrowRight /></Link>
+              </div>
+              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center">
+                <span className="font-heading font-[600] text-white">Dashboard</span>
+              </div>
+            </div>
+
+            {/* Bloc 2 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)] mb-[64px]">
+              <div className="order-2 md:order-1 card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center">
+                <span className="font-heading font-[600] text-white">Annuaire Réseau</span>
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">02</div>
+                <h3 className="text-h3 text-white mb-4">Annuaire Panafricain</h3>
+                <p className="text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-6">
+                  Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent grâce à des filtres avancés.
+                </p>
+                <Link href="/annuaire" className="btn-text !text-[#50a853]">En savoir plus <IconArrowRight /></Link>
+              </div>
+            </div>
+
+            {/* Bloc 3 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)]">
+              <div>
+                <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">03</div>
+                <h3 className="text-h3 text-white mb-4">Bibliothèque de Ressources</h3>
+                <p className="text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-6">
+                  Accédez à des centaines de documents techniques, thèses et guides pratiques spécifiquement adaptés aux sols africains.
+                </p>
+                <Link href="/bibliotheque" className="btn-text !text-[#50a853]">En savoir plus <IconArrowRight /></Link>
+              </div>
+              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center">
+                <span className="font-heading font-[600] text-white">Bibliothèque</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── TÉMOIGNAGES ──────────────────────────── */}
-      <section className="bg-gradient-to-b from-white to-[#f8f8f6] py-[60px] md:py-[100px]">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#1b5e38]" />
-              Impact
-            </div>
-            <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15]">
+
+
+      {/* ── TÉMOIGNAGES ── */}
+      <section className="bg-gris-fond">
+        <div className="container">
+          <div className="text-center mb-16">
+            <SectionLabel className="mx-auto flex justify-center text-center">Témoignages</SectionLabel>
+            <h2 className="text-h2 text-gris-titre">
               La voix du réseau
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
             {[
-              { initials: "KA", name: "Kouamé A.", role: "Agronome", country: "Côte d'Ivoire", delay: "md:mt-0" },
-              { initials: "FD", name: "Fatou D.",  role: "Chercheuse", country: "Sénégal", delay: "md:mt-12" },
-              { initials: "EM", name: "Emmanuel M.", role: "Agripreneur", country: "Cameroun", delay: "md:mt-24" },
+              { initials: "KA", name: "Kouamé A.", role: "Agronome", country: "Côte d'Ivoire",
+                quote: "agrolide m'a permis de structurer mon approche et de trouver des partenaires solides. L'accès aux ressources adaptées à notre réalité change véritablement la donne." },
+              { initials: "FD", name: "Fatou D.", role: "Chercheuse", country: "Sénégal",
+                quote: "Grâce au réseau, mes travaux de recherche ont trouvé une audience et des applications concrètes. Un espace unique pour valoriser la science africaine." },
+              { initials: "EM", name: "Emmanuel M.", role: "Agripreneur", country: "Cameroun",
+                quote: "L'accompagnement d'Agrolide m'a aidé à passer de l'idée au marché en moins de six mois. Le réseau de mentors est exceptionnel." },
             ].map((t) => (
-              <div key={t.initials} className={`bg-white rounded-2xl p-8 border border-[#eaeaea] shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] transition-shadow duration-300 ${t.delay}`}>
-                <div className="text-[#fcb726] mb-6">
-                  <IconQuote />
-                </div>
-                <p className="font-sans italic text-[16px] text-[#444] leading-[1.8] mb-8">
-                  "agrolide m'a permis de structurer mon approche et de trouver des partenaires solides. L'accès aux ressources adaptées à notre continent change véritablement la donne."
+              <Card key={t.initials} className="flex flex-col h-full">
+                <div className="font-baskerville text-[48px] text-[#d4ead4] leading-[0.8] mt-2">"</div>
+                <p className="font-baskerville italic text-[14px] text-[#444] leading-[1.85] flex-1 mt-4">
+                  {t.quote}
                 </p>
-                <div className="flex items-center gap-4 pt-6 border-t border-[#f0f0f0]">
-                  <div className="w-[44px] h-[44px] rounded-full bg-gradient-to-br from-[#1b5e38] to-[#124026] text-white flex items-center justify-center font-heading font-[700] text-[14px] shadow-[0_4px_10px_rgba(27,94,56,0.3)]">
+                <div className="border-t border-[#f0f0f0] mt-4 pt-4 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-gris-light flex items-center justify-center text-vert-principal font-heading font-[700] text-[13px] flex-shrink-0">
                     {t.initials}
                   </div>
-                  <div>
-                    <div className="font-heading font-[700] text-[15px] text-[#1a1a1a]">{t.name}</div>
-                    <div className="font-sans text-[13px] text-[#888]">{t.role} · {t.country}</div>
+                  <div className="flex flex-col">
+                    <div className="font-heading font-[600] text-[13px] text-gris-titre leading-tight">{t.name}</div>
+                    <div className="font-sans text-[12px] text-gris-muted mt-0.5">{t.role} · {t.country}</div>
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── BLOG ─────────────────────────────────── */}
-      <section className="bg-white py-[60px] md:py-[100px]">
-        <div className="max-w-[1100px] mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      {/* ── SECTION BLOG ── */}
+      <section className="bg-blanc">
+        <div className="container">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div>
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#1b5e38]/10 text-[#1b5e38] font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#1b5e38]" />
-                Ressources
-              </div>
-              <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] leading-[1.15]">
+              <SectionLabel>Ressources</SectionLabel>
+              <h2 className="text-h2 text-gris-titre">
                 Derniers articles
               </h2>
             </div>
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-white bg-[#1b5e38] font-heading font-[600] text-[14px] px-6 py-3 rounded-full group hover:bg-[#124026] hover:shadow-lg transition-all duration-300 flex-shrink-0"
-            >
-              Tous les articles
-              <span className="transition-transform duration-300 group-hover:translate-x-1"><IconArrowRight /></span>
+            <Link href="/blog" className="btn-text self-start md:self-auto mb-2 md:mb-0">
+              Tous les articles <IconArrowRight />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="group cursor-pointer">
-                <div className="relative h-[220px] bg-[#f4f4f4] rounded-2xl mb-6 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
-                  <div className="absolute top-4 left-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full font-heading font-[700] text-[10px] text-[#1b5e38] tracking-[0.1em] uppercase shadow-sm">
-                    Bientôt disponible
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
+            {[
+              { tag: "Agronomie", title: "Pratiques agroécologiques pour sols tropicaux", desc: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", date: "12 Oct 2024", readTime: "5 min" },
+              { tag: "Agrobusiness", title: "Financer son projet agricole : les clés", desc: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", date: "05 Oct 2024", readTime: "8 min" },
+              { tag: "Formation", title: "Compétences du futur pour les agronomes", desc: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", date: "28 Sep 2024", readTime: "4 min" },
+            ].map((item, i) => (
+              <Link href="#" key={i} className="block group">
+                <Card className="card-blog p-0 h-full flex flex-col">
+                  <div className="card-blog-image relative">
+                    <div className="absolute top-4 left-4">
+                      <Badge variant="category" className="bg-vert-pale text-vert-principal">{item.tag}</Badge>
+                    </div>
                   </div>
-                </div>
-                <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-3 leading-[1.4] group-hover:text-[#1b5e38] transition-colors">
-                  Articles en cours de préparation pour la communauté
-                </h3>
-                <p className="font-sans text-[15px] text-[#666] leading-[1.7] mb-4">
-                  Notre équipe éditoriale prépare une série de contenus techniques de haute valeur pour les acteurs de la chaîne agricole.
-                </p>
-                <div className="font-sans text-[13px] font-[600] text-[#fcb726]">
-                  À venir très prochainement
-                </div>
-              </div>
+                  <div className="card-blog-body flex flex-col flex-1">
+                    <h3 className="font-heading font-[700] text-[15px] text-gris-titre leading-[1.4] mb-2">{item.title}</h3>
+                    <p className="font-sans text-[13px] text-gris-texte line-clamp-2 mb-4 flex-1">
+                      {item.desc}
+                    </p>
+                    <div className="font-sans text-[12px] text-gris-muted mt-auto pt-4 border-t border-[#f0f0f0]">
+                      {item.date} · {item.readTime} de lecture
+                    </div>
+                  </div>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="relative overflow-hidden py-[80px] md:py-[120px] bg-[#1a1a1a]">
-        {/* Dynamic Abstract Background */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
-        </div>
-
-        <div className="max-w-[800px] mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-8">
-            Rejoindre le réseau
-          </div>
-          <h2 className="font-heading font-[800] text-[36px] md:text-[56px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
+      {/* ── CTA FINAL ── */}
+      <section className="bg-[#1b5e38] py-[96px] text-center">
+        <div className="container flex flex-col items-center">
+          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-white leading-[1.2] max-w-[520px] mx-auto mb-4">
             Prêt à participer à la conquête de la souveraineté alimentaire ?
           </h2>
-          <p className="font-sans text-[16px] md:text-[18px] text-[rgba(255,255,255,0.7)] mb-12 leading-[1.7]">
+          <p className="font-sans font-[400] text-[14px] text-[rgba(255,255,255,0.6)] mb-[28px]">
             Annuaire · Formations · Agrobusiness · Bibliothèque · Événements
           </p>
-          <Link
-            href="/rejoindre"
-            className="inline-flex items-center gap-3 bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[16px] px-[40px] py-[18px] rounded-full hover:bg-white hover:shadow-[0_0_40px_rgba(252,183,38,0.4)] transition-all duration-300 hover:-translate-y-1"
-          >
-            Rejoindre le réseau maintenant
-            <IconArrowRight />
-          </Link>
+          <Button variant="primary" href="/rejoindre">
+            Rejoindre le réseau <IconArrowRight />
+          </Button>
         </div>
       </section>
 

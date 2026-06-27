@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
+import { SectionLabel } from "@/components/ui/SectionLabel"
+import { Card } from "@/components/ui/Card"
 import { Users, Crown, Star, Lightbulb, Target, BookOpen, Microscope, Share2, Globe, ArrowRight, LineChart } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -33,91 +35,84 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── LE PARADOXE ───────────────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-[#f0f7f0] relative overflow-hidden">
-        <div className="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-[#1b5e38]/10 rounded-full blur-[100px] pointer-events-none" />
-        
-        <div className="max-w-[1000px] mx-auto px-6 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="font-heading font-[800] text-[36px] md:text-[48px] text-[#1b5e38] mb-6">
+      <section className="bg-vert-clair relative overflow-hidden">
+        <div className="container relative z-10">
+          <div className="text-center mb-16">
+            <SectionLabel className="mx-auto flex justify-center text-center">Le paradoxe</SectionLabel>
+            <h2 className="text-h2 text-vert-profond">
               Pourquoi le réseau agrolide ?
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <p className="font-sans text-[18px] md:text-[20px] text-[#1a1a1a] leading-[1.8] font-[500]">
-                L'Afrique possède <strong className="text-[#1b5e38] font-[800]">60 % des terres arables non exploitées</strong> de la planète. Elle abrite des milliers de techniciens et d'ingénieurs agronomes, des chercheurs passionnés, des entrepreneurs audacieux et des producteurs tenaces...
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center">
+            <div>
+              <p className="text-body-lg text-gris-titre font-[500]">
+                L'Afrique possède <strong className="text-vert-profond font-[800]">60 % des terres arables non exploitées</strong> de la planète. Elle abrite des milliers de techniciens et d'ingénieurs agronomes, des chercheurs passionnés, des entrepreneurs audacieux et des producteurs tenaces...
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-3xl shadow-[0_10px_30px_rgba(27,94,56,0.08)] border border-[#1b5e38]/10 relative">
-              <div className="absolute -left-6 -top-6 w-16 h-16 bg-[#fcb726] rounded-full flex items-center justify-center text-white font-heading font-[800] text-[32px] shadow-lg transform -rotate-12">
+            <Card className="relative mt-8 md:mt-0">
+              <div className="absolute -left-4 -top-6 w-14 h-14 bg-orange-dore rounded-full flex items-center justify-center text-white font-heading font-[800] text-[28px] shadow-lg transform -rotate-12">
                 ?
               </div>
-              <p className="font-sans text-[16px] md:text-[18px] text-[#555] leading-[1.7]">
-                Et pourtant... elle n'arrive pas encore à nourrir tous ses enfants, elle dépense <strong className="text-[#d9970c] font-[800] underline decoration-[#fcb726]/30 decoration-4">65 milliards de dollars par an</strong> pour importer sa nourriture. Une dépendance en hausse depuis 3 ans consécutifs.
+              <p className="text-body text-gris-texte mb-6">
+                Et pourtant... elle n'arrive pas encore à nourrir tous ses enfants, elle dépense <strong className="text-orange-accent font-[800] underline decoration-orange-dore/30 decoration-4">65 milliards de dollars par an</strong> pour importer sa nourriture. Une dépendance en hausse depuis 3 ans consécutifs.
               </p>
-              <p className="font-sans text-[16px] md:text-[18px] text-[#1a1a1a] font-[700] mt-6 bg-[#f8f8f6] p-4 rounded-xl border border-[#eaeaea] text-center">
-                Ce n'est pas un manque de talent, ni un manque de savoir.
-              </p>
-            </div>
+              <div className="bg-gris-fond p-4 rounded-btn border border-gris-border text-center">
+                <p className="font-heading font-[700] text-[15px] text-gris-titre">
+                  Ce n'est pas un manque de talent, ni un manque de savoir.
+                </p>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* ── LES 4 FREINS ───────────────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="bg-gris-fond">
+        <div className="container">
           <div className="text-center mb-16">
-            <h2 className="font-heading font-[800] text-[36px] md:text-[48px] text-[#1b5e38] mb-4">
+            <h2 className="text-h2 text-vert-profond mb-4">
               C'est un manque...
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative">
-            {/* Ligne décorative au centre (visible sur desktop) */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[#eaeaea] to-transparent transform -translate-x-1/2" />
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#eaeaea] to-transparent transform -translate-y-1/2" />
-            
-            <div className="bg-[#f8f8f6] p-8 rounded-3xl border border-[#eaeaea] hover:border-[#1b5e38]/30 transition-all duration-300 shadow-sm hover:shadow-md group relative">
-              <div className="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center text-[#1b5e38] mb-6 group-hover:scale-110 transition-transform">
-                <Users size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-3">...de connexion entre les professionnels.</h3>
-              <p className="font-sans text-[15px] text-[#666] leading-[1.6]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px]">
+            <Card className="group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-sm">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-vert-principal opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-4">01</div>
+              <h3 className="font-heading font-[700] text-[17px] text-gris-titre mb-[12px]">...de connexion entre les professionnels.</h3>
+              <p className="font-sans font-[400] text-[14px] text-gris-texte leading-[1.6]">
                 Faute de réseaux agricoles structurés, des étudiants brillants terminent leurs études sans savoir à quelle porte frapper. Les professionnels travaillent en vase clos et reproduisent des erreurs que d'autres ont déjà surmontées.
               </p>
-            </div>
+            </Card>
 
-            <div className="bg-[#f8f8f6] p-8 rounded-3xl border border-[#eaeaea] hover:border-[#fcb726]/30 transition-all duration-300 shadow-sm hover:shadow-md group relative">
-              <div className="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center text-[#fcb726] mb-6 group-hover:scale-110 transition-transform">
-                <Target size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-3">...d'accompagnement entrepreneurial et visibilité.</h3>
-              <p className="font-sans text-[15px] text-[#666] leading-[1.6]">
+            <Card className="group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-sm">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-vert-principal opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-4">02</div>
+              <h3 className="font-heading font-[700] text-[17px] text-gris-titre mb-[12px]">...d'accompagnement entrepreneurial et visibilité.</h3>
+              <p className="font-sans font-[400] text-[14px] text-gris-texte leading-[1.6]">
                 De nombreux jeunes diplômés et porteurs de projets manquent de mentorat, d'accès au financement et de compétences pratiques. Même les entrepreneurs les plus talentueux restent invisibles, faute de réseaux structurés.
               </p>
-            </div>
+            </Card>
 
-            <div className="bg-[#f8f8f6] p-8 rounded-3xl border border-[#eaeaea] hover:border-[#fcb726]/30 transition-all duration-300 shadow-sm hover:shadow-md group relative">
-              <div className="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center text-[#fcb726] mb-6 group-hover:scale-110 transition-transform">
-                <BookOpen size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-3">...de documentation adaptée à nos réalités.</h3>
-              <p className="font-sans text-[15px] text-[#666] leading-[1.6]">
+            <Card className="group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-sm">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-vert-principal opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-4">03</div>
+              <h3 className="font-heading font-[700] text-[17px] text-gris-titre mb-[12px]">...de documentation adaptée à nos réalités.</h3>
+              <p className="font-sans font-[400] text-[14px] text-gris-texte leading-[1.6]">
                 La quasi-totalité des ressources techniques disponibles a été conçue pour des contextes occidentaux. Elle ne répond pas aux contraintes spécifiques de l'agriculture africaine : sols tropicaux, variabilité climatique, marchés informels.
               </p>
-            </div>
+            </Card>
 
-            <div className="bg-[#f8f8f6] p-8 rounded-3xl border border-[#eaeaea] hover:border-[#1b5e38]/30 transition-all duration-300 shadow-sm hover:shadow-md group relative">
-              <div className="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center text-[#1b5e38] mb-6 group-hover:scale-110 transition-transform">
-                <Microscope size={28} />
-              </div>
-              <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-3">...de passerelles entre la recherche et le terrain.</h3>
-              <p className="font-sans text-[15px] text-[#666] leading-[1.6]">
+            <Card className="group relative overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-sm">
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-vert-principal opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-4">04</div>
+              <h3 className="font-heading font-[700] text-[17px] text-gris-titre mb-[12px]">...de passerelles entre la recherche et le terrain.</h3>
+              <p className="font-sans font-[400] text-[14px] text-gris-texte leading-[1.6]">
                 Des milliers de thèses et mémoires agronomiques sont produits chaque année dans les universités africaines et ne parviennent jamais aux producteurs. Les solutions existent, mais elles dorment dans les tiroirs.
               </p>
-            </div>
+            </Card>
           </div>
         </div>
       </section>
@@ -181,144 +176,44 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── CHRONOLOGIE ──────────────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-[#f8f8f6] relative overflow-hidden">
-        <div className="max-w-[1000px] mx-auto px-6">
+      <section className="bg-gris-fond">
+        <div className="container">
           <div className="text-center mb-16">
-            <h2 className="font-heading font-[800] text-[36px] md:text-[44px] text-[#1a1a1a]">L'évolution du réseau</h2>
+            <h2 className="text-h2 text-gris-titre">L'évolution du réseau</h2>
           </div>
           
           <div className="relative">
             {/* Ligne verticale centrale (desktop) ou à gauche (mobile) */}
-            <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-1 bg-[#eaeaea] transform md:-translate-x-1/2 z-0"></div>
+            <div className="absolute left-6 md:left-1/2 top-4 bottom-4 w-[2px] bg-gris-border transform md:-translate-x-1/2 z-0"></div>
             
             <div className="space-y-8 md:space-y-12 relative z-10">
-              
-              {/* Étape 1 */}
-              <div className="relative flex flex-col md:flex-row items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
-                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">21 Octobre 2025</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1b5e38] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">21 Octobre 2025</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Création du groupe WhatsApp "Bibliothèque Agricole"</p>
+              {[
+                { date: "21 Octobre 2025", text: "Création du groupe WhatsApp \"Bibliothèque Agricole\"", colorClass: "text-vert-profond", borderClass: "border-vert-profond" },
+                { date: "26 Novembre 2025", text: "Début des réflexions pour trouver des solutions défis du monde agricole", colorClass: "text-orange-dore", borderClass: "border-orange-dore" },
+                { date: "2 Déc. 2025", text: "La \"Bibliothèque Agricole\" devient BIFERA", colorClass: "text-gris-titre", borderClass: "border-gris-titre" },
+                { date: "20 Déc. 2025", text: "Premier webinaire sur la gestion de projet agricole", colorClass: "text-vert-profond", borderClass: "border-vert-profond" },
+                { date: "Janvier 2026", text: "Mise en place d'une équipe d'appui", colorClass: "text-orange-dore", borderClass: "border-orange-dore" },
+                { date: "31 Janvier 2026", text: "2ème Webinaire sur la commercialisation des produits agricoles", colorClass: "text-vert-profond", borderClass: "border-vert-profond" },
+                { date: "Février - Avril 2026", text: "Structuration de BIFERA en un réseau : Gouvernance, activités stratégiques, pilotes...", colorClass: "text-gris-titre", borderClass: "border-gris-titre" },
+                { date: "Mai - Juin 2026", text: "Relance des activités, BIFERA devient agrolide", colorClass: "text-orange-dore", borderClass: "border-orange-dore" },
+                { date: "Juil à Déc. 2026", text: "Mise en place de l'organe de gouvernance, création formelle et lancement officiel des activités du réseau agrolide", colorClass: "text-gris-titre", borderClass: "border-gris-titre" },
+              ].map((step, idx) => {
+                const isEven = idx % 2 === 0;
+                return (
+                  <div key={idx} className={`relative flex flex-col items-start md:items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+                    <div className={`hidden md:block md:w-1/2 ${isEven ? 'md:pr-12 text-right' : 'md:pl-12 text-left'}`}>
+                      <div className={`font-heading font-[800] text-[22px] ${step.colorClass}`}>{step.date}</div>
+                    </div>
+                    <div className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-blanc border-[4px] ${step.borderClass} rounded-full shadow-sm z-10 mt-6 md:mt-0`}></div>
+                    <div className={`pl-16 md:w-1/2 w-full ${isEven ? 'md:pl-12' : 'md:pr-12 md:pl-0'}`}>
+                      <Card className={`hover:shadow-md transition-shadow ${!isEven ? 'md:text-right' : ''}`}>
+                        <div className={`md:hidden font-heading font-[800] text-[18px] ${step.colorClass} mb-2`}>{step.date}</div>
+                        <p className="text-body text-gris-texte">{step.text}</p>
+                      </Card>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Étape 2 */}
-              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
-                  <div className="font-heading font-[800] text-[22px] text-[#fcb726]">26 Novembre 2025</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#fcb726] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">26 Novembre 2025</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Début des réflexions pour trouver des solutions défis du monde agricole</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 3 */}
-              <div className="relative flex flex-col md:flex-row items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
-                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">2 Déc. 2025</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1a1a1a] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">2 Déc. 2025</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">La "Bibliothèque Agricole" devient BIFERA</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 4 */}
-              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
-                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">20 Déc. 2025</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1b5e38] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">20 Déc. 2025</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Premier webinaire sur la gestion de projet agricole</p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Étape 5 */}
-              <div className="relative flex flex-col md:flex-row items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
-                  <div className="font-heading font-[800] text-[22px] text-[#fcb726]">Janvier 2026</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#fcb726] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">Janvier 2026</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Mise en place d'une équipe d'appui</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 6 */}
-              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
-                  <div className="font-heading font-[800] text-[22px] text-[#1b5e38]">31 Janvier 2026</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1b5e38] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1b5e38] mb-2">31 Janvier 2026</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">2ème Webinaire sur la commercialisation des produits agricoles</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 7 */}
-              <div className="relative flex flex-col md:flex-row items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
-                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">Février - Avril 2026</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1a1a1a] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">Février - Avril 2026</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Structuration de BIFERA en un réseau : Gouvernance, activités stratégiques, pilotes...</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 8 */}
-              <div className="relative flex flex-col md:flex-row-reverse items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pl-12 text-left">
-                  <div className="font-heading font-[800] text-[22px] text-[#fcb726]">Mai - Juin 2026</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#fcb726] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pr-12 md:pl-0 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 md:text-right relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#fcb726] mb-2">Mai - Juin 2026</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Relance des activité du BIFERA de vient agrolide</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Étape 9 */}
-              <div className="relative flex flex-col md:flex-row items-start md:items-center">
-                <div className="hidden md:block md:w-1/2 md:pr-12 text-right">
-                  <div className="font-heading font-[800] text-[22px] text-[#1a1a1a]">Juil à Déc. 2026</div>
-                </div>
-                <div className="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-white border-[5px] border-[#1a1a1a] rounded-full shadow-md z-10 mt-6 md:mt-0"></div>
-                <div className="pl-16 md:pl-12 md:w-1/2 w-full">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#eaeaea] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 relative group">
-                    <div className="md:hidden font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">Juil à Déc. 2026</div>
-                    <p className="font-sans text-[15px] md:text-[16px] text-[#555] leading-[1.6]">Mise en place de l'organe de gouvernance, Création formelle et lancement officiel des activités du réseau agrolide</p>
-                  </div>
-                </div>
-              </div>
-
+                );
+              })}
             </div>
           </div>
         </div>
@@ -358,7 +253,7 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── NOTRE ÉQUIPE ───────────────────────────── */}
-      <section className="py-[40px] md:py-[80px] bg-white">
+      <section id="equipe" className="py-[40px] md:py-[80px] bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-[700px] mx-auto mb-16">
             <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] mb-6">

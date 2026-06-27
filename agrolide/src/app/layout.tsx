@@ -4,17 +4,21 @@ import Script from "next/script";
 import "./globals.css";
 
 const urbanist = Urbanist({
-  weight: ["600", "700"],
-  subsets: ["latin"],
-  variable: "--font-urbanist",
-});
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-urbanist',
+  display: 'swap',
+  preload: true,
+})
 
 const baskerville = Libre_Baskerville({
-  weight: ["400"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-baskerville",
-});
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  variable: '--font-baskerville',
+  display: 'swap',
+  preload: false,
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://agrolide.org'),

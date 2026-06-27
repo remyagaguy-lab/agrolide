@@ -1,14 +1,22 @@
-import * as React from "react"
-import { cn } from "@/lib/utils/formatters"
+import React, { HTMLAttributes } from 'react';
 
-export function Card({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+export type CardVariant = 'standard' | 'dark' | 'feature' | 'membre' | 'blog';
+
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+  variant?: CardVariant;
+  children: React.ReactNode;
+}
+
+export function Card({ variant = 'standard', className = '', children, ...props }: CardProps) {
+  let baseClass = 'card';
+  if (variant === 'dark') baseClass = 'card-dark';
+  if (variant === 'feature') baseClass = 'card-feature';
+  if (variant === 'membre') baseClass = 'card-membre';
+  if (variant === 'blog') baseClass = 'card-blog';
+
   return (
-    <div
-      className={cn(
-        "bg-[var(--color-blanc)] rounded-[12px] shadow-sm hover:shadow-md transition-shadow border border-[var(--color-gris-moyen)] overflow-hidden",
-        className
-      )}
-      {...props}
-    />
-  )
+    <div className={`${baseClass} ${className}`.trim()} {...props}>
+      {children}
+    </div>
+  );
 }
