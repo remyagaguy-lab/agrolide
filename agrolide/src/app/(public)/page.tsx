@@ -152,7 +152,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="bg-[#1b5e38] relative overflow-hidden">
+      <section className="bg-[#1b5e38] relative overflow-hidden pt-0 md:pt-0">
         {/* Image de fond avec dégradé */}
         <div className="absolute top-0 right-0 w-full md:w-1/2 h-full pointer-events-none z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-[#1b5e38] via-[#1b5e38]/80 to-[#1b5e38]/60 md:via-[#1b5e38]/40 md:to-transparent z-10" />
@@ -165,7 +165,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="max-w-[1100px] mx-auto px-6 pt-[16px] pb-0 md:pt-[24px] relative z-20">
+        <div className="max-w-[1100px] mx-auto px-6 pt-[32px] pb-0 md:pt-[48px] relative z-20">
           <div className="max-w-[900px]">
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
               Fédérer la chaîne<br />
