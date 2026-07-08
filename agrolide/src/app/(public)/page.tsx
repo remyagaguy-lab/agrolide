@@ -366,7 +366,6 @@ export default function HomePage() {
         <div className="container">
           {/* Header */}
           <div className="text-center mb-16">
-            <SectionLabel className="mx-auto flex justify-center text-center !bg-[#1a2e22] !text-[#50a853] !border-[rgba(80,168,83,0.2)]">La plateforme</SectionLabel>
             <h2 className="text-h2 text-white">
               Une plateforme au service de la mutualisation des ressources entre les acteurs de la chaîne de valeur agricole
             </h2>
