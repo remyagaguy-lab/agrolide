@@ -250,12 +250,13 @@ export default function HomePage() {
             </div>
 
             {/* Colonne droite */}
-            <div className="hidden md:flex bg-gris-light rounded-card aspect-[4/3] items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#c0c0bc" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-image">
-                <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
-                <circle cx="9" cy="9" r="2"/>
-                <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
-              </svg>
+            <div className="hidden md:block relative bg-gris-light rounded-card aspect-[4/3] overflow-hidden shadow-lg">
+              <Image 
+                src="/raison-detre.png" 
+                alt="Cohésion continentale en agriculture africaine" 
+                fill 
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -376,14 +377,14 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)] mb-[64px]">
               <div>
                 <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">01</div>
-                <h3 className="text-h3 text-white mb-4">Dashboard & Suivi</h3>
+                <h3 className="text-h3 text-white mb-4">Espace d'échange agricole</h3>
                 <p className="text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-6">
-                  Pilotez votre activité, suivez vos candidatures et gérez vos formations depuis une interface centralisée et intuitive.
+                  Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités, découvrez de nouvelles opportunités et échangez autour des événements qui transforment l'agriculture africaine.
                 </p>
-                <Link href="/dashboard" className="btn-text !text-[#50a853]">En savoir plus <IconArrowRight /></Link>
+                <Link href="/rejoindre" className="btn-text !text-[#50a853]">Rejoindre les discussions <IconArrowRight /></Link>
               </div>
               <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center">
-                <span className="font-heading font-[600] text-white">Dashboard</span>
+                <span className="font-heading font-[600] text-white">Espace d'échange</span>
               </div>
             </div>
 
