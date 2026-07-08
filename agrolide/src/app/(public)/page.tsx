@@ -196,32 +196,32 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION STATS ── */}
-      <section className="bg-blanc border-b border-gris-border !py-[28px]">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-gris-border">
-            <div className="py-4 md:py-0 text-center">
-              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
-                500<span className="font-[400] text-[18px] text-vert-principal">+</span>
+      <section className="bg-blanc border-b border-gris-border py-[16px] md:!py-[28px]">
+        <div className="container px-2 md:px-6">
+          <div className="grid grid-cols-4 divide-x divide-gris-border">
+            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
+                500<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal">+</span>
               </div>
-              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Membres actifs</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Membres actifs</div>
             </div>
-            <div className="py-4 md:py-0 text-center">
-              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
-                5<span className="font-[400] text-[18px] text-vert-principal"> pays</span>
+            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
+                5<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal"> pays</span>
               </div>
-              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Pays africains</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Pays africains</div>
             </div>
-            <div className="py-4 md:py-0 text-center">
-              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
-                700<span className="font-[400] text-[18px] text-vert-principal">+</span>
+            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
+                700<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal">+</span>
               </div>
-              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Ressources techniques</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Ressources techniques</div>
             </div>
-            <div className="py-4 md:py-0 text-center">
-              <div className="font-heading font-[900] text-[36px] text-vert-profond leading-none mb-1">
-                100<span className="font-[400] text-[18px] text-vert-principal">%</span>
+            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
+                100<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal">%</span>
               </div>
-              <div className="font-heading font-[600] text-[11px] text-gris-muted uppercase tracking-[0.07em]">Dédiés à l'Afrique</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Dédiés à l'Afrique</div>
             </div>
           </div>
         </div>

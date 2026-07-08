@@ -266,18 +266,50 @@ export default function QuiSommesNousPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: "Remy Gaguy", role: "Fondateur & CEO", desc: "Visionnaire et leader, expert en développement d'écosystèmes agricoles." },
-              { name: "Alice K.", role: "Directrice des Opérations", desc: "Assure la structuration et le bon déploiement des actions sur le terrain." },
-              { name: "Marc D.", role: "Lead Tech", desc: "Architecte de la plateforme agrolide et de ses solutions digitales." },
-              { name: "Sarah N.", role: "Responsable Réseau", desc: "Anime la communauté et construit les partenariats stratégiques." }
+              { 
+                name: "M. Remyaga Guy KOUMANTEGA", 
+                role: "Fondateur du Réseau BIFERA", 
+                bullets: ["Ingénieur des travaux agricoles", "Social Média Manager", "Créateur de contenu Business"],
+                image: "/equipe/Remyaga%20Guy%20KOUMANTEGA.jpg"
+              },
+              { 
+                name: "M. Antoine AHONDO", 
+                role: "Community & Programs Manager", 
+                bullets: ["Ingénieur des travaux agricoles"],
+                image: "/equipe/Antoine%20AHONDO.jpg"
+              },
+              { 
+                name: "Mlle. Saratou NAYA", 
+                role: "Responsable Partenariat et événementiel", 
+                bullets: ["Agroéconomiste en formation"],
+                image: "/equipe/Saratou%20NAYA.jpg"
+              },
+              { 
+                name: "À pourvoir", 
+                role: "Responsable Affaires Juridiques et Administration", 
+                bullets: ["Poste à pourvoir"],
+                image: ""
+              }
             ].map((member, i) => (
-              <div key={i} className="group text-center">
-                <div className="w-[160px] h-[160px] md:w-[200px] md:h-[200px] mx-auto mb-6 relative rounded-full bg-[#f8f8f6] border-4 border-[#eaeaea] group-hover:border-[#fcb726] transition-all duration-300 overflow-hidden flex items-center justify-center shadow-sm">
-                  <span className="font-heading font-[800] text-[40px] text-[#ccc] group-hover:text-[#fcb726] transition-colors">{member.name.substring(0, 2).toUpperCase()}</span>
+              <div key={i} className="group text-center flex flex-col items-center">
+                <div className="w-[160px] h-[160px] md:w-[200px] md:h-[200px] mb-6 relative rounded-full bg-[#f8f8f6] border-4 border-[#eaeaea] group-hover:border-[#fcb726] transition-all duration-300 overflow-hidden flex items-center justify-center shadow-sm">
+                  {member.image ? (
+                    <Image src={member.image} alt={member.name} fill className="object-cover" />
+                  ) : (
+                    <span className="font-heading font-[800] text-[40px] text-[#ccc] group-hover:text-[#fcb726] transition-colors">
+                      {member.name === "À pourvoir" ? "?" : member.name.substring(0, 2).toUpperCase()}
+                    </span>
+                  )}
                 </div>
-                <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-1">{member.name}</h3>
-                <p className="font-sans text-[14px] font-[600] text-[#1b5e38] uppercase tracking-wider mb-3">{member.role}</p>
-                <p className="font-sans text-[15px] text-[#666] leading-[1.6] max-w-[260px] mx-auto">{member.desc}</p>
+                <h3 className="font-heading font-[800] text-[18px] md:text-[20px] text-[#1a1a1a] mb-1">{member.name}</h3>
+                <p className="font-sans text-[13px] md:text-[14px] font-[600] text-[#1b5e38] uppercase tracking-wider mb-3 leading-[1.4] min-h-[40px] flex items-start justify-center">
+                  {member.role}
+                </p>
+                <div className="font-sans text-[14px] md:text-[15px] text-[#666] leading-[1.6] max-w-[260px] flex flex-col gap-1 text-center">
+                  {member.bullets.map((bullet, idx) => (
+                    <span key={idx} className="block">{bullet}</span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
