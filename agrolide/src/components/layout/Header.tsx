@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { href: "/",                label: "Accueil" },
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
   { href: "/actualites",      label: "Actualités" },
-  { href: "/agrobusiness",    label: "Agrobusiness" },
+  { href: "/nos-actions",     label: "Nos actions" },
   { href: "/blog",            label: "Blog" },
 ]
 

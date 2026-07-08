@@ -1,0 +1,207 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+.ag{font-family:'Urbanist',system-ui,sans-serif;padding:0 0 32px}
+.top-label{text-align:center;margin-bottom:8px}
+.top-label span{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#50a853}
+.top-h{font-size:24px;font-weight:900;text-align:center;color:var(--text-primary);letter-spacing:-.02em;margin-bottom:6px}
+.top-sub{font-size:13px;color:var(--text-secondary);text-align:center;margin-bottom:24px}
+
+.passion-card{border:1px solid #e8e8e4;border-radius:12px;padding:24px 28px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;margin-bottom:28px;background:var(--surface-2)}
+.passion-left{}
+.passion-tag{display:inline-flex;align-items:center;gap:6px;background:#e8f5e9;border-radius:5px;padding:4px 12px;margin-bottom:12px}
+.passion-tag span{font-size:11px;font-weight:700;color:#27500A;letter-spacing:.05em}
+.passion-h{font-size:17px;font-weight:800;color:var(--text-primary);margin-bottom:4px}
+.passion-desc{font-size:12px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px}
+.passion-price{font-size:28px;font-weight:900;color:#1b5e38;margin-bottom:4px}
+.passion-price-sub{font-size:11px;color:var(--text-secondary)}
+.btn-passion{display:inline-flex;align-items:center;gap:6px;background:#1b5e38;color:#fff;font-family:'Urbanist',sans-serif;font-size:13px;font-weight:700;padding:10px 20px;border-radius:7px;margin-top:16px;margin-right:12px;cursor:pointer}
+.btn-passion-ghost{display:inline-flex;align-items:center;gap:6px;color:#1b5e38;font-family:'Urbanist',sans-serif;font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;text-decoration-color:transparent}
+.btn-passion-ghost:hover{text-decoration-color:#1b5e38}
+.passion-right{}
+.passion-features{display:flex;flex-direction:column;gap:8px}
+.pf-item{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--text-primary)}
+.pf-check{color:#50a853;font-size:14px;flex-shrink:0;margin-top:1px}
+.pf-x{color:#ccc;font-size:14px;flex-shrink:0;margin-top:1px}
+.pf-muted{color:var(--text-secondary)}
+
+.sep{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sep-line{flex:1;height:1px;background:#e8e8e4}
+.sep-text{font-size:11px;font-weight:600;color:var(--text-secondary);white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
+
+.cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+.plan-card{border:1px solid #e8e8e4;border-radius:12px;padding:20px;display:flex;flex-direction:column;background:var(--surface-2);position:relative}
+.plan-card.featured{border:2px solid #1b5e38}
+
+.popular-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#1b5e38;color:#fff;font-size:10px;font-weight:800;padding:3px 12px;border-radius:20px;white-space:nowrap;letter-spacing:.04em}
+
+.plan-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:16px}
+.plan-icon.j{background:#e8f5e9}
+.plan-icon.p{background:#1b5e38}
+.plan-icon.pa{background:#e8f0e8}
+.plan-icon.s{background:#fef3e2}
+
+.plan-name{font-size:15px;font-weight:800;color:var(--text-primary);margin-bottom:3px}
+.plan-for{font-size:11px;color:var(--text-secondary);line-height:1.5;margin-bottom:12px}
+
+.plan-price-wrap{margin-bottom:4px;display:flex;align-items:baseline;gap:3px}
+.plan-price{font-size:26px;font-weight:900;color:#1b5e38}
+.plan-currency{font-size:13px;font-weight:700;color:#1b5e38}
+.plan-period{font-size:11px;color:var(--text-secondary);margin-left:3px}
+.plan-monthly{font-size:11px;color:var(--text-secondary);margin-bottom:14px}
+.plan-monthly span{color:#50a853;font-weight:600}
+
+.plan-btn{display:block;width:100%;padding:10px;border-radius:7px;font-family:'Urbanist',sans-serif;font-size:13px;font-weight:700;text-align:center;cursor:pointer;margin-bottom:14px;border:none}
+.plan-btn.green{background:#1b5e38;color:#fff}
+.plan-btn.outline{background:transparent;border:1.5px solid #e8e8e4;color:var(--text-primary)}
+.plan-btn.orange{background:#f99e1d;color:#fff}
+
+.plan-divider{border:none;border-top:1px solid #f0f0ee;margin-bottom:12px}
+
+.plan-feat-title{font-size:10px;font-weight:700;color:var(--text-secondary);letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}
+.plan-feats{display:flex;flex-direction:column;gap:6px;flex:1}
+.plan-feat{display:flex;align-items:flex-start;gap:7px;font-size:11px;color:var(--text-primary);line-height:1.45}
+.feat-check{color:#50a853;font-size:13px;flex-shrink:0;line-height:1.3}
+.feat-x{color:#d0d0d0;font-size:13px;flex-shrink:0;line-height:1.3}
+.feat-accent{color:#50a853;font-weight:600}
+
+.plan-more{font-size:11px;font-weight:600;color:#1b5e38;margin-top:14px;cursor:pointer;display:flex;align-items:center;gap:4px}
+
+.payment-note{text-align:center;margin-top:20px;font-size:11px;color:var(--text-secondary);display:flex;align-items:center;justify-content:center;gap:6px}
+.payment-note i{font-size:14px}
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<h2 class="sr-only">Page d'adhésion agrolide — 5 profils membres : Passionné, Junior, Professionnel, Partenaire, Sénior</h2>
+
+<div class="ag">
+  <div class="top-label"><span>Adhésion</span></div>
+  <div class="top-h">Choisissez votre profil dans le réseau</div>
+  <div class="top-sub">Rejoignez gratuitement ou accédez aux avantages complets selon votre parcours.</div>
+
+  <div class="passion-card">
+    <div class="passion-left">
+      <div class="passion-tag"><span>Gratuit · Sans engagement</span></div>
+      <div class="passion-h">Passionné du domaine agricole</div>
+      <div class="passion-desc">Pour les curieux, les étudiants en exploration et toute personne attachée à l'agriculture africaine sans exercer professionnellement.</div>
+      <div class="passion-price">0 FCFA</div>
+      <div class="passion-price-sub">Accès gratuit, pour toujours</div>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;margin-top:14px">
+        <span class="btn-passion"><i class="ti ti-user-plus" style="font-size:14px" aria-hidden="true"></i> Rejoindre gratuitement</span>
+        <span class="btn-passion-ghost">Voir les avantages <i class="ti ti-arrow-right" style="font-size:13px" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="passion-right">
+      <div class="passion-features">
+        <div class="pf-item"><span class="pf-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Lecture du blog et des actualités agrolide</span></div>
+        <div class="pf-item"><span class="pf-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Newsletter mensuelle du réseau</span></div>
+        <div class="pf-item"><span class="pf-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Accès aux webinaires publics gratuits</span></div>
+        <div class="pf-item"><span class="pf-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Calendrier des événements publics</span></div>
+        <div class="pf-item"><span class="pf-x"><i class="ti ti-x" aria-hidden="true"></i></span><span class="pf-muted">Annuaire professionnel (membres uniquement)</span></div>
+        <div class="pf-item"><span class="pf-x"><i class="ti ti-x" aria-hidden="true"></i></span><span class="pf-muted">Bibliothèque numérique</span></div>
+        <div class="pf-item"><span class="pf-x"><i class="ti ti-x" aria-hidden="true"></i></span><span class="pf-muted">Forum et messagerie membres</span></div>
+        <div class="pf-item"><span class="pf-x"><i class="ti ti-x" aria-hidden="true"></i></span><span class="pf-muted">Opportunités d'emploi et appels à projets</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"><div class="sep-line"></div><div class="sep-text">Profils membres avec accès complet</div><div class="sep-line"></div></div>
+
+  <div class="cards-grid">
+
+    <div class="plan-card">
+      <div class="plan-icon j"><i class="ti ti-school" style="color:#27500A;font-size:18px" aria-hidden="true"></i></div>
+      <div class="plan-name">Junior</div>
+      <div class="plan-for">Étudiants en agronomie, jeunes diplômés et passionnés en phase d'insertion.</div>
+      <div class="plan-price-wrap"><span class="plan-currency">FCFA</span><span class="plan-price">5 000</span></div>
+      <div class="plan-monthly">par an · soit <span>417 FCFA/mois</span></div>
+      <button class="plan-btn outline">S'inscrire comme Junior</button>
+      <hr class="plan-divider">
+      <div class="plan-feat-title">Inclus dans Junior :</div>
+      <div class="plan-feats">
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Profil dans l'annuaire continental</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Bibliothèque numérique <span class="feat-accent">(20 docs/mois)</span></span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Webinaires publics et privés</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Forum communautaire</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Opportunités d'emploi et stages</span></div>
+        <div class="plan-feat"><span class="feat-x"><i class="ti ti-x" aria-hidden="true"></i></span><span style="color:var(--text-secondary)">Messagerie interne membres</span></div>
+        <div class="plan-feat"><span class="feat-x"><i class="ti ti-x" aria-hidden="true"></i></span><span style="color:var(--text-secondary)">Dépôt de documents bibliothèque</span></div>
+      </div>
+      <div class="plan-more">Voir tous les avantages <i class="ti ti-arrow-right" style="font-size:12px" aria-hidden="true"></i></div>
+    </div>
+
+    <div class="plan-card featured">
+      <div class="popular-badge">Le plus populaire</div>
+      <div class="plan-icon p"><i class="ti ti-briefcase" style="color:#fff;font-size:18px" aria-hidden="true"></i></div>
+      <div class="plan-name">Professionnel</div>
+      <div class="plan-for">Agronomes, ingénieurs, chercheurs, consultants et entrepreneurs actifs.</div>
+      <div class="plan-price-wrap"><span class="plan-currency">FCFA</span><span class="plan-price">15 000</span></div>
+      <div class="plan-monthly">par an · soit <span>1 250 FCFA/mois</span></div>
+      <button class="plan-btn green">S'inscrire comme Professionnel</button>
+      <hr class="plan-divider">
+      <div class="plan-feat-title">Tout Junior, plus :</div>
+      <div class="plan-feats">
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Bibliothèque numérique <span class="feat-accent">illimitée</span></span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Messagerie interne membres</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Dépôt de documents (thèses, guides...)</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Sessions techniques privées</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Appels à projets et partenariats</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Certificats de formation téléchargeables</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Visibilité dans l'annuaire complet</span></div>
+      </div>
+      <div class="plan-more">Voir tous les avantages <i class="ti ti-arrow-right" style="font-size:12px" aria-hidden="true"></i></div>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-icon pa"><i class="ti ti-building" style="color:#3B6D11;font-size:18px" aria-hidden="true"></i></div>
+      <div class="plan-name">Partenaire</div>
+      <div class="plan-for">Entreprises agricoles, coopératives, ONG, agritech et institutions de recherche.</div>
+      <div class="plan-price-wrap"><span class="plan-currency">FCFA</span><span class="plan-price">50 000</span></div>
+      <div class="plan-monthly">par an · par organisation</div>
+      <button class="plan-btn outline">Nous contacter</button>
+      <hr class="plan-divider">
+      <div class="plan-feat-title">Tout Professionnel, plus :</div>
+      <div class="plan-feats">
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Vitrine entreprise dans l'annuaire</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Accès au vivier de talents agrolide</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Publication d'offres d'emploi prioritaires</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Co-organisation d'événements réseau</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Logo dans l'espace partenaires</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Montage d'appels à projets collectifs</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Paiement par virement sur facture</span></div>
+      </div>
+      <div class="plan-more">Voir tous les avantages <i class="ti ti-arrow-right" style="font-size:12px" aria-hidden="true"></i></div>
+    </div>
+
+    <div class="plan-card">
+      <div class="plan-icon s"><i class="ti ti-award" style="color:#633806;font-size:18px" aria-hidden="true"></i></div>
+      <div class="plan-name">Sénior</div>
+      <div class="plan-for">Experts, chercheurs émérites, mentors et investisseurs qui contribuent bénévolement.</div>
+      <div style="margin-bottom:4px">
+        <span style="font-size:22px;font-weight:900;color:#1b5e38">Sur sélection</span>
+      </div>
+      <div class="plan-monthly">Contribution bénévole · <span>Gratuit</span></div>
+      <button class="plan-btn orange">Déposer ma candidature</button>
+      <hr class="plan-divider">
+      <div class="plan-feat-title">Tout Professionnel, plus :</div>
+      <div class="plan-feats">
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Espace mentorat dédié</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Animation de webinaires réseau</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Badge "Expert" visible dans l'annuaire</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Accès illimité à toutes les ressources</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Participation aux décisions du réseau</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Valorisation de votre expertise africaine</span></div>
+        <div class="plan-feat"><span class="feat-check"><i class="ti ti-check" aria-hidden="true"></i></span><span>Profil prioritaire dans les résultats</span></div>
+      </div>
+      <div class="plan-more">Voir les critères de sélection <i class="ti ti-arrow-right" style="font-size:12px" aria-hidden="true"></i></div>
+    </div>
+
+  </div>
+
+  <div class="payment-note">
+    <i class="ti ti-lock" aria-hidden="true"></i>
+    Paiement sécurisé par Mobile Money (Orange, MTN, Moov, Wave) ou carte bancaire · Engagement annuel résiliable
+  </div>
+</div>
