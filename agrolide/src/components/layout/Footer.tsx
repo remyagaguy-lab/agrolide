@@ -88,47 +88,6 @@ function IconArrowRight() {
 export function Footer() {
   return (
     <>
-      {/* ── CTA PRÉ-FOOTER ── */}
-      <div className="bg-[#f7f8f3] py-16 px-6">
-        <div className="max-w-[860px] mx-auto">
-          <div
-            className="relative rounded-3xl overflow-hidden px-8 py-14 md:px-16 text-center"
-            style={{ background: "linear-gradient(135deg, #1b5e38 0%, #1e7042 40%, #2d5a1b 70%, #1a4a2e 100%)" }}
-          >
-            <div className="absolute top-[-60px] left-[-60px] w-[280px] h-[280px] rounded-full opacity-30 pointer-events-none"
-              style={{ background: "radial-gradient(circle, #fcb726 0%, transparent 70%)" }} />
-            <div className="absolute bottom-[-80px] right-[-40px] w-[320px] h-[320px] rounded-full opacity-20 pointer-events-none"
-              style={{ background: "radial-gradient(circle, #4ade80 0%, transparent 70%)" }} />
-            <div className="relative z-10">
-              <span className="inline-block border border-white/20 text-white/80 font-heading font-[600] text-[11px] tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-6">
-                Rejoindre le réseau
-              </span>
-              <h2 className="font-heading font-[800] text-[28px] md:text-[42px] text-white leading-[1.2] tracking-[-0.02em] mb-4">
-                Rejoignez des professionnels qui<br className="hidden md:block" /> bâtissent l'agriculture africaine
-              </h2>
-              <p className="font-sans text-[15px] text-white/60 mb-10 max-w-[500px] mx-auto leading-[1.7]">
-                Accédez à l'annuaire, aux formations, aux ressources et à la communauté agrolide dès aujourd'hui.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 max-w-[480px] mx-auto">
-                <div className="flex-1 flex items-center gap-3 bg-white/10 border border-white/20 rounded-xl px-4 py-3 backdrop-blur-sm">
-                  <IconMail />
-                  <input
-                    type="email"
-                    placeholder="Votre adresse email"
-                    className="bg-transparent text-white placeholder-white/40 font-sans text-[14px] flex-1 outline-none"
-                  />
-                </div>
-                <Link
-                  href="/rejoindre"
-                  className="inline-flex items-center justify-center gap-2 bg-[#fcb726] text-[#1a1a1a] font-heading font-[700] text-[14px] px-6 py-3 rounded-xl hover:bg-white transition-colors whitespace-nowrap"
-                >
-                  Nous rejoindre <IconArrowRight />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* ── FOOTER 4 COLONNES ── */}
       <footer
