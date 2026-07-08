@@ -165,7 +165,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="max-w-[1100px] mx-auto px-6 pt-[40px] pb-0 md:pt-[60px] relative z-20">
+        <div className="max-w-[1100px] mx-auto px-6 pt-[16px] pb-0 md:pt-[24px] relative z-20">
           <div className="max-w-[900px]">
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
               Fédérer la chaîne<br />
