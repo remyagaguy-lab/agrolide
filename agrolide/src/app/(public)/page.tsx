@@ -368,7 +368,7 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <SectionLabel className="mx-auto flex justify-center text-center !bg-[#1a2e22] !text-[#50a853] !border-[rgba(80,168,83,0.2)]">La plateforme</SectionLabel>
             <h2 className="text-h2 text-white">
-              L'outil au service de votre croissance
+              Une plateforme au service de la mutualisation des ressources entre les acteurs de la chaîne de valeur agricole
             </h2>
           </div>
 
@@ -383,15 +383,15 @@ export default function HomePage() {
                 </p>
                 <Link href="/rejoindre" className="btn-text !text-[#50a853]">Rejoindre les discussions <IconArrowRight /></Link>
               </div>
-              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center">
-                <span className="font-heading font-[600] text-white">Espace d'échange</span>
+              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center relative overflow-hidden">
+                <Image src="/plateforme-forum-ui.png" alt="Espace d'échange agricole" fill className="object-cover" />
               </div>
             </div>
 
             {/* Bloc 2 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)] mb-[64px]">
-              <div className="order-2 md:order-1 card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center">
-                <span className="font-heading font-[600] text-white">Annuaire Réseau</span>
+              <div className="order-2 md:order-1 card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center relative overflow-hidden">
+                <Image src="/plateforme-annuaire-ui.png" alt="Annuaire Panafricain" fill className="object-cover" />
               </div>
               <div className="order-1 md:order-2">
                 <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">02</div>
@@ -413,8 +413,8 @@ export default function HomePage() {
                 </p>
                 <Link href="/bibliotheque" className="btn-text !text-[#50a853]">En savoir plus <IconArrowRight /></Link>
               </div>
-              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center">
-                <span className="font-heading font-[600] text-white">Bibliothèque</span>
+              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center relative overflow-hidden">
+                <Image src="/plateforme-bibliotheque-ui.png" alt="Bibliothèque de Ressources" fill className="object-cover" />
               </div>
             </div>
           </div>
