@@ -12,7 +12,7 @@ import StarterKit from '@tiptap/starter-kit'
 import LinkExtension from '@tiptap/extension-link'
 import ImageExtension from '@tiptap/extension-image'
 
-export const revalidate = 86400 // ISR 24h
+export const revalidate = 3600 // ISR 1h
 
 // Dynamic metadata
 export async function generateMetadata(
