@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Découvrez les dernières actualités, analyses et conseils pour les acteurs de l'agriculture africaine.",
 }
 
-export const revalidate = 86400 // ISR 24h
+export const revalidate = 3600 // ISR 1h
 
 export default async function BlogPage({
   searchParams,
