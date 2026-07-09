@@ -268,7 +268,7 @@ export default function QuiSommesNousPage() {
             {[
               { 
                 name: "M. Remyaga Guy KOUMANTEGA", 
-                role: "Fondateur du Réseau BIFERA", 
+                role: "Fondateur du Réseau agrolide", 
                 bullets: ["Ingénieur des travaux agricoles", "Social Média Manager", "Créateur de contenu Business"],
                 image: "/equipe/Remyaga%20Guy%20KOUMANTEGA.jpg"
               },
