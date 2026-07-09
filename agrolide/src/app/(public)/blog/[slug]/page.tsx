@@ -16,14 +16,15 @@ export const revalidate = 0 // Pas de cache temporairement pour purger l'erreur 
 
 // Dynamic metadata
 export async function generateMetadata(
-  { params }: { params: { slug: string } },
+  { params }: { params: Promise<{ slug: string }> },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
+  const { slug } = await params;
   const supabase = await createClient()
   const { data: article } = await supabase
     .from('articles')
     .select('*')
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .single()
 
   if (!article) {
@@ -49,15 +50,16 @@ export async function generateMetadata(
 export default async function BlogPostPage({
   params
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
+  const { slug } = await params;
   const supabase = await createClient()
   
   // Fetch article
   const { data: article, error } = await supabase
     .from('articles')
     .select('*')
-    .eq('slug', params.slug)
+    .eq('slug', slug)
     .single()
 
   if (error || !article) {

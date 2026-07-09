@@ -13,10 +13,11 @@ export const revalidate = 3600 // ISR 1h
 export default async function BlogPage({
   searchParams,
 }: {
-  searchParams: { category?: string }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
   const supabase = await createClient()
-  const categoryParam = searchParams.category
+  const resolvedParams = await searchParams;
+  const categoryParam = resolvedParams.category
 
   // Build query
   let query = supabase
