@@ -50,11 +50,6 @@ export default async function BibliothequePublicPage() {
       {/* Hero section */}
       <section className="bg-[#0d3520] pt-10 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Accent badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fcb726]/10 border border-[#fcb726]/20 text-[#fcb726] text-xs font-heading font-semibold mb-4">
-            <BookOpen className="w-3.5 h-3.5" />
-            Ressources du réseau
-          </div>
 
           <h1 className="font-heading font-[800] text-3xl sm:text-4xl text-white mb-4 max-w-3xl mx-auto leading-tight">
             Bibliothèque du réseau
