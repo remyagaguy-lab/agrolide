@@ -228,7 +228,7 @@ export default function HomePage() {
       </section>
 
       {/* ── RAISON D'ÊTRE ── */}
-      <section className="bg-blanc">
+      <section className="bg-[#fcfbf9] border-b border-[#f0ece1]">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-[55%_1fr] gap-[48px] items-start">
             {/* Colonne gauche */}
@@ -263,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* ── LES 4 FREINS ── layout horizontal inspiré template Features ── */}
-      <section className="bg-gris-fond">
+      <section className="bg-gradient-to-b from-[#f0f6f0] to-[#e8efe8] border-b border-[#dce6dc]">
         <div className="container">
           <div className="text-center max-w-[640px] mx-auto mb-12">
             <SectionLabel className="mx-auto flex justify-center text-center">Constat</SectionLabel>
@@ -310,7 +310,7 @@ export default function HomePage() {
       </section>
 
       {/* ── 3 DOMAINES D'ACTIVITÉ ── */}
-      <section id="actions" className="bg-blanc">
+      <section id="actions" className="bg-white">
         <div className="container">
           <div className="text-center mb-12">
             <SectionLabel className="mx-auto flex justify-center text-center">Notre approche</SectionLabel>
