@@ -10,6 +10,7 @@ export interface DocumentType {
   pays?: string
   nb_telechargements: number
   statut?: string
+  created_at?: string
 }
 
 interface DocumentCardProps {
