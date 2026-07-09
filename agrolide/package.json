@@ -24,6 +24,7 @@
     "@sentry/nextjs": "latest",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "latest",
+    "@tailwindcss/typography": "^0.5.20",
     "@tiptap/extension-image": "latest",
     "@tiptap/extension-link": "latest",
     "@tiptap/html": "latest",
