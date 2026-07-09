@@ -47,19 +47,19 @@ export default async function BibliothequePublicPage() {
     <div className="min-h-screen" style={{ backgroundColor: '#f8f8f6' }}>
 
       {/* Hero section */}
-      <section className="bg-[#0d3520] pt-16 pb-16">
+      <section className="bg-[#0d3520] pt-10 pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Accent badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fcb726]/10 border border-[#fcb726]/20 text-[#fcb726] text-sm font-heading font-semibold mb-6">
-            <BookOpen className="w-4 h-4" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fcb726]/10 border border-[#fcb726]/20 text-[#fcb726] text-xs font-heading font-semibold mb-4">
+            <BookOpen className="w-3.5 h-3.5" />
             Ressources du réseau
           </div>
 
-          <h1 className="font-heading font-[800] text-4xl sm:text-5xl text-white mb-6 max-w-3xl mx-auto leading-tight">
+          <h1 className="font-heading font-[800] text-3xl sm:text-4xl text-white mb-4 max-w-3xl mx-auto leading-tight">
             Bibliothèque du réseau
           </h1>
 
-          <p className="text-white/70 text-xl mb-10 max-w-2xl mx-auto font-sans">
+          <p className="text-white/70 text-lg mb-6 max-w-2xl mx-auto font-sans">
             Accédez à notre collection de{' '}
             {count > 0 ? (
               <span className="font-semibold text-[#fcb726]">{count} documents</span>
@@ -71,16 +71,16 @@ export default async function BibliothequePublicPage() {
 
           <Link
             href="/rejoindre"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#fcb726] text-[#1a1a1a] font-heading font-[700] hover:bg-[#e5a620] transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#fcb726] text-[#1a1a1a] font-heading font-[700] text-sm hover:bg-[#e5a620] transition-colors"
           >
             Devenir membre
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </section>
 
       {/* Documents section */}
-      <section className="py-20">
+      <section className="pt-10 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Section title */}
