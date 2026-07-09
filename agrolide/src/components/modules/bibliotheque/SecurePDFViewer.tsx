@@ -1,0 +1,194 @@
+'use client'
+
+import { useState, useEffect, useRef } from 'react'
+import { Document, Page, pdfjs } from 'react-pdf'
+import 'react-pdf/dist/Page/AnnotationLayer.css'
+import 'react-pdf/dist/Page/TextLayer.css'
+import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react'
+import Image from 'next/image'
+
+// Configurer le worker pour pdf.js
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`
+
+export function SecurePDFViewer({ documentId }: { documentId: string }) {
+  const [numPages, setNumPages] = useState<number>(0)
+  const [pageNumber, setPageNumber] = useState<number>(1)
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null)
+  const [loading, setLoading] = useState<boolean>(true)
+  const [error, setError] = useState<string | null>(null)
+  const [scale, setScale] = useState<number>(1.2)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Empêcher le clic droit sur toute la zone du lecteur
+    const handleContextMenu = (e: MouseEvent) => {
+      e.preventDefault()
+    }
+    const container = containerRef.current
+    if (container) {
+      container.addEventListener('contextmenu', handleContextMenu)
+    }
+    return () => {
+      if (container) container.removeEventListener('contextmenu', handleContextMenu)
+    }
+  }, [])
+
+  useEffect(() => {
+    // Empêcher les raccourcis clavier (Ctrl+S, Ctrl+P)
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p')) {
+        e.preventDefault()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  useEffect(() => {
+    const fetchSecureUrl = async () => {
+      try {
+        const { createClient } = await import('@supabase/supabase-js')
+        const supabase = createClient(
+          process.env.NEXT_PUBLIC_SUPABASE_URL!, 
+          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+        )
+        const { data: { session } } = await supabase.auth.getSession()
+
+        // Fetching signed URL
+        const res = await fetch(`/api/bibliotheque/download/${documentId}`, {
+          headers: {
+            ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {})
+          }
+        })
+        
+        if (!res.ok) throw new Error('Accès refusé ou document introuvable')
+        
+        const data = await res.json()
+        if (data.url) {
+          setPdfUrl(data.url)
+        } else {
+          throw new Error('URL du document introuvable')
+        }
+      } catch (err: any) {
+        setError(err.message || 'Erreur de chargement')
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchSecureUrl()
+  }, [documentId])
+
+  function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    setNumPages(numPages)
+  }
+
+  const changePage = (offset: number) => {
+    setPageNumber(prevPageNumber => {
+      const newPage = prevPageNumber + offset;
+      return Math.min(Math.max(1, newPage), numPages);
+    })
+  }
+
+  const changeScale = (offset: number) => {
+    setScale(prevScale => Math.min(Math.max(0.5, prevScale + offset), 3))
+  }
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[600px] bg-gray-50 rounded-xl">
+        <Loader2 className="w-10 h-10 animate-spin text-green-700 mb-4" />
+        <p className="text-gray-500 font-medium">Sécurisation et chargement du document...</p>
+      </div>
+    )
+  }
+
+  if (error || !pdfUrl) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[600px] bg-red-50 rounded-xl">
+        <p className="text-red-600 font-medium">{error || 'Erreur'}</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="flex flex-col items-center bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
+      {/* Toolbar */}
+      <div className="w-full bg-white border-b border-gray-200 p-4 flex items-center justify-between shadow-sm z-10">
+        <div className="flex items-center gap-4">
+          <button 
+            onClick={() => changeScale(-0.2)} 
+            className="p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
+            title="Dézoomer"
+          >
+            <ZoomOut className="w-5 h-5" />
+          </button>
+          <span className="text-sm font-medium text-gray-600 w-12 text-center">{Math.round(scale * 100)}%</span>
+          <button 
+            onClick={() => changeScale(0.2)} 
+            className="p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
+            title="Zoomer"
+          >
+            <ZoomIn className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <button
+            disabled={pageNumber <= 1}
+            onClick={() => changePage(-1)}
+            className="p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <span className="text-sm font-medium text-gray-700">
+            Page {pageNumber} sur {numPages || '--'}
+          </span>
+          <button
+            disabled={pageNumber >= numPages}
+            onClick={() => changePage(1)}
+            className="p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+
+      {/* Secure PDF Container */}
+      <div 
+        ref={containerRef}
+        className="relative w-full h-[800px] overflow-auto flex justify-center p-8 bg-[#e5e5e5] select-none"
+        style={{ WebkitUserSelect: 'none', userSelect: 'none' }}
+      >
+        <Document
+          file={pdfUrl}
+          onLoadSuccess={onDocumentLoadSuccess}
+          loading={<Loader2 className="w-10 h-10 animate-spin text-green-700 mx-auto mt-20" />}
+          error={<div className="text-red-500 mt-20">Impossible de charger le PDF.</div>}
+        >
+          <div className="relative shadow-xl">
+            <Page 
+              pageNumber={pageNumber} 
+              scale={scale} 
+              renderTextLayer={false} 
+              renderAnnotationLayer={false}
+              className="pointer-events-none" 
+            />
+            
+            {/* Watermark Overlay (Transparent Logo) */}
+            <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center opacity-[0.04] z-50 overflow-hidden">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="flex gap-16 mb-16 transform -rotate-45">
+                  <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
+                  <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
+                </div>
+              ))}
+            </div>
+            
+            {/* Transparent anti-drag overlay */}
+            <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
+          </div>
+        </Document>
+      </div>
+    </div>
+  )
+}
