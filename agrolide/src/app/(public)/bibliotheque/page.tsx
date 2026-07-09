@@ -52,7 +52,7 @@ export default async function BibliothequePublicPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
           <h1 className="font-heading font-[800] text-3xl sm:text-4xl text-white mb-4 max-w-3xl mx-auto leading-tight">
-            Bibliothèque du réseau
+            Bibliothèque agricole
           </h1>
 
           <p className="text-white/70 text-lg mb-6 max-w-2xl mx-auto font-sans">
