@@ -257,7 +257,7 @@ export default function QuiSommesNousPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-[700px] mx-auto mb-16">
             <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] mb-6">
-              L'équipe fondatrice
+              L'équipe pilote
             </h2>
             <p className="font-sans text-[16px] text-[#666] leading-[1.7]">
               Une équipe de passionnés, alliant expertise agronomique, technologique et stratégique au service de l'agriculture africaine.
