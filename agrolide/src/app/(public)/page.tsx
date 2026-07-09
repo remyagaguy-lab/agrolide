@@ -361,61 +361,84 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* ── SECTION PLATEFORME ── */}
-      <section className="bg-[#f4f8f4] py-[96px]">
-        <div className="container">
+      {/* ── SECTION PLATEFORME (BENTO GRID) ── */}
+      <section className="bg-gris-fond py-section-lg relative overflow-hidden">
+        {/* Cercles décoratifs (Glassmorphism / Glow) */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#50a853]/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#f99e1d]/5 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3" />
+
+        <div className="container relative z-10">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-h2 text-gris-titre">
-              Une plateforme au service de la mutualisation des ressources entre les acteurs de la chaîne de valeur agricole
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-h2 text-gris-titre mb-4">
+              L'écosystème <span className="text-vert-principal">complet</span>
             </h2>
+            <p className="text-gris-texte text-[16px] leading-[1.6]">
+              Une plateforme innovante au service de la mutualisation des ressources entre les acteurs de la chaîne de valeur agricole africaine.
+            </p>
           </div>
 
-          <div className="flex flex-col">
-            {/* Bloc 1 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-gris-border mb-[64px]">
-              <div>
-                <div className="font-heading font-[900] text-[48px] text-[rgba(27,94,56,0.08)] leading-none mb-2">01</div>
-                <h3 className="text-h3 text-gris-titre mb-4">Espace d'échange agricole</h3>
-                <p className="text-[15px] text-gris-texte leading-[1.65] mb-6">
-                  Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités, découvrez de nouvelles opportunités et échangez autour des événements qui transforment l'agriculture africaine.
-                </p>
-                <Link href="/rejoindre" className="btn-text !text-[#1b5e38]">Rejoindre les discussions <IconArrowRight /></Link>
-              </div>
-              <div className="aspect-video bg-white border border-gris-border shadow-sm rounded-[10px] flex items-center justify-center relative overflow-hidden">
-                <Image src="/plateforme-forum-ui.png" alt="Espace d'échange agricole" fill className="object-cover" />
-              </div>
-            </div>
-
-            {/* Bloc 2 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-gris-border mb-[64px]">
-              <div className="order-2 md:order-1 aspect-video bg-white border border-gris-border shadow-sm rounded-[10px] flex items-center justify-center relative overflow-hidden">
-                <Image src="/plateforme-annuaire-ui.png" alt="Annuaire Panafricain" fill className="object-cover" />
-              </div>
-              <div className="order-1 md:order-2">
-                <div className="font-heading font-[900] text-[48px] text-[rgba(27,94,56,0.08)] leading-none mb-2">02</div>
-                <h3 className="text-h3 text-gris-titre mb-4">Annuaire Panafricain</h3>
-                <p className="text-[15px] text-gris-texte leading-[1.65] mb-6">
-                  Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent grâce à des filtres avancés.
-                </p>
-                <Link href="/annuaire" className="btn-text !text-[#1b5e38]">En savoir plus <IconArrowRight /></Link>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            
+            {/* Bloc 1 : Espace d'échange (Pleine largeur sur grand écran) */}
+            <div className="lg:col-span-12 group bg-white rounded-[24px] border border-gris-border overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500">
+              <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+                <div className="p-10 md:p-16 flex flex-col justify-center">
+                  <div className="w-14 h-14 bg-vert-clair text-vert-principal rounded-[16px] flex items-center justify-center mb-6">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <h3 className="text-[32px] font-heading font-[800] text-gris-titre mb-4 leading-tight">Espace d'échange agricole</h3>
+                  <p className="text-[16px] text-gris-texte leading-[1.7] mb-8 max-w-[400px]">
+                    Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités et découvrez de nouvelles opportunités.
+                  </p>
+                  <Link href="/rejoindre" className="inline-flex items-center gap-2 font-heading font-[700] text-vert-principal hover:text-vert-profond transition-colors w-fit">
+                    Rejoindre les discussions <IconArrowRight />
+                  </Link>
+                </div>
+                <div className="relative min-h-[300px] lg:min-h-[400px] bg-[#f8faf8] overflow-hidden">
+                  <Image src="/plateforme-forum-ui.png" alt="Espace d'échange" fill className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-gris-border shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
+                </div>
               </div>
             </div>
 
-            {/* Bloc 3 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-gris-border">
-              <div>
-                <div className="font-heading font-[900] text-[48px] text-[rgba(27,94,56,0.08)] leading-none mb-2">03</div>
-                <h3 className="text-h3 text-gris-titre mb-4">Bibliothèque de Ressources</h3>
-                <p className="text-[15px] text-gris-texte leading-[1.65] mb-6">
+            {/* Bloc 2 : Annuaire (Moitié gauche) */}
+            <div className="lg:col-span-6 group bg-gradient-to-b from-white to-[#fcfaf7] rounded-[24px] border border-gris-border overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col">
+              <div className="p-10 flex-1">
+                <div className="w-14 h-14 bg-[#fff3e0] text-orange-accent rounded-[16px] flex items-center justify-center mb-6">
+                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 className="text-[26px] font-heading font-[800] text-gris-titre mb-4 leading-tight">Annuaire Panafricain</h3>
+                <p className="text-[15px] text-gris-texte leading-[1.7] mb-8">
+                  Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent.
+                </p>
+                <Link href="/annuaire" className="inline-flex items-center gap-2 font-heading font-[700] text-orange-accent hover:text-orange-dore transition-colors">
+                  Explorer le réseau <IconArrowRight />
+                </Link>
+              </div>
+              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-[#f8faf8] overflow-hidden">
+                <Image src="/plateforme-annuaire-ui.png" alt="Annuaire Panafricain" fill className="object-cover object-top border-t border-gris-border transform group-hover:scale-[1.03] transition-transform duration-700" />
+              </div>
+            </div>
+
+            {/* Bloc 3 : Bibliothèque (Moitié droite) */}
+            <div className="lg:col-span-6 group bg-gradient-to-b from-white to-[#f4f8f4] rounded-[24px] border border-gris-border overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col">
+              <div className="p-10 flex-1">
+                <div className="w-14 h-14 bg-vert-clair text-vert-profond rounded-[16px] flex items-center justify-center mb-6">
+                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M2 7h20"/><path d="M4 7v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/></svg>
+                </div>
+                <h3 className="text-[26px] font-heading font-[800] text-gris-titre mb-4 leading-tight">Bibliothèque de Ressources</h3>
+                <p className="text-[15px] text-gris-texte leading-[1.7] mb-8">
                   Accédez à des centaines de documents techniques, thèses et guides pratiques spécifiquement adaptés aux sols africains.
                 </p>
-                <Link href="/bibliotheque" className="btn-text !text-[#1b5e38]">En savoir plus <IconArrowRight /></Link>
+                <Link href="/bibliotheque" className="inline-flex items-center gap-2 font-heading font-[700] text-vert-principal hover:text-vert-profond transition-colors">
+                  Consulter les guides <IconArrowRight />
+                </Link>
               </div>
-              <div className="aspect-video bg-white border border-gris-border shadow-sm rounded-[10px] flex items-center justify-center relative overflow-hidden">
-                <Image src="/plateforme-bibliotheque-ui.png" alt="Bibliothèque de Ressources" fill className="object-cover" />
+              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-[#f8faf8] overflow-hidden">
+                <Image src="/plateforme-bibliotheque-ui.png" alt="Bibliothèque de Ressources" fill className="object-cover object-top border-t border-gris-border transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
+
           </div>
         </div>
       </section>
