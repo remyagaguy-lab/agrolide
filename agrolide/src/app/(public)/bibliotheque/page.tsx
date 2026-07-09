@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import Link from 'next/link'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
@@ -83,20 +84,23 @@ export default async function BibliothequePublicPage() {
       <section className="pt-10 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+
           {/* Section title */}
           <div className="flex items-center justify-between mb-8">
             <h2 className="font-heading font-[800] text-2xl text-[#1a1a1a]">Tous les documents</h2>
           </div>
 
-          <BibliothequeClient 
-            initialData={{ 
-              data: documents, 
-              nextCursor: documents.length === 6 ? documents[documents.length - 1].created_at : null 
-            }}
-            supabaseUrl={process.env.NEXT_PUBLIC_SUPABASE_URL}
-            supabaseAnonKey={process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}
-            publicView={true}
-          />
+          <Suspense fallback={<div className="text-center py-12 text-gray-500">Chargement de la bibliothèque...</div>}>
+            <BibliothequeClient 
+              initialData={{ 
+                data: documents, 
+                nextCursor: documents.length === 6 ? documents[documents.length - 1].created_at : null 
+              }}
+              supabaseUrl={process.env.NEXT_PUBLIC_SUPABASE_URL}
+              supabaseAnonKey={process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}
+              publicView={true}
+            />
+          </Suspense>
 
           {/* Bottom CTA card */}
           <div className="mt-16 text-center bg-[#0d3520] p-10 rounded-2xl shadow-sm">
