@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
+import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
 import { ArrowRight, BookOpen } from 'lucide-react'
 
 export const revalidate = 3600 // ISR 1 heure
@@ -84,21 +85,18 @@ export default async function BibliothequePublicPage() {
 
           {/* Section title */}
           <div className="flex items-center justify-between mb-8">
-            <h2 className="font-heading font-[800] text-2xl text-[#1a1a1a]">Récemment ajoutés</h2>
+            <h2 className="font-heading font-[800] text-2xl text-[#1a1a1a]">Tous les documents</h2>
           </div>
 
-          {documents.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {documents.map((doc) => (
-                <DocumentCard key={doc.id} document={doc} publicView={true} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12 bg-white rounded-2xl border border-gray-100 shadow-sm">
-              <BookOpen className="w-12 h-12 mx-auto mb-4" style={{ color: '#ccc' }} />
-              <p style={{ color: '#666' }} className="font-sans">Les documents sont en cours de chargement...</p>
-            </div>
-          )}
+          <BibliothequeClient 
+            initialData={{ 
+              data: documents, 
+              nextCursor: documents.length === 6 ? documents[documents.length - 1].created_at : null 
+            }}
+            supabaseUrl={process.env.NEXT_PUBLIC_SUPABASE_URL}
+            supabaseAnonKey={process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}
+            publicView={true}
+          />
 
           {/* Bottom CTA card */}
           <div className="mt-16 text-center bg-[#0d3520] p-10 rounded-2xl shadow-sm">

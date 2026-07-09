@@ -6,7 +6,7 @@ import { Search, Filter, X } from 'lucide-react'
 import { DocumentCard, DocumentType } from './DocumentCard'
 import { createClient } from '@supabase/supabase-js'
 
-export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey }: any) {
+export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, publicView = false }: any) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -209,8 +209,8 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey }
         ) : documents.length > 0 ? (
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {documents.map((doc) => (
-                <DocumentCard key={doc.id} document={doc} />
+              {documents.map((doc: DocumentType) => (
+                <DocumentCard key={doc.id} document={doc} publicView={publicView} />
               ))}
             </div>
             {nextCursor && (
