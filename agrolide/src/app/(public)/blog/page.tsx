@@ -45,9 +45,6 @@ export default async function BlogPage({
       {/* Hero */}
       <section className="bg-[#0d3520] pt-10 pb-10 text-white text-center">
         <div className="container mx-auto px-4">
-          <span className="inline-block mb-4 px-4 py-2 rounded-full bg-[#fcb726]/20 text-[#fcb726] text-xs font-semibold tracking-wide uppercase">
-            Blog & Actualités
-          </span>
           <h1 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
             Blog & Actualités
           </h1>
