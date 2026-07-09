@@ -46,7 +46,7 @@ export default async function BibliothequePublicPage() {
     <div className="min-h-screen" style={{ backgroundColor: '#f8f8f6' }}>
 
       {/* Hero section */}
-      <section className="bg-[#0d3520] pt-32 pb-24">
+      <section className="bg-[#0d3520] pt-16 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Accent badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fcb726]/10 border border-[#fcb726]/20 text-[#fcb726] text-sm font-heading font-semibold mb-6">
