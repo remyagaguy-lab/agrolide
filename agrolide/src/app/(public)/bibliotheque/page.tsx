@@ -4,24 +4,37 @@ import { ArrowRight, BookOpen } from 'lucide-react'
 
 export const revalidate = 3600 // ISR 1 heure
 
+import { createClient } from '@supabase/supabase-js'
+
 async function getBibliothequeData() {
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
-
   try {
-    const [countRes, previewRes] = await Promise.all([
-      fetch(`${API_URL}/api/bibliotheque/count`, { next: { revalidate: 3600 } }),
-      fetch(`${API_URL}/api/bibliotheque/public-preview`, { next: { revalidate: 3600 } })
-    ])
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+    const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
-    const countData = countRes.ok ? await countRes.json() : { count: 0 }
-    const previewData = previewRes.ok ? await previewRes.json() : { data: [] }
+    // Compter le nombre de documents
+    const { count, error: countError } = await supabase
+      .from('documents')
+      .select('*', { count: 'exact', head: true })
+      .eq('statut', 'publie') // Optionnel: filtrer les publiés
+
+    // Récupérer les derniers documents (ex: les 6 plus récents)
+    const { data: documents, error: docsError } = await supabase
+      .from('documents')
+      .select('*')
+      .eq('statut', 'publie')
+      .order('created_at', { ascending: false })
+      .limit(6)
+
+    if (countError) console.error('Erreur count:', countError)
+    if (docsError) console.error('Erreur docs:', docsError)
 
     return {
-      count: countData.count || 0,
-      documents: (previewData.data || []) as DocumentType[]
+      count: count || 0,
+      documents: (documents || []) as DocumentType[]
     }
   } catch (error) {
-    console.error('Erreur lors du fetch de la bibliothèque:', error)
+    console.error('Erreur lors du fetch de la bibliothèque (Supabase):', error)
     return { count: 0, documents: [] }
   }
 }
