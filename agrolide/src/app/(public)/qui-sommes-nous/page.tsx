@@ -289,6 +289,24 @@ export default function QuiSommesNousPage() {
                 role: "Responsable Affaires Juridiques et Administration", 
                 bullets: ["Poste à pourvoir"],
                 image: ""
+              },
+              { 
+                name: "À pourvoir", 
+                role: "Responsable Marketing et Communication", 
+                bullets: ["Poste à pourvoir"],
+                image: ""
+              },
+              { 
+                name: "À pourvoir", 
+                role: "Responsable Finance et Logistique", 
+                bullets: ["Poste à pourvoir"],
+                image: ""
+              },
+              { 
+                name: "À pourvoir", 
+                role: "Responsable Contrôle Qualité et Reporting", 
+                bullets: ["Poste à pourvoir"],
+                image: ""
               }
             ].map((member, i) => (
               <div key={i} className="group text-center flex flex-col items-center">
