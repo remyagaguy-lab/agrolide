@@ -43,15 +43,15 @@ export default async function BlogPage({
   return (
     <div className="flex flex-col min-h-screen bg-[#f8f8f6]">
       {/* Hero */}
-      <section className="bg-[#0d3520] pt-32 pb-24 text-white text-center">
+      <section className="bg-[#0d3520] pt-10 pb-10 text-white text-center">
         <div className="container mx-auto px-4">
-          <span className="inline-block mb-4 px-4 py-1.5 rounded-full bg-[#fcb726]/20 text-[#fcb726] text-sm font-semibold tracking-wide uppercase">
+          <span className="inline-block mb-4 px-4 py-2 rounded-full bg-[#fcb726]/20 text-[#fcb726] text-xs font-semibold tracking-wide uppercase">
             Blog & Actualités
           </span>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+          <h1 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
             Blog & Actualités
           </h1>
-          <p className="text-xl max-w-2xl mx-auto text-white/80">
+          <p className="text-lg max-w-2xl mx-auto text-white/80 mb-6">
             Analyses, conseils pratiques et retours d'expérience pour l'agriculture africaine.
           </p>
         </div>
