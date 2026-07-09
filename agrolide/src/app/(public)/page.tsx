@@ -381,7 +381,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
             {/* Bloc 1 : Espace d'échange (Pleine largeur sur grand écran) */}
-            <div className="lg:col-span-12 group bg-white rounded-[24px] border border-gris-border overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500">
+            <div className="lg:col-span-12 group bg-gradient-to-br from-[#f0f7f0] to-[#e3f0e3] rounded-[24px] border border-[#d2e3d2] overflow-hidden hover:shadow-[0_12px_40px_rgba(80,168,83,0.15)] transition-all duration-500">
               <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
                 <div className="p-10 md:p-16 flex flex-col justify-center">
                   <div className="w-14 h-14 bg-vert-clair text-vert-principal rounded-[16px] flex items-center justify-center mb-6">
@@ -395,14 +395,14 @@ export default function HomePage() {
                     Rejoindre les discussions <IconArrowRight />
                   </Link>
                 </div>
-                <div className="relative min-h-[300px] lg:min-h-[400px] bg-[#f8faf8] overflow-hidden">
-                  <Image src="/plateforme-forum-ui.png" alt="Espace d'échange" fill className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-gris-border shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
+                <div className="relative min-h-[300px] lg:min-h-[400px] bg-white/40 overflow-hidden">
+                  <Image src="/plateforme-forum-ui.png" alt="Espace d'échange" fill className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-white/60 shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
                 </div>
               </div>
             </div>
 
             {/* Bloc 2 : Annuaire (Moitié gauche) */}
-            <div className="lg:col-span-6 group bg-gradient-to-b from-white to-[#fcfaf7] rounded-[24px] border border-gris-border overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col">
+            <div className="lg:col-span-6 group bg-gradient-to-br from-[#fffaf0] to-[#fce8d5] rounded-[24px] border border-[#f5d5b5] overflow-hidden hover:shadow-[0_12px_40px_rgba(249,158,29,0.15)] transition-all duration-500 flex flex-col">
               <div className="p-10 flex-1">
                 <div className="w-14 h-14 bg-[#fff3e0] text-orange-accent rounded-[16px] flex items-center justify-center mb-6">
                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -415,13 +415,13 @@ export default function HomePage() {
                   Explorer le réseau <IconArrowRight />
                 </Link>
               </div>
-              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-[#f8faf8] overflow-hidden">
-                <Image src="/plateforme-annuaire-ui.png" alt="Annuaire Panafricain" fill className="object-cover object-top border-t border-gris-border transform group-hover:scale-[1.03] transition-transform duration-700" />
+              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
+                <Image src="/plateforme-annuaire-ui.png" alt="Annuaire Panafricain" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 
             {/* Bloc 3 : Bibliothèque (Moitié droite) */}
-            <div className="lg:col-span-6 group bg-gradient-to-b from-white to-[#f4f8f4] rounded-[24px] border border-gris-border overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-500 flex flex-col">
+            <div className="lg:col-span-6 group bg-gradient-to-br from-[#f8f9f6] to-[#e6ebe3] rounded-[24px] border border-[#d0dbcb] overflow-hidden hover:shadow-[0_12px_40px_rgba(135,142,44,0.12)] transition-all duration-500 flex flex-col">
               <div className="p-10 flex-1">
                 <div className="w-14 h-14 bg-vert-clair text-vert-profond rounded-[16px] flex items-center justify-center mb-6">
                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M2 7h20"/><path d="M4 7v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/></svg>
@@ -434,8 +434,8 @@ export default function HomePage() {
                   Consulter les guides <IconArrowRight />
                 </Link>
               </div>
-              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-[#f8faf8] overflow-hidden">
-                <Image src="/plateforme-bibliotheque-ui.png" alt="Bibliothèque de Ressources" fill className="object-cover object-top border-t border-gris-border transform group-hover:scale-[1.03] transition-transform duration-700" />
+              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
+                <Image src="/plateforme-bibliotheque-ui.png" alt="Bibliothèque de Ressources" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 
