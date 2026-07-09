@@ -33,14 +33,14 @@ export async function generateMetadata(
   }
 
   return {
-    title: `${article.titre || article.title} | agrolide Blog`,
-    description: article.excerpt || article.extrait || `Lisez cet article sur ${article.category || 'l\'agriculture africaine'}.`,
+    title: `${article.titre} | agrolide Blog`,
+    description: article.extrait || `Lisez cet article sur ${article.categorie || 'l\'agriculture africaine'}.`,
     openGraph: {
       type: 'article',
       publishedTime: article.published_at,
-      authors: [article.author_name],
-      title: article.titre || article.title,
-      description: article.excerpt || article.extrait,
+      authors: [article.auteur_externe],
+      title: article.titre,
+      description: article.extrait,
       images: article.image_une_url ? [{ url: article.image_une_url, width: 1200, height: 630 }] : [],
     },
   }
@@ -68,15 +68,15 @@ export default async function BlogPostPage({
   const { data: similarArticles } = await supabase
     .from('articles')
     .select('*')
-    .eq('category', article.category)
+    .eq('categorie', article.categorie)
     .neq('id', article.id)
-    .eq('status', 'published')
+    .eq('statut', 'publie')
     .limit(3)
 
   // Parse Content: check if JSON for Tiptap
   let htmlContent = ""
   try {
-    const jsonContent = JSON.parse(article.content)
+    const jsonContent = typeof article.contenu_json === 'string' ? JSON.parse(article.contenu_json) : article.contenu_json
     htmlContent = generateHTML(jsonContent, [
       StarterKit,
       LinkExtension,
@@ -84,11 +84,11 @@ export default async function BlogPostPage({
     ])
   } catch (e) {
     // If it's already HTML or plain string
-    htmlContent = article.content || ""
+    htmlContent = article.contenu_json || ""
   }
 
   const articleUrl = `https://agrolide.org/blog/${article.slug}`
-  const encodedTitle = encodeURIComponent(article.title)
+  const encodedTitle = encodeURIComponent(article.titre)
   const encodedUrl = encodeURIComponent(articleUrl)
 
   return (
@@ -98,22 +98,22 @@ export default async function BlogPostPage({
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="mb-6">
             <span className="inline-block px-3 py-1 bg-green-100 text-[var(--color-vert-principal)] text-sm font-semibold rounded-full">
-              {article.category || "Général"}
+              {article.categorie || "Général"}
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6 leading-tight">
-            {article.titre || article.title}
+            {article.titre}
           </h1>
-          {article.excerpt && (
+          {article.extrait && (
             <p className="text-xl text-[var(--color-gris-texte)] mb-8">
-              {article.excerpt}
+              {article.extrait}
             </p>
           )}
           
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
             <div className="flex items-center gap-2">
               <User size={18} className="text-[var(--color-vert-principal)]" />
-              <span className="font-medium">{article.author_name || "Équipe Agrolide"}</span>
+              <span className="font-medium">{article.auteur_externe || "Équipe Agrolide"}</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-[var(--color-vert-principal)]" />
@@ -123,19 +123,19 @@ export default async function BlogPostPage({
             </div>
             <div className="flex items-center gap-2">
               <Clock size={18} className="text-[var(--color-vert-principal)]" />
-              <span>{article.read_time ? `${article.read_time} min de lecture` : "5 min de lecture"}</span>
+              <span>5 min de lecture</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Featured Image */}
-      {(article.image_une_url || article.image_url) && (
+      {article.image_une_url && (
         <section className="container mx-auto px-4 max-w-5xl -mt-8 relative z-10">
           <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
             <Image 
-              src={article.image_une_url || article.image_url} 
-              alt={article.titre || article.title}
+              src={article.image_une_url} 
+              alt={article.titre}
               fill
               className="object-cover"
               priority
@@ -216,13 +216,13 @@ export default async function BlogPostPage({
                 <ArticleCard
                   key={simArticle.id}
                   slug={simArticle.slug}
-                  title={simArticle.title}
-                  excerpt={simArticle.excerpt || ""}
-                  category={simArticle.category || "Général"}
-                  author={simArticle.author_name || "Équipe Agrolide"}
+                  title={simArticle.titre}
+                  excerpt={simArticle.extrait || ""}
+                  category={simArticle.categorie || "Général"}
+                  author={simArticle.auteur_externe || "Équipe Agrolide"}
                   date={simArticle.published_at}
-                  readTime={simArticle.read_time ? `${simArticle.read_time} min` : "5 min"}
-                  imageUrl={simArticle.image_url}
+                  readTime={"5 min"}
+                  imageUrl={simArticle.image_une_url}
                 />
               ))}
             </div>

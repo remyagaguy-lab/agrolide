@@ -22,11 +22,11 @@ export default async function BlogPage({
   let query = supabase
     .from('articles')
     .select('*')
-    .eq('status', 'published')
+    .eq('statut', 'publie')
     .order('published_at', { ascending: false })
 
   if (categoryParam) {
-    query = query.eq('category', categoryParam)
+    query = query.eq('categorie', categoryParam)
   }
 
   const { data: articles, error } = await query
@@ -111,13 +111,13 @@ export default async function BlogPage({
                     <ArticleCard
                       key={article.id}
                       slug={article.slug}
-                      title={article.title}
-                      excerpt={article.excerpt || ""}
-                      category={article.category || "Général"}
-                      author={article.author_name || "Équipe Agrolide"}
+                      title={article.titre}
+                      excerpt={article.extrait || ""}
+                      category={article.categorie || "Général"}
+                      author={article.auteur_externe || "Équipe Agrolide"}
                       date={article.published_at}
-                      readTime={article.read_time ? `${article.read_time} min` : "5 min"}
-                      imageUrl={article.image_url}
+                      readTime={"5 min"}
+                      imageUrl={article.image_une_url}
                     />
                   ))}
                 </div>
