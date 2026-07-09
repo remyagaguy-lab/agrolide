@@ -362,57 +362,57 @@ export default function HomePage() {
         </div>
       </section>
       {/* ── SECTION PLATEFORME ── */}
-      <section className="bg-[#0f1f17] py-[96px]">
+      <section className="bg-[#f4f8f4] py-[96px]">
         <div className="container">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-h2 text-white">
+            <h2 className="text-h2 text-gris-titre">
               Une plateforme au service de la mutualisation des ressources entre les acteurs de la chaîne de valeur agricole
             </h2>
           </div>
 
           <div className="flex flex-col">
             {/* Bloc 1 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)] mb-[64px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-gris-border mb-[64px]">
               <div>
-                <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">01</div>
-                <h3 className="text-h3 text-white mb-4">Espace d'échange agricole</h3>
-                <p className="text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-6">
+                <div className="font-heading font-[900] text-[48px] text-[rgba(27,94,56,0.08)] leading-none mb-2">01</div>
+                <h3 className="text-h3 text-gris-titre mb-4">Espace d'échange agricole</h3>
+                <p className="text-[15px] text-gris-texte leading-[1.65] mb-6">
                   Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités, découvrez de nouvelles opportunités et échangez autour des événements qui transforment l'agriculture africaine.
                 </p>
-                <Link href="/rejoindre" className="btn-text !text-[#50a853]">Rejoindre les discussions <IconArrowRight /></Link>
+                <Link href="/rejoindre" className="btn-text !text-[#1b5e38]">Rejoindre les discussions <IconArrowRight /></Link>
               </div>
-              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-video bg-white border border-gris-border shadow-sm rounded-[10px] flex items-center justify-center relative overflow-hidden">
                 <Image src="/plateforme-forum-ui.png" alt="Espace d'échange agricole" fill className="object-cover" />
               </div>
             </div>
 
             {/* Bloc 2 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)] mb-[64px]">
-              <div className="order-2 md:order-1 card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center relative overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-gris-border mb-[64px]">
+              <div className="order-2 md:order-1 aspect-video bg-white border border-gris-border shadow-sm rounded-[10px] flex items-center justify-center relative overflow-hidden">
                 <Image src="/plateforme-annuaire-ui.png" alt="Annuaire Panafricain" fill className="object-cover" />
               </div>
               <div className="order-1 md:order-2">
-                <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">02</div>
-                <h3 className="text-h3 text-white mb-4">Annuaire Panafricain</h3>
-                <p className="text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-6">
+                <div className="font-heading font-[900] text-[48px] text-[rgba(27,94,56,0.08)] leading-none mb-2">02</div>
+                <h3 className="text-h3 text-gris-titre mb-4">Annuaire Panafricain</h3>
+                <p className="text-[15px] text-gris-texte leading-[1.65] mb-6">
                   Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent grâce à des filtres avancés.
                 </p>
-                <Link href="/annuaire" className="btn-text !text-[#50a853]">En savoir plus <IconArrowRight /></Link>
+                <Link href="/annuaire" className="btn-text !text-[#1b5e38]">En savoir plus <IconArrowRight /></Link>
               </div>
             </div>
 
             {/* Bloc 3 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-[rgba(255,255,255,0.08)]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center pb-[64px] border-b border-gris-border">
               <div>
-                <div className="font-heading font-[900] text-[48px] text-[rgba(255,255,255,0.06)] leading-none mb-2">03</div>
-                <h3 className="text-h3 text-white mb-4">Bibliothèque de Ressources</h3>
-                <p className="text-[15px] text-[rgba(255,255,255,0.65)] leading-[1.65] mb-6">
+                <div className="font-heading font-[900] text-[48px] text-[rgba(27,94,56,0.08)] leading-none mb-2">03</div>
+                <h3 className="text-h3 text-gris-titre mb-4">Bibliothèque de Ressources</h3>
+                <p className="text-[15px] text-gris-texte leading-[1.65] mb-6">
                   Accédez à des centaines de documents techniques, thèses et guides pratiques spécifiquement adaptés aux sols africains.
                 </p>
-                <Link href="/bibliotheque" className="btn-text !text-[#50a853]">En savoir plus <IconArrowRight /></Link>
+                <Link href="/bibliotheque" className="btn-text !text-[#1b5e38]">En savoir plus <IconArrowRight /></Link>
               </div>
-              <div className="card-dark aspect-video bg-[#1a2e22] border border-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center justify-center relative overflow-hidden">
+              <div className="aspect-video bg-white border border-gris-border shadow-sm rounded-[10px] flex items-center justify-center relative overflow-hidden">
                 <Image src="/plateforme-bibliotheque-ui.png" alt="Bibliothèque de Ressources" fill className="object-cover" />
               </div>
             </div>
