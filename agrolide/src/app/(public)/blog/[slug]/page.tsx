@@ -12,7 +12,7 @@ import StarterKit from '@tiptap/starter-kit'
 import LinkExtension from '@tiptap/extension-link'
 import ImageExtension from '@tiptap/extension-image'
 
-export const revalidate = 3600 // ISR 1h
+export const revalidate = 0 // Pas de cache temporairement pour purger l'erreur 404
 
 // Dynamic metadata
 export async function generateMetadata(
