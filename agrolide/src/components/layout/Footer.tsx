@@ -91,7 +91,7 @@ export function Footer() {
 
       {/* ── FOOTER 4 COLONNES ── */}
       <footer
-        className="relative overflow-hidden pt-[60px] pb-[36px]"
+        className="relative overflow-hidden pt-[80px] md:pt-[100px] pb-[36px] rounded-t-[40px] md:rounded-t-[80px] -mt-[40px] md:-mt-[80px] z-20 shadow-[0_-20px_50px_rgba(0,0,0,0.15)] border-t border-white/5"
         style={{ background: "linear-gradient(160deg, #0d3520 0%, #0f2d1a 35%, #091a0f 70%, #060f08 100%)" }}
       >
         {/* Glows */}

@@ -33,9 +33,6 @@ export default function QuiSommesNousPage() {
         </div>
         
         <div className="max-w-[900px] mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
-            Réseau agrolide
-          </div>
           <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
             Qui sommes-nous ?
           </h1>
