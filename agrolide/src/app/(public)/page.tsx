@@ -530,12 +530,12 @@ export default function HomePage() {
       </section>
 
       {/* ── CTA FINAL ── */}
-      <section className="bg-[#1b5e38] py-[96px] text-center">
+      <section className="bg-vert-clair py-[96px] text-center">
         <div className="container flex flex-col items-center">
-          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-white leading-[1.2] max-w-[520px] mx-auto mb-4">
+          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-vert-profond leading-[1.2] max-w-[520px] mx-auto mb-4">
             Prêt à participer à la conquête de la souveraineté alimentaire ?
           </h2>
-          <p className="font-sans font-[400] text-[14px] text-[rgba(255,255,255,0.6)] mb-[28px]">
+          <p className="font-sans font-[400] text-[14px] text-gris-texte mb-[28px]">
             Annuaire · Formations · Agrobusiness · Bibliothèque · Événements
           </p>
           <Button variant="primary" href="/rejoindre">
