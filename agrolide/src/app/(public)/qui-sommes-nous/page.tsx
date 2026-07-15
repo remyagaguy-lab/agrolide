@@ -34,7 +34,7 @@ export default function QuiSommesNousPage() {
         
         <div className="max-w-[900px] mx-auto px-6 relative z-10 text-center">
           <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
-            Qui sommes-nous ?
+            Qui sommes-nous&nbsp;?
           </h1>
           <p className="font-sans text-[16px] md:text-[20px] text-[rgba(255,255,255,0.7)] max-w-[700px] mx-auto leading-[1.7]">
             Découvrez l'histoire, la mission et les valeurs qui animent le premier réseau continental de l'agriculture africaine.
@@ -48,7 +48,7 @@ export default function QuiSommesNousPage() {
           <div className="text-center mb-16">
             <SectionLabel className="mx-auto flex justify-center text-center">Le paradoxe</SectionLabel>
             <h2 className="text-h2 text-vert-profond">
-              Pourquoi le réseau agrolide ?
+              Pourquoi le réseau agrolide&nbsp;?
             </h2>
           </div>
           
@@ -381,7 +381,7 @@ export default function QuiSommesNousPage() {
         </div>
         <div className="max-w-[800px] mx-auto px-6 relative z-10">
           <h2 className="font-heading font-[800] text-[32px] md:text-[48px] text-white mb-10 leading-[1.15]">
-            Prêt à faire partie de l'histoire ?
+            Prêt à faire partie de l'histoire&nbsp;?
           </h2>
           <Link
             href="/rejoindre"
