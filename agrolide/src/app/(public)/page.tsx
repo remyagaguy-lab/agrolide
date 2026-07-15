@@ -502,11 +502,11 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
             {[
-              { tag: "Agronomie", title: "Pratiques agroécologiques pour sols tropicaux", desc: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", date: "12 Oct 2024", readTime: "5 min" },
-              { tag: "Agrobusiness", title: "Financer son projet agricole : les clés", desc: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", date: "05 Oct 2024", readTime: "8 min" },
-              { tag: "Formation", title: "Compétences du futur pour les agronomes", desc: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", date: "28 Sep 2024", readTime: "4 min" },
+              { slug: "pratiques-agroecologiques", tag: "Agronomie", title: "Pratiques agroécologiques pour sols tropicaux", desc: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", date: "12 Oct 2024", readTime: "5 min" },
+              { slug: "financer-projet-agricole", tag: "Agrobusiness", title: "Financer son projet agricole : les clés", desc: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", date: "05 Oct 2024", readTime: "8 min" },
+              { slug: "competences-agronomes", tag: "Formation", title: "Compétences du futur pour les agronomes", desc: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", date: "28 Sep 2024", readTime: "4 min" },
             ].map((item, i) => (
-              <Link href="#" key={i} className="block group">
+              <Link href={`/blog/${item.slug}`} key={i} className="block group">
                 <Card className="card-blog p-0 h-full flex flex-col">
                   <div className="card-blog-image relative">
                     <div className="absolute top-4 left-4">

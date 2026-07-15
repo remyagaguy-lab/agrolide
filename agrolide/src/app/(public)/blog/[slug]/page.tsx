@@ -56,14 +56,26 @@ export default async function BlogPostPage({
   const supabase = await createClient()
   
   // Fetch article
-  const { data: article, error } = await supabase
+  const { data: dbArticle, error } = await supabase
     .from('articles')
     .select('*')
     .eq('slug', slug)
     .single()
 
+  const fallbackArticles = [
+    { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", categorie: "Agronomie", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z" },
+    { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe Agrolide", published_at: "2024-10-05T00:00:00Z" },
+    { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Formation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" }
+  ]
+
+  let article = dbArticle
   if (error || !article) {
-    notFound()
+    const fallback = fallbackArticles.find(a => a.slug === slug)
+    if (fallback) {
+      article = { ...fallback, contenu_json: `<p>${fallback.extrait}</p><p><em>(Cet article est un exemple de démonstration. Le contenu complet sera ajouté ultérieurement.)</em></p>` }
+    } else {
+      notFound()
+    }
   }
 
   // Fetch similar articles
