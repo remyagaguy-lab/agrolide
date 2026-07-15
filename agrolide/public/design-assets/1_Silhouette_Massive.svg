@@ -1,0 +1,9 @@
+<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Silhouette globale unie (sans trous) -->
+  <path d="M 12 90 
+           A 90 90 0 0 1 185 80 
+           Q 190 85 190 98
+           Q 90 98 45 120 
+           Q 20 110 12 90 Z" 
+        fill="#fcb726" />
+</svg>

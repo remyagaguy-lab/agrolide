@@ -1,0 +1,6 @@
+<svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Les contours verts (L'arche et les collines du bas) -->
+  <path d="M 12 90 A 90 90 0 0 1 185 80 Q 175 75 165 72 A 75 75 0 0 0 25 80 Q 18 85 12 90 Z" fill="#297b41" />
+  <path d="M 5 95 Q 80 60 195 85 Q 185 92 175 92 Q 80 72 15 105 Z" fill="#297b41" />
+  <path d="M 40 115 Q 90 90 190 98 Q 185 103 175 104 Q 90 98 45 120 Z" fill="#297b41" />
+</svg>

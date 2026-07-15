@@ -15,6 +15,17 @@ export default function QuiSommesNousPage() {
     <div className="flex flex-col min-h-screen">
       {/* ── HERO ─────────────────────────────────── */}
       <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-[#1a1a1a]">
+        {/* Motif Background */}
+        <div className="absolute inset-0 z-0 opacity-15">
+          <Image 
+            src="/images/motif-agrolide.png"
+            alt="Motif Agrolide"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        
         {/* Dynamic Abstract Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
