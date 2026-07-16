@@ -16,15 +16,10 @@ export default function QuiSommesNousPage() {
       {/* ── HERO ─────────────────────────────────── */}
       <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-[#1a1a1a]">
         {/* Motif Background */}
-        <div className="absolute inset-0 z-0 opacity-15">
-          <Image 
-            src="/images/motif-v02.png"
-            alt="Motif Agrolide"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+        <div 
+          className="absolute inset-0 z-0 opacity-[0.05]" 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "120px", backgroundRepeat: "repeat" }} 
+        />
         
         {/* Dynamic Abstract Background */}
         <div className="absolute inset-0 z-0">

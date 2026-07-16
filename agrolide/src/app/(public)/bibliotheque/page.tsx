@@ -50,7 +50,10 @@ export default async function BibliothequePublicPage() {
       {/* Hero section */}
       <section className="bg-[#0d3520] pt-10 pb-10 relative overflow-hidden">
         {/* Motif Background */}
-        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none bg-[url('/images/motif-v02.png')] bg-cover bg-center" />
+        <div 
+          className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none" 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "120px", backgroundRepeat: "repeat" }} 
+        />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
