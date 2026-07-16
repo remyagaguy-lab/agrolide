@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/server"
 import { ArticleCard } from "@/components/ui/ArticleCard"
+import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
 
@@ -68,29 +69,6 @@ export default async function BlogPage({
         </div>
       </section>
 
-      {/* Categories Bar */}
-      <section className="bg-white border-b border-gray-100 sticky top-0 z-10 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex overflow-x-auto py-4 gap-4 no-scrollbar items-center">
-            <Link
-              href="/blog"
-              className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-bold transition-colors ${!categoryParam ? 'bg-primary-600 text-white shadow-md' : 'bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'}`}
-            >
-              Tous les articles
-            </Link>
-            {categories.map((cat) => (
-              <Link
-                key={cat}
-                href={`/blog?category=${encodeURIComponent(cat)}`}
-                className={`whitespace-nowrap px-6 py-2.5 rounded-full text-sm font-bold transition-colors ${categoryParam === cat ? 'bg-primary-600 text-white shadow-md' : 'bg-gray-50 text-gray-600 hover:bg-gray-100 hover:text-gray-900 border border-gray-200'}`}
-              >
-                {cat}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-12">
         <div className="container mx-auto px-4 max-w-7xl">
           
@@ -144,9 +122,12 @@ export default async function BlogPage({
 
           {/* Grid Articles */}
           <div className="mb-8">
-            <h3 className="text-2xl font-bold font-heading text-gray-900 mb-8 border-b border-gray-200 pb-4">
-              {categoryParam ? `Articles : ${categoryParam}` : "Dernières publications"}
-            </h3>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-gray-200 pb-4">
+              <h3 className="text-2xl font-bold font-heading text-gray-900">
+                {categoryParam ? `Articles : ${categoryParam}` : "Dernières publications"}
+              </h3>
+              <BlogFilter currentCategory={categoryParam as string} categories={categories} />
+            </div>
             
             {!displayArticles || displayArticles.length === 0 ? (
               <div className="text-center py-20 bg-white rounded-3xl border border-gray-100">
