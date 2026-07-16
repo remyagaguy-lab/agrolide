@@ -42,13 +42,13 @@ export async function POST(request: NextRequest) {
     const objectKey = `${folder || 'uploads'}/${crypto.randomUUID()}.${ext}`
 
     const command = new PutObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME,
+      Bucket: process.env.NEXT_PUBLIC_R2_PUBLIC_BUCKET || process.env.R2_BUCKET_NAME,
       Key: objectKey,
       ContentType: contentType,
     })
 
     const presignedUrl = await getSignedUrl(S3, command, { expiresIn: 3600 })
-    const publicUrl = `https://${process.env.R2_BUCKET_NAME}.${process.env.CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com/${objectKey}`
+    const publicUrl = `${process.env.NEXT_PUBLIC_R2_PUBLIC_URL}/${objectKey}`
 
     return NextResponse.json({ presignedUrl, objectKey, publicUrl })
   } catch (error) {
