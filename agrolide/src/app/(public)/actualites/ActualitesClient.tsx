@@ -51,8 +51,12 @@ export default function ActualitesClient() {
   }
 
   const handleInscrireClick = (event: any) => {
-    setSelectedEvent(event)
-    setIsEventModalOpen(true)
+    if (event.lien_inscription) {
+      window.open(event.lien_inscription, '_blank', 'noopener,noreferrer')
+    } else {
+      setSelectedEvent(event)
+      setIsEventModalOpen(true)
+    }
   }
 
   const filteredItems = items.filter(item => {
@@ -129,13 +133,17 @@ export default function ActualitesClient() {
           isOpen={!!selectedEvent}
           onClose={() => setSelectedEvent(null)}
           event={selectedEvent}
+          onInscrire={() => {
+            setSelectedEvent(null)
+            handleInscrireClick(selectedEvent)
+          }}
         />
       )}
     </div>
   )
 }
 
-function EventDetailsModal({ isOpen, onClose, event }: { isOpen: boolean, onClose: () => void, event: any }) {
+function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boolean, onClose: () => void, event: any, onInscrire: () => void }) {
   const [marked, setMarked] = useState<any>(null)
 
   useEffect(() => {
@@ -174,10 +182,19 @@ function EventDetailsModal({ isOpen, onClose, event }: { isOpen: boolean, onClos
           </div>
         </div>
         
-        <div className="sticky bottom-0 bg-white border-t border-gray-100 p-4 flex justify-end">
+        <div className="sticky bottom-0 bg-white border-t border-gray-100 p-4 flex justify-end gap-3">
           <button onClick={onClose} className="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-colors">
             Fermer
           </button>
+          
+          {new Date(event.date_debut) >= new Date() && (
+            <button 
+              onClick={onInscrire} 
+              className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-xl transition-colors shadow-sm"
+            >
+              S'inscrire à l'événement
+            </button>
+          )}
         </div>
       </div>
     </div>
