@@ -49,7 +49,11 @@ export default function EventCard({ event, onInscrireClick }: EventCardProps) {
     <div className={`bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
       {event.image_url && (
         <div className="w-full h-48 bg-gray-100 relative">
-          <img src={event.image_url} alt={`Affiche ${event.titre}`} className="w-full h-full object-cover" />
+          <img 
+            src={event.image_url?.includes('r2.cloudflarestorage.com') ? `/api/r2-image?url=${encodeURIComponent(event.image_url)}` : event.image_url} 
+            alt={`Affiche ${event.titre}`} 
+            className="w-full h-full object-cover" 
+          />
         </div>
       )}
       <div className="p-6 flex-grow">
