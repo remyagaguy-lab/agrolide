@@ -156,7 +156,7 @@ export default function HomePage() {
         {/* Motif Background overlayed on the whole section for texture */}
         <div 
           className="absolute inset-0 z-[15] opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "120px", backgroundRepeat: "repeat" }} 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
         />
 
         {/* Image de fond avec dégradé */}

@@ -62,7 +62,7 @@ export default async function BlogPage({
         {/* Motif Background */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "120px", backgroundRepeat: "repeat" }} 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
         />
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">

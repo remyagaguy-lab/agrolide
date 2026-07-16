@@ -18,7 +18,7 @@ export default function QuiSommesNousPage() {
         {/* Motif Background */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05]" 
-          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "120px", backgroundRepeat: "repeat" }} 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
         />
         
         {/* Dynamic Abstract Background */}
