@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Calendar, MapPin, Globe, Users, Clock, FileText, Download } from 'lucide-react'
+import { Calendar, MapPin, Globe, Users, Clock, FileText, Download, Video } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
@@ -118,7 +118,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
       <div className="p-6 pt-0 mt-auto">
         {isPast ? (
           <div className="space-y-2">
-            {(event.presentation_url || event.ressources_url) ? (
+            {(event.presentation_url || event.ressources_url || event.lien_inscription) ? (
               <div className="flex flex-col gap-2">
                 {event.presentation_url && (
                   <a href={event.presentation_url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(event.presentation_url)}` : event.presentation_url} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
@@ -128,6 +128,11 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
                 {event.ressources_url && (
                   <a href={event.ressources_url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(event.ressources_url)}` : event.ressources_url} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
                     <Download className="w-4 h-4" /> Accéder aux ressources
+                  </a>
+                )}
+                {event.lien_inscription && (
+                  <a href={event.lien_inscription.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(event.lien_inscription)}` : event.lien_inscription} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
+                    <Video className="w-4 h-4" /> Voir la rediffusion
                   </a>
                 )}
               </div>
