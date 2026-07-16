@@ -14,24 +14,18 @@ export default function QuiSommesNousPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-[#1a1a1a]">
+      <section className="bg-[#0d3520] pt-12 pb-16 text-white text-center relative overflow-hidden">
         {/* Motif Background */}
         <div 
-          className="absolute inset-0 z-0 opacity-[0.05]" 
+          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
           style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
         />
         
-        {/* Dynamic Abstract Background */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-[#1b5e38]/20 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
-        </div>
-        
-        <div className="max-w-[900px] mx-auto px-6 relative z-10 text-center">
-          <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
+        <div className="container mx-auto px-4 relative z-10">
+          <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
             Qui sommes-nous&nbsp;?
           </h1>
-          <p className="font-sans text-[16px] md:text-[20px] text-[rgba(255,255,255,0.7)] max-w-[700px] mx-auto leading-[1.7]">
+          <p className="text-lg max-w-2xl mx-auto text-white/80">
             Découvrez l'histoire, la mission et les valeurs qui animent le premier réseau continental de l'agriculture africaine.
           </p>
         </div>
