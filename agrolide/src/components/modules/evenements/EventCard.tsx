@@ -138,12 +138,23 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
             )}
           </div>
         ) : (
-          <button 
-            onClick={() => onInscrireClick(event)}
-            className="w-full py-2.5 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-xl text-sm transition-colors"
-          >
-            S'inscrire
-          </button>
+          event.lien_inscription ? (
+            <a 
+              href={event.lien_inscription} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2"
+            >
+              <Globe className="w-4 h-4" /> S'inscrire
+            </a>
+          ) : (
+            <button 
+              onClick={() => onInscrireClick(event)}
+              className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2"
+            >
+              S'inscrire
+            </button>
+          )
         )}
       </div>
     </div>
