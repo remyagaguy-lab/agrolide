@@ -102,7 +102,7 @@ export default function ActualitesClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredItems.map(item => {
               if (item._itemType === 'evenement') {
-                return <EventCard key={`evt-${item.id}`} event={item} onInscrireClick={handleInscrireClick} />
+                return <EventCard key={`evt-${item.id}`} event={item} onInscrireClick={handleInscrireClick} onDetailsClick={(evt) => setSelectedEvent(evt)} />
               } else {
                 return <OpportunityCard key={`opp-${item.id}`} opp={item} />
               }
@@ -122,6 +122,64 @@ export default function ActualitesClient() {
         onClose={() => setIsOppModalOpen(false)}
         onSuccess={fetchData}
       />
+
+      {/* Event Details Modal */}
+      {selectedEvent && selectedEvent._itemType === 'evenement' && !isEventModalOpen && (
+        <EventDetailsModal 
+          isOpen={!!selectedEvent}
+          onClose={() => setSelectedEvent(null)}
+          event={selectedEvent}
+        />
+      )}
+    </div>
+  )
+}
+
+function EventDetailsModal({ isOpen, onClose, event }: { isOpen: boolean, onClose: () => void, event: any }) {
+  const [marked, setMarked] = useState<any>(null)
+
+  useEffect(() => {
+    import('marked').then(m => setMarked(m))
+  }, [])
+
+  if (!isOpen || !event) return null
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+      <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl flex flex-col">
+        <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex justify-between items-center z-10">
+          <h2 className="text-xl font-bold text-gray-900 pr-8">{event.titre}</h2>
+          <button onClick={onClose} className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+        </div>
+        
+        <div className="p-6 flex-grow">
+          {event.image_url && (
+            <div className="mb-6 rounded-xl overflow-hidden bg-gray-100">
+              <img src={event.image_url} alt="Affiche" className="w-full h-auto object-contain max-h-[400px]" />
+            </div>
+          )}
+          
+          <div className="prose prose-green max-w-none text-gray-700">
+            {event.description ? (
+              marked ? (
+                <div dangerouslySetInnerHTML={{ __html: marked.parse(event.description) }} />
+              ) : (
+                <p>Chargement de la description...</p>
+              )
+            ) : (
+              <p className="italic text-gray-500">Aucune description disponible pour cet événement.</p>
+            )}
+          </div>
+        </div>
+        
+        <div className="sticky bottom-0 bg-white border-t border-gray-100 p-4 flex justify-end">
+          <button onClick={onClose} className="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-colors">
+            Fermer
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

@@ -23,9 +23,10 @@ type Evenement = {
 interface EventCardProps {
   event: Evenement
   onInscrireClick: (event: Evenement) => void
+  onDetailsClick?: (event: Evenement) => void
 }
 
-export default function EventCard({ event, onInscrireClick }: EventCardProps) {
+export default function EventCard({ event, onInscrireClick, onDetailsClick }: EventCardProps) {
   
   // Formatage des dates
   const dateDebut = new Date(event.date_debut)
@@ -48,8 +49,24 @@ export default function EventCard({ event, onInscrireClick }: EventCardProps) {
   return (
     <div className={`bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
       {event.image_url && (
-        <div className="w-full h-48 bg-gray-100 relative">
+        <div 
+          className="w-full h-48 bg-gray-100 relative cursor-pointer"
+          onClick={() => onDetailsClick?.(event)}
+        >
           <img src={event.image_url} alt={`Affiche ${event.titre}`} className="w-full h-full object-cover" />
+          
+          {/* Badge statut */}
+          <div className="absolute top-4 right-4">
+            {isPast ? (
+              <span className="px-3 py-1 bg-gray-900/80 backdrop-blur-sm text-white text-xs font-semibold rounded-full border border-gray-700/50 shadow-sm">
+                Passé
+              </span>
+            ) : (
+              <span className="px-3 py-1 bg-green-600/90 backdrop-blur-sm text-white text-xs font-semibold rounded-full border border-green-500/50 shadow-sm">
+                À venir
+              </span>
+            )}
+          </div>
         </div>
       )}
       <div className="p-6 flex-grow">
@@ -64,7 +81,10 @@ export default function EventCard({ event, onInscrireClick }: EventCardProps) {
           )}
         </div>
         
-        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+        <h3 
+          className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-primary-600 transition-colors"
+          onClick={() => onDetailsClick?.(event)}
+        >
           {event.titre}
         </h3>
         
