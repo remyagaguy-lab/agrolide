@@ -120,9 +120,9 @@ export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess }: S
                   <div className="space-y-1">
                     <label className="text-sm font-medium text-gray-700">Type *</label>
                     <select required name="type_opp" value={formData.type_opp} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none">
-                      <option value="emploi">Emploi / Stage</option>
-                      <option value="financement">Financement</option>
-                      <option value="partenariat">Partenariat</option>
+                      <option value="emploi">Offres d'emploi</option>
+                      <option value="bourse">Bourse d'étude</option>
+                      <option value="appel">Appel à projet</option>
                     </select>
                   </div>
                   <div className="space-y-1">

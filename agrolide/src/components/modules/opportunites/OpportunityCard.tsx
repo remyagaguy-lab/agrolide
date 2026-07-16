@@ -13,8 +13,8 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
   const getIcon = (type: string) => {
     switch(type) {
       case 'emploi': return '💼'
-      case 'financement': return '💰'
-      case 'partenariat': return '🤝'
+      case 'bourse': return '🎓'
+      case 'appel': return '📢'
       default: return '📌'
     }
   }

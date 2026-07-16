@@ -9,7 +9,7 @@ import InscriptionModal from "@/components/modules/evenements/InscriptionModal"
 import SubmitOpportunityModal from "@/components/modules/opportunites/SubmitOpportunityModal"
 
 export default function ActualitesClient() {
-  const [filter, setFilter] = useState<'tous' | 'evenements' | 'opportunites'>('tous')
+  const [filter, setFilter] = useState<'tous' | 'evenements' | 'emploi' | 'bourse' | 'appel'>('tous')
   const [items, setItems] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -66,7 +66,9 @@ export default function ActualitesClient() {
 
   const filteredItems = items.filter(item => {
     if (filter === 'evenements' && item._itemType !== 'evenement') return false
-    if (filter === 'opportunites' && item._itemType !== 'opportunite') return false
+    if (filter === 'emploi' && (item._itemType !== 'opportunite' || item.type_opp !== 'emploi')) return false
+    if (filter === 'bourse' && (item._itemType !== 'opportunite' || item.type_opp !== 'bourse')) return false
+    if (filter === 'appel' && (item._itemType !== 'opportunite' || item.type_opp !== 'appel')) return false
     return true
   })
 
@@ -93,8 +95,10 @@ export default function ActualitesClient() {
               className="border-none outline-none focus:ring-0 bg-transparent text-gray-700 font-medium cursor-pointer py-1 pr-4"
             >
               <option value="tous">Toutes les actualités</option>
-              <option value="evenements">Événements & Webinaires</option>
-              <option value="opportunites">Bourse aux Opportunités</option>
+              <option value="evenements">Événements</option>
+              <option value="bourse">Bourse d'étude</option>
+              <option value="appel">Appel à projet</option>
+              <option value="emploi">Offres d'emploi</option>
             </select>
           </div>
         </div>
