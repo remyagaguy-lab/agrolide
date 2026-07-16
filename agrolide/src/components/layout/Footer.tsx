@@ -2,6 +2,7 @@
 import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { Button } from "@/components/ui/Button"
 
 function IconLinkedIn() {
   return (
@@ -88,6 +89,20 @@ function IconArrowRight() {
 export function Footer() {
   return (
     <>
+      {/* ── CTA GLOBAL ── */}
+      <section className="bg-vert-clair py-[96px] text-center">
+        <div className="container flex flex-col items-center">
+          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-vert-profond leading-[1.2] max-w-[520px] mx-auto mb-4">
+            Prêt à participer à la conquête de la souveraineté alimentaire&nbsp;?
+          </h2>
+          <p className="font-sans font-[400] text-[14px] text-gris-texte mb-[28px]">
+            Annuaire · Formations · Agrobusiness · Bibliothèque · Événements
+          </p>
+          <Button variant="primary" href="/rejoindre">
+            Rejoindre le réseau <IconArrowRight />
+          </Button>
+        </div>
+      </section>
 
       {/* ── FOOTER 4 COLONNES ── */}
       <footer
