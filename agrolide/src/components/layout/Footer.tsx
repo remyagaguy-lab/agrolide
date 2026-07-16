@@ -94,6 +94,12 @@ export function Footer() {
         className="relative overflow-hidden pt-[60px] pb-[36px]"
         style={{ background: "linear-gradient(160deg, #0d3520 0%, #0f2d1a 35%, #091a0f 70%, #060f08 100%)" }}
       >
+        {/* Motif Background */}
+        <div 
+          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "120px", backgroundRepeat: "repeat" }} 
+        />
+
         {/* Glows */}
         <div className="absolute top-0 left-[-10%] w-[500px] h-[400px] rounded-full opacity-25 pointer-events-none"
           style={{ background: "radial-gradient(circle, #1b5e38 0%, transparent 65%)" }} />
