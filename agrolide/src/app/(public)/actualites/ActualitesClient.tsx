@@ -44,11 +44,11 @@ export default function ActualitesClient() {
 
     const combined = [...events, ...opps]
     // Tri par date : date_debut pour les événements, created_at pour les opportunités
-    // Du plus ancien au plus récent
+    // Du plus récent au plus ancien
     combined.sort((a, b) => {
       const dateA = a._itemType === 'evenement' ? new Date(a.date_debut).getTime() : new Date(a.created_at).getTime()
       const dateB = b._itemType === 'evenement' ? new Date(b.date_debut).getTime() : new Date(b.created_at).getTime()
-      return dateA - dateB
+      return dateB - dateA
     })
 
     setItems(combined)
