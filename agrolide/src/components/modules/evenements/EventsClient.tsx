@@ -20,7 +20,6 @@ export default function EventsClient() {
   // Filters
   const [filterType, setFilterType] = useState('tous')
   const [filterFormat, setFilterFormat] = useState('tous')
-  const [showPast, setShowPast] = useState(false)
 
   useEffect(() => {
     fetchEvents()
@@ -168,28 +167,23 @@ export default function EventsClient() {
             )}
           </div>
 
-          {/* Past Events Toggle */}
+          {/* Past Events */}
           {pastEvents.length > 0 && (
             <div className="border-t border-gray-100 pt-8">
-              <button 
-                onClick={() => setShowPast(!showPast)}
-                className="text-lg font-bold text-gray-700 hover:text-gray-900 flex items-center gap-2 transition-colors"
-              >
+              <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <span className="w-2 h-6 bg-gray-300 rounded-full"></span>
-                Événements passés {showPast ? '▼' : '▶'}
-              </button>
+                Événements passés
+              </h2>
               
-              {showPast && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                  {pastEvents.map(event => (
-                    <EventCard 
-                      key={event.id} 
-                      event={event} 
-                      onInscrireClick={handleInscrireClick} 
-                    />
-                  ))}
-                </div>
-              )}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {pastEvents.map(event => (
+                  <EventCard 
+                    key={event.id} 
+                    event={event} 
+                    onInscrireClick={handleInscrireClick} 
+                  />
+                ))}
+              </div>
             </div>
           )}
         </div>
