@@ -43,8 +43,13 @@ export default function ActualitesClient() {
     const opps = (oppsData || []).map(o => ({ ...o, _itemType: 'opportunite' }))
 
     const combined = [...events, ...opps]
-    // Tri par date de création, de la plus ancienne à la plus récente, comme demandé
-    combined.sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime())
+    // Tri par date : date_debut pour les événements, created_at pour les opportunités
+    // Du plus ancien au plus récent
+    combined.sort((a, b) => {
+      const dateA = a._itemType === 'evenement' ? new Date(a.date_debut).getTime() : new Date(a.created_at).getTime()
+      const dateB = b._itemType === 'evenement' ? new Date(b.date_debut).getTime() : new Date(b.created_at).getTime()
+      return dateA - dateB
+    })
 
     setItems(combined)
     setLoading(false)
