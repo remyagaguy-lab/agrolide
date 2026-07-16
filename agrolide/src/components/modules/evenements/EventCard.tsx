@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Calendar, MapPin, Globe, Users, Clock } from 'lucide-react'
+import { Calendar, MapPin, Globe, Users, Clock, FileText, Download } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
@@ -14,6 +14,9 @@ type Evenement = {
   lieu: string | null
   en_ligne: boolean | null
   places_max: number | null
+  image_url?: string | null
+  presentation_url?: string | null
+  ressources_url?: string | null
   [key: string]: any
 }
 
@@ -43,7 +46,12 @@ export default function EventCard({ event, onInscrireClick }: EventCardProps) {
   }
 
   return (
-    <div className={`bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isPast ? 'opacity-70' : ''}`}>
+    <div className={`bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
+      {event.image_url && (
+        <div className="w-full h-48 bg-gray-100 relative">
+          <img src={event.image_url} alt={`Affiche ${event.titre}`} className="w-full h-full object-cover" />
+        </div>
+      )}
       <div className="p-6 flex-grow">
         <div className="flex justify-between items-start mb-4">
           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
@@ -89,9 +97,26 @@ export default function EventCard({ event, onInscrireClick }: EventCardProps) {
       
       <div className="p-6 pt-0 mt-auto">
         {isPast ? (
-          <button disabled className="w-full py-2.5 bg-gray-100 text-gray-500 font-medium rounded-xl text-sm">
-            Événement terminé
-          </button>
+          <div className="space-y-2">
+            {(event.presentation_url || event.ressources_url) ? (
+              <div className="flex flex-col gap-2">
+                {event.presentation_url && (
+                  <a href={event.presentation_url} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
+                    <FileText className="w-4 h-4" /> Voir la présentation
+                  </a>
+                )}
+                {event.ressources_url && (
+                  <a href={event.ressources_url} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
+                    <Download className="w-4 h-4" /> Accéder aux ressources
+                  </a>
+                )}
+              </div>
+            ) : (
+              <button disabled className="w-full py-2.5 bg-gray-100 text-gray-500 font-medium rounded-xl text-sm">
+                Événement terminé
+              </button>
+            )}
+          </div>
         ) : (
           <button 
             onClick={() => onInscrireClick(event)}

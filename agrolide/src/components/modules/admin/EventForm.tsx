@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { Loader2 } from 'lucide-react'
+import { Loader2, Upload, FileText, Image as ImageIcon } from 'lucide-react'
 
 interface EventFormProps {
   initialData?: any
@@ -25,12 +25,66 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     en_ligne: initialData?.en_ligne || false,
     lien_inscription: initialData?.lien_inscription || '',
     places_max: initialData?.places_max || '',
-    publie: initialData?.publie ?? false
+    publie: initialData?.publie ?? false,
+    image_url: initialData?.image_url || '',
+    presentation_url: initialData?.presentation_url || '',
+    ressources_url: initialData?.ressources_url || ''
   })
+  
+  const [uploadingField, setUploadingField] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const value = e.target.type === 'checkbox' ? (e.target as HTMLInputElement).checked : e.target.value
     setFormData({ ...formData, [e.target.name]: value })
+  }
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>, fieldName: 'image_url' | 'presentation_url' | 'ressources_url', folder: string) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploadingField(fieldName)
+    setError('')
+
+    try {
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+      const supabase = createClient(supabaseUrl, supabaseKey)
+      const { data: { session } } = await supabase.auth.getSession()
+
+      if (!session) throw new Error("Vous devez être connecté.")
+
+      const res = await fetch('/api/admin/upload', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session.access_token}`
+        },
+        body: JSON.stringify({
+          filename: file.name,
+          contentType: file.type,
+          folder: folder
+        })
+      })
+
+      if (!res.ok) throw new Error("Erreur lors de la génération de l'URL d'upload")
+      
+      const { presignedUrl, publicUrl } = await res.json()
+
+      const uploadRes = await fetch(presignedUrl, {
+        method: 'PUT',
+        headers: { 'Content-Type': file.type },
+        body: file
+      })
+
+      if (!uploadRes.ok) throw new Error("Erreur lors de l'upload du fichier")
+
+      setFormData(prev => ({ ...prev, [fieldName]: publicUrl }))
+    } catch (err: any) {
+      console.error(err)
+      setError(err.message || "Erreur d'upload")
+    } finally {
+      setUploadingField(null)
+    }
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -160,6 +214,89 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
           <label className="text-sm font-medium text-gray-700">Lien d'inscription externe (Optionnel, ex: Zoom, Eventbrite)</label>
           <input type="url" name="lien_inscription" value={formData.lien_inscription} onChange={handleChange} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none" placeholder="https://" />
           <p className="text-xs text-gray-500">Si vide, l'inscription se fera en interne sur Agrolide.</p>
+        </div>
+
+        {/* Fichiers & Ressources */}
+        <div className="md:col-span-2 pt-4 border-t border-gray-100">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Ressources & Fichiers</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Affiche */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-700 block">Affiche de l'événement</label>
+              {formData.image_url ? (
+                <div className="relative rounded-xl overflow-hidden border border-gray-200">
+                  <img src={formData.image_url} alt="Affiche" className="w-full h-32 object-cover" />
+                  <button type="button" onClick={() => setFormData({...formData, image_url: ''})} className="absolute top-2 right-2 bg-white rounded-full p-1 shadow hover:bg-gray-100 text-xs">Retirer</button>
+                </div>
+              ) : (
+                <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-xl hover:bg-gray-50 transition-colors cursor-pointer relative">
+                  <div className="space-y-1 text-center">
+                    {uploadingField === 'image_url' ? <Loader2 className="mx-auto h-8 w-8 text-gray-400 animate-spin" /> : <ImageIcon className="mx-auto h-8 w-8 text-gray-400" />}
+                    <div className="flex text-sm text-gray-600 justify-center">
+                      <label className="relative cursor-pointer rounded-md font-medium text-primary-600 hover:text-primary-500 focus-within:outline-none">
+                        <span>Téléverser l'affiche</span>
+                        <input type="file" accept="image/*" className="sr-only" disabled={uploadingField !== null} onChange={(e) => handleFileUpload(e, 'image_url', 'evenements/affiches')} />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Présentation */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-700 block">Présentation (PPT, PDF)</label>
+              {formData.presentation_url ? (
+                <div className="p-4 border border-green-200 bg-green-50 rounded-xl flex flex-col justify-between h-32">
+                  <div className="flex items-center gap-2 text-green-700 font-medium break-all text-sm line-clamp-2">
+                    <FileText className="w-5 h-5 flex-shrink-0" />
+                    <span>Document de présentation lié</span>
+                  </div>
+                  <button type="button" onClick={() => setFormData({...formData, presentation_url: ''})} className="text-xs text-red-600 hover:underline self-end">Retirer</button>
+                </div>
+              ) : (
+                <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-xl hover:bg-gray-50 transition-colors cursor-pointer relative">
+                  <div className="space-y-1 text-center">
+                    {uploadingField === 'presentation_url' ? <Loader2 className="mx-auto h-8 w-8 text-gray-400 animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-gray-400" />}
+                    <div className="flex text-sm text-gray-600 justify-center">
+                      <label className="relative cursor-pointer rounded-md font-medium text-primary-600 hover:text-primary-500 focus-within:outline-none">
+                        <span>Téléverser présentation</span>
+                        <input type="file" className="sr-only" disabled={uploadingField !== null} onChange={(e) => handleFileUpload(e, 'presentation_url', 'evenements/presentations')} />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Ressources */}
+            <div className="space-y-2">
+              <label className="text-sm font-medium text-gray-700 block">Autres ressources</label>
+              {formData.ressources_url ? (
+                <div className="p-4 border border-blue-200 bg-blue-50 rounded-xl flex flex-col justify-between h-32">
+                  <div className="flex items-center gap-2 text-blue-700 font-medium break-all text-sm line-clamp-2">
+                    <FileText className="w-5 h-5 flex-shrink-0" />
+                    <span>Ressources liées</span>
+                  </div>
+                  <button type="button" onClick={() => setFormData({...formData, ressources_url: ''})} className="text-xs text-red-600 hover:underline self-end">Retirer</button>
+                </div>
+              ) : (
+                <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-xl hover:bg-gray-50 transition-colors cursor-pointer relative">
+                  <div className="space-y-1 text-center">
+                    {uploadingField === 'ressources_url' ? <Loader2 className="mx-auto h-8 w-8 text-gray-400 animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-gray-400" />}
+                    <div className="flex text-sm text-gray-600 justify-center">
+                      <label className="relative cursor-pointer rounded-md font-medium text-primary-600 hover:text-primary-500 focus-within:outline-none">
+                        <span>Téléverser ressource</span>
+                        <input type="file" className="sr-only" disabled={uploadingField !== null} onChange={(e) => handleFileUpload(e, 'ressources_url', 'evenements/ressources')} />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+          </div>
         </div>
       </div>
 
