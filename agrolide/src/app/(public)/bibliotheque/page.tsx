@@ -48,8 +48,11 @@ export default async function BibliothequePublicPage() {
     <div className="min-h-screen" style={{ backgroundColor: '#f8f8f6' }}>
 
       {/* Hero section */}
-      <section className="bg-[#0d3520] pt-10 pb-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-[#0d3520] pt-10 pb-10 relative overflow-hidden">
+        {/* Motif Background */}
+        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none bg-[url('/images/motif-v02.png')] bg-cover bg-center" />
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
           <h1 className="font-heading font-[800] text-3xl sm:text-4xl text-white mb-4 max-w-3xl mx-auto leading-tight">
             Bibliothèque agricole

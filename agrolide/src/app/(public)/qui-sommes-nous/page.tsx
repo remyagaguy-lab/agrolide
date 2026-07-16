@@ -18,7 +18,7 @@ export default function QuiSommesNousPage() {
         {/* Motif Background */}
         <div className="absolute inset-0 z-0 opacity-15">
           <Image 
-            src="/images/motif-agrolide.png"
+            src="/images/motif-v02.png"
             alt="Motif Agrolide"
             fill
             className="object-cover"
