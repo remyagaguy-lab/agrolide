@@ -163,20 +163,57 @@ export default async function BlogPostPage({
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Sidebar (TOC + Share) */}
-            <div className="w-full lg:w-1/4 order-2 lg:order-1 hidden lg:block">
-              <TableOfContents />
-              
-              <div className="mt-8">
-                <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Share2 size={18} />
-                  Partager
-                </h4>
-                <div className="flex gap-3">
+            <div className="w-full lg:w-1/4 order-1">
+              <div className="sticky top-24 space-y-6">
+                <TableOfContents />
+                
+                {/* Partager - fixe sous le sommaire */}
+                <div className="bg-gray-50 p-6 rounded-xl border border-[var(--color-gris-clair)] hidden lg:block">
+                  <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <Share2 size={18} />
+                    Partager
+                  </h4>
+                  <div className="flex gap-3">
+                    <a 
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors font-bold"
+                    >
+                      in
+                    </a>
+                    <a 
+                      href={`https://wa.me/?text=${encodedTitle} ${encodedUrl}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
+                    >
+                      <MessageCircle size={20} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="w-full lg:w-3/4 order-2">
+              <div 
+                className="article-content prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-[var(--color-vert-principal)] prose-a:text-[var(--color-orange-accent)]"
+                dangerouslySetInnerHTML={{ __html: htmlContent }}
+              />
+
+              {/* Partage Mobile */}
+              <div className="mt-12 lg:hidden flex flex-col items-center justify-center gap-4 border-t border-gray-200 pt-8">
+                <span className="font-bold text-gray-900 flex items-center gap-2 text-lg">
+                  <Share2 size={20} />
+                  Partager cet article
+                </span>
+                <div className="flex gap-4">
                   <a 
                     href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors font-bold"
+                    className="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors font-bold text-lg"
                   >
                     in
                   </a>
@@ -184,20 +221,12 @@ export default async function BlogPostPage({
                     href={`https://wa.me/?text=${encodedTitle} ${encodedUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
+                    className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
                   >
-                    <MessageCircle size={20} />
+                    <MessageCircle size={24} />
                   </a>
                 </div>
               </div>
-            </div>
-
-            {/* Content */}
-            <div className="w-full lg:w-3/4 order-1 lg:order-2">
-              <div 
-                className="article-content prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-[var(--color-vert-principal)] prose-a:text-[var(--color-orange-accent)]"
-                dangerouslySetInnerHTML={{ __html: htmlContent }}
-              />
 
               {/* CTA Fin d'article */}
               <div className="mt-16 p-8 bg-[#E8F3EB] rounded-2xl border border-green-200 text-center">
