@@ -127,7 +127,7 @@ export function Footer() {
         {/* Motif Background */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/_next/image?url=%2Fimages%2Fmotif-transparent.png&w=1080&q=60')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+          style={{ backgroundImage: "url('/images/motif-v02.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
         />
 
         {/* Glows */}
