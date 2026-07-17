@@ -437,7 +437,7 @@ export default async function HomePage() {
                 <p className="text-[15px] text-gris-texte leading-[1.7] mb-8">
                   Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent.
                 </p>
-                <Link href="/annuaire" className="inline-flex items-center gap-2 font-heading font-[700] text-orange-accent hover:text-orange-dore transition-colors">
+                <Link href="/annuaire" className="inline-flex items-center gap-2 font-heading font-[700] text-[#c26a00] hover:text-[#995400] transition-colors">
                   Explorer le réseau <IconArrowRight />
                 </Link>
               </div>

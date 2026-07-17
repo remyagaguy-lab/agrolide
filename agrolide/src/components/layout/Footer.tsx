@@ -188,9 +188,9 @@ export function Footer() {
 
             {/* ── Col 2 : À propos ── */}
             <div className="flex flex-col gap-3">
-              <h4 className="font-heading font-[700] text-[11px] text-white/60 uppercase tracking-[0.18em] mb-3">
+              <h3 className="font-heading font-[700] text-[11px] text-white/60 uppercase tracking-[0.18em] mb-3">
                 À propos de nous
-              </h4>
+              </h3>
               {[
                 { href: "/qui-sommes-nous",         label: "Notre histoire" },
                 { href: "/#actions",                label: "Nos activités" },
@@ -207,9 +207,9 @@ export function Footer() {
 
             {/* ── Col 3 : Navigation ── */}
             <div className="flex flex-col gap-3">
-              <h4 className="font-heading font-[700] text-[11px] text-white/60 uppercase tracking-[0.18em] mb-3">
+              <h3 className="font-heading font-[700] text-[11px] text-white/60 uppercase tracking-[0.18em] mb-3">
                 Navigation
-              </h4>
+              </h3>
               {[
                 { href: "/",             label: "Accueil" },
                 { href: "/annuaire",     label: "Annuaire" },
@@ -226,9 +226,9 @@ export function Footer() {
 
             {/* ── Col 4 : Contact ── */}
             <div className="flex flex-col gap-3">
-              <h4 className="font-heading font-[700] text-[11px] text-white/60 uppercase tracking-[0.18em] mb-3">
+              <h3 className="font-heading font-[700] text-[11px] text-white/60 uppercase tracking-[0.18em] mb-3">
                 Contact
-              </h4>
+              </h3>
 
               <div className="flex items-start gap-2 text-white/40">
                 <span className="mt-0.5 flex-shrink-0"><IconMapPin /></span>
