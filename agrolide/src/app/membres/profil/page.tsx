@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { createClient } from "@/lib/supabase/server"
 import { User, MapPin, Briefcase, Mail, Phone, Edit } from "lucide-react"
 
@@ -35,9 +36,9 @@ export default async function ProfilPage() {
         <div className="h-32 bg-[var(--color-vert-principal)] relative"></div>
         <div className="px-8 pb-8 relative">
           <div className="absolute -top-16 left-8 w-32 h-32 bg-white rounded-full p-1 shadow-md">
-            <div className="w-full h-full bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
+            <div className="w-full h-full bg-gray-200 rounded-full overflow-hidden flex items-center justify-center relative">
               {profile.avatar_url ? (
-                <img src={profile.avatar_url} alt="Avatar" className="w-full h-full object-cover" />
+                <Image src={profile.avatar_url} alt="Avatar" fill sizes="128px" className="object-cover" />
               ) : (
                 <User size={64} className="text-gray-400" />
               )}

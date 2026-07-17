@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import { Calendar, MapPin, Users, Clock, Check, AlertCircle, Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 export function FormationDetailClient({ initialFormation }: { initialFormation: any }) {
   const router = useRouter()
@@ -228,9 +229,9 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
             {formation.avis_formation.map((avis: any) => (
               <div key={avis.id} className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">
+                  <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden relative">
                     {avis.profiles?.avatar_url ? (
-                      <img src={avis.profiles.avatar_url} alt="" className="w-full h-full object-cover" />
+                      <Image src={avis.profiles.avatar_url} alt="" fill sizes="40px" className="object-cover" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-gray-500 font-bold">
                         {avis.profiles?.prenom?.charAt(0)}

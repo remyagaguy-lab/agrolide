@@ -1,6 +1,14 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { SecurePDFViewer } from '@/components/modules/bibliotheque/SecurePDFViewer'
+import dynamic from 'next/dynamic'
+
+const SecurePDFViewer = dynamic(
+  () => import('@/components/modules/bibliotheque/SecurePDFViewer').then(mod => mod.SecurePDFViewer),
+  {
+    ssr: false,
+    loading: () => <div className="text-center p-12 text-gray-500">Chargement de la liseuse sécurisée...</div>
+  }
+)
 
 export const metadata = {
   title: 'Lecture Sécurisée | Agrolide Bibliothèque'

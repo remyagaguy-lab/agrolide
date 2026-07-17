@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { createClient } from "@/lib/supabase/server"
 import { ArticleCard } from "@/components/ui/ArticleCard"
 import BlogFilter from "./BlogFilter"
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   description: "Découvrez les dernières actualités, analyses et conseils pour les acteurs de l'agriculture africaine.",
 }
 
-export const revalidate = 0 // ISR désactivé temporairement pour les images
+export const revalidate = 3600
 
 export default async function BlogPage({
   searchParams,
@@ -83,10 +84,12 @@ export default async function BlogPage({
               <Link href={`/blog/${featuredArticle.slug}`} className="group block">
                 <div className="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col lg:flex-row">
                   <div className="lg:w-3/5 h-[300px] lg:h-[450px] relative overflow-hidden bg-gray-100">
-                    <img 
+                    <Image 
                       src={featuredArticle.image_une_url || "https://images.unsplash.com/photo-1592982537447-6f2a6a0c6c0e?q=80&w=2070&auto=format&fit=crop"} 
                       alt={featuredArticle.titre} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute top-6 left-6">
                       <span className="bg-primary-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg flex items-center gap-2">

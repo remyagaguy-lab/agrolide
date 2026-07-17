@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { Calendar, MapPin, Globe, Users, Clock, FileText, Download, Video } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
@@ -53,7 +54,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
           className="w-full h-48 bg-gray-100 relative cursor-pointer"
           onClick={() => onDetailsClick?.(event)}
         >
-          <img src={event.image_url} alt={`Affiche ${event.titre}`} className="w-full h-full object-cover" />
+          <Image src={event.image_url} alt={`Affiche ${event.titre}`} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
           
           {/* Badge statut */}
           <div className="absolute top-4 right-4">

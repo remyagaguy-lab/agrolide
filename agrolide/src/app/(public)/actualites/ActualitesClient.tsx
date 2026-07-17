@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
+import Image from "next/image"
 import { createClient } from '@supabase/supabase-js'
 import { Filter, Plus } from 'lucide-react'
 import EventCard from "@/components/modules/evenements/EventCard"
@@ -173,8 +174,8 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
         
         <div className="p-6 flex-grow">
           {event.image_url && (
-            <div className="mb-6 rounded-xl overflow-hidden bg-gray-100">
-              <img src={event.image_url} alt="Affiche" className="w-full h-auto object-contain max-h-[400px]" />
+            <div className="mb-6 rounded-xl overflow-hidden bg-gray-100 relative w-full h-[400px]">
+              <Image src={event.image_url} alt="Affiche" fill sizes="(max-width: 768px) 100vw, 800px" className="object-contain" />
             </div>
           )}
           

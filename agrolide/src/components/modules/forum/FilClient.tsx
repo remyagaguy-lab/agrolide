@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 import { createClient } from '@supabase/supabase-js'
 import Link from 'next/link'
 import { ArrowLeft, Clock, AlertTriangle, Send, User } from 'lucide-react'
@@ -166,9 +167,9 @@ export default function FilClient({ filId }: FilClientProps) {
           <div key={msg.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col sm:flex-row">
             {/* Profil Sidebar */}
             <div className="bg-gray-50 p-6 sm:w-48 sm:border-r border-gray-100 flex flex-col items-center text-center shrink-0">
-              <div className="w-16 h-16 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-3 shadow-sm overflow-hidden">
+              <div className="w-16 h-16 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-3 shadow-sm overflow-hidden relative">
                 {msg.auteur?.avatar_url ? (
-                  <img src={msg.auteur.avatar_url} alt="Avatar" className="w-full h-full object-cover" />
+                  <Image src={msg.auteur.avatar_url} alt="Avatar" fill sizes="64px" className="object-cover" />
                 ) : (
                   <User className="w-8 h-8 text-gray-400" />
                 )}

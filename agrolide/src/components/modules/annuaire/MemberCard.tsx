@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Briefcase, Award } from 'lucide-react'
 
 interface MemberCardProps {
@@ -28,9 +29,9 @@ export default function MemberCard({ member }: MemberCardProps) {
       className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-200 transition-all group flex flex-col h-full"
     >
       <div className="flex items-start justify-between mb-4 gap-4">
-        <div className="w-16 h-16 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold overflow-hidden shrink-0 border border-primary-100">
+        <div className="w-16 h-16 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold overflow-hidden shrink-0 border border-primary-100 relative">
           {member.avatar_url ? (
-            <img src={member.avatar_url} alt={displayName} className="w-full h-full object-cover" />
+            <Image src={member.avatar_url} alt={displayName} fill sizes="64px" className="object-cover" />
           ) : (
             member.prenom?.charAt(0) || '?'
           )}

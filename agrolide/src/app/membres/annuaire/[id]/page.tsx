@@ -2,6 +2,7 @@ import React from 'react'
 import { createClient } from '@supabase/supabase-js'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Briefcase, MessageCircle, ExternalLink, Globe, FileText, ArrowLeft } from 'lucide-react'
 import { Metadata } from 'next'
 
@@ -69,9 +70,9 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div className="flex flex-col md:flex-row gap-6 -mt-12">
               <div className="w-32 h-32 rounded-2xl bg-white p-1.5 shadow-sm shrink-0">
-                <div className="w-full h-full rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-4xl font-bold overflow-hidden border border-gray-100">
+                <div className="w-full h-full rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-4xl font-bold overflow-hidden border border-gray-100 relative">
                   {member.photo_url ? (
-                    <img src={member.photo_url} alt={displayName} className="w-full h-full object-cover" />
+                    <Image src={member.photo_url} alt={displayName} fill sizes="128px" className="object-cover" />
                   ) : (
                     member.prenom?.charAt(0) || '?'
                   )}

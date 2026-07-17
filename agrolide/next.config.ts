@@ -36,6 +36,11 @@ const nextConfig: NextConfig = {
         hostname: '*.r2.cloudflarestorage.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co',
+        pathname: '/**',
+      },
     ],
   },
   async headers() {

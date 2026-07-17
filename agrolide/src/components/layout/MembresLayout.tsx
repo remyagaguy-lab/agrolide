@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { 
   LayoutDashboard, 
@@ -53,9 +54,9 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
       {/* Sidebar Desktop */}
       <aside className="hidden md:flex flex-col w-[240px] bg-white border-r border-gray-200 sticky top-16 h-[calc(100vh-64px)] z-30">
         <div className="p-6 border-b border-gray-100 flex flex-col items-center text-center">
-          <div className="w-20 h-20 bg-gray-200 rounded-full mb-3 overflow-hidden">
+          <div className="w-20 h-20 bg-gray-200 rounded-full mb-3 overflow-hidden relative">
             {profile?.avatar_url ? (
-              <img src={profile.avatar_url} alt="Avatar" className="w-full h-full object-cover" />
+              <Image src={profile.avatar_url} alt="Avatar" fill sizes="80px" className="object-cover" />
             ) : (
               <User size={40} className="m-auto h-full text-gray-400" />
             )}
