@@ -92,7 +92,6 @@ export function Footer() {
   
   // Liste des chemins exacts qui ont déjà leur propre CTA en bas de page
   const pathsWithCustomCTA = [
-    "/",
     "/qui-sommes-nous",
     "/nos-actions",
     "/bibliotheque",

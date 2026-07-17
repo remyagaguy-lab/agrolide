@@ -166,16 +166,24 @@ export default function NosActionsPage() {
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="bg-[#0f1f17] py-[80px] text-center border-t border-[rgba(255,255,255,0.08)]">
-        <div className="container">
-          <h2 className="text-h2 text-white mb-4">Prêt à bénéficier de tout notre écosystème ?</h2>
-          <p className="text-[16px] text-white/70 max-w-[600px] mx-auto mb-8">
+      {/* ── CTA FINAL ────────────────────────────── */}
+      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[60px] md:py-[100px] text-center relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
+        </div>
+        <div className="max-w-[800px] mx-auto px-6 relative z-10">
+          <h2 className="font-heading font-[800] text-[32px] md:text-[48px] text-white mb-6 leading-[1.15]">
+            Prêt à bénéficier de tout notre écosystème&nbsp;?
+          </h2>
+          <p className="text-[16px] text-white/80 max-w-[600px] mx-auto mb-10">
             Rejoignez des centaines de professionnels engagés pour la souveraineté alimentaire africaine.
           </p>
-          <Button variant="primary" href="/rejoindre">
+          <Link
+            href="/rejoindre"
+            className="inline-flex items-center gap-3 bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[16px] px-[40px] py-[18px] rounded-full hover:bg-white hover:shadow-[0_0_40px_rgba(252,183,38,0.4)] transition-all duration-300 hover:-translate-y-1"
+          >
             Rejoindre le réseau
-          </Button>
+          </Link>
         </div>
       </section>
 

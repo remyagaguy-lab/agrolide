@@ -104,22 +104,27 @@ export default async function BibliothequePublicPage() {
           </Suspense>
 
           {/* Bottom CTA card */}
-          <div className="mt-16 text-center bg-[#0d3520] p-10 rounded-2xl shadow-sm">
-            <h3 className="font-heading font-[800] text-2xl text-white mb-4">
-              Accédez à la bibliothèque complète
-            </h3>
-            <p className="mb-8 max-w-2xl mx-auto font-sans text-white/70">
-              Rejoignez Agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
-            </p>
-            <Link
-              href="/rejoindre"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#fcb726] text-[#1a1a1a] font-heading font-[700] hover:bg-[#e5a620] transition-colors"
-            >
-              Voir les offres d&apos;adhésion
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
+        </div>
+      </section>
 
+      {/* ── CTA FINAL ────────────────────────────── */}
+      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[60px] md:py-[100px] text-center relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
+        </div>
+        <div className="max-w-[800px] mx-auto px-6 relative z-10">
+          <h2 className="font-heading font-[800] text-[32px] md:text-[48px] text-white mb-6 leading-[1.15]">
+            Accédez à la bibliothèque complète
+          </h2>
+          <p className="text-[16px] text-white/80 max-w-[600px] mx-auto mb-10">
+            Rejoignez Agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
+          </p>
+          <Link
+            href="/rejoindre"
+            className="inline-flex items-center gap-3 bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[16px] px-[40px] py-[18px] rounded-full hover:bg-white hover:shadow-[0_0_40px_rgba(252,183,38,0.4)] transition-all duration-300 hover:-translate-y-1"
+          >
+            Voir les offres d&apos;adhésion
+          </Link>
         </div>
       </section>
 
