@@ -114,51 +114,58 @@ export default function QuiSommesNousPage() {
         </div>
       </section>
 
-      {/* ── LA SOLUTION ──────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[40px] md:py-[60px] text-white relative overflow-hidden">
-        {/* Motif Background */}
-        <div 
-          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-        />
-        <div className="max-w-[800px] mx-auto px-6 relative z-10 text-center">
-          <h2 className="font-heading font-[800] text-[32px] md:text-[40px] mb-4 leading-[1.15]">
-            Un Réseau comme solution...
-          </h2>
-          <p className="font-sans text-[18px] md:text-[20px] text-white/90 leading-[1.6] mb-8">
-            Et si la solution à ces défis n'était pas une nouvelle technologie... <strong className="text-[#fcb726]">mais un réseau ?</strong>
-          </p>
-          
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 md:p-8 rounded-2xl shadow-xl text-left">
-            <div className="flex items-start gap-4 mb-6">
-              <ArrowRight className="w-5 h-5 text-[#fcb726] flex-shrink-0 mt-1" />
-              <p className="font-sans text-[16px] md:text-[18px] text-white/90 leading-[1.6] m-0">Un réseau qui <strong className="text-white">connecte</strong>, qui <strong className="text-white">forme</strong>, qui <strong className="text-white">accompagne</strong>, qui <strong className="text-white">valorise</strong> chaque acteur de la chaîne agricole africaine.</p>
+      {/* ── LA SOLUTION & NOTRE HISTOIRE ──────────────────────────── */}
+      <section className="bg-gris-fond pt-[60px] md:pt-[100px] relative overflow-hidden">
+        <div className="container max-w-[1200px] mx-auto px-6 mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
+            
+            {/* Colonne 1: Un Réseau comme solution */}
+            <div className="bg-gradient-to-br from-[#1b5e38] to-[#124026] p-8 md:p-12 rounded-3xl text-white relative overflow-hidden shadow-xl flex flex-col justify-center">
+              {/* Motif Background */}
+              <div 
+                className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
+                style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "400px", backgroundRepeat: "repeat" }} 
+              />
+              <div className="relative z-10">
+                <h2 className="font-heading font-[800] text-[32px] md:text-[40px] mb-4 leading-[1.15]">
+                  Un Réseau comme solution...
+                </h2>
+                <p className="font-sans text-[18px] md:text-[20px] text-white/90 leading-[1.6] mb-8">
+                  Et si la solution à ces défis n'était pas une nouvelle technologie... <strong className="text-[#fcb726]">mais un réseau ?</strong>
+                </p>
+                
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-lg">
+                  <div className="flex items-start gap-4 mb-6">
+                    <ArrowRight className="w-5 h-5 text-[#fcb726] flex-shrink-0 mt-1" />
+                    <p className="font-sans text-[16px] text-white/90 leading-[1.6] m-0">Un réseau qui <strong className="text-white">connecte</strong>, qui <strong className="text-white">forme</strong>, qui <strong className="text-white">accompagne</strong>, qui <strong className="text-white">valorise</strong> chaque acteur de la chaîne agricole africaine.</p>
+                  </div>
+                  <div className="border-t border-white/20 pt-4 text-center">
+                    <p className="font-heading font-[700] text-[16px] text-[#fcb726] m-0 leading-[1.5]">
+                      C'est exactement ce que nous construisons ensemble, pour vous, pour l'Afrique. Bienvenue dans le Réseau agrolide.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="border-t border-white/20 pt-4 text-center">
-              <p className="font-heading font-[700] text-[16px] md:text-[18px] text-[#fcb726] m-0 leading-[1.5]">
-                C'est exactement ce que nous construisons ensemble, pour vous, pour l'Afrique. <br className="hidden md:block" /> Bienvenue dans le Réseau agrolide.
-              </p>
+
+            {/* Colonne 2: Notre histoire */}
+            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-md border border-[#f0f0f0] flex flex-col justify-center">
+              <h2 className="font-heading font-[800] text-[32px] md:text-[40px] text-[#1b5e38] mb-6">Notre histoire...</h2>
+              <div className="space-y-4">
+                <p className="font-sans text-[16px] md:text-[18px] text-[#555] leading-[1.8]">
+                  <strong className="text-[#1a1a1a]">agrolide</strong> est né d'un geste simple : <strong className="text-[#1b5e38]">celui de partager</strong>. 
+                  Tout a commencé avec <strong className="text-[#1a1a1a]">«La Bibliothèque de l'Agronome»</strong>, une communauté virtuelle, spontanée, où étudiants, professionnels et entrepreneurs du domaine agricole de tous horizons partageaient librement leurs savoirs, leurs expériences, leurs ressources.
+                </p>
+                <p className="font-sans text-[16px] md:text-[18px] text-[#555] leading-[1.8]">
+                  Ce signal était clair : <strong className="text-[#1a1a1a]">la demande existait et la volonté aussi.</strong> Il ne manquait qu'une structure pour lui donner toute sa puissance. C'est précisément ce que nous avons décidé de construire.
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
-      </section>
 
-      {/* ── NOTRE HISTOIRE & ÉVOLUTION ────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-gris-fond">
-        <div className="max-w-[1200px] mx-auto px-6 mb-20">
-          <div className="max-w-[900px] mx-auto text-center space-y-6">
-            <h2 className="font-heading font-[800] text-[36px] md:text-[44px] text-[#1b5e38]">Notre histoire...</h2>
-            <p className="font-sans text-[18px] text-[#555] leading-[1.8] text-left md:text-center">
-              <strong className="text-[#1a1a1a]">agrolide</strong> est né d'un geste simple : <strong className="text-[#1b5e38]">celui de partager</strong>. 
-              Tout a commencé avec <strong className="text-[#1a1a1a]">«La Bibliothèque de l'Agronome»</strong>, une communauté virtuelle, spontanée, où étudiants, professionnels et entrepreneurs du domaine agricole de tous horizons partageaient librement leurs savoirs, leurs expériences, leurs ressources.
-            </p>
-            <p className="font-sans text-[18px] text-[#555] leading-[1.8] text-left md:text-center">
-              Ce signal était clair : <strong className="text-[#1a1a1a]">la demande existait et la volonté aussi.</strong> Il ne manquait qu'une structure pour lui donner toute sa puissance. C'est précisément ce que nous avons décidé de construire.
-            </p>
-          </div>
-        </div>
-
-        <div className="container">
+        <div className="container pb-[60px] md:pb-[100px]">
           <div className="text-center mb-16">
             <h2 className="text-h2 text-gris-titre">L'évolution du réseau</h2>
           </div>
