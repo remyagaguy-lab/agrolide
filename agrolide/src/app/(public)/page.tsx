@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Metadata } from "next"
+import { createClient } from "@/lib/supabase/server"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
@@ -147,7 +148,23 @@ function IconHandshake({ className = "" }: { className?: string }) {
 
 // --- Page ---
 
-export default function HomePage() {
+export default async function HomePage() {
+  const supabase = await createClient()
+  
+  // Fetch 3 latest published articles
+  const { data: latestArticles } = await supabase
+    .from('articles')
+    .select('*')
+    .eq('statut', 'publie')
+    .order('published_at', { ascending: false })
+    .limit(3)
+
+  const displayArticles = latestArticles && latestArticles.length > 0 ? latestArticles : [
+    { slug: "pratiques-agroecologiques", categorie: "Agronomie", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", published_at: "2024-10-12T00:00:00Z" },
+    { slug: "financer-projet-agricole", categorie: "Agrobusiness", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", published_at: "2024-10-05T00:00:00Z" },
+    { slug: "competences-agronomes", categorie: "Formation", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", published_at: "2024-09-28T00:00:00Z" },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
 
@@ -510,30 +527,31 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
-            {[
-              { slug: "pratiques-agroecologiques", tag: "Agronomie", title: "Pratiques agroécologiques pour sols tropicaux", desc: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", date: "12 Oct 2024", readTime: "5 min" },
-              { slug: "financer-projet-agricole", tag: "Agrobusiness", title: "Financer son projet agricole : les clés", desc: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", date: "05 Oct 2024", readTime: "8 min" },
-              { slug: "competences-agronomes", tag: "Formation", title: "Compétences du futur pour les agronomes", desc: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", date: "28 Sep 2024", readTime: "4 min" },
-            ].map((item, i) => (
+            {displayArticles.map((item, i) => {
+              const articleDate = item.published_at ? new Date(item.published_at).toLocaleDateString('fr-FR', {
+                year: 'numeric', month: 'short', day: 'numeric'
+              }) : "Récemment";
+
+              return (
               <Link href={`/blog/${item.slug}`} key={i} className="block group">
                 <Card className="card-blog p-0 h-full flex flex-col">
                   <div className="card-blog-image relative">
                     <div className="absolute top-4 left-4">
-                      <Badge variant="category" className="bg-vert-pale text-vert-principal">{item.tag}</Badge>
+                      <Badge variant="category" className="bg-vert-pale text-vert-principal">{item.categorie || "Article"}</Badge>
                     </div>
                   </div>
                   <div className="card-blog-body flex flex-col flex-1">
-                    <h3 className="font-heading font-[700] text-[15px] text-gris-titre leading-[1.4] mb-2">{item.title}</h3>
+                    <h3 className="font-heading font-[700] text-[15px] text-gris-titre leading-[1.4] mb-2">{item.titre}</h3>
                     <p className="font-sans text-[13px] text-gris-texte line-clamp-2 mb-4 flex-1">
-                      {item.desc}
+                      {item.extrait}
                     </p>
                     <div className="font-sans text-[12px] text-gris-muted mt-auto pt-4 border-t border-[#f0f0f0]">
-                      {item.date} · {item.readTime} de lecture
+                      {articleDate} · 5 min de lecture
                     </div>
                   </div>
                 </Card>
               </Link>
-            ))}
+            )})}
           </div>
         </div>
       </section>
