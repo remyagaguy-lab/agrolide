@@ -1,14 +1,6 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import dynamic from 'next/dynamic'
-
-const SecurePDFViewer = dynamic(
-  () => import('@/components/modules/bibliotheque/SecurePDFViewer').then(mod => mod.SecurePDFViewer),
-  {
-    ssr: false,
-    loading: () => <div className="text-center p-12 text-gray-500">Chargement de la liseuse sécurisée...</div>
-  }
-)
+import { SecurePDFViewerWrapper } from '@/components/modules/bibliotheque/SecurePDFViewerWrapper'
 
 export const metadata = {
   title: 'Lecture Sécurisée | Agrolide Bibliothèque'
@@ -30,7 +22,7 @@ export default async function SecureReaderPage({ params }: { params: Promise<{ i
         <p className="text-gray-500 text-sm">Le téléchargement, la sélection et le clic droit sont désactivés pour protéger ce document.</p>
       </div>
 
-      <SecurePDFViewer documentId={id} />
+      <SecurePDFViewerWrapper documentId={id} />
     </div>
   )
 }
