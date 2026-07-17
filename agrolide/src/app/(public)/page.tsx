@@ -173,7 +173,7 @@ export default async function HomePage() {
         {/* Motif Background for texture (placed behind the image) */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+          style={{ backgroundImage: "url('/_next/image?url=%2Fimages%2Fmotif-transparent.png&w=1080&q=60')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
         />
 
         {/* Image de fond avec mask pour fondu fluide */}
@@ -183,6 +183,7 @@ export default async function HomePage() {
             alt="Agriculture africaine"
             fill
             priority
+            sizes="(max-width: 768px) 100vw, 55vw"
             className="object-cover object-[center_80%] opacity-100"
             style={{ 
               WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)', 
