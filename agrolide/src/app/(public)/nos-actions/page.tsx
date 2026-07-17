@@ -3,7 +3,7 @@ import { Metadata } from "next"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
-import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase } from "lucide-react"
+import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Nos actions",
@@ -167,22 +167,16 @@ export default function NosActionsPage() {
       </section>
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[60px] md:py-[100px] text-center relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#fcb726]/10 rounded-full blur-[100px] pointer-events-none" />
-        </div>
-        <div className="max-w-[800px] mx-auto px-6 relative z-10">
-          <h2 className="font-heading font-[800] text-[32px] md:text-[48px] text-white mb-6 leading-[1.15]">
+      <section className="bg-vert-clair py-[96px] text-center">
+        <div className="container flex flex-col items-center">
+          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-vert-profond leading-[1.2] max-w-[700px] mx-auto mb-4">
             Prêt à bénéficier de tout notre écosystème&nbsp;?
           </h2>
-          <p className="text-[16px] text-white/80 max-w-[600px] mx-auto mb-10">
+          <p className="font-sans font-[400] text-[14px] text-gris-texte mb-[28px]">
             Rejoignez des centaines de professionnels engagés pour la souveraineté alimentaire africaine.
           </p>
-          <Link
-            href="/rejoindre"
-            className="inline-flex items-center gap-3 bg-[#fcb726] text-[#1a1a1a] font-heading font-[800] text-[16px] px-[40px] py-[18px] rounded-full hover:bg-white hover:shadow-[0_0_40px_rgba(252,183,38,0.4)] transition-all duration-300 hover:-translate-y-1"
-          >
-            Rejoindre le réseau
+          <Link href="/rejoindre" className="btn-primary inline-flex items-center">
+            Rejoindre le réseau <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
       </section>
