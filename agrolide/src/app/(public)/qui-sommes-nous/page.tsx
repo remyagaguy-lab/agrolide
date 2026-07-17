@@ -116,7 +116,11 @@ export default function QuiSommesNousPage() {
 
       {/* ── LA SOLUTION ──────────────────────────── */}
       <section className="bg-gradient-to-br from-[#1b5e38] to-[#124026] py-[40px] md:py-[60px] text-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 20px 20px, rgba(255,255,255,0.2) 2px, transparent 0)', backgroundSize: '40px 40px' }}></div>
+        {/* Motif Background */}
+        <div 
+          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+        />
         <div className="max-w-[800px] mx-auto px-6 relative z-10 text-center">
           <h2 className="font-heading font-[800] text-[32px] md:text-[40px] mb-4 leading-[1.15]">
             Un Réseau comme solution...
