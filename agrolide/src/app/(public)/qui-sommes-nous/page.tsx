@@ -208,31 +208,36 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── MISSION & VISION ─────────────────────── */}
-      <section className="bg-gradient-to-br from-[#f8f8f6] to-white py-[60px] md:py-[100px] relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#0d3520] to-[#0a2818] py-[60px] md:py-[100px] relative overflow-hidden">
+        {/* Motif Background */}
+        <div 
+          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
+          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+        />
         <div className="max-w-[1100px] mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block px-8 py-4 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)] text-[#1b5e38] rounded-full font-heading font-[800] text-[16px] md:text-[20px] mb-8 border border-[#eaeaea]">
+            <div className="inline-block px-8 py-4 bg-white/10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.1)] text-[#fcb726] rounded-full font-heading font-[800] text-[16px] md:text-[20px] mb-8 border border-white/20">
               « Fédérer la chaîne agricole, pour conquérir la souveraineté alimentaire »
             </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group relative bg-white rounded-2xl p-10 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-1 transition-all duration-300">
-              <div className="w-14 h-14 bg-[#fcb726]/10 rounded-xl flex items-center justify-center text-[#d9970c] mb-6">
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
+              <div className="w-14 h-14 bg-[#fcb726]/20 rounded-xl flex items-center justify-center text-[#fcb726] mb-6">
                 <Target size={28} />
               </div>
-              <h3 className="font-heading font-[800] text-[24px] text-[#1a1a1a] mb-4">Notre Mission</h3>
-              <p className="font-sans text-[16px] text-[#666] leading-[1.8]">
+              <h3 className="font-heading font-[800] text-[24px] text-white mb-4">Notre Mission</h3>
+              <p className="font-sans text-[16px] text-white/80 leading-[1.8]">
                 Fédérer et valoriser les acteurs de la chaîne agricole africaine par la mutualisation des ressources, le renforcement des compétences, l'incubation entrepreneuriale et le développement de leur visibilité, pour contribuer activement à la conquête de la souveraineté alimentaire africaine.
               </p>
             </div>
             
-            <div className="group relative bg-white rounded-2xl p-10 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-1 transition-all duration-300">
-              <div className="w-14 h-14 bg-[#1b5e38]/10 rounded-xl flex items-center justify-center text-[#1b5e38] mb-6">
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
+              <div className="w-14 h-14 bg-[#fcb726]/20 rounded-xl flex items-center justify-center text-[#fcb726] mb-6">
                 <Lightbulb size={28} />
               </div>
-              <h3 className="font-heading font-[800] text-[24px] text-[#1a1a1a] mb-4">Notre Vision</h3>
-              <p className="font-sans text-[16px] text-[#666] leading-[1.8]">
+              <h3 className="font-heading font-[800] text-[24px] text-white mb-4">Notre Vision</h3>
+              <p className="font-sans text-[16px] text-white/80 leading-[1.8]">
                 Être le réseau continental où chaque acteur de la chaîne agricole africaine trouve les ressources, les opportunités et les connexions nécessaires pour participer activement à la conquête de la souveraineté alimentaire.
               </p>
             </div>
@@ -324,7 +329,7 @@ export default function QuiSommesNousPage() {
 
       {/* ── NOS VALEURS ──────────────────────────── */}
       <section className="py-[40px] md:py-[80px] bg-[#f8f8f6]">
-        <div className="max-w-[1100px] mx-auto px-6">
+        <div className="max-w-[1400px] mx-auto px-6">
           <div className="text-center max-w-[700px] mx-auto mb-16">
             <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-[#1a1a1a] mb-6">
               Nos valeurs fondatrices
@@ -334,7 +339,7 @@ export default function QuiSommesNousPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
             {[
               { icon: <Users size={24} />, title: "Solidarité", desc: "Le réseau est notre première ressource. La réussite de chacun passe par la force du collectif et la mutualisation des compétences entre membres." },
               { icon: <Crown size={24} />, title: "Leadership", desc: "agrolide forge des leaders agricoles. Chaque acteur accompagné est un futur moteur de la chaîne agricole et de la souveraineté alimentaire africaine." },
@@ -342,12 +347,12 @@ export default function QuiSommesNousPage() {
               { icon: <Lightbulb size={24} />, title: "Innovation africaine", desc: "Des solutions pensées pour et par les réalités africaines — adaptées aux terroirs, aux marchés et aux contraintes du continent." },
               { icon: <Target size={24} />, title: "Impact", desc: "Chaque action est évaluée à l'aune de sa contribution concrète à la souveraineté alimentaire africaine." },
             ].map((v, i) => (
-              <div key={i} className="group bg-white rounded-2xl p-8 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-1 transition-all duration-300">
-                <div className="w-12 h-12 bg-[#f0f7f0] group-hover:bg-[#1b5e38] rounded-xl flex items-center justify-center text-[#1b5e38] group-hover:text-white transition-colors duration-300 mb-6">
+              <div key={i} className="group bg-white rounded-2xl p-6 border border-[#f0f0f0] shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
+                <div className="w-12 h-12 bg-[#f0f7f0] group-hover:bg-[#1b5e38] rounded-xl flex items-center justify-center text-[#1b5e38] group-hover:text-white transition-colors duration-300 mb-4">
                   {v.icon}
                 </div>
-                <h3 className="font-heading font-[800] text-[20px] text-[#1a1a1a] mb-4">{v.title}</h3>
-                <p className="font-sans text-[15px] text-[#666] leading-[1.7]">{v.desc}</p>
+                <h3 className="font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">{v.title}</h3>
+                <p className="font-sans text-[14px] text-[#666] leading-[1.6]">{v.desc}</p>
               </div>
             ))}
           </div>
