@@ -143,41 +143,21 @@ export default function QuiSommesNousPage() {
         </div>
       </section>
 
-      {/* ── NOTRE HISTOIRE & STATS ────────────────── */}
-      <section className="py-[60px] md:py-[100px] bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-6">
-              <h2 className="font-heading font-[800] text-[36px] md:text-[44px] text-[#1b5e38]">Notre histoire...</h2>
-              <p className="font-sans text-[18px] text-[#555] leading-[1.8]">
-                <strong className="text-[#1a1a1a]">agrolide</strong> est né d'un geste simple : <strong className="text-[#1b5e38]">celui de partager</strong>. 
-                Tout a commencé avec <strong className="text-[#1a1a1a]">«La Bibliothèque de l'Agronome»</strong>, une communauté virtuelle, spontanée, où étudiants, professionnels et entrepreneurs du domaine agricole de tous horizons partageaient librement leurs savoirs, leurs expériences, leurs ressources.
-              </p>
-              <p className="font-sans text-[18px] text-[#555] leading-[1.8]">
-                Ce signal était clair : <strong className="text-[#1a1a1a]">la demande existait et la volonté aussi.</strong> Il ne manquait qu'une structure pour lui donner toute sa puissance. C'est précisément ce que nous avons décidé de construire.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-[#1b5e38] text-white p-8 rounded-3xl shadow-lg border border-[#1b5e38]/20 flex flex-col items-center justify-center text-center transform hover:-translate-y-1 transition-transform">
-                <div className="font-heading font-[800] text-[48px] text-[#fcb726] leading-none mb-2">1300+</div>
-                <div className="font-sans text-[15px] font-[600] opacity-90 uppercase tracking-wide">Membres dans la communauté WhatsApp</div>
-              </div>
-              <div className="bg-[#1b5e38] text-white p-8 rounded-3xl shadow-lg border border-[#1b5e38]/20 flex flex-col items-center justify-center text-center transform hover:-translate-y-1 transition-transform">
-                <div className="font-heading font-[800] text-[48px] text-[#fcb726] leading-none mb-2">900+</div>
-                <div className="font-sans text-[15px] font-[600] opacity-90 uppercase tracking-wide">Ressources mobilisées dans la bibliothèque</div>
-              </div>
-              <div className="sm:col-span-2 bg-[#1b5e38] text-white p-8 rounded-3xl shadow-lg border border-[#1b5e38]/20 flex flex-col sm:flex-row items-center justify-center text-center gap-6 transform hover:-translate-y-1 transition-transform">
-                <div className="font-heading font-[800] text-[48px] text-[#fcb726] leading-none">46-55</div>
-                <div className="font-sans text-[15px] font-[600] opacity-90 uppercase tracking-wide max-w-[200px]">Participants durant nos 2 premiers webinaires</div>
-              </div>
-            </div>
+      {/* ── NOTRE HISTOIRE & ÉVOLUTION ────────────────── */}
+      <section className="py-[60px] md:py-[100px] bg-gris-fond">
+        <div className="max-w-[1200px] mx-auto px-6 mb-20">
+          <div className="max-w-[900px] mx-auto text-center space-y-6">
+            <h2 className="font-heading font-[800] text-[36px] md:text-[44px] text-[#1b5e38]">Notre histoire...</h2>
+            <p className="font-sans text-[18px] text-[#555] leading-[1.8] text-left md:text-center">
+              <strong className="text-[#1a1a1a]">agrolide</strong> est né d'un geste simple : <strong className="text-[#1b5e38]">celui de partager</strong>. 
+              Tout a commencé avec <strong className="text-[#1a1a1a]">«La Bibliothèque de l'Agronome»</strong>, une communauté virtuelle, spontanée, où étudiants, professionnels et entrepreneurs du domaine agricole de tous horizons partageaient librement leurs savoirs, leurs expériences, leurs ressources.
+            </p>
+            <p className="font-sans text-[18px] text-[#555] leading-[1.8] text-left md:text-center">
+              Ce signal était clair : <strong className="text-[#1a1a1a]">la demande existait et la volonté aussi.</strong> Il ne manquait qu'une structure pour lui donner toute sa puissance. C'est précisément ce que nous avons décidé de construire.
+            </p>
           </div>
         </div>
-      </section>
 
-      {/* ── CHRONOLOGIE ──────────────────────────── */}
-      <section className="bg-gris-fond">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-h2 text-gris-titre">L'évolution du réseau</h2>
