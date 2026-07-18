@@ -51,7 +51,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
     <div className={`bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
       {event.image_url && (
         <div 
-          className="w-full h-48 bg-gray-100 relative cursor-pointer"
+          className="w-full h-40 bg-gray-100 relative cursor-pointer"
           onClick={() => onDetailsClick?.(event)}
         >
           <Image 
