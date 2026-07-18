@@ -38,7 +38,7 @@ export async function getDocumentUrl(documentId: string) {
     
   if (data?.fichier_r2_key) {
     // Generate the API proxy url to download
-    return { url: `/api/r2-proxy?url=${encodeURIComponent(`https://${process.env.NEXT_PUBLIC_R2_PUBLIC_BUCKET}.r2.cloudflarestorage.com/${data.fichier_r2_key}`)}` }
+    return { url: `/api/bibliotheque/download/${documentId}?download=true` }
   }
   return { error: 'Document non trouvé' }
 }

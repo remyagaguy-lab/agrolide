@@ -43,29 +43,29 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       .update({ nb_telechargements: (document.nb_telechargements || 0) + 1 })
       .eq('id', id)
       
-    // Récupérer le fichier depuis l'URL publique de R2
-    const r2PublicUrl = process.env.NEXT_PUBLIC_R2_PUBLIC_URL
-    if (!r2PublicUrl) {
-       return NextResponse.json({ error: 'Configuration R2 manquante' }, { status: 500 })
-    }
-
-    const pdfUrl = `${r2PublicUrl}/${document.fichier_r2_key}`
-    const pdfResponse = await fetch(pdfUrl)
-
-    if (!pdfResponse.ok) {
-      return NextResponse.json({ error: 'Erreur lors du téléchargement du PDF depuis R2' }, { status: 502 })
-    }
+    // Utiliser le client S3 pour récupérer directement le flux depuis le bucket privé
+    const command = new GetObjectCommand({
+      Bucket: process.env.R2_BUCKET_NAME || 'agrolide-biblio',
+      Key: document.fichier_r2_key,
+    })
+    
+    const s3Response = await s3Client.send(command)
+    
+    const isDownload = request.nextUrl.searchParams.get('download') === 'true'
+    const contentDisposition = isDownload 
+      ? `attachment; filename="Document-${id}.pdf"` 
+      : 'inline'
 
     // Retourner le flux directement (Proxy bytes) pour éviter les erreurs CORS de react-pdf
-    return new NextResponse(pdfResponse.body, {
+    return new NextResponse(s3Response.Body as any, {
       headers: {
         'Content-Type': 'application/pdf',
         'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
-        'Content-Disposition': 'inline'
+        'Content-Disposition': contentDisposition
       }
     })
   } catch (error: any) {
-    console.error('Erreur Proxy PDF:', error)
-    return NextResponse.json({ error: 'Erreur serveur' }, { status: 500 })
+    console.error('Erreur Proxy S3 PDF:', error)
+    return NextResponse.json({ error: 'Erreur serveur ou fichier introuvable' }, { status: 500 })
   }
 }
