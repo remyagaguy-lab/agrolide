@@ -51,13 +51,19 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     
     const s3Response = await s3Client.send(command)
     
+    // Extraire les octets (Buffer) pour que Next.js puisse le renvoyer
+    const bytes = await s3Response.Body?.transformToByteArray()
+    if (!bytes) {
+      throw new Error("Impossible de lire le fichier depuis le stockage")
+    }
+    
     const isDownload = request.nextUrl.searchParams.get('download') === 'true'
     const contentDisposition = isDownload 
       ? `attachment; filename="Document-${id}.pdf"` 
       : 'inline'
 
     // Retourner le flux directement (Proxy bytes) pour éviter les erreurs CORS de react-pdf
-    return new NextResponse(s3Response.Body as any, {
+    return new NextResponse(bytes, {
       headers: {
         'Content-Type': 'application/pdf',
         'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
