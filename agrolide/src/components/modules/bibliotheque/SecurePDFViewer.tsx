@@ -17,6 +17,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
   const [scale, setScale] = useState<number>(1.2)
+  const [containerWidth, setContainerWidth] = useState<number>()
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -27,9 +28,20 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     const container = containerRef.current
     if (container) {
       container.addEventListener('contextmenu', handleContextMenu)
-    }
-    return () => {
-      if (container) container.removeEventListener('contextmenu', handleContextMenu)
+      
+      // Observer la taille du container pour adapter le PDF (responsivité)
+      const observer = new ResizeObserver((entries) => {
+        if (entries[0]) {
+          // Soustraire un peu de padding (environ 32px)
+          const width = entries[0].contentRect.width
+          setContainerWidth(width > 600 ? undefined : width - 32)
+        }
+      })
+      observer.observe(container)
+      return () => {
+        container.removeEventListener('contextmenu', handleContextMenu)
+        observer.disconnect()
+      }
     }
   }, [])
 
@@ -101,40 +113,40 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   return (
     <div className="flex flex-col items-center bg-gray-100 rounded-xl overflow-hidden border border-gray-200">
       {/* Toolbar */}
-      <div className="w-full bg-white border-b border-gray-200 p-4 flex items-center justify-between shadow-sm z-10">
-        <div className="flex items-center gap-4">
+      <div className="w-full bg-white border-b border-gray-200 p-2 sm:p-4 flex flex-wrap items-center justify-between gap-2 shadow-sm z-10">
+        <div className="flex items-center gap-2 sm:gap-4">
           <button 
             onClick={() => changeScale(-0.2)} 
-            className="p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
+            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
             title="Dézoomer"
           >
             <ZoomOut className="w-5 h-5" />
           </button>
-          <span className="text-sm font-medium text-gray-600 w-12 text-center">{Math.round(scale * 100)}%</span>
+          <span className="text-xs sm:text-sm font-medium text-gray-600 w-10 sm:w-12 text-center">{Math.round(scale * 100)}%</span>
           <button 
             onClick={() => changeScale(0.2)} 
-            className="p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
+            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
             title="Zoomer"
           >
             <ZoomIn className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <button
             disabled={pageNumber <= 1}
             onClick={() => changePage(-1)}
-            className="p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <span className="text-sm font-medium text-gray-700">
-            Page {pageNumber} sur {numPages || '--'}
+          <span className="text-xs sm:text-sm font-medium text-gray-700">
+            Page {pageNumber} / {numPages || '--'}
           </span>
           <button
             disabled={pageNumber >= numPages}
             onClick={() => changePage(1)}
-            className="p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
@@ -144,7 +156,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       {/* Secure PDF Container */}
       <div 
         ref={containerRef}
-        className="relative w-full h-[800px] overflow-auto flex justify-center p-8 bg-[#e5e5e5] select-none"
+        className="relative w-full h-[60vh] sm:h-[800px] overflow-auto flex justify-center p-4 sm:p-8 bg-[#e5e5e5] select-none"
         style={{ WebkitUserSelect: 'none', userSelect: 'none' }}
       >
         <Document
@@ -161,6 +173,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
             <Page 
               pageNumber={pageNumber} 
               scale={scale} 
+              width={containerWidth}
               renderTextLayer={false} 
               renderAnnotationLayer={false}
               className="pointer-events-none" 
