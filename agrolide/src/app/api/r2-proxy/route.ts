@@ -37,7 +37,14 @@ export async function GET(request: NextRequest) {
     })
     
     const signedUrl = await getSignedUrl(s3Client, command, { expiresIn: 3600 })
-    return NextResponse.redirect(signedUrl)
+    
+    // Ajout d'un cache agressif (Next.js & Navigateur) pour éviter de re-signer l'URL à chaque fois
+    return NextResponse.redirect(signedUrl, {
+      status: 302,
+      headers: {
+        'Cache-Control': 'public, max-age=3000, s-maxage=3000, stale-while-revalidate=300',
+      }
+    })
   } catch (error) {
     console.error('R2 Proxy Error:', error)
     return new NextResponse('Internal Server Error', { status: 500 })

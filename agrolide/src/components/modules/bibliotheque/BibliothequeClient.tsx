@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { Search, Filter, X } from 'lucide-react'
 import { DocumentCard, DocumentType } from './DocumentCard'
+import { SkeletonGrid } from '@/components/ui/Skeleton'
 import { createClient } from '@supabase/supabase-js'
 
 export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, publicView = false }: any) {
@@ -15,6 +16,7 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, 
   const [nextCursor, setNextCursor] = useState<string | null>(initialData?.nextCursor || null)
   const [loading, setLoading] = useState(false)
   const [loadingMore, setLoadingMore] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   // Filtres state (local state synced with URL)
   const [search, setSearch] = useState(searchParams.get('search') || '')
@@ -56,13 +58,8 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, 
     
     // Fetch new data
     setLoading(true)
+    setError(null)
     try {
-      // In a real implementation, we would fetch from our Worker API with Auth header.
-      // But since we are client-side here and the worker needs the Auth token we could fetch from worker:
-      // const res = await fetch(`/api/bibliotheque?${queryString}`, { headers: { Authorization: `Bearer ${session.access_token}` } })
-      // For simplicity in this demo, let's just query Supabase directly since RLS is usually configured to allow reading public documents.
-      // If RLS blocks it, we must use the worker endpoint and get the token.
-      
       const supabase = createClient(supabaseUrl, supabaseAnonKey)
       let query = supabase.from('documents').select('*').eq('statut', 'publie').order('created_at', { ascending: false }).limit(20)
       
@@ -72,12 +69,15 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, 
       
       const { data, error } = await query
       
-      if (!error && data) {
+      if (error) throw error
+      
+      if (data) {
         setDocuments(data as DocumentType[])
         setNextCursor(data.length === 20 ? data[data.length - 1].created_at : null)
       }
     } catch (err) {
       console.error(err)
+      setError('Erreur lors du chargement des documents')
     } finally {
       setLoading(false)
     }
@@ -190,21 +190,11 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, 
 
       {/* Grille de résultats */}
       <div className="flex-1">
-        {loading ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="animate-pulse bg-white border border-gray-100 rounded-xl h-64 overflow-hidden">
-                <div className="h-32 bg-gray-200"></div>
-                <div className="p-5 space-y-3">
-                  <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-                  <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-                  <div className="pt-4 flex justify-between">
-                    <div className="h-3 bg-gray-200 rounded w-1/4"></div>
-                    <div className="h-3 bg-gray-200 rounded w-1/4"></div>
-                  </div>
-                </div>
-              </div>
-            ))}
+        {loading && documents.length === 0 ? (
+          <SkeletonGrid count={6} />
+        ) : error ? (
+          <div className="text-center py-16 bg-red-50 rounded-xl border border-red-100">
+            <p className="text-red-600">{error}</p>
           </div>
         ) : documents.length > 0 ? (
           <>

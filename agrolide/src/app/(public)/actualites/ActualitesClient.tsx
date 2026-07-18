@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react"
 import Image from "next/image"
 import { Filter, Plus, AlertCircle } from 'lucide-react'
 import { useActualites } from "@/hooks/useActualites"
+import { SkeletonGrid } from "@/components/ui/Skeleton"
 import EventCard from "@/components/modules/evenements/EventCard"
 import OpportunityCard from "@/components/modules/opportunites/OpportunityCard"
 import InscriptionModal from "@/components/modules/evenements/InscriptionModal"
@@ -59,9 +60,8 @@ export default function ActualitesClient() {
 
       <div className="max-w-7xl mx-auto px-4">
         {loading ? (
-          <div className="py-20 flex flex-col items-center justify-center text-gray-500">
-            <div className="w-12 h-12 border-4 border-primary-100 border-t-primary-600 rounded-full animate-spin mb-4"></div>
-            <p className="font-medium">Chargement des actualités...</p>
+          <div className="py-8">
+            <SkeletonGrid count={6} />
           </div>
         ) : error ? (
           <div className="text-center py-12 bg-red-50 rounded-2xl border border-red-100 flex flex-col items-center justify-center">

@@ -5,6 +5,7 @@ import { createClient } from '@supabase/supabase-js'
 import OpportunityCard from './OpportunityCard'
 import SubmitOpportunityModal from './SubmitOpportunityModal'
 import { Plus, Search, Filter } from 'lucide-react'
+import { SkeletonGrid } from "@/components/ui/Skeleton"
 
 export default function OpportunitesClient() {
   const [opportunites, setOpportunites] = useState<any[]>([])
@@ -116,7 +117,9 @@ export default function OpportunitesClient() {
 
       {/* Content */}
       {loading ? (
-        <div className="py-20 text-center text-gray-500">Chargement...</div>
+        <div className="py-8">
+          <SkeletonGrid count={6} />
+        </div>
       ) : filteredOpp.length === 0 ? (
         <div className="py-20 text-center bg-white rounded-2xl shadow-sm border border-gray-100">
           <p className="text-gray-500">Aucune opportunité trouvée pour vos critères.</p>

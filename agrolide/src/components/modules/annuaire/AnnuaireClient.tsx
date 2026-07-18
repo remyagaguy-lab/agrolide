@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import MemberCard from './MemberCard'
+import AnnuaireFiltres from './AnnuaireFiltres'
+import ProfileModal from './ProfileModal'
+import { SkeletonGrid } from "@/components/ui/Skeleton"
 import { Search, Filter, Loader2, ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { useDebounce } from 'use-debounce'
 
@@ -185,8 +188,10 @@ export default function AnnuaireClient() {
         </div>
 
         {/* Grid */}
-        {loading && members.length === 0 ? (
-          <div className="py-20 text-center text-gray-500">Chargement de l'annuaire...</div>
+        {loading ? (
+          <div className="py-8">
+            <SkeletonGrid count={6} />
+          </div>
         ) : members.length === 0 ? (
           <div className="py-20 text-center bg-white rounded-2xl border border-gray-100">
             <h3 className="text-lg font-bold text-gray-900 mb-2">Aucun membre trouvé</h3>
