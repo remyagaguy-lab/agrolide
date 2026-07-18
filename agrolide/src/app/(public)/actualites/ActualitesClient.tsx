@@ -2,59 +2,19 @@
 
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
-import { createClient } from '@supabase/supabase-js'
-import { Filter, Plus } from 'lucide-react'
+import { Filter, Plus, AlertCircle } from 'lucide-react'
+import { useActualites } from "@/hooks/useActualites"
 import EventCard from "@/components/modules/evenements/EventCard"
 import OpportunityCard from "@/components/modules/opportunites/OpportunityCard"
 import InscriptionModal from "@/components/modules/evenements/InscriptionModal"
 import SubmitOpportunityModal from "@/components/modules/opportunites/SubmitOpportunityModal"
 
 export default function ActualitesClient() {
-  const [filter, setFilter] = useState<'tous' | 'evenements' | 'emploi' | 'bourse' | 'appel'>('tous')
-  const [items, setItems] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const { loading, error, filter, setFilter, filteredItems, fetchData } = useActualites()
 
   const [selectedEvent, setSelectedEvent] = useState<any | null>(null)
   const [isEventModalOpen, setIsEventModalOpen] = useState(false)
   const [isOppModalOpen, setIsOppModalOpen] = useState(false)
-
-  useEffect(() => {
-    fetchData()
-  }, [])
-
-  const fetchData = async () => {
-    setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    // On récupère les événements publiés
-    const { data: eventsData } = await supabase
-      .from('evenements')
-      .select('*')
-      .eq('publie', true)
-
-    // On récupère les opportunités publiées
-    const { data: oppsData } = await supabase
-      .from('opportunites')
-      .select('*')
-      .eq('statut', 'publie')
-
-    const events = (eventsData || []).map(e => ({ ...e, _itemType: 'evenement' }))
-    const opps = (oppsData || []).map(o => ({ ...o, _itemType: 'opportunite' }))
-
-    const combined = [...events, ...opps]
-    // Tri par date : date_debut pour les événements, created_at pour les opportunités
-    // Du plus récent au plus ancien
-    combined.sort((a, b) => {
-      const dateA = a._itemType === 'evenement' ? new Date(a.date_debut).getTime() : new Date(a.created_at).getTime()
-      const dateB = b._itemType === 'evenement' ? new Date(b.date_debut).getTime() : new Date(b.created_at).getTime()
-      return dateB - dateA
-    })
-
-    setItems(combined)
-    setLoading(false)
-  }
 
   const handleInscrireClick = (event: any) => {
     if (event.lien_inscription) {
@@ -64,14 +24,6 @@ export default function ActualitesClient() {
       setIsEventModalOpen(true)
     }
   }
-
-  const filteredItems = items.filter(item => {
-    if (filter === 'evenements' && item._itemType !== 'evenement') return false
-    if (filter === 'emploi' && (item._itemType !== 'opportunite' || item.type_opp !== 'emploi')) return false
-    if (filter === 'bourse' && (item._itemType !== 'opportunite' || item.type_opp !== 'bourse')) return false
-    if (filter === 'appel' && (item._itemType !== 'opportunite' || item.type_opp !== 'appel')) return false
-    return true
-  })
 
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-12">
@@ -107,7 +59,19 @@ export default function ActualitesClient() {
 
       <div className="max-w-7xl mx-auto px-4">
         {loading ? (
-          <div className="py-20 text-center text-gray-500">Chargement des actualités...</div>
+          <div className="py-20 flex flex-col items-center justify-center text-gray-500">
+            <div className="w-12 h-12 border-4 border-primary-100 border-t-primary-600 rounded-full animate-spin mb-4"></div>
+            <p className="font-medium">Chargement des actualités...</p>
+          </div>
+        ) : error ? (
+          <div className="text-center py-12 bg-red-50 rounded-2xl border border-red-100 flex flex-col items-center justify-center">
+            <AlertCircle className="w-10 h-10 text-red-500 mb-4" />
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Impossible de charger les actualités</h3>
+            <p className="text-gray-600 mb-4">{error}</p>
+            <button onClick={fetchData} className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              Réessayer
+            </button>
+          </div>
         ) : filteredItems.length === 0 ? (
           <div className="text-center py-12 bg-white rounded-2xl border border-gray-100">
             <p className="text-gray-500">Aucune actualité ne correspond à vos critères.</p>
