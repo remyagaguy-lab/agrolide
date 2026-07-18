@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist, Libre_Baskerville } from "next/font/google";
-import Script from "next/script";
+import { CookieBanner } from "@/components/layout/CookieBanner";
 import "./globals.css";
 
 const urbanist = Urbanist({
@@ -39,22 +39,12 @@ export default function RootLayout({
       className={`${urbanist.variable} ${baskerville.variable} h-full antialiased`}
     >
       <head>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-KM57804JDG`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-KM57804JDG', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
+        {/* Scripts analytiques gérés par CookieBanner */}
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }
