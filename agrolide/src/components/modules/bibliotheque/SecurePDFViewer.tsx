@@ -54,21 +54,9 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         )
         const { data: { session } } = await supabase.auth.getSession()
 
-        // Fetching signed URL
-        const res = await fetch(`/api/bibliotheque/download/${documentId}`, {
-          headers: {
-            ...(session?.access_token ? { Authorization: `Bearer ${session.access_token}` } : {})
-          }
-        })
-        
-        if (!res.ok) throw new Error('Accès refusé ou document introuvable')
-        
-        const data = await res.json()
-        if (data.url) {
-          setPdfUrl(data.url)
-        } else {
-          throw new Error('URL du document introuvable')
-        }
+        // L'API route proxie maintenant directement le flux binaire
+        // Nous donnons juste l'URL à react-pdf qui se chargera du fetch
+        setPdfUrl(`/api/bibliotheque/download/${documentId}`)
       } catch (err: any) {
         setError(err.message || 'Erreur de chargement')
       } finally {

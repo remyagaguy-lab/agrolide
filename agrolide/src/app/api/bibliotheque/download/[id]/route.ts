@@ -43,19 +43,29 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       .update({ nb_telechargements: (document.nb_telechargements || 0) + 1 })
       .eq('id', id)
       
-    // Générer l'URL signée
-    const command = new GetObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME || 'agrolide-bibliotheque',
-      Key: document.fichier_r2_key,
-      ResponseContentDisposition: 'inline', // Forcer l'affichage dans le navigateur
-      ResponseContentType: 'application/pdf',
+    // Récupérer le fichier depuis l'URL publique de R2
+    const r2PublicUrl = process.env.NEXT_PUBLIC_R2_PUBLIC_URL
+    if (!r2PublicUrl) {
+       return NextResponse.json({ error: 'Configuration R2 manquante' }, { status: 500 })
+    }
+
+    const pdfUrl = `${r2PublicUrl}/${document.fichier_r2_key}`
+    const pdfResponse = await fetch(pdfUrl)
+
+    if (!pdfResponse.ok) {
+      return NextResponse.json({ error: 'Erreur lors du téléchargement du PDF depuis R2' }, { status: 502 })
+    }
+
+    // Retourner le flux directement (Proxy bytes) pour éviter les erreurs CORS de react-pdf
+    return new NextResponse(pdfResponse.body, {
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+        'Content-Disposition': 'inline'
+      }
     })
-    
-    const signedUrl = await getSignedUrl(s3Client, command, { expiresIn: 60 })
-    
-    return NextResponse.json({ url: signedUrl })
   } catch (error: any) {
-    console.error('Erreur de génération R2:', error)
+    console.error('Erreur Proxy PDF:', error)
     return NextResponse.json({ error: 'Erreur serveur' }, { status: 500 })
   }
 }
