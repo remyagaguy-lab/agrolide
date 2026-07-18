@@ -24,11 +24,8 @@ export async function checkTrocEligibility() {
   }
 
   const uploadedCount = count || 0
-  if (uploadedCount >= 2) {
-    return { authorized: true, count: uploadedCount }
-  } else {
-    return { authorized: false, reason: 'quota_not_met', count: uploadedCount }
-  }
+  // Le système de troc est temporairement désactivé. Toute personne connectée peut télécharger.
+  return { authorized: true, count: uploadedCount }
 }
 
 export async function getDocumentUrl(documentId: string) {
