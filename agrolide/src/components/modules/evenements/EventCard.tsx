@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Calendar, MapPin, Globe, Users, Clock, FileText, Download, Video } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
@@ -50,9 +51,9 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
   return (
     <div className={`group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
       {event.image_url && (
-        <div 
-          className="w-full h-40 bg-gray-100 relative cursor-pointer"
-          onClick={() => onDetailsClick?.(event)}
+        <Link 
+          href={`/evenements/${event.id}`}
+          className="w-full h-40 bg-gray-100 relative cursor-pointer block"
         >
           <Image 
             src={event.image_url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(event.image_url)}` : event.image_url} 
@@ -75,7 +76,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
               </span>
             )}
           </div>
-        </div>
+        </Link>
       )}
       <div className="p-6 flex-grow">
         <div className="flex justify-between items-start mb-4">
@@ -89,12 +90,11 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
           )}
         </div>
         
-        <h3 
-          className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 cursor-pointer hover:text-primary-600 transition-colors"
-          onClick={() => onDetailsClick?.(event)}
-        >
-          {event.titre}
-        </h3>
+        <Link href={`/evenements/${event.id}`}>
+          <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2 hover:text-primary-600 transition-colors">
+            {event.titre}
+          </h3>
+        </Link>
         
         <div className="space-y-2 mt-4 text-sm text-gray-600">
           <div className="flex items-center gap-2">

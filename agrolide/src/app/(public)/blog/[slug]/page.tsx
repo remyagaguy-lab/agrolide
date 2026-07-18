@@ -5,6 +5,7 @@ import { notFound } from "next/navigation"
 import { createClient } from "@/lib/supabase/server"
 import { ArticleCard } from "@/components/ui/ArticleCard"
 import { Button } from "@/components/ui/Button"
+import Breadcrumb from "@/components/ui/Breadcrumb"
 import { TableOfContents } from "@/components/modules/TableOfContents"
 import { Clock, User, Calendar, Share2, MessageCircle } from "lucide-react"
 import { generateHTML } from '@tiptap/html'
@@ -105,11 +106,18 @@ export default async function BlogPostPage({
   const encodedTitle = encodeURIComponent(article.titre)
   const encodedUrl = encodeURIComponent(articleUrl)
 
+  const breadcrumbItems = [
+    { label: "Blog", href: "/blog" },
+    { label: article.categorie || "Général", href: `/blog?category=${encodeURIComponent(article.categorie || "Général")}` },
+    { label: article.titre }
+  ]
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Article Header */}
       <section className="bg-gray-50 py-16 border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-4xl">
+          <Breadcrumb items={breadcrumbItems} />
           <div className="mb-6">
             <span className="inline-block px-3 py-1 bg-green-100 text-[var(--color-vert-principal)] text-sm font-semibold rounded-full">
               {article.categorie || "Général"}
