@@ -131,7 +131,7 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
       <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl flex flex-col">
         <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex justify-between items-center z-10">
           <h2 className="text-xl font-bold text-gray-900 pr-8">{event.titre}</h2>
-          <button onClick={onClose} className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-gray-600">
+          <button aria-label="Fermer les détails" onClick={onClose} className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-gray-600">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           </button>
         </div>

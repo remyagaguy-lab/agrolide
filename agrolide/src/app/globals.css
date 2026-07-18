@@ -43,6 +43,18 @@
     background-color: #1b5e38;
     color: #ffffff;
   }
+  
+  /* Accessibilité : Navigation au clavier (Focus Rings) */
+  *:focus-visible {
+    outline: 2px solid var(--vert-principal);
+    outline-offset: 2px;
+  }
+  
+  /* Désactiver l'outline classique pour ceux qui utilisent la souris, 
+     mais garder focus-visible pour le clavier */
+  *:focus:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 @layer components {
