@@ -12,11 +12,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
 
 export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const [numPages, setNumPages] = useState<number>(0)
-  const [pageNumber, setPageNumber] = useState<number>(1)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
-  const [scale, setScale] = useState<number>(1.2)
+  const [scale, setScale] = useState<number>(1.0)
   const [containerWidth, setContainerWidth] = useState<number>()
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -82,13 +81,6 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     setNumPages(numPages)
   }
 
-  const changePage = (offset: number) => {
-    setPageNumber(prevPageNumber => {
-      const newPage = prevPageNumber + offset;
-      return Math.min(Math.max(1, newPage), numPages);
-    })
-  }
-
   const changeScale = (offset: number) => {
     setScale(prevScale => Math.min(Math.max(0.5, prevScale + offset), 3))
   }
@@ -133,23 +125,9 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <button
-            disabled={pageNumber <= 1}
-            onClick={() => changePage(-1)}
-            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
           <span className="text-xs sm:text-sm font-medium text-gray-700">
-            Page {pageNumber} / {numPages || '--'}
+            {numPages ? `${numPages} pages au total` : 'Chargement...'}
           </span>
-          <button
-            disabled={pageNumber >= numPages}
-            onClick={() => changePage(1)}
-            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </div>
       </div>
 
@@ -169,28 +147,32 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
           }}
           error={<div className="text-red-500 mt-20">Impossible de charger le PDF.</div>}
         >
-          <div className="relative shadow-xl">
-            <Page 
-              pageNumber={pageNumber} 
-              scale={scale} 
-              width={containerWidth}
-              renderTextLayer={false} 
-              renderAnnotationLayer={false}
-              className="pointer-events-none" 
-            />
-            
-            {/* Watermark Overlay (Transparent Logo) */}
-            <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center opacity-[0.04] z-50 overflow-hidden">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div key={i} className="flex gap-16 mb-16 transform -rotate-45">
-                  <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
-                  <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
+          <div className="flex flex-col gap-6 items-center w-full">
+            {Array.from(new Array(numPages), (el, index) => (
+              <div key={`page_${index + 1}`} className="relative shadow-xl">
+                <Page 
+                  pageNumber={index + 1} 
+                  scale={scale} 
+                  width={containerWidth}
+                  renderTextLayer={false} 
+                  renderAnnotationLayer={false}
+                  className="pointer-events-none" 
+                />
+                
+                {/* Watermark Overlay (Transparent Logo) */}
+                <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center opacity-[0.04] z-50 overflow-hidden">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <div key={i} className="flex gap-16 mb-16 transform -rotate-45">
+                      <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
+                      <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            
-            {/* Transparent anti-drag overlay */}
-            <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
+                
+                {/* Transparent anti-drag overlay */}
+                <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
+              </div>
+            ))}
           </div>
         </Document>
       </div>
