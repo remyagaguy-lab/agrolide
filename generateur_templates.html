@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Templates Agrolide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vert: { profond: '#1b5e38', principal: '#50a853', pale: '#e8f5e9' },
+                        orange: { accent: '#f99e1d' },
+                        jaune: { dore: '#fcb726' },
+                        gris: { fond: '#f8f8f6', texte: '#4a4a4a', titre: '#1a1a1a' }
+                    },
+                    fontFamily: {
+                        urbanist: ['Urbanist', 'sans-serif'],
+                        baskerville: ['"Libre Baskerville"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #e5e7eb; padding: 2rem; font-family: 'Urbanist', sans-serif; }
+        .template-wrapper { 
+            width: 1080px; 
+            height: 1080px; 
+            background: white; 
+            margin: 0 auto 3rem auto; 
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); 
+            position: relative;
+            overflow: hidden;
+            transform: scale(0.6);
+            transform-origin: top center;
+            margin-bottom: -400px;
+        }
+        [contenteditable="true"] { outline: 2px dashed transparent; transition: outline 0.2s; }
+        [contenteditable="true"]:hover { outline: 2px dashed #50a853; }
+        [contenteditable="true"]:focus { outline: 2px solid #f99e1d; }
+        .pattern-dots {
+            background-image: radial-gradient(#1b5e38 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="max-w-4xl mx-auto text-center mb-8">
+        <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Générateur de Posts Agrolide</h1>
+        <p class="text-gray-600">Cliquez sur les textes pour les modifier, puis prenez une capture d'écran carrée du modèle pour le poster sur LinkedIn ou Facebook.</p>
+    </div>
+
+    <!-- Template 1: Citation / Témoignage -->
+    <h2 class="text-xl font-bold text-center mb-4 mt-12">Modèle 1 : Témoignage / Citation</h2>
+    <div class="template-wrapper bg-gris-fond flex flex-col justify-center px-24 py-20 relative">
+        <div class="absolute inset-0 pattern-dots"></div>
+        <div class="relative z-10 bg-white p-16 rounded-3xl shadow-sm border border-gray-100 flex-grow flex flex-col justify-center">
+            <div class="text-vert-pale font-baskerville text-9xl leading-none mb-[-2rem]">"</div>
+            <p class="font-baskerville italic text-5xl text-gris-titre leading-snug mb-12" contenteditable="true">
+                Agrolide nous a permis de structurer notre réseau de distribution et d'augmenter nos rendements de 40% en un an. C'est un outil incontournable pour l'agrobusiness en Afrique.
+            </p>
+            <div class="flex items-center gap-6 mt-auto">
+                <div class="w-24 h-24 rounded-full bg-vert-profond text-white flex items-center justify-center font-bold text-3xl">
+                    <span contenteditable="true">JD</span>
+                </div>
+                <div>
+                    <h3 class="font-urbanist font-bold text-3xl text-gris-titre" contenteditable="true">Jean Dupont</h3>
+                    <p class="font-urbanist text-2xl text-gris-texte" contenteditable="true">Agronome & Fondateur de TerraAgri</p>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-10 mt-12 flex justify-between items-end">
+            <div class="text-vert-profond font-urbanist font-black text-4xl">agrolide</div>
+            <div class="font-urbanist font-bold text-2xl text-vert-principal" contenteditable="true">agrolide.org</div>
+        </div>
+    </div>
+
+    <!-- Template 2: Chiffre Clé -->
+    <h2 class="text-xl font-bold text-center mb-4 mt-20">Modèle 2 : Chiffre Clé / Impact</h2>
+    <div class="template-wrapper bg-vert-profond flex flex-col px-24 py-24 relative text-white">
+        <!-- Abstract shape decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-vert-principal opacity-20 rounded-bl-full"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-orange-accent opacity-10 rounded-tr-full"></div>
+        
+        <div class="relative z-10 mt-12">
+            <span class="inline-block px-6 py-2 rounded-full border border-white/30 text-2xl font-bold tracking-widest uppercase mb-16" contenteditable="true">
+                Notre Impact
+            </span>
+            <div class="flex flex-col">
+                <h2 class="font-urbanist font-black text-[180px] leading-none text-white tracking-tighter mb-4" contenteditable="true">
+                    +15 000
+                </h2>
+                <p class="font-urbanist text-5xl text-vert-pale font-medium max-w-2xl leading-tight" contenteditable="true">
+                    Membres actifs connectés à travers tout le continent africain.
+                </p>
+            </div>
+        </div>
+        
+        <div class="relative z-10 mt-auto flex justify-between items-end">
+            <div class="text-white font-urbanist font-black text-4xl">agrolide</div>
+            <div class="font-urbanist font-bold text-2xl text-jaune-dore" contenteditable="true">Rejoignez le réseau →</div>
+        </div>
+    </div>
+
+    <!-- Template 3: Annonce Générique -->
+    <h2 class="text-xl font-bold text-center mb-4 mt-20">Modèle 3 : Annonce / Événement</h2>
+    <div class="template-wrapper bg-white flex flex-col relative">
+        <div class="h-2/5 bg-gris-fond relative overflow-hidden flex items-center justify-center">
+             <!-- Placeholder for image -->
+             <div class="text-gris-texte opacity-50 font-urbanist text-3xl font-bold" contenteditable="true">
+                 [Espace pour insérer votre photo]
+             </div>
+             <div class="absolute inset-0 pattern-dots"></div>
+        </div>
+        <div class="h-3/5 px-24 py-16 flex flex-col relative z-10 border-t-8 border-vert-principal">
+            <div class="text-vert-principal font-bold text-2xl tracking-widest uppercase mb-4" contenteditable="true">Webinaire Exclusif</div>
+            <h2 class="font-urbanist font-black text-6xl text-gris-titre leading-tight mb-8" contenteditable="true">
+                Comment optimiser vos rendements avec l'IA agricole ?
+            </h2>
+            <p class="font-urbanist text-3xl text-gris-texte mb-12" contenteditable="true">
+                Découvrez les dernières innovations lors de notre conférence en direct avec des experts du secteur.
+            </p>
+            <div class="mt-auto flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="w-16 h-16 bg-orange-accent text-white rounded-xl flex items-center justify-center">
+                        <!-- Icon -->
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <div class="font-urbanist font-bold text-3xl text-gris-titre" contenteditable="true">24 Octobre 2026</div>
+                </div>
+                <div class="text-vert-profond font-urbanist font-black text-4xl">agrolide</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
