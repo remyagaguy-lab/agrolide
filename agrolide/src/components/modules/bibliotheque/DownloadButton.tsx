@@ -30,7 +30,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
       
       if (!eligibility.authorized) {
         if (eligibility.reason === 'unauthenticated') {
-          router.push('/connexion?redirect=/bibliotheque/' + documentId)
+          router.push('/login?redirect=/bibliotheque/' + documentId)
           return
         }
         if (eligibility.reason === 'quota_not_met') {
