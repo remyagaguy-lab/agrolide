@@ -3,6 +3,36 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import crypto from 'crypto'
 import { createClient } from '@supabase/supabase-js'
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
+
+// Simple in-memory rate limiter fallback if Upstash is not configured
+const ipRequests = new Map<string, { count: number, resetAt: number }>()
+
+function checkRateLimit(ip: string): boolean {
+  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+    // If Upstash will be used, we handle it asynchronously below
+    return true; 
+  }
+  const now = Date.now();
+  const record = ipRequests.get(ip);
+  if (!record || now > record.resetAt) {
+    ipRequests.set(ip, { count: 1, resetAt: now + 60000 });
+    return true;
+  }
+  if (record.count >= 5) return false; // Max 5 uploads per minute
+  record.count++;
+  return true;
+}
+
+// Configuration optionnelle d'Upstash
+const ratelimit = process.env.UPSTASH_REDIS_REST_URL
+  ? new Ratelimit({
+      redis: Redis.fromEnv(),
+      limiter: Ratelimit.slidingWindow(5, '1 m'), // 5 requêtes par minute
+      analytics: true,
+    })
+  : null;
 
 const S3 = new S3Client({
   region: "auto",
@@ -15,6 +45,20 @@ const S3 = new S3Client({
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate Limiting (Protection Anti-DDoS)
+    const ip = request.headers.get('x-forwarded-for') || '127.0.0.1'
+    
+    if (ratelimit) {
+      const { success } = await ratelimit.limit(`upload_limit_${ip}`)
+      if (!success) {
+        return NextResponse.json({ error: 'Trop de requêtes, veuillez patienter.' }, { status: 429 })
+      }
+    } else {
+      if (!checkRateLimit(ip)) {
+        return NextResponse.json({ error: 'Trop de requêtes, veuillez patienter.' }, { status: 429 })
+      }
+    }
+
     // Vérification de l'admin
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
     const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
