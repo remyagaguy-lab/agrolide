@@ -63,7 +63,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       : 'inline'
 
     // Retourner le flux directement (Proxy bytes) pour éviter les erreurs CORS de react-pdf
-    return new NextResponse(bytes, {
+    return new NextResponse(Buffer.from(bytes), {
       headers: {
         'Content-Type': 'application/pdf',
         'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
