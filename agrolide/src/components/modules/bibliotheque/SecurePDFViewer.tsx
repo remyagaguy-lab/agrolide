@@ -7,8 +7,8 @@ import 'react-pdf/dist/Page/TextLayer.css'
 import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react'
 import Image from 'next/image'
 
-// Configurer le worker pour pdf.js (utilisation de la version 4.4.168 en .mjs car la version par défaut est parfois introuvable sur unpkg)
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs`
+// Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
 
 export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const [numPages, setNumPages] = useState<number>(0)
@@ -151,6 +151,10 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
           file={pdfUrl}
           onLoadSuccess={onDocumentLoadSuccess}
           loading={<Loader2 className="w-10 h-10 animate-spin text-green-700 mx-auto mt-20" />}
+          onLoadError={(err) => {
+            console.error("Erreur détaillée react-pdf:", err)
+            setError(`Erreur: ${err.message || 'Impossible de charger le PDF'}`)
+          }}
           error={<div className="text-red-500 mt-20">Impossible de charger le PDF.</div>}
         >
           <div className="relative shadow-xl">
