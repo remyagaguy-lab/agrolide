@@ -7,8 +7,8 @@ import 'react-pdf/dist/Page/TextLayer.css'
 import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react'
 import Image from 'next/image'
 
-// Configurer le worker pour pdf.js
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`
+// Configurer le worker pour pdf.js (utilisation de la version 4.4.168 en .mjs car la version par défaut est parfois introuvable sur unpkg)
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs`
 
 export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const [numPages, setNumPages] = useState<number>(0)
