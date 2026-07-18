@@ -37,7 +37,7 @@ export function FormationCard({ formation }: FormationCardProps) {
   const isGratuit = !formation.prix || formation.prix === 0
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
       <div className="p-6 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-4 gap-2">
           <div className="flex flex-wrap gap-2">

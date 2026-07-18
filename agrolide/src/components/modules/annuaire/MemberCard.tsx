@@ -26,7 +26,7 @@ export default function MemberCard({ member }: MemberCardProps) {
   return (
     <Link 
       href={`/membres/annuaire/${member.id}`}
-      className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md hover:border-primary-200 transition-all group flex flex-col h-full"
+      className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-primary-200 transition-all duration-300 group flex flex-col h-full"
     >
       <div className="flex items-start justify-between mb-4 gap-4">
         <div className="w-16 h-16 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold overflow-hidden shrink-0 border border-primary-100 relative">

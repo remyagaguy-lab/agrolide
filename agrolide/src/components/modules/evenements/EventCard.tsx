@@ -48,7 +48,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
   }
 
   return (
-    <div className={`bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
+    <div className={`group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
       {event.image_url && (
         <div 
           className="w-full h-40 bg-gray-100 relative cursor-pointer"
@@ -156,14 +156,14 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
               href={event.lien_inscription} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2"
+              className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2"
             >
               <Globe className="w-4 h-4" /> S'inscrire
             </a>
           ) : (
             <button 
               onClick={() => onInscrireClick(event)}
-              className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2"
+              className="w-full py-2.5 bg-green-50 hover:bg-green-100 text-green-700 border border-green-200 font-medium rounded-xl text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2"
             >
               S'inscrire
             </button>

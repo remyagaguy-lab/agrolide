@@ -39,8 +39,8 @@ export function ArticleCard({
   };
 
   return (
-    <Link href={`/blog/${slug}`} className={cn("group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-[var(--color-gris-clair)] transition-shadow hover:shadow-md", className)}>
-      <div className="relative h-48 w-full bg-gray-200">
+    <Link href={`/blog/${slug}`} className={cn("group flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-[var(--color-gris-clair)] transition-all duration-300 hover:shadow-xl hover:-translate-y-1", className)}>
+      <div className="relative w-full aspect-[16/9] overflow-hidden">
         {imageUrl ? (
           <Image src={imageUrl} alt={title} fill className="object-cover transition-transform group-hover:scale-105" />
         ) : (

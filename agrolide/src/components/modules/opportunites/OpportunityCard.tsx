@@ -22,7 +22,7 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
   const isExpired = opp.date_limite && new Date(opp.date_limite) < new Date()
 
   return (
-    <div className={`bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isExpired ? 'opacity-70' : ''}`}>
+    <div className={`group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${isExpired ? 'opacity-70' : ''}`}>
       <div className="p-6 flex-grow">
         <div className="flex justify-between items-start mb-4">
           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-50 text-primary-700 capitalize">
@@ -73,7 +73,7 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
             href={opp.lien_externe}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2.5 bg-gray-50 hover:bg-primary-50 text-primary-700 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2 border border-gray-100 hover:border-primary-100"
+            className="w-full py-2.5 bg-gray-50 hover:bg-primary-50 text-primary-700 font-medium rounded-xl text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2 border border-gray-100 hover:border-primary-100"
           >
             Voir l'offre <ExternalLink className="w-4 h-4" />
           </a>
