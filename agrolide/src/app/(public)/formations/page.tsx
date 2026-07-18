@@ -37,7 +37,7 @@ export default function FormationsPage() {
           <div className="max-w-md mx-auto bg-gray-50 p-6 rounded-xl border border-gray-100">
             <h3 className="font-semibold text-gray-900 mb-2">Soyez informé en avant-première</h3>
             <p className="text-sm text-gray-500 mb-4">Rejoignez la liste d'attente pour être averti du lancement et bénéficier d'une offre exclusive.</p>
-            <form className="flex flex-col sm:flex-row gap-2" onSubmit={(e) => { e.preventDefault(); alert("Merci ! Vous êtes bien inscrit sur la liste d'attente."); }}>
+            <form className="flex flex-col sm:flex-row gap-2" action="">
               <input 
                 type="email" 
                 placeholder="Votre adresse email" 

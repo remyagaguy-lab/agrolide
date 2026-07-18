@@ -278,10 +278,6 @@ export default async function HomePage() {
                 <button 
                   type="submit" 
                   className="px-6 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors shadow-md"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert("Merci ! Le guide a été envoyé à votre adresse e-mail. (Ceci est une démonstration)");
-                  }}
                 >
                   Recevoir le PDF
                 </button>

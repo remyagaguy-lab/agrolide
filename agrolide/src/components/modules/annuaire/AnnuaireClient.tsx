@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import MemberCard from './MemberCard'
-import AnnuaireFiltres from './AnnuaireFiltres'
-import ProfileModal from './ProfileModal'
 import { SkeletonGrid } from "@/components/ui/Skeleton"
 import { Search, Filter, Loader2, ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { useDebounce } from 'use-debounce'

@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import OpenAI from 'openai'
-import pdf from 'pdf-parse'
 
 // Initialize OpenRouter via OpenAI SDK
 const openai = new OpenAI({
@@ -27,21 +26,12 @@ export async function POST(request: NextRequest) {
     const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
     const supabase = createClient(supabaseUrl, supabaseKey)
 
-    // 1. Fetch PDF content from R2
-    const publicUrl = `${process.env.NEXT_PUBLIC_R2_PUBLIC_URL}/${r2Key}`
-    let extractedText = ""
-    try {
-      const pdfResponse = await fetch(publicUrl)
-      if (pdfResponse.ok) {
-        const arrayBuffer = await pdfResponse.arrayBuffer()
-        const buffer = Buffer.from(arrayBuffer)
-        const pdfData = await pdf(buffer, { max: 3 }) // Parse max 3 pages
-        extractedText = pdfData.text.substring(0, 3000) // Keep first 3000 chars
-      }
-    } catch (e) {
-      console.error("Erreur lors de l'extraction PDF:", e)
-      // On continue sans le texte intégral, on se basera sur le résumé et le titre
-    }
+    // NOTE: L'extraction du texte brut du PDF a été retirée car les librairies d'extraction
+    // (comme pdf-parse) requièrent des bindings C++ ou le DOM (Canvas/DOMMatrix) non disponibles
+    // dans l'environnement Vercel Serverless.
+    // L'IA se basera uniquement sur le "titre" et le "resume" fournis par l'utilisateur, ce qui 
+    // est suffisant pour juger de la pertinence (Agriculture) et vérifier les doublons.
+    const extractedText = "(Texte intégral non extrait - L'analyse se base sur le résumé)"
 
     // 2. Fetch existing documents to check duplicates
     const { data: existingDocs } = await supabase
