@@ -46,7 +46,7 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
     }
   }
 
-  const href = publicView ? '/rejoindre?redirect=bibliotheque' : `/membres/bibliotheque/${document.id}`
+  const href = publicView ? `/bibliotheque/${document.id}` : `/membres/bibliotheque/${document.id}`
 
   return (
     <Link href={href} className={`block group rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col h-full`}>
@@ -91,8 +91,8 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
             </div>
             
             {publicView ? (
-              <span className="text-xs font-medium text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity">
-                S'inscrire pour lire →
+              <span className="text-xs font-medium text-green-700 opacity-0 group-hover:opacity-100 transition-opacity">
+                Consulter →
               </span>
             ) : (
               <span className="text-xs font-medium text-green-700 opacity-0 group-hover:opacity-100 transition-opacity">

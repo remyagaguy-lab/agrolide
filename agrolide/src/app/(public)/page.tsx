@@ -254,6 +254,52 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── LEAD MAGNET (CRO) ── */}
+      <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-12 border-b border-orange-200">
+        <div className="container">
+          <div className="bg-white rounded-2xl shadow-xl border border-orange-100 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="md:w-1/2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                <BookOpen className="w-4 h-4" /> Guide Gratuit
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 font-heading">
+                Le Manuel de l'Agroécologie en Afrique de l'Ouest
+              </h2>
+              <p className="text-gray-600 mb-6 text-lg">
+                Découvrez les 10 pratiques essentielles pour adapter vos cultures aux changements climatiques et augmenter vos rendements sans intrants chimiques.
+              </p>
+              <form className="flex flex-col sm:flex-row gap-3">
+                <input 
+                  type="email" 
+                  placeholder="Votre adresse e-mail..." 
+                  className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  required
+                />
+                <button 
+                  type="submit" 
+                  className="px-6 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors shadow-md"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert("Merci ! Le guide a été envoyé à votre adresse e-mail. (Ceci est une démonstration)");
+                  }}
+                >
+                  Recevoir le PDF
+                </button>
+              </form>
+            </div>
+            <div className="md:w-1/3 flex justify-center relative">
+              <div className="w-48 h-64 bg-gray-200 rounded-lg shadow-2xl relative rotate-3 transform hover:rotate-0 transition-transform duration-300 overflow-hidden border-4 border-white">
+                <Image src="/hero-background.jpg" alt="Couverture du guide" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80 flex flex-col justify-end p-4">
+                  <div className="text-white font-heading font-bold text-lg leading-tight mb-1">MANUEL PRATIQUE</div>
+                  <div className="text-orange-300 text-sm font-medium">Agroécologie</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── RAISON D'ÊTRE ── */}
       <section className="bg-[#fcfbf9] border-b border-[#f0ece1]">
         <div className="container">

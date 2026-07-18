@@ -145,6 +145,17 @@ export default function DeposerDocumentPage() {
       
       if (!docRes.ok) throw new Error('Erreur lors de l\'enregistrement du document')
 
+      // 4. Lancer la validation par l'Agent IA (de façon asynchrone pour ne pas bloquer l'UI)
+      fetch(`/api/documents/validate`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          r2Key: key,
+          titre: data.titre,
+          resume: data.resume
+        })
+      }).catch(e => console.error("Validation IA échouée en arrière-plan", e))
+
       setSuccess(true)
       
       // Redirect after 3s
