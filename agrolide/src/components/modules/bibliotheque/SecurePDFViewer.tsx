@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
-import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react'
+import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack } from 'lucide-react'
 import Image from 'next/image'
 
 // Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
@@ -12,10 +12,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
 
 export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const [numPages, setNumPages] = useState<number>(0)
+  const [pageNumber, setPageNumber] = useState<number>(1)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
   const [scale, setScale] = useState<number>(1.0)
+  const [viewMode, setViewMode] = useState<'single' | 'continuous'>('single')
   const [containerWidth, setContainerWidth] = useState<number>()
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -81,6 +83,13 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     setNumPages(numPages)
   }
 
+  const changePage = (offset: number) => {
+    setPageNumber(prevPageNumber => {
+      const newPage = prevPageNumber + offset;
+      return Math.min(Math.max(1, newPage), numPages);
+    })
+  }
+
   const changeScale = (offset: number) => {
     setScale(prevScale => Math.min(Math.max(0.5, prevScale + offset), 3))
   }
@@ -125,9 +134,40 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <span className="text-xs sm:text-sm font-medium text-gray-700">
-            {numPages ? `${numPages} pages au total` : 'Chargement...'}
-          </span>
+          <button
+            onClick={() => setViewMode(viewMode === 'single' ? 'continuous' : 'single')}
+            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors flex items-center gap-2 text-xs sm:text-sm font-medium mr-2"
+            title="Changer le mode d'affichage"
+          >
+            {viewMode === 'single' ? <FileStack className="w-4 h-4 sm:w-5 sm:h-5" /> : <Maximize className="w-4 h-4 sm:w-5 sm:h-5" />}
+            <span className="hidden sm:inline">{viewMode === 'single' ? 'Défilement continu' : 'Page par page'}</span>
+          </button>
+          
+          {viewMode === 'single' ? (
+            <>
+              <button
+                disabled={pageNumber <= 1}
+                onClick={() => changePage(-1)}
+                className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <span className="text-xs sm:text-sm font-medium text-gray-700">
+                Page {pageNumber} / {numPages || '--'}
+              </span>
+              <button
+                disabled={pageNumber >= numPages}
+                onClick={() => changePage(1)}
+                className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </>
+          ) : (
+            <span className="text-xs sm:text-sm font-medium text-gray-700">
+              {numPages ? `${numPages} pages au total` : 'Chargement...'}
+            </span>
+          )}
         </div>
       </div>
 
@@ -148,10 +188,36 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
           error={<div className="text-red-500 mt-20">Impossible de charger le PDF.</div>}
         >
           <div className="flex flex-col gap-6 items-center w-full">
-            {Array.from(new Array(numPages), (el, index) => (
-              <div key={`page_${index + 1}`} className="relative shadow-xl">
+            {viewMode === 'continuous' ? (
+              Array.from(new Array(numPages), (el, index) => (
+                <div key={`page_${index + 1}`} className="relative shadow-xl">
+                  <Page 
+                    pageNumber={index + 1} 
+                    scale={scale} 
+                    width={containerWidth}
+                    renderTextLayer={false} 
+                    renderAnnotationLayer={false}
+                    className="pointer-events-none" 
+                  />
+                  
+                  {/* Watermark Overlay (Transparent Logo) */}
+                  <div className="absolute inset-0 pointer-events-none flex flex-col items-center justify-center opacity-[0.04] z-50 overflow-hidden">
+                    {Array.from({ length: 6 }).map((_, i) => (
+                      <div key={i} className="flex gap-16 mb-16 transform -rotate-45">
+                        <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
+                        <Image src="/agrolide-png.png" alt="Agrolide Watermark" width={300} height={100} className="grayscale" />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Transparent anti-drag overlay */}
+                  <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
+                </div>
+              ))
+            ) : (
+              <div className="relative shadow-xl">
                 <Page 
-                  pageNumber={index + 1} 
+                  pageNumber={pageNumber} 
                   scale={scale} 
                   width={containerWidth}
                   renderTextLayer={false} 
@@ -172,7 +238,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
                 {/* Transparent anti-drag overlay */}
                 <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
               </div>
-            ))}
+            )}
           </div>
         </Document>
       </div>
