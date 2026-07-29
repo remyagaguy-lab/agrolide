@@ -11,6 +11,7 @@ import ImageExtension from '@tiptap/extension-image'
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
+import { revalidateEverything } from "@/app/actions/revalidate"
 import { 
   Bold, Italic, List, ListOrdered, Link as LinkIcon, 
   Image as ImageIcon, Heading2, Heading3, Loader2, Save, Send 
@@ -148,6 +149,7 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
 
       if (resError) throw resError
 
+      await revalidateEverything()
       router.push("/admin/contenus/articles")
       router.refresh()
     } catch (err: any) {

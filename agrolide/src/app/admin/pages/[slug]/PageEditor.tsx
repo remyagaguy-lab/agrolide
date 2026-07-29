@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation"
 import { Save, CheckCircle, ArrowLeft } from "lucide-react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
+import { revalidateEverything } from "@/app/actions/revalidate"
 
 const ArticleEditorForm = dynamic(
   () => import("@/app/admin/contenus/articles/[id]/ArticleEditorForm").then(m => m.ArticleEditorForm),
@@ -39,6 +40,8 @@ export function PageEditor({ slug, titre, contenuJson, sessionToken }: Props) {
       })
       if (!res.ok) throw new Error("Erreur lors de la sauvegarde")
       setSaved(true)
+      await revalidateEverything()
+      router.refresh()
       setTimeout(() => setSaved(false), 3000)
     } catch (e: any) {
       setError(e.message)

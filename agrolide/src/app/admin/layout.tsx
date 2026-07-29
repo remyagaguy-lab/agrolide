@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { headers } from "next/headers"
@@ -7,6 +8,7 @@ import {
   CreditCard, ExternalLink, Globe, Star, Handshake, Sprout, MessageSquare,
   ChevronDown
 } from "lucide-react"
+import { ClearCacheButton } from "./ClearCacheButton"
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createClient()
@@ -87,12 +89,15 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <div className="flex-1 flex flex-col overflow-hidden">
         <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8 shrink-0">
           <h2 className="font-semibold text-gray-800">Panneau d'administration</h2>
-          <Link 
-            href="/" target="_blank"
-            className="flex items-center gap-2 text-sm font-medium text-green-700 hover:text-green-800 transition-colors bg-green-50 px-3 py-1.5 rounded-md"
-          >
-            Voir le site <ExternalLink size={16} />
-          </Link>
+          <div className="flex items-center gap-4">
+            <ClearCacheButton />
+            <Link 
+              href="/" target="_blank"
+              className="flex items-center gap-2 text-sm font-medium text-green-700 hover:text-green-800 transition-colors bg-green-50 px-3 py-1.5 rounded-md"
+            >
+              Voir le site <ExternalLink size={16} />
+            </Link>
+          </div>
         </header>
         <main className="flex-1 overflow-y-auto p-8">
           {children}

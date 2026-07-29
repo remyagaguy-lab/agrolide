@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server"
 import { NextResponse, NextRequest } from "next/server"
+import { revalidatePath } from "next/cache"
 
 export async function PATCH(
   request: NextRequest,
@@ -28,5 +29,9 @@ export async function PATCH(
     .eq("slug", slug)
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
+  
+  revalidatePath(`/${slug}`)
+  revalidatePath('/admin/pages')
+  
   return NextResponse.json({ success: true })
 }
