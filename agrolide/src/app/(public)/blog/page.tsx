@@ -8,7 +8,7 @@ import { format } from "date-fns"
 import { fr } from "date-fns/locale"
 
 export const metadata: Metadata = {
-  title: "Blog & Actualités",
+  title: "Blog",
   description: "Découvrez les dernières actualités, analyses et conseils pour les acteurs de l'agriculture africaine.",
 }
 
