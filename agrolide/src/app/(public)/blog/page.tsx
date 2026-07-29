@@ -123,9 +123,14 @@ export default async function BlogPage({
                         <p className="text-gray-600 text-base line-clamp-3 mb-6">
                           {featuredMain.extrait}
                         </p>
-                        <div className="mt-auto flex items-center text-sm font-bold text-[#1b5e38] group-hover:translate-x-1 transition-transform duration-300">
-                          Lire l'article 
-                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                        <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
+                          <span className="text-xs text-gray-500 font-medium truncate max-w-[200px]">
+                            Par {featuredMain.profiles ? `${featuredMain.profiles.prenom} ${featuredMain.profiles.nom}` : (featuredMain.auteur_externe || "Équipe Agrolide")}
+                          </span>
+                          <div className="flex items-center text-sm font-bold text-[#1b5e38] group-hover:translate-x-1 transition-transform duration-300">
+                            Lire l'article 
+                            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                          </div>
                         </div>
                       </div>
                     </Link>
@@ -162,9 +167,14 @@ export default async function BlogPage({
                             {format(new Date(article.published_at), 'dd MMM yyyy', { locale: fr })}
                           </span>
                         </div>
-                        <h3 className="text-xl font-heading font-bold text-gray-900 group-hover:text-[#1b5e38] transition-colors leading-tight line-clamp-3">
+                        <h3 className="text-xl font-heading font-bold text-gray-900 group-hover:text-[#1b5e38] transition-colors leading-tight line-clamp-3 mb-4 flex-grow">
                           {article.titre}
                         </h3>
+                        <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
+                          <span className="text-xs text-gray-500 font-medium truncate max-w-[140px]">
+                            Par {article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
+                          </span>
+                        </div>
                       </div>
                     </Link>
                   ))}
