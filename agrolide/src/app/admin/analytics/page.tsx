@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { Users, BookOpen, Download, UserCheck } from "lucide-react"
 import { AdminLineChart } from "@/components/admin/ChartsWrapper"
 
-export const metadata = { title: "Analytiques | agrolide" }
+export const metadata = { title: "Analytiques" }
 
 export default async function AdminAnalyticsPage() {
   const supabase = await createClient()

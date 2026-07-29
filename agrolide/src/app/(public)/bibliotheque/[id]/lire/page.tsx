@@ -3,7 +3,7 @@ import { ArrowLeft } from 'lucide-react'
 import { SecurePDFViewerWrapper } from '@/components/modules/bibliotheque/SecurePDFViewerWrapper'
 
 export const metadata = {
-  title: 'Lecture Sécurisée | Agrolide Bibliothèque'
+  title: "Lecture Sécurisée"
 }
 
 export default async function SecureReaderPage({ params }: { params: Promise<{ id: string }> }) {

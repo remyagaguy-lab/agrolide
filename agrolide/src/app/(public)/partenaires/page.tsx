@@ -5,7 +5,7 @@ import PartenariatForm from "@/components/modules/fonds/PartenariatForm"
 import { Handshake, Target, Globe, Building2, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Nos Partenaires | agrolide",
+  title: "Nos Partenaires",
   description: "Découvrez les organisations qui nous accompagnent dans la structuration de l'agriculture en Afrique.",
 }
 

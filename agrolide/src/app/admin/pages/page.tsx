@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import Link from "next/link"
 import { FileEdit, Globe } from "lucide-react"
 
-export const metadata = { title: "Pages statiques | Admin agrolide" }
+export const metadata = { title: "Pages statiques" }
 
 const PAGE_LABELS: Record<string, string> = {
   accueil: "Page d'accueil",

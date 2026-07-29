@@ -2,7 +2,7 @@ import { BibliothequeClient } from '@/components/modules/bibliotheque/Bibliotheq
 import { createClient } from '@supabase/supabase-js'
 
 export const metadata = {
-  title: 'Bibliothèque | Agrolide',
+  title: "Bibliothèque",
   description: 'Bibliothèque de documents pour les membres Agrolide',
 }
 

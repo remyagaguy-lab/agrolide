@@ -4,7 +4,7 @@ import AnnuaireClient from '@/components/modules/annuaire/AnnuaireClient'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Annuaire des Membres | Agrolide',
+  title: "Annuaire des Membres",
   description: 'Rejoignez le réseau professionnel de la transition agroécologique en Afrique.',
 }
 

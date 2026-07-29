@@ -4,7 +4,7 @@ import DonationForm from "@/components/modules/fonds/DonationForm"
 import { Heart, Target, TrendingUp, Users, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Nous Soutenir | agrolide",
+  title: "Nous Soutenir",
   description: "Soutenir agrolide, c'est investir dans la souveraineté alimentaire africaine.",
 }
 

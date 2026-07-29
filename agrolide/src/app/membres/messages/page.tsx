@@ -3,7 +3,7 @@ import MessagesClient from '@/components/modules/messages/MessagesClient'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Messagerie | Agrolide',
+  title: "Messagerie",
   description: 'Vos conversations privées avec les membres du réseau.',
 }
 

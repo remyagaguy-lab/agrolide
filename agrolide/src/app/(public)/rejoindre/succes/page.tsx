@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/Button"
 import { PartyPopper } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Bienvenue | agrolide",
+  title: "Bienvenue",
   description: "Votre inscription est validée. Bienvenue dans le réseau agrolide.",
 }
 

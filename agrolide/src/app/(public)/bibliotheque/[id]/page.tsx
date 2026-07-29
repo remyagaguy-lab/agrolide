@@ -7,7 +7,7 @@ import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  return { title: `Document ${id} | Agrolide` } // Ideally fetch the title
+  return { title: "Document ${id}" } // Ideally fetch the title
 }
 
 export default async function DocumentDetailPage({ params }: { params: Promise<{ id: string }> }) {

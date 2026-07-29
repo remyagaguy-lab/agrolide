@@ -3,7 +3,7 @@ import AnnuaireClient from '@/components/modules/annuaire/AnnuaireClient'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Annuaire | Agrolide',
+  title: "Annuaire",
   description: 'Recherchez et connectez-vous avec les membres du réseau.',
 }
 

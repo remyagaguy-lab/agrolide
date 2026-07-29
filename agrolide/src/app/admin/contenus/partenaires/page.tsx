@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { Handshake, Mail } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
-export const metadata = { title: "Partenaires | Admin agrolide" }
+export const metadata = { title: "Partenaires" }
 
 const PARTENAIRE_FIELDS = [
   { key: "nom", label: "Nom de l'organisation", required: true },

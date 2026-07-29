@@ -3,7 +3,7 @@ import ForumClient from '@/components/modules/forum/ForumClient'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Forum | Agrolide',
+  title: "Forum",
   description: 'Forum communautaire Agrolide.',
 }
 

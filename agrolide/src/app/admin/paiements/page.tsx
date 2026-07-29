@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { CreditCard, AlertCircle, Clock, Send } from "lucide-react"
 import RappelButton from "./RappelButton"
 
-export const metadata = { title: "Paiements & Cotisations | Admin agrolide" }
+export const metadata = { title: "Paiements & Cotisations" }
 
 export default async function AdminPaiementsPage() {
   const supabase = await createClient()

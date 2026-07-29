@@ -6,7 +6,7 @@ import { createClient } from "@supabase/supabase-js"
 import AgripreneurCard from "@/components/modules/agrobusiness/AgripreneurCard"
 
 export const metadata: Metadata = {
-  title: "Nos Agripreneurs | agrolide",
+  title: "Nos Agripreneurs",
   description: "Découvrez les success stories des agripreneurs incubés par le réseau agrolide.",
 }
 

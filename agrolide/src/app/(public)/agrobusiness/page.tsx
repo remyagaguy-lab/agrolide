@@ -7,7 +7,7 @@ import { Briefcase, LineChart, FileText, ArrowRight } from "lucide-react"
 import DemandeServiceForm from "@/components/modules/agrobusiness/DemandeServiceForm"
 
 export const metadata: Metadata = {
-  title: "Agrobusiness & Consulting | agrolide",
+  title: "Agrobusiness & Consulting",
   description: "Conseil, accompagnement stratégique et incubation pour les projets agricoles en Afrique.",
 }
 

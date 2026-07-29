@@ -3,7 +3,7 @@ import FilClient from '@/components/modules/forum/FilClient'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sujet | Forum Agrolide',
+  title: "Sujet | Forum Agrolide",
 }
 
 export default async function FilPage({ params }: { params: Promise<{ id: string }> }) {

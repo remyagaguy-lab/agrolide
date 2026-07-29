@@ -7,7 +7,7 @@ import {
 
 import { AdminRevenueChart, AdminDonutChart } from "@/components/admin/ChartsWrapper"
 
-export const metadata = { title: "Dashboard Admin | agrolide" }
+export const metadata = { title: "Dashboard Admin" }
 
 function KpiCard({ 
   label, value, sub, icon: Icon, color, valueClass = ""

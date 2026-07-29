@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import PricingSection from "./PricingSection"
 
 export const metadata: Metadata = {
-  title: "Adhésion | agrolide",
+  title: "Adhésion",
   description: "Choisissez votre profil dans le réseau continental de l'agriculture africaine.",
 }
 

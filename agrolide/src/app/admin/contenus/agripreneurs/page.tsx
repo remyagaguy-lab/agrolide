@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { Sprout } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
-export const metadata = { title: "Agripreneurs | Admin agrolide" }
+export const metadata = { title: "Agripreneurs" }
 
 const AGRIPRENEUR_FIELDS = [
   { key: "nom", label: "Nom de l'agripreneur", required: true },

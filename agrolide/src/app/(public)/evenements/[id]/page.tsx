@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: EventPageProps) {
     .eq('id', p.id)
     .single()
 
-  if (!event) return { title: 'Événement introuvable | Agrolide' }
+  if (!event) return { title: "Événement introuvable" }
 
   return {
-    title: `${event.titre} | Événements Agrolide`,
+    title: "${event.titre} | Événements Agrolide",
     description: event.description ? event.description.substring(0, 160).replace(/<[^>]+>/g, '') : `Participez à l'événement ${event.titre} organisé par le réseau Agrolide.`,
     openGraph: {
       title: event.titre,

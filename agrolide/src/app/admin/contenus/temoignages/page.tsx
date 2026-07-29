@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { Star } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
-export const metadata = { title: "Témoignages | Admin agrolide" }
+export const metadata = { title: "Témoignages" }
 
 const TEMOIGNAGE_FIELDS = [
   { key: "nom", label: "Nom complet", required: true },

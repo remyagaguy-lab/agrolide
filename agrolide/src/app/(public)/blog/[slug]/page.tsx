@@ -30,14 +30,14 @@ export async function generateMetadata(
 
   if (!article) {
     return {
-      title: "Article non trouvé | agrolide",
+      title: "Article non trouvé",
     }
   }
 
   const authorName = article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")
 
   return {
-    title: `${article.titre} | agrolide Blog`,
+    title: "${article.titre}",
     description: article.extrait || `Lisez cet article sur ${article.categorie || 'l\'agriculture africaine'}.`,
     openGraph: {
       type: 'article',

@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { BookOpen, Wrench } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Formations Agricoles | Agrolide',
+  title: "Formations Agricoles",
   description: 'Notre catalogue de formations est actuellement en cours de développement.',
 }
 

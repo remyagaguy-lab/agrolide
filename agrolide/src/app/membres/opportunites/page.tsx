@@ -3,7 +3,7 @@ import OpportunitesClient from '@/components/modules/opportunites/OpportunitesCl
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Opportunités | Agrolide',
+  title: "Opportunités",
   description: 'Bourse aux opportunités : Emplois, financements et partenariats.',
 }
 

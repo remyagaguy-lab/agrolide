@@ -22,7 +22,7 @@ const baskerville = Libre_Baskerville({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://agrolide.org'),
-  title: { default: 'agrolide — Réseau agricole africain', template: '%s | agrolide' },
+  title: { default: 'Accueil | Réseau agrolide', template: '%s | Réseau agrolide' },
   description: 'Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire. Annuaire, bibliothèque, formations et accompagnement pour agronomes, chercheurs et agripreneurs africains.',
   openGraph: { type: 'website', locale: 'fr_FR', siteName: 'agrolide', images: [{ url: '/og-image.jpg', width: 1200, height: 630 }] },
   twitter: { card: 'summary_large_image' },

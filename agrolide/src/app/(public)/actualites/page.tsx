@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Actualités | Agrolide',
+  title: "Actualités",
   description: 'Découvrez les événements, formations, webinaires et opportunités de la communauté Agrolide.',
 }
 
