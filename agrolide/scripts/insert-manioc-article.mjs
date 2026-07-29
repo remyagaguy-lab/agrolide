@@ -62,7 +62,7 @@ const article = {
   categorie: "Agrobusiness",
   auteur_externe: "Équipe Agrolide",
   published_at: new Date().toISOString(),
-  image_une_url: "https://placehold.co/1200x630/16a34a/FFFFFF/png?text=Transformation+Manioc", 
+  image_une_url: "/images/articles/transformer-localement-7-opportunites-agrobusiness-autour-du-manioc.png", 
   statut: "publie",
   contenu_json: htmlContent
 }
