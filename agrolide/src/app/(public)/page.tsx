@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Accueil",
+  title: { absolute: "agrolide | Réseau agricole" },
   description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire."
 }
 
