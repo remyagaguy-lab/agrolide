@@ -62,7 +62,7 @@ const article = {
   categorie: "Agrobusiness",
   auteur_externe: "Équipe Agrolide",
   published_at: new Date().toISOString(),
-  image_une_url: "https://images.unsplash.com/photo-1594951475149-bc94be19fbe3?q=80&w=2070&auto=format&fit=crop", 
+  image_une_url: "https://placehold.co/1200x630/16a34a/FFFFFF/png?text=Transformation+Manioc", 
   statut: "publie",
   contenu_json: htmlContent
 }
