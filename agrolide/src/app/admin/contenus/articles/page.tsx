@@ -3,6 +3,9 @@ import Link from "next/link"
 import { Plus, Edit2 } from "lucide-react"
 import { ArticleDeleteButton } from "./ArticleDeleteButton"
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function ArticlesListPage() {
   const supabase = await createClient()
 
