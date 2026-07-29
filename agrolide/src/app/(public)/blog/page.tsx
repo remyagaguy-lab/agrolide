@@ -65,16 +65,25 @@ export default async function BlogPage({
 
     return (
       <div className="flex flex-col min-h-screen bg-[#f9f9f9]">
-        {/* Hero Section */}
-        <section className="pt-16 pb-12">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-gray-900 text-center mb-4">
-              Blog & Ressources
+        {/* Hero Section (Original) */}
+        <section className="bg-[#0d3520] pt-12 pb-16 text-white text-center relative overflow-hidden">
+          {/* Motif Background */}
+          <div 
+            className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
+            style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+          />
+          <div className="container mx-auto px-4 relative z-10">
+            <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
+              Blog & Actualités
             </h1>
-            <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-16">
-              Expertise, tendances et bonnes pratiques pour réussir votre projet agricole en Afrique.
+            <p className="text-lg max-w-2xl mx-auto text-white/80">
+              Découvrez nos récits authentiques, nos analyses approfondies et nos retours d'expérience pour transformer l'agriculture africaine.
             </p>
+          </div>
+        </section>
 
+        <section className="py-12">
+          <div className="container mx-auto px-4 max-w-7xl">
             {/* Featured Articles Section (Brevo style) */}
             {displayArticles.length > 0 && !searchParam && !categoryParam && (
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
