@@ -2,11 +2,17 @@
 
 import React, { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { CheckCircle, XCircle, Clock } from 'lucide-react'
+import { CheckCircle, XCircle, Clock, Eye, Trash2, Loader2 } from 'lucide-react'
+import { validateOpportunity, rejectOpportunity, deleteOpportunityAdmin } from '@/app/actions/admin-opportunites'
+import { OpportunityDetailsModal } from '@/components/modules/admin/OpportunityDetailsModal'
 
 export default function AdminOpportunitesPage() {
   const [opportunites, setOpportunites] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
+  const [processing, setProcessing] = useState<string | null>(null)
+  
+  const [selectedOpp, setSelectedOpp] = useState<any | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const fetchOpportunites = async () => {
     setLoading(true)
@@ -27,40 +33,66 @@ export default function AdminOpportunitesPage() {
     fetchOpportunites()
   }, [])
 
-  const handleUpdateStatut = async (id: string, newStatut: string) => {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    await supabase
-      .from('opportunites')
-      .update({ statut: newStatut })
-      .eq('id', id)
-      
-    fetchOpportunites()
+  const handleValidate = async (id: string) => {
+    setProcessing(id)
+    try {
+      await validateOpportunity(id)
+      setOpportunites(opps => opps.map(o => o.id === id ? { ...o, statut: 'publie' } : o))
+      setIsModalOpen(false)
+      alert("L'opportunité a été publiée.")
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    } finally {
+      setProcessing(null)
+    }
+  }
+
+  const handleReject = async (id: string) => {
+    setProcessing(id)
+    try {
+      await rejectOpportunity(id)
+      setOpportunites(opps => opps.map(o => o.id === id ? { ...o, statut: 'rejete' } : o))
+      setIsModalOpen(false)
+      alert("L'opportunité a été rejetée.")
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    } finally {
+      setProcessing(null)
+    }
   }
 
   const handleDelete = async (id: string) => {
-    if (!window.confirm("Supprimer définitivement ?")) return
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    await supabase.from('opportunites').delete().eq('id', id)
-    fetchOpportunites()
+    if (!window.confirm("Supprimer définitivement cette opportunité ?")) return
+    setProcessing(id)
+    try {
+      await deleteOpportunityAdmin(id)
+      setOpportunites(opps => opps.filter(o => o.id !== id))
+      alert("L'opportunité a été supprimée.")
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    } finally {
+      setProcessing(null)
+    }
+  }
+
+  const openDetails = (opp: any) => {
+    setSelectedOpp(opp)
+    setIsModalOpen(true)
   }
 
   return (
-    <div className="space-y-6">
-      <div className="flex justify-between items-center bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-900">Modération des Opportunités</h1>
-          <p className="text-gray-500">Validez ou rejetez les offres soumises par les membres.</p>
-        </div>
+    <div className="space-y-6 max-w-7xl mx-auto p-6 sm:p-8">
+      <div className="mb-8">
+        <h1 className="text-2xl font-bold text-gray-900">Modération des Opportunités</h1>
+        <p className="text-gray-500">Validez ou rejetez les offres soumises par les membres.</p>
       </div>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         {loading ? (
-          <div className="p-12 text-center text-gray-500">Chargement...</div>
+          <div className="p-12 text-center flex flex-col items-center">
+            <Loader2 className="w-8 h-8 animate-spin text-gray-400 mb-2" />
+            <span className="text-gray-500">Chargement...</span>
+          </div>
         ) : opportunites.length === 0 ? (
           <div className="p-12 text-center text-gray-500">Aucune opportunité soumise.</div>
         ) : (
@@ -100,19 +132,24 @@ export default function AdminOpportunitesPage() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex justify-end gap-2">
-                        {opp.statut === 'en_attente' && (
-                          <>
-                            <button onClick={() => handleUpdateStatut(opp.id, 'publie')} className="px-3 py-1.5 bg-green-50 hover:bg-green-100 text-green-700 font-medium rounded-lg text-xs transition-colors">
-                              Publier
-                            </button>
-                            <button onClick={() => handleUpdateStatut(opp.id, 'rejete')} className="px-3 py-1.5 bg-red-50 hover:bg-red-100 text-red-700 font-medium rounded-lg text-xs transition-colors">
-                              Rejeter
-                            </button>
-                          </>
-                        )}
-                        <button onClick={() => handleDelete(opp.id)} className="px-3 py-1.5 text-gray-500 hover:text-red-600 hover:bg-red-50 font-medium rounded-lg text-xs transition-colors">
-                          Supprimer
+                        <button 
+                          onClick={() => openDetails(opp)}
+                          className="p-2 text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+                          title="Voir les détails et modérer"
+                        >
+                          <Eye className="w-4 h-4" />
                         </button>
+                        
+                        {(opp.statut === 'en_attente' || opp.statut === 'rejete') && (
+                          <button 
+                            onClick={() => handleDelete(opp.id)}
+                            disabled={processing === opp.id}
+                            className="p-2 text-gray-400 hover:text-red-600 bg-gray-50 hover:bg-red-50 rounded-lg transition-colors"
+                            title="Supprimer définitivement"
+                          >
+                            {processing === opp.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                          </button>
+                        )}
                       </div>
                     </td>
                   </tr>
@@ -122,6 +159,15 @@ export default function AdminOpportunitesPage() {
           </div>
         )}
       </div>
+
+      <OpportunityDetailsModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        opportunity={selectedOpp}
+        onValidate={handleValidate}
+        onReject={handleReject}
+        processing={!!processing}
+      />
     </div>
   )
 }

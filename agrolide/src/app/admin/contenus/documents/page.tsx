@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { Check, X, Eye, FileText, Loader2, AlertCircle } from 'lucide-react'
+import { Check, X, Eye, FileText, Loader2, AlertCircle, Trash2 } from 'lucide-react'
+import { validateDocument, rejectDocument, deleteDocumentAdmin } from '@/app/actions/admin-documents'
+import { DocumentDetailsModal } from '@/components/modules/admin/DocumentDetailsModal'
 
 type DocumentAdmin = {
   id: string
@@ -11,6 +13,13 @@ type DocumentAdmin = {
   type_doc: string
   statut: string
   created_at: string
+  resume?: string
+  thematique?: string
+  pays?: string
+  filiere?: string
+  langue?: string
+  annee?: number
+  fichier_r2_key?: string
 }
 
 export default function AdminDocumentsPage() {
@@ -18,6 +27,10 @@ export default function AdminDocumentsPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [processing, setProcessing] = useState<string | null>(null)
+  
+  // Modal State
+  const [selectedDoc, setSelectedDoc] = useState<DocumentAdmin | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     fetchDocuments()
@@ -30,15 +43,13 @@ export default function AdminDocumentsPage() {
       const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
       const supabase = createClient(supabaseUrl, supabaseAnonKey)
       
-      // On trie manuellement : d'abord 'en_attente_validation', puis par date décroissante
       const { data, error } = await supabase
         .from('documents')
-        .select('id, titre, auteurs, type_doc, statut, created_at')
+        .select('*')
         .order('created_at', { ascending: false })
         
       if (error) throw error
       
-      // Tri prioritaire
       const sorted = [...(data || [])].sort((a, b) => {
         if (a.statut === 'en_attente_validation' && b.statut !== 'en_attente_validation') return -1
         if (a.statut !== 'en_attente_validation' && b.statut === 'en_attente_validation') return 1
@@ -53,37 +64,52 @@ export default function AdminDocumentsPage() {
     }
   }
 
-  const handleUpdateStatus = async (id: string, newStatus: 'publie' | 'rejete') => {
+  const handleValidate = async (id: string) => {
     setProcessing(id)
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-      const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
-      
-      const { data: { session } } = await supabase.auth.getSession()
-      
-      const res = await fetch(`${API_URL}/api/bibliotheque/${id}/status`, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${session?.access_token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ statut: newStatus })
-      })
-      
-      if (!res.ok) {
-        throw new Error('Erreur lors de la mise à jour')
-      }
-      
-      // Update local state
-      setDocuments(docs => docs.map(d => d.id === id ? { ...d, statut: newStatus } : d))
-      
+      await validateDocument(id)
+      setDocuments(docs => docs.map(d => d.id === id ? { ...d, statut: 'publie' } : d))
+      setIsModalOpen(false)
+      alert("Document publié avec succès")
     } catch (err: any) {
-      alert(err.message)
+      alert("Erreur: " + err.message)
     } finally {
       setProcessing(null)
     }
+  }
+
+  const handleReject = async (id: string, reason?: string) => {
+    if (!reason) return // Modal forces reason
+    setProcessing(id)
+    try {
+      await rejectDocument(id, reason)
+      setDocuments(docs => docs.map(d => d.id === id ? { ...d, statut: 'rejete' } : d))
+      setIsModalOpen(false)
+      alert("Document refusé. Un email a été envoyé à l'auteur.")
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    } finally {
+      setProcessing(null)
+    }
+  }
+
+  const handleDelete = async (id: string) => {
+    if (!window.confirm("Êtes-vous sûr de vouloir supprimer définitivement ce document ?")) return
+    setProcessing(id)
+    try {
+      await deleteDocumentAdmin(id)
+      setDocuments(docs => docs.filter(d => d.id !== id))
+      alert("Document supprimé")
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    } finally {
+      setProcessing(null)
+    }
+  }
+
+  const openDetails = (doc: DocumentAdmin) => {
+    setSelectedDoc(doc)
+    setIsModalOpen(true)
   }
 
   const getStatusBadge = (statut: string) => {
@@ -157,35 +183,23 @@ export default function AdminDocumentsPage() {
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                       <div className="flex items-center justify-end gap-2">
-                        <a 
-                          href={`/membres/bibliotheque/${doc.id}`} 
-                          target="_blank" 
-                          rel="noreferrer"
-                          className="p-2 text-gray-400 hover:text-gray-900 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors"
-                          title="Voir la fiche"
+                        <button 
+                          onClick={() => openDetails(doc)}
+                          className="p-2 text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+                          title="Voir les détails et modérer"
                         >
                           <Eye className="w-4 h-4" />
-                        </a>
+                        </button>
                         
-                        {doc.statut === 'en_attente_validation' && (
-                          <>
-                            <button
-                              onClick={() => handleUpdateStatus(doc.id, 'publie')}
-                              disabled={processing === doc.id}
-                              className="p-2 text-green-600 hover:text-green-700 bg-green-50 hover:bg-green-100 rounded-lg transition-colors disabled:opacity-50"
-                              title="Publier"
-                            >
-                              {processing === doc.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Check className="w-4 h-4" />}
-                            </button>
-                            <button
-                              onClick={() => handleUpdateStatus(doc.id, 'rejete')}
-                              disabled={processing === doc.id}
-                              className="p-2 text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded-lg transition-colors disabled:opacity-50"
-                              title="Rejeter"
-                            >
-                              {processing === doc.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <X className="w-4 h-4" />}
-                            </button>
-                          </>
+                        {(doc.statut === 'rejete' || doc.statut === 'en_attente_validation') && (
+                           <button 
+                             onClick={() => handleDelete(doc.id)}
+                             disabled={processing === doc.id}
+                             className="p-2 text-gray-400 hover:text-red-600 bg-gray-50 hover:bg-red-50 rounded-lg transition-colors"
+                             title="Supprimer définitivement"
+                           >
+                             {processing === doc.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                           </button>
                         )}
                       </div>
                     </td>
@@ -196,6 +210,15 @@ export default function AdminDocumentsPage() {
           </table>
         </div>
       </div>
+
+      <DocumentDetailsModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        document={selectedDoc}
+        onValidate={handleValidate}
+        onReject={handleReject}
+        processing={!!processing}
+      />
     </div>
   )
 }
