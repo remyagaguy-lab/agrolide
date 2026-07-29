@@ -140,11 +140,21 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
 
       let resError;
       if (isNew) {
-        const { error } = await supabase.from("articles").insert(payload)
-        resError = error
+        const res = await fetch("/api/admin/articles", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        })
+        const data = await res.json()
+        if (!res.ok) resError = new Error(data.error || "Erreur lors de la création")
       } else {
-        const { error } = await supabase.from("articles").update(payload).eq("id", initialData.id)
-        resError = error
+        const res = await fetch(`/api/admin/articles/${initialData.id}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        })
+        const data = await res.json()
+        if (!res.ok) resError = new Error(data.error || "Erreur lors de la modification")
       }
 
       if (resError) throw resError
