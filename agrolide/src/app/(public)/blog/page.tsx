@@ -26,7 +26,7 @@ export default async function BlogPage({
   // Build query
   let query = supabase
     .from('articles')
-    .select('*')
+    .select('*, profiles(prenom, nom, photo_url)')
     .eq('statut', 'publie')
     .order('published_at', { ascending: false })
 
@@ -150,7 +150,8 @@ export default async function BlogPage({
                     title={article.titre}
                     excerpt={article.extrait || ""}
                     category={article.categorie || "Général"}
-                    author={article.auteur_externe || "Équipe Agrolide"}
+                    author={article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
+                    authorId={article.auteur_id}
                     date={article.published_at}
                     readTime={"5 min"}
                     imageUrl={article.image_une_url}

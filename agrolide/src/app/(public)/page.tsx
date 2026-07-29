@@ -154,7 +154,7 @@ export default async function HomePage() {
   // Fetch 3 latest published articles
   const { data: latestArticles } = await supabase
     .from('articles')
-    .select('*')
+    .select('*, profiles(prenom, nom, photo_url)')
     .eq('statut', 'publie')
     .order('published_at', { ascending: false })
     .limit(3)
