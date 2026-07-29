@@ -49,7 +49,7 @@ const htmlContent = `
 
 <div style="margin-top: 2rem; padding: 1.5rem; background-color: #f8f8f8; border-left: 4px solid #4ade80; border-radius: 0.5rem;">
   <p style="margin-top: 0; font-weight: bold;">Téléchargez gratuitement le manuel :</p>
-  <a href="/documents/manuel_transformation_manioc.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #16a34a; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; margin-top: 0.5rem;">
+  <a href="/bibliotheque/49192cf8-6241-4e56-b93f-61830c786844" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #16a34a; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: bold; margin-top: 0.5rem;">
     Obtenir le manuel de l'IITA
   </a>
 </div>
