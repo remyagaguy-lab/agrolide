@@ -7,7 +7,14 @@ import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  return { title: "Document ${id}" } // Ideally fetch the title
+  
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+  const supabase = createClient(supabaseUrl, supabaseKey)
+  
+  const { data } = await supabase.from('documents').select('titre').eq('id', id).single()
+  
+  return { title: data?.titre || "Document" }
 }
 
 export default async function DocumentDetailPage({ params }: { params: Promise<{ id: string }> }) {
