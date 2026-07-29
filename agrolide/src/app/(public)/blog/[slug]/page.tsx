@@ -114,8 +114,35 @@ export default async function BlogPostPage({
 
   const authorName = article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.titre,
+    image: article.image_une_url ? [article.image_une_url] : [],
+    datePublished: article.published_at,
+    dateModified: article.updated_at || article.published_at,
+    author: [{
+        "@type": "Person",
+        name: authorName,
+        url: article.auteur_id ? `https://agrolide.org/annuaire/${article.auteur_id}` : "https://agrolide.org",
+      }],
+    publisher: {
+      "@type": "Organization",
+      name: "Agrolide",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://agrolide.org/icon.png"
+      }
+    },
+    description: article.extrait
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Article Header */}
       <section className="bg-gray-50 py-16 border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-4xl">

@@ -50,8 +50,40 @@ export default async function EventPage({ params }: EventPageProps) {
   const dateDebut = new Date(event.date_debut)
   const isPast = dateDebut < new Date()
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.titre,
+    startDate: event.date_debut,
+    endDate: event.date_fin || event.date_debut,
+    eventAttendanceMode: event.format === 'en_ligne' ? "https://schema.org/OnlineEventAttendanceMode" : "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    location: event.format === 'en_ligne' ? {
+      "@type": "VirtualLocation",
+      url: event.lien_inscription || `https://agrolide.org/evenements/${event.id}`
+    } : {
+      "@type": "Place",
+      name: event.lieu || "Lieu à confirmer",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: event.lieu || "Lieu à confirmer"
+      }
+    },
+    image: event.image_url ? [event.image_url] : [],
+    description: event.description ? event.description.replace(/<[^>]+>/g, '') : "",
+    organizer: {
+      "@type": "Organization",
+      name: "Agrolide",
+      url: "https://agrolide.org"
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 pt-24 pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="max-w-4xl mx-auto px-4">
         {/* Breadcrumb / Back Link */}
         <Link href="/actualites" className="inline-flex items-center gap-2 text-gray-500 hover:text-primary-600 transition-colors mb-6 font-medium">
