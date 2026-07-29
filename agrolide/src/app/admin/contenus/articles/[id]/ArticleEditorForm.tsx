@@ -188,13 +188,12 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
             {...register("category")}
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
           >
-            <option value="Agronomie">Agronomie</option>
             <option value="Agrobusiness">Agrobusiness</option>
-            <option value="Innovation">Innovation</option>
-            <option value="Formation">Formation</option>
-            <option value="Recherche & vulgarisation">Recherche & vulgarisation</option>
-            <option value="Politique">Politique</option>
-            <option value="Marché">Marché</option>
+            <option value="Agroeconomie">Agroeconomie</option>
+            <option value="Agroalimentaire">Agroalimentaire</option>
+            <option value="Agroinnovation">Agroinnovation</option>
+            <option value="Production Végétal">Production Végétal</option>
+            <option value="Production Animal">Production Animal</option>
           </select>
         </div>
         <div>

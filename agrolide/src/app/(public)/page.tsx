@@ -159,11 +159,13 @@ export default async function HomePage() {
     .order('published_at', { ascending: false })
     .limit(3)
 
-  const displayArticles = latestArticles && latestArticles.length > 0 ? latestArticles : [
-    { slug: "pratiques-agroecologiques", categorie: "Agronomie", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", published_at: "2024-10-12T00:00:00Z" },
+  const fallbackArticles = [
+    { slug: "pratiques-agroecologiques", categorie: "Production Végétal", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", published_at: "2024-10-12T00:00:00Z" },
     { slug: "financer-projet-agricole", categorie: "Agrobusiness", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", published_at: "2024-10-05T00:00:00Z" },
-    { slug: "competences-agronomes", categorie: "Formation", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", published_at: "2024-09-28T00:00:00Z" },
+    { slug: "competences-agronomes", categorie: "Agroeconomie", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", published_at: "2024-09-28T00:00:00Z" }
   ];
+
+  const displayArticles = latestArticles && latestArticles.length > 0 ? latestArticles : fallbackArticles;
 
   return (
     <div className="flex flex-col min-h-screen">

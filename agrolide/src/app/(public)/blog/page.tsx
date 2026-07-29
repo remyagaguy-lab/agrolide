@@ -43,17 +43,19 @@ export default async function BlogPage({
     const { data: articles, error } = await query
 
     const categories = [
-      "Réseau & communauté",
-      "Formation & savoirs",
-      "Entrepreneuriat agricole",
-      "Recherche & vulgarisation"
+      "Agrobusiness",
+      "Agroeconomie",
+      "Agroalimentaire",
+      "Agroinnovation",
+      "Production Végétal",
+      "Production Animal"
     ]
 
     const fallbackArticles = [
-      { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne. Une analyse détaillée des meilleures pratiques pour restaurer la fertilité des sols et garantir une agriculture durable à long terme face aux défis climatiques actuels.", categorie: "Agronomie", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z", image_une_url: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c6c0e?q=80&w=2070&auto=format&fit=crop" },
+      { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne. Une analyse détaillée des meilleures pratiques pour restaurer la fertilité des sols et garantir une agriculture durable à long terme face aux défis climatiques actuels.", categorie: "Production Végétal", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z", image_une_url: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c6c0e?q=80&w=2070&auto=format&fit=crop" },
       { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe Agrolide", published_at: "2024-10-05T00:00:00Z" },
-      { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Formation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" },
-      { id: "4", slug: "innovation-agricole", titre: "Les innovations technologiques qui transforment l'agriculture", extrait: "Découvrez comment l'IA et les drones révolutionnent les rendements agricoles en Afrique de l'Ouest.", categorie: "Recherche & vulgarisation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-15T00:00:00Z" }
+      { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Agroeconomie", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" },
+      { id: "4", slug: "innovation-agricole", titre: "Les innovations technologiques qui transforment l'agriculture", extrait: "Découvrez comment l'IA et les drones révolutionnent les rendements agricoles en Afrique de l'Ouest.", categorie: "Agroinnovation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-15T00:00:00Z" }
     ]
 
     const hasArticles = articles && articles.length > 0 && !error
