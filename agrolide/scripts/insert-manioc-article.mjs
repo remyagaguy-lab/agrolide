@@ -62,7 +62,7 @@ const article = {
   categorie: "Agrobusiness",
   auteur_externe: "Équipe Agrolide",
   published_at: new Date().toISOString(),
-  image_une_url: "/images/articles/transformer-localement-7-opportunites-agrobusiness-autour-du-manioc.png", 
+  image_une_url: "/images/articles/transformer-localement-7-opportunites-agrobusiness-autour-du-manioc.jpg", 
   statut: "publie",
   contenu_json: htmlContent
 }
