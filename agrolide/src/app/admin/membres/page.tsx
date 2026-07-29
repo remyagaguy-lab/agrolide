@@ -3,7 +3,7 @@ import { redirect } from "next/navigation"
 import { MembresTable } from "./MembresTable"
 import { Users } from "lucide-react"
 
-export const metadata = { title: "Gestion membres" }
+export const metadata = { title: "Gestion des membres" }
 
 const PER_PAGE = 25
 

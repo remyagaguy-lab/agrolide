@@ -3,7 +3,7 @@ import CategorieClient from '@/components/modules/forum/CategorieClient'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Catégorie | Forum Agrolide",
+  title: "Catégorie",
 }
 
 export default async function CategoriePage({ params }: { params: Promise<{ id: string }> }) {

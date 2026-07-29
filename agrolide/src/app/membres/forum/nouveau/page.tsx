@@ -3,7 +3,7 @@ import NouveauFilClient from '@/components/modules/forum/NouveauFilClient'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Nouveau sujet | Forum Agrolide",
+  title: "Nouveau sujet",
 }
 
 export default function NouveauFilPage() {
