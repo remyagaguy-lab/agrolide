@@ -19,58 +19,59 @@ export default async function BlogPage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-  const supabase = await createClient()
-  const resolvedParams = await searchParams;
-  const categoryParam = resolvedParams.category
+  try {
+    const supabase = await createClient()
+    const resolvedParams = await searchParams;
+    const categoryParam = resolvedParams.category
 
-  // Build query
-  let query = supabase
-    .from('articles')
-    .select('*, profiles(prenom, nom, photo_url)')
-    .eq('statut', 'publie')
-    .order('published_at', { ascending: false })
+    // Build query
+    let query = supabase
+      .from('articles')
+      .select('*, profiles(prenom, nom, photo_url)')
+      .eq('statut', 'publie')
+      .order('published_at', { ascending: false })
 
-  if (categoryParam) {
-    query = query.eq('categorie', categoryParam)
-  }
+    if (categoryParam) {
+      query = query.eq('categorie', categoryParam)
+    }
 
-  const { data: articles, error } = await query
+    const { data: articles, error } = await query
 
-  const categories = [
-    "Réseau & communauté",
-    "Formation & savoirs",
-    "Entrepreneuriat agricole",
-    "Recherche & vulgarisation"
-  ]
+    const categories = [
+      "Réseau & communauté",
+      "Formation & savoirs",
+      "Entrepreneuriat agricole",
+      "Recherche & vulgarisation"
+    ]
 
-  const fallbackArticles = [
-    { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne. Une analyse détaillée des meilleures pratiques pour restaurer la fertilité des sols et garantir une agriculture durable à long terme face aux défis climatiques actuels.", categorie: "Agronomie", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z", image_une_url: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c6c0e?q=80&w=2070&auto=format&fit=crop" },
-    { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe Agrolide", published_at: "2024-10-05T00:00:00Z" },
-    { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Formation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" },
-    { id: "4", slug: "innovation-agricole", titre: "Les innovations technologiques qui transforment l'agriculture", extrait: "Découvrez comment l'IA et les drones révolutionnent les rendements agricoles en Afrique de l'Ouest.", categorie: "Recherche & vulgarisation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-15T00:00:00Z" }
-  ]
+    const fallbackArticles = [
+      { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne. Une analyse détaillée des meilleures pratiques pour restaurer la fertilité des sols et garantir une agriculture durable à long terme face aux défis climatiques actuels.", categorie: "Agronomie", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z", image_une_url: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c6c0e?q=80&w=2070&auto=format&fit=crop" },
+      { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe Agrolide", published_at: "2024-10-05T00:00:00Z" },
+      { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Formation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" },
+      { id: "4", slug: "innovation-agricole", titre: "Les innovations technologiques qui transforment l'agriculture", extrait: "Découvrez comment l'IA et les drones révolutionnent les rendements agricoles en Afrique de l'Ouest.", categorie: "Recherche & vulgarisation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-15T00:00:00Z" }
+    ]
 
-  const hasArticles = articles && articles.length > 0 && !error
-  const displayArticles = hasArticles ? articles : fallbackArticles
+    const hasArticles = articles && articles.length > 0 && !error
+    const displayArticles = hasArticles ? articles : fallbackArticles
 
-  return (
-    <div className="flex flex-col min-h-screen bg-[#f8f8f6]">
-      {/* Hero */}
-      <section className="bg-[#0d3520] pt-12 pb-16 text-white text-center relative overflow-hidden">
-        {/* Motif Background */}
-        <div 
-          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
-            Blog & Actualités
-          </h1>
-          <p className="text-lg max-w-2xl mx-auto text-white/80">
-            Découvrez nos récits authentiques, nos analyses approfondies et nos retours d'expérience pour transformer l'agriculture africaine.
-          </p>
-        </div>
-      </section>
+    return (
+      <div className="flex flex-col min-h-screen bg-[#f8f8f6]">
+        {/* Hero */}
+        <section className="bg-[#0d3520] pt-12 pb-16 text-white text-center relative overflow-hidden">
+          {/* Motif Background */}
+          <div 
+            className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
+            style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+          />
+          <div className="container mx-auto px-4 relative z-10">
+            <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
+              Blog & Actualités
+            </h1>
+            <p className="text-lg max-w-2xl mx-auto text-white/80">
+              Découvrez nos récits authentiques, nos analyses approfondies et nos retours d'expérience pour transformer l'agriculture africaine.
+            </p>
+          </div>
+        </section>
 
       <section className="py-12">
         <div className="container mx-auto px-4 max-w-7xl">
@@ -153,9 +154,19 @@ export default async function BlogPage({
               </div>
             </div>
 
-          </div>
         </div>
       </section>
     </div>
   )
+  } catch (err: any) {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-8 bg-red-50 text-red-900">
+        <div className="max-w-2xl bg-white p-8 rounded-2xl shadow-xl">
+          <h1 className="text-2xl font-bold mb-4">Erreur de rendu Serveur !</h1>
+          <p className="mb-4 text-sm font-mono whitespace-pre-wrap">{err.message}</p>
+          <pre className="text-xs bg-gray-100 p-4 rounded overflow-auto">{err.stack}</pre>
+        </div>
+      </div>
+    )
+  }
 }
