@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Eye, Download, Loader2, AlertCircle } from 'lucide-react'
+import { Eye, Download, Loader2, AlertCircle, Lock } from 'lucide-react'
 import { checkTrocEligibility, getDocumentUrl } from '@/app/actions/bibliotheque'
 import Link from 'next/link'
 
@@ -14,9 +14,15 @@ export function DownloadButton({ documentId }: { documentId: string }) {
 
   const [downloading, setDownloading] = useState(false)
   const [showTrocModal, setShowTrocModal] = useState(false)
+  const [showAuthModal, setShowAuthModal] = useState(false)
   const [trocCount, setTrocCount] = useState(0)
 
-  const handleRead = () => {
+  const handleRead = async () => {
+    const eligibility = await checkTrocEligibility()
+    if (!eligibility.authorized && eligibility.reason === 'unauthenticated') {
+      setShowAuthModal(true)
+      return
+    }
     // Redirige vers le lecteur sécurisé interne
     router.push(`/bibliotheque/${documentId}/lire`)
   }
@@ -30,7 +36,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
       
       if (!eligibility.authorized) {
         if (eligibility.reason === 'unauthenticated') {
-          router.push('/login?redirect=/bibliotheque/' + documentId)
+          setShowAuthModal(true)
           return
         }
         if (eligibility.reason === 'quota_not_met') {
@@ -104,6 +110,34 @@ export function DownloadButton({ documentId }: { documentId: string }) {
                 Importer un document
               </Link>
               <button onClick={() => setShowTrocModal(false)} className="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+                Annuler
+              </button>
+            </div>
+          </div>
+        </div>
+      {/* MODALE D'AUTHENTIFICATION */}
+      {showAuthModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200">
+            <div className="flex justify-center mb-4">
+              <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                <Lock className="w-6 h-6" />
+              </div>
+            </div>
+            <h3 className="text-xl font-bold text-center text-gray-900 mb-2">Accès Réservé</h3>
+            <p className="text-center text-gray-600 mb-6">
+              Pour accéder à l'intégralité de notre bibliothèque, lire en mode sécurisé ou télécharger des documents pour les conserver, vous devez avoir un compte.
+              <br/><br/>
+              Rejoignez le Réseau Agrolide pour profiter de toutes nos ressources !
+            </p>
+            <div className="flex flex-col gap-3">
+              <Link href={`/inscription?redirect=/bibliotheque/${documentId}`} className="w-full flex justify-center items-center px-4 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+                Créer un compte
+              </Link>
+              <Link href={`/login?redirect=/bibliotheque/${documentId}`} className="w-full flex justify-center items-center px-4 py-3 bg-white text-green-700 border border-green-200 rounded-lg font-medium hover:bg-green-50 transition-colors">
+                Se connecter
+              </Link>
+              <button onClick={() => setShowAuthModal(false)} className="w-full px-4 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors mt-2">
                 Annuler
               </button>
             </div>
