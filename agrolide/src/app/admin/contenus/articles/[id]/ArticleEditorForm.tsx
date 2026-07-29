@@ -32,7 +32,7 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
       category: initialData?.categorie || "Agronomie",
       excerpt: initialData?.extrait || "",
       status: initialData?.statut || "brouillon",
-      access: initialData?.access || "public",
+      access: initialData?.acces || "public",
       tags: initialData?.tags?.join(", ") || "",
     }
   })
@@ -113,7 +113,7 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
       categorie: data.category,
       extrait: data.excerpt,
       statut: data.status,
-      access: data.access,
+      acces: data.access,
       contenu_json: editor?.getHTML(),
       image_une_url: imageUrl,
       tags: data.tags ? data.tags.split(",").map((t: string) => t.trim()).filter(Boolean) : []
