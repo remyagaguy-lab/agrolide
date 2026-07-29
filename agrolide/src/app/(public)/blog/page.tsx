@@ -35,6 +35,11 @@ export default async function BlogPage({
       query = query.eq('categorie', categoryParam)
     }
 
+    const searchParam = resolvedParams.search
+    if (searchParam && typeof searchParam === 'string') {
+      query = query.ilike('titre', `%${searchParam}%`)
+    }
+
     const { data: articles, error } = await query
 
     const categories = [
@@ -54,110 +59,180 @@ export default async function BlogPage({
     const hasArticles = articles && articles.length > 0 && !error
     const displayArticles = hasArticles ? articles : fallbackArticles
 
+    const featuredMain = displayArticles[0];
+    const featuredSecondary = displayArticles.slice(1, 3);
+    const gridArticles = displayArticles.slice(3);
+
     return (
-      <div className="flex flex-col min-h-screen bg-[#f8f8f6]">
-        {/* Hero */}
-        <section className="bg-[#0d3520] pt-12 pb-16 text-white text-center relative overflow-hidden">
-          {/* Motif Background */}
-          <div 
-            className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-            style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-          />
-          <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
-              Blog & Actualités
+      <div className="flex flex-col min-h-screen bg-[#f9f9f9]">
+        {/* Hero Section */}
+        <section className="pt-16 pb-12">
+          <div className="container mx-auto px-4 max-w-7xl">
+            <h1 className="text-4xl md:text-5xl font-heading font-extrabold text-gray-900 text-center mb-4">
+              Blog & Ressources
             </h1>
-            <p className="text-lg max-w-2xl mx-auto text-white/80">
-              Découvrez nos récits authentiques, nos analyses approfondies et nos retours d'expérience pour transformer l'agriculture africaine.
+            <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-16">
+              Expertise, tendances et bonnes pratiques pour réussir votre projet agricole en Afrique.
             </p>
-          </div>
-        </section>
 
-      <section className="py-12">
-        <div className="container mx-auto px-4 max-w-7xl">
-          <div className="flex flex-col lg:flex-row gap-10">
-            
-            {/* Colonne Principale (Dernières publications) */}
-            <div className="lg:w-2/3">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 border-b border-gray-200 pb-4">
-                <h3 className="text-2xl font-bold font-heading text-gray-900">
-                  {categoryParam ? `Articles : ${categoryParam}` : "Dernières publications"}
-                </h3>
-                <BlogFilter currentCategory={categoryParam as string} categories={categories} />
-              </div>
-              
-              {!displayArticles || displayArticles.length === 0 ? (
-                <div className="text-center py-20 bg-white rounded-3xl border border-gray-100">
-                  <p className="text-xl text-gray-500">Aucun article trouvé pour le moment.</p>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {displayArticles.map((article) => (
-                    <ArticleCard
-                      key={article.id}
-                      slug={article.slug}
-                      title={article.titre}
-                      excerpt={article.extrait || ""}
-                      category={article.categorie || "Général"}
-                      author={article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
-                      authorId={article.auteur_id}
-                      date={article.published_at}
-                      readTime={"5 min"}
-                      imageUrl={article.image_une_url}
-                    />
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Sidebar (Articles populaires) */}
-            <div className="lg:w-1/3">
-              <div className="bg-white rounded-3xl p-6 md:p-8 border border-gray-100 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] sticky top-24">
-                <h3 className="text-xl font-bold font-heading text-gray-900 mb-6 flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#fcb726]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                  Articles Populaires
-                </h3>
-                <div className="space-y-6">
-                  {displayArticles.slice(0, 4).map((article) => (
-                    <Link href={`/blog/${article.slug}`} key={article.id} className="group block">
-                      <div className="flex gap-4 items-center">
-                        <div className="w-20 h-20 rounded-2xl relative overflow-hidden shrink-0 bg-gray-100 shadow-sm">
+            {/* Featured Articles Section (Brevo style) */}
+            {displayArticles.length > 0 && !searchParam && !categoryParam && (
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+                {/* Main Featured Article (2/3 width) */}
+                {featuredMain && (
+                  <div className="lg:col-span-2">
+                    <Link 
+                      href={`/blog/${featuredMain.slug}`} 
+                      className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-gray-100"
+                    >
+                      <div className="relative w-full aspect-[16/9] overflow-hidden bg-gray-100">
+                        {featuredMain.image_une_url ? (
                           <Image 
-                            src={article.image_une_url || "https://images.unsplash.com/photo-1592982537447-6f2a6a0c6c0e?q=80&w=2070&auto=format&fit=crop"} 
+                            src={featuredMain.image_une_url} 
+                            alt={featuredMain.titre} 
+                            fill 
+                            priority
+                            className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center text-gray-400">Sans image</div>
+                        )}
+                      </div>
+                      <div className="p-8 flex flex-col flex-grow">
+                        <div className="flex items-center gap-3 text-sm mb-4">
+                          <span className="font-bold text-[#1b5e38] uppercase tracking-wider text-xs">
+                            {featuredMain.categorie || "Général"}
+                          </span>
+                          <span className="text-gray-300">•</span>
+                          <span className="text-gray-500 font-medium text-xs">
+                            {format(new Date(featuredMain.published_at), 'dd MMMM yyyy', { locale: fr })}
+                          </span>
+                        </div>
+                        <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 group-hover:text-[#1b5e38] transition-colors leading-tight">
+                          {featuredMain.titre}
+                        </h2>
+                        <p className="text-gray-600 text-base line-clamp-3 mb-6">
+                          {featuredMain.extrait}
+                        </p>
+                        <div className="mt-auto flex items-center text-sm font-bold text-[#1b5e38] group-hover:translate-x-1 transition-transform duration-300">
+                          Lire l'article 
+                          <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                )}
+
+                {/* Secondary Featured Articles (1/3 width, stacked) */}
+                <div className="flex flex-col gap-6">
+                  {featuredSecondary.map((article) => (
+                    <Link 
+                      href={`/blog/${article.slug}`} 
+                      key={article.id} 
+                      className="group flex flex-col flex-1 bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-gray-100"
+                    >
+                      <div className="relative w-full h-48 overflow-hidden bg-gray-100">
+                        {article.image_une_url ? (
+                          <Image 
+                            src={article.image_une_url} 
                             alt={article.titre} 
                             fill 
-                            sizes="80px" 
-                            className="object-cover group-hover:scale-110 transition-transform duration-500" 
+                            className="object-cover transition-transform duration-700 group-hover:scale-105" 
                           />
-                        </div>
-                        <div className="flex-1">
-                          <h4 className="font-heading font-bold text-[15px] text-gray-900 group-hover:text-[#1b5e38] transition-colors line-clamp-2 leading-tight mb-1.5">
-                            {article.titre}
-                          </h4>
-                          <span className="text-xs font-medium text-gray-500">
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center text-gray-400">Sans image</div>
+                        )}
+                      </div>
+                      <div className="p-6 flex flex-col flex-grow">
+                        <div className="flex items-center gap-3 text-sm mb-3">
+                          <span className="font-bold text-[#1b5e38] uppercase tracking-wider text-xs">
+                            {article.categorie || "Général"}
+                          </span>
+                          <span className="text-gray-300">•</span>
+                          <span className="text-gray-500 font-medium text-xs">
                             {format(new Date(article.published_at), 'dd MMM yyyy', { locale: fr })}
                           </span>
                         </div>
+                        <h3 className="text-xl font-heading font-bold text-gray-900 group-hover:text-[#1b5e38] transition-colors leading-tight line-clamp-3">
+                          {article.titre}
+                        </h3>
                       </div>
                     </Link>
                   ))}
                 </div>
-                
-                {/* Petit bloc promo / abonnement newsletter éventuel */}
-                <div className="mt-10 p-6 rounded-2xl bg-gradient-to-br from-[#f4fdf4] to-[#e8f5e9] border border-[#c8e6c9] text-center">
-                  <h4 className="font-heading font-bold text-[#1b5e38] mb-2">Ne manquez rien !</h4>
-                  <p className="text-sm text-gray-600 mb-4">Rejoignez notre newsletter pour recevoir les meilleures astuces agricoles.</p>
-                  <Link href="/inscription" className="inline-block text-sm font-bold text-white bg-[#1b5e38] hover:bg-green-800 transition-colors px-4 py-2 rounded-xl">
-                    S'inscrire
+              </div>
+            )}
+
+            {/* Filter and Search Bar */}
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10 py-6 border-y border-gray-200">
+              <div className="flex items-center gap-4 w-full md:w-auto">
+                <span className="text-sm font-bold text-gray-500 uppercase tracking-wider hidden md:block">Filtrer :</span>
+                <BlogFilter currentCategory={categoryParam as string} categories={categories} />
+              </div>
+              <form action="/blog" method="GET" className="relative w-full md:w-72">
+                {categoryParam && <input type="hidden" name="category" value={categoryParam} />}
+                <input 
+                  type="text" 
+                  name="search" 
+                  defaultValue={searchParam as string || ''}
+                  placeholder="Rechercher un article..." 
+                  className="w-full pl-11 pr-4 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-[#1b5e38] focus:ring-1 focus:ring-[#1b5e38] transition-shadow" 
+                />
+                <svg className="w-4 h-4 absolute left-4 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </form>
+            </div>
+
+            {/* Main Article Grid */}
+            {!displayArticles || displayArticles.length === 0 ? (
+              <div className="text-center py-24 bg-white rounded-3xl border border-gray-100 shadow-sm">
+                <p className="text-xl text-gray-500">Aucun article ne correspond à votre recherche.</p>
+                {(categoryParam || searchParam) && (
+                  <Link href="/blog" className="inline-block mt-4 text-[#1b5e38] font-bold hover:underline">
+                    Réinitialiser les filtres
                   </Link>
-                </div>
+                )}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* If searching or filtering, show all in grid. If normal view, show remaining articles after featured. */}
+                {((categoryParam || searchParam) ? displayArticles : gridArticles).map((article) => (
+                  <ArticleCard
+                    key={article.id}
+                    slug={article.slug}
+                    title={article.titre}
+                    excerpt={article.extrait || ""}
+                    category={article.categorie || "Général"}
+                    author={article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
+                    authorId={article.auteur_id}
+                    date={article.published_at}
+                    readTime={"5 min"}
+                    imageUrl={article.image_une_url}
+                  />
+                ))}
+              </div>
+            )}
+
+            {/* Newsletter CTA Footer */}
+            <div className="mt-20 p-10 md:p-16 rounded-3xl bg-gradient-to-br from-[#1b5e38] to-[#0d3520] text-center text-white relative overflow-hidden shadow-xl">
+              <div 
+                className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
+                style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "400px", backgroundRepeat: "repeat" }} 
+              />
+              <div className="relative z-10 max-w-2xl mx-auto">
+                <h3 className="text-3xl md:text-4xl font-heading font-bold mb-4">Rejoignez la communauté</h3>
+                <p className="text-lg text-white/80 mb-8">
+                  Recevez directement dans votre boîte mail les meilleures analyses, conseils agronomiques et opportunités de financement pour développer votre activité.
+                </p>
+                <Link href="/inscription" className="inline-block font-bold text-[#1b5e38] bg-white hover:bg-gray-50 transition-colors px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                  S'inscrire à la newsletter
+                </Link>
               </div>
             </div>
+
           </div>
-        </div>
-      </section>
-    </div>
-  )
+        </section>
+      </div>
+    )
   } catch (err: any) {
     return (
       <div className="min-h-screen flex items-center justify-center p-8 bg-red-50 text-red-900">
