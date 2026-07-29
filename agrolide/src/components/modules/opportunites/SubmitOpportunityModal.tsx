@@ -9,9 +9,10 @@ interface SubmitOpportunityModalProps {
   isOpen: boolean
   onClose: () => void
   onSuccess: () => void
+  isAdmin?: boolean
 }
 
-export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess }: SubmitOpportunityModalProps) {
+export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess, isAdmin = false }: SubmitOpportunityModalProps) {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
@@ -49,7 +50,7 @@ export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess }: S
     const payload = {
       ...formData,
       publie_par: user.id,
-      statut: 'en_attente',
+      statut: isAdmin ? 'publie' : 'en_attente',
       date_limite: formData.date_limite ? new Date(formData.date_limite).toISOString() : null
     }
 
@@ -87,20 +88,20 @@ export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess }: S
                 <CheckCircle className="w-8 h-8" />
               </div>
               <Dialog.Title className="text-xl font-bold text-gray-900 mb-2">
-                Opportunité soumise !
+                {isAdmin ? "Opportunité publiée !" : "Opportunité soumise !"}
               </Dialog.Title>
               <Dialog.Description className="text-gray-600">
-                Merci pour votre partage. Votre opportunité sera examinée par nos administrateurs avant d'être publiée sur la plateforme.
+                {isAdmin ? "L'opportunité est maintenant visible par tous les membres." : "Merci pour votre partage. Votre opportunité sera examinée par nos administrateurs avant d'être publiée sur la plateforme."}
               </Dialog.Description>
             </div>
           ) : (
             <>
               <div className="mb-2">
                 <Dialog.Title className="text-xl font-bold text-gray-900">
-                  Partager une opportunité
+                  {isAdmin ? "Publier une opportunité" : "Partager une opportunité"}
                 </Dialog.Title>
                 <Dialog.Description className="text-gray-500 mt-1 text-sm">
-                  Proposez un emploi, un financement ou un partenariat à la communauté.
+                  {isAdmin ? "Créez une offre qui sera visible immédiatement." : "Proposez un emploi, un financement ou un partenariat à la communauté."}
                 </Dialog.Description>
               </div>
 

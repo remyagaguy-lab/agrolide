@@ -7,11 +7,17 @@ import Link from 'next/link'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { ignoreReport, deleteMessage, banUser } from '@/app/actions/admin-forum'
+import CategoriesManager from '@/components/modules/admin/forum/CategoriesManager'
+import ThreadsManager from '@/components/modules/admin/forum/ThreadsManager'
+import MessagesManager from '@/components/modules/admin/forum/MessagesManager'
+
+export const dynamic = 'force-dynamic';
 
 export default function AdminForumPage() {
   const [reportedMessages, setReportedMessages] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [processing, setProcessing] = useState<string | null>(null)
+  const [activeTab, setActiveTab] = useState<'signalements' | 'categories' | 'fils' | 'messages'>('signalements')
 
   const fetchReported = async () => {
     setLoading(true)
@@ -84,13 +90,40 @@ export default function AdminForumPage() {
     <div className="space-y-6 max-w-7xl mx-auto p-6 sm:p-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-          <ShieldAlert className="w-7 h-7 text-orange-500" />
-          Modération du Forum
+          Administration du Forum
         </h1>
-        <p className="text-gray-500">Gérez les messages signalés par la communauté et sanctionnez les comportements abusifs.</p>
+        <p className="text-gray-500">Gérez le contenu, l'architecture et les membres du forum.</p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="flex space-x-1 border-b border-gray-200 mb-6 overflow-x-auto pb-1">
+        <button 
+          onClick={() => setActiveTab('signalements')}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'signalements' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+        >
+          Signalements {reportedMessages.length > 0 && <span className="ml-2 bg-red-100 text-red-600 py-0.5 px-2 rounded-full text-xs">{reportedMessages.length}</span>}
+        </button>
+        <button 
+          onClick={() => setActiveTab('categories')}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'categories' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+        >
+          Catégories
+        </button>
+        <button 
+          onClick={() => setActiveTab('fils')}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'fils' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+        >
+          Discussions
+        </button>
+        <button 
+          onClick={() => setActiveTab('messages')}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'messages' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+        >
+          Recherche & Messages
+        </button>
+      </div>
+
+      {activeTab === 'signalements' && (
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         {loading ? (
           <div className="p-12 text-center flex flex-col items-center">
             <Loader2 className="w-8 h-8 animate-spin text-gray-400 mb-2" />
@@ -155,7 +188,12 @@ export default function AdminForumPage() {
             ))}
           </div>
         )}
-      </div>
+        </div>
+      )}
+
+      {activeTab === 'categories' && <CategoriesManager />}
+      {activeTab === 'fils' && <ThreadsManager />}
+      {activeTab === 'messages' && <MessagesManager />}
     </div>
   )
 }

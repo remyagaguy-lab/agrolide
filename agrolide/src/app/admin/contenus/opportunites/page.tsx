@@ -2,9 +2,12 @@
 
 import React, { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { CheckCircle, XCircle, Clock, Eye, Trash2, Loader2 } from 'lucide-react'
+import { CheckCircle, XCircle, Clock, Eye, Trash2, Loader2, Plus } from 'lucide-react'
 import { validateOpportunity, rejectOpportunity, deleteOpportunityAdmin } from '@/app/actions/admin-opportunites'
+import SubmitOpportunityModal from '@/components/modules/opportunites/SubmitOpportunityModal'
 import { OpportunityDetailsModal } from '@/components/modules/admin/OpportunityDetailsModal'
+
+export const dynamic = 'force-dynamic';
 
 export default function AdminOpportunitesPage() {
   const [opportunites, setOpportunites] = useState<any[]>([])
@@ -13,6 +16,7 @@ export default function AdminOpportunitesPage() {
   
   const [selectedOpp, setSelectedOpp] = useState<any | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isSubmitModalOpen, setIsSubmitModalOpen] = useState(false)
 
   const fetchOpportunites = async () => {
     setLoading(true)
@@ -82,9 +86,17 @@ export default function AdminOpportunitesPage() {
 
   return (
     <div className="space-y-6 max-w-7xl mx-auto p-6 sm:p-8">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Modération des Opportunités</h1>
-        <p className="text-gray-500">Validez ou rejetez les offres soumises par les membres.</p>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900">Modération des Opportunités</h1>
+          <p className="text-gray-500">Gérez les offres soumises par les membres et publiez-en de nouvelles.</p>
+        </div>
+        <button 
+          onClick={() => setIsSubmitModalOpen(true)}
+          className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
+        >
+          <Plus className="w-5 h-5" /> Nouvelle opportunité
+        </button>
       </div>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
@@ -162,11 +174,24 @@ export default function AdminOpportunitesPage() {
 
       <OpportunityDetailsModal 
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={() => {
+          setIsModalOpen(false)
+          setSelectedOpp(null)
+        }}
         opportunity={selectedOpp}
         onValidate={handleValidate}
         onReject={handleReject}
         processing={!!processing}
+      />
+
+      <SubmitOpportunityModal 
+        isOpen={isSubmitModalOpen}
+        onClose={() => setIsSubmitModalOpen(false)}
+        onSuccess={() => {
+          setIsSubmitModalOpen(false)
+          fetchOpportunites()
+        }}
+        isAdmin={true}
       />
     </div>
   )

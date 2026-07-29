@@ -2,9 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
-import { Check, X, Eye, FileText, Loader2, AlertCircle, Trash2 } from 'lucide-react'
+import { Check, X, Eye, FileText, Loader2, AlertCircle, Trash2, Plus } from 'lucide-react'
 import { validateDocument, rejectDocument, deleteDocumentAdmin } from '@/app/actions/admin-documents'
 import { DocumentDetailsModal } from '@/components/modules/admin/DocumentDetailsModal'
+import SubmitDocumentModal from '@/components/modules/admin/SubmitDocumentModal'
+
+export const dynamic = 'force-dynamic';
 
 type DocumentAdmin = {
   id: string
@@ -31,6 +34,7 @@ export default function AdminDocumentsPage() {
   // Modal State
   const [selectedDoc, setSelectedDoc] = useState<DocumentAdmin | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isSubmitModalOpen, setIsSubmitModalOpen] = useState(false)
 
   useEffect(() => {
     fetchDocuments()
@@ -122,10 +126,18 @@ export default function AdminDocumentsPage() {
   }
 
   return (
-    <div className="p-6 sm:p-8 max-w-7xl mx-auto">
-      <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Modération des documents</h1>
-        <p className="text-gray-600">Gérez les documents déposés par les membres dans la bibliothèque.</p>
+    <div className="space-y-6 max-w-7xl mx-auto p-6 sm:p-8">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900">Modération des documents</h1>
+          <p className="text-gray-500">Gérez les documents et publiez-en de nouveaux dans la bibliothèque.</p>
+        </div>
+        <button 
+          onClick={() => setIsSubmitModalOpen(true)}
+          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
+        >
+          <Plus className="w-5 h-5" /> Nouveau document
+        </button>
       </div>
 
       {error && (
@@ -213,11 +225,23 @@ export default function AdminDocumentsPage() {
 
       <DocumentDetailsModal 
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        onClose={() => {
+          setIsModalOpen(false)
+          setSelectedDoc(null)
+        }}
         document={selectedDoc}
         onValidate={handleValidate}
         onReject={handleReject}
         processing={!!processing}
+      />
+
+      <SubmitDocumentModal 
+        isOpen={isSubmitModalOpen}
+        onClose={() => setIsSubmitModalOpen(false)}
+        onSuccess={() => {
+          setIsSubmitModalOpen(false)
+          fetchDocuments()
+        }}
       />
     </div>
   )
