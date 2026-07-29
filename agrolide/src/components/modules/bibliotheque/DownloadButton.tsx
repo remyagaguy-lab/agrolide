@@ -115,6 +115,8 @@ export function DownloadButton({ documentId }: { documentId: string }) {
             </div>
           </div>
         </div>
+      )}
+
       {/* MODALE D'AUTHENTIFICATION */}
       {showAuthModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
