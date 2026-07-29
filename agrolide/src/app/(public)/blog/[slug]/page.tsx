@@ -37,7 +37,7 @@ export async function generateMetadata(
   const authorName = article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")
 
   return {
-    title: "${article.titre}",
+    title: article.titre,
     description: article.extrait || `Lisez cet article sur ${article.categorie || 'l\'agriculture africaine'}.`,
     openGraph: {
       type: 'article',
