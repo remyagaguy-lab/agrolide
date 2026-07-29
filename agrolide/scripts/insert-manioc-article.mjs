@@ -47,22 +47,22 @@ const htmlContent = `
 <p>Ces sept filières ne s'opposent pas entre elles ; vous pouvez souvent les combiner au sein d'une même unité de transformation, produire du gari tout en valorisant vos épluchures, par exemple. Un seul point commun à toutes : aucune ne se lance sérieusement sans une méthode de production rigoureuse, une bonne lecture de votre marché local et une stratégie de vente qui vous démarque de la production artisanale déjà en place.</p>
 <p>Consultez le manuel de transformation du manioc élaboré par l'Institut International d'Agriculture Tropicale (IITA), disponible dans la bibliothèque numérique agrolide, pour retrouver, filière par filière, les étapes techniques qui vous aideront à sécuriser la qualité de votre produit, de la production jusqu'à la vente.</p>
 
-<div style="margin: 3rem 0; padding: 2.5rem 2rem; background: linear-gradient(135deg, #f4fdf4 0%, #e8f5e9 100%); border: 1px solid #c8e6c9; border-radius: 1.5rem; box-shadow: 0 10px 30px -10px rgba(27, 94, 56, 0.15); display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; overflow: hidden;">
-  <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: rgba(74, 222, 128, 0.2); border-radius: 50%; filter: blur(20px);"></div>
-  <div style="position: absolute; bottom: -20px; right: -20px; width: 120px; height: 120px; background: rgba(249, 158, 29, 0.15); border-radius: 50%; filter: blur(25px);"></div>
+<div style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #f4fdf4 0%, #e8f5e9 100%); border: 1px solid #c8e6c9; border-radius: 1rem; box-shadow: 0 4px 15px -5px rgba(27, 94, 56, 0.1); display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: rgba(74, 222, 128, 0.15); border-radius: 50%; filter: blur(20px);"></div>
+  <div style="position: absolute; bottom: -20px; right: -20px; width: 120px; height: 120px; background: rgba(249, 158, 29, 0.1); border-radius: 50%; filter: blur(25px);"></div>
   
-  <div style="background-color: #ffffff; width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.06); margin-bottom: 1.5rem; position: relative; z-index: 10;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1b5e38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+  <div style="background-color: #ffffff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 1rem; position: relative; z-index: 10;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1b5e38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
   </div>
   
-  <h3 style="margin: 0 0 0.75rem 0; font-size: 1.5rem; color: #111827; font-weight: 800; line-height: 1.2; position: relative; z-index: 10;">Prêt à vous lancer dans la transformation ?</h3>
-  <p style="margin: 0 0 2rem 0; font-size: 1.125rem; color: #4b5563; max-width: 550px; line-height: 1.6; position: relative; z-index: 10;">
+  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem; color: #111827; font-weight: 800; line-height: 1.2; position: relative; z-index: 10;">Prêt à vous lancer dans la transformation ?</h3>
+  <p style="margin: 0 0 1.25rem 0; font-size: 1rem; color: #4b5563; max-width: 500px; line-height: 1.5; position: relative; z-index: 10;">
     Accédez au <strong>Manuel de transformation du manioc</strong> de l'IITA. Des méthodes détaillées pour réussir vos premiers pas.
   </p>
   
-  <a href="/bibliotheque/49192cf8-6241-4e56-b93f-61830c786844" target="_blank" rel="noopener noreferrer" style="position: relative; z-index: 10; display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; background-color: #f99e1d; color: #ffffff; padding: 1rem 2.5rem; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 1.125rem; box-shadow: 0 8px 20px rgba(249, 158, 29, 0.35); text-transform: uppercase; letter-spacing: 0.05em; border: 2px solid transparent;">
+  <a href="/bibliotheque/49192cf8-6241-4e56-b93f-61830c786844" target="_blank" rel="noopener noreferrer" style="position: relative; z-index: 10; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background-color: #f99e1d; color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 10px rgba(249, 158, 29, 0.3); text-transform: uppercase; letter-spacing: 0.05em;">
     Consulter le manuel
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 1px;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 1px;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
   </a>
 </div>
 `
