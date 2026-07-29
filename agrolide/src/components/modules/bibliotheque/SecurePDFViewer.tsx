@@ -17,7 +17,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
   const [scale, setScale] = useState<number>(1.0)
-  const [viewMode, setViewMode] = useState<'single' | 'continuous'>('single')
+  const [viewMode, setViewMode] = useState<'single' | 'continuous'>('continuous')
   const [containerWidth, setContainerWidth] = useState<number>()
   const containerRef = useRef<HTMLDivElement>(null)
 
