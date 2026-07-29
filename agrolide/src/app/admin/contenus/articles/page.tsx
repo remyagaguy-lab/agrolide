@@ -45,21 +45,21 @@ export default async function ArticlesListPage() {
                 articles.map((article) => (
                   <tr key={article.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-medium text-gray-900 max-w-xs truncate">
-                      {article.title || article.titre}
+                      {article.titre}
                     </td>
                     <td className="px-6 py-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        article.status === 'published' ? 'bg-green-100 text-green-700' :
-                        article.status === 'draft' ? 'bg-gray-100 text-gray-700' :
+                        article.statut === 'publie' ? 'bg-green-100 text-green-700' :
+                        article.statut === 'brouillon' ? 'bg-gray-100 text-gray-700' :
                         'bg-blue-100 text-blue-700'
                       }`}>
-                        {article.status === 'published' ? 'Publié' : 
-                         article.status === 'draft' ? 'Brouillon' : 
+                        {article.statut === 'publie' ? 'Publié' : 
+                         article.statut === 'brouillon' ? 'Brouillon' : 
                          'Planifié'}
                       </span>
                     </td>
-                    <td className="px-6 py-4 capitalize">{article.category}</td>
-                    <td className="px-6 py-4 text-gray-600">{article.author_name}</td>
+                    <td className="px-6 py-4 capitalize">{article.categorie}</td>
+                    <td className="px-6 py-4 text-gray-600">{article.auteur_externe || "Admin"}</td>
                     <td className="px-6 py-4 text-gray-500">
                       {new Date(article.created_at).toLocaleDateString('fr-FR')}
                     </td>
