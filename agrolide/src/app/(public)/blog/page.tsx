@@ -153,7 +153,7 @@ export default async function BlogPage({
                 </div>
               </div>
             </div>
-
+          </div>
         </div>
       </section>
     </div>
