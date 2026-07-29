@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire."
 }
 
-export const revalidate = 3600
+export const revalidate = 60 // Changed from 3600 to 60 for faster synchronization
 
 // --- Icônes SVG inline ---
 
@@ -576,22 +576,33 @@ export default async function HomePage() {
               const articleDate = item.published_at ? new Date(item.published_at).toLocaleDateString('fr-FR', {
                 year: 'numeric', month: 'short', day: 'numeric'
               }) : "Récemment";
+              
+              const auteurName = item.profiles ? `${item.profiles.prenom} ${item.profiles.nom}` : (item.auteur_externe || "Équipe Agrolide");
 
               return (
               <Link href={`/blog/${item.slug}`} key={i} className="block group">
-                <Card className="card-blog p-0 h-full flex flex-col">
-                  <div className="card-blog-image relative">
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="category" className="bg-vert-pale text-vert-principal">{item.categorie || "Article"}</Badge>
+                <Card className="card-blog p-0 h-full flex flex-col overflow-hidden">
+                  <div className="relative w-full h-48 bg-gray-100">
+                    {item.image_une_url && (
+                      <Image 
+                        src={item.image_une_url} 
+                        alt={item.titre} 
+                        fill 
+                        className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                      />
+                    )}
+                    <div className="absolute top-4 left-4 z-10">
+                      <Badge variant="category" className="bg-vert-pale text-vert-principal shadow-sm">{item.categorie || "Article"}</Badge>
                     </div>
                   </div>
-                  <div className="card-blog-body flex flex-col flex-1">
-                    <h3 className="font-heading font-[700] text-[15px] text-gris-titre leading-[1.4] mb-2">{item.titre}</h3>
+                  <div className="card-blog-body flex flex-col flex-1 p-6">
+                    <h3 className="font-heading font-[700] text-[15px] text-gris-titre leading-[1.4] mb-2 group-hover:text-[#1b5e38] transition-colors">{item.titre}</h3>
                     <p className="font-sans text-[13px] text-gris-texte line-clamp-2 mb-4 flex-1">
                       {item.extrait}
                     </p>
-                    <div className="font-sans text-[12px] text-gris-muted mt-auto pt-4 border-t border-[#f0f0f0]">
-                      {articleDate} · 5 min de lecture
+                    <div className="font-sans text-[12px] text-gris-muted mt-auto pt-4 border-t border-[#f0f0f0] flex justify-between items-center">
+                      <span>{articleDate} · 5 min</span>
+                      <span className="font-medium text-gray-500 truncate max-w-[120px]">Par {auteurName}</span>
                     </div>
                   </div>
                 </Card>
