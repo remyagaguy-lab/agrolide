@@ -50,7 +50,7 @@ export function ArticleCard({
           </div>
         )}
       </div>
-      <div className="pt-6 pb-6 flex flex-col flex-grow">
+      <div className="p-6 md:p-8 flex flex-col flex-grow">
         <div className="flex items-center gap-3 text-sm mb-3">
           <span className="font-bold text-[#1b5e38] uppercase tracking-wider text-xs">
             {category}
