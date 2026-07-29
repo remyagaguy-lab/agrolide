@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire."
 }
 
-export const revalidate = 60 // Changed from 3600 to 60 for faster synchronization
+export const dynamic = 'force-dynamic';
 
 // --- Icônes SVG inline ---
 
