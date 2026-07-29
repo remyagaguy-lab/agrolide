@@ -27,11 +27,11 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
 
   const { register, handleSubmit, watch, setValue, formState: { errors } } = useForm({
     defaultValues: {
-      titre: initialData?.title || initialData?.titre || "",
+      titre: initialData?.titre || "",
       slug: initialData?.slug || "",
-      category: initialData?.category || "agronomie",
-      excerpt: initialData?.excerpt || initialData?.extrait || "",
-      status: initialData?.status || "draft",
+      category: initialData?.categorie || "Agronomie",
+      excerpt: initialData?.extrait || "",
+      status: initialData?.statut || "brouillon",
       access: initialData?.access || "public",
       tags: initialData?.tags?.join(", ") || "",
     }
@@ -59,7 +59,7 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
       LinkExtension.configure({ openOnClick: false }),
       ImageExtension,
     ],
-    content: initialData?.content || "<p>Commencez à écrire votre article ici...</p>",
+    content: initialData?.contenu_json || "<p>Commencez à écrire votre article ici...</p>",
     editorProps: {
       attributes: {
         class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[300px] p-4',
@@ -107,11 +107,16 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
     setIsSaving(true)
     setError(null)
     
-    const payload = {
-      ...data,
-      content: editor?.getHTML(),
+    const payload: any = {
+      titre: data.titre,
+      slug: data.slug,
+      categorie: data.category,
+      extrait: data.excerpt,
+      statut: data.status,
+      access: data.access,
+      contenu_json: editor?.getHTML(),
       image_une_url: imageUrl,
-      tags: data.tags.split(",").map((t: string) => t.trim()).filter(Boolean)
+      tags: data.tags ? data.tags.split(",").map((t: string) => t.trim()).filter(Boolean) : []
     }
 
     try {
@@ -124,11 +129,11 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
       const { data: profile } = await supabase.from("profiles").select("prenom, nom").eq("id", session.user.id).single()
 
       if (isNew) {
-        payload.author_id = session.user.id
-        payload.author_name = profile ? `${profile.prenom} ${profile.nom}` : "Admin"
+        payload.auteur_id = session.user.id
+        payload.auteur_externe = profile ? `${profile.prenom} ${profile.nom}` : "Admin"
       }
 
-      if (payload.status === "published" && !initialData?.published_at) {
+      if (payload.statut === "publie" && !initialData?.published_at) {
         payload.published_at = new Date().toISOString()
       }
 
@@ -137,8 +142,7 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
         const { error } = await supabase.from("articles").insert(payload)
         resError = error
       } else {
-        const { id, created_at, author_id, author_name, ...updateData } = payload
-        const { error } = await supabase.from("articles").update(updateData).eq("id", initialData.id)
+        const { error } = await supabase.from("articles").update(payload).eq("id", initialData.id)
         resError = error
       }
 
@@ -184,10 +188,13 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
             {...register("category")}
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
           >
-            <option value="agronomie">Agronomie</option>
-            <option value="innovation">Innovation</option>
-            <option value="politique">Politique</option>
-            <option value="marche">Marché</option>
+            <option value="Agronomie">Agronomie</option>
+            <option value="Agrobusiness">Agrobusiness</option>
+            <option value="Innovation">Innovation</option>
+            <option value="Formation">Formation</option>
+            <option value="Recherche & vulgarisation">Recherche & vulgarisation</option>
+            <option value="Politique">Politique</option>
+            <option value="Marché">Marché</option>
           </select>
         </div>
         <div>
@@ -206,8 +213,8 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
             {...register("status")}
             className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
           >
-            <option value="draft">Brouillon</option>
-            <option value="published">Publié</option>
+            <option value="brouillon">Brouillon</option>
+            <option value="publie">Publié</option>
           </select>
         </div>
       </div>
