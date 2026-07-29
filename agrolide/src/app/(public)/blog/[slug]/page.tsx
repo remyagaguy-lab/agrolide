@@ -236,20 +236,22 @@ export default async function BlogPostPage({
                 </div>
               </div>
 
-              {/* CTA Fin d'article */}
-              <div className="mt-16 p-8 bg-[#E8F3EB] rounded-2xl border border-green-200 text-center">
-                <h3 className="text-2xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">
-                  Vous souhaitez aller plus loin ?
-                </h3>
-                <p className="text-[var(--color-gris-texte)] mb-6 max-w-xl mx-auto">
-                  Rejoignez des milliers de professionnels sur agrolide et accédez à des ressources exclusives pour développer votre projet agricole.
-                </p>
-                <Link href="/rejoindre">
-                  <Button variant="primary" className="text-lg px-8">
-                    Découvrir les adhésions
-                  </Button>
-                </Link>
-              </div>
+              {/* CTA Fin d'article (affiché uniquement si l'article n'a pas son propre CTA) */}
+              {!htmlContent.includes('class="custom-cta"') && (
+                <div className="mt-16 p-8 bg-[#E8F3EB] rounded-2xl border border-green-200 text-center">
+                  <h3 className="text-2xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">
+                    Vous souhaitez aller plus loin ?
+                  </h3>
+                  <p className="text-[var(--color-gris-texte)] mb-6 max-w-xl mx-auto">
+                    Rejoignez des milliers de professionnels sur agrolide et accédez à des ressources exclusives pour développer votre projet agricole.
+                  </p>
+                  <Link href="/rejoindre">
+                    <Button variant="primary" className="text-lg px-8">
+                      Découvrir les adhésions
+                    </Button>
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
