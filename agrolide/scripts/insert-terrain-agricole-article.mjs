@@ -48,23 +48,17 @@ const htmlContent = `
 <h3>Les erreurs qui reviennent le plus souvent</h3>
 <p>Trois erreurs reviennent sans cesse chez les porteurs de projet : choisir un terrain sur le seul critère du prix ; le visiter uniquement en saison des pluies, quand l'eau semble abondante partout ; et démarrer les travaux avant même d'avoir vérifié les documents fonciers. Rien de tout cela n'est compliqué à éviter. Il suffit d'y penser avant, et non après la signature.</p>
 
-<div class="custom-cta" style="margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, #f4fdf4 0%, #e8f5e9 100%); border: 1px solid #c8e6c9; border-radius: 1rem; box-shadow: 0 4px 15px -5px rgba(27, 94, 56, 0.1); display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; overflow: hidden;">
-  <div style="position: absolute; top: -20px; left: -20px; width: 100px; height: 100px; background: rgba(74, 222, 128, 0.15); border-radius: 50%; filter: blur(20px);"></div>
-  <div style="position: absolute; bottom: -20px; right: -20px; width: 120px; height: 120px; background: rgba(249, 158, 29, 0.1); border-radius: 50%; filter: blur(25px);"></div>
-  
-  <div style="background-color: #ffffff; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 1rem; position: relative; z-index: 10;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1b5e38" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-  </div>
-  
-  <h3 style="margin: 0 0 0.5rem 0; font-size: 1.25rem; color: #111827; font-weight: 800; line-height: 1.2; position: relative; z-index: 10;">Rejoignez le réseau</h3>
-  <p style="margin: 0 0 1.25rem 0; font-size: 1rem; color: #4b5563; max-width: 500px; line-height: 1.5; position: relative; z-index: 10;">
-    Ces dix conditions ne remplacent pas une étude de terrain complète. Elles évitent, en revanche, les erreurs les plus coûteuses dès la première visite — et posent des bases solides pour construire, ensuite, un vrai projet agricole.<br><br>
-    Rejoignez dès maintenant notre réseau pour concrétiser votre projet agricole : vous y trouverez des conseils supplémentaires et une communauté de professionnels engagés, agronomes, agripreneurs et Membres Partenaires, prêts à échanger sur les réalités du terrain.
+<h3>Rejoignez le réseau</h3>
+<p>Ces dix conditions ne remplacent pas une étude de terrain complète. Elles évitent, en revanche, les erreurs les plus coûteuses dès la première visite — et posent des bases solides pour construire, ensuite, un vrai projet agricole.</p>
+<p>Rejoignez dès maintenant notre réseau pour concrétiser votre projet agricole : vous y trouverez des conseils supplémentaires et une communauté de professionnels engagés, agronomes, agripreneurs et Membres Partenaires, prêts à échanger sur les réalités du terrain.</p>
+
+<div class="custom-cta" style="margin: 2rem 0; padding: 2rem; background-color: #f0fdf4; border: 1px solid #dcfce7; border-radius: 0.75rem; text-align: center;">
+  <h3 style="margin: 0 0 1rem 0; font-size: 1.5rem; color: #4b5563; font-weight: 700;">Vous souhaitez aller plus loin ?</h3>
+  <p style="margin: 0 auto 1.5rem auto; font-size: 1.125rem; color: #6b7280; max-width: 600px; line-height: 1.6;">
+    Rejoignez des milliers de professionnels sur agrolide et accédez à des ressources exclusives pour développer votre projet agricole.
   </p>
-  
-  <a href="/adhesion" style="position: relative; z-index: 10; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; background-color: #f99e1d; color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 9999px; text-decoration: none; font-weight: 700; font-size: 1rem; box-shadow: 0 4px 10px rgba(249, 158, 29, 0.3); text-transform: uppercase; letter-spacing: 0.05em;">
-    Rejoindre le réseau
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 1px;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+  <a href="/adhesion" style="display: inline-block; background-color: #f99e1d; color: #ffffff; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.125rem;">
+    Découvrir les adhésions
   </a>
 </div>
 `
