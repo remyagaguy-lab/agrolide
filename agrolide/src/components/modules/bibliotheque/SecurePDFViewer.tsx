@@ -4,8 +4,9 @@ import { useState, useEffect, useRef } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
-import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack } from 'lucide-react'
+import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack, AlertCircle } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 // Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
@@ -57,15 +58,27 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
+  const [quotaReached, setQuotaReached] = useState<boolean>(false)
+
   useEffect(() => {
     const fetchSecureUrl = async () => {
       try {
-        const { createClient } = await import('@supabase/supabase-js')
-        const supabase = createClient(
-          process.env.NEXT_PUBLIC_SUPABASE_URL!, 
-          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-        )
+        const { createClient } = await import('@/lib/supabase/client')
+        const supabase = createClient()
         const { data: { session } } = await supabase.auth.getSession()
+
+        // Si l'utilisateur n'est pas connecté, vérifier le quota
+        if (!session) {
+          const savedDocsStr = localStorage.getItem('agrolide_read_docs')
+          const readDocs: string[] = savedDocsStr ? JSON.parse(savedDocsStr) : []
+          
+          if (!readDocs.includes(documentId) && readDocs.length >= 5) {
+            // Quota atteint et document non débloqué
+            setQuotaReached(true)
+            setLoading(false)
+            return
+          }
+        }
 
         // L'API route proxie maintenant directement le flux binaire
         // Nous donnons juste l'URL à react-pdf qui se chargera du fetch
@@ -99,6 +112,28 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       <div className="flex flex-col items-center justify-center h-[600px] bg-gray-50 rounded-xl">
         <Loader2 className="w-10 h-10 animate-spin text-green-700 mb-4" />
         <p className="text-gray-500 font-medium">Sécurisation et chargement du document...</p>
+      </div>
+    )
+  }
+
+  if (quotaReached) {
+    return (
+      <div className="flex flex-col items-center justify-center h-[600px] bg-gray-50 rounded-xl border border-gray-200 p-6 text-center">
+        <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6">
+          <AlertCircle className="w-8 h-8" />
+        </div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-3">Quota Gratuit Atteint</h3>
+        <p className="text-gray-600 mb-8 max-w-md">
+          Vous avez épuisé votre quota de <strong>5 consultations gratuites</strong>. Pour continuer à explorer notre bibliothèque et lire ce document, créez un compte gratuitement.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
+          <Link href={`/inscription?redirect=/bibliotheque/${documentId}/lire`} className="flex-1 px-4 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+            Créer mon compte
+          </Link>
+          <Link href={`/login?redirect=/bibliotheque/${documentId}/lire`} className="flex-1 px-4 py-3 bg-white text-green-700 border border-green-200 rounded-lg font-medium hover:bg-green-50 transition-colors">
+            Se connecter
+          </Link>
+        </div>
       </div>
     )
   }
