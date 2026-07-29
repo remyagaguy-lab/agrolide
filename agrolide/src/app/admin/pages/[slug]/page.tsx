@@ -4,7 +4,7 @@ import { PageEditor } from "./PageEditor"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  return { title: "Éditer "${slug}"" }
+  return { title: `Éditer ${slug}` }
 }
 
 export default async function AdminPageEditorPage({ params }: { params: Promise<{ slug: string }> }) {
