@@ -59,7 +59,7 @@ export default async function BlogPostPage({
   // Fetch article
   const { data: dbArticle, error } = await supabase
     .from('articles')
-    .select('*')
+    .select('*, profiles(prenom, nom, photo_url)')
     .eq('slug', slug)
     .single()
 
@@ -112,6 +112,8 @@ export default async function BlogPostPage({
     { label: article.titre }
   ]
 
+  const authorName = article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Article Header */}
@@ -134,8 +136,25 @@ export default async function BlogPostPage({
           
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <User size={18} className="text-[var(--color-vert-principal)]" />
-              <span className="font-medium">{article.auteur_externe || "Équipe Agrolide"}</span>
+              {article.auteur_id ? (
+                <Link href={`/annuaire/${article.auteur_id}`} className="flex items-center gap-2 hover:text-[var(--color-vert-principal)] transition-colors group">
+                  {article.profiles?.photo_url ? (
+                    <Image src={article.profiles.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
+                  ) : (
+                    <User size={18} className="text-[var(--color-vert-principal)]" />
+                  )}
+                  <span className="font-medium group-hover:underline">{authorName}</span>
+                </Link>
+              ) : (
+                <>
+                  {article.profiles?.photo_url ? (
+                    <Image src={article.profiles.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
+                  ) : (
+                    <User size={18} className="text-[var(--color-vert-principal)]" />
+                  )}
+                  <span className="font-medium">{authorName}</span>
+                </>
+              )}
             </div>
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-[var(--color-vert-principal)]" />
@@ -272,7 +291,7 @@ export default async function BlogPostPage({
                   title={simArticle.titre}
                   excerpt={simArticle.extrait || ""}
                   category={simArticle.categorie || "Général"}
-                  author={simArticle.auteur_externe || "Équipe Agrolide"}
+                  author={simArticle.profiles ? `${simArticle.profiles.prenom} ${simArticle.profiles.nom}` : (simArticle.auteur_externe || "Équipe Agrolide")}
                   date={simArticle.published_at}
                   readTime={"5 min"}
                   imageUrl={simArticle.image_une_url}

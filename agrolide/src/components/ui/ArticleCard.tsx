@@ -10,6 +10,7 @@ export interface ArticleCardProps {
   excerpt: string;
   category: string;
   author: string;
+  authorId?: string;
   date: string;
   readTime: string;
   imageUrl?: string;
@@ -22,6 +23,7 @@ export function ArticleCard({
   excerpt,
   category,
   author,
+  authorId,
   date,
   readTime,
   imageUrl,
@@ -64,7 +66,13 @@ export function ArticleCard({
         <div className="flex items-center justify-between text-xs text-gray-500 mt-auto pt-4 border-t border-gray-100">
           <div className="flex items-center gap-1.5">
             <User size={14} />
-            <span className="font-medium truncate max-w-[100px]">{author}</span>
+            {authorId ? (
+              <Link href={`/annuaire/${authorId}`} className="font-medium truncate max-w-[100px] hover:text-[var(--color-vert-principal)] hover:underline" onClick={(e) => e.stopPropagation()}>
+                {author}
+              </Link>
+            ) : (
+              <span className="font-medium truncate max-w-[100px]">{author}</span>
+            )}
           </div>
           <div className="flex items-center gap-3">
             <span>{new Date(date).toLocaleDateString('fr-FR')}</span>
