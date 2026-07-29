@@ -72,7 +72,7 @@ const article = {
   titre: "Transformer localement : 7 opportunités agrobusiness autour du manioc",
   extrait: "Le manioc offre bien plus que la vente en frais : sa transformation locale ouvre sept voies d'activité avec peu de moyens.",
   categorie: "Agrobusiness",
-  auteur_externe: "Équipe Agrolide",
+  auteur_externe: "Koumantega Remyaga Guy",
   published_at: new Date().toISOString(),
   image_une_url: "/images/articles/transformer-localement-7-opportunites-agrobusiness-autour-du-manioc.jpg", 
   statut: "publie",

@@ -55,7 +55,7 @@ export function ArticleCard({
         </div>
       </div>
       <div className="p-5 flex flex-col flex-grow">
-        <h3 className="text-lg font-heading font-bold text-[var(--color-vert-principal)] mb-2 line-clamp-2 group-hover:text-[var(--color-orange-accent)] transition-colors">
+        <h3 className="text-base font-heading font-bold text-[var(--color-vert-principal)] mb-2 line-clamp-2 group-hover:text-[var(--color-orange-accent)] transition-colors">
           {title}
         </h3>
         <p className="text-[var(--color-gris-texte)] text-sm mb-4 line-clamp-3 flex-grow">

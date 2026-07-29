@@ -123,7 +123,7 @@ export default async function BlogPostPage({
               {article.categorie || "Général"}
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6 leading-tight">
             {article.titre}
           </h1>
           {article.extrait && (
