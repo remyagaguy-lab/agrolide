@@ -9,7 +9,7 @@ import { Metadata } from 'next'
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
   const supabase = createClient(supabaseUrl, supabaseKey)
   
   const { data } = await supabase.from('profiles').select('prenom, nom').eq('id', id).single()
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function FicheProfilPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
   const supabase = createClient(supabaseUrl, supabaseKey)
 
   // Fetch du profil
@@ -57,7 +57,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
-      <Link href="/membres/annuaire" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+      <Link href="/annuaire" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
         <ArrowLeft className="w-4 h-4" /> Retour à l'annuaire
       </Link>
 
