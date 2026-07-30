@@ -1,7 +1,6 @@
 import { Calendar, MapPin, CheckCircle, Clock, XCircle } from 'lucide-react'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
-const DownloadCertificatButton = dynamic(() => import('@/components/modules/formations/DownloadCertificatButton').then(m => m.DownloadCertificatButton), { ssr: false })
+import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButton'
 import { auth } from '@/auth'
 import { db } from '@/db'
 import { inscriptions_formation, sessions_formation, formations, users } from '@/db/schema'
