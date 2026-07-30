@@ -5,16 +5,14 @@ const isMembreRoute = createRouteMatcher(['/membres(.*)'])
 const isAdminRoute = createRouteMatcher(['/admin(.*)'])
 
 export default clerkMiddleware(async (auth, request) => {
-  const { userId, sessionClaims } = await auth()
-
   // Rediriger vers le login si non connecté pour routes protégées
-  if ((isMembreRoute(request) || isAdminRoute(request)) && !userId) {
-    const { redirectToSignIn } = await auth()
-    return redirectToSignIn()
+  if (isMembreRoute(request) || isAdminRoute(request)) {
+    await auth.protect()
   }
 
   // Vérifier le rôle admin pour les routes admin
-  if (isAdminRoute(request) && userId) {
+  if (isAdminRoute(request)) {
+    const { sessionClaims } = await auth()
     const role = (sessionClaims?.metadata as any)?.role
     if (role !== 'super_admin' && role !== 'admin_content') {
       const url = request.nextUrl.clone()
