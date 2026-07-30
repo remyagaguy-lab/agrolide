@@ -224,7 +224,7 @@ export default async function BlogPostPage({
             </div>
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-[var(--color-vert-principal)]" />
-              <span>{new Date(article.published_at).toLocaleDateString('fr-FR', {
+              <span>{new Date(article.published_at || '').toLocaleDateString('fr-FR', {
                 year: 'numeric', month: 'long', day: 'numeric'
               })}</span>
             </div>

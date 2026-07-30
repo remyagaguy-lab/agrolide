@@ -114,7 +114,7 @@ export default async function BlogPage({
                           </span>
                           <span className="text-gray-300">•</span>
                           <span className="text-gray-500 font-medium text-xs">
-                            {format(new Date(featuredMain.published_at), 'dd MMMM yyyy', { locale: fr })}
+                            {format(new Date(featuredMain.published_at || ''), 'dd MMMM yyyy', { locale: fr })}
                           </span>
                         </div>
                         <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 group-hover:text-[#1b5e38] transition-colors leading-tight">
@@ -164,7 +164,7 @@ export default async function BlogPage({
                           </span>
                           <span className="text-gray-300">•</span>
                           <span className="text-gray-500 font-medium text-xs">
-                            {format(new Date(article.published_at), 'dd MMM yyyy', { locale: fr })}
+                            {format(new Date(article.published_at || ''), 'dd MMM yyyy', { locale: fr })}
                           </span>
                         </div>
                         <h3 className="text-xl font-heading font-bold text-gray-900 group-hover:text-[#1b5e38] transition-colors leading-tight line-clamp-3 mb-4 flex-grow">
@@ -223,7 +223,7 @@ export default async function BlogPage({
                     category={article.categorie || "Général"}
                     author={article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
                     authorId={article.auteur_id}
-                    date={article.published_at}
+                    date={article.published_at || ''}
                     readTime={"5 min"}
                     imageUrl={article.image_une_url}
                   />
