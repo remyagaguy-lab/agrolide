@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default async function ArticlesListPage() {
-  let articlesList = []
+  let articlesList: any[] = []
   try {
     articlesList = await db.select().from(articles).orderBy(desc(articles.created_at))
   } catch (e) {
