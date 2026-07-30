@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import crypto from 'crypto'
-import { createClient } from '@supabase/supabase-js'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
 
@@ -60,20 +63,20 @@ export async function POST(request: NextRequest) {
     }
 
     // Vérification de l'admin
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    const authHeader = request.headers.get('Authorization')
-    if (!authHeader) {
+    const session = await auth()
+    const user = session?.user
+    
+    if (!user || !user.id) {
       return NextResponse.json({ error: 'Non autorisé' }, { status: 401 })
     }
-
-    const token = authHeader.replace('Bearer ', '')
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
-
-    if (authError || !user) {
-      return NextResponse.json({ error: 'Non autorisé' }, { status: 401 })
+    
+    const profile = await db.query.users.findFirst({
+      columns: { role_plateforme: true },
+      where: eq(users.id, user.id)
+    })
+    
+    if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
+      return NextResponse.json({ error: 'Privilèges insuffisants' }, { status: 403 })
     }
 
     const { filename, contentType, folder } = await request.json()

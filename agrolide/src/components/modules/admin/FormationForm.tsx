@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react"
-import { createClient } from "@/lib/supabase/client"
 import { Loader2 } from "lucide-react"
 
 interface FormationFormProps {
@@ -34,34 +33,14 @@ export default function FormationForm({ initialData, onSuccess, onCancel }: Form
     setLoading(true)
     setError("")
 
-    const supabase = createClient()
-    const { data: { session } } = await supabase.auth.getSession()
-
-    if (!session) {
-      setError("Vous devez être connecté.")
-      setLoading(false)
-      return
-    }
-
     const payload = {
       ...formData,
       prix: formData.prix ? parseFloat(formData.prix.toString()) : 0,
     }
 
     try {
-      let result;
-      if (initialData?.id) {
-        result = await supabase
-          .from("formations")
-          .update(payload)
-          .eq("id", initialData.id)
-      } else {
-        result = await supabase
-          .from("formations")
-          .insert(payload)
-      }
-
-      if (result.error) throw result.error
+      const { upsertFormation } = await import("@/app/actions/admin-formations")
+      await upsertFormation(initialData?.id || null, payload)
       onSuccess()
     } catch (err: any) {
       console.error(err)

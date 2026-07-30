@@ -1,42 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { messages } from '@/db/schema'
+import { eq, or, desc } from 'drizzle-orm'
 
 export async function GET(request: NextRequest) {
   try {
-    const authHeader = request.headers.get('authorization')
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    const session = await auth()
+    if (!session?.user?.id) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
     }
-    const token = authHeader.split(' ')[1]
-
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
-    if (authError || !user) {
-      return NextResponse.json({ error: "Session invalide." }, { status: 401 })
-    }
+    const userId = session.user.id
 
     // On récupère tous les messages envoyés ou reçus par l'utilisateur
-    // En production avec beaucoup de messages, on ferait une vue SQL ou RPC. Ici on fait le traitement côté worker.
-    const { data: messages, error } = await supabase
-      .from('messages')
-      .select(`
-        *,
-        expediteur:profiles!messages_expediteur_id_fkey(id, prenom, nom, avatar_url),
-        destinataire:profiles!messages_destinataire_id_fkey(id, prenom, nom, avatar_url)
-      `)
-      .or(`expediteur_id.eq.${user.id},destinataire_id.eq.${user.id}`)
-      .order('created_at', { ascending: false })
-
-    if (error) throw error
+    const userMessages = await db.query.messages.findMany({
+      where: or(eq(messages.expediteur_id, userId), eq(messages.destinataire_id, userId)),
+      with: {
+        expediteur: {
+          columns: { id: true, prenom: true, nom: true, photo_url: true }
+        },
+        destinataire: {
+          columns: { id: true, prenom: true, nom: true, photo_url: true }
+        }
+      },
+      orderBy: [desc(messages.created_at)]
+    })
 
     // Grouper par correspondant
     const conversationsMap = new Map()
 
-    messages?.forEach((msg: any) => {
-      const isExpediteur = msg.expediteur_id === user.id
+    userMessages?.forEach((msg: any) => {
+      const isExpediteur = msg.expediteur_id === userId
       const correspondantId = isExpediteur ? msg.destinataire_id : msg.expediteur_id
       const correspondant = isExpediteur ? msg.destinataire : msg.expediteur
 

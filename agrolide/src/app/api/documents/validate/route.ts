@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 import OpenAI from 'openai'
+import { db } from '@/db'
+import { documents } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 
 // Initialize OpenRouter via OpenAI SDK
 const openai = new OpenAI({
@@ -21,11 +23,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: true, warning: 'AI validation skipped (no API key)' })
     }
 
-    // Initialize Supabase
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
     // NOTE: L'extraction du texte brut du PDF a été retirée car les librairies d'extraction
     // (comme pdf-parse) requièrent des bindings C++ ou le DOM (Canvas/DOMMatrix) non disponibles
     // dans l'environnement Vercel Serverless.
@@ -34,11 +31,11 @@ export async function POST(request: NextRequest) {
     const extractedText = "(Texte intégral non extrait - L'analyse se base sur le résumé)"
 
     // 2. Fetch existing documents to check duplicates
-    const { data: existingDocs } = await supabase
-      .from('documents')
-      .select('titre, resume')
-      .eq('statut', 'publie')
-      .limit(100) // Limite pour ne pas surcharger le prompt
+    const existingDocs = await db.query.documents.findMany({
+      columns: { titre: true, resume: true },
+      where: eq(documents.statut, 'publie'),
+      limit: 100
+    })
 
     const existingDocsContext = existingDocs?.map(d => `- Titre: ${d.titre}\n  Résumé: ${d.resume}`).join('\n') || "Aucun document existant."
 
@@ -80,24 +77,20 @@ ${existingDocsContext}`
 
     // 4. Update Document Status if valid
     if (aiResult.is_valid) {
-      let query = supabase.from('documents').update({ statut: 'publie' })
       if (documentId) {
-        query = query.eq('id', documentId)
+        await db.update(documents).set({ statut: 'publie' }).where(eq(documents.id, documentId))
       } else {
-        query = query.eq('fichier_r2_key', r2Key)
+        await db.update(documents).set({ statut: 'publie' }).where(eq(documents.fichier_r2_key, r2Key))
       }
-      await query
       
       return NextResponse.json({ success: true, result: aiResult, action: 'published' })
     } else {
       // Rejeté par l'IA (reste 'en_attente_validation' ou passe en 'rejete')
-      let query = supabase.from('documents').update({ statut: 'rejete' })
       if (documentId) {
-        query = query.eq('id', documentId)
+        await db.update(documents).set({ statut: 'rejete' }).where(eq(documents.id, documentId))
       } else {
-        query = query.eq('fichier_r2_key', r2Key)
+        await db.update(documents).set({ statut: 'rejete' }).where(eq(documents.fichier_r2_key, r2Key))
       }
-      await query
       
       return NextResponse.json({ success: false, result: aiResult, action: 'rejected' })
     }

@@ -1,39 +1,35 @@
 'use server'
 
-import { createClient } from '@/lib/supabase/server'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { documents, users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 import { Resend } from 'resend'
 import { revalidatePath } from 'next/cache'
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 export async function validateDocument(documentId: string) {
-  const supabase = await createClient()
+  const session = await auth()
+  const user = session?.user
 
-  // Verify if current user is admin/super_admin
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  if (!user || !user.id) throw new Error("Non autorisé")
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
   // Update status to 'publie'
-  const { error } = await supabase
-    .from('documents')
-    .update({ 
-      statut: 'publie',
-      valide_par: user.id,
-      published_at: new Date().toISOString()
-    })
-    .eq('id', documentId)
-
-  if (error) throw new Error("Erreur lors de la validation du document: " + error.message)
+  await db.update(documents).set({
+    statut: 'publie',
+    valide_par: user.id,
+    published_at: new Date().toISOString()
+  }).where(eq(documents.id, documentId))
 
   revalidatePath('/admin/contenus/documents')
   revalidatePath('/membres/bibliotheque')
@@ -42,44 +38,36 @@ export async function validateDocument(documentId: string) {
 }
 
 export async function rejectDocument(documentId: string, reason: string) {
-  const supabase = await createClient()
+  const session = await auth()
+  const user = session?.user
 
-  // Verify if current user is admin/super_admin
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  if (!user || !user.id) throw new Error("Non autorisé")
 
-  const { data: adminProfile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  const adminProfile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
   if (!adminProfile || (adminProfile.role_plateforme !== 'admin' && adminProfile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
   // Get document details and the author's email
-  const { data: doc } = await supabase
-    .from('documents')
-    .select('titre, depose_par, profiles:depose_par(email, prenom)')
-    .eq('id', documentId)
-    .single()
+  const doc = await db.query.documents.findFirst({
+    columns: { titre: true },
+    with: { depose_par: { columns: { email: true, prenom: true } } },
+    where: eq(documents.id, documentId)
+  })
 
   if (!doc) throw new Error("Document introuvable")
 
-  // Extract profile correctly whether it's an array or object
-  const authorProfile = Array.isArray(doc.profiles) ? doc.profiles[0] : doc.profiles
+  const authorProfile = doc.depose_par
 
   // Update status to 'rejete'
-  const { error } = await supabase
-    .from('documents')
-    .update({ 
-      statut: 'rejete',
-      valide_par: user.id
-    })
-    .eq('id', documentId)
-
-  if (error) throw new Error("Erreur lors du rejet du document: " + error.message)
+  await db.update(documents).set({
+    statut: 'rejete',
+    valide_par: user.id
+  }).where(eq(documents.id, documentId))
 
   // Send email if Resend is configured and author has an email
   if (resend && authorProfile?.email) {
@@ -101,9 +89,8 @@ export async function rejectDocument(documentId: string, reason: string) {
           </div>
         `
       })
-    } catch (emailError) {
-      console.error("Erreur d'envoi d'email :", emailError)
-      // We don't throw here to avoid failing the rejection if the email fails
+    } catch (e) {
+      console.error("Erreur envoi email rejet document:", e)
     }
   }
 
@@ -113,28 +100,24 @@ export async function rejectDocument(documentId: string, reason: string) {
 }
 
 export async function deleteDocumentAdmin(documentId: string) {
-  const supabase = await createClient()
+  const session = await auth()
+  const user = session?.user
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  if (!user || !user.id) throw new Error("Non autorisé")
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  const adminProfile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
-  if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
+  if (!adminProfile || (adminProfile.role_plateforme !== 'admin' && adminProfile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
-  const { error } = await supabase
-    .from('documents')
-    .delete()
-    .eq('id', documentId)
-
-  if (error) throw new Error("Erreur lors de la suppression: " + error.message)
+  await db.delete(documents).where(eq(documents.id, documentId))
 
   revalidatePath('/admin/contenus/documents')
+  revalidatePath('/membres/bibliotheque')
+  
   return { success: true }
 }

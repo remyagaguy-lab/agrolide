@@ -74,6 +74,8 @@ export const candidatures_incubation = sqliteTable("candidatures_incubation", {
   solution: text("solution"),
   stade: text("stade"),
   statut: text("statut"),
+  telephone: text("telephone"),
+  besoins: text("besoins"),
 });
 
 export const contributions = sqliteTable("contributions", {
@@ -114,6 +116,7 @@ export const demandes_service = sqliteTable("demandes_service", {
   pays: text("pays"),
   prenom: text("prenom").notNull(),
   statut: text("statut"),
+  telephone: text("telephone"),
   type_service: text("type_service").notNull(),
 });
 
@@ -168,6 +171,7 @@ export const formations = sqliteTable("formations", {
   programme_json: text("programme_json", { mode: "json" }),
   thematique: text("thematique"),
   titre: text("titre").notNull(),
+  statut: text("statut"),
 });
 
 export const forum_categories = sqliteTable("forum_categories", {
@@ -195,6 +199,26 @@ export const forum_messages = sqliteTable("forum_messages", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   statut: text("statut"),
   updated_at: text("updated_at"),
+});
+
+export const commentaires_forum = sqliteTable("commentaires_forum", {
+  auteur_id: text("auteur_id").notNull(),
+  contenu: text("contenu").notNull(),
+  created_at: text("created_at"),
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  message_id: text("message_id").notNull(),
+  updated_at: text("updated_at"),
+});
+
+export const contacts_partenariat = sqliteTable("contacts_partenariat", {
+  budget: text("budget"),
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
+  email: text("email").notNull(),
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  message: text("message").notNull(),
+  nature_collaboration: text("nature_collaboration").notNull(),
+  raison_sociale: text("raison_sociale").notNull(),
+  secteur: text("secteur").notNull(),
 });
 
 export const inscriptions_evenement = sqliteTable("inscriptions_evenement", {
@@ -273,33 +297,6 @@ export const partenaires = sqliteTable("partenaires", {
   temoignage: text("temoignage"),
 });
 
-export const profiles = sqliteTable("profiles", {
-  annuaire_visible: integer("annuaire_visible", { mode: "boolean" }),
-  biographie: text("biographie"),
-  categorie: text("categorie").notNull(),
-  created_at: text("created_at"),
-  email: text("email").notNull(),
-  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
-  langues: text("langues"),
-  linkedin_url: text("linkedin_url"),
-  newsletter_brevo: integer("newsletter_brevo", { mode: "boolean" }),
-  niveau_etudes: text("niveau_etudes"),
-  nom: text("nom").notNull(),
-  notif_evenements: integer("notif_evenements", { mode: "boolean" }),
-  notif_opportunites: integer("notif_opportunites", { mode: "boolean" }),
-  organisation: text("organisation"),
-  ouvert_contact: integer("ouvert_contact", { mode: "boolean" }),
-  pays: text("pays").notNull(),
-  photo_url: text("photo_url"),
-  prenom: text("prenom").notNull(),
-  role_plateforme: text("role_plateforme").notNull(),
-  secteurs_expertise: text("secteurs_expertise"),
-  site_web_url: text("site_web_url"),
-  specialite: text("specialite"),
-  statut_adhesion: text("statut_adhesion").notNull(),
-  updated_at: text("updated_at"),
-  ville: text("ville"),
-});
 
 export const sessions_formation = sqliteTable("sessions_formation", {
   created_at: text("created_at"),
@@ -423,3 +420,105 @@ export const verificationTokens = sqliteTable(
     compoundKey: primaryKey({ columns: [vt.identifier, vt.token] }),
   })
 );
+
+// --- RELATIONS ---
+import { relations } from "drizzle-orm";
+
+export const usersRelations = relations(users, ({ many }) => ({
+  articles: many(articles),
+  evenements: many(evenements),
+  opportunites: many(opportunites),
+  documents: many(documents),
+  forum_fils: many(forum_fils),
+  forum_messages: many(forum_messages),
+}));
+
+export const articlesRelations = relations(articles, ({ one }) => ({
+  auteur: one(users, {
+    fields: [articles.auteur_id],
+    references: [users.id],
+  }),
+}));
+
+export const forumFilsRelations = relations(forum_fils, ({ one, many }) => ({
+  auteur: one(users, {
+    fields: [forum_fils.auteur_id],
+    references: [users.id],
+  }),
+  categorie: one(forum_categories, {
+    fields: [forum_fils.categorie_id],
+    references: [forum_categories.id],
+  }),
+  messages: many(forum_messages),
+}));
+
+export const forumMessagesRelations = relations(forum_messages, ({ one }) => ({
+  auteur: one(users, {
+    fields: [forum_messages.auteur_id],
+    references: [users.id],
+  }),
+  fil: one(forum_fils, {
+    fields: [forum_messages.fil_id],
+    references: [forum_fils.id],
+  }),
+}));
+
+export const forumCategoriesRelations = relations(forum_categories, ({ many }) => ({
+  fils: many(forum_fils),
+}));
+
+export const documentsRelations = relations(documents, ({ one }) => ({
+  depose_par: one(users, {
+    fields: [documents.depose_par],
+    references: [users.id],
+  }),
+  valide_par: one(users, {
+    fields: [documents.valide_par],
+    references: [users.id],
+  }),
+}));
+
+export const evenementsRelations = relations(evenements, ({ one, many }) => ({
+  inscriptions: many(inscriptions_evenement),
+}));
+
+export const inscriptionsEvenementRelations = relations(inscriptions_evenement, ({ one }) => ({
+  evenement: one(evenements, {
+    fields: [inscriptions_evenement.evenement_id],
+    references: [evenements.id],
+  }),
+  membre: one(users, {
+    fields: [inscriptions_evenement.membre_id],
+    references: [users.id],
+  }),
+}));
+
+export const formationsRelations = relations(formations, ({ one, many }) => ({
+  sessions_formation: many(sessions_formation),
+}));
+
+export const sessionsFormationRelations = relations(sessions_formation, ({ one, many }) => ({
+  formation: one(formations, {
+    fields: [sessions_formation.formation_id],
+    references: [formations.id],
+  }),
+  inscriptions: many(inscriptions_formation),
+}));
+
+export const inscriptionsFormationRelations = relations(inscriptions_formation, ({ one }) => ({
+  sessions_formation: one(sessions_formation, {
+    fields: [inscriptions_formation.session_id],
+    references: [sessions_formation.id],
+  }),
+  membre: one(users, {
+    fields: [inscriptions_formation.membre_id],
+    references: [users.id],
+  }),
+}));
+
+export const opportunitesRelations = relations(opportunites, ({ one }) => ({
+  auteur: one(users, {
+    fields: [opportunites.poste_par],
+    references: [users.id],
+  }),
+}));

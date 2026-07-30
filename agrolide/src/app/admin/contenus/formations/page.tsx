@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { createClient } from "@/lib/supabase/client"
 import { Plus, Edit2, Trash2, BookOpen, Clock, Users } from "lucide-react"
 import FormationForm from "@/components/modules/admin/FormationForm"
+import { getAdminFormations, deleteFormation } from "@/app/actions/admin-formations"
 
 export default function AdminFormationsPage() {
   const [formations, setFormations] = useState<any[]>([])
@@ -13,15 +13,11 @@ export default function AdminFormationsPage() {
 
   const fetchFormations = async () => {
     setLoading(true)
-    const supabase = createClient()
-    
-    const { data, error } = await supabase
-      .from("formations")
-      .select("*, sessions_formation(count)")
-      .order("created_at", { ascending: false })
-      
-    if (!error && data) {
+    try {
+      const data = await getAdminFormations()
       setFormations(data)
+    } catch (e) {
+      console.error(e)
     }
     setLoading(false)
   }
@@ -33,13 +29,17 @@ export default function AdminFormationsPage() {
   const handleDelete = async (id: string) => {
     if (!window.confirm("Êtes-vous sûr de vouloir supprimer cette formation ?")) return
     
-    const supabase = createClient()
-    await supabase.from("formations").delete().eq("id", id)
-    fetchFormations()
+    try {
+      await deleteFormation(id)
+      fetchFormations()
+    } catch (e) {
+      console.error(e)
+    }
   }
 
   const handleEdit = (formation: any) => {
-    setEditingFormation(formation)
+    // Map prix_fcfa to prix for the form
+    setEditingFormation({ ...formation, prix: formation.prix_fcfa })
     setIsFormOpen(true)
   }
 

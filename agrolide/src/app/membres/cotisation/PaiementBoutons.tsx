@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/Button"
 import { CreditCard, Smartphone, Loader2 } from "lucide-react"
 
-export function PaiementBoutons({ sessionToken, categorie }: { sessionToken: string, categorie: string }) {
+export function PaiementBoutons({ categorie }: { categorie: string }) {
   const [isLoading, setIsLoading] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
 
@@ -18,8 +18,7 @@ export function PaiementBoutons({ sessionToken, categorie }: { sessionToken: str
       const response = await fetch(`${apiUrl}/api/paiements/checkout`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${sessionToken}`
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ methode, categorie })
       })

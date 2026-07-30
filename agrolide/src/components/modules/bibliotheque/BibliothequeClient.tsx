@@ -5,9 +5,8 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { Search, Filter, X } from 'lucide-react'
 import { DocumentCard, DocumentType } from './DocumentCard'
 import { SkeletonGrid } from '@/components/ui/Skeleton'
-import { createClient } from '@supabase/supabase-js'
 
-export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, publicView = false }: any) {
+export function BibliothequeClient({ initialData, publicView = false }: any) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -60,21 +59,11 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, 
     setLoading(true)
     setError(null)
     try {
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
-      let query = supabase.from('documents').select('*').eq('statut', 'publie').order('created_at', { ascending: false }).limit(20)
+      const { fetchDocuments } = await import('@/app/actions/bibliotheque')
+      const result = await fetchDocuments({ search, type, thematique })
       
-      if (search) query = query.ilike('titre', `%${search}%`)
-      if (type) query = query.in('type_doc', type.split(','))
-      if (thematique) query = query.in('thematique', thematique.split(','))
-      
-      const { data, error } = await query
-      
-      if (error) throw error
-      
-      if (data) {
-        setDocuments(data as DocumentType[])
-        setNextCursor(data.length === 20 ? data[data.length - 1].created_at : null)
-      }
+      setDocuments(result.data as DocumentType[])
+      setNextCursor(result.nextCursor)
     } catch (err) {
       console.error(err)
       setError('Erreur lors du chargement des documents')
@@ -88,25 +77,11 @@ export function BibliothequeClient({ initialData, supabaseUrl, supabaseAnonKey, 
     
     setLoadingMore(true)
     try {
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
-      let query = supabase
-        .from('documents')
-        .select('*')
-        .eq('statut', 'publie')
-        .order('created_at', { ascending: false })
-        .lt('created_at', nextCursor)
-        .limit(20)
-        
-      if (search) query = query.ilike('titre', `%${search}%`)
-      if (type) query = query.in('type_doc', type.split(','))
-      if (thematique) query = query.in('thematique', thematique.split(','))
+      const { fetchDocuments } = await import('@/app/actions/bibliotheque')
+      const result = await fetchDocuments({ search, type, thematique, cursor: nextCursor })
       
-      const { data, error } = await query
-      
-      if (!error && data) {
-        setDocuments(prev => [...prev, ...(data as DocumentType[])])
-        setNextCursor(data.length === 20 ? data[data.length - 1].created_at : null)
-      }
+      setDocuments(prev => [...prev, ...(result.data as DocumentType[])])
+      setNextCursor(result.nextCursor)
     } finally {
       setLoadingMore(false)
     }

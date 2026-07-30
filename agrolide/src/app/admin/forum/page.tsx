@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import { ShieldAlert, CheckCircle, Trash2, ArrowRight, UserX, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
@@ -21,18 +21,15 @@ export default function AdminForumPage() {
 
   const fetchReported = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    const { data } = await supabase
-      .from('forum_messages')
-      .select('*, auteur:profiles(prenom, nom), fil:forum_fils(id, titre)')
-      .eq('statut', 'en_revue')
-      .order('updated_at', { ascending: false })
-      
-    if (data) setReportedMessages(data)
-    setLoading(false)
+    try {
+      const { fetchReportedMessages } = await import('@/app/actions/admin-forum')
+      const data = await fetchReportedMessages()
+      if (data) setReportedMessages(data)
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setLoading(false)
+    }
   }
 
   useEffect(() => {

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import { Plus, Edit2, Trash2, Calendar, Globe, MapPin, Users } from 'lucide-react'
 import EventForm from '@/components/modules/admin/EventForm'
 import { format } from 'date-fns'
@@ -15,19 +15,15 @@ export default function AdminEvenementsPage() {
 
   const fetchEvents = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    const { data, error } = await supabase
-      .from('evenements')
-      .select('*, inscriptions:inscriptions_evenement(count)')
-      .order('date_debut', { ascending: false })
-      
-    if (!error && data) {
-      setEvents(data)
+    try {
+      const { getAdminEvenements } = await import('@/app/actions/admin-evenements')
+      const data = await getAdminEvenements()
+      if (data) setEvents(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   useEffect(() => {
@@ -37,14 +33,13 @@ export default function AdminEvenementsPage() {
   const handleDelete = async (id: string) => {
     if (!window.confirm("Êtes-vous sûr de vouloir supprimer cet événement ? Les inscriptions liées seront perdues.")) return
     
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    await supabase.from('inscriptions_evenement').delete().eq('evenement_id', id)
-    await supabase.from('evenements').delete().eq('id', id)
-    
-    fetchEvents()
+    try {
+      const { deleteAdminEvenement } = await import('@/app/actions/admin-evenements')
+      await deleteAdminEvenement(id)
+      fetchEvents()
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    }
   }
 
   const handleEdit = (evt: any) => {

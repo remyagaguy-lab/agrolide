@@ -1,30 +1,29 @@
 'use server'
 
-import { createClient } from '@/lib/supabase/server'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { forum_messages, users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 
 export async function ignoreReport(messageId: string) {
-  const supabase = await createClient()
+  const session = await auth()
+  const user = session?.user
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  if (!user || !user.id) throw new Error("Non autorisé")
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
-  const { error } = await supabase
-    .from('forum_messages')
-    .update({ statut: 'publie' }) // remettre en ligne
-    .eq('id', messageId)
-
-  if (error) throw new Error("Erreur lors de l'ignorance du signalement: " + error.message)
+  await db.update(forum_messages).set({
+    statut: 'publie'
+  }).where(eq(forum_messages.id, messageId))
 
   revalidatePath('/admin/forum')
   
@@ -32,27 +31,23 @@ export async function ignoreReport(messageId: string) {
 }
 
 export async function deleteMessage(messageId: string) {
-  const supabase = await createClient()
+  const session = await auth()
+  const user = session?.user
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  if (!user || !user.id) throw new Error("Non autorisé")
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
-  const { error } = await supabase
-    .from('forum_messages')
-    .update({ statut: 'supprime' }) // suppression logique
-    .eq('id', messageId)
-
-  if (error) throw new Error("Erreur lors de la suppression: " + error.message)
+  await db.update(forum_messages).set({
+    statut: 'supprime'
+  }).where(eq(forum_messages.id, messageId))
 
   revalidatePath('/admin/forum')
   
@@ -60,39 +55,105 @@ export async function deleteMessage(messageId: string) {
 }
 
 export async function banUser(userId: string, reason: string) {
-  const supabase = await createClient()
+  const session = await auth()
+  const user = session?.user
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  if (!user || !user.id) throw new Error("Non autorisé")
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
-  // To ban a user in Supabase, we need the Service Role Key to use the Admin API
-  const { createClient: createAdminClient } = await import('@supabase/supabase-js')
-  const supabaseAdmin = createAdminClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
-  )
-
-  // Ban the user indefinitely (for example, 10 years = 87600h)
-  const { error: banError } = await supabaseAdmin.auth.admin.updateUserById(userId, {
-    ban_duration: '87600h'
-  })
-
-  if (banError) throw new Error("Erreur lors du bannissement au niveau de l'authentification: " + banError.message)
-
-  // We also optionally update their profile status if there's a field for it, but Auth level ban is sufficient.
-  // We can just keep a log or note of the reason somewhere, or just trust the admin knows why.
+  // Ban the user by updating their role to 'banni'
+  await db.update(users).set({
+    role_plateforme: 'banni'
+  }).where(eq(users.id, userId))
 
   revalidatePath('/admin/forum')
   
   return { success: true }
+}
+
+export async function fetchReportedMessages() {
+  const session = await auth()
+  const user = session?.user
+
+  if (!user || !user.id) throw new Error("Non autorisé")
+
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
+
+  if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
+    throw new Error("Privilèges insuffisants")
+  }
+
+  const msgs = await db.query.forum_messages.findMany({
+    where: eq(forum_messages.statut, 'en_revue'),
+    with: {
+      auteur: { columns: { prenom: true, nom: true } },
+      fil: { columns: { id: true, titre: true } }
+    },
+    // Assuming you have an updated_at column or fall back to created_at
+    orderBy: (forum_messages, { desc }) => [desc(forum_messages.created_at)]
+  })
+
+  return msgs
+}
+
+export async function fetchAdminMessages(query: string = '') {
+  const session = await auth()
+  const user = session?.user
+  if (!user || !user.id) throw new Error("Non autorisé")
+
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
+  if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
+    throw new Error("Privilèges insuffisants")
+  }
+
+  const msgs = await db.query.forum_messages.findMany({
+    where: (forum_messages, { ne, ilike, and }) => 
+      query ? and(ne(forum_messages.statut, 'supprime'), ilike(forum_messages.contenu, `%${query}%`)) : ne(forum_messages.statut, 'supprime'),
+    with: {
+      auteur: { columns: { prenom: true, nom: true } },
+      fil: { columns: { titre: true } }
+    },
+    orderBy: (forum_messages, { desc }) => [desc(forum_messages.created_at)],
+    limit: 50
+  })
+
+  return msgs
+}
+
+export async function fetchAdminThreads() {
+  const session = await auth()
+  const user = session?.user
+  if (!user || !user.id) throw new Error("Non autorisé")
+
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
+  if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
+    throw new Error("Privilèges insuffisants")
+  }
+
+  const threads = await db.query.forum_fils.findMany({
+    with: {
+      auteur: { columns: { prenom: true, nom: true } },
+      categorie: { columns: { nom: true } }
+    },
+    orderBy: (forum_fils, { desc }) => [desc(forum_fils.created_at)]
+  })
+
+  return threads
 }

@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, CheckCircle, Loader2, Upload } from 'lucide-react'
-import { createClient } from '@supabase/supabase-js'
 
 interface SubmitDocumentModalProps {
   isOpen: boolean
@@ -55,26 +54,16 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
     setError('')
 
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-      const supabase = createClient(supabaseUrl, supabaseKey)
-
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) throw new Error("Non autorisé")
-      
-      const token = session.access_token
-
       // 1. Demander URL d'upload
-      const urlRes = await fetch(`${API_URL}/api/bibliotheque/upload-url?filename=${encodeURIComponent(file.name)}`, {
-        headers: { Authorization: `Bearer ${token}` }
-      })
+      const urlRes = await fetch(`/api/bibliotheque/upload-url?filename=${encodeURIComponent(file.name)}`)
       
       if (!urlRes.ok) throw new Error("Erreur lors de la demande d'upload")
-      const { uploadUrl, key } = await urlRes.json()
+      const { uploadUrl, key, url, useDirect } = await urlRes.json()
+
+      const targetUrl = uploadUrl || url // Handle differences if any
 
       // 2. Upload vers R2
-      const uploadRes = await fetch(uploadUrl, {
+      const uploadRes = await fetch(targetUrl, {
         method: 'PUT',
         body: file,
         headers: { 'Content-Type': 'application/pdf' }
@@ -82,18 +71,26 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
       
       if (!uploadRes.ok) throw new Error("Erreur lors du transfert du fichier")
 
-      // 3. Insert dans Supabase
+      // 3. Insert via API
       const payload = {
         ...formData,
-        fichier_url: key,
-        taille_octets: file.size,
-        depose_par: session.user.id,
+        annee: formData.annee ? parseInt(formData.annee, 10) : null,
+        fichier_r2_key: key,
+        taille: file.size,
+        format: 'pdf',
+        acces: 'public', // Par défaut public
         statut: 'publie' // Directement publié pour l'admin
       }
 
-      const { error: insertErr } = await supabase.from('documents').insert(payload)
+      const docRes = await fetch(`/api/bibliotheque`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
 
-      if (insertErr) throw new Error(insertErr.message)
+      if (!docRes.ok) throw new Error("Erreur lors de l'enregistrement en base de données")
 
       setSuccess(true)
       setTimeout(() => {

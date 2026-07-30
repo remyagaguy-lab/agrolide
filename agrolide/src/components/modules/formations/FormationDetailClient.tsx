@@ -1,10 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
 import { Calendar, MapPin, Users, Clock, Check, AlertCircle, Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
+import { getInscriptionsFormation, inscrireSessionFormation } from '@/app/actions/formations'
 
 export function FormationDetailClient({ initialFormation }: { initialFormation: any }) {
   const router = useRouter()
@@ -13,75 +13,27 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
   const [inscriptions, setInscriptions] = useState<any[]>([])
   const [loading, setLoading] = useState<string | null>(null) // session_id
   const [message, setMessage] = useState<{type: 'success' | 'error', text: string} | null>(null)
-  
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
   // Fetch inscriptions on mount
   useEffect(() => {
     const fetchInscriptions = async () => {
-      const { data: { session } } = await supabase.auth.getSession()
-      if (session) {
-        const { data } = await supabase
-          .from('inscriptions_formation')
-          .select('session_id, statut')
-          .eq('membre_id', session.user.id)
-        if (data) setInscriptions(data)
-      }
+      const data = await getInscriptionsFormation()
+      if (data) setInscriptions(data)
     }
     fetchInscriptions()
   }, [])
-
-  // Setup Supabase Realtime for places_restantes
-  useEffect(() => {
-    const channel = supabase
-      .channel('public:sessions_formation')
-      .on(
-        'postgres_changes',
-        { event: 'UPDATE', schema: 'public', table: 'sessions_formation', filter: `formation_id=eq.${formation.id}` },
-        (payload) => {
-          setSessions((current: any[]) => 
-            current.map(s => s.id === payload.new.id ? { ...s, places_restantes: payload.new.places_restantes } : s)
-          )
-        }
-      )
-      .subscribe()
-
-    return () => {
-      supabase.removeChannel(channel)
-    }
-  }, [formation.id])
 
   const handleInscription = async (sessionId: string, isWaitlist: boolean) => {
     setLoading(sessionId)
     setMessage(null)
     try {
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) {
-        router.push('/connexion')
-        return
-      }
-
       if (isWaitlist) {
         // Logique simplifiée pour liste d'attente (juste un message pour l'instant)
         setMessage({ type: 'success', text: "Vous avez été ajouté à la liste d'attente." })
         return
       }
 
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
-      const res = await fetch(`${API_URL}/api/formations/sessions/${sessionId}/inscrire`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${session.access_token}`
-        }
-      })
-      
-      const result = await res.json()
-      
-      if (!res.ok) {
-        throw new Error(result.error || "Erreur lors de l'inscription")
-      }
+      const result = await inscrireSessionFormation(sessionId)
       
       setMessage({ type: 'success', text: result.message })
       
@@ -89,6 +41,10 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
       setInscriptions([...inscriptions, { session_id: sessionId, statut: result.statut }])
       
     } catch (err: any) {
+      if (err.message === "Vous devez être connecté pour vous inscrire.") {
+        router.push('/login')
+        return
+      }
       setMessage({ type: 'error', text: err.message })
     } finally {
       setLoading(null)

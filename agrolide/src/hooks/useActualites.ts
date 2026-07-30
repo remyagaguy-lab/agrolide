@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
 
 export type FilterType = 'tous' | 'evenements' | 'emploi' | 'bourse' | 'appel'
 
@@ -13,38 +12,8 @@ export function useActualites() {
     setLoading(true)
     setError(null)
     try {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-      const supabase = createClient(supabaseUrl, supabaseKey)
-
-      // On récupère les événements publiés
-      const { data: eventsData, error: eventsError } = await supabase
-        .from('evenements')
-        .select('*')
-        .eq('publie', true)
-
-      if (eventsError) throw eventsError
-
-      // On récupère les opportunités publiées
-      const { data: oppsData, error: oppsError } = await supabase
-        .from('opportunites')
-        .select('*')
-        .eq('statut', 'publie')
-
-      if (oppsError) throw oppsError
-
-      const events = (eventsData || []).map(e => ({ ...e, _itemType: 'evenement' }))
-      const opps = (oppsData || []).map(o => ({ ...o, _itemType: 'opportunite' }))
-
-      const combined = [...events, ...opps]
-      // Tri par date : date_debut pour les événements, created_at pour les opportunités
-      // Du plus récent au plus ancien
-      combined.sort((a, b) => {
-        const dateA = a._itemType === 'evenement' ? new Date(a.date_debut).getTime() : new Date(a.created_at).getTime()
-        const dateB = b._itemType === 'evenement' ? new Date(b.date_debut).getTime() : new Date(b.created_at).getTime()
-        return dateB - dateA
-      })
-
+      const { getActualites } = await import('@/app/actions/actualites')
+      const combined = await getActualites()
       setItems(combined)
     } catch (err: any) {
       console.error("Erreur lors de la récupération des actualités:", err)

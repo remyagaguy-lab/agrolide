@@ -1,82 +1,79 @@
 'use server'
 
-import { createClient } from '@/lib/supabase/server'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { forum_categories, forum_fils, forum_messages, users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 
 async function checkAdmin() {
-  const supabase = await createClient()
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  const session = await auth()
+  const user = session?.user
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  if (!user || !user.id) throw new Error("Non autorisé")
+
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
-  return { supabase, user }
+  return { user }
 }
 
 // Catégories
 export async function createCategory(data: { nom: string, description: string, icone: string, ordre: number }) {
-  const { supabase } = await checkAdmin()
-  const { error } = await supabase.from('forum_categories').insert([data])
-  if (error) throw new Error(error.message)
+  await checkAdmin()
+  await db.insert(forum_categories).values(data)
   revalidatePath('/admin/forum')
 }
 
 export async function updateCategory(id: string, data: { nom: string, description: string, icone: string, ordre: number }) {
-  const { supabase } = await checkAdmin()
-  const { error } = await supabase.from('forum_categories').update(data).eq('id', id)
-  if (error) throw new Error(error.message)
+  await checkAdmin()
+  await db.update(forum_categories).set(data).where(eq(forum_categories.id, id))
   revalidatePath('/admin/forum')
 }
 
 export async function deleteCategory(id: string) {
-  const { supabase } = await checkAdmin()
+  await checkAdmin()
   // Ensure no threads are linked, or cascade depending on DB settings.
   // We'll just attempt to delete.
-  const { error } = await supabase.from('forum_categories').delete().eq('id', id)
-  if (error) throw new Error(error.message)
+  await db.delete(forum_categories).where(eq(forum_categories.id, id))
   revalidatePath('/admin/forum')
 }
 
 // Fils
 export async function deleteThread(id: string) {
-  const { supabase } = await checkAdmin()
+  await checkAdmin()
   // Delete all messages first if no cascade
-  await supabase.from('forum_messages').delete().eq('fil_id', id)
-  const { error } = await supabase.from('forum_fils').delete().eq('id', id)
-  if (error) throw new Error(error.message)
+  await db.delete(forum_messages).where(eq(forum_messages.fil_id, id))
+  await db.delete(forum_fils).where(eq(forum_fils.id, id))
   revalidatePath('/admin/forum')
 }
 
 export async function createAdminThread(categorie_id: string, titre: string, contenu: string) {
-  const { supabase, user } = await checkAdmin()
+  const { user } = await checkAdmin()
   
   // Create thread
-  const { data: fil, error: filErr } = await supabase.from('forum_fils').insert({
+  const filId = crypto.randomUUID()
+  await db.insert(forum_fils).values({
+    id: filId,
     categorie_id,
     titre,
-    auteur_id: user.id
-  }).select().single()
-
-  if (filErr || !fil) throw new Error(filErr?.message || "Erreur création fil")
+    auteur_id: user.id as string
+  })
 
   // Create first message
-  const { error: msgErr } = await supabase.from('forum_messages').insert({
-    fil_id: fil.id,
-    auteur_id: user.id,
+  await db.insert(forum_messages).values({
+    fil_id: filId,
+    auteur_id: user.id as string,
     contenu,
     statut: 'publie'
   })
 
-  if (msgErr) throw new Error(msgErr.message)
-
   revalidatePath('/admin/forum')
-  return fil.id
+  return filId
 }

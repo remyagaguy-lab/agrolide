@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import Link from 'next/link'
 import { MessageSquare, Clock, ArrowLeft, Plus } from 'lucide-react'
 import { formatDistanceToNow, format } from 'date-fns'
@@ -27,41 +27,22 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
 
   const fetchData = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    // Récupérer les infos de la catégorie
-    const { data: cat } = await supabase
-      .from('forum_categories')
-      .select('*')
-      .eq('id', categorieId)
-      .single()
+    try {
+      const { getCategoryWithThreads } = await import('@/app/actions/forum')
       
-    if (cat) setCategorie(cat)
-
-    // Compter le total
-    const { count } = await supabase
-      .from('forum_fils')
-      .select('*', { count: 'exact', head: true })
-      .eq('categorie_id', categorieId)
+      const from = (page - 1) * threadsPerPage
+      const result = await getCategoryWithThreads(categorieId, threadsPerPage, from)
       
-    if (count !== null) setTotalThreads(count)
-
-    // Récupérer les fils de la page
-    const from = (page - 1) * threadsPerPage
-    const to = from + threadsPerPage - 1
-    
-    const { data: tData } = await supabase
-      .from('forum_fils')
-      .select('*, auteur:profiles(prenom, nom, avatar_url)')
-      .eq('categorie_id', categorieId)
-      .order('last_activity_at', { ascending: false })
-      .range(from, to)
-      
-    if (tData) setThreads(tData)
-    
-    setLoading(false)
+      if (result) {
+        setCategorie(result.category)
+        setTotalThreads(result.totalCount)
+        setThreads(result.threads)
+      }
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   const totalPages = Math.ceil(totalThreads / threadsPerPage)

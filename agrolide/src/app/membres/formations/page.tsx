@@ -1,47 +1,41 @@
-'use client'
-
-import { createClient } from '@supabase/supabase-js'
 import { Calendar, MapPin, CheckCircle, Clock, XCircle } from 'lucide-react'
 import Link from 'next/link'
-import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButton'
-import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
+const DownloadCertificatButton = dynamic(() => import('@/components/modules/formations/DownloadCertificatButton').then(m => m.DownloadCertificatButton), { ssr: false })
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { inscriptions_formation, sessions_formation, formations, users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
+import { redirect } from 'next/navigation'
 
-export default function MesFormationsPage() {
-  const [inscriptions, setInscriptions] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
-  const [profile, setProfile] = useState<any>(null)
+export const metadata = { title: "Mes formations" }
 
-  useEffect(() => {
-    const fetchInscriptions = async () => {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-      const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export default async function MesFormationsPage() {
+  const session = await auth()
+  if (!session?.user?.id) {
+    redirect('/login')
+  }
 
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) return
+  // Get user profile
+  const profile = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id),
+    columns: { nom: true, prenom: true }
+  })
 
-      // Obtenir infos profil
-      const { data: prof } = await supabase
-        .from('profiles')
-        .select('nom, prenom')
-        .eq('id', session.user.id)
-        .single()
-      setProfile(prof)
+  // Get inscriptions with relations
+  const data = await db.query.inscriptions_formation.findMany({
+    where: eq(inscriptions_formation.membre_id, session.user.id),
+    with: {
+      sessions_formation: {
+        with: {
+          formation: true
+        }
+      }
+    },
+    orderBy: (inscriptions, { desc }) => [desc(inscriptions.created_at)]
+  })
 
-      // Obtenir inscriptions via API ou BDD directe
-      const { data } = await supabase
-        .from('inscriptions_formation')
-        .select('*, sessions_formation(*, formations(*))')
-        .eq('membre_id', session.user.id)
-        .order('created_at', { ascending: false })
-
-      if (data) setInscriptions(data)
-      setLoading(false)
-    }
-    fetchInscriptions()
-  }, [])
-
-  const getStatusBadge = (statut: string) => {
+  const getStatusBadge = (statut: string | null) => {
     switch (statut) {
       case 'inscrit':
         return <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"><CheckCircle className="w-3.5 h-3.5" /> Inscrit</span>
@@ -52,7 +46,7 @@ export default function MesFormationsPage() {
       case 'annule':
         return <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800"><XCircle className="w-3.5 h-3.5" /> Annulée</span>
       default:
-        return <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">{statut}</span>
+        return <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">{statut || 'Inconnu'}</span>
     }
   }
 
@@ -71,13 +65,7 @@ export default function MesFormationsPage() {
         </Link>
       </div>
 
-      {loading ? (
-        <div className="animate-pulse space-y-4">
-          {[1, 2].map(i => (
-            <div key={i} className="h-32 bg-white rounded-2xl border border-gray-100"></div>
-          ))}
-        </div>
-      ) : inscriptions.length === 0 ? (
+      {data.length === 0 ? (
         <div className="bg-white rounded-2xl border border-gray-200 p-12 text-center shadow-sm">
           <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <Calendar className="w-8 h-8 text-gray-400" />
@@ -90,9 +78,11 @@ export default function MesFormationsPage() {
         </div>
       ) : (
         <div className="space-y-6">
-          {inscriptions.map((ins) => {
-            const formation = ins.sessions_formation.formations
-            const session = ins.sessions_formation
+          {data.map((ins) => {
+            const sessionData = ins.sessions_formation
+            if (!sessionData) return null
+            const formation = sessionData.formation
+            if (!formation) return null
             
             return (
               <div key={ins.id} className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 flex flex-col md:flex-row gap-6 items-start md:items-center">
@@ -111,11 +101,11 @@ export default function MesFormationsPage() {
                   <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
                     <div className="flex items-center">
                       <Calendar className="w-4 h-4 mr-2 text-gray-400" />
-                      {new Date(session.date_debut).toLocaleDateString('fr-FR')} au {new Date(session.date_fin).toLocaleDateString('fr-FR')}
+                      {new Date(sessionData.date_debut).toLocaleDateString('fr-FR')} au {new Date(sessionData.date_fin).toLocaleDateString('fr-FR')}
                     </div>
                     <div className="flex items-center">
                       <MapPin className="w-4 h-4 mr-2 text-gray-400" />
-                      {session.lieu}
+                      {sessionData.lieu}
                     </div>
                   </div>
                 </div>
@@ -127,12 +117,12 @@ export default function MesFormationsPage() {
                     </button>
                   )}
                   
-                  {ins.statut === 'complete' && profile && (
+                  {ins.statut === 'complete' && profile && profile.nom && profile.prenom && (
                     <DownloadCertificatButton 
                       nom={profile.nom}
                       prenom={profile.prenom}
                       formationTitre={formation.titre}
-                      dateDebut={session.date_debut}
+                      dateDebut={sessionData.date_debut}
                       inscriptionId={ins.id}
                     />
                   )}

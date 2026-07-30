@@ -1,0 +1,410 @@
+{
+  "src\\middleware.ts": [
+    "supabase\n      .from(\"profiles\")\n      .select(\"role_plateforme\")\n      .eq(\"id\", user.id)\n      .single()"
+  ],
+  "src\\app\\sitemap.ts": [
+    "supabase\n    .from('articles')\n    .select('slug, updated_at')\n    .eq('statut', 'publie')",
+    "supabase\n    .from('evenements')\n    .select('id, date_creation')\n    .eq('statut', 'publie')",
+    "supabase\n    .from('formations')\n    .select('id, date_creation')\n    .eq('statut', 'publie')"
+  ],
+  "src\\hooks\\useActualites.ts": [
+    "supabase\n        .from('evenements')\n        .select('*')\n        .eq('publie', true)",
+    "supabase\n        .from('opportunites')\n        .select('*')\n        .eq('statut', 'publie')"
+  ],
+  "src\\app\\(public)\\page.tsx": [
+    "supabase\n    .from('articles')\n    .select('*, profiles(prenom, nom, photo_url)')\n    .eq('statut', 'publie')\n    .order('published_at', { ascending: false })\n    .limit(3)"
+  ],
+  "src\\app\\actions\\admin-documents.ts": [
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('documents')\n    .update({ \n      statut: 'publie',\n      valide_par: user.id,\n      published_at: new Date().toISOString()\n    })\n    .eq('id', documentId)",
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('documents')\n    .select('titre, depose_par, profiles:depose_par(email, prenom)')\n    .eq('id', documentId)\n    .single()",
+    "supabase\n    .from('documents')\n    .update({ \n      statut: 'rejete',\n      valide_par: user.id\n    })\n    .eq('id', documentId)",
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('documents')\n    .delete()\n    .eq('id', documentId)"
+  ],
+  "src\\app\\actions\\admin-forum-extended.ts": [
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase.from('forum_categories').insert([data])",
+    "supabase.from('forum_categories').update(data).eq('id', id)",
+    "supabase.from('forum_categories').delete().eq('id', id)",
+    "supabase.from('forum_messages').delete().eq('fil_id', id)",
+    "supabase.from('forum_fils').delete().eq('id', id)",
+    "supabase.from('forum_fils').insert({\n    categorie_id,\n    titre,\n    auteur_id: user.id\n  }).select().single()",
+    "supabase.from('forum_messages').insert({\n    fil_id: fil.id,\n    auteur_id: user.id,\n    contenu,\n    statut: 'publie'\n  })"
+  ],
+  "src\\app\\actions\\admin-forum.ts": [
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('forum_messages')\n    .update({ statut: 'publie' }) // remettre en ligne\n    .eq('id', messageId)",
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('forum_messages')\n    .update({ statut: 'supprime' }) // suppression logique\n    .eq('id', messageId)",
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()"
+  ],
+  "src\\app\\actions\\admin-opportunites.ts": [
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('opportunites')\n    .update({ statut: 'publie' })\n    .eq('id', id)",
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('opportunites')\n    .update({ statut: 'rejete' })\n    .eq('id', id)",
+    "supabase\n    .from('profiles')\n    .select('role_plateforme')\n    .eq('id', user.id)\n    .single()",
+    "supabase\n    .from('opportunites')\n    .delete()\n    .eq('id', id)"
+  ],
+  "src\\app\\actions\\bibliotheque.ts": [
+    "supabase\n    .from('documents')\n    .select('*', { count: 'exact', head: true })\n    .eq('depose_par', session.user.id)\n    .eq('statut', 'publie')",
+    "supabase\n    .from('documents')\n    .select('fichier_r2_key')\n    .eq('id', documentId)\n    .single()"
+  ],
+  "src\\app\\admin\\layout.tsx": [
+    "supabase\n    .from(\"profiles\").select(\"role_plateforme\").eq(\"id\", session.user.id).single()"
+  ],
+  "src\\app\\membres\\layout.tsx": [
+    "supabase\n    .from(\"profiles\")\n    .select(\"*\")\n    .eq(\"id\", session.user.id)\n    .single()"
+  ],
+  "src\\components\\modules\\LatestArticles.tsx": [
+    "supabase\n    .from(\"articles\")\n    .select(\"*\")\n    .eq('status', 'published')\n    .order('published_at', { ascending: false })\n    .limit(3)"
+  ],
+  "src\\components\\shared\\NotificationBell.tsx": [
+    "supabase\n      .from('notifications')\n      .select('*')\n      .eq('user_id', userId)\n      .order('created_at', { ascending: false })\n      .limit(5)",
+    "supabase\n        .from('notifications')\n        .select('*', { count: 'exact', head: true })\n        .eq('user_id', userId)\n        .eq('lu', false)"
+  ],
+  "src\\app\\(public)\\actualites\\page.tsx": [
+    "supabase\n    .from('evenements')\n    .select('*')\n    .eq('publie', true)"
+  ],
+  "src\\app\\(public)\\bibliotheque\\page.tsx": [
+    "supabase\n      .from('documents')\n      .select('*', { count: 'exact', head: true })\n      .eq('statut', 'publie')",
+    "supabase\n      .from('documents')\n      .select('*')\n      .eq('statut', 'publie')\n      .order('created_at', { ascending: false })\n      .limit(6)"
+  ],
+  "src\\app\\(public)\\blog\\page.tsx": [
+    "supabase\n      .from('articles')\n      .select('*, profiles(prenom, nom, photo_url)')\n      .eq('statut', 'publie')\n      .order('published_at', { ascending: false })"
+  ],
+  "src\\app\\(public)\\nous-soutenir\\page.tsx": [
+    "supabase\n    .from('campagnes_fonds')\n    .select('*')\n    .eq('statut', 'active')\n    .order('created_at', { ascending: false })\n    .limit(1)\n    .single()",
+    "supabase\n      .from('contributions')\n      .select('montant_fcfa, prenom, anonyme, created_at')\n      .eq('campagne_id', campagne.id)\n      .eq('statut', 'valide')"
+  ],
+  "src\\app\\(public)\\partenaires\\page.tsx": [
+    "supabase\r\n    .from('partenaires')\r\n    .select('*')\r\n    .eq('statut', 'actif')\r\n    .order('niveau', { ascending: true }) // par ex: 1 = Platinum, 2 = Gold, etc.\r\n    .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\admin\\agrobusiness\\page.tsx": [
+    "supabase\n    .from('demandes_service')\n    .select('*')\n    .order('created_at', { ascending: false })",
+    "supabase\n    .from('candidatures_incubation')\n    .select('*')\n    .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\admin\\analytics\\page.tsx": [
+    "supabase\n    .from(\"profiles\")\n    .select(\"created_at\")\n    .order(\"created_at\", { ascending: true })",
+    "supabase.from(\"documents\").select(\"nb_telechargements\")"
+  ],
+  "src\\app\\admin\\dashboard\\page.tsx": [
+    "supabase.from(\"profiles\").select(\"*\", { count: \"exact\", head: true }).eq(\"statut_adhesion\", \"actif\")",
+    "supabase.from(\"profiles\").select(\"*\", { count: \"exact\", head: true })",
+    "supabase.from(\"profiles\").select(\"*\", { count: \"exact\", head: true }).gte(\"created_at\", firstDayOfMonth)",
+    "supabase.from(\"profiles\").select(\"*\", { count: \"exact\", head: true }).gte(\"updated_at\", thirtyDaysAgo)",
+    "supabase.from(\"profiles\").select(\"categorie\").eq(\"statut_adhesion\", \"actif\")",
+    "supabase.from(\"cotisations\")\n    .select(\"*\", { count: \"exact\", head: true })\n    .eq(\"statut\", \"valide\")\n    .gte(\"created_at\", firstDayOfMonth)",
+    "supabase.from(\"cotisations\")\n    .select(\"*\", { count: \"exact\", head: true })\n    .lt(\"date_fin\", firstDayOfMonth)",
+    "supabase.from(\"cotisations\").select(\"montant_fcfa\").eq(\"statut\", \"valide\").gte(\"created_at\", firstDayOfMonth)",
+    "supabase.from(\"cotisations\").select(\"montant_fcfa, created_at\").eq(\"statut\", \"valide\")",
+    "supabase.from(\"contributions\").select(\"montant_fcfa, created_at\").eq(\"statut\", \"valide\")",
+    "supabase.from(\"documents\").select(\"nb_telechargements\").eq(\"statut\", \"publie\").gte(\"published_at\", firstDayOfMonth)",
+    "supabase.from(\"inscriptions_formation\").select(\"*\", { count: \"exact\", head: true }).gte(\"created_at\", firstDayOfMonth)",
+    "supabase.from(\"forum_messages\").select(\"*\", { count: \"exact\", head: true }).gte(\"created_at\", firstDayOfMonth)",
+    "supabase.from(\"articles\").select(\"*\", { count: \"exact\", head: true }).eq(\"statut\", \"published\")",
+    "supabase.from(\"documents\").select(\"*\", { count: \"exact\", head: true }).eq(\"statut\", \"publie\")",
+    "supabase.from(\"opportunites\").select(\"*\", { count: \"exact\", head: true }).eq(\"statut\", \"publie\")",
+    "supabase.from(\"evenements\").select(\"*\", { count: \"exact\", head: true }).eq(\"publie\", true).gte(\"date_debut\", now.toISOString())",
+    "supabase.from(\"profiles\")\n    .select(\"id, prenom, nom, categorie, statut_adhesion, pays, created_at\")\n    .order(\"created_at\", { ascending: false })\n    .limit(8)"
+  ],
+  "src\\app\\admin\\forum\\page.tsx": [
+    "supabase\n      .from('forum_messages')\n      .select('*, auteur:profiles(prenom, nom), fil:forum_fils(id, titre)')\n      .eq('statut', 'en_revue')\n      .order('updated_at', { ascending: false })"
+  ],
+  "src\\app\\admin\\membres\\page.tsx": [
+    "supabase\n    .from(\"profiles\")\n    .select(\"id, prenom, nom, email, categorie, statut_adhesion, pays, created_at\", { count: \"exact\" })\n    .order(\"created_at\", { ascending: false })\n    .range(from, to)",
+    "supabase.from(\"cotisations\")\n        .select(\"membre_id, date_fin\")\n        .in(\"membre_id\", ids)\n        .eq(\"statut\", \"valide\")\n        .order(\"date_fin\", { ascending: false })"
+  ],
+  "src\\app\\admin\\pages\\page.tsx": [
+    "supabase.from(\"pages_statiques\")\n    .select(\"id, slug, titre, updated_at\")\n    .order(\"slug\")"
+  ],
+  "src\\app\\admin\\paiements\\page.tsx": [
+    "supabase.from(\"cotisations\")\n      .select(\"id, membre_id, montant_fcfa, methode, statut, created_at, date_fin, profiles(prenom, nom, email)\")\n      .order(\"created_at\", { ascending: false })\n      .limit(50)",
+    "supabase.from(\"cotisations\")\n      .select(\"id, membre_id, date_fin, profiles(id, prenom, nom, email, statut_adhesion)\")\n      .eq(\"statut\", \"valide\")\n      .gte(\"date_fin\", now.toISOString())\n      .lte(\"date_fin\", in30Days)\n      .order(\"date_fin\")",
+    "supabase.from(\"contributions\")\n      .select(\"id, email, prenom, montant_fcfa, methode, statut, created_at\")\n      .order(\"created_at\", { ascending: false })\n      .limit(30)"
+  ],
+  "src\\app\\api\\annuaire\\route.ts": [
+    "supabase\n      .from('profiles')\n      .select('id, prenom, nom, pays, specialite, categorie, photo_url, secteurs_expertise, langues', { count: 'exact' })\n      .eq('annuaire_visible', true)"
+  ],
+  "src\\app\\api\\messages\\route.ts": [
+    "supabase.from('profiles').select('prenom, nom, categorie').eq('id', user.id).single()",
+    "supabase.from('profiles').select('ouvert_contact').eq('id', destinataire_id).single()",
+    "supabase\n      .from('messages')\n      .insert({\n        expediteur_id: user.id,\n        destinataire_id,\n        contenu\n      })\n      .select()\n      .single()",
+    "supabase.from('notifications').insert({\n      user_id: destinataire_id,\n      titre: `Nouveau message de ${expediteur.prenom} ${expediteur.nom}`,\n      contenu: contenu.substring(0, 100) + (contenu.length > 100 ? '...' : ''),\n      lien: `/membres/messages?conv=${user.id}`\n    })"
+  ],
+  "src\\app\\api\\notifications\\route.ts": [
+    "supabase\n      .from('notifications')\n      .update({ lu: true })\n      .eq('user_id', user.id)\n      .eq('lu', false)"
+  ],
+  "src\\app\\membres\\bibliotheque\\page.tsx": [
+    "supabase.from('documents').select('*').eq('statut', 'publie').order('created_at', { ascending: false }).limit(20)"
+  ],
+  "src\\app\\membres\\cotisation\\page.tsx": [
+    "supabase\n    .from(\"profiles\")\n    .select(\"*\")\n    .eq(\"id\", session.user.id)\n    .single()",
+    "supabase\n    .from(\"cotisations\")\n    .select(\"*\")\n    .eq(\"membre_id\", session.user.id)\n    .order(\"created_at\", { ascending: false })"
+  ],
+  "src\\app\\membres\\dashboard\\page.tsx": [
+    "supabase\r\n    .from(\"profiles\")\r\n    .select(\"*\")\r\n    .eq(\"id\", session.user.id)\r\n    .single()",
+    "supabase\r\n    .from(\"notifications\")\r\n    .select(\"*\")\r\n    .eq(\"user_id\", session.user.id)\r\n    .eq(\"read\", false)\r\n    .order(\"created_at\", { ascending: false })\r\n    .limit(3)",
+    "supabase\r\n    .from(\"evenements\")\r\n    .select(\"*\")\r\n    .gte(\"date_debut\", new Date().toISOString())\r\n    .order(\"date_debut\", { ascending: true })\r\n    .limit(2)",
+    "supabase\r\n    .from(\"articles\")\r\n    .select(\"slug, title, published_at, category\")\r\n    .eq(\"status\", \"published\")\r\n    .order(\"published_at\", { ascending: false })\r\n    .limit(2)",
+    "supabase.from(\"formations\").select(\"*\").limit(2)",
+    "supabase.from(\"opportunites\").select(\"*\").limit(2)",
+    "supabase\r\n    .from(\"cotisations\")\r\n    .select(\"date_fin\")\r\n    .eq(\"membre_id\", session.user.id)\r\n    .eq(\"statut\", \"valide\")\r\n    .order(\"created_at\", { ascending: false })\r\n    .limit(1)\r\n    .single()"
+  ],
+  "src\\app\\membres\\formations\\page.tsx": [
+    "supabase\n        .from('profiles')\n        .select('nom, prenom')\n        .eq('id', session.user.id)\n        .single()",
+    "supabase\n        .from('inscriptions_formation')\n        .select('*, sessions_formation(*, formations(*))')\n        .eq('membre_id', session.user.id)\n        .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\membres\\notifications\\page.tsx": [
+    "supabase\n        .from('notifications')\n        .select('*')\n        .eq('user_id', session.user.id)\n        .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\membres\\profil\\page.tsx": [
+    "supabase\n    .from(\"profiles\")\n    .select(\"*\")\n    .eq(\"id\", session.user.id)\n    .single()"
+  ],
+  "src\\components\\modules\\admin\\EventForm.tsx": [
+    "supabase\n          .from('evenements')\n          .update(payload)\n          .eq('id', initialData.id)",
+    "supabase\n          .from('evenements')\n          .insert(payload)"
+  ],
+  "src\\components\\modules\\admin\\FormationForm.tsx": [
+    "supabase\n          .from(\"formations\")\n          .update(payload)\n          .eq(\"id\", initialData.id)",
+    "supabase\n          .from(\"formations\")\n          .insert(payload)"
+  ],
+  "src\\components\\modules\\admin\\SubmitDocumentModal.tsx": [
+    "supabase.from('documents').insert(payload)"
+  ],
+  "src\\components\\modules\\bibliotheque\\BibliothequeClient.tsx": [
+    "supabase.from('documents').select('*').eq('statut', 'publie').order('created_at', { ascending: false }).limit(20)",
+    "supabase\n        .from('documents')\n        .select('*')\n        .eq('statut', 'publie')\n        .order('created_at', { ascending: false })\n        .lt('created_at', nextCursor)\n        .limit(20)"
+  ],
+  "src\\components\\modules\\evenements\\EventsClient.tsx": [
+    "supabase\n      .from('evenements')\n      .select('*')\n      .eq('publie', true)\n      .order('date_debut', { ascending: true })"
+  ],
+  "src\\components\\modules\\formations\\FormationDetailClient.tsx": [
+    "supabase\n          .from('inscriptions_formation')\n          .select('session_id, statut')\n          .eq('membre_id', session.user.id)"
+  ],
+  "src\\components\\modules\\forum\\CategorieClient.tsx": [
+    "supabase\n      .from('forum_categories')\n      .select('*')\n      .eq('id', categorieId)\n      .single()",
+    "supabase\n      .from('forum_fils')\n      .select('*', { count: 'exact', head: true })\n      .eq('categorie_id', categorieId)",
+    "supabase\n      .from('forum_fils')\n      .select('*, auteur:profiles(prenom, nom, avatar_url)')\n      .eq('categorie_id', categorieId)\n      .order('last_activity_at', { ascending: false })\n      .range(from, to)"
+  ],
+  "src\\components\\modules\\forum\\FilClient.tsx": [
+    "supabase\n      .from('profiles')\n      .select('prenom, nom, avatar_url')\n      .eq('id', newMessage.auteur_id)\n      .single()",
+    "supabase\n      .from('forum_fils')\n      .select('*, categorie:forum_categories(*), auteur:profiles(prenom, nom, avatar_url)')\n      .eq('id', filId)\n      .single()",
+    "supabase\n      .from('forum_messages')\n      .select('*, auteur:profiles(prenom, nom, avatar_url)')\n      .eq('fil_id', filId)\n      .order('created_at', { ascending: true })",
+    "supabase\n      .from('forum_messages')\n      .insert({\n        fil_id: filId,\n        auteur_id: currentUser.id,\n        contenu: replyContent.trim()\n      })",
+    "supabase\n        .from('forum_fils')\n        .update({ \n          last_activity_at: new Date().toISOString(),\n          nb_reponses: messages.length + 1 \n        })\n        .eq('id', filId)"
+  ],
+  "src\\components\\modules\\forum\\ForumClient.tsx": [
+    "supabase\n      .from('forum_categories')\n      .select('*')\n      .order('ordre', { ascending: true })",
+    "supabase\n          .from('forum_fils')\n          .select('*, auteur:profiles(prenom, nom, avatar_url)')\n          .eq('categorie_id', cat.id)\n          .order('last_activity_at', { ascending: false })\n          .limit(3)"
+  ],
+  "src\\components\\modules\\forum\\NouveauFilClient.tsx": [
+    "supabase.from('forum_categories').select('*').order('ordre')"
+  ],
+  "src\\components\\modules\\messages\\MessagesClient.tsx": [
+    "supabase.from('messages').update({ lu: true }).eq('id', newMsg.id).then()"
+  ],
+  "src\\components\\modules\\opportunites\\OpportunitesClient.tsx": [
+    "supabase.from('opportunites').select('*').order('created_at', { ascending: false })"
+  ],
+  "src\\components\\modules\\opportunites\\SubmitOpportunityModal.tsx": [
+    "supabase\n      .from('opportunites')\n      .insert(payload)"
+  ],
+  "src\\app\\(public)\\agrobusiness\\agripreneurs\\page.tsx": [
+    "supabase\n    .from('agripreneurs')\n    .select('*')\n    .eq('statut', 'actif')\n    .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\(public)\\annuaire\\[id]\\page.tsx": [
+    "supabase.from('profiles').select('prenom, nom').eq('id', id).single()",
+    "supabase\n    .from('profiles')\n    .select('*')\n    .eq('id', id)\n    .single()",
+    "supabase\n    .from('documents')\n    .select('id, titre, type_doc')\n    .eq('uploader_id', id)\n    .eq('statut', 'publie')\n    .order('created_at', { ascending: false })\n    .limit(5)"
+  ],
+  "src\\app\\(public)\\bibliotheque\\[id]\\page.tsx": [
+    "supabase.from('documents').select('titre').eq('id', id).single()",
+    "supabase\n    .from('documents')\n    .select('*')\n    .eq('id', id)\n    .single()",
+    "supabase\n      .from('documents')\n      .select('*')\n      .eq('statut', 'publie')\n      .eq('thematique', document.thematique)\n      .neq('id', document.id)\n      .limit(3)"
+  ],
+  "src\\app\\(public)\\blog\\[slug]\\page.tsx": [
+    "supabase\n    .from('articles')\n    .select('*, profiles(prenom, nom)')\n    .eq('slug', slug)\n    .single()",
+    "supabase\n    .from('articles')\n    .select('*, profiles(prenom, nom, photo_url)')\n    .eq('slug', slug)\n    .single()",
+    "supabase\n    .from('articles')\n    .select('*')\n    .eq('categorie', article.categorie)\n    .neq('id', article.id)\n    .eq('statut', 'publie')\n    .limit(3)"
+  ],
+  "src\\app\\(public)\\evenements\\[id]\\page.tsx": [
+    "supabase\n    .from('evenements')\n    .select('*')\n    .eq('id', p.id)\n    .single()",
+    "supabase\n    .from('evenements')\n    .select('*')\n    .eq('id', p.id)\n    .single()"
+  ],
+  "src\\app\\admin\\contenus\\agripreneurs\\page.tsx": [
+    "supabase.from(\"agripreneurs\").select(\"*\").order(\"created_at\", { ascending: false })"
+  ],
+  "src\\app\\admin\\contenus\\articles\\ArticleDeleteButton.tsx": [
+    "supabase.from(\"articles\").delete().eq(\"id\", articleId)"
+  ],
+  "src\\app\\admin\\contenus\\articles\\page.tsx": [
+    "supabase\n    .from(\"articles\")\n    .select(\"*\")\n    .order(\"created_at\", { ascending: false })"
+  ],
+  "src\\app\\admin\\contenus\\documents\\page.tsx": [
+    "supabase\n        .from('documents')\n        .select('*')\n        .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\admin\\contenus\\evenements\\page.tsx": [
+    "supabase\n      .from('evenements')\n      .select('*, inscriptions:inscriptions_evenement(count)')\n      .order('date_debut', { ascending: false })",
+    "supabase.from('inscriptions_evenement').delete().eq('evenement_id', id)",
+    "supabase.from('evenements').delete().eq('id', id)"
+  ],
+  "src\\app\\admin\\contenus\\formations\\page.tsx": [
+    "supabase\n      .from(\"formations\")\n      .select(\"*, sessions_formation(count)\")\n      .order(\"created_at\", { ascending: false })",
+    "supabase.from(\"formations\").delete().eq(\"id\", id)"
+  ],
+  "src\\app\\admin\\contenus\\opportunites\\page.tsx": [
+    "supabase\n      .from('opportunites')\n      .select('*, auteur:profiles!opportunites_publie_par_fkey(prenom, nom)')\n      .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\admin\\contenus\\partenaires\\page.tsx": [
+    "supabase.from(\"contacts_partenariat\").select(\"*\").order(\"created_at\", { ascending: false }).limit(20)",
+    "supabase.from(\"partenaires\").select(\"*\").order(\"ordre\")"
+  ],
+  "src\\app\\admin\\contenus\\temoignages\\page.tsx": [
+    "supabase.from(\"temoignages\").select(\"*\").order(\"ordre\")"
+  ],
+  "src\\app\\admin\\pages\\[slug]\\page.tsx": [
+    "supabase.from(\"pages_statiques\")\n    .select(\"*\")\n    .eq(\"slug\", slug)\n    .single()"
+  ],
+  "src\\app\\api\\admin\\articles\\route.ts": [
+    "supabase.from(\"profiles\")\n    .select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabaseAdmin.from(\"articles\").insert(payload).select('id').single()"
+  ],
+  "src\\app\\api\\admin\\partenaires\\route.ts": [
+    "supabase.from(\"partenaires\").select(\"*\").order(\"ordre\")",
+    "supabase.from(\"partenaires\")\n    .insert({ nom, description, site_web, logo_url, temoignage, contact_nom, contact_titre, publie: publie ?? true, ordre: ordre ?? 0 })\n    .select().single()"
+  ],
+  "src\\app\\api\\admin\\temoignages\\route.ts": [
+    "supabase.from(\"temoignages\").select(\"*\").order(\"ordre\")",
+    "supabase.from(\"temoignages\")\n    .insert({ nom, poste, organisation, pays, citation, photo_url, note: note ?? 5, publie: publie ?? true, ordre: ordre ?? 0 })\n    .select().single()"
+  ],
+  "src\\app\\api\\agrobusiness\\demandes\\route.ts": [
+    "supabase\n      .from('demandes_service')\n      .insert({\n        prenom, nom, email, telephone, organisation, pays, type_service, description, fichier_url\n      })\n      .select()\n      .single()"
+  ],
+  "src\\app\\api\\agrobusiness\\incubation\\route.ts": [
+    "supabase\n      .from('candidatures_incubation')\n      .insert({\n        prenom: data.prenom,\n        nom: data.nom,\n        email: data.email,\n        telephone: data.telephone,\n        pays: data.pays,\n        titre_projet: data.titre_projet,\n        description_projet: data.description_projet,\n        secteur: data.secteur,\n        stade_avancement: data.stade_avancement,\n        besoins: data.besoins,\n        cv_url\n      })\n      .select()\n      .single()"
+  ],
+  "src\\app\\api\\documents\\validate\\route.ts": [
+    "supabase\n      .from('documents')\n      .select('titre, resume')\n      .eq('statut', 'publie')\n      .limit(100)",
+    "supabase.from('documents').update({ statut: 'publie' })",
+    "supabase.from('documents').update({ statut: 'rejete' })"
+  ],
+  "src\\app\\api\\evenements\\inscription\\route.ts": [
+    "supabaseAdmin\n          .from('profiles')\n          .select('prenom, nom')\n          .eq('id', user.id)\n          .single()",
+    "supabaseAdmin\n      .from('evenements')\n      .select('titre, date_debut, lieu, en_ligne')\n      .eq('id', evenement_id)\n      .single()",
+    "supabaseAdmin\n      .from('inscriptions_evenement')\n      .insert({\n        evenement_id,\n        membre_id,\n        email_externe: membre_id ? null : email_externe,\n        prenom: membre_id ? null : prenom,\n        nom: membre_id ? null : nom\n      })"
+  ],
+  "src\\app\\api\\fonds\\contact-partenariat\\route.ts": [
+    "supabase\n      .from('contacts_partenariat')\n      .insert({\n        raison_sociale: data.raison_sociale,\n        secteur: data.secteur,\n        nature_collaboration: data.nature_collaboration,\n        budget: data.budget,\n        email: data.email,\n        message: data.message\n      })\n      .select()\n      .single()"
+  ],
+  "src\\app\\api\\fonds\\don\\route.ts": [
+    "supabase.from('contributions').insert({\n        campagne_id: campagneId,\n        prenom,\n        nom,\n        email,\n        montant_fcfa,\n        methode_paiement: 'simulation',\n        anonyme: anonyme || false,\n        statut: 'valide'\n      })",
+    "supabase.from('contributions').insert({\n      campagne_id: campagneId,\n      prenom,\n      nom,\n      email,\n      montant_fcfa: amount,\n      methode_paiement: 'stripe',\n      stripe_session_id: session.id,\n      anonyme: anonyme || false,\n      statut: 'en_attente'\n    })"
+  ],
+  "src\\app\\api\\fonds\\webhook\\route.ts": [
+    "supabase\n      .from('contributions')\n      .update({ statut: 'valide' })\n      .eq('stripe_session_id', session.id)\n      .select()\n      .single()"
+  ],
+  "src\\app\\api\\forum\\fils\\route.ts": [
+    "supabase\n      .from('forum_fils')\n      .insert({\n        categorie_id,\n        titre,\n        auteur_id: user.id,\n        statut: 'ouvert',\n        nb_reponses: 0\n      })\n      .select('id')\n      .single()",
+    "supabase\n      .from('forum_messages')\n      .insert({\n        fil_id: fil.id,\n        auteur_id: user.id,\n        contenu\n      })",
+    "supabase.from('forum_fils').delete().eq('id', fil.id)"
+  ],
+  "src\\app\\api\\messages\\[id]\\route.ts": [
+    "supabase\n      .from('messages')\n      .select('*')\n      .or(`and(expediteur_id.eq.${user.id},destinataire_id.eq.${correspondantId}),and(expediteur_id.eq.${correspondantId},destinataire_id.eq.${user.id})`)\n      .order('created_at', { ascending: true })",
+    "supabase.from('messages').update({ lu: true }).in('id', nonLus)"
+  ],
+  "src\\app\\api\\messages\\conversations\\route.ts": [
+    "supabase\n      .from('messages')\n      .select(`\n        *,\n        expediteur:profiles!messages_expediteur_id_fkey(id, prenom, nom, avatar_url),\n        destinataire:profiles!messages_destinataire_id_fkey(id, prenom, nom, avatar_url)\n      `)\n      .or(`expediteur_id.eq.${user.id},destinataire_id.eq.${user.id}`)\n      .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\api\\notifications\\[id]\\route.ts": [
+    "supabase\n      .from('notifications')\n      .update({ lu: true })\n      .eq('id', id)\n      .eq('user_id', user.id)"
+  ],
+  "src\\app\\api\\pdf-proxy\\[id]\\route.ts": [
+    "supabase\n      .from('documents')\n      .select('fichier_r2_key')\n      .eq('id', id)\n      .single()"
+  ],
+  "src\\app\\membres\\bibliotheque\\deposer\\page.tsx": [
+    "supabase\n        .from('profiles')\n        .select('categorie')\n        .eq('id', session.user.id)\n        .single()"
+  ],
+  "src\\app\\membres\\formations\\[id]\\page.tsx": [
+    "supabase\n    .from('formations')\n    .select('*, sessions_formation(*), intervenants(*), avis_formation(*, profiles(prenom, nom, avatar_url))')\n    .eq('id', id)\n    .single()"
+  ],
+  "src\\app\\membres\\profil\\modifier\\page.tsx": [
+    "supabase\n    .from(\"profiles\")\n    .select(\"*\")\n    .eq(\"id\", session.user.id)\n    .single()"
+  ],
+  "src\\app\\membres\\profil\\modifier\\ProfilForm.tsx": [
+    "supabase\n          .from(\"profiles\")\n          .update({ avatar_url: data.url })\n          .eq(\"id\", initialData.id)",
+    "supabase\n      .from(\"profiles\")\n      .update({\n        prenom: data.prenom,\n        nom: data.nom,\n        telephone: data.telephone,\n        entreprise: data.entreprise,\n        bio: data.bio\n      })\n      .eq(\"id\", initialData.id)"
+  ],
+  "src\\components\\modules\\admin\\forum\\CategoriesManager.tsx": [
+    "supabase.from('forum_categories').select('*').order('ordre')"
+  ],
+  "src\\components\\modules\\admin\\forum\\MessagesManager.tsx": [
+    "supabase\n      .from('forum_messages')\n      .select('*, auteur:profiles(prenom, nom), fil:forum_fils(titre)')\n      .neq('statut', 'supprime')\n      .order('created_at', { ascending: false })\n      .limit(50)"
+  ],
+  "src\\components\\modules\\admin\\forum\\ThreadsManager.tsx": [
+    "supabase.from('forum_categories').select('id, nom').order('ordre')",
+    "supabase\n      .from('forum_fils')\n      .select('*, auteur:profiles(prenom, nom), categorie:forum_categories(nom)')\n      .order('created_at', { ascending: false })"
+  ],
+  "src\\app\\(public)\\bibliotheque\\[id]\\lire\\page.tsx": [
+    "supabase.from('documents').select('titre').eq('id', id).single()"
+  ],
+  "src\\app\\admin\\contenus\\articles\\[id]\\ArticleEditorForm.tsx": [
+    "supabase.from(\"profiles\").select(\"prenom, nom\").eq(\"id\", session.user.id).single()"
+  ],
+  "src\\app\\admin\\contenus\\articles\\[id]\\page.tsx": [
+    "supabase\n      .from(\"articles\")\n      .select(\"*\")\n      .eq(\"id\", resolvedParams.id)\n      .single()"
+  ],
+  "src\\app\\api\\admin\\agripreneurs\\[id]\\route.ts": [
+    "supabase.from(\"profiles\").select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabase.from(\"agripreneurs\").update(body).eq(\"id\", id)",
+    "supabase.from(\"agripreneurs\").delete().eq(\"id\", id)"
+  ],
+  "src\\app\\api\\admin\\articles\\[id]\\route.ts": [
+    "supabase.from(\"profiles\")\n    .select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabaseAdmin.from(\"articles\").update(payload).eq(\"id\", id).select('id').single()"
+  ],
+  "src\\app\\api\\admin\\membres\\export\\route.ts": [
+    "supabase.from(\"profiles\")\n    .select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabase.from(\"profiles\")\n    .select(\"id, prenom, nom, email, categorie, statut_adhesion, pays, created_at, specialite\")\n    .order(\"nom\")"
+  ],
+  "src\\app\\api\\admin\\pages\\[slug]\\route.ts": [
+    "supabase.from(\"profiles\")\n    .select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabase.from(\"pages_statiques\")\n    .update({ \n      contenu_json, \n      ...(titre && { titre }), \n      ...(meta_description && { meta_description }),\n      updated_at: new Date().toISOString()\n    })\n    .eq(\"slug\", slug)"
+  ],
+  "src\\app\\api\\admin\\partenaires\\[id]\\route.ts": [
+    "supabase.from(\"profiles\").select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabase.from(\"partenaires\").update(body).eq(\"id\", id)",
+    "supabase.from(\"partenaires\").delete().eq(\"id\", id)"
+  ],
+  "src\\app\\api\\admin\\temoignages\\[id]\\route.ts": [
+    "supabase.from(\"profiles\").select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabase.from(\"temoignages\").update(body).eq(\"id\", id)",
+    "supabase.from(\"temoignages\").delete().eq(\"id\", id)"
+  ],
+  "src\\app\\api\\bibliotheque\\download\\[id]\\route.ts": [
+    "supabase\n      .from('documents')\n      .select('fichier_r2_key, nb_telechargements')\n      .eq('id', id)\n      .single()",
+    "supabase\n      .from('documents')\n      .update({ nb_telechargements: (document.nb_telechargements || 0) + 1 })\n      .eq('id', id)"
+  ],
+  "src\\app\\membres\\forum\\categorie\\[id]\\page.tsx": [
+    "supabase.from('forum_categories').select('nom').eq('id', id).single()"
+  ],
+  "src\\app\\membres\\forum\\fil\\[id]\\page.tsx": [
+    "supabase.from('forum_fils').select('titre').eq('id', id).single()"
+  ],
+  "src\\app\\api\\admin\\membres\\[id]\\rappel\\route.ts": [
+    "supabase.from(\"profiles\")\n    .select(\"role_plateforme\").eq(\"id\", session.user.id).single()"
+  ],
+  "src\\app\\api\\admin\\membres\\[id]\\role\\route.ts": [
+    "supabase.from(\"profiles\")\n    .select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabase.from(\"profiles\")\n    .update({ role_plateforme, updated_at: new Date().toISOString() })\n    .eq(\"id\", id)"
+  ],
+  "src\\app\\api\\admin\\membres\\[id]\\statut\\route.ts": [
+    "supabase.from(\"profiles\")\n    .select(\"role_plateforme\").eq(\"id\", session.user.id).single()",
+    "supabase.from(\"profiles\")\n    .update({ statut_adhesion, updated_at: new Date().toISOString() })\n    .eq(\"id\", id)"
+  ],
+  "src\\app\\api\\forum\\messages\\[id]\\signaler\\route.ts": [
+    "supabase\n      .from('forum_messages')\n      .update({ statut: 'en_revue' })\n      .eq('id', id)"
+  ]
+}

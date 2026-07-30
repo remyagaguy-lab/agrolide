@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { createClient } from '@supabase/supabase-js'
 import Link from 'next/link'
 import { ArrowLeft, Clock, AlertTriangle, Send, User } from 'lucide-react'
 import { formatDistanceToNow, format } from 'date-fns'
@@ -17,77 +16,33 @@ export default function FilClient({ filId }: FilClientProps) {
   const [thread, setThread] = useState<any>(null)
   const [messages, setMessages] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
-  const [currentUser, setCurrentUser] = useState<any>(null)
   
   // Nouveau message
   const [replyContent, setReplyContent] = useState('')
   const [replying, setReplying] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
+  const currentUser = true
 
   useEffect(() => {
     fetchData()
-    
-    // S'abonner aux nouveaux messages via Realtime
-    const channel = supabase
-      .channel(`forum:fil:${filId}`)
-      .on('postgres_changes', {
-        event: 'INSERT',
-        schema: 'public',
-        table: 'forum_messages',
-        filter: `fil_id=eq.${filId}`
-      }, (payload) => {
-        // Au lieu de faire un fetchData() complet, on ajoute le message
-        // On doit récupérer les infos de l'auteur car elles ne sont pas dans le payload
-        fetchMessageAuthor(payload.new)
-      })
-      .subscribe()
-
-    return () => {
-      supabase.removeChannel(channel)
-    }
   }, [filId])
-
-  const fetchMessageAuthor = async (newMessage: any) => {
-    const { data: auteur } = await supabase
-      .from('profiles')
-      .select('prenom, nom, avatar_url')
-      .eq('id', newMessage.auteur_id)
-      .single()
-      
-    setMessages(prev => [...prev, { ...newMessage, auteur }])
-    setTimeout(scrollToBottom, 100)
-  }
 
   const fetchData = async () => {
     setLoading(true)
-    
-    // Utilisateur courant
-    const { data: { user } } = await supabase.auth.getUser()
-    setCurrentUser(user)
-    
-    // Info du fil + catégorie
-    const { data: t } = await supabase
-      .from('forum_fils')
-      .select('*, categorie:forum_categories(*), auteur:profiles(prenom, nom, avatar_url)')
-      .eq('id', filId)
-      .single()
-      
-    if (t) setThread(t)
-    
-    // Messages
-    const { data: msgs } = await supabase
-      .from('forum_messages')
-      .select('*, auteur:profiles(prenom, nom, avatar_url)')
-      .eq('fil_id', filId)
-      .order('created_at', { ascending: true })
-      
-    if (msgs) setMessages(msgs)
-    setLoading(false)
-    setTimeout(scrollToBottom, 100)
+    try {
+      const { getThreadDetails } = await import('@/app/actions/forum')
+      const result = await getThreadDetails(filId)
+      if (result) {
+        setThread(result.fil)
+        setMessages(result.messages)
+      }
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setLoading(false)
+      setTimeout(scrollToBottom, 100)
+    }
   }
 
   const scrollToBottom = () => {
@@ -96,33 +51,21 @@ export default function FilClient({ filId }: FilClientProps) {
 
   const handleReply = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!replyContent.trim() || !currentUser) return
+    if (!replyContent.trim()) return
     
     setReplying(true)
-    
-    // Insérer le message
-    const { error } = await supabase
-      .from('forum_messages')
-      .insert({
-        fil_id: filId,
-        auteur_id: currentUser.id,
-        contenu: replyContent.trim()
-      })
-      
-    if (!error) {
+    try {
+      const { addReplyToThread } = await import('@/app/actions/forum')
+      await addReplyToThread(filId, replyContent)
       setReplyContent('')
-      // Mettre à jour last_activity_at et nb_reponses
-      await supabase
-        .from('forum_fils')
-        .update({ 
-          last_activity_at: new Date().toISOString(),
-          nb_reponses: messages.length + 1 
-        })
-        .eq('id', filId)
-    } else {
+      // Re-fetch to get new message
+      await fetchData()
+    } catch (err) {
+      console.error(err)
       alert("Erreur lors de la publication.")
+    } finally {
+      setReplying(false)
     }
-    setReplying(false)
   }
 
   const handleReport = async (msgId: string) => {

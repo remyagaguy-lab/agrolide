@@ -2,15 +2,18 @@ import React from 'react'
 import CategorieClient from '@/components/modules/forum/CategorieClient'
 import { Metadata } from 'next'
 
-import { createClient } from '@supabase/supabase-js'
+import { db } from '@/db'
+import { forum_categories } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
   
-  const { data } = await supabase.from('forum_categories').select('nom').eq('id', id).single()
+  const data = await db.query.forum_categories.findFirst({
+    columns: { nom: true },
+    where: eq(forum_categories.id, id)
+  })
+  
   return { title: data?.nom || "Catégorie" }
 }
 

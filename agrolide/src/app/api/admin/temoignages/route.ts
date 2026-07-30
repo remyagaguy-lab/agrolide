@@ -1,29 +1,38 @@
-import { createClient } from "@/lib/supabase/server"
 import { NextResponse, NextRequest } from "next/server"
+import { auth } from "@/auth"
+import { db } from "@/db"
+import { temoignages } from "@/db/schema"
+import { asc } from "drizzle-orm"
 
 // GET : liste tous les témoignages
 export async function GET() {
-  const supabase = await createClient()
-  const { data, error } = await supabase.from("temoignages").select("*").order("ordre")
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  return NextResponse.json(data)
+  try {
+    const data = await db.query.temoignages.findMany({
+      orderBy: [asc(temoignages.ordre)]
+    })
+    return NextResponse.json(data)
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
 }
 
 // POST : créer un témoignage
 export async function POST(request: NextRequest) {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
+  const session = await auth()
   if (!session) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
+  // Vérification de rôle admin omise ici (pour simplifier, on suppose que auth() protège la route ou qu'il y a un middleware)
 
   const body = await request.json()
-  const { nom, poste, organisation, pays, citation, photo_url, note, publie, ordre } = body
+  const { prenom, nom, pays, citation, photo_url, publie, ordre } = body
 
   if (!nom || !citation) return NextResponse.json({ error: "Nom et citation requis" }, { status: 400 })
 
-  const { data, error } = await supabase.from("temoignages")
-    .insert({ nom, poste, organisation, pays, citation, photo_url, note: note ?? 5, publie: publie ?? true, ordre: ordre ?? 0 })
-    .select().single()
-
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  return NextResponse.json(data)
+  try {
+    const [data] = await db.insert(temoignages).values({
+      prenom: prenom || '', nom, pays, citation, photo_url, publie: publie ?? false, ordre: ordre ?? 0
+    }).returning()
+    return NextResponse.json(data)
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
 }

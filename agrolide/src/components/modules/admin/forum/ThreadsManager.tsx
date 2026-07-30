@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import { Plus, Trash2, Loader2, MessageCircle, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
@@ -19,25 +19,22 @@ export default function ThreadsManager() {
 
   const fetchThreads = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    // Fetch categories for the form
-    const { data: cats } = await supabase.from('forum_categories').select('id, nom').order('ordre')
-    if (cats) {
-      setCategories(cats)
-      if (cats.length > 0) setFormData(f => ({ ...f, categorie_id: cats[0].id }))
-    }
+    try {
+      const { getForumCategories } = await import('@/app/actions/forum')
+      const cats = await getForumCategories()
+      if (cats) {
+        setCategories(cats)
+        if (cats.length > 0) setFormData(f => ({ ...f, categorie_id: cats[0].id }))
+      }
 
-    // Fetch threads
-    const { data } = await supabase
-      .from('forum_fils')
-      .select('*, auteur:profiles(prenom, nom), categorie:forum_categories(nom)')
-      .order('created_at', { ascending: false })
-      
-    if (data) setThreads(data)
-    setLoading(false)
+      const { fetchAdminThreads } = await import('@/app/actions/admin-forum')
+      const data = await fetchAdminThreads()
+      if (data) setThreads(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   useEffect(() => {

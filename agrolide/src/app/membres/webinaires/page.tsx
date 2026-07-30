@@ -1,8 +1,7 @@
-import { createClient } from '@supabase/supabase-js'
 import { Calendar, Clock, Video, Lock, Unlock } from 'lucide-react'
+export const metadata = { title: "Webinaires" }
 
 export const revalidate = 3600 // Cache 1h
-
 async function getWebinaires() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
   try {

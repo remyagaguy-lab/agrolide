@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
@@ -42,9 +41,8 @@ export async function POST(request: NextRequest) {
 
     const { prenom, nom, email, telephone, organisation, pays, type_service, description, fichier_nom, fichier_type } = result.data
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    const { db } = await import('@/db')
+    const { demandes_service } = await import('@/db/schema')
 
     let presignedUrl = null
     let objectKey = null
@@ -63,18 +61,10 @@ export async function POST(request: NextRequest) {
       presignedUrl = await getSignedUrl(S3, command, { expiresIn: 300 })
     }
 
-    const fichier_url = objectKey ? `https://${process.env.R2_BUCKET_NAME}.${process.env.CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com/${objectKey}` : null
-
     // 1. Insertion BD
-    const { data: demande, error: dbError } = await supabase
-      .from('demandes_service')
-      .insert({
-        prenom, nom, email, telephone, organisation, pays, type_service, description, fichier_url
-      })
-      .select()
-      .single()
-
-    if (dbError) throw dbError
+    const [demande] = await db.insert(demandes_service).values({
+      prenom, nom, email, telephone, organisation, pays, type_service, description, fichier_r2_key: objectKey
+    }).returning()
 
     // 2. Envoi Emails (Resend)
     // Accusé de réception

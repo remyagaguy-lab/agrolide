@@ -1,11 +1,13 @@
 import React from 'react'
-import { createClient } from '@/lib/supabase/server'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { Calendar, Clock, MapPin, Globe, ArrowLeft } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import Link from 'next/link'
+import { db } from '@/db'
+import { evenements } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 
 interface EventPageProps {
   params: Promise<{ id: string }>
@@ -13,17 +15,14 @@ interface EventPageProps {
 
 export async function generateMetadata({ params }: EventPageProps) {
   const p = await params
-  const supabase = await createClient()
-  const { data: event } = await supabase
-    .from('evenements')
-    .select('*')
-    .eq('id', p.id)
-    .single()
+  const event = await db.query.evenements.findFirst({
+    where: eq(evenements.id, p.id)
+  })
 
   if (!event) return { title: "Événement introuvable" }
 
   return {
-    title: "${event.titre} | Événements Agrolide",
+    title: `${event.titre} | Événements Agrolide`,
     description: event.description ? event.description.substring(0, 160).replace(/<[^>]+>/g, '') : `Participez à l'événement ${event.titre} organisé par le réseau Agrolide.`,
     openGraph: {
       title: event.titre,
@@ -35,15 +34,12 @@ export async function generateMetadata({ params }: EventPageProps) {
 
 export default async function EventPage({ params }: EventPageProps) {
   const p = await params
-  const supabase = await createClient()
   
-  const { data: event, error } = await supabase
-    .from('evenements')
-    .select('*')
-    .eq('id', p.id)
-    .single()
+  const event = await db.query.evenements.findFirst({
+    where: eq(evenements.id, p.id)
+  })
 
-  if (error || !event) {
+  if (!event) {
     notFound()
   }
 
@@ -56,9 +52,9 @@ export default async function EventPage({ params }: EventPageProps) {
     name: event.titre,
     startDate: event.date_debut,
     endDate: event.date_fin || event.date_debut,
-    eventAttendanceMode: event.format === 'en_ligne' ? "https://schema.org/OnlineEventAttendanceMode" : "https://schema.org/OfflineEventAttendanceMode",
+    eventAttendanceMode: event.en_ligne ? "https://schema.org/OnlineEventAttendanceMode" : "https://schema.org/OfflineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
-    location: event.format === 'en_ligne' ? {
+    location: event.en_ligne ? {
       "@type": "VirtualLocation",
       url: event.lien_inscription || `https://agrolide.org/evenements/${event.id}`
     } : {

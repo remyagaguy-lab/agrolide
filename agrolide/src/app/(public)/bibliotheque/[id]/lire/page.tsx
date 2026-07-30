@@ -2,27 +2,33 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { SecurePDFViewerWrapper } from '@/components/modules/bibliotheque/SecurePDFViewerWrapper'
 
-import { createClient } from '@supabase/supabase-js'
+import { db } from '@/db'
+import { documents } from '@/db/schema'
+import { eq } from 'drizzle-orm'
+import { auth } from '@/auth'
+import { QuotaTracker } from '@/components/modules/bibliotheque/QuotaTracker'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
+  const data = await db.query.documents.findFirst({
+    columns: { titre: true },
+    where: eq(documents.id, id)
+  })
   
-  const { data } = await supabase.from('documents').select('titre').eq('id', id).single()
-  
-  return { title: data?.titre ? `Lecture : ${data.titre}` : "Lecture Sécurisée" }
+  return { title: data?.titre ? `Lecture : ${data.titre} | Bibliothèque Agrolide` : "Lecture Sécurisée | Agrolide" }
 }
 
 export default async function SecureReaderPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
+  const session = await auth()
+  const isLoggedIn = !!session?.user
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
+      <QuotaTracker documentId={id} isLoggedIn={isLoggedIn} />
       {/* Retour */}
-      <Link href={`/membres/bibliotheque/${id}`} className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-green-700 mb-6 transition-colors font-medium">
+      <Link href={`/bibliotheque/${id}`} className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-green-700 mb-6 transition-colors font-medium">
         <ArrowLeft className="w-4 h-4" />
         Retour aux détails du document
       </Link>

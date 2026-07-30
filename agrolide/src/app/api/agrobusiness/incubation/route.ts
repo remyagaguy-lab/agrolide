@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
@@ -68,9 +67,8 @@ export async function POST(request: NextRequest) {
 
     const data = result.data
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    const { db } = await import('@/db')
+    const { candidatures_incubation } = await import('@/db/schema')
 
     let presignedUrl = null
     let objectKey = null
@@ -89,28 +87,20 @@ export async function POST(request: NextRequest) {
       presignedUrl = await getSignedUrl(S3, command, { expiresIn: 300 })
     }
 
-    const cv_url = objectKey ? `https://${process.env.R2_BUCKET_NAME}.${process.env.CLOUDFLARE_ACCOUNT_ID}.r2.cloudflarestorage.com/${objectKey}` : null
-
     // 1. Insertion BD
-    const { data: candidature, error: dbError } = await supabase
-      .from('candidatures_incubation')
-      .insert({
-        prenom: data.prenom,
-        nom: data.nom,
-        email: data.email,
-        telephone: data.telephone,
-        pays: data.pays,
-        titre_projet: data.titre_projet,
-        description_projet: data.description_projet,
-        secteur: data.secteur,
-        stade_avancement: data.stade_avancement,
-        besoins: data.besoins,
-        cv_url
-      })
-      .select()
-      .single()
-
-    if (dbError) throw dbError
+    const [candidature] = await db.insert(candidatures_incubation).values({
+      prenom: data.prenom,
+      nom: data.nom,
+      email: data.email,
+      telephone: data.telephone,
+      pays: data.pays,
+      nom_projet: data.titre_projet,
+      probleme: data.description_projet,
+      secteur: data.secteur,
+      stade: data.stade_avancement,
+      besoins: data.besoins,
+      cv_r2_key: objectKey
+    }).returning()
 
     // 2. Envoi Emails (Resend)
     // Accusé de réception

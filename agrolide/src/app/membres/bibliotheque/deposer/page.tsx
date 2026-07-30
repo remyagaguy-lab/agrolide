@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Upload, FileText, AlertCircle, Loader2 } from 'lucide-react'
-import { createClient } from '@supabase/supabase-js'
+import { useSession } from 'next-auth/react'
 
 const formSchema = z.object({
   titre: z.string().min(3, 'Le titre est requis'),
@@ -37,34 +37,28 @@ export default function DeposerDocumentPage() {
     }
   })
 
+  const { data: session, status } = useSession()
+
   // Vérification de l'autorisation au chargement
   useEffect(() => {
-    const checkAuth = async () => {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-      const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
-      
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) {
-        router.push('/connexion')
-        return
-      }
+    if (status === 'unauthenticated') {
+      router.push('/login')
+      return
+    }
 
-      // Fetch profile
-      const { data: profile } = await supabase
-        .from('profiles')
-        .select('categorie')
-        .eq('id', session.user.id)
-        .single()
-        
-      if (profile?.categorie === 'junior') {
+    if (status === 'authenticated' && session?.user) {
+      // In NextAuth, we might not have 'categorie' in the session immediately,
+      // but if we attached it to the token/session callback, we can check it.
+      // Assuming 'categorie' is added to the user object, or we fetch it.
+      const userCategory = (session.user as any).categorie
+      
+      if (userCategory === 'junior') {
         setIsAuthorized(false)
       } else {
         setIsAuthorized(true)
       }
     }
-    checkAuth()
-  }, [router])
+  }, [status, session, router])
 
   const onSubmit = async (data: FormData) => {
     if (!file) {
@@ -86,29 +80,18 @@ export default function DeposerDocumentPage() {
     setError(null)
     
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-      const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
-      
-      const { data: { session } } = await supabase.auth.getSession()
-      const token = session?.access_token
-
       // 1. Demander URL d'upload
-      const urlRes = await fetch(`${API_URL}/api/bibliotheque/upload-url?filename=${encodeURIComponent(file.name)}`, {
-        headers: { Authorization: `Bearer ${token}` }
-      })
+      const urlRes = await fetch(`/api/bibliotheque/upload-url?filename=${encodeURIComponent(file.name)}`)
       
       if (!urlRes.ok) throw new Error('Erreur lors de la génération de l\'URL d\'upload')
       const { url, key, useDirect } = await urlRes.json()
 
       // 2. Upload vers R2
       if (useDirect) {
-        // Fallback custom upload route in worker
-        const uploadRes = await fetch(`${API_URL}${url}`, {
+        // Fallback custom upload route
+        const uploadRes = await fetch(`${url}`, {
           method: 'PUT',
           headers: {
-            'Authorization': `Bearer ${token}`,
             'Content-Type': file.type
           },
           body: file
@@ -126,11 +109,10 @@ export default function DeposerDocumentPage() {
         if (!uploadRes.ok) throw new Error('Erreur lors de l\'upload du fichier vers R2')
       }
 
-      // 3. Créer le document en base (via Worker pour déclencher email et set statut)
-      const docRes = await fetch(`${API_URL}/api/bibliotheque`, {
+      // 3. Créer le document en base
+      const docRes = await fetch(`/api/bibliotheque`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({

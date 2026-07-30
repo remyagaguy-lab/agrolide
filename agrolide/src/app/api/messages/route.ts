@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { messages, users, notifications } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,54 +15,62 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Le message ne doit pas dépasser 2000 caractères." }, { status: 400 })
     }
 
-    const authHeader = request.headers.get('authorization')
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    const session = await auth()
+    if (!session?.user?.id) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
     }
-    const token = authHeader.split(' ')[1]
-
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
-    if (authError || !user) {
-      return NextResponse.json({ error: "Session invalide." }, { status: 401 })
-    }
+    const userId = session.user.id
 
     // Vérifier le rôle de l'expéditeur (RG-033)
-    const { data: expediteur } = await supabase.from('profiles').select('prenom, nom, categorie').eq('id', user.id).single()
+    const expediteur = await db.query.users.findFirst({
+      columns: { prenom: true, nom: true, categorie: true, id: true },
+      where: eq(users.id, userId)
+    })
+    
     const allowedCategories = ['professionnel', 'partenaire', 'senior']
-    if (!expediteur || !allowedCategories.includes(expediteur.categorie?.toLowerCase())) {
+    if (!expediteur || !expediteur.categorie || !allowedCategories.includes(expediteur.categorie.toLowerCase())) {
       return NextResponse.json({ error: "Seuls les membres Professionnels, Partenaires et Séniors peuvent initier des messages." }, { status: 403 })
     }
 
     // Vérifier si le destinataire accepte les messages
-    const { data: destinataire } = await supabase.from('profiles').select('ouvert_contact').eq('id', destinataire_id).single()
+    const destinataire = await db.query.users.findFirst({
+      columns: { ouvert_contact: true },
+      where: eq(users.id, destinataire_id)
+    })
+    
     if (!destinataire?.ouvert_contact) {
       return NextResponse.json({ error: "Ce membre n'accepte pas les messages." }, { status: 403 })
     }
 
     // Insérer le message
-    const { data: msg, error: msgError } = await supabase
-      .from('messages')
-      .insert({
-        expediteur_id: user.id,
-        destinataire_id,
-        contenu
-      })
-      .select()
-      .single()
-
-    if (msgError) throw msgError
+    const [msg] = await db.insert(messages).values({
+      expediteur_id: userId,
+      destinataire_id,
+      contenu
+    }).returning()
 
     // Créer une notification
-    await supabase.from('notifications').insert({
+    const [notif] = await db.insert(notifications).values({
       user_id: destinataire_id,
-      titre: `Nouveau message de ${expediteur.prenom} ${expediteur.nom}`,
-      contenu: contenu.substring(0, 100) + (contenu.length > 100 ? '...' : ''),
-      lien: `/membres/messages?conv=${user.id}`
-    })
+      contenu: `Nouveau message de ${expediteur.prenom} ${expediteur.nom}: ` + contenu.substring(0, 100) + (contenu.length > 100 ? '...' : ''),
+      type: 'message',
+      lien: `/membres/messages/${userId}`
+    }).returning()
+
+    // Diffuser via le WebSocket Server (Durable Object)
+    const wsUrl = process.env.NEXT_PUBLIC_WS_URL || 'http://localhost:8787';
+    
+    // Pour le message
+    fetch(`${wsUrl}/broadcast/msg_${destinataire_id}`, {
+      method: 'POST',
+      body: JSON.stringify({ type: 'NEW_MESSAGE', message: msg })
+    }).catch(console.error);
+
+    // Pour la notification
+    fetch(`${wsUrl}/broadcast/notif_${destinataire_id}`, {
+      method: 'POST',
+      body: JSON.stringify({ type: 'NEW_NOTIFICATION', notification: notif })
+    }).catch(console.error);
 
     return NextResponse.json({ success: true, message: msg })
 

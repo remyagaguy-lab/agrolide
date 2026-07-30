@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 
@@ -21,27 +20,24 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     const authHeader = request.headers.get('authorization')
     
     // For this demo, we can just allow it if the document is public
-    // Let's fetch the document from Supabase
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL || '', 
-      process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    )
+    // Let's fetch the document from Drizzle
+    const { db } = await import('@/db')
+    const { documents } = await import('@/db/schema')
+    const { eq } = await import('drizzle-orm')
     
-    const { data: document, error: dbError } = await supabase
-      .from('documents')
-      .select('fichier_r2_key, nb_telechargements')
-      .eq('id', id)
-      .single()
+    const document = await db.query.documents.findFirst({
+      columns: { fichier_r2_key: true, nb_telechargements: true },
+      where: eq(documents.id, id)
+    })
       
-    if (dbError || !document) {
+    if (!document) {
       return NextResponse.json({ error: 'Document introuvable' }, { status: 404 })
     }
     
     // Mettre à jour le compteur de consultations (téléchargements)
-    await supabase
-      .from('documents')
-      .update({ nb_telechargements: (document.nb_telechargements || 0) + 1 })
-      .eq('id', id)
+    await db.update(documents)
+      .set({ nb_telechargements: (document.nb_telechargements || 0) + 1 })
+      .where(eq(documents.id, id))
       
     // Utiliser le client S3 pour récupérer directement le flux depuis le bucket privé
     const command = new GetObjectCommand({

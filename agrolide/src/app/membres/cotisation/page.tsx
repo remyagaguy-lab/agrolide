@@ -1,30 +1,28 @@
 import { redirect } from "next/navigation"
-import { createClient } from "@/lib/supabase/server"
+import { auth } from "@/auth"
+import { db } from "@/db"
+import { users, cotisations as cotisationsTable } from "@/db/schema"
+import { eq, desc } from "drizzle-orm"
 import { CreditCard, Smartphone, CheckCircle, Clock, AlertTriangle } from "lucide-react"
 import { PaiementBoutons } from "./PaiementBoutons"
 
+export const metadata = { title: "Ma Cotisation" }
+
 export default async function CotisationPage() {
-  const supabase = await createClient()
+  const session = await auth()
+  if (!session?.user?.id) redirect("/login")
 
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", session.user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id)
+  })
 
   if (!profile) redirect("/login")
 
   // Fetch cotisations
-  let { data: cotisations } = await supabase
-    .from("cotisations")
-    .select("*")
-    .eq("membre_id", session.user.id)
-    .order("created_at", { ascending: false })
-    
-  if (!cotisations) cotisations = []
+  const cotisations = await db.query.cotisations.findMany({
+    where: eq(cotisationsTable.membre_id, session.user.id),
+    orderBy: [desc(cotisationsTable.created_at)]
+  })
 
   const cotisationActive = cotisations?.find(c => c.statut === 'valide')
   
@@ -58,8 +56,7 @@ export default async function CotisationPage() {
             
             {/* Composant Client pour gérer les appels API de paiement */}
             <PaiementBoutons 
-              sessionToken={session.access_token} 
-              categorie={profile.categorie} 
+              categorie={profile.categorie ?? ''} 
             />
             
             <div className="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500">
@@ -77,14 +74,14 @@ export default async function CotisationPage() {
             </div>
             <div>
               <h2 className="text-xl font-bold text-gray-900">Adhésion active</h2>
-              <p className="text-[var(--color-gris-texte)]">Valable jusqu'au <strong className="text-gray-900">{new Date(cotisationActive.date_fin).toLocaleDateString('fr-FR')}</strong></p>
+              <p className="text-[var(--color-gris-texte)]">Valable jusqu'au <strong className="text-gray-900">{cotisationActive.date_fin ? new Date(cotisationActive.date_fin).toLocaleDateString('fr-FR') : 'N/A'}</strong></p>
             </div>
           </div>
           <div className="text-right">
             <span className="inline-block px-3 py-1 bg-gray-100 rounded-full text-sm font-medium text-gray-700 mb-2">
-              Méthode: {cotisationActive.methode_paiement === 'stripe' ? 'Carte Bancaire' : 'Mobile Money'}
+              Méthode: {cotisationActive.methode === 'stripe' ? 'Carte Bancaire' : 'Mobile Money'}
             </span>
-            <p className="text-sm text-gray-500">Montant payé: {cotisationActive.montant} {cotisationActive.devise}</p>
+            <p className="text-sm text-gray-500">Montant payé: {cotisationActive.montant_fcfa} FCFA</p>
           </div>
         </div>
       )}
@@ -114,8 +111,8 @@ export default async function CotisationPage() {
                 cotisations.map((cotis: any) => (
                   <tr key={cotis.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4">{new Date(cotis.created_at).toLocaleDateString('fr-FR')}</td>
-                    <td className="px-6 py-4 font-medium text-gray-900">{cotis.montant} {cotis.devise}</td>
-                    <td className="px-6 py-4 capitalize">{cotis.methode_paiement}</td>
+                    <td className="px-6 py-4 font-medium text-gray-900">{cotis.montant_fcfa} FCFA</td>
+                    <td className="px-6 py-4 capitalize">{cotis.methode}</td>
                     <td className="px-6 py-4">
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                         cotis.statut === 'valide' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'

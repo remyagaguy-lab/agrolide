@@ -1,30 +1,31 @@
 'use server'
 
-import { createClient } from '@/lib/supabase/server'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { opportunites, users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 
-export async function validateOpportunity(id: string) {
-  const supabase = await createClient()
+async function checkAdmin() {
+  const session = await auth()
+  const user = session?.user
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
+  if (!user || !user.id) throw new Error("Non autorisé")
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    columns: { role_plateforme: true },
+    where: eq(users.id, user.id)
+  })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
+}
 
-  const { error } = await supabase
-    .from('opportunites')
-    .update({ statut: 'publie' })
-    .eq('id', id)
+export async function validateOpportunity(id: string) {
+  await checkAdmin()
 
-  if (error) throw new Error("Erreur lors de la validation: " + error.message)
+  await db.update(opportunites).set({ statut: 'publie' }).where(eq(opportunites.id, id))
 
   revalidatePath('/admin/contenus/opportunites')
   revalidatePath('/opportunites')
@@ -33,27 +34,9 @@ export async function validateOpportunity(id: string) {
 }
 
 export async function rejectOpportunity(id: string) {
-  const supabase = await createClient()
+  await checkAdmin()
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
-
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
-
-  if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
-    throw new Error("Privilèges insuffisants")
-  }
-
-  const { error } = await supabase
-    .from('opportunites')
-    .update({ statut: 'rejete' })
-    .eq('id', id)
-
-  if (error) throw new Error("Erreur lors du rejet: " + error.message)
+  await db.update(opportunites).set({ statut: 'rejete' }).where(eq(opportunites.id, id))
 
   revalidatePath('/admin/contenus/opportunites')
   
@@ -61,30 +44,23 @@ export async function rejectOpportunity(id: string) {
 }
 
 export async function deleteOpportunityAdmin(id: string) {
-  const supabase = await createClient()
+  await checkAdmin()
 
-  const { data: { user } } = await supabase.auth.getUser()
-  if (!user) throw new Error("Non autorisé")
-
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('role_plateforme')
-    .eq('id', user.id)
-    .single()
-
-  if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
-    throw new Error("Privilèges insuffisants")
-  }
-
-  const { error } = await supabase
-    .from('opportunites')
-    .delete()
-    .eq('id', id)
-
-  if (error) throw new Error("Erreur lors de la suppression: " + error.message)
+  await db.delete(opportunites).where(eq(opportunites.id, id))
 
   revalidatePath('/admin/contenus/opportunites')
   revalidatePath('/opportunites')
   
   return { success: true }
+}
+
+export async function getAdminOpportunites() {
+  await checkAdmin()
+  const data = await db.query.opportunites.findMany({
+    with: {
+      auteur: { columns: { prenom: true, nom: true } }
+    },
+    orderBy: (opportunites, { desc }) => [desc(opportunites.created_at)]
+  })
+  return data
 }

@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
+import { db } from '@/db'
+import { users } from '@/db/schema'
+import { eq, or, and, like, inArray, count as countFn } from 'drizzle-orm'
 
 export async function GET(request: NextRequest) {
   try {
@@ -15,55 +17,46 @@ export async function GET(request: NextRequest) {
     const limit = 20
     const offset = (page - 1) * limit
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    let conditions: any[] = [eq(users.annuaire_visible, true)]
 
-    // Base query
-    let query = supabase
-      .from('profiles')
-      .select('id, prenom, nom, pays, specialite, categorie, photo_url, secteurs_expertise, langues', { count: 'exact' })
-      .eq('annuaire_visible', true)
-
-    // TODO: Add statut_adhesion='actif' filter when implemented in the schema
-    // query = query.eq('statut_adhesion', 'actif')
-
-    // Recherche plein texte (sur fts_search si la colonne existe)
     if (search) {
-      // Pour éviter les erreurs si fts_search n'est pas encore créé, on fallback sur 'or'
-      // S'il est créé, on peut utiliser textSearch('fts_search', search)
-      // On utilise ilike sur le nom/prenom/organisation/specialite par sécurité si fts_search n'est pas actif
-      query = query.or(`prenom.ilike.%${search}%,nom.ilike.%${search}%,organisation.ilike.%${search}%,specialite.ilike.%${search}%`)
-      
-      // Idéalement :
-      // query = query.textSearch('fts_search', search, { type: 'websearch', config: 'french' })
+      conditions.push(or(
+        like(users.prenom, `%${search}%`),
+        like(users.nom, `%${search}%`),
+        like(users.organisation, `%${search}%`), // Organisation mapped to entreprise
+        like(users.specialite, `%${search}%`)
+      ))
     }
 
     if (pays.length > 0) {
-      query = query.in('pays', pays)
+      conditions.push(inArray(users.pays, pays))
     }
 
     if (categories.length > 0) {
-      query = query.in('categorie', categories)
+      conditions.push(inArray(users.categorie, categories))
     }
 
     if (specialites.length > 0) {
-      query = query.in('specialite', specialites)
+      conditions.push(inArray(users.specialite, specialites))
     }
 
     if (ouvertMentorat) {
-      query = query.eq('ouvert_contact', true).eq('categorie', 'senior') // Simplification, ouvert_contact est le flag
+      conditions.push(eq(users.ouvert_contact, true))
+      conditions.push(eq(users.categorie, 'senior')) // Simplification
     }
 
-    // Pagination
-    query = query.range(offset, offset + limit - 1)
+    const whereClause = and(...conditions)
 
-    const { data, count, error } = await query
+    const data = await db.query.users.findMany({
+      columns: { id: true, prenom: true, nom: true, pays: true, specialite: true, categorie: true, photo_url: true },
+      where: whereClause,
+      limit,
+      offset
+    })
 
-    if (error) {
-      console.error("Supabase Error:", error)
-      throw error
-    }
+    const [{ count }] = await db.select({ count: countFn() })
+      .from(users)
+      .where(whereClause)
 
     return NextResponse.json({ 
       data: data || [], 

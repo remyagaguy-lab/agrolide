@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useRouter } from "next/navigation"
-import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
@@ -21,9 +20,8 @@ const profilSchema = z.object({
 
 type ProfilForm = z.infer<typeof profilSchema>
 
-export function ProfilForm({ initialData, sessionToken }: { initialData: any, sessionToken: string }) {
+export function ProfilForm({ initialData, sessionToken }: { initialData: any, sessionToken?: string }) {
   const router = useRouter()
-  const supabase = createClient()
   const fileInputRef = useRef<HTMLInputElement>(null)
   
   const [error, setError] = useState<string | null>(null)
@@ -60,7 +58,6 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
       formData.append("photo", file)
 
       // Appel au Worker pour l'upload R2
-      // Note: On utilise process.env.NEXT_PUBLIC_API_URL ou on fallback sur localhost:8787 pour le dev
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8787"
       
       const response = await fetch(`${apiUrl}/api/membres/profil/photo`, {
@@ -80,11 +77,9 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
       // Update local state with the permanent URL from R2
       if (data.url) {
         setAvatarUrl(data.url)
-        // Update avatar URL in Supabase immediately
-        await supabase
-          .from("profiles")
-          .update({ avatar_url: data.url })
-          .eq("id", initialData.id)
+        // Update avatar URL immediately
+        const { updateAvatarUrl } = await import('@/app/actions/profil')
+        await updateAvatarUrl(data.url)
       }
       
     } catch (err: any) {
@@ -101,18 +96,16 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
     setError(null)
     setSuccess(false)
 
-    const { error: updateError } = await supabase
-      .from("profiles")
-      .update({
+    try {
+      const { updateProfil } = await import('@/app/actions/profil')
+      await updateProfil({
         prenom: data.prenom,
         nom: data.nom,
         telephone: data.telephone,
         entreprise: data.entreprise,
         bio: data.bio
       })
-      .eq("id", initialData.id)
-
-    if (updateError) {
+    } catch (updateError: any) {
       setError(updateError.message)
       setIsSaving(false)
       return

@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, CheckCircle, Loader2 } from 'lucide-react'
-import { createClient } from '@supabase/supabase-js'
+
 
 interface SubmitOpportunityModalProps {
   isOpen: boolean
@@ -36,31 +36,10 @@ export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess, isA
     setLoading(true)
     setError('')
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    const { data: { user } } = await supabase.auth.getUser()
-    if (!user) {
-      setError("Vous devez être connecté pour soumettre une opportunité.")
-      setLoading(false)
-      return
-    }
-
-    const payload = {
-      ...formData,
-      publie_par: user.id,
-      statut: isAdmin ? 'publie' : 'en_attente',
-      date_limite: formData.date_limite ? new Date(formData.date_limite).toISOString() : null
-    }
-
-    const { error: insertErr } = await supabase
-      .from('opportunites')
-      .insert(payload)
-
-    if (insertErr) {
-      setError(insertErr.message)
-    } else {
+    try {
+      const { submitOpportunity } = await import('@/app/actions/opportunites')
+      await submitOpportunity(formData, isAdmin)
+      
       setSuccess(true)
       setTimeout(() => {
         onSuccess()
@@ -68,8 +47,11 @@ export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess, isA
         setSuccess(false)
         setFormData({ titre: '', description: '', type_opp: 'emploi', lieu: '', date_limite: '', montant: '', lien_externe: '' })
       }, 3000)
+    } catch (err: any) {
+      setError(err.message)
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   return (

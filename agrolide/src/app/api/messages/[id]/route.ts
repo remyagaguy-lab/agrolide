@@ -1,41 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
+import { auth } from '@/auth'
+import { db } from '@/db'
+import { messages } from '@/db/schema'
+import { eq, or, and, desc, inArray, asc } from 'drizzle-orm'
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id: correspondantId } = await params
     
-    const authHeader = request.headers.get('authorization')
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    const session = await auth()
+    if (!session?.user?.id) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
     }
-    const token = authHeader.split(' ')[1]
-
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token)
-    if (authError || !user) {
-      return NextResponse.json({ error: "Session invalide." }, { status: 401 })
-    }
+    const userId = session.user.id
 
     // Récupérer l'historique
-    const { data: messages, error } = await supabase
-      .from('messages')
-      .select('*')
-      .or(`and(expediteur_id.eq.${user.id},destinataire_id.eq.${correspondantId}),and(expediteur_id.eq.${correspondantId},destinataire_id.eq.${user.id})`)
-      .order('created_at', { ascending: true })
-
-    if (error) throw error
+    const userMessages = await db.query.messages.findMany({
+      where: or(
+        and(eq(messages.expediteur_id, userId), eq(messages.destinataire_id, correspondantId)),
+        and(eq(messages.expediteur_id, correspondantId), eq(messages.destinataire_id, userId))
+      ),
+      orderBy: [asc(messages.created_at)]
+    })
 
     // Marquer les messages reçus comme lus
-    const nonLus = messages?.filter(m => m.destinataire_id === user.id && !m.lu).map(m => m.id) || []
+    const nonLus = userMessages?.filter(m => m.destinataire_id === userId && !m.lu).map(m => m.id) || []
     if (nonLus.length > 0) {
-      await supabase.from('messages').update({ lu: true }).in('id', nonLus)
+      await db.update(messages)
+        .set({ lu: true })
+        .where(inArray(messages.id, nonLus))
     }
 
-    return NextResponse.json(messages || [])
+    return NextResponse.json(userMessages || [])
 
   } catch (error: any) {
     console.error("API Messages Error:", error)

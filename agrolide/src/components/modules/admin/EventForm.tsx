@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import { Loader2, Upload, FileText, Image as ImageIcon } from 'lucide-react'
 
 interface EventFormProps {
@@ -46,18 +46,10 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     setError('')
 
     try {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-      const supabase = createClient(supabaseUrl, supabaseKey)
-      const { data: { session } } = await supabase.auth.getSession()
-
-      if (!session) throw new Error("Vous devez être connecté.")
-
       const res = await fetch('/api/admin/upload', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${session.access_token}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           filename: file.name,
@@ -92,19 +84,6 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     setLoading(true)
     setError('')
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    // On utilise la session courante (qui doit être admin)
-    const { data: { session } } = await supabase.auth.getSession()
-    
-    if (!session) {
-      setError("Vous devez être connecté.")
-      setLoading(false)
-      return
-    }
-
     const payload = {
       ...formData,
       places_max: formData.places_max ? parseInt(formData.places_max as string) : null,
@@ -112,19 +91,8 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     }
 
     try {
-      let result;
-      if (initialData?.id) {
-        result = await supabase
-          .from('evenements')
-          .update(payload)
-          .eq('id', initialData.id)
-      } else {
-        result = await supabase
-          .from('evenements')
-          .insert(payload)
-      }
-
-      if (result.error) throw result.error
+      const { upsertAdminEvenement } = await import('@/app/actions/admin-evenements')
+      await upsertAdminEvenement(payload, initialData?.id)
       onSuccess()
     } catch (err: any) {
       console.error(err)

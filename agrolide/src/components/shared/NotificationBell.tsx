@@ -1,85 +1,65 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
 import { Bell } from 'lucide-react'
 import Link from 'next/link'
 import * as Popover from '@radix-ui/react-popover'
 import { formatDistanceToNow } from 'date-fns'
 import { fr } from 'date-fns/locale'
+import { getNotifications, markAsReadAction } from '@/app/actions/notifications'
+import { useSession } from 'next-auth/react'
 
 export default function NotificationBell() {
   const [notifications, setNotifications] = useState<any[]>([])
   const [unreadCount, setUnreadCount] = useState(0)
-  const [currentUser, setCurrentUser] = useState<any>(null)
   
-  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL || '', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '')
+  const { data: session } = useSession()
 
   useEffect(() => {
-    fetchSessionAndNotifs()
-  }, [])
-
-  const fetchSessionAndNotifs = async () => {
-    const { data: { session } } = await supabase.auth.getSession()
-    if (session) {
-      setCurrentUser(session.user)
-      fetchNotifications(session.user.id)
+    if (session?.user) {
+      fetchNotifications()
     }
-  }
+  }, [session])
 
-  const fetchNotifications = async (userId: string) => {
-    const { data } = await supabase
-      .from('notifications')
-      .select('*')
-      .eq('user_id', userId)
-      .order('created_at', { ascending: false })
-      .limit(5)
-      
+  const fetchNotifications = async () => {
+    const data = await getNotifications()
     if (data) {
-      setNotifications(data)
-      // On compte les non lues
-      const { count } = await supabase
-        .from('notifications')
-        .select('*', { count: 'exact', head: true })
-        .eq('user_id', userId)
-        .eq('lu', false)
-      setUnreadCount(count || 0)
+      setNotifications(data.slice(0, 5))
+      setUnreadCount(data.filter(n => !n.lu).length)
     }
   }
 
-  // Realtime subscription
+  // Realtime WebSockets with Cloudflare Durable Objects
   useEffect(() => {
-    if (!currentUser) return
+    if (!session?.user?.id) return;
 
-    const channel = supabase.channel(`notifications:${currentUser.id}`)
-      .on('postgres_changes', { 
-        event: 'INSERT', 
-        schema: 'public', 
-        table: 'notifications', 
-        filter: `user_id=eq.${currentUser.id}` 
-      }, () => {
-        fetchNotifications(currentUser.id)
-      })
-      .subscribe()
+    const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8787';
+    // Connect to the specific channel for this user's notifications
+    const ws = new WebSocket(`${WS_URL}/ws/notif_${session.user.id}`);
+
+    ws.onmessage = (event) => {
+      try {
+        const message = JSON.parse(event.data);
+        if (message.type === 'NEW_NOTIFICATION') {
+          // Fetch notifications again to update the list, or optimistically update it
+          fetchNotifications();
+        }
+      } catch (err) {
+        console.error('WebSocket message parsing error', err);
+      }
+    };
 
     return () => {
-      supabase.removeChannel(channel)
-    }
-  }, [currentUser])
-
+      ws.close();
+    };
+  }, [session?.user?.id]);
   const markAsRead = async (id: string, lien: string) => {
-    const { data: { session } } = await supabase.auth.getSession()
-    if (session) {
-      await fetch(`/api/notifications/${id}`, {
-        method: 'PUT',
-        headers: { 'Authorization': `Bearer ${session.access_token}` }
-      })
-      fetchNotifications(currentUser.id)
-      window.location.href = lien || '/membres/notifications'
-    }
+    await markAsReadAction(id)
+    await fetchNotifications()
+    window.location.href = lien || '/membres/notifications'
   }
 
-  if (!currentUser) return null
+  if (!session?.user) return null
 
   return (
     <Popover.Root>

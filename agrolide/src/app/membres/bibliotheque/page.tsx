@@ -1,31 +1,27 @@
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
-import { createClient } from '@supabase/supabase-js'
-
+import { db } from '@/db'
+import { documents } from '@/db/schema'
+import { eq, like, inArray, and, desc } from 'drizzle-orm'
 export const metadata = {
   title: "Bibliothèque",
   description: 'Bibliothèque de documents pour les membres Agrolide',
 }
 
 export default async function MembresBibliothequePage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  
   // Next 15+ needs await on searchParams
   const params = await searchParams
-  
-  // Initial fetch for SSR
-  const supabase = createClient(supabaseUrl, supabaseAnonKey)
-  let query = supabase.from('documents').select('*').eq('statut', 'publie').order('created_at', { ascending: false }).limit(20)
   
   const search = typeof params.search === 'string' ? params.search : ''
   const type = typeof params.type === 'string' ? params.type : ''
   const thematique = typeof params.thematique === 'string' ? params.thematique : ''
   
-  if (search) query = query.ilike('titre', `%${search}%`)
-  if (type) query = query.in('type_doc', type.split(','))
-  if (thematique) query = query.in('thematique', thematique.split(','))
-  
-  const { data } = await query
+  // Drizzle query
+  const conditions = [eq(documents.statut, 'publie')]
+  if (search) conditions.push(like(documents.titre, `%${search}%`))
+  if (type) conditions.push(inArray(documents.type_doc, type.split(',')))
+  if (thematique) conditions.push(inArray(documents.thematique, thematique.split(',')))
+
+  const data = await db.select().from(documents).where(and(...conditions)).orderBy(desc(documents.created_at)).limit(20)
   
   const initialData = {
     data: data || [],
@@ -41,8 +37,6 @@ export default async function MembresBibliothequePage({ searchParams }: { search
       
       <BibliothequeClient 
         initialData={initialData} 
-        supabaseUrl={supabaseUrl} 
-        supabaseAnonKey={supabaseAnonKey} 
       />
     </div>
   )

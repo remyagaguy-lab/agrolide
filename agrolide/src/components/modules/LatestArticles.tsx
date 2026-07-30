@@ -1,20 +1,33 @@
 import * as React from "react"
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { articles as articlesTable, users } from "@/db/schema"
+import { eq, desc } from "drizzle-orm"
 import { ArticleCard } from "@/components/ui/ArticleCard"
 
 export async function LatestArticles() {
-  const supabase = await createClient()
+  const articles = await db.query.articles.findMany({
+    where: eq(articlesTable.statut, 'publie'),
+    orderBy: [desc(articlesTable.published_at)],
+    limit: 3
+  })
 
-  // On tente de récupérer les 3 derniers articles.
-  // Si la table n'existe pas, supabase renverra une erreur, on gère silencieusement pour le MVP.
-  const { data: articles, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq('status', 'published')
-    .order('published_at', { ascending: false })
-    .limit(3)
+  // Pour les auteurs, on pourrait faire un map ou le charger via relations, on va simplifier pour le MVP.
+  // On gère manuellement la récupération des noms.
+  const articlesWithAuthors = await Promise.all(articles.map(async (article) => {
+    let authorName = "Équipe Agrolide"
+    if (article.auteur_id) {
+      const user = await db.query.users.findFirst({
+        where: eq(users.id, article.auteur_id),
+        columns: { prenom: true, nom: true }
+      })
+      if (user) authorName = `${user.prenom} ${user.nom}`
+    } else if (article.auteur_externe) {
+      authorName = article.auteur_externe
+    }
+    return { ...article, authorName }
+  }))
 
-  const hasArticles = articles && articles.length > 0 && !error;
+  const hasArticles = articlesWithAuthors.length > 0;
 
   return (
     <div className="w-full">
@@ -24,17 +37,17 @@ export async function LatestArticles() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {articles.map((article) => (
+          {articlesWithAuthors.map((article) => (
             <ArticleCard
               key={article.id}
               slug={article.slug}
-              title={article.title}
-              excerpt={article.excerpt || ""}
-              category={article.category || "Général"}
-              author={article.author_name || "Équipe Agrolide"}
-              date={article.published_at}
-              readTime={article.read_time ? `${article.read_time} min` : "5 min"}
-              imageUrl={article.image_url}
+              title={article.titre}
+              excerpt={article.extrait || ""}
+              category={article.categorie || "Général"}
+              author={article.authorName}
+              date={article.published_at || new Date().toISOString()}
+              readTime="5 min"
+              imageUrl={article.image_une_url || ""}
             />
           ))}
         </div>

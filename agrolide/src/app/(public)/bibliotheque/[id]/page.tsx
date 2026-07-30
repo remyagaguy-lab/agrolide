@@ -1,35 +1,35 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { createClient } from '@supabase/supabase-js'
 import { ArrowLeft, Calendar, MapPin, Eye, Tag, FileText, User } from 'lucide-react'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton'
+import { db } from '@/db'
+import { documents } from '@/db/schema'
+import { eq, and, ne } from 'drizzle-orm'
+import { auth } from '@/auth'
+import { QuotaTracker } from '@/components/modules/bibliotheque/QuotaTracker'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
+  const data = await db.query.documents.findFirst({
+    columns: { titre: true },
+    where: eq(documents.id, id)
+  })
   
-  const { data } = await supabase.from('documents').select('titre').eq('id', id).single()
-  
-  return { title: data?.titre || "Document" }
+  return { title: data?.titre ? `${data.titre} | Bibliothèque Agrolide` : "Document | Bibliothèque Agrolide" }
 }
 
 export default async function DocumentDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseAnonKey)
+  const session = await auth()
+  const isLoggedIn = !!session?.user
   
   // Fetch document
-  const { data: document } = await supabase
-    .from('documents')
-    .select('*')
-    .eq('id', id)
-    .single()
+  const document = await db.query.documents.findFirst({
+    where: eq(documents.id, id)
+  })
     
   if (!document) {
     notFound()
@@ -38,23 +38,25 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
   // Fetch similar documents (same thématique, excluding current)
   let similarDocs: DocumentType[] = []
   if (document.thematique) {
-    const { data } = await supabase
-      .from('documents')
-      .select('*')
-      .eq('statut', 'publie')
-      .eq('thematique', document.thematique)
-      .neq('id', document.id)
-      .limit(3)
+    const data = await db.query.documents.findMany({
+      where: and(
+        eq(documents.statut, 'publie'),
+        eq(documents.thematique, document.thematique),
+        ne(documents.id, document.id)
+      ),
+      limit: 3
+    })
       
     if (data) similarDocs = data as DocumentType[]
   }
 
-  const tags = document.tags || [document.filiere, document.langue].filter(Boolean)
+  const tags = [document.filiere, document.langue].filter(Boolean) as string[]
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <QuotaTracker documentId={id} isLoggedIn={isLoggedIn} />
       {/* Retour */}
-      <Link href="/membres/bibliotheque" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 mb-8 transition-colors">
+      <Link href="/bibliotheque" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 mb-8 transition-colors">
         <ArrowLeft className="w-4 h-4" />
         Retour à la bibliothèque
       </Link>
@@ -65,7 +67,7 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
           <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                {document.type}
+                {document.type_doc}
               </span>
               {document.thematique && (
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-50 text-green-700">
@@ -79,10 +81,10 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
             </h1>
             
             <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-100">
-              {document.auteur && (
+              {document.auteurs && (
                 <div className="flex items-center gap-2">
                   <User className="w-4 h-4" />
-                  <span>{document.auteur}</span>
+                  <span>{document.auteurs}</span>
                 </div>
               )}
               {document.annee && (
@@ -141,7 +143,7 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
               </div>
               <div className="flex justify-between items-center text-sm">
                 <span className="text-gray-500">Taille</span>
-                <span className="font-medium text-gray-900">{document.taille ? `${(document.taille / 1024 / 1024).toFixed(2)} MB` : 'Inconnue'}</span>
+                <span className="font-medium text-gray-900">{document.taille_octets ? `${(document.taille_octets / 1024 / 1024).toFixed(2)} MB` : 'Inconnue'}</span>
               </div>
               <div className="flex justify-between items-center text-sm">
                 <span className="text-gray-500">Consultations</span>

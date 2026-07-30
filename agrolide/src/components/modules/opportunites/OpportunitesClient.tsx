@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+import { useSession } from 'next-auth/react'
 import OpportunityCard from './OpportunityCard'
 import SubmitOpportunityModal from './SubmitOpportunityModal'
 import { Plus, Search, Filter } from 'lucide-react'
@@ -11,8 +11,9 @@ export default function OpportunitesClient() {
   const [opportunites, setOpportunites] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [currentUser, setCurrentUser] = useState<any>(null)
-  
+  const { data: session } = useSession()
+  const currentUser = session?.user
+
   const [activeTab, setActiveTab] = useState<'toutes' | 'mes_soumissions'>('toutes')
   const [filterType, setFilterType] = useState('tous')
   const [search, setSearch] = useState('')
@@ -23,27 +24,15 @@ export default function OpportunitesClient() {
 
   const fetchData = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    const { data: { user } } = await supabase.auth.getUser()
-    setCurrentUser(user)
-    
-    let query = supabase.from('opportunites').select('*').order('created_at', { ascending: false })
-    
-    if (activeTab === 'toutes') {
-      // Afficher seulement celles publiées
-      query = query.eq('statut', 'publie')
-    } else if (activeTab === 'mes_soumissions' && user) {
-      // Afficher les soumissions de l'utilisateur (quel que soit le statut)
-      query = query.eq('publie_par', user.id)
+    try {
+      const { getOpportunites } = await import('@/app/actions/opportunites')
+      const data = await getOpportunites(activeTab)
+      if (data) setOpportunites(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
     }
-
-    const { data } = await query
-    if (data) setOpportunites(data)
-    
-    setLoading(false)
   }
 
   // Filtrage local

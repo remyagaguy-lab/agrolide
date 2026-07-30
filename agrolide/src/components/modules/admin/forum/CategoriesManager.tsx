@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import { Plus, Edit2, Trash2, Loader2, Save, X } from 'lucide-react'
 import { createCategory, updateCategory, deleteCategory } from '@/app/actions/admin-forum-extended'
 
@@ -14,13 +14,15 @@ export default function CategoriesManager() {
 
   const fetchCats = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    const { data } = await supabase.from('forum_categories').select('*').order('ordre')
-    if (data) setCategories(data)
-    setLoading(false)
+    try {
+      const { getForumCategories } = await import('@/app/actions/forum')
+      const data = await getForumCategories()
+      if (data) setCategories(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   useEffect(() => {

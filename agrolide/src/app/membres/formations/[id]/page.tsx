@@ -1,35 +1,48 @@
 import { notFound } from 'next/navigation'
-import { createClient } from '@supabase/supabase-js'
+import { db } from '@/db'
+import { formations, sessions_formation, avis_formation, users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 import { FormationDetailClient } from '@/components/modules/formations/FormationDetailClient'
 
 export default async function FormationDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  // Use a proper fetching strategy, this might just run at build time if not careful,
-  // but since we read cookies inside auth.getSession() it forces dynamic rendering.
-  // Wait, Next.js requires cookies() from next/headers to read auth, so let's just 
-  // do a basic fetch and pass data. In Next.js App Router, using simple supabase client 
-  // without cookies will not have the session. So we pass an anon client and let 
-  // the client component handle inscriptions if needed, or we just pass the formation.
-  
-  const supabase = createClient(supabaseUrl, supabaseAnonKey)
-  
-  const { data: formation, error } = await supabase
-    .from('formations')
-    .select('*, sessions_formation(*), intervenants(*), avis_formation(*, profiles(prenom, nom, avatar_url))')
-    .eq('id', id)
-    .single()
+  const formation = await db.query.formations.findFirst({
+    where: eq(formations.id, id)
+  })
     
-  if (error || !formation) {
+  if (!formation) {
     notFound()
+  }
+
+  // Fetch relations manually since Drizzle schema might not have all nested relations configured correctly
+  const sessions = await db.query.sessions_formation.findMany({
+    where: eq(sessions_formation.formation_id, id)
+  })
+
+  const avisList = await db.query.avis_formation.findMany({
+    where: eq(avis_formation.formation_id, id)
+  })
+
+  const avisWithProfiles = await Promise.all(avisList.map(async (avis) => {
+    const profile = await db.query.users.findFirst({
+      where: eq(users.id, avis.membre_id),
+      columns: { prenom: true, nom: true, photo_url: true }
+    })
+    return { ...avis, profiles: profile }
+  }))
+
+  const formationData = {
+    ...formation,
+    sessions_formation: sessions,
+    intervenants: [], // no intervenants table in schema
+    avis_formation: avisWithProfiles
   }
 
   return (
     <div className="bg-gray-50 min-h-screen py-8">
       <FormationDetailClient 
-        initialFormation={formation} 
+        initialFormation={formationData as any} 
       />
     </div>
   )

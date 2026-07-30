@@ -1,20 +1,20 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { createClient } from "@/lib/supabase/server"
 import { User, MapPin, Briefcase, Mail, Phone, Edit } from "lucide-react"
+import { auth } from "@/auth"
+import { db } from "@/db"
+import { users } from "@/db/schema"
+import { eq } from "drizzle-orm"
+export const metadata = { title: "Mon Profil" }
 
 export default async function ProfilPage() {
-  const supabase = await createClient()
+  const session = await auth()
+  if (!session?.user?.id) redirect("/login")
 
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", session.user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id)
+  })
 
   if (!profile) redirect("/login")
 
@@ -37,8 +37,8 @@ export default async function ProfilPage() {
         <div className="px-8 pb-8 relative">
           <div className="absolute -top-16 left-8 w-32 h-32 bg-white rounded-full p-1 shadow-md">
             <div className="w-full h-full bg-gray-200 rounded-full overflow-hidden flex items-center justify-center relative">
-              {profile.avatar_url ? (
-                <Image src={profile.avatar_url} alt="Avatar" fill sizes="128px" className="object-cover" />
+              {profile.photo_url ? (
+                <Image src={profile.photo_url} alt="Avatar" fill sizes="128px" className="object-cover" />
               ) : (
                 <User size={64} className="text-gray-400" />
               )}
@@ -77,15 +77,7 @@ export default async function ProfilPage() {
                   </div>
                 </div>
                 
-                {profile.telephone && (
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Phone className="text-[var(--color-vert-principal)]" size={20} />
-                    <div>
-                      <p className="text-xs text-gray-500">Téléphone</p>
-                      <p className="font-medium text-gray-900">{profile.telephone}</p>
-                    </div>
-                  </div>
-                )}
+
               </div>
             </div>
 
@@ -94,12 +86,12 @@ export default async function ProfilPage() {
               <h3 className="font-bold text-gray-900 border-b pb-2">Informations Professionnelles</h3>
               
               <div className="space-y-4">
-                {profile.entreprise && (
+                {profile.organisation && (
                   <div className="flex items-center gap-3 text-gray-600">
                     <Briefcase className="text-[var(--color-orange-accent)]" size={20} />
                     <div>
                       <p className="text-xs text-gray-500">Entreprise / Organisation</p>
-                      <p className="font-medium text-gray-900">{profile.entreprise}</p>
+                      <p className="font-medium text-gray-900">{profile.organisation}</p>
                     </div>
                   </div>
                 )}
@@ -111,11 +103,11 @@ export default async function ProfilPage() {
                   </span>
                 </div>
                 
-                {profile.bio && (
+                {profile.biographie && (
                   <div>
                     <p className="text-xs text-gray-500 mb-1">À propos</p>
                     <p className="text-sm text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
-                      {profile.bio}
+                      {profile.biographie}
                     </p>
                   </div>
                 )}

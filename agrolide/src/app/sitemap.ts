@@ -1,32 +1,26 @@
 import { MetadataRoute } from 'next'
-import { createClient } from '@/lib/supabase/server'
+import { db } from '@/db'
+import { articles, evenements, formations } from '@/db/schema'
+import { eq } from 'drizzle-orm'
+
+export const dynamic = 'force-dynamic'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const supabase = await createClient()
-
   // 1. Articles de blog
-  let { data: articles } = await supabase
-    .from('articles')
-    .select('slug, updated_at')
-    .eq('statut', 'publie')
-    
-  if (!articles) articles = []
+  const articlesData = await db.query.articles.findMany({
+    where: eq(articles.statut, 'publie'),
+    columns: { slug: true, updated_at: true }
+  })
 
   // 2. Événements
-  let { data: evenements } = await supabase
-    .from('evenements')
-    .select('id, date_creation')
-    .eq('statut', 'publie')
-
-  if (!evenements) evenements = []
+  const evenementsData = await db.query.evenements.findMany({
+    columns: { id: true, created_at: true }
+  })
 
   // 3. Formations
-  let { data: formations } = await supabase
-    .from('formations')
-    .select('id, date_creation')
-    .eq('statut', 'publie')
-
-  if (!formations) formations = []
+  const formationsData = await db.query.formations.findMany({
+    columns: { id: true, created_at: true }
+  })
 
   const baseUrl = 'https://agrolide.org'
 
@@ -41,23 +35,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/annuaire`, changeFrequency: 'daily', priority: 0.8 },
   ]
 
-  const articleUrls: MetadataRoute.Sitemap = articles.map((article) => ({
+  const articleUrls: MetadataRoute.Sitemap = articlesData.map((article) => ({
     url: `${baseUrl}/blog/${article.slug}`,
     lastModified: new Date(article.updated_at || new Date()),
     changeFrequency: 'weekly',
     priority: 0.6,
   }))
 
-  const eventUrls: MetadataRoute.Sitemap = evenements.map((event) => ({
+  const eventUrls: MetadataRoute.Sitemap = evenementsData.map((event) => ({
     url: `${baseUrl}/evenements/${event.id}`,
-    lastModified: new Date(event.date_creation || new Date()),
+    lastModified: new Date(event.created_at || new Date()),
     changeFrequency: 'weekly',
     priority: 0.6,
   }))
 
-  const formationUrls: MetadataRoute.Sitemap = formations.map((formation) => ({
+  const formationUrls: MetadataRoute.Sitemap = formationsData.map((formation) => ({
     url: `${baseUrl}/formations/${formation.id}`,
-    lastModified: new Date(formation.date_creation || new Date()),
+    lastModified: new Date(formation.created_at || new Date()),
     changeFrequency: 'monthly',
     priority: 0.6,
   }))

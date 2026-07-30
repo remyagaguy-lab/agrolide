@@ -1,18 +1,17 @@
 import { redirect } from "next/navigation"
-import { createClient } from "@/lib/supabase/server"
 import { ProfilForm } from "./ProfilForm"
+import { auth } from "@/auth"
+import { db } from "@/db"
+import { users } from "@/db/schema"
+import { eq } from "drizzle-orm"
 
 export default async function ProfilModifierPage() {
-  const supabase = await createClient()
+  const session = await auth()
+  if (!session?.user?.id) redirect("/login")
 
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", session.user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id)
+  })
 
   if (!profile) redirect("/login")
 
@@ -24,7 +23,7 @@ export default async function ProfilModifierPage() {
       </div>
       
       <div className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-[var(--color-gris-clair)]">
-        <ProfilForm initialData={profile} sessionToken={session.access_token} />
+        <ProfilForm initialData={profile} />
       </div>
     </div>
   )

@@ -1,21 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params
     
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    const { db } = await import('@/db')
+    const { forum_messages } = await import('@/db/schema')
+    const { eq } = await import('drizzle-orm')
     
     // Mettre à jour le statut du message (pourrait être dans une table de signalements à part dans une appli complexe, mais ici on simplifie)
-    const { error } = await supabase
-      .from('forum_messages')
-      .update({ statut: 'en_revue' })
-      .eq('id', id)
-      
-    if (error) throw error
+    await db.update(forum_messages)
+      .set({ statut: 'en_revue' })
+      .where(eq(forum_messages.id, id))
 
     return NextResponse.json({ success: true })
     

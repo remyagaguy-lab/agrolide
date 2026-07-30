@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 import { z } from 'zod'
 
@@ -25,14 +24,12 @@ export async function POST(request: NextRequest) {
 
     const data = result.data
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
+    const { db } = await import('@/db')
+    const { contacts_partenariat } = await import('@/db/schema')
+    
     // Insertion en base
-    const { data: contact, error: dbError } = await supabase
-      .from('contacts_partenariat')
-      .insert({
+    const [contact] = await db.insert(contacts_partenariat)
+      .values({
         raison_sociale: data.raison_sociale,
         secteur: data.secteur,
         nature_collaboration: data.nature_collaboration,
@@ -40,10 +37,7 @@ export async function POST(request: NextRequest) {
         email: data.email,
         message: data.message
       })
-      .select()
-      .single()
-
-    if (dbError) throw dbError
+      .returning()
 
     // Accusé de réception
     await resend.emails.send({

@@ -6,37 +6,30 @@ import { ArrowRight, BookOpen } from 'lucide-react'
 
 export const revalidate = 3600 // ISR 1 heure
 
-import { createClient } from '@supabase/supabase-js'
+import { db } from '@/db'
+import { documents } from '@/db/schema'
+import { eq, desc, count } from 'drizzle-orm'
 
 async function getBibliothequeData() {
   try {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseAnonKey)
-
     // Compter le nombre de documents
-    const { count, error: countError } = await supabase
-      .from('documents')
-      .select('*', { count: 'exact', head: true })
-      .eq('statut', 'publie') // Optionnel: filtrer les publiés
+    const countResult = await db.select({ value: count() })
+      .from(documents)
+      .where(eq(documents.statut, 'publie'))
 
     // Récupérer les derniers documents (ex: les 6 plus récents)
-    const { data: documents, error: docsError } = await supabase
-      .from('documents')
-      .select('*')
-      .eq('statut', 'publie')
-      .order('created_at', { ascending: false })
-      .limit(6)
-
-    if (countError) console.error('Erreur count:', countError)
-    if (docsError) console.error('Erreur docs:', docsError)
+    const docs = await db.query.documents.findMany({
+      where: eq(documents.statut, 'publie'),
+      orderBy: [desc(documents.created_at)],
+      limit: 6
+    })
 
     return {
-      count: count || 0,
-      documents: (documents || []) as DocumentType[]
+      count: countResult[0].value || 0,
+      documents: (docs || []) as any[]
     }
   } catch (error) {
-    console.error('Erreur lors du fetch de la bibliothèque (Supabase):', error)
+    console.error('Erreur lors du fetch de la bibliothèque (Drizzle):', error)
     return { count: 0, documents: [] }
   }
 }
@@ -97,8 +90,6 @@ export default async function BibliothequePublicPage() {
                 data: documents, 
                 nextCursor: documents.length === 6 ? documents[documents.length - 1].created_at : null 
               }}
-              supabaseUrl={process.env.NEXT_PUBLIC_SUPABASE_URL}
-              supabaseAnonKey={process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY}
               publicView={true}
             />
           </Suspense>

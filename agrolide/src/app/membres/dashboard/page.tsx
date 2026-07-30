@@ -1,77 +1,71 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { createClient } from "@/lib/supabase/server"
 import { Bell, Calendar as CalendarIcon, FileText, Briefcase, BookOpen, ChevronRight, Clock, Users, Library, MessageSquare } from "lucide-react"
+import { auth } from "@/auth"
+import { db } from "@/db"
+import { users, notifications, evenements, articles, formations, opportunites, cotisations } from "@/db/schema"
+import { eq, desc, gte } from "drizzle-orm"
+
+export const metadata = { title: "Tableau de bord" }
 
 export default async function DashboardPage() {
-  const supabase = await createClient()
-
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const session = await auth()
+  if (!session?.user?.id) redirect("/login")
 
   // Fetch Profile
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", session.user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id)
+  })
 
   if (!profile) redirect("/login")
 
-  // Fetch notifications (mock fallback if table doesn't exist)
-  const { data: notifications } = await supabase
-    .from("notifications")
-    .select("*")
-    .eq("user_id", session.user.id)
-    .eq("read", false)
-    .order("created_at", { ascending: false })
-    .limit(3)
-    
+  // Fetch notifications
+  const notifsData = await db.query.notifications.findMany({
+    where: eq(notifications.user_id, session.user.id),
+    orderBy: [desc(notifications.created_at)],
+    limit: 3
+  })
 
-  // Fetch prochains événements (mock fallback)
-  const { data: evenements } = await supabase
-    .from("evenements")
-    .select("*")
-    .gte("date_debut", new Date().toISOString())
-    .order("date_debut", { ascending: true })
-    .limit(2)
-    
+  // Fetch prochains événements
+  const evtsData = await db.query.evenements.findMany({
+    where: gte(evenements.date_debut, new Date().toISOString()),
+    orderBy: (evts, { asc }) => [asc(evts.date_debut)],
+    limit: 2
+  })
 
-  // Fetch latest articles (fallback)
-  const { data: articles } = await supabase
-    .from("articles")
-    .select("slug, title, published_at, category")
-    .eq("status", "published")
-    .order("published_at", { ascending: false })
-    .limit(2)
-    
+  // Fetch latest articles
+  const artsData = await db.query.articles.findMany({
+    where: eq(articles.statut, "publie"),
+    columns: { slug: true, titre: true, published_at: true, categorie: true },
+    orderBy: [desc(articles.published_at)],
+    limit: 2
+  })
+  
+  const mappedArticles = artsData.map(a => ({
+    slug: a.slug,
+    title: a.titre,
+    published_at: a.published_at,
+    category: a.categorie
+  }))
 
   // Données spécifiques catégorie
-  let formations = []
-  let opportunites = []
+  let userFormations: any[] = []
+  let userOpportunites: any[] = []
   
   if (profile.categorie === "junior") {
-    const { data } = await supabase.from("formations").select("*").limit(2)
-    formations = data || []
+    userFormations = await db.query.formations.findMany({ limit: 2 })
   }
 
   if (profile.categorie === "professionnel") {
-    const { data } = await supabase.from("opportunites").select("*").limit(2)
-    opportunites = data || []
+    userOpportunites = await db.query.opportunites.findMany({ limit: 2 })
   }
 
-  // Calcul date de fin de cotisation (simulée ici pour le MVP si non présente dans profil)
-  // Dans le flow réel, on récupère de la table cotisations.
-  let { data: cotisation } = await supabase
-    .from("cotisations")
-    .select("date_fin")
-    .eq("membre_id", session.user.id)
-    .eq("statut", "valide")
-    .order("created_at", { ascending: false })
-    .limit(1)
-    .single()
+  // Calcul date de fin de cotisation
+  const cotisation = await db.query.cotisations.findFirst({
+    where: eq(cotisations.membre_id, session.user.id),
+    orderBy: [desc(cotisations.created_at)]
+  })
     
-  if (!cotisation) cotisation = null
   const dateFinCotisation = cotisation?.date_fin ? new Date(cotisation.date_fin) : null
   const joursRestants = dateFinCotisation 
     ? Math.max(0, Math.ceil((dateFinCotisation.getTime() - new Date().getTime()) / (1000 * 3600 * 24)))
@@ -170,9 +164,9 @@ export default async function DashboardPage() {
               </Link>
             </div>
             
-            {articles && articles.length > 0 ? (
+            {mappedArticles && mappedArticles.length > 0 ? (
               <div className="space-y-4">
-                {articles.map((article: any) => (
+                {mappedArticles.map((article: any) => (
                   <Link href={`/blog/${article.slug}`} key={article.slug} className="block group">
                     <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200">
                       <div className="flex-1">
@@ -205,11 +199,11 @@ export default async function DashboardPage() {
                 Notifications
               </h3>
             </div>
-            {notifications && notifications.length > 0 ? (
+            {notifsData && notifsData.length > 0 ? (
               <div className="space-y-3">
-                {notifications.map((notif: any) => (
+                {notifsData.map((notif: any) => (
                   <div key={notif.id} className="p-3 bg-blue-50/50 rounded-lg text-sm border border-blue-100">
-                    <p className="text-gray-800">{notif.content}</p>
+                    <p className="text-gray-800">{notif.contenu}</p>
                     <span className="text-xs text-gray-500 mt-1 block">{new Date(notif.created_at).toLocaleDateString()}</span>
                   </div>
                 ))}
@@ -225,13 +219,13 @@ export default async function DashboardPage() {
               <CalendarIcon size={18} className="text-[var(--color-vert-principal)]" />
               Prochains événements
             </h3>
-            {evenements && evenements.length > 0 ? (
+            {evtsData && evtsData.length > 0 ? (
               <div className="space-y-3">
-                {evenements.map((evt: any) => (
+                {evtsData.map((evt: any) => (
                   <div key={evt.id} className="p-3 border border-gray-100 rounded-lg text-sm">
                     <p className="font-semibold text-gray-900">{evt.titre}</p>
                     <span className="text-xs text-[var(--color-vert-principal)] mt-1 block font-medium">
-                      {new Date(evt.date_debut).toLocaleDateString('fr-FR')} • {evt.type}
+                      {new Date(evt.date_debut).toLocaleDateString('fr-FR')} • {evt.type_evt}
                     </span>
                   </div>
                 ))}
@@ -251,7 +245,7 @@ export default async function DashboardPage() {
                 <BookOpen size={18} className="text-[var(--color-orange-accent)]" />
                 Mes formations
               </h3>
-              {formations.length > 0 ? (
+              {userFormations.length > 0 ? (
                 <div className="space-y-3">
                   {/* Render formations */}
                 </div>
@@ -267,7 +261,7 @@ export default async function DashboardPage() {
                 <Briefcase size={18} className="text-blue-600" />
                 Opportunités récentes
               </h3>
-              {opportunites.length > 0 ? (
+              {userOpportunites.length > 0 ? (
                 <div className="space-y-3">
                   {/* Render opportunités */}
                 </div>

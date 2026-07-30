@@ -2,15 +2,18 @@ import React from 'react'
 import FilClient from '@/components/modules/forum/FilClient'
 import { Metadata } from 'next'
 
-import { createClient } from '@supabase/supabase-js'
+import { db } from '@/db'
+import { forum_fils } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
   
-  const { data } = await supabase.from('forum_fils').select('titre').eq('id', id).single()
+  const data = await db.query.forum_fils.findFirst({
+    columns: { titre: true },
+    where: eq(forum_fils.id, id)
+  })
+  
   return { title: data?.titre || "Sujet" }
 }
 

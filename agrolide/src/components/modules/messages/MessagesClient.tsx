@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { createClient } from '@supabase/supabase-js'
+import { useSession } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
 import { Send, Loader2, MessageCircle, User } from 'lucide-react'
 import { format } from 'date-fns'
@@ -12,6 +12,7 @@ export default function MessagesClient() {
   const searchParams = useSearchParams()
   const initialConvId = searchParams.get('conv') || searchParams.get('nouveau')
 
+  const { data: session } = useSession()
   const [conversations, setConversations] = useState<any[]>([])
   const [activeConvId, setActiveConvId] = useState<string | null>(initialConvId)
   const [messages, setMessages] = useState<any[]>([])
@@ -25,25 +26,17 @@ export default function MessagesClient() {
   const [error, setError] = useState('')
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
-  const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL || '', process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '')
 
   useEffect(() => {
-    fetchSession()
-  }, [])
-
-  const fetchSession = async () => {
-    const { data: { session } } = await supabase.auth.getSession()
-    if (session) {
+    if (session?.user) {
       setCurrentUser(session.user)
-      fetchConversations(session.access_token)
+      fetchConversations()
     }
-  }
+  }, [session])
 
-  const fetchConversations = async (token: string) => {
+  const fetchConversations = async () => {
     try {
-      const res = await fetch('/api/messages/conversations', {
-        headers: { 'Authorization': `Bearer ${token}` }
-      })
+      const res = await fetch('/api/messages/conversations')
       const data = await res.json()
       if (Array.isArray(data)) {
         setConversations(data)
@@ -56,12 +49,9 @@ export default function MessagesClient() {
 
   const fetchMessages = async (correspondantId: string) => {
     setLoadingMessages(true)
-    const { data: { session } } = await supabase.auth.getSession()
-    if (session) {
+    if (session?.user) {
       try {
-        const res = await fetch(`/api/messages/${correspondantId}`, {
-          headers: { 'Authorization': `Bearer ${session.access_token}` }
-        })
+        const res = await fetch(`/api/messages/${correspondantId}`)
         const data = await res.json()
         if (Array.isArray(data)) {
           setMessages(data)
@@ -85,34 +75,38 @@ export default function MessagesClient() {
     }
   }, [activeConvId])
 
-  // Realtime subscription
+  // Realtime subscription via Custom WebSocket Server
   useEffect(() => {
     if (!currentUser) return
 
-    const channel = supabase.channel(`messages:${currentUser.id}`)
-      .on('postgres_changes', { 
-        event: 'INSERT', 
-        schema: 'public', 
-        table: 'messages', 
-        filter: `destinataire_id=eq.${currentUser.id}` 
-      }, (payload) => {
-        const newMsg = payload.new
-        
-        // Si c'est un message pour la conversation active
-        if (activeConvId && newMsg.expediteur_id === activeConvId) {
-          setMessages(prev => [...prev, newMsg])
-          // Marquer comme lu
-          supabase.from('messages').update({ lu: true }).eq('id', newMsg.id).then()
-          scrollToBottom()
-        } else {
-          // Sinon, on met à jour la liste des conversations (simplifié)
-          fetchSession()
+    const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8787';
+    const ws = new WebSocket(`${WS_URL}/ws/msg_${currentUser.id}`);
+
+    ws.onmessage = (event) => {
+      try {
+        const messageData = JSON.parse(event.data);
+        if (messageData.type === 'NEW_MESSAGE') {
+          const newMsg = messageData.message;
+          
+          // Si c'est un message pour la conversation active
+          if (activeConvId && newMsg.expediteur_id === activeConvId) {
+            setMessages(prev => [...prev, newMsg]);
+            
+            // Marquer comme lu via API
+            fetch(`/api/messages/${newMsg.id}/read`, { method: 'POST' }).catch(console.error);
+            scrollToBottom();
+          } else {
+            // Sinon, on met à jour la liste des conversations
+            fetchConversations();
+          }
         }
-      })
-      .subscribe()
+      } catch (err) {
+        console.error('WS Error:', err);
+      }
+    };
 
     return () => {
-      supabase.removeChannel(channel)
+      ws.close();
     }
   }, [currentUser, activeConvId])
 
@@ -129,14 +123,12 @@ export default function MessagesClient() {
     setSending(true)
     setError('')
     
-    const { data: { session } } = await supabase.auth.getSession()
-    if (session) {
+    if (session?.user) {
       try {
         const res = await fetch('/api/messages', {
           method: 'POST',
           headers: { 
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${session.access_token}`
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             destinataire_id: activeConvId,
@@ -152,7 +144,7 @@ export default function MessagesClient() {
           setNewMessage('')
           scrollToBottom()
           // Update conversation list
-          fetchConversations(session.access_token)
+          fetchConversations()
         }
       } catch (err: any) {
         setError(err.message)

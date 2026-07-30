@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import { Trash2, Loader2, MessageSquare, Search } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
@@ -15,24 +15,15 @@ export default function MessagesManager() {
 
   const fetchMessages = async (query = '') => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    let q = supabase
-      .from('forum_messages')
-      .select('*, auteur:profiles(prenom, nom), fil:forum_fils(titre)')
-      .neq('statut', 'supprime')
-      .order('created_at', { ascending: false })
-      .limit(50)
-
-    if (query) {
-      q = q.ilike('contenu', `%${query}%`)
+    try {
+      const { fetchAdminMessages } = await import('@/app/actions/admin-forum')
+      const data = await fetchAdminMessages(query)
+      if (data) setMessages(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
     }
-
-    const { data } = await q
-    if (data) setMessages(data)
-    setLoading(false)
   }
 
   useEffect(() => {

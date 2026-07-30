@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import CustomCalendar from './CustomCalendar'
 import EventCard from './EventCard'
 import InscriptionModal from './InscriptionModal'
@@ -27,21 +27,15 @@ export default function EventsClient() {
 
   const fetchEvents = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    // On récupère tous les événements publiés
-    const { data, error } = await supabase
-      .from('evenements')
-      .select('*')
-      .eq('publie', true)
-      .order('date_debut', { ascending: true })
-      
-    if (!error && data) {
-      setEvents(data)
+    try {
+      const { getEvenements } = await import('@/app/actions/evenements')
+      const data = await getEvenements()
+      if (data) setEvents(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   const handleInscrireClick = (event: any) => {

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import { CheckCircle, XCircle, Clock, Eye, Trash2, Loader2, Plus } from 'lucide-react'
 import { validateOpportunity, rejectOpportunity, deleteOpportunityAdmin } from '@/app/actions/admin-opportunites'
 import SubmitOpportunityModal from '@/components/modules/opportunites/SubmitOpportunityModal'
@@ -20,17 +20,15 @@ export default function AdminOpportunitesPage() {
 
   const fetchOpportunites = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    const { data } = await supabase
-      .from('opportunites')
-      .select('*, auteur:profiles!opportunites_publie_par_fkey(prenom, nom)')
-      .order('created_at', { ascending: false })
-      
-    if (data) setOpportunites(data)
-    setLoading(false)
+    try {
+      const { getAdminOpportunites } = await import('@/app/actions/admin-opportunites')
+      const data = await getAdminOpportunites()
+      if (data) setOpportunites(data)
+    } catch (err) {
+      console.error(err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   useEffect(() => {

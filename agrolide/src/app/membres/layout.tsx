@@ -1,6 +1,9 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { createClient } from "@/lib/supabase/server"
+import { auth } from "@/auth"
+import { db } from "@/db"
+import { users } from "@/db/schema"
+import { eq } from "drizzle-orm"
 import { LogoutButton } from "@/components/ui/LogoutButton"
 import { MembresLayout } from "@/components/layout/MembresLayout"
 import { AlertCircle } from "lucide-react"
@@ -10,27 +13,20 @@ export default async function MembresRootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const supabase = await createClient()
+  const session = await auth()
 
-  // 1. Vérification de la session
-  const { data: { session }, error: sessionError } = await supabase.auth.getSession()
-
-  if (sessionError || !session) {
+  if (!session?.user?.id) {
     redirect("/login?message=Veuillez+vous+connecter")
   }
 
   // 2. Récupération du profil utilisateur
-  const { data: profile, error: profileError } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", session.user.id)
-    .single()
+  const profile = await db.query.users.findFirst({
+    where: eq(users.id, session.user.id)
+  })
 
-  if (profileError || !profile) {
+  if (!profile) {
     // Si pas de profil trouvé, il y a eu un problème avec le trigger ou l'inscription
-    // On peut tenter de rediriger vers l'accueil ou le login
-    const errDetails = profileError ? `${profileError.code} - ${profileError.message}` : "Aucune ligne trouvée"
-    redirect(`/login?error=Profil+introuvable&details=${encodeURIComponent(errDetails)}`)
+    redirect(`/login?error=Profil+introuvable`)
   }
 
   // 3. Gestion des statuts d'adhésion (RG-007, RG-008)

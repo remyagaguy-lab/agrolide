@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
+
 import Link from 'next/link'
 import { MessageSquare, Clock, Plus } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
@@ -17,31 +17,15 @@ export default function ForumClient() {
 
   const fetchForumData = async () => {
     setLoading(true)
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
-    
-    // Récupérer les catégories
-    const { data: cats, error: catsError } = await supabase
-      .from('forum_categories')
-      .select('*')
-      .order('ordre', { ascending: true })
-      
-    if (!catsError && cats) {
-      // Pour chaque catégorie, on récupère les 3 derniers fils
-      const catsWithThreads = await Promise.all(cats.map(async (cat) => {
-        const { data: threads } = await supabase
-          .from('forum_fils')
-          .select('*, auteur:profiles(prenom, nom, avatar_url)')
-          .eq('categorie_id', cat.id)
-          .order('last_activity_at', { ascending: false })
-          .limit(3)
-          
-        return { ...cat, recent_threads: threads || [] }
-      }))
+    try {
+      const { getForumCategoriesWithRecentThreads } = await import('@/app/actions/forum')
+      const catsWithThreads = await getForumCategoriesWithRecentThreads()
       setCategories(catsWithThreads)
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   return (

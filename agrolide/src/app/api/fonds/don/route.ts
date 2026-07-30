@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { createClient } from '@supabase/supabase-js'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_fake', {
   apiVersion: '2026-06-24.dahlia', // ou la version la plus récente supportée
@@ -17,19 +16,16 @@ export async function POST(request: NextRequest) {
 
     // Si on a pas de clé Stripe réelle, on simule un succès pour le test de développement
     if (!process.env.STRIPE_SECRET_KEY) {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-      const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-      const supabase = createClient(supabaseUrl, supabaseKey)
+      const { db } = await import('@/db')
+      const { contributions } = await import('@/db/schema')
 
       // Simulation : Insérer directement le don en base comme validé (pour test)
-      await supabase.from('contributions').insert({
-        campagne_id: campagneId,
-        prenom,
-        nom,
+      await db.insert(contributions).values({
+        prenom: nom ? `${prenom} ${nom}` : prenom,
         email,
         montant_fcfa,
-        methode_paiement: 'simulation',
-        anonyme: anonyme || false,
+        methode: 'simulation',
+        anonyme: !!anonyme,
         statut: 'valide'
       })
 
@@ -74,19 +70,16 @@ export async function POST(request: NextRequest) {
     // mais le webhook est plus sûr pour la créer directement validée (ou mettre à jour).
     // Faisons la création en_attente pour lier le session_id :
     
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    const { db } = await import('@/db')
+    const { contributions } = await import('@/db/schema')
 
-    await supabase.from('contributions').insert({
-      campagne_id: campagneId,
-      prenom,
-      nom,
+    await db.insert(contributions).values({
+      prenom: nom ? `${prenom} ${nom}` : prenom,
       email,
       montant_fcfa: amount,
-      methode_paiement: 'stripe',
-      stripe_session_id: session.id,
-      anonyme: anonyme || false,
+      methode: 'stripe',
+      provider_ref: session.id,
+      anonyme: !!anonyme,
       statut: 'en_attente'
     })
 

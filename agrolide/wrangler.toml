@@ -1,8 +1,10 @@
-name = "agrolide-db"
-compatibility_date = "2024-03-20"
+name = "agrolide"
+main = ".open-next/worker.js"
+compatibility_date = "2024-12-30"
 compatibility_flags = ["nodejs_compat"]
+assets = { directory = ".open-next/assets", binding = "ASSETS" }
 
 [[d1_databases]]
-binding = "DB" # i.e. available in your Worker on env.DB
+binding = "DB"
 database_name = "agrolide-d1"
-database_id = "" # To be filled after creation
+database_id = "17c5dcc3-93fc-4a46-b39e-cdc1c4123c06"

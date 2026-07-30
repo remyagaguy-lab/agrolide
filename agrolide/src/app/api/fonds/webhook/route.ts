@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Stripe from 'stripe'
-import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_fake', {
@@ -31,22 +30,18 @@ export async function POST(request: NextRequest) {
     const session = event.data.object as Stripe.Checkout.Session
     
     // Récupération des données depuis les metadata ou la DB
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    const { db } = await import('@/db')
+    const { contributions } = await import('@/db/schema')
+    const { eq } = await import('drizzle-orm')
 
     // Mettre à jour la contribution
-    const { data: contribution, error } = await supabase
-      .from('contributions')
-      .update({ statut: 'valide' })
-      .eq('stripe_session_id', session.id)
-      .select()
-      .single()
-
-    if (error) {
-      console.error("Erreur màj contribution:", error)
-      return NextResponse.json({ error: "Erreur BDD" }, { status: 500 })
-    }
+    try {
+      const updatedContributions = await db.update(contributions)
+        .set({ statut: 'valide' })
+        .where(eq(contributions.provider_ref, session.id))
+        .returning()
+        
+      const contribution = updatedContributions[0]
 
     if (contribution) {
       // Envoyer un email de remerciement
@@ -65,6 +60,10 @@ export async function POST(request: NextRequest) {
       } catch (emailError) {
         console.error("Erreur d'envoi d'email de remerciement:", emailError)
       }
+    }
+    } catch (error) {
+      console.error("Erreur màj contribution:", error)
+      return NextResponse.json({ error: "Erreur BDD" }, { status: 500 })
     }
   }
 
