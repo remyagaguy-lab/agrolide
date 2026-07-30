@@ -54,7 +54,7 @@ export async function generateMetadata(
     description: article.extrait || `Lisez cet article sur ${article.categorie || 'l\'agriculture africaine'}.`,
     openGraph: {
       type: 'article',
-      publishedTime: article.published_at,
+      publishedTime: article.published_at || undefined,
       authors: [authorName],
       title: article.titre,
       description: article.extrait || undefined,
