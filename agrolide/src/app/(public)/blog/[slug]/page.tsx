@@ -57,7 +57,7 @@ export async function generateMetadata(
       publishedTime: article.published_at,
       authors: [authorName],
       title: article.titre,
-      description: article.extrait,
+      description: article.extrait || undefined,
       images: article.image_une_url ? [{ url: article.image_une_url, width: 1200, height: 630 }] : [],
     },
   }
