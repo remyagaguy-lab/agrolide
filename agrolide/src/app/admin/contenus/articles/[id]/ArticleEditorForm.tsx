@@ -123,6 +123,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
       tags: data.tags ? data.tags.split(",").map((t: string) => t.trim()).filter(Boolean) : []
     }
 
+    try {
       if (payload.statut === "publie" && !initialData?.published_at) {
         payload.published_at = new Date().toISOString()
       }

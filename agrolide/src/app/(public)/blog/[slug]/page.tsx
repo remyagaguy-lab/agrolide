@@ -4,7 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { db } from "@/db"
 import { articles, users } from "@/db/schema"
-import { eq, neq, and } from "drizzle-orm"
+import { eq, ne, and } from "drizzle-orm"
 import { ArticleCard } from "@/components/ui/ArticleCard"
 import { Button } from "@/components/ui/Button"
 import Breadcrumb from "@/components/ui/Breadcrumb"
@@ -121,7 +121,7 @@ export default async function BlogPostPage({
       .from(articles)
       .where(and(
         eq(articles.categorie, article.categorie),
-        neq(articles.id, article.id),
+        ne(articles.id, article.id),
         eq(articles.statut, 'publie')
       ))
       .limit(3)
