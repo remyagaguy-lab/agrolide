@@ -24,7 +24,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         if (!user || !user.password_hash) return null
         
         // Verify password
-        console.log('PASS MATCH:', await bcrypt.compare(credentials.password, user.password_hash)); const passwordsMatch = await bcrypt.compare(credentials.password as string, user.password_hash)
+        console.log('PASS MATCH:', await bcrypt.compare(credentials.password as string, user.password_hash)); const passwordsMatch = await bcrypt.compare(credentials.password as string, user.password_hash)
         if (passwordsMatch) return user
         
         return null
