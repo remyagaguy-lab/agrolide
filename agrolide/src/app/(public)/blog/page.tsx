@@ -125,7 +125,7 @@ export default async function BlogPage({
                         </p>
                         <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
                           <span className="text-xs text-gray-500 font-medium truncate max-w-[200px]">
-                            Par {featuredMain.profiles ? `${featuredMain.profiles.prenom} ${featuredMain.profiles.nom}` : (featuredMain.auteur_externe || "Équipe Agrolide")}
+                            Par {(featuredMain as any).profiles ? `${(featuredMain as any).profiles.prenom} ${(featuredMain as any).profiles.nom}` : (featuredMain.auteur_externe || "Équipe Agrolide")}
                           </span>
                           <div className="flex items-center text-sm font-bold text-[#1b5e38] group-hover:translate-x-1 transition-transform duration-300">
                             Lire l'article 
@@ -172,7 +172,7 @@ export default async function BlogPage({
                         </h3>
                         <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
                           <span className="text-xs text-gray-500 font-medium truncate max-w-[140px]">
-                            Par {article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
+                            Par {(article as any).profiles ? `${(article as any).profiles.prenom} ${(article as any).profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
                           </span>
                         </div>
                       </div>
@@ -221,7 +221,7 @@ export default async function BlogPage({
                     title={article.titre}
                     excerpt={article.extrait || ""}
                     category={article.categorie || "Général"}
-                    author={article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
+                    author={(article as any).profiles ? `${(article as any).profiles.prenom} ${(article as any).profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
                     authorId={article.auteur_id}
                     date={article.published_at || ''}
                     readTime={"5 min"}
