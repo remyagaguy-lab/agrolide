@@ -7,7 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
-import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Select } from "@/components/ui/Select"
@@ -57,8 +56,6 @@ function InscriptionContent() {
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [passwordStrength, setPasswordStrength] = useState(0)
-  
-  const supabase = createClient()
 
   const { register, handleSubmit, formState: { errors }, watch, setValue, trigger, getValues } = useForm<InscriptionForm>({
     resolver: zodResolver(inscriptionSchema),
@@ -99,54 +96,25 @@ function InscriptionContent() {
     setError(null)
 
     try {
-      const { error: authError, data: authData } = await supabase.auth.signUp({
-        email: data.email,
-        password: data.password,
-        options: {
-          emailRedirectTo: `${window.location.origin}/callback`,
-          data: {
-            prenom: data.prenom,
-            nom: data.nom,
-            pays: data.pays,
-            ville: data.ville || "",
-            categorie: data.categorie,
-            specialite: data.specialite
-          }
-        }
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       })
 
-      if (authError) {
-        console.error("Erreur d'inscription Supabase :", authError)
-        
-        let errorMsg = "Une erreur est survenue lors de l'inscription."
-        if (authError?.message) errorMsg = authError.message
-        else if ((authError as any)?.msg) errorMsg = (authError as any).msg
-        else if (typeof authError === 'string') errorMsg = authError
-        
-        if (errorMsg.toLowerCase().includes("already registered") || errorMsg.toLowerCase().includes("already exists")) {
-          errorMsg = "Un compte existe déjà avec cette adresse email."
-        }
-        
-        if (errorMsg === "{}" || errorMsg === "[object Object]") {
-          errorMsg = "Erreur de la base de données. Le profil n'a pas pu être créé (Trigger)."
-        }
-        
-        setError(errorMsg)
+      const result = await response.json()
+
+      if (!response.ok) {
+        setError(result.message || "Erreur lors de l'inscription.")
         setIsLoading(false)
         return
       }
 
-      // Redirige vers la page d'attente avec l'email dans l'url (ou le state)
-      router.push(`/inscription/attente?email=${encodeURIComponent(data.email)}`)
+      // Redirige vers la page de login ou dashboard
+      router.push(`/login?redirect=/membres/dashboard`)
     } catch (err: any) {
       console.error("Exception inattendue :", err)
-      let catchMsg = "Délai d'attente dépassé ou erreur réseau. Veuillez réessayer."
-      if (err?.message) catchMsg = err.message
-      else if (typeof err === 'string') catchMsg = err
-      
-      if (catchMsg === "{}") catchMsg = "Erreur de connexion inattendue."
-      
-      setError(catchMsg)
+      setError("Délai d'attente dépassé ou erreur réseau. Veuillez réessayer.")
       setIsLoading(false)
     }
   }

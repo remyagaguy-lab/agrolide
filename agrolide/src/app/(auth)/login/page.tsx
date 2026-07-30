@@ -7,7 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
 import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
-import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { LogIn } from "lucide-react"
@@ -26,7 +25,6 @@ function LoginContent() {
   
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
-  const supabase = createClient()
 
   const { register, handleSubmit, formState: { errors } } = useForm<LoginForm>({
     resolver: zodResolver(loginSchema)
@@ -36,19 +34,26 @@ function LoginContent() {
     setIsLoading(true)
     setError(null)
 
-    const { error: authError } = await supabase.auth.signInWithPassword({
-      email: data.email,
-      password: data.password,
-    })
+    try {
+      const { signIn } = await import("next-auth/react")
+      const result = await signIn("credentials", {
+        redirect: false,
+        email: data.email,
+        password: data.password,
+      })
 
-    if (authError) {
-      setError("Identifiants incorrects. Veuillez réessayer.")
+      if (result?.error) {
+        setError("Identifiants incorrects. Veuillez réessayer.")
+        setIsLoading(false)
+        return
+      }
+
+      router.push(redirect)
+      router.refresh()
+    } catch (err) {
+      setError("Une erreur est survenue lors de la connexion.")
       setIsLoading(false)
-      return
     }
-
-    router.push(redirect)
-    router.refresh()
   }
 
   return (
