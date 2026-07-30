@@ -7,4 +7,4 @@ assets = { directory = ".open-next/assets", binding = "ASSETS" }
 [[d1_databases]]
 binding = "DB"
 database_name = "agrolide-d1"
-database_id = "17c5dcc3-93fc-4a46-b39e-cdc1c4123c06"
+database_id = "6c776ed5-4868-4cbd-beda-87bcf9cd2e64"
