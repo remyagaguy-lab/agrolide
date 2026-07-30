@@ -225,7 +225,7 @@ export default async function BlogPage({
                     authorId={article.auteur_id || undefined}
                     date={article.published_at || ''}
                     readTime={"5 min"}
-                    imageUrl={article.image_une_url}
+                    imageUrl={article.image_une_url || undefined}
                   />
                 ))}
               </div>

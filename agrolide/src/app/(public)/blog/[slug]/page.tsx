@@ -357,10 +357,10 @@ export default async function BlogPostPage({
                   title={simArticle.titre}
                   excerpt={simArticle.extrait || ""}
                   category={simArticle.categorie || "Général"}
-                  author={simArticle.profiles ? `${simArticle.profiles.prenom} ${simArticle.profiles.nom}` : (simArticle.auteur_externe || "Équipe Agrolide")}
-                  date={simArticle.published_at}
+                  author={(simArticle as any).prenom && (simArticle as any).nom ? `${(simArticle as any).prenom} ${(simArticle as any).nom}` : (simArticle.auteur_externe || "Équipe Agrolide")}
+                  date={simArticle.published_at || ''}
                   readTime={"5 min"}
-                  imageUrl={simArticle.image_une_url}
+                  imageUrl={simArticle.image_une_url || undefined}
                 />
               ))}
             </div>
