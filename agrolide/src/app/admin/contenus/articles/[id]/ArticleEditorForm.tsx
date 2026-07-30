@@ -16,9 +16,11 @@ import {
   Bold, Italic, List, ListOrdered, Link as LinkIcon, 
   Image as ImageIcon, Heading2, Heading3, Loader2, Save, Send 
 } from "lucide-react"
+import { useAuth } from "@clerk/nextjs"
 
-export function ArticleEditorForm({ initialData, sessionToken }: { initialData?: any, sessionToken: string }) {
+export function ArticleEditorForm({ initialData }: { initialData?: any }) {
   const router = useRouter()
+  const { getToken } = useAuth()
   const isNew = !initialData
   
   const [isSaving, setIsSaving] = useState(false)
@@ -79,9 +81,10 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8787"
     
     try {
+      const token = await getToken()
       const response = await fetch(`${apiUrl}/api/blog/media`, {
         method: "POST",
-        headers: { "Authorization": `Bearer ${sessionToken}` },
+        headers: { "Authorization": `Bearer ${token}` },
         body: formData
       })
       
@@ -119,20 +122,6 @@ export function ArticleEditorForm({ initialData, sessionToken }: { initialData?:
       image_une_url: imageUrl,
       tags: data.tags ? data.tags.split(",").map((t: string) => t.trim()).filter(Boolean) : []
     }
-
-    try {
-      const { createClient } = await import("@/lib/supabase/client")
-      const supabase = createClient()
-      
-      const { data: { session } } = await supabase.auth.getSession()
-      if (!session) throw new Error("Non authentifié")
-      
-      const { data: profile } = await supabase.from("profiles").select("prenom, nom").eq("id", session.user.id).single()
-
-      if (isNew) {
-        payload.auteur_id = session.user.id
-        payload.auteur_externe = profile ? `${profile.prenom} ${profile.nom}` : "Admin"
-      }
 
       if (payload.statut === "publie" && !initialData?.published_at) {
         payload.published_at = new Date().toISOString()

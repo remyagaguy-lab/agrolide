@@ -5,12 +5,14 @@ import { useRouter } from 'next/navigation'
 import { Eye, Download, Loader2, AlertCircle, Lock } from 'lucide-react'
 import { checkTrocEligibility, getDocumentUrl } from '@/app/actions/bibliotheque'
 import Link from 'next/link'
+import { useAuth } from '@clerk/nextjs'
 
 export function DownloadButton({ documentId }: { documentId: string }) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   const router = useRouter()
+  const { isSignedIn, isLoaded } = useAuth()
 
   const [downloading, setDownloading] = useState(false)
   const [showTrocModal, setShowTrocModal] = useState(false)
@@ -19,25 +21,12 @@ export function DownloadButton({ documentId }: { documentId: string }) {
   const [trocCount, setTrocCount] = useState(0)
   
   const [readDocsCount, setReadDocsCount] = useState<number | null>(null)
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null)
+  const isAuthenticated = isLoaded ? isSignedIn : null
 
   useEffect(() => {
     // Check local storage for read documents
     const docs = JSON.parse(localStorage.getItem('agrolide_read_docs') || '[]')
     setReadDocsCount(docs.length)
-    
-    // Check if user is authenticated client-side to show/hide the counter
-    const fetchAuth = async () => {
-      try {
-        const { createClient } = await import('@/lib/supabase/client')
-        const supabase = createClient()
-        const { data } = await supabase.auth.getSession()
-        setIsAuthenticated(!!data.session)
-      } catch (e) {
-        setIsAuthenticated(false)
-      }
-    }
-    fetchAuth()
   }, [])
 
   const handleRead = async () => {

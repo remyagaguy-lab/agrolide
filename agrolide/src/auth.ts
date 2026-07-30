@@ -18,13 +18,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         if (!credentials?.email || !credentials?.password) return null
         
         // Find user
-        const userRows = await db.select().from(users).where(eq(users.email, credentials.email as string)).limit(1)
-        const user = userRows[0]
+        console.log('EMAIL:', credentials.email); const userRows = await db.select().from(users).where(eq(users.email, credentials.email as string)).limit(1)
+        console.log('USER ROWS:', userRows); const user = userRows[0]
         
         if (!user || !user.password_hash) return null
         
         // Verify password
-        const passwordsMatch = await bcrypt.compare(credentials.password as string, user.password_hash)
+        console.log('PASS MATCH:', await bcrypt.compare(credentials.password, user.password_hash)); const passwordsMatch = await bcrypt.compare(credentials.password as string, user.password_hash)
         if (passwordsMatch) return user
         
         return null

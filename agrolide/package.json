@@ -13,6 +13,7 @@
     "@auth/drizzle-adapter": "^1.11.3",
     "@aws-sdk/client-s3": "^3.1075.0",
     "@aws-sdk/s3-request-presigner": "^3.1075.0",
+    "@clerk/nextjs": "^7.6.3",
     "@ducanh2912/next-pwa": "latest",
     "@hookform/resolvers": "latest",
     "@libsql/client": "^0.17.4",
@@ -54,6 +55,7 @@
     "recharts": "^3.9.0",
     "resend": "^6.16.0",
     "stripe": "^22.3.0",
+    "svix": "^1.99.1",
     "tailwind-merge": "latest",
     "use-debounce": "^10.1.1",
     "zod": "latest"

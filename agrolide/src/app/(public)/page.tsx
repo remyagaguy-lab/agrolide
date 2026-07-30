@@ -1,7 +1,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Metadata } from "next"
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { articles } from "@/db/schema"
+import { eq, desc } from "drizzle-orm"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
@@ -149,15 +151,16 @@ function IconHandshake({ className = "" }: { className?: string }) {
 // --- Page ---
 
 export default async function HomePage() {
-  const supabase = await createClient()
-  
-  // Fetch 3 latest published articles
-  const { data: latestArticles } = await supabase
-    .from('articles')
-    .select('*, profiles(prenom, nom, photo_url)')
-    .eq('statut', 'publie')
-    .order('published_at', { ascending: false })
-    .limit(3)
+  // Fetch 3 derniers articles publiés depuis Cloudflare D1
+  let latestArticles: any[] = []
+  try {
+    latestArticles = await db.select().from(articles)
+      .where(eq(articles.statut, 'publie'))
+      .orderBy(desc(articles.published_at))
+      .limit(3)
+  } catch (e) {
+    console.error('Erreur fetch articles homepage:', e)
+  }
 
   const fallbackArticles = [
     { slug: "pratiques-agroecologiques", categorie: "Production Végétal", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", published_at: "2024-10-12T00:00:00Z" },

@@ -1,18 +1,14 @@
-import { redirect } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
+'use client'
+import { useRouter } from "next/navigation"
+import { useEffect } from "react"
 
-export default async function CallbackPage({
-  searchParams,
-}: {
-  searchParams: { code?: string }
-}) {
-  const { code } = searchParams
-  
-  if (code) {
-    const supabase = await createClient()
-    await supabase.auth.exchangeCodeForSession(code)
-  }
-  
-  // Redirige vers /membres/cotisation (paiement obligatoire avant accès dashboard)
-  redirect('/membres/cotisation')
+// Avec Clerk, la page callback n'est plus nécessaire. 
+// Clerk gère ses propres redirections via /__clerk/...
+// On redirige simplement vers le dashboard membre.
+export default function CallbackPage() {
+  const router = useRouter()
+  useEffect(() => {
+    router.replace('/membres/dashboard')
+  }, [router])
+  return null
 }

@@ -1,31 +1,38 @@
-import { createClient } from "@/lib/supabase/server"
 import { NextResponse, NextRequest } from "next/server"
+import { auth } from "@clerk/nextjs/server"
+import { db } from "@/db"
+import { partenaires, users } from "@/db/schema"
+import { eq } from "drizzle-orm"
 
-async function checkAdmin(supabase: any, session: any) {
-  if (!session) return false
-  const { data } = await supabase.from("profiles").select("role_plateforme").eq("id", session.user.id).single()
-  return data && ["admin_content", "super_admin"].includes(data.role_plateforme)
+async function checkAdmin(userId: string) {
+  const profile = await db.select({ role_plateforme: users.role_plateforme })
+    .from(users).where(eq(users.id, userId)).limit(1).then(r => r[0])
+  return profile && ["admin_content", "super_admin"].includes(profile.role_plateforme || '')
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!await checkAdmin(supabase, session)) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
+  const { userId } = await auth()
+  if (!userId || !await checkAdmin(userId)) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
 
   const { id } = await params
   const body = await request.json()
-  const { error } = await supabase.from("partenaires").update(body).eq("id", id)
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  return NextResponse.json({ success: true })
+  try {
+    await db.update(partenaires).set(body).where(eq(partenaires.id, id))
+    return NextResponse.json({ success: true })
+  } catch (e: any) {
+    return NextResponse.json({ error: e.message }, { status: 500 })
+  }
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!await checkAdmin(supabase, session)) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
+  const { userId } = await auth()
+  if (!userId || !await checkAdmin(userId)) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
 
   const { id } = await params
-  const { error } = await supabase.from("partenaires").delete().eq("id", id)
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  return NextResponse.json({ success: true })
+  try {
+    await db.delete(partenaires).where(eq(partenaires.id, id))
+    return NextResponse.json({ success: true })
+  } catch (e: any) {
+    return NextResponse.json({ error: e.message }, { status: 500 })
+  }
 }

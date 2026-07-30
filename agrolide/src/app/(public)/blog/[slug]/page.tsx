@@ -2,7 +2,9 @@ import { Metadata, ResolvingMetadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { articles, users } from "@/db/schema"
+import { eq, neq, and } from "drizzle-orm"
 import { ArticleCard } from "@/components/ui/ArticleCard"
 import { Button } from "@/components/ui/Button"
 import Breadcrumb from "@/components/ui/Breadcrumb"
@@ -21,12 +23,23 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { slug } = await params;
-  const supabase = await createClient()
-  const { data: article } = await supabase
-    .from('articles')
-    .select('*, profiles(prenom, nom)')
-    .eq('slug', slug)
-    .single()
+  
+  const articleList = await db.select({
+    titre: articles.titre,
+    extrait: articles.extrait,
+    categorie: articles.categorie,
+    published_at: articles.published_at,
+    image_une_url: articles.image_une_url,
+    auteur_externe: articles.auteur_externe,
+    prenom: users.prenom,
+    nom: users.nom
+  })
+  .from(articles)
+  .leftJoin(users, eq(articles.auteur_id, users.id))
+  .where(eq(articles.slug, slug))
+  .limit(1)
+
+  const article = articleList[0]
 
   if (!article) {
     return {
@@ -34,7 +47,7 @@ export async function generateMetadata(
     }
   }
 
-  const authorName = article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")
+  const authorName = (article.prenom && article.nom) ? `${article.prenom} ${article.nom}` : (article.auteur_externe || "Équipe Agrolide")
 
   return {
     title: article.titre,
@@ -56,14 +69,34 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params;
-  const supabase = await createClient()
   
   // Fetch article
-  const { data: dbArticle, error } = await supabase
-    .from('articles')
-    .select('*, profiles(prenom, nom, photo_url)')
-    .eq('slug', slug)
-    .single()
+  let dbArticleList: any[] = []
+  let error = false
+  try {
+    dbArticleList = await db.select({
+      id: articles.id,
+      slug: articles.slug,
+      titre: articles.titre,
+      extrait: articles.extrait,
+      categorie: articles.categorie,
+      contenu_json: articles.contenu_json,
+      image_une_url: articles.image_une_url,
+      auteur_externe: articles.auteur_externe,
+      auteur_id: articles.auteur_id,
+      published_at: articles.published_at,
+      updated_at: articles.updated_at,
+      prenom: users.prenom,
+      nom: users.nom,
+      photo_url: users.photo_url
+    })
+    .from(articles)
+    .leftJoin(users, eq(articles.auteur_id, users.id))
+    .where(eq(articles.slug, slug))
+    .limit(1)
+  } catch (e) {
+    error = true
+  }
 
   const fallbackArticles = [
     { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", categorie: "Production Végétal", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z" },
@@ -71,7 +104,7 @@ export default async function BlogPostPage({
     { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Agroeconomie", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" }
   ]
 
-  let article = dbArticle
+  let article = dbArticleList[0]
   if (error || !article) {
     const fallback = fallbackArticles.find(a => a.slug === slug)
     if (fallback) {
@@ -82,13 +115,17 @@ export default async function BlogPostPage({
   }
 
   // Fetch similar articles
-  const { data: similarArticles } = await supabase
-    .from('articles')
-    .select('*')
-    .eq('categorie', article.categorie)
-    .neq('id', article.id)
-    .eq('statut', 'publie')
-    .limit(3)
+  let similarArticles: any[] = []
+  if (article.categorie && article.id) {
+    similarArticles = await db.select()
+      .from(articles)
+      .where(and(
+        eq(articles.categorie, article.categorie),
+        neq(articles.id, article.id),
+        eq(articles.statut, 'publie')
+      ))
+      .limit(3)
+  }
 
   // Parse Content: check if JSON for Tiptap
   let htmlContent = ""
@@ -114,7 +151,7 @@ export default async function BlogPostPage({
     { label: article.titre }
   ]
 
-  const authorName = article.profiles ? `${article.profiles.prenom} ${article.profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")
+  const authorName = (article.prenom && article.nom) ? `${article.prenom} ${article.nom}` : (article.auteur_externe || "Équipe Agrolide")
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -167,8 +204,8 @@ export default async function BlogPostPage({
             <div className="flex items-center gap-2">
               {article.auteur_id ? (
                 <Link href={`/annuaire/${article.auteur_id}`} className="flex items-center gap-2 hover:text-[var(--color-vert-principal)] transition-colors group">
-                  {article.profiles?.photo_url ? (
-                    <Image src={article.profiles.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
+                  {article.photo_url ? (
+                    <Image src={article.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
                   ) : (
                     <User size={18} className="text-[var(--color-vert-principal)]" />
                   )}
@@ -176,8 +213,8 @@ export default async function BlogPostPage({
                 </Link>
               ) : (
                 <>
-                  {article.profiles?.photo_url ? (
-                    <Image src={article.profiles.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
+                  {article.photo_url ? (
+                    <Image src={article.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
                   ) : (
                     <User size={18} className="text-[var(--color-vert-principal)]" />
                   )}

@@ -8,3 +8,4 @@ assets = { directory = ".open-next/assets", binding = "ASSETS" }
 binding = "DB"
 database_name = "agrolide-d1"
 database_id = "6c776ed5-4868-4cbd-beda-87bcf9cd2e64"
+migrations_dir = "drizzle"

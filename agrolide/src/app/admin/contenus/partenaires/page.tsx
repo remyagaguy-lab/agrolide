@@ -1,9 +1,13 @@
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { partenaires, contacts_partenariat } from "@/db/schema"
+import { desc, asc } from "drizzle-orm"
+import { auth } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import { Handshake, Mail } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
 export const metadata = { title: "Gestion des partenaires" }
+export const dynamic = 'force-dynamic'
 
 const PARTENAIRE_FIELDS = [
   { key: "nom", label: "Nom de l'organisation", required: true },
@@ -17,17 +21,19 @@ const PARTENAIRE_FIELDS = [
 ]
 
 export default async function AdminPartenairesPage() {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
   let contacts: any[] = []
-  try {
-    const { data } = await supabase.from("contacts_partenariat").select("*").order("created_at", { ascending: false }).limit(20)
-    contacts = data || []
-  } catch {}
+  let partenairesList: any[] = []
 
-  const { data: partenaires } = await supabase.from("partenaires").select("*").order("ordre")
+  try {
+    contacts = await db.select().from(contacts_partenariat).orderBy(desc(contacts_partenariat.created_at)).limit(20)
+  } catch (e) {}
+
+  try {
+    partenairesList = await db.select().from(partenaires).orderBy(asc(partenaires.ordre))
+  } catch (e) {}
 
   return (
     <div className="space-y-10 pb-10">
@@ -56,21 +62,15 @@ export default async function AdminPartenairesPage() {
                     <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wide">Email</th>
                     <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wide">Type</th>
                     <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wide">Date</th>
-                    <th className="px-5 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wide">Statut</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {(contacts as any[]).map(c => (
+                  {contacts.map(c => (
                     <tr key={c.id} className="hover:bg-gray-50 transition-colors">
-                      <td className="px-5 py-3 font-medium text-gray-900">{c.raison_sociale || c.nom || "—"}</td>
+                      <td className="px-5 py-3 font-medium text-gray-900">{c.raison_sociale || "—"}</td>
                       <td className="px-5 py-3 text-gray-500 text-xs"><a href={`mailto:${c.email}`} className="hover:text-blue-600">{c.email}</a></td>
-                      <td className="px-5 py-3 text-gray-500 text-xs">{c.nature_collaboration || c.type_collaboration || "—"}</td>
+                      <td className="px-5 py-3 text-gray-500 text-xs">{c.nature_collaboration || "—"}</td>
                       <td className="px-5 py-3 text-gray-400 text-xs">{c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}</td>
-                      <td className="px-5 py-3">
-                        <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${c.statut === "nouveau" ? "bg-blue-100 text-blue-700" : c.statut === "conclu" ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"}`}>
-                          {c.statut || "nouveau"}
-                        </span>
-                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -84,7 +84,7 @@ export default async function AdminPartenairesPage() {
       <section>
         <h2 className="text-base font-semibold text-gray-900 mb-4">Vitrine partenaires</h2>
         <GenericCrudTable
-          items={partenaires || []}
+          items={partenairesList}
           fields={PARTENAIRE_FIELDS}
           title="Partenaires"
           apiBase="/api/admin/partenaires"

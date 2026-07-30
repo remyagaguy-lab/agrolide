@@ -1,32 +1,37 @@
-import { createClient } from "@/lib/supabase/server"
-import { createClient as createAdminClient } from "@supabase/supabase-js"
 import { NextResponse, NextRequest } from "next/server"
+import { auth } from "@clerk/nextjs/server"
 import { revalidatePath } from "next/cache"
+import { db } from "@/db"
+import { users, articles } from "@/db/schema"
+import { eq } from "drizzle-orm"
 
 export async function POST(request: NextRequest) {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
+  const { userId } = await auth()
+  if (!userId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
 
-  const { data: profile } = await supabase.from("profiles")
-    .select("role_plateforme").eq("id", session.user.id).single()
-  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme)) {
+  // Vérifier rôle admin
+  const profile = await db.select({ role_plateforme: users.role_plateforme })
+    .from(users).where(eq(users.id, userId)).limit(1).then(r => r[0])
+
+  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme || '')) {
     return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
   }
 
   const payload = await request.json()
 
-  const supabaseAdmin = createAdminClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
-  )
+  try {
+    const inserted = await db.insert(articles).values({
+      ...payload,
+      id: crypto.randomUUID(),
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    }).returning({ id: articles.id })
 
-  const { error, data } = await supabaseAdmin.from("articles").insert(payload).select('id').single()
+    revalidatePath('/blog')
+    revalidatePath('/admin/contenus/articles')
 
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  
-  revalidatePath(`/blog`)
-  revalidatePath(`/admin/contenus/articles`)
-  
-  return NextResponse.json({ success: true, id: data.id })
+    return NextResponse.json({ success: true, id: inserted[0].id })
+  } catch (e: any) {
+    return NextResponse.json({ error: e.message }, { status: 500 })
+  }
 }

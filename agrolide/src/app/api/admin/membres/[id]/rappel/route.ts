@@ -1,19 +1,22 @@
-import { createClient } from "@/lib/supabase/server"
 import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
+import { auth } from "@clerk/nextjs/server"
 import { Resend } from "resend"
+import { db } from "@/db"
+import { users } from "@/db/schema"
+import { eq } from "drizzle-orm"
 
 export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
+  const { userId } = await auth()
+  if (!userId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
 
-  const { data: profile } = await supabase.from("profiles")
-    .select("role_plateforme").eq("id", session.user.id).single()
-  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme)) {
+  const profile = await db.select({ role_plateforme: users.role_plateforme })
+    .from(users).where(eq(users.id, userId)).limit(1).then(r => r[0])
+
+  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme || '')) {
     return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
   }
 

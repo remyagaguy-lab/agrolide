@@ -2,7 +2,10 @@ export const dynamic = 'force-dynamic';
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { headers } from "next/headers"
-import { createClient } from "@/lib/supabase/server"
+import { auth, currentUser } from "@clerk/nextjs/server"
+import { db } from "@/db"
+import { users } from "@/db/schema"
+import { eq } from "drizzle-orm"
 import { 
   LayoutDashboard, Users, FileText, FolderOpen, BookOpen, Calendar, 
   CreditCard, ExternalLink, Globe, Star, Handshake, Sprout, MessageSquare,
@@ -11,14 +14,22 @@ import {
 import { ClearCacheButton } from "./ClearCacheButton"
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
-  const { data: profile } = await supabase
-    .from("profiles").select("role_plateforme").eq("id", session.user.id).single()
+  // Vérifier le rôle admin dans D1
+  let profile = null
+  try {
+    const results = await db.select({ role_plateforme: users.role_plateforme })
+      .from(users)
+      .where(eq(users.id, userId))
+      .limit(1)
+    profile = results[0] || null
+  } catch (e) {
+    console.error('Erreur lecture profil admin:', e)
+  }
 
-  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme)) {
+  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme || '')) {
     redirect("/membres/dashboard")
   }
 

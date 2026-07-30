@@ -1,9 +1,13 @@
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { pages_statiques } from "@/db/schema"
+import { asc } from "drizzle-orm"
+import { auth } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { FileEdit, Globe } from "lucide-react"
 
 export const metadata = { title: "Pages statiques" }
+export const dynamic = 'force-dynamic'
 
 const PAGE_LABELS: Record<string, string> = {
   accueil: "Page d'accueil",
@@ -15,13 +19,14 @@ const PAGE_LABELS: Record<string, string> = {
 }
 
 export default async function AdminPagesPage() {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
-  const { data: pages } = await supabase.from("pages_statiques")
-    .select("id, slug, titre, updated_at")
-    .order("slug")
+  let pages: any[] = []
+  try {
+    pages = await db.select({ id: pages_statiques.id, slug: pages_statiques.slug, titre: pages_statiques.titre, updated_at: pages_statiques.updated_at })
+      .from(pages_statiques).orderBy(asc(pages_statiques.slug))
+  } catch (e) {}
 
   return (
     <div className="space-y-6 pb-10">
@@ -36,7 +41,7 @@ export default async function AdminPagesPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {(pages || []).map(page => (
+        {pages.map(page => (
           <Link
             key={page.id}
             href={`/admin/pages/${page.slug}`}
@@ -61,9 +66,9 @@ export default async function AdminPagesPage() {
           </Link>
         ))}
 
-        {(pages || []).length === 0 && (
+        {pages.length === 0 && (
           <div className="col-span-3 py-12 text-center text-gray-400 italic">
-            Aucune page statique trouvée. Collez d'abord le SQL de migration dans Supabase.
+            Aucune page statique trouvée dans D1.
           </div>
         )}
       </div>

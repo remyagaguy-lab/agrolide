@@ -1,81 +1,34 @@
-import { createServerClient } from "@supabase/ssr"
-import { NextResponse, type NextRequest } from "next/server"
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
 
-export async function middleware(request: NextRequest) {
-  let supabaseResponse = NextResponse.next({
-    request,
-  })
+const isMembreRoute = createRouteMatcher(['/membres(.*)'])
+const isAdminRoute = createRouteMatcher(['/admin(.*)'])
 
-  // We only initialize Supabase if environment variables are present to avoid crash on dev
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    return supabaseResponse
+export default clerkMiddleware(async (auth, request) => {
+  const { userId, sessionClaims } = await auth()
+
+  // Rediriger vers le login si non connecté pour routes protégées
+  if ((isMembreRoute(request) || isAdminRoute(request)) && !userId) {
+    const { redirectToSignIn } = await auth()
+    return redirectToSignIn()
   }
 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-    {
-      cookies: {
-        getAll() {
-          return request.cookies.getAll()
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) => request.cookies.set(name, value))
-          supabaseResponse = NextResponse.next({
-            request,
-          })
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
-          )
-        },
-      },
-    }
-  )
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  const { pathname } = request.nextUrl
-
-  const membresPaths = [
-    '/membres'
-  ]
-
-  const adminPaths = [
-    '/admin'
-  ]
-
-  // Autoriser certaines routes même si on est sous /membres (ex: /membres/annuaire si c'est public)
-  const isMembreRoute = pathname.startsWith('/membres')
-  const isAdminRoute = pathname.startsWith('/admin')
-
-  if ((isMembreRoute || isAdminRoute) && !user) {
-    const url = request.nextUrl.clone()
-    url.pathname = '/login'
-    return NextResponse.redirect(url)
-  }
-
-  if (isAdminRoute && user) {
-    const { data: profile } = await supabase
-      .from("profiles")
-      .select("role_plateforme")
-      .eq("id", user.id)
-      .single()
-
-    const role = profile?.role_plateforme
+  // Vérifier le rôle admin pour les routes admin
+  if (isAdminRoute(request) && userId) {
+    const role = (sessionClaims?.metadata as any)?.role
     if (role !== 'super_admin' && role !== 'admin_content') {
       const url = request.nextUrl.clone()
       url.pathname = '/membres/dashboard'
       return NextResponse.redirect(url)
     }
   }
-
-  return supabaseResponse
-}
+})
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for Clerk's auto-proxy path
+    '/__clerk/:path*',
+    '/(api|trpc)(.*)',
   ],
 }

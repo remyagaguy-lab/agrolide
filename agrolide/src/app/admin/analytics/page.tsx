@@ -1,20 +1,29 @@
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { users, documents } from "@/db/schema"
+import { asc } from "drizzle-orm"
+import { auth } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import { Users, BookOpen, Download, UserCheck } from "lucide-react"
 import { AdminLineChart } from "@/components/admin/ChartsWrapper"
 
 export const metadata = { title: "Analytiques" }
+export const dynamic = 'force-dynamic'
 
 export default async function AdminAnalyticsPage() {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
-  // Fetch all members to build a registration trend
-  const { data: profiles } = await supabase
-    .from("profiles")
-    .select("created_at")
-    .order("created_at", { ascending: true })
+  let profiles: any[] = []
+  let docs: any[] = []
+
+  try {
+    profiles = await db.select({ created_at: users.created_at }).from(users).orderBy(asc(users.created_at))
+    docs = await db.select({ nb_telechargements: documents.nb_telechargements }).from(documents)
+  } catch (e) {
+    console.error('Erreur fetch analytics:', e)
+  }
+
+  const totalDownloads = docs.reduce((acc, curr) => acc + (curr.nb_telechargements || 0), 0)
 
   // Build trend data for the last 6 months
   const monthsData: Record<string, number> = {}
@@ -27,31 +36,25 @@ export default async function AdminAnalyticsPage() {
 
   const MOIS_LABELS = ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"]
 
-  if (profiles) {
-    profiles.forEach(p => {
-      if (!p.created_at) return
-      const date = new Date(p.created_at)
-      const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`
-      if (monthsData[key] !== undefined) {
-        monthsData[key]++
-      }
-    })
-  }
+  profiles.forEach(p => {
+    if (!p.created_at) return
+    const date = new Date(p.created_at)
+    const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`
+    if (monthsData[key] !== undefined) {
+      monthsData[key]++
+    }
+  })
 
   const registrationsTrend = Object.entries(monthsData).map(([k, v]) => ({
     name: MOIS_LABELS[parseInt(k.split("-")[1]) - 1],
     Inscriptions: v
   }))
 
-  // Fetch documents to get total downloads
-  const { data: docs } = await supabase.from("documents").select("nb_telechargements")
-  const totalDownloads = docs?.reduce((acc, curr) => acc + (curr.nb_telechargements || 0), 0) || 0
-
   return (
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Analytiques Détaillées</h1>
-        <p className="text-gray-500 mt-2">Vue approfondie de la croissance et de l'engagement de la plateforme.</p>
+        <p className="text-gray-500 mt-2">Vue approfondie de la croissance et de l&apos;engagement de la plateforme.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -62,7 +65,7 @@ export default async function AdminAnalyticsPage() {
             </div>
             <p className="text-sm font-medium text-gray-500">Membres Totaux</p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 mt-2">{profiles?.length || 0}</p>
+          <p className="text-3xl font-bold text-gray-900 mt-2">{profiles.length}</p>
         </div>
 
         <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-2">
@@ -94,7 +97,7 @@ export default async function AdminAnalyticsPage() {
             </div>
             <p className="text-sm font-medium text-gray-500">Ressources en ligne</p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 mt-2">{docs?.length || 0}</p>
+          <p className="text-3xl font-bold text-gray-900 mt-2">{docs.length}</p>
         </div>
       </div>
 
@@ -106,7 +109,7 @@ export default async function AdminAnalyticsPage() {
       <div className="bg-blue-50 border border-blue-100 text-blue-800 p-6 rounded-2xl">
         <h3 className="font-bold mb-2">💡 Suivi Analytique Avancé</h3>
         <p className="text-sm">
-          Actuellement, les statistiques sont générées à partir de votre base de données Supabase. Pour suivre le trafic en temps réel (visiteurs uniques, pages les plus vues, provenance du trafic), nous recommandons d'intégrer une solution externe comme <strong>Google Analytics</strong> ou <strong>Plausible</strong> à l'avenir.
+          Les statistiques sont maintenant générées depuis Cloudflare D1. Pour suivre le trafic en temps réel (visiteurs uniques, pages les plus vues), intégrez Google Analytics ou Plausible.
         </p>
       </div>
     </div>

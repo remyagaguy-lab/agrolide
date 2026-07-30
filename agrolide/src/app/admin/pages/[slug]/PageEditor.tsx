@@ -6,6 +6,7 @@ import { Save, CheckCircle, ArrowLeft } from "lucide-react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { revalidateEverything } from "@/app/actions/revalidate"
+import { useAuth } from "@clerk/nextjs"
 
 const ArticleEditorForm = dynamic(
   () => import("@/app/admin/contenus/articles/[id]/ArticleEditorForm").then(m => m.ArticleEditorForm),
@@ -16,11 +17,11 @@ interface Props {
   slug: string
   titre: string | null
   contenuJson: any
-  sessionToken: string
 }
 
-export function PageEditor({ slug, titre, contenuJson, sessionToken }: Props) {
+export function PageEditor({ slug, titre, contenuJson }: Props) {
   const router = useRouter()
+  const { getToken } = useAuth()
   const [json, setJson] = useState(contenuJson)
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
@@ -30,11 +31,12 @@ export function PageEditor({ slug, titre, contenuJson, sessionToken }: Props) {
     setSaving(true)
     setError("")
     try {
+      const token = await getToken()
       const res = await fetch(`/api/admin/pages/${slug}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${sessionToken}`,
+          "Authorization": `Bearer ${token}`,
         },
         body: JSON.stringify({ contenu_json: json }),
       })

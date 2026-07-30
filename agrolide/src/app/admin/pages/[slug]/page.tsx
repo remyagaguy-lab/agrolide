@@ -1,5 +1,8 @@
-import { createClient } from "@/lib/supabase/server"
 import { redirect, notFound } from "next/navigation"
+import { auth } from "@clerk/nextjs/server"
+import { db } from "@/db"
+import { pages_statiques } from "@/db/schema"
+import { eq } from "drizzle-orm"
 import { PageEditor } from "./PageEditor"
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -9,14 +12,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function AdminPageEditorPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
-  const { data: page } = await supabase.from("pages_statiques")
-    .select("*")
-    .eq("slug", slug)
-    .single()
+  const page = await db.select().from(pages_statiques).where(eq(pages_statiques.slug, slug)).limit(1).then(r => r[0])
 
   if (!page) notFound()
 
@@ -30,7 +29,6 @@ export default async function AdminPageEditorPage({ params }: { params: Promise<
         slug={slug}
         titre={page.titre}
         contenuJson={page.contenu_json}
-        sessionToken={session.access_token}
       />
     </div>
   )

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ea966da3-968f-466c-90c3-ed488dcdfac9",
+    "nom": "Réseau & communauté",
+    "ordre": 1
+  },
+  {
+    "id": "3200f7ba-da7b-412d-8346-1d3233dcda8f",
+    "nom": "Formation & savoirs",
+    "ordre": 2
+  },
+  {
+    "id": "dcbbd332-aadb-4ef3-8bed-f68c16c48bcd",
+    "nom": "Entrepreneuriat agricole",
+    "ordre": 3
+  },
+  {
+    "id": "326f9f64-4f49-47ab-aedc-43b8247b34d5",
+    "nom": "Recherche & vulgarisation",
+    "ordre": 4
+  },
+  {
+    "id": "59395811-a45f-4aaf-b15e-377372d6c1c6",
+    "nom": "Opportunités",
+    "ordre": 5
+  },
+  {
+    "id": "f4bf2c77-89b9-4015-9fb7-6f7e604f1a69",
+    "nom": "Annonces",
+    "ordre": 6
+  }
+]

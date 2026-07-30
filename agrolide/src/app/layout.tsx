@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist, Libre_Baskerville } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import "./globals.css";
 
@@ -34,17 +35,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${urbanist.variable} ${baskerville.variable} h-full antialiased`}
-    >
-      <head>
-        {/* Scripts analytiques gérés par CookieBanner */}
-      </head>
-      <body className="min-h-full flex flex-col">
-        {children}
-        <CookieBanner />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html
+        lang="fr"
+        className={`${urbanist.variable} ${baskerville.variable} h-full antialiased`}
+      >
+        <head>
+          {/* Scripts analytiques gérés par CookieBanner */}
+        </head>
+        <body className="min-h-full flex flex-col">
+          {children}
+          <CookieBanner />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

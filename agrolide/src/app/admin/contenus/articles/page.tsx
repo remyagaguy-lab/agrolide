@@ -1,20 +1,21 @@
-import { createClient } from "@/lib/supabase/server"
 import Link from "next/link"
 import { Plus, Edit2 } from "lucide-react"
+import { db } from "@/db"
+import { articles } from "@/db/schema"
+import { desc } from "drizzle-orm"
 import { ArticleDeleteButton } from "./ArticleDeleteButton"
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export default async function ArticlesListPage() {
-  const supabase = await createClient()
+  let articlesList = []
+  try {
+    articlesList = await db.select().from(articles).orderBy(desc(articles.created_at))
+  } catch (e) {
+    console.error('Erreur fetch articles:', e)
+  }
 
-  let { data: articles } = await supabase
-    .from("articles")
-    .select("*")
-    .order("created_at", { ascending: false })
-  
-  if (!articles) articles = []
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -44,8 +45,8 @@ export default async function ArticlesListPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-              {articles && articles.length > 0 ? (
-                articles.map((article) => (
+              {articlesList && articlesList.length > 0 ? (
+                articlesList.map((article) => (
                   <tr key={article.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-medium text-gray-900 max-w-xs truncate">
                       {article.titre}
@@ -64,7 +65,7 @@ export default async function ArticlesListPage() {
                     <td className="px-6 py-4 capitalize">{article.categorie}</td>
                     <td className="px-6 py-4 text-gray-600">{article.auteur_externe || "Admin"}</td>
                     <td className="px-6 py-4 text-gray-500">
-                      {new Date(article.created_at).toLocaleDateString('fr-FR')}
+                      {article.created_at ? new Date(article.created_at).toLocaleDateString('fr-FR') : '-'}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
@@ -83,7 +84,7 @@ export default async function ArticlesListPage() {
               ) : (
                 <tr>
                   <td colSpan={6} className="px-6 py-8 text-center text-gray-500 italic">
-                    Aucun article trouvé. Cliquez sur "Nouvel article" pour commencer.
+                    Aucun article trouvé. Cliquez sur &quot;Nouvel article&quot; pour commencer.
                   </td>
                 </tr>
               )}

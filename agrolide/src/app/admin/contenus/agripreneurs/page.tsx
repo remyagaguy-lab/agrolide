@@ -1,9 +1,13 @@
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { agripreneurs } from "@/db/schema"
+import { desc } from "drizzle-orm"
 import { redirect } from "next/navigation"
+import { auth } from "@clerk/nextjs/server"
 import { Sprout } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
 export const metadata = { title: "Agripreneurs" }
+export const dynamic = 'force-dynamic'
 
 const AGRIPRENEUR_FIELDS = [
   { key: "nom", label: "Nom de l'agripreneur", required: true },
@@ -17,11 +21,15 @@ const AGRIPRENEUR_FIELDS = [
 ]
 
 export default async function AdminAgripreneursPage() {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
-  const { data: agripreneurs } = await supabase.from("agripreneurs").select("*").order("created_at", { ascending: false })
+  let agripreneursList: any[] = []
+  try {
+    agripreneursList = await db.select().from(agripreneurs).orderBy(desc(agripreneurs.created_at))
+  } catch (e) {
+    console.error('Erreur fetch agripreneurs:', e)
+  }
 
   return (
     <div className="space-y-6 pb-10">
@@ -36,7 +44,7 @@ export default async function AdminAgripreneursPage() {
       </div>
 
       <GenericCrudTable
-        items={agripreneurs || []}
+        items={agripreneursList}
         fields={AGRIPRENEUR_FIELDS}
         title="Agripreneurs"
         apiBase="/api/admin/agripreneurs"

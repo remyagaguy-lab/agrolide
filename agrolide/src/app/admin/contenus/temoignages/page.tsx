@@ -1,27 +1,32 @@
-import { createClient } from "@/lib/supabase/server"
+import { db } from "@/db"
+import { temoignages } from "@/db/schema"
+import { asc } from "drizzle-orm"
+import { auth } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation"
 import { Star } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
 export const metadata = { title: "Témoignages" }
+export const dynamic = 'force-dynamic'
 
 const TEMOIGNAGE_FIELDS = [
-  { key: "nom", label: "Nom complet", required: true },
-  { key: "poste", label: "Poste / Titre" },
-  { key: "organisation", label: "Organisation" },
+  { key: "prenom", label: "Prénom", required: true },
+  { key: "nom", label: "Nom" },
+  { key: "categorie", label: "Catégorie" },
   { key: "pays", label: "Pays" },
   { key: "citation", label: "Citation / Témoignage", type: "textarea" as const, required: true },
   { key: "photo_url", label: "URL de la photo", type: "url" as const },
-  { key: "note", label: "Note (1-5)", type: "number" as const },
   { key: "ordre", label: "Ordre d'affichage", type: "number" as const },
 ]
 
 export default async function AdminTemoignagesPage() {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
-  const { data: temoignages } = await supabase.from("temoignages").select("*").order("ordre")
+  let temoignagesList: any[] = []
+  try {
+    temoignagesList = await db.select().from(temoignages).orderBy(asc(temoignages.ordre))
+  } catch (e) {}
 
   return (
     <div className="space-y-6 pb-10">
@@ -31,16 +36,16 @@ export default async function AdminTemoignagesPage() {
         </div>
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Témoignages</h1>
-          <p className="text-sm text-gray-500">Gérez les témoignages affichés sur la page d'accueil</p>
+          <p className="text-sm text-gray-500">Gérez les témoignages affichés sur la page d&apos;accueil</p>
         </div>
       </div>
 
       <GenericCrudTable
-        items={temoignages || []}
+        items={temoignagesList}
         fields={TEMOIGNAGE_FIELDS}
         title="Témoignages"
         apiBase="/api/admin/temoignages"
-        labelField="nom"
+        labelField="prenom"
         togglePublieKey="publie"
       />
     </div>

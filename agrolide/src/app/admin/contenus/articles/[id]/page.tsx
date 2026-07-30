@@ -1,25 +1,22 @@
 import { redirect } from "next/navigation"
-import { createClient } from "@/lib/supabase/server"
+import { auth } from "@clerk/nextjs/server"
+import { db } from "@/db"
+import { articles } from "@/db/schema"
+import { eq } from "drizzle-orm"
 import { ArticleEditorForm } from "./DynamicEditorWrapper"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
 
 export default async function ArticleEditPage({ params }: { params: Promise<{ id: string }> }) {
-  const supabase = await createClient()
-  const { data: { session } } = await supabase.auth.getSession()
-  
-  if (!session) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/sign-in")
 
   let article = null
   const resolvedParams = await params
   const isNew = resolvedParams.id === "nouveau"
 
   if (!isNew) {
-    const { data } = await supabase
-      .from("articles")
-      .select("*")
-      .eq("id", resolvedParams.id)
-      .single()
+    const data = await db.select().from(articles).where(eq(articles.id, resolvedParams.id)).limit(1).then(r => r[0])
       
     if (!data) {
       redirect("/admin/contenus/articles")
@@ -45,10 +42,7 @@ export default async function ArticleEditPage({ params }: { params: Promise<{ id
       </div>
 
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <ArticleEditorForm 
-          initialData={article} 
-          sessionToken={session.access_token} 
-        />
+        <ArticleEditorForm initialData={article} />
       </div>
     </div>
   )

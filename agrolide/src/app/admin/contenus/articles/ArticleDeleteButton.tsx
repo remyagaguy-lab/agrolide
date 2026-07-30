@@ -15,12 +15,11 @@ export function ArticleDeleteButton({ articleId }: { articleId: string }) {
 
     setIsDeleting(true)
     try {
-      const { createClient } = await import("@/lib/supabase/client")
-      const supabase = createClient()
-      
-      const { error } = await supabase.from("articles").delete().eq("id", articleId)
-      if (error) throw error
-
+      const res = await fetch(`/api/admin/articles/${articleId}`, { method: 'DELETE' })
+      if (!res.ok) {
+        const err = await res.json()
+        throw new Error(err.error || 'Erreur inconnue')
+      }
       router.refresh()
     } catch (err: any) {
       alert("Erreur lors de la suppression : " + err.message)

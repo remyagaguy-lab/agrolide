@@ -1,7 +1,9 @@
 import React from 'react'
 import ActualitesClient from './ActualitesClient'
 import { Metadata } from 'next'
-import { createClient } from '@/lib/supabase/server'
+import { db } from '@/db'
+import { evenements } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
@@ -12,16 +14,11 @@ export const metadata: Metadata = {
 export const revalidate = 3600 // Revalidate cache every hour
 
 export default async function ActualitesPage() {
-  const supabase = await createClient()
-
   // Fetch only published events for the JSON-LD
-  const { data: eventsData } = await supabase
-    .from('evenements')
-    .select('*')
-    .eq('publie', true)
+  const eventsData = await db.select().from(evenements).where(eq(evenements.publie, true))
 
   // Construction du JSON-LD pour les événements
-  const jsonLdEvents = (eventsData || []).map((evt: any) => {
+  const jsonLdEvents = eventsData.map((evt: any) => {
     return {
       "@context": "https://schema.org",
       "@type": "Event",
