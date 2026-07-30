@@ -2,6 +2,7 @@ import { headers } from 'next/headers'
 import { Webhook } from 'svix'
 import { db } from '@/db'
 import { users } from '@/db/schema'
+import { eq } from 'drizzle-orm'
 
 // Ce webhook est appelé par Clerk chaque fois qu'un utilisateur crée un compte
 // ou met à jour son profil. Il synchronise les données Clerk avec Cloudflare D1.
@@ -86,7 +87,7 @@ export async function POST(req: Request) {
           photo_url: image_url || null,
           updated_at: new Date().toISOString(),
         })
-        .where(users.id.eq(id))
+        .where(eq(users.id, id))
     } catch (err) {
       console.error('Erreur mise à jour D1:', err)
     }
