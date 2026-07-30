@@ -3,6 +3,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { Show, UserButton } from "@clerk/nextjs"
 
 const NAV_LINKS = [
   { href: "/",                label: "Accueil" },
@@ -85,18 +86,29 @@ export function Header() {
 
         {/* CTA Desktop */}
         <div className="hidden md:flex items-center gap-5">
-          <Link
-            href="/login"
-            className="font-heading font-[600] text-[13px] text-[#666] hover:text-[#1b5e38] transition-colors"
-          >
-            Connexion
-          </Link>
-          <Link
-            href="/rejoindre"
-            className="bg-[#1b5e38] text-white font-heading font-[700] px-[18px] py-[9px] text-[13px] rounded-md hover:bg-[#164d2e] transition-colors"
-          >
-            Rejoindre
-          </Link>
+          <Show when="signed-out">
+            <Link
+              href="/login"
+              className="font-heading font-[600] text-[13px] text-[#666] hover:text-[#1b5e38] transition-colors"
+            >
+              Connexion
+            </Link>
+            <Link
+              href="/rejoindre"
+              className="bg-[#1b5e38] text-white font-heading font-[700] px-[18px] py-[9px] text-[13px] rounded-md hover:bg-[#164d2e] transition-colors"
+            >
+              Rejoindre
+            </Link>
+          </Show>
+          <Show when="signed-in">
+            <Link
+              href="/membres/dashboard"
+              className="font-heading font-[600] text-[13px] text-[#1b5e38] hover:text-[#164d2e] transition-colors"
+            >
+              Mon espace
+            </Link>
+            <UserButton />
+          </Show>
         </div>
 
         {/* Hamburger Mobile */}
@@ -123,15 +135,25 @@ export function Header() {
               </Link>
             ))}
             <div className="border-t border-[#e8e8e4] pt-5 flex flex-col gap-3">
-              <Link href="/login" className="font-heading font-[600] text-[15px] text-[#666]">
-                Connexion
-              </Link>
-              <Link
-                href="/rejoindre"
-                className="bg-[#1b5e38] text-white font-heading font-[700] px-[20px] py-[12px] text-[14px] text-center rounded-md hover:bg-[#164d2e] transition-colors"
-              >
-                Rejoindre le réseau
-              </Link>
+              <Show when="signed-out">
+                <Link href="/login" className="font-heading font-[600] text-[15px] text-[#666]">
+                  Connexion
+                </Link>
+                <Link
+                  href="/rejoindre"
+                  className="bg-[#1b5e38] text-white font-heading font-[700] px-[20px] py-[12px] text-[14px] text-center rounded-md hover:bg-[#164d2e] transition-colors"
+                >
+                  Rejoindre le réseau
+                </Link>
+              </Show>
+              <Show when="signed-in">
+                <Link href="/membres/dashboard" className="font-heading font-[600] text-[15px] text-[#1b5e38]">
+                  Mon espace
+                </Link>
+                <div className="pt-2 flex items-center justify-start">
+                  <UserButton />
+                </div>
+              </Show>
             </div>
           </nav>
         </div>
