@@ -9,9 +9,22 @@ export default async function ProfilModifierPage() {
   const { userId } = await auth()
   if (!userId) redirect("/login")
 
-  const profile = await db.query.users.findFirst({
-    where: eq(users.id, userId)
+  const userRows = await db.select({
+    id: users.id,
+    prenom: users.prenom,
+    nom: users.nom,
+    entreprise: users.organisation,
+    bio: users.biographie,
+    avatar_url: users.photo_url
   })
+  .from(users)
+  .where(eq(users.id, userId))
+  .limit(1)
+
+  const profile = userRows[0] ? {
+    ...userRows[0],
+    telephone: ""
+  } : null
 
   if (!profile) redirect("/login")
 

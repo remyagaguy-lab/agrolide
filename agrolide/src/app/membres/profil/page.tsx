@@ -12,9 +12,24 @@ export default async function ProfilPage() {
   const { userId } = await auth()
   if (!userId) redirect("/login")
 
-  const profile = await db.query.users.findFirst({
-    where: eq(users.id, userId)
+  const userRows = await db.select({
+    id: users.id,
+    email: users.email,
+    prenom: users.prenom,
+    nom: users.nom,
+    photo_url: users.photo_url,
+    specialite: users.specialite,
+    categorie: users.categorie,
+    ville: users.ville,
+    pays: users.pays,
+    organisation: users.organisation,
+    biographie: users.biographie
   })
+  .from(users)
+  .where(eq(users.id, userId))
+  .limit(1)
+
+  const profile = userRows[0] || null
 
   if (!profile) redirect("/login")
 

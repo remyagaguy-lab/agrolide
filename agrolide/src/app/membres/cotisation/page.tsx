@@ -12,9 +12,16 @@ export default async function CotisationPage() {
   const { userId } = await auth()
   if (!userId) redirect("/login")
 
-  const profile = await db.query.users.findFirst({
-    where: eq(users.id, userId)
+  const userRows = await db.select({
+    id: users.id,
+    statut_adhesion: users.statut_adhesion,
+    categorie: users.categorie
   })
+  .from(users)
+  .where(eq(users.id, userId))
+  .limit(1)
+
+  const profile = userRows[0] || null
 
   if (!profile) redirect("/login")
 
