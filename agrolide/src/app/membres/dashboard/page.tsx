@@ -20,51 +20,79 @@ export default async function DashboardPage() {
   if (!profile) redirect("/login")
 
   // Fetch notifications
-  const notifsData = await db.query.notifications.findMany({
-    where: eq(notifications.user_id, userId),
-    orderBy: [desc(notifications.created_at)],
-    limit: 3
-  })
+  let notifsData: any[] = []
+  try {
+    notifsData = await db.query.notifications.findMany({
+      where: eq(notifications.user_id, userId),
+      orderBy: [desc(notifications.created_at)],
+      limit: 3
+    })
+  } catch (e) {
+    console.error("Error fetching notifications:", e)
+  }
 
   // Fetch prochains événements
-  const evtsData = await db.query.evenements.findMany({
-    where: gte(evenements.date_debut, new Date().toISOString()),
-    orderBy: (evts, { asc }) => [asc(evts.date_debut)],
-    limit: 2
-  })
+  let evtsData: any[] = []
+  try {
+    evtsData = await db.query.evenements.findMany({
+      where: gte(evenements.date_debut, new Date().toISOString()),
+      orderBy: (evts, { asc }) => [asc(evts.date_debut)],
+      limit: 2
+    })
+  } catch (e) {
+    console.error("Error fetching events:", e)
+  }
 
   // Fetch latest articles
-  const artsData = await db.query.articles.findMany({
-    where: eq(articles.statut, "publie"),
-    columns: { slug: true, titre: true, published_at: true, categorie: true },
-    orderBy: [desc(articles.published_at)],
-    limit: 2
-  })
-  
-  const mappedArticles = artsData.map(a => ({
-    slug: a.slug,
-    title: a.titre,
-    published_at: a.published_at,
-    category: a.categorie
-  }))
+  let mappedArticles: any[] = []
+  try {
+    const artsData = await db.select({
+      slug: articles.slug,
+      titre: articles.titre,
+      published_at: articles.published_at,
+      categorie: articles.categorie
+    })
+    .from(articles)
+    .where(eq(articles.statut, "publie"))
+    .orderBy(desc(articles.published_at))
+    .limit(2)
+    
+    mappedArticles = artsData.map(a => ({
+      slug: a.slug,
+      title: a.titre,
+      published_at: a.published_at,
+      category: a.categorie
+    }))
+  } catch (e) {
+    console.error("Error fetching articles:", e)
+  }
 
   // Données spécifiques catégorie
   let userFormations: any[] = []
   let userOpportunites: any[] = []
   
-  if (profile.categorie === "junior") {
-    userFormations = await db.query.formations.findMany({ limit: 2 })
-  }
+  try {
+    if (profile.categorie === "junior") {
+      userFormations = await db.query.formations.findMany({ limit: 2 })
+    }
 
-  if (profile.categorie === "professionnel") {
-    userOpportunites = await db.query.opportunites.findMany({ limit: 2 })
+    if (profile.categorie === "professionnel") {
+      userOpportunites = await db.query.opportunites.findMany({ limit: 2 })
+    }
+  } catch (e) {
+    console.error("Error fetching category-specific data:", e)
   }
 
   // Calcul date de fin de cotisation
-  const cotisation = await db.query.cotisations.findFirst({
-    where: eq(cotisations.membre_id, userId),
-    orderBy: [desc(cotisations.created_at)]
-  })
+  let cotisation: any = null
+  try {
+    cotisation = await db.query.cotisations.findFirst({
+      where: eq(cotisations.membre_id, userId),
+      orderBy: [desc(cotisations.created_at)]
+    })
+  } catch (e) {
+    console.error("Error fetching cotisation:", e)
+  }
     
   const dateFinCotisation = cotisation?.date_fin ? new Date(cotisation.date_fin) : null
   const joursRestants = dateFinCotisation 
