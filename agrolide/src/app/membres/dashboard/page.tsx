@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { Bell, Calendar as CalendarIcon, FileText, Briefcase, BookOpen, ChevronRight, Clock, Users, Library, MessageSquare } from "lucide-react"
-import { auth } from "@/auth"
+import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { users, notifications, evenements, articles, formations, opportunites, cotisations } from "@/db/schema"
 import { eq, desc, gte } from "drizzle-orm"
@@ -9,19 +9,19 @@ import { eq, desc, gte } from "drizzle-orm"
 export const metadata = { title: "Tableau de bord" }
 
 export default async function DashboardPage() {
-  const session = await auth()
-  if (!session?.user?.id) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/login")
 
   // Fetch Profile
   const profile = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id)
+    where: eq(users.id, userId)
   })
 
   if (!profile) redirect("/login")
 
   // Fetch notifications
   const notifsData = await db.query.notifications.findMany({
-    where: eq(notifications.user_id, session.user.id),
+    where: eq(notifications.user_id, userId),
     orderBy: [desc(notifications.created_at)],
     limit: 3
   })
@@ -62,7 +62,7 @@ export default async function DashboardPage() {
 
   // Calcul date de fin de cotisation
   const cotisation = await db.query.cotisations.findFirst({
-    where: eq(cotisations.membre_id, session.user.id),
+    where: eq(cotisations.membre_id, userId),
     orderBy: [desc(cotisations.created_at)]
   })
     

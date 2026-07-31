@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
-import { auth } from "@/auth"
+import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { users, cotisations as cotisationsTable } from "@/db/schema"
 import { eq, desc } from "drizzle-orm"
@@ -9,18 +9,18 @@ import { PaiementBoutons } from "./PaiementBoutons"
 export const metadata = { title: "Ma Cotisation" }
 
 export default async function CotisationPage() {
-  const session = await auth()
-  if (!session?.user?.id) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/login")
 
   const profile = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id)
+    where: eq(users.id, userId)
   })
 
   if (!profile) redirect("/login")
 
   // Fetch cotisations
   const cotisations = await db.query.cotisations.findMany({
-    where: eq(cotisationsTable.membre_id, session.user.id),
+    where: eq(cotisationsTable.membre_id, userId),
     orderBy: [desc(cotisationsTable.created_at)]
   })
 

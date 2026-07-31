@@ -1,16 +1,16 @@
 import { redirect } from "next/navigation"
 import { ProfilForm } from "./ProfilForm"
-import { auth } from "@/auth"
+import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
 
 export default async function ProfilModifierPage() {
-  const session = await auth()
-  if (!session?.user?.id) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/login")
 
   const profile = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id)
+    where: eq(users.id, userId)
   })
 
   if (!profile) redirect("/login")

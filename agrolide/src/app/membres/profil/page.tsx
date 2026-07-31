@@ -2,18 +2,18 @@ import { redirect } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
 import { User, MapPin, Briefcase, Mail, Phone, Edit } from "lucide-react"
-import { auth } from "@/auth"
+import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
 export const metadata = { title: "Mon Profil" }
 
 export default async function ProfilPage() {
-  const session = await auth()
-  if (!session?.user?.id) redirect("/login")
+  const { userId } = await auth()
+  if (!userId) redirect("/login")
 
   const profile = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id)
+    where: eq(users.id, userId)
   })
 
   if (!profile) redirect("/login")
@@ -63,7 +63,7 @@ export default async function ProfilPage() {
                   <Mail className="text-[var(--color-vert-principal)]" size={20} />
                   <div>
                     <p className="text-xs text-gray-500">Email</p>
-                    <p className="font-medium text-gray-900">{session.user.email}</p>
+                    <p className="font-medium text-gray-900">{profile.email}</p>
                   </div>
                 </div>
                 
