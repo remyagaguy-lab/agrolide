@@ -20,51 +20,108 @@ export default async function MembresRootLayout({
   }
 
   // 2. Récupération du profil utilisateur
-  let profile = await db.query.users.findFirst({
-    where: eq(users.id, userId)
-  })
+  let profile: any = null
+  try {
+    const userRows = await db.select({
+      id: users.id,
+      email: users.email,
+      name: users.name,
+      prenom: users.prenom,
+      nom: users.nom,
+      image: users.image,
+      photo_url: users.photo_url,
+      role_plateforme: users.role_plateforme,
+      statut_adhesion: users.statut_adhesion,
+      categorie: users.categorie,
+      specialite: users.specialite,
+      biographie: users.biographie,
+      ville: users.ville,
+      pays: users.pays,
+      created_at: users.created_at,
+      updated_at: users.updated_at
+    })
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1)
+
+    profile = userRows[0] || null
+  } catch (error) {
+    console.error("[MOUCHARD] Erreur lors de la récupération initiale du profil:", error)
+  }
 
   // FALLBACK SI LE WEBHOOK N'A PAS FONCTIONNÉ (ex: en dev local avec Google OAuth)
   if (!profile) {
     console.warn(`[CLERK FALLBACK] Profil introuvable pour ${userId}. Création automatique depuis Clerk...`);
-    const user = await currentUser();
-    if (user) {
-      const primaryEmail = user.emailAddresses[0]?.emailAddress;
-      if (primaryEmail) {
-        // Vérifier si un compte existe déjà avec cet email (ex: ancien compte NextAuth)
-        const existingUser = await db.query.users.findFirst({
-          where: eq(users.email, primaryEmail)
-        });
+    try {
+      const user = await currentUser();
+      if (user) {
+        const primaryEmail = user.emailAddresses[0]?.emailAddress;
+        if (primaryEmail) {
+          // Vérifier si un compte existe déjà avec cet email (ex: ancien compte NextAuth)
+          const existingUserRows = await db.select({
+            id: users.id,
+            email: users.email,
+            image: users.image,
+            photo_url: users.photo_url
+          })
+          .from(users)
+          .where(eq(users.email, primaryEmail))
+          .limit(1)
 
-        if (existingUser) {
-          console.warn(`[CLERK FALLBACK] Email ${primaryEmail} existant. Mise à jour de l'ID vers Clerk ID...`);
-          await db.update(users).set({ 
-            id: userId,
-            image: user.imageUrl || existingUser.image,
-            photo_url: user.imageUrl || existingUser.photo_url
-          }).where(eq(users.email, primaryEmail));
-        } else {
-          console.warn(`[CLERK FALLBACK] Nouvel utilisateur. Insertion en base...`);
-          await db.insert(users).values({
-            id: userId,
-            email: primaryEmail,
-            name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || null,
-            prenom: user.firstName || null,
-            nom: user.lastName || null,
-            image: user.imageUrl || null,
-            photo_url: user.imageUrl || null,
-            role_plateforme: 'membre',
-            statut_adhesion: 'gratuit',
-            created_at: new Date().toISOString(),
-            updated_at: new Date().toISOString(),
-          }).onConflictDoNothing();
+          const existingUser = existingUserRows[0] || null
+
+          if (existingUser) {
+            console.warn(`[CLERK FALLBACK] Email ${primaryEmail} existant. Mise à jour de l'ID vers Clerk ID...`);
+            await db.update(users).set({ 
+              id: userId,
+              image: user.imageUrl || existingUser.image,
+              photo_url: user.imageUrl || existingUser.photo_url
+            }).where(eq(users.email, primaryEmail));
+          } else {
+            console.warn(`[CLERK FALLBACK] Nouvel utilisateur. Insertion en base...`);
+            await db.insert(users).values({
+              id: userId,
+              email: primaryEmail,
+              name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || null,
+              prenom: user.firstName || null,
+              nom: user.lastName || null,
+              image: user.imageUrl || null,
+              photo_url: user.imageUrl || null,
+              role_plateforme: 'membre',
+              statut_adhesion: 'gratuit',
+              created_at: new Date().toISOString(),
+              updated_at: new Date().toISOString(),
+            }).onConflictDoNothing();
+          }
+          
+          // Recharger le profil fraîchement inséré ou mis à jour
+          const finalUserRows = await db.select({
+            id: users.id,
+            email: users.email,
+            name: users.name,
+            prenom: users.prenom,
+            nom: users.nom,
+            image: users.image,
+            photo_url: users.photo_url,
+            role_plateforme: users.role_plateforme,
+            statut_adhesion: users.statut_adhesion,
+            categorie: users.categorie,
+            specialite: users.specialite,
+            biographie: users.biographie,
+            ville: users.ville,
+            pays: users.pays,
+            created_at: users.created_at,
+            updated_at: users.updated_at
+          })
+          .from(users)
+          .where(eq(users.id, userId))
+          .limit(1)
+
+          profile = finalUserRows[0] || null
         }
-        
-        // Recharger le profil fraîchement inséré ou mis à jour
-        profile = await db.query.users.findFirst({
-          where: eq(users.id, userId)
-        });
       }
+    } catch (error) {
+      console.error("[CLERK FALLBACK] Erreur critique lors de la tentative de fallback Clerk:", error)
     }
   }
 
