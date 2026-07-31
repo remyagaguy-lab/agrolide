@@ -1,20 +1,20 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { forum_categories, forum_fils, forum_messages, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 
 async function checkAdmin() {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
@@ -39,8 +39,6 @@ export async function updateCategory(id: string, data: { nom: string, descriptio
 
 export async function deleteCategory(id: string) {
   await checkAdmin()
-  // Ensure no threads are linked, or cascade depending on DB settings.
-  // We'll just attempt to delete.
   await db.delete(forum_categories).where(eq(forum_categories.id, id))
   revalidatePath('/admin/forum')
 }
@@ -48,7 +46,6 @@ export async function deleteCategory(id: string) {
 // Fils
 export async function deleteThread(id: string) {
   await checkAdmin()
-  // Delete all messages first if no cascade
   await db.delete(forum_messages).where(eq(forum_messages.fil_id, id))
   await db.delete(forum_fils).where(eq(forum_fils.id, id))
   revalidatePath('/admin/forum')

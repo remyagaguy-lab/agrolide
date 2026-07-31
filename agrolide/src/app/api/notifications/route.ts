@@ -1,16 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { notifications } from '@/db/schema'
 import { eq, and } from 'drizzle-orm'
 
 export async function PUT(request: NextRequest) {
   try {
-    const session = await auth()
-    if (!session?.user?.id) {
+    const { userId } = await auth();
+    if (!userId) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
     }
-    const userId = session.user.id
 
     // Tout marquer comme lu
     await db.update(notifications)

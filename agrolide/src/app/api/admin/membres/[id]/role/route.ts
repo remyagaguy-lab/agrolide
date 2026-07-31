@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
-import { auth } from "@/auth"
+import { auth } from '@clerk/nextjs/server'
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -9,12 +9,12 @@ export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const session = await auth()
-  if (!session?.user?.id) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
+  const { userId: currentUserId } = await auth();
+  if (!currentUserId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, session.user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (profile?.role_plateforme !== "super_admin") {

@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from "next/server"
-import { auth } from "@/auth"
+import { auth } from '@clerk/nextjs/server'
 import { db } from "@/db"
 import { temoignages } from "@/db/schema"
 import { asc } from "drizzle-orm"
@@ -18,16 +18,15 @@ export async function GET() {
 
 // POST : créer un témoignage
 export async function POST(request: NextRequest) {
-  const session = await auth()
-  if (!session) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
-  // Vérification de rôle admin omise ici (pour simplifier, on suppose que auth() protège la route ou qu'il y a un middleware)
-
-  const body = await request.json()
-  const { prenom, nom, pays, citation, photo_url, publie, ordre } = body
-
-  if (!nom || !citation) return NextResponse.json({ error: "Nom et citation requis" }, { status: 400 })
+  const { userId: currentUserId } = await auth();
+  if (!currentUserId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
 
   try {
+    const body = await request.json()
+    const { prenom, nom, pays, citation, photo_url, publie, ordre } = body
+
+    if (!nom || !citation) return NextResponse.json({ error: "Nom et citation requis" }, { status: 400 })
+
     const [data] = await db.insert(temoignages).values({
       prenom: prenom || '', nom, pays, citation, photo_url, publie: publie ?? false, ordre: ordre ?? 0
     }).returning()

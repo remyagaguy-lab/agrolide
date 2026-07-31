@@ -1,20 +1,21 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 
 async function checkAdmin() {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {

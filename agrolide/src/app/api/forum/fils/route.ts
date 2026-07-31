@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { forum_fils, forum_messages } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -12,8 +12,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Tous les champs sont requis." }, { status: 400 })
     }
 
-    const session = await auth()
-    const user = session?.user
+    const { userId } = await auth();
+  const user = userId ? { id: userId } : null;
+  const session = userId ? { user: { id: userId } } : null;
     
     if (!user || !user.id) {
       return NextResponse.json({ error: "Session invalide." }, { status: 401 })

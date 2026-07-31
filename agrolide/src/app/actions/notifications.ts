@@ -1,12 +1,13 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { notifications } from '@/db/schema'
 import { eq, and, desc } from 'drizzle-orm'
 
 export async function getNotifications() {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) return []
   
   return await db.query.notifications.findMany({
@@ -16,7 +17,8 @@ export async function getNotifications() {
 }
 
 export async function markAllAsReadAction() {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) return false
   
   await db.update(notifications)
@@ -27,7 +29,8 @@ export async function markAllAsReadAction() {
 }
 
 export async function markAsReadAction(id: string) {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) return false
   
   await db.update(notifications)

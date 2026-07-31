@@ -3,11 +3,12 @@
 import { db } from '@/db'
 import { users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { revalidatePath } from 'next/cache'
 
 export async function updateProfil(payload: any) {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) {
     throw new Error("Non autorisé")
   }
@@ -25,7 +26,8 @@ export async function updateProfil(payload: any) {
 }
 
 export async function updateAvatarUrl(url: string) {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) {
     throw new Error("Non autorisé")
   }

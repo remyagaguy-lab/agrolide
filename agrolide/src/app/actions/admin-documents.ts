@@ -1,6 +1,6 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { documents, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -10,14 +10,15 @@ import { revalidatePath } from 'next/cache'
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 export async function validateDocument(documentId: string) {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
@@ -27,7 +28,7 @@ export async function validateDocument(documentId: string) {
   // Update status to 'publie'
   await db.update(documents).set({
     statut: 'publie',
-    valide_par: user.id,
+    valide_par: currentUserId,
     published_at: new Date().toISOString()
   }).where(eq(documents.id, documentId))
 
@@ -38,14 +39,15 @@ export async function validateDocument(documentId: string) {
 }
 
 export async function rejectDocument(documentId: string, reason: string) {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const adminProfile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!adminProfile || (adminProfile.role_plateforme !== 'admin' && adminProfile.role_plateforme !== 'super_admin')) {
@@ -66,7 +68,7 @@ export async function rejectDocument(documentId: string, reason: string) {
   // Update status to 'rejete'
   await db.update(documents).set({
     statut: 'rejete',
-    valide_par: user.id
+    valide_par: currentUserId
   }).where(eq(documents.id, documentId))
 
   // Send email if Resend is configured and author has an email
@@ -100,14 +102,15 @@ export async function rejectDocument(documentId: string, reason: string) {
 }
 
 export async function deleteDocumentAdmin(documentId: string) {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const adminProfile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!adminProfile || (adminProfile.role_plateforme !== 'admin' && adminProfile.role_plateforme !== 'super_admin')) {

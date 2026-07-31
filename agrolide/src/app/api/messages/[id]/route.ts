@@ -1,18 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { messages } from '@/db/schema'
-import { eq, or, and, desc, inArray, asc } from 'drizzle-orm'
+import { eq, or, and, inArray, asc } from 'drizzle-orm'
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id: correspondantId } = await params
     
-    const session = await auth()
-    if (!session?.user?.id) {
+    const { userId } = await auth();
+    if (!userId) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
     }
-    const userId = session.user.id
 
     // Récupérer l'historique
     const userMessages = await db.query.messages.findMany({

@@ -1,13 +1,14 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { opportunites } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 
 export async function getOpportunites(activeTab: 'toutes' | 'mes_soumissions') {
-  const session = await auth()
-  const user = session?.user
+  const { userId } = await auth();
+  const user = userId ? { id: userId } : null;
+  const session = userId ? { user: { id: userId } } : null;
 
   if (activeTab === 'mes_soumissions') {
     if (!user || !user.id) return []
@@ -27,8 +28,9 @@ export async function getOpportunites(activeTab: 'toutes' | 'mes_soumissions') {
 }
 
 export async function submitOpportunity(formData: any, isAdmin: boolean) {
-  const session = await auth()
-  const user = session?.user
+  const { userId } = await auth();
+  const user = userId ? { id: userId } : null;
+  const session = userId ? { user: { id: userId } } : null;
 
   if (!user || !user.id) throw new Error("Vous devez être connecté pour soumettre une opportunité.")
 

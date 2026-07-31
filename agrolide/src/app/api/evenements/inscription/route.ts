@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { evenements, inscriptions_evenement, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { Resend } from 'resend'
 
-// Initialiser Resend seulement si la clé est présente
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 export async function POST(request: NextRequest) {
@@ -17,24 +16,23 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "L'identifiant de l'événement est requis." }, { status: 400 })
     }
 
-    const session = await auth()
-    const user = session?.user
+    const { userId } = await auth();
 
     let membre_id = null
     let emailDestinataire = email_externe
     let userPrenom = prenom
     
-    if (user && user.id) {
-      membre_id = user.id
-      emailDestinataire = user.email
+    if (userId) {
+      membre_id = userId
       
       const profile = await db.query.users.findFirst({
-        columns: { prenom: true, nom: true },
-        where: eq(users.id, user.id)
+        columns: { prenom: true, nom: true, email: true },
+        where: eq(users.id, userId)
       })
       
       if (profile) {
         userPrenom = profile.prenom || ''
+        emailDestinataire = profile.email || ''
       }
     } else {
       if (!prenom || !nom || !email_externe) {

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { messages, users, notifications } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -15,11 +15,10 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Le message ne doit pas dépasser 2000 caractères." }, { status: 400 })
     }
 
-    const session = await auth()
-    if (!session?.user?.id) {
+    const { userId } = await auth();
+    if (!userId) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
     }
-    const userId = session.user.id
 
     // Vérifier le rôle de l'expéditeur (RG-033)
     const expediteur = await db.query.users.findFirst({

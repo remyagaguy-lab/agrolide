@@ -1,7 +1,7 @@
 import { Calendar, MapPin, CheckCircle, Clock, XCircle } from 'lucide-react'
 import Link from 'next/link'
 import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButton'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { inscriptions_formation, sessions_formation, formations, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -10,7 +10,8 @@ import { redirect } from 'next/navigation'
 export const metadata = { title: "Mes formations" }
 
 export default async function MesFormationsPage() {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) {
     redirect('/login')
   }

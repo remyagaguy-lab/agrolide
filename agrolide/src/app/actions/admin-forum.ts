@@ -1,20 +1,21 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { forum_messages, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 
 export async function ignoreReport(messageId: string) {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
@@ -31,14 +32,15 @@ export async function ignoreReport(messageId: string) {
 }
 
 export async function deleteMessage(messageId: string) {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
@@ -55,14 +57,15 @@ export async function deleteMessage(messageId: string) {
 }
 
 export async function banUser(userId: string, reason: string) {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
@@ -80,14 +83,15 @@ export async function banUser(userId: string, reason: string) {
 }
 
 export async function fetchReportedMessages() {
-  const session = await auth()
-  const user = session?.user
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
 
-  if (!user || !user.id) throw new Error("Non autorisé")
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
@@ -108,13 +112,14 @@ export async function fetchReportedMessages() {
 }
 
 export async function fetchAdminMessages(query: string = '') {
-  const session = await auth()
-  const user = session?.user
-  if (!user || !user.id) throw new Error("Non autorisé")
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
@@ -135,13 +140,14 @@ export async function fetchAdminMessages(query: string = '') {
 }
 
 export async function fetchAdminThreads() {
-  const session = await auth()
-  const user = session?.user
-  if (!user || !user.id) throw new Error("Non autorisé")
+  const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
+  if (!user || !currentUserId) throw new Error("Non autorisé")
 
   const profile = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, user.id)
+    where: eq(users.id, currentUserId)
   })
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")

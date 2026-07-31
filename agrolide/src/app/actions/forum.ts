@@ -1,6 +1,6 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { forum_categories, forum_fils, forum_messages, users } from '@/db/schema'
 import { eq, desc, asc, and, count } from 'drizzle-orm'
@@ -68,8 +68,9 @@ export async function getThreadDetails(filId: string) {
 }
 
 export async function addReplyToThread(filId: string, contenu: string) {
-  const session = await auth()
-  const user = session?.user
+  const { userId } = await auth();
+  const user = userId ? { id: userId } : null;
+  const session = userId ? { user: { id: userId } } : null;
   if (!user || !user.id) throw new Error("Non autorisé")
 
   // Check if thread exists

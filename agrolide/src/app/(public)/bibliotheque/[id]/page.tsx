@@ -6,7 +6,7 @@ import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, and, ne } from 'drizzle-orm'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { QuotaTracker } from '@/components/modules/bibliotheque/QuotaTracker'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
@@ -23,7 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function DocumentDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   const isLoggedIn = !!session?.user
   
   // Fetch document

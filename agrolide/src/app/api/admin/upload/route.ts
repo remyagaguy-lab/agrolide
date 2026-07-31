@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import crypto from 'crypto'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -63,16 +63,17 @@ export async function POST(request: NextRequest) {
     }
 
     // Vérification de l'admin
-    const session = await auth()
-    const user = session?.user
+    const { userId: currentUserId } = await auth();
+  const user = currentUserId ? { id: currentUserId } : null;
+  const session = currentUserId ? { user: { id: currentUserId } } : null;
     
-    if (!user || !user.id) {
+    if (!user || !currentUserId) {
       return NextResponse.json({ error: 'Non autorisé' }, { status: 401 })
     }
     
     const profile = await db.query.users.findFirst({
       columns: { role_plateforme: true },
-      where: eq(users.id, user.id)
+      where: eq(users.id, currentUserId)
     })
     
     if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {

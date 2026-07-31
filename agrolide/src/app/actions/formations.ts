@@ -3,11 +3,12 @@
 import { db } from '@/db'
 import { inscriptions_formation, sessions_formation } from '@/db/schema'
 import { eq, and } from 'drizzle-orm'
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { revalidatePath } from 'next/cache'
 
 export async function getInscriptionsFormation() {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) return []
 
   const inscriptions = await db.query.inscriptions_formation.findMany({
@@ -22,7 +23,8 @@ export async function getInscriptionsFormation() {
 }
 
 export async function inscrireSessionFormation(sessionId: string) {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   if (!session?.user?.id) {
     throw new Error("Vous devez être connecté pour vous inscrire.")
   }

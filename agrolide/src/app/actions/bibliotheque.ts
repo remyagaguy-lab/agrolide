@@ -1,12 +1,13 @@
 'use server'
 
-import { auth } from '@/auth'
+import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, and, count } from 'drizzle-orm'
 
 export async function checkTrocEligibility() {
-  const session = await auth()
+  const { userId } = await auth();
+  const session = userId ? { user: { id: userId } } : null;
   
   if (!session?.user) {
     return { authorized: false, reason: 'unauthenticated', count: 0 }

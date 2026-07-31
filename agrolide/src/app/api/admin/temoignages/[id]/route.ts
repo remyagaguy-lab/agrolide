@@ -1,21 +1,21 @@
 import { NextResponse, NextRequest } from "next/server"
-import { auth } from "@/auth"
+import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { temoignages, users } from "@/db/schema"
 import { eq } from "drizzle-orm"
 
-async function checkAdmin(session: any) {
-  if (!session?.user?.id) return false
+async function checkAdmin() {
+  const { userId: currentUserId } = await auth()
+  if (!currentUserId) return false
   const user = await db.query.users.findFirst({
     columns: { role_plateforme: true },
-    where: eq(users.id, session.user.id)
+    where: eq(users.id, currentUserId)
   })
   return user && ["admin_content", "super_admin"].includes(user.role_plateforme || "")
 }
 
 export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const session = await auth()
-  if (!await checkAdmin(session)) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
+  if (!await checkAdmin()) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
 
   try {
     const { id } = await params
@@ -28,8 +28,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const session = await auth()
-  if (!await checkAdmin(session)) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
+  if (!await checkAdmin()) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
 
   try {
     const { id } = await params
