@@ -5,22 +5,33 @@ const isMembreRoute = createRouteMatcher(['/membres(.*)'])
 const isAdminRoute = createRouteMatcher(['/admin(.*)'])
 
 export default clerkMiddleware(async (auth, request) => {
-  // Rediriger vers le login si non connecté pour routes protégées
-  if (isMembreRoute(request) || isAdminRoute(request)) {
-    const { userId } = await auth();
-    console.log(`[MOUCHARD MIDDLEWARE] Accès à ${request.nextUrl.pathname}. Utilisateur connecté Clerk: ${userId ? 'OUI (' + userId + ')' : 'NON'}`);
-    await auth.protect()
-  }
-
-  // Vérifier le rôle admin pour les routes admin
-  if (isAdminRoute(request)) {
-    const { sessionClaims } = await auth()
-    const role = (sessionClaims?.metadata as any)?.role
-    if (role !== 'super_admin' && role !== 'admin_content') {
-      const url = request.nextUrl.clone()
-      url.pathname = '/membres/dashboard'
-      return NextResponse.redirect(url)
+  try {
+    // Rediriger vers le login si non connecté pour routes protégées
+    if (isMembreRoute(request) || isAdminRoute(request)) {
+      const { userId } = await auth();
+      console.log(`[MOUCHARD MIDDLEWARE] Accès à ${request.nextUrl.pathname}. Utilisateur connecté Clerk: ${userId ? 'OUI (' + userId + ')' : 'NON'}`);
+      await auth.protect()
     }
+
+    // Vérifier le rôle admin pour les routes admin
+    if (isAdminRoute(request)) {
+      const { sessionClaims } = await auth()
+      const role = (sessionClaims?.metadata as any)?.role
+      if (role !== 'super_admin' && role !== 'admin_content') {
+        const url = request.nextUrl.clone()
+        url.pathname = '/membres/dashboard'
+        return NextResponse.redirect(url)
+      }
+    }
+  } catch (error: any) {
+    return new NextResponse(
+      JSON.stringify({
+        error: "Middleware Crash",
+        message: error.message,
+        stack: error.stack,
+      }),
+      { status: 500, headers: { 'content-type': 'application/json' } }
+    );
   }
 })
 
