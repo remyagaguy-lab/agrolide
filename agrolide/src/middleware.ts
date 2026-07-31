@@ -7,6 +7,8 @@ const isAdminRoute = createRouteMatcher(['/admin(.*)'])
 export default clerkMiddleware(async (auth, request) => {
   // Rediriger vers le login si non connecté pour routes protégées
   if (isMembreRoute(request) || isAdminRoute(request)) {
+    const { userId } = await auth();
+    console.log(`[MOUCHARD MIDDLEWARE] Accès à ${request.nextUrl.pathname}. Utilisateur connecté Clerk: ${userId ? 'OUI (' + userId + ')' : 'NON'}`);
     await auth.protect()
   }
 

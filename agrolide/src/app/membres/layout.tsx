@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { auth } from "@/auth"
+import { auth, currentUser } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -13,24 +13,70 @@ export default async function MembresRootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const session = await auth()
+  const { userId } = await auth()
 
-  if (!session?.user?.id) {
+  if (!userId) {
     redirect("/login?message=Veuillez+vous+connecter")
   }
 
   // 2. Récupération du profil utilisateur
-  const profile = await db.query.users.findFirst({
-    where: eq(users.id, session.user.id)
+  let profile = await db.query.users.findFirst({
+    where: eq(users.id, userId)
   })
 
+  // FALLBACK SI LE WEBHOOK N'A PAS FONCTIONNÉ (ex: en dev local avec Google OAuth)
   if (!profile) {
-    // Si pas de profil trouvé, il y a eu un problème avec le trigger ou l'inscription
+    console.warn(`[CLERK FALLBACK] Profil introuvable pour ${userId}. Création automatique depuis Clerk...`);
+    const user = await currentUser();
+    if (user) {
+      const primaryEmail = user.emailAddresses[0]?.emailAddress;
+      if (primaryEmail) {
+        // Vérifier si un compte existe déjà avec cet email (ex: ancien compte NextAuth)
+        const existingUser = await db.query.users.findFirst({
+          where: eq(users.email, primaryEmail)
+        });
+
+        if (existingUser) {
+          console.warn(`[CLERK FALLBACK] Email ${primaryEmail} existant. Mise à jour de l'ID vers Clerk ID...`);
+          await db.update(users).set({ 
+            id: userId,
+            image: user.imageUrl || existingUser.image,
+            photo_url: user.imageUrl || existingUser.photo_url
+          }).where(eq(users.email, primaryEmail));
+        } else {
+          console.warn(`[CLERK FALLBACK] Nouvel utilisateur. Insertion en base...`);
+          await db.insert(users).values({
+            id: userId,
+            email: primaryEmail,
+            name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || null,
+            prenom: user.firstName || null,
+            nom: user.lastName || null,
+            image: user.imageUrl || null,
+            photo_url: user.imageUrl || null,
+            role_plateforme: 'membre',
+            statut_adhesion: 'gratuit',
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+          }).onConflictDoNothing();
+        }
+        
+        // Recharger le profil fraîchement inséré ou mis à jour
+        profile = await db.query.users.findFirst({
+          where: eq(users.id, userId)
+        });
+      }
+    }
+  }
+
+  console.log(`[MOUCHARD] Vérification d'accès à /membres. Session Clerk ID: ${userId} | Profil en base de données trouvé: ${profile ? 'OUI' : 'NON'}`);
+
+  if (!profile) {
+    console.error(`[MOUCHARD] AVERTISSEMENT: Impossible de trouver ou créer le profil BDD pour l'utilisateur Clerk (${userId}). Redirection vers login.`);
     redirect(`/login?error=Profil+introuvable`)
   }
 
   // 3. Gestion des statuts d'adhésion (RG-007, RG-008)
-  const statut = profile.statut_adhesion
+  const statut = profile?.statut_adhesion || "gratuit"
 
   // Si en attente de paiement, seul l'accès à la page de cotisation est autorisé
   // (On évite une boucle de redirection en vérifiant l'URL courante dans le middleware ou ici via les headers, 
@@ -62,7 +108,7 @@ export default async function MembresRootLayout({
           <div className="flex items-center gap-6">
             <div className="hidden md:block text-sm">
               <span className="text-gray-500">Connecté en tant que</span>{" "}
-              <span className="font-semibold text-gray-900">{profile.prenom} {profile.nom}</span>
+              <span className="font-semibold text-gray-900">{profile?.prenom || "Membre"} {profile?.nom || ""}</span>
             </div>
             <LogoutButton />
           </div>
