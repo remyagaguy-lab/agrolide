@@ -24,6 +24,15 @@ export default function Error({
       <p className="text-gray-600 max-w-md mb-8">
         Notre équipe technique a été notifiée. Veuillez réessayer ou retourner à l'accueil si le problème persiste.
       </p>
+      {error && (
+        <div className="bg-red-50 text-red-800 p-4 rounded-lg mb-8 max-w-lg text-left overflow-auto font-mono text-xs w-full max-h-96 border border-red-200">
+          <strong>Message:</strong> {error.message || 'No message'} <br />
+          <strong>Digest:</strong> {error.digest || 'No digest'} <br />
+          {error.stack && (
+            <pre className="mt-2 whitespace-pre-wrap">{error.stack}</pre>
+          )}
+        </div>
+      )}
       <div className="flex gap-4">
         <Button onClick={() => reset()} variant="primary">
           Réessayer
