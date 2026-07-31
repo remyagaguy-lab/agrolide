@@ -94,7 +94,8 @@ export default async function DashboardPage() {
     console.error("Error fetching cotisation:", e)
   }
     
-  const dateFinCotisation = cotisation?.date_fin ? new Date(cotisation.date_fin) : null
+  const dateFinRaw = cotisation?.date_fin ? new Date(cotisation.date_fin) : null
+  const dateFinCotisation = (dateFinRaw && !isNaN(dateFinRaw.getTime())) ? dateFinRaw : null
   const joursRestants = dateFinCotisation 
     ? Math.max(0, Math.ceil((dateFinCotisation.getTime() - new Date().getTime()) / (1000 * 3600 * 24)))
     : 0
@@ -194,21 +195,25 @@ export default async function DashboardPage() {
             
             {mappedArticles && mappedArticles.length > 0 ? (
               <div className="space-y-4">
-                {mappedArticles.map((article: any) => (
-                  <Link href={`/blog/${article.slug}`} key={article.slug} className="block group">
-                    <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200">
-                      <div className="flex-1">
-                        <span className="text-xs font-semibold text-[var(--color-orange-accent)] uppercase tracking-wider">{article.category}</span>
-                        <h4 className="font-bold text-gray-900 mt-1 group-hover:text-[var(--color-vert-principal)] transition-colors line-clamp-1">{article.title}</h4>
-                        <div className="flex items-center text-xs text-gray-500 mt-2 gap-2">
-                          <Clock size={12} />
-                          <span>{new Date(article.published_at).toLocaleDateString('fr-FR')}</span>
+                {mappedArticles.map((article: any) => {
+                  const pubDate = article.published_at ? new Date(article.published_at) : null
+                  const isPubDateValid = pubDate && !isNaN(pubDate.getTime())
+                  return (
+                    <Link href={`/blog/${article.slug}`} key={article.slug} className="block group">
+                      <div className="flex items-start gap-4 p-3 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200">
+                        <div className="flex-1">
+                          <span className="text-xs font-semibold text-[var(--color-orange-accent)] uppercase tracking-wider">{article.category}</span>
+                          <h4 className="font-bold text-gray-900 mt-1 group-hover:text-[var(--color-vert-principal)] transition-colors line-clamp-1">{article.title}</h4>
+                          <div className="flex items-center text-xs text-gray-500 mt-2 gap-2">
+                            <Clock size={12} />
+                            <span>{isPubDateValid ? pubDate.toLocaleDateString('fr-FR') : ''}</span>
+                          </div>
                         </div>
+                        <ChevronRight size={20} className="text-gray-400 group-hover:text-[var(--color-vert-principal)]" />
                       </div>
-                      <ChevronRight size={20} className="text-gray-400 group-hover:text-[var(--color-vert-principal)]" />
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  )
+                })}
               </div>
             ) : (
               <p className="text-sm text-gray-500 italic">Aucun article récent.</p>

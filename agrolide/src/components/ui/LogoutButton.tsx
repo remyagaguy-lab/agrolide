@@ -1,11 +1,13 @@
 "use client"
 
-import { signOut } from "next-auth/react"
+import { useClerk } from "@clerk/nextjs"
 import { LogOut } from "lucide-react"
 
 export function LogoutButton() {
+  const { signOut } = useClerk()
+
   const handleLogout = async () => {
-    await signOut({ callbackUrl: "/" })
+    await signOut({ redirectUrl: "/" })
   }
 
   return (
