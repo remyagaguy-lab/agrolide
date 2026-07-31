@@ -9,15 +9,36 @@ import { eq, desc, gte } from "drizzle-orm"
 export const metadata = { title: "Tableau de bord" }
 
 export default async function DashboardPage() {
-  const { userId } = await auth()
-  if (!userId) redirect("/login")
+  try {
+    const { userId } = await auth()
+    if (!userId) redirect("/login")
 
-  // Fetch Profile
-  const profile = await db.query.users.findFirst({
-    where: eq(users.id, userId)
-  })
+    // Fetch Profile safely without JSON columns
+    const userRows = await db.select({
+      id: users.id,
+      email: users.email,
+      name: users.name,
+      prenom: users.prenom,
+      nom: users.nom,
+      image: users.image,
+      photo_url: users.photo_url,
+      role_plateforme: users.role_plateforme,
+      statut_adhesion: users.statut_adhesion,
+      categorie: users.categorie,
+      specialite: users.specialite,
+      biographie: users.biographie,
+      ville: users.ville,
+      pays: users.pays,
+      created_at: users.created_at,
+      updated_at: users.updated_at
+    })
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1)
 
-  if (!profile) redirect("/login")
+    const profile = userRows[0] || null
+
+    if (!profile) redirect("/login")
 
   // Fetch notifications
   let notifsData: any[] = []
@@ -308,4 +329,15 @@ export default async function DashboardPage() {
       </div>
     </div>
   )
+  } catch (err: any) {
+    if (err.digest !== 'NEXT_REDIRECT' && !err.message?.includes('NEXT_REDIRECT')) {
+      (globalThis as any).lastError = {
+        message: err.message,
+        stack: err.stack,
+        digest: err.digest,
+        location: 'dashboard'
+      };
+    }
+    throw err;
+  }
 }
