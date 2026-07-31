@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useSession } from 'next-auth/react'
+import { useUser } from '@clerk/nextjs'
 import OpportunityCard from './OpportunityCard'
 import SubmitOpportunityModal from './SubmitOpportunityModal'
 import { Plus, Search, Filter } from 'lucide-react'
@@ -11,8 +11,8 @@ export default function OpportunitesClient() {
   const [opportunites, setOpportunites] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { data: session } = useSession()
-  const currentUser = session?.user
+  const { user, isLoaded } = useUser()
+  const currentUser = isLoaded ? user : null
 
   const [activeTab, setActiveTab] = useState<'toutes' | 'mes_soumissions'>('toutes')
   const [filterType, setFilterType] = useState('tous')

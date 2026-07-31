@@ -7,19 +7,19 @@ import * as Popover from '@radix-ui/react-popover'
 import { formatDistanceToNow } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { getNotifications, markAsReadAction } from '@/app/actions/notifications'
-import { useSession } from 'next-auth/react'
+import { useUser } from '@clerk/nextjs'
 
 export default function NotificationBell() {
   const [notifications, setNotifications] = useState<any[]>([])
   const [unreadCount, setUnreadCount] = useState(0)
   
-  const { data: session } = useSession()
+  const { user, isLoaded } = useUser()
 
   useEffect(() => {
-    if (session?.user) {
+    if (isLoaded && user) {
       fetchNotifications()
     }
-  }, [session])
+  }, [user, isLoaded])
 
   const fetchNotifications = async () => {
     const data = await getNotifications()
@@ -31,17 +31,16 @@ export default function NotificationBell() {
 
   // Realtime WebSockets with Cloudflare Durable Objects
   useEffect(() => {
-    if (!session?.user?.id) return;
+    if (!isLoaded || !user?.id) return;
 
     const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8787';
     // Connect to the specific channel for this user's notifications
-    const ws = new WebSocket(`${WS_URL}/ws/notif_${session.user.id}`);
+    const ws = new WebSocket(`${WS_URL}/ws/notif_${user.id}`);
 
     ws.onmessage = (event) => {
       try {
         const message = JSON.parse(event.data);
         if (message.type === 'NEW_NOTIFICATION') {
-          // Fetch notifications again to update the list, or optimistically update it
           fetchNotifications();
         }
       } catch (err) {
@@ -52,14 +51,15 @@ export default function NotificationBell() {
     return () => {
       ws.close();
     };
-  }, [session?.user?.id]);
+  }, [user?.id, isLoaded]);
+
   const markAsRead = async (id: string, lien: string) => {
     await markAsReadAction(id)
     await fetchNotifications()
     window.location.href = lien || '/membres/notifications'
   }
 
-  if (!session?.user) return null
+  if (!isLoaded || !user) return null
 
   return (
     <Popover.Root>

@@ -7,13 +7,13 @@ import 'react-pdf/dist/Page/TextLayer.css'
 import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack, AlertCircle, Info } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useSession } from 'next-auth/react'
+import { useAuth } from '@clerk/nextjs'
 
 // Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
 
 export function SecurePDFViewer({ documentId }: { documentId: string }) {
-  const { data: session, status } = useSession()
+  const { userId, isLoaded } = useAuth()
   const [numPages, setNumPages] = useState<number>(0)
   const [pageNumber, setPageNumber] = useState<number>(1)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
@@ -64,12 +64,12 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   }, [])
 
   useEffect(() => {
-    if (status === 'loading') return; // Wait for session check
+    if (!isLoaded) return; // Wait for session check
 
     const fetchSecureUrl = async () => {
       try {
         // Si l'utilisateur n'est pas connecté, vérifier le quota
-        if (!session) {
+        if (!userId) {
           const savedDocsStr = localStorage.getItem('agrolide_read_docs')
           let readDocs: string[] = savedDocsStr ? JSON.parse(savedDocsStr) : []
           
@@ -99,7 +99,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       }
     }
     fetchSecureUrl()
-  }, [documentId, session, status])
+  }, [documentId, userId, isLoaded])
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages)
@@ -159,7 +159,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     <div className="flex flex-col items-center bg-gray-100 rounded-xl overflow-hidden border border-gray-200 relative">
       
       {/* Quota Banner for Visitors */}
-      {!session && readCount > 0 && readCount <= 5 && (
+      {!userId && readCount > 0 && readCount <= 5 && (
         <div className="w-full bg-blue-50 border-b border-blue-100 p-3 flex items-center justify-between z-10 text-sm">
           <div className="flex items-center text-blue-800">
             <Info className="w-4 h-4 mr-2 flex-shrink-0" />

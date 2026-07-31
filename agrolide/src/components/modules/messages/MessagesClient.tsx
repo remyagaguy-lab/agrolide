@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { useSession } from 'next-auth/react'
+import { useUser } from '@clerk/nextjs'
 import { useSearchParams } from 'next/navigation'
 import { Send, Loader2, MessageCircle, User } from 'lucide-react'
 import { format } from 'date-fns'
@@ -12,7 +12,7 @@ export default function MessagesClient() {
   const searchParams = useSearchParams()
   const initialConvId = searchParams.get('conv') || searchParams.get('nouveau')
 
-  const { data: session } = useSession()
+  const { user, isLoaded } = useUser()
   const [conversations, setConversations] = useState<any[]>([])
   const [activeConvId, setActiveConvId] = useState<string | null>(initialConvId)
   const [messages, setMessages] = useState<any[]>([])
@@ -28,11 +28,11 @@ export default function MessagesClient() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (session?.user) {
-      setCurrentUser(session.user)
+    if (isLoaded && user) {
+      setCurrentUser(user)
       fetchConversations()
     }
-  }, [session])
+  }, [user, isLoaded])
 
   const fetchConversations = async () => {
     try {
@@ -49,7 +49,7 @@ export default function MessagesClient() {
 
   const fetchMessages = async (correspondantId: string) => {
     setLoadingMessages(true)
-    if (session?.user) {
+    if (user) {
       try {
         const res = await fetch(`/api/messages/${correspondantId}`)
         const data = await res.json()
@@ -123,7 +123,7 @@ export default function MessagesClient() {
     setSending(true)
     setError('')
     
-    if (session?.user) {
+    if (user) {
       try {
         const res = await fetch('/api/messages', {
           method: 'POST',

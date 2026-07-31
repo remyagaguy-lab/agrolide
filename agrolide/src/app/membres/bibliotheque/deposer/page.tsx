@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Upload, FileText, AlertCircle, Loader2 } from 'lucide-react'
-import { useSession } from 'next-auth/react'
+import { useAuth } from '@clerk/nextjs'
 
 const formSchema = z.object({
   titre: z.string().min(3, 'Le titre est requis'),
@@ -37,28 +37,35 @@ export default function DeposerDocumentPage() {
     }
   })
 
-  const { data: session, status } = useSession()
+  const { userId, isLoaded } = useAuth()
 
   // Vérification de l'autorisation au chargement
   useEffect(() => {
-    if (status === 'unauthenticated') {
+    if (!isLoaded) return
+
+    if (!userId) {
       router.push('/login')
       return
     }
 
-    if (status === 'authenticated' && session?.user) {
-      // In NextAuth, we might not have 'categorie' in the session immediately,
-      // but if we attached it to the token/session callback, we can check it.
-      // Assuming 'categorie' is added to the user object, or we fetch it.
-      const userCategory = (session.user as any).categorie
-      
-      if (userCategory === 'junior') {
+    const checkAuthorization = async () => {
+      try {
+        const { getCurrentUserCategory } = await import('@/app/actions/profil')
+        const userCategory = await getCurrentUserCategory()
+        
+        if (userCategory === 'junior') {
+          setIsAuthorized(false)
+        } else {
+          setIsAuthorized(true)
+        }
+      } catch (err) {
+        console.error(err)
         setIsAuthorized(false)
-      } else {
-        setIsAuthorized(true)
       }
     }
-  }, [status, session, router])
+
+    checkAuthorization()
+  }, [isLoaded, userId, router])
 
   const onSubmit = async (data: FormData) => {
     if (!file) {
