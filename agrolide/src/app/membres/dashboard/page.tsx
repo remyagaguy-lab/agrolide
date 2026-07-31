@@ -150,130 +150,10 @@ export default async function DashboardPage() {
           </p>
         </div>
 
-        {/* LinkedIn-style Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
+        {/* Grid Layout: Main Feed & Right Sidebar */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
           
-          {/* LEFT COLUMN: Facebook/LinkedIn Style Profile Card & Cotisation */}
-          <div className="lg:col-span-1 space-y-6">
-            
-            {/* Profile Card */}
-            <div className="bg-white rounded-2xl border border-gray-150 shadow-sm overflow-hidden flex flex-col">
-              {/* Cover Banner (gradient/agricultural image look) */}
-              <div className="h-20 bg-gradient-to-r from-emerald-700 via-green-600 to-amber-500 relative">
-                <div className="absolute inset-0 bg-black/10"></div>
-              </div>
-              
-              {/* Profile Details Container */}
-              <div className="px-5 pb-6 text-center relative flex flex-col items-center">
-                {/* Overlapping Avatar */}
-                <div className="w-[76px] h-[76px] rounded-full border-4 border-white shadow-md -mt-[38px] bg-gray-100 overflow-hidden flex items-center justify-center relative">
-                  {profile.photo_url ? (
-                    <Image src={profile.photo_url} alt="Photo de profil" fill sizes="80px" className="object-cover" />
-                  ) : (
-                    <UserIcon size={34} className="text-gray-400" />
-                  )}
-                </div>
-
-                {/* Name & Role */}
-                <h2 className="mt-3 font-heading font-bold text-gray-900 text-lg leading-tight hover:underline">
-                  <Link href="/membres/profil">
-                    {profile.prenom} {profile.nom}
-                  </Link>
-                </h2>
-                
-                {/* Specialty / Headline */}
-                <p className="text-xs text-gray-700 font-medium mt-1.5 px-2 line-clamp-2">
-                  {profile.specialite ? profile.specialite : "Spécialiste Agricole"}
-                </p>
-
-                {/* Organisation */}
-                {profile.organisation && (
-                  <p className="text-[11px] text-gray-500 font-medium mt-0.5">
-                    {profile.organisation}
-                  </p>
-                )}
-
-                {/* Location */}
-                <div className="flex items-center gap-1.5 text-gray-500 text-[11px] mt-2">
-                  <MapPin size={12} className="text-emerald-600" />
-                  <span>{profile.ville ? `${profile.ville}, ` : ""}{profile.pays || "Afrique"}</span>
-                </div>
-
-                {/* Biography snippet */}
-                {profile.biographie && (
-                  <p className="text-[11px] text-gray-500 mt-4 line-clamp-3 italic bg-gray-50/50 p-2.5 rounded-lg border border-gray-100 w-full">
-                    "{profile.biographie}"
-                  </p>
-                )}
-
-                {/* Categories Badge */}
-                <span className="mt-4 px-2.5 py-0.5 text-[10px] font-bold tracking-wider uppercase bg-emerald-50 text-emerald-800 rounded-full border border-emerald-100">
-                  Membre {profile.categorie}
-                </span>
-                
-                {/* Divider */}
-                <div className="w-full h-px bg-gray-100 my-4"></div>
-
-                {/* Quick actions */}
-                <Link href="/membres/profil/modifier" className="text-xs font-semibold text-emerald-600 hover:text-emerald-700 hover:underline">
-                  Modifier mon profil
-                </Link>
-              </div>
-            </div>
-
-            {/* Membership/Cotisation integrated card */}
-            <div className="bg-white rounded-2xl border border-gray-150 shadow-sm p-5 space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Adhésion</h3>
-                {dateFinCotisation ? (
-                  <span className="px-2 py-0.5 text-[10px] font-bold bg-green-50 text-green-700 rounded-full border border-green-200">
-                    Active
-                  </span>
-                ) : (
-                  <span className="px-2 py-0.5 text-[10px] font-bold bg-amber-50 text-amber-700 rounded-full border border-amber-200">
-                    À régler
-                  </span>
-                )}
-              </div>
-
-              {dateFinCotisation ? (
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-xs text-gray-500">Date d'expiration</p>
-                    <p className="font-semibold text-gray-900 text-sm mt-0.5">
-                      {dateFinCotisation.toLocaleDateString('fr-FR')}
-                    </p>
-                  </div>
-                  <div className="w-full bg-gray-100 rounded-full h-2">
-                    <div 
-                      className="bg-emerald-600 h-2 rounded-full transition-all" 
-                      style={{ width: `${Math.min(100, (joursRestants / 365) * 100)}%` }}
-                    ></div>
-                  </div>
-                  <p className="text-[11px] text-gray-500 flex items-center gap-1.5">
-                    <Clock size={12} className="text-emerald-600" />
-                    <span>{joursRestants} jours restants</span>
-                  </p>
-                </div>
-              ) : (
-                <div className="space-y-3 text-center lg:text-left">
-                  <p className="text-xs text-gray-600">
-                    Veuillez régler votre cotisation annuelle pour bénéficier de l'ensemble des services.
-                  </p>
-                  <Link 
-                    href="/membres/cotisation" 
-                    className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold rounded-lg transition-colors"
-                  >
-                    <CreditCard size={14} />
-                    <span>Régler ma cotisation</span>
-                  </Link>
-                </div>
-              )}
-            </div>
-
-          </div>
-
-          {/* CENTER COLUMN: Welcome, Quick Links & Feeds */}
+          {/* CENTER COLUMN: Welcome, Quick Links & Feeds (Takes 2/3 of desktop width) */}
           <div className="lg:col-span-2 space-y-6">
             
             {/* Welcome banner on Desktop */}
@@ -439,8 +319,58 @@ export default async function DashboardPage() {
 
           </div>
 
-          {/* RIGHT COLUMN: Utility Widgets (Notifications & Events) */}
+          {/* RIGHT COLUMN: Utility Widgets (Adhésion, Notifications & Events) */}
           <div className="lg:col-span-1 space-y-6">
+            
+            {/* Membership/Cotisation integrated card */}
+            <div className="bg-white rounded-2xl border border-gray-150 shadow-sm p-5 space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Adhésion</h3>
+                {dateFinCotisation ? (
+                  <span className="px-2 py-0.5 text-[10px] font-bold bg-green-50 text-green-700 rounded-full border border-green-200">
+                    Active
+                  </span>
+                ) : (
+                  <span className="px-2 py-0.5 text-[10px] font-bold bg-amber-50 text-amber-700 rounded-full border border-amber-200">
+                    À régler
+                  </span>
+                )}
+              </div>
+
+              {dateFinCotisation ? (
+                <div className="space-y-3">
+                  <div>
+                    <p className="text-xs text-gray-500">Date d'expiration</p>
+                    <p className="font-semibold text-gray-900 text-sm mt-0.5">
+                      {dateFinCotisation.toLocaleDateString('fr-FR')}
+                    </p>
+                  </div>
+                  <div className="w-full bg-gray-100 rounded-full h-2">
+                    <div 
+                      className="bg-emerald-600 h-2 rounded-full transition-all" 
+                      style={{ width: `${Math.min(100, (joursRestants / 365) * 100)}%` }}
+                    ></div>
+                  </div>
+                  <p className="text-[11px] text-gray-500 flex items-center gap-1.5">
+                    <Clock size={12} className="text-emerald-600" />
+                    <span>{joursRestants} jours restants</span>
+                  </p>
+                </div>
+              ) : (
+                <div className="space-y-3 text-center lg:text-left">
+                  <p className="text-xs text-gray-600">
+                    Veuillez régler votre cotisation annuelle pour bénéficier de l'ensemble des services.
+                  </p>
+                  <Link 
+                    href="/membres/cotisation" 
+                    className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold rounded-lg transition-colors"
+                  >
+                    <CreditCard size={14} />
+                    <span>Régler ma cotisation</span>
+                  </Link>
+                </div>
+              )}
+            </div>
             
             {/* Notifications Widget */}
             <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-4">
