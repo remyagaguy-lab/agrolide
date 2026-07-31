@@ -46,7 +46,7 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
     }
   }
 
-  const href = publicView ? `/bibliotheque/${document.id}` : `/membres/bibliotheque/${document.id}`
+  const href = `/bibliotheque/${document.id}`
 
   return (
     <Link href={href} className={`block group rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col h-full`}>

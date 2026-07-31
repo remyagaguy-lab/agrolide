@@ -148,7 +148,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
                 {documents.map((doc: any) => (
                   <Link 
                     key={doc.id} 
-                    href={`/membres/bibliotheque/${doc.id}`}
+                    href={`/bibliotheque/${doc.id}`}
                     className="block p-4 rounded-xl border border-gray-100 hover:border-primary-200 hover:bg-primary-50/50 transition-colors group"
                   >
                     <div className="font-bold text-gray-900 group-hover:text-primary-700 transition-colors">{doc.titre}</div>

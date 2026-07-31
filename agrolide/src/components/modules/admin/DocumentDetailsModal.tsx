@@ -128,7 +128,7 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
 
         <div className="p-6 border-t border-gray-100 bg-gray-50 flex justify-between items-center">
           <div>
-             <a href={`/membres/bibliotheque/${document.id}`} target="_blank" rel="noreferrer" className="text-sm font-medium text-[var(--color-vert-principal)] hover:underline flex items-center gap-1">
+             <a href={`/bibliotheque/${document.id}`} target="_blank" rel="noreferrer" className="text-sm font-medium text-[var(--color-vert-principal)] hover:underline flex items-center gap-1">
                 <FileText className="w-4 h-4" /> Voir la page du document
              </a>
           </div>
