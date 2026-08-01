@@ -64,30 +64,30 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
   ]
 
   return (
-    <div className="h-screen bg-[#eef1f5] flex flex-col font-sans overflow-hidden">
+    <div className="h-screen bg-[var(--fond-gris)] flex flex-col font-sans overflow-hidden">
       
-      {/* ================= HEADER HORIZONTAL (Style Quixotic) ================= */}
-      <header className="flex-none w-full px-4 pt-4 pb-2 z-40">
-        <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-4">
+      {/* ================= HEADER HORIZONTAL ================= */}
+      <header className="flex-none w-full bg-[#ffffff] border-b border-[#e8e8e4] z-40">
+        <div className="max-w-[1600px] mx-auto flex items-center justify-between h-16 px-4">
           
-          {/* Logo Pill */}
-          <Link href="/membres/dashboard" className="bg-white/90 backdrop-blur-md h-14 px-6 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white flex items-center gap-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all">
-            <span className="font-heading font-bold text-xl text-[var(--color-vert-principal)]">
+          {/* Logo */}
+          <Link href="/membres/dashboard" className="flex items-center gap-2">
+            <span className="font-heading font-bold text-xl text-[var(--color-vert-profond)] tracking-tight">
               agrolide
             </span>
           </Link>
           
-          {/* Navigation Pill (Horizontal) - Hidden on Mobile */}
-          <nav className="hidden lg:flex bg-white/90 backdrop-blur-md h-14 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white px-2 items-center gap-1">
+          {/* Navigation - Hidden on Mobile */}
+          <nav className="hidden lg:flex items-center gap-1">
             {horizontalNav.map(item => {
               const isActive = pathname === item.href || (item.href !== "/membres/dashboard" && pathname?.startsWith(`${item.href}/`))
               return (
                 <Link 
                   key={item.name}
                   href={item.href} 
-                  className={`px-5 py-2 rounded-full text-[13px] font-bold transition-all ${
+                  className={`px-4 py-2 rounded-md text-[14px] font-bold transition-all ${
                     isActive 
-                      ? 'bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)] shadow-sm' 
+                      ? 'bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)]' 
                       : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100/50'
                   }`}
                 >
@@ -97,22 +97,22 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
             })}
           </nav>
 
-          {/* Profile & Notifications Pill */}
-          <div className="bg-white/90 backdrop-blur-md h-14 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white pr-2 pl-4 flex items-center gap-3">
-             <button className="w-8 h-8 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors">
-               <Search size={18} strokeWidth={2.5} />
+          {/* Profile & Notifications */}
+          <div className="flex items-center gap-2">
+             <button className="w-9 h-9 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors">
+               <Search size={20} strokeWidth={2} />
              </button>
-             <button className="w-8 h-8 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors relative">
-               <Bell size={18} strokeWidth={2.5} />
-               <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[var(--color-orange-accent)] border-2 border-white"></span>
+             <button className="w-9 h-9 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors relative">
+               <Bell size={20} strokeWidth={2} />
+               <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#f99e1d] border-2 border-white"></span>
              </button>
              
              {/* Profile Avatar Trigger */}
-             <Link href="/membres/profil" className="ml-1 w-10 h-10 rounded-full bg-gray-100 overflow-hidden relative shadow-sm ring-2 ring-white hover:ring-[var(--color-vert-principal)] transition-all">
+             <Link href="/membres/profil" className="ml-2 w-9 h-9 rounded-full bg-gray-100 overflow-hidden relative border border-[#e8e8e4] hover:border-[var(--color-vert-principal)] transition-all">
                 {profile?.avatar_url ? (
-                  <Image src={profile.avatar_url} alt="Avatar" fill sizes="40px" className="object-cover" />
+                  <Image src={profile.avatar_url} alt="Avatar" fill sizes="36px" className="object-cover" />
                 ) : (
-                  <User size={20} className="m-auto h-full text-gray-400" />
+                  <User size={18} className="m-auto h-full text-gray-400" />
                 )}
              </Link>
           </div>
@@ -121,13 +121,13 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
       </header>
 
       {/* ================= MAIN LAYOUT ================= */}
-      <div className="max-w-[1600px] w-full mx-auto px-4 flex gap-6 mt-4 flex-1 overflow-hidden pb-4">
+      <div className="max-w-[1600px] w-full mx-auto px-4 flex gap-6 flex-1 overflow-hidden">
          
-         {/* Vertical Sidebar (Floating Icons) - Hidden on Mobile */}
-         <aside className="hidden md:flex flex-col gap-4 w-16 h-full z-30 flex-none">
+         {/* Vertical Sidebar */}
+         <aside className="hidden md:flex flex-col gap-6 w-[64px] h-full z-30 flex-none py-6 border-r border-[#e8e8e4]">
             
-            {/* Pill 1: Accueil & Profil */}
-            <nav className="bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white py-2 px-2 flex flex-col gap-2 items-center">
+            {/* Nav 1: Accueil & Profil */}
+            <nav className="flex flex-col gap-2 items-center">
                {pill1.map((item) => {
                   const isActive = pathname === item.href
                   return (
@@ -135,20 +135,20 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
                       key={item.name}
                       href={item.href}
                       title={item.name}
-                      className={`w-11 h-11 rounded-full flex items-center justify-center transition-all ${
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
                         isActive 
-                          ? 'bg-[var(--color-vert-profond)] text-white shadow-md shadow-green-900/20' 
-                          : 'text-gray-400 hover:text-gray-800 hover:bg-gray-100/50'
+                          ? 'bg-[#1b5e38] text-white shadow-md' 
+                          : 'text-gray-400 hover:text-[#1b5e38] hover:bg-[#e8f5e9]'
                       }`}
                     >
-                      <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} />
+                      <item.icon size={20} strokeWidth={isActive ? 2.5 : 2} />
                     </Link>
                   )
                })}
             </nav>
 
-            {/* Pill 2: Utilities (Messages, Cotisation) */}
-            <nav className="bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white py-2 px-2 flex flex-col gap-2 items-center">
+            {/* Nav 2: Utilities (Messages, Cotisation) */}
+            <nav className="flex flex-col gap-2 items-center">
                {pill2.map((item) => {
                   const isActive = pathname === item.href || pathname?.startsWith(`${item.href}/`)
                   return (
@@ -156,38 +156,38 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
                       key={item.name}
                       href={item.href}
                       title={item.name}
-                      className={`w-11 h-11 rounded-full flex items-center justify-center transition-all ${
+                      className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
                         isActive 
-                          ? 'bg-[var(--color-vert-profond)] text-white shadow-md shadow-green-900/20' 
-                          : 'text-gray-400 hover:text-gray-800 hover:bg-gray-100/50'
+                          ? 'bg-[#1b5e38] text-white shadow-md' 
+                          : 'text-gray-400 hover:text-[#1b5e38] hover:bg-[#e8f5e9]'
                       }`}
                     >
-                      <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} />
+                      <item.icon size={20} strokeWidth={isActive ? 2.5 : 2} />
                     </Link>
                   )
                })}
             </nav>
 
-            {/* Pill 3: Logout */}
-            <div className="bg-white/90 backdrop-blur-md rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white py-2 px-2 flex flex-col gap-2 items-center mt-auto">
+            {/* Logout */}
+            <div className="flex flex-col gap-2 items-center mt-auto">
                <button 
                   onClick={handleLogout}
                   title="Se déconnecter"
-                  className="w-11 h-11 rounded-full flex items-center justify-center text-red-400 hover:text-white hover:bg-red-500 hover:shadow-md hover:shadow-red-500/20 transition-all"
+                  className="w-10 h-10 rounded-xl flex items-center justify-center text-red-400 hover:text-red-700 hover:bg-red-50 transition-all"
                 >
-                  <LogOut size={22} strokeWidth={2} />
+                  <LogOut size={20} strokeWidth={2} />
                </button>
             </div>
          </aside>
 
          {/* Content Area - Scrollable */}
-         <main className="flex-1 min-w-0 h-full overflow-y-auto custom-scrollbar rounded-[32px] pb-24 md:pb-8">
+         <main className="flex-1 min-w-0 h-full overflow-y-auto custom-scrollbar pb-24 md:pb-8 pt-6">
             {children}
          </main>
       </div>
 
       {/* ================= BOTTOM NAVIGATION (MOBILE) ================= */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white/95 backdrop-blur-md border-t border-gray-100 z-50 px-2 pb-safe shadow-[0_-10px_40px_rgba(0,0,0,0.05)] rounded-t-[32px]">
+      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 z-50 px-2 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
         <div className="flex justify-around items-center h-20 px-2">
           {mobileNavItems.map((item) => {
             const isActive = pathname === item.href || (item.href !== "/membres/dashboard" && pathname?.startsWith(`${item.href}/`))

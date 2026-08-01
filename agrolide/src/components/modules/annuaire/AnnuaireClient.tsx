@@ -89,7 +89,7 @@ export default function AnnuaireClient() {
   return (
     <div className="pb-12">
       {/* Banner Premium */}
-      <div className="bg-gradient-to-br from-[#1b5e38] via-[#1b5e38] to-emerald-900 rounded-[32px] p-8 md:p-12 mb-8 text-white shadow-lg shadow-green-900/20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="bg-gradient-to-br from-[#1b5e38] via-[#1b5e38] to-emerald-900 rounded-2xl p-8 md:p-12 mb-8 text-white shadow-lg relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#50a853]/20 rounded-full blur-3xl -mr-20 -mt-20"></div>
         <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#fcb726]/10 rounded-full blur-3xl -ml-16 -mb-16"></div>

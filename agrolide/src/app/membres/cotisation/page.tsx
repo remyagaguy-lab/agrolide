@@ -45,7 +45,7 @@ export default async function CotisationPage() {
       </div>
 
       {showPaymentBlock && (
-        <div className="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-orange-200 overflow-hidden relative">
+        <div className="bg-white rounded-2xl shadow-sm border border-orange-200 overflow-hidden relative">
           <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 p-8 border-b border-orange-100 flex items-start gap-4">
             <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center shrink-0">
                <AlertTriangle className="text-[var(--color-orange-accent)]" size={24} strokeWidth={2.5} />
@@ -76,7 +76,7 @@ export default async function CotisationPage() {
       )}
 
       {!showPaymentBlock && cotisationActive && (
-        <div className="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-6">
             <div className="w-16 h-16 bg-[var(--color-vert-clair)] rounded-full flex items-center justify-center text-[var(--color-vert-profond)] shrink-0 shadow-sm">
               <CheckCircle size={32} strokeWidth={2.5} />
@@ -96,7 +96,7 @@ export default async function CotisationPage() {
       )}
 
       {/* Historique */}
-      <div className="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white overflow-hidden p-2">
+      <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden p-2">
         <div className="px-6 py-6 flex items-center gap-3">
           <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
              <Clock size={18} className="text-[var(--color-vert-principal)]" />

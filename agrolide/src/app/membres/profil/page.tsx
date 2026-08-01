@@ -45,10 +45,9 @@ export default async function ProfilPage() {
         </Link>
       </div>
 
-      <div className="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white overflow-hidden relative">
-        
-        {/* Header Profil (Gradient) */}
-        <div className="h-40 bg-gradient-to-r from-[var(--color-vert-principal)] to-emerald-900 relative">
+      {/* En-tête du profil avec photo de couverture */}
+      <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden relative">
+        <div className="h-48 w-full bg-gradient-to-r from-[var(--color-vert-profond)] to-emerald-900 relative">
            <div className="absolute inset-0 bg-black/10"></div>
         </div>
         

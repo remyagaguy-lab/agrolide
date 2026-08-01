@@ -144,7 +144,7 @@ export default async function DashboardPage() {
         {/* Header / Welcome Area */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <h1 className="text-3xl font-heading font-bold text-gray-900 tracking-tight">
+            <h1 className="text-3xl font-heading font-bold text-[#1a1a1a] tracking-tight">
               Bonjour, {profile.prenom || "Membre"}
             </h1>
             <p className="text-sm text-gray-500 mt-1">
@@ -152,11 +152,11 @@ export default async function DashboardPage() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <div className="hidden md:flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-full border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-sm font-medium text-gray-600">
+            <div className="hidden md:flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-[#e8e8e4] shadow-sm text-sm font-medium text-gray-600">
               <CalendarIcon size={16} className="text-gray-400" />
               <span>{new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
             </div>
-            <Link href="/membres/profil/modifier" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-white text-gray-700 text-sm font-bold rounded-full hover:bg-gray-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all">
+            <Link href="/membres/profil/modifier" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-[#e8e8e4] text-gray-700 text-sm font-bold rounded-lg hover:bg-gray-50 shadow-sm transition-all">
               <span>Mettre à jour mon profil</span>
             </Link>
           </div>
@@ -170,7 +170,7 @@ export default async function DashboardPage() {
           {/* COL 1: Adhésion & Stats (3/12) */}
           <div className="lg:col-span-3 space-y-6 flex flex-col">
             {/* Adhésion "Credit Card" */}
-            <div className="bg-gradient-to-br from-[var(--color-vert-profond)] to-[#0c361e] p-6 rounded-[28px] shadow-lg shadow-[var(--color-vert-profond)]/20 text-white relative overflow-hidden flex flex-col justify-between min-h-[220px]">
+            <div className="bg-gradient-to-br from-[#1b5e38] to-[#0c361e] p-6 rounded-2xl shadow-lg text-white relative overflow-hidden flex flex-col justify-between min-h-[220px]">
               <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-2xl -mr-12 -mt-12"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-xl -ml-10 -mb-10"></div>
               
@@ -209,11 +209,11 @@ export default async function DashboardPage() {
             </div>
 
             {/* Quick Stats Block */}
-            <div className="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 flex-1 flex flex-col justify-center border border-white">
+            <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-6 flex-1 flex flex-col justify-center">
               <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Mon Profil</h3>
               <div className="flex items-end justify-between">
-                <div className="text-xl font-bold text-gray-900 capitalize">{profile.categorie}</div>
-                <div className="px-2.5 py-1 bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)] text-[10px] font-bold rounded-full">
+                <div className="text-xl font-bold text-[#1a1a1a] capitalize">{profile.categorie}</div>
+                <div className="px-2.5 py-1 bg-[#f0f7f0] text-[#1b5e38] text-[10px] font-bold rounded-md border border-[#c3dec4]">
                   Vérifié
                 </div>
               </div>
@@ -221,13 +221,13 @@ export default async function DashboardPage() {
           </div>
 
           {/* COL 2: Featured Feed (Formations / Opportunités) (6/12) */}
-          <div className="lg:col-span-6 bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 flex flex-col border border-white relative overflow-hidden">
+          <div className="lg:col-span-6 bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-6 flex flex-col relative overflow-hidden">
             {/* Background Graphic Hint */}
-            <div className="absolute right-0 bottom-0 w-64 h-64 bg-[var(--color-vert-clair)]/30 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none"></div>
+            <div className="absolute right-0 bottom-0 w-64 h-64 bg-[#f0f7f0]/50 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none"></div>
 
             <div className="flex justify-between items-center mb-6 relative z-10">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#f0f7f0] text-[#1b5e38] flex items-center justify-center">
                   {profile.categorie === "junior" ? <BookOpen size={18} /> : <Briefcase size={18} />}
                 </div>
                 <div>
@@ -289,10 +289,10 @@ export default async function DashboardPage() {
           <div className="lg:col-span-3 space-y-6 flex flex-col">
             
             {/* Events Widget */}
-            <div className="bg-white/90 backdrop-blur-xl p-6 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 border border-white">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-[#e8e8e4] flex-1">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-base font-bold text-gray-900 font-heading">Agenda</h3>
-                <Link href="/membres/evenements" className="text-[10px] font-bold text-[var(--color-vert-profond)] uppercase tracking-wider bg-[var(--color-vert-clair)] px-2 py-1 rounded-md">Voir tout</Link>
+                <h3 className="text-base font-bold text-[#1a1a1a] font-heading">Agenda</h3>
+                <Link href="/membres/evenements" className="text-[10px] font-bold text-[#1b5e38] uppercase tracking-wider bg-[#f0f7f0] px-2 py-1 rounded-md">Voir tout</Link>
               </div>
 
               {evtsData && evtsData.length > 0 ? (
@@ -303,12 +303,12 @@ export default async function DashboardPage() {
                     const month = evtDate ? evtDate.toLocaleDateString('fr-FR', { month: 'short' }) : ""
                     return (
                       <Link href="/membres/evenements" key={evt.id} className="flex gap-4 items-center group">
-                        <div className="w-12 h-12 bg-[#f8faf8] rounded-2xl flex flex-col items-center justify-center shrink-0 group-hover:bg-[var(--color-vert-profond)] group-hover:text-white transition-colors">
+                        <div className="w-12 h-12 bg-[#f8f8f6] border border-[#e8e8e4] rounded-xl flex flex-col items-center justify-center shrink-0 group-hover:bg-[#1b5e38] group-hover:text-white group-hover:border-[#1b5e38] transition-colors">
                           <span className="text-sm font-extrabold leading-none">{day}</span>
                           <span className="text-[9px] font-bold uppercase mt-1 leading-none opacity-80">{month}</span>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="font-bold text-gray-900 text-sm truncate leading-tight group-hover:text-[var(--color-vert-profond)] transition-colors">{evt.titre}</p>
+                          <p className="font-bold text-[#1a1a1a] text-sm truncate leading-tight group-hover:text-[#1b5e38] transition-colors">{evt.titre}</p>
                           <p className="text-[11px] text-gray-400 mt-1 truncate">{evt.type_evt || "Événement"}</p>
                         </div>
                       </Link>
@@ -323,15 +323,14 @@ export default async function DashboardPage() {
             </div>
 
             {/* Floating Shortcuts */}
-            <div className="bg-gradient-to-r from-[var(--color-vert-profond)] to-emerald-900 rounded-[32px] p-6 shadow-lg shadow-green-900/20 flex items-center justify-between relative overflow-hidden">
-              <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
-              <Link href="/membres/annuaire" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-[var(--color-vert-profond)] flex items-center justify-center transition-all relative z-10" title="Annuaire">
+            <div className="bg-[#f8f8f6] border border-[#e8e8e4] rounded-2xl p-6 flex items-center justify-between relative overflow-hidden">
+              <Link href="/membres/annuaire" className="w-12 h-12 rounded-xl bg-white border border-[#e8e8e4] text-[#1b5e38] hover:bg-[#1b5e38] hover:text-white hover:border-[#1b5e38] flex items-center justify-center transition-all shadow-sm" title="Annuaire">
                 <Users size={20} />
               </Link>
-              <Link href="/membres/bibliotheque" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-[var(--color-vert-profond)] flex items-center justify-center transition-all" title="Bibliothèque">
+              <Link href="/membres/bibliotheque" className="w-12 h-12 rounded-xl bg-white border border-[#e8e8e4] text-[#1b5e38] hover:bg-[#1b5e38] hover:text-white hover:border-[#1b5e38] flex items-center justify-center transition-all shadow-sm" title="Bibliothèque">
                 <Library size={20} />
               </Link>
-              <Link href="/membres/forum" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-[var(--color-vert-profond)] flex items-center justify-center transition-all" title="Forum">
+              <Link href="/membres/forum" className="w-12 h-12 rounded-xl bg-white border border-[#e8e8e4] text-[#1b5e38] hover:bg-[#1b5e38] hover:text-white hover:border-[#1b5e38] flex items-center justify-center transition-all shadow-sm" title="Forum">
                 <MessageSquare size={20} />
               </Link>
             </div>
@@ -341,10 +340,10 @@ export default async function DashboardPage() {
           {/* ================= ROW 2 ================= */}
 
           {/* COL 1: Articles Table (8/12) */}
-          <div className="lg:col-span-8 bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 border border-white">
+          <div className="lg:col-span-8 bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-6">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-lg font-bold text-gray-900 font-heading">Actualités du réseau</h3>
-              <Link href="/blog" className="text-xs font-bold text-gray-500 hover:text-gray-900 border border-gray-200 px-3 py-1.5 rounded-full flex items-center gap-1 transition-colors">
+              <h3 className="text-lg font-bold text-[#1a1a1a] font-heading">Actualités du réseau</h3>
+              <Link href="/blog" className="text-xs font-bold text-gray-500 hover:text-gray-900 border border-[#e8e8e4] px-3 py-1.5 rounded-md flex items-center gap-1 transition-colors bg-white hover:bg-gray-50">
                 Voir toutes <ChevronRight size={14} />
               </Link>
             </div>
@@ -368,16 +367,16 @@ export default async function DashboardPage() {
                         <tr key={article.slug} className="group border-b border-gray-50 last:border-0 hover:bg-[#f8faf8] transition-colors">
                           <td className="py-4">
                             <div className="flex items-center gap-3">
-                              <div className="w-8 h-8 rounded-full bg-[var(--color-vert-clair)] flex items-center justify-center shrink-0">
-                                <BookOpen size={14} className="text-[var(--color-vert-profond)]" />
+                              <div className="w-8 h-8 rounded-lg bg-[#f0f7f0] flex items-center justify-center shrink-0">
+                                <BookOpen size={14} className="text-[#1b5e38]" />
                               </div>
-                              <span className="font-bold text-gray-900 text-sm line-clamp-1 group-hover:text-[var(--color-vert-profond)] transition-colors">
+                              <span className="font-bold text-[#1a1a1a] text-sm line-clamp-1 group-hover:text-[#1b5e38] transition-colors">
                                 {article.title}
                               </span>
                             </div>
                           </td>
                           <td className="py-4 px-4">
-                            <span className="text-[10px] font-bold text-gray-600 bg-gray-100 px-2.5 py-1 rounded-md">
+                            <span className="text-[10px] font-bold text-gray-600 bg-[#f8f8f6] px-2.5 py-1 rounded-md border border-[#e8e8e4]">
                               {article.category || "Général"}
                             </span>
                           </td>
@@ -385,7 +384,7 @@ export default async function DashboardPage() {
                             {isPubDateValid ? pubDate.toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' }) : "Récemment"}
                           </td>
                           <td className="py-4 text-right">
-                            <Link href={`/blog/${article.slug}`} className="inline-block text-[11px] font-bold text-[var(--color-vert-profond)] hover:bg-[var(--color-vert-clair)] px-3 py-1.5 rounded-full transition-colors">
+                            <Link href={`/blog/${article.slug}`} className="inline-block text-[11px] font-bold text-[#1b5e38] hover:bg-[#f0f7f0] px-3 py-1.5 rounded-md transition-colors border border-transparent hover:border-[#c3dec4]">
                               Lire l'article
                             </Link>
                           </td>
@@ -401,11 +400,11 @@ export default async function DashboardPage() {
           </div>
 
           {/* COL 2: Notifications (4/12) */}
-          <div className="lg:col-span-4 bg-white/90 backdrop-blur-xl p-6 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white">
+          <div className="lg:col-span-4 bg-white p-6 rounded-2xl shadow-sm border border-[#e8e8e4]">
             <div className="flex justify-between items-center mb-6">
-              <h3 className="text-base font-bold text-gray-900 font-heading">Activité récente</h3>
+              <h3 className="text-base font-bold text-[#1a1a1a] font-heading">Activité récente</h3>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[var(--color-orange-accent)] animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-[#f99e1d] animate-pulse"></span>
                 <span className="text-xs font-medium text-gray-500">{notifsData?.length || 0} nouvelles</span>
               </div>
             </div>
@@ -413,8 +412,8 @@ export default async function DashboardPage() {
             {notifsData && notifsData.length > 0 ? (
               <div className="space-y-4">
                 {notifsData.map((notif: any) => (
-                  <div key={notif.id} className="flex gap-4 items-start p-3 rounded-[16px] hover:bg-[#f8faf8] transition-colors">
-                    <div className="w-10 h-10 rounded-full bg-[#fff8e6] text-[var(--color-orange-accent)] flex items-center justify-center shrink-0">
+                  <div key={notif.id} className="flex gap-4 items-start p-3 rounded-xl hover:bg-[#f8f8f6] transition-colors border border-transparent hover:border-[#e8e8e4]">
+                    <div className="w-10 h-10 rounded-lg bg-[#fff8e6] text-[#f99e1d] flex items-center justify-center shrink-0 border border-[#fef3e2]">
                       <Bell size={16} />
                     </div>
                     <div>
@@ -423,7 +422,7 @@ export default async function DashboardPage() {
                     </div>
                   </div>
                 ))}
-                <Link href="/membres/notifications" className="block w-full py-3 text-center text-xs font-bold text-gray-500 bg-gray-50 rounded-xl hover:bg-gray-100 hover:text-gray-700 transition-colors mt-2">
+                <Link href="/membres/notifications" className="block w-full py-2.5 text-center text-xs font-bold text-[#1a1a1a] bg-white border border-[#e8e8e4] rounded-lg hover:bg-[#f8f8f6] transition-colors mt-2">
                   Gérer les notifications
                 </Link>
               </div>
