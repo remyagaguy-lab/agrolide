@@ -47,7 +47,7 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
 
   const navPersonal = [
     { name: "Messages", href: "/membres/messages", icon: Mail },
-    { name: "Cotisation", href: "/membres/cotisation", icon: CreditCard },
+    // { name: "Cotisation", href: "/membres/cotisation", icon: CreditCard },
     { name: "Mon Profil", href: "/membres/profil", icon: User },
   ]
 
