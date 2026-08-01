@@ -1,5 +1,7 @@
 import { Metadata } from "next"
-import { createClient } from "@supabase/supabase-js"
+import { db } from "@/db"
+import { partenaires as partenairesTable } from "@/db/schema"
+import { eq, asc } from "drizzle-orm"
 import Image from "next/image"
 import PartenariatForm from "@/components/modules/fonds/PartenariatForm"
 import { Handshake, Target, Globe, Building2, CheckCircle2 } from "lucide-react"
@@ -12,17 +14,11 @@ export const metadata: Metadata = {
 export const revalidate = 3600 // ISR toutes les heures
 
 export default async function PartenairesPage() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
-
   // Fetch des partenaires actifs
-  const { data: partenaires } = await supabase
-    .from('partenaires')
-    .select('*')
-    .eq('statut', 'actif')
-    .order('niveau', { ascending: true }) // par ex: 1 = Platinum, 2 = Gold, etc.
-    .order('created_at', { ascending: false })
+  const partenaires = await db.select()
+    .from(partenairesTable)
+    .where(eq(partenairesTable.publie, true))
+    .orderBy(asc(partenairesTable.ordre))
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -75,10 +71,10 @@ export default async function PartenairesPage() {
                     )}
                   </div>
                   <h3 className="font-heading font-[800] text-[18px] text-[#1a1a1a] mb-2">{p.nom}</h3>
-                  <p className="font-sans text-[13px] font-[600] text-[#1b5e38] uppercase tracking-wider bg-[#1b5e38]/5 px-3 py-1 rounded-full">{p.type}</p>
+                  <p className="font-sans text-[13px] font-[600] text-[#1b5e38] uppercase tracking-wider bg-[#1b5e38]/5 px-3 py-1 rounded-full">{p.contact_titre || "Partenaire"}</p>
                   
-                  {p.website_url && (
-                    <a href={p.website_url} target="_blank" rel="noreferrer" className="absolute inset-0 z-10">
+                  {p.site_web && (
+                    <a href={p.site_web} target="_blank" rel="noreferrer" className="absolute inset-0 z-10">
                       <span className="sr-only">Visiter le site de {p.nom}</span>
                     </a>
                   )}

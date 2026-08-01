@@ -1,5 +1,7 @@
 import { Metadata } from "next"
-import { createClient } from "@supabase/supabase-js"
+import { db } from "@/db"
+import { campagnes_financement, contributions as contributionsTable } from "@/db/schema"
+import { eq, desc } from "drizzle-orm"
 import DonationForm from "@/components/modules/fonds/DonationForm"
 import { Heart, Target, TrendingUp, Users, CheckCircle2 } from "lucide-react"
 
@@ -11,20 +13,15 @@ export const metadata: Metadata = {
 export const revalidate = 1800 // ISR toutes les 30 minutes
 
 export default async function NousSoutenirPage({ searchParams }: { searchParams: Promise<{ merci?: string }> }) {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
-  
   const params = await searchParams;
 
   // 1. Récupérer la campagne active
-  const { data: campagne } = await supabase
-    .from('campagnes_fonds')
-    .select('*')
-    .eq('statut', 'active')
-    .order('created_at', { ascending: false })
+  const campagne = await db.select()
+    .from(campagnes_financement)
+    .where(eq(campagnes_financement.active, true))
+    .orderBy(desc(campagnes_financement.created_at))
     .limit(1)
-    .single()
+    .then(r => r[0])
 
   // 2. Calculer le total collecté
   let totalCollecte = 0
@@ -32,11 +29,14 @@ export default async function NousSoutenirPage({ searchParams }: { searchParams:
   let recentDonors: any[] = []
 
   if (campagne) {
-    const { data: contributions } = await supabase
-      .from('contributions')
-      .select('montant_fcfa, prenom, anonyme, created_at')
-      .eq('campagne_id', campagne.id)
-      .eq('statut', 'valide')
+    const contributions = await db.select({
+      montant_fcfa: contributionsTable.montant_fcfa,
+      prenom: contributionsTable.prenom,
+      anonyme: contributionsTable.anonyme,
+      created_at: contributionsTable.created_at
+    })
+    .from(contributionsTable)
+    .where(eq(contributionsTable.statut, 'valide'))
 
     if (contributions) {
       totalCollecte = contributions.reduce((sum, c) => sum + Number(c.montant_fcfa), 0)
@@ -45,7 +45,11 @@ export default async function NousSoutenirPage({ searchParams }: { searchParams:
       // Trier et filtrer pour les derniers soutiens publics
       recentDonors = contributions
         .filter(c => !c.anonyme)
-        .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())
+        .sort((a, b) => {
+          const tA = a.created_at ? new Date(a.created_at).getTime() : 0;
+          const tB = b.created_at ? new Date(b.created_at).getTime() : 0;
+          return tB - tA;
+        })
         .slice(0, 5)
     }
   }

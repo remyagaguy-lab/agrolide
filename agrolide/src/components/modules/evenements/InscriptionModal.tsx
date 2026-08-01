@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, CheckCircle, Loader2 } from 'lucide-react'
-import { createClient } from '@supabase/supabase-js'
+import { useUser } from '@clerk/nextjs'
 
 interface InscriptionModalProps {
   isOpen: boolean
@@ -12,8 +12,7 @@ interface InscriptionModalProps {
 }
 
 export default function InscriptionModal({ isOpen, onClose, event }: InscriptionModalProps) {
-  const [session, setSession] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+  const { user, isLoaded } = useUser()
   const [submitting, setSubmitting] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState('')
@@ -24,18 +23,7 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
   const [email, setEmail] = useState('')
 
   useEffect(() => {
-    const fetchSession = async () => {
-      setLoading(true)
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-      const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-      const supabase = createClient(supabaseUrl, supabaseKey)
-      const { data } = await supabase.auth.getSession()
-      setSession(data.session)
-      setLoading(false)
-    }
-    
     if (isOpen) {
-      fetchSession()
       setSuccess(false)
       setError('')
       setPrenom('')
@@ -56,13 +44,12 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
       const response = await fetch(`/api/evenements/inscription`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          ...(session?.access_token ? { 'Authorization': `Bearer ${session.access_token}` } : {})
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           evenement_id: event.id,
           // Si non connecté on envoie les champs
-          ...(!session ? { prenom, nom, email_externe: email } : {})
+          ...(!user ? { prenom, nom, email_externe: email } : {})
         })
       })
 
@@ -92,8 +79,7 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
             <X className="h-4 w-4" />
             <span className="sr-only">Fermer</span>
           </Dialog.Close>
-
-          {loading ? (
+          {!isLoaded ? (
             <div className="py-12 flex justify-center">
               <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
             </div>
@@ -132,10 +118,10 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                 </div>
               )}
 
-              {session ? (
+              {user ? (
                 <div className="py-4">
                   <p className="text-gray-700 mb-6">
-                    Vous êtes connecté(e) en tant que <strong>{session.user.email}</strong>. 
+                    Vous êtes connecté(e) en tant que <strong>{user.primaryEmailAddress?.emailAddress}</strong>. 
                     Vous pouvez confirmer votre inscription en un clic !
                   </p>
                   

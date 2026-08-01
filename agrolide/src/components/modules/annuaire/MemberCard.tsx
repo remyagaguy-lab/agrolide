@@ -11,6 +11,23 @@ export default function MemberCard({ member }: MemberCardProps) {
   // Initiale du nom
   const nomInitiale = member.nom ? `${member.nom.charAt(0)}.` : ''
   const displayName = `${member.prenom} ${nomInitiale}`
+  const avatarUrl = member.photo_url || member.avatar_url
+
+  const getSectors = () => {
+    const val = member.secteurs_expertise;
+    if (!val) return [];
+    if (Array.isArray(val)) return val;
+    if (typeof val !== 'string') return [];
+    const trimmed = val.trim();
+    if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+      try {
+        const parsed = JSON.parse(trimmed);
+        if (Array.isArray(parsed)) return parsed;
+      } catch (e) {}
+    }
+    return trimmed.split(',').map((s: string) => s.trim()).filter(Boolean);
+  }
+  const sectors = getSectors();
 
   // Déterminer la couleur du badge en fonction de la catégorie
   const getBadgeClass = (cat: string) => {
@@ -30,8 +47,8 @@ export default function MemberCard({ member }: MemberCardProps) {
     >
       <div className="flex items-start justify-between mb-4 gap-4">
         <div className="w-16 h-16 rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-xl font-bold overflow-hidden shrink-0 border border-primary-100 relative">
-          {member.avatar_url ? (
-            <Image src={member.avatar_url} alt={displayName} fill sizes="64px" className="object-cover" />
+          {avatarUrl ? (
+            <Image src={avatarUrl} alt={displayName} fill sizes="64px" className="object-cover" />
           ) : (
             member.prenom?.charAt(0) || '?'
           )}
@@ -63,14 +80,14 @@ export default function MemberCard({ member }: MemberCardProps) {
       )}
 
       <div className="mt-auto pt-4 border-t border-gray-50 flex gap-2 flex-wrap">
-        {member.secteurs_expertise && Array.isArray(member.secteurs_expertise) && member.secteurs_expertise.slice(0, 2).map((secteur: string, idx: number) => (
+        {sectors.slice(0, 2).map((secteur: string, idx: number) => (
           <span key={idx} className="bg-gray-50 text-gray-600 px-2 py-1 rounded text-xs">
             {secteur}
           </span>
         ))}
-        {member.secteurs_expertise?.length > 2 && (
+        {sectors.length > 2 && (
           <span className="bg-gray-50 text-gray-500 px-2 py-1 rounded text-xs font-medium">
-            +{member.secteurs_expertise.length - 2}
+            +{sectors.length - 2}
           </span>
         )}
       </div>

@@ -2,8 +2,11 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { ArrowLeft, Rocket } from "lucide-react"
-import { createClient } from "@supabase/supabase-js"
 import AgripreneurCard from "@/components/modules/agrobusiness/AgripreneurCard"
+
+import { db } from "@/db"
+import { agripreneurs as agripreneursTable } from "@/db/schema"
+import { eq, desc } from "drizzle-orm"
 
 export const metadata: Metadata = {
   title: "Nos Agripreneurs",
@@ -13,15 +16,10 @@ export const metadata: Metadata = {
 export const revalidate = 3600 // ISR toutes les heures
 
 export default async function AgripreneursPage() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
-
-  const { data: agripreneurs } = await supabase
-    .from('agripreneurs')
-    .select('*')
-    .eq('statut', 'actif')
-    .order('created_at', { ascending: false })
+  const agripreneurs = await db.select()
+    .from(agripreneursTable)
+    .where(eq(agripreneursTable.publie, true))
+    .orderBy(desc(agripreneursTable.created_at))
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">

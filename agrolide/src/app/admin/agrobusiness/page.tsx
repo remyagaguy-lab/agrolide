@@ -1,23 +1,19 @@
 import React from 'react'
-import { createClient } from '@supabase/supabase-js'
 import { FileText, Download, CheckCircle, XCircle, Clock } from 'lucide-react'
+import { db } from "@/db"
+import { demandes_service, candidatures_incubation } from "@/db/schema"
+import { desc } from "drizzle-orm"
 
 export const revalidate = 0
 
 export default async function AdminAgrobusinessPage() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
+  const demandes = await db.select()
+    .from(demandes_service)
+    .orderBy(desc(demandes_service.created_at))
 
-  const { data: demandes } = await supabase
-    .from('demandes_service')
-    .select('*')
-    .order('created_at', { ascending: false })
-
-  const { data: candidatures } = await supabase
-    .from('candidatures_incubation')
-    .select('*')
-    .order('created_at', { ascending: false })
+  const candidatures = await db.select()
+    .from(candidatures_incubation)
+    .orderBy(desc(candidatures_incubation.created_at))
 
   const renderStatus = (statut: string) => {
     switch (statut) {

@@ -3,7 +3,7 @@
 import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
 import { documents, users } from '@/db/schema'
-import { eq } from 'drizzle-orm'
+import { eq, desc } from 'drizzle-orm'
 import { Resend } from 'resend'
 import { revalidatePath } from 'next/cache'
 
@@ -11,15 +11,13 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 
 export async function validateDocument(documentId: string) {
   const { userId: currentUserId } = await auth();
-  const user = currentUserId ? { id: currentUserId } : null;
-  const session = currentUserId ? { user: { id: currentUserId } } : null;
+  if (!currentUserId) throw new Error("Non autorisé")
 
-  if (!user || !currentUserId) throw new Error("Non autorisé")
-
-  const profile = await db.query.users.findFirst({
-    columns: { role_plateforme: true },
-    where: eq(users.id, currentUserId)
-  })
+  const profile = await db.select({ role_plateforme: users.role_plateforme })
+    .from(users)
+    .where(eq(users.id, currentUserId))
+    .limit(1)
+    .then(r => r[0])
 
   if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
@@ -40,30 +38,41 @@ export async function validateDocument(documentId: string) {
 
 export async function rejectDocument(documentId: string, reason: string) {
   const { userId: currentUserId } = await auth();
-  const user = currentUserId ? { id: currentUserId } : null;
-  const session = currentUserId ? { user: { id: currentUserId } } : null;
+  if (!currentUserId) throw new Error("Non autorisé")
 
-  if (!user || !currentUserId) throw new Error("Non autorisé")
-
-  const adminProfile = await db.query.users.findFirst({
-    columns: { role_plateforme: true },
-    where: eq(users.id, currentUserId)
-  })
+  const adminProfile = await db.select({ role_plateforme: users.role_plateforme })
+    .from(users)
+    .where(eq(users.id, currentUserId))
+    .limit(1)
+    .then(r => r[0])
 
   if (!adminProfile || (adminProfile.role_plateforme !== 'admin' && adminProfile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
   }
 
   // Get document details and the author's email
-  const doc = await db.query.documents.findFirst({
-    columns: { titre: true },
-    with: { depose_par: { columns: { email: true, prenom: true } } },
-    where: eq(documents.id, documentId)
+  const doc = await db.select({
+    titre: documents.titre,
+    depose_par: documents.depose_par
   })
+  .from(documents)
+  .where(eq(documents.id, documentId))
+  .limit(1)
+  .then(r => r[0])
 
   if (!doc) throw new Error("Document introuvable")
 
-  const authorProfile = doc.depose_par
+  let authorProfile = null
+  if (doc.depose_par) {
+    authorProfile = await db.select({
+      email: users.email,
+      prenom: users.prenom
+    })
+    .from(users)
+    .where(eq(users.id, doc.depose_par))
+    .limit(1)
+    .then(r => r[0])
+  }
 
   // Update status to 'rejete'
   await db.update(documents).set({
@@ -103,15 +112,13 @@ export async function rejectDocument(documentId: string, reason: string) {
 
 export async function deleteDocumentAdmin(documentId: string) {
   const { userId: currentUserId } = await auth();
-  const user = currentUserId ? { id: currentUserId } : null;
-  const session = currentUserId ? { user: { id: currentUserId } } : null;
+  if (!currentUserId) throw new Error("Non autorisé")
 
-  if (!user || !currentUserId) throw new Error("Non autorisé")
-
-  const adminProfile = await db.query.users.findFirst({
-    columns: { role_plateforme: true },
-    where: eq(users.id, currentUserId)
-  })
+  const adminProfile = await db.select({ role_plateforme: users.role_plateforme })
+    .from(users)
+    .where(eq(users.id, currentUserId))
+    .limit(1)
+    .then(r => r[0])
 
   if (!adminProfile || (adminProfile.role_plateforme !== 'admin' && adminProfile.role_plateforme !== 'super_admin')) {
     throw new Error("Privilèges insuffisants")
@@ -123,4 +130,21 @@ export async function deleteDocumentAdmin(documentId: string) {
   revalidatePath('/membres/bibliotheque')
   
   return { success: true }
+}
+
+export async function getAdminDocuments() {
+  const { userId: currentUserId } = await auth();
+  if (!currentUserId) throw new Error("Non autorisé")
+
+  const adminProfile = await db.select({ role_plateforme: users.role_plateforme })
+    .from(users)
+    .where(eq(users.id, currentUserId))
+    .limit(1)
+    .then(r => r[0])
+
+  if (!adminProfile || (adminProfile.role_plateforme !== 'admin' && adminProfile.role_plateforme !== 'super_admin')) {
+    throw new Error("Privilèges insuffisants")
+  }
+
+  return db.select().from(documents).orderBy(desc(documents.created_at));
 }

@@ -1,46 +1,67 @@
 import React from 'react'
-import { createClient } from '@supabase/supabase-js'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { MapPin, Briefcase, MessageCircle, ExternalLink, Globe, FileText, ArrowLeft } from 'lucide-react'
 import { Metadata } from 'next'
+import { db } from '@/db'
+import { users, documents } from '@/db/schema'
+import { eq, and, desc } from 'drizzle-orm'
+
+function parseSafeArray(val: string | null | any): string[] {
+  if (!val) return [];
+  if (Array.isArray(val)) return val;
+  if (typeof val !== 'string') return [];
+  const trimmed = val.trim();
+  if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+    try {
+      const parsed = JSON.parse(trimmed);
+      if (Array.isArray(parsed)) return parsed;
+    } catch (e) {
+      // fallback
+    }
+  }
+  return trimmed.split(',').map(s => s.trim()).filter(Boolean);
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
   
-  const { data } = await supabase.from('profiles').select('prenom, nom').eq('id', id).single()
+  const member = await db.select({
+    prenom: users.prenom,
+    nom: users.nom
+  })
+  .from(users)
+  .where(eq(users.id, id))
+  .limit(1)
+  .then(r => r[0])
+
   return {
-    title: data ? `${data.prenom} ${data.nom} | Profil Agrolide` : 'Profil | Agrolide',
+    title: member ? `${member.prenom} ${member.nom} | Profil Agrolide` : 'Profil | Agrolide',
   }
 }
 
 export default async function FicheProfilPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
-  const supabase = createClient(supabaseUrl, supabaseKey)
 
   // Fetch du profil
-  const { data: member } = await supabase
-    .from('profiles')
-    .select('*')
-    .eq('id', id)
-    .single()
+  const member = await db.select().from(users).where(eq(users.id, id)).limit(1).then(r => r[0])
 
   if (!member) notFound()
 
   // Fetch de ses contributions à la bibliothèque
-  const { data: documents } = await supabase
-    .from('documents')
-    .select('id, titre, type_doc')
-    .eq('uploader_id', id)
-    .eq('statut', 'publie')
-    .order('created_at', { ascending: false })
-    .limit(5)
+  const docs = await db.select({
+    id: documents.id,
+    titre: documents.titre,
+    type_doc: documents.type_doc
+  })
+  .from(documents)
+  .where(and(
+    eq(documents.depose_par, id),
+    eq(documents.statut, 'publie')
+  ))
+  .orderBy(desc(documents.created_at))
+  .limit(5)
 
   // Déterminer la couleur du badge
   const getBadgeClass = (cat: string) => {
@@ -54,6 +75,8 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
   }
 
   const displayName = `${member.prenom} ${member.nom}`
+  const sectors = parseSafeArray(member.secteurs_expertise)
+  const languages = parseSafeArray(member.langues)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
@@ -126,26 +149,25 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
       <div className="grid md:grid-cols-3 gap-8">
         {/* Colonne Principale */}
         <div className="md:col-span-2 space-y-8">
-          
-          {/* Biographie */}
+                 {/* Biographie */}
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
             <h2 className="text-xl font-bold text-gray-900 mb-4">À propos</h2>
-            {member.bio ? (
-              <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">{member.bio}</p>
+            {member.biographie ? (
+              <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">{member.biographie}</p>
             ) : (
               <p className="text-gray-400 italic">Aucune biographie renseignée.</p>
             )}
           </div>
 
           {/* Contributions */}
-          {documents && documents.length > 0 && (
+          {docs && docs.length > 0 && (
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
               <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
                 <FileText className="w-5 h-5 text-primary-500" />
                 Contributions à la bibliothèque
               </h2>
               <div className="space-y-3">
-                {documents.map((doc: any) => (
+                {docs.map((doc: any) => (
                   <Link 
                     key={doc.id} 
                     href={`/bibliotheque/${doc.id}`}
@@ -166,11 +188,11 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
           {/* Tags */}
           <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 space-y-6">
             
-            {member.secteurs_expertise && member.secteurs_expertise.length > 0 && (
+            {sectors && sectors.length > 0 && (
               <div>
                 <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Expertise</h3>
                 <div className="flex flex-wrap gap-2">
-                  {member.secteurs_expertise.map((s: string, i: number) => (
+                  {sectors.map((s: string, i: number) => (
                     <span key={i} className="bg-primary-50 text-primary-700 px-3 py-1.5 rounded-lg text-sm font-medium">
                       {s}
                     </span>
@@ -179,11 +201,11 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
               </div>
             )}
 
-            {member.langues && member.langues.length > 0 && (
+            {languages && languages.length > 0 && (
               <div>
                 <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Langues</h3>
                 <div className="flex flex-wrap gap-2">
-                  {member.langues.map((l: string, i: number) => (
+                  {languages.map((l: string, i: number) => (
                     <span key={i} className="bg-gray-50 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-100">
                       {l}
                     </span>
@@ -193,7 +215,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
             )}
             
             {/* Liens Web */}
-            {(member.linkedin_url || member.website_url) && (
+            {(member.linkedin_url || member.site_web_url) && (
               <div>
                 <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Sur le web</h3>
                 <div className="space-y-2 text-sm font-medium">
@@ -202,8 +224,8 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
                       <ExternalLink className="w-4 h-4" /> Profil LinkedIn
                     </a>
                   )}
-                  {member.website_url && (
-                    <a href={member.website_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:underline p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                  {member.site_web_url && (
+                    <a href={member.site_web_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:underline p-2 rounded-lg hover:bg-gray-50 transition-colors">
                       <Globe className="w-4 h-4" /> Site internet
                     </a>
                   )}

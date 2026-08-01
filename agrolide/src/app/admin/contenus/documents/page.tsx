@@ -1,9 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { createClient } from '@supabase/supabase-js'
 import { Check, X, Eye, FileText, Loader2, AlertCircle, Trash2, Plus } from 'lucide-react'
-import { validateDocument, rejectDocument, deleteDocumentAdmin } from '@/app/actions/admin-documents'
+import { validateDocument, rejectDocument, deleteDocumentAdmin, getAdminDocuments } from '@/app/actions/admin-documents'
 import { DocumentDetailsModal } from '@/components/modules/admin/DocumentDetailsModal'
 import SubmitDocumentModal from '@/components/modules/admin/SubmitDocumentModal'
 
@@ -15,14 +14,14 @@ type DocumentAdmin = {
   auteurs: string
   type_doc: string
   statut: string
-  created_at: string
-  resume?: string
-  thematique?: string
-  pays?: string
-  filiere?: string
-  langue?: string
-  annee?: number
-  fichier_r2_key?: string
+  created_at?: string | null
+  resume?: string | null
+  thematique?: string | null
+  pays?: string | null
+  filiere?: string | null
+  langue?: string | null
+  annee?: number | null
+  fichier_r2_key?: string | null
 }
 
 export default function AdminDocumentsPage() {
@@ -43,16 +42,7 @@ export default function AdminDocumentsPage() {
   const fetchDocuments = async () => {
     setLoading(true)
     try {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
-      const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      const supabase = createClient(supabaseUrl, supabaseAnonKey)
-      
-      const { data, error } = await supabase
-        .from('documents')
-        .select('*')
-        .order('created_at', { ascending: false })
-        
-      if (error) throw error
+      const data = await getAdminDocuments()
       
       const sorted = [...(data || [])].sort((a, b) => {
         if (a.statut === 'en_attente_validation' && b.statut !== 'en_attente_validation') return -1
