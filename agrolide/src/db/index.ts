@@ -39,7 +39,52 @@ export const db = drizzle(async (sql, params, method) => {
     return { rows: [] };
   }
 
-  // Drizzle sqlite-proxy attend un tableau de tableaux de valeurs
-  const rows = result.results.map((row: any) => Object.values(row));
+  // Fonction pour extraire les colonnes sélectionnées du SQL afin d'éviter le décalage des valeurs nulles
+  function getSelectedColumns(sqlQuery: string) {
+    const selectMatch = sqlQuery.match(/select\s+(.+?)\s+from/i);
+    if (!selectMatch) return [];
+
+    const columnsStr = selectMatch[1];
+    const columnsList: string[] = [];
+    
+    let current = "";
+    let parenDepth = 0;
+    for (let i = 0; i < columnsStr.length; i++) {
+      const char = columnsStr[i];
+      if (char === '(') parenDepth++;
+      if (char === ')') parenDepth--;
+      if (char === ',' && parenDepth === 0) {
+        columnsList.push(current.trim());
+        current = "";
+      } else {
+        current += char;
+      }
+    }
+    if (current.trim()) {
+      columnsList.push(current.trim());
+    }
+
+    return columnsList.map(col => {
+      const aliasMatch = col.match(/(?:\s+as\s+)(?:"([^"]+)"|'([^']+)'|([^\s'"]+))/i);
+      if (aliasMatch) {
+        return aliasMatch[1] || aliasMatch[2] || aliasMatch[3];
+      }
+      const parts = col.split('.');
+      const lastPart = parts[parts.length - 1].trim();
+      return lastPart.replace(/^["'`\[]|["'`\]]$/g, '');
+    });
+  }
+
+  const colNames = getSelectedColumns(sql);
+  let rows: any[][] = [];
+
+  if (colNames.length > 0 && result.results) {
+    rows = result.results.map((row: any) => {
+      return colNames.map(colName => (row[colName] !== undefined ? row[colName] : null));
+    });
+  } else if (result.results) {
+    rows = result.results.map((row: any) => Object.values(row));
+  }
+
   return { rows };
 }, { schema });
