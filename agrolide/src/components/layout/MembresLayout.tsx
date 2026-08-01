@@ -63,8 +63,32 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
   return (
     <div className="h-screen bg-[#f8f9fa] flex font-sans overflow-hidden">
       
+      <style dangerouslySetInnerHTML={{__html: `
+        .fusion-active::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: -24px;
+          width: 24px;
+          height: 24px;
+          border-bottom-right-radius: 24px;
+          box-shadow: 12px 12px 0 12px #f8f9fa;
+          pointer-events: none;
+        }
+        .fusion-active::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -24px;
+          width: 24px;
+          height: 24px;
+          border-top-right-radius: 24px;
+          box-shadow: 12px -12px 0 12px #f8f9fa;
+          pointer-events: none;
+        }
+      `}} />
       {/* ================= VERTICAL SIDEBAR (DESKTOP) ================= */}
-      <aside className="hidden lg:flex flex-col w-[260px] shrink-0 h-full bg-[#f4f8f4] border-r border-[#e8e8e4] z-30">
+      <aside className="hidden lg:flex flex-col w-[260px] shrink-0 h-full bg-[#f4f8f4] z-30 relative">
         {/* Logo */}
         <div className="h-20 flex items-center px-6 shrink-0">
           <Link href="/membres/dashboard" className="flex items-center flex-shrink-0">
@@ -80,7 +104,7 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
         </div>
 
         {/* Navigation Area */}
-        <div className="flex-1 px-4 py-4 flex flex-col gap-6">
+        <div className="flex-1 pl-4 py-4 flex flex-col gap-6 relative z-10">
           
           {/* Main Menu */}
           <div>
@@ -92,10 +116,10 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
                   <Link 
                     key={item.name}
                     href={item.href}
-                    className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all ${
+                    className={`relative flex items-center gap-3 px-4 py-3 transition-all rounded-l-2xl ${
                       isActive 
-                        ? 'bg-[#dff0e0] text-[#1b5e38] font-bold shadow-sm' 
-                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium'
+                        ? 'bg-[#f8f9fa] text-[#1b5e38] font-bold fusion-active z-20' 
+                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium mr-4'
                     }`}
                   >
                     <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : "text-gray-400"} />
@@ -116,10 +140,10 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
                   <Link 
                     key={item.name}
                     href={item.href}
-                    className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all ${
+                    className={`relative flex items-center gap-3 px-4 py-3 transition-all rounded-l-2xl ${
                       isActive 
-                        ? 'bg-[#dff0e0] text-[#1b5e38] font-bold shadow-sm' 
-                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium'
+                        ? 'bg-[#f8f9fa] text-[#1b5e38] font-bold fusion-active z-20' 
+                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium mr-4'
                     }`}
                   >
                     <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : "text-gray-400"} />
