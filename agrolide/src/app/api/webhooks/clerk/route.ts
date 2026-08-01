@@ -61,6 +61,8 @@ export async function POST(req: Request) {
         photo_url: image_url || null,
         role_plateforme: 'membre',
         statut_adhesion: 'gratuit',
+        annuaire_visible: true,
+        categorie: null,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
       }).onConflictDoNothing()

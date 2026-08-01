@@ -355,7 +355,7 @@ export const users = sqliteTable("user", {
   // Profiles fields
   annuaire_visible: integer("annuaire_visible", { mode: "boolean" }),
   biographie: text("biographie"),
-  categorie: text("categorie").default('professionnel'),
+  categorie: text("categorie"),
   langues: text("langues"),
   linkedin_url: text("linkedin_url"),
   newsletter_brevo: integer("newsletter_brevo", { mode: "boolean" }),

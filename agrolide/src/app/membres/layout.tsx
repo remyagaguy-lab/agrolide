@@ -133,7 +133,12 @@ export default async function MembresRootLayout({
       redirect(`/login?error=Profil+introuvable`)
     }
 
-    // 3. Gestion des statuts d'adhésion (RG-007, RG-008)
+    // 3. Redirection onboarding si pas de catégorie (ex: login via Google sans passer par le formulaire)
+    if (!profile.categorie) {
+      redirect("/onboarding")
+    }
+
+    // 4. Gestion des statuts d'adhésion (RG-007, RG-008)
     const statut = profile?.statut_adhesion || "gratuit"
 
     return (
