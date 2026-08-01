@@ -79,8 +79,8 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
           </Link>
         </div>
 
-        {/* Navigation Scrollable Area */}
-        <div className="flex-1 overflow-y-auto custom-scrollbar px-4 py-4 flex flex-col gap-6">
+        {/* Navigation Area */}
+        <div className="flex-1 px-4 py-4 flex flex-col gap-6">
           
           {/* Main Menu */}
           <div>
