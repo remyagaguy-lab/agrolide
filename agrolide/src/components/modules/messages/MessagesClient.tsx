@@ -157,7 +157,7 @@ export default function MessagesClient() {
     (initialConvId && !conversations.find(c => c.correspondant.id === initialConvId) ? { id: initialConvId, prenom: 'Nouveau', nom: 'Contact' } : null)
 
   return (
-    <div className="flex h-[calc(100vh-120px)] bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden">
+    <div className="flex h-full bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden">
       
       {/* Sidebar - Liste des conversations */}
       <div className={`w-full md:w-80 border-r border-[#e8e8e4] flex flex-col bg-gray-50/30 ${activeConvId ? 'hidden md:flex' : 'flex'}`}>

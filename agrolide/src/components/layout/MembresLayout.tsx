@@ -18,7 +18,8 @@ import {
   CreditCard,
   LogOut,
   Bell,
-  Search
+  Search,
+  Settings
 } from "lucide-react"
 
 interface MembresLayoutProps {
@@ -34,24 +35,20 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
     await signOut({ redirectUrl: "/" })
   }
 
-  // --- Horizontal Navigation (Modules du réseau) ---
-  const horizontalNav = [
-    { name: "Dashboard", href: "/membres/dashboard" }, // Optional, could be just the logo
-    { name: "Annuaire", href: "/membres/annuaire" },
-    { name: "Bibliothèque", href: "/membres/bibliotheque" },
-    { name: "Forum", href: "/membres/forum" },
-    { name: "Événements", href: "/membres/evenements" },
-    { name: profile?.categorie === "junior" ? "Formations" : "Opportunités", href: profile?.categorie === "junior" ? "/membres/formations" : "/membres/opportunites" },
+  // --- Sidebar Navigation ---
+  const navMain = [
+    { name: "Dashboard", href: "/membres/dashboard", icon: LayoutDashboard },
+    { name: "Annuaire", href: "/membres/annuaire", icon: Users },
+    { name: "Bibliothèque", href: "/membres/bibliotheque", icon: Library },
+    { name: "Forum", href: "/membres/forum", icon: MessageSquare },
+    { name: "Événements", href: "/membres/evenements", icon: Calendar },
+    { name: profile?.categorie === "junior" ? "Formations" : "Opportunités", href: profile?.categorie === "junior" ? "/membres/formations" : "/membres/opportunites", icon: profile?.categorie === "junior" ? BookOpen : Briefcase },
   ]
 
-  // --- Vertical Navigation (Outils personnels / Sidebar) ---
-  const pill1 = [
-    { name: "Accueil", href: "/membres/dashboard", icon: LayoutDashboard },
-    { name: "Mon Profil", href: "/membres/profil", icon: User },
-  ]
-  const pill2 = [
+  const navPersonal = [
     { name: "Messages", href: "/membres/messages", icon: Mail },
     { name: "Cotisation", href: "/membres/cotisation", icon: CreditCard },
+    { name: "Mon Profil", href: "/membres/profil", icon: User },
   ]
 
   // --- Mobile Navigation ---
@@ -64,130 +61,164 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
   ]
 
   return (
-    <div className="h-screen bg-[var(--fond-gris)] flex flex-col font-sans overflow-hidden">
+    <div className="h-screen bg-[#f8f9fa] flex font-sans overflow-hidden">
       
-      {/* ================= HEADER HORIZONTAL ================= */}
-      <header className="flex-none w-full bg-[#ffffff] border-b border-[#e8e8e4] z-40">
-        <div className="max-w-[1600px] mx-auto flex items-center justify-between h-16 px-4">
-          
-          {/* Logo */}
+      {/* ================= VERTICAL SIDEBAR (DESKTOP) ================= */}
+      <aside className="hidden lg:flex flex-col w-[260px] shrink-0 h-full bg-[#f4f8f4] border-r border-[#e8e8e4] z-30">
+        {/* Logo */}
+        <div className="h-20 flex items-center px-6 shrink-0">
           <Link href="/membres/dashboard" className="flex items-center gap-2">
-            <span className="font-heading font-bold text-xl text-[var(--color-vert-profond)] tracking-tight">
+            <div className="w-8 h-8 bg-[#1b5e38] rounded-xl flex items-center justify-center">
+              <span className="text-white font-bold text-lg">a</span>
+            </div>
+            <span className="font-heading font-bold text-xl text-[#1a1a1a] tracking-tight">
               agrolide
             </span>
           </Link>
-          
-          {/* Navigation - Hidden on Mobile */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {horizontalNav.map(item => {
-              const isActive = pathname === item.href || (item.href !== "/membres/dashboard" && pathname?.startsWith(`${item.href}/`))
-              return (
-                <Link 
-                  key={item.name}
-                  href={item.href} 
-                  className={`px-4 py-2 rounded-md text-[14px] font-bold transition-all ${
-                    isActive 
-                      ? 'bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)]' 
-                      : 'text-gray-500 hover:text-gray-900 hover:bg-gray-100/50'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              )
-            })}
-          </nav>
+        </div>
 
-          {/* Profile & Notifications */}
-          <div className="flex items-center gap-2">
-             <button className="w-9 h-9 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors">
-               <Search size={20} strokeWidth={2} />
+        {/* Navigation Scrollable Area */}
+        <div className="flex-1 overflow-y-auto custom-scrollbar px-4 py-4 flex flex-col gap-6">
+          
+          {/* Main Menu */}
+          <div>
+            <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Menu Principal</div>
+            <nav className="flex flex-col gap-1">
+              {navMain.map((item) => {
+                const isActive = pathname === item.href || (item.href !== "/membres/dashboard" && pathname?.startsWith(`${item.href}/`))
+                return (
+                  <Link 
+                    key={item.name}
+                    href={item.href}
+                    className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all ${
+                      isActive 
+                        ? 'bg-[#dff0e0] text-[#1b5e38] font-bold shadow-sm' 
+                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium'
+                    }`}
+                  >
+                    <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : "text-gray-400"} />
+                    <span className="text-sm">{item.name}</span>
+                  </Link>
+                )
+              })}
+            </nav>
+          </div>
+
+          {/* Personal Utilities */}
+          <div>
+            <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Personnel</div>
+            <nav className="flex flex-col gap-1">
+              {navPersonal.map((item) => {
+                const isActive = pathname === item.href || pathname?.startsWith(`${item.href}/`)
+                return (
+                  <Link 
+                    key={item.name}
+                    href={item.href}
+                    className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all ${
+                      isActive 
+                        ? 'bg-[#dff0e0] text-[#1b5e38] font-bold shadow-sm' 
+                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium'
+                    }`}
+                  >
+                    <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : "text-gray-400"} />
+                    <span className="text-sm">{item.name}</span>
+                  </Link>
+                )
+              })}
+            </nav>
+          </div>
+
+        </div>
+
+        {/* Upgrade / Logout Bottom Area */}
+        <div className="p-4 mt-auto shrink-0">
+          <div className="bg-[#1b5e38] rounded-2xl p-4 text-white relative overflow-hidden mb-4 shadow-sm">
+             <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-xl -mr-8 -mt-8"></div>
+             <div className="relative z-10">
+               <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mb-3">
+                 <Briefcase size={16} className="text-white" />
+               </div>
+               <p className="text-[11px] font-medium text-white/90 mb-3 leading-tight">
+                 Accédez à toutes les opportunités et formations du réseau.
+               </p>
+               <Link href="/membres/cotisation" className="block w-full py-2 bg-[#dff0e0] hover:bg-white text-[#1b5e38] text-center rounded-xl text-xs font-bold transition-colors">
+                 Ma Cotisation
+               </Link>
+             </div>
+          </div>
+          <button 
+            onClick={handleLogout}
+            className="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-gray-500 hover:bg-red-50 hover:text-red-600 transition-all font-medium"
+          >
+            <LogOut size={18} strokeWidth={2} />
+            <span className="text-sm">Déconnexion</span>
+          </button>
+        </div>
+      </aside>
+
+      {/* ================= MAIN CONTENT AREA ================= */}
+      <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
+        
+        {/* HEADER */}
+        <header className="h-20 bg-white/80 backdrop-blur-md border-b border-[#e8e8e4] z-20 flex items-center justify-between px-4 md:px-6 shrink-0">
+          
+          {/* Mobile Logo */}
+          <div className="lg:hidden flex items-center gap-2">
+            <div className="w-8 h-8 bg-[#1b5e38] rounded-xl flex items-center justify-center">
+              <span className="text-white font-bold text-lg">a</span>
+            </div>
+            <span className="font-heading font-bold text-xl text-[#1a1a1a] tracking-tight">
+              agrolide
+            </span>
+          </div>
+
+          {/* Search (Desktop) */}
+          <div className="hidden lg:flex items-center bg-gray-50 border border-[#e8e8e4] rounded-xl px-3 py-2 w-96 transition-colors focus-within:bg-white focus-within:border-[#1b5e38] focus-within:ring-1 focus-within:ring-[#1b5e38]/20">
+            <Search size={16} className="text-gray-400 min-w-4" />
+            <input 
+              type="text" 
+              placeholder="Rechercher..." 
+              className="bg-transparent border-none outline-none text-sm text-gray-700 ml-2 w-full placeholder-gray-400"
+            />
+          </div>
+
+          {/* Right Actions */}
+          <div className="flex items-center gap-2 md:gap-3 lg:gap-4 ml-auto">
+             <button className="hidden md:flex w-10 h-10 rounded-xl items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4]">
+               <Settings size={20} strokeWidth={2} />
              </button>
-             <button className="w-9 h-9 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors relative">
+             <button className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4] relative">
                <Bell size={20} strokeWidth={2} />
-               <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#f99e1d] border-2 border-white"></span>
+               <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#f99e1d] border-2 border-white"></span>
              </button>
              
              {/* Profile Avatar Trigger */}
-             <Link href="/membres/profil" className="ml-2 w-9 h-9 rounded-full bg-gray-100 overflow-hidden relative border border-[#e8e8e4] hover:border-[var(--color-vert-principal)] transition-all">
-                {profile?.avatar_url ? (
-                  <Image src={profile.avatar_url} alt="Avatar" fill sizes="36px" className="object-cover" />
-                ) : (
-                  <User size={18} className="m-auto h-full text-gray-400" />
-                )}
+             <Link href="/membres/profil" className="flex items-center gap-3 pl-2 lg:pl-4 lg:border-l border-[#e8e8e4]">
+                <div className="hidden lg:flex flex-col items-end">
+                  <span className="text-sm font-bold text-[#1a1a1a] leading-tight">{profile?.prenom} {profile?.nom}</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{profile?.categorie}</span>
+                </div>
+                <div className="w-10 h-10 rounded-xl bg-gray-100 overflow-hidden relative border border-[#e8e8e4] hover:border-[#1b5e38] transition-colors shrink-0">
+                  {profile?.avatar_url ? (
+                    <Image src={profile.avatar_url} alt="Avatar" fill sizes="40px" className="object-cover" />
+                  ) : (
+                    <User size={20} className="m-auto h-full text-gray-400" />
+                  )}
+                </div>
              </Link>
           </div>
-          
-        </div>
-      </header>
+        </header>
 
-      {/* ================= MAIN LAYOUT ================= */}
-      <div className="max-w-[1600px] w-full mx-auto px-4 flex gap-6 flex-1 overflow-hidden">
-         
-         {/* Vertical Sidebar */}
-         <aside className="hidden md:flex flex-col gap-6 w-[64px] h-full z-30 flex-none py-6 border-r border-[#e8e8e4]">
-            
-            {/* Nav 1: Accueil & Profil */}
-            <nav className="flex flex-col gap-2 items-center">
-               {pill1.map((item) => {
-                  const isActive = pathname === item.href
-                  return (
-                    <Link 
-                      key={item.name}
-                      href={item.href}
-                      title={item.name}
-                      className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
-                        isActive 
-                          ? 'bg-[#1b5e38] text-white shadow-md' 
-                          : 'text-gray-400 hover:text-[#1b5e38] hover:bg-[#e8f5e9]'
-                      }`}
-                    >
-                      <item.icon size={20} strokeWidth={isActive ? 2.5 : 2} />
-                    </Link>
-                  )
-               })}
-            </nav>
-
-            {/* Nav 2: Utilities (Messages, Cotisation) */}
-            <nav className="flex flex-col gap-2 items-center">
-               {pill2.map((item) => {
-                  const isActive = pathname === item.href || pathname?.startsWith(`${item.href}/`)
-                  return (
-                    <Link 
-                      key={item.name}
-                      href={item.href}
-                      title={item.name}
-                      className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
-                        isActive 
-                          ? 'bg-[#1b5e38] text-white shadow-md' 
-                          : 'text-gray-400 hover:text-[#1b5e38] hover:bg-[#e8f5e9]'
-                      }`}
-                    >
-                      <item.icon size={20} strokeWidth={isActive ? 2.5 : 2} />
-                    </Link>
-                  )
-               })}
-            </nav>
-
-            {/* Logout */}
-            <div className="flex flex-col gap-2 items-center mt-auto">
-               <button 
-                  onClick={handleLogout}
-                  title="Se déconnecter"
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-red-400 hover:text-red-700 hover:bg-red-50 transition-all"
-                >
-                  <LogOut size={20} strokeWidth={2} />
-               </button>
-            </div>
-         </aside>
-
-         {/* Content Area - Scrollable */}
-         <main className="flex-1 min-w-0 h-full overflow-y-auto custom-scrollbar pb-24 md:pb-8 pt-6">
+        {/* SCROLLABLE PAGE CONTENT */}
+        <main className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-2 md:p-4 lg:p-6 pb-24 md:pb-6 relative">
+          <div className="max-w-[1400px] mx-auto h-full">
             {children}
-         </main>
+          </div>
+        </main>
       </div>
 
       {/* ================= BOTTOM NAVIGATION (MOBILE) ================= */}
-      <nav className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 z-50 px-2 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+      <nav className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 z-50 px-2 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
         <div className="flex justify-around items-center h-20 px-2">
           {mobileNavItems.map((item) => {
             const isActive = pathname === item.href || (item.href !== "/membres/dashboard" && pathname?.startsWith(`${item.href}/`))
@@ -197,11 +228,11 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
                 href={item.href}
                 className={`flex flex-col items-center justify-center w-16 h-16 rounded-[16px] space-y-1.5 transition-all ${
                   isActive 
-                    ? "bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)] font-bold shadow-sm" 
+                    ? "bg-[#dff0e0] text-[#1b5e38] font-bold shadow-sm" 
                     : "text-gray-400 hover:text-gray-900 font-medium"
                 }`}
               >
-                <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[var(--color-vert-profond)]" : ""} />
+                <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : ""} />
                 <span className="text-[10px]">{item.name}</span>
               </Link>
             )
@@ -212,4 +243,3 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
     </div>
   )
 }
-
