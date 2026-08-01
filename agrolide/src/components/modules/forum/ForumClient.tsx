@@ -44,38 +44,38 @@ export default function ForumClient() {
       </div>
 
       {loading ? (
-        <div className="py-20 text-center text-gray-400 card-glass p-8">Chargement du forum...</div>
+        <div className="py-16 text-center text-gray-400 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-8">Chargement du forum...</div>
       ) : (
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => (
-            <div key={cat.id} className="card-glass overflow-hidden">
-              <div className="bg-gradient-to-r from-[#1b5e38]/5 to-transparent px-6 py-4 border-b border-gray-100/50 flex justify-between items-center">
-                <h2 className="dash-title">{cat.nom}</h2>
-                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-sm font-bold text-[#1b5e38] hover:text-[#50a853] transition-colors">
-                  Voir tout
+            <div key={cat.id} className="bg-white border border-[#e8e8e4] rounded-2xl shadow-sm overflow-hidden">
+              <div className="bg-[#f8faf8] px-5 py-3 border-b border-[#e8e8e4] flex justify-between items-center">
+                <h2 className="text-sm font-bold text-[#1a1a1a]">{cat.nom}</h2>
+                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-[10px] font-bold text-[#1b5e38] bg-[#f0f7f0] px-2 py-1 rounded hover:bg-[#e3f0e3] transition-colors border border-transparent hover:border-[#c3dec4]">
+                  Voir
                 </Link>
               </div>
               
-              <div className="divide-y divide-gray-50/50">
+              <div className="divide-y divide-gray-50">
                 {cat.recent_threads.length === 0 ? (
-                  <div className="p-6 text-center text-gray-400 text-sm">
-                    Aucun sujet dans cette catégorie. Soyez le premier !
+                  <div className="p-5 text-center text-gray-400 text-xs">
+                    Aucun sujet. Soyez le premier !
                   </div>
                 ) : (
                   cat.recent_threads.map((thread: any) => (
                     <Link 
                       key={thread.id} 
                       href={`/membres/forum/fil/${thread.id}`}
-                      className="block p-6 hover:bg-[#e8f5e9]/20 transition-colors"
+                      className="block p-4 hover:bg-gray-50 transition-colors group"
                     >
                       <div className="flex justify-between items-start gap-4">
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-base font-bold text-gray-900 truncate mb-1">
+                          <h3 className="text-sm font-bold text-gray-800 truncate mb-1 group-hover:text-[#1b5e38] transition-colors">
                             {thread.titre}
                           </h3>
-                          <div className="flex items-center gap-2 text-xs text-gray-500">
-                            <span className="font-bold text-gray-700">
-                              {thread.auteur?.prenom} {thread.auteur?.nom}
+                          <div className="flex items-center gap-1.5 text-[10px] text-gray-500">
+                            <span className="font-semibold text-gray-600">
+                              {thread.auteur?.prenom}
                             </span>
                             <span>•</span>
                             <div className="flex items-center gap-1">
@@ -84,8 +84,8 @@ export default function ForumClient() {
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center gap-1.5 text-[#1b5e38] bg-[#e8f5e9]/50 px-3 py-1 rounded-full text-xs font-bold shrink-0">
-                          <MessageSquare className="w-3.5 h-3.5" />
+                        <div className="flex items-center gap-1 text-[#1b5e38] bg-[#f0f7f0] px-2 py-0.5 rounded text-[10px] font-bold shrink-0 border border-[#e8e8e4]">
+                          <MessageSquare className="w-3 h-3" />
                           {thread.nb_reponses}
                         </div>
                       </div>

@@ -29,13 +29,13 @@ export default async function ProfilModifierPage() {
   if (!profile) redirect("/login")
 
   return (
-    <div className="max-w-3xl mx-auto space-y-6 py-4">
-      <div className="mb-6">
-        <h1 className="dash-page-title">Modifier mon Profil</h1>
-        <p className="mt-2 text-gray-500 text-sm">Mettez à jour vos informations personnelles et professionnelles.</p>
+    <div className="max-w-[800px] mx-auto space-y-6 py-6 px-2 md:px-4">
+      <div className="mb-4">
+        <h1 className="text-xl md:text-2xl font-bold text-[#1a1a1a] font-heading">Modifier mon Profil</h1>
+        <p className="mt-1 text-gray-500 text-xs">Mettez à jour vos informations personnelles et professionnelles.</p>
       </div>
       
-      <div className="card-glass p-6 md:p-8">
+      <div className="bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-5 md:p-6">
         <ProfilForm initialData={profile} />
       </div>
     </div>

@@ -48,9 +48,9 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
   const totalPages = Math.ceil(totalThreads / threadsPerPage)
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 space-y-6">
-      <Link href="/membres/forum" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
-        <ArrowLeft className="w-4 h-4" /> Retour au forum
+    <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
+      <Link href="/membres/forum" className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-gray-900 transition-colors">
+        <ArrowLeft className="w-3.5 h-3.5" /> Retour au forum
       </Link>
       
       {loading && !categorie ? (
@@ -59,53 +59,53 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
         <>
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">{categorie?.nom}</h1>
-              <p className="text-gray-600 mt-2">{totalThreads} sujets dans cette catégorie</p>
+              <h1 className="text-xl md:text-2xl font-bold text-[#1a1a1a] font-heading">{categorie?.nom}</h1>
+              <p className="text-xs text-gray-500 mt-1">{totalThreads} sujets dans cette catégorie</p>
             </div>
             <Link 
               href={`/membres/forum/nouveau?cat=${categorieId}`} 
-              className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm"
+              className="bg-[#1b5e38] hover:bg-[#144a2c] text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
             >
-              <Plus className="w-5 h-5" /> Nouveau sujet
+              <Plus className="w-4 h-4" /> Nouveau sujet
             </Link>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
-                <thead className="bg-gray-50 border-b border-gray-100">
+                <thead className="bg-[#f8faf8] border-b border-[#e8e8e4]">
                   <tr>
-                    <th className="px-6 py-4 text-sm font-semibold text-gray-600">Sujet</th>
-                    <th className="px-6 py-4 text-sm font-semibold text-gray-600 text-center">Réponses</th>
-                    <th className="px-6 py-4 text-sm font-semibold text-gray-600">Dernière activité</th>
+                    <th className="px-4 py-3 text-[10px] font-bold text-gray-500 uppercase tracking-wider">Sujet</th>
+                    <th className="px-4 py-3 text-[10px] font-bold text-gray-500 uppercase tracking-wider text-center">Réponses</th>
+                    <th className="px-4 py-3 text-[10px] font-bold text-gray-500 uppercase tracking-wider">Dernière activité</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-50">
+                <tbody className="divide-y divide-[#e8e8e4]">
                   {threads.length === 0 ? (
                     <tr>
-                      <td colSpan={3} className="px-6 py-12 text-center text-gray-500">
+                      <td colSpan={3} className="px-4 py-12 text-center text-xs text-gray-500">
                         Aucun sujet dans cette catégorie.
                       </td>
                     </tr>
                   ) : (
                     threads.map((thread) => (
-                      <tr key={thread.id} className="hover:bg-gray-50/50 transition-colors">
-                        <td className="px-6 py-4">
+                      <tr key={thread.id} className="hover:bg-gray-50 transition-colors group">
+                        <td className="px-4 py-3">
                           <Link href={`/membres/forum/fil/${thread.id}`} className="block">
-                            <h3 className="text-base font-semibold text-gray-900 mb-1">{thread.titre}</h3>
-                            <div className="text-sm text-gray-500">
-                              Par <span className="font-medium text-gray-700">{thread.auteur?.prenom} {thread.auteur?.nom}</span> le {format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}
+                            <h3 className="text-sm font-bold text-[#1a1a1a] mb-0.5 group-hover:text-[#1b5e38] transition-colors">{thread.titre}</h3>
+                            <div className="text-[11px] text-gray-500">
+                              Par <span className="font-bold text-gray-700">{thread.auteur?.prenom} {thread.auteur?.nom}</span> le {format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}
                             </div>
                           </Link>
                         </td>
-                        <td className="px-6 py-4 text-center">
-                          <div className="inline-flex items-center justify-center min-w-[2rem] h-8 bg-gray-100 text-gray-700 rounded-full text-sm font-medium">
+                        <td className="px-4 py-3 text-center">
+                          <div className="inline-flex items-center justify-center min-w-[24px] h-6 bg-[#f0f7f0] text-[#1b5e38] rounded-full text-[10px] font-bold border border-[#c3dec4]">
                             {thread.nb_reponses}
                           </div>
                         </td>
-                        <td className="px-6 py-4 text-sm text-gray-500">
+                        <td className="px-4 py-3 text-[11px] text-gray-500">
                           <div className="flex items-center gap-1.5">
-                            <Clock className="w-4 h-4 text-gray-400" />
+                            <Clock className="w-3.5 h-3.5 text-gray-400" />
                             {formatDistanceToNow(new Date(thread.last_activity_at), { addSuffix: true, locale: fr })}
                           </div>
                         </td>
@@ -118,21 +118,21 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
             
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 flex justify-between items-center">
+              <div className="px-4 py-3 bg-[#f8faf8] border-t border-[#e8e8e4] flex justify-between items-center">
                 <button 
                   onClick={() => setPage(p => Math.max(1, p - 1))}
                   disabled={page === 1}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-3 py-1.5 text-xs font-bold text-gray-600 bg-white border border-[#e8e8e4] rounded hover:border-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Précédent
                 </button>
-                <span className="text-sm text-gray-600">
-                  Page {page} sur {totalPages}
+                <span className="text-[11px] font-bold text-gray-500">
+                  Page {page} / {totalPages}
                 </span>
                 <button 
                   onClick={() => setPage(p => Math.min(totalPages, p + 1))}
                   disabled={page === totalPages}
-                  className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-3 py-1.5 text-xs font-bold text-gray-600 bg-white border border-[#e8e8e4] rounded hover:border-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Suivant
                 </button>

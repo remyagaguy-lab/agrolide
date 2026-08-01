@@ -22,64 +22,64 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
   const isExpired = opp.date_limite && new Date(opp.date_limite) < new Date()
 
   return (
-    <div className={`group card-glass-hover flex flex-col h-full ${isExpired ? 'opacity-60' : ''}`}>
-      <div className="p-6 flex-grow">
-        <div className="flex justify-between items-start mb-4">
-          <span className="badge-glass bg-[#e8f5e9]/80 text-[#1b5e38] capitalize border border-[#50a853]/20">
+    <div className={`group bg-white border border-[#e8e8e4] rounded-2xl shadow-sm hover:border-[#1b5e38] hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
+      <div className="p-5 flex-grow">
+        <div className="flex justify-between items-start mb-3">
+          <span className="bg-[#f0f7f0] text-[#1b5e38] border border-[#c3dec4] px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
             {getIcon(opp.type_opp)} {opp.type_opp}
           </span>
           {isExpired && (
-            <span className="badge-glass bg-red-50 text-red-700">
+            <span className="bg-red-50 text-red-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
               Expiré
             </span>
           )}
         </div>
         
-        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#1b5e38] transition-colors">
+        <h3 className="text-sm font-bold text-[#1a1a1a] mb-2 group-hover:text-[#1b5e38] transition-colors leading-snug">
           {opp.titre}
         </h3>
         
-        <p className="text-sm text-gray-600 line-clamp-3 mb-4">
+        <p className="text-xs text-gray-500 line-clamp-2 mb-4">
           {opp.description}
         </p>
         
-        <div className="space-y-2 text-sm text-gray-600">
+        <div className="space-y-1.5 text-xs text-gray-500">
           {opp.lieu && (
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-[#50a853] shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-gray-400 shrink-0" />
               <span className="line-clamp-1">{opp.lieu}</span>
             </div>
           )}
           
           {opp.montant && (
             <div className="flex items-center gap-2">
-              <DollarSign className="w-4 h-4 text-[#50a853] shrink-0" />
-              <span className="font-bold text-gray-900">{opp.montant}</span>
+              <DollarSign className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+              <span className="font-bold text-gray-700">{opp.montant}</span>
             </div>
           )}
           
           {opp.date_limite && (
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-[#50a853] shrink-0" />
-              <span>Expire le {format(new Date(opp.date_limite), "dd MMMM yyyy", { locale: fr })}</span>
+              <Calendar className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+              <span>Expire le {format(new Date(opp.date_limite), "dd MMM yyyy", { locale: fr })}</span>
             </div>
           )}
         </div>
       </div>
       
-      <div className="p-6 pt-0 mt-auto">
+      <div className="p-4 pt-0 mt-auto">
         {opp.lien_externe ? (
           <a 
             href={opp.lien_externe}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2.5 bg-[#e8f5e9]/50 hover:bg-[#e8f5e9] text-[#1b5e38] font-bold rounded-2xl text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2 border border-[#50a853]/20"
+            className="w-full py-2 bg-gray-50 hover:bg-[#f0f7f0] hover:text-[#1b5e38] text-gray-600 font-bold rounded-lg text-[11px] transition-colors flex items-center justify-center gap-1.5 border border-[#e8e8e4] uppercase tracking-wider"
           >
-            Voir l'offre <ExternalLink className="w-4 h-4" />
+            Voir l'offre <ExternalLink className="w-3 h-3" />
           </a>
         ) : (
-          <div className="bg-gray-50 py-2.5 text-center rounded-2xl text-sm text-gray-500 font-bold border border-gray-100">
-            Contactez l'auteur pour plus d'infos
+          <div className="bg-gray-50 py-2 text-center rounded-lg text-[11px] text-gray-500 font-bold border border-[#e8e8e4] uppercase tracking-wider">
+            Contactez l'auteur
           </div>
         )}
       </div>

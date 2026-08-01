@@ -49,7 +49,7 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
   const href = `/bibliotheque/${document.id}`
 
   return (
-    <Link href={href} className={`block group rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col h-full`}>
+    <Link href={href} className={`group flex flex-col h-full bg-white border border-[#e8e8e4] rounded-2xl shadow-sm hover:border-[#1b5e38] hover:shadow-md transition-all overflow-hidden`}>
       {/* En-tête miniature */}
       <div className="h-32 bg-gray-50 flex items-center justify-center border-b border-gray-100 relative group-hover:bg-gray-100 transition-colors">
         <FileText className="w-12 h-12 text-gray-400" strokeWidth={1.5} />
@@ -59,8 +59,8 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
       </div>
 
       {/* Contenu */}
-      <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-semibold text-gray-900 line-clamp-2 mb-1 group-hover:text-green-700 transition-colors">
+      <div className="p-4 flex flex-col flex-1">
+        <h3 className="font-bold text-[#1a1a1a] text-sm line-clamp-2 mb-1 group-hover:text-[#1b5e38] transition-colors">
           {document.titre}
         </h3>
         
@@ -84,7 +84,7 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
             )}
           </div>
           
-          <div className="flex items-center justify-between pt-3 border-t border-gray-50">
+          <div className="flex items-center justify-between pt-3 mt-3 border-t border-[#e8e8e4]">
             <div className="flex items-center gap-1.5 text-xs font-medium text-gray-500">
               <Eye className="w-3.5 h-3.5" />
               <span>{document.nb_telechargements || 0}</span>

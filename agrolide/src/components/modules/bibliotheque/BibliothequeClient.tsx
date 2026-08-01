@@ -95,10 +95,10 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
   }
 
   return (
-    <div className="flex flex-col md:flex-row gap-8">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-12">
       {/* Sidebar Filtres */}
-      <div className="w-full md:w-64 flex-shrink-0 space-y-6 md:sticky md:top-24 h-fit">
-        <div className="card-glass p-5">
+      <div className="lg:col-span-3 space-y-6 md:sticky md:top-24 h-fit">
+        <div className="bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-5">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold text-gray-900 flex items-center gap-2">
               <Filter className="w-4 h-4 text-gray-400" /> Filtres
@@ -164,11 +164,11 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
       </div>
 
       {/* Grille de résultats */}
-      <div className="flex-1">
+      <div className="lg:col-span-9">
         {loading && documents.length === 0 ? (
           <SkeletonGrid count={6} />
         ) : error ? (
-          <div className="text-center py-16 card-glass p-8">
+          <div className="text-center py-12 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-6">
             <p className="text-red-600 font-medium">{error}</p>
           </div>
         ) : documents.length > 0 ? (
@@ -191,8 +191,8 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             )}
           </>
         ) : (
-          <div className="text-center py-16 card-glass p-8 flex flex-col items-center">
-            <div className="icon-circle-lg bg-gray-50 mb-4">
+          <div className="text-center py-16 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-8 flex flex-col items-center">
+            <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-4">
               <Search className="w-8 h-8 text-gray-300" />
             </div>
             <h3 className="text-lg font-bold text-gray-900 mb-1">Aucun document trouvé</h3>

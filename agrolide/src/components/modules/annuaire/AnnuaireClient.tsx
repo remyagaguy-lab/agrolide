@@ -89,16 +89,14 @@ export default function AnnuaireClient() {
   return (
     <div className="pb-12">
       {/* Banner Premium */}
-      <div className="bg-gradient-to-br from-[#1b5e38] via-[#1b5e38] to-emerald-900 rounded-2xl p-8 md:p-12 mb-8 text-white shadow-lg relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#50a853]/20 rounded-full blur-3xl -mr-20 -mt-20"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#fcb726]/10 rounded-full blur-3xl -ml-16 -mb-16"></div>
-        <div className="relative z-10 max-w-2xl">
-          <h1 className="dash-page-title text-white mb-4">L'Annuaire des Membres</h1>
-          <p className="text-white/80 text-lg md:text-xl font-medium">Découvrez et connectez-vous avec les leaders, experts et entrepreneurs qui façonnent l'agriculture africaine de demain.</p>
+      <div className="bg-gradient-to-br from-[#1b5e38] to-[#0c361e] rounded-2xl p-6 md:px-8 md:py-6 mb-6 text-white shadow-sm relative overflow-hidden flex items-center justify-between gap-6">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-2xl -mr-12 -mt-12"></div>
+        <div className="relative z-10 max-w-xl">
+          <h1 className="text-xl md:text-2xl font-bold font-heading text-white mb-1">Annuaire des Membres</h1>
+          <p className="text-white/80 text-xs md:text-sm">Découvrez et connectez-vous avec les acteurs de l'agriculture africaine.</p>
         </div>
-        <div className="relative z-10 shrink-0 w-32 h-32 md:w-40 md:h-40 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-2xl">
-          <Users className="w-16 h-16 md:w-20 md:h-20 text-white/90" />
+        <div className="relative z-10 hidden sm:flex shrink-0 w-12 h-12 bg-white/10 rounded-xl items-center justify-center border border-white/20">
+          <Users className="w-6 h-6 text-white" />
         </div>
       </div>
 
@@ -112,7 +110,7 @@ export default function AnnuaireClient() {
             </button>
           </div>
 
-          <div className="space-y-8 md:sticky md:top-24 card-glass md:p-6">
+          <div className="space-y-6 md:sticky md:top-24 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm md:p-5">
             
             {/* Recherche */}
             <div>
@@ -161,8 +159,8 @@ export default function AnnuaireClient() {
               </button>
               
               {isPaysOpen && (
-                <div className="absolute z-20 mt-2 w-full card-glass overflow-hidden animate-in fade-in slide-in-from-top-2">
-                  <div className="p-3 border-b border-gray-50 bg-gray-50/50">
+                <div className="absolute z-20 mt-2 w-full bg-white border border-[#e8e8e4] rounded-2xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-2">
+                  <div className="p-3 border-b border-gray-100 bg-gray-50/50">
                     <div className="relative">
                       <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
                       <input 
@@ -237,7 +235,7 @@ export default function AnnuaireClient() {
         <div className="flex-1 min-w-0 w-full">
           
           {/* Header Mobile & Stats Desktop */}
-          <div className="flex flex-col sm:flex-row items-center justify-between mb-8 card-glass p-4 sm:px-6 gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-6 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-4 gap-4">
             <div className="text-gray-600 flex items-center gap-3 w-full sm:w-auto">
               {loading ? (
                 <span className="flex items-center gap-2 font-medium text-[#1b5e38]"><Loader2 className="w-5 h-5 animate-spin"/> Actualisation...</span>
@@ -265,8 +263,8 @@ export default function AnnuaireClient() {
               <SkeletonGrid count={8} />
             </div>
           ) : members.length === 0 ? (
-            <div className="py-24 text-center card-glass p-8 flex flex-col items-center">
-              <div className="icon-circle-lg bg-gray-50 mb-4">
+            <div className="py-16 text-center bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-8 flex flex-col items-center">
+              <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-4">
                 <Search className="w-8 h-8 text-gray-300" />
               </div>
               <h3 className="text-xl font-extrabold text-gray-900 mb-2">Aucun membre trouvé</h3>
@@ -295,19 +293,19 @@ export default function AnnuaireClient() {
                   <button 
                     disabled={page === 1}
                     onClick={() => setPage(p => p - 1)}
-                    className="w-12 h-12 flex items-center justify-center rounded-full card-glass hover:border-[#50a853]/30 hover:text-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-[#e8e8e4] hover:border-[#1b5e38] hover:text-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                   >
-                    <ChevronLeft className="w-5 h-5" />
+                    <ChevronLeft className="w-4 h-4" />
                   </button>
-                  <span className="text-sm font-bold text-gray-600 card-glass px-6 py-3">
-                    Page <span className="text-gray-900">{page}</span> sur {totalPages}
+                  <span className="text-xs font-bold text-gray-600 bg-white border border-[#e8e8e4] rounded-xl px-4 py-2.5">
+                    Page <span className="text-gray-900">{page}</span> / {totalPages}
                   </span>
                   <button 
                     disabled={page === totalPages}
                     onClick={() => setPage(p => p + 1)}
-                    className="w-12 h-12 flex items-center justify-center rounded-full card-glass hover:border-[#50a853]/30 hover:text-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-[#e8e8e4] hover:border-[#1b5e38] hover:text-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                   >
-                    <ChevronRight className="w-5 h-5" />
+                    <ChevronRight className="w-4 h-4" />
                   </button>
                 </div>
               )}

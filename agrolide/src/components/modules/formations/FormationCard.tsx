@@ -37,56 +37,56 @@ export function FormationCard({ formation }: FormationCardProps) {
   const isGratuit = !formation.prix || formation.prix === 0
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-      <div className="p-6 flex-1 flex flex-col">
-        <div className="flex justify-between items-start mb-4 gap-2">
-          <div className="flex flex-wrap gap-2">
-            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-green-50 text-green-700">
+    <div className="bg-white rounded-2xl border border-[#e8e8e4] shadow-sm overflow-hidden flex flex-col h-full hover:border-[#1b5e38] hover:shadow-md transition-all group">
+      <div className="p-4 flex-1 flex flex-col">
+        <div className="flex justify-between items-start mb-3 gap-2">
+          <div className="flex flex-wrap gap-1.5">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#f0f7f0] text-[#1b5e38] border border-[#c3dec4] uppercase tracking-wider">
               {formation.thematique}
             </span>
-            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-700">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-gray-50 text-gray-600 border border-[#e8e8e4] uppercase tracking-wider">
               {formation.modalite}
             </span>
           </div>
           
           {isGratuit ? (
-            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-green-100 text-green-800">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-green-50 text-green-700 border border-green-200 uppercase tracking-wider">
               Gratuit
             </span>
           ) : (
-            <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-bold bg-orange-100 text-orange-800">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-orange-50 text-orange-700 border border-orange-200 uppercase tracking-wider">
               {formation.prix} FCFA
             </span>
           )}
         </div>
         
-        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+        <h3 className="text-sm font-bold text-[#1a1a1a] mb-1.5 line-clamp-2 group-hover:text-[#1b5e38] transition-colors leading-snug">
           {formation.titre}
         </h3>
         
-        <p className="text-sm text-gray-500 line-clamp-3 mb-6 flex-1">
+        <p className="text-xs text-gray-500 line-clamp-2 mb-4 flex-1">
           {formation.description}
         </p>
         
-        <div className="space-y-3 mt-auto pt-4 border-t border-gray-100">
-          <div className="flex items-center text-sm text-gray-600">
-            <Calendar className="w-4 h-4 mr-2 text-gray-400" />
-            <span>
+        <div className="space-y-2 mt-auto pt-3 border-t border-[#e8e8e4]">
+          <div className="flex items-center text-[11px] text-gray-500 font-medium">
+            <Calendar className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+            <span className="truncate">
               {nextSession 
-                ? `Prochaine session : ${new Date(nextSession.date_debut).toLocaleDateString('fr-FR')}` 
-                : 'Aucune session programmée'}
+                ? `Prochaine : ${new Date(nextSession.date_debut).toLocaleDateString('fr-FR')}` 
+                : 'Aucune session'}
             </span>
           </div>
           {nextSession && (
-            <div className="flex justify-between items-center text-sm text-gray-600">
+            <div className="flex justify-between items-center text-[11px] text-gray-500 font-medium">
               <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2 text-gray-400" />
-                <span className="truncate max-w-[120px]">{nextSession.lieu}</span>
+                <MapPin className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+                <span className="truncate max-w-[100px]">{nextSession.lieu}</span>
               </div>
               <div className="flex items-center">
-                <Users className="w-4 h-4 mr-2 text-gray-400" />
-                <span className={nextSession.places_restantes <= 0 ? "text-red-600 font-medium" : ""}>
-                  {nextSession.places_restantes} place{nextSession.places_restantes > 1 ? 's' : ''} libre{nextSession.places_restantes > 1 ? 's' : ''}
+                <Users className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+                <span className={nextSession.places_restantes <= 0 ? "text-red-600" : ""}>
+                  {nextSession.places_restantes} place{nextSession.places_restantes > 1 ? 's' : ''}
                 </span>
               </div>
             </div>
@@ -94,13 +94,13 @@ export function FormationCard({ formation }: FormationCardProps) {
         </div>
       </div>
       
-      <div className="px-6 py-4 bg-gray-50 border-t border-gray-100 mt-auto">
+      <div className="px-4 py-3 bg-gray-50 border-t border-[#e8e8e4] mt-auto">
         <Link 
           href={`/membres/formations/${formation.id}`}
-          className="flex items-center justify-center w-full gap-2 text-sm font-medium text-green-700 hover:text-green-800"
+          className="flex items-center justify-center w-full gap-1.5 text-[11px] font-bold text-[#1b5e38] uppercase tracking-wider hover:text-[#144a2c] transition-colors"
         >
           En savoir plus
-          <ChevronRight className="w-4 h-4" />
+          <ChevronRight className="w-3.5 h-3.5" />
         </Link>
       </div>
     </div>
