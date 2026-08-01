@@ -64,7 +64,6 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
   ]
 
   return (
-  return (
     <div className="h-screen bg-[#eef1f5] flex flex-col font-sans overflow-hidden">
       
       {/* ================= HEADER HORIZONTAL (Style Quixotic) ================= */}
