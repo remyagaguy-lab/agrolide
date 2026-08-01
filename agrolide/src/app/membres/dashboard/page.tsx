@@ -152,11 +152,11 @@ export default async function DashboardPage() {
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <div className="hidden md:flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-gray-100 shadow-sm text-sm font-medium text-gray-600">
+            <div className="hidden md:flex items-center gap-2 bg-white/90 backdrop-blur-md px-4 py-2.5 rounded-full border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] text-sm font-medium text-gray-600">
               <CalendarIcon size={16} className="text-gray-400" />
               <span>{new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
             </div>
-            <Link href="/membres/profil/modifier" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 text-gray-700 text-sm font-bold rounded-full hover:bg-gray-50 shadow-sm transition-all">
+            <Link href="/membres/profil/modifier" className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/90 backdrop-blur-md border border-white text-gray-700 text-sm font-bold rounded-full hover:bg-gray-50 shadow-[0_8px_30px_rgb(0,0,0,0.04)] transition-all">
               <span>Mettre à jour mon profil</span>
             </Link>
           </div>
@@ -209,7 +209,7 @@ export default async function DashboardPage() {
             </div>
 
             {/* Quick Stats Block */}
-            <div className="bg-white rounded-[28px] shadow-sm p-6 flex-1 flex flex-col justify-center border border-gray-50">
+            <div className="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 flex-1 flex flex-col justify-center border border-white">
               <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Mon Profil</h3>
               <div className="flex items-end justify-between">
                 <div className="text-xl font-bold text-gray-900 capitalize">{profile.categorie}</div>
@@ -221,9 +221,9 @@ export default async function DashboardPage() {
           </div>
 
           {/* COL 2: Featured Feed (Formations / Opportunités) (6/12) */}
-          <div className="lg:col-span-6 bg-white rounded-[28px] shadow-sm p-6 flex flex-col border border-gray-50 relative overflow-hidden">
+          <div className="lg:col-span-6 bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 flex flex-col border border-white relative overflow-hidden">
             {/* Background Graphic Hint */}
-            <div className="absolute right-0 bottom-0 w-64 h-64 bg-[var(--color-vert-clair)]/20 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none"></div>
+            <div className="absolute right-0 bottom-0 w-64 h-64 bg-[var(--color-vert-clair)]/30 rounded-full blur-3xl -mr-20 -mb-20 pointer-events-none"></div>
 
             <div className="flex justify-between items-center mb-6 relative z-10">
               <div className="flex items-center gap-3">
@@ -289,7 +289,7 @@ export default async function DashboardPage() {
           <div className="lg:col-span-3 space-y-6 flex flex-col">
             
             {/* Events Widget */}
-            <div className="bg-white p-6 rounded-[28px] shadow-sm flex-1 border border-gray-50">
+            <div className="bg-white/90 backdrop-blur-xl p-6 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] flex-1 border border-white">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-base font-bold text-gray-900 font-heading">Agenda</h3>
                 <Link href="/membres/evenements" className="text-[10px] font-bold text-[var(--color-vert-profond)] uppercase tracking-wider bg-[var(--color-vert-clair)] px-2 py-1 rounded-md">Voir tout</Link>
@@ -323,8 +323,9 @@ export default async function DashboardPage() {
             </div>
 
             {/* Floating Shortcuts */}
-            <div className="bg-[var(--color-vert-profond)] rounded-[28px] p-6 shadow-sm flex items-center justify-between">
-              <Link href="/membres/annuaire" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-[var(--color-vert-profond)] flex items-center justify-center transition-all" title="Annuaire">
+            <div className="bg-gradient-to-r from-[var(--color-vert-profond)] to-emerald-900 rounded-[32px] p-6 shadow-lg shadow-green-900/20 flex items-center justify-between relative overflow-hidden">
+              <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
+              <Link href="/membres/annuaire" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-[var(--color-vert-profond)] flex items-center justify-center transition-all relative z-10" title="Annuaire">
                 <Users size={20} />
               </Link>
               <Link href="/membres/bibliotheque" className="w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-[var(--color-vert-profond)] flex items-center justify-center transition-all" title="Bibliothèque">
@@ -340,7 +341,7 @@ export default async function DashboardPage() {
           {/* ================= ROW 2 ================= */}
 
           {/* COL 1: Articles Table (8/12) */}
-          <div className="lg:col-span-8 bg-white rounded-[28px] shadow-sm p-6 border border-gray-50">
+          <div className="lg:col-span-8 bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 border border-white">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-lg font-bold text-gray-900 font-heading">Actualités du réseau</h3>
               <Link href="/blog" className="text-xs font-bold text-gray-500 hover:text-gray-900 border border-gray-200 px-3 py-1.5 rounded-full flex items-center gap-1 transition-colors">
@@ -400,7 +401,7 @@ export default async function DashboardPage() {
           </div>
 
           {/* COL 2: Notifications (4/12) */}
-          <div className="lg:col-span-4 bg-white p-6 rounded-[28px] shadow-sm border border-gray-50">
+          <div className="lg:col-span-4 bg-white/90 backdrop-blur-xl p-6 rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-base font-bold text-gray-900 font-heading">Activité récente</h3>
               <div className="flex items-center gap-2">
