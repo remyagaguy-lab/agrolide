@@ -143,23 +143,7 @@ export default async function MembresRootLayout({
 
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col">
-        {/* Header Espace Membre */}
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-40 shadow-sm">
-          <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Link href="/membres/dashboard" className="font-heading font-bold text-xl text-[var(--color-vert-principal)]">
-                agrolide <span className="text-[var(--color-orange-accent)]">Espace Membre</span>
-              </Link>
-            </div>
-            <div className="flex items-center gap-6">
-              <div className="hidden md:block text-sm">
-                <span className="text-gray-500">Connecté en tant que</span>{" "}
-                <span className="font-semibold text-gray-900">{profile?.prenom || "Membre"} {profile?.nom || ""}</span>
-              </div>
-              <LogoutButton />
-            </div>
-          </div>
-        </header>
+        {/* Header moved to MembresLayout for client-side routing state */}
 
         {/* Traitement des statuts */}
         {statut === "en_attente_paiement" && (
