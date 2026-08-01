@@ -45,83 +45,104 @@ export default async function ProfilPage() {
         </Link>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-[var(--color-gris-clair)] overflow-hidden">
+      <div className="bg-white/90 backdrop-blur-xl rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white overflow-hidden relative">
         
-        {/* Header Profil */}
-        <div className="h-32 bg-[var(--color-vert-principal)] relative"></div>
-        <div className="px-8 pb-8 relative">
-          <div className="absolute -top-16 left-8 w-32 h-32 bg-white rounded-full p-1 shadow-md">
-            <div className="w-full h-full bg-gray-200 rounded-full overflow-hidden flex items-center justify-center relative">
+        {/* Header Profil (Gradient) */}
+        <div className="h-40 bg-gradient-to-r from-[var(--color-vert-principal)] to-emerald-900 relative">
+           <div className="absolute inset-0 bg-black/10"></div>
+        </div>
+        
+        <div className="px-10 pb-12 relative">
+          <div className="absolute -top-16 left-10 w-32 h-32 bg-white rounded-full p-1.5 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div className="w-full h-full bg-gray-50 rounded-full overflow-hidden flex items-center justify-center relative ring-1 ring-gray-100">
               {profile.photo_url ? (
                 <Image src={profile.photo_url} alt="Avatar" fill sizes="128px" className="object-cover" />
               ) : (
-                <User size={64} className="text-gray-400" />
+                <User size={48} className="text-gray-300" strokeWidth={1.5} />
               )}
             </div>
           </div>
           
-          <div className="ml-36 pt-4 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+          <div className="ml-40 pt-4 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">{profile.prenom} {profile.nom}</h2>
-              <p className="text-[var(--color-gris-texte)] font-medium capitalize">{profile.specialite} • Membre {profile.categorie}</p>
+              <h2 className="text-3xl font-heading font-bold text-gray-900 tracking-tight">{profile.prenom} {profile.nom}</h2>
+              <p className="text-gray-500 font-medium capitalize mt-1 flex items-center gap-2">
+                 <span>{profile.specialite}</span>
+                 <span className="w-1.5 h-1.5 rounded-full bg-gray-300"></span>
+                 <span className="text-[var(--color-vert-principal)]">Membre {profile.categorie}</span>
+              </p>
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-12">
             
             {/* Informations Personnelles */}
-            <div className="space-y-6">
-              <h3 className="font-bold text-gray-900 border-b pb-2">Informations Personnelles</h3>
+            <div className="space-y-8">
+              <h3 className="font-heading font-bold text-lg text-gray-900 flex items-center gap-3">
+                 <span className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                    <User size={16} className="text-gray-600" />
+                 </span>
+                 Informations Personnelles
+              </h3>
               
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-gray-600">
-                  <Mail className="text-[var(--color-vert-principal)]" size={20} />
+              <div className="space-y-6 bg-gray-50/50 rounded-2xl p-6 border border-gray-100/50">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-gray-500">
+                    <Mail size={18} />
+                  </div>
                   <div>
-                    <p className="text-xs text-gray-500">Email</p>
-                    <p className="font-medium text-gray-900">{profile.email}</p>
+                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Email</p>
+                    <p className="font-semibold text-gray-800">{profile.email}</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-3 text-gray-600">
-                  <MapPin className="text-[var(--color-vert-principal)]" size={20} />
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-gray-500">
+                    <MapPin size={18} />
+                  </div>
                   <div>
-                    <p className="text-xs text-gray-500">Localisation</p>
-                    <p className="font-medium text-gray-900">
-                      {profile.ville ? `${profile.ville}, ` : ''}{profile.pays}
+                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Localisation</p>
+                    <p className="font-semibold text-gray-800">
+                      {profile.ville ? `${profile.ville}, ` : ''}{profile.pays || 'Non renseignée'}
                     </p>
                   </div>
                 </div>
-                
-
               </div>
             </div>
 
             {/* Informations Professionnelles */}
-            <div className="space-y-6">
-              <h3 className="font-bold text-gray-900 border-b pb-2">Informations Professionnelles</h3>
+            <div className="space-y-8">
+              <h3 className="font-heading font-bold text-lg text-gray-900 flex items-center gap-3">
+                 <span className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                    <Briefcase size={16} className="text-gray-600" />
+                 </span>
+                 Informations Professionnelles
+              </h3>
               
-              <div className="space-y-4">
+              <div className="space-y-6 bg-gray-50/50 rounded-2xl p-6 border border-gray-100/50">
                 {profile.organisation && (
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <Briefcase className="text-[var(--color-orange-accent)]" size={20} />
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[var(--color-orange-accent)]">
+                      <Briefcase size={18} />
+                    </div>
                     <div>
-                      <p className="text-xs text-gray-500">Entreprise / Organisation</p>
-                      <p className="font-medium text-gray-900">{profile.organisation}</p>
+                      <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Entreprise / Organisation</p>
+                      <p className="font-semibold text-gray-800">{profile.organisation}</p>
                     </div>
                   </div>
                 )}
 
                 <div>
-                  <p className="text-xs text-gray-500 mb-1">Spécialité</p>
-                  <span className="px-3 py-1 bg-orange-100 text-[var(--color-orange-accent)] rounded-full text-sm font-medium">
+                  <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-3">Spécialité Principale</p>
+                  <span className="px-4 py-2 bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)] rounded-xl text-sm font-bold shadow-sm">
                     {profile.specialite}
                   </span>
                 </div>
                 
                 {profile.biographie && (
-                  <div>
-                    <p className="text-xs text-gray-500 mb-1">À propos</p>
-                    <p className="text-sm text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
+                  <div className="pt-2">
+                    <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">À propos</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">
                       {profile.biographie}
                     </p>
                   </div>
