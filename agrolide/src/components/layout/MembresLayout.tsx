@@ -71,9 +71,9 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
             <Image
               src="/agrolide-png.png"
               alt="agrolide"
-              width={200}
-              height={60}
-              className="h-10 w-auto object-contain scale-[1.6] origin-left"
+              width={240}
+              height={80}
+              className="h-12 w-auto object-contain scale-[2.2] origin-left"
               priority
             />
           </Link>
@@ -169,9 +169,9 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
             <Image
               src="/agrolide-png.png"
               alt="agrolide"
-              width={200}
-              height={60}
-              className="h-8 w-auto object-contain scale-[1.6] origin-left"
+              width={240}
+              height={80}
+              className="h-10 w-auto object-contain scale-[2.0] origin-left"
               priority
             />
           </Link>
