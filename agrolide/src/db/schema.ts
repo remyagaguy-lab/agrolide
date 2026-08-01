@@ -20,7 +20,7 @@ export const articles = sqliteTable("articles", {
   auteur_externe: text("auteur_externe"),
   auteur_id: text("auteur_id"),
   categorie: text("categorie").notNull(),
-  contenu_json: text("contenu_json", { mode: "json" }).notNull(),
+  contenu_json: text("contenu_json").notNull(),
   created_at: text("created_at"),
   cta_lien: text("cta_lien"),
   cta_texte: text("cta_texte"),
