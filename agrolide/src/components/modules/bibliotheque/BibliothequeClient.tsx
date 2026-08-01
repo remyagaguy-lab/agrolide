@@ -98,13 +98,13 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
     <div className="flex flex-col md:flex-row gap-8">
       {/* Sidebar Filtres */}
       <div className="w-full md:w-64 flex-shrink-0 space-y-6 md:sticky md:top-24 h-fit">
-        <div className="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+        <div className="card-glass p-5">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-semibold text-gray-900 flex items-center gap-2">
-              <Filter className="w-4 h-4" /> Filtres
+            <h3 className="font-bold text-gray-900 flex items-center gap-2">
+              <Filter className="w-4 h-4 text-gray-400" /> Filtres
             </h3>
             {(search || type || thematique) && (
-              <button onClick={resetFilters} className="text-xs text-red-600 hover:text-red-800 flex items-center gap-1">
+              <button onClick={resetFilters} className="text-xs text-red-600 hover:text-red-800 flex items-center gap-1 font-bold">
                 <X className="w-3 h-3" /> Réinitialiser
               </button>
             )}
@@ -113,26 +113,26 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
           <div className="space-y-4">
             {/* Recherche textuelle */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Recherche</label>
+              <label className="dash-label mb-2 block">Recherche</label>
               <div className="relative">
                 <input 
                   type="text" 
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Titre, mots-clés..."
-                  className="w-full pl-8 pr-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-green-500 focus:border-green-500"
+                  className="w-full pl-8 pr-3 py-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all"
                 />
-                <Search className="w-4 h-4 text-gray-400 absolute left-2.5 top-2.5" />
+                <Search className="w-4 h-4 text-gray-400 absolute left-2.5 top-3" />
               </div>
             </div>
 
             {/* Type */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Type de document</label>
+              <label className="dash-label mb-2 block">Type de document</label>
               <select 
                 value={type}
                 onChange={(e) => setType(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-green-500 focus:border-green-500"
+                className="w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all"
               >
                 <option value="">Tous les types</option>
                 <option value="these">Thèse</option>
@@ -146,11 +146,11 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             
             {/* Thématique */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Thématique</label>
+              <label className="dash-label mb-2 block">Thématique</label>
               <select 
                 value={thematique}
                 onChange={(e) => setThematique(e.target.value)}
-                className="w-full p-2 border border-gray-300 rounded-lg text-sm focus:ring-green-500 focus:border-green-500"
+                className="w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all"
               >
                 <option value="">Toutes</option>
                 <option value="Agroécologie">Agroécologie</option>
@@ -168,8 +168,8 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
         {loading && documents.length === 0 ? (
           <SkeletonGrid count={6} />
         ) : error ? (
-          <div className="text-center py-16 bg-red-50 rounded-xl border border-red-100">
-            <p className="text-red-600">{error}</p>
+          <div className="text-center py-16 card-glass p-8">
+            <p className="text-red-600 font-medium">{error}</p>
           </div>
         ) : documents.length > 0 ? (
           <>
@@ -183,7 +183,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
                 <button 
                   onClick={loadMore}
                   disabled={loadingMore}
-                  className="px-6 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors disabled:opacity-50"
+                  className="btn-dash-outline disabled:opacity-50"
                 >
                   {loadingMore ? 'Chargement...' : 'Charger plus'}
                 </button>
@@ -191,11 +191,13 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             )}
           </>
         ) : (
-          <div className="text-center py-16 bg-white rounded-xl border border-gray-200">
-            <Search className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-gray-900 mb-1">Aucun document trouvé</h3>
+          <div className="text-center py-16 card-glass p-8 flex flex-col items-center">
+            <div className="icon-circle-lg bg-gray-50 mb-4">
+              <Search className="w-8 h-8 text-gray-300" />
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-1">Aucun document trouvé</h3>
             <p className="text-gray-500">Essayez de modifier vos filtres de recherche.</p>
-            <button onClick={resetFilters} className="mt-4 text-green-700 hover:text-green-800 font-medium">
+            <button onClick={resetFilters} className="mt-4 text-[#1b5e38] hover:text-[#145030] font-bold">
               Réinitialiser les filtres
             </button>
           </div>

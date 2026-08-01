@@ -44,16 +44,16 @@ export default function NotificationsClient() {
   const unreadCount = notifications.filter(n => !n.lu).length
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+    <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4 space-y-6">
       
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 card-glass p-6">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-primary-50 rounded-2xl flex items-center justify-center text-primary-600 shrink-0">
+          <div className="icon-circle-lg bg-[#e8f5e9] text-[#1b5e38]">
             <Bell className="w-6 h-6" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Notifications</h1>
-            <p className="text-gray-500">Vous avez {unreadCount} notification{unreadCount !== 1 ? 's' : ''} non lue{unreadCount !== 1 ? 's' : ''}</p>
+            <h1 className="dash-page-title text-2xl">Notifications</h1>
+            <p className="text-gray-500 text-sm mt-1">Vous avez {unreadCount} notification{unreadCount !== 1 ? 's' : ''} non lue{unreadCount !== 1 ? 's' : ''}</p>
           </div>
         </div>
         
@@ -61,7 +61,7 @@ export default function NotificationsClient() {
           <button 
             onClick={markAllAsRead}
             disabled={markingAll}
-            className="px-4 py-2 bg-gray-50 hover:bg-gray-100 text-gray-700 font-medium rounded-xl transition-colors flex items-center gap-2 text-sm border border-gray-200"
+            className="btn-dash-outline"
           >
             {markingAll ? <Loader2 className="w-4 h-4 animate-spin" /> : <CheckCircle className="w-4 h-4" />}
             Tout marquer comme lu
@@ -69,12 +69,12 @@ export default function NotificationsClient() {
         )}
       </div>
 
-      <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="card-glass overflow-hidden">
         {loading ? (
           <div className="p-12 text-center text-gray-500">Chargement...</div>
         ) : notifications.length === 0 ? (
           <div className="p-12 text-center flex flex-col items-center justify-center gap-4">
-            <div className="w-16 h-16 bg-gray-50 text-gray-300 rounded-full flex items-center justify-center">
+            <div className="icon-circle-lg bg-gray-50 text-gray-300">
               <Bell className="w-8 h-8" />
             </div>
             <div>
@@ -83,18 +83,18 @@ export default function NotificationsClient() {
             </div>
           </div>
         ) : (
-          <div className="divide-y divide-gray-50">
+          <div className="divide-y divide-gray-50/50">
             {notifications.map(notif => (
               <button
                 key={notif.id}
                 onClick={() => handleNotifClick(notif.id, notif.lien, notif.lu)}
-                className={`w-full text-left p-6 hover:bg-gray-50 transition-colors flex gap-4 ${!notif.lu ? 'bg-primary-50/20' : ''}`}
+                className={`w-full text-left p-6 hover:bg-[#e8f5e9]/30 transition-colors flex gap-4 ${!notif.lu ? 'bg-[#e8f5e9]/10' : ''}`}
               >
                 <div className="mt-1">
                   {notif.lu ? (
-                    <div className="w-3 h-3 rounded-full bg-gray-300" />
+                    <div className="w-3 h-3 rounded-full bg-gray-200" />
                   ) : (
-                    <div className="w-3 h-3 rounded-full bg-primary-500 shadow-[0_0_10px_rgba(22,101,52,0.5)]" />
+                    <div className="w-3 h-3 rounded-full bg-[#50a853] shadow-[0_0_10px_rgba(80,168,83,0.4)]" />
                   )}
                 </div>
                 <div>

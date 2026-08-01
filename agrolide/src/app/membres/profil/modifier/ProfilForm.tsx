@@ -135,13 +135,13 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
 
       {/* Avatar Section */}
       <div>
-        <h3 className="font-bold text-gray-900 mb-4 border-b pb-2">Photo de profil</h3>
+        <h3 className="dash-title mb-4 border-b border-gray-100/50 pb-2">Photo de profil</h3>
         <div className="flex items-center gap-6">
-          <div className="w-24 h-24 bg-gray-100 border border-gray-200 rounded-full overflow-hidden flex items-center justify-center relative group">
+          <div className="w-24 h-24 bg-[#e8f5e9]/50 border border-[#50a853]/20 rounded-full overflow-hidden flex items-center justify-center relative group">
             {avatarUrl ? (
               <img src={avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
             ) : (
-              <User size={40} className="text-gray-400" />
+              <User size={40} className="text-[#1b5e38]/50" />
             )}
             
             {/* Loading overlay */}
@@ -160,53 +160,52 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
               accept="image/jpeg,image/png,image/webp" 
               className="hidden" 
             />
-            <Button 
+            <button 
               type="button" 
-              variant="outline" 
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="flex items-center gap-2"
+              className="btn-dash-outline flex items-center gap-2"
             >
               <Camera size={16} /> {isUploading ? "Upload..." : "Changer la photo"}
-            </Button>
-            <p className="text-xs text-gray-500 mt-2">Format JPEG, PNG ou WEBP. Max 2MB.</p>
+            </button>
+            <p className="text-xs text-gray-500 mt-2 font-medium">Format JPEG, PNG ou WEBP. Max 2MB.</p>
           </div>
         </div>
       </div>
 
       <div className="space-y-6">
-        <h3 className="font-bold text-gray-900 border-b pb-2">Informations Générales</h3>
+        <h3 className="dash-title border-b border-gray-100/50 pb-2">Informations Générales</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Prénom *</label>
-            <Input {...register("prenom")} className={errors.prenom ? "border-red-500" : ""} />
+            <label className="dash-label mb-1 block">Prénom *</label>
+            <Input {...register("prenom")} className={`w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all ${errors.prenom ? "border-red-500" : ""}`} />
             {errors.prenom && <p className="mt-1 text-xs text-[#d32f2f]">{errors.prenom.message}</p>}
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Nom *</label>
-            <Input {...register("nom")} className={errors.nom ? "border-red-500" : ""} />
+            <label className="dash-label mb-1 block">Nom *</label>
+            <Input {...register("nom")} className={`w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all ${errors.nom ? "border-red-500" : ""}`} />
             {errors.nom && <p className="mt-1 text-xs text-[#d32f2f]">{errors.nom.message}</p>}
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
-            <Input {...register("telephone")} />
+            <label className="dash-label mb-1 block">Téléphone</label>
+            <Input {...register("telephone")} className="w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Entreprise / Organisation</label>
-            <Input {...register("entreprise")} />
+            <label className="dash-label mb-1 block">Entreprise / Organisation</label>
+            <Input {...register("entreprise")} className="w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all" />
           </div>
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Biographie (À propos)</label>
+          <label className="dash-label mb-1 block">Biographie (À propos)</label>
           <Textarea 
             {...register("bio")} 
             placeholder="Parlez-nous un peu de vous et de votre projet..."
-            className={`min-h-[120px] ${errors.bio ? "border-red-500" : ""}`}
+            className={`w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all min-h-[120px] ${errors.bio ? "border-red-500" : ""}`}
           />
           <div className="flex justify-between mt-1">
             <p className="text-xs text-gray-500">Présentez-vous aux autres membres du réseau.</p>
@@ -215,23 +214,22 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
         </div>
       </div>
 
-      <div className="pt-4 flex justify-end">
-        <Button 
+      <div className="pt-4 flex justify-end gap-3">
+        <button 
           type="button" 
-          variant="outline" 
           onClick={() => router.push("/membres/profil")} 
-          className="mr-3"
+          className="btn-dash-outline"
           disabled={isSaving}
         >
           Annuler
-        </Button>
-        <Button type="submit" variant="primary" className="flex items-center gap-2" disabled={isSaving || isUploading}>
+        </button>
+        <button type="submit" className="btn-dash flex items-center gap-2" disabled={isSaving || isUploading}>
           {isSaving ? (
             <><Loader2 size={16} className="animate-spin" /> Enregistrement...</>
           ) : (
             <><Save size={16} /> Enregistrer les modifications</>
           )}
-        </Button>
+        </button>
       </div>
 
     </form>

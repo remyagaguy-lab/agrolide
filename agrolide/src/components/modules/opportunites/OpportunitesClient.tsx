@@ -43,17 +43,17 @@ export default function OpportunitesClient() {
   })
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+    <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4 space-y-8">
       {/* Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Bourse aux Opportunités</h1>
-          <p className="text-gray-600 mt-2">Trouvez ou proposez des emplois, financements et partenariats.</p>
+          <h1 className="dash-page-title">Bourse aux Opportunités</h1>
+          <p className="text-gray-500 mt-2 text-sm">Trouvez ou proposez des emplois, financements et partenariats.</p>
         </div>
         
         <button 
           onClick={() => setIsModalOpen(true)}
-          className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm"
+          className="btn-dash"
         >
           <Plus className="w-5 h-5" /> Proposer une opportunité
         </button>
@@ -61,16 +61,16 @@ export default function OpportunitesClient() {
 
       {/* Tabs */}
       {currentUser && (
-        <div className="flex border-b border-gray-200">
+        <div className="flex bg-gray-50/50 p-1 rounded-full w-fit border border-gray-100">
           <button
             onClick={() => setActiveTab('toutes')}
-            className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === 'toutes' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'toutes' ? 'bg-white text-[#1b5e38] shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
           >
             Toutes les opportunités
           </button>
           <button
             onClick={() => setActiveTab('mes_soumissions')}
-            className={`px-6 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === 'mes_soumissions' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}
+            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'mes_soumissions' ? 'bg-white text-[#1b5e38] shadow-sm' : 'text-gray-500 hover:text-gray-700'}`}
           >
             Mes soumissions
           </button>
@@ -78,7 +78,7 @@ export default function OpportunitesClient() {
       )}
 
       {/* Filters & Search */}
-      <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4">
+      <div className="card-glass p-4 flex flex-col md:flex-row gap-4">
         <div className="flex-1 relative">
           <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
           <input 
@@ -86,15 +86,15 @@ export default function OpportunitesClient() {
             placeholder="Rechercher par mot-clé..."
             value={search}
             onChange={e => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+            className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-full focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] outline-none bg-gray-50/50"
           />
         </div>
-        <div className="flex items-center gap-2">
-          <Filter className="w-5 h-5 text-gray-400" />
+        <div className="flex items-center gap-2 w-full md:w-auto">
+          <Filter className="w-5 h-5 text-gray-400 hidden md:block" />
           <select 
             value={filterType}
             onChange={e => setFilterType(e.target.value)}
-            className="border border-gray-200 rounded-xl px-4 py-2 bg-gray-50 outline-none focus:ring-2 focus:ring-primary-500"
+            className="w-full md:w-auto border border-gray-200 rounded-full px-4 py-2.5 bg-gray-50/50 outline-none focus:ring-2 focus:ring-[#50a853]/30 text-sm font-medium text-gray-700"
           >
             <option value="tous">Tous les types</option>
             <option value="emploi">Emplois / Stages</option>
@@ -110,8 +110,8 @@ export default function OpportunitesClient() {
           <SkeletonGrid count={6} />
         </div>
       ) : filteredOpp.length === 0 ? (
-        <div className="py-20 text-center bg-white rounded-2xl shadow-sm border border-gray-100">
-          <p className="text-gray-500">Aucune opportunité trouvée pour vos critères.</p>
+        <div className="py-20 text-center card-glass">
+          <p className="text-gray-500 font-medium">Aucune opportunité trouvée pour vos critères.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

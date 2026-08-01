@@ -29,10 +29,10 @@ export default async function MembresBibliothequePage({ searchParams }: { search
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900">Bibliothèque</h1>
-        <p className="mt-2 text-gray-600">Recherchez et consultez nos ressources documentaires.</p>
+    <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4 space-y-6">
+      <div>
+        <h1 className="dash-page-title">Bibliothèque</h1>
+        <p className="mt-2 text-gray-500 text-sm">Recherchez et consultez nos ressources documentaires.</p>
       </div>
       
       <BibliothequeClient 

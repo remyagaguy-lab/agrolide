@@ -32,12 +32,12 @@ export default function MemberCard({ member }: MemberCardProps) {
   const getBadgeClass = (cat: string) => {
     switch(cat?.toLowerCase()) {
       case 'senior':
-      case 'sénior': return 'bg-purple-100 text-purple-700 ring-purple-200'
-      case 'professionnel': return 'bg-blue-100 text-blue-700 ring-blue-200'
-      case 'partenaire': return 'bg-orange-100 text-orange-700 ring-orange-200'
-      case 'junior': return 'bg-green-100 text-green-700 ring-green-200'
+      case 'sénior': return 'bg-[#fcb726]/15 text-[#5a3d00] ring-[#fcb726]/30'
+      case 'professionnel': return 'bg-[#1b5e38]/10 text-[#1b5e38] ring-[#1b5e38]/20'
+      case 'partenaire': return 'bg-[#878e2c]/10 text-[#878e2c] ring-[#878e2c]/20'
+      case 'junior': return 'bg-[#50a853]/10 text-[#1b5e38] ring-[#50a853]/20'
       case 'passionne':
-      case 'passionné': return 'bg-pink-100 text-pink-700 ring-pink-200'
+      case 'passionné': return 'bg-[#f99e1d]/10 text-[#8a4e00] ring-[#f99e1d]/20'
       default: return 'bg-gray-100 text-gray-700 ring-gray-200'
     }
   }
@@ -45,17 +45,17 @@ export default function MemberCard({ member }: MemberCardProps) {
   return (
     <Link 
       href={`/annuaire/${member.id}`}
-      className="group relative flex flex-col h-full bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+      className="group relative flex flex-col h-full card-glass-hover overflow-hidden"
     >
       {/* Decorative Top Background */}
-      <div className="h-16 bg-gradient-to-r from-primary-50 to-primary-100/50 w-full relative">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay"></div>
+      <div className="h-16 bg-gradient-to-r from-[#1b5e38]/10 to-[#50a853]/10 w-full relative">
+        <div className="absolute top-0 right-0 w-20 h-20 bg-[#50a853]/10 rounded-full blur-2xl -mr-8 -mt-8"></div>
       </div>
 
       <div className="flex flex-col items-center px-6 pb-6 -mt-10 flex-1">
         {/* Avatar */}
         <div className="w-20 h-20 rounded-full bg-white p-1 shadow-md shrink-0 relative z-10 mb-3">
-          <div className="w-full h-full rounded-full bg-primary-50 text-primary-600 flex items-center justify-center text-2xl font-bold overflow-hidden border border-gray-100 relative">
+          <div className="w-full h-full rounded-full bg-[#e8f5e9] text-[#1b5e38] flex items-center justify-center text-2xl font-bold overflow-hidden border border-white relative">
             {avatarUrl ? (
               <Image src={avatarUrl} alt={displayName} fill sizes="80px" className="object-cover" />
             ) : (
@@ -72,7 +72,7 @@ export default function MemberCard({ member }: MemberCardProps) {
         )}
 
         {/* Name - Allow wrapping instead of truncating */}
-        <h3 className="text-lg font-extrabold text-gray-900 group-hover:text-primary-600 transition-colors text-center leading-tight mb-2">
+        <h3 className="text-lg font-extrabold text-gray-900 group-hover:text-[#1b5e38] transition-colors text-center leading-tight mb-2">
           {displayName}
         </h3>
         
@@ -95,12 +95,12 @@ export default function MemberCard({ member }: MemberCardProps) {
         {/* Sectors Tags */}
         <div className="mt-auto flex justify-center gap-1.5 flex-wrap w-full">
           {sectors.slice(0, 2).map((secteur: string, idx: number) => (
-            <span key={idx} className="bg-gray-50 text-gray-600 px-2.5 py-1 rounded-md text-[11px] font-medium border border-gray-100">
+            <span key={idx} className="bg-gray-50/80 text-gray-600 px-2.5 py-1 rounded-full text-[11px] font-medium border border-gray-100/50">
               {secteur}
             </span>
           ))}
           {sectors.length > 2 && (
-            <span className="bg-gray-50 text-gray-500 px-2 py-1 rounded-md text-[11px] font-medium border border-gray-100">
+            <span className="bg-gray-50/80 text-gray-500 px-2 py-1 rounded-full text-[11px] font-medium border border-gray-100/50">
               +{sectors.length - 2}
             </span>
           )}
@@ -108,7 +108,7 @@ export default function MemberCard({ member }: MemberCardProps) {
       </div>
 
       {/* Hover CTA Footer */}
-      <div className="border-t border-gray-50 p-4 bg-gray-50/50 flex items-center justify-center text-sm font-bold text-primary-600 opacity-0 group-hover:opacity-100 group-hover:bg-primary-50 transition-all duration-300 gap-2">
+      <div className="border-t border-gray-50/50 p-4 bg-transparent flex items-center justify-center text-sm font-bold text-[#1b5e38] opacity-0 group-hover:opacity-100 group-hover:bg-[#e8f5e9]/30 transition-all duration-300 gap-2">
         Voir le profil <ArrowRight className="w-4 h-4" />
       </div>
     </Link>

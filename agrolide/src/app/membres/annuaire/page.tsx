@@ -9,12 +9,7 @@ export const metadata: Metadata = {
 
 export default function AnnuairePage() {
   return (
-    <div className="max-w-[1600px] mx-auto px-4 py-8 space-y-8">
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">Annuaire des Membres</h1>
-        <p className="text-gray-600 mt-2">Découvrez les experts de la communauté et développez votre réseau.</p>
-      </div>
-
+    <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4">
       <AnnuaireClient />
     </div>
   )

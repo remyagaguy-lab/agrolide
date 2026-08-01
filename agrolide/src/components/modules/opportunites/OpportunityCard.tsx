@@ -22,20 +22,20 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
   const isExpired = opp.date_limite && new Date(opp.date_limite) < new Date()
 
   return (
-    <div className={`group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${isExpired ? 'opacity-70' : ''}`}>
+    <div className={`group card-glass-hover flex flex-col h-full ${isExpired ? 'opacity-60' : ''}`}>
       <div className="p-6 flex-grow">
         <div className="flex justify-between items-start mb-4">
-          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-50 text-primary-700 capitalize">
+          <span className="badge-glass bg-[#e8f5e9]/80 text-[#1b5e38] capitalize border border-[#50a853]/20">
             {getIcon(opp.type_opp)} {opp.type_opp}
           </span>
           {isExpired && (
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-50 text-red-700">
+            <span className="badge-glass bg-red-50 text-red-700">
               Expiré
             </span>
           )}
         </div>
         
-        <h3 className="text-lg font-bold text-gray-900 mb-2">
+        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#1b5e38] transition-colors">
           {opp.titre}
         </h3>
         
@@ -46,21 +46,21 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
         <div className="space-y-2 text-sm text-gray-600">
           {opp.lieu && (
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-primary-500 shrink-0" />
+              <MapPin className="w-4 h-4 text-[#50a853] shrink-0" />
               <span className="line-clamp-1">{opp.lieu}</span>
             </div>
           )}
           
           {opp.montant && (
             <div className="flex items-center gap-2">
-              <DollarSign className="w-4 h-4 text-primary-500 shrink-0" />
-              <span className="font-medium text-gray-900">{opp.montant}</span>
+              <DollarSign className="w-4 h-4 text-[#50a853] shrink-0" />
+              <span className="font-bold text-gray-900">{opp.montant}</span>
             </div>
           )}
           
           {opp.date_limite && (
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-primary-500 shrink-0" />
+              <Calendar className="w-4 h-4 text-[#50a853] shrink-0" />
               <span>Expire le {format(new Date(opp.date_limite), "dd MMMM yyyy", { locale: fr })}</span>
             </div>
           )}
@@ -73,12 +73,12 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
             href={opp.lien_externe}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2.5 bg-gray-50 hover:bg-primary-50 text-primary-700 font-medium rounded-xl text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2 border border-gray-100 hover:border-primary-100"
+            className="w-full py-2.5 bg-[#e8f5e9]/50 hover:bg-[#e8f5e9] text-[#1b5e38] font-bold rounded-2xl text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2 border border-[#50a853]/20"
           >
             Voir l'offre <ExternalLink className="w-4 h-4" />
           </a>
         ) : (
-          <div className="bg-gray-50 py-2.5 text-center rounded-xl text-sm text-gray-500 font-medium border border-gray-100">
+          <div className="bg-gray-50 py-2.5 text-center rounded-2xl text-sm text-gray-500 font-bold border border-gray-100">
             Contactez l'auteur pour plus d'infos
           </div>
         )}

@@ -29,36 +29,36 @@ export default function ForumClient() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-8 space-y-8">
+    <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4 space-y-8">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Forum Communautaire</h1>
-          <p className="text-gray-600 mt-2">Discutez, partagez et trouvez des réponses avec les autres membres.</p>
+          <h1 className="dash-page-title">Forum Communautaire</h1>
+          <p className="text-gray-500 mt-2 text-sm">Discutez, partagez et trouvez des réponses avec les autres membres.</p>
         </div>
         <Link 
           href="/membres/forum/nouveau" 
-          className="bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm"
+          className="btn-dash"
         >
           <Plus className="w-5 h-5" /> Nouveau sujet
         </Link>
       </div>
 
       {loading ? (
-        <div className="py-20 text-center text-gray-500">Chargement du forum...</div>
+        <div className="py-20 text-center text-gray-400 card-glass p-8">Chargement du forum...</div>
       ) : (
         <div className="space-y-6">
           {categories.map((cat) => (
-            <div key={cat.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-              <div className="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
-                <h2 className="text-xl font-bold text-gray-900">{cat.nom}</h2>
-                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-sm font-medium text-primary-600 hover:text-primary-700">
+            <div key={cat.id} className="card-glass overflow-hidden">
+              <div className="bg-gradient-to-r from-[#1b5e38]/5 to-transparent px-6 py-4 border-b border-gray-100/50 flex justify-between items-center">
+                <h2 className="dash-title">{cat.nom}</h2>
+                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-sm font-bold text-[#1b5e38] hover:text-[#50a853] transition-colors">
                   Voir tout
                 </Link>
               </div>
               
-              <div className="divide-y divide-gray-50">
+              <div className="divide-y divide-gray-50/50">
                 {cat.recent_threads.length === 0 ? (
-                  <div className="p-6 text-center text-gray-500 text-sm">
+                  <div className="p-6 text-center text-gray-400 text-sm">
                     Aucun sujet dans cette catégorie. Soyez le premier !
                   </div>
                 ) : (
@@ -66,15 +66,15 @@ export default function ForumClient() {
                     <Link 
                       key={thread.id} 
                       href={`/membres/forum/fil/${thread.id}`}
-                      className="block p-6 hover:bg-gray-50/50 transition-colors"
+                      className="block p-6 hover:bg-[#e8f5e9]/20 transition-colors"
                     >
                       <div className="flex justify-between items-start gap-4">
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-base font-semibold text-gray-900 truncate mb-1">
+                          <h3 className="text-base font-bold text-gray-900 truncate mb-1">
                             {thread.titre}
                           </h3>
                           <div className="flex items-center gap-2 text-xs text-gray-500">
-                            <span className="font-medium text-gray-700">
+                            <span className="font-bold text-gray-700">
                               {thread.auteur?.prenom} {thread.auteur?.nom}
                             </span>
                             <span>•</span>
@@ -84,7 +84,7 @@ export default function ForumClient() {
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center gap-1.5 text-gray-500 bg-gray-100 px-3 py-1 rounded-full text-xs font-medium shrink-0">
+                        <div className="flex items-center gap-1.5 text-[#1b5e38] bg-[#e8f5e9]/50 px-3 py-1 rounded-full text-xs font-bold shrink-0">
                           <MessageSquare className="w-3.5 h-3.5" />
                           {thread.nb_reponses}
                         </div>
