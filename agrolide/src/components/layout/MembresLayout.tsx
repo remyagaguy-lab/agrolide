@@ -67,13 +67,15 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
       <aside className="hidden lg:flex flex-col w-[260px] shrink-0 h-full bg-[#f4f8f4] border-r border-[#e8e8e4] z-30">
         {/* Logo */}
         <div className="h-20 flex items-center px-6 shrink-0">
-          <Link href="/membres/dashboard" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#1b5e38] rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">a</span>
-            </div>
-            <span className="font-heading font-bold text-xl text-[#1a1a1a] tracking-tight">
-              agrolide
-            </span>
+          <Link href="/membres/dashboard" className="flex items-center flex-shrink-0">
+            <Image
+              src="/agrolide-png.png"
+              alt="agrolide"
+              width={200}
+              height={60}
+              className="h-10 w-auto object-contain scale-[1.6] origin-left"
+              priority
+            />
           </Link>
         </div>
 
@@ -163,14 +165,16 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
         <header className="h-20 bg-white/80 backdrop-blur-md border-b border-[#e8e8e4] z-20 flex items-center justify-between px-4 md:px-6 shrink-0">
           
           {/* Mobile Logo */}
-          <div className="lg:hidden flex items-center gap-2">
-            <div className="w-8 h-8 bg-[#1b5e38] rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-lg">a</span>
-            </div>
-            <span className="font-heading font-bold text-xl text-[#1a1a1a] tracking-tight">
-              agrolide
-            </span>
-          </div>
+          <Link href="/membres/dashboard" className="lg:hidden flex items-center flex-shrink-0">
+            <Image
+              src="/agrolide-png.png"
+              alt="agrolide"
+              width={200}
+              height={60}
+              className="h-8 w-auto object-contain scale-[1.6] origin-left"
+              priority
+            />
+          </Link>
 
           {/* Search (Desktop) */}
           <div className="hidden lg:flex items-center bg-gray-50 border border-[#e8e8e4] rounded-xl px-3 py-2 w-96 transition-colors focus-within:bg-white focus-within:border-[#1b5e38] focus-within:ring-1 focus-within:ring-[#1b5e38]/20">
