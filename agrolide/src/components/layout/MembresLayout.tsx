@@ -40,7 +40,7 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
     { name: "Dashboard", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
     { name: "Bibliothèque", href: "/membres/bibliotheque", icon: Library },
-    { name: "Forum", href: "/membres/forum", icon: MessageSquare },
+    // { name: "Forum", href: "/membres/forum", icon: MessageSquare },
     { name: "Événements", href: "/membres/evenements", icon: Calendar },
     { name: profile?.categorie === "junior" ? "Formations" : "Opportunités", href: profile?.categorie === "junior" ? "/membres/formations" : "/membres/opportunites", icon: profile?.categorie === "junior" ? BookOpen : Briefcase },
   ]
@@ -56,7 +56,7 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
     { name: "Accueil", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
     { name: "Biblio", href: "/membres/bibliotheque", icon: Library },
-    { name: "Forum", href: "/membres/forum", icon: MessageSquare },
+    // { name: "Forum", href: "/membres/forum", icon: MessageSquare },
     { name: "Profil", href: "/membres/profil", icon: User },
   ]
 
