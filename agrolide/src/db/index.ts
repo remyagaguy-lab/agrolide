@@ -86,5 +86,9 @@ export const db = drizzle(async (sql, params, method) => {
     rows = result.results.map((row: any) => Object.values(row));
   }
 
+  if (method === 'get') {
+    return { rows: rows[0] || [] };
+  }
+
   return { rows };
 }, { schema });
