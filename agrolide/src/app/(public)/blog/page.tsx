@@ -10,8 +10,8 @@ import { format } from "date-fns"
 import { fr } from "date-fns/locale"
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Découvrez les dernières actualités, analyses et conseils pour les acteurs de l'agriculture africaine.",
+  title: "Blog & Actualités",
+  description: "Découvrez les analyses, récits et conseils de notre réseau agricole. Des ressources concrètes pour transformer l'agriculture africaine et innover sur le terrain.",
 }
 
 export const revalidate = 3600

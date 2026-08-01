@@ -4,8 +4,8 @@ import AnnuaireClient from '@/components/modules/annuaire/AnnuaireClient'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: "Annuaire du réseau",
-  description: 'Rejoignez le réseau professionnel de la transition agroécologique en Afrique.',
+  title: "Annuaire des Acteurs Agricoles",
+  description: "Trouvez et connectez-vous avec les experts, ingénieurs et partenaires du premier réseau agricole africain. Rejoignez notre annuaire pour accélérer la transition agroécologique.",
 }
 
 export const revalidate = 3600 // ISR toutes les heures

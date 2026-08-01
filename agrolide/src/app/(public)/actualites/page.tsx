@@ -7,8 +7,8 @@ import { eq } from 'drizzle-orm'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: "Actualités",
-  description: 'Découvrez les événements, formations, webinaires et opportunités de la communauté Agrolide.',
+  title: "Actualités & Événements",
+  description: "Restez informé des dernières actualités de notre réseau agricole. Découvrez les événements, formations, webinaires et opportunités pour les acteurs de l'agriculture en Afrique.",
 }
 
 export const revalidate = 3600 // Revalidate cache every hour

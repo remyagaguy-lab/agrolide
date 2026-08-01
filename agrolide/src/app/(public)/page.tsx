@@ -11,8 +11,10 @@ import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Accueil",
-  description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire."
+  title: {
+    absolute: "Réseau Agricole Africain | agrolide"
+  },
+  description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire. Rejoignez le premier réseau agricole d'Afrique."
 }
 
 export const revalidate = 3600;
@@ -199,6 +201,9 @@ export default async function HomePage() {
 
         <div className="max-w-[1100px] mx-auto px-6 pt-[32px] pb-0 md:pt-[48px] relative z-20">
           <div className="max-w-[900px]">
+            <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
+              Le premier réseau agricole africain
+            </div>
             <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
               Fédérer la chaîne<br />
               agricole, pour conquérir<br />

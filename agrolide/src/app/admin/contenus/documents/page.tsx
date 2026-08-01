@@ -178,7 +178,7 @@ export default function AdminDocumentsPage() {
                       <span className="text-sm text-gray-900">{doc.type_doc}</span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {new Date(doc.created_at).toLocaleDateString('fr-FR')}
+                      {doc.created_at ? new Date(doc.created_at).toLocaleDateString('fr-FR') : '-'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
                       {getStatusBadge(doc.statut)}

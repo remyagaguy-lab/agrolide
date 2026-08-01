@@ -4,6 +4,13 @@ import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/Do
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
 import { ArrowRight, BookOpen } from 'lucide-react'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Bibliothèque Agricole",
+  description: "Accédez à des centaines de documents techniques, thèses et guides spécialisés. Une ressource indispensable pour les membres de notre réseau agricole en Afrique.",
+}
+
 export const revalidate = 3600 // ISR 1 heure
 
 import { db } from '@/db'

@@ -2,8 +2,8 @@ import { Metadata } from "next"
 import PricingSection from "./PricingSection"
 
 export const metadata: Metadata = {
-  title: "Adhésion",
-  description: "Choisissez votre profil dans le réseau continental de l'agriculture africaine.",
+  title: "Adhésion - Rejoindre le Réseau",
+  description: "Rejoignez agrolide, le premier réseau agricole africain. Connectez-vous avec des experts, participez à des événements et accédez à des ressources exclusives pour développer votre activité.",
 }
 
 export default function RejoindrePage() {

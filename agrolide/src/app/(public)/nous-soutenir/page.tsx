@@ -6,8 +6,8 @@ import DonationForm from "@/components/modules/fonds/DonationForm"
 import { Heart, Target, TrendingUp, Users, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Nous Soutenir",
-  description: "Soutenir agrolide, c'est investir dans la souveraineté alimentaire africaine.",
+  title: "Nous Soutenir - Faire un Don",
+  description: "Soutenez le développement de notre réseau agricole et investissez dans la souveraineté alimentaire africaine. Découvrez comment contribuer à nos actions sur le terrain.",
 }
 
 export const revalidate = 1800 // ISR toutes les 30 minutes

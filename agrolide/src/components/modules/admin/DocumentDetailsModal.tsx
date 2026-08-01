@@ -10,14 +10,14 @@ interface DocumentAdmin {
   auteurs: string
   type_doc: string
   statut: string
-  created_at: string
-  resume?: string
-  thematique?: string
-  pays?: string
-  filiere?: string
-  langue?: string
-  annee?: number
-  fichier_r2_key?: string
+  created_at?: string | null
+  resume?: string | null
+  thematique?: string | null
+  pays?: string | null
+  filiere?: string | null
+  langue?: string | null
+  annee?: number | null
+  fichier_r2_key?: string | null
 }
 
 interface DocumentDetailsModalProps {

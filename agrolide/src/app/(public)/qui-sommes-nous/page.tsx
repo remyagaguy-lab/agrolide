@@ -6,8 +6,8 @@ import { Card } from "@/components/ui/Card"
 import { Users, Crown, Star, Lightbulb, Target, BookOpen, Microscope, Share2, Globe, ArrowRight, LineChart } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Qui sommes-nous",
-  description: "Découvrez l'histoire, la mission et les valeurs fondatrices du réseau agrolide, le réseau continental de l'agriculture africaine.",
+  title: "Qui sommes-nous ?",
+  description: "Découvrez l'histoire, la mission et les valeurs d'agrolide. Apprenez comment notre réseau agricole continental rassemble les acteurs de l'agriculture africaine.",
 }
 
 export default function QuiSommesNousPage() {
