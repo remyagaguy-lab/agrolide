@@ -139,301 +139,277 @@ export default async function DashboardPage() {
       : 0
 
     return (
-      <div className="max-w-[1400px] mx-auto space-y-6 px-1">
-        {/* Top welcome banner on mobile/tablet */}
-        <div className="block lg:hidden bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-          <h1 className="text-xl font-heading font-bold text-gray-900">
-            Bonjour, {profile.prenom || "Membre"} 👋
-          </h1>
-          <p className="text-sm text-gray-500 mt-1">
-            Ravi de vous revoir sur votre espace agrolide.
-          </p>
+      <div className="max-w-[1400px] mx-auto space-y-8 px-2 md:px-6 py-6">
+        
+        {/* Header / Welcome Area */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h1 className="text-3xl font-heading font-bold text-gray-900 tracking-tight">
+              Bonjour, {profile.prenom || "Membre"}
+            </h1>
+            <p className="text-sm text-gray-500 mt-1">
+              Bienvenue sur votre espace personnel Agrolide.
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="hidden md:flex items-center gap-2 bg-white px-4 py-2.5 rounded-full border border-gray-100 shadow-sm text-sm font-medium text-gray-600">
+              <CalendarIcon size={16} className="text-gray-400" />
+              <span>{new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}</span>
+            </div>
+            <Link href="/membres/profil/modifier" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--color-vert-profond)] text-white text-sm font-bold rounded-full hover:bg-[var(--color-vert-principal)] shadow-[0_4px_20px_rgba(27,94,56,0.3)] transition-all">
+              <span>Mettre à jour mon profil</span>
+            </Link>
+          </div>
         </div>
 
-        {/* Grid Layout: Main Feed & Right Sidebar */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+        {/* Top Widgets Grid (Shortcuts + Membership Card) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           
-          {/* CENTER COLUMN: Welcome, Quick Links & Feeds (Takes 2/3 of desktop width) */}
-          <div className="lg:col-span-2 space-y-6">
+          {/* Adhésion "Credit Card" Style (Takes 1 column) */}
+          <div className="lg:col-span-1 bg-gradient-to-br from-[var(--color-vert-profond)] to-[#0c361e] p-6 rounded-[28px] shadow-lg shadow-[var(--color-vert-profond)]/20 text-white relative overflow-hidden flex flex-col justify-between min-h-[200px]">
+            {/* Decorative background shapes */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-2xl -mr-12 -mt-12"></div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/10 rounded-full blur-xl -ml-10 -mb-10"></div>
             
-            {/* Welcome banner on Desktop */}
-            <div className="hidden lg:block bg-white p-6 rounded-2xl border border-gray-150 shadow-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-full blur-3xl opacity-60 -mr-8 -mt-8"></div>
-              <h1 className="text-2xl font-heading font-bold text-gray-900">
-                Bonjour, {profile.prenom || "Membre"} 👋
-              </h1>
-              <p className="text-sm text-gray-500 mt-1">
-                Voici un aperçu de l'activité du réseau agrolide aujourd'hui.
-              </p>
-            </div>
-
-            {/* Quick Links / Shortcuts Grid */}
-            <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-4">
-              <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Raccourcis rapides</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                <Link href="/membres/annuaire" className="p-3 bg-blue-50/40 rounded-xl border border-blue-100/60 hover:bg-blue-50 transition-all flex flex-col items-center justify-center text-center gap-2 group">
-                  <div className="w-9 h-9 rounded-lg bg-blue-500 text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                    <Users size={18} />
-                  </div>
-                  <span className="text-xs font-semibold text-gray-800">Annuaire</span>
-                </Link>
-                
-                <Link href="/membres/bibliotheque" className="p-3 bg-purple-50/40 rounded-xl border border-purple-100/60 hover:bg-purple-50 transition-all flex flex-col items-center justify-center text-center gap-2 group">
-                  <div className="w-9 h-9 rounded-lg bg-purple-500 text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                    <Library size={18} />
-                  </div>
-                  <span className="text-xs font-semibold text-gray-800">Bibliothèque</span>
-                </Link>
-
-                <Link href="/membres/forum" className="p-3 bg-amber-50/40 rounded-xl border border-amber-100/60 hover:bg-amber-50 transition-all flex flex-col items-center justify-center text-center gap-2 group">
-                  <div className="w-9 h-9 rounded-lg bg-amber-500 text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                    <MessageSquare size={18} />
-                  </div>
-                  <span className="text-xs font-semibold text-gray-800">Forum</span>
-                </Link>
-
-                <Link href="/membres/evenements" className="p-3 bg-emerald-50/40 rounded-xl border border-emerald-100/60 hover:bg-emerald-50 transition-all flex flex-col items-center justify-center text-center gap-2 group">
-                  <div className="w-9 h-9 rounded-lg bg-emerald-600 text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                    <CalendarIcon size={18} />
-                  </div>
-                  <span className="text-xs font-semibold text-gray-800">Événements</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Category Custom Section */}
-            {profile.categorie === "junior" && (
-              <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-4">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2">
-                    <BookOpen size={16} className="text-purple-600" />
-                    Mes Formations Recommandées
+            <div className="relative z-10">
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <h3 className="text-white/80 text-xs font-semibold uppercase tracking-wider mb-1">
+                    Statut Adhésion
                   </h3>
-                  <Link href="/membres/formations" className="text-xs font-bold text-emerald-600 hover:underline">
-                    Tout voir
-                  </Link>
+                  {dateFinCotisation ? (
+                    <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold">
+                      Actif • Premium
+                    </span>
+                  ) : (
+                    <span className="inline-block px-3 py-1 bg-red-500/80 backdrop-blur-sm rounded-full text-xs font-bold text-white">
+                      À renouveler
+                    </span>
+                  )}
                 </div>
-                
-                {userFormations && userFormations.length > 0 ? (
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {userFormations.map((f: any) => (
-                      <Link href={`/membres/formations/${f.id}`} key={f.id} className="block group p-3.5 border border-gray-100 rounded-xl hover:border-emerald-200 hover:shadow-sm transition-all">
-                        <span className="text-[10px] font-bold text-purple-600 uppercase tracking-wider">{f.niveau || "Tous niveaux"}</span>
-                        <h4 className="font-heading font-bold text-gray-900 mt-1 text-sm group-hover:text-emerald-700 line-clamp-2 leading-snug">
-                          {f.titre}
-                        </h4>
-                        <div className="flex items-center gap-1.5 text-xs text-gray-500 mt-3">
-                          <Clock size={12} />
-                          <span>{f.duree || "Auto-formation"}</span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+                <CreditCard className="text-white/60 opacity-80" size={28} />
+              </div>
+
+              <div>
+                <div className="text-3xl font-bold font-heading mb-1 tracking-tight">
+                  {joursRestants} <span className="text-lg font-normal text-white/80">jours restants</span>
+                </div>
+                {dateFinCotisation ? (
+                  <p className="text-white/60 text-xs font-medium">Expire le {dateFinCotisation.toLocaleDateString('fr-FR')}</p>
                 ) : (
-                  <div className="text-center py-6 bg-gray-50/50 border border-dashed border-gray-200 rounded-xl">
-                    <p className="text-xs text-gray-500 italic">Aucune formation recommandée pour l'instant.</p>
-                  </div>
+                  <Link href="/membres/cotisation" className="inline-block mt-2 text-xs font-bold text-[#fcb726] hover:text-white transition-colors">
+                    Régler ma cotisation maintenant →
+                  </Link>
                 )}
               </div>
-            )}
+            </div>
+          </div>
 
-            {profile.categorie === "professionnel" && (
-              <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-4">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2">
-                    <Briefcase size={16} className="text-blue-600" />
-                    Opportunités récentes
+          {/* Raccourcis Rapides (Takes 2 columns) */}
+          <div className="lg:col-span-2 bg-white rounded-[28px] shadow-sm p-6 flex flex-col justify-center">
+            <h3 className="text-sm font-bold text-gray-800 mb-6 flex items-center justify-between">
+              <span>Accès rapides</span>
+              <span className="text-[10px] text-gray-400 font-medium uppercase tracking-wider bg-gray-50 px-2 py-1 rounded-md">Vos outils</span>
+            </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <Link href="/membres/annuaire" className="flex flex-col items-center p-4 rounded-[20px] bg-[#f8faf8] hover:bg-[var(--color-vert-clair)] transition-colors group">
+                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[var(--color-vert-profond)] group-hover:scale-110 transition-transform mb-3">
+                  <Users size={20} />
+                </div>
+                <span className="text-sm font-bold text-gray-700">Annuaire</span>
+              </Link>
+              
+              <Link href="/membres/bibliotheque" className="flex flex-col items-center p-4 rounded-[20px] bg-[#f8faf8] hover:bg-[var(--color-vert-clair)] transition-colors group">
+                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[var(--color-vert-profond)] group-hover:scale-110 transition-transform mb-3">
+                  <Library size={20} />
+                </div>
+                <span className="text-sm font-bold text-gray-700">Ressources</span>
+              </Link>
+
+              <Link href="/membres/forum" className="flex flex-col items-center p-4 rounded-[20px] bg-[#f8faf8] hover:bg-[var(--color-vert-clair)] transition-colors group">
+                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[var(--color-vert-profond)] group-hover:scale-110 transition-transform mb-3">
+                  <MessageSquare size={20} />
+                </div>
+                <span className="text-sm font-bold text-gray-700">Discussions</span>
+              </Link>
+
+              <Link href="/membres/evenements" className="flex flex-col items-center p-4 rounded-[20px] bg-[#f8faf8] hover:bg-[var(--color-vert-clair)] transition-colors group">
+                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[var(--color-vert-profond)] group-hover:scale-110 transition-transform mb-3">
+                  <CalendarIcon size={20} />
+                </div>
+                <span className="text-sm font-bold text-gray-700">Agenda</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Content Grid (Feeds) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
+          {/* Main Feed (Takes 2/3) */}
+          <div className="lg:col-span-2 space-y-6">
+            
+            {/* Category Custom Feed (Formations / Opportunités) */}
+            {(profile.categorie === "junior" || profile.categorie === "professionnel") && (
+              <div className="bg-white rounded-[28px] shadow-sm p-6">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-lg font-bold text-gray-900 font-heading">
+                    {profile.categorie === "junior" ? "Formations recommandées" : "Opportunités récentes"}
                   </h3>
-                  <Link href="/membres/opportunites" className="text-xs font-bold text-emerald-600 hover:underline">
-                    Tout voir
+                  <Link href={profile.categorie === "junior" ? "/membres/formations" : "/membres/opportunites"} className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-[var(--color-vert-clair)] hover:text-[var(--color-vert-profond)] transition-colors">
+                    <ChevronRight size={18} />
                   </Link>
                 </div>
                 
-                {userOpportunites && userOpportunites.length > 0 ? (
-                  <div className="space-y-3">
-                    {userOpportunites.map((o: any) => (
-                      <Link href={`/membres/opportunites/${o.id}`} key={o.id} className="block group p-3.5 border border-gray-100 rounded-xl hover:border-emerald-200 hover:shadow-sm transition-all">
-                        <div className="flex justify-between items-start gap-4">
-                          <div>
-                            <h4 className="font-heading font-bold text-gray-900 text-sm group-hover:text-emerald-700 leading-snug">
-                              {o.titre}
-                            </h4>
-                            <p className="text-xs text-gray-500 mt-1">{o.entreprise} • {o.type_contrat || "CDI/CDD"}</p>
-                          </div>
-                          <span className="text-[10px] font-bold bg-blue-50 text-blue-800 px-2 py-0.5 rounded border border-blue-100 shrink-0">
-                            {o.localisation || "A distance"}
+                <div className="space-y-4">
+                  {profile.categorie === "junior" && userFormations && userFormations.length > 0 ? (
+                    userFormations.map((f: any) => (
+                      <Link href={`/membres/formations/${f.id}`} key={f.id} className="flex items-center gap-4 p-4 rounded-[20px] border border-gray-100 hover:border-[var(--color-vert-principal)] hover:shadow-sm transition-all group bg-white">
+                        <div className="w-14 h-14 rounded-2xl bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)] flex items-center justify-center shrink-0">
+                          <BookOpen size={24} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-gray-900 truncate group-hover:text-[var(--color-vert-profond)] transition-colors">{f.titre}</h4>
+                          <p className="text-sm text-gray-500 flex items-center gap-2 mt-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-orange-accent)]"></span>
+                            {f.niveau || "Tous niveaux"} • {f.duree || "Auto-formation"}
+                          </p>
+                        </div>
+                      </Link>
+                    ))
+                  ) : profile.categorie === "professionnel" && userOpportunites && userOpportunites.length > 0 ? (
+                    userOpportunites.map((o: any) => (
+                      <Link href={`/membres/opportunites/${o.id}`} key={o.id} className="flex items-center gap-4 p-4 rounded-[20px] border border-gray-100 hover:border-[var(--color-vert-principal)] hover:shadow-sm transition-all group bg-white">
+                        <div className="w-14 h-14 rounded-2xl bg-[#fff8e6] text-[var(--color-orange-accent)] flex items-center justify-center shrink-0">
+                          <Briefcase size={24} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-gray-900 truncate group-hover:text-[var(--color-orange-accent)] transition-colors">{o.titre}</h4>
+                          <p className="text-sm text-gray-500 flex items-center gap-2 mt-1">
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            {o.entreprise} • {o.localisation || "A distance"}
+                          </p>
+                        </div>
+                        <div className="hidden sm:block">
+                          <span className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-bold rounded-full">
+                            {o.type_contrat || "CDI"}
                           </span>
                         </div>
                       </Link>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-6 bg-gray-50/50 border border-dashed border-gray-200 rounded-xl">
-                    <p className="text-xs text-gray-500 italic">Aucune opportunité récente disponible dans votre secteur.</p>
-                  </div>
-                )}
+                    ))
+                  ) : (
+                    <div className="text-center py-8 bg-gray-50 rounded-[20px]">
+                      <p className="text-sm text-gray-400">Aucune nouveauté pour le moment.</p>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
 
-            {/* Articles feed */}
-            <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-4">
-              <div className="flex justify-between items-center">
-                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Publications & Actualités récentes</h3>
-                <Link href="/blog" className="text-xs font-bold text-emerald-600 hover:underline">
+            {/* Articles feed - Styled like a clean list */}
+            <div className="bg-white rounded-[28px] shadow-sm p-6">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-lg font-bold text-gray-900 font-heading">Actualités du réseau</h3>
+                <Link href="/blog" className="text-xs font-bold text-[var(--color-vert-profond)] hover:underline">
                   Tout lire
                 </Link>
               </div>
 
               {mappedArticles && mappedArticles.length > 0 ? (
-                <div className="divide-y divide-gray-100">
-                  {mappedArticles.map((article: any) => {
+                <div className="space-y-0">
+                  {mappedArticles.map((article: any, idx: number) => {
                     const pubDate = article.published_at ? new Date(article.published_at) : null
                     const isPubDateValid = pubDate && !isNaN(pubDate.getTime())
                     return (
-                      <Link href={`/blog/${article.slug}`} key={article.slug} className="block py-4 first:pt-0 last:pb-0 group">
-                        <div className="flex justify-between gap-4 items-start">
-                          <div className="space-y-1">
-                            <span className="text-[10px] font-bold text-amber-600 uppercase tracking-wider">{article.category}</span>
-                            <h4 className="font-heading font-bold text-gray-900 text-sm sm:text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2">
+                      <Link href={`/blog/${article.slug}`} key={article.slug} className={`flex items-start gap-4 p-4 rounded-[16px] hover:bg-[#f8faf8] transition-colors group ${idx !== mappedArticles.length - 1 ? 'border-b border-gray-50' : ''}`}>
+                        <div className="w-2 h-2 rounded-full bg-[var(--color-vert-principal)] mt-2 shrink-0"></div>
+                        <div className="flex-1 min-w-0">
+                          <div className="flex justify-between items-start gap-4">
+                            <h4 className="font-bold text-gray-900 text-base leading-snug group-hover:text-[var(--color-vert-profond)] transition-colors">
                               {article.title}
                             </h4>
-                            <div className="flex items-center text-[11px] text-gray-500 gap-3 pt-1">
-                              <span className="flex items-center gap-1">
-                                <Clock size={12} />
-                                <span>{isPubDateValid ? pubDate.toLocaleDateString('fr-FR') : "Récemment"}</span>
-                              </span>
-                            </div>
+                            <span className="text-xs font-medium text-gray-400 whitespace-nowrap hidden sm:block">
+                              {isPubDateValid ? pubDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' }) : ""}
+                            </span>
                           </div>
-                          <div className="p-2 border border-gray-100 rounded-lg group-hover:border-emerald-200 group-hover:bg-emerald-50/30 transition-colors shrink-0">
-                            <ChevronRight size={16} className="text-gray-400 group-hover:text-emerald-700" />
-                          </div>
+                          <span className="text-xs font-bold text-[var(--color-orange-accent)] uppercase mt-2 block">
+                            {article.category || "Général"}
+                          </span>
                         </div>
                       </Link>
                     )
                   })}
                 </div>
               ) : (
-                <p className="text-xs text-gray-500 italic text-center py-4">Aucune publication récente.</p>
+                <p className="text-sm text-gray-400 text-center py-6">Aucune publication récente.</p>
               )}
             </div>
 
           </div>
 
-          {/* RIGHT COLUMN: Utility Widgets (Adhésion, Notifications & Events) */}
+          {/* Sidebar Feed (Notifications & Events) */}
           <div className="lg:col-span-1 space-y-6">
             
-            {/* Membership/Cotisation integrated card */}
-            <div className="bg-white rounded-2xl border border-gray-150 shadow-sm p-5 space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">Adhésion</h3>
-                {dateFinCotisation ? (
-                  <span className="px-2 py-0.5 text-[10px] font-bold bg-green-50 text-green-700 rounded-full border border-green-200">
-                    Active
-                  </span>
-                ) : (
-                  <span className="px-2 py-0.5 text-[10px] font-bold bg-amber-50 text-amber-700 rounded-full border border-amber-200">
-                    À régler
-                  </span>
-                )}
+            {/* Notifications */}
+            <div className="bg-white p-6 rounded-[28px] shadow-sm">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-base font-bold text-gray-900 font-heading">Notifications</h3>
+                <span className="w-6 h-6 rounded-full bg-red-100 text-red-600 text-xs font-bold flex items-center justify-center">
+                  {notifsData?.length || 0}
+                </span>
               </div>
-
-              {dateFinCotisation ? (
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-xs text-gray-500">Date d'expiration</p>
-                    <p className="font-semibold text-gray-900 text-sm mt-0.5">
-                      {dateFinCotisation.toLocaleDateString('fr-FR')}
-                    </p>
-                  </div>
-                  <div className="w-full bg-gray-100 rounded-full h-2">
-                    <div 
-                      className="bg-emerald-600 h-2 rounded-full transition-all" 
-                      style={{ width: `${Math.min(100, (joursRestants / 365) * 100)}%` }}
-                    ></div>
-                  </div>
-                  <p className="text-[11px] text-gray-500 flex items-center gap-1.5">
-                    <Clock size={12} className="text-emerald-600" />
-                    <span>{joursRestants} jours restants</span>
-                  </p>
-                </div>
-              ) : (
-                <div className="space-y-3 text-center lg:text-left">
-                  <p className="text-xs text-gray-600">
-                    Veuillez régler votre cotisation annuelle pour bénéficier de l'ensemble des services.
-                  </p>
-                  <Link 
-                    href="/membres/cotisation" 
-                    className="w-full inline-flex items-center justify-center gap-2 px-3 py-2 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold rounded-lg transition-colors"
-                  >
-                    <CreditCard size={14} />
-                    <span>Régler ma cotisation</span>
-                  </Link>
-                </div>
-              )}
-            </div>
-            
-            {/* Notifications Widget */}
-            <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-4">
-              <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2">
-                <Bell size={15} className="text-emerald-600" />
-                Notifications
-              </h3>
               
               {notifsData && notifsData.length > 0 ? (
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {notifsData.map((notif: any) => (
-                    <div key={notif.id} className="p-3 bg-blue-50/30 border border-blue-100/50 rounded-xl text-xs relative flex flex-col gap-1">
-                      <p className="text-gray-800 leading-normal">{notif.contenu}</p>
-                      <span className="text-[10px] text-gray-400">
-                        {new Date(notif.created_at).toLocaleDateString()}
-                      </span>
+                    <div key={notif.id} className="flex gap-3 items-start">
+                      <div className="w-8 h-8 rounded-full bg-[var(--color-vert-clair)] text-[var(--color-vert-profond)] flex items-center justify-center shrink-0 mt-0.5">
+                        <Bell size={14} />
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-700 leading-snug">{notif.contenu}</p>
+                        <p className="text-[10px] text-gray-400 mt-1">{new Date(notif.created_at).toLocaleDateString()}</p>
+                      </div>
                     </div>
                   ))}
-                  <Link href="/membres/notifications" className="block text-center text-xs font-bold text-emerald-600 hover:underline pt-2">
-                    Voir toutes les notifications
+                  <Link href="/membres/notifications" className="block w-full py-2.5 text-center text-xs font-bold text-gray-600 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors mt-2">
+                    Voir toutes
                   </Link>
                 </div>
               ) : (
-                <div className="text-center py-6">
-                  <p className="text-xs text-gray-400 italic">Aucune nouvelle notification.</p>
-                </div>
+                <p className="text-xs text-gray-400 text-center py-4">Aucune notification.</p>
               )}
             </div>
 
             {/* Events Widget */}
-            <div className="bg-white p-5 rounded-2xl border border-gray-150 shadow-sm space-y-4">
-              <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider flex items-center gap-2">
-                <CalendarIcon size={15} className="text-emerald-600" />
-                Agenda à venir
-              </h3>
+            <div className="bg-white p-6 rounded-[28px] shadow-sm">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-base font-bold text-gray-900 font-heading">À venir</h3>
+              </div>
 
               {evtsData && evtsData.length > 0 ? (
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {evtsData.map((evt: any) => {
                     const evtDate = evt.date_debut ? new Date(evt.date_debut) : null
                     const day = evtDate ? evtDate.getDate() : ""
                     const month = evtDate ? evtDate.toLocaleDateString('fr-FR', { month: 'short' }) : ""
                     return (
-                      <div key={evt.id} className="flex gap-3 items-center p-2.5 border border-gray-50 rounded-xl hover:bg-gray-50/50 transition-colors">
-                        <div className="w-11 h-11 bg-emerald-50 rounded-lg flex flex-col items-center justify-center shrink-0 border border-emerald-100/40">
-                          <span className="text-xs font-extrabold text-emerald-800 leading-none">{day}</span>
-                          <span className="text-[9px] font-bold text-emerald-600 uppercase mt-0.5 leading-none">{month}</span>
+                      <Link href="/membres/evenements" key={evt.id} className="flex gap-4 items-center group">
+                        <div className="w-12 h-12 bg-gray-50 rounded-xl flex flex-col items-center justify-center shrink-0 border border-gray-100 group-hover:bg-[var(--color-vert-clair)] group-hover:border-[var(--color-vert-principal)] transition-colors">
+                          <span className="text-sm font-extrabold text-gray-900 group-hover:text-[var(--color-vert-profond)] leading-none">{day}</span>
+                          <span className="text-[9px] font-bold text-gray-500 uppercase mt-1 leading-none">{month}</span>
                         </div>
-                        <div className="min-w-0">
-                          <p className="font-heading font-bold text-gray-900 text-xs truncate leading-tight">{evt.titre}</p>
-                          <span className="text-[10px] text-gray-500 block mt-0.5">{evt.type_evt || "Événement"}</span>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-bold text-gray-900 text-sm truncate leading-tight group-hover:text-[var(--color-vert-profond)]">{evt.titre}</p>
+                          <p className="text-xs text-gray-500 mt-1">{evt.type_evt || "Événement"}</p>
                         </div>
-                      </div>
+                      </Link>
                     )
                   })}
-                  <Link href="/membres/evenements" className="block text-center text-xs font-bold text-emerald-600 hover:underline pt-2">
-                    Voir l'agenda complet
-                  </Link>
                 </div>
               ) : (
-                <div className="text-center py-6">
-                  <p className="text-xs text-gray-400 italic">Aucun événement prévu.</p>
-                </div>
+                <p className="text-xs text-gray-400 text-center py-4">Aucun événement prévu.</p>
               )}
             </div>
 
