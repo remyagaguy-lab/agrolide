@@ -49,19 +49,19 @@ export default function MemberCard({ member }: MemberCardProps) {
       href={`/annuaire/${member.id}`}
       className="group relative flex flex-col h-full bg-white border border-[#e8e8e4] rounded-2xl shadow-sm hover:border-[#1b5e38] hover:shadow-md transition-all overflow-hidden"
     >
-      <div className="h-20 bg-gradient-to-r from-[#1b5e38] to-[#0c361e] w-full relative">
+      <div className="h-14 bg-gradient-to-r from-[#1b5e38] to-[#0c361e] w-full relative">
          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:16px_16px]"></div>
       </div>
 
-      <div className="flex flex-col items-center px-4 pb-5 -mt-10 flex-1">
-        <div className="w-20 h-20 rounded-full bg-white p-1 shadow-sm shrink-0 relative z-10 mb-3 border border-[#e8e8e4]">
-          <div className="w-full h-full rounded-full bg-[#f4f8f4] text-[#1b5e38] flex items-center justify-center text-2xl font-heading font-bold overflow-hidden relative">
+      <div className="flex flex-col items-center px-4 pb-4 -mt-8 flex-1">
+        <div className="w-16 h-16 rounded-full bg-white p-1 shadow-sm shrink-0 relative z-10 mb-2 border border-[#e8e8e4]">
+          <div className="w-full h-full rounded-full bg-[#f4f8f4] text-[#1b5e38] flex items-center justify-center text-xl font-bold overflow-hidden relative">
             {avatarUrl && !imgError ? (
               <Image 
                 src={avatarUrl} 
                 alt={displayName} 
                 fill 
-                sizes="80px" 
+                sizes="64px" 
                 className="object-cover" 
                 onError={() => setImgError(true)}
               />
@@ -72,45 +72,47 @@ export default function MemberCard({ member }: MemberCardProps) {
         </div>
 
         {member.categorie && (
-          <span className={`px-2.5 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider mb-2 border ${getBadgeClass(member.categorie)}`}>
+          <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider mb-1.5 border ${getBadgeClass(member.categorie)}`}>
             {member.categorie}
           </span>
         )}
 
-        <h3 className="text-base font-extrabold text-[#1a1a1a] group-hover:text-[#1b5e38] transition-colors text-center leading-tight mb-1.5">
+        <h3 className="text-sm font-extrabold text-[#1a1a1a] group-hover:text-[#1b5e38] transition-colors text-center leading-tight mb-1">
           {displayName}
         </h3>
         
         {member.specialite && (
-          <div className="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-500 mb-2 w-full">
+          <div className="flex items-center justify-center gap-1.5 text-xs font-medium text-gray-500 mb-1.5 w-full">
             <Briefcase className="w-3.5 h-3.5 text-gray-400 shrink-0" />
             <span className="line-clamp-1 text-center leading-snug">{member.specialite}</span>
           </div>
         )}
 
         {member.pays && (
-          <div className="flex items-center justify-center gap-1.5 text-xs text-gray-400 mb-4 w-full">
+          <div className="flex items-center justify-center gap-1.5 text-xs text-gray-400 mb-2 w-full">
             <MapPin className="w-3.5 h-3.5 shrink-0" />
             <span className="truncate">{member.ville ? `${member.ville}, ` : ''}{member.pays}</span>
           </div>
         )}
 
-        <div className="mt-auto flex justify-center gap-1.5 flex-wrap w-full">
-          {sectors.slice(0, 2).map((secteur: string, idx: number) => (
-            <span key={idx} className="bg-gray-50 text-gray-500 px-2 py-1 rounded-md text-[9px] font-bold border border-gray-100 uppercase tracking-wider">
-              {secteur}
-            </span>
-          ))}
-          {sectors.length > 2 && (
-            <span className="bg-gray-50 text-gray-400 px-2 py-1 rounded-md text-[9px] font-bold border border-gray-100 uppercase tracking-wider">
-              +{sectors.length - 2}
-            </span>
-          )}
-        </div>
+        {sectors.length > 0 && (
+          <div className="mt-auto pt-2 flex justify-center gap-1.5 flex-wrap w-full">
+            {sectors.slice(0, 2).map((secteur: string, idx: number) => (
+              <span key={idx} className="bg-gray-50 text-gray-500 px-2 py-1 rounded-md text-[9px] font-bold border border-gray-100 uppercase tracking-wider">
+                {secteur}
+              </span>
+            ))}
+            {sectors.length > 2 && (
+              <span className="bg-gray-50 text-gray-400 px-2 py-1 rounded-md text-[9px] font-bold border border-gray-100 uppercase tracking-wider">
+                +{sectors.length - 2}
+              </span>
+            )}
+          </div>
+        )}
       </div>
 
-      <div className="border-t border-[#e8e8e4] p-3 bg-[#fcfdfc] flex items-center justify-center text-xs font-bold text-gray-500 group-hover:text-[#1b5e38] group-hover:bg-[#dff0e0]/30 transition-colors gap-2">
-        Voir le profil <ArrowRight className="w-4 h-4" />
+      <div className="border-t border-[#e8e8e4] p-2.5 bg-[#fcfdfc] flex items-center justify-center text-xs font-bold text-gray-500 group-hover:text-[#1b5e38] group-hover:bg-[#dff0e0]/30 transition-colors gap-2">
+        Voir le profil <ArrowRight className="w-3.5 h-3.5" />
       </div>
     </Link>
   )
