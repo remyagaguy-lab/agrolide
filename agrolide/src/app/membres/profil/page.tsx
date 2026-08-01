@@ -3,9 +3,18 @@ import Link from "next/link"
 import Image from "next/image"
 import { 
   User, MapPin, Briefcase, Mail, Edit,
-  GraduationCap, Globe, Linkedin, ShieldCheck,
+  GraduationCap, Globe, ShieldCheck,
   Languages, BookOpen, Star, AlertCircle
 } from "lucide-react"
+
+function IconLinkedIn() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+    </svg>
+  )
+}
 import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
@@ -214,7 +223,7 @@ export default async function ProfilPage() {
                 {profile.linkedin_url && (
                   <div className="flex items-start gap-3">
                     <div className="mt-0.5 text-[#0a66c2] bg-[#f0f7ff] p-1.5 rounded-lg border border-[#d6e8ff]">
-                      <Linkedin size={12} />
+                      <IconLinkedIn />
                     </div>
                     <div>
                       <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">LinkedIn</p>
