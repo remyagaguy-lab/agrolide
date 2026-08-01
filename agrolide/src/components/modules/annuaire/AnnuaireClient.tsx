@@ -31,7 +31,7 @@ export default function AnnuaireClient() {
 
   // Options statiques pour les filtres (dans un cas réel, on pourrait les fetcher)
   const paysOptions = ["Sénégal", "Côte d'Ivoire", "Cameroun", "Bénin", "Togo", "Mali", "Burkina Faso", "Guinée", "Congo", "Gabon", "RDC", "Madagascar", "Maroc", "Tunisie", "Algérie", "France", "Canada"]
-  const catOptions = ["Junior", "Professionnel", "Partenaire", "Senior", "Entreprise"]
+  const catOptions = ["Passionné", "Junior", "Professionnel", "Partenaire", "Sénior"]
   const specOptions = ["Productions végétales", "Élevage", "Transformation", "Agroéconomie", "Agritech", "Environnement", "Logistique", "Commerce", "Recherche"]
 
   useEffect(() => {

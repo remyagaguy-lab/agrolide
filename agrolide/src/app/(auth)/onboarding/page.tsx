@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { submitOnboarding } from '@/app/actions/onboarding'
-import { CheckCircle2, User, Building, Briefcase, GraduationCap, Loader2 } from 'lucide-react'
+import { CheckCircle2, User, Building, Briefcase, GraduationCap, Loader2, Heart } from 'lucide-react'
 
 export default function OnboardingPage() {
   const router = useRouter()
@@ -12,10 +12,11 @@ export default function OnboardingPage() {
   const [categorie, setCategorie] = useState('professionnel')
 
   const profiles = [
+    { id: 'passionne', label: 'Passionné', icon: Heart, desc: 'Curieux ou non-professionnel' },
     { id: 'junior', label: 'Junior / Étudiant', icon: GraduationCap, desc: 'Vous débutez dans le secteur' },
     { id: 'professionnel', label: 'Professionnel', icon: User, desc: 'Vous êtes un acteur du secteur' },
-    { id: 'senior', label: 'Expert / Senior', icon: Briefcase, desc: 'Vous avez une forte expérience' },
-    { id: 'entreprise', label: 'Entreprise / Organisation', icon: Building, desc: 'Vous représentez une structure' },
+    { id: 'partenaire', label: 'Partenaire', icon: Building, desc: 'Entreprise, ONG, Coopérative' },
+    { id: 'senior', label: 'Sénior', icon: Briefcase, desc: 'Vous avez une forte expérience' },
   ]
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

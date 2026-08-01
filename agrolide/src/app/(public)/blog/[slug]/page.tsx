@@ -182,96 +182,111 @@ export default async function BlogPostPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* Article Header */}
-      <section className="bg-gray-50 py-16 border-b border-gray-200">
-        <div className="container mx-auto px-4 max-w-4xl">
+      
+      {/* Hero Section */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl py-8 md:py-16">
           <Breadcrumb items={breadcrumbItems} />
-          <div className="mb-6">
-            <span className="inline-block px-3 py-1 bg-green-100 text-[var(--color-vert-principal)] text-sm font-semibold rounded-full">
-              {article.categorie || "Général"}
-            </span>
-          </div>
-          <h1 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-6 leading-tight">
-            {article.titre}
-          </h1>
-          {article.extrait && (
-            <p className="text-xl text-[var(--color-gris-texte)] mb-8">
-              {article.extrait}
-            </p>
-          )}
           
-          <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600">
-            <div className="flex items-center gap-2">
-              {article.auteur_id ? (
-                <Link href={`/annuaire/${article.auteur_id}`} className="flex items-center gap-2 hover:text-[var(--color-vert-principal)] transition-colors group">
-                  {article.photo_url ? (
-                    <Image src={article.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
-                  ) : (
-                    <User size={18} className="text-[var(--color-vert-principal)]" />
-                  )}
-                  <span className="font-medium group-hover:underline">{authorName}</span>
-                </Link>
-              ) : (
-                <>
-                  {article.photo_url ? (
-                    <Image src={article.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
-                  ) : (
-                    <User size={18} className="text-[var(--color-vert-principal)]" />
-                  )}
-                  <span className="font-medium">{authorName}</span>
-                </>
+          <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:items-center xl:gap-14">
+            {/* Colonne Gauche : Contenu */}
+            <div className="lg:pr-4 xl:pr-8">
+              <div className="mb-4">
+                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-vert-principal)]">
+                  {article.categorie || "Général"}
+                </span>
+              </div>
+              <h1 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-gray-900 leading-[1.2] tracking-tight mb-5">
+                {article.titre}
+              </h1>
+              {article.extrait && (
+                <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+                  {article.extrait}
+                </p>
               )}
+              
+              <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-gray-500 mb-6">
+                <div className="flex items-center gap-2">
+                  {article.photo_url ? (
+                    <Image src={article.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
+                  ) : (
+                    <User size={16} />
+                  )}
+                  {article.auteur_id ? (
+                    <Link href={`/annuaire/${article.auteur_id}`} className="hover:text-[var(--color-vert-principal)] transition-colors">
+                      {authorName}
+                    </Link>
+                  ) : (
+                    <span>{authorName}</span>
+                  )}
+                </div>
+                <span aria-hidden="true"> · </span>
+                <span>
+                  {new Date(article.published_at || '').toLocaleDateString('fr-FR', {
+                    year: 'numeric', month: 'long', day: 'numeric'
+                  })}
+                </span>
+                <span aria-hidden="true"> · </span>
+                <span>5 min de lecture</span>
+              </div>
+              
+              {/* Tags éventuels (optionnels, on peut mettre la catégorie ici aussi ou des tags si on en a) */}
+              <ul className="flex flex-wrap gap-2">
+                <li>
+                  <span className="inline-flex rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium text-gray-600">
+                    {article.categorie || "Général"}
+                  </span>
+                </li>
+              </ul>
             </div>
-            <div className="flex items-center gap-2">
-              <Calendar size={18} className="text-[var(--color-vert-principal)]" />
-              <span>{new Date(article.published_at || '').toLocaleDateString('fr-FR', {
-                year: 'numeric', month: 'long', day: 'numeric'
-              })}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock size={18} className="text-[var(--color-vert-principal)]" />
-              <span>5 min de lecture</span>
+            
+            {/* Colonne Droite : Image */}
+            <div className="w-full">
+              {article.image_une_url ? (
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+                  <Image 
+                    src={article.image_une_url} 
+                    alt={article.titre}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              ) : (
+                <div className="relative w-full aspect-video rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center">
+                  <span className="text-gray-400">Image indisponible</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Image */}
-      {article.image_une_url && (
-        <section className="container mx-auto px-4 max-w-5xl -mt-8 relative z-10">
-          <div className="relative w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
-            <Image 
-              src={article.image_une_url} 
-              alt={article.titre}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </section>
-      )}
-
       {/* Article Body */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex flex-col lg:flex-row gap-12">
-            {/* Sidebar (TOC + Share) */}
-            <div className="w-full lg:w-1/4 order-1">
-              <div className="sticky top-24 space-y-6">
-                <TableOfContents />
+      <section className="bg-white border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl py-12 md:py-16">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] xl:gap-x-12">
+            
+            {/* Sidebar (TOC + Share) - Ordre 1 sur desktop, mais order-2 sur mobile */}
+            <div className="w-full order-2 lg:order-1 lg:border-r lg:border-gray-100 lg:pr-8">
+              <div className="sticky top-24 space-y-8">
+                <div>
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400 mb-4">
+                    Dans cet article
+                  </p>
+                  <TableOfContents />
+                </div>
                 
-                {/* Partager - fixe sous le sommaire */}
-                <div className="bg-gray-50 p-6 rounded-xl border border-[var(--color-gris-clair)] hidden lg:block">
-                  <h4 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <Share2 size={18} />
+                <div className="pt-6 border-t border-gray-100 hidden lg:block">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400 mb-4">
                     Partager
-                  </h4>
-                  <div className="flex gap-3">
+                  </p>
+                  <div className="flex gap-2">
                     <a 
                       href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors font-bold"
+                      className="w-9 h-9 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-colors"
                     >
                       in
                     </a>
@@ -279,34 +294,43 @@ export default async function BlogPostPage({
                       href={`https://wa.me/?text=${encodedTitle} ${encodedUrl}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full bg-green-100 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
+                      className="w-9 h-9 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-colors"
                     >
-                      <MessageCircle size={20} />
+                      <MessageCircle size={16} />
                     </a>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Content */}
-            <div className="w-full lg:w-3/4 order-2">
+            {/* Content - Ordre 1 sur mobile */}
+            <div className="w-full order-1 lg:order-2">
               <div 
-                className="article-content prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-[var(--color-vert-principal)] prose-a:text-[var(--color-orange-accent)]"
+                className="prose prose-lg max-w-none 
+                  prose-headings:font-heading prose-headings:font-bold prose-headings:text-gray-900 prose-headings:scroll-mt-28
+                  prose-h2:text-[1.75rem] prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-100
+                  prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                  prose-p:text-[1.0625rem] prose-p:leading-[1.8] prose-p:text-gray-700 prose-p:mb-6
+                  prose-a:text-[var(--color-vert-principal)] prose-a:no-underline prose-a:font-medium hover:prose-a:underline
+                  prose-strong:text-gray-900
+                  prose-ul:list-disc prose-ul:pl-6 prose-ul:text-gray-700 prose-ul:mb-6
+                  prose-ol:list-decimal prose-ol:pl-6 prose-ol:text-gray-700 prose-ol:mb-6
+                  prose-li:mb-2
+                  prose-blockquote:border-l-4 prose-blockquote:border-[var(--color-vert-principal)] prose-blockquote:bg-gray-50 prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:rounded-r-lg prose-blockquote:text-gray-800 prose-blockquote:italic"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
 
               {/* Partage Mobile */}
-              <div className="mt-12 lg:hidden flex flex-col items-center justify-center gap-4 border-t border-gray-200 pt-8">
-                <span className="font-bold text-gray-900 flex items-center gap-2 text-lg">
-                  <Share2 size={20} />
+              <div className="mt-12 lg:hidden flex flex-col items-start gap-4 border-t border-gray-100 pt-8">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400">
                   Partager cet article
-                </span>
-                <div className="flex gap-4">
+                </p>
+                <div className="flex gap-3">
                   <a 
                     href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors font-bold text-lg"
+                    className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-blue-50 hover:text-blue-600 transition-colors"
                   >
                     in
                   </a>
@@ -314,25 +338,25 @@ export default async function BlogPostPage({
                     href={`https://wa.me/?text=${encodedTitle} ${encodedUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-green-100 text-green-600 flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
+                    className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-green-50 hover:text-green-600 transition-colors"
                   >
-                    <MessageCircle size={24} />
+                    <MessageCircle size={18} />
                   </a>
                 </div>
               </div>
 
-              {/* CTA Fin d'article (affiché uniquement si l'article n'a pas son propre CTA) */}
+              {/* CTA Fin d'article */}
               {!htmlContent.includes('class="custom-cta"') && (
-                <div className="mt-16 p-8 bg-[#E8F3EB] rounded-2xl border border-green-200 text-center">
-                  <h3 className="text-2xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">
-                    Vous souhaitez aller plus loin ?
+                <div className="mt-16 p-8 bg-[#f8faf8] rounded-2xl border border-[var(--color-vert-clair)]">
+                  <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-900 mb-3">
+                    Besoin de développer votre réseau agricole ?
                   </h3>
-                  <p className="text-[var(--color-gris-texte)] mb-6 max-w-xl mx-auto">
-                    Rejoignez des milliers de professionnels sur agrolide et accédez à des ressources exclusives pour développer votre projet agricole.
+                  <p className="text-gray-600 mb-6 text-sm md:text-base">
+                    Rejoignez des milliers de professionnels sur agrolide et accédez à des ressources exclusives pour développer votre projet.
                   </p>
                   <Link href="/rejoindre">
-                    <Button variant="primary" className="text-lg px-8">
-                      Découvrir les adhésions
+                    <Button variant="primary" className="text-sm md:text-base px-6">
+                      Découvrir les avantages membres →
                     </Button>
                   </Link>
                 </div>
@@ -344,12 +368,12 @@ export default async function BlogPostPage({
 
       {/* Articles similaires */}
       {similarArticles && similarArticles.length > 0 && (
-        <section className="py-16 bg-gray-50 border-t border-gray-200">
+        <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-10">
               Articles similaires
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {similarArticles.map((simArticle) => (
                 <ArticleCard
                   key={simArticle.id}

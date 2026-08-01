@@ -17,7 +17,7 @@ export async function submitOnboarding(formData: FormData) {
     const biographie = formData.get("biographie") as string
     const specialite = formData.get("specialite") as string
 
-    if (!categorie || !['junior', 'professionnel', 'senior', 'entreprise'].includes(categorie)) {
+    if (!categorie || !['passionne', 'junior', 'professionnel', 'partenaire', 'senior'].includes(categorie)) {
       return { success: false, error: "Catégorie invalide." }
     }
 

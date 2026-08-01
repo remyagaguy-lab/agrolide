@@ -31,11 +31,13 @@ export default function MemberCard({ member }: MemberCardProps) {
   // Déterminer la couleur du badge en fonction de la catégorie
   const getBadgeClass = (cat: string) => {
     switch(cat?.toLowerCase()) {
-      case 'senior': return 'bg-purple-100 text-purple-700 ring-purple-200'
+      case 'senior':
+      case 'sénior': return 'bg-purple-100 text-purple-700 ring-purple-200'
       case 'professionnel': return 'bg-blue-100 text-blue-700 ring-blue-200'
       case 'partenaire': return 'bg-orange-100 text-orange-700 ring-orange-200'
       case 'junior': return 'bg-green-100 text-green-700 ring-green-200'
-      case 'entreprise': return 'bg-slate-100 text-slate-700 ring-slate-200'
+      case 'passionne':
+      case 'passionné': return 'bg-pink-100 text-pink-700 ring-pink-200'
       default: return 'bg-gray-100 text-gray-700 ring-gray-200'
     }
   }
