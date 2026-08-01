@@ -132,22 +132,8 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
 
         </div>
 
-        {/* Upgrade / Logout Bottom Area */}
+        {/* Logout Bottom Area */}
         <div className="p-4 mt-auto shrink-0">
-          <div className="bg-[#1b5e38] rounded-2xl p-4 text-white relative overflow-hidden mb-4 shadow-sm">
-             <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-xl -mr-8 -mt-8"></div>
-             <div className="relative z-10">
-               <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center mb-3">
-                 <Briefcase size={16} className="text-white" />
-               </div>
-               <p className="text-[11px] font-medium text-white/90 mb-3 leading-tight">
-                 Accédez à toutes les opportunités et formations du réseau.
-               </p>
-               <Link href="/membres/cotisation" className="block w-full py-2 bg-[#dff0e0] hover:bg-white text-[#1b5e38] text-center rounded-xl text-xs font-bold transition-colors">
-                 Ma Cotisation
-               </Link>
-             </div>
-          </div>
           <button 
             onClick={handleLogout}
             className="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-gray-500 hover:bg-red-50 hover:text-red-600 transition-all font-medium"
