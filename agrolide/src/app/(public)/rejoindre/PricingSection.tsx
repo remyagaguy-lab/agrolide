@@ -214,8 +214,8 @@ export default function PricingSection() {
             
             <PriceBlock annualPrice={70000} monthlyPrice={7000} />
 
-            <Link href={`/contact?periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-[#e8e8e4] text-[#1a1a1a] hover:border-[#1b5e38] hover:text-[#1b5e38] hover:bg-[#f0f7f0] mb-[14px]">
-              Nous contacter
+            <Link href={`/inscription?categorie=partenaire&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-[#e8e8e4] text-[#1a1a1a] hover:border-[#1b5e38] hover:text-[#1b5e38] hover:bg-[#f0f7f0] mb-[14px]">
+              S'inscrire comme Partenaire
             </Link>
             <hr className="border-t border-[#f0f0ee] mb-[12px]" />
             <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Tout Professionnel, plus :</div>
