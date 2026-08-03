@@ -8,7 +8,7 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: "Actualités & Événements",
-  description: "Restez informé des dernières actualités de notre réseau agricole. Découvrez les événements, formations, webinaires et opportunités pour les acteurs de l'agriculture en Afrique.",,
+  description: "Restez informé des dernières actualités de notre réseau agricole. Découvrez les événements, formations, webinaires et opportunités pour les acteurs de l'agriculture en Afrique.",
   alternates: { canonical: '/actualites' }
 }
 

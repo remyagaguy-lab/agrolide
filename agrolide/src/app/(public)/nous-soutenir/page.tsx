@@ -7,7 +7,7 @@ import { Heart, Target, TrendingUp, Users, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Nous Soutenir - Faire un Don",
-  description: "Soutenez le développement de notre réseau agricole et investissez dans la souveraineté alimentaire africaine. Découvrez comment contribuer à nos actions sur le terrain.",,
+  description: "Soutenez le développement de notre réseau agricole et investissez dans la souveraineté alimentaire africaine. Découvrez comment contribuer à nos actions sur le terrain.",
   alternates: { canonical: '/nous-soutenir' }
 }
 

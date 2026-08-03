@@ -12,7 +12,7 @@ import { NewsletterForm } from "@/components/modules/newsletter/NewsletterForm"
 
 export const metadata: Metadata = {
   title: "Blog & Actualités",
-  description: "Découvrez les analyses, récits et conseils de notre réseau agricole. Des ressources concrètes pour transformer l'agriculture africaine et innover sur le terrain.",,
+  description: "Découvrez les analyses, récits et conseils de notre réseau agricole. Des ressources concrètes pour transformer l'agriculture africaine et innover sur le terrain.",
   alternates: { canonical: '/blog' }
 }
 

@@ -8,7 +8,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Bibliothèque Agricole",
-  description: "Accédez à des centaines de documents techniques, thèses et guides spécialisés. Une ressource indispensable pour les membres de notre réseau agricole en Afrique.",,
+  description: "Accédez à des centaines de documents techniques, thèses et guides spécialisés. Une ressource indispensable pour les membres de notre réseau agricole en Afrique.",
   alternates: { canonical: '/bibliotheque' }
 }
 
