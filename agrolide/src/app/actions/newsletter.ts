@@ -46,7 +46,7 @@ export async function subscribeToNewsletter(prevState: any, formData: FormData) 
     const result = subscribeSchema.safeParse(rawData)
     if (!result.success) {
       return {
-        error: result.error.errors[0].message,
+        error: result.error.issues[0].message,
         success: false,
       }
     }

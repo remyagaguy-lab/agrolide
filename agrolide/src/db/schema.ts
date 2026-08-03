@@ -154,7 +154,9 @@ export const evenements = sqliteTable("evenements", {
   lieu: text("lieu"),
   pays: text("pays"),
   places_max: integer("places_max"),
+  presentation_url: text("presentation_url"),
   publie: integer("publie", { mode: "boolean" }),
+  ressources_url: text("ressources_url"),
   titre: text("titre").notNull(),
   type_evt: text("type_evt").notNull(),
 });
