@@ -1,4 +1,4 @@
-﻿# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -25,6 +25,12 @@
 # misc
 .DS_Store
 *.pem
+local.db
+log.txt
+temp.txt
+*.pdf
+queries-list.json
+contenu_articles.md
 
 # debug
 npm-debug.log*

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/Button"
 import { CreditCard, Smartphone, Loader2 } from "lucide-react"
+import { sendGAEvent } from "@next/third-parties/google"
 
 export function PaiementBoutons({ categorie }: { categorie: string }) {
   const [isLoading, setIsLoading] = useState<string | null>(null)
@@ -12,6 +13,12 @@ export function PaiementBoutons({ categorie }: { categorie: string }) {
     setIsLoading(methode)
     setError(null)
     
+    // Suivi de conversion GA4 pour le début du processus d'adhésion
+    sendGAEvent('event', 'begin_checkout', {
+      payment_type: methode,
+      item_category: categorie
+    })
+
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8787"
       

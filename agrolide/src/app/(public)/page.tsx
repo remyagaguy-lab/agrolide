@@ -187,7 +187,7 @@ export default async function HomePage() {
         {/* Image de fond avec mask pour fondu fluide */}
         <div className="absolute top-0 right-0 w-full md:w-[55%] h-full pointer-events-none z-[1]">
           <Image
-            src="/hero-background.jpg"
+            src="/hero-background.webp"
             alt="Agriculture africaine"
             fill
             priority
@@ -297,7 +297,7 @@ export default async function HomePage() {
             </div>
             <div className="md:w-1/3 flex justify-center relative">
               <div className="w-48 h-64 bg-gray-200 rounded-lg shadow-2xl relative rotate-3 transform hover:rotate-0 transition-transform duration-300 overflow-hidden border-4 border-white">
-                <Image src="/hero-background.jpg" alt="Couverture du guide" fill className="object-cover" />
+                <Image src="/hero-background.webp" alt="Couverture du guide" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80 flex flex-col justify-end p-4">
                   <div className="text-white font-heading font-bold text-lg leading-tight mb-1">MANUEL PRATIQUE</div>
                   <div className="text-orange-300 text-sm font-medium">Agroécologie</div>
@@ -333,7 +333,7 @@ export default async function HomePage() {
             {/* Colonne droite */}
             <div className="hidden md:block relative bg-gris-light rounded-card aspect-[4/3] overflow-hidden shadow-lg">
               <Image 
-                src="/raison-detre.png" 
+                src="/raison-detre.webp" 
                 alt="Cohésion continentale en agriculture africaine" 
                 fill 
                 className="object-cover"
@@ -477,7 +477,7 @@ export default async function HomePage() {
                   </Link>
                 </div>
                 <div className="relative min-h-[300px] lg:min-h-[400px] bg-white/40 overflow-hidden">
-                  <Image src="/plateforme-forum-ui.png" alt="Espace d'échange" fill className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-white/60 shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
+                  <Image src="/plateforme-forum-ui.webp" alt="Espace d'échange" fill className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-white/60 shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
                 </div>
               </div>
             </div>
@@ -497,7 +497,7 @@ export default async function HomePage() {
                 </Link>
               </div>
               <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
-                <Image src="/plateforme-annuaire-ui.png" alt="Annuaire Panafricain" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
+                <Image src="/plateforme-annuaire-ui.webp" alt="Annuaire Panafricain" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 
@@ -516,7 +516,7 @@ export default async function HomePage() {
                 </Link>
               </div>
               <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
-                <Image src="/plateforme-bibliotheque-ui.png" alt="Bibliothèque de Ressources" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
+                <Image src="/plateforme-bibliotheque-ui.webp" alt="Bibliothèque de Ressources" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 

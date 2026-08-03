@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Script from 'next/script';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Button } from '@/components/ui/Button';
 
 export function CookieBanner() {
@@ -34,22 +34,7 @@ export function CookieBanner() {
     <>
       {/* Si le consentement est donné, on charge le script Google Analytics */}
       {consentGiven && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=G-KM57804JDG`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-KM57804JDG', {
-                page_path: window.location.pathname,
-              });
-            `}
-          </Script>
-        </>
+        <GoogleAnalytics gaId="G-KM57804JDG" />
       )}
 
       {/* Affichage de la bannière si aucun choix n'a été fait */}
