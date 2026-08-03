@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Header } from "./Header"
 import { Footer } from "./Footer"
+import { NewsletterForm } from "@/components/modules/newsletter/NewsletterForm"
 
 export function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -10,6 +11,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <Footer />
+      <NewsletterForm />
     </div>
   )
 }

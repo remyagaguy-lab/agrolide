@@ -8,7 +8,6 @@ import { ArticleCard } from "@/components/ui/ArticleCard"
 import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
-import { NewsletterForm } from "@/components/modules/newsletter/NewsletterForm"
 
 export const metadata: Metadata = {
   title: "Blog & Actualités",
@@ -235,9 +234,6 @@ export default async function BlogPage({
                 ))}
               </div>
             )}
-
-            {/* Newsletter CTA Footer */}
-            <NewsletterForm />
 
           </div>
         </section>

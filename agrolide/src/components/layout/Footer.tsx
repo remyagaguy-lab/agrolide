@@ -278,6 +278,9 @@ export function Footer() {
               <Link href="/mentions-legales" className="font-sans text-[12px] text-white/20 hover:text-white/50 transition-colors">
                 Mentions légales
               </Link>
+              <Link href="/cgu" className="font-sans text-[12px] text-white/20 hover:text-white/50 transition-colors">
+                CGU / CGV
+              </Link>
               <Link href="/confidentialite" className="font-sans text-[12px] text-white/20 hover:text-white/50 transition-colors">
                 Confidentialité
               </Link>
