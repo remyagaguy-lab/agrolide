@@ -11,13 +11,15 @@ async function processImages() {
   const files = fs.readdirSync(publicDir);
   
   for (const file of files) {
-    if (file === 'og-image.jpg') {
+    if (file === 'og-image.jpg' || file === 'agrolide-png.png') {
       // Open Graph relies on jpg/png usually, just compress it heavily
-      const inputPath = path.join(publicDir, file);
-      const tempPath = path.join(publicDir, 'temp-og.jpg');
-      await sharp(inputPath).jpeg({ quality: 60 }).toFile(tempPath);
-      fs.renameSync(tempPath, inputPath);
-      console.log(`Compressed og-image.jpg`);
+      if (file === 'og-image.jpg') {
+        const inputPath = path.join(publicDir, file);
+        const tempPath = path.join(publicDir, 'temp-og.jpg');
+        await sharp(inputPath).jpeg({ quality: 60 }).toFile(tempPath);
+        fs.renameSync(tempPath, inputPath);
+        console.log(`Compressed og-image.jpg`);
+      }
       continue;
     }
     
