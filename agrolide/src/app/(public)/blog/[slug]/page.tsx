@@ -88,6 +88,8 @@ export default async function BlogPostPage({
   }
 
   // Fetch similar articles
+  let similarArticles: any[] = []
+  try {
     similarArticles = await db.query.articles.findMany({
       where: and(
         eq(articles.categorie, article.categorie),
@@ -97,6 +99,8 @@ export default async function BlogPostPage({
       limit: 3,
       with: { auteur: true }
     })
+  } catch (e) {
+    console.error(e)
   }
 
   // Parse Content: check if JSON for Tiptap

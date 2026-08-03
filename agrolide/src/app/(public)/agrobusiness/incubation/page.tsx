@@ -8,8 +8,7 @@ import IncubationForm from "@/components/modules/agrobusiness/IncubationForm"
 
 export const metadata: Metadata = {
   title: "Programme d'Incubation",
-  description: "Rejoignez le programme d'incubation d'agrolide pour transformer votre idée en entreprise agricole florissante.",
-,
+  description: "Rejoignez le programme d'incubation d'agrolide pour transformer votre idée en entreprise agricole florissante.",,
   alternates: { canonical: '/agrobusiness/incubation' }
 }
 

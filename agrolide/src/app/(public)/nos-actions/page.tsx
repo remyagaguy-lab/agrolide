@@ -7,8 +7,7 @@ import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRigh
 
 export const metadata: Metadata = {
   title: "Nos actions",
-  description: "Découvrez les 3 piliers d'action du réseau Agrolide : Mobilisation, Formation et Agrobusiness."
-,
+  description: "Découvrez les 3 piliers d'action du réseau Agrolide : Mobilisation, Formation et Agrobusiness.",
   alternates: { canonical: '/nos-actions' }
 }
 

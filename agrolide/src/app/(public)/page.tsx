@@ -12,8 +12,7 @@ import { Users, BookOpen, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Réseau Agricole Africain | agrolide"
-  ,
+    absolute: "Réseau Agricole Africain | agrolide",
   alternates: { canonical: '/' }
 },
   description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire. Rejoignez le premier réseau agricole d'Afrique."

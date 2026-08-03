@@ -7,8 +7,7 @@ import { Users, Crown, Star, Lightbulb, Target, BookOpen, Microscope, Share2, Gl
 
 export const metadata: Metadata = {
   title: "Qui sommes-nous ?",
-  description: "Découvrez l'histoire, la mission et les valeurs d'agrolide. Apprenez comment notre réseau agricole continental rassemble les acteurs de l'agriculture africaine.",
-,
+  description: "Découvrez l'histoire, la mission et les valeurs d'agrolide. Apprenez comment notre réseau agricole continental rassemble les acteurs de l'agriculture africaine.",,
   alternates: { canonical: '/qui-sommes-nous' }
 }
 
