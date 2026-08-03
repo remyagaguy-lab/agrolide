@@ -8,10 +8,13 @@ import { ArticleCard } from "@/components/ui/ArticleCard"
 import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
+import { NewsletterForm } from "@/components/modules/newsletter/NewsletterForm"
 
 export const metadata: Metadata = {
   title: "Blog & Actualités",
   description: "Découvrez les analyses, récits et conseils de notre réseau agricole. Des ressources concrètes pour transformer l'agriculture africaine et innover sur le terrain.",
+,
+  alternates: { canonical: '/blog' }
 }
 
 export const revalidate = 3600
@@ -26,10 +29,13 @@ export default async function BlogPage({
     const categoryParam = resolvedParams.category
     const searchParam = resolvedParams.search
 
-    // Fetch depuis Cloudflare D1 via Drizzle
-    let allArticles = await db.select().from(articles)
-      .where(eq(articles.statut, 'publie'))
-      .orderBy(desc(articles.published_at))
+    let allArticles = await db.query.articles.findMany({
+      where: eq(articles.statut, 'publie'),
+      orderBy: [desc(articles.published_at)],
+      with: {
+        auteur: true
+      }
+    })
 
     // Filtres JS (D1 SQLite ne supporte pas ilike)
     if (categoryParam && typeof categoryParam === 'string') {
@@ -50,10 +56,10 @@ export default async function BlogPage({
     ]
 
     const fallbackArticles = [
-      { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", categorie: "Production Végétal", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z", image_une_url: null, auteur_id: null },
-      { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe Agrolide", published_at: "2024-10-05T00:00:00Z", image_une_url: null, auteur_id: null },
-      { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Agroeconomie", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z", image_une_url: null, auteur_id: null },
-      { id: "4", slug: "innovation-agricole", titre: "Les innovations technologiques qui transforment l'agriculture", extrait: "Découvrez comment l'IA et les drones révolutionnent les rendements agricoles en Afrique de l'Ouest.", categorie: "Agroinnovation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-15T00:00:00Z", image_une_url: null, auteur_id: null }
+      { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", categorie: "Production Végétal", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z", image_une_url: null, auteur_id: null, auteur: null },
+      { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe Agrolide", published_at: "2024-10-05T00:00:00Z", image_une_url: null, auteur_id: null, auteur: null },
+      { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Agroeconomie", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z", image_une_url: null, auteur_id: null, auteur: null },
+      { id: "4", slug: "innovation-agricole", titre: "Les innovations technologiques qui transforment l'agriculture", extrait: "Découvrez comment l'IA et les drones révolutionnent les rendements agricoles en Afrique de l'Ouest.", categorie: "Agroinnovation", auteur_externe: "Équipe Agrolide", published_at: "2024-09-15T00:00:00Z", image_une_url: null, auteur_id: null, auteur: null }
     ]
 
     const hasArticles = allArticles && allArticles.length > 0
@@ -125,7 +131,7 @@ export default async function BlogPage({
                         </p>
                         <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
                           <span className="text-xs text-gray-500 font-medium truncate max-w-[200px]">
-                            Par {(featuredMain as any).profiles ? `${(featuredMain as any).profiles.prenom} ${(featuredMain as any).profiles.nom}` : (featuredMain.auteur_externe || "Équipe Agrolide")}
+                            Par {featuredMain.auteur ? `${featuredMain.auteur.prenom} ${featuredMain.auteur.nom}` : (featuredMain.auteur_externe || "Équipe Agrolide")}
                           </span>
                           <div className="flex items-center text-sm font-bold text-[#1b5e38] group-hover:translate-x-1 transition-transform duration-300">
                             Lire l'article 
@@ -172,7 +178,7 @@ export default async function BlogPage({
                         </h3>
                         <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
                           <span className="text-xs text-gray-500 font-medium truncate max-w-[140px]">
-                            Par {(article as any).profiles ? `${(article as any).profiles.prenom} ${(article as any).profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
+                            Par {article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe Agrolide")}
                           </span>
                         </div>
                       </div>
@@ -221,7 +227,7 @@ export default async function BlogPage({
                     title={article.titre}
                     excerpt={article.extrait || ""}
                     category={article.categorie || "Général"}
-                    author={(article as any).profiles ? `${(article as any).profiles.prenom} ${(article as any).profiles.nom}` : (article.auteur_externe || "Équipe Agrolide")}
+                    author={article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe Agrolide")}
                     authorId={article.auteur_id || undefined}
                     date={article.published_at || ''}
                     readTime={"5 min"}
@@ -232,21 +238,7 @@ export default async function BlogPage({
             )}
 
             {/* Newsletter CTA Footer */}
-            <div className="mt-20 p-10 md:p-16 rounded-3xl bg-gradient-to-br from-[#1b5e38] to-[#0d3520] text-center text-white relative overflow-hidden shadow-xl">
-              <div 
-                className="absolute inset-0 z-0 opacity-10 pointer-events-none" 
-                style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "400px", backgroundRepeat: "repeat" }} 
-              />
-              <div className="relative z-10 max-w-2xl mx-auto">
-                <h3 className="text-3xl md:text-4xl font-heading font-bold mb-4">Rejoignez la communauté</h3>
-                <p className="text-lg text-white/80 mb-8">
-                  Recevez directement dans votre boîte mail les meilleures analyses, conseils agronomiques et opportunités de financement pour développer votre activité.
-                </p>
-                <Link href="/inscription" className="inline-block font-bold text-[#1b5e38] bg-white hover:bg-gray-50 transition-colors px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  S'inscrire à la newsletter
-                </Link>
-              </div>
-            </div>
+            <NewsletterForm />
 
           </div>
         </section>

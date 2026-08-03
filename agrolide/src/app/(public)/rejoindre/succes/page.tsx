@@ -6,6 +6,8 @@ import { PartyPopper } from "lucide-react"
 export const metadata: Metadata = {
   title: "Bienvenue",
   description: "Votre inscription est validée. Bienvenue dans le réseau agrolide.",
+,
+  alternates: { canonical: '/rejoindre/succes' }
 }
 
 export default function SuccesInscriptionPage() {

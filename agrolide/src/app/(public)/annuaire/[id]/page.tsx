@@ -38,6 +38,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
   return {
     title: member ? `${member.prenom} ${member.nom} | Profil Agrolide` : 'Profil | Agrolide',
+    alternates: {
+      canonical: `/annuaire/${id}`
+    }
   }
 }
 

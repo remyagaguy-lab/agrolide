@@ -187,7 +187,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden relative">
                     {avis.profiles?.avatar_url ? (
-                      <Image src={avis.profiles.avatar_url} alt="" fill sizes="40px" className="object-cover" />
+                      <Image src={avis.profiles.avatar_url} alt={`Avatar de ${avis.profiles.first_name || 'utilisateur'}`} fill sizes="40px" className="object-cover" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-gray-500 font-bold">
                         {avis.profiles?.prenom?.charAt(0)}

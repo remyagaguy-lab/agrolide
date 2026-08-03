@@ -63,11 +63,17 @@ export async function POST(req: Request) {
         statut_adhesion: 'gratuit',
         annuaire_visible: true,
         categorie: null,
+        newsletter_brevo: true, // Automatiquement inscrit
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
       }).onConflictDoNothing()
 
       console.log(`✅ Utilisateur Clerk synchronisé dans D1: ${primaryEmail}`)
+      
+      // Inscription automatique à la newsletter Brevo
+      import('@/app/actions/newsletter').then(({ addEmailToBrevo }) => {
+        addEmailToBrevo(primaryEmail).catch(err => console.error("Erreur auto-inscription Brevo:", err))
+      })
     } catch (err) {
       console.error('Erreur insertion D1:', err)
       return new Response('Erreur base de données', { status: 500 })

@@ -81,8 +81,8 @@
 
   /* BOUTONS */
   .btn-primary {
-    background: #f99e1d; color: #ffffff; font-family: var(--font-urbanist), sans-serif; font-size: 15px;
-    font-weight: 700; padding: 12px 28px; border-radius: 8px; border: none; cursor: pointer;
+    background: #f99e1d; color: #1a1a1a; font-family: var(--font-urbanist), sans-serif; font-size: 15px;
+    font-weight: 800; padding: 12px 28px; border-radius: 8px; border: none; cursor: pointer;
     transition: background 0.15s ease, transform 0.1s ease; min-height: 48px;
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   }

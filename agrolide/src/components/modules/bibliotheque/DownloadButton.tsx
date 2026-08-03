@@ -133,7 +133,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
 
       {/* MODALE DE TROC */}
       {showTrocModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200">
             <div className="flex justify-center mb-4">
               <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
@@ -160,7 +160,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
 
       {/* MODALE D'AUTHENTIFICATION (Téléchargement) */}
       {showAuthModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] overflow-y-auto">
             <div className="flex justify-center mb-4 mt-2">
               <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
@@ -190,7 +190,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
 
       {/* MODALE QUOTA ATTEINT */}
       {showQuotaModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] overflow-y-auto">
             <div className="flex justify-center mb-4 mt-2">
               <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">

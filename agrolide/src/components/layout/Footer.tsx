@@ -170,7 +170,7 @@ export function Footer() {
                   { href: "https://www.facebook.com/bibliotheque.ifera", icon: <IconFacebook />, label: "Facebook" },
                   { href: "https://www.instagram.com/bibliotheque.ifera", icon: <IconInstagram />, label: "Instagram" },
                   { href: "https://tiktok.com/@rseau.bifera", icon: <IconTiktok />, label: "TikTok" },
-                  { href: "https://youtube.com/@agrolide", icon: <IconYoutube />, label: "YouTube" },
+                  { href: "https://www.youtube.com/@agrolide", icon: <IconYoutube />, label: "YouTube" },
                 ].map((s) => (
                   <Link
                     key={s.label}

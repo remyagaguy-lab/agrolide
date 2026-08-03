@@ -11,6 +11,8 @@ import { eq, desc } from "drizzle-orm"
 export const metadata: Metadata = {
   title: "Nos Agripreneurs",
   description: "Découvrez les success stories des agripreneurs incubés par le réseau agrolide.",
+,
+  alternates: { canonical: '/agrobusiness/agripreneurs' }
 }
 
 export const revalidate = 3600 // ISR toutes les heures

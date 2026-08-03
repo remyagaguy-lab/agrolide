@@ -9,6 +9,8 @@ import DemandeServiceForm from "@/components/modules/agrobusiness/DemandeService
 export const metadata: Metadata = {
   title: "Agrobusiness & Consulting - Accompagnement",
   description: "Conseil stratégique et incubation pour les projets agricoles en Afrique. Notre réseau agricole vous accompagne de l'idée au marché pour bâtir des entreprises viables.",
+,
+  alternates: { canonical: '/agrobusiness' }
 }
 
 export default function AgrobusinessPage() {

@@ -4,6 +4,8 @@ import { BookOpen, Wrench } from 'lucide-react'
 export const metadata: Metadata = {
   title: "Formations Agricoles",
   description: "Développez vos compétences avec les programmes de formation de notre réseau agricole. Des cursus certifiants adaptés aux réalités de l'agriculture en Afrique.",
+,
+  alternates: { canonical: '/formations' }
 }
 
 export default function FormationsPage() {

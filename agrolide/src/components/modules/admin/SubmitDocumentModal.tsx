@@ -111,7 +111,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
   return (
     <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 data-[state=open]:animate-in data-[state=closed]:animate-out" />
+        <Dialog.Overlay className="fixed inset-0 bg-slate-900/60 z-50 data-[state=open]:animate-in data-[state=closed]:animate-out" />
         <Dialog.Content className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-xl translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg duration-200 sm:rounded-2xl max-h-[90vh] overflow-y-auto">
           
           <Dialog.Close aria-label="Fermer" className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100">

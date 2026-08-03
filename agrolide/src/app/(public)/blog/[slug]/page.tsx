@@ -24,22 +24,10 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
   
-  const articleList = await db.select({
-    titre: articles.titre,
-    extrait: articles.extrait,
-    categorie: articles.categorie,
-    published_at: articles.published_at,
-    image_une_url: articles.image_une_url,
-    auteur_externe: articles.auteur_externe,
-    prenom: users.prenom,
-    nom: users.nom
+  const article = await db.query.articles.findFirst({
+    where: eq(articles.slug, slug),
+    with: { auteur: true }
   })
-  .from(articles)
-  .leftJoin(users, eq(articles.auteur_id, users.id))
-  .where(eq(articles.slug, slug))
-  .limit(1)
-
-  const article = articleList[0]
 
   if (!article) {
     return {
@@ -47,7 +35,7 @@ export async function generateMetadata(
     }
   }
 
-  const authorName = (article.prenom && article.nom) ? `${article.prenom} ${article.nom}` : (article.auteur_externe || "Équipe Agrolide")
+  const authorName = article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe Agrolide")
 
   return {
     title: article.titre,
@@ -60,6 +48,9 @@ export async function generateMetadata(
       description: article.extrait || undefined,
       images: article.image_une_url ? [{ url: article.image_une_url, width: 1200, height: 630 }] : [],
     },
+    alternates: {
+      canonical: `/blog/${slug}`
+    }
   }
 }
 
@@ -70,30 +61,13 @@ export default async function BlogPostPage({
 }) {
   const { slug } = await params;
   
-  // Fetch article
-  let dbArticleList: any[] = []
+  let article: any = null
   let error = false
   try {
-    dbArticleList = await db.select({
-      id: articles.id,
-      slug: articles.slug,
-      titre: articles.titre,
-      extrait: articles.extrait,
-      categorie: articles.categorie,
-      contenu_json: articles.contenu_json,
-      image_une_url: articles.image_une_url,
-      auteur_externe: articles.auteur_externe,
-      auteur_id: articles.auteur_id,
-      published_at: articles.published_at,
-      updated_at: articles.updated_at,
-      prenom: users.prenom,
-      nom: users.nom,
-      photo_url: users.photo_url
+    article = await db.query.articles.findFirst({
+      where: eq(articles.slug, slug),
+      with: { auteur: true }
     })
-    .from(articles)
-    .leftJoin(users, eq(articles.auteur_id, users.id))
-    .where(eq(articles.slug, slug))
-    .limit(1)
   } catch (e) {
     error = true
   }
@@ -104,7 +78,6 @@ export default async function BlogPostPage({
     { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Agroeconomie", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" }
   ]
 
-  let article = dbArticleList[0]
   if (error || !article) {
     const fallback = fallbackArticles.find(a => a.slug === slug)
     if (fallback) {
@@ -115,16 +88,15 @@ export default async function BlogPostPage({
   }
 
   // Fetch similar articles
-  let similarArticles: any[] = []
-  if (article.categorie && article.id) {
-    similarArticles = await db.select()
-      .from(articles)
-      .where(and(
+    similarArticles = await db.query.articles.findMany({
+      where: and(
         eq(articles.categorie, article.categorie),
         ne(articles.id, article.id),
         eq(articles.statut, 'publie')
-      ))
-      .limit(3)
+      ),
+      limit: 3,
+      with: { auteur: true }
+    })
   }
 
   // Parse Content: check if JSON for Tiptap
@@ -151,7 +123,7 @@ export default async function BlogPostPage({
     { label: article.titre }
   ]
 
-  const authorName = (article.prenom && article.nom) ? `${article.prenom} ${article.nom}` : (article.auteur_externe || "Équipe Agrolide")
+  const authorName = article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe Agrolide")
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -207,8 +179,8 @@ export default async function BlogPostPage({
               
               <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-gray-500 mb-6">
                 <div className="flex items-center gap-2">
-                  {article.photo_url ? (
-                    <Image src={article.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
+                  {article.auteur?.photo_url ? (
+                    <Image src={article.auteur.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
                   ) : (
                     <User size={16} />
                   )}
@@ -381,7 +353,7 @@ export default async function BlogPostPage({
                   title={simArticle.titre}
                   excerpt={simArticle.extrait || ""}
                   category={simArticle.categorie || "Général"}
-                  author={(simArticle as any).prenom && (simArticle as any).nom ? `${(simArticle as any).prenom} ${(simArticle as any).nom}` : (simArticle.auteur_externe || "Équipe Agrolide")}
+                  author={simArticle.auteur ? `${simArticle.auteur.prenom} ${simArticle.auteur.nom}` : (simArticle.auteur_externe || "Équipe Agrolide")}
                   date={simArticle.published_at || ''}
                   readTime={"5 min"}
                   imageUrl={simArticle.image_une_url || undefined}

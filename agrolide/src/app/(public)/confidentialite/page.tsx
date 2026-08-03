@@ -3,6 +3,8 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description: "Politique de confidentialité et de protection des données du réseau agrolide.",
+,
+  alternates: { canonical: '/confidentialite' }
 }
 
 export default function ConfidentialitePage() {

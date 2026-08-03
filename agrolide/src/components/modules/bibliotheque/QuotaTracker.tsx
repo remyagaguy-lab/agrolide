@@ -36,7 +36,7 @@ export function QuotaTracker({ documentId, isLoggedIn }: { documentId: string, i
 
   if (quotaReached) {
     return (
-      <div className="fixed inset-0 z-50 bg-white/80 backdrop-blur-sm flex items-center justify-center p-4">
+      <div className="fixed inset-0 z-50 bg-white/95 flex items-center justify-center p-4">
         <div className="bg-white max-w-lg w-full rounded-2xl shadow-xl border border-gray-100 p-8 text-center space-y-6">
           <div className="mx-auto w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
             <Lock className="w-8 h-8" />

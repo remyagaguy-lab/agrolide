@@ -9,6 +9,8 @@ import { Handshake, Target, Globe, Building2, CheckCircle2 } from "lucide-react"
 export const metadata: Metadata = {
   title: "Nos Partenaires",
   description: "Découvrez les organisations et institutions qui accompagnent notre réseau agricole. Ensemble, nous structurons et développons l'agriculture en Afrique.",
+,
+  alternates: { canonical: '/partenaires' }
 }
 
 export const revalidate = 3600 // ISR toutes les heures

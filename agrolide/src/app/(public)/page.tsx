@@ -13,7 +13,9 @@ import { Users, BookOpen, TrendingUp } from "lucide-react"
 export const metadata: Metadata = {
   title: {
     absolute: "Réseau Agricole Africain | agrolide"
-  },
+  ,
+  alternates: { canonical: '/' }
+},
   description: "Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire. Rejoignez le premier réseau agricole d'Afrique."
 }
 
@@ -281,7 +283,8 @@ export default async function HomePage() {
               <form className="flex flex-col sm:flex-row gap-3">
                 <input 
                   type="email" 
-                  placeholder="Votre adresse e-mail..." 
+                  placeholder="Votre adresse e-mail..."
+                  aria-label="Votre adresse e-mail"
                   className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   required
                 />
@@ -600,7 +603,7 @@ export default async function HomePage() {
                       />
                     )}
                     <div className="absolute top-4 left-4 z-10">
-                      <Badge variant="category" className="bg-vert-pale text-vert-principal shadow-sm">{item.categorie || "Article"}</Badge>
+                      <Badge variant="category" className="bg-vert-pale text-vert-profond shadow-sm">{item.categorie || "Article"}</Badge>
                     </div>
                   </div>
                   <div className="card-blog-body flex flex-col flex-1 p-6">
@@ -608,9 +611,9 @@ export default async function HomePage() {
                     <p className="font-sans text-[13px] text-gris-texte line-clamp-2 mb-4 flex-1">
                       {item.extrait}
                     </p>
-                    <div className="font-sans text-[12px] text-gris-muted mt-auto pt-4 border-t border-[#f0f0f0] flex justify-between items-center">
-                      <span>{articleDate} · 5 min</span>
-                      <span className="font-medium text-gray-500 truncate max-w-[120px]">Par {auteurName}</span>
+                    <div className="font-sans text-[12px] text-gris-texte mt-auto pt-4 border-t border-[#f0f0f0] flex justify-between items-center">
+                      <span className="font-medium">{articleDate} · 5 min</span>
+                      <span className="font-medium text-gray-700 truncate max-w-[120px]">Par {auteurName}</span>
                     </div>
                   </div>
                 </Card>

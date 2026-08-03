@@ -8,6 +8,8 @@ import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRigh
 export const metadata: Metadata = {
   title: "Nos actions",
   description: "Découvrez les 3 piliers d'action du réseau Agrolide : Mobilisation, Formation et Agrobusiness."
+,
+  alternates: { canonical: '/nos-actions' }
 }
 
 export default function NosActionsPage() {
@@ -23,8 +25,13 @@ export default function NosActionsPage() {
               Un écosystème intégré en <span className="text-vert-profond">3 piliers d'action</span>
             </h1>
             <p className="font-sans text-[17px] text-gris-texte leading-[1.7] max-w-[650px] mx-auto">
-              Pour briser l'isolement, renforcer les compétences et catalyser la réussite des projets agricoles africains, le réseau Agrolide déploie une stratégie d'accompagnement complète.
+              Le réseau Agrolide déploie une stratégie d'accompagnement complète pour :
             </p>
+            <ul className="font-sans text-[17px] text-gris-texte leading-[1.7] max-w-[650px] mx-auto text-left list-disc list-inside space-y-2 mt-4 px-4 sm:px-12 md:px-24">
+              <li>Briser l'isolement des professionnels de l'agriculture</li>
+              <li>Renforcer les compétences techniques et managériales</li>
+              <li>Catalyser la réussite des projets agricoles africains</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -40,9 +47,13 @@ export default function NosActionsPage() {
               <h2 className="text-h2 text-gris-titre mb-4">
                 1. Mobilisation & Réseautage
               </h2>
-              <p className="text-body-lg mb-6">
-                L'isolement professionnel est le premier frein au développement. Nous avons conçu un environnement où les agronomes, chercheurs et investisseurs peuvent se trouver et collaborer.
-              </p>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>L'isolement professionnel est le premier frein au développement. Nous avons conçu un environnement collaboratif pour :</p>
+                <ul className="list-disc list-outside pl-5 space-y-2 text-[15px] text-gris-texte">
+                  <li>Fédérer les agronomes, chercheurs et investisseurs</li>
+                  <li>Faciliter les synergies et le partage d'opportunités</li>
+                </ul>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <Card className="!p-5 bg-gris-fond border-none shadow-none hover:shadow-none hover:border-transparent">
@@ -88,9 +99,13 @@ export default function NosActionsPage() {
               <h2 className="text-h2 text-gris-titre mb-4">
                 2. Formation & Insertion
               </h2>
-              <p className="text-body-lg mb-6">
-                Pour faire face au manque de documentation adaptée et aux défis de l'insertion, nous centralisons la connaissance agronomique africaine et offrons des parcours certifiants.
-              </p>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>Pour faire face au manque de documentation adaptée et aux défis de l'insertion, nous avons mis en place :</p>
+                <ul className="list-disc list-outside pl-5 space-y-2 text-[15px] text-gris-texte">
+                  <li>Une centralisation de la connaissance agronomique africaine</li>
+                  <li>Des parcours de montée en compétences et de certification</li>
+                </ul>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <Card className="!p-5 bg-blanc border-gris-border shadow-sm">
@@ -133,9 +148,13 @@ export default function NosActionsPage() {
               <h2 className="text-h2 text-gris-titre mb-4">
                 3. Agrobusiness & Consulting
               </h2>
-              <p className="text-body-lg mb-6">
-                Nous transformons les idées en entreprises viables et accompagnons les structures existantes dans leur croissance grâce à une expertise sectorielle pointue.
-              </p>
+              <div className="text-body-lg mb-6 space-y-3">
+                <p>Grâce à une expertise sectorielle pointue, nous soutenons le développement de projets pérennes :</p>
+                <ul className="list-disc list-outside pl-5 space-y-2 text-[15px] text-gris-texte">
+                  <li>Transformation des idées novatrices en entreprises viables</li>
+                  <li>Accompagnement opérationnel pour la croissance des structures existantes</li>
+                </ul>
+              </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <Card className="!p-5 bg-gris-fond border-none shadow-none hover:shadow-none hover:border-transparent">
