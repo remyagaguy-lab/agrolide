@@ -192,27 +192,25 @@ export default async function HomePage() {
             fill
             priority
             sizes="(max-width: 768px) 100vw, 55vw"
-            className="object-cover object-[center_80%] opacity-100"
-            style={{ 
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 40%)', 
-              maskImage: 'linear-gradient(to right, transparent 0%, black 40%)' 
-            }}
+            className="object-cover object-[center_80%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_60%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_40%)]"
           />
+          {/* Calque d'assombrissement uniquement sur mobile pour le contraste */}
+          <div className="absolute inset-0 bg-[#1b5e38]/60 md:hidden" />
         </div>
 
         <div className="max-w-[1100px] mx-auto px-6 pt-[32px] pb-0 md:pt-[48px] relative z-20">
           <div className="max-w-[900px]">
-            <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
+            <div className="inline-block px-4 py-2 rounded-full border border-white/20 bg-black/20 md:bg-transparent md:border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6 backdrop-blur-sm md:backdrop-blur-none">
               Le premier réseau agricole africain
             </div>
-            <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8">
+            <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8 drop-shadow-xl md:drop-shadow-none">
               Fédérer la chaîne<br />
               agricole, pour conquérir<br />
-              <span className="text-[#fcb726]">la souveraineté alimentaire</span>
+              <span className="text-[#fcb726] drop-shadow-md md:drop-shadow-none">la souveraineté alimentaire</span>
             </h1>
-            <p className="font-sans text-[16px] text-white max-w-[600px] leading-[1.8] mb-10">
+            <p className="font-sans text-[16px] text-white max-w-[600px] leading-[1.8] mb-10 drop-shadow-lg md:drop-shadow-none font-medium md:font-normal">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.{" "}
-              <strong className="text-[#f99e1d] font-[700]">Étudiants en agronomie</strong>, <strong className="text-[#f99e1d] font-[700]">Ingénieurs Agronomes</strong>, <strong className="text-[#f99e1d] font-[700]">Chercheurs</strong>, <strong className="text-[#f99e1d] font-[700]">Entreprises Agricoles</strong>, <strong className="text-[#f99e1d] font-[700]">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
+              <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Étudiants en agronomie</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Ingénieurs Agronomes</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Chercheurs</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Entreprises Agricoles</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
