@@ -57,30 +57,20 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
       const formData = new FormData()
       formData.append("photo", file)
 
-      // Appel au Worker pour l'upload R2
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8787"
-      
-      const response = await fetch(`${apiUrl}/api/membres/profil/photo`, {
-        method: "PUT",
-        headers: {
-          "Authorization": `Bearer ${sessionToken}`
-        },
-        body: formData
-      })
+      // Appel à la Server Action pour l'upload vers R2
+      const { uploadAvatarAction } = await import('@/app/actions/upload')
+      const result = await uploadAvatarAction(formData)
 
-      if (!response.ok) {
-        throw new Error("Erreur lors de l'upload de l'image")
+      if (!result.success || !result.url) {
+        throw new Error(result.error || "Erreur lors de l'upload de l'image")
       }
 
-      const data = await response.json()
-      
       // Update local state with the permanent URL from R2
-      if (data.url) {
-        setAvatarUrl(data.url)
-        // Update avatar URL immediately
-        const { updateAvatarUrl } = await import('@/app/actions/profil')
-        await updateAvatarUrl(data.url)
-      }
+      setAvatarUrl(result.url)
+      
+      // Update avatar URL immediately in the database
+      const { updateAvatarUrl } = await import('@/app/actions/profil')
+      await updateAvatarUrl(result.url)
       
     } catch (err: any) {
       setError(err.message || "Impossible d'uploader l'image.")
