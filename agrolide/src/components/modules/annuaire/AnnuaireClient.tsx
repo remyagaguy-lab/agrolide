@@ -50,7 +50,7 @@ export default function AnnuaireClient() {
     params.set('page', page.toString())
 
     try {
-      const res = await fetch(`/api/annuaire?${params.toString()}`)
+      const res = await fetch(`/api/annuaire?${params.toString()}`, { cache: 'no-store' })
       const data = await res.json()
       if (data.data) {
         setMembers(data.data)

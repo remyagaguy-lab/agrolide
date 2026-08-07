@@ -3,6 +3,8 @@ import { db } from '@/db'
 import { users } from '@/db/schema'
 import { eq, or, and, like, inArray, count as countFn } from 'drizzle-orm'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
