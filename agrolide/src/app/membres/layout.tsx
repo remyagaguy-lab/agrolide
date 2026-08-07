@@ -90,6 +90,8 @@ export default async function MembresRootLayout({
                 photo_url: user.imageUrl || null,
                 role_plateforme: 'membre',
                 statut_adhesion: 'gratuit',
+                annuaire_visible: true,
+                newsletter_brevo: true,
                 created_at: new Date().toISOString(),
                 updated_at: new Date().toISOString(),
               }).onConflictDoNothing();

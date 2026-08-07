@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/db'
 import { users } from '@/db/schema'
-import { eq, or, and, like, inArray, count as countFn } from 'drizzle-orm'
+import { eq, or, and, like, inArray, count as countFn, isNull } from 'drizzle-orm'
 
 export const dynamic = 'force-dynamic'
 
@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
     const limit = 20
     const offset = (page - 1) * limit
 
-    let conditions: any[] = [eq(users.annuaire_visible, true)]
+    let conditions: any[] = [or(eq(users.annuaire_visible, true), isNull(users.annuaire_visible))]
 
     if (search) {
       conditions.push(or(
