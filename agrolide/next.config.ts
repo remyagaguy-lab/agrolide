@@ -59,6 +59,11 @@ const nextConfig: NextConfig = {
     ]
   },
   turbopack: {},
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '5mb',
+    },
+  },
 };
 
 export default withAnalyzer(withPWA(nextConfig));

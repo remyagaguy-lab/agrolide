@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
 import { Camera, Save, Loader2, User } from "lucide-react"
+import { uploadAvatarAction } from "@/app/actions/upload"
+import { updateProfil, updateAvatarUrl } from "@/app/actions/profil"
 
 const profilSchema = z.object({
   prenom: z.string().min(2, "Le prénom est requis"),
@@ -58,7 +60,6 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
       formData.append("photo", file)
 
       // Appel à la Server Action pour l'upload vers R2
-      const { uploadAvatarAction } = await import('@/app/actions/upload')
       const result = await uploadAvatarAction(formData)
 
       if (!result.success || !result.url) {
@@ -69,7 +70,6 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
       setAvatarUrl(result.url)
       
       // Update avatar URL immediately in the database
-      const { updateAvatarUrl } = await import('@/app/actions/profil')
       await updateAvatarUrl(result.url)
       
     } catch (err: any) {
@@ -87,7 +87,6 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
     setSuccess(false)
 
     try {
-      const { updateProfil } = await import('@/app/actions/profil')
       await updateProfil({
         prenom: data.prenom,
         nom: data.nom,
