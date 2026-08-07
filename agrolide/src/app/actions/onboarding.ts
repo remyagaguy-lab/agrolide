@@ -16,9 +16,15 @@ export async function submitOnboarding(formData: FormData) {
     const categorie = formData.get("categorie") as string
     const biographie = formData.get("biographie") as string
     const specialite = formData.get("specialite") as string
+    const pays = formData.get("pays") as string
+    const ville = formData.get("ville") as string
 
     if (!categorie || !['passionne', 'junior', 'professionnel', 'partenaire', 'senior'].includes(categorie)) {
       return { success: false, error: "Catégorie invalide." }
+    }
+    
+    if (!pays || !ville) {
+      return { success: false, error: "Le pays et la ville sont obligatoires." }
     }
 
     await db.update(users)
@@ -26,6 +32,8 @@ export async function submitOnboarding(formData: FormData) {
         categorie: categorie,
         biographie: biographie || null,
         specialite: specialite || null,
+        pays: pays,
+        ville: ville,
         updated_at: new Date().toISOString()
       })
       .where(eq(users.id, userId))

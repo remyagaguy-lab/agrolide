@@ -19,6 +19,8 @@ export default function OnboardingPage() {
     { id: 'senior', label: 'Sénior', icon: Briefcase, desc: 'Vous avez une forte expérience' },
   ]
 
+  const paysOptions = ["Sénégal", "Côte d'Ivoire", "Cameroun", "Bénin", "Togo", "Mali", "Burkina Faso", "Guinée", "Congo", "Gabon", "RDC", "Madagascar", "Maroc", "Tunisie", "Algérie", "France", "Canada"]
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
@@ -98,6 +100,45 @@ export default function OnboardingPage() {
                   placeholder="Ex: Ingénieur Agronome, Consultant, etc."
                   className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
                 />
+              </div>
+            </div>
+
+            {/* Pays et Ville */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="pays" className="block text-sm font-medium text-gray-700">
+                  Pays de résidence *
+                </label>
+                <div className="mt-1">
+                  <select
+                    id="pays"
+                    name="pays"
+                    required
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-white focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                  >
+                    <option value="">Sélectionnez un pays</option>
+                    {paysOptions.map(p => (
+                      <option key={p} value={p}>{p}</option>
+                    ))}
+                    <option value="Autre">Autre</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="ville" className="block text-sm font-medium text-gray-700">
+                  Ville *
+                </label>
+                <div className="mt-1">
+                  <input
+                    id="ville"
+                    name="ville"
+                    type="text"
+                    required
+                    placeholder="Ex: Dakar"
+                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                  />
+                </div>
               </div>
             </div>
 
