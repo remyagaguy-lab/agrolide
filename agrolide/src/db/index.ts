@@ -19,7 +19,6 @@ export const db = drizzle(async (sql, params, method) => {
   
   const response = await fetch(url, {
     method: 'POST',
-    cache: 'no-store',
     headers: {
       Authorization: `Bearer ${token}`,
       'Content-Type': 'application/json',
