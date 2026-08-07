@@ -15,7 +15,14 @@ import { ClearCacheButton } from "./ClearCacheButton"
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const { userId } = await auth()
+  const user = await currentUser()
+  
   if (!userId) redirect("/sign-in")
+
+  const email = user?.emailAddresses?.[0]?.emailAddress;
+
+  // Bypasser la vérification D1 pour l'admin principal si problème de synchro Clerk/D1
+  const isSuperAdminEmail = email === 'remyagaguy@gmail.com' || email === 'koumantega952002@gmail.com';
 
   // Vérifier le rôle admin dans D1
   let profile = null
@@ -29,7 +36,9 @@ export default async function AdminLayout({ children }: { children: React.ReactN
     console.error('Erreur lecture profil admin:', e)
   }
 
-  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme || '')) {
+  const hasAdminRole = profile && ["admin_content", "super_admin"].includes(profile.role_plateforme || '');
+
+  if (!isSuperAdminEmail && !hasAdminRole) {
     redirect("/membres/dashboard")
   }
 
