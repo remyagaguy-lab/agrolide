@@ -15,9 +15,13 @@ export default clerkMiddleware(async (auth, request) => {
 
     // Vérifier le rôle admin pour les routes admin
     if (isAdminRoute(request)) {
-      const { sessionClaims } = await auth()
+      const { sessionClaims, userId } = await auth()
       const role = (sessionClaims?.metadata as any)?.role
-      if (role !== 'super_admin' && role !== 'admin_content') {
+      
+      // Bypass pour les administrateurs principaux par leur ID Clerk
+      const isSuperAdminId = userId === 'user_3HEMG7ZcpynYXbhaG8MGHxHmAuC' || userId === 'user_3HJO6en8yGy4GBgIt5GzwJEZ4AO';
+      
+      if (!isSuperAdminId && role !== 'super_admin' && role !== 'admin_content') {
         const url = request.nextUrl.clone()
         url.pathname = '/membres/dashboard'
         return NextResponse.redirect(url)
