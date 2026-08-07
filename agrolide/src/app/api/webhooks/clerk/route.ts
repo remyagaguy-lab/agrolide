@@ -101,5 +101,18 @@ export async function POST(req: Request) {
     }
   }
 
+  if (eventType === 'user.deleted') {
+    const { id } = evt.data
+
+    try {
+      if (id) {
+        await db.delete(users).where(eq(users.id, id))
+        console.log(`✅ Utilisateur supprimé de D1: ${id}`)
+      }
+    } catch (err) {
+      console.error('Erreur suppression D1:', err)
+    }
+  }
+
   return new Response('OK', { status: 200 })
 }
