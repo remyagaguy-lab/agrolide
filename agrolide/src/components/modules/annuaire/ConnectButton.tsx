@@ -5,6 +5,7 @@ import { UserPlus, MessageCircle, Clock } from 'lucide-react'
 import { sendConnectionRequest } from '@/app/actions/connections'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import { useAuth } from '@clerk/nextjs'
 
 interface ConnectButtonProps {
   memberId: string;
@@ -14,8 +15,13 @@ interface ConnectButtonProps {
 export default function ConnectButton({ memberId, status }: ConnectButtonProps) {
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
+  const { userId } = useAuth()
 
   const handleConnect = async () => {
+    if (!userId) {
+      router.push('/login')
+      return
+    }
     if (status) return;
     
     startTransition(async () => {

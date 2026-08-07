@@ -29,8 +29,8 @@ export async function sendConnectionRequest(receiverId: string) {
     status: 'pending',
   });
 
-  revalidatePath('/annuaire');
-  revalidatePath('/membres/reseau');
+  revalidatePath('/annuaire', 'layout');
+  revalidatePath('/membres/reseau', 'layout');
   return { success: true };
 }
 
