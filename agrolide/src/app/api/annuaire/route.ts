@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/db'
 import { users } from '@/db/schema'
 import { eq, or, and, like, inArray, count as countFn, isNull } from 'drizzle-orm'
+import { auth } from '@clerk/nextjs/server'
 
 export const dynamic = 'force-dynamic'
 
@@ -59,9 +60,36 @@ export async function GET(request: NextRequest) {
     const [{ count }] = await db.select({ count: countFn() })
       .from(users)
       .where(whereClause)
+      
+    // Fetch connection status if user is logged in
+    const { userId } = await auth();
+    let membersWithConnection = data;
+    
+    if (userId && data.length > 0) {
+      const targetIds = data.map(u => u.id);
+      const connections = await db.query.user_connections.findMany({
+        where: (connections, { or, and, eq, inArray }) => 
+          or(
+            and(eq(connections.requester_id, userId), inArray(connections.receiver_id, targetIds)),
+            and(eq(connections.receiver_id, userId), inArray(connections.requester_id, targetIds))
+          )
+      });
+      
+      membersWithConnection = data.map(member => {
+        const conn = connections.find(c => c.requester_id === member.id || c.receiver_id === member.id);
+        let connectionStatus = null;
+        if (conn) {
+          if (conn.status === 'accepted') connectionStatus = 'accepted';
+          else if (conn.status === 'pending') {
+            connectionStatus = conn.requester_id === userId ? 'pending_sent' : 'pending_received';
+          }
+        }
+        return { ...member, connectionStatus };
+      });
+    }
 
     return NextResponse.json({ 
-      data: data || [], 
+      data: membersWithConnection || [], 
       count: count || 0,
       page,
       totalPages: count ? Math.ceil(count / limit) : 0

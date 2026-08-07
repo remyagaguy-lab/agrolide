@@ -423,6 +423,15 @@ export const verificationTokens = sqliteTable(
   })
 );
 
+export const user_connections = sqliteTable("user_connections", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  requester_id: text("requester_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  receiver_id: text("receiver_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  status: text("status").notNull(), // 'pending', 'accepted', 'rejected'
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
+  updated_at: text("updated_at").$defaultFn(() => new Date().toISOString()),
+});
+
 // --- RELATIONS ---
 import { relations } from "drizzle-orm";
 
@@ -433,6 +442,21 @@ export const usersRelations = relations(users, ({ many }) => ({
   documents: many(documents),
   forum_fils: many(forum_fils),
   forum_messages: many(forum_messages),
+  sent_connections: many(user_connections, { relationName: "requester" }),
+  received_connections: many(user_connections, { relationName: "receiver" }),
+}));
+
+export const userConnectionsRelations = relations(user_connections, ({ one }) => ({
+  requester: one(users, {
+    fields: [user_connections.requester_id],
+    references: [users.id],
+    relationName: "requester",
+  }),
+  receiver: one(users, {
+    fields: [user_connections.receiver_id],
+    references: [users.id],
+    relationName: "receiver",
+  }),
 }));
 
 export const articlesRelations = relations(articles, ({ one }) => ({

@@ -7,6 +7,9 @@ import { Metadata } from 'next'
 import { db } from '@/db'
 import { users, documents } from '@/db/schema'
 import { eq, and, desc } from 'drizzle-orm'
+import ConnectButton from '@/components/modules/annuaire/ConnectButton'
+import { auth } from '@clerk/nextjs/server'
+import { user_connections } from '@/db/schema'
 
 function parseSafeArray(val: string | null | any): string[] {
   if (!val) return [];
@@ -51,6 +54,25 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
   const member = await db.select().from(users).where(eq(users.id, id)).limit(1).then(r => r[0])
 
   if (!member) notFound()
+
+  // Fetch connection status if logged in
+  const { userId } = await auth();
+  let connectionStatus: 'accepted' | 'pending_sent' | 'pending_received' | null = null;
+  if (userId && userId !== id) {
+    const conn = await db.query.user_connections.findFirst({
+      where: (connections, { or, and, eq }) => 
+        or(
+          and(eq(connections.requester_id, userId), eq(connections.receiver_id, id)),
+          and(eq(connections.receiver_id, userId), eq(connections.requester_id, id))
+        )
+    });
+    if (conn) {
+      if (conn.status === 'accepted') connectionStatus = 'accepted';
+      else if (conn.status === 'pending') {
+        connectionStatus = conn.requester_id === userId ? 'pending_sent' : 'pending_received';
+      }
+    }
+  }
 
   // Fetch de ses contributions à la bibliothèque
   const docs = await db.select({
@@ -132,13 +154,15 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
 
             {/* Actions */}
             <div className="mt-4 md:mt-8 flex gap-3 w-full md:w-auto">
-              {member.ouvert_contact ? (
+              {userId === id ? (
                 <Link 
-                  href={`/membres/messages?nouveau=${member.id}`}
-                  className="flex-1 md:flex-none bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
+                  href="/parametres/profil"
+                  className="flex-1 md:flex-none bg-white text-gray-700 px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm border border-gray-200 hover:bg-gray-50"
                 >
-                  <MessageCircle className="w-5 h-5" /> Contacter
+                  Modifier mon profil
                 </Link>
+              ) : member.ouvert_contact ? (
+                <ConnectButton memberId={member.id} status={connectionStatus} />
               ) : (
                 <div className="px-5 py-2.5 rounded-xl bg-gray-50 text-gray-500 font-medium text-sm border border-gray-100">
                   N'accepte pas les messages

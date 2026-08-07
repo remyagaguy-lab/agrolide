@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
 import { db } from '@/db'
-import { messages, users, notifications } from '@/db/schema'
-import { eq } from 'drizzle-orm'
+import { messages, users, notifications, user_connections } from '@/db/schema'
+import { eq, or, and } from 'drizzle-orm'
 
 export async function POST(request: NextRequest) {
   try {
@@ -20,17 +20,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
     }
 
-    // Vérifier le rôle de l'expéditeur (RG-033)
-    const expediteur = await db.query.users.findFirst({
-      columns: { prenom: true, nom: true, categorie: true, id: true },
-      where: eq(users.id, userId)
+    // Vérifier si une connexion "accepted" existe entre les deux membres
+    const connection = await db.query.user_connections.findFirst({
+      where: (connections, { or, and, eq }) => 
+        or(
+          and(eq(connections.requester_id, userId), eq(connections.receiver_id, destinataire_id)),
+          and(eq(connections.receiver_id, userId), eq(connections.requester_id, destinataire_id))
+        )
     })
-    
-    const allowedCategories = ['professionnel', 'partenaire', 'senior']
-    if (!expediteur || !expediteur.categorie || !allowedCategories.includes(expediteur.categorie.toLowerCase())) {
-      return NextResponse.json({ error: "Seuls les membres Professionnels, Partenaires et Séniors peuvent initier des messages." }, { status: 403 })
+
+    if (!connection || connection.status !== 'accepted') {
+      return NextResponse.json({ error: "Vous devez être connecté(e) avec ce membre pour lui envoyer un message." }, { status: 403 })
     }
 
+    // On retire l'ancienne restriction basée sur la catégorie, car les connexions gèrent la confiance.
+    // Le contrôle "ouvert_contact" reste pertinent globalement ou pourrait être fusionné avec la logique des connexions.
     // Vérifier si le destinataire accepte les messages
     const destinataire = await db.query.users.findFirst({
       columns: { ouvert_contact: true },
@@ -48,10 +52,16 @@ export async function POST(request: NextRequest) {
       contenu
     }).returning()
 
+    // Récupérer le nom de l'expéditeur pour la notification
+    const expediteur = await db.query.users.findFirst({
+      columns: { prenom: true, nom: true },
+      where: eq(users.id, userId)
+    })
+
     // Créer une notification
     const [notif] = await db.insert(notifications).values({
       user_id: destinataire_id,
-      contenu: `Nouveau message de ${expediteur.prenom} ${expediteur.nom}: ` + contenu.substring(0, 100) + (contenu.length > 100 ? '...' : ''),
+      contenu: `Nouveau message de ${expediteur?.prenom} ${expediteur?.nom}: ` + contenu.substring(0, 100) + (contenu.length > 100 ? '...' : ''),
       type: 'message',
       lien: `/membres/messages/${userId}`
     }).returning()
