@@ -10,6 +10,7 @@ import {
 import { AdminRevenueChart, AdminDonutChart } from "@/components/admin/ChartsWrapper"
 
 export const metadata = { title: "Tableau de bord" }
+export const dynamic = 'force-dynamic'
 
 function KpiCard({ 
   label, value, sub, icon: Icon, color, valueClass = ""
