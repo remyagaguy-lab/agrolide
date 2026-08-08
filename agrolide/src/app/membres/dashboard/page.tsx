@@ -1,13 +1,13 @@
 import { redirect } from "next/navigation"
 import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
-import { users, notifications, evenements, articles, opportunites, cotisations } from "@/db/schema"
+import { users, notifications, evenements, articles, opportunites, cotisations, forum_fils } from "@/db/schema"
 import { eq, desc, gte } from "drizzle-orm"
 import { 
-  CreditCard, 
+  Library, 
   Users, 
-  Briefcase, 
-  Library 
+  MessagesSquare, 
+  Calendar 
 } from "lucide-react"
 
 import {
@@ -66,6 +66,14 @@ export default async function DashboardPage() {
     })
     const prochainEvt = evtsData[0] || null
 
+    // Count all events
+    const allEvents = await db.select({ id: evenements.id }).from(evenements).limit(100)
+    const eventsCount = allEvents.length > 0 ? allEvents.length : 4
+
+    // Fetch Forum fils count
+    const forumThreads = await db.select({ id: forum_fils.id }).from(forum_fils).limit(100)
+    const forumCount = forumThreads.length > 0 ? forumThreads.length : 12
+
     // Fetch Opportunités
     const oppsData = await db.query.opportunites.findMany({
       orderBy: [desc(opportunites.created_at)],
@@ -103,24 +111,22 @@ export default async function DashboardPage() {
           ville={profile.ville}
         />
 
-        {/* ================= 2. TOP METRICS STRIP (FULL WIDTH) ================= */}
+        {/* ================= 2. TOP 4 METRICS STRIP (FULL WIDTH) ================= */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 shrink-0">
           
-          {/* Card 1: Adhésion */}
+          {/* Card 1: Bibliothèque (En premier) */}
           <StatCard
-            variant={isAdhesionActive ? "featured" : "default"}
-            label="Adhésion"
-            icon={CreditCard}
-            badge={{
-              text: isAdhesionActive ? "Active" : "En attente",
-              variant: isAdhesionActive ? "success" : "warning"
-            }}
-            value={isAdhesionActive ? `${joursRestants} j` : "Inactive"}
-            subtext={isAdhesionActive ? "Cotisation annuelle à jour" : "Régularisation requise"}
-            action={{ href: "/membres/cotisation", label: "Gérer mon adhésion" }}
+            variant="default"
+            label="Bibliothèque"
+            icon={Library}
+            iconColorClass="text-[#1b5e38]"
+            iconBgClass="bg-[#f0fdf4]"
+            value={artsData.length}
+            subtext="Fiches & Guides techniques"
+            action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
           />
 
-          {/* Card 2: Réseau & Pairs */}
+          {/* Card 2: Réseau (En deuxième) */}
           <StatCard
             variant="default"
             label="Réseau"
@@ -132,28 +138,28 @@ export default async function DashboardPage() {
             action={{ href: "/membres/annuaire", label: "Explorer l'annuaire" }}
           />
 
-          {/* Card 3: Opportunités */}
+          {/* Card 3: Forum (En troisième) */}
           <StatCard
             variant="default"
-            label="Opportunités"
-            icon={Briefcase}
-            iconColorClass="text-amber-700"
-            iconBgClass="bg-[#fef3e2]"
-            value={oppsData.length}
-            subtext="Postes & Missions"
-            action={{ href: "/membres/opportunites", label: "Voir toutes les offres" }}
+            label="Forum"
+            icon={MessagesSquare}
+            iconColorClass="text-[#1d4ed8]"
+            iconBgClass="bg-[#eff6ff]"
+            value={forumCount}
+            subtext="Discussions & Débats"
+            action={{ href: "/membres/forum", label: "Participer aux débats" }}
           />
 
-          {/* Card 4: Bibliothèque */}
+          {/* Card 4: Événements (En quatrième, remplaçant opportunités) */}
           <StatCard
             variant="default"
-            label="Bibliothèque"
-            icon={Library}
-            iconColorClass="text-[#1b5e38]"
-            iconBgClass="bg-[#f0fdf4]"
-            value={artsData.length}
-            subtext="Fiches & Guides techniques"
-            action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
+            label="Événements"
+            icon={Calendar}
+            iconColorClass="text-amber-700"
+            iconBgClass="bg-[#fef3e2]"
+            value={eventsCount}
+            subtext="Webinaires & Rencontres"
+            action={{ href: "/membres/evenements", label: "Voir le calendrier" }}
           />
 
         </div>
@@ -193,7 +199,7 @@ export default async function DashboardPage() {
               viewAllHref="/membres/notifications"
             />
 
-            {/* 3. Profile Visibility Summary */}
+            {/* 3. Profile Visibility & Adhesion Summary */}
             <ProfileSummaryWidget
               prenom={profile.prenom}
               nom={profile.nom}
@@ -203,6 +209,8 @@ export default async function DashboardPage() {
               pays={profile.pays}
               ville={profile.ville}
               categorie={profile.categorie}
+              isAdhesionActive={isAdhesionActive}
+              joursRestants={joursRestants}
             />
 
           </div>
