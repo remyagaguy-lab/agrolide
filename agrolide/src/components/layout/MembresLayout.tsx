@@ -17,9 +17,7 @@ import {
   Mail, 
   CreditCard,
   LogOut,
-  Bell,
-  Search,
-  Settings
+  Bell
 } from "lucide-react"
 
 interface MembresLayoutProps {
@@ -177,62 +175,38 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
       {/* ================= MAIN CONTENT AREA ================= */}
       <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
         
-        {/* HEADER */}
-        <header className="h-20 bg-white/80 backdrop-blur-md border-b border-[#e8e8e4] z-20 flex items-center justify-between px-4 md:px-6 shrink-0">
-          
-          {/* Mobile Logo */}
-          <Link href="/membres/dashboard" className="lg:hidden flex items-center flex-shrink-0">
+        {/* Mobile Header Only (Hidden on Desktop) */}
+        <header className="lg:hidden h-14 bg-white border-b border-[#e8e8e4] z-20 flex items-center justify-between px-4 shrink-0">
+          <Link href="/membres/dashboard" className="flex items-center flex-shrink-0">
             <Image
               src="/agrolide-png.png"
               alt="agrolide"
-              width={240}
-              height={80}
-              className="h-10 w-auto object-contain scale-[2.0] origin-left"
+              width={160}
+              height={50}
+              className="h-8 w-auto object-contain scale-[1.8] origin-left"
               priority
             />
           </Link>
 
-          {/* Search (Desktop) */}
-          <div className="hidden lg:flex items-center bg-gray-50 border border-[#e8e8e4] rounded-xl px-3 py-2 w-96 transition-colors focus-within:bg-white focus-within:border-[#1b5e38] focus-within:ring-1 focus-within:ring-[#1b5e38]/20">
-            <Search size={16} className="text-gray-400 min-w-4" />
-            <input 
-              type="text" 
-              placeholder="Rechercher..." 
-              className="bg-transparent border-none outline-none text-sm text-gray-700 ml-2 w-full placeholder-gray-400"
-            />
-          </div>
-
-          {/* Right Actions */}
-          <div className="flex items-center gap-2 lg:gap-4">
-             <button className="hidden md:flex w-10 h-10 rounded-xl items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4]">
-               <Settings size={20} strokeWidth={2} />
-             </button>
-             <Link href="/membres/reseau" className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4] relative">
-               <Bell size={20} strokeWidth={2} />
-               {pendingRequestsCount > 0 && (
-                 <span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-red-500 border-2 border-white"></span>
-               )}
-             </Link>
-             
-             {/* Profile Avatar Trigger */}
-             <Link href="/membres/profil" className="flex items-center gap-3 pl-2 lg:pl-4 lg:border-l border-[#e8e8e4]">
-                <div className="hidden lg:flex flex-col items-end">
-                  <span className="text-sm font-bold text-[#1a1a1a] leading-tight">{profile?.prenom} {profile?.nom}</span>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{profile?.categorie}</span>
-                </div>
-                <div className="w-10 h-10 rounded-xl bg-gray-100 overflow-hidden relative border border-[#e8e8e4] hover:border-[#1b5e38] transition-colors shrink-0">
-                  {profile?.avatar_url ? (
-                    <Image src={profile.avatar_url} alt="Avatar" fill sizes="40px" className="object-cover" />
-                  ) : (
-                    <User size={20} className="m-auto h-full text-gray-400" />
-                  )}
-                </div>
-             </Link>
+          <div className="flex items-center gap-2">
+            <Link href="/membres/reseau" className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors relative">
+              <Bell size={18} strokeWidth={2} />
+              {pendingRequestsCount > 0 && (
+                <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500 border-2 border-white"></span>
+              )}
+            </Link>
+            <Link href="/membres/profil" className="w-8 h-8 rounded-lg bg-gray-100 overflow-hidden relative border border-[#e8e8e4] shrink-0">
+              {profile?.avatar_url ? (
+                <Image src={profile.avatar_url} alt="Avatar" fill sizes="32px" className="object-cover" />
+              ) : (
+                <User size={16} className="m-auto h-full text-gray-400" />
+              )}
+            </Link>
           </div>
         </header>
 
         {/* SCROLLABLE PAGE CONTENT */}
-        <main className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-2 md:p-4 lg:p-6 pb-24 md:pb-6 relative">
+        <main className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-3 md:p-5 lg:p-6 pb-24 md:pb-6 relative">
           <div className="max-w-[1400px] mx-auto h-full">
             {children}
           </div>
