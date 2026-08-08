@@ -106,107 +106,63 @@ export default async function DashboardPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 shrink-0">
               
               {/* Card 1: Adhésion (Featured / High Contrast) */}
-              <StatCard.Root variant="featured">
-                <StatCard.Header>
-                  <StatCard.Label icon={CreditCard}>Adhésion</StatCard.Label>
-                  <StatCard.Badge variant={isAdhesionActive ? "success" : "error"}>
-                    {isAdhesionActive ? "Actif" : "Inactif"}
-                  </StatCard.Badge>
-                </StatCard.Header>
-                <StatCard.Content>
-                  <div className="flex items-baseline gap-1.5">
-                    <StatCard.Value>{joursRestants}</StatCard.Value>
-                    <StatCard.Subtext>Jours restants</StatCard.Subtext>
-                  </div>
-                  <StatCard.Action href="/membres/cotisation" label="Gérer mon adhésion" />
-                </StatCard.Content>
-              </StatCard.Root>
+              <StatCard
+                variant="featured"
+                label="Adhésion"
+                icon={CreditCard}
+                badge={{
+                  text: isAdhesionActive ? "Actif" : "Inactif",
+                  variant: isAdhesionActive ? "success" : "error"
+                }}
+                value={joursRestants}
+                subtext="Jours restants"
+                action={{ href: "/membres/cotisation", label: "Gérer mon adhésion" }}
+              />
 
               {/* Card 2: Formations */}
-              <StatCard.Root variant="default">
-                <StatCard.Header>
-                  <StatCard.Label>Formations</StatCard.Label>
-                  <StatCard.Icon 
-                    icon={BookOpen} 
-                    colorClass="text-blue-600" 
-                    bgClass="bg-blue-50" 
-                  />
-                </StatCard.Header>
-                <StatCard.Content>
-                  <div>
-                    <StatCard.Value>5</StatCard.Value>
-                    <div className="text-[11px] text-gray-500 mt-1 font-medium">En cours ou terminées</div>
-                  </div>
-                  <StatCard.Action href="/membres/formations" label="Voir les formations" />
-                </StatCard.Content>
-              </StatCard.Root>
+              <StatCard
+                variant="default"
+                label="Formations"
+                icon={BookOpen}
+                iconColorClass="text-blue-600"
+                iconBgClass="bg-blue-50"
+                value="5"
+                subtext="En cours ou terminées"
+                action={{ href: "/membres/formations", label: "Voir les formations" }}
+              />
 
               {/* Card 3: Opportunités */}
-              <StatCard.Root variant="default">
-                <StatCard.Header>
-                  <StatCard.Label>Opportunités</StatCard.Label>
-                  <StatCard.Icon 
-                    icon={Briefcase} 
-                    colorClass="text-amber-600" 
-                    bgClass="bg-amber-50" 
-                  />
-                </StatCard.Header>
-                <StatCard.Content>
-                  <div>
-                    <StatCard.Value>{oppsData.length}</StatCard.Value>
-                    <div className="text-[11px] text-gray-500 mt-1 font-medium">Postes & Missions</div>
-                  </div>
-                  <StatCard.Action href="/membres/opportunites" label="Voir les opportunités" />
-                </StatCard.Content>
-              </StatCard.Root>
+              <StatCard
+                variant="default"
+                label="Opportunités"
+                icon={Briefcase}
+                iconColorClass="text-amber-600"
+                iconBgClass="bg-amber-50"
+                value={oppsData.length}
+                subtext="Postes & Missions"
+                action={{ href: "/membres/opportunites", label: "Voir les opportunités" }}
+              />
 
               {/* Card 4: Ressources */}
-              <StatCard.Root variant="default">
-                <StatCard.Header>
-                  <StatCard.Label>Ressources</StatCard.Label>
-                  <StatCard.Icon 
-                    icon={Library} 
-                    colorClass="text-[#1b5e38]" 
-                    bgClass="bg-[#f0fdf4]" 
-                  />
-                </StatCard.Header>
-                <StatCard.Content>
-                  <div>
-                    <StatCard.Value>{artsData.length}</StatCard.Value>
-                    <div className="text-[11px] text-gray-500 mt-1 font-medium">Articles & Guides</div>
-                  </div>
-                  <StatCard.Action href="/membres/bibliotheque" label="Explorer la bibliothèque" />
-                </StatCard.Content>
-              </StatCard.Root>
+              <StatCard
+                variant="default"
+                label="Ressources"
+                icon={Library}
+                iconColorClass="text-[#1b5e38]"
+                iconBgClass="bg-[#f0fdf4]"
+                value={artsData.length}
+                subtext="Articles & Guides"
+                action={{ href: "/membres/bibliotheque", label: "Explorer la bibliothèque" }}
+              />
 
             </div>
 
             {/* OPPORTUNITIES WIDGET */}
-            <OpportunitiesWidget.Root>
-              <OpportunitiesWidget.Header 
-                title="Dernières Opportunités"
-                viewAllHref="/membres/opportunites"
-                count={oppsData.length}
-              />
-              {oppsData.length > 0 ? (
-                <OpportunitiesWidget.Table>
-                  {oppsData.map((opp) => (
-                    <OpportunitiesWidget.Row
-                      key={opp.id}
-                      id={opp.id}
-                      titre={opp.titre}
-                      organisation={opp.organisation}
-                      pays={opp.pays}
-                      type_opp={opp.type_opp}
-                      createdAt={opp.created_at}
-                      href="/membres/opportunites"
-                    />
-                  ))}
-                </OpportunitiesWidget.Table>
-              ) : (
-                <OpportunitiesWidget.EmptyState message="Aucune opportunité pour l'instant." />
-              )}
-            </OpportunitiesWidget.Root>
+            <OpportunitiesWidget 
+              opportunities={oppsData}
+              title="Dernières Opportunités"
+              viewAllHref="/membres/opportunites"
+            />
 
           </div>
 
