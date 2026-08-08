@@ -202,6 +202,8 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
             />
           </div>
 
+          {/* Right Actions */}
+          <div className="flex items-center gap-2 lg:gap-4">
              <button className="hidden md:flex w-10 h-10 rounded-xl items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4]">
                <Settings size={20} strokeWidth={2} />
              </button>
