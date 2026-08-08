@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+agrolide/node_modules/
+
+# next.js build
+.next/
+agrolide/.next/
+out/
+build/
+
+# scratch scripts & local tests
+scratch/
+agrolide/scratch/
+*.local
+.env*
+agrolide/.env*
+
+# system & logs
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.wrangler
+.open-next
+.vercel
+agrolide/.vercel

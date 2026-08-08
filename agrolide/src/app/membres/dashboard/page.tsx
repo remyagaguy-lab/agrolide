@@ -5,10 +5,9 @@ import { users, notifications, evenements, articles, opportunites, cotisations }
 import { eq, desc, gte } from "drizzle-orm"
 import { 
   CreditCard, 
-  BookOpen, 
+  Users, 
   Briefcase, 
-  Library, 
-  Sparkles
+  Library 
 } from "lucide-react"
 
 import {
@@ -18,6 +17,7 @@ import {
   EventWidget,
   ActivityTimeline,
   ResourcesWidget,
+  ProfileSummaryWidget
 } from "@/components/modules/dashboard"
 
 export const metadata = { title: "Tableau de bord | Agrolide" }
@@ -46,7 +46,7 @@ export default async function DashboardPage() {
     const profile = userRows[0] || null
     if (!profile) redirect("/login")
 
-    // Fetch Cotisation
+    // Fetch Cotisation status
     const userCotisation = await db.query.cotisations.findFirst({
       where: eq(cotisations.membre_id, userId),
       orderBy: [desc(cotisations.created_at)]
@@ -69,7 +69,7 @@ export default async function DashboardPage() {
     // Fetch Opportunités
     const oppsData = await db.query.opportunites.findMany({
       orderBy: [desc(opportunites.created_at)],
-      limit: 4
+      limit: 5
     })
 
     // Fetch Articles / Ressources
@@ -86,6 +86,10 @@ export default async function DashboardPage() {
       limit: 5
     })
 
+    // Count members in directory
+    const directoryMembers = await db.select({ id: users.id }).from(users).limit(500)
+    const membersCount = directoryMembers.length > 0 ? directoryMembers.length : 150
+
     return (
       <div className="h-full flex flex-col space-y-4">
         {/* ================= 1. HEADER ================= */}
@@ -94,6 +98,9 @@ export default async function DashboardPage() {
           nom={profile.nom} 
           categorie={profile.categorie}
           specialite={profile.specialite}
+          organisation={profile.organisation}
+          pays={profile.pays}
+          ville={profile.ville}
         />
 
         {/* ================= 2. BENTO GRID ================= */}
@@ -105,30 +112,30 @@ export default async function DashboardPage() {
             {/* TOP METRICS ROW (4 Cards) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 shrink-0">
               
-              {/* Card 1: Adhésion (Featured / High Contrast) */}
+              {/* Card 1: Adhésion (Featured if active, warning badge if inactive) */}
               <StatCard
-                variant="featured"
+                variant={isAdhesionActive ? "featured" : "default"}
                 label="Adhésion"
                 icon={CreditCard}
                 badge={{
-                  text: isAdhesionActive ? "Actif" : "Inactif",
-                  variant: isAdhesionActive ? "success" : "error"
+                  text: isAdhesionActive ? "Active" : "À renouveler",
+                  variant: isAdhesionActive ? "success" : "warning"
                 }}
-                value={joursRestants}
-                subtext="Jours restants"
+                value={isAdhesionActive ? `${joursRestants} j` : "Inactive"}
+                subtext={isAdhesionActive ? "Cotisation annuelle à jour" : "Régularisation requise"}
                 action={{ href: "/membres/cotisation", label: "Gérer mon adhésion" }}
               />
 
-              {/* Card 2: Formations */}
+              {/* Card 2: Réseau & Pairs */}
               <StatCard
                 variant="default"
-                label="Formations"
-                icon={BookOpen}
-                iconColorClass="text-blue-600"
-                iconBgClass="bg-blue-50"
-                value="5"
-                subtext="En cours ou terminées"
-                action={{ href: "/membres/formations", label: "Voir les formations" }}
+                label="Réseau"
+                icon={Users}
+                iconColorClass="text-[#1b5e38]"
+                iconBgClass="bg-[#f0f7f0]"
+                value={`${membersCount}+`}
+                subtext="Membres & Experts"
+                action={{ href: "/membres/annuaire", label: "Explorer l'annuaire" }}
               />
 
               {/* Card 3: Opportunités */}
@@ -136,23 +143,23 @@ export default async function DashboardPage() {
                 variant="default"
                 label="Opportunités"
                 icon={Briefcase}
-                iconColorClass="text-amber-600"
-                iconBgClass="bg-amber-50"
+                iconColorClass="text-amber-700"
+                iconBgClass="bg-[#fef3e2]"
                 value={oppsData.length}
                 subtext="Postes & Missions"
-                action={{ href: "/membres/opportunites", label: "Voir les opportunités" }}
+                action={{ href: "/membres/opportunites", label: "Voir toutes les offres" }}
               />
 
-              {/* Card 4: Ressources */}
+              {/* Card 4: Bibliothèque */}
               <StatCard
                 variant="default"
-                label="Ressources"
+                label="Bibliothèque"
                 icon={Library}
                 iconColorClass="text-[#1b5e38]"
                 iconBgClass="bg-[#f0fdf4]"
                 value={artsData.length}
-                subtext="Articles & Guides"
-                action={{ href: "/membres/bibliotheque", label: "Explorer la bibliothèque" }}
+                subtext="Fiches & Guides techniques"
+                action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
               />
 
             </div>
@@ -160,8 +167,15 @@ export default async function DashboardPage() {
             {/* OPPORTUNITIES WIDGET */}
             <OpportunitiesWidget 
               opportunities={oppsData}
-              title="Dernières Opportunités"
+              title="Dernières Opportunités & Missions"
               viewAllHref="/membres/opportunites"
+            />
+
+            {/* RESOURCES WIDGET */}
+            <ResourcesWidget 
+              resources={artsData}
+              title="Fiches Techniques & Bibliothèque"
+              viewAllHref="/membres/bibliotheque"
             />
 
           </div>
@@ -173,10 +187,23 @@ export default async function DashboardPage() {
             <EventWidget event={prochainEvt} />
 
             {/* 2. Notifications Timeline Widget */}
-            <ActivityTimeline notifications={notifsData} />
+            <ActivityTimeline 
+              notifications={notifsData}
+              title="Activités & Notifications"
+              viewAllHref="/membres/notifications"
+            />
 
-            {/* 3. Dernières Ressources Widget */}
-            <ResourcesWidget resources={artsData} />
+            {/* 3. Profile Visibility Summary */}
+            <ProfileSummaryWidget
+              prenom={profile.prenom}
+              nom={profile.nom}
+              photo_url={profile.photo_url}
+              specialite={profile.specialite}
+              organisation={profile.organisation}
+              pays={profile.pays}
+              ville={profile.ville}
+              categorie={profile.categorie}
+            />
 
           </div>
 
