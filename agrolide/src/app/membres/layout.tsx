@@ -3,10 +3,11 @@ import Link from "next/link"
 import { auth, currentUser } from "@clerk/nextjs/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
-import { eq } from "drizzle-orm"
+import { eq, and } from "drizzle-orm"
 import { LogoutButton } from "@/components/ui/LogoutButton"
 import { MembresLayout } from "@/components/layout/MembresLayout"
 import { AlertCircle } from "lucide-react"
+import { user_connections } from "@/db/schema"
 
 export default async function MembresRootLayout({
   children,
@@ -143,6 +144,20 @@ export default async function MembresRootLayout({
     // 4. Gestion des statuts d'adhésion (RG-007, RG-008)
     const statut = profile?.statut_adhesion || "gratuit"
 
+    // 5. Récupération des demandes de connexion en attente
+    let pendingRequestsCount = 0;
+    try {
+      const pendingRows = await db.select({ id: user_connections.id })
+        .from(user_connections)
+        .where(and(
+          eq(user_connections.receiver_id, userId),
+          eq(user_connections.status, 'pending')
+        ));
+      pendingRequestsCount = pendingRows.length;
+    } catch (e) {
+      console.error("[MOUCHARD] Erreur recup pending requests:", e);
+    }
+
     return (
       <div className="min-h-screen bg-gray-50 flex flex-col">
         {/* Header moved to MembresLayout for client-side routing state */}
@@ -183,7 +198,7 @@ export default async function MembresRootLayout({
 
         {/* Si le compte est suspendu, on n'affiche pas le layout complet */}
         {statut !== "suspendu" && (
-          <MembresLayout profile={profile}>
+          <MembresLayout profile={profile} pendingRequestsCount={pendingRequestsCount}>
             <div className="container mx-auto px-4 py-8">
               {children}
             </div>

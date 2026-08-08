@@ -25,9 +25,10 @@ import {
 interface MembresLayoutProps {
   children: React.ReactNode
   profile: any
+  pendingRequestsCount?: number
 }
 
-export function MembresLayout({ children, profile }: MembresLayoutProps) {
+export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: MembresLayoutProps) {
   const pathname = usePathname()
   const { signOut } = useClerk()
 
@@ -46,17 +47,17 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
   ]
 
   const navPersonal = [
+    { name: "Mon Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Messages", href: "/membres/messages", icon: Mail },
     // { name: "Cotisation", href: "/membres/cotisation", icon: CreditCard },
     { name: "Mon Profil", href: "/membres/profil", icon: User },
   ]
 
-  // --- Mobile Navigation ---
   const mobileNavItems = [
     { name: "Accueil", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
+    { name: "Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Biblio", href: "/membres/bibliotheque", icon: Library },
-    // { name: "Forum", href: "/membres/forum", icon: MessageSquare },
     { name: "Profil", href: "/membres/profil", icon: User },
   ]
 
@@ -148,6 +149,11 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
                   >
                     <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : "text-gray-400"} />
                     <span className="text-sm">{item.name}</span>
+                    {item.badge ? (
+                      <span className="ml-auto bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                        {item.badge}
+                      </span>
+                    ) : null}
                   </Link>
                 )
               })}
@@ -196,15 +202,15 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
             />
           </div>
 
-          {/* Right Actions */}
-          <div className="flex items-center gap-2 md:gap-3 lg:gap-4 ml-auto">
              <button className="hidden md:flex w-10 h-10 rounded-xl items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4]">
                <Settings size={20} strokeWidth={2} />
              </button>
-             <button className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4] relative">
+             <Link href="/membres/reseau" className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors border border-transparent hover:border-[#e8e8e4] relative">
                <Bell size={20} strokeWidth={2} />
-               <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#f99e1d] border-2 border-white"></span>
-             </button>
+               {pendingRequestsCount > 0 && (
+                 <span className="absolute top-2 right-2 w-2.5 h-2.5 rounded-full bg-red-500 border-2 border-white"></span>
+               )}
+             </Link>
              
              {/* Profile Avatar Trigger */}
              <Link href="/membres/profil" className="flex items-center gap-3 pl-2 lg:pl-4 lg:border-l border-[#e8e8e4]">
@@ -240,13 +246,18 @@ export function MembresLayout({ children, profile }: MembresLayoutProps) {
               <Link 
                 key={item.name} 
                 href={item.href}
-                className={`flex flex-col items-center justify-center w-16 h-16 rounded-[16px] space-y-1.5 transition-all ${
+                className={`relative flex flex-col items-center justify-center w-16 h-16 rounded-[16px] space-y-1.5 transition-all ${
                   isActive 
                     ? "bg-[#dff0e0] text-[#1b5e38] font-bold shadow-sm" 
                     : "text-gray-400 hover:text-gray-900 font-medium"
                 }`}
               >
-                <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : ""} />
+                <div className="relative">
+                  <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : ""} />
+                  {item.badge ? (
+                    <span className="absolute -top-1 -right-2 w-2.5 h-2.5 rounded-full bg-red-500 border-2 border-white"></span>
+                  ) : null}
+                </div>
                 <span className="text-[10px]">{item.name}</span>
               </Link>
             )

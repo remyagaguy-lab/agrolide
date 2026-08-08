@@ -432,6 +432,7 @@ export const user_connections = sqliteTable("user_connections", {
   updated_at: text("updated_at").$defaultFn(() => new Date().toISOString()),
 });
 
+
 // --- RELATIONS ---
 import { relations } from "drizzle-orm";
 

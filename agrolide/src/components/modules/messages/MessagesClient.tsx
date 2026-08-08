@@ -10,7 +10,7 @@ import { fr } from 'date-fns/locale'
 
 export default function MessagesClient() {
   const searchParams = useSearchParams()
-  const initialConvId = searchParams.get('conv') || searchParams.get('nouveau')
+  const initialConvId = searchParams.get('conv') || searchParams.get('nouveau') || searchParams.get('user')
 
   const { user, isLoaded } = useUser()
   const [conversations, setConversations] = useState<any[]>([])

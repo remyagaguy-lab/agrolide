@@ -41,18 +41,14 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
     }
   }
 
-  const handleMessage = () => {
-    router.push(`/membres/messages?user=${memberId}`);
-  }
-
   if (status === 'accepted') {
     return (
-      <button 
-        onClick={handleMessage}
+      <Link 
+        href={`/membres/messages?user=${memberId}`}
         className="flex-1 md:flex-none bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
       >
         <MessageCircle className="w-5 h-5" /> Message
-      </button>
+      </Link>
     )
   }
 
