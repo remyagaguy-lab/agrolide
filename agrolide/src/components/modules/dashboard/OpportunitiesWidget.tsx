@@ -74,25 +74,37 @@ function OpportunitiesWidgetTable({ children }: { children: React.ReactNode }) {
 interface OpportunitiesWidgetRowProps {
   id: string | number
   titre: string
-  entreprise: string
+  organisation?: string | null
+  entreprise?: string | null
+  pays?: string | null
   localisation?: string | null
+  type_opp?: string | null
   type?: string | null
-  createdAt: string | Date
+  createdAt?: string | Date | null
   href?: string
 }
 
 function OpportunitiesWidgetRow({
   titre,
+  organisation,
   entreprise,
+  pays,
   localisation,
+  type_opp,
   type,
   createdAt,
   href = "/membres/opportunites"
 }: OpportunitiesWidgetRowProps) {
-  const formattedDate = new Date(createdAt).toLocaleDateString("fr-FR", {
-    day: "numeric",
-    month: "short"
-  })
+  const displayCompany = organisation || entreprise || "Agrolide"
+  const displayLocation = pays || localisation || "Non précisé"
+  const displayType = type_opp || type || "Offre"
+
+  const formattedDate = createdAt
+    ? new Date(createdAt).toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "short"
+      })
+    : "—"
 
   const getContractColor = (contractType?: string | null) => {
     const lower = (contractType || "").toLowerCase()
@@ -111,22 +123,22 @@ function OpportunitiesWidgetRow({
           </p>
           <p className="text-[11px] text-gray-500 mt-0.5 flex items-center gap-1 font-medium">
             <Briefcase size={11} className="text-gray-400" />
-            <span>{entreprise}</span>
+            <span>{displayCompany}</span>
           </p>
         </Link>
       </td>
       <td className="px-4 py-3 text-[11px] text-gray-500 font-medium hidden sm:table-cell">
         <div className="flex items-center gap-1">
           <MapPin size={11} className="text-gray-400" />
-          <span>{localisation || "Non précisé"}</span>
+          <span>{displayLocation}</span>
         </div>
       </td>
       <td className="px-4 py-3 text-[10px] text-gray-400 font-bold uppercase hidden md:table-cell tabular-nums">
         {formattedDate}
       </td>
       <td className="px-4 py-3 text-right">
-        <span className={`inline-block px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider border ${getContractColor(type)}`}>
-          {type || "Offre"}
+        <span className={`inline-block px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider border ${getContractColor(displayType)}`}>
+          {displayType}
         </span>
       </td>
     </tr>

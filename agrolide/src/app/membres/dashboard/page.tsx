@@ -195,9 +195,9 @@ export default async function DashboardPage() {
                       key={opp.id}
                       id={opp.id}
                       titre={opp.titre}
-                      entreprise={opp.entreprise}
-                      localisation={opp.localisation}
-                      type={opp.type}
+                      organisation={opp.organisation}
+                      pays={opp.pays}
+                      type_opp={opp.type_opp}
                       createdAt={opp.created_at}
                       href="/membres/opportunites"
                     />
