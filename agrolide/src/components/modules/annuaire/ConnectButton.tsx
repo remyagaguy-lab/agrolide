@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useTransition } from 'react'
+import React, { useState } from 'react'
 import { UserPlus, MessageCircle, Clock } from 'lucide-react'
 import { sendConnectionRequest } from '@/app/actions/connections'
 import { useRouter } from 'next/navigation'
@@ -12,8 +12,9 @@ interface ConnectButtonProps {
   status: 'accepted' | 'pending_sent' | 'pending_received' | null;
 }
 
-export default function ConnectButton({ memberId, status }: ConnectButtonProps) {
-  const [isPending, startTransition] = useTransition()
+export default function ConnectButton({ memberId, status: initialStatus }: ConnectButtonProps) {
+  const [status, setStatus] = useState(initialStatus)
+  const [isPending, setIsPending] = useState(false)
   const router = useRouter()
   const { userId } = useAuth()
 
@@ -24,17 +25,20 @@ export default function ConnectButton({ memberId, status }: ConnectButtonProps) 
     }
     if (status) return;
     
-    startTransition(async () => {
-      try {
-        const res = await sendConnectionRequest(memberId);
-        if (res.error) {
-          alert(res.error);
-        }
-      } catch (error: any) {
-        console.error("Erreur:", error);
-        alert(error.message || "Une erreur s'est produite lors de la connexion.");
+    setIsPending(true)
+    try {
+      const res = await sendConnectionRequest(memberId);
+      if (res.error) {
+        alert(res.error);
+      } else {
+        setStatus('pending_sent');
       }
-    });
+    } catch (error: any) {
+      console.error("Erreur:", error);
+      alert(error.message || "Une erreur s'est produite lors de la connexion.");
+    } finally {
+      setIsPending(false)
+    }
   }
 
   const handleMessage = () => {
