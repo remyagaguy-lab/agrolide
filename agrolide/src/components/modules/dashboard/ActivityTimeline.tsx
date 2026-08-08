@@ -4,10 +4,12 @@ import { Bell, ChevronRight, CheckCircle2 } from "lucide-react"
 
 interface NotificationItem {
   id: string | number
-  titre: string
-  contenu?: string | null
-  created_at: string | Date
+  titre?: string | null
+  contenu: string
+  type?: string | null
+  created_at?: string | Date | null
   lu?: boolean | null
+  lien?: string | null
 }
 
 interface ActivityTimelineProps {
@@ -49,10 +51,15 @@ export function ActivityTimeline({
             <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[#e5e7eb]" />
 
             {notifications.map((notif) => {
-              const formattedDate = new Date(notif.created_at).toLocaleDateString("fr-FR", {
-                day: "numeric",
-                month: "short"
-              })
+              const formattedDate = notif.created_at 
+                ? new Date(notif.created_at).toLocaleDateString("fr-FR", {
+                    day: "numeric",
+                    month: "short"
+                  })
+                : "—"
+
+              const displayTitle = notif.titre || notif.contenu
+              const hasSeparateContent = Boolean(notif.titre && notif.contenu)
 
               return (
                 <div key={notif.id} className="relative group">
@@ -63,13 +70,28 @@ export function ActivityTimeline({
 
                   {/* Content */}
                   <div>
-                    <p className="text-[11px] font-bold text-[#1a1a1a] leading-tight group-hover:text-[#1b5e38] transition-colors">
-                      {notif.titre}
-                    </p>
-                    {notif.contenu && (
-                      <p className="text-[10px] font-medium text-gray-500 mt-0.5 line-clamp-1">
-                        {notif.contenu}
-                      </p>
+                    {notif.lien ? (
+                      <Link href={notif.lien} className="block">
+                        <p className="text-[11px] font-bold text-[#1a1a1a] leading-tight group-hover:text-[#1b5e38] transition-colors">
+                          {displayTitle}
+                        </p>
+                        {hasSeparateContent && (
+                          <p className="text-[10px] font-medium text-gray-500 mt-0.5 line-clamp-1">
+                            {notif.contenu}
+                          </p>
+                        )}
+                      </Link>
+                    ) : (
+                      <>
+                        <p className="text-[11px] font-bold text-[#1a1a1a] leading-tight group-hover:text-[#1b5e38] transition-colors">
+                          {displayTitle}
+                        </p>
+                        {hasSeparateContent && (
+                          <p className="text-[10px] font-medium text-gray-500 mt-0.5 line-clamp-1">
+                            {notif.contenu}
+                          </p>
+                        )}
+                      </>
                     )}
                     <span className="text-[9px] text-gray-400 font-bold uppercase tracking-wider mt-1 block tabular-nums">
                       {formattedDate}

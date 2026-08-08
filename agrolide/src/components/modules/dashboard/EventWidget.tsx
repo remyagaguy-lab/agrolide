@@ -8,6 +8,7 @@ interface EventData {
   date_debut: string | Date
   date_fin?: string | Date | null
   lieu?: string | null
+  type_evt?: string | null
   type?: string | null
 }
 
