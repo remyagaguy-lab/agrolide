@@ -117,7 +117,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
                   <Link 
                     key={item.name}
                     href={item.href}
-                    className={`relative flex items-center gap-3 px-4 py-3 transition-all rounded-l-2xl ${
+                    className={`relative flex items-center gap-3 px-4 py-3 transition-[background-color,color] rounded-l-2xl ${
                       isActive 
                         ? 'bg-[#f8f9fa] text-[#1b5e38] font-bold fusion-active z-20' 
                         : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium mr-4'
@@ -141,7 +141,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
                   <Link 
                     key={item.name}
                     href={item.href}
-                    className={`relative flex items-center gap-3 px-4 py-3 transition-all rounded-l-2xl ${
+                    className={`relative flex items-center gap-3 px-4 py-3 transition-[background-color,color] rounded-l-2xl ${
                       isActive 
                         ? 'bg-[#f8f9fa] text-[#1b5e38] font-bold fusion-active z-20' 
                         : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium mr-4'

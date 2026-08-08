@@ -90,15 +90,15 @@ export default async function DashboardPage() {
         {/* HEADER */}
         <div className="flex justify-between items-end shrink-0">
           <div>
-            <h1 className="text-xl md:text-2xl font-bold text-[#1a1a1a] font-heading leading-tight">
+            <h1 className="text-xl md:text-2xl font-bold text-[#1a1a1a] font-heading leading-tight" style={{ textWrap: 'balance' }}>
               Tableau de bord
             </h1>
-            <p className="text-[11px] text-gray-500 font-medium mt-0.5">
+            <p className="text-[11px] text-gris-muted font-medium mt-0.5">
               Aperçu de vos activités et opportunités Agrolide.
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <div className="hidden md:flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg border border-[#e8e8e4] shadow-sm text-[10px] font-bold text-gray-600 uppercase tracking-wider">
+            <div className="hidden md:flex items-center gap-1.5 bg-white px-3 py-1.5 rounded-lg shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] text-[11px] font-bold text-gray-600 uppercase tracking-wider tabular-nums">
               <CalendarIcon size={12} className="text-gray-400" />
               <span>{new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
             </div>
@@ -119,79 +119,79 @@ export default async function DashboardPage() {
                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-xl -mr-8 -mt-8"></div>
                 <div className="relative z-10 flex justify-between items-start">
                   <div className="flex items-center gap-1.5 text-white/80">
-                    <CreditCard size={12} />
-                    <span className="text-[10px] font-bold uppercase tracking-wider">Adhésion</span>
+                    <CreditCard size={12} strokeWidth={1.5} />
+                    <span className="text-[11px] font-bold uppercase tracking-wider">Adhésion</span>
                   </div>
                   {dateFinCotisation ? (
-                    <span className="text-[9px] font-bold bg-white/20 px-1.5 py-0.5 rounded text-white">Actif</span>
+                    <span className="text-[9px] font-bold bg-white/20 px-1.5 py-0.5 rounded-md text-white">Actif</span>
                   ) : (
-                    <span className="text-[9px] font-bold bg-red-500/20 px-1.5 py-0.5 rounded text-red-200">Inactif</span>
+                    <span className="text-[9px] font-bold bg-red-500/20 px-1.5 py-0.5 rounded-md text-red-200">Inactif</span>
                   )}
                 </div>
                 <div className="relative z-10 flex items-end justify-between mt-auto">
                   <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-bold font-heading leading-none">{joursRestants}</span>
-                    <span className="text-[10px] text-white/60 font-medium">Jours restants</span>
+                    <span className="text-2xl font-bold font-heading leading-none tabular-nums">{joursRestants}</span>
+                    <span className="text-[11px] text-white/60 font-medium">Jours restants</span>
                   </div>
-                  <Link href="/membres/cotisation" className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition-colors">
+                  <Link href="/membres/cotisation" className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 active:scale-[0.96] transition-[background-color,transform]">
                     <ChevronRight size={14} className="text-white" />
                   </Link>
                 </div>
               </div>
 
               {/* KPI 1 */}
-              <div className="bg-white p-4 rounded-2xl border border-[#e8e8e4] shadow-sm flex flex-col justify-between h-28">
+              <div className="bg-white p-4 rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-shadow flex flex-col justify-between h-28">
                 <div className="flex justify-between items-start">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Formations</span>
-                  <div className="w-6 h-6 rounded bg-blue-50 flex items-center justify-center border border-blue-100">
-                    <BookOpen size={12} className="text-blue-600" />
+                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Formations</span>
+                  <div className="w-6 h-6 rounded-lg bg-blue-50 flex items-center justify-center">
+                    <BookOpen size={12} strokeWidth={1.5} className="text-blue-600" />
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold font-heading text-[#1a1a1a] leading-none">5</div>
-                  <div className="text-[10px] text-gray-500 mt-1 font-medium">En cours ou terminées</div>
+                  <div className="text-2xl font-bold font-heading text-[#1a1a1a] leading-none tabular-nums">5</div>
+                  <div className="text-[11px] text-gray-500 mt-1 font-medium">En cours ou terminées</div>
                 </div>
               </div>
 
               {/* KPI 2 */}
-              <div className="bg-white p-4 rounded-2xl border border-[#e8e8e4] shadow-sm flex flex-col justify-between h-28">
+              <div className="bg-white p-4 rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-shadow flex flex-col justify-between h-28">
                 <div className="flex justify-between items-start">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Opportunités</span>
-                  <div className="w-6 h-6 rounded bg-orange-50 flex items-center justify-center border border-orange-100">
-                    <Briefcase size={12} className="text-orange-600" />
+                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Opportunités</span>
+                  <div className="w-6 h-6 rounded-lg bg-orange-50 flex items-center justify-center">
+                    <Briefcase size={12} strokeWidth={1.5} className="text-orange-600" />
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold font-heading text-[#1a1a1a] leading-none">{oppsData.length}</div>
-                  <div className="text-[10px] text-gray-500 mt-1 font-medium">Postes & Missions</div>
+                  <div className="text-2xl font-bold font-heading text-[#1a1a1a] leading-none tabular-nums">{oppsData.length}</div>
+                  <div className="text-[11px] text-gray-500 mt-1 font-medium">Postes & Missions</div>
                 </div>
               </div>
 
               {/* KPI 3 */}
-              <div className="bg-white p-4 rounded-2xl border border-[#e8e8e4] shadow-sm flex flex-col justify-between h-28">
+              <div className="bg-white p-4 rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] hover:shadow-[0_2px_8px_rgba(0,0,0,0.08)] transition-shadow flex flex-col justify-between h-28">
                 <div className="flex justify-between items-start">
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Actualités</span>
-                  <div className="w-6 h-6 rounded bg-[#f0f7f0] flex items-center justify-center border border-[#c3dec4]">
-                    <Library size={12} className="text-[#1b5e38]" />
+                  <span className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Actualités</span>
+                  <div className="w-6 h-6 rounded-lg bg-[#f0f7f0] flex items-center justify-center">
+                    <Library size={12} strokeWidth={1.5} className="text-[#1b5e38]" />
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold font-heading text-[#1a1a1a] leading-none">{artsData.length}</div>
-                  <div className="text-[10px] text-gray-500 mt-1 font-medium">Ressources publiées</div>
+                  <div className="text-2xl font-bold font-heading text-[#1a1a1a] leading-none tabular-nums">{artsData.length}</div>
+                  <div className="text-[11px] text-gray-500 mt-1 font-medium">Ressources publiées</div>
                 </div>
               </div>
 
             </div>
 
             {/* Opportunités Table */}
-            <div className="bg-white rounded-2xl border border-[#e8e8e4] shadow-sm flex flex-col flex-1 min-h-0 overflow-hidden">
-              <div className="p-4 border-b border-[#e8e8e4] flex justify-between items-center shrink-0">
+            <div className="bg-white rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] flex flex-col flex-1 min-h-0 overflow-hidden">
+              <div className="p-4 border-b border-gris-border flex justify-between items-center shrink-0">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-[#1b5e38]"></div>
                   <h3 className="text-xs font-bold text-[#1a1a1a] uppercase tracking-wider">Dernières Opportunités</h3>
                 </div>
                 <div className="flex gap-2">
-                  <Link href="/membres/opportunites" className="text-[10px] px-2.5 py-1 bg-gray-50 border border-[#e8e8e4] rounded-lg font-bold text-gray-500 hover:text-[#1b5e38] transition-colors">Tout voir</Link>
+                  <Link href="/membres/opportunites" className="text-[11px] px-2.5 py-1 bg-gray-50 border border-gris-border rounded-lg font-bold text-gray-500 hover:text-[#1b5e38] transition-[color]">Tout voir</Link>
                 </div>
               </div>
               <div className="overflow-y-auto custom-scrollbar p-2 flex-1">
@@ -206,7 +206,7 @@ export default async function DashboardPage() {
                   </thead>
                   <tbody className="divide-y divide-[#e8e8e4]">
                     {oppsData.map((opp: any) => (
-                      <tr key={opp.id} className="hover:bg-gray-50 transition-colors group">
+                      <tr key={opp.id} className="hover:bg-gray-50 transition-[background-color] group">
                         <td className="px-4 py-3">
                           <Link href="/membres/opportunites" className="block">
                             <p className="text-xs font-bold text-[#1a1a1a] line-clamp-1 group-hover:text-[#1b5e38] transition-colors">{opp.titre}</p>
@@ -247,7 +247,7 @@ export default async function DashboardPage() {
                     <CalendarIcon size={14} />
                     <span className="text-[10px] font-bold uppercase tracking-wider">Événement à venir</span>
                   </div>
-                  <div className="w-1.5 h-1.5 rounded-full bg-[#50a853] animate-pulse"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#50a853] animate-pulse will-change-[opacity]"></div>
                 </div>
                 {prochainEvt ? (
                   <>
@@ -267,7 +267,7 @@ export default async function DashboardPage() {
             </div>
 
             {/* Notifications Timeline */}
-            <div className="bg-white rounded-2xl border border-[#e8e8e4] shadow-sm p-4 flex-1 flex flex-col min-h-0 overflow-hidden">
+            <div className="bg-white rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] p-4 flex-1 flex flex-col min-h-0 overflow-hidden">
               <div className="flex justify-between items-center mb-4 shrink-0">
                 <h3 className="text-[11px] font-bold text-[#1a1a1a] uppercase tracking-wider">Activités Récentes</h3>
                 <Link href="/membres/notifications" className="text-gray-400 hover:text-[#1b5e38]"><ChevronRight size={14}/></Link>
@@ -294,14 +294,14 @@ export default async function DashboardPage() {
             </div>
 
             {/* Articles Récents */}
-            <div className="bg-white rounded-2xl border border-[#e8e8e4] shadow-sm flex flex-col shrink-0">
-              <div className="px-4 py-3 border-b border-[#e8e8e4] flex justify-between items-center shrink-0 bg-[#fcfdfc] rounded-t-2xl">
+            <div className="bg-white rounded-2xl shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] flex flex-col shrink-0">
+              <div className="px-4 py-3 border-b border-gris-border flex justify-between items-center shrink-0 bg-[#fcfdfc] rounded-t-2xl">
                 <h3 className="text-[11px] font-bold text-[#1a1a1a] uppercase tracking-wider">Dernières Ressources</h3>
               </div>
               <div className="p-2 flex flex-col gap-1">
                 {artsData.map((art: any) => (
-                  <Link key={art.id} href="/membres/bibliotheque" className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded-xl border border-transparent hover:border-[#e8e8e4] transition-all">
-                    <div className="w-8 h-8 rounded-lg bg-[#f4f8f4] flex items-center justify-center shrink-0 border border-[#e8e8e4]">
+                  <Link key={art.id} href="/membres/bibliotheque" className="flex items-center gap-3 p-2 hover:bg-gris-fond rounded-xl transition-[background-color]">
+                    <div className="w-8 h-8 rounded-lg bg-[#f4f8f4] flex items-center justify-center shrink-0">
                       <BookOpen size={12} className="text-[#1b5e38]" />
                     </div>
                     <div className="flex-1 min-w-0">
