@@ -8,7 +8,7 @@ import { revalidatePath } from 'next/cache';
 
 export async function sendConnectionRequest(receiverId: string) {
   const { userId } = await auth();
-  if (!userId) throw new Error("Non autorisé");
+  if (!userId) return { error: "Non autorisé" };
 
   // Check if connection already exists
   const existing = await db.query.user_connections.findFirst({
@@ -20,7 +20,7 @@ export async function sendConnectionRequest(receiverId: string) {
   });
 
   if (existing) {
-    throw new Error("Une connexion ou demande existe déjà");
+    return { error: "Une connexion ou demande existe déjà" };
   }
 
   await db.insert(user_connections).values({
@@ -36,7 +36,7 @@ export async function sendConnectionRequest(receiverId: string) {
 
 export async function acceptConnectionRequest(connectionId: string) {
   const { userId } = await auth();
-  if (!userId) throw new Error("Non autorisé");
+  if (!userId) return { error: "Non autorisé" };
 
   // Only the receiver can accept
   const connection = await db.query.user_connections.findFirst({
@@ -44,7 +44,7 @@ export async function acceptConnectionRequest(connectionId: string) {
   });
 
   if (!connection || connection.receiver_id !== userId) {
-    throw new Error("Demande introuvable ou non autorisée");
+    return { error: "Demande introuvable ou non autorisée" };
   }
 
   await db.update(user_connections)
@@ -57,14 +57,14 @@ export async function acceptConnectionRequest(connectionId: string) {
 
 export async function rejectConnectionRequest(connectionId: string) {
   const { userId } = await auth();
-  if (!userId) throw new Error("Non autorisé");
+  if (!userId) return { error: "Non autorisé" };
 
   const connection = await db.query.user_connections.findFirst({
     where: (connections, { eq }) => eq(connections.id, connectionId)
   });
 
   if (!connection || connection.receiver_id !== userId) {
-    throw new Error("Demande introuvable ou non autorisée");
+    return { error: "Demande introuvable ou non autorisée" };
   }
 
   await db.update(user_connections)

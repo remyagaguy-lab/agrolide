@@ -26,9 +26,13 @@ export default function ConnectButton({ memberId, status }: ConnectButtonProps) 
     
     startTransition(async () => {
       try {
-        await sendConnectionRequest(memberId);
-      } catch (error) {
+        const res = await sendConnectionRequest(memberId);
+        if (res.error) {
+          alert(res.error);
+        }
+      } catch (error: any) {
         console.error("Erreur:", error);
+        alert(error.message || "Une erreur s'est produite lors de la connexion.");
       }
     });
   }
