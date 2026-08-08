@@ -3,7 +3,7 @@ import { auth } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
 import { db } from '@/db'
 import { users, user_connections } from '@/db/schema'
-import { eq, or, and } from 'drizzle-orm'
+import { eq, or, and, inArray } from 'drizzle-orm'
 import Link from 'next/link'
 import Image from 'next/image'
 import { User, Check, X, MessageCircle } from 'lucide-react'
@@ -82,7 +82,7 @@ export default async function NetworkPage() {
         avatar_url: users.photo_url,
         specialite: users.specialite,
         categorie: users.categorie
-    }).from(users).where((users, { inArray }) => inArray(users.id, relationUserIds))
+    }).from(users).where(inArray(users.id, relationUserIds))
   }
 
   return (
