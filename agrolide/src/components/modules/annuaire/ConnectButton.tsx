@@ -28,14 +28,16 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
     setIsPending(true)
     try {
       const res = await sendConnectionRequest(memberId);
-      if (res.error) {
-        alert(res.error);
-      } else {
+      if (res?.error) {
+        alert("Erreur retournée par le serveur : " + res.error);
+      } else if (res?.success) {
         setStatus('pending_sent');
+      } else {
+        alert("Réponse inattendue : " + JSON.stringify(res));
       }
     } catch (error: any) {
-      console.error("Erreur:", error);
-      alert(error.message || "Une erreur s'est produite lors de la connexion.");
+      console.error("Erreur catchée :", error);
+      alert("Erreur catchée : " + (error.message || JSON.stringify(error)));
     } finally {
       setIsPending(false)
     }
