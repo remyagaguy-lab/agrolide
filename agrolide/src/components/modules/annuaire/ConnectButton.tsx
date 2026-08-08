@@ -15,6 +15,7 @@ interface ConnectButtonProps {
 export default function ConnectButton({ memberId, status: initialStatus }: ConnectButtonProps) {
   const [status, setStatus] = useState(initialStatus)
   const [isPending, setIsPending] = useState(false)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
   const router = useRouter()
   const { userId } = useAuth()
 
@@ -26,18 +27,19 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
     if (status) return;
     
     setIsPending(true)
+    setErrorMsg(null)
     try {
       const res = await sendConnectionRequest(memberId);
       if (res?.error) {
-        alert("Erreur retournée par le serveur : " + res.error);
+        setErrorMsg("Erreur Serveur: " + res.error);
       } else if (res?.success) {
         setStatus('pending_sent');
       } else {
-        alert("Réponse inattendue : " + JSON.stringify(res));
+        setErrorMsg("Erreur: Réponse inattendue " + JSON.stringify(res));
       }
     } catch (error: any) {
       console.error("Erreur catchée :", error);
-      alert("Erreur catchée : " + (error.message || JSON.stringify(error)));
+      setErrorMsg("Exception: " + (error.message || JSON.stringify(error)));
     } finally {
       setIsPending(false)
     }
@@ -77,13 +79,18 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
   }
 
   return (
-    <button 
-      onClick={handleConnect}
-      disabled={isPending}
-      className="flex-1 md:flex-none bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
-    >
-      {isPending ? <Clock className="w-5 h-5 animate-spin" /> : <UserPlus className="w-5 h-5" />} 
-      {isPending ? 'Envoi...' : 'Se connecter'}
-    </button>
+    <div className="flex flex-col gap-2">
+      <button 
+        onClick={handleConnect}
+        disabled={isPending}
+        className="flex-1 md:flex-none bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
+      >
+        {isPending ? <Clock className="w-5 h-5 animate-spin" /> : <UserPlus className="w-5 h-5" />} 
+        {isPending ? 'Envoi...' : 'Se connecter'}
+      </button>
+      {errorMsg && (
+        <p className="text-red-500 text-xs font-medium max-w-[200px] text-center">{errorMsg}</p>
+      )}
+    </div>
   )
 }
