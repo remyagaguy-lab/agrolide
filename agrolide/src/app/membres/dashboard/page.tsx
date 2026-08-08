@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
-import { users, notifications, evenements, articles, opportunites, cotisations, forum_fils } from "@/db/schema"
+import { users, notifications, evenements, articles, documents, opportunites, cotisations, forum_fils } from "@/db/schema"
 import { eq, desc, gte } from "drizzle-orm"
 import { 
   Library, 
@@ -80,12 +80,43 @@ export default async function DashboardPage() {
       limit: 5
     })
 
-    // Fetch Articles / Ressources
-    const artsData = await db.query.articles.findMany({
-      where: eq(articles.statut, "publie"),
-      orderBy: [desc(articles.published_at)],
-      limit: 4
-    })
+    // Fetch exact total published resources in Bibliothèque (documents & articles)
+    const [publishedDocsRows, publishedArticlesRows] = await Promise.all([
+      db.select({ id: documents.id }).from(documents).where(eq(documents.statut, "publie")),
+      db.select({ id: articles.id }).from(articles).where(eq(articles.statut, "publie"))
+    ])
+
+    const totalResourcesCount = (publishedDocsRows.length || 0) + (publishedArticlesRows.length || 0)
+
+    // Fetch recent documents for the library widget (fallback to articles)
+    const [recentDocsData, artsData] = await Promise.all([
+      db.query.documents.findMany({
+        where: eq(documents.statut, "publie"),
+        orderBy: [desc(documents.created_at)],
+        limit: 4
+      }),
+      db.query.articles.findMany({
+        where: eq(articles.statut, "publie"),
+        orderBy: [desc(articles.published_at)],
+        limit: 4
+      })
+    ])
+
+    const resourcesForWidget = recentDocsData.length > 0
+      ? recentDocsData.map(doc => ({
+          id: doc.id,
+          titre: doc.titre,
+          categorie: doc.thematique || doc.type_doc || "Guide Technique",
+          slug: doc.id,
+          published_at: doc.created_at || doc.created_at
+        }))
+      : artsData.map(art => ({
+          id: art.id,
+          titre: art.titre,
+          categorie: art.categorie || "Article",
+          slug: art.slug || art.id,
+          published_at: art.published_at
+        }))
 
     // Fetch Notifications
     const notifsData = await db.query.notifications.findMany({
@@ -121,7 +152,7 @@ export default async function DashboardPage() {
             icon={Library}
             iconColorClass="text-[#1b5e38]"
             iconBgClass="bg-[#f0fdf4]"
-            value={artsData.length}
+            value={totalResourcesCount}
             subtext="Fiches & Guides techniques"
             action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
           />
@@ -173,13 +204,13 @@ export default async function DashboardPage() {
             {/* OPPORTUNITIES WIDGET */}
             <OpportunitiesWidget 
               opportunities={oppsData}
-              title="Dernières Opportunités & Missions"
+              title="Opportunités & Appels à Projets"
               viewAllHref="/membres/opportunites"
             />
 
             {/* RESOURCES WIDGET */}
             <ResourcesWidget 
-              resources={artsData}
+              resources={resourcesForWidget}
               title="Fiches Techniques & Bibliothèque"
               viewAllHref="/membres/bibliotheque"
             />
