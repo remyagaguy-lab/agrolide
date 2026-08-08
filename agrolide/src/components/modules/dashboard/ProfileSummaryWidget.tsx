@@ -27,15 +27,27 @@ export function ProfileSummaryWidget({
   const displayName = prenom ? `${prenom}${nom ? ` ${nom}` : ""}` : "Membre"
   const isProfileComplete = Boolean(specialite && organisation && pays)
 
+  // Calculate initials (e.g. "RG" for "Remyaga Guy")
+  const initials = [prenom?.[0], nom?.[0]].filter(Boolean).join("").toUpperCase() || "M"
+  const hasValidPhoto = Boolean(photo_url && (photo_url.startsWith("http") || photo_url.startsWith("/")))
+
   return (
     <div className="bg-white rounded-2xl border border-gris-border shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] p-5 flex flex-col shrink-0">
-      <div className="flex items-center gap-3 mb-3.5">
+      <div className="flex items-center gap-3.5 mb-3.5">
         {/* Avatar */}
-        <div className="w-12 h-12 rounded-xl bg-[#f0f7f0] border border-[#c3dec4] flex items-center justify-center text-[#1b5e38] shrink-0 relative overflow-hidden">
-          {photo_url ? (
-            <Image src={photo_url} alt={displayName} fill sizes="48px" className="object-cover" />
+        <div className="w-12 h-12 rounded-xl bg-[#f0f7f0] border border-[#c3dec4] flex items-center justify-center text-[#1b5e38] font-bold text-sm shrink-0 relative overflow-hidden select-none">
+          {hasValidPhoto ? (
+            <Image 
+              src={photo_url!} 
+              alt="" 
+              fill 
+              sizes="48px" 
+              className="object-cover" 
+            />
           ) : (
-            <User size={22} strokeWidth={1.5} className="text-[#1b5e38]" />
+            <span className="font-heading tracking-wide text-[#1b5e38] font-bold text-sm">
+              {initials}
+            </span>
           )}
         </div>
 

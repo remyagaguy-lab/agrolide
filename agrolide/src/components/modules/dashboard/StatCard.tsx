@@ -65,18 +65,18 @@ export function StatCard({
       )}
 
       {/* Header: Label + Badge or Icon */}
-      <div className="relative z-10 flex justify-between items-start gap-2">
-        <div className="flex items-center gap-1.5">
+      <div className="relative z-10 flex justify-between items-center gap-2">
+        <div className="flex items-center gap-1.5 min-w-0">
           {Icon && (
-            <Icon size={14} strokeWidth={1.5} className={isFeatured ? "text-white/80" : "text-[#1b5e38]"} />
+            <Icon size={14} strokeWidth={1.5} className={`shrink-0 ${isFeatured ? "text-white/80" : "text-[#1b5e38]"}`} />
           )}
-          <span className={`text-[11px] font-bold uppercase tracking-wider ${isFeatured ? "text-white/90" : "text-gris-muted"}`}>
+          <span className={`text-[11px] font-bold uppercase tracking-wider truncate ${isFeatured ? "text-white/90" : "text-gris-muted"}`}>
             {label}
           </span>
         </div>
 
         {badge ? (
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${badgeStyles[badge.variant || "neutral"]}`}>
+          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 whitespace-nowrap ${badgeStyles[badge.variant || "neutral"]}`}>
             {badge.text}
           </span>
         ) : Icon && !isFeatured ? (

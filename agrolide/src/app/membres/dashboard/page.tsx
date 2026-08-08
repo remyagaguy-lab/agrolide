@@ -91,7 +91,7 @@ export default async function DashboardPage() {
     const membersCount = directoryMembers.length > 0 ? directoryMembers.length : 150
 
     return (
-      <div className="h-full flex flex-col space-y-4">
+      <div className="h-full flex flex-col space-y-5">
         {/* ================= 1. HEADER ================= */}
         <DashboardHeader 
           prenom={profile.prenom} 
@@ -103,67 +103,67 @@ export default async function DashboardPage() {
           ville={profile.ville}
         />
 
-        {/* ================= 2. BENTO GRID ================= */}
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-4 flex-1 min-h-0">
+        {/* ================= 2. TOP METRICS STRIP (FULL WIDTH) ================= */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 shrink-0">
+          
+          {/* Card 1: Adhésion */}
+          <StatCard
+            variant={isAdhesionActive ? "featured" : "default"}
+            label="Adhésion"
+            icon={CreditCard}
+            badge={{
+              text: isAdhesionActive ? "Active" : "En attente",
+              variant: isAdhesionActive ? "success" : "warning"
+            }}
+            value={isAdhesionActive ? `${joursRestants} j` : "Inactive"}
+            subtext={isAdhesionActive ? "Cotisation annuelle à jour" : "Régularisation requise"}
+            action={{ href: "/membres/cotisation", label: "Gérer mon adhésion" }}
+          />
+
+          {/* Card 2: Réseau & Pairs */}
+          <StatCard
+            variant="default"
+            label="Réseau"
+            icon={Users}
+            iconColorClass="text-[#1b5e38]"
+            iconBgClass="bg-[#f0f7f0]"
+            value={`${membersCount}+`}
+            subtext="Membres & Experts"
+            action={{ href: "/membres/annuaire", label: "Explorer l'annuaire" }}
+          />
+
+          {/* Card 3: Opportunités */}
+          <StatCard
+            variant="default"
+            label="Opportunités"
+            icon={Briefcase}
+            iconColorClass="text-amber-700"
+            iconBgClass="bg-[#fef3e2]"
+            value={oppsData.length}
+            subtext="Postes & Missions"
+            action={{ href: "/membres/opportunites", label: "Voir toutes les offres" }}
+          />
+
+          {/* Card 4: Bibliothèque */}
+          <StatCard
+            variant="default"
+            label="Bibliothèque"
+            icon={Library}
+            iconColorClass="text-[#1b5e38]"
+            iconBgClass="bg-[#f0fdf4]"
+            value={artsData.length}
+            subtext="Fiches & Guides techniques"
+            action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
+          />
+
+        </div>
+
+        {/* ================= 3. BENTO GRID (8/12 - 4/12) ================= */}
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 flex-1 min-h-0 items-start">
           
           {/* ----- LEFT MAIN COLUMN (8/12) ----- */}
-          <div className="xl:col-span-8 flex flex-col gap-4 min-h-0">
+          <div className="xl:col-span-8 flex flex-col gap-5 min-h-0">
             
-            {/* TOP METRICS ROW (4 Cards) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 shrink-0">
-              
-              {/* Card 1: Adhésion (Featured if active, warning badge if inactive) */}
-              <StatCard
-                variant={isAdhesionActive ? "featured" : "default"}
-                label="Adhésion"
-                icon={CreditCard}
-                badge={{
-                  text: isAdhesionActive ? "Active" : "À renouveler",
-                  variant: isAdhesionActive ? "success" : "warning"
-                }}
-                value={isAdhesionActive ? `${joursRestants} j` : "Inactive"}
-                subtext={isAdhesionActive ? "Cotisation annuelle à jour" : "Régularisation requise"}
-                action={{ href: "/membres/cotisation", label: "Gérer mon adhésion" }}
-              />
-
-              {/* Card 2: Réseau & Pairs */}
-              <StatCard
-                variant="default"
-                label="Réseau"
-                icon={Users}
-                iconColorClass="text-[#1b5e38]"
-                iconBgClass="bg-[#f0f7f0]"
-                value={`${membersCount}+`}
-                subtext="Membres & Experts"
-                action={{ href: "/membres/annuaire", label: "Explorer l'annuaire" }}
-              />
-
-              {/* Card 3: Opportunités */}
-              <StatCard
-                variant="default"
-                label="Opportunités"
-                icon={Briefcase}
-                iconColorClass="text-amber-700"
-                iconBgClass="bg-[#fef3e2]"
-                value={oppsData.length}
-                subtext="Postes & Missions"
-                action={{ href: "/membres/opportunites", label: "Voir toutes les offres" }}
-              />
-
-              {/* Card 4: Bibliothèque */}
-              <StatCard
-                variant="default"
-                label="Bibliothèque"
-                icon={Library}
-                iconColorClass="text-[#1b5e38]"
-                iconBgClass="bg-[#f0fdf4]"
-                value={artsData.length}
-                subtext="Fiches & Guides techniques"
-                action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
-              />
-
-            </div>
-
             {/* OPPORTUNITIES WIDGET */}
             <OpportunitiesWidget 
               opportunities={oppsData}
@@ -181,7 +181,7 @@ export default async function DashboardPage() {
           </div>
 
           {/* ----- RIGHT SIDEBAR (4/12) ----- */}
-          <div className="xl:col-span-4 flex flex-col gap-4 min-h-0">
+          <div className="xl:col-span-4 flex flex-col gap-5 min-h-0">
             
             {/* 1. Prochain Événement Widget */}
             <EventWidget event={prochainEvt} />

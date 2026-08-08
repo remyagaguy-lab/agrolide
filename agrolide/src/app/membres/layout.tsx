@@ -164,10 +164,11 @@ export default async function MembresRootLayout({
 
         {/* Traitement des statuts */}
         {statut === "en_attente_paiement" && (
-          <div className="bg-blue-50 border-b border-blue-200 text-blue-800 p-4 text-center text-sm font-medium">
-            Votre compte est en attente de paiement. 
-            <Link href="/membres/cotisation" className="underline ml-2 font-bold hover:text-blue-900">
-              Régler ma cotisation
+          <div className="bg-[#fef9ee] border-b border-[#fed7aa] text-[#8a4e00] px-4 py-3 text-center text-xs sm:text-sm font-medium flex items-center justify-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#e65100] animate-pulse shrink-0" />
+            <span>Votre compte est en attente de paiement de cotisation.</span>
+            <Link href="/membres/cotisation" className="font-bold underline ml-1 hover:text-[#5c3400] transition-colors inline-flex items-center gap-0.5">
+              Régler ma cotisation &rarr;
             </Link>
           </div>
         )}
