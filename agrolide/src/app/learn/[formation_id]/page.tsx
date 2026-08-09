@@ -6,9 +6,9 @@ import { redirect } from "next/navigation";
 export default async function LearnRootPage({
   params,
 }: {
-  params: { formation_id: string };
+  params: Promise<{ formation_id: string }>;
 }) {
-  const formationId = params.formation_id;
+  const { formation_id: formationId } = await params;
 
   const formation = await db.query.formations.findFirst({
     where: eq(formations.id, formationId),

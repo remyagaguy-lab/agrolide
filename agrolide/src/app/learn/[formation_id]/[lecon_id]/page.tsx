@@ -12,10 +12,9 @@ import { Quiz } from "./Quiz";
 export default async function LeconPage({
   params,
 }: {
-  params: { formation_id: string; lecon_id: string };
+  params: Promise<{ formation_id: string; lecon_id: string }>;
 }) {
-  const formationId = params.formation_id;
-  const leconId = params.lecon_id;
+  const { formation_id: formationId, lecon_id: leconId } = await params;
 
   // Fetch the current lesson and the whole formation structure to determine previous/next
   const formation = await db.query.formations.findFirst({

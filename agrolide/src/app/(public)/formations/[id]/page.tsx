@@ -11,10 +11,11 @@ import ReactMarkdown from "react-markdown";
 export default async function FormationPublicPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
+  const { id } = await params;
   const formation = await db.query.formations.findFirst({
-    where: eq(formations.id, params.id),
+    where: eq(formations.id, id),
     with: {
       modules: {
         orderBy: (modules, { asc }) => [asc(modules.ordre)],

@@ -11,9 +11,9 @@ export default async function LearnLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { formation_id: string };
+  params: Promise<{ formation_id: string }>;
 }) {
-  const formationId = params.formation_id;
+  const { formation_id: formationId } = await params;
 
   const formation = await db.query.formations.findFirst({
     where: eq(formations.id, formationId),
