@@ -163,17 +163,45 @@ export const evenements = sqliteTable("evenements", {
 
 export const formations = sqliteTable("formations", {
   acces: text("acces"),
-  created_at: text("created_at"),
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
   description: text("description"),
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   intervenants: text("intervenants", { mode: "json" }),
   modalite: text("modalite").notNull(),
   niveau: text("niveau"),
   prix_fcfa: integer("prix_fcfa"),
-  programme_json: text("programme_json", { mode: "json" }),
+  programme_json: text("programme_json", { mode: "json" }), // Legacy support
   thematique: text("thematique"),
   titre: text("titre").notNull(),
   statut: text("statut"),
+  cover_image_url: text("cover_image_url"), // Added for course display
+});
+
+export const formation_modules = sqliteTable("formation_modules", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  formation_id: text("formation_id").notNull(),
+  titre: text("titre").notNull(),
+  description: text("description"),
+  ordre: integer("ordre").notNull(),
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
+});
+
+export const formation_lecons = sqliteTable("formation_lecons", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  module_id: text("module_id").notNull(),
+  titre: text("titre").notNull(),
+  contenu: text("contenu").notNull(), // Markdown or HTML
+  duree_minutes: integer("duree_minutes"),
+  ordre: integer("ordre").notNull(),
+  quiz_json: text("quiz_json", { mode: "json" }), // Store quiz questions array
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
+});
+
+export const progression_lecons = sqliteTable("progression_lecons", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  membre_id: text("membre_id").notNull(),
+  lecon_id: text("lecon_id").notNull(),
+  completed_at: text("completed_at").$defaultFn(() => new Date().toISOString()),
 });
 
 export const forum_categories = sqliteTable("forum_categories", {

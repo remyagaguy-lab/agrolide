@@ -11,7 +11,7 @@ export function PublicLayout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       <Footer />
-      <NewsletterForm />
+      {/* <NewsletterForm /> */}
     </div>
   )
 }

@@ -15,6 +15,13 @@
       "when": 1786139768538,
       "tag": "0001_magenta_maestro",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1786313995217,
+      "tag": "0002_powerful_vanisher",
+      "breakpoints": true
     }
   ]
 }

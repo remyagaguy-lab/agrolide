@@ -181,7 +181,7 @@ export default async function HomePage() {
         {/* Motif Background for texture (placed behind the image) */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+          style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
         />
 
         {/* Image de fond avec mask pour fondu fluide */}
@@ -191,6 +191,7 @@ export default async function HomePage() {
             alt="Agriculture africaine"
             fill
             priority
+            fetchPriority="high"
             sizes="(max-width: 768px) 100vw, 55vw"
             className="object-cover object-[center_80%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_60%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_40%)]"
           />
@@ -295,7 +296,7 @@ export default async function HomePage() {
             </div>
             <div className="md:w-1/3 flex justify-center relative">
               <div className="w-48 h-64 bg-gray-200 rounded-lg shadow-2xl relative rotate-3 transform hover:rotate-0 transition-transform duration-300 overflow-hidden border-4 border-white">
-                <Image src="/hero-background.webp" alt="Couverture du guide" fill className="object-cover" />
+                <Image src="/hero-background.webp" alt="Couverture du guide" fill sizes="250px" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80 flex flex-col justify-end p-4">
                   <div className="text-white font-heading font-bold text-lg leading-tight mb-1">MANUEL PRATIQUE</div>
                   <div className="text-orange-300 text-sm font-medium">Agroécologie</div>
@@ -334,6 +335,7 @@ export default async function HomePage() {
                 src="/raison-detre.webp" 
                 alt="Cohésion continentale en agriculture africaine" 
                 fill 
+                sizes="(max-width: 768px) 100vw, 45vw"
                 className="object-cover"
               />
             </div>
@@ -475,7 +477,7 @@ export default async function HomePage() {
                   </Link>
                 </div>
                 <div className="relative min-h-[300px] lg:min-h-[400px] bg-white/40 overflow-hidden">
-                  <Image src="/plateforme-forum-ui.webp" alt="Espace d'échange" fill className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-white/60 shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
+                  <Image src="/plateforme-forum-ui.webp" alt="Espace d'échange" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-white/60 shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
                 </div>
               </div>
             </div>
@@ -495,7 +497,7 @@ export default async function HomePage() {
                 </Link>
               </div>
               <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
-                <Image src="/plateforme-annuaire-ui.webp" alt="Annuaire Panafricain" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
+                <Image src="/plateforme-annuaire-ui.webp" alt="Annuaire Panafricain" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 
@@ -514,7 +516,7 @@ export default async function HomePage() {
                 </Link>
               </div>
               <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
-                <Image src="/plateforme-bibliotheque-ui.webp" alt="Bibliothèque de Ressources" fill className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
+                <Image src="/plateforme-bibliotheque-ui.webp" alt="Bibliothèque de Ressources" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 
