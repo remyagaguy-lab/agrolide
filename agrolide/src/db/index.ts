@@ -41,14 +41,33 @@ export const db = drizzle(async (sql, params, method) => {
 
   // Fonction pour extraire les colonnes sélectionnées du SQL afin d'éviter le décalage des valeurs nulles
   function getSelectedColumns(sqlQuery: string) {
-    const selectMatch = sqlQuery.match(/select\s+(.+?)\s+from/i);
-    if (!selectMatch) return [];
-
-    const columnsStr = selectMatch[1];
-    const columnsList: string[] = [];
+    const lowerSql = sqlQuery.toLowerCase();
+    const selectIdx = lowerSql.indexOf('select ');
+    if (selectIdx === -1) return [];
     
-    let current = "";
     let parenDepth = 0;
+    let fromIdx = -1;
+    for (let i = selectIdx + 7; i < lowerSql.length; i++) {
+      if (lowerSql[i] === '(') parenDepth++;
+      else if (lowerSql[i] === ')') parenDepth--;
+      else if (parenDepth === 0 && lowerSql.substring(i, i + 4) === 'from') {
+         const prev = lowerSql[i-1];
+         const next = lowerSql[i+4];
+         const isWhitespace = (c: string) => /\s/.test(c);
+         if ((!prev || isWhitespace(prev)) && (!next || isWhitespace(next))) {
+            fromIdx = i;
+            break;
+         }
+      }
+    }
+    
+    if (fromIdx === -1) return [];
+    
+    const columnsStr = sqlQuery.substring(selectIdx + 7, fromIdx);
+    
+    const columnsList: string[] = [];
+    let current = "";
+    parenDepth = 0;
     for (let i = 0; i < columnsStr.length; i++) {
       const char = columnsStr[i];
       if (char === '(') parenDepth++;
@@ -65,7 +84,7 @@ export const db = drizzle(async (sql, params, method) => {
     }
 
     return columnsList.map(col => {
-      const aliasMatch = col.match(/(?:\s+as\s+)(?:"([^"]+)"|'([^']+)'|([^\s'"]+))/i);
+      const aliasMatch = col.match(/(?:\s+as\s+)(?:"([^"]+)"|'([^']+)'|([^\s'"]+))\s*$/i);
       if (aliasMatch) {
         return aliasMatch[1] || aliasMatch[2] || aliasMatch[3];
       }
