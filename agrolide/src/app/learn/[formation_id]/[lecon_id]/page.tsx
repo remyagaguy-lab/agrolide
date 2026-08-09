@@ -6,7 +6,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Quiz } from "./Quiz";
 
 export default async function LeconPage({
@@ -90,30 +90,26 @@ export default async function LeconPage({
       {/* Bottom Navigation Bar */}
       <div className="bg-card border-t p-4 mt-auto">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          {previousLecon ? (
-            <Button variant="outline" asChild>
-              <Link href={`/learn/${formationId}/${previousLecon.id}`}>
-                <ChevronLeft className="mr-2 h-4 w-4" />
-                Précédent
-              </Link>
-            </Button>
-          ) : (
-            <div></div> // Empty div to keep 'Suivant' on the right
-          )}
-
-          {nextLecon ? (
-            <Button asChild>
-              <Link href={`/learn/${formationId}/${nextLecon.id}`}>
-                Suivant
-                <ChevronRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          ) : (
-            <Button variant="default" className="bg-green-600 hover:bg-green-700">
-              <CheckCircle2 className="mr-2 h-4 w-4" />
-              Terminer la formation
-            </Button>
-          )}
+              {previousLecon ? (
+                <Button variant="outline" href={`/learn/${formationId}/${previousLecon.id}`}>
+                  <ChevronLeft className="w-4 h-4 mr-2" />
+                  Leçon précédente
+                </Button>
+              ) : (
+                <div /> // Spacer
+              )}
+              
+              {nextLecon ? (
+                <Button variant="primary" href={`/learn/${formationId}/${nextLecon.id}`}>
+                  Leçon suivante
+                  <ChevronRight className="w-4 h-4 ml-2" />
+                </Button>
+              ) : (
+                <Button variant="primary" href={`/learn/${formationId}`}>
+                  <CheckCircle2 className="w-4 h-4 mr-2" />
+                  Terminer le module
+                </Button>
+              )}
         </div>
       </div>
     </div>

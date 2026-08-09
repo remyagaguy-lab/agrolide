@@ -3,8 +3,8 @@ import { formations } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
 import { CheckCircle2, Clock, BookOpen, GraduationCap } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
@@ -44,11 +44,11 @@ export default async function FormationPublicPage({
           <div className="flex flex-col lg:flex-row gap-12 items-start">
             <div className="flex-1 space-y-6 max-w-3xl">
               <div className="flex items-center gap-3">
-                <Badge variant="secondary" className="px-3 py-1 bg-primary/10 text-primary hover:bg-primary/20">
+                <Badge variant="category" className="px-3 py-1 bg-primary/10 text-primary hover:bg-primary/20">
                   {formation.modalite || "En ligne"}
                 </Badge>
                 {formation.statut === 'publié' && (
-                  <Badge variant="outline" className="text-green-600 border-green-200 bg-green-50">Nouveau</Badge>
+                  <Badge variant="nouveau" className="text-green-600 border-green-200 bg-green-50">Nouveau</Badge>
                 )}
               </div>
               
@@ -76,10 +76,8 @@ export default async function FormationPublicPage({
               </div>
 
               <div className="pt-6 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="h-14 px-8 text-lg w-full sm:w-auto" asChild>
-                  <Link href={`/learn/${formation.id}`}>
-                    Commencer la formation
-                  </Link>
+                <Button variant="primary" className="h-14 px-8 text-lg w-full sm:w-auto" href={`/learn/${formation.id}`}>
+                  Commencer la formation
                 </Button>
               </div>
             </div>

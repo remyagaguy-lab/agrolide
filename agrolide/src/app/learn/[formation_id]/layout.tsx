@@ -4,8 +4,7 @@ import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle } from "lucide-react";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { ThemeToggle } from "@/components/theme-toggle";
+
 
 export default async function LearnLayout({
   children,
@@ -69,7 +68,6 @@ export default async function LearnLayout({
               />
             </div>
           </div>
-          <ThemeToggle />
         </div>
       </header>
 
@@ -79,7 +77,7 @@ export default async function LearnLayout({
           <div className="p-4 border-b">
             <h2 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground">Sommaire du cours</h2>
           </div>
-          <ScrollArea className="flex-1">
+          <div className="flex-1 overflow-y-auto">
             <div className="p-2 space-y-4">
               {formation.modules.map((mod, index) => (
                 <div key={mod.id} className="space-y-1">
@@ -110,7 +108,7 @@ export default async function LearnLayout({
                 </div>
               ))}
             </div>
-          </ScrollArea>
+          </div>
         </aside>
 
         {/* Main Content Area */}

@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { CheckCircle2, XCircle, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
+
+const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(" ");
 
 type Question = {
   question: string;
