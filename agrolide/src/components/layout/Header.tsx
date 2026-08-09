@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
   { href: "/actualites",      label: "Actualités" },
   { href: "/nos-actions",     label: "Nos actions" },
+  { href: "/formations/form_bp_agricole", label: "Formations" },
   { href: "/bibliotheque",    label: "Bibliothèque" },
   { href: "/blog",            label: "Blog" },
 ]
