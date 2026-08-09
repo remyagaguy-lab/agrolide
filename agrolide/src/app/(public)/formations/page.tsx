@@ -58,7 +58,7 @@ export default async function FormationsPage() {
                     </div>
                   )}
                   <div className="absolute top-4 left-4 flex gap-2">
-                    <Badge variant="secondary" className="bg-white/90 text-green-900 font-semibold backdrop-blur-sm">
+                    <Badge variant="category" className="bg-white/90 text-green-900 font-medium backdrop-blur-sm">
                       {formation.thematique}
                     </Badge>
                   </div>
