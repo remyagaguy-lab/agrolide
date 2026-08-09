@@ -550,6 +550,7 @@ export const inscriptionsEvenementRelations = relations(inscriptions_evenement, 
 
 export const formationsRelations = relations(formations, ({ one, many }) => ({
   sessions_formation: many(sessions_formation),
+  modules: many(formation_modules),
 }));
 
 export const sessionsFormationRelations = relations(sessions_formation, ({ one, many }) => ({
@@ -575,5 +576,20 @@ export const opportunitesRelations = relations(opportunites, ({ one }) => ({
   auteur: one(users, {
     fields: [opportunites.poste_par],
     references: [users.id],
+  }),
+}));
+
+export const modulesRelations = relations(formation_modules, ({ one, many }) => ({
+  formation: one(formations, {
+    fields: [formation_modules.formation_id],
+    references: [formations.id],
+  }),
+  lecons: many(formation_lecons),
+}));
+
+export const leconsRelations = relations(formation_lecons, ({ one }) => ({
+  module: one(formation_modules, {
+    fields: [formation_lecons.module_id],
+    references: [formation_modules.id],
   }),
 }));
