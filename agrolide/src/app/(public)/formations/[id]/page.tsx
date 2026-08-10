@@ -36,6 +36,9 @@ export default async function FormationPublicPage({
   const allLecons = formation.modules.flatMap(m => m.lecons);
   const totalLecons = allLecons.length;
   const totalDuree = allLecons.reduce((acc, curr) => acc + (curr.duree_minutes || 0), 0);
+  const formattedDuree = totalDuree >= 60 
+    ? `${Math.floor(totalDuree / 60)}h${totalDuree % 60 > 0 ? ` ${totalDuree % 60}min` : ''}` 
+    : `${totalDuree} min`;
 
   return (
     <div className="min-h-screen bg-background">
@@ -64,7 +67,7 @@ export default async function FormationPublicPage({
               <div className="flex flex-wrap items-center gap-6 pt-4 text-sm font-medium text-white/80">
                 <div className="flex items-center gap-2">
                   <Clock className="w-5 h-5 text-[#50a853]" />
-                  <span>Environ {totalDuree} min</span>
+                  <span>Environ {formattedDuree}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <BookOpen className="w-5 h-5 text-[#50a853]" />
