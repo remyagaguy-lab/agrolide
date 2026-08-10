@@ -175,6 +175,8 @@ export const formations = sqliteTable("formations", {
   titre: text("titre").notNull(),
   statut: text("statut"),
   cover_image_url: text("cover_image_url"), // Added for course display
+  lien_externe: text("lien_externe"),
+  source_externe: text("source_externe").default("Agrolide"),
 });
 
 export const formation_modules = sqliteTable("formation_modules", {

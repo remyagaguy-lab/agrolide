@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { CheckCircle2, Clock, BookOpen, GraduationCap } from "lucide-react";
+import { CheckCircle2, Clock, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { auth } from "@/auth";
 import { inscriptions_formation } from "@/db/schema";
@@ -62,6 +62,7 @@ export default async function FormationPublicPage({
   }
 
   const firstLeconId = allLecons[0]?.id || "";
+  const isExternal = !!formation.lien_externe;
 
   return (
     <div className="min-h-screen bg-background">
@@ -88,27 +89,46 @@ export default async function FormationPublicPage({
               </p>
               
               <div className="flex flex-wrap items-center gap-6 pt-4 text-sm font-medium text-white/80">
-                <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5 text-[#50a853]" />
-                  <span>Environ {formattedDuree}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BookOpen className="w-5 h-5 text-[#50a853]" />
-                  <span>{totalModules} Modules</span>
-                </div>
+                {!isExternal && (
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-5 h-5 text-[#50a853]" />
+                    <span>Environ {formattedDuree}</span>
+                  </div>
+                )}
                 <div className="flex items-center gap-2">
                   <GraduationCap className="w-5 h-5 text-[#50a853]" />
-                  <span>{totalLecons} Leçons</span>
+                  <span>Niveau {formation.niveau}</span>
                 </div>
+                {!isExternal && (
+                  <div className="flex items-center gap-2">
+                    <BookOpen className="w-5 h-5 text-[#50a853]" />
+                    <span>{totalModules} Modules</span>
+                  </div>
+                )}
+                {isExternal && (
+                  <div className="flex items-center gap-2">
+                    <ExternalLink className="w-5 h-5 text-[#f99e1d]" />
+                    <span>Source : {formation.source_externe}</span>
+                  </div>
+                )}
               </div>
 
               <div className="pt-8 flex flex-col sm:flex-row gap-4">
-                <EnrollButton 
-                  formationId={formation.id}
-                  firstLeconId={firstLeconId}
-                  isEnrolled={isEnrolled}
-                  isLoggedIn={isLoggedIn}
-                />
+                {isExternal ? (
+                  <a href={formation.lien_externe!} target="_blank" rel="noopener noreferrer">
+                    <Button size="lg" className="w-full sm:w-auto bg-[#f99e1d] hover:bg-[#d8891a] text-white">
+                      Accéder à la formation externe
+                      <ExternalLink className="ml-2 w-5 h-5" />
+                    </Button>
+                  </a>
+                ) : (
+                  <EnrollButton 
+                    formationId={formation.id}
+                    firstLeconId={firstLeconId}
+                    isEnrolled={isEnrolled}
+                    isLoggedIn={isLoggedIn}
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -116,43 +136,45 @@ export default async function FormationPublicPage({
       </section>
 
       {/* Course Content Section */}
-      <section className="py-16 md:py-24 bg-[#f8f8f6]">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-h2 text-[#1a1a1a] mb-10">Programme de la formation</h2>
-            
-            <div className="space-y-6">
-              {formation.modules.map((mod, index) => (
-                <div key={mod.id} className="bg-white border border-[#e8e8e4] rounded-xl overflow-hidden shadow-none">
-                  <div className="p-6 md:p-8">
-                    <div className="flex items-start gap-4 mb-2">
-                      <div className="w-10 h-10 rounded-full bg-[#f0f0ee] flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-[#1b5e38] font-bold text-lg">{index + 1}</span>
-                      </div>
-                      <div>
-                        <h3 className="text-h3 text-[#1a1a1a] mb-2">{mod.titre}</h3>
-                        <p className="text-body text-[#4a4a4a]">{mod.description}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="pl-14 space-y-4 pt-6 border-t border-[#e8e8e4] mt-6">
-                      {mod.lecons.map((lecon) => (
-                        <div key={lecon.id} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-[#50a853] mt-0.5 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-[#1a1a1a]">{lecon.titre}</p>
-                            <p className="text-body-sm mt-1">{lecon.duree_minutes} min</p>
-                          </div>
+      {!isExternal && (
+        <section className="py-16 md:py-24 bg-[#f8f8f6]">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-h2 text-[#1a1a1a] mb-10">Programme de la formation</h2>
+              
+              <div className="space-y-6">
+                {formation.modules.map((mod, index) => (
+                  <div key={mod.id} className="bg-white border border-[#e8e8e4] rounded-xl overflow-hidden shadow-none">
+                    <div className="p-6 md:p-8">
+                      <div className="flex items-start gap-4 mb-2">
+                        <div className="w-10 h-10 rounded-full bg-[#f0f0ee] flex items-center justify-center flex-shrink-0 mt-1">
+                          <span className="text-[#1b5e38] font-bold text-lg">{index + 1}</span>
                         </div>
-                      ))}
+                        <div>
+                          <h3 className="text-h3 text-[#1a1a1a] mb-2">{mod.titre}</h3>
+                          <p className="text-body text-[#4a4a4a]">{mod.description}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="pl-14 space-y-4 pt-6 border-t border-[#e8e8e4] mt-6">
+                        {mod.lecons.map((lecon) => (
+                          <div key={lecon.id} className="flex items-start gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-[#50a853] mt-0.5 flex-shrink-0" />
+                            <div>
+                              <p className="font-medium text-[#1a1a1a]">{lecon.titre}</p>
+                              <p className="text-body-sm mt-1">{lecon.duree_minutes} min</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   );
 }
