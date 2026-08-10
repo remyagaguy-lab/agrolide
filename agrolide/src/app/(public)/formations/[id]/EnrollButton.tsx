@@ -10,7 +10,8 @@ export function EnrollButton({
   isEnrolled,
   isLoggedIn,
   isExternal = false,
-  lienExterne = ""
+  lienExterne = "",
+  className = ""
 }: { 
   formationId: string; 
   firstLeconId?: string;
