@@ -18,9 +18,18 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1595841696650-6f03d51fb154?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
+    cover_image_url: "/images/formations/ext-atingi-1.png",
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "Passer d'une agriculture de subsistance à une agriculture commerciale nécessite de nouvelles compétences en gestion financière, en marketing et en planification.",
+      public_cible: "Jeunes agripreneurs, agriculteurs souhaitant développer leur activité, étudiants en agronomie.",
+      presentation_structure: "Atingi est une plateforme numérique d'apprentissage gratuite mise en place par la Coopération allemande (GIZ) pour améliorer l'accès à la formation.",
+      objectifs: [
+        "Comprendre les principes de l'agrobusiness",
+        "Calculer les coûts de production et la rentabilité",
+        "Identifier les marchés potentiels et vendre efficacement"
+      ]
+    })
   },
   {
     id: "ext-atingi-2",
@@ -33,9 +42,18 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
+    cover_image_url: "/images/formations/ext-atingi-2.png",
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "Un bon projet agricole repose sur un modèle économique solide. Le BMC est l'outil visuel de référence pour cartographier et optimiser ce modèle.",
+      public_cible: "Porteurs de projets agricoles, gérants d'exploitations, startups agritech.",
+      presentation_structure: "Atingi collabore avec des experts mondiaux pour offrir des cours de qualité sur l'entrepreneuriat.",
+      objectifs: [
+        "Maîtriser les 9 blocs du Business Model Canvas",
+        "Appliquer le BMC à une entreprise agricole",
+        "Tester et valider ses hypothèses économiques"
+      ]
+    })
   },
   {
     id: "ext-atingi-3",
@@ -49,8 +67,17 @@ const externalCourses = [
     prix_fcfa: 0,
     statut: "Publié",
     cover_image_url: "https://images.unsplash.com/photo-1611080922883-8a0a2e7c4ea9?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "L'accès au financement est l'un des principaux freins au développement de l'agrobusiness en Afrique. Savoir parler aux investisseurs est crucial.",
+      public_cible: "Entrepreneurs agricoles en phase de levée de fonds, directeurs financiers de PME agricoles.",
+      presentation_structure: "Atingi met à disposition des ressources pour renforcer la viabilité économique des PME en Afrique.",
+      objectifs: [
+        "Structurer des données financières pour des investisseurs",
+        "Rédiger un pitch deck percutant",
+        "Comprendre les critères de due diligence"
+      ]
+    })
   },
   // COLEAD
   {
@@ -65,8 +92,17 @@ const externalCourses = [
     prix_fcfa: 0,
     statut: "Publié",
     cover_image_url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "Face aux défis environnementaux et aux exigences croissantes des marchés internationaux (notamment l'UE), la durabilité devient incontournable.",
+      public_cible: "Producteurs exportateurs, responsables qualité, techniciens agricoles.",
+      presentation_structure: "Le COLEAD (Comité de Liaison Europe-Afrique-Caraïbes-Pacifique) soutient le développement d'une agriculture durable et compétitive.",
+      objectifs: [
+        "Mettre en œuvre les bonnes pratiques agricoles (BPA)",
+        "Réduire l'utilisation de pesticides chimiques",
+        "Optimiser la gestion des ressources en eau"
+      ]
+    })
   },
   {
     id: "ext-colead-2",
@@ -80,8 +116,17 @@ const externalCourses = [
     prix_fcfa: 0,
     statut: "Publié",
     cover_image_url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "La conformité sanitaire est un prérequis pour accéder aux marchés internationaux. Une défaillance dans la chaîne de valeur peut avoir de graves conséquences.",
+      public_cible: "Responsables qualité en unités de transformation, exportateurs, inspecteurs sanitaires.",
+      presentation_structure: "Le COLEAD accompagne les pays ACP dans l'atteinte des standards de qualité européens et internationaux.",
+      objectifs: [
+        "Comprendre les principes du système HACCP",
+        "Assurer la traçabilité complète des produits",
+        "Prévenir les contaminations croisées"
+      ]
+    })
   },
   // Agrisud
   {
@@ -96,8 +141,17 @@ const externalCourses = [
     prix_fcfa: 0,
     statut: "Publié",
     cover_image_url: "https://images.unsplash.com/photo-1592982537447-6f296d19beec?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "L'agroécologie propose des solutions fondées sur la nature pour produire sainement tout en préservant la biodiversité et en régénérant les écosystèmes.",
+      public_cible: "Petits producteurs, animateurs ruraux, membres d'ONG environnementales.",
+      presentation_structure: "Agrisud International lutte contre la pauvreté en soutenant la création de très petites entreprises (TPE) agricoles familiales.",
+      objectifs: [
+        "Comprendre les principes de l'agroécologie",
+        "Produire du compost et des fertilisants organiques",
+        "Protéger les cultures de manière naturelle"
+      ]
+    })
   },
   // CORAF
   {
@@ -111,9 +165,18 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
+    cover_image_url: "/images/formations/ext-coraf-1.png",
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "La dégradation des sols menace gravement la sécurité alimentaire en Afrique. Des pratiques intégrées sont nécessaires pour restaurer la productivité.",
+      public_cible: "Producteurs de céréales, techniciens agricoles, chercheurs.",
+      presentation_structure: "Le CORAF est la principale organisation de recherche agricole en Afrique de l'Ouest et du Centre.",
+      objectifs: [
+        "Évaluer l'état de fertilité d'un sol",
+        "Combiner engrais minéraux et amendements organiques",
+        "Pratiquer la rotation et l'association de cultures"
+      ]
+    })
   },
   // Daki Farm
   {
@@ -127,9 +190,18 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1548550023-2bf3c49b56bc?q=80&w=1000&auto=format&fit=crop",
-    programme_json: JSON.stringify([]),
+    cover_image_url: "/images/formations/ext-daki-1.png",
     acces: "Gratuit",
+    programme_json: JSON.stringify({
+      contexte: "L'aviculture est une filière très dynamique et lucrative en Afrique, mais elle exige une grande rigueur technique et sanitaire.",
+      public_cible: "Nouveaux éleveurs, passionnés d'agriculture, investisseurs ruraux.",
+      presentation_structure: "Daki Farm est une entreprise agricole leader qui partage son expertise pratique avec les entrepreneurs du continent.",
+      objectifs: [
+        "Aménager un poulailler aux normes",
+        "Gérer l'alimentation et la prophylaxie",
+        "Optimiser la croissance et le rendement de ponte"
+      ]
+    })
   }
 ];
 
@@ -145,6 +217,8 @@ async function seed() {
           description: course.description,
           source_externe: course.source_externe,
           lien_externe: course.lien_externe,
+          cover_image_url: course.cover_image_url,
+          programme_json: course.programme_json,
         }
       });
       console.log(`✅ Formation ajoutée/mise à jour : ${course.titre} (${course.source_externe})`);
@@ -153,6 +227,7 @@ async function seed() {
   } catch (error) {
     console.error("❌ Erreur lors de l'insertion :", error);
   }
+  process.exit(0);
 }
 
 seed();

@@ -2,18 +2,22 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Loader2 } from "lucide-react";
+import { Loader2, ExternalLink } from "lucide-react";
 
 export function EnrollButton({ 
   formationId, 
   firstLeconId, 
   isEnrolled,
-  isLoggedIn 
+  isLoggedIn,
+  isExternal = false,
+  lienExterne = ""
 }: { 
   formationId: string; 
-  firstLeconId: string;
+  firstLeconId?: string;
   isEnrolled: boolean;
   isLoggedIn: boolean;
+  isExternal?: boolean;
+  lienExterne?: string;
 }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -25,7 +29,11 @@ export function EnrollButton({
     }
 
     if (isEnrolled) {
-      router.push(`/learn/${formationId}/${firstLeconId}`);
+      if (isExternal && lienExterne) {
+        window.open(lienExterne, "_blank");
+      } else if (firstLeconId) {
+        router.push(`/learn/${formationId}/${firstLeconId}`);
+      }
       return;
     }
 
@@ -35,8 +43,13 @@ export function EnrollButton({
         method: "POST",
       });
       if (res.ok) {
-        router.push(`/learn/${formationId}/${firstLeconId}`);
-        router.refresh();
+        if (isExternal && lienExterne) {
+          window.open(lienExterne, "_blank");
+          router.refresh();
+        } else if (firstLeconId) {
+          router.push(`/learn/${formationId}/${firstLeconId}`);
+          router.refresh();
+        }
       }
     } catch (error) {
       console.error(error);
@@ -53,10 +66,13 @@ export function EnrollButton({
     >
       {loading && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
       {!isLoggedIn 
-        ? "Se connecter pour commencer" 
+        ? (isExternal ? "Se connecter pour accéder" : "Se connecter pour commencer")
         : isEnrolled 
-          ? "Reprendre la formation" 
-          : "S'inscrire et commencer"}
+          ? (isExternal ? "Accéder à la formation" : "Reprendre la formation")
+          : (isExternal ? "S'inscrire et accéder" : "S'inscrire et commencer")}
+      
+      {isExternal && <ExternalLink className="ml-2 w-5 h-5 inline" />}
     </button>
   );
 }
+

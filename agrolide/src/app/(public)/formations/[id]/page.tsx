@@ -64,6 +64,17 @@ export default async function FormationPublicPage({
   const firstLeconId = allLecons[0]?.id || "";
   const isExternal = !!formation.lien_externe;
 
+  let extProgramme: any = null;
+  if (isExternal && formation.programme_json) {
+    try {
+      extProgramme = typeof formation.programme_json === "string" 
+        ? JSON.parse(formation.programme_json)
+        : formation.programme_json;
+    } catch (e) {
+      console.error("Failed to parse programme_json", e);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -114,21 +125,14 @@ export default async function FormationPublicPage({
               </div>
 
               <div className="pt-8 flex flex-col sm:flex-row gap-4">
-                {isExternal ? (
-                  <a href={formation.lien_externe!} target="_blank" rel="noopener noreferrer">
-                    <Button className="w-full sm:w-auto bg-[#f99e1d] hover:bg-[#d8891a] text-white py-3 px-6">
-                      Accéder à la formation externe
-                      <ExternalLink className="ml-2 w-5 h-5 inline" />
-                    </Button>
-                  </a>
-                ) : (
-                  <EnrollButton 
-                    formationId={formation.id}
-                    firstLeconId={firstLeconId}
-                    isEnrolled={isEnrolled}
-                    isLoggedIn={isLoggedIn}
-                  />
-                )}
+                <EnrollButton 
+                  formationId={formation.id}
+                  firstLeconId={firstLeconId}
+                  isEnrolled={isEnrolled}
+                  isLoggedIn={isLoggedIn}
+                  isExternal={isExternal}
+                  lienExterne={formation.lien_externe || ""}
+                />
               </div>
             </div>
           </div>
@@ -136,7 +140,60 @@ export default async function FormationPublicPage({
       </section>
 
       {/* Course Content Section */}
-      {!isExternal && (
+      {isExternal && extProgramme ? (
+        <section className="py-16 md:py-24 bg-[#f8f8f6]">
+          <div className="container">
+            <div className="max-w-4xl mx-auto space-y-12">
+              
+              {extProgramme.contexte && (
+                <div>
+                  <h2 className="text-h2 text-[#1a1a1a] mb-6">Contexte de la formation</h2>
+                  <p className="text-body-lg text-[#4a4a4a] leading-relaxed">
+                    {extProgramme.contexte}
+                  </p>
+                </div>
+              )}
+
+              {extProgramme.public_cible && (
+                <div>
+                  <h2 className="text-h2 text-[#1a1a1a] mb-6">Public cible</h2>
+                  <div className="bg-white p-6 rounded-xl border border-[#e8e8e4]">
+                    <p className="text-body text-[#4a4a4a]">
+                      {extProgramme.public_cible}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {extProgramme.objectifs && extProgramme.objectifs.length > 0 && (
+                <div>
+                  <h2 className="text-h2 text-[#1a1a1a] mb-6">Ce que vous allez apprendre</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {extProgramme.objectifs.map((obj: string, i: number) => (
+                      <div key={i} className="flex items-start gap-3 bg-white p-4 rounded-xl border border-[#e8e8e4]">
+                        <CheckCircle2 className="w-5 h-5 text-[#50a853] mt-0.5 flex-shrink-0" />
+                        <span className="text-[#1a1a1a] leading-tight">{obj}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {extProgramme.presentation_structure && (
+                <div>
+                  <h2 className="text-h2 text-[#1a1a1a] mb-6">À propos de {formation.source_externe}</h2>
+                  <div className="bg-[#1b5e38]/5 p-6 rounded-xl border border-[#1b5e38]/10">
+                    <p className="text-body text-[#4a4a4a]">
+                      {extProgramme.presentation_structure}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+            </div>
+          </div>
+        </section>
+      ) : !isExternal && (
         <section className="py-16 md:py-24 bg-[#f8f8f6]">
           <div className="container">
             <div className="max-w-3xl mx-auto">
