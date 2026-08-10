@@ -1,10 +1,11 @@
-import { db } from "@/db";
-import { formation_lecons, formation_modules, formations } from "@/db/schema";
+import { auth } from "@/auth";
+import { formation_lecons, formation_modules, formations, progression_lecons } from "@/db/schema";
 import { eq, and } from "drizzle-orm";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link";
+import { db } from "@/db";
 import { ChevronLeft, ChevronRight, CheckCircle2 } from "lucide-react";
 import { Quiz } from "./Quiz";
 
@@ -14,6 +15,12 @@ export default async function LeconPage({
   params: Promise<{ formation_id: string; lecon_id: string }>;
 }) {
   const { formation_id: formationId, lecon_id: leconId } = await params;
+
+  const session = await auth();
+  if (!session || !session.user || !session.user.id) {
+    redirect("/login");
+  }
+  const userId = session.user.id;
 
   // Fetch the formation structure to determine previous/next
   const formation = await db.query.formations.findFirst({
@@ -47,6 +54,27 @@ export default async function LeconPage({
 
   const previousLecon = currentIndex > 0 ? allLecons[currentIndex - 1] : null;
   const nextLecon = currentIndex < allLecons.length - 1 ? allLecons[currentIndex + 1] : null;
+
+  // Check progression
+  const userProgress = await db.query.progression_lecons.findMany({
+    where: eq(progression_lecons.membre_id, userId),
+  });
+  const completedLeconIds = new Set(userProgress.map(p => p.lecon_id));
+  
+  // Verify if this lesson is unlocked
+  const isUnlocked = currentIndex === 0 || completedLeconIds.has(allLecons[currentIndex - 1].id);
+  
+  if (!isUnlocked) {
+    // Redirect to the first incomplete lesson
+    const firstIncomplete = allLecons.find(l => !completedLeconIds.has(l.id));
+    if (firstIncomplete) {
+      redirect(`/learn/${formationId}/${firstIncomplete.id}`);
+    } else {
+      redirect(`/learn/${formationId}/${allLecons[0].id}`);
+    }
+  }
+
+  const isCompleted = completedLeconIds.has(leconId);
 
   // Fetch the full lesson content individually to avoid D1 JSON payload limits
   const currentLeconFull = await db.query.formation_lecons.findFirst({
@@ -96,9 +124,14 @@ export default async function LeconPage({
 
         {/* Quiz Section */}
         {quizData && quizData.length > 0 && (
-          <div className="mt-16 pt-12 border-t border-[#e8e8e4]">
+          <div className="mt-16 pt-12 border-t border-[#e8e8e4]" id="quiz-section">
             <h2 className="font-urbanist text-h3 text-[#1a1a1a] mb-8">Vérifiez vos connaissances</h2>
-            <Quiz questions={quizData} />
+            <Quiz 
+              questions={quizData} 
+              formationId={formationId}
+              leconId={leconId}
+              isCompleted={isCompleted}
+            />
           </div>
         )}
       </main>
@@ -119,20 +152,31 @@ export default async function LeconPage({
           )}
           
           {nextLecon ? (
-            <Link 
-              href={`/learn/${formationId}/${nextLecon.id}`}
-              className="inline-flex items-center justify-center bg-[#f99e1d] hover:bg-[#fcb726] text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
-            >
-              Suivant
-              <ChevronRight className="w-5 h-5 ml-2" />
-            </Link>
+            isCompleted || !quizData || quizData.length === 0 ? (
+              <Link 
+                href={`/learn/${formationId}/${nextLecon.id}`}
+                className="inline-flex items-center justify-center bg-[#f99e1d] hover:bg-[#fcb726] text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              >
+                Suivant
+                <ChevronRight className="w-5 h-5 ml-2" />
+              </Link>
+            ) : (
+              <button 
+                disabled
+                className="inline-flex items-center justify-center bg-[#f0f0ee] text-[#9a9a96] font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors cursor-not-allowed"
+                title="Validez le quiz pour passer à la suite"
+              >
+                Suivant bloqué
+                <Lock className="w-4 h-4 ml-2" />
+              </button>
+            )
           ) : (
             <Link 
               href={`/formations/${formationId}`}
               className="inline-flex items-center justify-center bg-[#1b5e38] hover:bg-[#145030] text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               <CheckCircle2 className="w-5 h-5 mr-2" />
-              Terminer
+              Terminer la formation
             </Link>
           )}
         </div>

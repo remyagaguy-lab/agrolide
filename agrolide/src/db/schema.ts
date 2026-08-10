@@ -266,7 +266,8 @@ export const inscriptions_formation = sqliteTable("inscriptions_formation", {
   created_at: text("created_at"),
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   membre_id: text("membre_id").notNull(),
-  session_id: text("session_id").notNull(),
+  formation_id: text("formation_id"), // Added for async formations
+  session_id: text("session_id"), // Made optional
   statut: text("statut"),
 });
 
@@ -565,6 +566,10 @@ export const inscriptionsFormationRelations = relations(inscriptions_formation, 
   sessions_formation: one(sessions_formation, {
     fields: [inscriptions_formation.session_id],
     references: [sessions_formation.id],
+  }),
+  formation: one(formations, {
+    fields: [inscriptions_formation.formation_id],
+    references: [formations.id],
   }),
   membre: one(users, {
     fields: [inscriptions_formation.membre_id],

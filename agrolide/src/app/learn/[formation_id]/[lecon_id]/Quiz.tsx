@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, XCircle, ChevronRight } from "lucide-react";
+import { CheckCircle2, XCircle, ChevronRight, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(" ");
 
@@ -12,12 +13,24 @@ type Question = {
   correctAnswer: number;
 };
 
-export function Quiz({ questions }: { questions: Question[] }) {
+export function Quiz({ 
+  questions,
+  formationId,
+  leconId,
+  isCompleted 
+}: { 
+  questions: Question[];
+  formationId: string;
+  leconId: string;
+  isCompleted: boolean;
+}) {
+  const router = useRouter();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+  const [isSubmittingCompletion, setIsSubmittingCompletion] = useState(false);
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -30,13 +43,29 @@ export function Quiz({ questions }: { questions: Question[] }) {
     }
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedOption(null);
       setHasSubmitted(false);
     } else {
       setIsFinished(true);
+      // Validate lesson if not already validated
+      if (!isCompleted && formationId && leconId) {
+        setIsSubmittingCompletion(true);
+        try {
+          const res = await fetch(`/api/formations/${formationId}/lecons/${leconId}/complete`, {
+            method: 'POST',
+          });
+          if (res.ok) {
+            router.refresh();
+          }
+        } catch (error) {
+          console.error("Failed to complete lesson", error);
+        } finally {
+          setIsSubmittingCompletion(false);
+        }
+      }
     }
   };
 
@@ -47,7 +76,19 @@ export function Quiz({ questions }: { questions: Question[] }) {
         <p className="text-muted-foreground">
           Vous avez obtenu {score} sur {questions.length} bonnes réponses.
         </p>
-        <div className="pt-4">
+        <div className="pt-4 space-y-4">
+          {isSubmittingCompletion && (
+            <p className="text-[#f99e1d] font-urbanist font-medium flex items-center justify-center">
+              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              Validation de la leçon en cours...
+            </p>
+          )}
+          {isCompleted && !isSubmittingCompletion && (
+            <p className="text-[#1b5e38] font-urbanist font-bold flex items-center justify-center">
+              <CheckCircle2 className="w-5 h-5 mr-2 text-[#50a853]" />
+              Leçon validée avec succès ! Vous pouvez passer à la suite.
+            </p>
+          )}
           <button onClick={() => {
             setCurrentQuestionIndex(0);
             setSelectedOption(null);

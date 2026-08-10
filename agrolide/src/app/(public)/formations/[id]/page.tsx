@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { CheckCircle2, Clock, BookOpen, GraduationCap } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import { auth } from "@/auth";
+import { inscriptions_formation } from "@/db/schema";
+import { and } from "drizzle-orm";
+import { EnrollButton } from "./EnrollButton";
 
 export default async function FormationPublicPage({
   params,
@@ -39,6 +43,25 @@ export default async function FormationPublicPage({
   const formattedDuree = totalDuree >= 60 
     ? `${Math.floor(totalDuree / 60)}h${totalDuree % 60 > 0 ? ` ${totalDuree % 60}min` : ''}` 
     : `${totalDuree} min`;
+
+  // Auth & Enrollment check
+  const session = await auth();
+  const isLoggedIn = !!session?.user;
+  let isEnrolled = false;
+
+  if (isLoggedIn && session.user?.id) {
+    const existing = await db.query.inscriptions_formation.findFirst({
+      where: and(
+        eq(inscriptions_formation.membre_id, session.user.id),
+        eq(inscriptions_formation.formation_id, formation.id)
+      )
+    });
+    if (existing) {
+      isEnrolled = true;
+    }
+  }
+
+  const firstLeconId = allLecons[0]?.id || "";
 
   return (
     <div className="min-h-screen bg-background">
@@ -80,12 +103,12 @@ export default async function FormationPublicPage({
               </div>
 
               <div className="pt-8 flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href={`/learn/${formation.id}`}
-                  className="inline-flex items-center justify-center bg-[#f99e1d] hover:bg-[#fcb726] text-white font-heading font-[700] text-[15px] px-[28px] py-[12px] rounded-lg transition-colors min-h-[48px]"
-                >
-                  Commencer la formation
-                </Link>
+                <EnrollButton 
+                  formationId={formation.id}
+                  firstLeconId={firstLeconId}
+                  isEnrolled={isEnrolled}
+                  isLoggedIn={isLoggedIn}
+                />
               </div>
             </div>
           </div>
