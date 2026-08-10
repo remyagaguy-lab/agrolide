@@ -141,51 +141,11 @@ export default function CourseFilters() {
                 <input 
                   type="radio" 
                   name="source" 
-                  checked={source === 'Agribusiness e-Academy (Atingi)'} 
-                  onChange={() => handleFilterChange('source', 'Agribusiness e-Academy (Atingi)')}
+                  checked={source === 'FUN MOOC'} 
+                  onChange={() => handleFilterChange('source', 'FUN MOOC')}
                   className="text-[#1b5e38] focus:ring-[#1b5e38]"
                 />
-                Atingi
-              </label>
-              <label className="flex items-center gap-2 text-gray-700 cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === 'COLEAD e-learning'} 
-                  onChange={() => handleFilterChange('source', 'COLEAD e-learning')}
-                  className="text-[#1b5e38] focus:ring-[#1b5e38]"
-                />
-                COLEAD
-              </label>
-              <label className="flex items-center gap-2 text-gray-700 cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === 'Agrisud International'} 
-                  onChange={() => handleFilterChange('source', 'Agrisud International')}
-                  className="text-[#1b5e38] focus:ring-[#1b5e38]"
-                />
-                Agrisud
-              </label>
-              <label className="flex items-center gap-2 text-gray-700 cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === 'CORAF e-learning'} 
-                  onChange={() => handleFilterChange('source', 'CORAF e-learning')}
-                  className="text-[#1b5e38] focus:ring-[#1b5e38]"
-                />
-                CORAF
-              </label>
-              <label className="flex items-center gap-2 text-gray-700 cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === 'Daki Farm'} 
-                  onChange={() => handleFilterChange('source', 'Daki Farm')}
-                  className="text-[#1b5e38] focus:ring-[#1b5e38]"
-                />
-                Daki Farm
+                FUN MOOC
               </label>
             </div>
           </div>
