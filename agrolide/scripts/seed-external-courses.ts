@@ -140,7 +140,7 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1592982537447-6f296d19beec?q=80&w=1000&auto=format&fit=crop",
+    cover_image_url: "/images/formations/ext-agrisud-1.png",
     acces: "Gratuit",
     programme_json: JSON.stringify({
       contexte: "L'agroécologie propose des solutions fondées sur la nature pour produire sainement tout en préservant la biodiversité et en régénérant les écosystèmes.",

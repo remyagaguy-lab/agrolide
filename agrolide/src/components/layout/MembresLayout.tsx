@@ -42,13 +42,13 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
     // { name: "Forum", href: "/membres/forum", icon: MessageSquare },
     { name: "Événements", href: "/membres/evenements", icon: Calendar },
     { name: "Opportunités", href: "/membres/opportunites", icon: Briefcase },
+    { name: "Formations", href: "/formations", icon: BookOpen },
   ]
 
   const navPersonal = [
     { name: "Mon Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Messages", href: "/membres/messages", icon: Mail },
     { name: "Mes Formations", href: "/membres/formations", icon: BookOpen },
-    // { name: "Cotisation", href: "/membres/cotisation", icon: CreditCard },
     { name: "Mon Profil", href: "/membres/profil", icon: User },
   ]
 
@@ -57,6 +57,8 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
     { name: "Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Biblio", href: "/membres/bibliotheque", icon: Library },
+    { name: "Formations", href: "/formations", icon: BookOpen },
+    { name: "Mes Formations", href: "/membres/formations", icon: BookOpen },
     { name: "Profil", href: "/membres/profil", icon: User },
   ]
 
