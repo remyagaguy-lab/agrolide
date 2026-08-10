@@ -36,7 +36,7 @@ const externalCourses = [
     thematique: "Agrobusiness",
     description: "Comprendre les liens entre la production agricole, la transformation, la distribution et la nutrition humaine pour des systèmes alimentaires durables.",
     source_externe: "FUN MOOC",
-    lien_externe: "https://www.fun-mooc.fr/fr/cours/nutrition-et-systemes-alimentaires/",
+    lien_externe: "https://www.fun-mooc.fr/fr/cours/nutrition-systemes-alimentaires/",
     niveau: "Intermédiaire",
     modalite: "En ligne",
     prix_fcfa: 0,
