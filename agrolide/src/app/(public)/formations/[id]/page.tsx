@@ -116,9 +116,9 @@ export default async function FormationPublicPage({
               <div className="pt-8 flex flex-col sm:flex-row gap-4">
                 {isExternal ? (
                   <a href={formation.lien_externe!} target="_blank" rel="noopener noreferrer">
-                    <Button size="lg" className="w-full sm:w-auto bg-[#f99e1d] hover:bg-[#d8891a] text-white">
+                    <Button className="w-full sm:w-auto bg-[#f99e1d] hover:bg-[#d8891a] text-white py-3 px-6">
                       Accéder à la formation externe
-                      <ExternalLink className="ml-2 w-5 h-5" />
+                      <ExternalLink className="ml-2 w-5 h-5 inline" />
                     </Button>
                   </a>
                 ) : (
