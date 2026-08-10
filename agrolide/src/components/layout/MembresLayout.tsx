@@ -41,12 +41,13 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
     { name: "Bibliothèque", href: "/membres/bibliotheque", icon: Library },
     // { name: "Forum", href: "/membres/forum", icon: MessageSquare },
     { name: "Événements", href: "/membres/evenements", icon: Calendar },
-    { name: profile?.categorie === "junior" ? "Formations" : "Opportunités", href: profile?.categorie === "junior" ? "/membres/formations" : "/membres/opportunites", icon: profile?.categorie === "junior" ? BookOpen : Briefcase },
+    { name: "Opportunités", href: "/membres/opportunites", icon: Briefcase },
   ]
 
   const navPersonal = [
     { name: "Mon Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Messages", href: "/membres/messages", icon: Mail },
+    { name: "Mes Formations", href: "/membres/formations", icon: BookOpen },
     // { name: "Cotisation", href: "/membres/cotisation", icon: CreditCard },
     { name: "Mon Profil", href: "/membres/profil", icon: User },
   ]
