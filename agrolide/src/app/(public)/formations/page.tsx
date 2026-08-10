@@ -111,13 +111,13 @@ export default async function FormationsPage(
                     </div>
                     
                     <div className="p-6 flex flex-col flex-1">
-                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                        <span className="flex items-center gap-1.5 font-medium text-primary-700">
+                      <div className="flex items-start justify-between gap-2 text-sm text-gray-500 mb-3">
+                        <span className="flex items-center gap-1.5 font-medium text-primary-700 shrink-0">
                           <GraduationCap size={16} />
                           {formation.niveau}
                         </span>
                         {isExternal && (
-                          <span className="flex items-center gap-1.5 font-medium text-gray-500">
+                          <span className="text-right font-medium text-gray-500 text-xs line-clamp-2">
                             Source: {formation.source_externe}
                           </span>
                         )}
