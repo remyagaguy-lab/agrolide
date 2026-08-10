@@ -69,16 +69,16 @@ export default async function LeconPage({
 
   return (
     <div className="flex flex-col min-h-full bg-white">
-      {/* Clean Header for Reading Mode */}
-      <section className="pt-12 md:pt-16 pb-8 border-b border-[#e8e8e4]">
+      {/* Corporate Header for Reading Mode */}
+      <section className="pt-12 md:pt-16 pb-12 bg-[#1b5e38]">
         <div className="container max-w-3xl mx-auto px-6">
           <div className="flex flex-col gap-4">
             <div>
-              <span className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-[#50a853]">
+              <span className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-[#50a853] bg-[#0f351f] px-3 py-1 rounded-full">
                 {formation.modules.find(m => m.id === currentLeconFull.module_id)?.titre}
               </span>
             </div>
-            <h1 className="font-urbanist text-h2 md:text-h1 text-[#1a1a1a] leading-tight">
+            <h1 className="font-urbanist text-h2 md:text-h1 text-white leading-tight mt-2">
               {currentLeconFull.titre}
             </h1>
           </div>
