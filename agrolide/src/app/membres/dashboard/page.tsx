@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { auth } from "@clerk/nextjs/server"
 import { db } from "@/db"
-import { users, notifications, evenements, articles, documents, opportunites, cotisations, forum_fils } from "@/db/schema"
+import { users, notifications, evenements, articles, documents, opportunites, cotisations, forum_fils, formations } from "@/db/schema"
 import { eq, desc, gte } from "drizzle-orm"
 import { 
   Library, 
@@ -17,7 +17,8 @@ import {
   EventWidget,
   ActivityTimeline,
   ResourcesWidget,
-  ProfileSummaryWidget
+  ProfileSummaryWidget,
+  FormationsWidget
 } from "@/components/modules/dashboard"
 
 export const metadata = { title: "Tableau de bord | Agrolide" }
@@ -77,6 +78,12 @@ export default async function DashboardPage() {
     // Fetch Opportunités
     const oppsData = await db.query.opportunites.findMany({
       orderBy: [desc(opportunites.created_at)],
+      limit: 5
+    })
+
+    // Fetch Formations
+    const formationsData = await db.query.formations.findMany({
+      orderBy: [desc(formations.created_at)],
       limit: 5
     })
 
@@ -206,6 +213,13 @@ export default async function DashboardPage() {
               opportunities={oppsData}
               title="Opportunités & Appels à Projets"
               viewAllHref="/membres/opportunites"
+            />
+
+            {/* FORMATIONS WIDGET */}
+            <FormationsWidget 
+              formations={formationsData}
+              title="Formations & Cours"
+              viewAllHref="/formations"
             />
 
             {/* RESOURCES WIDGET */}

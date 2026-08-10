@@ -22,6 +22,7 @@ export default async function FormationsPage(
   const source = searchParams.source as string | undefined;
   const niveau = searchParams.niveau as string | undefined;
   const prix = searchParams.prix as string | undefined;
+  const thematique = searchParams.thematique as string | undefined;
 
   let allFormations = await db.query.formations.findMany({
     orderBy: (formations, { desc }) => [desc(formations.created_at)],
@@ -38,6 +39,10 @@ export default async function FormationsPage(
 
   if (niveau) {
     allFormations = allFormations.filter(f => f.niveau === niveau);
+  }
+
+  if (thematique) {
+    allFormations = allFormations.filter(f => f.thematique === thematique);
   }
 
   if (prix) {
@@ -138,8 +143,8 @@ export default async function FormationsPage(
                         <span className="font-bold text-gray-900">
                           {formation.prix_fcfa === 0 ? "Gratuit" : `${formation.prix_fcfa?.toLocaleString('fr-FR')} FCFA`}
                         </span>
-                        <span className="text-primary-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-                          Découvrir <ChevronRight size={18} />
+                        <span className="text-white bg-[#1b5e38] hover:bg-[#144a2c] font-medium flex items-center gap-1 px-4 py-2 rounded-lg transition-all text-sm shadow-sm group-hover:shadow group-hover:gap-2">
+                          {isExternal ? "Accéder" : "S'inscrire"} <ChevronRight size={16} />
                         </span>
                       </div>
                     </div>

@@ -34,7 +34,9 @@ export default function CourseFilters() {
   const niveau = searchParams.get('niveau') || '';
   const prix = searchParams.get('prix') || '';
 
-  const hasFilters = source || niveau || prix;
+  const thematique = searchParams.get('thematique') || '';
+
+  const hasFilters = source || niveau || prix || thematique;
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
@@ -63,6 +65,44 @@ export default function CourseFilters() {
         </div>
 
         <div className="space-y-6">
+          {/* Thématique */}
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wider">Thématique</h3>
+            <div className="space-y-2">
+              <label className="flex items-center gap-2 text-gray-700 cursor-pointer">
+                <input 
+                  type="radio" 
+                  name="thematique" 
+                  checked={!searchParams.get('thematique')} 
+                  onChange={() => handleFilterChange('thematique', '')}
+                  className="text-[#1b5e38] focus:ring-[#1b5e38]"
+                />
+                Toutes les thématiques
+              </label>
+              {[
+                "Agrobusiness",
+                "Production Animale",
+                "Production Végétale",
+                "Financement",
+                "Agroécologie",
+                "Gestion des Sols"
+              ].map((theme) => (
+                <label key={theme} className="flex items-center gap-2 text-gray-700 cursor-pointer">
+                  <input 
+                    type="radio" 
+                    name="thematique" 
+                    checked={searchParams.get('thematique') === theme} 
+                    onChange={() => handleFilterChange('thematique', theme)}
+                    className="text-[#1b5e38] focus:ring-[#1b5e38]"
+                  />
+                  {theme}
+                </label>
+              ))}
+            </div>
+          </div>
+
+          <div className="h-px bg-gray-100"></div>
+
           {/* Source */}
           <div>
             <h3 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wider">Source</h3>

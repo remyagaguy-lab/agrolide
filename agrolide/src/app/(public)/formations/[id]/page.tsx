@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { CheckCircle2, Clock, BookOpen, GraduationCap, ExternalLink } from "lucide-react";
 import ReactMarkdown from "react-markdown";
-import { auth } from "@/auth";
+import { auth } from "@clerk/nextjs/server";
 import { inscriptions_formation } from "@/db/schema";
 import { and } from "drizzle-orm";
 import { EnrollButton } from "./EnrollButton";
@@ -45,14 +45,14 @@ export default async function FormationPublicPage({
     : `${totalDuree} min`;
 
   // Auth & Enrollment check
-  const session = await auth();
-  const isLoggedIn = !!session?.user;
+  const { userId } = await auth();
+  const isLoggedIn = !!userId;
   let isEnrolled = false;
 
-  if (isLoggedIn && session.user?.id) {
+  if (isLoggedIn && userId) {
     const existing = await db.query.inscriptions_formation.findFirst({
       where: and(
-        eq(inscriptions_formation.membre_id, session.user.id),
+        eq(inscriptions_formation.membre_id, userId),
         eq(inscriptions_formation.formation_id, formation.id)
       )
     });
