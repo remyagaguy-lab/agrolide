@@ -4,37 +4,7 @@ import { db } from "@/db"
 import Link from 'next/link'
 import { Badge } from "@/components/ui/Badge"
 import CourseFilters from './CourseFilters'
-    titre: "Agriculture Intelligente face au Climat (AIC)",
-    thematique: "Climat & Résilience",
-    description: "Découvrez les bases de l'agriculture intelligente face au climat et comment adapter vos systèmes de production aux changements climatiques.",
-    source: "FAO elearning Academy",
-    url: "https://elearning.fao.org/course/view.php?id=354",
-  },
-  {
-    id: "fao-2",
-    titre: "Gestion des Risques Agricoles",
-    thematique: "Finance & Gestion",
-    description: "Apprenez à évaluer et atténuer les risques liés aux marchés, aux conditions météorologiques et aux investissements agricoles.",
-    source: "FAO elearning Academy",
-    url: "https://elearning.fao.org/course/view.php?id=336",
-  },
-  {
-    id: "fao-3",
-    titre: "Systèmes Alimentaires Durables",
-    thematique: "Chaîne de Valeur",
-    description: "Comprendre les principes des systèmes alimentaires durables et la réduction des pertes après récolte pour optimiser la chaîne de valeur.",
-    source: "FAO elearning Academy",
-    url: "https://elearning.fao.org/course/view.php?id=682",
-  },
-  {
-    id: "fao-4",
-    titre: "Gouvernance Foncière",
-    thematique: "Droits & Gouvernance",
-    description: "Les directives volontaires pour une gouvernance responsable des régimes fonciers applicables aux terres, pêches et forêts.",
-    source: "FAO elearning Academy",
-    url: "https://elearning.fao.org/course/view.php?id=255",
-  }
-];
+
 
 export const metadata: Metadata = {
   title: "Formations Agricoles",
