@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import { BookOpen, GraduationCap, Clock, ChevronRight, ExternalLink, Globe } from 'lucide-react'
 import { db } from "@/db"
 import Link from 'next/link'
@@ -88,10 +89,12 @@ export default async function FormationsPage(
                   <Link key={formation.id} href={`/formations/${formation.id}`} className="group flex flex-col bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div className="relative h-48 w-full bg-gray-100 overflow-hidden">
                       {formation.cover_image_url ? (
-                        <img 
+                        <Image 
                           src={formation.cover_image_url} 
                           alt={formation.titre}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       ) : (
                         <div className="absolute inset-0 flex items-center justify-center bg-green-50 text-green-800">

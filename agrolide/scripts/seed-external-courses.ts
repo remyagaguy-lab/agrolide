@@ -66,7 +66,7 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1611080922883-8a0a2e7c4ea9?q=80&w=1000&auto=format&fit=crop",
+    cover_image_url: "/images/formations/ext-atingi-3.png",
     acces: "Gratuit",
     programme_json: JSON.stringify({
       contexte: "L'accès au financement est l'un des principaux freins au développement de l'agrobusiness en Afrique. Savoir parler aux investisseurs est crucial.",
@@ -91,7 +91,7 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1000&auto=format&fit=crop",
+    cover_image_url: "/images/formations/ext-colead-1.png",
     acces: "Gratuit",
     programme_json: JSON.stringify({
       contexte: "Face aux défis environnementaux et aux exigences croissantes des marchés internationaux (notamment l'UE), la durabilité devient incontournable.",
@@ -115,7 +115,7 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop",
+    cover_image_url: "/images/formations/ext-colead-2.png",
     acces: "Gratuit",
     programme_json: JSON.stringify({
       contexte: "La conformité sanitaire est un prérequis pour accéder aux marchés internationaux. Une défaillance dans la chaîne de valeur peut avoir de graves conséquences.",
