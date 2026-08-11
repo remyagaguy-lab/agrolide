@@ -30,54 +30,7 @@ const faoCourses = [
       ]
     })
   },
-  {
-    id: "fao-2",
-    titre: "Capitalisation d'expériences pour un apprentissage continu",
-    thematique: "Formation & Gestion",
-    description: "Méthodologie pour identifier, analyser et partager les bonnes pratiques agricoles issues de l'expérience de terrain.",
-    source_externe: "FAO elearning Academy",
-    lien_externe: "https://elearning.fao.org/course/view.php?id=336",
-    modalite: "En ligne (Externe)",
-    niveau: "Débutant",
-    prix_fcfa: 0,
-    statut: "publie",
-    acces: "libre",
-    cover_image_url: "/images/formations/ext-fao-4.png",
-    programme_json: JSON.stringify({
-      contexte: "La capitalisation des expériences permet de ne pas reproduire les mêmes erreurs et de diffuser les innovations paysannes.",
-      public_cible: "Agents de vulgarisation, chefs de projet, exploitants agricoles.",
-      presentation_structure: "L'Académie d'apprentissage en ligne de la FAO.",
-      objectifs: [
-        "Comprendre le processus de capitalisation",
-        "Mettre en place des stratégies de partage de connaissances",
-        "Valoriser les expériences de terrain"
-      ]
-    })
-  },
-  {
-    id: "fao-3",
-    titre: "Données sur la composition des aliments",
-    thematique: "Chaîne de Valeur",
-    description: "Comprendre comment générer, compiler et utiliser les données sur la composition des aliments pour la nutrition.",
-    source_externe: "FAO elearning Academy",
-    lien_externe: "https://elearning.fao.org/course/view.php?id=354",
-    modalite: "En ligne (Externe)",
-    niveau: "Avancé",
-    prix_fcfa: 0,
-    statut: "publie",
-    acces: "libre",
-    cover_image_url: "/images/formations/ext-fao-3.png",
-    programme_json: JSON.stringify({
-      contexte: "La connaissance précise de la composition des aliments est indispensable pour élaborer des politiques nutritionnelles efficaces.",
-      public_cible: "Nutritionnistes, chercheurs, acteurs de l'agro-industrie.",
-      presentation_structure: "La FAO s'engage à promouvoir une chaîne de valeur alimentaire respectueuse de la santé humaine.",
-      objectifs: [
-        "Appréhender les bases de données nutritionnelles",
-        "Générer et utiliser des données fiables",
-        "Améliorer la qualité nutritionnelle des produits"
-      ]
-    })
-  },
+
   {
     id: "fao-4",
     titre: "Introduction à l'agriculture intelligente face au climat (Anglais)",
