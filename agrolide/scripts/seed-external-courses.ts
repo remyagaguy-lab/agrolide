@@ -53,31 +53,6 @@ const externalCourses = [
         "Proposer des améliorations durables"
       ]
     })
-  },
-  {
-    id: "ext-funmooc-3",
-    titre: "Bien-être des troupeaux laitiers",
-    thematique: "Production Animale",
-    description: "Découvrez les principes de l'évaluation du bien-être animal et les bonnes pratiques pour les troupeaux laitiers.",
-    source_externe: "FUN MOOC",
-    lien_externe: "https://www.fun-mooc.fr/fr/cours/bien-etre-des-troupeaux-laitiers/",
-    niveau: "Intermédiaire",
-    modalite: "En ligne",
-    prix_fcfa: 0,
-    statut: "Publié",
-    cover_image_url: "/images/formations/ext-funmooc-3.png",
-    acces: "Gratuit",
-    programme_json: JSON.stringify({
-      contexte: "Le bien-être animal est un enjeu éthique et économique majeur pour les éleveurs de bovins laitiers.",
-      public_cible: "Éleveurs, vétérinaires, techniciens agricoles.",
-      presentation_structure: "Formation conçue par VetAgro Sup.",
-      objectifs: [
-        "Évaluer le bien-être des bovins",
-        "Mettre en œuvre des bonnes pratiques d'élevage",
-        "Améliorer la santé et la productivité du troupeau"
-      ]
-    })
-  }
 ];
 
 async function seed() {
