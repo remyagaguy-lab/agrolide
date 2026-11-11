@@ -29,7 +29,7 @@ async function seedBusinessPlan() {
     niveau: "Avancé",
     modalite: "En ligne",
     prix_fcfa: 0,
-    cover_image_url: "/images/formations/cover_bp_agricole_2.png",
+    cover_image_url: "/images/formations/cover_bp_agricole_2.webp",
     statut: "publie",
     acces: "public",
   });

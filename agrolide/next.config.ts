@@ -43,6 +43,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Les anciennes couvertures PNG (chemins stockés en base) sont servies en WebP.
+  async rewrites() {
+    return [
+      { source: '/images/formations/:name.png', destination: '/images/formations/:name.webp' },
+    ]
+  },
   async headers() {
     return [
       {

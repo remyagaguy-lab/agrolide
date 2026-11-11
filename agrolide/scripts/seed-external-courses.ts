@@ -17,7 +17,7 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "/images/formations/ext-funmooc-1.png",
+    cover_image_url: "/images/formations/ext-funmooc-1.webp",
     acces: "Gratuit",
     programme_json: JSON.stringify({
       contexte: "Le cours explore l'émergence du concept d'agroécologie et les processus de transition vers des systèmes agricoles durables.",
@@ -41,7 +41,7 @@ const externalCourses = [
     modalite: "En ligne",
     prix_fcfa: 0,
     statut: "Publié",
-    cover_image_url: "/images/formations/ext-funmooc-2.png",
+    cover_image_url: "/images/formations/ext-funmooc-2.webp",
     acces: "Gratuit",
     programme_json: JSON.stringify({
       contexte: "La nécessité de repenser nos systèmes alimentaires pour garantir une nutrition de qualité tout en préservant l'environnement.",
