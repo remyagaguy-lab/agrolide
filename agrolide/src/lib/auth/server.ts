@@ -13,19 +13,22 @@ import { createSupabaseServer } from '@/lib/supabase/server'
 
 export type AppRole = 'membre' | 'admin_content' | 'super_admin' | string
 
+/**
+ * RÈGLE (audit S10) : le rôle présent dans le jeton Supabase (app_metadata.role) peut être
+ * périmé jusqu'à la prochaine connexion. Il n'est donc volontairement PAS exposé ici.
+ * Toute décision de droit d'accès relit le rôle dans D1 (voir lib/auth/admin.ts : requireAdmin()).
+ */
 export type AuthResult = {
   userId: string | null
   /** UUID Supabase (peut différer de userId pour les anciens comptes). */
   authId: string | null
   email: string | null
-  role: AppRole | null
-  sessionClaims: { metadata: { role: AppRole | null } } | null
   /** Compat Auth.js : `session.user.id` */
   user: { id: string; email: string | null } | null
 }
 
 const EMPTY: AuthResult = {
-  userId: null, authId: null, email: null, role: null, sessionClaims: null, user: null,
+  userId: null, authId: null, email: null, user: null,
 }
 
 export const auth = cache(async (): Promise<AuthResult> => {
@@ -37,14 +40,11 @@ export const auth = cache(async (): Promise<AuthResult> => {
   const appMeta = (claims.app_metadata ?? {}) as { d1_id?: string; role?: string }
   const userId = appMeta.d1_id ?? claims.sub
   const email = (claims.email as string | undefined) ?? null
-  const role = appMeta.role ?? null
 
   return {
     userId,
     authId: claims.sub,
     email,
-    role,
-    sessionClaims: { metadata: { role } },
     user: { id: userId, email },
   }
 })
@@ -57,7 +57,6 @@ export type CurrentUser = {
   imageUrl: string | null
   emailAddresses: { emailAddress: string }[]
   primaryEmailAddress: { emailAddress: string } | null
-  publicMetadata: { role?: string }
 }
 
 export const currentUser = cache(async (): Promise<CurrentUser | null> => {
@@ -79,7 +78,6 @@ export const currentUser = cache(async (): Promise<CurrentUser | null> => {
     imageUrl: meta.avatar_url ?? meta.picture ?? null,
     emailAddresses: email ? [{ emailAddress: email }] : [],
     primaryEmailAddress: email ? { emailAddress: email } : null,
-    publicMetadata: { role: appMeta.role },
   }
 })
 
