@@ -10,7 +10,12 @@ export { Card, CardDescription, CardTitle, type CardProps, type CardVariant } fr
 export {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
 } from './DropdownMenu'
+export { ChoiceChip, type ChoiceChipProps } from './ChoiceChip'
 export { EmptyState, type EmptyStateProps } from './EmptyState'
+export { FeatureCard, type FeatureCardProps } from './FeatureCard'
+export { PageHero, type PageHeroProps, type PageHeroNextTone } from './PageHero'
+export { Section, type SectionProps, type SectionTone } from './Section'
+export { StepList, type StepListItem, type StepListProps } from './StepList'
 export { FormField, Label, type FormFieldProps } from './FormField'
 export { IconButton, type IconButtonProps } from './IconButton'
 export { Input, type InputProps } from './Input'

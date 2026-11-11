@@ -1,207 +1,224 @@
 import { Metadata } from "next"
-import { db } from "@/db"
-import { campagnes_financement, contributions as contributionsTable } from "@/db/schema"
-import { eq, desc } from "drizzle-orm"
+import Link from "next/link"
 import { Suspense } from "react"
+import { BookOpen, Building2, EyeOff, Mail, Server, ShieldCheck, Sprout } from "lucide-react"
 import MerciBanner from "@/components/modules/fonds/MerciBanner"
-import { getCampagneData } from "@/lib/cache/public-queries"
 import DonationForm from "@/components/modules/fonds/DonationForm"
-import { Heart, Target, TrendingUp, Users, CheckCircle2 } from "lucide-react"
+import { getCampagneData } from "@/lib/cache/public-queries"
+import { Button } from "@/components/ui/Button"
+import { Card } from "@/components/ui/Card"
+import { FeatureCard } from "@/components/ui/FeatureCard"
+import { PageHero } from "@/components/ui/PageHero"
+import { Section } from "@/components/ui/Section"
 
 export const metadata: Metadata = {
-  title: "Nous Soutenir - Faire un Don",
+  title: "Nous soutenir - Faire un don",
   description: "Soutenez le développement de notre réseau agricole et investissez dans la souveraineté alimentaire africaine. Découvrez comment contribuer à nos actions sur le terrain.",
   alternates: { canonical: '/nous-soutenir' }
 }
 
 export const revalidate = 1800 // ISR toutes les 30 minutes
 
+const dateFr = (value?: string | null) =>
+  value ? new Date(value).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }) : ""
+
 export default async function NousSoutenirPage() {
-  // 1+2. Campagne active et contributions validées (requêtes parallèles, en cache)
+  // Campagne active et contributions validées (requêtes parallèles, en cache)
   const { campagne, contributions } = await getCampagneData()
 
   let totalCollecte = 0
   let progressPercentage = 0
-  let recentDonors: any[] = []
+  let recentDonors: typeof contributions = []
 
-  if (campagne) {
-    if (contributions) {
-      totalCollecte = contributions.reduce((sum, c) => sum + Number(c.montant_fcfa), 0)
-      progressPercentage = Math.min(100, Math.round((totalCollecte / campagne.objectif_fcfa) * 100))
-      
-      // Trier et filtrer pour les derniers soutiens publics
-      recentDonors = contributions
-        .filter(c => !c.anonyme)
-        .sort((a, b) => {
-          const tA = a.created_at ? new Date(a.created_at).getTime() : 0;
-          const tB = b.created_at ? new Date(b.created_at).getTime() : 0;
-          return tB - tA;
-        })
-        .slice(0, 5)
-    }
+  if (campagne && contributions) {
+    totalCollecte = contributions.reduce((sum, c) => sum + Number(c.montant_fcfa), 0)
+    progressPercentage = campagne.objectif_fcfa
+      ? Math.min(100, Math.round((totalCollecte / campagne.objectif_fcfa) * 100))
+      : 0
+
+    // Derniers soutiens publics (les dons anonymes ne sont jamais listés)
+    recentDonors = contributions
+      .filter((c) => !c.anonyme)
+      .sort((a, b) => {
+        const tA = a.created_at ? new Date(a.created_at).getTime() : 0
+        const tB = b.created_at ? new Date(b.created_at).getTime() : 0
+        return tB - tA
+      })
+      .slice(0, 5)
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-surface-brand">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-accent-sun/10 rounded-full blur-[100px] pointer-events-none" />
-        </div>
-        
-        <div className="max-w-[900px] mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block px-4 py-2 rounded-full border border-on-surface-brand/10 text-accent-sun font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
-            Fonds de soutien
+    <>
+      <PageHero
+        nextTone="low"
+        label="Nous soutenir"
+        title={
+          <>
+            Soutenir agrolide, c&apos;est investir dans la{" "}
+            <span className="text-accent-sun">souveraineté alimentaire africaine.</span>
+          </>
+        }
+        description="Votre don permet de financer l'accompagnement des agripreneurs, la création de ressources et le développement technologique du réseau."
+        actions={
+          <Button variant="ghost-dark" href="#don">
+            Faire un don
+          </Button>
+        }
+      />
+
+      <Section tone="low" aria-label="Faire un don" className="!pt-6 md:!pt-8">
+        <Suspense fallback={null}>
+          <MerciBanner />
+        </Suspense>
+
+        {/* Campagne en cours : seulement si une campagne est active */}
+        {campagne && (
+          <Card variant="outlined" className="mb-10 !p-6 md:!p-8">
+            <p className="text-label-md uppercase tracking-[0.1em] text-primary">Campagne en cours</p>
+            <h2 className="mt-1 text-headline-sm text-on-surface">{campagne.titre}</h2>
+            <div className="mt-5 flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
+              <p className="text-on-surface">
+                <span className="text-headline-md text-primary">{totalCollecte.toLocaleString("fr-FR")}</span>{" "}
+                <span className="text-body-md text-on-surface-variant">FCFA collectés</span>
+              </p>
+              <p className="text-body-md text-on-surface-variant">
+                {progressPercentage} % de l&apos;objectif de {Number(campagne.objectif_fcfa).toLocaleString("fr-FR")} FCFA
+              </p>
+            </div>
+            <div
+              role="progressbar"
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-valuenow={progressPercentage}
+              aria-label={`Progression de la campagne : ${progressPercentage} % de l'objectif`}
+              className="mt-3 h-3 w-full overflow-hidden rounded-full bg-surface-container-high"
+            >
+              <div className="h-full rounded-full bg-primary" style={{ width: `${progressPercentage}%` }} />
+            </div>
+            {campagne.description && <p className="mt-5 max-w-3xl text-body-md text-on-surface-variant">{campagne.description}</p>}
+          </Card>
+        )}
+
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-14">
+          {/* Formulaire : en premier sur mobile (visible tout de suite), à droite sur bureau */}
+          <div id="don" className="scroll-mt-24 lg:order-2 lg:col-span-5">
+            <Card variant="elevated" className="!p-6 md:!p-8 lg:sticky lg:top-24">
+              <h2 className="mb-6 text-headline-sm text-on-surface">Faire un don</h2>
+              <DonationForm campagneId={campagne?.id || ""} />
+            </Card>
           </div>
-          <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-on-surface-brand leading-[1.1] tracking-[-0.02em] mb-8">
-            Soutenir agrolide, c'est investir dans la <span className="text-accent-sun">souveraineté alimentaire africaine.</span>
-          </h1>
-          <p className="font-sans text-[16px] md:text-[20px] text-on-surface-brand/70 max-w-[700px] mx-auto leading-[1.7]">
-            Votre don permet de financer l'accompagnement des agripreneurs, la création de ressources et le développement technologique du réseau.
-          </p>
-        </div>
-      </section>
 
-      {/* ── MESSAGE DE REMERCIEMENT ──────────────── */}
-      <Suspense fallback={null}>
-        <MerciBanner />
-      </Suspense>
+          <div className="space-y-14 lg:order-1 lg:col-span-7">
+            <div>
+              <h2 className="text-headline-md text-on-surface">Ce que finance votre contribution</h2>
+              <p className="mt-3 max-w-xl text-body-lg text-on-surface-variant">Votre don soutient trois axes du réseau.</p>
+              <div className="mt-8 grid gap-4">
+                <FeatureCard icon={<BookOpen />} title="Vulgariser la science">
+                  Traduction et adaptation de recherches agronomiques en fiches techniques utilisables sur le terrain.
+                </FeatureCard>
+                <FeatureCard icon={<Sprout />} title="Accompagner les porteurs de projets">
+                  Appui aux jeunes agripreneurs : mentorat et préparation des dossiers de financement.
+                </FeatureCard>
+                <FeatureCard icon={<Server />} title="Maintenir la plateforme">
+                  Couverture des frais d&apos;hébergement, d&apos;outils et de développement pour garder le réseau accessible.
+                </FeatureCard>
+              </div>
+            </div>
 
-      {/* ── CONTENU PRINCIPAL ────────────────────── */}
-      <section className="py-[40px] md:py-[80px] bg-surface-container-low">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            
-            {/* Colonne Gauche : Objectif & Contexte */}
-            <div className="lg:col-span-7 space-y-12">
-              
-              {/* Barre de progression */}
-              {campagne && (
-                <div className="bg-surface-container-lowest p-8 md:p-10 rounded-3xl border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="w-14 h-14 bg-accent-sun/10 text-on-tertiary-container rounded-2xl flex items-center justify-center">
-                      <Target size={28} />
-                    </div>
-                    <h2 className="font-heading font-[800] text-[24px] md:text-[28px] text-on-surface">{campagne.titre}</h2>
+            <div>
+              <h2 className="text-headline-md text-on-surface">Votre don en toute confiance</h2>
+              <ul className="mt-8 space-y-6">
+                <li className="flex gap-4">
+                  <ShieldCheck className="mt-0.5 size-6 shrink-0 text-primary" aria-hidden="true" />
+                  <div>
+                    <h3 className="text-title-md text-on-surface">Paiement sécurisé par Stripe</h3>
+                    <p className="mt-1 text-body-md text-on-surface-variant">
+                      Le paiement se fait sur la page sécurisée de Stripe. agrolide ne voit ni ne conserve votre numéro de carte.
+                    </p>
                   </div>
-                  
-                  <div className="mb-6">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-4">
-                      <div>
-                        <div className="font-heading font-[800] text-[36px] text-primary leading-none">
-                          {totalCollecte.toLocaleString('fr-FR')} <span className="text-[18px] text-on-surface-muted font-sans font-normal ml-1">FCFA collectés</span>
-                        </div>
-                      </div>
-                      <div className="text-left sm:text-right">
-                        <div className="font-heading font-[800] text-[20px] text-on-surface leading-none">{progressPercentage}%</div>
-                        <div className="font-sans text-[14px] text-on-surface-muted mt-1">sur {campagne.objectif_fcfa.toLocaleString('fr-FR')} FCFA</div>
-                      </div>
-                    </div>
-                    <div className="h-4 w-full bg-surface-container-low rounded-full overflow-hidden border border-outline-variant">
-                      <div 
-                        className="h-full bg-accent-sun transition-all duration-1000 ease-out"
-                        style={{ width: `${progressPercentage}%` }}
-                      />
-                    </div>
+                </li>
+                <li className="flex gap-4">
+                  <EyeOff className="mt-0.5 size-6 shrink-0 text-primary" aria-hidden="true" />
+                  <div>
+                    <h3 className="text-title-md text-on-surface">Don anonyme possible</h3>
+                    <p className="mt-1 text-body-md text-on-surface-variant">
+                      Cochez l&apos;option dans le formulaire : votre nom n&apos;apparaît pas dans la liste des soutiens.
+                    </p>
                   </div>
-                  
-                  <p className="font-sans text-[16px] text-on-surface-variant leading-[1.7]">
-                    {campagne.description}
-                  </p>
-                </div>
-              )}
+                </li>
+                <li className="flex gap-4">
+                  <Mail className="mt-0.5 size-6 shrink-0 text-primary" aria-hidden="true" />
+                  <div>
+                    <h3 className="text-title-md text-on-surface">Confirmation par e-mail</h3>
+                    <p className="mt-1 text-body-md text-on-surface-variant">
+                      Un e-mail de confirmation vous est envoyé une fois le don validé.
+                    </p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <Building2 className="mt-0.5 size-6 shrink-0 text-primary" aria-hidden="true" />
+                  <div>
+                    <h3 className="text-title-md text-on-surface">Une organisation que vous pouvez joindre</h3>
+                    <p className="mt-1 text-body-md text-on-surface-variant">
+                      agrolide, siège à Lomé (Togo). Une question avant de donner ?{" "}
+                      <a href="mailto:contact@agrolide.org" className="font-semibold text-primary underline underline-offset-2">
+                        contact@agrolide.org
+                      </a>
+                      . Voir les{" "}
+                      <Link href="/mentions-legales" className="font-semibold text-primary underline underline-offset-2">
+                        mentions légales
+                      </Link>{" "}
+                      et la{" "}
+                      <Link href="/confidentialite" className="font-semibold text-primary underline underline-offset-2">
+                        politique de confidentialité
+                      </Link>
+                      .
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
 
-              {/* Contexte & Impact */}
+            {recentDonors.length > 0 && (
               <div>
-                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-accent-leaf font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
-                  <span className="w-2 h-2 rounded-full bg-accent-sun" />
-                  Transparence
-                </div>
-                <h3 className="font-heading font-[800] text-[32px] text-on-surface mb-6">
-                  L'impact de votre don
-                </h3>
-                <div className="font-sans text-[16px] text-on-surface-variant leading-[1.8] space-y-4 mb-8">
-                  <p>
-                    <strong className="text-on-surface">agrolide</strong> est une initiative dédiée à la structuration de l'écosystème agricole en Afrique. Notre modèle repose sur la gratuité d'accès à la majorité de nos ressources pour les jeunes diplômés et petits producteurs.
-                  </p>
-                  <p>
-                    En nous soutenant financièrement, vous contribuez directement à :
-                  </p>
-                </div>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-5 bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <strong className="block font-heading font-[800] text-[18px] text-on-surface mb-1">Vulgariser la science</strong>
-                      <p className="font-sans text-[15px] text-on-surface-muted leading-[1.6]">Traduction et adaptation de recherches agronomiques en fiches techniques utilisables sur le terrain.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 p-5 bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <strong className="block font-heading font-[800] text-[18px] text-on-surface mb-1">Incuber les talents</strong>
-                      <p className="font-sans text-[15px] text-on-surface-muted leading-[1.6]">Financement de bourses pour permettre aux jeunes porteurs de projets d'accéder à notre programme d'incubation.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4 p-5 bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm">
-                    <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <strong className="block font-heading font-[800] text-[18px] text-on-surface mb-1">Maintenir la plateforme</strong>
-                      <p className="font-sans text-[15px] text-on-surface-muted leading-[1.6]">Couverture des frais d'hébergement, d'outils et de développement pour garder le réseau accessible à tous.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Derniers soutiens */}
-              <div className="bg-surface-brand p-8 md:p-10 rounded-3xl relative overflow-hidden shadow-[0_20px_40px_rgba(27,94,56,0.15)]">
-                <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-2xl pointer-events-none" />
-                <h3 className="font-heading font-[800] text-[24px] text-on-surface-brand flex items-center gap-3 mb-8 relative z-10">
-                  <Users className="w-6 h-6 text-on-tertiary-container" />
-                  Ils nous soutiennent
-                </h3>
-                
-                {recentDonors.length > 0 ? (
-                  <div className="space-y-4 relative z-10">
-                    {recentDonors.map((donor: any, i: number) => (
-                      <div key={i} className="flex items-center justify-between bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-on-surface-brand/10">
-                        <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-full bg-accent-sun text-on-accent flex items-center justify-center font-heading font-[800] text-[18px]">
-                            {donor.prenom.charAt(0)}
+                <h2 className="text-headline-md text-on-surface">Ils nous soutiennent</h2>
+                <Card variant="outlined" className="mt-6 !p-0">
+                  <ul className="divide-y divide-outline-variant">
+                    {recentDonors.map((donor, i) => {
+                      const prenom = String(donor.prenom ?? "").trim().split(" ")[0] || "Anonyme"
+                      return (
+                        <li key={i} className="flex items-center justify-between gap-4 px-5 py-4">
+                          <div className="flex items-center gap-4">
+                            <span
+                              aria-hidden="true"
+                              className="flex size-11 items-center justify-center rounded-full bg-primary-container text-title-md text-on-primary-container"
+                            >
+                              {prenom.charAt(0).toUpperCase()}
+                            </span>
+                            <div>
+                              <p className="text-title-sm text-on-surface">{prenom}</p>
+                              <p className="text-body-sm text-on-surface-muted">{dateFr(donor.created_at)}</p>
+                            </div>
                           </div>
-                          <div>
-                            <div className="font-heading font-[800] text-on-surface-brand">{donor.prenom}</div>
-                            <div className="font-sans text-[13px] text-on-surface-brand/60">{new Date(donor.created_at).toLocaleDateString()}</div>
-                          </div>
-                        </div>
-                        <div className="font-heading font-[800] text-on-tertiary-container">
-                          {Number(donor.montant_fcfa).toLocaleString('fr-FR')} FCFA
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="font-sans text-[15px] text-on-surface-brand/80 italic py-6 text-center border border-on-surface-brand/10 rounded-xl bg-white/5 relative z-10">
-                    Soyez le premier à soutenir publiquement cette campagne !
-                  </p>
-                )}
+                          <p className="text-title-sm text-primary">{Number(donor.montant_fcfa).toLocaleString("fr-FR")} FCFA</p>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </Card>
               </div>
-
-            </div>
-
-            {/* Colonne Droite : Formulaire */}
-            <div className="lg:col-span-5">
-              <div className="sticky top-24 bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
-                <h3 className="font-heading font-[800] text-[24px] text-on-surface mb-6">Faire un don</h3>
-                <DonationForm campagneId={campagne?.id || ''} />
-              </div>
-            </div>
-
+            )}
           </div>
         </div>
-      </section>
-    </div>
+      </Section>
+
+      <Section tone="container" centered title="Vous représentez une organisation ?" description="Fondations, entreprises et institutions peuvent s'associer aux actions du réseau sous forme de partenariat.">
+        <div className="flex justify-center">
+          <Button variant="secondary" href="/partenaires">
+            Devenir partenaire
+          </Button>
+        </div>
+      </Section>
+    </>
   )
 }
