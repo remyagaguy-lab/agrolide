@@ -20,7 +20,7 @@ export default function GlobalError({
           </p>
           <button
             onClick={() => reset()}
-            className="px-6 py-3 bg-success text-white font-medium rounded-xl hover:bg-success transition-colors"
+            className="px-6 py-3 bg-success text-on-success font-medium rounded-xl hover:bg-success transition-colors"
           >
             Recharger l'application
           </button>

@@ -45,17 +45,17 @@ export default async function CotisationPage() {
       </div>
 
       {showPaymentBlock && (
-        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-orange-200 overflow-hidden relative">
-          <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 p-6 border-b border-orange-100 flex items-start gap-4">
-            <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center shrink-0 border border-orange-200">
-               <AlertTriangle className="text-orange-600 w-5 h-5" strokeWidth={2.5} />
+        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-warning/40 overflow-hidden relative">
+          <div className="bg-gradient-to-r from-warning-container to-warning-container p-6 border-b border-warning/40 flex items-start gap-4">
+            <div className="w-10 h-10 bg-warning-container rounded-lg flex items-center justify-center shrink-0 border border-warning/40">
+               <AlertTriangle className="text-warning w-5 h-5" strokeWidth={2.5} />
             </div>
             <div>
               <h2 className="text-lg font-bold text-on-surface">
                 Finaliser votre adhésion {profile.categorie}
               </h2>
               <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-                Pour profiter pleinement de tous les avantages du réseau, veuillez régler votre cotisation annuelle de <strong className="text-orange-600 text-sm bg-orange-100 border border-orange-200 px-2 py-0.5 rounded ml-1">{montantFCFA} FCFA</strong>.
+                Pour profiter pleinement de tous les avantages du réseau, veuillez régler votre cotisation annuelle de <strong className="text-warning text-sm bg-warning-container border border-warning/40 px-2 py-0.5 rounded ml-1">{montantFCFA} FCFA</strong>.
               </p>
             </div>
           </div>

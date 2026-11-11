@@ -48,7 +48,7 @@ export default function NetworkActions({ requestId }: { requestId: string }) {
       <button 
         onClick={handleAccept} 
         disabled={isPending}
-        className="px-4 py-2 bg-primary text-white font-medium rounded-xl hover:bg-primary/90 transition-colors flex items-center gap-2 disabled:opacity-75"
+        className="px-4 py-2 bg-primary text-on-primary font-medium rounded-xl hover:bg-primary/90 transition-colors flex items-center gap-2 disabled:opacity-75"
       >
         {isPending ? <Loader2 className="animate-spin" size={18} /> : <Check size={18} />}
         Accepter

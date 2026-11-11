@@ -99,7 +99,7 @@ export default async function MembresRootLayout({
 
         {/* Si le compte est expiré, on affiche une bannière non fermable */}
         {statut === "expire" && (
-          <div className="bg-error text-white p-4 text-center font-bold flex items-center justify-center gap-2">
+          <div className="bg-error text-on-error p-4 text-center font-bold flex items-center justify-center gap-2">
             <AlertCircle size={20} />
             Votre adhésion a expiré. Pour continuer à profiter du réseau, veuillez renouveler votre cotisation.
             <Link href="/membres/cotisation" className="underline ml-2 hover:text-error-container">

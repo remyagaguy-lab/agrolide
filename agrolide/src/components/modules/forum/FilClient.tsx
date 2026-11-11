@@ -167,7 +167,7 @@ export default function FilClient({ filId }: FilClientProps) {
                 <button 
                   type="submit" 
                   disabled={replying || !replyContent.trim()}
-                  className="bg-primary hover:bg-primary/90 disabled:opacity-50 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors"
+                  className="bg-primary hover:bg-primary/90 disabled:opacity-50 text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors"
                 >
                   <Send className="w-3.5 h-3.5" /> Publier
                 </button>

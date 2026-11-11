@@ -68,7 +68,7 @@ export function PageEditor({ slug, titre, contenuJson }: Props) {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex items-center gap-2 px-5 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 disabled:opacity-50 transition-colors"
+            className="flex items-center gap-2 px-5 py-2 text-sm font-medium text-on-primary bg-primary rounded-lg hover:bg-primary/90 disabled:opacity-50 transition-colors"
           >
             <Save size={16} />
             {saving ? "Sauvegarde..." : "Sauvegarder"}

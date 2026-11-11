@@ -23,6 +23,7 @@ export {
 } from './Select'
 export { Skeleton, SkeletonCard, SkeletonGrid, SkeletonList } from './Skeleton'
 export { Spinner, type SpinnerProps } from './Spinner'
+export { ThemeToggle, ThemeMenuItems, useThemePreference, type ThemeToggleProps } from './ThemeToggle'
 export {
   Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow, type SortDirection,
 } from './Table'

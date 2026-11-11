@@ -21,7 +21,7 @@ export default function AgrobusinessPage() {
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
             Agrobusiness & Consulting
           </h1>
-          <p className="text-xl max-w-2xl mx-auto text-white/90">
+          <p className="text-xl max-w-2xl mx-auto text-on-surface-brand/90">
             De l'idée au marché : nous accompagnons vos projets agricoles pour les transformer en entreprises viables et durables.
           </p>
         </div>
@@ -64,7 +64,7 @@ export default function AgrobusinessPage() {
               <div className="absolute -top-4 right-6 bg-tertiary text-on-tertiary text-xs font-bold px-3 py-1 rounded-full">
                 Programme Phare
               </div>
-              <div className="w-14 h-14 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600 mb-6">
+              <div className="w-14 h-14 bg-info-container rounded-lg flex items-center justify-center text-info mb-6">
                 <Briefcase size={28} />
               </div>
               <h3 className="text-xl font-bold text-on-surface mb-4">Incubation & Accélération</h3>

@@ -82,7 +82,7 @@ export default async function AdminAnalyticsPage() {
 
         <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-tertiary-container text-orange-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-tertiary-container text-warning flex items-center justify-center">
               <Download size={20} />
             </div>
             <p className="text-sm font-medium text-on-surface-muted">Téléchargements</p>
@@ -92,7 +92,7 @@ export default async function AdminAnalyticsPage() {
 
         <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-info-container text-info flex items-center justify-center">
               <BookOpen size={20} />
             </div>
             <p className="text-sm font-medium text-on-surface-muted">Ressources en ligne</p>

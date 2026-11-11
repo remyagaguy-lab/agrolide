@@ -54,7 +54,7 @@ export default async function EvenementsPage() {
                       {evt.type_evt || "Événement"}
                     </span>
                     {isValid && (
-                      <div className="flex flex-col items-center bg-surface-container-low border border-outline-variant text-on-surface rounded-lg px-2 py-1 min-w-[40px] group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-colors">
+                      <div className="flex flex-col items-center bg-surface-container-low border border-outline-variant text-on-surface rounded-lg px-2 py-1 min-w-[40px] group-hover:bg-primary group-hover:text-on-primary group-hover:border-primary transition-colors">
                         <span className="text-sm font-extrabold leading-none">{evtDate.getDate()}</span>
                         <span className="text-[8px] font-bold uppercase mt-0.5">{evtDate.toLocaleDateString('fr-FR', { month: 'short' })}</span>
                       </div>

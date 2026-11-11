@@ -36,11 +36,11 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
   const getBadgeColor = (type_doc: string) => {
     if (!type_doc) return 'bg-surface-container text-on-surface';
     switch (type_doc.toLowerCase()) {
-      case 'these': return 'bg-purple-100 text-purple-800'
+      case 'these': return 'bg-info-container text-on-info-container'
       case 'memoire': return 'bg-info-container text-on-info-container'
       case 'fiche_technique': return 'bg-success-container text-on-success-container'
       case 'guide_pratique': return 'bg-warning-container text-on-warning-container'
-      case 'article': return 'bg-rose-100 text-rose-800'
+      case 'article': return 'bg-error-container text-on-error-container'
       case 'rapport': return 'bg-surface-container text-on-surface'
       default: return 'bg-surface-container text-on-surface'
     }

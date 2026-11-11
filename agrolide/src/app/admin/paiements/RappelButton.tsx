@@ -39,7 +39,7 @@ export default function RappelButton({ membreId, email, nom }: Props) {
     <button
       onClick={sendRappel}
       disabled={status === "loading"}
-      className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-orange-700 bg-orange-100 hover:bg-orange-200 rounded-lg transition-colors disabled:opacity-50"
+      className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-on-warning-container bg-warning-container hover:bg-warning-container rounded-lg transition-colors disabled:opacity-50"
     >
       <Send size={12} />
       {status === "loading" ? "Envoi..." : "Envoyer rappel"}

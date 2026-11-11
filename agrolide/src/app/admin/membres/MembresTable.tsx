@@ -22,8 +22,8 @@ type Membre = {
 const catColors: Record<string, string> = {
   junior: "bg-success-container text-success",
   professionnel: "bg-info-container text-info",
-  senior: "bg-purple-100 text-purple-700",
-  partenaire: "bg-orange-100 text-orange-700",
+  senior: "bg-info-container text-on-info-container",
+  partenaire: "bg-warning-container text-on-warning-container",
 }
 const statutColors: Record<string, string> = {
   actif: "bg-success-container text-success",
@@ -106,7 +106,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
               <button onClick={() => setConfirmDialog(null)} className="px-4 py-2 text-sm text-on-surface-variant border border-outline-variant rounded-lg hover:bg-surface-container-low">Annuler</button>
               <button 
                 onClick={() => executeAction(confirmDialog.id, confirmDialog.action)}
-                className="px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90"
+                className="px-4 py-2 text-sm font-medium text-on-primary bg-primary rounded-lg hover:bg-primary/90"
               >
                 Confirmer
               </button>
@@ -155,7 +155,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
           <div className="ml-auto">
             <button
               onClick={exportCSV}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-primary bg-primary rounded-lg hover:bg-primary/90 transition-colors"
             >
               <Download size={16} /> Export CSV
             </button>
@@ -254,7 +254,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                       )}
                       <button
                         onClick={() => setConfirmDialog({ id: m.id, action: "admin", label: `Promouvoir ${m.prenom} ${m.nom} comme administrateur de contenu ?` })}
-                        className="p-1.5 text-on-surface-muted hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                        className="p-1.5 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors"
                         title="Promouvoir admin"
                         disabled={!!actionLoading}
                       >

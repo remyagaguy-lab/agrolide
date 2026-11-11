@@ -203,7 +203,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                 <button 
                   type="submit" 
                   disabled={loading}
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-6"
+                  className="w-full bg-primary hover:bg-primary/90 text-on-primary font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-6"
                 >
                   {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Publier le document"}
                 </button>

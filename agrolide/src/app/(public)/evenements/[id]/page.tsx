@@ -167,12 +167,12 @@ export default async function EventPage({ params }: EventPageProps) {
                   href={event.lien_inscription} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2"
+                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-on-primary font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2"
                 >
                   S'inscrire à l'événement
                 </a>
               ) : (
-                <Link href="/auth/login" className="px-8 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2">
+                <Link href="/auth/login" className="px-8 py-4 bg-primary hover:bg-primary/90 text-on-primary font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2">
                   Connectez-vous pour vous inscrire
                 </Link>
               )}

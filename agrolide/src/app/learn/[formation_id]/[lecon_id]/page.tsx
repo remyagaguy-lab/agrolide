@@ -155,7 +155,7 @@ export default async function LeconPage({
             isCompleted || !quizData || quizData.length === 0 ? (
               <Link 
                 href={`/learn/${formationId}/${nextLecon.id}`}
-                className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+                className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-on-tertiary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
               >
                 Suivant
                 <ChevronRight className="w-5 h-5 ml-2" />
@@ -173,7 +173,7 @@ export default async function LeconPage({
           ) : (
             <Link 
               href={`/formations/${formationId}`}
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               <CheckCircle2 className="w-5 h-5 mr-2" />
               Terminer la formation

@@ -64,7 +64,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
             </div>
             <Link 
               href={`/membres/forum/nouveau?cat=${categorieId}`} 
-              className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
+              className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
             >
               <Plus className="w-4 h-4" /> Nouveau sujet
             </Link>

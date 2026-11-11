@@ -44,7 +44,7 @@ export default async function MesFormationsPage() {
       case 'inscrit':
         return <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Inscrit</span>
       case 'en_attente_paiement':
-        return <span className="bg-tertiary-container text-orange-700 border border-orange-200 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><Clock className="w-3 h-3" /> En attente</span>
+        return <span className="bg-tertiary-container text-on-warning-container border border-warning/40 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><Clock className="w-3 h-3" /> En attente</span>
       case 'complete':
         return <span className="bg-info-container text-info border border-info/30 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Terminée</span>
       case 'annule':
@@ -63,7 +63,7 @@ export default async function MesFormationsPage() {
         </div>
         <Link 
           href="/formations" 
-          className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
+          className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
         >
           <BookOpen className="w-4 h-4" /> Découvrir le catalogue
         </Link>
@@ -130,7 +130,7 @@ export default async function MesFormationsPage() {
 
                 <div className="w-full md:w-auto md:min-w-[180px] flex flex-col gap-2 border-t md:border-t-0 md:border-l border-outline-variant pt-4 md:pt-0 md:pl-5">
                   {!isExternal && ins.statut === 'en_attente_paiement' && (
-                    <button className="w-full px-4 py-2 bg-tertiary text-white rounded-lg text-xs font-bold hover:bg-accent-sun transition-colors shadow-sm">
+                    <button className="w-full px-4 py-2 bg-tertiary text-on-tertiary rounded-lg text-xs font-bold hover:bg-accent-sun transition-colors shadow-sm">
                       Procéder au paiement
                     </button>
                   )}
@@ -156,7 +156,7 @@ export default async function MesFormationsPage() {
                       href={formation.lien_externe} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="w-full px-4 py-2 bg-primary text-white text-center rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors shadow-sm"
+                      className="w-full px-4 py-2 bg-primary text-on-primary text-center rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors shadow-sm"
                     >
                       Accéder à la plateforme
                     </a>

@@ -19,7 +19,7 @@ export default async function AdminAgrobusinessPage() {
     switch (statut) {
       case 'nouveau': return <span className="px-2 py-1 bg-info-container text-on-info-container rounded-full text-xs font-medium">Nouveau</span>
       case 'en_cours':
-      case 'en_evaluation': return <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">En cours</span>
+      case 'en_evaluation': return <span className="px-2 py-1 bg-warning-container text-on-warning-container rounded-full text-xs font-medium">En cours</span>
       case 'traite':
       case 'accepte': return <span className="px-2 py-1 bg-success-container text-on-success-container rounded-full text-xs font-medium">Accepté / Traité</span>
       case 'rejete':
@@ -85,7 +85,7 @@ export default async function AdminAgrobusinessPage() {
         <div className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-on-surface flex items-center gap-2">
-              <Clock className="w-5 h-5 text-orange-500" />
+              <Clock className="w-5 h-5 text-warning" />
               Candidatures Incubation
             </h2>
             <span className="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-sm font-medium">
@@ -95,7 +95,7 @@ export default async function AdminAgrobusinessPage() {
 
           <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
             {candidatures?.map((c: any) => (
-              <div key={c.id} className="p-4 border border-outline-variant rounded-xl hover:border-orange-300 transition-colors">
+              <div key={c.id} className="p-4 border border-outline-variant rounded-xl hover:border-warning/40 transition-colors">
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="font-bold text-on-surface">{c.titre_projet}</h3>

@@ -91,9 +91,9 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
   // Déterminer la couleur du badge
   const getBadgeClass = (cat: string) => {
     switch(cat?.toLowerCase()) {
-      case 'senior': return 'bg-purple-100 text-purple-700 border-purple-200'
+      case 'senior': return 'bg-info-container text-on-info-container border-info/40'
       case 'professionnel': return 'bg-info-container text-info border-info/30'
-      case 'partenaire': return 'bg-orange-100 text-orange-700 border-orange-200'
+      case 'partenaire': return 'bg-warning-container text-on-warning-container border-warning/40'
       case 'junior': return 'bg-success-container text-success border-success/30'
       default: return 'bg-surface-container text-on-surface-variant border-outline-variant'
     }

@@ -72,7 +72,7 @@ export default async function BlogPage({
             <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
               Blog & Actualités
             </h1>
-            <p className="text-lg max-w-2xl mx-auto text-white/80">
+            <p className="text-lg max-w-2xl mx-auto text-on-surface-brand/80">
               Découvrez nos récits authentiques, nos analyses approfondies et nos retours d'expérience pour transformer l'agriculture africaine.
             </p>
           </div>

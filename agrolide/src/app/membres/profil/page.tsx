@@ -50,7 +50,7 @@ export default async function ProfilPage() {
         </div>
         <Link 
           href="/membres/profil/modifier" 
-          className="flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-[11px] font-bold rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
+          className="flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary text-[11px] font-bold rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
         >
           <Edit size={14} /> Modifier
         </Link>
@@ -104,7 +104,7 @@ export default async function ProfilPage() {
                   <div className="h-full bg-primary rounded-full transition-all duration-500" style={{ width: `${completion}%` }}></div>
                 </div>
                 {completion < 100 && (
-                  <p className="text-[9px] text-orange-600 mt-1.5 font-medium flex items-center gap-1">
+                  <p className="text-[9px] text-warning mt-1.5 font-medium flex items-center gap-1">
                     <AlertCircle size={10} /> Complétez votre profil
                   </p>
                 )}

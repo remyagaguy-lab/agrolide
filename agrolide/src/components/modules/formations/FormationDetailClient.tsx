@@ -72,7 +72,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
               Gratuit
             </span>
           ) : (
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-orange-100 text-orange-800">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-warning-container text-on-warning-container">
               {formation.prix} FCFA
             </span>
           )}
@@ -155,8 +155,8 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
                       disabled={loading === session.id}
                       className={`w-full py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${
                         isWaitlist 
-                          ? 'bg-warning-container text-on-warning-container hover:bg-amber-200' 
-                          : 'bg-success text-white hover:bg-primary/90'
+                          ? 'bg-warning-container text-on-warning-container hover:bg-warning-container' 
+                          : 'bg-success text-on-primary hover:bg-primary/90'
                       }`}
                     >
                       {loading === session.id ? (
@@ -196,7 +196,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
                   </div>
                   <div>
                     <div className="font-medium text-on-surface">{avis.profiles?.prenom} {avis.profiles?.nom}</div>
-                    <div className="flex text-yellow-400 text-sm">
+                    <div className="flex text-warning text-sm">
                       {'★'.repeat(avis.note)}{'☆'.repeat(5 - avis.note)}
                     </div>
                   </div>

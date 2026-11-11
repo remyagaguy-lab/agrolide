@@ -124,7 +124,7 @@ export default function AdminDocumentsPage() {
         </div>
         <button 
           onClick={() => setIsSubmitModalOpen(true)}
-          className="bg-info hover:bg-info text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
+          className="bg-info hover:bg-info text-on-surface-brand px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
         >
           <Plus className="w-5 h-5" /> Nouveau document
         </button>

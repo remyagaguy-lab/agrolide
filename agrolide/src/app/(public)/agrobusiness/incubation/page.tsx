@@ -24,7 +24,7 @@ export default function IncubationPage() {
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
             Programme d'Incubation
           </h1>
-          <p className="text-xl max-w-2xl mx-auto text-white/90">
+          <p className="text-xl max-w-2xl mx-auto text-on-surface-brand/90">
             Un accompagnement intensif de 6 mois pour lancer et pérenniser votre startup agricole avec le soutien de mentors experts.
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function IncubationPage() {
                 </div>
                 
                 <div className="flex gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-full bg-purple-50 text-purple-600 flex flex-shrink-0 items-center justify-center">
+                  <div className="mt-1 w-10 h-10 rounded-full bg-info-container text-info flex flex-shrink-0 items-center justify-center">
                     <Users size={20} />
                   </div>
                   <div>

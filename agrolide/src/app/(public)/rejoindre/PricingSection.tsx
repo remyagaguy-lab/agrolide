@@ -53,16 +53,16 @@ export default function PricingSection() {
             <div className="inline-flex bg-surface-container p-1 rounded-full relative">
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${!isAnnual ? 'text-white' : 'text-on-surface-muted hover:text-on-surface'}`}
+                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${!isAnnual ? 'text-on-surface-brand' : 'text-on-surface-muted hover:text-on-surface'}`}
               >
                 Mensuel
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${isAnnual ? 'text-white' : 'text-on-surface-muted hover:text-on-surface'}`}
+                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${isAnnual ? 'text-on-surface-brand' : 'text-on-surface-muted hover:text-on-surface'}`}
               >
                 Annuel
-                <span className="absolute -top-[12px] -right-[15px] bg-accent-sun text-on-surface text-[10px] font-[800] px-[8px] py-[3px] rounded-full whitespace-nowrap shadow-sm">
+                <span className="absolute -top-[12px] -right-[15px] bg-accent-sun text-on-accent text-[10px] font-[800] px-[8px] py-[3px] rounded-full whitespace-nowrap shadow-sm">
                   2 mois offerts
                 </span>
               </button>
@@ -85,7 +85,7 @@ export default function PricingSection() {
               <div className="font-[900] text-[28px] text-primary mb-[4px] leading-none">0 FCFA</div>
               <div className="text-[11px] text-on-surface-muted">Accès gratuit, pour toujours</div>
               <div className="flex items-center flex-wrap gap-[12px] mt-[16px]">
-                <Link href="/inscription?categorie=passionne" className="inline-flex items-center gap-[6px] bg-primary text-white text-[13px] font-[700] px-[20px] py-[10px] rounded-[7px] hover:bg-primary/90 transition-colors">
+                <Link href="/inscription?categorie=passionne" className="inline-flex items-center gap-[6px] bg-primary text-on-primary text-[13px] font-[700] px-[20px] py-[10px] rounded-[7px] hover:bg-primary/90 transition-colors">
                   <UserPlus size={14} /> Rejoindre gratuitement
                 </Link>
                 <button className="inline-flex items-center gap-[6px] text-primary text-[13px] font-[600] underline decoration-transparent hover:decoration-primary transition-colors">
@@ -165,10 +165,10 @@ export default function PricingSection() {
 
           {/* Professionnel */}
           <div className="border-[2px] border-primary rounded-xl p-[20px] flex flex-col bg-surface-container-lowest relative mt-[12px] md:mt-0">
-            <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-[800] px-[12px] py-[3px] rounded-full whitespace-nowrap tracking-[0.04em]">
+            <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 bg-primary text-on-primary text-[10px] font-[800] px-[12px] py-[3px] rounded-full whitespace-nowrap tracking-[0.04em]">
               Le plus populaire
             </div>
-            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-primary text-white">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-primary text-on-primary">
               <Briefcase size={18} />
             </div>
             <div className="font-[800] text-[15px] text-on-surface mb-[3px]">Professionnel</div>
@@ -176,7 +176,7 @@ export default function PricingSection() {
             
             <PriceBlock annualPrice={25000} monthlyPrice={2500} />
 
-            <Link href={`/inscription?categorie=professionnel&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-primary text-white hover:bg-primary/90 mb-[14px]">
+            <Link href={`/inscription?categorie=professionnel&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-primary text-on-primary hover:bg-primary/90 mb-[14px]">
               S'inscrire comme Professionnel
             </Link>
             <hr className="border-t border-outline-variant mb-[12px]" />
@@ -252,7 +252,7 @@ export default function PricingSection() {
             
             <PriceBlock annualPrice={45000} monthlyPrice={4500} />
 
-            <Link href={`/inscription?categorie=senior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-tertiary text-white hover:bg-accent-sun mb-[14px]">
+            <Link href={`/inscription?categorie=senior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-tertiary text-on-tertiary hover:bg-accent-sun mb-[14px]">
               S'inscrire comme Sénior
             </Link>
             <hr className="border-t border-outline-variant mb-[12px]" />

@@ -27,7 +27,7 @@ export default function QuiSommesNousPage() {
           <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
             Qui sommes-nous&nbsp;?
           </h1>
-          <p className="text-lg max-w-2xl mx-auto text-white/80">
+          <p className="text-lg max-w-2xl mx-auto text-on-surface-brand/80">
             Découvrez l'histoire, la mission et les valeurs qui animent le premier réseau continental de l'agriculture africaine.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function QuiSommesNousPage() {
             </div>
             
             <Card className="relative mt-8 md:mt-0">
-              <div className="absolute -left-4 -top-6 w-14 h-14 bg-accent-sun rounded-full flex items-center justify-center text-white font-heading font-[800] text-[28px] shadow-lg transform -rotate-12">
+              <div className="absolute -left-4 -top-6 w-14 h-14 bg-accent-sun rounded-full flex items-center justify-center text-on-accent font-heading font-[800] text-[28px] shadow-lg transform -rotate-12">
                 ?
               </div>
               <p className="text-body-md text-on-surface-variant mb-6">
@@ -132,16 +132,16 @@ export default function QuiSommesNousPage() {
                 <h2 className="font-heading font-[800] text-[32px] md:text-[40px] mb-4 leading-[1.15]">
                   Un Réseau comme solution...
                 </h2>
-                <p className="font-sans text-[18px] md:text-[20px] text-white/90 leading-[1.6] mb-8">
+                <p className="font-sans text-[18px] md:text-[20px] text-on-surface-brand/90 leading-[1.6] mb-8">
                   Et si la solution à ces défis n'était pas une nouvelle technologie... <strong className="text-on-tertiary-container">mais un réseau ?</strong>
                 </p>
                 
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-lg">
+                <div className="bg-white/10 backdrop-blur-md border border-on-surface-brand/20 p-6 rounded-2xl shadow-lg">
                   <div className="flex items-start gap-4 mb-6">
                     <ArrowRight className="w-5 h-5 text-on-tertiary-container flex-shrink-0 mt-1" />
-                    <p className="font-sans text-[16px] text-white/90 leading-[1.6] m-0">Un réseau qui <strong className="text-white">connecte</strong>, qui <strong className="text-white">forme</strong>, qui <strong className="text-white">accompagne</strong>, qui <strong className="text-white">valorise</strong> chaque acteur de la chaîne agricole africaine.</p>
+                    <p className="font-sans text-[16px] text-on-surface-brand/90 leading-[1.6] m-0">Un réseau qui <strong className="text-on-surface-brand">connecte</strong>, qui <strong className="text-on-surface-brand">forme</strong>, qui <strong className="text-on-surface-brand">accompagne</strong>, qui <strong className="text-on-surface-brand">valorise</strong> chaque acteur de la chaîne agricole africaine.</p>
                   </div>
-                  <div className="border-t border-white/20 pt-4 text-center">
+                  <div className="border-t border-on-surface-brand/20 pt-4 text-center">
                     <p className="font-heading font-[700] text-[16px] text-on-tertiary-container m-0 leading-[1.5]">
                       C'est exactement ce que nous construisons ensemble, pour vous, pour l'Afrique. Bienvenue dans le Réseau agrolide.
                     </p>
@@ -218,28 +218,28 @@ export default function QuiSommesNousPage() {
         />
         <div className="max-w-[1100px] mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block px-8 py-4 bg-white/10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.1)] text-on-tertiary-container rounded-full font-heading font-[800] text-[16px] md:text-[20px] mb-8 border border-white/20">
+            <div className="inline-block px-8 py-4 bg-white/10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.1)] text-on-tertiary-container rounded-full font-heading font-[800] text-[16px] md:text-[20px] mb-8 border border-on-surface-brand/20">
               « Fédérer la chaîne agricole, pour conquérir la souveraineté alimentaire »
             </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-on-surface-brand/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
               <div className="w-14 h-14 bg-accent-sun/20 rounded-xl flex items-center justify-center text-on-tertiary-container mb-6">
                 <Target size={28} />
               </div>
-              <h3 className="font-heading font-[800] text-[24px] text-white mb-4">Notre Mission</h3>
-              <p className="font-sans text-[16px] text-white/80 leading-[1.8]">
+              <h3 className="font-heading font-[800] text-[24px] text-on-surface-brand mb-4">Notre Mission</h3>
+              <p className="font-sans text-[16px] text-on-surface-brand/80 leading-[1.8]">
                 Fédérer et valoriser les acteurs de la chaîne agricole africaine par la mutualisation des ressources, le renforcement des compétences, l'incubation entrepreneuriale et le développement de leur visibilité, pour contribuer activement à la conquête de la souveraineté alimentaire africaine.
               </p>
             </div>
             
-            <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-white/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
+            <div className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-10 border border-on-surface-brand/10 shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
               <div className="w-14 h-14 bg-accent-sun/20 rounded-xl flex items-center justify-center text-on-tertiary-container mb-6">
                 <Lightbulb size={28} />
               </div>
-              <h3 className="font-heading font-[800] text-[24px] text-white mb-4">Notre Vision</h3>
-              <p className="font-sans text-[16px] text-white/80 leading-[1.8]">
+              <h3 className="font-heading font-[800] text-[24px] text-on-surface-brand mb-4">Notre Vision</h3>
+              <p className="font-sans text-[16px] text-on-surface-brand/80 leading-[1.8]">
                 Être le réseau continental où chaque acteur de la chaîne agricole africaine trouve les ressources, les opportunités et les connexions nécessaires pour participer activement à la conquête de la souveraineté alimentaire.
               </p>
             </div>
@@ -350,7 +350,7 @@ export default function QuiSommesNousPage() {
               { icon: <Target size={24} />, title: "Impact", desc: "Chaque action est évaluée à l'aune de sa contribution concrète à la souveraineté alimentaire africaine." },
             ].map((v, i) => (
               <div key={i} className="group bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
-                <div className="w-12 h-12 bg-primary-container group-hover:bg-primary rounded-xl flex items-center justify-center text-primary group-hover:text-white transition-colors duration-300 mb-4">
+                <div className="w-12 h-12 bg-primary-container group-hover:bg-primary rounded-xl flex items-center justify-center text-primary group-hover:text-on-primary transition-colors duration-300 mb-4">
                   {v.icon}
                 </div>
                 <h3 className="font-heading font-[800] text-[18px] text-on-surface mb-2">{v.title}</h3>

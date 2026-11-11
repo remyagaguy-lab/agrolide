@@ -130,7 +130,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   if (quotaReached) {
     return (
       <div className="flex flex-col items-center justify-center h-[600px] bg-surface-container-low rounded-xl border border-outline-variant p-6 text-center">
-        <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6">
+        <div className="w-16 h-16 bg-warning-container text-warning rounded-full flex items-center justify-center mb-6">
           <AlertCircle className="w-8 h-8" />
         </div>
         <h3 className="text-2xl font-bold text-on-surface mb-3">Vous avez lu vos 3 documents gratuits 🎉</h3>
@@ -138,7 +138,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
           Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte Agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
-          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
+          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-success text-on-primary rounded-lg font-medium hover:bg-primary/90 transition-colors">
             Créer mon compte
           </Link>
           <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-surface-container-lowest text-success border border-success/30 rounded-lg font-medium hover:bg-success-container transition-colors">
@@ -162,7 +162,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       
       {/* Bandeau permanent pour les visiteurs */}
       {showEncarts && (
-        <div className="sticky top-0 w-full bg-success text-white px-3 py-2 flex items-center justify-between gap-3 z-20 text-xs sm:text-sm">
+        <div className="sticky top-0 w-full bg-success text-on-success px-3 py-2 flex items-center justify-between gap-3 z-20 text-xs sm:text-sm">
           <span className="flex items-center min-w-0">
             <Info className="w-4 h-4 mr-2 flex-shrink-0" />
             <span className="truncate">

@@ -104,7 +104,7 @@ export function NewsletterForm() {
               <button
                 type="submit"
                 disabled={status === "loading" || !email}
-                className="w-full font-bold text-white bg-primary hover:bg-primary/90 transition-colors px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md disabled:opacity-70 disabled:cursor-not-allowed text-sm flex justify-center items-center"
+                className="w-full font-bold text-on-primary bg-primary hover:bg-primary/90 transition-colors px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md disabled:opacity-70 disabled:cursor-not-allowed text-sm flex justify-center items-center"
               >
                 {status === "loading" ? "Inscription..." : "S'inscrire"}
               </button>

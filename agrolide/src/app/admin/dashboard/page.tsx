@@ -54,8 +54,8 @@ const formatFCFA = (n: number) =>
 const catColors: Record<string, string> = {
   junior: "bg-success-container text-success",
   professionnel: "bg-info-container text-info",
-  senior: "bg-purple-100 text-purple-700",
-  partenaire: "bg-orange-100 text-orange-700",
+  senior: "bg-info-container text-on-info-container",
+  partenaire: "bg-warning-container text-on-warning-container",
 }
 const statutColors: Record<string, string> = {
   actif: "bg-success-container text-success",
@@ -151,7 +151,7 @@ export default async function AdminDashboardPage() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard label="Membres actifs" value={totalActifs} icon={Users} color="bg-success-container text-success" />
           <KpiCard label="Nouveaux ce mois" value={nouveauxMois} icon={UserPlus} color="bg-info-container text-info" />
-          <KpiCard label="Actifs (30 jours)" value={membresActifs30j} icon={Activity} color="bg-indigo-50 text-indigo-600" />
+          <KpiCard label="Actifs (30 jours)" value={membresActifs30j} icon={Activity} color="bg-info-container text-info" />
           <KpiCard label="Total membres" value={totalMembres} icon={TrendingUp} color="bg-success-container text-success" />
         </div>
         <div className="mt-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm">
@@ -164,8 +164,8 @@ export default async function AdminDashboardPage() {
         <SectionHeader title="Revenus" sub="Cotisations et dons" icon={Coins} />
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
           <KpiCard label="Cotisations ce mois" value={formatFCFA(revenusMois)} icon={CreditCard} color="bg-success-container text-success" />
-          <KpiCard label="Revenus cumulés" value={formatFCFA(revenusCumules)} icon={TrendingUp} color="bg-purple-50 text-purple-600" />
-          <KpiCard label="Dons collectés" value={formatFCFA(totalDons)} icon={Target} color="bg-tertiary-container text-orange-600" />
+          <KpiCard label="Revenus cumulés" value={formatFCFA(revenusCumules)} icon={TrendingUp} color="bg-info-container text-info" />
+          <KpiCard label="Dons collectés" value={formatFCFA(totalDons)} icon={Target} color="bg-tertiary-container text-warning" />
         </div>
         <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm">
           <p className="text-sm font-semibold text-on-surface-variant mb-3">Revenus mensuels (12 derniers mois)</p>
@@ -177,9 +177,9 @@ export default async function AdminDashboardPage() {
         <SectionHeader title="Contenu" sub="État de la plateforme" icon={FileText} />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           <KpiCard label="Articles publiés" value={articlesPubliesRows.length} icon={FileText} color="bg-warning-container text-warning" />
-          <KpiCard label="Documents bibliothèque" value={documentsApprouvesRows.length} icon={Eye} color="bg-cyan-50 text-cyan-600" />
-          <KpiCard label="Opportunités publiées" value={opportunitesPubRows.length} icon={Target} color="bg-lime-50 text-lime-600" />
-          <KpiCard label="Événements à venir" value={evenementsAvenirRows.length} icon={Calendar} color="bg-rose-50 text-rose-600" />
+          <KpiCard label="Documents bibliothèque" value={documentsApprouvesRows.length} icon={Eye} color="bg-info-container text-info" />
+          <KpiCard label="Opportunités publiées" value={opportunitesPubRows.length} icon={Target} color="bg-success-container text-success" />
+          <KpiCard label="Événements à venir" value={evenementsAvenirRows.length} icon={Calendar} color="bg-error-container text-error" />
         </div>
       </section>
 

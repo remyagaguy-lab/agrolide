@@ -136,7 +136,7 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
             {/* Loading overlay */}
             {isUploading && (
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                <Loader2 className="animate-spin text-white" size={16} />
+                <Loader2 className="animate-spin text-on-surface-brand" size={16} />
               </div>
             )}
           </div>
@@ -212,7 +212,7 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
         >
           Annuler
         </button>
-        <button type="submit" className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors shadow-sm mt-4" disabled={isSaving || isUploading}>
+        <button type="submit" className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors shadow-sm mt-4" disabled={isSaving || isUploading}>
           {isSaving ? (
             <><Loader2 size={14} className="animate-spin" /> Enregistrement...</>
           ) : (

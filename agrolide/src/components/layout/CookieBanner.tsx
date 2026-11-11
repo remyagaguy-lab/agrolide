@@ -45,7 +45,7 @@ export function CookieBanner() {
           aria-modal="false"
           aria-labelledby="cookie-heading"
           aria-describedby="cookie-desc"
-          className="fixed bottom-6 right-6 z-50 flex w-[calc(100%-3rem)] max-w-[420px] flex-col gap-3 rounded-card border border-on-surface-brand/10 bg-inverse-surface p-5 text-inverse-on-surface shadow-elev-4 md:w-full"
+          className="fixed bottom-6 right-6 z-50 flex w-[calc(100%-3rem)] max-w-[420px] flex-col gap-3 rounded-card border border-on-surface-brand/10 bg-surface-brand p-5 text-on-surface-brand shadow-elev-4 md:w-full"
         >
           <div>
             <h2 id="cookie-heading" className="mb-1 text-title-md">Nous respectons votre vie privée.</h2>

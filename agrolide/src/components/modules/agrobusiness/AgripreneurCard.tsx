@@ -49,7 +49,7 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
       
       <div className="p-6 pt-2 flex-grow flex flex-col">
         {agripreneur.secteur && (
-          <div className="inline-block px-3 py-1 bg-tertiary-container text-orange-700 text-xs font-bold rounded-full w-fit mb-3">
+          <div className="inline-block px-3 py-1 bg-tertiary-container text-on-warning-container text-xs font-bold rounded-full w-fit mb-3">
             {agripreneur.secteur}
           </div>
         )}

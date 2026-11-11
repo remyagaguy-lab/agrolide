@@ -72,7 +72,7 @@ export default function AdminFormationsPage() {
         </div>
         <button 
           onClick={handleCreateNew}
-          className="bg-success hover:bg-success text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium"
+          className="bg-success hover:bg-success text-on-success px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium"
         >
           <Plus className="w-5 h-5" /> Nouvelle formation
         </button>

@@ -63,7 +63,7 @@ export default function MessagesManager() {
           onChange={e => setSearch(e.target.value)}
           className="flex-1 px-4 py-2 border border-outline rounded-xl outline-none focus:ring-2 focus:ring-primary"
         />
-        <button type="submit" className="px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-xl flex items-center gap-2">
+        <button type="submit" className="px-4 py-2 bg-primary hover:bg-primary/90 text-on-primary rounded-xl flex items-center gap-2">
           <Search className="w-5 h-5" /> Rechercher
         </button>
       </form>

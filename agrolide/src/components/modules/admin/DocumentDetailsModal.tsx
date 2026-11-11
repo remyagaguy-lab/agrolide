@@ -117,7 +117,7 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
                 />
                 <div className="mt-3 flex justify-end gap-2">
                   <Button variant="outline" onClick={() => setIsRejecting(false)} className="bg-surface-container-lowest">Annuler</Button>
-                  <Button onClick={handleReject} disabled={processing || !rejectReason.trim()} className="bg-error hover:bg-error text-white border-0">
+                  <Button onClick={handleReject} disabled={processing || !rejectReason.trim()} className="bg-error hover:bg-error text-on-error border-0">
                     Confirmer le refus
                   </Button>
                 </div>

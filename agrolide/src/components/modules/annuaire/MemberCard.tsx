@@ -82,10 +82,10 @@ export default function MemberCard({ member }: MemberCardProps) {
         <div className="mt-3 flex items-center justify-center gap-2 text-[12px] text-on-surface-muted w-full px-2">
           <div className="flex items-center gap-1.5">
              <div className="flex -space-x-1.5">
-               <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center border border-white z-10">
+               <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center border border-on-primary z-10">
                  <Briefcase className="w-3 h-3 text-primary" />
                </div>
-               <div className="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center border border-white">
+               <div className="w-5 h-5 rounded-full bg-surface-container flex items-center justify-center border border-on-surface-brand">
                  <MapPin className="w-3 h-3 text-on-surface-muted" />
                </div>
              </div>
@@ -115,7 +115,7 @@ export default function MemberCard({ member }: MemberCardProps) {
           ) : status === 'pending_received' ? (
              <Link
                href="/membres/reseau"
-               className="w-full py-1.5 border-[1.5px] border-orange-500 text-orange-600 rounded-full flex items-center justify-center gap-2 text-sm font-semibold hover:bg-tertiary-container transition-colors duration-200"
+               className="w-full py-1.5 border-[1.5px] border-warning/40 text-warning rounded-full flex items-center justify-center gap-2 text-sm font-semibold hover:bg-tertiary-container transition-colors duration-200"
              >
                Répondre
              </Link>
@@ -123,7 +123,7 @@ export default function MemberCard({ member }: MemberCardProps) {
              <button 
                onClick={handleConnect}
                disabled={isPending}
-               className="w-full py-1.5 border-[1.5px] border-primary text-primary rounded-full flex items-center justify-center gap-2 text-sm font-semibold hover:bg-primary hover:text-white transition-colors duration-200"
+               className="w-full py-1.5 border-[1.5px] border-primary text-primary rounded-full flex items-center justify-center gap-2 text-sm font-semibold hover:bg-primary hover:text-on-primary transition-colors duration-200"
              >
                {isPending ? <Clock className="w-4 h-4 animate-spin" /> : <UserPlus className="w-4 h-4" />} 
                {isPending ? 'Envoi...' : 'Se connecter'}

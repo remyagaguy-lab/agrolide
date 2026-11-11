@@ -123,7 +123,7 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
         <div className="ml-auto">
           <button
             onClick={startCreate}
-            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-primary bg-primary rounded-lg hover:bg-primary/90 transition-colors"
           >
             <Plus size={16} /> Ajouter
           </button>
@@ -158,7 +158,7 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
             ))}
           </div>
           <div className="flex gap-3 pt-2">
-            <button onClick={handleSave} disabled={loading} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary/90 disabled:opacity-50">
+            <button onClick={handleSave} disabled={loading} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-primary bg-primary rounded-lg hover:bg-primary/90 disabled:opacity-50">
               <Save size={14} /> {loading ? "..." : "Créer"}
             </button>
             <button onClick={cancel} className="flex items-center gap-2 px-4 py-2 text-sm text-on-surface-variant border border-outline-variant rounded-lg hover:bg-surface-container-low">
@@ -202,7 +202,7 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
                       ))}
                     </div>
                     <div className="flex gap-3">
-                      <button onClick={handleSave} disabled={loading} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-info rounded-lg hover:bg-info disabled:opacity-50">
+                      <button onClick={handleSave} disabled={loading} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-surface-brand bg-info rounded-lg hover:bg-info disabled:opacity-50">
                         <Save size={14} /> {loading ? "..." : "Enregistrer"}
                       </button>
                       <button onClick={cancel} className="flex items-center gap-2 px-4 py-2 text-sm text-on-surface-variant border border-outline-variant rounded-lg hover:bg-surface-container-low">

@@ -59,11 +59,11 @@ export default async function BibliothequePublicPage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-          <h1 className="font-heading font-[800] text-3xl sm:text-4xl text-white mb-4 max-w-3xl mx-auto leading-tight">
+          <h1 className="font-heading font-[800] text-3xl sm:text-4xl text-on-surface-brand mb-4 max-w-3xl mx-auto leading-tight">
             Bibliothèque agricole
           </h1>
 
-          <p className="text-white/70 text-lg mb-6 max-w-2xl mx-auto font-sans">
+          <p className="text-on-surface-brand/70 text-lg mb-6 max-w-2xl mx-auto font-sans">
             Accédez à notre collection de{' '}
             {count > 0 ? (
               <span className="font-semibold text-on-tertiary-container">{count} documents</span>
@@ -75,7 +75,7 @@ export default async function BibliothequePublicPage() {
 
           <Link
             href="/rejoindre"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-surface font-heading font-[700] text-sm hover:bg-tertiary-hover transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-accent font-heading font-[700] text-sm hover:bg-tertiary-hover transition-colors"
           >
             Devenir membre
             <ArrowRight className="w-4 h-4" />

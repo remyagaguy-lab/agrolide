@@ -91,7 +91,7 @@ export default function AdminOpportunitesPage() {
         </div>
         <button 
           onClick={() => setIsSubmitModalOpen(true)}
-          className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
+          className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
         >
           <Plus className="w-5 h-5" /> Nouvelle opportunité
         </button>
@@ -132,7 +132,7 @@ export default function AdminOpportunitesPage() {
                       <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold ${
                         opp.statut === 'publie' ? 'bg-success-container text-success' :
                         opp.statut === 'rejete' ? 'bg-error-container text-error' :
-                        'bg-orange-100 text-orange-700'
+                        'bg-warning-container text-on-warning-container'
                       }`}>
                         {opp.statut === 'publie' && <CheckCircle className="w-3.5 h-3.5" />}
                         {opp.statut === 'rejete' && <XCircle className="w-3.5 h-3.5" />}

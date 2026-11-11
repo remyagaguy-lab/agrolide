@@ -5,6 +5,7 @@ import Link from "next/link"
 import { ChevronDown, ExternalLink, LogOut, User } from "lucide-react"
 import { useClerk } from "@/lib/auth/client"
 import { Avatar } from "@/components/ui/Avatar"
+import { ThemeMenuItems } from "@/components/ui/ThemeToggle"
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu"
@@ -61,6 +62,8 @@ export function MembresUserMenu({ profile, compact = false }: MembresUserMenuPro
         <DropdownMenuItem asChild>
           <Link href="/"><ExternalLink className="size-4 text-on-surface-muted" aria-hidden="true" /> Retour au site</Link>
         </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <ThemeMenuItems />
         <DropdownMenuSeparator />
         <DropdownMenuItem destructive disabled={signingOut} onSelect={(e) => { e.preventDefault(); void handleLogout() }}>
           <LogOut className="size-4" aria-hidden="true" /> {signingOut ? "Déconnexion…" : "Se déconnecter"}

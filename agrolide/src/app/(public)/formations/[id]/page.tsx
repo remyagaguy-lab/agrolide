@@ -118,14 +118,14 @@ export default async function FormationPublicPage({
               </div>
             ) : (
               <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-inverse-surface border border-primary aspect-[4/3] w-full flex items-center justify-center p-6">
-                 <span className="font-heading font-semibold text-white/50 text-center text-lg">{formation.source_externe || "AGROLIDE FORMATION"}</span>
+                 <span className="font-heading font-semibold text-on-surface-brand/50 text-center text-lg">{formation.source_externe || "AGROLIDE FORMATION"}</span>
               </div>
             )}
           </div>
           
           {/* Title */}
           <div className="flex-1 md:pb-4">
-            <h1 className="font-heading font-[900] text-[clamp(28px,4vw,44px)] leading-[1.15] text-on-surface md:text-white tracking-[-0.02em]">
+            <h1 className="font-heading font-[900] text-[clamp(28px,4vw,44px)] leading-[1.15] text-on-surface md:text-on-surface-brand tracking-[-0.02em]">
               {formation.titre}
             </h1>
           </div>

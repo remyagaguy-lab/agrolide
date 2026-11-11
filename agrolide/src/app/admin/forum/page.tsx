@@ -149,7 +149,7 @@ export default function AdminForumPage() {
                         Sujet : {msg.fil?.titre} <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
-                    <div className="bg-tertiary-container/50 p-4 rounded-xl border border-orange-100 text-on-surface text-sm whitespace-pre-wrap font-sans break-words">
+                    <div className="bg-tertiary-container/50 p-4 rounded-xl border border-warning/40 text-on-surface text-sm whitespace-pre-wrap font-sans break-words">
                       {msg.contenu}
                     </div>
                   </div>
@@ -165,7 +165,7 @@ export default function AdminForumPage() {
                     <button 
                       onClick={() => handleDelete(msg.id)}
                       disabled={processing === msg.id}
-                      className="px-4 py-2 bg-tertiary-container hover:bg-orange-100 text-orange-700 font-medium rounded-lg text-sm transition-colors border border-orange-200 flex items-center gap-2 justify-center w-full h-10"
+                      className="px-4 py-2 bg-tertiary-container hover:bg-warning-container text-on-warning-container font-medium rounded-lg text-sm transition-colors border border-warning/40 flex items-center gap-2 justify-center w-full h-10"
                     >
                       {processing === msg.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <><Trash2 className="w-4 h-4" /> Supprimer le message</>}
                     </button>

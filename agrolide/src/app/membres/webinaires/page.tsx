@@ -78,7 +78,7 @@ export default async function WebinairesPage() {
                   </div>
                 </div>
                 
-                <button className="w-full mt-4 py-2 bg-primary text-white rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors shadow-sm">
+                <button className="w-full mt-4 py-2 bg-primary text-on-primary rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors shadow-sm">
                   M'inscrire au webinaire
                 </button>
               </div>

@@ -54,7 +54,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
         isActive(href) 
           ? "bg-success/30 text-inverse-primary" 
-          : "text-outline hover:bg-inverse-surface hover:text-white"
+          : "text-outline hover:bg-inverse-surface hover:text-inverse-on-surface"
       }`}
     >
       <Icon size={18} />
@@ -64,10 +64,10 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
   return (
     <div className="flex h-screen bg-surface-container-low overflow-hidden">
-      <aside className="w-[240px] bg-inverse-surface text-white flex flex-col shrink-0 overflow-y-auto">
+      <aside className="w-[240px] bg-inverse-surface text-inverse-on-surface flex flex-col shrink-0 overflow-y-auto">
         <div className="h-16 flex items-center px-6 border-b border-inverse-surface shrink-0">
           <span className="font-heading font-bold text-xl text-inverse-primary">
-            agrolide <span className="text-white text-sm font-normal">ADMIN</span>
+            agrolide <span className="text-on-surface-brand text-sm font-normal">ADMIN</span>
           </span>
         </div>
         

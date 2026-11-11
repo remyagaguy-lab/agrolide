@@ -53,7 +53,7 @@ export default function OpportunitesClient() {
         
         <button 
           onClick={() => setIsModalOpen(true)}
-          className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
+          className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
         >
           <Plus className="w-4 h-4" /> Proposer une opportunité
         </button>
@@ -123,7 +123,7 @@ export default function OpportunitesClient() {
                   <span className={`px-2 py-1 rounded text-xs font-bold ${
                     opp.statut === 'publie' ? 'bg-success-container text-success' :
                     opp.statut === 'rejete' ? 'bg-error-container text-error' :
-                    'bg-orange-100 text-orange-700'
+                    'bg-warning-container text-on-warning-container'
                   }`}>
                     {opp.statut.replace('_', ' ').toUpperCase()}
                   </span>

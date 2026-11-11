@@ -27,13 +27,13 @@ export default async function AgripreneursPage() {
       {/* Header */}
       <section className="bg-surface-brand py-16 text-on-surface-brand text-center">
         <div className="container mx-auto px-4">
-          <Link href="/agrobusiness" className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-6 text-sm">
+          <Link href="/agrobusiness" className="inline-flex items-center gap-2 text-on-surface-brand/80 hover:text-on-surface-brand transition-colors mb-6 text-sm">
             <ArrowLeft size={16} /> Retour à l'Agrobusiness
           </Link>
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
             Nos Agripreneurs
           </h1>
-          <p className="text-xl max-w-2xl mx-auto text-white/90">
+          <p className="text-xl max-w-2xl mx-auto text-on-surface-brand/90">
             Les startups et projets qui transforment l'agriculture africaine, accompagnés par l'incubateur agrolide.
           </p>
         </div>

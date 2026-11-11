@@ -44,20 +44,20 @@ export default async function NousSoutenirPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-on-surface">
+      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-surface-brand">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-accent-sun/10 rounded-full blur-[100px] pointer-events-none" />
         </div>
         
         <div className="max-w-[900px] mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-on-tertiary-container font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
+          <div className="inline-block px-4 py-2 rounded-full border border-on-surface-brand/10 text-accent-sun font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
             Fonds de soutien
           </div>
-          <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
-            Soutenir agrolide, c'est investir dans la <span className="text-on-tertiary-container">souveraineté alimentaire africaine.</span>
+          <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-on-surface-brand leading-[1.1] tracking-[-0.02em] mb-8">
+            Soutenir agrolide, c'est investir dans la <span className="text-accent-sun">souveraineté alimentaire africaine.</span>
           </h1>
-          <p className="font-sans text-[16px] md:text-[20px] text-[rgba(255,255,255,0.7)] max-w-[700px] mx-auto leading-[1.7]">
+          <p className="font-sans text-[16px] md:text-[20px] text-on-surface-brand/70 max-w-[700px] mx-auto leading-[1.7]">
             Votre don permet de financer l'accompagnement des agripreneurs, la création de ressources et le développement technologique du réseau.
           </p>
         </div>
@@ -158,7 +158,7 @@ export default async function NousSoutenirPage() {
               {/* Derniers soutiens */}
               <div className="bg-surface-brand p-8 md:p-10 rounded-3xl relative overflow-hidden shadow-[0_20px_40px_rgba(27,94,56,0.15)]">
                 <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-2xl pointer-events-none" />
-                <h3 className="font-heading font-[800] text-[24px] text-white flex items-center gap-3 mb-8 relative z-10">
+                <h3 className="font-heading font-[800] text-[24px] text-on-surface-brand flex items-center gap-3 mb-8 relative z-10">
                   <Users className="w-6 h-6 text-on-tertiary-container" />
                   Ils nous soutiennent
                 </h3>
@@ -166,14 +166,14 @@ export default async function NousSoutenirPage() {
                 {recentDonors.length > 0 ? (
                   <div className="space-y-4 relative z-10">
                     {recentDonors.map((donor: any, i: number) => (
-                      <div key={i} className="flex items-center justify-between bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                      <div key={i} className="flex items-center justify-between bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-on-surface-brand/10">
                         <div className="flex items-center gap-4">
-                          <div className="w-12 h-12 rounded-full bg-accent-sun text-on-surface flex items-center justify-center font-heading font-[800] text-[18px]">
+                          <div className="w-12 h-12 rounded-full bg-accent-sun text-on-accent flex items-center justify-center font-heading font-[800] text-[18px]">
                             {donor.prenom.charAt(0)}
                           </div>
                           <div>
-                            <div className="font-heading font-[800] text-white">{donor.prenom}</div>
-                            <div className="font-sans text-[13px] text-white/60">{new Date(donor.created_at).toLocaleDateString()}</div>
+                            <div className="font-heading font-[800] text-on-surface-brand">{donor.prenom}</div>
+                            <div className="font-sans text-[13px] text-on-surface-brand/60">{new Date(donor.created_at).toLocaleDateString()}</div>
                           </div>
                         </div>
                         <div className="font-heading font-[800] text-on-tertiary-container">
@@ -183,7 +183,7 @@ export default async function NousSoutenirPage() {
                     ))}
                   </div>
                 ) : (
-                  <p className="font-sans text-[15px] text-white/80 italic py-6 text-center border border-white/10 rounded-xl bg-white/5 relative z-10">
+                  <p className="font-sans text-[15px] text-on-surface-brand/80 italic py-6 text-center border border-on-surface-brand/10 rounded-xl bg-white/5 relative z-10">
                     Soyez le premier à soutenir publiquement cette campagne !
                   </p>
                 )}

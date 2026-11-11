@@ -34,7 +34,7 @@ export default async function AdminAgripreneursPage() {
   return (
     <div className="space-y-6 pb-10">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-lime-50 text-lime-700 rounded-xl flex items-center justify-center">
+        <div className="w-10 h-10 bg-success-container text-on-success-container rounded-xl flex items-center justify-center">
           <Sprout size={20} />
         </div>
         <div>

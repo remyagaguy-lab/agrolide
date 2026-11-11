@@ -179,7 +179,7 @@ export default function DeposerDocumentPage() {
           Le dépôt de documents est réservé aux membres Professionnels, Partenaires et Séniors.
           Votre abonnement Junior ne vous permet pas de publier dans la bibliothèque.
         </p>
-        <button onClick={() => router.back()} className="px-6 py-2 bg-inverse-surface text-white rounded-lg font-medium hover:bg-inverse-surface">
+        <button onClick={() => router.back()} className="px-6 py-2 bg-inverse-surface text-inverse-on-surface rounded-lg font-medium hover:bg-inverse-surface">
           Retour
         </button>
       </div>
@@ -315,7 +315,7 @@ export default function DeposerDocumentPage() {
           <button
             type="submit"
             disabled={loading}
-            className="flex items-center gap-2 px-6 py-3 bg-success text-white rounded-lg font-medium hover:bg-primary/90 disabled:opacity-70"
+            className="flex items-center gap-2 px-6 py-3 bg-success text-on-primary rounded-lg font-medium hover:bg-primary/90 disabled:opacity-70"
           >
             {loading && <Loader2 className="w-5 h-5 animate-spin" />}
             {loading ? 'Dépôt en cours...' : 'Soumettre le document'}

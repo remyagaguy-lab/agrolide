@@ -195,7 +195,7 @@ export default function MessagesClient() {
                       )}
                     </div>
                     {conv.non_lus > 0 && (
-                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-tertiary-container0 text-white text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-white shadow-sm">
+                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-tertiary text-on-tertiary text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-surface shadow-sm">
                         {conv.non_lus}
                       </span>
                     )}
@@ -259,7 +259,7 @@ export default function MessagesClient() {
                   const isMe = msg.expediteur_id === currentUser?.id
                   return (
                     <div key={msg.id} className={`flex flex-col max-w-[80%] md:max-w-[70%] ${isMe ? 'self-end items-end' : 'self-start items-start'}`}>
-                      <div className={`px-4 py-2.5 rounded-xl shadow-sm text-xs leading-relaxed ${isMe ? 'bg-primary text-white rounded-br-sm' : 'bg-surface-container-lowest border border-outline-variant text-on-surface rounded-bl-sm'}`}>
+                      <div className={`px-4 py-2.5 rounded-xl shadow-sm text-xs leading-relaxed ${isMe ? 'bg-primary text-on-primary rounded-br-sm' : 'bg-surface-container-lowest border border-outline-variant text-on-surface rounded-bl-sm'}`}>
                         {msg.contenu}
                       </div>
                       <span className="text-[9px] font-bold text-on-surface-muted mt-1 px-1 uppercase tracking-wider">
@@ -294,7 +294,7 @@ export default function MessagesClient() {
                 <button 
                   type="submit"
                   disabled={sending || !newMessage.trim()}
-                  className="w-10 h-10 bg-primary hover:bg-primary/90 text-white rounded-xl flex items-center justify-center shrink-0 disabled:opacity-50 transition-all shadow-sm"
+                  className="w-10 h-10 bg-primary hover:bg-primary/90 text-on-primary rounded-xl flex items-center justify-center shrink-0 disabled:opacity-50 transition-all shadow-sm"
                 >
                   {sending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
                 </button>
@@ -303,7 +303,7 @@ export default function MessagesClient() {
           </>
         ) : (
           <div className="flex-1 flex flex-col items-center justify-center text-on-surface-muted bg-transparent">
-            <div className="w-24 h-24 rounded-full bg-surface-container-low flex items-center justify-center mb-6 shadow-sm border border-white">
+            <div className="w-24 h-24 rounded-full bg-surface-container-low flex items-center justify-center mb-6 shadow-sm border border-on-surface-brand">
                <MessageCircle className="w-10 h-10 text-outline" strokeWidth={1.5} />
             </div>
             <h3 className="font-heading font-bold text-xl text-on-surface mb-2">Vos Messages</h3>

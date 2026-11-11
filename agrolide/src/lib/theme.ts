@@ -4,9 +4,11 @@
  * Fonctionnement : <html data-theme="light|dark"> est posé avant le premier rendu par un script en ligne
  * (aucun flash). Les jetons de src/styles/tokens/generated.css basculent sur [data-theme='dark'].
  *
- * DARK_MODE_ENABLED reste à false tant que les pages n'ont pas toutes migré vers les jetons : sinon les
- * pages encore écrites en couleurs fixes (fond blanc en dur) seraient à moitié sombres. Passer à true
- * à la fin de la migration (étape « application progressive » du design system).
+ * DARK_MODE_ENABLED reste à false : tout le site est migré SAUF trois fichiers en attente de validation
+ * (src/app/(public)/page.tsx, src/app/(public)/formations/page.tsx, src/components/modules/evenements/EventCard.tsx),
+ * dont l'accueil, qui serait illisible en sombre. Une fois ces fichiers migrés (node scripts/ds-migrate.mjs, puis
+ * reprise à la main des dégradés/hex restants), passer à true : la bascule Clair / Sombre / Système
+ * (ThemeToggle, déjà montée dans l'en-tête public et le menu du compte) apparaît alors toute seule.
  */
 export const DARK_MODE_ENABLED = false
 

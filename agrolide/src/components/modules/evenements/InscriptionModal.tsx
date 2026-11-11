@@ -96,7 +96,7 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
               </Dialog.Description>
               <button
                 onClick={onClose}
-                className="w-full py-2.5 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl text-sm transition-colors"
+                className="w-full py-2.5 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-xl text-sm transition-colors"
               >
                 Fermer
               </button>
@@ -137,7 +137,7 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                     <button
                       onClick={() => handleSubmit()}
                       disabled={submitting}
-                      className="px-6 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                      className="px-6 py-2 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-lg transition-colors flex items-center gap-2"
                     >
                       {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
                       Confirmer l'inscription
@@ -195,7 +195,7 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="px-6 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                      className="px-6 py-2 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-lg transition-colors flex items-center gap-2"
                     >
                       {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
                       S'inscrire

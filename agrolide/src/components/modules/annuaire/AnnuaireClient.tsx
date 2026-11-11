@@ -92,11 +92,11 @@ export default function AnnuaireClient() {
       <div className="bg-surface-brand rounded-2xl p-6 md:px-8 md:py-6 mb-6 text-on-surface-brand shadow-sm relative overflow-hidden flex items-center justify-between gap-6">
         <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full blur-2xl -mr-12 -mt-12"></div>
         <div className="relative z-10 max-w-xl">
-          <h1 className="text-xl md:text-2xl font-bold font-heading text-white mb-1">Annuaire des Membres</h1>
-          <p className="text-white/80 text-xs md:text-sm">Découvrez et connectez-vous avec les acteurs de l'agriculture africaine.</p>
+          <h1 className="text-xl md:text-2xl font-bold font-heading text-on-surface-brand mb-1">Annuaire des Membres</h1>
+          <p className="text-on-surface-brand/80 text-xs md:text-sm">Découvrez et connectez-vous avec les acteurs de l'agriculture africaine.</p>
         </div>
-        <div className="relative z-10 hidden sm:flex shrink-0 w-12 h-12 bg-white/10 rounded-xl items-center justify-center border border-white/20">
-          <Users className="w-6 h-6 text-white" />
+        <div className="relative z-10 hidden sm:flex shrink-0 w-12 h-12 bg-white/10 rounded-xl items-center justify-center border border-on-surface-brand/20">
+          <Users className="w-6 h-6 text-on-surface-brand" />
         </div>
       </div>
 

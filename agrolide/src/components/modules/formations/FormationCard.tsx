@@ -54,7 +54,7 @@ export function FormationCard({ formation }: FormationCardProps) {
               Gratuit
             </span>
           ) : (
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-orange-700 border border-orange-200 uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-on-warning-container border border-warning/40 uppercase tracking-wider">
               {formation.prix} FCFA
             </span>
           )}

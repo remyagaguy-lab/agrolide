@@ -71,24 +71,24 @@ export default async function LearnLayout({
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-background">
       {/* Top Navigation Bar */}
-      <header className="flex-shrink-0 h-16 border-b border-on-surface-brand/20 flex items-center justify-between px-4 lg:px-8 bg-primary text-white z-10">
+      <header className="flex-shrink-0 h-16 border-b border-on-surface-brand/20 flex items-center justify-between px-4 lg:px-8 bg-primary text-on-primary z-10">
         <div className="flex items-center gap-4">
           <Link 
             href={`/formations/${formation.id}`} 
-            className="p-2 -ml-2 rounded-full hover:bg-white/10 transition-colors flex items-center justify-center text-white/80 hover:text-white"
+            className="p-2 -ml-2 rounded-full hover:bg-white/10 transition-colors flex items-center justify-center text-on-surface-brand/80 hover:text-on-surface-brand"
           >
             <ArrowLeft className="h-5 w-5" />
             <span className="sr-only">Retour à la formation</span>
           </Link>
           <div className="h-6 w-px bg-white/20 hidden sm:block"></div>
-          <h1 className="font-urbanist font-semibold text-base sm:text-lg text-white line-clamp-1">
+          <h1 className="font-urbanist font-semibold text-base sm:text-lg text-on-surface-brand line-clamp-1">
             {formation.titre}
           </h1>
         </div>
 
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-3 text-sm">
-            <span className="text-white/80 font-medium">{progressPercent}% terminé</span>
+            <span className="text-on-surface-brand/80 font-medium">{progressPercent}% terminé</span>
             <div className="w-24 h-2 bg-on-surface-brand/15 rounded-full overflow-hidden">
               <div 
                 className="h-full bg-tertiary rounded-full transition-all duration-500 ease-in-out" 

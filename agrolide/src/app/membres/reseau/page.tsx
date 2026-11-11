@@ -97,7 +97,7 @@ export default async function NetworkPage() {
         <h2 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
           Invitations en attente
           {pendingRequests.length > 0 && (
-            <span className="bg-error text-white text-xs font-bold px-2 py-0.5 rounded-full">
+            <span className="bg-error text-on-error text-xs font-bold px-2 py-0.5 rounded-full">
               {pendingRequests.length}
             </span>
           )}
@@ -144,7 +144,7 @@ export default async function NetworkPage() {
           <div className="text-center py-8 text-on-surface-muted">
             Vous n'avez pas encore de relations. Parcourez l'annuaire pour vous connecter avec d'autres membres !
             <div className="mt-4">
-              <Link href="/annuaire" className="inline-block bg-primary text-white px-6 py-2.5 rounded-xl font-medium hover:bg-primary/90 transition-colors">
+              <Link href="/annuaire" className="inline-block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium hover:bg-primary/90 transition-colors">
                 Explorer l'annuaire
               </Link>
             </div>

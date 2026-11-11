@@ -85,7 +85,7 @@ export default function CategoriesManager() {
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold text-on-surface">Catégories du Forum</h2>
-        <button onClick={startCreate} className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-medium">
+        <button onClick={startCreate} className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-medium">
           <Plus className="w-4 h-4" /> Nouvelle catégorie
         </button>
       </div>

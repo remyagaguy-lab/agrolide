@@ -50,7 +50,7 @@ export default async function AdminPaiementsPage() {
   return (
     <div className="space-y-8 pb-10">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-purple-50 text-purple-700 rounded-xl flex items-center justify-center">
+        <div className="w-10 h-10 bg-info-container text-on-info-container rounded-xl flex items-center justify-center">
           <CreditCard size={20} />
         </div>
         <div>
@@ -63,25 +63,25 @@ export default async function AdminPaiementsPage() {
       {expirationsBientot.length > 0 && (
         <section>
           <div className="flex items-center gap-2 mb-4">
-            <AlertCircle size={18} className="text-orange-500" />
+            <AlertCircle size={18} className="text-warning" />
             <h2 className="text-base font-semibold text-on-surface">
               Expirations dans 30 jours ({expirationsBientot.length})
             </h2>
           </div>
-          <div className="bg-tertiary-container border border-orange-200 rounded-xl overflow-hidden">
+          <div className="bg-tertiary-container border border-warning/40 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
-              <thead className="bg-orange-100/70 border-b border-orange-200">
+              <thead className="bg-warning-container border-b border-warning/40">
                 <tr>
-                  <th className="px-5 py-3 font-medium text-orange-800 text-xs uppercase tracking-wide text-left">Membre ID</th>
-                  <th className="px-5 py-3 font-medium text-orange-800 text-xs uppercase tracking-wide text-left">Expire le</th>
+                  <th className="px-5 py-3 font-medium text-on-warning-container text-xs uppercase tracking-wide text-left">Membre ID</th>
+                  <th className="px-5 py-3 font-medium text-on-warning-container text-xs uppercase tracking-wide text-left">Expire le</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-orange-100">
+              <tbody className="divide-y divide-warning/40">
                 {expirationsBientot.map((c) => (
-                  <tr key={c.id} className="hover:bg-orange-100/30 transition-colors">
+                  <tr key={c.id} className="hover:bg-warning-container transition-colors">
                     <td className="px-5 py-3 font-medium text-on-surface">{c.membre_id}</td>
                     <td className="px-5 py-3">
-                      <span className="flex items-center gap-1.5 text-orange-700 font-medium text-xs">
+                      <span className="flex items-center gap-1.5 text-on-warning-container font-medium text-xs">
                         <Clock size={12} />
                         {c.date_fin ? new Date(c.date_fin).toLocaleDateString("fr-FR") : "—"}
                       </span>

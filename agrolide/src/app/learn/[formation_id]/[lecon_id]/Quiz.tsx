@@ -142,9 +142,9 @@ export function Quiz({
                 <div className="flex items-center gap-4 w-full">
                   <div className={cn(
                     "flex-shrink-0 w-7 h-7 rounded-full border-2 flex items-center justify-center transition-colors",
-                    hasSubmitted && isCorrect ? "border-accent-leaf bg-accent-leaf text-white" : 
-                    hasSubmitted && isSelected && !isCorrect ? "border-error bg-error text-white" :
-                    isSelected ? "border-accent-leaf bg-accent-leaf text-white" : "border-outline text-on-surface-muted"
+                    hasSubmitted && isCorrect ? "border-accent-leaf bg-accent-leaf text-on-accent" : 
+                    hasSubmitted && isSelected && !isCorrect ? "border-error bg-error text-on-error" :
+                    isSelected ? "border-accent-leaf bg-accent-leaf text-on-accent" : "border-outline text-on-surface-muted"
                   )}>
                     {hasSubmitted && isCorrect ? <CheckCircle2 className="w-4 h-4" /> : 
                      hasSubmitted && isSelected && !isCorrect ? <XCircle className="w-4 h-4" /> :
@@ -162,14 +162,14 @@ export function Quiz({
             <button 
               onClick={handleSubmit} 
               disabled={selectedOption === null}
-              className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun disabled:bg-surface-container disabled:text-on-surface/38 disabled:cursor-not-allowed text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun disabled:bg-surface-container disabled:text-on-surface/38 disabled:cursor-not-allowed text-on-tertiary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               Valider la réponse
             </button>
           ) : (
             <button 
               onClick={handleNext}
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               {currentQuestionIndex < questions.length - 1 ? "Question suivante" : "Terminer le quiz"}
               <ChevronRight className="ml-2 w-5 h-5" />

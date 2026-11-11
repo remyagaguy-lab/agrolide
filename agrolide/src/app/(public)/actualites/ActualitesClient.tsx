@@ -36,7 +36,7 @@ export default function ActualitesClient() {
         <div className="flex flex-wrap items-center gap-4">
           <button 
             onClick={() => setIsOppModalOpen(true)}
-            className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm text-sm"
+            className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm text-sm"
           >
             <Plus className="w-4 h-4" /> Proposer une opportunité
           </button>
@@ -164,7 +164,7 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
           {new Date(event.date_debut) >= new Date() && (
             <button 
               onClick={onInscrire} 
-              className="px-6 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-colors shadow-sm"
+              className="px-6 py-2 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-xl transition-colors shadow-sm"
             >
               S'inscrire à l'événement
             </button>

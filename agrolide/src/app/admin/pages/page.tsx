@@ -31,7 +31,7 @@ export default async function AdminPagesPage() {
   return (
     <div className="space-y-6 pb-10">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-indigo-50 text-indigo-700 rounded-xl flex items-center justify-center">
+        <div className="w-10 h-10 bg-info-container text-on-info-container rounded-xl flex items-center justify-center">
           <Globe size={20} />
         </div>
         <div>
@@ -45,16 +45,16 @@ export default async function AdminPagesPage() {
           <Link
             key={page.id}
             href={`/admin/pages/${page.slug}`}
-            className="group bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all"
+            className="group bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm hover:shadow-md hover:border-info/40 transition-all"
           >
             <div className="flex items-start justify-between">
               <div>
-                <p className="font-semibold text-on-surface group-hover:text-indigo-700 transition-colors">
+                <p className="font-semibold text-on-surface group-hover:text-on-info-container transition-colors">
                   {page.titre || PAGE_LABELS[page.slug] || page.slug}
                 </p>
                 <p className="text-xs text-on-surface-muted mt-1">/{page.slug}</p>
               </div>
-              <div className="w-8 h-8 bg-surface-container-low group-hover:bg-indigo-50 text-on-surface-muted group-hover:text-indigo-600 rounded-lg flex items-center justify-center transition-colors">
+              <div className="w-8 h-8 bg-surface-container-low group-hover:bg-info-container text-on-surface-muted group-hover:text-info rounded-lg flex items-center justify-center transition-colors">
                 <FileEdit size={16} />
               </div>
             </div>

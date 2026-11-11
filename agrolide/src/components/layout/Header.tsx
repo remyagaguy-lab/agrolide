@@ -7,6 +7,7 @@ import { Show, UserButton } from "@/lib/auth/client"
 import { Button } from "@/components/ui/Button"
 import { IconButton } from "@/components/ui/IconButton"
 import { Logo } from "@/components/ui/Logo"
+import { ThemeToggle } from "@/components/ui/ThemeToggle"
 import { cn } from "@/lib/utils/formatters"
 
 const NAV_LINKS = [
@@ -75,6 +76,7 @@ export function Header() {
 
         {/* Actions desktop */}
         <div className="hidden items-center gap-4 lg:flex">
+          <ThemeToggle />
           <Show when="signed-out">
             <Link href="/login" className={cn(navLink, "inline-flex min-h-11 items-center text-on-surface-variant hover:text-primary")}>
               Connexion
@@ -119,6 +121,7 @@ export function Header() {
               </Link>
             ))}
             <div className="mt-3 flex flex-col gap-3 border-t border-outline-variant pt-5">
+              <ThemeToggle showLabels className="self-start" />
               <Show when="signed-out">
                 <Button href="/login" variant="outline" fullWidth>Connexion</Button>
                 <Button href="/rejoindre" variant="secondary" fullWidth>Rejoindre le réseau</Button>

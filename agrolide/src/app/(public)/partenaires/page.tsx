@@ -24,20 +24,20 @@ export default async function PartenairesPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-on-surface">
+      <section className="relative overflow-hidden pt-[100px] pb-[60px] md:pt-[140px] md:pb-[80px] bg-surface-brand">
         <div className="absolute inset-0 z-0">
           <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[140%] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
           <div className="absolute bottom-[-20%] right-[-10%] w-[40%] h-[120%] bg-accent-sun/10 rounded-full blur-[100px] pointer-events-none" />
         </div>
         
         <div className="max-w-[900px] mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block px-4 py-2 rounded-full border border-white/10 text-on-tertiary-container font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
+          <div className="inline-block px-4 py-2 rounded-full border border-on-surface-brand/10 text-accent-sun font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6">
             Écosystème
           </div>
-          <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.1] tracking-[-0.02em] mb-8">
+          <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-on-surface-brand leading-[1.1] tracking-[-0.02em] mb-8">
             Ils nous font confiance
           </h1>
-          <p className="font-sans text-[16px] md:text-[20px] text-[rgba(255,255,255,0.7)] max-w-[700px] mx-auto leading-[1.7]">
+          <p className="font-sans text-[16px] md:text-[20px] text-on-surface-brand/70 max-w-[700px] mx-auto leading-[1.7]">
             Ensemble, avec nos partenaires et sponsors, nous construisons un écosystème agricole africain plus fort, plus structuré et plus innovant.
           </p>
         </div>
