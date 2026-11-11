@@ -51,7 +51,10 @@ export default function ResetPasswordClient() {
       <AuthCard title="Nouveau mot de passe" subtitle="Choisissez un mot de passe d’au moins 8 caractères">
         <form onSubmit={saveNewPassword} className="space-y-5">
           {error && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
-          <input type="password" required minLength={8} autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} className={inputClass} aria-label="Nouveau mot de passe" />
+          <div>
+            <label htmlFor="new-password" className="mb-1 block text-sm font-medium text-gray-700">Nouveau mot de passe</label>
+            <input id="new-password" type="password" required minLength={8} autoComplete="new-password" placeholder="8 caractères minimum" value={password} onChange={(e) => setPassword(e.target.value)} className={inputClass} />
+          </div>
           <button type="submit" disabled={loading} className={buttonClass}>{loading ? 'Enregistrement…' : 'Enregistrer'}</button>
         </form>
       </AuthCard>
@@ -69,7 +72,10 @@ export default function ResetPasswordClient() {
       ) : (
         <form onSubmit={requestLink} className="space-y-5">
           {error && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
-          <input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={inputClass} aria-label="Adresse e-mail" />
+          <div>
+            <label htmlFor="reset-email" className="mb-1 block text-sm font-medium text-gray-700">Adresse e-mail de votre compte</label>
+            <input id="reset-email" type="email" required autoComplete="email" placeholder="vous@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} className={inputClass} />
+          </div>
           <button type="submit" disabled={loading} className={buttonClass}>{loading ? 'Envoi…' : 'Envoyer le lien'}</button>
         </form>
       )}
