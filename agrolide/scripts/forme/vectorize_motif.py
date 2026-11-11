@@ -12,7 +12,8 @@ Méthode
     le canal vert.
  3. Les champs sont répétés 3 x 3 puis tracés (contours sous-pixel + Bézier, voir bezier_trace.py) : un élément qui
     traverse le bord de la tuile reste d'un seul tenant ; on garde les anneaux qui touchent la cellule centrale.
-Sorties : public/design-assets/motif-couleur.svg (tuile couleur) et motif-masque.svg (alpha ton sur ton, pour mask-image), entrée « motif » de forme-paths.ts.
+Sorties : public/design-assets/motif-couleur.svg (tuile couleur) et motif-masque.svg (alpha ton sur ton, pour mask-image),
+motif-plantes-couleur.svg et motif-plantes-masque.svg (variante sans collines ; --pieds 2 pour deux pieds), entrée « motif » de forme-paths.ts.
 """
 from __future__ import annotations
 
@@ -103,9 +104,46 @@ def d_of(rings, nd=1):
     return s
 
 
+# --- variante « plantes seules » (sans collines) -------------------------------------------------------------
+# Quatre petits arcs de colline ont la couleur de la tige : on les efface (polylignes dans la cellule recentrée
+# d'une demi-période, unités de travail 2x). Option --pieds 2 : second pied de plante dessiné en symétrie.
+ARCS = [[(140, 278), (160, 262), (185, 246), (210, 230), (222, 224)],
+        [(234, 224), (255, 228), (285, 246), (310, 268), (326, 285)],
+        [(30, 640), (55, 650), (85, 670), (110, 692), (122, 700)],
+        [(350, 684), (372, 668), (395, 653), (408, 645)], [(0, 645), (14, 640)]]
+
+
+def plants_only_fields(F, pieds=1):
+    h, w = F["plant"].shape
+    sh = w // 2
+    out = {k: np.roll(F[k], sh, axis=1).copy() for k in ("plant", "leaf", "light")}
+    er = np.zeros((h, w), np.uint8)
+    for pl in ARCS:
+        cv2.polylines(er, [np.array(pl, np.int32)], False, 255, thickness=17)
+    for k in out:
+        out[k][er > 0] = 0
+    if pieds == 2:
+        ys, xs = np.where(out["leaf"][270:380, 150:310] > 0.5)
+        ax = 150 + xs.mean()  # axe de la plante A ; la plante B est décalée d'une demi-période
+
+        def mirror(f, axis, y0, y1, hw=140):
+            o = f.copy()
+            a = int(round(axis))
+            reg = f[y0:y1, a - hw : a + hw + 1]
+            o[y0:y1, a - hw : a + hw + 1] = np.maximum(reg, reg[:, ::-1])
+            return o
+
+        q = mirror(out["plant"], ax, 576, 812)
+        q = np.roll(q, sh, axis=1)
+        q = mirror(q, ax - sh + sh, 170, 392)  # B : axe - 204 + 204
+        out["plant"] = np.roll(q, -sh, axis=1)
+    return {k: np.roll(v, -sh, axis=1) for k, v in out.items()}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src")
+    ap.add_argument("--pieds", type=int, choices=(1, 2), default=1, help="plantes seules : 1 pied (défaut) ou 2 pieds")
     a = ap.parse_args()
     src = vz.find_src(a.src)
     A, col = fold_cell(src)
@@ -129,6 +167,16 @@ def main():
     body_m = (f'<g fill="#000" fill-rule="evenodd"><path fill-opacity=".42" d="{D["hill"]}"/>'
               f'<path fill-opacity=".7" d="{D["plant"]}"/><path d="{D["plant"]}{D["leaf"]}"/></g>')
     (vz.ASSETS / "motif-masque.svg").write_text(doc(body_m), encoding="utf-8")
+    # --- plantes seules (sans collines) : masque ton sur ton et tuile couleur
+    PF = plants_only_fields(F, a.pieds)
+    DP = {k: d_of(trace_layer(PF[k], k)) for k in ("plant", "leaf", "light")}
+    body_pm = (f'<g fill="#000" fill-rule="evenodd"><path fill-opacity=".7" d="{DP["plant"]}"/>'
+               f'<path d="{DP["plant"]}{DP["leaf"]}"/></g>')
+    (vz.ASSETS / "motif-plantes-masque.svg").write_text(doc(body_pm), encoding="utf-8")
+    body_pc = (f'<path fill="{colors["plant"]}" fill-rule="evenodd" d="{DP["plant"]}"/>'
+               f'<path fill="{colors["leaf"]}" fill-rule="evenodd" d="{DP["leaf"]}"/>'
+               f'<path fill="{colors["light"]}" fill-rule="evenodd" d="{DP["light"]}"/>')
+    (vz.ASSETS / "motif-plantes-couleur.svg").write_text(doc(body_pc), encoding="utf-8")
     ts = {"motif": {"viewBox": [0, 0, CELL_W, CELL_H], "layers": [
         {"id": k, "fill": colors[k], "d": D[k]} for k in ("hill", "plant", "leaf", "light")]}}
     vz.write_ts(ts, only="motif")
