@@ -38,8 +38,8 @@ export default async function AdminAgripreneursPage() {
           <Sprout size={20} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Vitrine Agripreneurs</h1>
-          <p className="text-sm text-gray-500">Success stories affichées sur la page agrobusiness</p>
+          <h1 className="text-2xl font-bold text-on-surface">Vitrine Agripreneurs</h1>
+          <p className="text-sm text-on-surface-muted">Success stories affichées sur la page agrobusiness</p>
         </div>
       </div>
 

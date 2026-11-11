@@ -29,19 +29,19 @@ export default async function ArticleEditPage({ params }: { params: Promise<{ id
       <div className="flex items-center gap-4">
         <Link 
           href="/admin/contenus/articles"
-          className="p-2 bg-white border border-gray-200 rounded-lg text-gray-500 hover:text-gray-900 transition-colors shadow-sm"
+          className="p-2 bg-white border border-outline-variant rounded-lg text-on-surface-muted hover:text-on-surface transition-colors shadow-sm"
         >
           <ArrowLeft size={20} />
         </Link>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-2xl font-bold text-on-surface">
             {isNew ? "Nouvel Article" : "Modifier l'article"}
           </h1>
-          <p className="text-gray-500 text-sm">Créez du contenu riche pour le blog Agrolide.</p>
+          <p className="text-on-surface-muted text-sm">Créez du contenu riche pour le blog Agrolide.</p>
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <div className="bg-white rounded-xl shadow-sm border border-outline-variant p-6">
         <ArticleEditorForm initialData={article} />
       </div>
     </div>

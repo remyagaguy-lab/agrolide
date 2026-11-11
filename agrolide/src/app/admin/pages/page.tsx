@@ -35,8 +35,8 @@ export default async function AdminPagesPage() {
           <Globe size={20} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Pages statiques</h1>
-          <p className="text-sm text-gray-500">Modifiez le contenu des pages sans toucher au code</p>
+          <h1 className="text-2xl font-bold text-on-surface">Pages statiques</h1>
+          <p className="text-sm text-on-surface-muted">Modifiez le contenu des pages sans toucher au code</p>
         </div>
       </div>
 
@@ -45,16 +45,16 @@ export default async function AdminPagesPage() {
           <Link
             key={page.id}
             href={`/admin/pages/${page.slug}`}
-            className="group bg-white rounded-xl border border-gray-200 p-5 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all"
+            className="group bg-white rounded-xl border border-outline-variant p-5 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all"
           >
             <div className="flex items-start justify-between">
               <div>
-                <p className="font-semibold text-gray-900 group-hover:text-indigo-700 transition-colors">
+                <p className="font-semibold text-on-surface group-hover:text-indigo-700 transition-colors">
                   {page.titre || PAGE_LABELS[page.slug] || page.slug}
                 </p>
                 <p className="text-xs text-gray-400 mt-1">/{page.slug}</p>
               </div>
-              <div className="w-8 h-8 bg-gray-50 group-hover:bg-indigo-50 text-gray-400 group-hover:text-indigo-600 rounded-lg flex items-center justify-center transition-colors">
+              <div className="w-8 h-8 bg-surface-container-low group-hover:bg-indigo-50 text-gray-400 group-hover:text-indigo-600 rounded-lg flex items-center justify-center transition-colors">
                 <FileEdit size={16} />
               </div>
             </div>

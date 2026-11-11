@@ -53,60 +53,60 @@ export default async function AdminAnalyticsPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Analytiques Détaillées</h1>
-        <p className="text-gray-500 mt-2">Vue approfondie de la croissance et de l&apos;engagement de la plateforme.</p>
+        <h1 className="text-3xl font-bold text-on-surface">Analytiques Détaillées</h1>
+        <p className="text-on-surface-muted mt-2">Vue approfondie de la croissance et de l&apos;engagement de la plateforme.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-2">
+        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-green-50 text-green-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-success-container text-success flex items-center justify-center">
               <Users size={20} />
             </div>
-            <p className="text-sm font-medium text-gray-500">Membres Totaux</p>
+            <p className="text-sm font-medium text-on-surface-muted">Membres Totaux</p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 mt-2">{profiles.length}</p>
+          <p className="text-3xl font-bold text-on-surface mt-2">{profiles.length}</p>
         </div>
 
-        <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-2">
+        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-info-container text-info flex items-center justify-center">
               <UserCheck size={20} />
             </div>
-            <p className="text-sm font-medium text-gray-500">Membres ce mois</p>
+            <p className="text-sm font-medium text-on-surface-muted">Membres ce mois</p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 mt-2">
+          <p className="text-3xl font-bold text-on-surface mt-2">
             {registrationsTrend[registrationsTrend.length - 1]?.Inscriptions || 0}
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-2">
+        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center">
               <Download size={20} />
             </div>
-            <p className="text-sm font-medium text-gray-500">Téléchargements</p>
+            <p className="text-sm font-medium text-on-surface-muted">Téléchargements</p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 mt-2">{totalDownloads}</p>
+          <p className="text-3xl font-bold text-on-surface mt-2">{totalDownloads}</p>
         </div>
 
-        <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-2">
+        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
               <BookOpen size={20} />
             </div>
-            <p className="text-sm font-medium text-gray-500">Ressources en ligne</p>
+            <p className="text-sm font-medium text-on-surface-muted">Ressources en ligne</p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 mt-2">{docs.length}</p>
+          <p className="text-3xl font-bold text-on-surface mt-2">{docs.length}</p>
         </div>
       </div>
 
-      <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
-        <h2 className="text-lg font-bold text-gray-900 mb-6">Croissance des inscriptions (6 derniers mois)</h2>
+      <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm">
+        <h2 className="text-lg font-bold text-on-surface mb-6">Croissance des inscriptions (6 derniers mois)</h2>
         <AdminLineChart data={registrationsTrend} dataKey="Inscriptions" stroke="#16a34a" />
       </div>
       
-      <div className="bg-blue-50 border border-blue-100 text-blue-800 p-6 rounded-2xl">
+      <div className="bg-info-container border border-info/30 text-on-info-container p-6 rounded-2xl">
         <h3 className="font-bold mb-2">💡 Suivi Analytique Avancé</h3>
         <p className="text-sm">
           Les statistiques sont maintenant générées depuis Cloudflare D1. Pour suivre le trafic en temps réel (visiteurs uniques, pages les plus vues), intégrez Google Analytics ou Plausible.

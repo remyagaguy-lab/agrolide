@@ -19,13 +19,13 @@ function KpiCard({
   icon: React.ElementType; color: string; valueClass?: string 
 }) {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 p-5 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-xl border border-outline-variant p-5 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
       <div className={`w-11 h-11 rounded-lg flex items-center justify-center shrink-0 ${color}`}>
         <Icon size={20} />
       </div>
       <div className="min-w-0">
-        <p className="text-xs font-medium text-gray-500 uppercase tracking-wide truncate">{label}</p>
-        <p className={`text-2xl font-bold text-gray-900 mt-0.5 ${valueClass}`}>{value}</p>
+        <p className="text-xs font-medium text-on-surface-muted uppercase tracking-wide truncate">{label}</p>
+        <p className={`text-2xl font-bold text-on-surface mt-0.5 ${valueClass}`}>{value}</p>
         {sub && <p className="text-xs text-gray-400 mt-0.5">{sub}</p>}
       </div>
     </div>
@@ -35,11 +35,11 @@ function KpiCard({
 function SectionHeader({ title, sub, icon: Icon }: { title: string; sub?: string; icon?: React.ElementType }) {
   return (
     <div className="mb-4">
-      <h2 className="text-base font-semibold text-gray-800 flex items-center gap-2">
-        {Icon && <Icon className="w-5 h-5 text-gray-500" />}
+      <h2 className="text-base font-semibold text-on-surface flex items-center gap-2">
+        {Icon && <Icon className="w-5 h-5 text-on-surface-muted" />}
         {title}
       </h2>
-      {sub && <p className="text-xs text-gray-500 mt-1">{sub}</p>}
+      {sub && <p className="text-xs text-on-surface-muted mt-1">{sub}</p>}
     </div>
   )
 }
@@ -52,17 +52,17 @@ const formatFCFA = (n: number) =>
   `${n} FCFA`
 
 const catColors: Record<string, string> = {
-  junior: "bg-green-100 text-green-700",
-  professionnel: "bg-blue-100 text-blue-700",
+  junior: "bg-success-container text-success",
+  professionnel: "bg-info-container text-info",
   senior: "bg-purple-100 text-purple-700",
   partenaire: "bg-orange-100 text-orange-700",
 }
 const statutColors: Record<string, string> = {
-  actif: "bg-green-100 text-green-700",
-  en_attente_paiement: "bg-yellow-100 text-yellow-700",
-  suspendu: "bg-red-100 text-red-700",
-  expire: "bg-gray-100 text-gray-500",
-  gratuit: "bg-gray-100 text-gray-500",
+  actif: "bg-success-container text-success",
+  en_attente_paiement: "bg-warning-container text-warning",
+  suspendu: "bg-error-container text-error",
+  expire: "bg-surface-container text-on-surface-muted",
+  gratuit: "bg-surface-container text-on-surface-muted",
 }
 
 export default async function AdminDashboardPage() {
@@ -142,20 +142,20 @@ export default async function AdminDashboardPage() {
   return (
     <div className="space-y-10 pb-10">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Tableau de bord</h1>
-        <p className="text-sm text-gray-500 mt-1">Vue d&apos;ensemble de l&apos;activité de la plateforme agrolide.</p>
+        <h1 className="text-2xl font-bold text-on-surface">Tableau de bord</h1>
+        <p className="text-sm text-on-surface-muted mt-1">Vue d&apos;ensemble de l&apos;activité de la plateforme agrolide.</p>
       </div>
 
       <section>
         <SectionHeader title="Membres" sub="Statistiques d'adhésion" icon={Users} />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <KpiCard label="Membres actifs" value={totalActifs} icon={Users} color="bg-green-50 text-green-600" />
-          <KpiCard label="Nouveaux ce mois" value={nouveauxMois} icon={UserPlus} color="bg-blue-50 text-blue-600" />
+          <KpiCard label="Membres actifs" value={totalActifs} icon={Users} color="bg-success-container text-success" />
+          <KpiCard label="Nouveaux ce mois" value={nouveauxMois} icon={UserPlus} color="bg-info-container text-info" />
           <KpiCard label="Actifs (30 jours)" value={membresActifs30j} icon={Activity} color="bg-indigo-50 text-indigo-600" />
-          <KpiCard label="Total membres" value={totalMembres} icon={TrendingUp} color="bg-emerald-50 text-emerald-600" />
+          <KpiCard label="Total membres" value={totalMembres} icon={TrendingUp} color="bg-success-container text-success" />
         </div>
-        <div className="mt-4 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-          <p className="text-sm font-semibold text-gray-700 mb-2">Répartition par catégorie</p>
+        <div className="mt-4 bg-white rounded-xl border border-outline-variant p-5 shadow-sm">
+          <p className="text-sm font-semibold text-on-surface-variant mb-2">Répartition par catégorie</p>
           <AdminDonutChart data={donutData} />
         </div>
       </section>
@@ -163,12 +163,12 @@ export default async function AdminDashboardPage() {
       <section>
         <SectionHeader title="Revenus" sub="Cotisations et dons" icon={Coins} />
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-          <KpiCard label="Cotisations ce mois" value={formatFCFA(revenusMois)} icon={CreditCard} color="bg-green-50 text-green-600" />
+          <KpiCard label="Cotisations ce mois" value={formatFCFA(revenusMois)} icon={CreditCard} color="bg-success-container text-success" />
           <KpiCard label="Revenus cumulés" value={formatFCFA(revenusCumules)} icon={TrendingUp} color="bg-purple-50 text-purple-600" />
           <KpiCard label="Dons collectés" value={formatFCFA(totalDons)} icon={Target} color="bg-orange-50 text-orange-600" />
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-          <p className="text-sm font-semibold text-gray-700 mb-3">Revenus mensuels (12 derniers mois)</p>
+        <div className="bg-white rounded-xl border border-outline-variant p-5 shadow-sm">
+          <p className="text-sm font-semibold text-on-surface-variant mb-3">Revenus mensuels (12 derniers mois)</p>
           <AdminRevenueChart data={revenueChartData} />
         </div>
       </section>
@@ -176,7 +176,7 @@ export default async function AdminDashboardPage() {
       <section>
         <SectionHeader title="Contenu" sub="État de la plateforme" icon={FileText} />
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <KpiCard label="Articles publiés" value={articlesPubliesRows.length} icon={FileText} color="bg-amber-50 text-amber-600" />
+          <KpiCard label="Articles publiés" value={articlesPubliesRows.length} icon={FileText} color="bg-warning-container text-warning" />
           <KpiCard label="Documents bibliothèque" value={documentsApprouvesRows.length} icon={Eye} color="bg-cyan-50 text-cyan-600" />
           <KpiCard label="Opportunités publiées" value={opportunitesPubRows.length} icon={Target} color="bg-lime-50 text-lime-600" />
           <KpiCard label="Événements à venir" value={evenementsAvenirRows.length} icon={Calendar} color="bg-rose-50 text-rose-600" />
@@ -186,44 +186,44 @@ export default async function AdminDashboardPage() {
       <section>
         <div className="flex items-center justify-between mb-4">
           <SectionHeader title="Derniers membres inscrits" icon={UserPlus} />
-          <a href="/admin/membres" className="text-xs font-medium text-green-700 hover:underline">Voir tous →</a>
+          <a href="/admin/membres" className="text-xs font-medium text-success hover:underline">Voir tous →</a>
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left">
-              <thead className="bg-gray-50 border-b border-gray-200">
+              <thead className="bg-surface-container-low border-b border-outline-variant">
                 <tr>
-                  <th className="px-5 py-3 font-medium text-gray-500 text-xs uppercase tracking-wide">Membre</th>
-                  <th className="px-5 py-3 font-medium text-gray-500 text-xs uppercase tracking-wide">Catégorie</th>
-                  <th className="px-5 py-3 font-medium text-gray-500 text-xs uppercase tracking-wide">Statut</th>
-                  <th className="px-5 py-3 font-medium text-gray-500 text-xs uppercase tracking-wide">Pays</th>
-                  <th className="px-5 py-3 font-medium text-gray-500 text-xs uppercase tracking-wide">Date</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Membre</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Catégorie</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Statut</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Pays</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Date</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-outline-variant">
                 {derniersMembresRows.map(m => (
-                  <tr key={m.id} className="hover:bg-gray-50 transition-colors">
+                  <tr key={m.id} className="hover:bg-surface-container-low transition-colors">
                     <td className="px-5 py-3">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-success-container text-success flex items-center justify-center text-xs font-bold shrink-0">
                           {m.prenom?.charAt(0)}{m.nom?.charAt(0)}
                         </div>
-                        <a href={`/admin/membres/${m.id}`} className="font-medium text-gray-900 hover:text-green-700 transition-colors">
+                        <a href={`/admin/membres/${m.id}`} className="font-medium text-on-surface hover:text-success transition-colors">
                           {m.prenom} {m.nom}
                         </a>
                       </div>
                     </td>
                     <td className="px-5 py-3">
-                      <span className={`px-2 py-0.5 rounded-full text-xs font-semibold capitalize ${catColors[m.categorie || ''] || "bg-gray-100 text-gray-600"}`}>
+                      <span className={`px-2 py-0.5 rounded-full text-xs font-semibold capitalize ${catColors[m.categorie || ''] || "bg-surface-container text-on-surface-variant"}`}>
                         {m.categorie}
                       </span>
                     </td>
                     <td className="px-5 py-3">
-                      <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${statutColors[m.statut_adhesion || ''] || "bg-gray-100 text-gray-500"}`}>
+                      <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${statutColors[m.statut_adhesion || ''] || "bg-surface-container text-on-surface-muted"}`}>
                         {m.statut_adhesion?.replace(/_/g, " ")}
                       </span>
                     </td>
-                    <td className="px-5 py-3 text-gray-500">{m.pays}</td>
+                    <td className="px-5 py-3 text-on-surface-muted">{m.pays}</td>
                     <td className="px-5 py-3 text-gray-400 text-xs">
                       {m.created_at ? new Date(m.created_at).toLocaleDateString("fr-FR") : "—"}
                     </td>

@@ -31,12 +31,12 @@ export default async function AdminTemoignagesPage() {
   return (
     <div className="space-y-6 pb-10">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-yellow-50 text-yellow-600 rounded-xl flex items-center justify-center">
+        <div className="w-10 h-10 bg-warning-container text-warning rounded-xl flex items-center justify-center">
           <Star size={20} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Témoignages</h1>
-          <p className="text-sm text-gray-500">Gérez les témoignages affichés sur la page d&apos;accueil</p>
+          <h1 className="text-2xl font-bold text-on-surface">Témoignages</h1>
+          <p className="text-sm text-on-surface-muted">Gérez les témoignages affichés sur la page d&apos;accueil</p>
         </div>
       </div>
 

@@ -108,10 +108,10 @@ export default function AdminDocumentsPage() {
 
   const getStatusBadge = (statut: string) => {
     switch(statut) {
-      case 'en_attente_validation': return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-amber-100 text-amber-800">En attente</span>
-      case 'publie': return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-green-100 text-green-800">Publié</span>
-      case 'rejete': return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-red-100 text-red-800">Rejeté</span>
-      default: return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800">{statut}</span>
+      case 'en_attente_validation': return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-warning-container text-on-warning-container">En attente</span>
+      case 'publie': return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-success-container text-on-success-container">Publié</span>
+      case 'rejete': return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-error-container text-on-error-container">Rejeté</span>
+      default: return <span className="px-2.5 py-1 text-xs font-medium rounded-full bg-surface-container text-on-surface">{statut}</span>
     }
   }
 
@@ -119,37 +119,37 @@ export default function AdminDocumentsPage() {
     <div className="space-y-6 max-w-7xl mx-auto p-6 sm:p-8">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Modération des documents</h1>
-          <p className="text-gray-500">Gérez les documents et publiez-en de nouveaux dans la bibliothèque.</p>
+          <h1 className="text-2xl font-bold text-on-surface">Modération des documents</h1>
+          <p className="text-on-surface-muted">Gérez les documents et publiez-en de nouveaux dans la bibliothèque.</p>
         </div>
         <button 
           onClick={() => setIsSubmitModalOpen(true)}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
+          className="bg-info hover:bg-info text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
         >
           <Plus className="w-5 h-5" /> Nouveau document
         </button>
       </div>
 
       {error && (
-        <div className="mb-6 p-4 bg-red-50 text-red-700 rounded-lg flex items-start gap-3 text-sm">
+        <div className="mb-6 p-4 bg-error-container text-error rounded-lg flex items-start gap-3 text-sm">
           <AlertCircle className="w-5 h-5 flex-shrink-0" />
           <p>{error}</p>
         </div>
       )}
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+          <table className="min-w-full divide-y divide-outline-variant">
+            <thead className="bg-surface-container-low">
               <tr>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Document</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Type</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Statut</th>
-                <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-on-surface-muted uppercase tracking-wider">Document</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-on-surface-muted uppercase tracking-wider">Type</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-on-surface-muted uppercase tracking-wider">Date</th>
+                <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-on-surface-muted uppercase tracking-wider">Statut</th>
+                <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-on-surface-muted uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
+            <tbody className="bg-white divide-y divide-outline-variant">
               {loading ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-12 text-center">
@@ -158,26 +158,26 @@ export default function AdminDocumentsPage() {
                 </tr>
               ) : documents.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="px-6 py-12 text-center text-gray-500">
+                  <td colSpan={5} className="px-6 py-12 text-center text-on-surface-muted">
                     Aucun document trouvé.
                   </td>
                 </tr>
               ) : (
                 documents.map((doc) => (
-                  <tr key={doc.id} className={doc.statut === 'en_attente_validation' ? 'bg-amber-50/30' : ''}>
+                  <tr key={doc.id} className={doc.statut === 'en_attente_validation' ? 'bg-warning-container/30' : ''}>
                     <td className="px-6 py-4">
                       <div className="flex items-start gap-3">
                         <FileText className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
                         <div>
-                          <div className="text-sm font-medium text-gray-900 line-clamp-1">{doc.titre}</div>
-                          <div className="text-sm text-gray-500">{doc.auteurs}</div>
+                          <div className="text-sm font-medium text-on-surface line-clamp-1">{doc.titre}</div>
+                          <div className="text-sm text-on-surface-muted">{doc.auteurs}</div>
                         </div>
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="text-sm text-gray-900">{doc.type_doc}</span>
+                      <span className="text-sm text-on-surface">{doc.type_doc}</span>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-on-surface-muted">
                       {doc.created_at ? new Date(doc.created_at).toLocaleDateString('fr-FR') : '-'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
@@ -187,7 +187,7 @@ export default function AdminDocumentsPage() {
                       <div className="flex items-center justify-end gap-2">
                         <button 
                           onClick={() => openDetails(doc)}
-                          className="p-2 text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+                          className="p-2 text-info hover:text-info bg-info-container hover:bg-info-container rounded-lg transition-colors"
                           title="Voir les détails et modérer"
                         >
                           <Eye className="w-4 h-4" />
@@ -197,7 +197,7 @@ export default function AdminDocumentsPage() {
                            <button 
                              onClick={() => handleDelete(doc.id)}
                              disabled={processing === doc.id}
-                             className="p-2 text-gray-400 hover:text-red-600 bg-gray-50 hover:bg-red-50 rounded-lg transition-colors"
+                             className="p-2 text-gray-400 hover:text-error bg-surface-container-low hover:bg-error-container rounded-lg transition-colors"
                              title="Supprimer définitivement"
                            >
                              {processing === doc.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}

@@ -22,8 +22,8 @@ export default async function AdminPageEditorPage({ params }: { params: Promise<
   return (
     <div className="space-y-4 pb-10">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">{page.titre || slug}</h1>
-        <p className="text-sm text-gray-500 mt-1">Éditeur de contenu — /{slug}</p>
+        <h1 className="text-2xl font-bold text-on-surface">{page.titre || slug}</h1>
+        <p className="text-sm text-on-surface-muted mt-1">Éditeur de contenu — /{slug}</p>
       </div>
       <PageEditor
         slug={slug}

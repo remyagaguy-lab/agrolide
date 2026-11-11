@@ -164,7 +164,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
       
       {error && (
-        <div className="p-4 bg-red-50 text-red-700 rounded-lg text-sm border border-red-200">
+        <div className="p-4 bg-error-container text-error rounded-lg text-sm border border-error/30">
           {error}
         </div>
       )}
@@ -172,23 +172,23 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
       {/* Titre & Slug */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Titre de l'article *</label>
+          <label className="block text-sm font-medium text-on-surface-variant mb-1">Titre de l'article *</label>
           <Input {...register("titre", { required: "Le titre est requis" })} placeholder="Ex: Les défis de l'agriculture..." />
-          {errors.titre && <p className="text-red-500 text-xs mt-1">{String(errors.titre.message)}</p>}
+          {errors.titre && <p className="text-error text-xs mt-1">{String(errors.titre.message)}</p>}
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Slug (URL)</label>
-          <Input {...register("slug")} className="bg-gray-50" />
+          <label className="block text-sm font-medium text-on-surface-variant mb-1">Slug (URL)</label>
+          <Input {...register("slug")} className="bg-surface-container-low" />
         </div>
       </div>
 
       {/* Métadonnées & Catégorie */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Catégorie</label>
+          <label className="block text-sm font-medium text-on-surface-variant mb-1">Catégorie</label>
           <select 
             {...register("category")}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
+            className="w-full rounded-md border border-outline px-3 py-2 text-sm focus:border-success focus:outline-none focus:ring-1 focus:ring-success"
           >
             <option value="Agrobusiness">Agrobusiness</option>
             <option value="Agroeconomie">Agroeconomie</option>
@@ -199,20 +199,20 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Accès</label>
+          <label className="block text-sm font-medium text-on-surface-variant mb-1">Accès</label>
           <select 
             {...register("access")}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
+            className="w-full rounded-md border border-outline px-3 py-2 text-sm focus:border-success focus:outline-none focus:ring-1 focus:ring-success"
           >
             <option value="public">Public</option>
             <option value="membres">Membres uniquement</option>
           </select>
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Statut de publication</label>
+          <label className="block text-sm font-medium text-on-surface-variant mb-1">Statut de publication</label>
           <select 
             {...register("status")}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500"
+            className="w-full rounded-md border border-outline px-3 py-2 text-sm focus:border-success focus:outline-none focus:ring-1 focus:ring-success"
           >
             <option value="brouillon">Brouillon</option>
             <option value="publie">Publié</option>
@@ -221,13 +221,13 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Mots-clés (tags séparés par des virgules)</label>
+        <label className="block text-sm font-medium text-on-surface-variant mb-1">Mots-clés (tags séparés par des virgules)</label>
         <Input {...register("tags")} placeholder="Ex: afrique, climat, rendement" />
       </div>
 
       {/* Extrait & SEO */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-on-surface-variant mb-1">
           Extrait / Meta Description (Max 160 caractères)
         </label>
         <Textarea 
@@ -235,16 +235,16 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
           maxLength={160}
           className="h-24"
         />
-        <div className="text-right text-xs text-gray-500 mt-1">
+        <div className="text-right text-xs text-on-surface-muted mt-1">
           {excerptValue?.length || 0} / 160
         </div>
       </div>
 
       {/* Image à la Une */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">Image à la Une</label>
+        <label className="block text-sm font-medium text-on-surface-variant mb-2">Image à la Une</label>
         <div className="flex items-center gap-4">
-          <div className="w-48 h-32 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center overflow-hidden">
+          <div className="w-48 h-32 bg-surface-container border-2 border-dashed border-outline rounded-lg flex items-center justify-center overflow-hidden">
             {imageUrl ? (
               <img src={imageUrl} alt="Image à la une" className="w-full h-full object-cover" />
             ) : (
@@ -266,48 +266,48 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
             >
               Uploader une image
             </Button>
-            <p className="text-xs text-gray-500 mt-2">Format 16:9 recommandé (1200x630px pour le SEO OpenGraph)</p>
+            <p className="text-xs text-on-surface-muted mt-2">Format 16:9 recommandé (1200x630px pour le SEO OpenGraph)</p>
           </div>
         </div>
       </div>
 
       {/* Tiptap Editor */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">Contenu de l'article</label>
-        <div className="border border-gray-300 rounded-lg overflow-hidden flex flex-col">
+        <label className="block text-sm font-medium text-on-surface-variant mb-2">Contenu de l'article</label>
+        <div className="border border-outline rounded-lg overflow-hidden flex flex-col">
           {/* Toolbar */}
-          <div className="bg-gray-50 border-b border-gray-300 p-2 flex flex-wrap gap-1">
+          <div className="bg-surface-container-low border-b border-outline p-2 flex flex-wrap gap-1">
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleBold().run()}
-              className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('bold') ? 'bg-gray-200 text-gray-900' : 'text-gray-600'}`}
+              className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('bold') ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><Bold size={16} /></button>
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleItalic().run()}
-              className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('italic') ? 'bg-gray-200 text-gray-900' : 'text-gray-600'}`}
+              className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('italic') ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><Italic size={16} /></button>
             <div className="w-px h-6 bg-gray-300 mx-1 my-auto"></div>
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-              className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('heading', { level: 2 }) ? 'bg-gray-200 text-gray-900' : 'text-gray-600'}`}
+              className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('heading', { level: 2 }) ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><Heading2 size={16} /></button>
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-              className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('heading', { level: 3 }) ? 'bg-gray-200 text-gray-900' : 'text-gray-600'}`}
+              className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('heading', { level: 3 }) ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><Heading3 size={16} /></button>
             <div className="w-px h-6 bg-gray-300 mx-1 my-auto"></div>
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleBulletList().run()}
-              className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('bulletList') ? 'bg-gray-200 text-gray-900' : 'text-gray-600'}`}
+              className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('bulletList') ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><List size={16} /></button>
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleOrderedList().run()}
-              className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('orderedList') ? 'bg-gray-200 text-gray-900' : 'text-gray-600'}`}
+              className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('orderedList') ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><ListOrdered size={16} /></button>
             <div className="w-px h-6 bg-gray-300 mx-1 my-auto"></div>
             <button
@@ -316,12 +316,12 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
                 const url = window.prompt("URL du lien :")
                 if (url) editor.chain().focus().setLink({ href: url }).run()
               }}
-              className={`p-2 rounded hover:bg-gray-200 ${editor.isActive('link') ? 'bg-gray-200 text-gray-900' : 'text-gray-600'}`}
+              className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('link') ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><LinkIcon size={16} /></button>
             <button
               type="button"
               onClick={addEditorImage}
-              className="p-2 rounded hover:bg-gray-200 text-gray-600"
+              className="p-2 rounded hover:bg-surface-container-high text-on-surface-variant"
             ><ImageIcon size={16} /></button>
           </div>
           
@@ -333,7 +333,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
       </div>
 
       {/* Actions */}
-      <div className="flex justify-end gap-3 pt-6 border-t border-gray-200">
+      <div className="flex justify-end gap-3 pt-6 border-t border-outline-variant">
         <Button 
           type="button" 
           variant="outline"

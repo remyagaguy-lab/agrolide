@@ -82,12 +82,12 @@ export default async function AdminMembresPage({
   return (
     <div className="space-y-6 pb-10">
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 bg-green-50 text-green-700 rounded-xl flex items-center justify-center">
+        <div className="w-10 h-10 bg-success-container text-success rounded-xl flex items-center justify-center">
           <Users size={20} />
         </div>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Gestion des membres</h1>
-          <p className="text-sm text-gray-500">{total} membre{total > 1 ? "s" : ""} au total</p>
+          <h1 className="text-2xl font-bold text-on-surface">Gestion des membres</h1>
+          <p className="text-sm text-on-surface-muted">{total} membre{total > 1 ? "s" : ""} au total</p>
         </div>
       </div>
 

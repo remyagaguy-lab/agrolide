@@ -53,7 +53,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       href={href}
       className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
         isActive(href) 
-          ? "bg-green-700/30 text-green-300" 
+          ? "bg-success/30 text-green-300" 
           : "text-gray-300 hover:bg-gray-800 hover:text-white"
       }`}
     >
@@ -63,7 +63,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   )
 
   return (
-    <div className="flex h-screen bg-gray-50 overflow-hidden">
+    <div className="flex h-screen bg-surface-container-low overflow-hidden">
       <aside className="w-[240px] bg-gray-900 text-white flex flex-col shrink-0 overflow-y-auto">
         <div className="h-16 flex items-center px-6 border-b border-gray-800 shrink-0">
           <span className="font-heading font-bold text-xl text-[#4ade80]">
@@ -75,13 +75,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           {navLink("/admin/dashboard", "Dashboard", LayoutDashboard)}
           
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">Membres</p>
+            <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest">Membres</p>
           </div>
           {navLink("/admin/membres", "Gestion membres", Users)}
           {navLink("/admin/paiements", "Paiements", CreditCard)}
 
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">Contenu</p>
+            <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest">Contenu</p>
           </div>
           {navLink("/admin/contenus/articles", "Articles (Blog)", FileText)}
           {navLink("/admin/contenus/documents", "Documents", FolderOpen)}
@@ -91,14 +91,14 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           {navLink("/admin/forum", "Forum", MessageSquare)}
           
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">Vitrine</p>
+            <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest">Vitrine</p>
           </div>
           {navLink("/admin/contenus/partenaires", "Partenaires", Handshake)}
           {navLink("/admin/contenus/agripreneurs", "Agripreneurs", Sprout)}
           {navLink("/admin/contenus/temoignages", "Témoignages", Star)}
 
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">Site</p>
+            <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-widest">Site</p>
           </div>
           {navLink("/admin/pages", "Pages statiques", Globe)}
           {navLink("/admin/agrobusiness", "Agrobusiness", FolderOpen)}
@@ -107,13 +107,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       </aside>
 
       <div className="flex-1 flex flex-col overflow-hidden">
-        <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8 shrink-0">
-          <h2 className="font-semibold text-gray-800">Panneau d'administration</h2>
+        <header className="h-16 bg-white border-b border-outline-variant flex items-center justify-between px-8 shrink-0">
+          <h2 className="font-semibold text-on-surface">Panneau d'administration</h2>
           <div className="flex items-center gap-4">
             <ClearCacheButton />
             <Link 
               href="/" target="_blank"
-              className="flex items-center gap-2 text-sm font-medium text-green-700 hover:text-green-800 transition-colors bg-green-50 px-3 py-1.5 rounded-md"
+              className="flex items-center gap-2 text-sm font-medium text-success hover:text-on-success-container transition-colors bg-success-container px-3 py-1.5 rounded-md"
             >
               Voir le site <ExternalLink size={16} />
             </Link>

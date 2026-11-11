@@ -29,7 +29,7 @@ export default function RappelButton({ membreId, email, nom }: Props) {
 
   if (status === "done") {
     return (
-      <span className="flex items-center gap-1 text-xs text-green-600 font-medium">
+      <span className="flex items-center gap-1 text-xs text-success font-medium">
         <CheckCircle size={13} /> Envoyé
       </span>
     )

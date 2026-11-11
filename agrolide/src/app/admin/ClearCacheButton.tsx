@@ -28,12 +28,12 @@ export function ClearCacheButton() {
     <button
       onClick={handleClear}
       disabled={loading}
-      className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-md disabled:opacity-50"
+      className="flex items-center gap-2 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors bg-surface-container hover:bg-surface-container-high px-3 py-1.5 rounded-md disabled:opacity-50"
     >
       {done ? (
         <>
-          <Check size={16} className="text-green-600" />
-          <span className="text-green-700">Cache vidé</span>
+          <Check size={16} className="text-success" />
+          <span className="text-success">Cache vidé</span>
         </>
       ) : (
         <>

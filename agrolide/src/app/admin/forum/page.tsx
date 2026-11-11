@@ -86,70 +86,70 @@ export default function AdminForumPage() {
   return (
     <div className="space-y-6 max-w-7xl mx-auto p-6 sm:p-8">
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
+        <h1 className="text-2xl font-bold text-on-surface flex items-center gap-2">
           Administration du Forum
         </h1>
-        <p className="text-gray-500">Gérez le contenu, l'architecture et les membres du forum.</p>
+        <p className="text-on-surface-muted">Gérez le contenu, l'architecture et les membres du forum.</p>
       </div>
 
-      <div className="flex space-x-1 border-b border-gray-200 mb-6 overflow-x-auto pb-1">
+      <div className="flex space-x-1 border-b border-outline-variant mb-6 overflow-x-auto pb-1">
         <button 
           onClick={() => setActiveTab('signalements')}
-          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'signalements' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'signalements' ? 'border-primary text-primary' : 'border-transparent text-on-surface-muted hover:text-on-surface-variant hover:border-outline'}`}
         >
-          Signalements {reportedMessages.length > 0 && <span className="ml-2 bg-red-100 text-red-600 py-0.5 px-2 rounded-full text-xs">{reportedMessages.length}</span>}
+          Signalements {reportedMessages.length > 0 && <span className="ml-2 bg-error-container text-error py-0.5 px-2 rounded-full text-xs">{reportedMessages.length}</span>}
         </button>
         <button 
           onClick={() => setActiveTab('categories')}
-          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'categories' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'categories' ? 'border-primary text-primary' : 'border-transparent text-on-surface-muted hover:text-on-surface-variant hover:border-outline'}`}
         >
           Catégories
         </button>
         <button 
           onClick={() => setActiveTab('fils')}
-          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'fils' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'fils' ? 'border-primary text-primary' : 'border-transparent text-on-surface-muted hover:text-on-surface-variant hover:border-outline'}`}
         >
           Discussions
         </button>
         <button 
           onClick={() => setActiveTab('messages')}
-          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'messages' ? 'border-primary-500 text-primary-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+          className={`px-4 py-2 text-sm font-medium border-b-2 whitespace-nowrap transition-colors ${activeTab === 'messages' ? 'border-primary text-primary' : 'border-transparent text-on-surface-muted hover:text-on-surface-variant hover:border-outline'}`}
         >
           Recherche & Messages
         </button>
       </div>
 
       {activeTab === 'signalements' && (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
           <div className="p-12 text-center flex flex-col items-center">
             <Loader2 className="w-8 h-8 animate-spin text-gray-400 mb-2" />
-            <span className="text-gray-500">Chargement...</span>
+            <span className="text-on-surface-muted">Chargement...</span>
           </div>
         ) : reportedMessages.length === 0 ? (
           <div className="p-12 text-center flex flex-col items-center justify-center space-y-3">
-            <div className="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center mb-2">
+            <div className="w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mb-2">
               <CheckCircle className="w-8 h-8" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900">Aucun signalement</h3>
-            <p className="text-gray-500">Tout est en ordre sur le forum !</p>
+            <h3 className="text-lg font-bold text-on-surface">Aucun signalement</h3>
+            <p className="text-on-surface-muted">Tout est en ordre sur le forum !</p>
           </div>
         ) : (
-          <div className="divide-y divide-gray-100">
+          <div className="divide-y divide-outline-variant">
             {reportedMessages.map(msg => (
-              <div key={msg.id} className="p-6 hover:bg-gray-50 transition-colors">
+              <div key={msg.id} className="p-6 hover:bg-surface-container-low transition-colors">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-4">
                   <div className="flex-1 space-y-2 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 text-sm">
-                      <span className="font-bold text-gray-900">{msg.auteur?.prenom} {msg.auteur?.nom}</span>
+                      <span className="font-bold text-on-surface">{msg.auteur?.prenom} {msg.auteur?.nom}</span>
                       <span className="text-gray-400">•</span>
-                      <span className="text-gray-500">{format(new Date(msg.created_at), "dd MMM yyyy HH:mm", { locale: fr })}</span>
+                      <span className="text-on-surface-muted">{format(new Date(msg.created_at), "dd MMM yyyy HH:mm", { locale: fr })}</span>
                       <span className="text-gray-400">•</span>
-                      <Link href={`/membres/forum/fil/${msg.fil?.id}`} target="_blank" className="text-blue-600 hover:underline flex items-center gap-1 font-medium truncate">
+                      <Link href={`/membres/forum/fil/${msg.fil?.id}`} target="_blank" className="text-info hover:underline flex items-center gap-1 font-medium truncate">
                         Sujet : {msg.fil?.titre} <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
-                    <div className="bg-orange-50/50 p-4 rounded-xl border border-orange-100 text-gray-800 text-sm whitespace-pre-wrap font-sans break-words">
+                    <div className="bg-orange-50/50 p-4 rounded-xl border border-orange-100 text-on-surface text-sm whitespace-pre-wrap font-sans break-words">
                       {msg.contenu}
                     </div>
                   </div>
@@ -158,7 +158,7 @@ export default function AdminForumPage() {
                     <button 
                       onClick={() => handleIgnore(msg.id)}
                       disabled={processing === msg.id}
-                      className="px-4 py-2 bg-gray-50 hover:bg-gray-100 text-gray-700 font-medium rounded-lg text-sm transition-colors border border-gray-200 w-full flex justify-center items-center h-10"
+                      className="px-4 py-2 bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-medium rounded-lg text-sm transition-colors border border-outline-variant w-full flex justify-center items-center h-10"
                     >
                       {processing === msg.id ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Ignorer (Republier)'}
                     </button>
@@ -173,7 +173,7 @@ export default function AdminForumPage() {
                       <button 
                         onClick={() => handleBanUser(msg.id, msg.auteur_id)}
                         disabled={processing === msg.id}
-                        className="px-4 py-2 bg-red-50 hover:bg-red-100 text-red-700 font-medium rounded-lg text-sm transition-colors border border-red-200 flex items-center gap-2 justify-center w-full mt-2 h-10"
+                        className="px-4 py-2 bg-error-container hover:bg-error-container text-error font-medium rounded-lg text-sm transition-colors border border-error/30 flex items-center gap-2 justify-center w-full mt-2 h-10"
                         title="Suspendre l'utilisateur définitivement"
                       >
                          <UserX className="w-4 h-4" /> Bannir l'auteur

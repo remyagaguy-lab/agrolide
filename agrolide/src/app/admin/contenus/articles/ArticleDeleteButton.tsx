@@ -32,7 +32,7 @@ export function ArticleDeleteButton({ articleId }: { articleId: string }) {
     <button 
       onClick={handleDelete}
       disabled={isDeleting}
-      className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50"
+      className="p-2 text-error hover:bg-error-container rounded-lg transition-colors disabled:opacity-50"
       title="Supprimer"
     >
       {isDeleting ? <Loader2 size={16} className="animate-spin" /> : <Trash2 size={16} />}
