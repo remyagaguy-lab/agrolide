@@ -1,4 +1,4 @@
-import { Briefcase, CalendarDays, GraduationCap, Handshake, HeartHandshake, Library, Newspaper, Rocket, Sprout, Users, Video, type LucideIcon } from "lucide-react"
+import { Briefcase, CalendarDays, GraduationCap, Handshake, HeartHandshake, Library, Compass, Newspaper, Rocket, Users, Video, type LucideIcon } from "lucide-react"
 
 /**
  * Navigation publique : trois domaines d'action, nommés par le verbe de ce que le visiteur veut faire.
@@ -41,7 +41,7 @@ export const NAV_MEGA: NavMega[] = [
     allHref: "/nos-actions#reseauter",
     items: [
       { label: "Trouver un expert", description: "Parcourez l'annuaire des membres par pays et par spécialité.", href: "/annuaire", Icon: Users },
-      { label: "Participer à un événement", description: "Rencontres, opportunités et rendez-vous du réseau.", href: "/actualites", Icon: CalendarDays },
+      { label: "Participer à un événement", description: "Ateliers, conférences et rencontres du réseau.", href: "/evenements", Icon: CalendarDays },
       { label: "Devenir partenaire", description: "Associez votre structure aux activités du réseau.", href: "/partenaires", Icon: Handshake },
       { label: "Soutenir le réseau", description: "Un don pour financer les actions auprès des agriculteurs.", href: "/nous-soutenir", Icon: HeartHandshake },
     ],
@@ -56,6 +56,7 @@ export const NAV_MEGA: NavMega[] = [
       { label: "Consulter la bibliothèque", description: "Thèses, mémoires, guides et fiches techniques adaptés à l'Afrique.", href: "/bibliotheque", Icon: Library },
       { label: "Lire le blog", description: "Analyses, récits et conseils venus du terrain.", href: "/blog", Icon: Newspaper },
       { label: "Participer à un webinaire", description: "Échangez sur les thématiques agricoles avec la communauté.", href: "/webinaires", Icon: Video },
+      { label: "Saisir une opportunité", description: "Bourses, appels à projets et offres d'emploi.", href: "/opportunites", Icon: Compass },
     ],
   },
   {
@@ -66,7 +67,6 @@ export const NAV_MEGA: NavMega[] = [
     items: [
       { label: "Lancer mon projet", description: "Un programme d'incubation pour les agripreneurs.", href: "/agrobusiness/incubation", Icon: Rocket },
       { label: "Être accompagné", description: "Études, business plans et conseil technique.", href: "/agrobusiness", Icon: Briefcase },
-      { label: "S'inspirer d'agripreneurs", description: "Découvrez les parcours de ceux qui ont franchi le pas.", href: "/agrobusiness/agripreneurs", Icon: Sprout },
     ],
   },
 ]

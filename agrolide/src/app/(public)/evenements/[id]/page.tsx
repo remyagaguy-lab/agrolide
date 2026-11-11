@@ -5,6 +5,7 @@ import { Calendar, Clock, MapPin, Globe, ArrowLeft } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import Link from 'next/link'
+import { marked } from 'marked'
 import { db } from '@/db'
 import { evenements } from '@/db/schema'
 import { eq } from 'drizzle-orm'
@@ -19,10 +20,11 @@ export async function generateMetadata({ params }: EventPageProps) {
     where: eq(evenements.id, p.id)
   })
 
-  if (!event) return { title: "Événement introuvable" }
+  if (!event || !event.publie) return { title: "Événement introuvable", robots: { index: false } }
 
   return {
-    title: `${event.titre} | Événements Agrolide`,
+    title: event.titre,
+    alternates: { canonical: `/evenements/${event.id}` },
     description: event.description ? event.description.substring(0, 160).replace(/<[^>]+>/g, '') : `Participez à l'événement ${event.titre} organisé par le réseau Agrolide.`,
     openGraph: {
       title: event.titre,
@@ -39,7 +41,8 @@ export default async function EventPage({ params }: EventPageProps) {
     where: eq(evenements.id, p.id)
   })
 
-  if (!event) {
+  // Un événement non publié (brouillon) ne doit pas être visible publiquement
+  if (!event || !event.publie) {
     notFound()
   }
 
@@ -82,8 +85,8 @@ export default async function EventPage({ params }: EventPageProps) {
       />
       <div className="max-w-4xl mx-auto px-4">
         {/* Breadcrumb / Back Link */}
-        <Link href="/actualites" className="inline-flex items-center gap-2 text-on-surface-muted hover:text-primary transition-colors mb-6 font-medium">
-          <ArrowLeft className="w-4 h-4" /> Retour aux actualités
+        <Link href="/evenements" className="inline-flex min-h-11 items-center gap-2 text-on-surface-muted hover:text-primary transition-colors mb-6 font-medium">
+          <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Retour aux événements
         </Link>
 
         <div className="bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant overflow-hidden">
@@ -119,7 +122,7 @@ export default async function EventPage({ params }: EventPageProps) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-surface-container-low rounded-2xl p-6 mb-8">
               <div className="flex items-start gap-3">
-                <Calendar className="w-5 h-5 text-primary mt-0.5" />
+                <Calendar className="w-5 h-5 text-primary mt-0.5" aria-hidden="true" />
                 <div>
                   <p className="text-sm text-on-surface-muted font-medium">Date</p>
                   <p className="text-on-surface font-semibold">{format(dateDebut, "EEEE d MMMM yyyy", { locale: fr })}</p>
@@ -127,7 +130,7 @@ export default async function EventPage({ params }: EventPageProps) {
               </div>
               
               <div className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-primary mt-0.5" />
+                <Clock className="w-5 h-5 text-primary mt-0.5" aria-hidden="true" />
                 <div>
                   <p className="text-sm text-on-surface-muted font-medium">Heure</p>
                   <p className="text-on-surface font-semibold">
@@ -139,7 +142,7 @@ export default async function EventPage({ params }: EventPageProps) {
 
               {!event.en_ligne && event.lieu && (
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-primary mt-0.5" />
+                  <MapPin className="w-5 h-5 text-primary mt-0.5" aria-hidden="true" />
                   <div>
                     <p className="text-sm text-on-surface-muted font-medium">Lieu</p>
                     <p className="text-on-surface font-semibold">{event.lieu}</p>
@@ -151,7 +154,7 @@ export default async function EventPage({ params }: EventPageProps) {
             <div className="prose prose-green max-w-none text-on-surface-variant mb-12">
               <h2 className="text-2xl font-bold text-on-surface mb-4">À propos de l'événement</h2>
               {event.description ? (
-                <div dangerouslySetInnerHTML={{ __html: event.description }} />
+                <div dangerouslySetInnerHTML={{ __html: marked.parse(event.description, { async: false }) as string }} />
               ) : (
                 <p className="italic">Aucune description détaillée n'a été fournie pour le moment.</p>
               )}
@@ -172,7 +175,7 @@ export default async function EventPage({ params }: EventPageProps) {
                   S'inscrire à l'événement
                 </a>
               ) : (
-                <Link href="/auth/login" className="px-8 py-4 bg-primary hover:bg-primary/90 text-on-primary font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2">
+                <Link href={`/login?next=${encodeURIComponent(`/evenements/${event.id}`)}`} className="px-8 py-4 bg-primary hover:bg-primary/90 text-on-primary font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all flex items-center gap-2">
                   Connectez-vous pour vous inscrire
                 </Link>
               )}

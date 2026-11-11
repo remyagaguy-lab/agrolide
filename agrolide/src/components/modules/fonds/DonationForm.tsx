@@ -183,7 +183,7 @@ export default function DonationForm({ campagneId }: { campagneId: string }) {
         </div>
 
         <Turnstile onToken={setTurnstileToken} resetSignal={isSubmitting} />
-        <Button type="submit" variant="primary" disabled={isSubmitting || montant < 1000 || (turnstileEnabled && !turnstileToken)} className="w-full h-14 text-lg font-bold mt-6 bg-accent-sun hover:bg-tertiary text-on-surface border-none">
+        <Button type="submit" variant="primary" disabled={isSubmitting || montant < 1000 || (turnstileEnabled && !turnstileToken)} className="w-full h-14 text-lg font-bold mt-6 bg-accent-sun hover:bg-tertiary text-on-accent border-none">
           {isSubmitting ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Préparation...</> : `Soutenir avec ${montant.toLocaleString('fr-FR')} FCFA`}
         </Button>
       </div>
