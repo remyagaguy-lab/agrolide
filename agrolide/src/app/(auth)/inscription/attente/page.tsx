@@ -28,7 +28,7 @@ function AttenteContent() {
           
           <div className="bg-gray-50 p-4 rounded-lg text-sm text-gray-600 mb-8 border border-gray-100">
             <p>Veuillez cliquer sur le lien contenu dans cet email pour vérifier votre adresse et passer à l'étape du paiement de votre cotisation.</p>
-            <p className="mt-2 text-xs text-gray-500">(Vérifiez également vos courriers indésirables / spams)</p>
+            <p className="mt-2 text-xs text-gray-500">(Vérifiez également votre dossier spam)</p>
           </div>
           
           <Link href="/" className="inline-flex items-center gap-2 text-[var(--color-vert-principal)] font-bold hover:text-green-700">

@@ -41,7 +41,7 @@ export default function InscriptionPage() {
     return (
       <AuthCard title="Vérifiez votre boîte e-mail" subtitle={`Un lien de confirmation a été envoyé à ${form.email}.`}>
         <p className="text-sm text-gray-600 text-center">
-          Cliquez sur le lien pour activer votre compte (valable 15 minutes). Pensez à vérifier vos courriers indésirables.
+          Cliquez sur le lien pour activer votre compte (valable 15 minutes). Pensez à vérifier votre dossier spam.
         </p>
         <ResendConfirmation email={form.email} showInput={false} />
       </AuthCard>
