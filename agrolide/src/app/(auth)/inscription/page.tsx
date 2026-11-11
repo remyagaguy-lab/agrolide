@@ -5,16 +5,12 @@ import Link from 'next/link'
 import { createSupabaseBrowser } from '@/lib/supabase/client'
 import { GoogleButton } from '@/components/auth/GoogleButton'
 import { ResendConfirmation } from '@/components/auth/ResendConfirmation'
-<<<<<<< HEAD
 import { safeNext } from '@/lib/auth/safe-next'
-import { AuthCard, buttonClass, inputClass, translateAuthError } from '@/components/auth/AuthCard'
-=======
 import { AuthCard, authLinkClass, translateAuthError } from '@/components/auth/AuthCard'
 import { Alert } from '@/components/ui/Alert'
 import { Button } from '@/components/ui/Button'
 import { FormField } from '@/components/ui/FormField'
 import { Input } from '@/components/ui/Input'
->>>>>>> 50e60ce (refactor(auth): pages d'authentification migrées vers le design system)
 
 export default function InscriptionPage() {
   const [form, setForm] = useState({ prenom: '', nom: '', email: '', password: '' })
