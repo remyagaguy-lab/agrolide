@@ -15,7 +15,7 @@ export interface MotifProps {
    */
   tone?: "mono" | "couleur"
   /**
-   * plantes : les plantes seules, sans les collines en sillons (défaut : plus aéré, convient partout, y compris
+   * plantes : les plantes et leurs tirets en arc, sans les grosses collines (défaut : plus aéré, convient partout, y compris
    *           derrière du texte et dans les petits encarts) ;
    * complet : plantes + collines en sillons (plus riche, pour les grands aplats sans texte dense).
    */
@@ -29,7 +29,7 @@ const TILE = { w: 204, h: 417.5 }
 /**
  * Motif de marque (plante qui pousse sur des collines en sillons) en calque décoratif.
  * Tuile vectorielle parfaitement raccordable, tracée depuis `Motif agrolide transparent.png` par
- * `scripts/forme/vectorize_motif.py` (`public/design-assets/motif-plantes-masque.svg`, 14 Ko ; `motif-masque.svg` 27 Ko pour la variante complète ; fichiers mis en cache).
+ * `scripts/forme/vectorize_motif.py` (`public/design-assets/motif-plantes-masque.svg`, 22 Ko ; `motif-masque.svg` 27 Ko pour la variante complète ; fichiers mis en cache).
  * En `mono`, le SVG sert de MASQUE : il prend la couleur du texte sur n'importe quelle surface :
  *   - sur vert profond : `text-on-surface-brand` (blanc) ;
  *   - sur fond clair   : `text-primary` (vert).

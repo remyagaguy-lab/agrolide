@@ -105,7 +105,7 @@ def d_of(rings, nd=1):
 
 
 # --- variante « plantes seules » (sans collines) -------------------------------------------------------------
-# Quatre petits arcs de colline ont la couleur de la tige : on les efface (polylignes dans la cellule recentrée
+# Quatre petits tirets en arc (le « chapeau » des plantes) ont la couleur de la tige : conservés par défaut ; --sans-tirets les efface (polylignes dans la cellule recentrée
 # d'une demi-période, unités de travail 2x). Option --pieds 2 : second pied de plante dessiné en symétrie.
 ARCS = [[(140, 278), (160, 262), (185, 246), (210, 230), (222, 224)],
         [(234, 224), (255, 228), (285, 246), (310, 268), (326, 285)],
@@ -113,12 +113,12 @@ ARCS = [[(140, 278), (160, 262), (185, 246), (210, 230), (222, 224)],
         [(350, 684), (372, 668), (395, 653), (408, 645)], [(0, 645), (14, 640)]]
 
 
-def plants_only_fields(F, pieds=1):
+def plants_only_fields(F, pieds=1, tirets=True):
     h, w = F["plant"].shape
     sh = w // 2
     out = {k: np.roll(F[k], sh, axis=1).copy() for k in ("plant", "leaf", "light")}
     er = np.zeros((h, w), np.uint8)
-    for pl in ARCS:
+    for pl in ([] if tirets else ARCS):
         cv2.polylines(er, [np.array(pl, np.int32)], False, 255, thickness=17)
     for k in out:
         out[k][er > 0] = 0
@@ -144,6 +144,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src")
     ap.add_argument("--pieds", type=int, choices=(1, 2), default=1, help="plantes seules : 1 pied (défaut) ou 2 pieds")
+    ap.add_argument("--sans-tirets", action="store_true", help="efface les petits tirets en arc au-dessus des plantes")
     a = ap.parse_args()
     src = vz.find_src(a.src)
     A, col = fold_cell(src)
@@ -168,7 +169,7 @@ def main():
               f'<path fill-opacity=".7" d="{D["plant"]}"/><path d="{D["plant"]}{D["leaf"]}"/></g>')
     (vz.ASSETS / "motif-masque.svg").write_text(doc(body_m), encoding="utf-8")
     # --- plantes seules (sans collines) : masque ton sur ton et tuile couleur
-    PF = plants_only_fields(F, a.pieds)
+    PF = plants_only_fields(F, a.pieds, not a.sans_tirets)
     DP = {k: d_of(trace_layer(PF[k], k)) for k in ("plant", "leaf", "light")}
     body_pm = (f'<g fill="#000" fill-rule="evenodd"><path fill-opacity=".7" d="{DP["plant"]}"/>'
                f'<path d="{DP["plant"]}{DP["leaf"]}"/></g>')

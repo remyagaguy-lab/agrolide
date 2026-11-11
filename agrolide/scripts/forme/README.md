@@ -31,7 +31,7 @@ sont repliées sur une cellule de 204 x 417,5 (moyenne de ~40 répétitions, bru
 même moteur ; la tuile est raccordable sans couture (anneaux tracés sur un pavage 3 x 3).
 
 Variante **plantes seules** (sans collines), défaut de `Motif` : `motif-plantes-masque.svg` / `motif-plantes-couleur.svg`.
-Quatre petits arcs de colline ayant la couleur de la tige sont effacés avant le tracé. `--pieds 2` dessine le second pied de
+Les petits tirets en arc au-dessus des plantes (leur « chapeau ») sont conservés ; seules les grosses collines sombres sont retirées (`--sans-tirets` les efface aussi). `--pieds 2` dessine le second pied de
 chaque plante en symétrie (non retenu : `1` par défaut).
 
 ## Méthode (`bezier_trace.py`)

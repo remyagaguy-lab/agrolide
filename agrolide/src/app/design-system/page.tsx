@@ -317,7 +317,7 @@ export default function DesignSystemPage() {
 
             <h3 className="mb-3 mt-10 text-title-md">Motif de marque (Motif) : tuile vectorielle</h3>
             <p className="mb-4 max-w-3xl text-body-md text-on-surface-variant">
-              Plantes (et, en variante complète, collines en sillons) tracées depuis le motif d’origine (<code>scripts/forme/vectorize_motif.py</code>) : une seule tuile de 204 × 417,5 raccordable à l’infini, 14 Ko pour les plantes seules, 27 Ko avec collines (au lieu d’une image de 90 Ko), nette sur tout écran, aux couleurs du texte (clair, sombre). Le ton sur ton garde trois niveaux : collines, feuilles, contour. La planche d’origine dérivait dans ses dernières rangées ; la tuile est régulière.
+              Plantes (et, en variante complète, collines en sillons) tracées depuis le motif d’origine (<code>scripts/forme/vectorize_motif.py</code>) : une seule tuile de 204 × 417,5 raccordable à l’infini, 22 Ko pour les plantes seules (avec leurs tirets en arc), 27 Ko avec les grosses collines (au lieu d’une image de 90 Ko), nette sur tout écran, aux couleurs du texte (clair, sombre). Le ton sur ton garde trois niveaux : collines, feuilles, contour. La planche d’origine dérivait dans ses dernières rangées ; la tuile est régulière.
             </p>
             <div className="grid gap-4 md:grid-cols-4">
               <div className="relative h-56 overflow-hidden rounded-card bg-surface-brand text-on-surface-brand"><Motif size={800} opacity={0.25} className="text-on-surface-brand" /><span className="relative z-10 m-3 inline-block rounded-tag bg-surface-brand px-2 py-1 text-label-sm">plantes (défaut), sur vert</span></div>
