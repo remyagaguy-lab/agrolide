@@ -1,4 +1,4 @@
-import { text, integer, sqliteTable, primaryKey, real } from "drizzle-orm/sqlite-core";
+import { text, integer, sqliteTable, primaryKey, real, index } from "drizzle-orm/sqlite-core";
 
 export const agripreneurs = sqliteTable("agripreneurs", {
   created_at: text("created_at"),
@@ -32,7 +32,11 @@ export const articles = sqliteTable("articles", {
   tags: text("tags"),
   titre: text("titre").notNull(),
   updated_at: text("updated_at"),
-});
+}, (t) => [
+  index("idx_articles_statut_published_at").on(t.statut, t.published_at),
+  index("idx_articles_slug").on(t.slug),
+  index("idx_articles_auteur_id").on(t.auteur_id),
+]);
 
 export const avis_formation = sqliteTable("avis_formation", {
   commentaire: text("commentaire"),
@@ -41,7 +45,9 @@ export const avis_formation = sqliteTable("avis_formation", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   membre_id: text("membre_id").notNull(),
   note: integer("note").notNull(),
-});
+}, (t) => [
+  index("idx_avis_formation_formation_id").on(t.formation_id),
+]);
 
 export const campagnes_financement = sqliteTable("campagnes_financement", {
   active: integer("active", { mode: "boolean" }),
@@ -87,7 +93,9 @@ export const contributions = sqliteTable("contributions", {
   prenom: text("prenom"),
   provider_ref: text("provider_ref"),
   statut: text("statut"),
-});
+}, (t) => [
+  index("idx_contributions_statut").on(t.statut),
+]);
 
 export const cotisations = sqliteTable("cotisations", {
   categorie: text("categorie").notNull(),
@@ -100,7 +108,10 @@ export const cotisations = sqliteTable("cotisations", {
   montant_fcfa: integer("montant_fcfa").notNull(),
   provider_ref: text("provider_ref"),
   statut: text("statut"),
-});
+}, (t) => [
+  index("idx_cotisations_membre_id").on(t.membre_id),
+  index("idx_cotisations_statut").on(t.statut),
+]);
 
 export const demandes_service = sqliteTable("demandes_service", {
   budget_tranche: text("budget_tranche"),
@@ -139,7 +150,9 @@ export const documents = sqliteTable("documents", {
   titre: text("titre").notNull(),
   type_doc: text("type_doc").notNull(),
   valide_par: text("valide_par"),
-});
+}, (t) => [
+  index("idx_documents_statut_published_at").on(t.statut, t.published_at),
+]);
 
 export const evenements = sqliteTable("evenements", {
   created_at: text("created_at"),
@@ -158,7 +171,9 @@ export const evenements = sqliteTable("evenements", {
   ressources_url: text("ressources_url"),
   titre: text("titre").notNull(),
   type_evt: text("type_evt").notNull(),
-});
+}, (t) => [
+  index("idx_evenements_publie_date_debut").on(t.publie, t.date_debut),
+]);
 
 export const formations = sqliteTable("formations", {
   acces: text("acces"),
@@ -176,7 +191,9 @@ export const formations = sqliteTable("formations", {
   cover_image_url: text("cover_image_url"), // Added for course display
   lien_externe: text("lien_externe"),
   source_externe: text("source_externe").default("Agrolide"),
-});
+}, (t) => [
+  index("idx_formations_created_at").on(t.created_at),
+]);
 
 export const formation_modules = sqliteTable("formation_modules", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
@@ -185,7 +202,9 @@ export const formation_modules = sqliteTable("formation_modules", {
   description: text("description"),
   ordre: integer("ordre").notNull(),
   created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
-});
+}, (t) => [
+  index("idx_formation_modules_formation_id").on(t.formation_id),
+]);
 
 export const formation_lecons = sqliteTable("formation_lecons", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
@@ -196,14 +215,19 @@ export const formation_lecons = sqliteTable("formation_lecons", {
   ordre: integer("ordre").notNull(),
   quiz_json: text("quiz_json", { mode: "json" }), // Store quiz questions array
   created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
-});
+}, (t) => [
+  index("idx_formation_lecons_module_id").on(t.module_id),
+]);
 
 export const progression_lecons = sqliteTable("progression_lecons", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   membre_id: text("membre_id").notNull(),
   lecon_id: text("lecon_id").notNull(),
   completed_at: text("completed_at").$defaultFn(() => new Date().toISOString()),
-});
+}, (t) => [
+  index("idx_progression_lecons_membre_id").on(t.membre_id),
+  index("idx_progression_lecons_lecon_id").on(t.lecon_id),
+]);
 
 export const forum_categories = sqliteTable("forum_categories", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
@@ -220,7 +244,11 @@ export const forum_fils = sqliteTable("forum_fils", {
   nb_reponses: integer("nb_reponses"),
   statut: text("statut"),
   titre: text("titre").notNull(),
-});
+}, (t) => [
+  index("idx_forum_fils_categorie_id").on(t.categorie_id),
+  index("idx_forum_fils_auteur_id").on(t.auteur_id),
+  index("idx_forum_fils_created_at").on(t.created_at),
+]);
 
 export const forum_messages = sqliteTable("forum_messages", {
   auteur_id: text("auteur_id").notNull(),
@@ -230,7 +258,10 @@ export const forum_messages = sqliteTable("forum_messages", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   statut: text("statut"),
   updated_at: text("updated_at"),
-});
+}, (t) => [
+  index("idx_forum_messages_fil_id").on(t.fil_id),
+  index("idx_forum_messages_auteur_id").on(t.auteur_id),
+]);
 
 export const commentaires_forum = sqliteTable("commentaires_forum", {
   auteur_id: text("auteur_id").notNull(),
@@ -239,7 +270,9 @@ export const commentaires_forum = sqliteTable("commentaires_forum", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   message_id: text("message_id").notNull(),
   updated_at: text("updated_at"),
-});
+}, (t) => [
+  index("idx_commentaires_forum_message_id").on(t.message_id),
+]);
 
 export const contacts_partenariat = sqliteTable("contacts_partenariat", {
   budget: text("budget"),
@@ -260,7 +293,10 @@ export const inscriptions_evenement = sqliteTable("inscriptions_evenement", {
   membre_id: text("membre_id"),
   nom: text("nom"),
   prenom: text("prenom"),
-});
+}, (t) => [
+  index("idx_inscriptions_evenement_evenement_id").on(t.evenement_id),
+  index("idx_inscriptions_evenement_membre_id").on(t.membre_id),
+]);
 
 export const inscriptions_formation = sqliteTable("inscriptions_formation", {
   certificat_r2_key: text("certificat_r2_key"),
@@ -270,7 +306,10 @@ export const inscriptions_formation = sqliteTable("inscriptions_formation", {
   formation_id: text("formation_id"), // Added for async formations
   session_id: text("session_id"), // Made optional
   statut: text("statut"),
-});
+}, (t) => [
+  index("idx_inscriptions_formation_membre_id_formation_id").on(t.membre_id, t.formation_id),
+  index("idx_inscriptions_formation_formation_id").on(t.formation_id),
+]);
 
 export const messages = sqliteTable("messages", {
   contenu: text("contenu").notNull(),
@@ -279,7 +318,10 @@ export const messages = sqliteTable("messages", {
   expediteur_id: text("expediteur_id").notNull(),
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   lu: integer("lu", { mode: "boolean" }),
-});
+}, (t) => [
+  index("idx_messages_destinataire_id_lu").on(t.destinataire_id, t.lu),
+  index("idx_messages_expediteur_id").on(t.expediteur_id),
+]);
 
 export const notifications = sqliteTable("notifications", {
   contenu: text("contenu").notNull(),
@@ -289,7 +331,9 @@ export const notifications = sqliteTable("notifications", {
   lu: integer("lu", { mode: "boolean" }),
   type: text("type").notNull(),
   user_id: text("user_id").notNull(),
-});
+}, (t) => [
+  index("idx_notifications_user_id_lu").on(t.user_id, t.lu),
+]);
 
 export const opportunites = sqliteTable("opportunites", {
   created_at: text("created_at"),
@@ -304,7 +348,9 @@ export const opportunites = sqliteTable("opportunites", {
   statut: text("statut"),
   titre: text("titre").notNull(),
   type_opp: text("type_opp").notNull(),
-});
+}, (t) => [
+  index("idx_opportunites_statut").on(t.statut),
+]);
 
 export const pages_statiques = sqliteTable("pages_statiques", {
   contenu_json: text("contenu_json", { mode: "json" }),
@@ -313,7 +359,9 @@ export const pages_statiques = sqliteTable("pages_statiques", {
   slug: text("slug").notNull(),
   titre: text("titre"),
   updated_at: text("updated_at"),
-});
+}, (t) => [
+  index("idx_pages_statiques_slug").on(t.slug),
+]);
 
 export const partenaires = sqliteTable("partenaires", {
   contact_nom: text("contact_nom"),
@@ -341,14 +389,19 @@ export const sessions_formation = sqliteTable("sessions_formation", {
   places_max: integer("places_max"),
   places_restantes: integer("places_restantes"),
   statut: text("statut"),
-});
+}, (t) => [
+  index("idx_sessions_formation_formation_id").on(t.formation_id),
+]);
 
 export const telechargements = sqliteTable("telechargements", {
   created_at: text("created_at"),
   document_id: text("document_id").notNull(),
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   membre_id: text("membre_id").notNull(),
-});
+}, (t) => [
+  index("idx_telechargements_document_id").on(t.document_id),
+  index("idx_telechargements_membre_id").on(t.membre_id),
+]);
 
 export const temoignages = sqliteTable("temoignages", {
   categorie: text("categorie"),
@@ -408,7 +461,10 @@ export const users = sqliteTable("user", {
   created_at: text("created_at"),
   updated_at: text("updated_at"),
   ville: text("ville"),
-});
+}, (t) => [
+  index("idx_users_role_plateforme").on(t.role_plateforme),
+  index("idx_users_statut_adhesion").on(t.statut_adhesion),
+]);
 
 // Alias for easier migration
 export const profiles = users;
@@ -460,7 +516,10 @@ export const user_connections = sqliteTable("user_connections", {
   status: text("status").notNull(), // 'pending', 'accepted', 'rejected'
   created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
   updated_at: text("updated_at").$defaultFn(() => new Date().toISOString()),
-});
+}, (t) => [
+  index("idx_user_connections_requester_id").on(t.requester_id),
+  index("idx_user_connections_receiver_id").on(t.receiver_id),
+]);
 
 
 // --- RELATIONS ---

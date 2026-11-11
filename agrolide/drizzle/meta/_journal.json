@@ -29,6 +29,13 @@
       "when": 1786361602606,
       "tag": "0003_gifted_domino",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1794401807084,
+      "tag": "0004_perf_indexes",
+      "breakpoints": true
     }
   ]
 }
