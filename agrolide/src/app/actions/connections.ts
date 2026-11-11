@@ -9,6 +9,13 @@ import { revalidatePath } from 'next/cache';
 export async function sendConnectionRequest(receiverId: string) {
   const { userId } = await auth();
   if (!userId) return { error: "Non autorisé" };
+  if (receiverId === userId) return { error: "Vous ne pouvez pas vous inviter vous-même." };
+
+  const receiver = await db.query.users.findFirst({
+    columns: { id: true, annuaire_visible: true },
+    where: (u, { eq }) => eq(u.id, receiverId),
+  });
+  if (!receiver || receiver.annuaire_visible === false) return { error: "Ce membre est introuvable." };
 
   // Check if connection already exists
   const existing = await db.query.user_connections.findFirst({
@@ -23,15 +30,15 @@ export async function sendConnectionRequest(receiverId: string) {
     return { error: "Une connexion ou demande existe déjà" };
   }
 
-  await db.insert(user_connections).values({
+  const [created] = await db.insert(user_connections).values({
     requester_id: userId,
     receiver_id: receiverId,
     status: 'pending',
-  });
+  }).returning({ id: user_connections.id });
 
   revalidatePath('/annuaire', 'layout');
   revalidatePath('/membres/reseau', 'layout');
-  return { success: true };
+  return { success: true, connectionId: created?.id ?? null };
 }
 
 export async function acceptConnectionRequest(connectionId: string) {
