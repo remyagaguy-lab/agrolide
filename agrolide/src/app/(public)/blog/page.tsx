@@ -6,6 +6,7 @@ import { ArticleCard } from "@/components/ui/ArticleCard"
 import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
+import { Motif } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: "Blog & Actualités",
@@ -64,10 +65,7 @@ export default async function BlogPage({
         {/* Hero Section (Original) */}
         <section className="bg-surface-brand pt-12 pb-16 text-on-surface-brand text-center relative overflow-hidden">
           {/* Motif Background */}
-          <div 
-            className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-            style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-          />
+          <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
               Blog & Actualités

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react"
 import { subscribeToNewsletter } from "@/app/actions/newsletter"
 import { X } from "lucide-react"
+import { Motif } from "@/components/brand"
 
 export function NewsletterForm() {
   const [isOpen, setIsOpen] = useState(false)
@@ -72,10 +73,7 @@ export function NewsletterForm() {
       </button>
 
       {/* Motif Background (subtle) */}
-      <div 
-        className="absolute inset-0 z-0 opacity-5 pointer-events-none" 
-        style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "200px", backgroundRepeat: "repeat" }} 
-      />
+      <Motif size={200} opacity={0.05} className="text-on-surface-brand" />
       
       <div className="relative z-10 p-6 md:p-8">
         <h3 className="text-xl md:text-2xl font-heading font-bold mb-2 text-primary">Parlons agriculture</h3>

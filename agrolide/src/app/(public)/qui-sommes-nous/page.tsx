@@ -5,6 +5,7 @@ import Image from "next/image"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Users, Crown, Star, Lightbulb, Target, BookOpen, Microscope, Share2, Globe, ArrowRight, LineChart } from "lucide-react"
+import { Motif } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: "Qui sommes-nous ?",
@@ -18,10 +19,7 @@ export default function QuiSommesNousPage() {
       {/* ── HERO ─────────────────────────────────── */}
       <section className="bg-surface-brand pt-12 pb-16 text-on-surface-brand text-center relative overflow-hidden">
         {/* Motif Background */}
-        <div 
-          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-        />
+        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
         
         <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
@@ -124,10 +122,7 @@ export default function QuiSommesNousPage() {
             {/* Colonne 1: Un Réseau comme solution */}
             <div className="bg-surface-brand p-8 md:p-12 rounded-3xl text-on-surface-brand relative overflow-hidden shadow-xl flex flex-col justify-center">
               {/* Motif Background */}
-              <div 
-                className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-                style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "400px", backgroundRepeat: "repeat" }} 
-              />
+              <Motif size={400} opacity={0.05} className="text-on-surface-brand" />
               <div className="relative z-10">
                 <h2 className="font-heading font-[800] text-[32px] md:text-[40px] mb-4 leading-[1.15]">
                   Un Réseau comme solution...
@@ -212,10 +207,7 @@ export default function QuiSommesNousPage() {
       {/* ── MISSION & VISION ─────────────────────── */}
       <section className="bg-surface-brand py-[60px] md:py-[100px] relative overflow-hidden">
         {/* Motif Background */}
-        <div 
-          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-        />
+        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
         <div className="max-w-[1100px] mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block px-8 py-4 bg-white/10 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.1)] text-on-tertiary-container rounded-full font-heading font-[800] text-[16px] md:text-[20px] mb-8 border border-on-surface-brand/20">

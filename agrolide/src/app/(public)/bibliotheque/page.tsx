@@ -18,6 +18,7 @@ export const revalidate = 3600 // ISR 1 heure
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, desc, count } from 'drizzle-orm'
+import { Motif } from "@/components/brand"
 
 async function getBibliothequeData() {
   try {
@@ -52,10 +53,7 @@ export default async function BibliothequePublicPage() {
       {/* Hero section */}
       <section className="bg-surface-brand pt-10 pb-10 relative overflow-hidden">
         {/* Motif Background */}
-        <div 
-          className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-        />
+        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 

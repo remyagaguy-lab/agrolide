@@ -4,6 +4,7 @@ import {
   TableCaption, TableCell, TableHead, TableHeader, TableRow, ToastProvider,
 } from '@/components/ui'
 import { brand, darkColors, lightColors, refPalette, type ColorRole } from '@/styles/tokens'
+import { Arche, ArchPhoto, HorizonDivider, Motif } from '@/components/brand'
 import { Interactive } from './Interactive'
 
 export const metadata: Metadata = {
@@ -114,7 +115,7 @@ export default function DesignSystemPage() {
               Jetons, composants et règles d’usage. Page interne : non indexée, absente du plan du site. Version 1 : 11/11/2026.
             </p>
             <nav aria-label="Sections" className="mt-6 flex flex-wrap gap-2">
-              {[['couleurs', 'Couleurs'], ['typographie', 'Typographie'], ['formes', 'Formes et mouvement'], ['composants', 'Composants'], ['donnees', 'Données'], ['logo', 'Logo'], ['regles', 'Règles']].map(([id, label]) => (
+              {[['couleurs', 'Couleurs'], ['typographie', 'Typographie'], ['formes', 'Formes et mouvement'], ['composants', 'Composants'], ['donnees', 'Données'], ['identite', 'Identité'], ['logo', 'Logo'], ['regles', 'Règles']].map(([id, label]) => (
                 <a key={id} href={`#${id}`} className="ag-state inline-flex min-h-11 items-center rounded-full border border-on-surface-brand/30 px-4 text-label-md">{label}</a>
               ))}
             </nav>
@@ -260,6 +261,36 @@ export default function DesignSystemPage() {
             <div className="mt-8 grid gap-4 md:grid-cols-2" aria-hidden="true">
               <Card><Skeleton className="mb-3 h-5 w-1/2" /><Skeleton className="mb-2 h-4 w-full" /><Skeleton className="h-4 w-3/4" /></Card>
               <Card variant="filled"><CardTitle>Squelette</CardTitle><CardDescription>Placeholder de chargement, immobile si le mouvement est réduit.</CardDescription></Card>
+            </div>
+          </Section>
+
+          <Section id="identite" title="Identité visuelle : arche, horizon, motif" intro="Les formes de la marque (arche du soleil levant, collines, motif plante) sont des composants du design system : elles se règlent par couleur de texte, restent décoratives et se limitent à quelques usages par page.">
+            <h3 className="mb-3 text-title-md">L’arche (Arche)</h3>
+            <div className="grid gap-4 md:grid-cols-4">
+              <div className="flex flex-col items-center gap-2 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="frame" className="w-32 text-primary" /><code className="text-label-sm text-on-surface-muted">frame + soleil</code></div>
+              <div className="flex flex-col items-center gap-2 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="frame" sun={false} className="w-32 text-primary" /><code className="text-label-sm text-on-surface-muted">frame sans soleil</code></div>
+              <div className="flex flex-col items-center gap-2 rounded-card bg-surface-brand p-6 text-on-surface-brand"><Arche variant="frame" className="w-32 text-on-surface-brand" /><code className="text-label-sm">sur vert (blanc)</code></div>
+              <div className="flex flex-col items-center gap-2 rounded-card bg-primary-container p-6"><Arche variant="solid" className="w-32 text-primary/25" /><code className="text-label-sm text-on-primary-container">solid (filigrane)</code></div>
+            </div>
+
+            <h3 className="mb-3 mt-10 text-title-md">Photo dans le soleil (ArchPhoto)</h3>
+            <div className="grid items-center gap-6 md:grid-cols-2">
+              <ArchPhoto src="/hero-background.webp" alt="Champs agricoles au lever du soleil" className="max-w-md" />
+              <p className="text-body-md text-on-surface-variant">L’image est découpée par le disque solaire du logo et cerclée de l’arche et des collines. À réserver aux visuels forts (équipe, terrain, en-tête de section), une seule par écran.</p>
+            </div>
+
+            <h3 className="mb-3 mt-10 text-title-md">Transition d’horizon (HorizonDivider) et motif (Motif)</h3>
+            <div className="overflow-hidden rounded-panel border border-outline-variant">
+              <div className="relative bg-surface-brand pt-10 text-on-surface-brand">
+                <Motif size={400} opacity={0.08} className="text-on-surface-brand" />
+                <p className="relative z-10 px-6 pb-6 text-title-lg">Section vert profond avec motif plante</p>
+                <HorizonDivider className="relative z-10 text-surface" />
+              </div>
+              <div className="bg-surface px-6 pb-8 pt-4"><p className="text-body-md text-on-surface-variant">La courbe reprend les collines du logo et remplace les ruptures nettes et les dégradés.</p></div>
+            </div>
+            <div className="relative mt-4 overflow-hidden rounded-panel border border-outline-variant bg-primary-container p-8 text-primary">
+              <Motif size={400} opacity={0.1} className="text-primary" />
+              <p className="relative z-10 text-title-md text-on-primary-container">Le même motif, en vert, sur fond clair</p>
             </div>
           </Section>
 

@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react"
 import { Button, buttonVariants } from "@/components/ui/Button"
 import { Logo } from "@/components/ui/Logo"
+import { HorizonDivider, Motif } from "@/components/brand"
 
 /* Pictogrammes des réseaux sociaux : décoratifs (le lien porte le nom accessible). */
 const svgProps = { width: 18, height: 18, viewBox: "0 0 24 24", fill: "currentColor", "aria-hidden": true } as const
@@ -80,7 +81,7 @@ export function Footer() {
     <>
       {/* ── APPEL À L'ACTION GLOBAL ── */}
       {showGlobalCTA && (
-        <div className="bg-primary-container py-20 text-center md:py-24">
+        <div className="bg-primary-container pt-20 text-center md:pt-24">
           <div className="container flex flex-col items-center">
             <h2 className="mx-auto mb-4 max-w-[700px] text-headline-md text-on-primary-container">
               Prêt à participer à la conquête de la souveraineté alimentaire&nbsp;?
@@ -92,16 +93,14 @@ export function Footer() {
               Rejoindre le réseau <ArrowRight className="size-4" aria-hidden="true" />
             </Button>
           </div>
+          {/* Transition organique (collines du logo) vers le pied de page vert */}
+          <HorizonDivider className="mt-16 text-surface-brand md:mt-20" />
         </div>
       )}
 
       {/* ── PIED DE PAGE : bandeau vert de marque avec motif ── */}
       <footer className="relative overflow-hidden bg-surface-brand pb-9 pt-[60px] text-on-surface-brand">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 z-0 opacity-[0.07]"
-          style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }}
-        />
+        <Motif size={800} opacity={0.045} className="text-on-surface-brand" />
 
         <div className="relative z-10 mx-auto max-w-[1100px] px-6">
           <div className="mb-12 grid grid-cols-2 items-start gap-x-6 gap-y-10 md:grid-cols-4 md:gap-10">

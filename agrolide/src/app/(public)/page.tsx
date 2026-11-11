@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp } from "lucide-react"
+import { Motif } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: {
@@ -179,10 +180,7 @@ export default async function HomePage() {
       {/* ── HERO ─────────────────────────────────── */}
       <section className="bg-surface-brand relative overflow-hidden pt-0 md:pt-0">
         {/* Motif Background for texture (placed behind the image) */}
-        <div 
-          className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-          style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
-        />
+        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
 
         {/* Image de fond avec mask pour fondu fluide */}
         <div className="absolute top-0 right-0 w-full md:w-[55%] h-full pointer-events-none z-[1]">
