@@ -1,6 +1,30 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
 
+/* Design system agrolide : jetons (voir src/styles/tokens/ et scripts/ds-tokens.mjs) */
+@import "../styles/tokens/generated.css";
+@import "../styles/tokens/foundations.css";
+@import "../styles/tokens/theme.css";
+
+/*
+ * Alias de compatibilité : anciens noms de variables → jetons du design system.
+ * Les `--color-*` ci-dessous étaient utilisées (~100 fois) sans jamais être définies.
+ * À supprimer quand la migration des composants sera terminée.
+ */
+:root {
+  --color-vert-profond:   var(--ag-sys-color-primary);
+  --color-vert-principal: var(--ag-sys-color-accent-leaf);
+  --color-vert-clair:     var(--ag-sys-color-primary-container);
+  --color-orange-accent:  var(--ag-sys-color-tertiary);
+  --color-jaune-dore:     var(--ag-sys-color-accent-sun);
+  --color-blanc:          #ffffff;
+  --color-gris-clair:     var(--ag-sys-color-surface-container);
+  --color-gris-moyen:     var(--ag-sys-color-outline-variant);
+  --color-gris-texte:     var(--ag-sys-color-on-surface-variant);
+  --color-succes:         var(--ag-sys-color-success);
+  --color-erreur:         var(--ag-sys-color-error);
+}
+
 :root {
   /* === BRAND VERTS === */
   --vert-profond:    #1b5e38;   /* Autorité, confiance, fond hero, CTA final */
@@ -16,7 +40,7 @@
   --fond-gris:       #f8f8f6;   /* Fond sections features, alternance */
   --gris-border:     #e8e8e4;   /* Toutes les bordures, séparateurs */
   --gris-light:      #f0f0ee;   /* Fonds de badges, placeholders */
-  --gris-muted:      #757571;   /* Textes secondaires, métadonnées */
+  --gris-muted:      #757571;   /* Textes secondaires, métadonnées (4,6:1 sur blanc) */
   --texte-corps:     #4a4a4a;   /* Corps de texte */
   --texte-titre:     #1a1a1a;   /* Titres sur fond blanc */
 
@@ -46,8 +70,8 @@
   
   /* Accessibilité : Navigation au clavier (Focus Rings) */
   *:focus-visible {
-    outline: 2px solid var(--vert-principal);
-    outline-offset: 2px;
+    outline: var(--ag-sys-focus-width) solid var(--ag-sys-color-focus-ring);
+    outline-offset: var(--ag-sys-focus-offset);
   }
   
   /* Désactiver l'outline classique pour ceux qui utilisent la souris, 

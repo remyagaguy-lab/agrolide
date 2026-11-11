@@ -1,0 +1,62 @@
+/*
+ * Jetons de fondation agrolide (hors couleurs, qui sont générées : voir generated.css).
+ * Forme, élévation, mouvement, états. Niveau « système » : seul niveau que les composants consomment.
+ */
+
+:root {
+  /* ── Formes : plus c'est grand/important, plus c'est arrondi ─────────────── */
+  --ag-sys-shape-tag: 4px;       /* puces, infobulles */
+  --ag-sys-shape-control: 8px;   /* champs, boutons, chips */
+  --ag-sys-shape-card: 12px;     /* cartes, widgets */
+  --ag-sys-shape-panel: 16px;    /* modales, panneaux */
+  --ag-sys-shape-sheet: 28px;    /* feuilles basses mobiles, grands encarts */
+  --ag-sys-shape-full: 9999px;   /* avatars, pastilles */
+
+  /* ── Élévation : tonale d'abord (surface-container-*), ombre douce à partir du niveau 3 ── */
+  --ag-sys-elevation-0: none;
+  --ag-sys-elevation-1: 0 1px 2px rgb(24 29 24 / 0.06);
+  --ag-sys-elevation-2: 0 1px 3px rgb(24 29 24 / 0.08), 0 1px 2px rgb(24 29 24 / 0.06);
+  --ag-sys-elevation-3: 0 4px 12px rgb(24 29 24 / 0.10), 0 1px 3px rgb(24 29 24 / 0.06);
+  --ag-sys-elevation-4: 0 8px 20px rgb(24 29 24 / 0.12), 0 2px 6px rgb(24 29 24 / 0.08);
+  --ag-sys-scrim: rgb(10 15 11 / 0.52);
+
+  /* ── Mouvement (courbes et durées Material 3, sobriété agrolide) ─────────── */
+  --ag-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ag-sys-motion-easing-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --ag-sys-motion-easing-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --ag-sys-motion-duration-short: 150ms;
+  --ag-sys-motion-duration-medium: 250ms;
+  --ag-sys-motion-duration-long: 400ms;
+
+  /* ── Couches d'état (appliquées sur la couleur du contenu via color-mix) ─── */
+  --ag-sys-state-hover: 8%;
+  --ag-sys-state-focus: 10%;
+  --ag-sys-state-pressed: 10%;
+  --ag-sys-state-dragged: 16%;
+  --ag-sys-state-disabled-content: 38%;
+  --ag-sys-state-disabled-container: 12%;
+
+  /* ── Focus clavier ───────────────────────────────────────────────────────── */
+  --ag-sys-focus-width: 3px;
+  --ag-sys-focus-offset: 2px;
+
+  /* ── Dimensions des cibles tactiles ──────────────────────────────────────── */
+  --ag-sys-target-md: 48px;  /* par défaut */
+  --ag-sys-target-sm: 40px;  /* tableaux, administration (desktop) */
+  --ag-sys-target-min: 44px; /* boutons icône seule */
+}
+
+/* Mouvement réduit : toutes les animations/transitions deviennent quasi instantanées. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ag-sys-motion-duration-short: 0.01ms;
+    --ag-sys-motion-duration-medium: 0.01ms;
+    --ag-sys-motion-duration-long: 0.01ms;
+  }
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

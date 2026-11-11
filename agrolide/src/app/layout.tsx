@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { AuthProvider } from "@/lib/auth/client";
 import { CookieBanner } from "@/components/layout/CookieBanner";
+import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 // Polices embarquées (fichiers dans src/app/fonts) : plus de dépendance à Google Fonts.
@@ -58,8 +59,11 @@ export default function RootLayout({
       <html
         lang="fr"
         className={`${urbanist.variable} ${baskerville.variable} h-full antialiased`}
+        data-theme="light"
+        suppressHydrationWarning
       >
         <head>
+          <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
