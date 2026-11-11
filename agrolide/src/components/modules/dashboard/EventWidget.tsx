@@ -1,6 +1,7 @@
 import React from "react"
-import Link from "next/link"
 import { Calendar as CalendarIcon, MapPin, ArrowRight, Video } from "lucide-react"
+import { Button } from "@/components/ui/Button"
+import { cn } from "@/lib/utils/formatters"
 
 interface EventData {
   id: string | number
@@ -16,107 +17,83 @@ interface EventWidgetProps {
   event: EventData | null
 }
 
+/** Mise en avant du prochain événement : bandeau vert de marque, texte clair (contrastes ≥ 7:1). */
 export function EventWidget({ event }: EventWidgetProps) {
   if (!event) {
     return (
-      <div className="bg-[#151c17] border border-[#233526] rounded-2xl shadow-sm p-5 text-white shrink-0 relative overflow-hidden">
-        <div className="flex items-center gap-2 text-gray-400 mb-2">
-          <CalendarIcon size={14} strokeWidth={1.5} className="text-[#50a853]" />
-          <span className="text-[10px] font-bold uppercase tracking-wider text-gray-300">Événements à venir</span>
+      <div className="shrink-0 rounded-card bg-surface-brand p-5 text-on-surface-brand">
+        <div className="mb-2 flex items-center gap-2">
+          <CalendarIcon className="size-4" aria-hidden="true" />
+          <h2 className="text-label-sm uppercase tracking-wider">Événements à venir</h2>
         </div>
-        <h3 className="text-sm font-bold text-gray-200 font-heading mb-1">Aucun événement planifié</h3>
-        <p className="text-[11px] text-gray-400 mb-4">
+        <p className="mb-1 text-title-md">Aucun événement planifié</p>
+        <p className="mb-4 text-body-sm text-on-surface-brand/85">
           Restez connecté pour être informé des prochaines assemblées générales, webinaires techniques et ateliers du réseau.
         </p>
-        <Link
-          href="/membres/evenements"
-          className="inline-flex items-center justify-center gap-2 w-full py-2.5 bg-white/10 hover:bg-white/15 active:scale-[0.98] text-white rounded-xl text-xs font-bold transition-all duration-150"
-        >
-          <span>Consulter le calendrier</span>
-          <ArrowRight size={13} strokeWidth={2} />
-        </Link>
+        <Button href="/membres/evenements" variant="ghost-dark" size="sm" fullWidth>
+          Consulter le calendrier
+          <ArrowRight className="size-3.5" aria-hidden="true" />
+        </Button>
       </div>
     )
   }
 
   const startDate = new Date(event.date_debut)
   const isUpcoming = startDate.getTime() > Date.now()
-  
+
   const formattedDay = startDate.getDate()
   const formattedMonth = startDate.toLocaleDateString("fr-FR", { month: "short" }).toUpperCase()
   const formattedTime = startDate.toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" })
   const formattedFullDate = startDate.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" })
 
-  const isOnline = event.lieu?.toLowerCase().includes("ligne") || 
-                   event.lieu?.toLowerCase().includes("webinar") || 
-                   event.lieu?.toLowerCase().includes("zoom") || 
-                   event.lieu?.toLowerCase().includes("meet")
+  const lieu = event.lieu?.toLowerCase() ?? ""
+  const isOnline = lieu.includes("ligne") || lieu.includes("webinar") || lieu.includes("zoom") || lieu.includes("meet")
+  const PlaceIcon = isOnline ? Video : MapPin
 
   return (
-    <div className="bg-[#151c17] border border-[#233526] rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.12)] p-5 text-white shrink-0 relative overflow-hidden">
-      {/* Ambient subtle glow */}
-      <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#1b5e38]/25 rounded-full blur-3xl pointer-events-none" />
-      
-      <div className="relative z-10">
-        {/* Header with status badge */}
-        <div className="flex justify-between items-center mb-3.5">
-          <div className="flex items-center gap-2 text-[#86efac]">
-            <CalendarIcon size={14} strokeWidth={1.5} />
-            <span className="text-[10px] font-bold uppercase tracking-wider">Prochain Événement</span>
-          </div>
-          
-          <div className="flex items-center gap-1.5 bg-[#1e2e21] border border-[#2e7d32]/50 px-2.5 py-0.5 rounded-full">
-            <span className={`w-1.5 h-1.5 rounded-full ${isUpcoming ? "bg-[#4ade80] animate-pulse" : "bg-amber-400"}`} />
-            <span className="text-[9px] font-bold uppercase tracking-wider text-[#bbf7d0]">
-              {isUpcoming ? "Bientôt" : "En cours"}
-            </span>
-          </div>
+    <div className="relative shrink-0 overflow-hidden rounded-card bg-surface-brand p-5 text-on-surface-brand">
+      <div className="mb-3.5 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <CalendarIcon className="size-4" aria-hidden="true" />
+          <h2 className="text-label-sm uppercase tracking-wider">Prochain événement</h2>
         </div>
-
-        {/* Event Content with Date Ribbon */}
-        <div className="flex items-start gap-3.5 mb-4">
-          {/* Detachable Date Badge */}
-          <div className="bg-[#1e2e21] border border-[#2d4932] rounded-xl p-2 text-center shrink-0 w-12 flex flex-col items-center justify-center shadow-inner">
-            <span className="text-[9px] font-bold text-[#86efac] tracking-wider">{formattedMonth}</span>
-            <span className="text-lg font-bold font-heading text-white leading-tight tabular-nums">{formattedDay}</span>
-          </div>
-
-          <div className="flex-1 min-w-0">
-            <h3 
-              className="text-xs sm:text-sm font-bold font-heading leading-snug line-clamp-2 text-white"
-              style={{ textWrap: "balance" }}
-            >
-              {event.titre}
-            </h3>
-            
-            <p className="text-[11px] text-gray-300 mt-1 capitalize flex items-center gap-1.5 font-medium">
-              <span>{formattedFullDate}</span>
-              <span className="text-gray-500">•</span>
-              <span className="tabular-nums font-semibold text-[#86efac]">{formattedTime}</span>
-            </p>
-
-            {event.lieu && (
-              <p className="text-[10px] text-gray-400 mt-1 flex items-center gap-1.5">
-                {isOnline ? (
-                  <Video size={11} strokeWidth={1.5} className="text-[#4ade80] shrink-0" />
-                ) : (
-                  <MapPin size={11} strokeWidth={1.5} className="text-[#4ade80] shrink-0" />
-                )}
-                <span className="truncate">{event.lieu}</span>
-              </p>
-            )}
-          </div>
-        </div>
-
-        {/* CTA Button */}
-        <Link
-          href={`/membres/evenements/${event.id}`}
-          className="inline-flex items-center justify-center gap-1.5 w-full py-2.5 bg-[#1b5e38] hover:bg-[#154c2d] active:scale-[0.98] text-white rounded-xl text-xs font-bold tracking-wide transition-all duration-150 shadow-sm"
-        >
-          <span>Participer / Voir les détails</span>
-          <ArrowRight size={13} strokeWidth={2} />
-        </Link>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-on-surface-brand/15 px-2.5 py-0.5 text-label-sm uppercase tracking-wider">
+          <span
+            aria-hidden="true"
+            className={cn("size-1.5 rounded-full", isUpcoming ? "bg-accent-leaf motion-safe:animate-pulse" : "bg-accent-sun")}
+          />
+          {isUpcoming ? "Bientôt" : "En cours"}
+        </span>
       </div>
+
+      <div className="mb-4 flex items-start gap-3.5">
+        <div className="flex w-14 shrink-0 flex-col items-center justify-center rounded-control bg-on-surface-brand/15 p-2 text-center">
+          <span className="text-label-sm tracking-wider">{formattedMonth}</span>
+          <span className="text-title-lg tabular-nums leading-tight">{formattedDay}</span>
+        </div>
+
+        <div className="min-w-0 flex-1">
+          <h3 className="line-clamp-2 text-title-md" style={{ textWrap: "balance" }}>
+            {event.titre}
+          </h3>
+          <p className="mt-1 flex flex-wrap items-center gap-x-1.5 text-body-sm capitalize text-on-surface-brand/90">
+            <span>{formattedFullDate}</span>
+            <span aria-hidden="true">•</span>
+            <span className="tabular-nums font-semibold">{formattedTime}</span>
+          </p>
+          {event.lieu && (
+            <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-brand/90">
+              <PlaceIcon className="size-3.5 shrink-0" aria-hidden="true" />
+              <span className="truncate">{event.lieu}</span>
+            </p>
+          )}
+        </div>
+      </div>
+
+      <Button href={`/membres/evenements/${event.id}`} variant="tonal" size="sm" fullWidth>
+        Participer / voir les détails
+        <ArrowRight className="size-3.5" aria-hidden="true" />
+      </Button>
     </div>
   )
 }

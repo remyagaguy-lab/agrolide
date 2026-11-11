@@ -161,8 +161,7 @@ export default async function DashboardPage() {
           variant="default"
           label="Bibliothèque"
           icon={Library}
-          iconColorClass="text-[#1b5e38]"
-          iconBgClass="bg-[#f0fdf4]"
+          tone="brand"
           value={totalResourcesCount}
           subtext="Fiches & Guides techniques"
           action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
@@ -172,8 +171,7 @@ export default async function DashboardPage() {
           variant="default"
           label="Réseau"
           icon={Users}
-          iconColorClass="text-[#1b5e38]"
-          iconBgClass="bg-[#f0f7f0]"
+          tone="leaf"
           value={membersCount}
           subtext={membersCount > 1 ? "Membres inscrits" : "Membre inscrit"}
           action={{ href: "/membres/annuaire", label: "Explorer l'annuaire" }}
@@ -183,8 +181,7 @@ export default async function DashboardPage() {
           variant="default"
           label="Opportunités"
           icon={Briefcase}
-          iconColorClass="text-[#6d28d9]"
-          iconBgClass="bg-[#f5f3ff]"
+          tone="info"
           value={opportunitesCount}
           subtext="Offres & Appels à projets"
           action={{ href: "/membres/opportunites", label: "Voir les offres" }}
@@ -194,8 +191,7 @@ export default async function DashboardPage() {
           variant="default"
           label="Événements"
           icon={Calendar}
-          iconColorClass="text-amber-700"
-          iconBgClass="bg-[#fef3e2]"
+          tone="warning"
           value={upcomingEventsCount}
           subtext={upcomingEventsCount > 1 ? "Événements à venir" : "Événement à venir"}
           action={{ href: "/membres/evenements", label: "Voir le calendrier" }}

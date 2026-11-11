@@ -1,7 +1,10 @@
 import React from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { User, CheckCircle, ArrowRight, ShieldCheck, CreditCard } from "lucide-react"
+import { ArrowRight, ShieldCheck, CreditCard } from "lucide-react"
+import { Avatar } from "@/components/ui/Avatar"
+import { Badge } from "@/components/ui/Badge"
+import { Button } from "@/components/ui/Button"
+import { cn } from "@/lib/utils/formatters"
+import { Widget } from "./Widget"
 
 interface ProfileSummaryWidgetProps {
   prenom?: string | null
@@ -23,110 +26,65 @@ export function ProfileSummaryWidget({
   specialite,
   organisation,
   pays,
-  ville,
-  categorie,
   isAdhesionActive = false,
-  joursRestants = 0
+  joursRestants = 0,
 }: ProfileSummaryWidgetProps) {
   const displayName = prenom ? `${prenom}${nom ? ` ${nom}` : ""}` : "Membre"
   const isProfileComplete = Boolean(specialite && organisation && pays)
-
-  // Calculate initials (e.g. "RG" for "Remyaga Guy")
-  const initials = [prenom?.[0], nom?.[0]].filter(Boolean).join("").toUpperCase() || "M"
   const hasValidPhoto = Boolean(photo_url && (photo_url.startsWith("http") || photo_url.startsWith("/")))
 
   return (
-    <div className="bg-white rounded-2xl border border-gris-border shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] p-5 flex flex-col shrink-0">
-      {/* Header Profile Identity */}
-      <div className="flex items-center gap-3.5 mb-4">
-        {/* Avatar */}
-        <div className="w-12 h-12 rounded-xl bg-[#f0f7f0] border border-[#c3dec4] flex items-center justify-center text-[#1b5e38] font-bold text-sm shrink-0 relative overflow-hidden select-none">
-          {hasValidPhoto ? (
-            <Image 
-              src={photo_url!} 
-              alt="" 
-              fill 
-              sizes="48px" 
-              className="object-cover" 
-            />
-          ) : (
-            <span className="font-heading tracking-wide text-[#1b5e38] font-bold text-sm">
-              {initials}
-            </span>
-          )}
-        </div>
-
-        {/* Name & Speciality */}
+    <Widget className="shrink-0 p-5">
+      <div className="mb-4 flex items-center gap-3.5">
+        <Avatar src={hasValidPhoto ? photo_url : null} name={prenom ? displayName : undefined} size="lg" className="rounded-card" />
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5">
-            <h4 className="text-xs sm:text-sm font-bold text-[#1a1a1a] font-heading truncate">
-              {displayName}
-            </h4>
-            <ShieldCheck size={14} className="text-[#50a853] shrink-0" />
+            <h2 className="truncate text-title-md text-on-surface">{displayName}</h2>
+            <ShieldCheck className="size-4 shrink-0 text-success" aria-label="Profil vérifié" role="img" />
           </div>
-          <p className="text-[11px] text-gris-muted truncate">
-            {specialite || organisation || "Expertise agricole"}
-          </p>
+          <p className="truncate text-body-sm text-on-surface-muted">{specialite || organisation || "Expertise agricole"}</p>
         </div>
       </div>
 
-      {/* ================= ADHÉSION & COTISATION STATUS BLOCK ================= */}
-      <div className={`rounded-xl border p-3.5 mb-3.5 transition-all ${
-        isAdhesionActive 
-          ? "bg-[#f0fdf4] border-[#c3dec4]" 
-          : "bg-[#fef9ee] border-[#fed7aa]"
-      }`}>
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-1.5 text-xs font-bold text-gray-900 font-heading">
-            <CreditCard size={14} className={isAdhesionActive ? "text-[#1b5e38]" : "text-[#8a4e00]"} />
-            <span>Adhésion annuelle</span>
-          </div>
-          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 whitespace-nowrap ${
-            isAdhesionActive 
-              ? "bg-[#1b5e38] text-white" 
-              : "bg-[#e65100] text-white"
-          }`}>
-            {isAdhesionActive ? "Active" : "En attente"}
-          </span>
-        </div>
-
-        <div className="flex items-center justify-between text-[11px] text-gray-600 mb-2.5">
-          <span>{isAdhesionActive ? `${joursRestants} jours restants` : "Cotisation annuelle requise"}</span>
-          <span className="font-semibold text-gray-800">{isAdhesionActive ? "À jour" : "À régulariser"}</span>
-        </div>
-
-        <Link
-          href="/membres/cotisation"
-          className={`inline-flex items-center justify-center gap-1.5 w-full py-1.5 rounded-lg text-xs font-bold transition-all ${
-            isAdhesionActive
-              ? "bg-white border border-[#c3dec4] text-[#1b5e38] hover:bg-[#e8f5e9]"
-              : "bg-[#1b5e38] text-white hover:bg-[#164e2e]"
-          }`}
-        >
-          <span>{isAdhesionActive ? "Gérer ma cotisation" : "Régler ma cotisation"}</span>
-          <ArrowRight size={12} strokeWidth={2} />
-        </Link>
-      </div>
-
-      {/* Visibility Status Banner */}
-      <div className="bg-[#f8f8f6] border border-gris-border rounded-xl p-3 mb-3.5 flex items-center justify-between text-xs">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-[#50a853]" />
-          <span className="text-gray-700 font-semibold">Annuaire des pairs</span>
-        </div>
-        <span className="text-[10px] font-bold text-[#1b5e38] bg-[#e8f5e9] px-2 py-0.5 rounded-md">
-          {isProfileComplete ? "Profil complet" : "Visibilité active"}
-        </span>
-      </div>
-
-      {/* Link to Profile */}
-      <Link
-        href="/membres/profil"
-        className="inline-flex items-center justify-center gap-1.5 w-full py-2 bg-[#f0f7f0] hover:bg-[#e2f3e3] active:scale-[0.98] border border-[#c3dec4] text-[#1b5e38] rounded-xl text-xs font-bold transition-all duration-150"
+      {/* Adhésion et cotisation */}
+      <div
+        className={cn(
+          "mb-3.5 rounded-card p-3.5",
+          isAdhesionActive ? "bg-success-container text-on-success-container" : "bg-warning-container text-on-warning-container",
+        )}
       >
-        <span>Modifier mon profil</span>
-        <ArrowRight size={12} strokeWidth={2} />
-      </Link>
-    </div>
+        <div className="mb-2 flex items-center justify-between gap-2">
+          <p className="flex items-center gap-1.5 text-title-sm">
+            <CreditCard className="size-4" aria-hidden="true" />
+            Adhésion annuelle
+          </p>
+          <Badge variant={isAdhesionActive ? "success" : "warning"} className="bg-surface-container-lowest">
+            {isAdhesionActive ? "Active" : "En attente"}
+          </Badge>
+        </div>
+        <p className="mb-3 flex items-center justify-between text-body-sm">
+          <span>{isAdhesionActive ? `${joursRestants} jours restants` : "Cotisation annuelle requise"}</span>
+          <span className="font-semibold">{isAdhesionActive ? "À jour" : "À régulariser"}</span>
+        </p>
+        <Button href="/membres/cotisation" variant={isAdhesionActive ? "outline" : "secondary"} size="sm" fullWidth className={isAdhesionActive ? "bg-surface-container-lowest" : undefined}>
+          {isAdhesionActive ? "Gérer ma cotisation" : "Régler ma cotisation"}
+          <ArrowRight className="size-3.5" aria-hidden="true" />
+        </Button>
+      </div>
+
+      {/* Visibilité dans l'annuaire */}
+      <div className="mb-3.5 flex items-center justify-between rounded-card bg-surface-container p-3 text-body-sm">
+        <span className="flex items-center gap-2 font-semibold text-on-surface">
+          <span aria-hidden="true" className="size-2 rounded-full bg-accent-leaf" />
+          Annuaire des pairs
+        </span>
+        <Badge variant="junior">{isProfileComplete ? "Profil complet" : "Visibilité active"}</Badge>
+      </div>
+
+      <Button href="/membres/profil" variant="tonal" size="sm" fullWidth>
+        Modifier mon profil
+        <ArrowRight className="size-3.5" aria-hidden="true" />
+      </Button>
+    </Widget>
   )
 }
