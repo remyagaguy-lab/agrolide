@@ -24,6 +24,12 @@ python scripts/forme/icons.py                                            # icôn
 `Branding/Identité` est cherché dans les dossiers parents. Ces outils ne sont **pas** des dépendances de
 production : ils ne figurent pas dans `package.json`, et les SVG générés sont versionnés.
 
+## Motif (`vectorize_motif.py`)
+`Motif agrolide transparent.png` -> `motif-couleur.svg` (tuile couleur) et `motif-masque.svg` (alpha ton sur ton,
+pour `mask-image` : `Motif.tsx`). Le réseau (a = 204 px, b = (102 ; 208,8)) est régulier sur les rangées 2 à 6 : elles
+sont repliées sur une cellule de 204 x 417,5 (moyenne de ~40 répétitions, bruit supprimé) puis tracées avec le
+même moteur ; la tuile est raccordable sans couture (anneaux tracés sur un pavage 3 x 3).
+
 ## Méthode (`bezier_trace.py`)
 1. **Champ de couverture** : pour l'emblème, démélange à deux pôles de chaque pixel (blanc, vert, orange, jaune,
    deux verts de feuille) : on obtient, par couleur, la part réelle de couverture, d'où des frontières exactes

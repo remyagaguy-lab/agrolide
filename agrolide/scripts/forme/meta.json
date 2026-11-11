@@ -96,5 +96,18 @@
    ]
   },
   "nodes": 117
+ },
+ "motif": {
+  "src": "Motif agrolide transparent.png",
+  "cell": [
+   204.0,
+   417.5
+  ],
+  "nodes": {
+   "hill": 151,
+   "plant": 240,
+   "leaf": 149,
+   "light": 54
+  }
  }
 }
