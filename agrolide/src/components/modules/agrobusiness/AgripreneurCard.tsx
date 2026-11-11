@@ -22,7 +22,7 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
   const initials = nameParts.map(n => n.charAt(0)).join('').substring(0, 2).toUpperCase()
 
   return (
-    <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden hover:shadow-md transition-shadow group flex flex-col h-full">
+    <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm overflow-hidden hover:shadow-md transition-shadow group flex flex-col h-full">
       <div className="p-6 pb-0 flex items-center gap-4 mb-4">
         {agripreneur.photo_url ? (
           <Image 
@@ -49,7 +49,7 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
       
       <div className="p-6 pt-2 flex-grow flex flex-col">
         {agripreneur.secteur && (
-          <div className="inline-block px-3 py-1 bg-orange-50 text-orange-700 text-xs font-bold rounded-full w-fit mb-3">
+          <div className="inline-block px-3 py-1 bg-tertiary-container text-orange-700 text-xs font-bold rounded-full w-fit mb-3">
             {agripreneur.secteur}
           </div>
         )}

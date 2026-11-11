@@ -53,13 +53,13 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-      <div className="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
+      <div className="bg-surface-container-lowest rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
         <div className="flex justify-between items-center p-6 border-b border-outline-variant">
           <h2 className="text-xl font-bold flex items-center gap-2">
-            <FileText className="w-5 h-5 text-gray-400" />
+            <FileText className="w-5 h-5 text-on-surface-muted" />
             Détails du document
           </h2>
-          <button onClick={onClose} className="p-2 text-gray-400 hover:text-on-surface rounded-full hover:bg-surface-container">
+          <button onClick={onClose} className="p-2 text-on-surface-muted hover:text-on-surface rounded-full hover:bg-surface-container">
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -116,7 +116,7 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
                   onChange={(e) => setRejectReason(e.target.value)}
                 />
                 <div className="mt-3 flex justify-end gap-2">
-                  <Button variant="outline" onClick={() => setIsRejecting(false)} className="bg-white">Annuler</Button>
+                  <Button variant="outline" onClick={() => setIsRejecting(false)} className="bg-surface-container-lowest">Annuler</Button>
                   <Button onClick={handleReject} disabled={processing || !rejectReason.trim()} className="bg-error hover:bg-error text-white border-0">
                     Confirmer le refus
                   </Button>
@@ -128,7 +128,7 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
 
         <div className="p-6 border-t border-outline-variant bg-surface-container-low flex justify-between items-center">
           <div>
-             <a href={`/bibliotheque/${document.id}`} target="_blank" rel="noreferrer" className="text-sm font-medium text-[var(--color-vert-principal)] hover:underline flex items-center gap-1">
+             <a href={`/bibliotheque/${document.id}`} target="_blank" rel="noreferrer" className="text-sm font-medium text-primary hover:underline flex items-center gap-1">
                 <FileText className="w-4 h-4" /> Voir la page du document
              </a>
           </div>

@@ -41,8 +41,8 @@ export default function ActualitesClient() {
             <Plus className="w-4 h-4" /> Proposer une opportunité
           </button>
           
-          <div className="flex items-center gap-2 bg-white p-2 rounded-xl shadow-sm border border-outline-variant">
-            <Filter className="w-5 h-5 text-gray-400 ml-2" />
+          <div className="flex items-center gap-2 bg-surface-container-lowest p-2 rounded-xl shadow-sm border border-outline-variant">
+            <Filter className="w-5 h-5 text-on-surface-muted ml-2" />
             <select 
               value={filter}
               onChange={(e) => setFilter(e.target.value as any)}
@@ -68,12 +68,12 @@ export default function ActualitesClient() {
             <AlertCircle className="w-10 h-10 text-error mb-4" />
             <h3 className="text-lg font-bold text-on-surface mb-2">Impossible de charger les actualités</h3>
             <p className="text-on-surface-variant mb-4">{error}</p>
-            <button onClick={fetchData} className="px-4 py-2 bg-white border border-outline-variant rounded-lg text-sm font-medium hover:bg-surface-container-low transition-colors">
+            <button onClick={fetchData} className="px-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-sm font-medium hover:bg-surface-container-low transition-colors">
               Réessayer
             </button>
           </div>
         ) : filteredItems.length === 0 ? (
-          <div className="text-center py-12 bg-white rounded-2xl border border-outline-variant">
+          <div className="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant">
             <p className="text-on-surface-muted">Aucune actualité ne correspond à vos critères.</p>
           </div>
         ) : (
@@ -128,8 +128,8 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-      <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl flex flex-col">
-        <div className="sticky top-0 bg-white border-b border-outline-variant p-4 flex justify-between items-center z-10">
+      <div className="bg-surface-container-lowest rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl flex flex-col">
+        <div className="sticky top-0 bg-surface-container-lowest border-b border-outline-variant p-4 flex justify-between items-center z-10">
           <h2 className="text-xl font-bold text-on-surface pr-8">{event.titre}</h2>
           <button aria-label="Fermer les détails" onClick={onClose} className="p-2 bg-surface-container hover:bg-surface-container-high rounded-full transition-colors text-on-surface-variant">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
@@ -156,7 +156,7 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
           </div>
         </div>
         
-        <div className="sticky bottom-0 bg-white border-t border-outline-variant p-4 flex justify-end gap-3">
+        <div className="sticky bottom-0 bg-surface-container-lowest border-t border-outline-variant p-4 flex justify-end gap-3">
           <button onClick={onClose} className="px-6 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium rounded-xl transition-colors">
             Fermer
           </button>

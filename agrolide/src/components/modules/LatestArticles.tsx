@@ -33,7 +33,7 @@ export async function LatestArticles() {
     <div className="w-full">
       {!hasArticles ? (
         <div className="text-center p-12 bg-surface-container-low rounded-xl border border-dashed border-outline">
-          <p className="text-[var(--color-gris-texte)] font-medium">Articles bientôt disponibles</p>
+          <p className="text-on-surface-variant font-medium">Articles bientôt disponibles</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

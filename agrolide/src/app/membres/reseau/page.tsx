@@ -93,7 +93,7 @@ export default async function NetworkPage() {
       </div>
 
       {/* Invitations reçues */}
-      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-6">
+      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6">
         <h2 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
           Invitations en attente
           {pendingRequests.length > 0 && (
@@ -116,7 +116,7 @@ export default async function NetworkPage() {
                     {req.requester.avatar_url ? (
                       <Image src={req.requester.avatar_url} alt="Avatar" width={56} height={56} className="object-cover w-full h-full" />
                     ) : (
-                      <User className="m-auto h-full w-8 text-gray-400" />
+                      <User className="m-auto h-full w-8 text-on-surface-muted" />
                     )}
                   </div>
                   <div>
@@ -135,7 +135,7 @@ export default async function NetworkPage() {
       </div>
 
       {/* Relations actives */}
-      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-6">
+      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6">
         <h2 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
           Mes relations ({activeConnections.length})
         </h2>
@@ -154,11 +154,11 @@ export default async function NetworkPage() {
             {activeConnections.map((user) => (
               <div key={user.id} className="flex flex-col sm:flex-row items-center justify-between p-4 border border-outline-variant rounded-xl hover:border-primary/20 transition-colors gap-4 bg-surface-container-low/50">
                 <Link href={`/annuaire/${user.id}`} className="flex items-center gap-3 w-full">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-white shrink-0 shadow-sm">
+                  <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-container-lowest shrink-0 shadow-sm">
                     {user.avatar_url ? (
                       <Image src={user.avatar_url} alt="Avatar" width={48} height={48} className="object-cover w-full h-full" />
                     ) : (
-                      <User className="m-auto h-full w-6 text-gray-400" />
+                      <User className="m-auto h-full w-6 text-on-surface-muted" />
                     )}
                   </div>
                   <div className="flex-1 min-w-0">

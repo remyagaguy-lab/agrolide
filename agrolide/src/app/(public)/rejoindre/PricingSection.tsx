@@ -73,7 +73,7 @@ export default function PricingSection() {
           </div>
 
           {/* Passionné Card */}
-          <div className="border border-outline-variant rounded-xl p-6 md:p-7 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white mb-8">
+          <div className="border border-outline-variant rounded-xl p-6 md:p-7 grid grid-cols-1 md:grid-cols-2 gap-6 bg-surface-container-lowest mb-8">
             <div>
               <div className="inline-flex items-center gap-[6px] bg-success-container rounded-[5px] px-[12px] py-[4px] mb-[12px]">
                 <span className="text-[11px] font-[700] text-primary tracking-[0.05em]">Gratuit · Sans engagement</span>
@@ -88,7 +88,7 @@ export default function PricingSection() {
                 <Link href="/inscription?categorie=passionne" className="inline-flex items-center gap-[6px] bg-primary text-white text-[13px] font-[700] px-[20px] py-[10px] rounded-[7px] hover:bg-primary/90 transition-colors">
                   <UserPlus size={14} /> Rejoindre gratuitement
                 </Link>
-                <button className="inline-flex items-center gap-[6px] text-primary text-[13px] font-[600] underline decoration-transparent hover:decoration-[#1b5e38] transition-colors">
+                <button className="inline-flex items-center gap-[6px] text-primary text-[13px] font-[600] underline decoration-transparent hover:decoration-primary transition-colors">
                   Voir les avantages <ArrowRight size={13} />
                 </button>
               </div>
@@ -106,7 +106,7 @@ export default function PricingSection() {
               ].map((feat, i) => (
                 <div key={i} className="flex items-start gap-[8px] text-[12px]">
                   <div className="mt-[2px] flex-shrink-0">
-                    {feat.included ? <Check size={14} className="text-primary" /> : <X size={14} className="text-[#d0d0d0]" />}
+                    {feat.included ? <Check size={14} className="text-primary" /> : <X size={14} className="text-outline" />}
                   </div>
                   <span className={feat.included ? "text-on-surface" : "text-on-surface-muted"}>{feat.text}</span>
                 </div>
@@ -126,7 +126,7 @@ export default function PricingSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[14px]">
           
           {/* Junior */}
-          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-white">
+          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-surface-container-lowest">
             <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-success-container text-primary">
               <GraduationCap size={18} />
             </div>
@@ -152,7 +152,7 @@ export default function PricingSection() {
               ].map((feat, i) => (
                 <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45]">
                   <div className="mt-[1px] flex-shrink-0">
-                    {feat.included ? <Check size={13} className="text-primary" /> : <X size={13} className="text-[#d0d0d0]" />}
+                    {feat.included ? <Check size={13} className="text-primary" /> : <X size={13} className="text-outline" />}
                   </div>
                   <span className={feat.included ? "text-on-surface" : "text-on-surface-muted"}>{feat.text}</span>
                 </div>
@@ -164,7 +164,7 @@ export default function PricingSection() {
           </div>
 
           {/* Professionnel */}
-          <div className="border-[2px] border-primary rounded-xl p-[20px] flex flex-col bg-white relative mt-[12px] md:mt-0">
+          <div className="border-[2px] border-primary rounded-xl p-[20px] flex flex-col bg-surface-container-lowest relative mt-[12px] md:mt-0">
             <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-[800] px-[12px] py-[3px] rounded-full whitespace-nowrap tracking-[0.04em]">
               Le plus populaire
             </div>
@@ -205,7 +205,7 @@ export default function PricingSection() {
           </div>
 
           {/* Partenaire */}
-          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
+          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-surface-container-lowest mt-[6px] md:mt-0">
             <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-primary-container text-primary">
               <Building2 size={18} />
             </div>
@@ -243,7 +243,7 @@ export default function PricingSection() {
           </div>
 
           {/* Sénior */}
-          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
+          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-surface-container-lowest mt-[6px] md:mt-0">
             <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-tertiary-container text-on-tertiary-container">
               <Award size={18} />
             </div>

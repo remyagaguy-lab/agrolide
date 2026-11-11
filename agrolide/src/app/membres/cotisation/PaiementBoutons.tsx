@@ -60,7 +60,7 @@ export function PaiementBoutons({ categorie }: { categorie: string }) {
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Button 
           variant="outline" 
-          className="flex-1 h-14 text-lg border-2 hover:border-[var(--color-vert-principal)] flex justify-center items-center gap-3"
+          className="flex-1 h-14 text-lg border-2 hover:border-primary flex justify-center items-center gap-3"
           onClick={() => handlePayment('stripe')}
           disabled={isLoading !== null}
         >

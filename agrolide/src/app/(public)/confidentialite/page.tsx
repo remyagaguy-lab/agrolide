@@ -10,7 +10,7 @@ export default function ConfidentialitePage() {
   return (
     <div className="bg-surface-container-low min-h-screen pb-[80px] pt-[40px] md:pt-[80px] font-urbanist">
       <div className="max-w-[800px] mx-auto px-6">
-        <div className="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-outline-variant">
+        <div className="bg-surface-container-lowest rounded-2xl p-8 md:p-12 shadow-sm border border-outline-variant">
           <h1 className="font-[900] text-[32px] md:text-[40px] text-on-surface tracking-[-0.02em] mb-[8px]">
             Politique de Confidentialité
           </h1>

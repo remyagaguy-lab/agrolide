@@ -41,7 +41,7 @@ export default async function WebinairesPage() {
         {aVenir.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             {aVenir.map((webinaire: any) => (
-              <div key={webinaire.id} className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5 flex flex-col hover:border-primary/30 transition-colors">
+              <div key={webinaire.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5 flex flex-col hover:border-primary/30 transition-colors">
                 <div className="flex justify-between items-start mb-3">
                   {webinaire.acces === 'public' ? (
                     <span className="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 border border-outline-variant">
@@ -62,7 +62,7 @@ export default async function WebinairesPage() {
                 
                 <div className="space-y-2 pt-3 border-t border-outline-variant">
                   <div className="flex items-center text-[11px] font-medium text-on-surface-variant">
-                    <Calendar size={12} className="mr-1.5 text-gray-400" />
+                    <Calendar size={12} className="mr-1.5 text-on-surface-muted" />
                     {new Date(webinaire.date_prevue).toLocaleString('fr-FR', {
                       weekday: 'long',
                       year: 'numeric',
@@ -73,7 +73,7 @@ export default async function WebinairesPage() {
                     })}
                   </div>
                   <div className="flex items-center text-[11px] font-medium text-on-surface-variant">
-                    <Clock size={12} className="mr-1.5 text-gray-400" />
+                    <Clock size={12} className="mr-1.5 text-on-surface-muted" />
                     Durée estimée : {webinaire.duree_minutes} minutes
                   </div>
                 </div>
@@ -85,9 +85,9 @@ export default async function WebinairesPage() {
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-8 text-center mb-8 flex flex-col items-center">
+          <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-8 text-center mb-8 flex flex-col items-center">
             <div className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center border border-outline-variant mb-3">
-              <Calendar size={16} className="text-gray-400" />
+              <Calendar size={16} className="text-on-surface-muted" />
             </div>
             <p className="text-xs text-on-surface-muted font-bold uppercase tracking-wider">Aucun webinaire programmé pour le moment.</p>
           </div>
@@ -106,9 +106,9 @@ export default async function WebinairesPage() {
         {replays.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {replays.map((webinaire: any) => (
-              <div key={webinaire.id} className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col opacity-95 hover:opacity-100 transition-opacity">
+              <div key={webinaire.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col opacity-95 hover:opacity-100 transition-opacity">
                 {/* Embed YouTube Responsive */}
-                <div className="relative w-full aspect-video bg-gray-900 border-b border-outline-variant">
+                <div className="relative w-full aspect-video bg-inverse-surface border-b border-outline-variant">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
                     src={`https://www.youtube.com/embed/${webinaire.youtube_id}`}
@@ -124,7 +124,7 @@ export default async function WebinairesPage() {
                   <p className="text-xs text-on-surface-muted mb-3 flex-1 line-clamp-2 leading-relaxed">{webinaire.description}</p>
                   
                   <div className="flex items-center justify-between mt-auto pt-3 border-t border-outline-variant">
-                    <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+                    <span className="text-[10px] text-on-surface-muted font-bold uppercase tracking-wider">
                       Diffusé le {new Date(webinaire.date_prevue).toLocaleDateString('fr-FR')}
                     </span>
                     
@@ -144,9 +144,9 @@ export default async function WebinairesPage() {
             ))}
           </div>
         ) : (
-          <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-8 text-center flex flex-col items-center">
+          <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-8 text-center flex flex-col items-center">
              <div className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center border border-outline-variant mb-3">
-              <Video size={16} className="text-gray-400" />
+              <Video size={16} className="text-on-surface-muted" />
             </div>
             <p className="text-xs text-on-surface-muted font-bold uppercase tracking-wider">Aucun replay disponible pour le moment.</p>
           </div>

@@ -72,7 +72,7 @@ export default function ThreadsManager() {
 
   if (isFormOpen) {
     return (
-      <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm max-w-3xl mx-auto space-y-6">
+      <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm max-w-3xl mx-auto space-y-6">
         <h2 className="text-xl font-bold text-on-surface">Nouvelle discussion officielle</h2>
         
         <form onSubmit={handleCreate} className="space-y-4">
@@ -130,7 +130,7 @@ export default function ThreadsManager() {
         </button>
       </div>
 
-      <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <table className="w-full text-left text-sm">
           <thead className="bg-surface-container-low border-b border-outline-variant text-on-surface-variant">
             <tr>
@@ -150,7 +150,7 @@ export default function ThreadsManager() {
               <tr key={thread.id} className="hover:bg-surface-container-low transition-colors">
                 <td className="p-4 font-bold text-on-surface max-w-xs truncate" title={thread.titre}>
                   <div className="flex items-center gap-2">
-                    <MessageCircle className="w-4 h-4 text-gray-400" /> {thread.titre}
+                    <MessageCircle className="w-4 h-4 text-on-surface-muted" /> {thread.titre}
                   </div>
                 </td>
                 <td className="p-4 text-on-surface-variant">{thread.categorie?.nom}</td>

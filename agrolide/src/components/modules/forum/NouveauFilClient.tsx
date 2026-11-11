@@ -83,7 +83,7 @@ export default function NouveauFilClient() {
         <p className="text-on-surface-variant mt-2">Lancez une nouvelle discussion avec la communauté.</p>
       </div>
       
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant space-y-6">
+      <form onSubmit={handleSubmit} className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant space-y-6">
         {error && <div className="p-3 bg-error-container text-error rounded-lg text-sm">{error}</div>}
         
         <div className="space-y-2">

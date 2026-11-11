@@ -45,7 +45,7 @@ export default async function CotisationPage() {
       </div>
 
       {showPaymentBlock && (
-        <div className="bg-white rounded-2xl shadow-sm border border-orange-200 overflow-hidden relative">
+        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-orange-200 overflow-hidden relative">
           <div className="bg-gradient-to-r from-orange-50 to-orange-100/50 p-6 border-b border-orange-100 flex items-start gap-4">
             <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center shrink-0 border border-orange-200">
                <AlertTriangle className="text-orange-600 w-5 h-5" strokeWidth={2.5} />
@@ -68,7 +68,7 @@ export default async function CotisationPage() {
               categorie={profile.categorie ?? ''} 
             />
             
-            <div className="mt-6 flex items-center justify-center gap-1.5 text-[11px] text-gray-400 font-bold uppercase tracking-wider">
+            <div className="mt-6 flex items-center justify-center gap-1.5 text-[11px] text-on-surface-muted font-bold uppercase tracking-wider">
               <CheckCircle size={14} className="text-success" /> Paiements 100% sécurisés
             </div>
           </div>
@@ -76,7 +76,7 @@ export default async function CotisationPage() {
       )}
 
       {!showPaymentBlock && cotisationActive && (
-        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-primary-container border border-outline-variant rounded-full flex items-center justify-center text-primary shrink-0 shadow-sm">
               <CheckCircle size={24} strokeWidth={2.5} />
@@ -87,7 +87,7 @@ export default async function CotisationPage() {
             </div>
           </div>
           <div className="text-right bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-            <span className="inline-block px-3 py-1 bg-white shadow-sm border border-outline-variant rounded text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-2">
+            <span className="inline-block px-3 py-1 bg-surface-container-lowest shadow-sm border border-outline-variant rounded text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-2">
               Méthode: {cotisationActive.methode === 'stripe' ? 'Carte Bancaire' : 'Mobile Money'}
             </span>
             <p className="text-[11px] text-on-surface-muted font-bold uppercase tracking-wider">Montant payé: <span className="text-on-surface">{cotisationActive.montant_fcfa} FCFA</span></p>
@@ -96,7 +96,7 @@ export default async function CotisationPage() {
       )}
 
       {/* Historique */}
-      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         <div className="px-5 py-4 border-b border-outline-variant flex items-center gap-2.5">
           <div className="w-8 h-8 bg-surface-container-low border border-outline-variant rounded-lg flex items-center justify-center">
              <Clock size={16} className="text-primary" />
@@ -140,7 +140,7 @@ export default async function CotisationPage() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan={5} className="px-4 py-12 text-center text-gray-400">
+                  <td colSpan={5} className="px-4 py-12 text-center text-on-surface-muted">
                     <div className="flex flex-col items-center justify-center gap-2">
                        <Clock size={24} className="opacity-20" />
                        <p className="font-medium text-xs">Aucun historique de paiement trouvé.</p>

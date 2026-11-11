@@ -35,7 +35,7 @@ export default async function ProfilModifierPage() {
         <p className="mt-1 text-on-surface-muted text-xs">Mettez à jour vos informations personnelles et professionnelles.</p>
       </div>
       
-      <div className="bg-white border border-outline-variant rounded-2xl shadow-sm p-5 md:p-6">
+      <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-5 md:p-6">
         <ProfilForm initialData={profile} />
       </div>
     </div>

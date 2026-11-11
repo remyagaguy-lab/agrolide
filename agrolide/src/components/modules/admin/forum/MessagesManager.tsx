@@ -68,7 +68,7 @@ export default function MessagesManager() {
         </button>
       </form>
 
-      <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <div className="divide-y divide-outline-variant">
           {loading ? (
             <div className="p-8 text-center text-on-surface-muted flex flex-col items-center">

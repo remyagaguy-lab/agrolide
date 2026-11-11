@@ -37,7 +37,7 @@ export function FormationCard({ formation }: FormationCardProps) {
   const isGratuit = !formation.prix || formation.prix === 0
 
   return (
-    <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden flex flex-col h-full hover:border-primary hover:shadow-md transition-all group">
+    <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm overflow-hidden flex flex-col h-full hover:border-primary hover:shadow-md transition-all group">
       <div className="p-4 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-3 gap-2">
           <div className="flex flex-wrap gap-1.5">
@@ -54,7 +54,7 @@ export function FormationCard({ formation }: FormationCardProps) {
               Gratuit
             </span>
           ) : (
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-orange-50 text-orange-700 border border-orange-200 uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-orange-700 border border-orange-200 uppercase tracking-wider">
               {formation.prix} FCFA
             </span>
           )}
@@ -70,7 +70,7 @@ export function FormationCard({ formation }: FormationCardProps) {
         
         <div className="space-y-2 mt-auto pt-3 border-t border-outline-variant">
           <div className="flex items-center text-[11px] text-on-surface-muted font-medium">
-            <Calendar className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+            <Calendar className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
             <span className="truncate">
               {nextSession 
                 ? `Prochaine : ${new Date(nextSession.date_debut).toLocaleDateString('fr-FR')}` 
@@ -80,11 +80,11 @@ export function FormationCard({ formation }: FormationCardProps) {
           {nextSession && (
             <div className="flex justify-between items-center text-[11px] text-on-surface-muted font-medium">
               <div className="flex items-center">
-                <MapPin className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+                <MapPin className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
                 <span className="truncate max-w-[100px]">{nextSession.lieu}</span>
               </div>
               <div className="flex items-center">
-                <Users className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+                <Users className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
                 <span className={nextSession.places_restantes <= 0 ? "text-error" : ""}>
                   {nextSession.places_restantes} place{nextSession.places_restantes > 1 ? 's' : ''}
                 </span>

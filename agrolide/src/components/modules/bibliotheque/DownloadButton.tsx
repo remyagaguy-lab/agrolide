@@ -86,7 +86,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
       <button 
         onClick={handleDownload}
         disabled={downloading}
-        className="w-full flex items-center justify-center gap-2 px-4 py-4 bg-success text-white text-base rounded-xl font-bold shadow-md hover:bg-green-800 hover:shadow-lg transition disabled:opacity-70"
+        className="w-full flex items-center justify-center gap-2 px-4 py-4 bg-success text-white text-base rounded-xl font-bold shadow-md hover:bg-primary/90 hover:shadow-lg transition disabled:opacity-70"
       >
         {downloading ? <Loader2 className="w-5 h-5 animate-spin" /> : <Download className="w-5 h-5" />}
         Télécharger le fichier PDF
@@ -99,7 +99,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
       {/* MODALE DE TROC */}
       {showTrocModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200">
+          <div className="bg-surface-container-lowest rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200">
             <div className="flex justify-center mb-4">
               <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center">
                 <AlertCircle className="w-6 h-6" />
@@ -112,7 +112,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
               Votre progression actuelle : <span className="font-bold text-success">{trocCount} / 2</span> documents validés.
             </p>
             <div className="flex flex-col gap-3">
-              <Link href="/membres/bibliotheque/deposer" className="w-full text-center px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+              <Link href="/membres/bibliotheque/deposer" className="w-full text-center px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
                 Importer un document
               </Link>
               <button onClick={() => setShowTrocModal(false)} className="w-full px-4 py-3 bg-surface-container text-on-surface-variant rounded-lg font-medium hover:bg-surface-container-high transition-colors">
@@ -126,7 +126,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
       {/* MODALE D'AUTHENTIFICATION (Téléchargement) */}
       {showAuthModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] overflow-y-auto">
+          <div className="bg-surface-container-lowest rounded-2xl max-w-md w-full p-6 shadow-xl animate-in fade-in zoom-in-95 duration-200 max-h-[90vh] overflow-y-auto">
             <div className="flex justify-center mb-4 mt-2">
               <div className="w-14 h-14 bg-info-container text-info rounded-full flex items-center justify-center">
                 <Lock className="w-7 h-7" />
@@ -139,10 +139,10 @@ export function DownloadButton({ documentId }: { documentId: string }) {
               Créez votre compte gratuit en 1&nbsp;minute : vous pourrez télécharger ce document, lire toute la bibliothèque sans pub, et retrouver vos lectures.
             </p>
             <div className="flex flex-col gap-3">
-              <Link href={`/inscription?next=${encodeURIComponent(`/bibliotheque/${documentId}`)}`} className="w-full flex justify-center items-center px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+              <Link href={`/inscription?next=${encodeURIComponent(`/bibliotheque/${documentId}`)}`} className="w-full flex justify-center items-center px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
                 Je crée mon compte gratuit
               </Link>
-              <Link href={`/login?next=${encodeURIComponent(`/bibliotheque/${documentId}`)}`} className="w-full flex justify-center items-center px-4 py-3 bg-white text-success border border-success/30 rounded-lg font-medium hover:bg-success-container transition-colors">
+              <Link href={`/login?next=${encodeURIComponent(`/bibliotheque/${documentId}`)}`} className="w-full flex justify-center items-center px-4 py-3 bg-surface-container-lowest text-success border border-success/30 rounded-lg font-medium hover:bg-success-container transition-colors">
                 Se connecter
               </Link>
               <button onClick={() => setShowAuthModal(false)} className="w-full px-4 py-3 bg-surface-container text-on-surface-variant rounded-lg font-medium hover:bg-surface-container-high transition-colors mt-2">

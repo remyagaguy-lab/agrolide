@@ -89,7 +89,7 @@ export default function IncubationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 rounded-2xl border border-[var(--color-gris-clair)] shadow-sm">
+    <form onSubmit={handleSubmit} className="bg-surface-container-lowest p-8 md:p-10 rounded-2xl border border-outline-variant shadow-sm">
       {errorMsg && (
         <div className="mb-6 p-4 bg-error-container text-error rounded-xl border border-error/30 text-sm">
           {errorMsg}
@@ -143,7 +143,7 @@ export default function IncubationForm() {
 
           <div className="space-y-2">
             <label className="text-sm font-semibold text-on-surface-variant" htmlFor="stade_avancement">Stade d'avancement *</label>
-            <select id="stade_avancement" required value={formData.stade_avancement} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-on-surface-variant">
+            <select id="stade_avancement" required value={formData.stade_avancement} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary text-on-surface-variant">
               <option value="">Sélectionnez un stade...</option>
               <option value="idee">Idée (Concept validé)</option>
               <option value="prototype">Prototype / POC</option>

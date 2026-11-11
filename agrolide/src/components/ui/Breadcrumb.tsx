@@ -40,7 +40,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       <nav aria-label="Breadcrumb" className="flex text-sm text-gray-500 mb-6">
         <ol className="flex items-center space-x-2">
           <li>
-            <Link href="/" className="hover:text-primary-600 transition-colors flex items-center">
+            <Link href="/" className="hover:text-primary transition-colors flex items-center">
               <Home className="w-4 h-4" />
               <span className="sr-only">Accueil</span>
             </Link>
@@ -49,7 +49,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             <li key={index} className="flex items-center">
               <ChevronRight className="w-4 h-4 mx-1 text-gray-400" />
               {item.href ? (
-                <Link href={item.href} className="hover:text-primary-600 transition-colors">
+                <Link href={item.href} className="hover:text-primary transition-colors">
                   {item.label}
                 </Link>
               ) : (

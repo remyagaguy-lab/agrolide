@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import { buttonVariants } from "@/components/ui/Button"
 import Image from "next/image"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
@@ -15,7 +16,7 @@ export default function QuiSommesNousPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="bg-[#0d3520] pt-12 pb-16 text-white text-center relative overflow-hidden">
+      <section className="bg-surface-brand pt-12 pb-16 text-on-surface-brand text-center relative overflow-hidden">
         {/* Motif Background */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
@@ -37,7 +38,7 @@ export default function QuiSommesNousPage() {
         <div className="container relative z-10">
           <div className="text-center mb-16">
             <SectionLabel className="mx-auto flex justify-center text-center">Le paradoxe</SectionLabel>
-            <h2 className="text-h2 text-primary">
+            <h2 className="text-headline-md text-primary">
               Pourquoi le réseau agrolide&nbsp;?
             </h2>
           </div>
@@ -53,10 +54,10 @@ export default function QuiSommesNousPage() {
               <div className="absolute -left-4 -top-6 w-14 h-14 bg-accent-sun rounded-full flex items-center justify-center text-white font-heading font-[800] text-[28px] shadow-lg transform -rotate-12">
                 ?
               </div>
-              <p className="text-body text-on-surface-variant mb-6">
-                Et pourtant... elle n'arrive pas encore à nourrir tous ses enfants, elle dépense <strong className="text-on-tertiary-container font-[800] underline decoration-orange-dore/30 decoration-4">65 milliards de dollars par an</strong> pour importer sa nourriture. Une dépendance en hausse depuis 3 ans consécutifs.
+              <p className="text-body-md text-on-surface-variant mb-6">
+                Et pourtant... elle n'arrive pas encore à nourrir tous ses enfants, elle dépense <strong className="text-on-tertiary-container font-[800] underline decoration-accent-sun/30 decoration-4">65 milliards de dollars par an</strong> pour importer sa nourriture. Une dépendance en hausse depuis 3 ans consécutifs.
               </p>
-              <div className="bg-surface-container-low p-4 rounded-btn border border-outline-variant text-center">
+              <div className="bg-surface-container-low p-4 rounded-control border border-outline-variant text-center">
                 <p className="font-heading font-[700] text-[15px] text-on-surface">
                   Ce n'est pas un manque de talent, ni un manque de savoir.
                 </p>
@@ -70,7 +71,7 @@ export default function QuiSommesNousPage() {
       <section className="bg-surface-container-low">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-h2 text-primary mb-4">
+            <h2 className="text-headline-md text-primary mb-4">
               C'est un manque...
             </h2>
           </div>
@@ -121,7 +122,7 @@ export default function QuiSommesNousPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
             
             {/* Colonne 1: Un Réseau comme solution */}
-            <div className="bg-gradient-to-br from-[#1b5e38] to-[#124026] p-8 md:p-12 rounded-3xl text-white relative overflow-hidden shadow-xl flex flex-col justify-center">
+            <div className="bg-surface-brand p-8 md:p-12 rounded-3xl text-on-surface-brand relative overflow-hidden shadow-xl flex flex-col justify-center">
               {/* Motif Background */}
               <div 
                 className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
@@ -150,7 +151,7 @@ export default function QuiSommesNousPage() {
             </div>
 
             {/* Colonne 2: Notre histoire */}
-            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-md border border-outline-variant flex flex-col justify-center">
+            <div className="bg-surface-container-lowest p-8 md:p-12 rounded-3xl shadow-md border border-outline-variant flex flex-col justify-center">
               <h2 className="font-heading font-[800] text-[32px] md:text-[40px] text-primary mb-6">Notre histoire...</h2>
               <div className="space-y-4">
                 <p className="font-sans text-[16px] md:text-[18px] text-on-surface-variant leading-[1.8]">
@@ -168,7 +169,7 @@ export default function QuiSommesNousPage() {
 
         <div className="container pb-[60px] md:pb-[100px]">
           <div className="text-center mb-16">
-            <h2 className="text-h2 text-on-surface">L'évolution du réseau</h2>
+            <h2 className="text-headline-md text-on-surface">L'évolution du réseau</h2>
           </div>
           
           <div className="relative">
@@ -179,13 +180,13 @@ export default function QuiSommesNousPage() {
               {[
                 { date: "21 Octobre 2025", text: "Création du groupe WhatsApp \"Bibliothèque Agricole\"", colorClass: "text-primary", borderClass: "border-primary" },
                 { date: "26 Novembre 2025", text: "Début des réflexions pour trouver des solutions défis du monde agricole", colorClass: "text-on-tertiary-container", borderClass: "border-accent-sun" },
-                { date: "2 Déc. 2025", text: "La \"Bibliothèque Agricole\" devient BIFERA", colorClass: "text-on-surface", borderClass: "border-gris-titre" },
+                { date: "2 Déc. 2025", text: "La \"Bibliothèque Agricole\" devient BIFERA", colorClass: "text-on-surface", borderClass: "border-on-surface" },
                 { date: "20 Déc. 2025", text: "Premier webinaire sur la gestion de projet agricole", colorClass: "text-primary", borderClass: "border-primary" },
                 { date: "Janvier 2026", text: "Mise en place d'une équipe d'appui", colorClass: "text-on-tertiary-container", borderClass: "border-accent-sun" },
                 { date: "31 Janvier 2026", text: "2ème Webinaire sur la commercialisation des produits agricoles", colorClass: "text-primary", borderClass: "border-primary" },
-                { date: "Février - Avril 2026", text: "Structuration de BIFERA en un réseau : Gouvernance, activités stratégiques, pilotes...", colorClass: "text-on-surface", borderClass: "border-gris-titre" },
+                { date: "Février - Avril 2026", text: "Structuration de BIFERA en un réseau : Gouvernance, activités stratégiques, pilotes...", colorClass: "text-on-surface", borderClass: "border-on-surface" },
                 { date: "Mai - Juin 2026", text: "Relance des activités, BIFERA devient agrolide", colorClass: "text-on-tertiary-container", borderClass: "border-accent-sun" },
-                { date: "Juil à Déc. 2026", text: "Mise en place de l'organe de gouvernance, création formelle et lancement officiel des activités du réseau agrolide", colorClass: "text-on-surface", borderClass: "border-gris-titre" },
+                { date: "Juil à Déc. 2026", text: "Mise en place de l'organe de gouvernance, création formelle et lancement officiel des activités du réseau agrolide", colorClass: "text-on-surface", borderClass: "border-on-surface" },
               ].map((step, idx) => {
                 const isEven = idx % 2 === 0;
                 return (
@@ -193,11 +194,11 @@ export default function QuiSommesNousPage() {
                     <div className={`hidden md:block md:w-1/2 ${isEven ? 'md:pr-12 text-right' : 'md:pl-12 text-left'}`}>
                       <div className={`font-heading font-[800] text-[22px] ${step.colorClass}`}>{step.date}</div>
                     </div>
-                    <div className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-blanc border-[4px] ${step.borderClass} rounded-full shadow-sm z-10 mt-6 md:mt-0`}></div>
+                    <div className={`absolute left-6 md:left-1/2 transform -translate-x-1/2 w-5 h-5 bg-surface-container-lowest border-[4px] ${step.borderClass} rounded-full shadow-sm z-10 mt-6 md:mt-0`}></div>
                     <div className={`pl-16 md:w-1/2 w-full ${isEven ? 'md:pl-12' : 'md:pr-12 md:pl-0'}`}>
                       <Card className={`hover:shadow-md transition-shadow ${!isEven ? 'md:text-right' : ''}`}>
                         <div className={`md:hidden font-heading font-[800] text-[18px] ${step.colorClass} mb-2`}>{step.date}</div>
-                        <p className="text-body text-on-surface-variant">{step.text}</p>
+                        <p className="text-body-md text-on-surface-variant">{step.text}</p>
                       </Card>
                     </div>
                   </div>
@@ -209,7 +210,7 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── MISSION & VISION ─────────────────────── */}
-      <section className="bg-gradient-to-br from-[#0d3520] to-[#0a2818] py-[60px] md:py-[100px] relative overflow-hidden">
+      <section className="bg-surface-brand py-[60px] md:py-[100px] relative overflow-hidden">
         {/* Motif Background */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
@@ -247,7 +248,7 @@ export default function QuiSommesNousPage() {
       </section>
 
       {/* ── NOTRE ÉQUIPE ───────────────────────────── */}
-      <section id="equipe" className="py-[40px] md:py-[80px] bg-white">
+      <section id="equipe" className="py-[40px] md:py-[80px] bg-surface-container-lowest">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center max-w-[700px] mx-auto mb-16">
             <h2 className="font-heading font-[800] text-[32px] md:text-[44px] text-on-surface mb-6">
@@ -308,7 +309,7 @@ export default function QuiSommesNousPage() {
                   {member.image ? (
                     <Image src={member.image} alt={member.name} fill className="object-cover" />
                   ) : (
-                    <span className="font-heading font-[800] text-[40px] text-[#ccc] group-hover:text-on-tertiary-container transition-colors">
+                    <span className="font-heading font-[800] text-[40px] text-outline group-hover:text-on-tertiary-container transition-colors">
                       {member.name === "À pourvoir" ? "?" : member.name.substring(0, 2).toUpperCase()}
                     </span>
                   )}
@@ -348,7 +349,7 @@ export default function QuiSommesNousPage() {
               { icon: <Lightbulb size={24} />, title: "Innovation africaine", desc: "Des solutions pensées pour et par les réalités africaines — adaptées aux terroirs, aux marchés et aux contraintes du continent." },
               { icon: <Target size={24} />, title: "Impact", desc: "Chaque action est évaluée à l'aune de sa contribution concrète à la souveraineté alimentaire africaine." },
             ].map((v, i) => (
-              <div key={i} className="group bg-white rounded-2xl p-6 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
+              <div key={i} className="group bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(27,94,56,0.08)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center">
                 <div className="w-12 h-12 bg-primary-container group-hover:bg-primary rounded-xl flex items-center justify-center text-primary group-hover:text-white transition-colors duration-300 mb-4">
                   {v.icon}
                 </div>
@@ -366,7 +367,7 @@ export default function QuiSommesNousPage() {
           <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-primary leading-[1.2] max-w-[700px] mx-auto mb-8">
             Prêt à faire partie de l'histoire&nbsp;?
           </h2>
-          <Link href="/rejoindre" className="btn-primary inline-flex items-center">
+          <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>
             Rejoindre le réseau <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>

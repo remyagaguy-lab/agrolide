@@ -65,7 +65,7 @@ export default function AdminFormationsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center bg-white p-6 rounded-2xl shadow-sm border border-outline-variant">
+      <div className="flex justify-between items-center bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant">
         <div>
           <h1 className="text-2xl font-bold text-on-surface">Gestion des Formations</h1>
           <p className="text-on-surface-muted">Créez et administrez le catalogue de formations.</p>
@@ -78,7 +78,7 @@ export default function AdminFormationsPage() {
         </button>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
           <div className="p-12 text-center text-on-surface-muted">Chargement...</div>
         ) : formations.length === 0 ? (
@@ -127,10 +127,10 @@ export default function AdminFormationsPage() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
-                        <button onClick={() => handleEdit(f)} className="p-2 text-gray-400 hover:text-success hover:bg-success-container rounded-lg transition-colors" title="Modifier">
+                        <button onClick={() => handleEdit(f)} className="p-2 text-on-surface-muted hover:text-success hover:bg-success-container rounded-lg transition-colors" title="Modifier">
                           <Edit2 className="w-4 h-4" />
                         </button>
-                        <button onClick={() => handleDelete(f.id)} className="p-2 text-gray-400 hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
+                        <button onClick={() => handleDelete(f.id)} className="p-2 text-on-surface-muted hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
                           <Trash2 className="w-4 h-4" />
                         </button>
                       </div>

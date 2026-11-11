@@ -19,14 +19,14 @@ function KpiCard({
   icon: React.ElementType; color: string; valueClass?: string 
 }) {
   return (
-    <div className="bg-white rounded-xl border border-outline-variant p-5 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-5 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow">
       <div className={`w-11 h-11 rounded-lg flex items-center justify-center shrink-0 ${color}`}>
         <Icon size={20} />
       </div>
       <div className="min-w-0">
         <p className="text-xs font-medium text-on-surface-muted uppercase tracking-wide truncate">{label}</p>
         <p className={`text-2xl font-bold text-on-surface mt-0.5 ${valueClass}`}>{value}</p>
-        {sub && <p className="text-xs text-gray-400 mt-0.5">{sub}</p>}
+        {sub && <p className="text-xs text-on-surface-muted mt-0.5">{sub}</p>}
       </div>
     </div>
   )
@@ -106,10 +106,10 @@ export default async function AdminDashboardPage() {
     categorieCount[cat] = (categorieCount[cat] || 0) + 1
   }
   const donutData = [
-    { name: "Junior", value: categorieCount["junior"] || 0, color: "#86efac" },
-    { name: "Professionnel", value: categorieCount["professionnel"] || 0, color: "#1b5e38" },
-    { name: "Sénior", value: categorieCount["senior"] || 0, color: "#166534" },
-    { name: "Partenaire", value: categorieCount["partenaire"] || 0, color: "#4ade80" },
+    { name: "Junior", value: categorieCount["junior"] || 0, color: "var(--ag-sys-color-accent-leaf)" },
+    { name: "Professionnel", value: categorieCount["professionnel"] || 0, color: "var(--ag-sys-color-primary)" },
+    { name: "Sénior", value: categorieCount["senior"] || 0, color: "var(--ag-sys-color-accent-sun)" },
+    { name: "Partenaire", value: categorieCount["partenaire"] || 0, color: "var(--ag-sys-color-accent-olive)" },
   ]
 
   const cotisationsMois = cotisationsRows.filter(c => c.created_at && c.created_at >= firstDayOfMonth)
@@ -154,7 +154,7 @@ export default async function AdminDashboardPage() {
           <KpiCard label="Actifs (30 jours)" value={membresActifs30j} icon={Activity} color="bg-indigo-50 text-indigo-600" />
           <KpiCard label="Total membres" value={totalMembres} icon={TrendingUp} color="bg-success-container text-success" />
         </div>
-        <div className="mt-4 bg-white rounded-xl border border-outline-variant p-5 shadow-sm">
+        <div className="mt-4 bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm">
           <p className="text-sm font-semibold text-on-surface-variant mb-2">Répartition par catégorie</p>
           <AdminDonutChart data={donutData} />
         </div>
@@ -165,9 +165,9 @@ export default async function AdminDashboardPage() {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
           <KpiCard label="Cotisations ce mois" value={formatFCFA(revenusMois)} icon={CreditCard} color="bg-success-container text-success" />
           <KpiCard label="Revenus cumulés" value={formatFCFA(revenusCumules)} icon={TrendingUp} color="bg-purple-50 text-purple-600" />
-          <KpiCard label="Dons collectés" value={formatFCFA(totalDons)} icon={Target} color="bg-orange-50 text-orange-600" />
+          <KpiCard label="Dons collectés" value={formatFCFA(totalDons)} icon={Target} color="bg-tertiary-container text-orange-600" />
         </div>
-        <div className="bg-white rounded-xl border border-outline-variant p-5 shadow-sm">
+        <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm">
           <p className="text-sm font-semibold text-on-surface-variant mb-3">Revenus mensuels (12 derniers mois)</p>
           <AdminRevenueChart data={revenueChartData} />
         </div>
@@ -188,7 +188,7 @@ export default async function AdminDashboardPage() {
           <SectionHeader title="Derniers membres inscrits" icon={UserPlus} />
           <a href="/admin/membres" className="text-xs font-medium text-success hover:underline">Voir tous →</a>
         </div>
-        <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+        <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left">
               <thead className="bg-surface-container-low border-b border-outline-variant">
@@ -224,7 +224,7 @@ export default async function AdminDashboardPage() {
                       </span>
                     </td>
                     <td className="px-5 py-3 text-on-surface-muted">{m.pays}</td>
-                    <td className="px-5 py-3 text-gray-400 text-xs">
+                    <td className="px-5 py-3 text-on-surface-muted text-xs">
                       {m.created_at ? new Date(m.created_at).toLocaleDateString("fr-FR") : "—"}
                     </td>
                   </tr>

@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import Link from 'next/link'
+import { buttonVariants } from '@/components/ui/Button'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
 import { ArrowRight, BookOpen } from 'lucide-react'
@@ -46,10 +47,10 @@ export default async function BibliothequePublicPage() {
   const { count, documents } = await getBibliothequeData()
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f8f8f6' }}>
+    <div className="min-h-screen bg-surface-container-low">
 
       {/* Hero section */}
-      <section className="bg-[#0d3520] pt-10 pb-10 relative overflow-hidden">
+      <section className="bg-surface-brand pt-10 pb-10 relative overflow-hidden">
         {/* Motif Background */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.07] pointer-events-none" 
@@ -74,7 +75,7 @@ export default async function BibliothequePublicPage() {
 
           <Link
             href="/rejoindre"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-surface font-heading font-[700] text-sm hover:bg-[#e5a620] transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-surface font-heading font-[700] text-sm hover:bg-tertiary-hover transition-colors"
           >
             Devenir membre
             <ArrowRight className="w-4 h-4" />
@@ -115,7 +116,7 @@ export default async function BibliothequePublicPage() {
           <p className="font-sans font-[400] text-[14px] text-on-surface-variant mb-[28px]">
             Rejoignez Agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
           </p>
-          <Link href="/rejoindre" className="btn-primary inline-flex items-center">
+          <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>
             Voir les offres d&apos;adhésion <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>

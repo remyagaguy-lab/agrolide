@@ -83,7 +83,7 @@ export default async function FormationPublicPage({
   }
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-surface-container-lowest relative">
       {/* Banner Background */}
       <div className="absolute top-0 left-0 right-0 h-[180px] md:h-[260px] bg-primary z-0" />
       
@@ -95,7 +95,7 @@ export default async function FormationPublicPage({
           {/* Cover Image Wrapper */}
           <div className="w-full md:w-[420px] lg:w-[480px] flex-shrink-0">
             {formation.cover_image_url ? (
-              <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white border border-outline-variant p-1.5 md:p-2 aspect-[4/3] w-full">
+              <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-surface-container-lowest border border-outline-variant p-1.5 md:p-2 aspect-[4/3] w-full">
                 {formation.cover_image_url.startsWith("/") ? (
                   <div className="relative w-full h-full">
                     <Image
@@ -117,7 +117,7 @@ export default async function FormationPublicPage({
                 )}
               </div>
             ) : (
-              <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-[#1a2e22] border border-primary aspect-[4/3] w-full flex items-center justify-center p-6">
+              <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-inverse-surface border border-primary aspect-[4/3] w-full flex items-center justify-center p-6">
                  <span className="font-heading font-semibold text-white/50 text-center text-lg">{formation.source_externe || "AGROLIDE FORMATION"}</span>
               </div>
             )}
@@ -219,7 +219,7 @@ export default async function FormationPublicPage({
                       {formation.modules.map((mod, index) => (
                         <div key={mod.id}>
                           <div className="flex items-start gap-3 mb-2">
-                            <div className="w-8 h-8 rounded-full bg-white border border-outline-variant flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                            <div className="w-8 h-8 rounded-full bg-surface-container-lowest border border-outline-variant flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
                               <span className="font-heading text-primary font-[700] text-[13px]">
                                 {String(index + 1).padStart(2, '0')}
                               </span>

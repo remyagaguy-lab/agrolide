@@ -56,7 +56,7 @@ export default async function PartenairesPage() {
           {partenaires && partenaires.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {partenaires.map((p) => (
-                <div key={p.id} className="group bg-white rounded-3xl p-8 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden">
+                <div key={p.id} className="group bg-surface-container-lowest rounded-3xl p-8 border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center relative overflow-hidden">
                   <div className="w-24 h-24 md:w-32 md:h-32 relative mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 flex items-center justify-center">
                     {p.logo_url ? (
                       <Image 
@@ -83,8 +83,8 @@ export default async function PartenairesPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center bg-white p-12 md:p-20 rounded-3xl border border-dashed border-[#ccc] shadow-sm max-w-[800px] mx-auto">
-              <div className="w-20 h-20 bg-accent-sun/10 text-[#d9970c] rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center bg-surface-container-lowest p-12 md:p-20 rounded-3xl border border-dashed border-outline shadow-sm max-w-[800px] mx-auto">
+              <div className="w-20 h-20 bg-accent-sun/10 text-on-tertiary-container rounded-full flex items-center justify-center mx-auto mb-6">
                 <Globe size={40} />
               </div>
               <h3 className="font-heading font-[800] text-[24px] text-on-surface mb-4">Devenez notre premier partenaire officiel !</h3>
@@ -95,7 +95,7 @@ export default async function PartenairesPage() {
       </section>
 
       {/* ── DEVENIR PARTENAIRE ───────────────────── */}
-      <section className="py-[40px] md:py-[80px] bg-white border-t border-outline-variant">
+      <section className="py-[40px] md:py-[80px] bg-surface-container-lowest border-t border-outline-variant">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
@@ -113,7 +113,7 @@ export default async function PartenairesPage() {
               
               <div className="space-y-6 pt-4">
                 <div className="flex items-start gap-4 p-6 bg-surface-container-low rounded-2xl border border-outline-variant">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+                  <div className="w-12 h-12 bg-surface-container-lowest rounded-xl flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
                     <Target size={24} />
                   </div>
                   <div>
@@ -123,7 +123,7 @@ export default async function PartenairesPage() {
                 </div>
                 
                 <div className="flex items-start gap-4 p-6 bg-surface-container-low rounded-2xl border border-outline-variant">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+                  <div className="w-12 h-12 bg-surface-container-lowest rounded-xl flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
                     <Handshake size={24} />
                   </div>
                   <div>
@@ -133,7 +133,7 @@ export default async function PartenairesPage() {
                 </div>
 
                 <div className="flex items-start gap-4 p-6 bg-surface-container-low rounded-2xl border border-outline-variant">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+                  <div className="w-12 h-12 bg-surface-container-lowest rounded-xl flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
                     <Building2 size={24} />
                   </div>
                   <div>
@@ -144,7 +144,7 @@ export default async function PartenairesPage() {
               </div>
             </div>
 
-            <div className="bg-white p-8 md:p-10 rounded-3xl border border-outline-variant shadow-[0_20px_40px_rgba(0,0,0,0.06)] relative">
+            <div className="bg-surface-container-lowest p-8 md:p-10 rounded-3xl border border-outline-variant shadow-[0_20px_40px_rgba(0,0,0,0.06)] relative">
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent-sun/10 rounded-full blur-2xl pointer-events-none" />
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none" />
               <div className="relative z-10">

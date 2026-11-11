@@ -6,7 +6,7 @@ export interface SectionLabelProps extends HTMLAttributes<HTMLSpanElement> {
 
 export function SectionLabel({ children, className = '', ...props }: SectionLabelProps) {
   return (
-    <span className={`section-label ${className}`.trim()} {...props}>
+    <span className={`mb-2.5 block font-urbanist text-label-sm font-bold uppercase tracking-[0.1em] text-primary ${className}`.trim()} {...props}>
       {children}
     </span>
   );

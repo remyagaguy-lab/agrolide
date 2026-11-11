@@ -25,13 +25,13 @@ export default async function ArticlesListPage() {
         </div>
         <Link 
           href="/admin/contenus/articles/nouveau" 
-          className="flex items-center gap-2 bg-[var(--color-vert-principal)] text-white px-4 py-2 rounded-lg font-medium hover:bg-green-800 transition-colors"
+          className="flex items-center gap-2 bg-surface-brand text-on-surface-brand px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors"
         >
           <Plus size={18} /> Nouvel article
         </Link>
       </div>
 
-      <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead className="bg-surface-container-low text-on-surface-muted">

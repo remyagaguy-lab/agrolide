@@ -35,7 +35,7 @@ export default async function AdminAgrobusinessPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         
         {/* Demandes de service */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant">
+        <div className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-on-surface flex items-center gap-2">
               <FileText className="w-5 h-5 text-primary" />
@@ -61,7 +61,7 @@ export default async function AdminAgrobusinessPage() {
                   {d.description}
                 </div>
                 <div className="flex items-center justify-between mt-4 pt-4 border-t border-outline-variant">
-                  <div className="text-xs text-gray-400">{new Date(d.created_at).toLocaleDateString()}</div>
+                  <div className="text-xs text-on-surface-muted">{new Date(d.created_at).toLocaleDateString()}</div>
                   <div className="flex gap-2">
                     {d.fichier_url && (
                       <a href={d.fichier_url} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-info hover:text-on-info-container bg-info-container px-2 py-1 rounded">
@@ -82,7 +82,7 @@ export default async function AdminAgrobusinessPage() {
         </div>
 
         {/* Candidatures Incubation */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant">
+        <div className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-on-surface flex items-center gap-2">
               <Clock className="w-5 h-5 text-orange-500" />
@@ -108,7 +108,7 @@ export default async function AdminAgrobusinessPage() {
                   {c.description_projet.substring(0, 150)}...
                 </div>
                 <div className="flex items-center justify-between mt-4 pt-4 border-t border-outline-variant">
-                  <div className="text-xs text-gray-400">{new Date(c.created_at).toLocaleDateString()}</div>
+                  <div className="text-xs text-on-surface-muted">{new Date(c.created_at).toLocaleDateString()}</div>
                   <div className="flex gap-2">
                     {c.cv_url && (
                       <a href={c.cv_url} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-info hover:text-on-info-container bg-info-container px-2 py-1 rounded">

@@ -6,83 +6,38 @@
 @import "../styles/tokens/foundations.css";
 @import "../styles/tokens/theme.css";
 
-/*
- * Alias de compatibilité : anciens noms de variables → jetons du design system.
- * Les `--color-*` ci-dessous étaient utilisées (~100 fois) sans jamais être définies.
- * À supprimer quand la migration des composants sera terminée.
- */
-:root {
-  --color-vert-profond:   var(--ag-sys-color-primary);
-  --color-vert-principal: var(--ag-sys-color-accent-leaf);
-  --color-vert-clair:     var(--ag-sys-color-primary-container);
-  --color-orange-accent:  var(--ag-sys-color-tertiary);
-  --color-jaune-dore:     var(--ag-sys-color-accent-sun);
-  --color-blanc:          #ffffff;
-  --color-gris-clair:     var(--ag-sys-color-surface-container);
-  --color-gris-moyen:     var(--ag-sys-color-outline-variant);
-  --color-gris-texte:     var(--ag-sys-color-on-surface-variant);
-  --color-succes:         var(--ag-sys-color-success);
-  --color-erreur:         var(--ag-sys-color-error);
-}
-
-:root {
-  /* === BRAND VERTS === */
-  --vert-profond:    #1b5e38;   /* Autorité, confiance, fond hero, CTA final */
-  --vert-principal:  #50a853;   /* Accents actifs, badges, liens hover, icônes */
-  --vert-olive:      #878e2c;   /* Usages secondaires très rares */
-
-  /* === BRAND ORANGES === */
-  --orange-accent:   #f99e1d;   /* CTA principal unique, éléments d'urgence */
-  --jaune-dore:      #fcb726;   /* Hover sur orange, highlights très ponctuels */
-
-  /* === NEUTRES === */
-  --blanc:           #ffffff;   /* Fond sections principales, cards */
-  --fond-gris:       #f8f8f6;   /* Fond sections features, alternance */
-  --gris-border:     #e8e8e4;   /* Toutes les bordures, séparateurs */
-  --gris-light:      #f0f0ee;   /* Fonds de badges, placeholders */
-  --gris-muted:      #757571;   /* Textes secondaires, métadonnées (4,6:1 sur blanc) */
-  --texte-corps:     #4a4a4a;   /* Corps de texte */
-  --texte-titre:     #1a1a1a;   /* Titres sur fond blanc */
-
-  /* === SECTIONS SOMBRES (style Attio) === */
-  --dark-bg:         #0f1f17;   /* Fond section sombre (alternative au vert profond) */
-  --dark-surface:    #1a2e22;   /* Surface dans section sombre */
-  --dark-border:     rgba(255,255,255,0.1); /* Bordures dans section sombre */
-}
-
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    background-color: var(--blanc);
-    color: var(--texte-corps);
+    background-color: var(--ag-sys-color-surface);
+    color: var(--ag-sys-color-on-surface);
     font-family: var(--font-urbanist), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   ::selection {
-    background-color: #1b5e38;
-    color: #ffffff;
+    background-color: var(--ag-sys-color-primary);
+    color: var(--ag-sys-color-on-primary);
   }
-  
-  /* Accessibilité : Navigation au clavier (Focus Rings) */
+
+  /* Accessibilité : navigation au clavier (anneau de focus) */
   *:focus-visible {
     outline: var(--ag-sys-focus-width) solid var(--ag-sys-color-focus-ring);
     outline-offset: var(--ag-sys-focus-offset);
   }
-  
-  /* Désactiver l'outline classique pour ceux qui utilisent la souris, 
-     mais garder focus-visible pour le clavier */
+
+  /* Pas de contour au clic souris, focus-visible reste actif au clavier */
   *:focus:not(:focus-visible) {
     outline: none;
   }
 }
 
 @layer components {
-  /* CONTAINER & SECTIONS */
+  /* Conteneur et rythme vertical des sections */
   .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
   @media (min-width: 768px) { .container { padding: 0 32px; } }
   @media (min-width: 1024px) { .container { padding: 0 40px; } }
@@ -91,291 +46,39 @@
   @media (min-width: 768px) { section { padding: 80px 0; } }
   @media (min-width: 1024px) { section { padding: 96px 0; } }
 
-  /* TYPOGRAPHIE */
-  .text-display { font-size: clamp(36px, 5vw, 56px); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; }
-  .text-h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -0.025em; }
+  /* Barre de défilement discrète (espace membre) */
+  .custom-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .custom-scrollbar::-webkit-scrollbar-thumb { background: var(--ag-sys-color-outline-variant); border-radius: 20px; }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--ag-sys-color-outline); }
+}
+
+/*
+ * HÉRITÉ — encore employé par src/app/(public)/page.tsx (en attente de migration, voir Design-System.md §10).
+ * À supprimer avec ce fichier : .text-h2, .text-h3, .btn-text, .card-feature-icon, .card-blog, .card-blog-body.
+ */
+@layer components {
   .text-h2 { font-size: clamp(22px, 3vw, 34px); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; }
   .text-h3 { font-size: clamp(16px, 2vw, 20px); font-weight: 700; line-height: 1.3; }
-  .text-h4 { font-size: 16px; font-weight: 600; line-height: 1.4; }
-  .text-body { font-size: 15px; font-weight: 400; line-height: 1.7; color: #4a4a4a; }
-  .text-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1b5e38; }
-  .text-caption { font-size: 12px; font-weight: 500; color: #757571; }
-
-  /* BOUTONS */
-  .btn-primary {
-    background: #f99e1d; color: #1a1a1a; font-family: var(--font-urbanist), sans-serif; font-size: 15px;
-    font-weight: 800; padding: 12px 28px; border-radius: 8px; border: none; cursor: pointer;
-    transition: background 0.15s ease, transform 0.1s ease; min-height: 48px;
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  }
-  .btn-primary:hover { background: #fcb726; }
-  .btn-primary:active { transform: scale(0.98); }
-
-  .btn-secondary {
-    background: #1b5e38; color: #ffffff; font-family: var(--font-urbanist), sans-serif; font-size: 15px;
-    font-weight: 700; padding: 12px 28px; border-radius: 8px; border: none; cursor: pointer;
-    transition: background 0.15s ease, transform 0.1s ease; min-height: 48px;
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  }
-  .btn-secondary:hover { background: #145030; }
-  .btn-secondary:active { transform: scale(0.98); }
-
-  .btn-outline {
-    background: transparent; border: 1.5px solid #e8e8e4; color: #1a1a1a; font-family: var(--font-urbanist), sans-serif;
-    font-size: 15px; font-weight: 600; padding: 12px 28px; border-radius: 8px; min-height: 48px;
-    transition: border-color 0.15s ease, background 0.15s ease; cursor: pointer;
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  }
-  .btn-outline:hover { border-color: #1b5e38; color: #1b5e38; background: #f0f7f0; }
-
-  .btn-ghost-dark {
-    background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.3); color: #ffffff;
-    font-family: var(--font-urbanist), sans-serif; font-size: 15px; font-weight: 700; padding: 12px 28px;
-    border-radius: 8px; min-height: 48px; transition: background 0.15s ease, transform 0.1s ease;
-    cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  }
-  .btn-ghost-dark:hover { background: rgba(255,255,255,0.18); }
-  .btn-ghost-dark:active { transform: scale(0.98); }
 
   .btn-text {
-    background: none; border: none; color: #1b5e38; font-weight: 600; font-size: 14px;
+    background: none; border: none; color: var(--ag-sys-color-primary); font-weight: 600; font-size: 14px;
     display: inline-flex; align-items: center; gap: 6px; padding: 0;
     text-decoration: underline; text-decoration-color: transparent; transition: text-decoration-color 0.15s; cursor: pointer;
   }
-  .btn-text:hover { text-decoration-color: #1b5e38; }
+  .btn-text:hover { text-decoration-color: var(--ag-sys-color-primary); }
 
-  /* CARDS */
-  .card {
-    background: #ffffff; border: 1px solid #e8e8e4; border-radius: 12px; padding: 24px;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease;
-  }
-  .card:hover { border-color: #c8c8c4; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
-
-  .card-dark {
-    background: #1a2e22; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px;
-  }
-
-  .card-feature {
-    background: #ffffff; border: 1px solid #e8e8e4; border-radius: 12px; padding: 28px;
-  }
   .card-feature-icon {
-    width: 44px; height: 44px; border-radius: 10px; background: #f0f7f0; display: flex;
+    width: 44px; height: 44px; border-radius: 10px; background: var(--ag-sys-color-primary-container); display: flex;
     align-items: center; justify-content: center; margin-bottom: 16px;
   }
 
-  .card-membre {
-    background: #ffffff; border: 1px solid #e8e8e4; border-radius: 12px; padding: 20px;
-    cursor: pointer; transition: all 0.15s ease;
-  }
-  .card-membre:hover { border-color: #50a853; box-shadow: 0 0 0 3px rgba(80,168,83,0.1); }
-
   .card-blog {
-    background: #ffffff; border: 1px solid #e8e8e4; border-radius: 12px; overflow: hidden;
-    transition: border-color 0.15s ease;
+    background: var(--ag-sys-color-surface-container-lowest); border: 1px solid var(--ag-sys-color-outline-variant);
+    border-radius: 12px; overflow: hidden; transition: border-color 0.15s ease;
   }
-  .card-blog:hover { border-color: #c8c8c4; }
-  .card-blog-image { aspect-ratio: 16/9; background: #f0f0ee; overflow: hidden; }
+  .card-blog:hover { border-color: var(--ag-sys-color-outline); }
   .card-blog-body { padding: 20px; }
-
-  /* BADGES */
-  .badge-base {
-    font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 5px;
-    display: inline-flex; align-items: center; justify-content: center; letter-spacing: 0.03em; font-family: var(--font-urbanist), sans-serif;
-  }
-  .badge-junior { background: #e8f5e9; color: #1b5e38; }
-  .badge-professionnel { background: #1b5e38; color: #ffffff; }
-  .badge-partenaire { background: #878e2c; color: #ffffff; }
-  .badge-senior { background: #fcb726; color: #5a3d00; }
-  .badge-actif { background: #e8f5e9; color: #1b5e38; }
-  .badge-expire { background: #fef3e2; color: #8a4e00; }
-  .badge-nouveau { background: #f0f0fe; color: #3d3d8a; }
-
-  /* FORMULAIRES */
-  .input {
-    width: 100%; height: 48px; padding: 0 16px; border: 1px solid #e8e8e4; border-radius: 8px;
-    font-family: var(--font-urbanist), sans-serif; font-size: 15px; color: #1a1a1a; background: #ffffff;
-    transition: border-color 0.15s, box-shadow 0.15s; outline: none;
-  }
-  .input:focus { border-color: #50a853; box-shadow: 0 0 0 3px rgba(80,168,83,0.12); }
-  .input::placeholder { color: #757571; }
-  .input.error { border-color: #d32f2f; box-shadow: 0 0 0 3px rgba(211,47,47,0.1); }
-
-  .label {
-    font-family: var(--font-urbanist), sans-serif; font-size: 13px; font-weight: 600; color: #1a1a1a;
-    margin-bottom: 6px; display: block;
-  }
-
-  .textarea {
-    width: 100%; min-height: 120px; padding: 12px 16px; border: 1px solid #e8e8e4; border-radius: 8px;
-    font-family: var(--font-urbanist), sans-serif; font-size: 15px; color: #1a1a1a; background: #ffffff;
-    transition: border-color 0.15s, box-shadow 0.15s; outline: none; resize: vertical;
-  }
-  .textarea:focus { border-color: #50a853; box-shadow: 0 0 0 3px rgba(80,168,83,0.12); }
-  .textarea::placeholder { color: #757571; }
-  .textarea.error { border-color: #d32f2f; box-shadow: 0 0 0 3px rgba(211,47,47,0.1); }
-
-  .error-msg { font-size: 12px; color: #d32f2f; margin-top: 4px; display: flex; align-items: center; gap: 4px; }
-
-  /* AVATAR */
-  .avatar {
-    border-radius: 50%; background: #e8f5e9; color: #1b5e38; font-weight: 700;
-    font-family: var(--font-urbanist), sans-serif; display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; overflow: hidden;
-  }
-  .avatar-sm { width: 32px; height: 32px; font-size: 12px; }
-  .avatar-md { width: 40px; height: 40px; font-size: 14px; }
-  .avatar-lg { width: 56px; height: 56px; font-size: 18px; }
-  .avatar-xl { width: 80px; height: 80px; font-size: 24px; }
-
-  /* SECTION LABEL */
-  .section-label {
-    font-family: var(--font-urbanist), sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-    text-transform: uppercase; color: #1b5e38; margin-bottom: 10px; display: block;
-  }
-
-  /* DIVIDER */
-  .divider { border: none; border-top: 1px solid #e8e8e4; margin: 32px 0; }
-
-  /* ============================================ */
-  /* DASHBOARD DESIGN SYSTEM (Style Accueil)      */
-  /* ============================================ */
-
-  /* Carte Dashboard standard */
-  .card-glass, .card-dash {
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e8e8e4;
-    padding: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-  }
-
-  /* Carte Dashboard hover */
-  .card-glass-hover, .card-dash-hover {
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e8e8e4;
-    padding: 24px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
-    transition: all 0.2s ease;
-  }
-  .card-glass-hover:hover, .card-dash-hover:hover {
-    border-color: #c8c8c4; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  /* Bouton dashboard principal */
-  .btn-dash {
-    padding: 10px 20px;
-    background: #1b5e38;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 14px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-  .btn-dash:hover {
-    background: #145030;
-  }
-
-  /* Bouton dashboard secondaire (outline) */
-  .btn-dash-outline {
-    padding: 10px 20px;
-    background: #ffffff;
-    color: #1a1a1a;
-    font-weight: 700;
-    font-size: 14px;
-    border-radius: 8px;
-    border: 1px solid #e8e8e4;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-  .btn-dash-outline:hover {
-    border-color: #1b5e38;
-    color: #1b5e38;
-    background: #f0f7f0;
-  }
-
-  /* Label uppercase dashboard */
-  .dash-label {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: #757571;
-  }
-
-  /* Titre section dashboard */
-  .dash-title {
-    font-weight: 800;
-    font-size: 18px;
-    color: #1a1a1a;
-    letter-spacing: -0.02em;
-  }
-
-  /* Page header dashboard */
-  .dash-page-title {
-    font-weight: 800;
-    font-size: 28px;
-    color: #1a1a1a;
-    letter-spacing: -0.03em;
-    line-height: 1.2;
-  }
-
-  /* Scrollbar personnalisée dashboard */
-  .custom-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
-  .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
-  .custom-scrollbar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 20px; }
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
-
-  /* Badge dashboard */
-  .badge-glass {
-    padding: 4px 10px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  /* Icône conteneur rond */
-  .icon-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .icon-circle-sm {
-    width: 32px;
-    height: 32px;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .icon-circle-lg {
-    width: 48px;
-    height: 48px;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
 }
 
 /* Onglet « fusionné » de la navigation latérale de l'espace membre (courbes de raccord avec le contenu). */

@@ -70,7 +70,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
             </Link>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+          <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead className="bg-surface-container-low border-b border-outline-variant">
@@ -105,7 +105,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
                         </td>
                         <td className="px-4 py-3 text-[11px] text-on-surface-muted">
                           <div className="flex items-center gap-1.5">
-                            <Clock className="w-3.5 h-3.5 text-gray-400" />
+                            <Clock className="w-3.5 h-3.5 text-on-surface-muted" />
                             {formatDistanceToNow(new Date(thread.last_activity_at), { addSuffix: true, locale: fr })}
                           </div>
                         </td>
@@ -122,7 +122,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
                 <button 
                   onClick={() => setPage(p => Math.max(1, p - 1))}
                   disabled={page === 1}
-                  className="px-3 py-1.5 text-xs font-bold text-on-surface-variant bg-white border border-outline-variant rounded hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-3 py-1.5 text-xs font-bold text-on-surface-variant bg-surface-container-lowest border border-outline-variant rounded hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Précédent
                 </button>
@@ -132,7 +132,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
                 <button 
                   onClick={() => setPage(p => Math.min(totalPages, p + 1))}
                   disabled={page === totalPages}
-                  className="px-3 py-1.5 text-xs font-bold text-on-surface-variant bg-white border border-outline-variant rounded hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-3 py-1.5 text-xs font-bold text-on-surface-variant bg-surface-container-lowest border border-outline-variant rounded hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Suivant
                 </button>

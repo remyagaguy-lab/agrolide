@@ -40,15 +40,15 @@ export default function MemberCard({ member }: MemberCardProps) {
   }
 
   return (
-    <div className="group flex flex-col h-full bg-white border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow relative">
+    <div className="group flex flex-col h-full bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow relative">
       {/* Banner */}
-      <Link href={`/annuaire/${member.id}`} className="block h-[72px] bg-gradient-to-r from-[#1b5e38] to-[#0c361e] w-full relative">
+      <Link href={`/annuaire/${member.id}`} className="block h-[72px] bg-primary w-full relative">
          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:16px_16px]"></div>
       </Link>
 
       <div className="flex flex-col items-center px-4 pb-4 flex-1">
         {/* Avatar */}
-        <Link href={`/annuaire/${member.id}`} className="block w-[104px] h-[104px] rounded-full bg-white p-1 shrink-0 z-10 -mt-[52px] shadow-sm">
+        <Link href={`/annuaire/${member.id}`} className="block w-[104px] h-[104px] rounded-full bg-surface-container-lowest p-1 shrink-0 z-10 -mt-[52px] shadow-sm">
           <div className="w-full h-full rounded-full bg-surface-container-low text-primary flex items-center justify-center text-3xl font-bold overflow-hidden relative">
             {avatarUrl && !imgError ? (
               <Image 
@@ -115,7 +115,7 @@ export default function MemberCard({ member }: MemberCardProps) {
           ) : status === 'pending_received' ? (
              <Link
                href="/membres/reseau"
-               className="w-full py-1.5 border-[1.5px] border-orange-500 text-orange-600 rounded-full flex items-center justify-center gap-2 text-sm font-semibold hover:bg-orange-50 transition-colors duration-200"
+               className="w-full py-1.5 border-[1.5px] border-orange-500 text-orange-600 rounded-full flex items-center justify-center gap-2 text-sm font-semibold hover:bg-tertiary-container transition-colors duration-200"
              >
                Répondre
              </Link>

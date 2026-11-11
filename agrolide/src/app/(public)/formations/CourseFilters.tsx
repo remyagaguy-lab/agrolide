@@ -39,7 +39,7 @@ export default function CourseFilters() {
   const hasFilters = source || niveau || prix || thematique;
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-outline-variant p-6">
+    <div className="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-6">
       <div className="flex items-center justify-between mb-6 md:hidden">
         <h2 className="text-lg font-bold text-on-surface flex items-center gap-2">
           <Filter size={20} className="text-primary" /> Filtres

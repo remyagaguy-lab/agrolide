@@ -5,6 +5,7 @@ import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { Search, Filter, X } from 'lucide-react'
 import { DocumentCard, DocumentType } from './DocumentCard'
 import { SkeletonGrid } from '@/components/ui/Skeleton'
+import { buttonVariants } from '@/components/ui/Button'
 
 export function BibliothequeClient({ initialData, publicView = false }: any) {
   const router = useRouter()
@@ -98,10 +99,10 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-12">
       {/* Sidebar Filtres */}
       <div className="lg:col-span-3 space-y-6 md:sticky md:top-24 h-fit">
-        <div className="bg-white border border-outline-variant rounded-2xl shadow-sm p-5">
+        <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-5">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-bold text-on-surface flex items-center gap-2">
-              <Filter className="w-4 h-4 text-gray-400" /> Filtres
+              <Filter className="w-4 h-4 text-on-surface-muted" /> Filtres
             </h3>
             {(search || type || thematique) && (
               <button onClick={resetFilters} className="text-xs text-error hover:text-on-error-container flex items-center gap-1 font-bold">
@@ -113,7 +114,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
           <div className="space-y-4">
             {/* Recherche textuelle */}
             <div>
-              <label className="dash-label mb-2 block">Recherche</label>
+              <label className="text-label-sm font-bold uppercase tracking-wider text-on-surface-muted mb-2 block">Recherche</label>
               <div className="relative">
                 <input 
                   type="text" 
@@ -122,13 +123,13 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
                   placeholder="Titre, mots-clés..."
                   className="w-full pl-8 pr-3 py-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all"
                 />
-                <Search className="w-4 h-4 text-gray-400 absolute left-2.5 top-3" />
+                <Search className="w-4 h-4 text-on-surface-muted absolute left-2.5 top-3" />
               </div>
             </div>
 
             {/* Type */}
             <div>
-              <label className="dash-label mb-2 block">Type de document</label>
+              <label className="text-label-sm font-bold uppercase tracking-wider text-on-surface-muted mb-2 block">Type de document</label>
               <select 
                 value={type}
                 onChange={(e) => setType(e.target.value)}
@@ -146,7 +147,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             
             {/* Thématique */}
             <div>
-              <label className="dash-label mb-2 block">Thématique</label>
+              <label className="text-label-sm font-bold uppercase tracking-wider text-on-surface-muted mb-2 block">Thématique</label>
               <select 
                 value={thematique}
                 onChange={(e) => setThematique(e.target.value)}
@@ -168,7 +169,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
         {loading && documents.length === 0 ? (
           <SkeletonGrid count={6} />
         ) : error ? (
-          <div className="text-center py-12 bg-white border border-outline-variant rounded-2xl shadow-sm p-6">
+          <div className="text-center py-12 bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-6">
             <p className="text-error font-medium">{error}</p>
           </div>
         ) : documents.length > 0 ? (
@@ -183,7 +184,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
                 <button 
                   onClick={loadMore}
                   disabled={loadingMore}
-                  className="btn-dash-outline disabled:opacity-50"
+                  className={buttonVariants({ variant: 'outline', className: 'disabled:opacity-50' })}
                 >
                   {loadingMore ? 'Chargement...' : 'Charger plus'}
                 </button>
@@ -191,9 +192,9 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             )}
           </>
         ) : (
-          <div className="text-center py-16 bg-white border border-outline-variant rounded-2xl shadow-sm p-8 flex flex-col items-center">
+          <div className="text-center py-16 bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-8 flex flex-col items-center">
             <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-4">
-              <Search className="w-8 h-8 text-gray-300" />
+              <Search className="w-8 h-8 text-outline" />
             </div>
             <h3 className="text-lg font-bold text-on-surface mb-1">Aucun document trouvé</h3>
             <p className="text-on-surface-muted">Essayez de modifier vos filtres de recherche.</p>

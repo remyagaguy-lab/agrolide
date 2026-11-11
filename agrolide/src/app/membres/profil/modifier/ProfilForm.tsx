@@ -153,7 +153,7 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
               type="button" 
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="bg-white border border-outline-variant text-on-surface-variant px-3 py-1.5 rounded-lg text-xs font-bold hover:border-primary transition-colors flex items-center gap-1.5"
+              className="bg-surface-container-lowest border border-outline-variant text-on-surface-variant px-3 py-1.5 rounded-lg text-xs font-bold hover:border-primary transition-colors flex items-center gap-1.5"
             >
               <Camera size={14} /> {isUploading ? "Upload..." : "Changer la photo"}
             </button>
@@ -197,7 +197,7 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
             className={`w-full p-2 border border-outline-variant rounded-lg text-xs focus:ring-1 focus:ring-primary focus:border-primary bg-surface-container-low outline-none transition-all min-h-[100px] resize-none ${errors.bio ? "border-error" : ""}`}
           />
           <div className="flex justify-between mt-1">
-            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Présentez-vous aux autres membres du réseau.</p>
+            <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">Présentez-vous aux autres membres du réseau.</p>
             {errors.bio && <p className="text-[10px] text-error font-bold">{errors.bio.message}</p>}
           </div>
         </div>
@@ -207,7 +207,7 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
         <button 
           type="button" 
           onClick={() => router.push("/membres/profil")} 
-          className="bg-white border border-outline-variant text-on-surface-variant px-4 py-2 rounded-lg text-xs font-bold hover:border-primary transition-colors mt-4"
+          className="bg-surface-container-lowest border border-outline-variant text-on-surface-variant px-4 py-2 rounded-lg text-xs font-bold hover:border-primary transition-colors mt-4"
           disabled={isSaving}
         >
           Annuler

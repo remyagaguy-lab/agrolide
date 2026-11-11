@@ -48,7 +48,7 @@ export default async function EvenementsPage() {
               const evtDate = evt.date_debut ? new Date(evt.date_debut) : null
               const isValid = evtDate && !isNaN(evtDate.getTime())
               return (
-                <div key={evt.id} className="bg-white border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all p-5 flex flex-col group">
+                <div key={evt.id} className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all p-5 flex flex-col group">
                   <div className="flex justify-between items-start mb-3">
                     <span className="bg-primary-container text-primary px-2 py-0.5 rounded text-[10px] font-bold border border-outline-variant uppercase tracking-wider">
                       {evt.type_evt || "Événement"}
@@ -70,7 +70,7 @@ export default async function EvenementsPage() {
                   <div className="mt-auto space-y-1.5 pt-3 border-t border-outline-variant">
                     {isValid && (
                       <div className="flex items-center text-xs text-on-surface-muted">
-                        <Clock className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+                        <Clock className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
                         {evtDate.toLocaleString('fr-FR', {
                           weekday: 'long', day: 'numeric', month: 'long',
                           hour: '2-digit', minute: '2-digit'
@@ -79,7 +79,7 @@ export default async function EvenementsPage() {
                     )}
                     {evt.lieu && (
                       <div className="flex items-center text-xs text-on-surface-muted">
-                        <MapPin className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
+                        <MapPin className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
                         {evt.lieu}
                       </div>
                     )}
@@ -100,9 +100,9 @@ export default async function EvenementsPage() {
             })}
           </div>
         ) : (
-          <div className="bg-white border border-outline-variant rounded-2xl shadow-sm p-8 text-center flex flex-col items-center">
+          <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-8 text-center flex flex-col items-center">
             <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-3">
-              <Calendar className="w-6 h-6 text-gray-300" />
+              <Calendar className="w-6 h-6 text-outline" />
             </div>
             <h3 className="text-sm font-bold text-on-surface mb-1">Aucun événement programmé</h3>
             <p className="text-xs text-on-surface-muted">Revenez bientôt pour découvrir nos prochains événements.</p>
@@ -125,13 +125,13 @@ export default async function EvenementsPage() {
               const evtDate = evt.date_debut ? new Date(evt.date_debut) : null
               const isValid = evtDate && !isNaN(evtDate.getTime())
               return (
-                <div key={evt.id} className="bg-white border border-outline-variant rounded-xl shadow-sm p-4 opacity-70 hover:opacity-100 transition-opacity">
+                <div key={evt.id} className="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm p-4 opacity-70 hover:opacity-100 transition-opacity">
                   <div className="flex justify-between items-start mb-2">
                     <span className="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold border border-outline-variant uppercase tracking-wider">
                       {evt.type_evt || "Événement"}
                     </span>
                     {isValid && (
-                      <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+                      <span className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">
                         {evtDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}
                       </span>
                     )}

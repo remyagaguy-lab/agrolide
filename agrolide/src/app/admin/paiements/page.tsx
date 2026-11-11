@@ -68,7 +68,7 @@ export default async function AdminPaiementsPage() {
               Expirations dans 30 jours ({expirationsBientot.length})
             </h2>
           </div>
-          <div className="bg-orange-50 border border-orange-200 rounded-xl overflow-hidden">
+          <div className="bg-tertiary-container border border-orange-200 rounded-xl overflow-hidden">
             <table className="w-full text-sm">
               <thead className="bg-orange-100/70 border-b border-orange-200">
                 <tr>
@@ -97,7 +97,7 @@ export default async function AdminPaiementsPage() {
       {/* Tableau cotisations */}
       <section>
         <h2 className="text-base font-semibold text-on-surface mb-4">Historique cotisations (50 dernières)</h2>
-        <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+        <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left">
               <thead className="bg-surface-container-low border-b border-outline-variant">
@@ -111,7 +111,7 @@ export default async function AdminPaiementsPage() {
               </thead>
               <tbody className="divide-y divide-outline-variant">
                 {cotisationsList.length === 0 ? (
-                  <tr><td colSpan={5} className="px-5 py-8 text-center text-gray-400 italic">Aucune cotisation enregistrée</td></tr>
+                  <tr><td colSpan={5} className="px-5 py-8 text-center text-on-surface-muted italic">Aucune cotisation enregistrée</td></tr>
                 ) : cotisationsList.map((c) => (
                   <tr key={c.id} className="hover:bg-surface-container-low transition-colors">
                     <td className="px-5 py-3 text-xs text-on-surface-muted">{c.membre_id}</td>
@@ -122,7 +122,7 @@ export default async function AdminPaiementsPage() {
                         {c.statut || "—"}
                       </span>
                     </td>
-                    <td className="px-5 py-3 text-gray-400 text-xs">
+                    <td className="px-5 py-3 text-on-surface-muted text-xs">
                       {c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}
                     </td>
                   </tr>
@@ -136,7 +136,7 @@ export default async function AdminPaiementsPage() {
       {/* Dons */}
       <section>
         <h2 className="text-base font-semibold text-on-surface mb-4">Historique dons (30 derniers)</h2>
-        <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+        <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-sm text-left">
               <thead className="bg-surface-container-low border-b border-outline-variant">
@@ -150,12 +150,12 @@ export default async function AdminPaiementsPage() {
               </thead>
               <tbody className="divide-y divide-outline-variant">
                 {contributionsList.length === 0 ? (
-                  <tr><td colSpan={5} className="px-5 py-8 text-center text-gray-400 italic">Aucun don enregistré</td></tr>
+                  <tr><td colSpan={5} className="px-5 py-8 text-center text-on-surface-muted italic">Aucun don enregistré</td></tr>
                 ) : contributionsList.map((c) => (
                   <tr key={c.id} className="hover:bg-surface-container-low transition-colors">
                     <td className="px-5 py-3">
                       <div className="font-medium text-on-surface">{c.prenom || "Anonyme"}</div>
-                      <div className="text-xs text-gray-400">{c.email}</div>
+                      <div className="text-xs text-on-surface-muted">{c.email}</div>
                     </td>
                     <td className="px-5 py-3 font-semibold text-success">{formatFCFA(c.montant_fcfa)}</td>
                     <td className="px-5 py-3 text-on-surface-muted capitalize text-xs">{c.methode?.replace(/_/g, " ")}</td>
@@ -164,7 +164,7 @@ export default async function AdminPaiementsPage() {
                         {c.statut || "—"}
                       </span>
                     </td>
-                    <td className="px-5 py-3 text-gray-400 text-xs">
+                    <td className="px-5 py-3 text-on-surface-muted text-xs">
                       {c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}
                     </td>
                   </tr>

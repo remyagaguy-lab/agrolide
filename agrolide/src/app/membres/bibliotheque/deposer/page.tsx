@@ -179,7 +179,7 @@ export default function DeposerDocumentPage() {
           Le dépôt de documents est réservé aux membres Professionnels, Partenaires et Séniors.
           Votre abonnement Junior ne vous permet pas de publier dans la bibliothèque.
         </p>
-        <button onClick={() => router.back()} className="px-6 py-2 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800">
+        <button onClick={() => router.back()} className="px-6 py-2 bg-inverse-surface text-white rounded-lg font-medium hover:bg-inverse-surface">
           Retour
         </button>
       </div>
@@ -208,7 +208,7 @@ export default function DeposerDocumentPage() {
         <p className="text-on-surface-variant">Partagez vos connaissances avec la communauté Agrolide.</p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-white p-6 sm:p-8 rounded-2xl border border-outline-variant shadow-sm">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant shadow-sm">
         {error && (
           <div className="p-4 bg-error-container text-error rounded-lg flex items-start gap-3 text-sm">
             <AlertCircle className="w-5 h-5 flex-shrink-0" />
@@ -223,7 +223,7 @@ export default function DeposerDocumentPage() {
             <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer"
                  onClick={() => document.getElementById('file-upload')?.click()}>
               <div className="space-y-1 text-center">
-                <FileText className="mx-auto h-12 w-12 text-gray-400" />
+                <FileText className="mx-auto h-12 w-12 text-on-surface-muted" />
                 <div className="flex text-sm text-on-surface-variant justify-center">
                   <span className="relative rounded-md font-medium text-success hover:text-success focus-within:outline-none">
                     <span>Téléverser un fichier</span>
@@ -256,7 +256,7 @@ export default function DeposerDocumentPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-medium text-on-surface-variant mb-1">Type de document *</label>
-              <select {...register('type')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-white">
+              <select {...register('type')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-surface-container-lowest">
                 <option value="">Sélectionner</option>
                 <option value="Thèse">Thèse</option>
                 <option value="Mémoire">Mémoire</option>
@@ -269,7 +269,7 @@ export default function DeposerDocumentPage() {
             </div>
             <div>
               <label className="block text-sm font-medium text-on-surface-variant mb-1">Thématique *</label>
-              <select {...register('thematique')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-white">
+              <select {...register('thematique')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-surface-container-lowest">
                 <option value="">Sélectionner</option>
                 <option value="Agroécologie">Agroécologie</option>
                 <option value="Élevage">Élevage</option>
@@ -289,7 +289,7 @@ export default function DeposerDocumentPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div>
               <label className="block text-sm font-medium text-on-surface-variant mb-1">Langue *</label>
-              <select {...register('langue')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-white">
+              <select {...register('langue')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-surface-container-lowest">
                 <option value="fr">Français</option>
                 <option value="en">Anglais</option>
                 <option value="autre">Autre</option>
@@ -315,7 +315,7 @@ export default function DeposerDocumentPage() {
           <button
             type="submit"
             disabled={loading}
-            className="flex items-center gap-2 px-6 py-3 bg-success text-white rounded-lg font-medium hover:bg-green-800 disabled:opacity-70"
+            className="flex items-center gap-2 px-6 py-3 bg-success text-white rounded-lg font-medium hover:bg-primary/90 disabled:opacity-70"
           >
             {loading && <Loader2 className="w-5 h-5 animate-spin" />}
             {loading ? 'Dépôt en cours...' : 'Soumettre le document'}

@@ -59,18 +59,18 @@ export default async function ProfilPage() {
       <div className="flex-1 overflow-y-auto custom-scrollbar pb-10 min-h-0">
         
         {/* En-tête du profil */}
-        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden relative mb-6">
-          <div className="h-32 w-full bg-gradient-to-r from-[#1b5e38] via-[#217346] to-[#0c361e] relative overflow-hidden">
+        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden relative mb-6">
+          <div className="h-32 w-full bg-surface-brand relative overflow-hidden">
              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:20px_20px]"></div>
           </div>
           
           <div className="px-6 pb-6 relative">
-            <div className="absolute -top-12 left-6 w-24 h-24 bg-white rounded-2xl p-1 shadow-sm border border-outline-variant">
+            <div className="absolute -top-12 left-6 w-24 h-24 bg-surface-container-lowest rounded-2xl p-1 shadow-sm border border-outline-variant">
               <div className="w-full h-full bg-surface-container-low rounded-xl overflow-hidden flex items-center justify-center relative">
                 {profile.photo_url ? (
                   <Image src={profile.photo_url} alt="Avatar" fill sizes="96px" className="object-cover" />
                 ) : (
-                  <User size={32} className="text-gray-300" strokeWidth={1.5} />
+                  <User size={32} className="text-outline" strokeWidth={1.5} />
                 )}
               </div>
             </div>
@@ -87,9 +87,9 @@ export default async function ProfilPage() {
                    {profile.specialite && (
                      <span className="uppercase tracking-wider">{profile.specialite}</span>
                    )}
-                   {profile.specialite && <span className="w-1 h-1 rounded-full bg-gray-300"></span>}
+                   {profile.specialite && <span className="w-1 h-1 rounded-full bg-outline-variant"></span>}
                    <span className="text-primary">Membre {profile.categorie}</span>
-                   <span className="w-1 h-1 rounded-full bg-gray-300"></span>
+                   <span className="w-1 h-1 rounded-full bg-outline-variant"></span>
                    <span className="capitalize">{profile.statut_adhesion}</span>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default async function ProfilPage() {
             
             {/* Bio */}
             {profile.biographie && (
-              <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+              <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5">
                 <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-3">
                    <BookOpen size={14} className="text-primary" /> À propos
                 </h3>
@@ -131,7 +131,7 @@ export default async function ProfilPage() {
             )}
 
             {/* Expérience & Compétences */}
-            <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+            <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5">
               <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-4">
                  <Star size={14} className="text-primary" /> Expertise & Parcours
               </h3>
@@ -139,7 +139,7 @@ export default async function ProfilPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Spécialité */}
                 <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Spécialité Principale</p>
+                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Spécialité Principale</p>
                   <span className="inline-block px-2.5 py-1 bg-primary-container text-primary rounded-md text-[10px] font-bold uppercase tracking-wider">
                     {profile.specialite || 'Non renseignée'}
                   </span>
@@ -147,16 +147,16 @@ export default async function ProfilPage() {
                 
                 {/* Niveau d'études */}
                 <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Niveau d'études</p>
+                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Niveau d'études</p>
                   <p className="text-xs font-bold text-on-surface flex items-center gap-1.5">
-                    <GraduationCap size={14} className="text-gray-400" />
+                    <GraduationCap size={14} className="text-on-surface-muted" />
                     {profile.niveau_etudes || 'Non renseigné'}
                   </p>
                 </div>
                 
                 {/* Secteurs d'expertise */}
                 <div className="md:col-span-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Domaines d'expertise</p>
+                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Domaines d'expertise</p>
                   <p className="text-[11px] font-medium text-on-surface-variant">
                     {profile.secteurs_expertise || 'Aucun domaine spécifié.'}
                   </p>
@@ -164,9 +164,9 @@ export default async function ProfilPage() {
                 
                 {/* Langues */}
                 <div className="md:col-span-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Langues parlées</p>
+                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Langues parlées</p>
                   <p className="text-[11px] font-medium text-on-surface flex items-center gap-1.5">
-                    <Languages size={14} className="text-gray-400" />
+                    <Languages size={14} className="text-on-surface-muted" />
                     {profile.langues || 'Non renseigné'}
                   </p>
                 </div>
@@ -178,28 +178,28 @@ export default async function ProfilPage() {
           <div className="space-y-6">
             
             {/* Contact */}
-            <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+            <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5">
               <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-4">
                  <User size={14} className="text-primary" /> Contact
               </h3>
               
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <div className="mt-0.5 text-gray-400 bg-surface-container-low p-1.5 rounded-lg border border-outline-variant">
+                  <div className="mt-0.5 text-on-surface-muted bg-surface-container-low p-1.5 rounded-lg border border-outline-variant">
                     <Mail size={12} />
                   </div>
                   <div>
-                    <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Email</p>
+                    <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Email</p>
                     <p className="text-[11px] font-bold text-on-surface break-all">{profile.email}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="mt-0.5 text-gray-400 bg-surface-container-low p-1.5 rounded-lg border border-outline-variant">
+                  <div className="mt-0.5 text-on-surface-muted bg-surface-container-low p-1.5 rounded-lg border border-outline-variant">
                     <MapPin size={12} />
                   </div>
                   <div>
-                    <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Localisation</p>
+                    <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Localisation</p>
                     <p className="text-[11px] font-bold text-on-surface">
                       {profile.ville ? `${profile.ville}, ` : ''}{profile.pays || 'Non renseignée'}
                     </p>
@@ -212,7 +212,7 @@ export default async function ProfilPage() {
                       <Globe size={12} />
                     </div>
                     <div>
-                      <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Site Web</p>
+                      <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Site Web</p>
                       <a href={profile.site_web_url} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
                         {profile.site_web_url}
                       </a>
@@ -222,12 +222,12 @@ export default async function ProfilPage() {
                 
                 {profile.linkedin_url && (
                   <div className="flex items-start gap-3">
-                    <div className="mt-0.5 text-[#0a66c2] bg-info-container p-1.5 rounded-lg border border-outline-variant">
+                    <div className="mt-0.5 text-info bg-info-container p-1.5 rounded-lg border border-outline-variant">
                       <IconLinkedIn />
                     </div>
                     <div>
-                      <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">LinkedIn</p>
-                      <a href={profile.linkedin_url} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-[#0a66c2] hover:underline break-all">
+                      <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">LinkedIn</p>
+                      <a href={profile.linkedin_url} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
                         Voir le profil
                       </a>
                     </div>
@@ -237,7 +237,7 @@ export default async function ProfilPage() {
             </div>
 
             {/* Organisation */}
-            <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+            <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5">
               <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-4">
                  <Briefcase size={14} className="text-primary" /> Organisation
               </h3>
@@ -245,7 +245,7 @@ export default async function ProfilPage() {
               {profile.organisation ? (
                 <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant flex items-center gap-3">
                   <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center border border-outline-variant">
-                    <Briefcase size={16} className="text-gray-400" />
+                    <Briefcase size={16} className="text-on-surface-muted" />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-on-surface">{profile.organisation}</p>

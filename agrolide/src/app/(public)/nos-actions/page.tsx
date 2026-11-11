@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Metadata } from "next"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
-import { Button } from "@/components/ui/Button"
+import { Button, buttonVariants } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -43,7 +43,7 @@ export default function NosActionsPage() {
               <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
                 <Users size={32} strokeWidth={1.5} className="text-primary" />
               </div>
-              <h2 className="text-h2 text-on-surface mb-4">
+              <h2 className="text-headline-md text-on-surface mb-4">
                 1. Mobilisation & Réseautage
               </h2>
               <div className="text-body-lg mb-6 space-y-3">
@@ -71,7 +71,7 @@ export default function NosActionsPage() {
                 </Card>
               </div>
 
-              <Link href="/annuaire" className="btn-secondary">
+              <Link href="/annuaire" className={buttonVariants({ variant: 'secondary' })}>
                 Découvrir l'Annuaire
               </Link>
             </div>
@@ -93,7 +93,7 @@ export default function NosActionsPage() {
               <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
                 <BookOpen size={32} strokeWidth={1.5} className="text-primary" />
               </div>
-              <h2 className="text-h2 text-on-surface mb-4">
+              <h2 className="text-headline-md text-on-surface mb-4">
                 2. Formation & Insertion
               </h2>
               <div className="text-body-lg mb-6 space-y-3">
@@ -122,10 +122,10 @@ export default function NosActionsPage() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/bibliotheque" className="btn-secondary">
+                <Link href="/bibliotheque" className={buttonVariants({ variant: 'secondary' })}>
                   Bibliothèque
                 </Link>
-                <Link href="/formations" className="btn-outline">
+                <Link href="/formations" className={buttonVariants({ variant: 'outline' })}>
                   Voir nos formations
                 </Link>
               </div>
@@ -142,7 +142,7 @@ export default function NosActionsPage() {
               <div className="w-[64px] h-[64px] rounded-[16px] bg-tertiary-container flex items-center justify-center mb-6">
                 <TrendingUp size={32} strokeWidth={1.5} className="text-on-tertiary-container" />
               </div>
-              <h2 className="text-h2 text-on-surface mb-4">
+              <h2 className="text-headline-md text-on-surface mb-4">
                 3. Agrobusiness & Consulting
               </h2>
               <div className="text-body-lg mb-6 space-y-3">
@@ -170,7 +170,7 @@ export default function NosActionsPage() {
                 </Card>
               </div>
 
-              <Link href="/agrobusiness" className="btn-primary">
+              <Link href="/agrobusiness" className={buttonVariants({ variant: 'primary' })}>
                 Découvrir nos services
               </Link>
             </div>
@@ -190,7 +190,7 @@ export default function NosActionsPage() {
           <p className="font-sans font-[400] text-[14px] text-on-surface-variant mb-[28px]">
             Rejoignez des centaines de professionnels engagés pour la souveraineté alimentaire africaine.
           </p>
-          <Link href="/rejoindre" className="btn-primary inline-flex items-center">
+          <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>
             Rejoindre le réseau <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>

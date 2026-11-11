@@ -120,10 +120,10 @@ export default function AdminForumPage() {
       </div>
 
       {activeTab === 'signalements' && (
-        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
           <div className="p-12 text-center flex flex-col items-center">
-            <Loader2 className="w-8 h-8 animate-spin text-gray-400 mb-2" />
+            <Loader2 className="w-8 h-8 animate-spin text-on-surface-muted mb-2" />
             <span className="text-on-surface-muted">Chargement...</span>
           </div>
         ) : reportedMessages.length === 0 ? (
@@ -142,14 +142,14 @@ export default function AdminForumPage() {
                   <div className="flex-1 space-y-2 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 text-sm">
                       <span className="font-bold text-on-surface">{msg.auteur?.prenom} {msg.auteur?.nom}</span>
-                      <span className="text-gray-400">•</span>
+                      <span className="text-on-surface-muted">•</span>
                       <span className="text-on-surface-muted">{format(new Date(msg.created_at), "dd MMM yyyy HH:mm", { locale: fr })}</span>
-                      <span className="text-gray-400">•</span>
+                      <span className="text-on-surface-muted">•</span>
                       <Link href={`/membres/forum/fil/${msg.fil?.id}`} target="_blank" className="text-info hover:underline flex items-center gap-1 font-medium truncate">
                         Sujet : {msg.fil?.titre} <ArrowRight className="w-3 h-3" />
                       </Link>
                     </div>
-                    <div className="bg-orange-50/50 p-4 rounded-xl border border-orange-100 text-on-surface text-sm whitespace-pre-wrap font-sans break-words">
+                    <div className="bg-tertiary-container/50 p-4 rounded-xl border border-orange-100 text-on-surface text-sm whitespace-pre-wrap font-sans break-words">
                       {msg.contenu}
                     </div>
                   </div>
@@ -165,7 +165,7 @@ export default function AdminForumPage() {
                     <button 
                       onClick={() => handleDelete(msg.id)}
                       disabled={processing === msg.id}
-                      className="px-4 py-2 bg-orange-50 hover:bg-orange-100 text-orange-700 font-medium rounded-lg text-sm transition-colors border border-orange-200 flex items-center gap-2 justify-center w-full h-10"
+                      className="px-4 py-2 bg-tertiary-container hover:bg-orange-100 text-orange-700 font-medium rounded-lg text-sm transition-colors border border-orange-200 flex items-center gap-2 justify-center w-full h-10"
                     >
                       {processing === msg.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <><Trash2 className="w-4 h-4" /> Supprimer le message</>}
                     </button>

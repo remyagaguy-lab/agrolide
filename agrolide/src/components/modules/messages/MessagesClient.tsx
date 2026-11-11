@@ -157,7 +157,7 @@ export default function MessagesClient() {
     (initialConvId && !conversations.find(c => c.correspondant.id === initialConvId) ? { id: initialConvId, prenom: 'Nouveau', nom: 'Contact' } : null)
 
   return (
-    <div className="flex h-full bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+    <div className="flex h-full bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
       
       {/* Sidebar - Liste des conversations */}
       <div className={`w-full md:w-80 border-r border-outline-variant flex flex-col bg-surface-container-low/30 ${activeConvId ? 'hidden md:flex' : 'flex'}`}>
@@ -170,11 +170,11 @@ export default function MessagesClient() {
         
         <div className="flex-1 overflow-y-auto custom-scrollbar">
           {loadingConvs ? (
-            <div className="p-8 text-center text-gray-400"><Loader2 className="w-6 h-6 animate-spin mx-auto" /></div>
+            <div className="p-8 text-center text-on-surface-muted"><Loader2 className="w-6 h-6 animate-spin mx-auto" /></div>
           ) : conversations.length === 0 ? (
-            <div className="p-8 text-center text-gray-400 flex flex-col items-center gap-3 mt-10">
+            <div className="p-8 text-center text-on-surface-muted flex flex-col items-center gap-3 mt-10">
               <div className="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center">
-                 <MessageCircle className="w-8 h-8 text-gray-300" strokeWidth={1.5} />
+                 <MessageCircle className="w-8 h-8 text-outline" strokeWidth={1.5} />
               </div>
               <p className="text-sm font-medium">Aucune conversation</p>
             </div>
@@ -195,7 +195,7 @@ export default function MessagesClient() {
                       )}
                     </div>
                     {conv.non_lus > 0 && (
-                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-orange-500 text-white text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-white shadow-sm">
+                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-tertiary-container0 text-white text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-white shadow-sm">
                         {conv.non_lus}
                       </span>
                     )}
@@ -205,7 +205,7 @@ export default function MessagesClient() {
                       <div className="font-bold text-xs text-on-surface truncate">
                         {conv.correspondant.prenom} {conv.correspondant.nom?.charAt(0)}.
                       </div>
-                      <div className="text-[9px] font-bold text-gray-400 shrink-0 uppercase tracking-wider">
+                      <div className="text-[9px] font-bold text-on-surface-muted shrink-0 uppercase tracking-wider">
                         {format(new Date(conv.dernier_message.created_at), "dd/MM")}
                       </div>
                     </div>
@@ -226,11 +226,11 @@ export default function MessagesClient() {
         {activeConvId ? (
           <>
             {/* Chat Header */}
-            <div className="p-3 md:px-5 border-b border-outline-variant bg-white flex items-center justify-between shrink-0">
+            <div className="p-3 md:px-5 border-b border-outline-variant bg-surface-container-lowest flex items-center justify-between shrink-0">
               <div className="flex items-center gap-3">
                 <button 
                   onClick={() => setActiveConvId(null)}
-                  className="md:hidden p-1.5 text-gray-400 hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors"
+                  className="md:hidden p-1.5 text-on-surface-muted hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors"
                 >
                   &larr; Retour
                 </button>
@@ -251,18 +251,18 @@ export default function MessagesClient() {
             {/* Chat Messages */}
             <div className="flex-1 overflow-y-auto p-4 bg-surface-container-low flex flex-col gap-4 custom-scrollbar">
               {loadingMessages ? (
-                <div className="text-center text-gray-400 py-10"><Loader2 className="w-6 h-6 animate-spin mx-auto" /></div>
+                <div className="text-center text-on-surface-muted py-10"><Loader2 className="w-6 h-6 animate-spin mx-auto" /></div>
               ) : messages.length === 0 ? (
-                <div className="text-center text-gray-400 py-10 text-xs bg-white rounded-xl mx-auto px-4 py-2 border border-outline-variant max-w-sm">Début de la conversation sécurisée avec {activeCorrespondant?.prenom}.</div>
+                <div className="text-center text-on-surface-muted py-10 text-xs bg-surface-container-lowest rounded-xl mx-auto px-4 py-2 border border-outline-variant max-w-sm">Début de la conversation sécurisée avec {activeCorrespondant?.prenom}.</div>
               ) : (
                 messages.map((msg, idx) => {
                   const isMe = msg.expediteur_id === currentUser?.id
                   return (
                     <div key={msg.id} className={`flex flex-col max-w-[80%] md:max-w-[70%] ${isMe ? 'self-end items-end' : 'self-start items-start'}`}>
-                      <div className={`px-4 py-2.5 rounded-xl shadow-sm text-xs leading-relaxed ${isMe ? 'bg-primary text-white rounded-br-sm' : 'bg-white border border-outline-variant text-on-surface rounded-bl-sm'}`}>
+                      <div className={`px-4 py-2.5 rounded-xl shadow-sm text-xs leading-relaxed ${isMe ? 'bg-primary text-white rounded-br-sm' : 'bg-surface-container-lowest border border-outline-variant text-on-surface rounded-bl-sm'}`}>
                         {msg.contenu}
                       </div>
-                      <span className="text-[9px] font-bold text-gray-400 mt-1 px-1 uppercase tracking-wider">
+                      <span className="text-[9px] font-bold text-on-surface-muted mt-1 px-1 uppercase tracking-wider">
                         {format(new Date(msg.created_at), "HH:mm")}
                       </span>
                     </div>
@@ -273,7 +273,7 @@ export default function MessagesClient() {
             </div>
 
             {/* Chat Input */}
-            <div className="p-3 md:p-4 bg-white border-t border-outline-variant shrink-0">
+            <div className="p-3 md:p-4 bg-surface-container-lowest border-t border-outline-variant shrink-0">
               {error && <div className="mb-2 text-[10px] text-error bg-error-container px-3 py-1.5 rounded-lg font-bold uppercase tracking-wider">{error}</div>}
               <form onSubmit={handleSend} className="flex gap-2 items-end max-w-4xl mx-auto">
                 <div className="flex-1 relative">
@@ -302,9 +302,9 @@ export default function MessagesClient() {
             </div>
           </>
         ) : (
-          <div className="flex-1 flex flex-col items-center justify-center text-gray-400 bg-transparent">
+          <div className="flex-1 flex flex-col items-center justify-center text-on-surface-muted bg-transparent">
             <div className="w-24 h-24 rounded-full bg-surface-container-low flex items-center justify-center mb-6 shadow-sm border border-white">
-               <MessageCircle className="w-10 h-10 text-gray-300" strokeWidth={1.5} />
+               <MessageCircle className="w-10 h-10 text-outline" strokeWidth={1.5} />
             </div>
             <h3 className="font-heading font-bold text-xl text-on-surface mb-2">Vos Messages</h3>
             <p className="text-on-surface-muted font-medium">Sélectionnez une conversation pour discuter.</p>

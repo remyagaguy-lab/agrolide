@@ -71,7 +71,7 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
     return (
       <Link 
         href="/membres/reseau"
-        className="flex-1 md:flex-none bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
+        className="flex-1 md:flex-none bg-tertiary-container0 hover:bg-orange-600 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
       >
         Répondre à l'invitation
       </Link>

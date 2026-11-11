@@ -33,13 +33,13 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
-      <div className="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
+      <div className="bg-surface-container-lowest rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
         <div className="flex justify-between items-center p-6 border-b border-outline-variant">
           <h2 className="text-xl font-bold flex items-center gap-2">
-            <Briefcase className="w-5 h-5 text-gray-400" />
+            <Briefcase className="w-5 h-5 text-on-surface-muted" />
             Détails de l'opportunité
           </h2>
-          <button onClick={onClose} className="p-2 text-gray-400 hover:text-on-surface rounded-full hover:bg-surface-container">
+          <button onClick={onClose} className="p-2 text-on-surface-muted hover:text-on-surface rounded-full hover:bg-surface-container">
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -61,7 +61,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
             <div className="grid grid-cols-2 gap-4 bg-surface-container-low p-4 rounded-xl">
               {opportunity.lieu && (
                 <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-gray-400 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Lieu</div>
                     <div className="text-sm font-medium text-on-surface">{opportunity.lieu}</div>
@@ -70,7 +70,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
               )}
               {opportunity.date_limite && (
                 <div className="flex items-start gap-2">
-                  <Calendar className="w-4 h-4 text-gray-400 mt-0.5" />
+                  <Calendar className="w-4 h-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Date Limite</div>
                     <div className="text-sm font-medium text-on-surface">
@@ -81,7 +81,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
               )}
               {opportunity.montant && (
                 <div className="flex items-start gap-2">
-                  <DollarSign className="w-4 h-4 text-gray-400 mt-0.5" />
+                  <DollarSign className="w-4 h-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Montant / Budget</div>
                     <div className="text-sm font-medium text-on-surface">{opportunity.montant}</div>
@@ -90,7 +90,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
               )}
               {opportunity.lien_externe && (
                 <div className="flex items-start gap-2">
-                  <LinkIcon className="w-4 h-4 text-gray-400 mt-0.5" />
+                  <LinkIcon className="w-4 h-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Lien Externe</div>
                     <a href={opportunity.lien_externe} target="_blank" rel="noreferrer" className="text-sm font-medium text-info hover:underline line-clamp-1">
@@ -103,8 +103,8 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
 
             <div>
               <h3 className="text-sm font-medium text-on-surface-muted uppercase tracking-wider mb-2">Description complète</h3>
-              <div className="bg-white p-0 text-on-surface-variant text-sm whitespace-pre-wrap">
-                {opportunity.description || <span className="text-gray-400 italic">Aucune description fournie</span>}
+              <div className="bg-surface-container-lowest p-0 text-on-surface-variant text-sm whitespace-pre-wrap">
+                {opportunity.description || <span className="text-on-surface-muted italic">Aucune description fournie</span>}
               </div>
             </div>
           </div>

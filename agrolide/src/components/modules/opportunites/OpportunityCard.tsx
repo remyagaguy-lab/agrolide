@@ -22,7 +22,7 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
   const isExpired = opp.date_limite && new Date(opp.date_limite) < new Date()
 
   return (
-    <div className={`group bg-white border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
+    <div className={`group bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
       <div className="p-5 flex-grow">
         <div className="flex justify-between items-start mb-3">
           <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
@@ -46,21 +46,21 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
         <div className="space-y-1.5 text-xs text-on-surface-muted">
           {opp.lieu && (
             <div className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+              <MapPin className="w-3.5 h-3.5 text-on-surface-muted shrink-0" />
               <span className="line-clamp-1">{opp.lieu}</span>
             </div>
           )}
           
           {opp.montant && (
             <div className="flex items-center gap-2">
-              <DollarSign className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+              <DollarSign className="w-3.5 h-3.5 text-on-surface-muted shrink-0" />
               <span className="font-bold text-on-surface-variant">{opp.montant}</span>
             </div>
           )}
           
           {opp.date_limite && (
             <div className="flex items-center gap-2">
-              <Calendar className="w-3.5 h-3.5 text-gray-400 shrink-0" />
+              <Calendar className="w-3.5 h-3.5 text-on-surface-muted shrink-0" />
               <span>Expire le {format(new Date(opp.date_limite), "dd MMM yyyy", { locale: fr })}</span>
             </div>
           )}

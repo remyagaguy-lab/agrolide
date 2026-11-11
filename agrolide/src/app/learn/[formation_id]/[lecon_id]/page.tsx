@@ -96,7 +96,7 @@ export default async function LeconPage({
   }
 
   return (
-    <div className="flex flex-col min-h-full bg-white">
+    <div className="flex flex-col min-h-full bg-surface-container-lowest">
       {/* Corporate Header for Reading Mode */}
       <section className="pt-12 md:pt-16 pb-12 bg-primary">
         <div className="container max-w-3xl mx-auto px-6">
@@ -106,7 +106,7 @@ export default async function LeconPage({
                 {formation.modules.find(m => m.id === currentLeconFull.module_id)?.titre}
               </span>
             </div>
-            <h1 className="font-urbanist text-h2 md:text-h1 text-white leading-tight mt-2">
+            <h1 className="font-urbanist text-headline-md md:text-headline-lg text-on-surface-brand leading-tight mt-2">
               {currentLeconFull.titre}
             </h1>
           </div>
@@ -114,7 +114,7 @@ export default async function LeconPage({
       </section>
 
       {/* Main Content */}
-      <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-10 md:py-16 bg-white">
+      <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-10 md:py-16 bg-surface-container-lowest">
         {/* Markdown Content */}
         <div className="prose prose-slate prose-lg max-w-none mb-16 prose-headings:font-urbanist prose-headings:text-on-surface prose-p:font-baskerville prose-p:text-on-surface-variant prose-p:leading-[1.8] prose-li:font-baskerville prose-li:text-on-surface-variant prose-a:text-primary prose-strong:font-bold prose-strong:text-on-surface">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -125,7 +125,7 @@ export default async function LeconPage({
         {/* Quiz Section */}
         {quizData && quizData.length > 0 && (
           <div className="mt-16 pt-12 border-t border-outline-variant" id="quiz-section">
-            <h2 className="font-urbanist text-h3 text-on-surface mb-8">Vérifiez vos connaissances</h2>
+            <h2 className="font-urbanist text-title-lg text-on-surface mb-8">Vérifiez vos connaissances</h2>
             <Quiz 
               questions={quizData} 
               formationId={formationId}
@@ -137,7 +137,7 @@ export default async function LeconPage({
       </main>
 
       {/* Bottom Navigation Bar */}
-      <div className="bg-white border-t border-outline-variant py-6 sticky bottom-0 z-20">
+      <div className="bg-surface-container-lowest border-t border-outline-variant py-6 sticky bottom-0 z-20">
         <div className="container max-w-3xl mx-auto px-6 flex items-center justify-between">
           {previousLecon ? (
             <Link 

@@ -153,14 +153,14 @@ export default async function BlogPostPage({
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-surface-container-lowest">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
       {/* Hero Section */}
-      <section className="bg-white border-b border-outline-variant">
+      <section className="bg-surface-container-lowest border-b border-outline-variant">
         <div className="container mx-auto px-4 max-w-6xl py-8 md:py-16">
           <Breadcrumb items={breadcrumbItems} />
           
@@ -168,7 +168,7 @@ export default async function BlogPostPage({
             {/* Colonne Gauche : Contenu */}
             <div className="lg:pr-4 xl:pr-8">
               <div className="mb-4">
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-vert-principal)]">
+                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">
                   {article.categorie || "Général"}
                 </span>
               </div>
@@ -189,7 +189,7 @@ export default async function BlogPostPage({
                     <User size={16} />
                   )}
                   {article.auteur_id ? (
-                    <Link href={`/annuaire/${article.auteur_id}`} className="hover:text-[var(--color-vert-principal)] transition-colors">
+                    <Link href={`/annuaire/${article.auteur_id}`} className="hover:text-primary transition-colors">
                       {authorName}
                     </Link>
                   ) : (
@@ -230,7 +230,7 @@ export default async function BlogPostPage({
                 </div>
               ) : (
                 <div className="relative w-full aspect-video rounded-xl bg-surface-container border border-outline-variant flex items-center justify-center">
-                  <span className="text-gray-400">Image indisponible</span>
+                  <span className="text-on-surface-muted">Image indisponible</span>
                 </div>
               )}
             </div>
@@ -239,7 +239,7 @@ export default async function BlogPostPage({
       </section>
 
       {/* Article Body */}
-      <section className="bg-white border-b border-outline-variant">
+      <section className="bg-surface-container-lowest border-b border-outline-variant">
         <div className="container mx-auto px-4 max-w-6xl py-12 md:py-16">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] xl:gap-x-12">
             
@@ -247,14 +247,14 @@ export default async function BlogPostPage({
             <div className="w-full order-2 lg:order-1 lg:border-r lg:border-outline-variant lg:pr-8">
               <div className="sticky top-24 space-y-8">
                 <div>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400 mb-4">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-on-surface-muted mb-4">
                     Dans cet article
                   </p>
                   <TableOfContents />
                 </div>
                 
                 <div className="pt-6 border-t border-outline-variant hidden lg:block">
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400 mb-4">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-on-surface-muted mb-4">
                     Partager
                   </p>
                   <div className="flex gap-2">
@@ -287,18 +287,18 @@ export default async function BlogPostPage({
                   prose-h2:text-[1.75rem] prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-2 prose-h2:border-b prose-h2:border-outline-variant
                   prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
                   prose-p:text-[1.0625rem] prose-p:leading-[1.8] prose-p:text-on-surface-variant prose-p:mb-6
-                  prose-a:text-[var(--color-vert-principal)] prose-a:no-underline prose-a:font-medium hover:prose-a:underline
+                  prose-a:text-primary prose-a:no-underline prose-a:font-medium hover:prose-a:underline
                   prose-strong:text-on-surface
                   prose-ul:list-disc prose-ul:pl-6 prose-ul:text-on-surface-variant prose-ul:mb-6
                   prose-ol:list-decimal prose-ol:pl-6 prose-ol:text-on-surface-variant prose-ol:mb-6
                   prose-li:mb-2
-                  prose-blockquote:border-l-4 prose-blockquote:border-[var(--color-vert-principal)] prose-blockquote:bg-surface-container-low prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:rounded-r-lg prose-blockquote:text-on-surface prose-blockquote:italic"
+                  prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-surface-container-low prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:rounded-r-lg prose-blockquote:text-on-surface prose-blockquote:italic"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
 
               {/* Partage Mobile */}
               <div className="mt-12 lg:hidden flex flex-col items-start gap-4 border-t border-outline-variant pt-8">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400">
+                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-on-surface-muted">
                   Partager cet article
                 </p>
                 <div className="flex gap-3">
@@ -323,7 +323,7 @@ export default async function BlogPostPage({
 
               {/* CTA Fin d'article */}
               {!htmlContent.includes('class="custom-cta"') && (
-                <div className="mt-16 p-8 bg-surface-container-low rounded-2xl border border-[var(--color-vert-clair)]">
+                <div className="mt-16 p-8 bg-surface-container-low rounded-2xl border border-outline-variant">
                   <h3 className="text-xl md:text-2xl font-heading font-bold text-on-surface mb-3">
                     Besoin de développer votre réseau agricole ?
                   </h3>

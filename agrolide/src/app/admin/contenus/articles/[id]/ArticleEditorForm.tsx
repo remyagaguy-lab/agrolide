@@ -248,7 +248,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
             {imageUrl ? (
               <img src={imageUrl} alt="Image à la une" className="w-full h-full object-cover" />
             ) : (
-              <ImageIcon className="text-gray-400" size={32} />
+              <ImageIcon className="text-on-surface-muted" size={32} />
             )}
           </div>
           <div>
@@ -287,7 +287,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
               onClick={() => editor.chain().focus().toggleItalic().run()}
               className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('italic') ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><Italic size={16} /></button>
-            <div className="w-px h-6 bg-gray-300 mx-1 my-auto"></div>
+            <div className="w-px h-6 bg-outline-variant mx-1 my-auto"></div>
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
@@ -298,7 +298,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
               onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
               className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('heading', { level: 3 }) ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><Heading3 size={16} /></button>
-            <div className="w-px h-6 bg-gray-300 mx-1 my-auto"></div>
+            <div className="w-px h-6 bg-outline-variant mx-1 my-auto"></div>
             <button
               type="button"
               onClick={() => editor.chain().focus().toggleBulletList().run()}
@@ -309,7 +309,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
               onClick={() => editor.chain().focus().toggleOrderedList().run()}
               className={`p-2 rounded hover:bg-surface-container-high ${editor.isActive('orderedList') ? 'bg-surface-container-high text-on-surface' : 'text-on-surface-variant'}`}
             ><ListOrdered size={16} /></button>
-            <div className="w-px h-6 bg-gray-300 mx-1 my-auto"></div>
+            <div className="w-px h-6 bg-outline-variant mx-1 my-auto"></div>
             <button
               type="button"
               onClick={() => {
@@ -326,7 +326,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
           </div>
           
           {/* Editeur */}
-          <div className="bg-white max-h-[600px] overflow-y-auto">
+          <div className="bg-surface-container-lowest max-h-[600px] overflow-y-auto">
             <EditorContent editor={editor} />
           </div>
         </div>

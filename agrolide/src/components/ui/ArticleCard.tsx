@@ -32,7 +32,7 @@ export function ArticleCard({
     <Link 
       href={`/blog/${slug}`} 
       className={cn(
-        "group flex flex-col bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-gray-100", 
+        "group flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-gray-100", 
         className
       )}
     >

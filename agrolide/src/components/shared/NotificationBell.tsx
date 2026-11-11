@@ -64,10 +64,10 @@ export default function NotificationBell() {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button className="relative p-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors outline-none focus:ring-2 focus:ring-primary-500">
+        <button className="relative p-2 text-on-surface-muted hover:bg-surface-container rounded-full transition-colors outline-none focus:ring-2 focus:ring-primary">
           <Bell className="w-6 h-6" />
           {unreadCount > 0 && (
-            <span className="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white">
+            <span className="absolute top-1 right-1 w-4 h-4 bg-error text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white">
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
           )}
@@ -76,21 +76,21 @@ export default function NotificationBell() {
       
       <Popover.Portal>
         <Popover.Content 
-          className="w-80 bg-white rounded-2xl shadow-xl border border-gray-100 mr-4 mt-2 z-50 overflow-hidden data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95" 
+          className="w-80 bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant mr-4 mt-2 z-50 overflow-hidden data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95" 
           sideOffset={5}
         >
-          <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-            <h3 className="font-bold text-gray-900">Notifications</h3>
+          <div className="p-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-low/50">
+            <h3 className="font-bold text-on-surface">Notifications</h3>
             {unreadCount > 0 && (
-              <span className="bg-primary-100 text-primary-700 text-xs font-bold px-2 py-0.5 rounded-full">
+              <span className="bg-primary-container text-primary text-xs font-bold px-2 py-0.5 rounded-full">
                 {unreadCount} nvx
               </span>
             )}
           </div>
           
-          <div className="max-h-[300px] overflow-y-auto divide-y divide-gray-50">
+          <div className="max-h-[300px] overflow-y-auto divide-y divide-outline-variant">
             {notifications.length === 0 ? (
-              <div className="p-8 text-center text-gray-500 text-sm">
+              <div className="p-8 text-center text-on-surface-muted text-sm">
                 Aucune notification
               </div>
             ) : (
@@ -98,18 +98,18 @@ export default function NotificationBell() {
                 <button
                   key={notif.id}
                   onClick={() => markAsRead(notif.id, notif.lien)}
-                  className={`w-full text-left p-4 hover:bg-gray-50 transition-colors ${!notif.lu ? 'bg-primary-50/30' : ''}`}
+                  className={`w-full text-left p-4 hover:bg-surface-container-low transition-colors ${!notif.lu ? 'bg-primary-container/30' : ''}`}
                 >
                   <div className="flex gap-3">
-                    <div className={`w-2 h-2 rounded-full mt-1.5 shrink-0 ${!notif.lu ? 'bg-primary-500' : 'bg-transparent'}`} />
+                    <div className={`w-2 h-2 rounded-full mt-1.5 shrink-0 ${!notif.lu ? 'bg-accent-leaf' : 'bg-transparent'}`} />
                     <div>
-                      <p className={`text-sm ${!notif.lu ? 'font-bold text-gray-900' : 'font-medium text-gray-700'}`}>
+                      <p className={`text-sm ${!notif.lu ? 'font-bold text-on-surface' : 'font-medium text-on-surface-variant'}`}>
                         {notif.titre}
                       </p>
                       {notif.contenu && (
-                        <p className="text-xs text-gray-500 mt-0.5 line-clamp-1">{notif.contenu}</p>
+                        <p className="text-xs text-on-surface-muted mt-0.5 line-clamp-1">{notif.contenu}</p>
                       )}
-                      <p className="text-[10px] text-gray-400 mt-1">
+                      <p className="text-[10px] text-on-surface-muted mt-1">
                         {formatDistanceToNow(new Date(notif.created_at), { addSuffix: true, locale: fr })}
                       </p>
                     </div>
@@ -119,8 +119,8 @@ export default function NotificationBell() {
             )}
           </div>
           
-          <div className="p-2 border-t border-gray-100 bg-gray-50/50 text-center">
-            <Link href="/membres/notifications" className="text-sm font-medium text-primary-600 hover:text-primary-700 hover:underline block p-2">
+          <div className="p-2 border-t border-outline-variant bg-surface-container-low/50 text-center">
+            <Link href="/membres/notifications" className="text-sm font-medium text-primary hover:text-primary hover:underline block p-2">
               Voir toutes les notifications
             </Link>
           </div>

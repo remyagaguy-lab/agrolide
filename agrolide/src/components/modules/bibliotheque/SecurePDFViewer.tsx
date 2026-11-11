@@ -138,10 +138,10 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
           Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte Agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
-          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
             Créer mon compte
           </Link>
-          <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-white text-success border border-success/30 rounded-lg font-medium hover:bg-success-container transition-colors">
+          <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-surface-container-lowest text-success border border-success/30 rounded-lg font-medium hover:bg-success-container transition-colors">
             Se connecter
           </Link>
         </div>
@@ -169,14 +169,14 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
               Mode visiteur{readCount > 0 && <> : <strong>{readCount}/{readLimit}</strong> documents gratuits</>} · Lisez sans pub en créant un compte
             </span>
           </span>
-          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="shrink-0 rounded-md bg-white px-3 py-1 font-semibold text-on-success-container hover:bg-success-container">
+          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="shrink-0 rounded-md bg-surface-container-lowest px-3 py-1 font-semibold text-on-success-container hover:bg-success-container">
             Créer un compte
           </Link>
         </div>
       )}
 
       {/* Toolbar */}
-      <div className="w-full bg-white border-b border-outline-variant p-2 sm:p-4 flex flex-wrap items-center justify-between gap-2 shadow-sm z-10">
+      <div className="w-full bg-surface-container-lowest border-b border-outline-variant p-2 sm:p-4 flex flex-wrap items-center justify-between gap-2 shadow-sm z-10">
         <div className="flex items-center gap-2 sm:gap-4">
           <button 
             onClick={() => changeScale(-0.2)} 

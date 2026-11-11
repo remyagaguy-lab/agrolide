@@ -49,10 +49,10 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
   const href = `/bibliotheque/${document.id}`
 
   return (
-    <Link href={href} className={`group flex flex-col h-full bg-white border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all overflow-hidden`}>
+    <Link href={href} className={`group flex flex-col h-full bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all overflow-hidden`}>
       {/* En-tête miniature */}
       <div className="h-32 bg-surface-container-low flex items-center justify-center border-b border-outline-variant relative group-hover:bg-surface-container transition-colors">
-        <FileText className="w-12 h-12 text-gray-400" strokeWidth={1.5} />
+        <FileText className="w-12 h-12 text-on-surface-muted" strokeWidth={1.5} />
         <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full ${getBadgeColor(document.type_doc)}`}>
           {formatType(document.type_doc)}
         </span>

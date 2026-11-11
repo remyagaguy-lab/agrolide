@@ -78,9 +78,9 @@ export default async function NousSoutenirPage() {
               
               {/* Barre de progression */}
               {campagne && (
-                <div className="bg-white p-8 md:p-10 rounded-3xl border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+                <div className="bg-surface-container-lowest p-8 md:p-10 rounded-3xl border border-outline-variant shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
                   <div className="flex items-center gap-4 mb-8">
-                    <div className="w-14 h-14 bg-accent-sun/10 text-[#d9970c] rounded-2xl flex items-center justify-center">
+                    <div className="w-14 h-14 bg-accent-sun/10 text-on-tertiary-container rounded-2xl flex items-center justify-center">
                       <Target size={28} />
                     </div>
                     <h2 className="font-heading font-[800] text-[24px] md:text-[28px] text-on-surface">{campagne.titre}</h2>
@@ -100,7 +100,7 @@ export default async function NousSoutenirPage() {
                     </div>
                     <div className="h-4 w-full bg-surface-container-low rounded-full overflow-hidden border border-outline-variant">
                       <div 
-                        className="h-full bg-gradient-to-r from-[#fcb726] to-[#f99e1d] transition-all duration-1000 ease-out"
+                        className="h-full bg-accent-sun transition-all duration-1000 ease-out"
                         style={{ width: `${progressPercentage}%` }}
                       />
                     </div>
@@ -131,21 +131,21 @@ export default async function NousSoutenirPage() {
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-outline-variant shadow-sm">
+                  <div className="flex items-start gap-4 p-5 bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <strong className="block font-heading font-[800] text-[18px] text-on-surface mb-1">Vulgariser la science</strong>
                       <p className="font-sans text-[15px] text-on-surface-muted leading-[1.6]">Traduction et adaptation de recherches agronomiques en fiches techniques utilisables sur le terrain.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-outline-variant shadow-sm">
+                  <div className="flex items-start gap-4 p-5 bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <strong className="block font-heading font-[800] text-[18px] text-on-surface mb-1">Incuber les talents</strong>
                       <p className="font-sans text-[15px] text-on-surface-muted leading-[1.6]">Financement de bourses pour permettre aux jeunes porteurs de projets d'accéder à notre programme d'incubation.</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 p-5 bg-white rounded-2xl border border-outline-variant shadow-sm">
+                  <div className="flex items-start gap-4 p-5 bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm">
                     <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
                       <strong className="block font-heading font-[800] text-[18px] text-on-surface mb-1">Maintenir la plateforme</strong>
@@ -156,7 +156,7 @@ export default async function NousSoutenirPage() {
               </div>
 
               {/* Derniers soutiens */}
-              <div className="bg-gradient-to-br from-[#1b5e38] to-[#124026] p-8 md:p-10 rounded-3xl relative overflow-hidden shadow-[0_20px_40px_rgba(27,94,56,0.15)]">
+              <div className="bg-surface-brand p-8 md:p-10 rounded-3xl relative overflow-hidden shadow-[0_20px_40px_rgba(27,94,56,0.15)]">
                 <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-white/5 rounded-full blur-2xl pointer-events-none" />
                 <h3 className="font-heading font-[800] text-[24px] text-white flex items-center gap-3 mb-8 relative z-10">
                   <Users className="w-6 h-6 text-on-tertiary-container" />
@@ -193,7 +193,7 @@ export default async function NousSoutenirPage() {
 
             {/* Colonne Droite : Formulaire */}
             <div className="lg:col-span-5">
-              <div className="sticky top-24 bg-white p-8 rounded-3xl border border-outline-variant shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+              <div className="sticky top-24 bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
                 <h3 className="font-heading font-[800] text-[24px] text-on-surface mb-6">Faire un don</h3>
                 <DonationForm campagneId={campagne?.id || ''} />
               </div>

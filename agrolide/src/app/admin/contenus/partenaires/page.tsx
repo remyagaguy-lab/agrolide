@@ -53,7 +53,7 @@ export default async function AdminPartenairesPage() {
           <h2 className="text-base font-semibold text-on-surface mb-4 flex items-center gap-2">
             <Mail size={16} className="text-info" /> Demandes de partenariat ({contacts.length})
           </h2>
-          <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+          <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead className="bg-surface-container-low border-b border-outline-variant">
@@ -70,7 +70,7 @@ export default async function AdminPartenairesPage() {
                       <td className="px-5 py-3 font-medium text-on-surface">{c.raison_sociale || "—"}</td>
                       <td className="px-5 py-3 text-on-surface-muted text-xs"><a href={`mailto:${c.email}`} className="hover:text-info">{c.email}</a></td>
                       <td className="px-5 py-3 text-on-surface-muted text-xs">{c.nature_collaboration || "—"}</td>
-                      <td className="px-5 py-3 text-gray-400 text-xs">{c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}</td>
+                      <td className="px-5 py-3 text-on-surface-muted text-xs">{c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}</td>
                     </tr>
                   ))}
                 </tbody>

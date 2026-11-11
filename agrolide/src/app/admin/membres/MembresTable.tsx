@@ -99,7 +99,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
       {/* Confirmation Dialog */}
       {confirmDialog && (
         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-          <div className="bg-white rounded-xl shadow-xl p-6 max-w-sm w-full mx-4">
+          <div className="bg-surface-container-lowest rounded-xl shadow-xl p-6 max-w-sm w-full mx-4">
             <h3 className="font-bold text-on-surface mb-2">Confirmer l'action</h3>
             <p className="text-sm text-on-surface-variant mb-5">{confirmDialog.label}</p>
             <div className="flex gap-3 justify-end">
@@ -116,10 +116,10 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
       )}
 
       {/* Filtres */}
-      <div className="bg-white rounded-xl border border-outline-variant p-4 shadow-sm">
+      <div className="bg-surface-container-lowest rounded-xl border border-outline-variant p-4 shadow-sm">
         <div className="flex flex-wrap gap-3 items-center">
           <div className="relative flex-1 min-w-[200px]">
-            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-muted" />
             <input
               type="text"
               placeholder="Rechercher nom, email..."
@@ -169,7 +169,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
       </div>
 
       {/* Tableau */}
-      <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead className="bg-surface-container-low border-b border-outline-variant">
@@ -186,7 +186,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
             <tbody className="divide-y divide-outline-variant">
               {membres.length === 0 ? (
                 <tr>
-                  <td colSpan={7} className="px-5 py-10 text-center text-gray-400 italic">
+                  <td colSpan={7} className="px-5 py-10 text-center text-on-surface-muted italic">
                     Aucun membre ne correspond aux filtres.
                   </td>
                 </tr>
@@ -199,7 +199,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                       </div>
                       <div>
                         <div className="font-medium text-on-surface">{m.prenom} {m.nom}</div>
-                        <div className="text-xs text-gray-400">{m.email}</div>
+                        <div className="text-xs text-on-surface-muted">{m.email}</div>
                       </div>
                     </div>
                   </td>
@@ -214,7 +214,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                     </span>
                   </td>
                   <td className="px-5 py-3 text-on-surface-muted text-xs">{m.pays}</td>
-                  <td className="px-5 py-3 text-gray-400 text-xs">
+                  <td className="px-5 py-3 text-on-surface-muted text-xs">
                     {m.created_at ? new Date(m.created_at).toLocaleDateString("fr-FR") : "—"}
                   </td>
                   <td className="px-5 py-3 text-xs">
@@ -228,7 +228,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                     <div className="flex items-center justify-end gap-2">
                       <a
                         href={`/admin/membres/${m.id}`}
-                        className="p-1.5 text-gray-400 hover:text-info hover:bg-info-container rounded-lg transition-colors"
+                        className="p-1.5 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors"
                         title="Voir profil"
                       >
                         <Eye size={15} />
@@ -236,7 +236,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                       {m.statut_adhesion !== "actif" ? (
                         <button
                           onClick={() => setConfirmDialog({ id: m.id, action: "activer", label: `Activer le compte de ${m.prenom} ${m.nom} ?` })}
-                          className="p-1.5 text-gray-400 hover:text-success hover:bg-success-container rounded-lg transition-colors"
+                          className="p-1.5 text-on-surface-muted hover:text-success hover:bg-success-container rounded-lg transition-colors"
                           title="Activer"
                           disabled={!!actionLoading}
                         >
@@ -245,7 +245,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                       ) : (
                         <button
                           onClick={() => setConfirmDialog({ id: m.id, action: "suspendre", label: `Suspendre le compte de ${m.prenom} ${m.nom} ?` })}
-                          className="p-1.5 text-gray-400 hover:text-error hover:bg-error-container rounded-lg transition-colors"
+                          className="p-1.5 text-on-surface-muted hover:text-error hover:bg-error-container rounded-lg transition-colors"
                           title="Suspendre"
                           disabled={!!actionLoading}
                         >
@@ -254,7 +254,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                       )}
                       <button
                         onClick={() => setConfirmDialog({ id: m.id, action: "admin", label: `Promouvoir ${m.prenom} ${m.nom} comme administrateur de contenu ?` })}
-                        className="p-1.5 text-gray-400 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
+                        className="p-1.5 text-on-surface-muted hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors"
                         title="Promouvoir admin"
                         disabled={!!actionLoading}
                       >

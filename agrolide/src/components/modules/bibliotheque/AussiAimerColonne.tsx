@@ -14,7 +14,7 @@ export function AussiAimerColonne({ docs }: { docs: DocSuggere[] }) {
           <li key={d.id} className="snap-start shrink-0 w-[70%] sm:w-[45%] lg:w-auto">
             <Link
               href={`/bibliotheque/${d.id}`}
-              className="flex h-full items-start gap-3 rounded-xl border border-outline-variant bg-white p-3 hover:border-success/30 hover:shadow-sm transition"
+              className="flex h-full items-start gap-3 rounded-xl border border-outline-variant bg-surface-container-lowest p-3 hover:border-success/30 hover:shadow-sm transition"
             >
               <span className="mt-0.5 flex h-10 w-8 shrink-0 items-center justify-center rounded bg-success-container text-success">
                 <FileText className="h-5 w-5" />

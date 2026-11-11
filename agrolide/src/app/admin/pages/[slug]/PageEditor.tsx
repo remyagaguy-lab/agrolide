@@ -76,7 +76,7 @@ export function PageEditor({ slug, titre, contenuJson }: Props) {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-outline-variant shadow-sm p-1 min-h-[500px]">
+      <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm p-1 min-h-[500px]">
         {/* 
           NOTE: Le PageEditor utilise un éditeur Tiptap simplifié.
           Pour l'instant on affiche le JSON éditable directement,
@@ -95,7 +95,7 @@ export function PageEditor({ slug, titre, contenuJson }: Props) {
               }
             }}
           />
-          <p className="text-xs text-gray-400 mt-2">Format JSON Tiptap. Sauvegardez pour mettre à jour la page.</p>
+          <p className="text-xs text-on-surface-muted mt-2">Format JSON Tiptap. Sauvegardez pour mettre à jour la page.</p>
         </div>
       </div>
     </div>

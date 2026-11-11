@@ -87,7 +87,7 @@ export default function FilClient({ filId }: FilClientProps) {
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
       {/* Header */}
-      <div className="bg-white border border-outline-variant rounded-2xl p-5 shadow-sm">
+      <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-5 shadow-sm">
         <Link href={`/membres/forum/categorie/${thread.categorie_id}`} className="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface-muted hover:text-on-surface transition-colors mb-3">
           <ArrowLeft className="w-3.5 h-3.5" /> Retour à {thread.categorie?.nom}
         </Link>
@@ -107,14 +107,14 @@ export default function FilClient({ filId }: FilClientProps) {
       {/* Messages */}
       <div className="space-y-6">
         {messages.map((msg, index) => (
-          <div key={msg.id} className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col sm:flex-row">
+          <div key={msg.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col sm:flex-row">
             {/* Profil Sidebar */}
             <div className="bg-surface-container-low p-4 sm:w-40 sm:border-r border-outline-variant flex flex-col items-center text-center shrink-0">
-              <div className="w-12 h-12 bg-white border border-outline-variant rounded-xl flex items-center justify-center mb-2 shadow-sm overflow-hidden relative">
+              <div className="w-12 h-12 bg-surface-container-lowest border border-outline-variant rounded-xl flex items-center justify-center mb-2 shadow-sm overflow-hidden relative">
                 {msg.auteur?.avatar_url ? (
                   <Image src={msg.auteur.avatar_url} alt="Avatar" fill sizes="48px" className="object-cover" />
                 ) : (
-                  <User className="w-6 h-6 text-gray-400" />
+                  <User className="w-6 h-6 text-on-surface-muted" />
                 )}
               </div>
               <div className="font-bold text-on-surface text-xs truncate w-full">{msg.auteur?.prenom}</div>
@@ -123,14 +123,14 @@ export default function FilClient({ filId }: FilClientProps) {
             
             {/* Contenu */}
             <div className="p-5 flex-1 flex flex-col">
-              <div className="flex justify-between items-center mb-3 text-[10px] text-gray-400 font-bold uppercase tracking-wider">
+              <div className="flex justify-between items-center mb-3 text-[10px] text-on-surface-muted font-bold uppercase tracking-wider">
                 <div className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" />
                   {formatDistanceToNow(new Date(msg.created_at), { addSuffix: true, locale: fr })}
                 </div>
                 <div className="flex items-center gap-2">
                   <span>#{index + 1}</span>
-                  <button onClick={() => handleReport(msg.id)} className="text-gray-400 hover:text-error transition-colors p-1" title="Signaler">
+                  <button onClick={() => handleReport(msg.id)} className="text-on-surface-muted hover:text-error transition-colors p-1" title="Signaler">
                     <AlertTriangle className="w-3.5 h-3.5" />
                   </button>
                 </div>
@@ -148,7 +148,7 @@ export default function FilClient({ filId }: FilClientProps) {
 
       {/* Reply Form */}
       {thread.statut === 'ouvert' ? (
-        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5">
           <h3 className="text-sm font-bold text-on-surface mb-3">Répondre</h3>
           {currentUser ? (
             <form onSubmit={handleReply}>

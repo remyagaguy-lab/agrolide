@@ -62,7 +62,7 @@ export default function CustomCalendar({
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+    <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-outline-variant bg-surface-container-low">
         <button 
@@ -101,7 +101,7 @@ export default function CustomCalendar({
             <div 
               key={day.toString()}
               className={`min-h-[100px] p-2 border-b border-r border-outline-variant relative
-                ${!isSameMonth(day, monthStart) ? 'bg-surface-container-low/50 text-gray-400' : 'text-on-surface-variant'}
+                ${!isSameMonth(day, monthStart) ? 'bg-surface-container-low/50 text-on-surface-muted' : 'text-on-surface-variant'}
                 ${isToday(day) ? 'bg-primary-container/30' : ''}
               `}
             >

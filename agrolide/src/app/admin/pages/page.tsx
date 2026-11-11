@@ -45,21 +45,21 @@ export default async function AdminPagesPage() {
           <Link
             key={page.id}
             href={`/admin/pages/${page.slug}`}
-            className="group bg-white rounded-xl border border-outline-variant p-5 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all"
+            className="group bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm hover:shadow-md hover:border-indigo-300 transition-all"
           >
             <div className="flex items-start justify-between">
               <div>
                 <p className="font-semibold text-on-surface group-hover:text-indigo-700 transition-colors">
                   {page.titre || PAGE_LABELS[page.slug] || page.slug}
                 </p>
-                <p className="text-xs text-gray-400 mt-1">/{page.slug}</p>
+                <p className="text-xs text-on-surface-muted mt-1">/{page.slug}</p>
               </div>
-              <div className="w-8 h-8 bg-surface-container-low group-hover:bg-indigo-50 text-gray-400 group-hover:text-indigo-600 rounded-lg flex items-center justify-center transition-colors">
+              <div className="w-8 h-8 bg-surface-container-low group-hover:bg-indigo-50 text-on-surface-muted group-hover:text-indigo-600 rounded-lg flex items-center justify-center transition-colors">
                 <FileEdit size={16} />
               </div>
             </div>
             {page.updated_at && (
-              <p className="text-xs text-gray-400 mt-3">
+              <p className="text-xs text-on-surface-muted mt-3">
                 Dernière édition : {new Date(page.updated_at).toLocaleDateString("fr-FR", { day: "numeric", month: "short", year: "numeric" })}
               </p>
             )}
@@ -67,7 +67,7 @@ export default async function AdminPagesPage() {
         ))}
 
         {pages.length === 0 && (
-          <div className="col-span-3 py-12 text-center text-gray-400 italic">
+          <div className="col-span-3 py-12 text-center text-on-surface-muted italic">
             Aucune page statique trouvée dans D1.
           </div>
         )}

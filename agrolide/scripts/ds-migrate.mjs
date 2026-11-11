@@ -20,7 +20,6 @@ const SKIP = [
   'src/app/(public)/page.tsx',
   'src/app/(public)/formations/page.tsx',
   'src/components/modules/evenements/EventCard.tsx',
-  'src/app/(public)/design-system-arche',
   'src/app/design-system',
   'src/components/ui',
   'src/styles',

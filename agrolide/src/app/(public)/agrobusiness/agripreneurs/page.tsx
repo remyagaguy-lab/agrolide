@@ -25,7 +25,7 @@ export default async function AgripreneursPage() {
   return (
     <div className="flex flex-col min-h-screen bg-surface-container-low">
       {/* Header */}
-      <section className="bg-[var(--color-vert-principal)] py-16 text-white text-center">
+      <section className="bg-surface-brand py-16 text-on-surface-brand text-center">
         <div className="container mx-auto px-4">
           <Link href="/agrobusiness" className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-6 text-sm">
             <ArrowLeft size={16} /> Retour à l'Agrobusiness
@@ -49,14 +49,14 @@ export default async function AgripreneursPage() {
               ))}
             </div>
           ) : (
-            <div className="bg-white rounded-2xl border border-dashed border-[var(--color-orange-accent)] p-16 text-center max-w-4xl mx-auto shadow-sm">
-              <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center mx-auto text-[var(--color-orange-accent)] mb-6">
+            <div className="bg-surface-container-lowest rounded-2xl border border-dashed border-tertiary p-16 text-center max-w-4xl mx-auto shadow-sm">
+              <div className="w-24 h-24 bg-tertiary-container rounded-full flex items-center justify-center mx-auto text-on-tertiary-container mb-6">
                 <Rocket size={48} />
               </div>
               <h2 className="text-3xl font-heading font-bold text-on-surface mb-4">
                 Success stories à venir !
               </h2>
-              <p className="text-[var(--color-gris-texte)] text-lg mb-8 max-w-xl mx-auto">
+              <p className="text-on-surface-variant text-lg mb-8 max-w-xl mx-auto">
                 La première cohorte d'incubation est en cours de sélection. Revenez bientôt pour découvrir les profils de nos brillants agripreneurs et suivre leur évolution.
               </p>
               <div className="flex justify-center gap-4">

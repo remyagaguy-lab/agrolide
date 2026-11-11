@@ -58,7 +58,7 @@ export default async function AdminAnalyticsPage() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
+        <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-success-container text-success flex items-center justify-center">
               <Users size={20} />
@@ -68,7 +68,7 @@ export default async function AdminAnalyticsPage() {
           <p className="text-3xl font-bold text-on-surface mt-2">{profiles.length}</p>
         </div>
 
-        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
+        <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-info-container text-info flex items-center justify-center">
               <UserCheck size={20} />
@@ -80,9 +80,9 @@ export default async function AdminAnalyticsPage() {
           </p>
         </div>
 
-        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
+        <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-tertiary-container text-orange-600 flex items-center justify-center">
               <Download size={20} />
             </div>
             <p className="text-sm font-medium text-on-surface-muted">Téléchargements</p>
@@ -90,7 +90,7 @@ export default async function AdminAnalyticsPage() {
           <p className="text-3xl font-bold text-on-surface mt-2">{totalDownloads}</p>
         </div>
 
-        <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
+        <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center">
               <BookOpen size={20} />
@@ -101,9 +101,9 @@ export default async function AdminAnalyticsPage() {
         </div>
       </div>
 
-      <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm">
+      <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm">
         <h2 className="text-lg font-bold text-on-surface mb-6">Croissance des inscriptions (6 derniers mois)</h2>
-        <AdminLineChart data={registrationsTrend} dataKey="Inscriptions" stroke="#16a34a" />
+        <AdminLineChart data={registrationsTrend} dataKey="Inscriptions" stroke="var(--ag-sys-color-primary)" />
       </div>
       
       <div className="bg-info-container border border-info/30 text-on-info-container p-6 rounded-2xl">

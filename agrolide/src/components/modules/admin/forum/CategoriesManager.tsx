@@ -90,7 +90,7 @@ export default function CategoriesManager() {
         </button>
       </div>
 
-      <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <table className="w-full text-left text-sm">
           <thead className="bg-surface-container-low border-b border-outline-variant text-on-surface-variant">
             <tr>

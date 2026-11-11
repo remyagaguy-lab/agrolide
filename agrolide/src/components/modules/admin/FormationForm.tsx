@@ -51,7 +51,7 @@ export default function FormationForm({ initialData, onSuccess, onCancel }: Form
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-2xl border border-outline-variant shadow-sm">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-on-surface">
           {initialData ? "Modifier la formation" : "Nouvelle formation"}

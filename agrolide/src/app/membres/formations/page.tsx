@@ -44,7 +44,7 @@ export default async function MesFormationsPage() {
       case 'inscrit':
         return <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Inscrit</span>
       case 'en_attente_paiement':
-        return <span className="bg-orange-50 text-orange-700 border border-orange-200 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><Clock className="w-3 h-3" /> En attente</span>
+        return <span className="bg-tertiary-container text-orange-700 border border-orange-200 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><Clock className="w-3 h-3" /> En attente</span>
       case 'complete':
         return <span className="bg-info-container text-info border border-info/30 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Terminée</span>
       case 'annule':
@@ -70,9 +70,9 @@ export default async function MesFormationsPage() {
       </div>
 
       {data.length === 0 ? (
-        <div className="bg-white border border-outline-variant rounded-2xl shadow-sm p-8 text-center flex flex-col items-center">
+        <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-8 text-center flex flex-col items-center">
           <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-3">
-            <Calendar className="w-6 h-6 text-gray-300" />
+            <Calendar className="w-6 h-6 text-outline" />
           </div>
           <h3 className="text-sm font-bold text-on-surface mb-1">Aucune inscription</h3>
           <p className="text-xs text-on-surface-muted mb-4">Vous n'êtes inscrit à aucune formation pour le moment.</p>
@@ -90,7 +90,7 @@ export default async function MesFormationsPage() {
             const sessionData = ins.sessions_formation;
 
             return (
-              <div key={ins.id} className="bg-white border border-outline-variant rounded-2xl shadow-sm hover:border-primary transition-colors p-5 flex flex-col md:flex-row gap-6 items-start md:items-center group">
+              <div key={ins.id} className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary transition-colors p-5 flex flex-col md:flex-row gap-6 items-start md:items-center group">
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     {getStatusBadge(ins.statut)}
@@ -108,11 +108,11 @@ export default async function MesFormationsPage() {
                   {!isExternal && sessionData && (
                     <div className="flex flex-wrap items-center gap-4 text-xs text-on-surface-muted">
                       <div className="flex items-center">
-                        <Calendar className="w-3.5 h-3.5 mr-1.5 text-gray-400" />
+                        <Calendar className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted" />
                         {new Date(sessionData.date_debut).toLocaleDateString('fr-FR')} au {new Date(sessionData.date_fin).toLocaleDateString('fr-FR')}
                       </div>
                       <div className="flex items-center">
-                        <MapPin className="w-3.5 h-3.5 mr-1.5 text-gray-400" />
+                        <MapPin className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted" />
                         {sessionData.lieu}
                       </div>
                     </div>
@@ -121,7 +121,7 @@ export default async function MesFormationsPage() {
                   {isExternal && formation.thematique && (
                     <div className="flex flex-wrap items-center gap-4 text-xs text-on-surface-muted">
                       <div className="flex items-center">
-                        <BookOpen className="w-3.5 h-3.5 mr-1.5 text-gray-400" />
+                        <BookOpen className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted" />
                         {formation.thematique}
                       </div>
                     </div>

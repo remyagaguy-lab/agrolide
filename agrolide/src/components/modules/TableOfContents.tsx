@@ -34,7 +34,7 @@ export function TableOfContents() {
   if (headings.length === 0) return null
 
   return (
-    <div className="bg-surface-container-low rounded-xl border border-[var(--color-gris-clair)] overflow-hidden">
+    <div className="bg-surface-container-low rounded-xl border border-outline-variant overflow-hidden">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-5 lg:cursor-default"
@@ -48,11 +48,11 @@ export function TableOfContents() {
           {headings.map((heading) => (
             <li 
               key={heading.id} 
-              className={`${heading.level === 3 ? 'ml-4 text-sm' : 'font-medium'} text-[var(--color-gris-texte)]`}
+              className={`${heading.level === 3 ? 'ml-4 text-sm' : 'font-medium'} text-on-surface-variant`}
             >
               <a 
                 href={`#${heading.id}`}
-                className="hover:text-[var(--color-vert-principal)] transition-colors inline-block w-full"
+                className="hover:text-primary transition-colors inline-block w-full"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById(heading.id)?.scrollIntoView({ behavior: 'smooth' });

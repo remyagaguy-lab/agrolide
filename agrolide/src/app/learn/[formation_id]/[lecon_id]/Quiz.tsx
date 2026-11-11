@@ -104,7 +104,7 @@ export function Quiz({
   }
 
   return (
-    <div className="bg-white border border-outline-variant rounded-xl overflow-hidden shadow-none">
+    <div className="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-none">
       <div className="bg-surface-container-low p-5 border-b border-outline-variant flex justify-between items-center text-sm font-urbanist font-semibold text-on-surface-variant uppercase tracking-wide">
         <span>Question {currentQuestionIndex + 1} sur {questions.length}</span>
         <span className="text-primary">Score: {score}</span>
@@ -121,14 +121,14 @@ export function Quiz({
             let buttonClass = "w-full justify-start text-left h-auto whitespace-normal py-4 px-6 text-base border-2 font-urbanist rounded-xl transition-all";
             
             if (!hasSubmitted) {
-              buttonClass = cn(buttonClass, isSelected ? "border-accent-leaf bg-primary-container" : "border-outline-variant hover:border-primary hover:bg-surface-container-low bg-white");
+              buttonClass = cn(buttonClass, isSelected ? "border-accent-leaf bg-primary-container" : "border-outline-variant hover:border-primary hover:bg-surface-container-low bg-surface-container-lowest");
             } else {
               if (isCorrect) {
                 buttonClass = cn(buttonClass, "border-accent-leaf bg-success-container text-primary");
               } else if (isSelected && !isCorrect) {
                 buttonClass = cn(buttonClass, "border-error bg-error-container text-error");
               } else {
-                buttonClass = cn(buttonClass, "border-outline-variant opacity-60 bg-white");
+                buttonClass = cn(buttonClass, "border-outline-variant opacity-60 bg-surface-container-lowest");
               }
             }
 

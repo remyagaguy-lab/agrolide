@@ -132,10 +132,10 @@ export function UserButton() {
           : initials}
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-52 rounded-lg border border-[#e8e8e4] bg-white shadow-lg py-1 z-50">
-          <p className="px-3 py-2 text-xs text-gray-500 truncate">{user.primaryEmailAddress?.emailAddress}</p>
-          <Link href="/membres/profil" onClick={() => setOpen(false)} className="block px-3 py-2 text-sm hover:bg-gray-50">Mon profil</Link>
-          <button type="button" onClick={() => signOut()}className="block w-full text-left px-3 py-2 text-sm text-red-600 hover:bg-gray-50">Se déconnecter</button>
+        <div className="absolute right-0 mt-2 w-52 rounded-lg border border-[#e8e8e4] bg-surface-container-lowest shadow-lg py-1 z-50">
+          <p className="px-3 py-2 text-xs text-on-surface-muted truncate">{user.primaryEmailAddress?.emailAddress}</p>
+          <Link href="/membres/profil" onClick={() => setOpen(false)} className="block px-3 py-2 text-sm hover:bg-surface-container-low">Mon profil</Link>
+          <button type="button" onClick={() => signOut()}className="block w-full text-left px-3 py-2 text-sm text-error hover:bg-surface-container-low">Se déconnecter</button>
         </div>
       )}
     </div>

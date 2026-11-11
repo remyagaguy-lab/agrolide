@@ -74,7 +74,7 @@ export default function DonationForm({ campagneId }: { campagneId: string }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-sm border border-outline-variant">
+    <form onSubmit={handleSubmit} className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant">
       <h3 className="text-xl font-bold text-on-surface mb-6">Faire un don</h3>
 
       {errorMsg && (

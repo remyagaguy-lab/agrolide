@@ -86,7 +86,7 @@ export default async function MembresRootLayout({
 
         {statut === "suspendu" && (
           <div className="flex-1 flex items-center justify-center p-4">
-            <div className="bg-white p-8 rounded-xl border border-error/30 shadow-sm max-w-md text-center">
+            <div className="bg-surface-container-lowest p-8 rounded-xl border border-error/30 shadow-sm max-w-md text-center">
               <AlertCircle className="mx-auto text-error mb-4" size={48} />
               <h2 className="text-xl font-bold text-error mb-2">Compte suspendu</h2>
               <p className="text-on-surface-variant mb-6">Votre compte a été suspendu par un administrateur. Veuillez nous contacter pour plus d'informations.</p>
@@ -102,7 +102,7 @@ export default async function MembresRootLayout({
           <div className="bg-error text-white p-4 text-center font-bold flex items-center justify-center gap-2">
             <AlertCircle size={20} />
             Votre adhésion a expiré. Pour continuer à profiter du réseau, veuillez renouveler votre cotisation.
-            <Link href="/membres/cotisation" className="underline ml-2 hover:text-red-100">
+            <Link href="/membres/cotisation" className="underline ml-2 hover:text-error-container">
               Renouveler maintenant
             </Link>
           </div>

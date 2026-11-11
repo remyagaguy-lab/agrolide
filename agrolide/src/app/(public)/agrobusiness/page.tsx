@@ -16,7 +16,7 @@ export default function AgrobusinessPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero */}
-      <section className="bg-[var(--color-vert-principal)] py-20 text-white text-center">
+      <section className="bg-surface-brand py-20 text-on-surface-brand text-center">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
             Agrobusiness & Consulting
@@ -31,44 +31,44 @@ export default function AgrobusinessPage() {
       <section className="py-24 bg-surface-container-low">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">
+            <h2 className="text-3xl font-heading font-bold text-primary mb-4">
               Nos services d'accompagnement
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Service 1 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-[var(--color-gris-clair)] flex flex-col h-full">
-              <div className="w-14 h-14 bg-orange-50 rounded-lg flex items-center justify-center text-[var(--color-orange-accent)] mb-6">
+            <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant flex flex-col h-full">
+              <div className="w-14 h-14 bg-tertiary-container rounded-lg flex items-center justify-center text-on-tertiary-container mb-6">
                 <FileText size={28} />
               </div>
               <h3 className="text-xl font-bold text-on-surface mb-4">Études & Business Plans</h3>
-              <p className="text-[var(--color-gris-texte)] mb-6 flex-grow">
+              <p className="text-on-surface-variant mb-6 flex-grow">
                 Études de faisabilité, études de marché et rédaction de business plans bancables pour sécuriser vos financements.
               </p>
             </div>
 
             {/* Service 2 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-[var(--color-gris-clair)] flex flex-col h-full">
-              <div className="w-14 h-14 bg-success-container rounded-lg flex items-center justify-center text-[var(--color-vert-principal)] mb-6">
+            <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border border-outline-variant flex flex-col h-full">
+              <div className="w-14 h-14 bg-success-container rounded-lg flex items-center justify-center text-primary mb-6">
                 <LineChart size={28} />
               </div>
               <h3 className="text-xl font-bold text-on-surface mb-4">Conseil Stratégique</h3>
-              <p className="text-[var(--color-gris-texte)] mb-6 flex-grow">
+              <p className="text-on-surface-variant mb-6 flex-grow">
                 Appui technique aux exploitations, optimisation des processus de production et structuration de chaînes de valeur.
               </p>
             </div>
 
             {/* Service 3 */}
-            <div className="bg-white p-8 rounded-2xl shadow-sm border-2 border-[var(--color-vert-principal)] flex flex-col h-full relative">
-              <div className="absolute -top-4 right-6 bg-[var(--color-orange-accent)] text-white text-xs font-bold px-3 py-1 rounded-full">
+            <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-2 border-primary flex flex-col h-full relative">
+              <div className="absolute -top-4 right-6 bg-tertiary text-on-tertiary text-xs font-bold px-3 py-1 rounded-full">
                 Programme Phare
               </div>
               <div className="w-14 h-14 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600 mb-6">
                 <Briefcase size={28} />
               </div>
               <h3 className="text-xl font-bold text-on-surface mb-4">Incubation & Accélération</h3>
-              <p className="text-[var(--color-gris-texte)] mb-6 flex-grow">
+              <p className="text-on-surface-variant mb-6 flex-grow">
                 Programmes complets pour les agripreneurs : mentorat, préparation au pitch investisseurs et mise en réseau.
               </p>
               <Link href="/agrobusiness/incubation" className="mt-auto">
@@ -82,13 +82,13 @@ export default function AgrobusinessPage() {
       </section>
 
       {/* Formulaire de demande */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-surface-container-lowest">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">
+            <h2 className="text-3xl font-heading font-bold text-primary mb-4">
               Demander un accompagnement
             </h2>
-            <p className="text-[var(--color-gris-texte)]">
+            <p className="text-on-surface-variant">
               Remplissez ce formulaire pour nous faire part de vos besoins. Un de nos experts vous contactera sous 48h.
             </p>
           </div>

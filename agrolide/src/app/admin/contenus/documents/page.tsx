@@ -137,7 +137,7 @@ export default function AdminDocumentsPage() {
         </div>
       )}
 
-      <div className="bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant overflow-hidden">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-outline-variant">
             <thead className="bg-surface-container-low">
@@ -149,11 +149,11 @@ export default function AdminDocumentsPage() {
                 <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-on-surface-muted uppercase tracking-wider">Actions</th>
               </tr>
             </thead>
-            <tbody className="bg-white divide-y divide-outline-variant">
+            <tbody className="bg-surface-container-lowest divide-y divide-outline-variant">
               {loading ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-12 text-center">
-                    <Loader2 className="w-8 h-8 animate-spin text-gray-400 mx-auto" />
+                    <Loader2 className="w-8 h-8 animate-spin text-on-surface-muted mx-auto" />
                   </td>
                 </tr>
               ) : documents.length === 0 ? (
@@ -167,7 +167,7 @@ export default function AdminDocumentsPage() {
                   <tr key={doc.id} className={doc.statut === 'en_attente_validation' ? 'bg-warning-container/30' : ''}>
                     <td className="px-6 py-4">
                       <div className="flex items-start gap-3">
-                        <FileText className="w-5 h-5 text-gray-400 mt-0.5 flex-shrink-0" />
+                        <FileText className="w-5 h-5 text-on-surface-muted mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="text-sm font-medium text-on-surface line-clamp-1">{doc.titre}</div>
                           <div className="text-sm text-on-surface-muted">{doc.auteurs}</div>
@@ -197,7 +197,7 @@ export default function AdminDocumentsPage() {
                            <button 
                              onClick={() => handleDelete(doc.id)}
                              disabled={processing === doc.id}
-                             className="p-2 text-gray-400 hover:text-error bg-surface-container-low hover:bg-error-container rounded-lg transition-colors"
+                             className="p-2 text-on-surface-muted hover:text-error bg-surface-container-low hover:bg-error-container rounded-lg transition-colors"
                              title="Supprimer définitivement"
                            >
                              {processing === doc.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}

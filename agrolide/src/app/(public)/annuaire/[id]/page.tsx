@@ -109,15 +109,15 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
         <ArrowLeft className="w-4 h-4" /> Retour à l'annuaire
       </Link>
 
-      <div className="bg-white rounded-3xl shadow-sm border border-outline-variant overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant overflow-hidden">
         {/* Couverture */}
-        <div className="h-32 bg-gradient-to-r from-primary-600 to-primary-800"></div>
+        <div className="h-32 bg-primary"></div>
         
         {/* Header Profil */}
         <div className="px-8 pb-8 relative">
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div className="flex flex-col md:flex-row gap-6 -mt-12">
-              <div className="w-32 h-32 rounded-2xl bg-white p-1.5 shadow-sm shrink-0">
+              <div className="w-32 h-32 rounded-2xl bg-surface-container-lowest p-1.5 shadow-sm shrink-0">
                 <div className="w-full h-full rounded-xl bg-primary-container text-primary flex items-center justify-center text-4xl font-bold overflow-hidden border border-outline-variant relative">
                   {member.photo_url ? (
                     <Image src={member.photo_url} alt={displayName} fill sizes="128px" className="object-cover" />
@@ -157,7 +157,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
               {userId === id ? (
                 <Link 
                   href="/parametres/profil"
-                  className="flex-1 md:flex-none bg-white text-on-surface-variant px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm border border-outline-variant hover:bg-surface-container-low"
+                  className="flex-1 md:flex-none bg-surface-container-lowest text-on-surface-variant px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm border border-outline-variant hover:bg-surface-container-low"
                 >
                   Modifier mon profil
                 </Link>
@@ -177,18 +177,18 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
         {/* Colonne Principale */}
         <div className="md:col-span-2 space-y-8">
                  {/* Biographie */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant">
+          <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant">
             <h2 className="text-xl font-bold text-on-surface mb-4">À propos</h2>
             {member.biographie ? (
               <p className="text-on-surface-variant leading-relaxed whitespace-pre-wrap">{member.biographie}</p>
             ) : (
-              <p className="text-gray-400 italic">Aucune biographie renseignée.</p>
+              <p className="text-on-surface-muted italic">Aucune biographie renseignée.</p>
             )}
           </div>
 
           {/* Contributions */}
           {docs && docs.length > 0 && (
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant">
+            <div className="bg-surface-container-lowest p-8 rounded-3xl shadow-sm border border-outline-variant">
               <h2 className="text-xl font-bold text-on-surface mb-6 flex items-center gap-2">
                 <FileText className="w-5 h-5 text-primary" />
                 Contributions à la bibliothèque
@@ -213,7 +213,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
         <div className="space-y-8">
           
           {/* Tags */}
-          <div className="bg-white p-6 rounded-3xl shadow-sm border border-outline-variant space-y-6">
+          <div className="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant space-y-6">
             
             {sectors && sectors.length > 0 && (
               <div>

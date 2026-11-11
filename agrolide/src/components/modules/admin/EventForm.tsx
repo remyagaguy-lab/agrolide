@@ -103,7 +103,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-2xl border border-outline-variant shadow-sm">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-on-surface">
           {initialData ? 'Modifier l\'événement' : 'Nouvel événement'}
@@ -195,12 +195,12 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               {formData.image_url ? (
                 <div className="relative rounded-xl overflow-hidden border border-outline-variant">
                   <img src={formData.image_url} alt="Affiche" className="w-full h-32 object-cover" />
-                  <button type="button" onClick={() => setFormData({...formData, image_url: ''})} className="absolute top-2 right-2 bg-white rounded-full p-1 shadow hover:bg-surface-container text-xs">Retirer</button>
+                  <button type="button" onClick={() => setFormData({...formData, image_url: ''})} className="absolute top-2 right-2 bg-surface-container-lowest rounded-full p-1 shadow hover:bg-surface-container text-xs">Retirer</button>
                 </div>
               ) : (
                 <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer relative">
                   <div className="space-y-1 text-center">
-                    {uploadingField === 'image_url' ? <Loader2 className="mx-auto h-8 w-8 text-gray-400 animate-spin" /> : <ImageIcon className="mx-auto h-8 w-8 text-gray-400" />}
+                    {uploadingField === 'image_url' ? <Loader2 className="mx-auto h-8 w-8 text-on-surface-muted animate-spin" /> : <ImageIcon className="mx-auto h-8 w-8 text-on-surface-muted" />}
                     <div className="flex text-sm text-on-surface-variant justify-center">
                       <label className="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary focus-within:outline-none">
                         <span>Téléverser l'affiche</span>
@@ -226,7 +226,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               ) : (
                 <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer relative">
                   <div className="space-y-1 text-center">
-                    {uploadingField === 'presentation_url' ? <Loader2 className="mx-auto h-8 w-8 text-gray-400 animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-gray-400" />}
+                    {uploadingField === 'presentation_url' ? <Loader2 className="mx-auto h-8 w-8 text-on-surface-muted animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-on-surface-muted" />}
                     <div className="flex text-sm text-on-surface-variant justify-center">
                       <label className="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary focus-within:outline-none">
                         <span>Téléverser présentation</span>
@@ -252,7 +252,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               ) : (
                 <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer relative">
                   <div className="space-y-1 text-center">
-                    {uploadingField === 'ressources_url' ? <Loader2 className="mx-auto h-8 w-8 text-gray-400 animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-gray-400" />}
+                    {uploadingField === 'ressources_url' ? <Loader2 className="mx-auto h-8 w-8 text-on-surface-muted animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-on-surface-muted" />}
                     <div className="flex text-sm text-on-surface-variant justify-center">
                       <label className="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary focus-within:outline-none">
                         <span>Téléverser ressource</span>

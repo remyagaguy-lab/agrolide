@@ -40,7 +40,7 @@ export default function NetworkActions({ requestId }: { requestId: string }) {
       <button 
         onClick={handleDecline} 
         disabled={isPending}
-        className="w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-error hover:bg-error-container transition-colors disabled:opacity-50"
+        className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-muted hover:text-error hover:bg-error-container transition-colors disabled:opacity-50"
         title="Ignorer"
       >
         <X size={20} />

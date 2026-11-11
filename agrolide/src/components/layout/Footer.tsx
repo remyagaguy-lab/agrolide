@@ -173,7 +173,7 @@ export function Footer() {
                 className={buttonVariants({ variant: "ghost-dark", size: "sm", className: "mt-3 whitespace-normal text-left" })}
               >
                 {/* Vert WhatsApp : couleur officielle d'une marque tierce, volontairement hors palette. */}
-                <span className="text-[#25D366]"><IconWhatsApp /></span>
+                <span className="text-[#25D366]"><IconWhatsApp /></span>{/* ds-check:ignore couleur de marque WhatsApp */}
                 Rejoindre la chaîne WhatsApp
                 <span className="sr-only"> (nouvel onglet)</span>
               </a>

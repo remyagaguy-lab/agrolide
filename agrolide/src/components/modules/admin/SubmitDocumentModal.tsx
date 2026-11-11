@@ -112,7 +112,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
     <Dialog.Root open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-slate-900/60 z-50 data-[state=open]:animate-in data-[state=closed]:animate-out" />
-        <Dialog.Content className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-xl translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg duration-200 sm:rounded-2xl max-h-[90vh] overflow-y-auto">
+        <Dialog.Content className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-xl translate-x-[-50%] translate-y-[-50%] gap-4 border bg-surface-container-lowest p-6 shadow-lg duration-200 sm:rounded-2xl max-h-[90vh] overflow-y-auto">
           
           <Dialog.Close aria-label="Fermer" className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100">
             <X className="h-4 w-4" />
@@ -190,7 +190,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                   <label className="text-sm font-medium text-on-surface-variant">Fichier PDF *</label>
                   <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-outline border-dashed rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                      <Upload className="w-8 h-8 text-gray-400 mb-2" />
+                      <Upload className="w-8 h-8 text-on-surface-muted mb-2" />
                       <p className="text-sm text-on-surface-muted font-medium">
                         {file ? file.name : "Cliquez pour sélectionner un PDF"}
                       </p>

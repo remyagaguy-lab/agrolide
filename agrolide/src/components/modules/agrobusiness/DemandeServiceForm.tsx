@@ -85,7 +85,7 @@ export default function DemandeServiceForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-surface-container-low p-8 md:p-10 rounded-2xl border border-[var(--color-gris-clair)] shadow-sm">
+    <form onSubmit={handleSubmit} className="bg-surface-container-low p-8 md:p-10 rounded-2xl border border-outline-variant shadow-sm">
       {errorMsg && (
         <div className="mb-6 p-4 bg-error-container text-error rounded-xl border border-error/30 text-sm">
           {errorMsg}
@@ -127,7 +127,7 @@ export default function DemandeServiceForm() {
 
         <div className="space-y-2">
           <label className="text-sm font-semibold text-on-surface-variant" htmlFor="type_service">Type d'accompagnement souhaité *</label>
-          <select id="type_service" required value={formData.type_service} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-on-surface-variant">
+          <select id="type_service" required value={formData.type_service} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary text-on-surface-variant">
             <option value="">Sélectionnez un service...</option>
             <option value="business-plan">Étude & Business Plan</option>
             <option value="conseil">Conseil Stratégique / Appui technique</option>
@@ -149,7 +149,7 @@ export default function DemandeServiceForm() {
 
         <div className="space-y-2">
           <label className="text-sm font-semibold text-on-surface-variant" htmlFor="fichier">Pièce jointe (Brief, présentation, etc. - Optionnel)</label>
-          <Input id="fichier" type="file" onChange={handleFileChange} className="cursor-pointer bg-white" />
+          <Input id="fichier" type="file" onChange={handleFileChange} className="cursor-pointer bg-surface-container-lowest" />
         </div>
 
         <Turnstile onToken={setTurnstileToken} resetSignal={isSubmitting} />

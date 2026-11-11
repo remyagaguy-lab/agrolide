@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Link from 'next/link'
+import { buttonVariants } from '@/components/ui/Button'
 import { MessageSquare, Clock, Plus } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import { fr } from 'date-fns/locale'
@@ -32,23 +33,23 @@ export default function ForumClient() {
     <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4 space-y-8">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="dash-page-title">Forum Communautaire</h1>
+          <h1 className="text-headline-lg font-extrabold tracking-tight text-on-surface">Forum Communautaire</h1>
           <p className="text-on-surface-muted mt-2 text-sm">Discutez, partagez et trouvez des réponses avec les autres membres.</p>
         </div>
         <Link 
           href="/membres/forum/nouveau" 
-          className="btn-dash"
+          className={buttonVariants({ variant: 'secondary' })}
         >
           <Plus className="w-5 h-5" /> Nouveau sujet
         </Link>
       </div>
 
       {loading ? (
-        <div className="py-16 text-center text-gray-400 bg-white border border-outline-variant rounded-2xl shadow-sm p-8">Chargement du forum...</div>
+        <div className="py-16 text-center text-on-surface-muted bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-8">Chargement du forum...</div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => (
-            <div key={cat.id} className="bg-white border border-outline-variant rounded-2xl shadow-sm overflow-hidden">
+            <div key={cat.id} className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm overflow-hidden">
               <div className="bg-surface-container-low px-5 py-3 border-b border-outline-variant flex justify-between items-center">
                 <h2 className="text-sm font-bold text-on-surface">{cat.nom}</h2>
                 <Link href={`/membres/forum/categorie/${cat.id}`} className="text-[10px] font-bold text-primary bg-primary-container px-2 py-1 rounded hover:bg-primary-container transition-colors border border-transparent hover:border-outline-variant">
@@ -58,7 +59,7 @@ export default function ForumClient() {
               
               <div className="divide-y divide-outline-variant">
                 {cat.recent_threads.length === 0 ? (
-                  <div className="p-5 text-center text-gray-400 text-xs">
+                  <div className="p-5 text-center text-on-surface-muted text-xs">
                     Aucun sujet. Soyez le premier !
                   </div>
                 ) : (

@@ -29,7 +29,7 @@ export default async function ArticleEditPage({ params }: { params: Promise<{ id
       <div className="flex items-center gap-4">
         <Link 
           href="/admin/contenus/articles"
-          className="p-2 bg-white border border-outline-variant rounded-lg text-on-surface-muted hover:text-on-surface transition-colors shadow-sm"
+          className="p-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-on-surface-muted hover:text-on-surface transition-colors shadow-sm"
         >
           <ArrowLeft size={20} />
         </Link>
@@ -41,7 +41,7 @@ export default async function ArticleEditPage({ params }: { params: Promise<{ id
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-outline-variant p-6">
+      <div className="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-6">
         <ArticleEditorForm initialData={article} />
       </div>
     </div>

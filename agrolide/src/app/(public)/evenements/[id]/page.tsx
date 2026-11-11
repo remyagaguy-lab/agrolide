@@ -86,7 +86,7 @@ export default async function EventPage({ params }: EventPageProps) {
           <ArrowLeft className="w-4 h-4" /> Retour aux actualités
         </Link>
 
-        <div className="bg-white rounded-3xl shadow-sm border border-outline-variant overflow-hidden">
+        <div className="bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant overflow-hidden">
           {/* Header Image */}
           {event.image_url ? (
             <div className="w-full h-[300px] md:h-[400px] relative bg-surface-container">

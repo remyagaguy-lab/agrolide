@@ -63,7 +63,7 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Colonne Principale */}
         <div className="lg:col-span-2 space-y-8">
-          <div className="bg-white p-8 rounded-2xl border border-outline-variant shadow-sm">
+          <div className="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface">
                 {document.type_doc}
@@ -130,7 +130,7 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
         
         {/* Sidebar */}
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm sticky top-24">
+          <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm sticky top-24">
             <div className="flex items-center justify-center w-16 h-16 bg-success-container rounded-2xl mb-6">
               <FileText className="w-8 h-8 text-success" />
             </div>

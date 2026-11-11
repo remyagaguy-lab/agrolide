@@ -69,13 +69,13 @@ export default function EventsClient() {
         <div className="flex bg-surface-container p-1 rounded-xl">
           <button 
             onClick={() => setView('list')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'list' ? 'bg-white shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'list' ? 'bg-surface-container-lowest shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
             <List className="w-4 h-4" /> Liste
           </button>
           <button 
             onClick={() => setView('calendar')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'calendar' ? 'bg-white shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'calendar' ? 'bg-surface-container-lowest shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
             <CalendarIcon className="w-4 h-4" /> Calendrier
           </button>
@@ -84,7 +84,7 @@ export default function EventsClient() {
 
       {/* Filters (only show in list view for simplicity) */}
       {view === 'list' && (
-        <div className="bg-white p-4 rounded-2xl border border-outline-variant shadow-sm mb-8 flex flex-wrap gap-4 items-center">
+        <div className="bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant shadow-sm mb-8 flex flex-wrap gap-4 items-center">
           <div className="flex items-center gap-2 text-on-surface-muted">
             <Filter className="w-4 h-4" />
             <span className="text-sm font-medium">Filtres :</span>
@@ -165,7 +165,7 @@ export default function EventsClient() {
           {pastEvents.length > 0 && (
             <div className="border-t border-outline-variant pt-8">
               <h2 className="text-xl font-bold text-on-surface mb-6 flex items-center gap-2">
-                <span className="w-2 h-6 bg-gray-300 rounded-full"></span>
+                <span className="w-2 h-6 bg-outline-variant rounded-full"></span>
                 Événements passés
               </h2>
               

@@ -57,7 +57,7 @@ export function NewsletterForm() {
   if (!isOpen) return null
 
   return (
-    <div className="fixed bottom-4 right-4 z-[100] w-[calc(100%-2rem)] md:w-[450px] bg-white rounded-2xl shadow-2xl border border-outline-variant overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-500">
+    <div className="fixed bottom-4 right-4 z-[100] w-[calc(100%-2rem)] md:w-[450px] bg-surface-container-lowest rounded-2xl shadow-2xl border border-outline-variant overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-500">
       
       {/* Decorative top bar */}
       <div className="h-1.5 w-full bg-primary" />
@@ -65,7 +65,7 @@ export function NewsletterForm() {
       {/* Close Button */}
       <button 
         onClick={closePopup}
-        className="absolute top-4 right-4 p-1.5 text-gray-400 hover:text-on-surface-variant hover:bg-surface-container rounded-full transition-colors z-20"
+        className="absolute top-4 right-4 p-1.5 text-on-surface-muted hover:text-on-surface-variant hover:bg-surface-container rounded-full transition-colors z-20"
         aria-label="Fermer"
       >
         <X className="w-5 h-5" />
@@ -99,7 +99,7 @@ export function NewsletterForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={status === "loading"}
-                className="w-full px-4 py-2.5 rounded-xl text-on-surface bg-surface-container-low border border-outline-variant placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-70 text-sm"
+                className="w-full px-4 py-2.5 rounded-xl text-on-surface bg-surface-container-low border border-outline-variant placeholder:text-on-surface-muted focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-70 text-sm"
               />
               <button
                 type="submit"
@@ -116,7 +116,7 @@ export function NewsletterForm() {
               </p>
             )}
             
-            <p className="text-[11px] text-gray-400 mt-4 leading-tight">
+            <p className="text-[11px] text-on-surface-muted mt-4 leading-tight">
               En vous inscrivant, vous acceptez notre politique de confidentialité.
             </p>
           </>

@@ -60,9 +60,9 @@ export default async function BlogPage({
     const gridArticles = displayArticles.slice(3);
 
     return (
-      <div className="flex flex-col min-h-screen bg-[#f9f9f9]">
+      <div className="flex flex-col min-h-screen bg-surface-container-low">
         {/* Hero Section (Original) */}
-        <section className="bg-[#0d3520] pt-12 pb-16 text-white text-center relative overflow-hidden">
+        <section className="bg-surface-brand pt-12 pb-16 text-on-surface-brand text-center relative overflow-hidden">
           {/* Motif Background */}
           <div 
             className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
@@ -88,7 +88,7 @@ export default async function BlogPage({
                   <div className="lg:col-span-2">
                     <Link 
                       href={`/blog/${featuredMain.slug}`} 
-                      className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
+                      className="group flex flex-col h-full bg-surface-container-lowest rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
                     >
                       <div className="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
                         {featuredMain.image_une_url ? (
@@ -100,7 +100,7 @@ export default async function BlogPage({
                             className="object-cover transition-transform duration-700 group-hover:scale-105" 
                           />
                         ) : (
-                          <div className="absolute inset-0 flex items-center justify-center text-gray-400">Sans image</div>
+                          <div className="absolute inset-0 flex items-center justify-center text-on-surface-muted">Sans image</div>
                         )}
                       </div>
                       <div className="p-8 flex flex-col flex-grow">
@@ -108,7 +108,7 @@ export default async function BlogPage({
                           <span className="font-bold text-primary uppercase tracking-wider text-xs">
                             {featuredMain.categorie || "Général"}
                           </span>
-                          <span className="text-gray-300">•</span>
+                          <span className="text-outline">•</span>
                           <span className="text-on-surface-muted font-medium text-xs">
                             {format(new Date(featuredMain.published_at || ''), 'dd MMMM yyyy', { locale: fr })}
                           </span>
@@ -139,7 +139,7 @@ export default async function BlogPage({
                     <Link 
                       href={`/blog/${article.slug}`} 
                       key={article.id} 
-                      className="group flex flex-col flex-1 bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
+                      className="group flex flex-col flex-1 bg-surface-container-lowest rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
                     >
                       <div className="relative w-full h-48 overflow-hidden bg-surface-container">
                         {article.image_une_url ? (
@@ -150,7 +150,7 @@ export default async function BlogPage({
                             className="object-cover transition-transform duration-700 group-hover:scale-105" 
                           />
                         ) : (
-                          <div className="absolute inset-0 flex items-center justify-center text-gray-400">Sans image</div>
+                          <div className="absolute inset-0 flex items-center justify-center text-on-surface-muted">Sans image</div>
                         )}
                       </div>
                       <div className="p-6 flex flex-col flex-grow">
@@ -158,7 +158,7 @@ export default async function BlogPage({
                           <span className="font-bold text-primary uppercase tracking-wider text-xs">
                             {article.categorie || "Général"}
                           </span>
-                          <span className="text-gray-300">•</span>
+                          <span className="text-outline">•</span>
                           <span className="text-on-surface-muted font-medium text-xs">
                             {format(new Date(article.published_at || ''), 'dd MMM yyyy', { locale: fr })}
                           </span>
@@ -193,13 +193,13 @@ export default async function BlogPage({
                   placeholder="Rechercher un article..." 
                   className="w-full pl-11 pr-4 py-2.5 border border-outline rounded-full text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" 
                 />
-                <svg className="w-4 h-4 absolute left-4 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <svg className="w-4 h-4 absolute left-4 top-3.5 text-on-surface-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               </form>
             </div>
 
             {/* Main Article Grid */}
             {!displayArticles || displayArticles.length === 0 ? (
-              <div className="text-center py-24 bg-white rounded-3xl border border-outline-variant shadow-sm">
+              <div className="text-center py-24 bg-surface-container-lowest rounded-3xl border border-outline-variant shadow-sm">
                 <p className="text-xl text-on-surface-muted">Aucun article ne correspond à votre recherche.</p>
                 {(categoryParam || searchParam) && (
                   <Link href="/blog" className="inline-block mt-4 text-primary font-bold hover:underline">
@@ -234,7 +234,7 @@ export default async function BlogPage({
   } catch (err: any) {
     return (
       <div className="min-h-screen flex items-center justify-center p-8 bg-error-container text-on-error-container">
-        <div className="max-w-2xl bg-white p-8 rounded-2xl shadow-xl">
+        <div className="max-w-2xl bg-surface-container-lowest p-8 rounded-2xl shadow-xl">
           <h1 className="text-2xl font-bold mb-4">Erreur de rendu Serveur !</h1>
           <p className="mb-4 text-sm font-mono whitespace-pre-wrap">{err.message}</p>
           <pre className="text-xs bg-surface-container p-4 rounded overflow-auto">{err.stack}</pre>

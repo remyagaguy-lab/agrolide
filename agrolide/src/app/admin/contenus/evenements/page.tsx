@@ -71,7 +71,7 @@ export default function AdminEvenementsPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center bg-white p-6 rounded-2xl shadow-sm border border-outline-variant">
+      <div className="flex justify-between items-center bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant">
         <div>
           <h1 className="text-2xl font-bold text-on-surface">Gestion des Événements</h1>
           <p className="text-on-surface-muted">Créez et administrez les événements de la communauté</p>
@@ -84,7 +84,7 @@ export default function AdminEvenementsPage() {
         </button>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
           <div className="p-12 text-center text-on-surface-muted">Chargement...</div>
         ) : events.length === 0 ? (
@@ -111,7 +111,7 @@ export default function AdminEvenementsPage() {
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2 text-on-surface-variant">
-                        <Calendar className="w-4 h-4 text-gray-400" />
+                        <Calendar className="w-4 h-4 text-on-surface-muted" />
                         {format(new Date(evt.date_debut), "dd MMM yyyy à HH:mm", { locale: fr })}
                       </div>
                     </td>
@@ -122,7 +122,7 @@ export default function AdminEvenementsPage() {
                         </div>
                       ) : (
                         <div className="flex items-center gap-2 text-on-surface-variant">
-                          <MapPin className="w-4 h-4 text-gray-400" />
+                          <MapPin className="w-4 h-4 text-on-surface-muted" />
                           <span className="truncate max-w-[150px]">{evt.lieu || 'Non spécifié'}</span>
                         </div>
                       )}
@@ -131,7 +131,7 @@ export default function AdminEvenementsPage() {
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium">
                         <Users className="w-4 h-4" />
                         {evt.inscriptions[0]?.count || 0}
-                        {evt.places_max && <span className="text-gray-400 font-normal">/ {evt.places_max}</span>}
+                        {evt.places_max && <span className="text-on-surface-muted font-normal">/ {evt.places_max}</span>}
                       </div>
                     </td>
                     <td className="px-6 py-4">
@@ -141,10 +141,10 @@ export default function AdminEvenementsPage() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
-                        <button onClick={() => handleEdit(evt)} className="p-2 text-gray-400 hover:text-info hover:bg-info-container rounded-lg transition-colors" title="Modifier">
+                        <button onClick={() => handleEdit(evt)} className="p-2 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors" title="Modifier">
                           <Edit2 className="w-4 h-4" />
                         </button>
-                        <button onClick={() => handleDelete(evt.id)} className="p-2 text-gray-400 hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
+                        <button onClick={() => handleDelete(evt.id)} className="p-2 text-on-surface-muted hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
                           <Trash2 className="w-4 h-4" />
                         </button>
                       </div>

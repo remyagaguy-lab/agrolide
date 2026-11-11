@@ -132,7 +132,7 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
 
       {/* Formulaire création */}
       {creating && (
-        <div className="bg-white rounded-xl border border-success/30 shadow-sm p-5 space-y-4">
+        <div className="bg-surface-container-lowest rounded-xl border border-success/30 shadow-sm p-5 space-y-4">
           <h3 className="font-semibold text-on-surface">Nouvel élément</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {fields.filter(f => f.type !== "toggle").map(f => (
@@ -169,9 +169,9 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
       )}
 
       {/* Liste */}
-      <div className="bg-white rounded-xl border border-outline-variant shadow-sm overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
         {items.length === 0 ? (
-          <div className="py-12 text-center text-gray-400 italic">
+          <div className="py-12 text-center text-on-surface-muted italic">
             Aucun élément. Cliquez sur "Ajouter" pour créer le premier.
           </div>
         ) : (
@@ -221,16 +221,16 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
                       {togglePublieKey && (
                         <button
                           onClick={() => togglePublie(item)}
-                          className={`p-1.5 rounded-lg transition-colors ${item[togglePublieKey] ? "text-success bg-success-container hover:bg-success-container" : "text-gray-400 bg-surface-container-low hover:bg-surface-container"}`}
+                          className={`p-1.5 rounded-lg transition-colors ${item[togglePublieKey] ? "text-success bg-success-container hover:bg-success-container" : "text-on-surface-muted bg-surface-container-low hover:bg-surface-container"}`}
                           title={item[togglePublieKey] ? "Publié — cliquer pour dépublier" : "Non publié — cliquer pour publier"}
                         >
                           {item[togglePublieKey] ? <Eye size={15} /> : <EyeOff size={15} />}
                         </button>
                       )}
-                      <button onClick={() => startEdit(item)} className="p-1.5 text-gray-400 hover:text-info hover:bg-info-container rounded-lg transition-colors" title="Modifier">
+                      <button onClick={() => startEdit(item)} className="p-1.5 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors" title="Modifier">
                         <Pencil size={15} />
                       </button>
-                      <button onClick={() => handleDelete(item.id)} className="p-1.5 text-gray-400 hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
+                      <button onClick={() => handleDelete(item.id)} className="p-1.5 text-on-surface-muted hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
                         <Trash2 size={15} />
                       </button>
                     </div>

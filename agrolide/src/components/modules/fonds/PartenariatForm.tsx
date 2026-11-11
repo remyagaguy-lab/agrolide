@@ -64,7 +64,7 @@ export default function PartenariatForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 rounded-2xl border border-[var(--color-gris-clair)] shadow-sm">
+    <form onSubmit={handleSubmit} className="bg-surface-container-lowest p-8 md:p-10 rounded-2xl border border-outline-variant shadow-sm">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-bold text-on-surface mb-2">Devenir Partenaire / Sponsor</h2>
         <p className="text-on-surface-variant">Associez votre image à la transition agricole en Afrique.</p>
@@ -91,7 +91,7 @@ export default function PartenariatForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label className="text-sm font-semibold text-on-surface-variant" htmlFor="nature_collaboration">Nature de la collaboration souhaitée *</label>
-            <select id="nature_collaboration" required value={formData.nature_collaboration} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-on-surface-variant">
+            <select id="nature_collaboration" required value={formData.nature_collaboration} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary text-on-surface-variant">
               <option value="">Sélectionnez...</option>
               <option value="sponsoring_financier">Sponsoring Financier</option>
               <option value="partenariat_technique">Partenariat Technique</option>
@@ -102,7 +102,7 @@ export default function PartenariatForm() {
           </div>
           <div className="space-y-2">
             <label className="text-sm font-semibold text-on-surface-variant" htmlFor="budget">Budget estimatif (Optionnel)</label>
-            <select id="budget" value={formData.budget} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-on-surface-variant">
+            <select id="budget" value={formData.budget} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-outline-variant bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary text-on-surface-variant">
               <option value="">Ne se prononce pas</option>
               <option value="< 5000">Moins de 5 000 €</option>
               <option value="5000 - 15000">5 000 € - 15 000 €</option>

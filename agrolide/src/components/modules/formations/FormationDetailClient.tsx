@@ -56,7 +56,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header Formation */}
-      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-8 mb-8">
+      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-8 mb-8">
         <div className="flex flex-wrap gap-2 mb-4">
           <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-success-container text-success">
             {formation.thematique}
@@ -123,7 +123,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
             const isAttentePaiement = ins?.statut === 'en_attente_paiement'
             
             return (
-              <div key={session.id} className="bg-white rounded-2xl border border-outline-variant shadow-sm p-6 flex flex-col">
+              <div key={session.id} className="bg-surface-container-lowest rounded-2xl border border-outline-variant shadow-sm p-6 flex flex-col">
                 <div className="space-y-4 mb-6 flex-1">
                   <div className="flex items-center text-on-surface-variant">
                     <Calendar className="w-5 h-5 mr-3 text-success" />
@@ -132,11 +132,11 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
                     </span>
                   </div>
                   <div className="flex items-center text-on-surface-variant">
-                    <MapPin className="w-5 h-5 mr-3 text-gray-400" />
+                    <MapPin className="w-5 h-5 mr-3 text-on-surface-muted" />
                     <span>{session.lieu}</span>
                   </div>
                   <div className="flex items-center text-on-surface-variant">
-                    <Users className="w-5 h-5 mr-3 text-gray-400" />
+                    <Users className="w-5 h-5 mr-3 text-on-surface-muted" />
                     <span className={isWaitlist ? "text-error font-medium" : "font-medium"}>
                       {session.places_restantes} place(s) restante(s) sur {session.places_totales}
                     </span>
@@ -156,7 +156,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
                       className={`w-full py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${
                         isWaitlist 
                           ? 'bg-warning-container text-on-warning-container hover:bg-amber-200' 
-                          : 'bg-success text-white hover:bg-green-800'
+                          : 'bg-success text-white hover:bg-primary/90'
                       }`}
                     >
                       {loading === session.id ? (
@@ -171,7 +171,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
             )
           })
         ) : (
-          <div className="col-span-full p-8 text-center bg-white rounded-2xl border border-outline-variant">
+          <div className="col-span-full p-8 text-center bg-surface-container-lowest rounded-2xl border border-outline-variant">
             <p className="text-on-surface-muted">Aucune session n'est programmée pour le moment.</p>
           </div>
         )}
@@ -183,7 +183,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
           <h2 className="text-2xl font-bold text-on-surface mb-6">Avis des participants</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {formation.avis_formation.map((avis: any) => (
-              <div key={avis.id} className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm">
+              <div key={avis.id} className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden relative">
                     {avis.profiles?.avatar_url ? (

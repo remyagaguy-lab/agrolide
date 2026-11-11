@@ -64,13 +64,13 @@ export default function OpportunitesClient() {
         <div className="flex bg-surface-container-low/50 p-1 rounded-full w-fit border border-outline-variant">
           <button
             onClick={() => setActiveTab('toutes')}
-            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'toutes' ? 'bg-white text-primary shadow-sm' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
+            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'toutes' ? 'bg-surface-container-lowest text-primary shadow-sm' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
             Toutes les opportunités
           </button>
           <button
             onClick={() => setActiveTab('mes_soumissions')}
-            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'mes_soumissions' ? 'bg-white text-primary shadow-sm' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
+            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'mes_soumissions' ? 'bg-surface-container-lowest text-primary shadow-sm' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
             Mes soumissions
           </button>
@@ -78,9 +78,9 @@ export default function OpportunitesClient() {
       )}
 
       {/* Filters & Search */}
-      <div className="bg-white border border-outline-variant rounded-2xl shadow-sm p-4 flex flex-col md:flex-row gap-4">
+      <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-4 flex flex-col md:flex-row gap-4">
         <div className="flex-1 relative">
-          <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-on-surface-muted absolute left-3 top-1/2 -translate-y-1/2" />
           <input 
             type="text" 
             placeholder="Rechercher par mot-clé..."
@@ -90,7 +90,7 @@ export default function OpportunitesClient() {
           />
         </div>
         <div className="flex items-center gap-2 w-full md:w-auto">
-          <Filter className="w-4 h-4 text-gray-400 hidden md:block" />
+          <Filter className="w-4 h-4 text-on-surface-muted hidden md:block" />
           <select 
             value={filterType}
             onChange={e => setFilterType(e.target.value)}
@@ -110,7 +110,7 @@ export default function OpportunitesClient() {
           <SkeletonGrid count={6} />
         </div>
       ) : filteredOpp.length === 0 ? (
-        <div className="py-16 text-center bg-white border border-outline-variant rounded-2xl shadow-sm p-8">
+        <div className="py-16 text-center bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-8">
           <p className="text-on-surface-muted font-medium text-sm">Aucune opportunité trouvée pour vos critères.</p>
         </div>
       ) : (

@@ -97,10 +97,10 @@ export default function AdminOpportunitesPage() {
         </button>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
           <div className="p-12 text-center flex flex-col items-center">
-            <Loader2 className="w-8 h-8 animate-spin text-gray-400 mb-2" />
+            <Loader2 className="w-8 h-8 animate-spin text-on-surface-muted mb-2" />
             <span className="text-on-surface-muted">Chargement...</span>
           </div>
         ) : opportunites.length === 0 ? (
@@ -154,7 +154,7 @@ export default function AdminOpportunitesPage() {
                           <button 
                             onClick={() => handleDelete(opp.id)}
                             disabled={processing === opp.id}
-                            className="p-2 text-gray-400 hover:text-error bg-surface-container-low hover:bg-error-container rounded-lg transition-colors"
+                            className="p-2 text-on-surface-muted hover:text-error bg-surface-container-low hover:bg-error-container rounded-lg transition-colors"
                             title="Supprimer définitivement"
                           >
                             {processing === opp.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
