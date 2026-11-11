@@ -3,20 +3,32 @@ import { db } from '@/db'
 import { users } from '@/db/schema'
 import { eq, or, and, like, inArray, count as countFn, isNull } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
+import { rateLimit } from '@/lib/security/rate-limit'
 
 export const dynamic = 'force-dynamic'
 
+const MAX_PAGES = 5
+
 export async function GET(request: NextRequest) {
   try {
+    // Annuaire réservé aux membres connectés (protection des données personnelles)
+    const { userId } = await auth()
+    if (!userId) return NextResponse.json({ error: 'Connexion requise.' }, { status: 401 })
+
+    // Freine la collecte en masse
+    const limited = await rateLimit(request, 'annuaire', 60, 60)
+    if (limited) return limited
+
     const { searchParams } = new URL(request.url)
     
-    const search = searchParams.get('q') || ''
+    const search = (searchParams.get('q') || '').slice(0, 100)
     const pays = searchParams.get('pays')?.split(',').filter(Boolean) || []
     const categories = searchParams.get('categories')?.split(',').filter(Boolean) || []
     const specialites = searchParams.get('specialites')?.split(',').filter(Boolean) || []
     const ouvertMentorat = searchParams.get('mentorat') === 'true'
     
-    const page = parseInt(searchParams.get('page') || '1')
+    // Pages plafonnées (5 x 20 résultats max) : impossible d'énumérer tous les membres
+    const page = Math.min(Math.max(parseInt(searchParams.get('page') || '1') || 1, 1), MAX_PAGES)
     const limit = 20
     const offset = (page - 1) * limit
 
@@ -61,11 +73,10 @@ export async function GET(request: NextRequest) {
       .from(users)
       .where(whereClause)
       
-    // Fetch connection status if user is logged in
-    const { userId } = await auth();
+    // Statut de connexion avec chaque membre
     let membersWithConnection = data;
     
-    if (userId && data.length > 0) {
+    if (data.length > 0) {
       const targetIds = data.map(u => u.id);
       const connections = await db.query.user_connections.findMany({
         where: (connections, { or, and, eq, inArray }) => 
@@ -92,7 +103,7 @@ export async function GET(request: NextRequest) {
       data: membersWithConnection || [], 
       count: count || 0,
       page,
-      totalPages: count ? Math.ceil(count / limit) : 0
+      totalPages: count ? Math.min(Math.ceil(count / limit), MAX_PAGES) : 0
     })
 
   } catch (error: any) {
