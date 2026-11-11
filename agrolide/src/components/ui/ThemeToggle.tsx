@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Check, Monitor, Moon, Sun } from "lucide-react"
 import { applyThemePreference, DARK_MODE_ENABLED, readThemePreference, type ThemePreference } from "@/lib/theme"
-import { DropdownMenuItem } from "./DropdownMenu"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./DropdownMenu"
 import { cn } from "@/lib/utils/formatters"
 
 const OPTIONS: { value: ThemePreference; label: string; Icon: typeof Sun }[] = [
@@ -110,5 +110,26 @@ export function ThemeMenuItems() {
         </DropdownMenuItem>
       ))}
     </>
+  )
+}
+
+/** Bouton icône unique qui ouvre le choix Clair / Sombre / Système (barre de navigation : une seule cible au lieu de trois). */
+export function ThemeMenu({ className }: { className?: string }) {
+  const [pref] = useThemePreference()
+  if (!DARK_MODE_ENABLED) return null
+  const Icon = OPTIONS.find((o) => o.value === pref)?.Icon ?? Monitor
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        aria-label="Thème d'affichage"
+        title="Thème d'affichage"
+        className={cn("ag-state inline-flex size-11 shrink-0 items-center justify-center rounded-full text-on-surface-variant", className)}
+      >
+        <Icon className="size-5" aria-hidden="true" />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent>
+        <ThemeMenuItems />
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }

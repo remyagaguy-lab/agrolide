@@ -36,15 +36,16 @@ export default function NosActionsPage() {
       </section>
 
       {/* ── PILIER 1 : MOBILISATION ─────────────────────────────────── */}
-      <section className="bg-surface-container-lowest">
+      <section id="reseauter" className="scroll-mt-20 bg-surface-container-lowest">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
             <div className="order-2 md:order-1">
               <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
                 <Users size={32} strokeWidth={1.5} className="text-primary" />
               </div>
+              <SectionLabel>Mobilisation des ressources et réseautage</SectionLabel>
               <h2 className="text-headline-md text-on-surface mb-4">
-                1. Mobilisation & Réseautage
+                1. Réseauter
               </h2>
               <div className="text-body-lg mb-6 space-y-3">
                 <p>L'isolement professionnel est le premier frein au développement. Nous avons conçu un environnement collaboratif pour :</p>
@@ -83,7 +84,7 @@ export default function NosActionsPage() {
       </section>
 
       {/* ── PILIER 2 : FORMATION ─────────────────────────────────── */}
-      <section className="bg-surface-container-low border-y border-outline-variant">
+      <section id="se-former" className="scroll-mt-20 bg-surface-container-low border-y border-outline-variant">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
             <div className="bg-surface-container-lowest rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant shadow-sm">
@@ -93,8 +94,9 @@ export default function NosActionsPage() {
               <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
                 <BookOpen size={32} strokeWidth={1.5} className="text-primary" />
               </div>
+              <SectionLabel>Formation et insertion professionnelle</SectionLabel>
               <h2 className="text-headline-md text-on-surface mb-4">
-                2. Formation & Insertion
+                2. Se former
               </h2>
               <div className="text-body-lg mb-6 space-y-3">
                 <p>Pour faire face au manque de documentation adaptée et aux défis de l'insertion, nous avons mis en place :</p>
@@ -135,15 +137,16 @@ export default function NosActionsPage() {
       </section>
 
       {/* ── PILIER 3 : AGROBUSINESS ─────────────────────────────────── */}
-      <section className="bg-surface-container-lowest">
+      <section id="entreprendre" className="scroll-mt-20 bg-surface-container-lowest">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
             <div className="order-2 md:order-1">
               <div className="w-[64px] h-[64px] rounded-[16px] bg-tertiary-container flex items-center justify-center mb-6">
                 <TrendingUp size={32} strokeWidth={1.5} className="text-on-tertiary-container" />
               </div>
+              <SectionLabel>Agrobusiness : consulting et incubation</SectionLabel>
               <h2 className="text-headline-md text-on-surface mb-4">
-                3. Agrobusiness & Consulting
+                3. Entreprendre
               </h2>
               <div className="text-body-lg mb-6 space-y-3">
                 <p>Grâce à une expertise sectorielle pointue, nous soutenons le développement de projets pérennes :</p>
