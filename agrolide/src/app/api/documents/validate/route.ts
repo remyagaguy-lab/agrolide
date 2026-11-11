@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit } from '@/lib/security/rate-limit'
 import OpenAI from 'openai'
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq } from 'drizzle-orm'
+import { auth } from '@/lib/auth/server'
 
 // Initialize OpenRouter via OpenAI SDK
 const openai = new OpenAI({
@@ -12,7 +14,17 @@ const openai = new OpenAI({
 
 export async function POST(request: NextRequest) {
   try {
-    const { documentId, r2Key, titre, resume } = await request.json()
+    // Appelle un modèle payant : réservé aux membres connectés, débit limité
+    const { userId } = await auth()
+    if (!userId) return NextResponse.json({ error: 'Non autorisé' }, { status: 401 })
+    const limited = await rateLimit(request, 'documents-validate', 10, 600)
+    if (limited) return limited
+
+    const raw = await request.json()
+    const documentId = typeof raw.documentId === 'string' ? raw.documentId.slice(0, 100) : undefined
+    const r2Key = typeof raw.r2Key === 'string' ? raw.r2Key.slice(0, 500) : undefined
+    const titre = typeof raw.titre === 'string' ? raw.titre.slice(0, 300) : ''
+    const resume = typeof raw.resume === 'string' ? raw.resume.slice(0, 3000) : ''
 
     if (!documentId && !r2Key) {
       return NextResponse.json({ error: 'Missing documentId or r2Key' }, { status: 400 })

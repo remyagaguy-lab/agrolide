@@ -1,21 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit } from '@/lib/security/rate-limit'
 import Stripe from 'stripe'
+import { z } from 'zod'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_fake', {
   apiVersion: '2026-06-24.dahlia', // ou la version la plus récente supportée
 })
 
+const donSchema = z.object({
+  campagneId: z.string().min(1).max(100),
+  montant_fcfa: z.coerce.number().int().min(500).max(50_000_000),
+  prenom: z.string().trim().min(1).max(100),
+  nom: z.string().trim().max(100).optional().nullable(),
+  email: z.string().trim().email().max(200),
+  anonyme: z.boolean().optional(),
+})
+
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
-    const { campagneId, montant_fcfa, prenom, nom, email, anonyme } = body
+    const limited = await rateLimit(request, 'don', 10, 600)
+    if (limited) return limited
 
-    if (!campagneId || !montant_fcfa || !email || !prenom) {
-      return NextResponse.json({ error: "Données manquantes" }, { status: 400 })
+    const parsed = donSchema.safeParse(await request.json())
+    if (!parsed.success) {
+      return NextResponse.json({ error: "Données invalides" }, { status: 400 })
     }
+    const { campagneId, montant_fcfa, prenom, nom, email, anonyme } = parsed.data
 
     // Si on a pas de clé Stripe réelle, on simule un succès pour le test de développement
     if (!process.env.STRIPE_SECRET_KEY) {
+      if (process.env.NODE_ENV === 'production') {
+        return NextResponse.json({ error: "Paiement indisponible" }, { status: 503 })
+      }
       const { db } = await import('@/db')
       const { contributions } = await import('@/db/schema')
 
@@ -35,7 +51,7 @@ export async function POST(request: NextRequest) {
     // 1. Convertir FCFA en XOF pour Stripe, ou utiliser EUR si Stripe ne supporte pas XOF sur votre compte (Stripe supporte XOF en général)
     // Stripe attend les montants en centimes pour les devises à décimales, mais XOF n'a pas de centimes.
     // XOF est une monnaie "zéro décimale" pour Stripe, on passe donc le montant tel quel.
-    const amount = parseInt(montant_fcfa, 10)
+    const amount = montant_fcfa
 
     // 2. Créer une session Stripe Checkout
     const session = await stripe.checkout.sessions.create({

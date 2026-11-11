@@ -1,11 +1,13 @@
 import { NextResponse, NextRequest } from "next/server"
-import { auth } from "@/lib/auth/server"
+import { requireAdmin } from "@/lib/auth/admin"
 import { db } from "@/db"
-import { partenaires, users } from "@/db/schema"
-import { eq, asc } from "drizzle-orm"
+import { partenaires } from "@/db/schema"
+import { asc } from "drizzle-orm"
 
 // GET : liste tous les partenaires
 export async function GET(request: NextRequest) {
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
   try {
     const data = await db.select().from(partenaires).orderBy(asc(partenaires.ordre))
     return NextResponse.json(data)
@@ -16,8 +18,8 @@ export async function GET(request: NextRequest) {
 
 // POST : créer un partenaire
 export async function POST(request: NextRequest) {
-  const { userId } = await auth()
-  if (!userId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   const body = await request.json()
   const { nom, description, site_web, logo_url, temoignage, contact_nom, contact_titre, publie, ordre } = body

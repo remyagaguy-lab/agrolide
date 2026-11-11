@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit } from '@/lib/security/rate-limit'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
@@ -47,16 +48,8 @@ const S3 = new S3Client({
 
 export async function POST(request: NextRequest) {
   try {
-    // Rate Limiting (basé sur l'IP)
-    const ip = request.headers.get("x-forwarded-for") || "127.0.0.1"
-    
-    // Si on a les vraies variables Upstash, on utilise le ratelimit
-    if (process.env.UPSTASH_REDIS_REST_URL) {
-      const { success } = await ratelimit.limit(ip)
-      if (!success) {
-        return NextResponse.json({ error: "Trop de candidatures soumises. Veuillez réessayer plus tard." }, { status: 429 })
-      }
-    }
+    const limited = await rateLimit(request, 'incubation', 3, 3600)
+    if (limited) return limited
 
     const body = await request.json()
     const result = incubationSchema.safeParse(body)
