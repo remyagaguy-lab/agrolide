@@ -126,6 +126,9 @@
   --ag-sys-color-inverse-on-surface: #edf2eb;
   --ag-sys-color-inverse-primary: #92d5a5;
   --ag-sys-color-focus-ring: #1b5e38;
+  --ag-sys-color-surface-brand: #1b5e38;
+  --ag-sys-color-on-surface-brand: #ffffff;
+  --ag-sys-color-on-accent: #1a1a1a;
 }
 
 /* Niveau 2 — système, thème sombre (activé par <html data-theme="dark">) */
@@ -180,4 +183,7 @@
   --ag-sys-color-inverse-on-surface: #2c322d;
   --ag-sys-color-inverse-primary: #1b5e38;
   --ag-sys-color-focus-ring: #92d5a5;
+  --ag-sys-color-surface-brand: #1b5e38;
+  --ag-sys-color-on-surface-brand: #ffffff;
+  --ag-sys-color-on-accent: #1a1a1a;
 }

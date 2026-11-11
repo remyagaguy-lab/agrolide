@@ -46,6 +46,23 @@
   --ag-sys-target-min: 44px; /* boutons icône seule */
 }
 
+/* ── Couche d'état : survol/appui sur un conteneur plein (couleur du contenu à 8 % / 10 %) ── */
+@layer components {
+  .ag-state { position: relative; isolation: isolate; }
+  .ag-state::after {
+    content: ''; position: absolute; inset: 0; border-radius: inherit; background: currentColor;
+    opacity: 0; pointer-events: none;
+    transition: opacity var(--ag-sys-motion-duration-short) var(--ag-sys-motion-easing-standard);
+  }
+  .ag-state:where(:hover:not(:disabled, [aria-disabled='true']))::after { opacity: var(--ag-sys-state-hover); }
+  .ag-state:where(:active:not(:disabled, [aria-disabled='true']))::after { opacity: var(--ag-sys-state-pressed); }
+}
+
+/* ── Animations d'entrée (modales, toasts) ── */
+@keyframes ag-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes ag-rise-in { from { opacity: 0; transform: translateY(12px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes ag-slide-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
 /* Mouvement réduit : toutes les animations/transitions deviennent quasi instantanées. */
 @media (prefers-reduced-motion: reduce) {
   :root {

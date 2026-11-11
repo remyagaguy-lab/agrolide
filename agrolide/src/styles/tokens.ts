@@ -143,7 +143,10 @@ export const lightColors = {
   "inverse-surface": "#2c322d",
   "inverse-on-surface": "#edf2eb",
   "inverse-primary": "#92d5a5",
-  "focus-ring": "#1b5e38"
+  "focus-ring": "#1b5e38",
+  "surface-brand": "#1b5e38",
+  "on-surface-brand": "#ffffff",
+  "on-accent": "#1a1a1a"
 } as const
 
 export const darkColors = {
@@ -195,7 +198,10 @@ export const darkColors = {
   "inverse-surface": "#dfe4dd",
   "inverse-on-surface": "#2c322d",
   "inverse-primary": "#1b5e38",
-  "focus-ring": "#92d5a5"
+  "focus-ring": "#92d5a5",
+  "surface-brand": "#1b5e38",
+  "on-surface-brand": "#ffffff",
+  "on-accent": "#1a1a1a"
 } as const
 
 export type ColorRole = keyof typeof lightColors

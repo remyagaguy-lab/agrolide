@@ -1,22 +1,35 @@
-import * as React from "react"
-import { cn } from "@/lib/utils/formatters"
+'use client'
 
-export type TextareaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement>
+import * as React from 'react'
+import { cn } from '@/lib/utils/formatters'
+import { FormField, fieldControlClasses, fieldControlProps, useFieldContext } from './FormField'
 
-const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, ...props }, ref) => {
+export interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  label?: string
+  hint?: string
+  error?: string
+}
+
+export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(function Textarea(
+  { label, hint, error, className, required, ...props },
+  ref,
+) {
+  const ctx = useFieldContext()
+  const control = (
+    <textarea
+      ref={ref}
+      required={required}
+      className={cn(fieldControlClasses, 'min-h-32 resize-y py-3', className)}
+      {...fieldControlProps(ctx)}
+      {...props}
+    />
+  )
+  if (label && !ctx) {
     return (
-      <textarea
-        className={cn(
-          "flex min-h-[80px] w-full rounded-md border border-[var(--color-gris-moyen)] bg-[var(--color-blanc)] px-3 py-2 text-sm transition-colors placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-[var(--color-vert-principal)] focus-visible:ring-1 focus-visible:ring-[var(--color-vert-principal)] disabled:cursor-not-allowed disabled:opacity-50",
-          className
-        )}
-        ref={ref}
-        {...props}
-      />
+      <FormField label={label} hint={hint} error={error} required={required} id={props.id}>
+        {control}
+      </FormField>
     )
   }
-)
-Textarea.displayName = "Textarea"
-
-export { Textarea }
+  return control
+})

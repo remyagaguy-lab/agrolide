@@ -68,6 +68,7 @@ const light = {
   outline: R.neutralVariant[50], 'outline-variant': R.neutralVariant[90],
   'inverse-surface': R.neutral[20], 'inverse-on-surface': R.neutral[95], 'inverse-primary': R.green[80],
   'focus-ring': R.green[35],
+  'surface-brand': R.green[35], 'on-surface-brand': '#ffffff', 'on-accent': R.ink[90],
 }
 const dark = {
   primary: R.green[80], 'on-primary': R.green[20],
@@ -88,6 +89,7 @@ const dark = {
   outline: R.neutralVariant[60], 'outline-variant': R.neutralVariant[30],
   'inverse-surface': R.neutral[90], 'inverse-on-surface': R.neutral[20], 'inverse-primary': R.green[35],
   'focus-ring': R.green[80],
+  'surface-brand': R.green[35], 'on-surface-brand': '#ffffff', 'on-accent': R.ink[90],
 }
 
 // ─── Vérification des contrastes (WCAG 2.x) ─────────────────────────────────────────
@@ -114,6 +116,7 @@ for (const [name, theme] of [['clair', light], ['sombre', dark]]) {
     t('outline', s, UI); t('focus-ring', s, UI); t('primary', s); t('secondary', s); t('error', s); t('success', s); t('info', s)
   }
   t('inverse-on-surface', 'inverse-surface')
+  t('on-surface-brand', 'surface-brand'); t('on-accent', 'accent-leaf'); t('on-accent', 'accent-sun'); t('on-accent', 'accent-olive')
   t('on-primary', 'primary-container', 3) // information seulement
 }
 const failures = checks.filter((c) => c.value < c.min && !(c.fg === 'on-primary' && c.bg === 'primary-container'))

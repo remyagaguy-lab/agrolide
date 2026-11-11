@@ -1,18 +1,30 @@
-import React from 'react'
+import * as React from 'react'
+import { cn } from '@/lib/utils/formatters'
+
+/** Bloc de chargement. Décoratif : masqué aux lecteurs d'écran ; annoncer le chargement ailleurs (Spinner, aria-busy). */
+export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      aria-hidden="true"
+      className={cn('animate-pulse rounded-control bg-surface-container-highest motion-reduce:animate-none', className)}
+      {...props}
+    />
+  )
+}
 
 export function SkeletonCard() {
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 p-6 flex flex-col h-full animate-pulse shadow-sm">
-      <div className="flex justify-between items-start mb-4">
-        <div className="h-6 bg-gray-200 rounded-full w-24"></div>
-        <div className="h-6 bg-gray-200 rounded-full w-16"></div>
+    <div className="flex h-full flex-col rounded-card border border-outline-variant bg-surface-container-lowest p-6" aria-hidden="true">
+      <div className="mb-4 flex items-start justify-between">
+        <Skeleton className="h-6 w-24 rounded-full" />
+        <Skeleton className="h-6 w-16 rounded-full" />
       </div>
-      <div className="w-full h-40 bg-gray-200 rounded-xl mb-4"></div>
-      <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
-      <div className="h-4 bg-gray-200 rounded w-full mb-4"></div>
-      <div className="space-y-2 mt-auto">
-        <div className="h-4 bg-gray-200 rounded w-1/2"></div>
-        <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+      <Skeleton className="mb-4 h-40 w-full rounded-card" />
+      <Skeleton className="mb-2 h-6 w-3/4" />
+      <Skeleton className="mb-4 h-4 w-full" />
+      <div className="mt-auto space-y-2">
+        <Skeleton className="h-4 w-1/2" />
+        <Skeleton className="h-4 w-2/3" />
       </div>
     </div>
   )
@@ -20,7 +32,7 @@ export function SkeletonCard() {
 
 export function SkeletonGrid({ count = 6 }: { count?: number }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+    <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="status" aria-busy="true" aria-label="Chargement">
       {Array.from({ length: count }).map((_, i) => (
         <SkeletonCard key={i} />
       ))}
@@ -30,13 +42,13 @@ export function SkeletonGrid({ count = 6 }: { count?: number }) {
 
 export function SkeletonList({ count = 3 }: { count?: number }) {
   return (
-    <div className="space-y-4 w-full">
+    <div className="w-full space-y-4" role="status" aria-busy="true" aria-label="Chargement">
       {Array.from({ length: count }).map((_, i) => (
-        <div key={i} className="bg-white rounded-xl border border-gray-100 p-4 flex gap-4 animate-pulse">
-          <div className="w-12 h-12 bg-gray-200 rounded-full shrink-0"></div>
+        <div key={i} className="flex gap-4 rounded-card border border-outline-variant bg-surface-container-lowest p-4">
+          <Skeleton className="size-12 shrink-0 rounded-full" />
           <div className="flex-1 space-y-3 py-1">
-            <div className="h-5 bg-gray-200 rounded w-3/4"></div>
-            <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+            <Skeleton className="h-5 w-3/4" />
+            <Skeleton className="h-4 w-1/2" />
           </div>
         </div>
       ))}

@@ -3,6 +3,9 @@
  * (bg-primary, text-on-surface, border-outline-variant, rounded-card, shadow-elev-2, text-body-md…).
  * `inline` : les utilitaires pointent vers var(--ag-sys-*) → le thème sombre s'applique sans rien recompiler.
  */
+/* Variante `dark:` pilotée par <html data-theme="dark"> (et non par la préférence système seule). */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 @theme inline {
   /* Couleurs : rôles système */
   --color-primary: var(--ag-sys-color-primary);
@@ -54,6 +57,14 @@
   --color-inverse-on-surface: var(--ag-sys-color-inverse-on-surface);
   --color-inverse-primary: var(--ag-sys-color-inverse-primary);
   --color-focus-ring: var(--ag-sys-color-focus-ring);
+  --color-surface-brand: var(--ag-sys-color-surface-brand);
+  --color-on-surface-brand: var(--ag-sys-color-on-surface-brand);
+  --color-on-accent: var(--ag-sys-color-on-accent);
+
+  /* Polices : Urbanist (UI et titres), Libre Baskerville (éditorial uniquement) */
+  --font-sans: var(--font-urbanist), system-ui, sans-serif;
+  --font-heading: var(--font-urbanist), system-ui, sans-serif;
+  --font-serif: var(--font-baskerville), Georgia, serif;
 
   /* Formes (noms sémantiques : n'écrasent pas rounded-lg/xl/2xl de Tailwind pendant la migration) */
   --radius-tag: var(--ag-sys-shape-tag);
