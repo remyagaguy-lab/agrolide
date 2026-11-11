@@ -1,182 +1,212 @@
 import React from 'react'
-import { auth } from '@/lib/auth/server'
-import { redirect } from 'next/navigation'
-import { db } from '@/db'
-import { users, user_connections } from '@/db/schema'
-import { eq, or, and, inArray } from 'drizzle-orm'
 import Link from 'next/link'
-import Image from 'next/image'
-import { User, Check, X, MessageCircle } from 'lucide-react'
-import NetworkActions from './NetworkActions' // We'll create this client component
+import { redirect } from 'next/navigation'
+import type { Metadata } from 'next'
+import { Search, Send, Sparkles, UserPlus, UsersRound } from 'lucide-react'
+import { auth } from '@/lib/auth/server'
+import { Button } from '@/components/ui/Button'
+import { EmptyState } from '@/components/ui/EmptyState'
+import { Input } from '@/components/ui/Input'
+import { NativeSelect } from '@/components/ui/Select'
+import { cn } from '@/lib/utils/formatters'
+import { MemberCard } from '@/components/modules/reseau/MemberCard'
+import { RelationCard } from '@/components/modules/reseau/RelationCard'
+import { SuggestionGrid } from '@/components/modules/reseau/SuggestionGrid'
+import { fetchAnnuaire, fetchMonProfil, parseFilters } from '@/lib/reseau/annuaire'
+import { fetchInvitations, fetchRelations, type TriRelations } from '@/lib/reseau/mon-reseau'
+import { profilSuffisant } from '@/lib/reseau/suggestions'
+import type { ProfilPourScore } from '@/lib/reseau/suggestions'
 
-export const metadata = {
-  title: 'Mon Réseau - Agrolide',
+export const metadata: Metadata = {
+  title: 'Mon réseau',
+  robots: { index: false, follow: false },
 }
 
-export default async function NetworkPage() {
+const BASE = '/membres/reseau'
+const ONGLETS = [
+  { id: 'suggestions', label: 'Suggestions' },
+  { id: 'invitations', label: 'Invitations' },
+  { id: 'relations', label: 'Relations' },
+] as const
+type OngletId = (typeof ONGLETS)[number]['id']
+
+type SearchParams = Promise<Record<string, string | string[] | undefined>>
+const premier = (v: string | string[] | undefined) => (Array.isArray(v) ? v[0] : v) ?? ''
+
+export default async function MonReseauPage({ searchParams }: { searchParams: SearchParams }) {
   const { userId } = await auth()
-  
-  if (!userId) {
-    redirect('/login')
+  if (!userId) redirect(`/login?next=${encodeURIComponent(BASE)}`)
+
+  const brut = await searchParams
+  const onglet: OngletId = (ONGLETS.find((o) => o.id === premier(brut.onglet))?.id ?? 'suggestions') as OngletId
+
+  // Le nombre d'invitations reçues sert au badge de l'onglet : lu sur tous les onglets (1 requête légère via la liste).
+  const invitations = await fetchInvitations(userId)
+
+  return (
+    <div className="space-y-6">
+      <header>
+        <h1 className="text-headline-md text-on-surface">Mon réseau</h1>
+        <p className="mt-1 text-body-md text-on-surface-variant">
+          Répondez à vos invitations, retrouvez vos relations et découvrez des membres proches de votre profil.
+        </p>
+      </header>
+
+      <nav aria-label="Mon réseau" className="flex gap-1 overflow-x-auto border-b border-outline-variant [scrollbar-width:none]">
+        {ONGLETS.map((o) => {
+          const actif = o.id === onglet
+          return (
+            <Link
+              key={o.id}
+              href={o.id === 'suggestions' ? BASE : `${BASE}?onglet=${o.id}`}
+              aria-current={actif ? 'page' : undefined}
+              className={cn(
+                'ag-state relative -mb-px inline-flex min-h-12 shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-t-control border-b-2 px-4 text-label-lg transition-colors duration-150 ease-standard',
+                actif ? 'border-primary text-primary' : 'border-transparent text-on-surface-variant',
+              )}
+            >
+              {o.label}
+              {o.id === 'invitations' && invitations.recues.length > 0 && (
+                <span className="inline-flex min-w-6 items-center justify-center rounded-full bg-error px-1.5 text-label-md text-on-error">
+                  <span aria-hidden>{invitations.recues.length}</span>
+                  <span className="sr-only">{invitations.recues.length} {invitations.recues.length > 1 ? 'invitations reçues' : 'invitation reçue'}</span>
+                </span>
+              )}
+            </Link>
+          )
+        })}
+      </nav>
+
+      {onglet === 'suggestions' && <Suggestions viewerId={userId} />}
+      {onglet === 'invitations' && <Invitations recues={invitations.recues} envoyees={invitations.envoyees} />}
+      {onglet === 'relations' && <Relations viewerId={userId} q={premier(brut.q).trim().slice(0, 80)} tri={premier(brut.tri) === 'nom' ? 'nom' : 'recentes'} />}
+    </div>
+  )
+}
+
+const DECOUVRIR = (
+  <Button variant="secondary" href="/membres/annuaire">
+    <UserPlus className="size-5" aria-hidden />
+    Découvrir des membres
+  </Button>
+)
+
+async function Suggestions({ viewerId }: { viewerId: string }) {
+  const moi: ProfilPourScore | null = await fetchMonProfil(viewerId)
+  if (!moi || !profilSuffisant(moi)) {
+    return (
+      <EmptyState
+        icon={<Sparkles />}
+        title="Complétez votre profil pour recevoir des suggestions"
+        description="Sans spécialité, thématiques, langues ou pays, rien ne permet de vous comparer aux autres membres."
+        action={<Button variant="secondary" href="/membres/profil/modifier">Compléter mon profil</Button>}
+      />
+    )
   }
+  const result = await fetchAnnuaire(viewerId, { ...parseFilters({}), tri: 'pertinence' }, moi)
+  const suggeres = result.members.filter((m) => m.suggere)
+  if (suggeres.length === 0) {
+    return (
+      <EmptyState
+        icon={<Sparkles />}
+        title="Aucune suggestion pour le moment"
+        description="Les membres déjà en relation avec vous ou invités ne sont pas proposés ici. Parcourez l’annuaire pour en trouver d’autres."
+        action={DECOUVRIR}
+      />
+    )
+  }
+  return (
+    <div className="space-y-6">
+      <SuggestionGrid members={suggeres} />
+      <div>
+        <Button variant="outline" href="/membres/annuaire">Voir tout l’annuaire</Button>
+      </div>
+    </div>
+  )
+}
 
-  // 1. Invitations reçues (en attente)
-  const pendingRequests = await db.select({
-    id: user_connections.id,
-    status: user_connections.status,
-    created_at: user_connections.created_at,
-    requester: {
-      id: users.id,
-      prenom: users.prenom,
-      nom: users.nom,
-      avatar_url: users.photo_url,
-      specialite: users.specialite,
-      categorie: users.categorie
-    }
-  }).from(user_connections)
-  .innerJoin(users, eq(user_connections.requester_id, users.id))
-  .where(and(
-    eq(user_connections.receiver_id, userId),
-    eq(user_connections.status, 'pending')
-  ))
+function Invitations({ recues, envoyees }: { recues: Awaited<ReturnType<typeof fetchInvitations>>['recues']; envoyees: Awaited<ReturnType<typeof fetchInvitations>>['envoyees'] }) {
+  return (
+    <div className="space-y-10">
+      <div role="region" aria-labelledby="titre-recues" className="space-y-4">
+        <h2 id="titre-recues" className="text-title-lg text-on-surface">Reçues</h2>
+        {recues.length === 0 ? (
+          <EmptyState icon={<UsersRound />} title="Aucune invitation en attente." description="Quand un membre vous invitera, vous pourrez l’accepter ou l’ignorer ici." />
+        ) : (
+          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {recues.map((m) => (
+              <li key={m.connectionId ?? m.id}>
+                <MemberCard member={m} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
 
-  // 2. Mes relations (acceptées)
-  // On doit chercher les relations où l'utilisateur est soit requester, soit receiver
-  const connectionsRows = await db.select({
-    id: user_connections.id,
-    requester_id: user_connections.requester_id,
-    receiver_id: user_connections.receiver_id,
-    created_at: user_connections.created_at,
-    requester: {
-      id: users.id,
-      prenom: users.prenom,
-      nom: users.nom,
-      avatar_url: users.photo_url,
-      specialite: users.specialite,
-      categorie: users.categorie
-    },
-    // On doit faire un alias avec l'ORMs mais drizzle sqlite ne supporte pas facilement les alias complexes dans un select simple avec join si on n'a pas setup de relation. 
-    // On va faire ça en deux requêtes simples pour la MVP.
-  }).from(user_connections)
-  .leftJoin(users, eq(user_connections.requester_id, users.id))
-  .where(and(
-    eq(user_connections.status, 'accepted'),
-    or(eq(user_connections.receiver_id, userId), eq(user_connections.requester_id, userId))
-  ))
+      <div role="region" aria-labelledby="titre-envoyees" className="space-y-4">
+        <h2 id="titre-envoyees" className="text-title-lg text-on-surface">Envoyées</h2>
+        {envoyees.length === 0 ? (
+          <EmptyState icon={<Send />} title="Vous n’avez envoyé aucune invitation." action={DECOUVRIR} />
+        ) : (
+          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {envoyees.map((m) => (
+              <li key={m.connectionId ?? m.id}>
+                <MemberCard member={m} libelleEnAttente="En attente" />
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  )
+}
 
-  // Pour les relations acceptées, il faut charger l'AUTRE utilisateur
-  // Drizzle SQLite n'ayant pas un leftJoin puissant sans relation schema explicite pour 2 fois la même table,
-  // on récupère tous les IDs des relations, et on fait un IN
-  const relationUserIds = connectionsRows.map(row => 
-    row.requester_id === userId ? row.receiver_id : row.requester_id
-  );
+async function Relations({ viewerId, q, tri }: { viewerId: string; q: string; tri: TriRelations }) {
+  const { relations, total } = await fetchRelations(viewerId, q, tri)
 
-  let activeConnections: any[] = [];
-  if (relationUserIds.length > 0) {
-    // Drizzle inArray
-    // Pour simplifier, itérons.
-    activeConnections = await db.select({
-        id: users.id,
-        prenom: users.prenom,
-        nom: users.nom,
-        avatar_url: users.photo_url,
-        specialite: users.specialite,
-        categorie: users.categorie
-    }).from(users).where(inArray(users.id, relationUserIds))
+  if (total === 0) {
+    return <EmptyState icon={<UsersRound />} title="Vous n’avez pas encore de relations." description="Invitez des membres : une fois l’invitation acceptée, ils apparaissent ici." action={DECOUVRIR} />
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <div>
-        <h1 className="text-2xl font-bold text-on-surface">Mon Réseau</h1>
-        <p className="text-on-surface-muted mt-1">Gérez vos invitations et vos relations professionnelles</p>
-      </div>
+    <div className="space-y-6">
+      <form method="get" action={BASE} role="search" aria-label="Rechercher dans mes relations" className="grid gap-3 sm:grid-cols-[1fr_14rem_auto] sm:items-end">
+        <input type="hidden" name="onglet" value="relations" />
+        <Input label="Rechercher une relation" name="q" type="search" defaultValue={q} placeholder="Nom, spécialité, pays…" maxLength={80} />
+        <label className="flex flex-col gap-1.5 text-label-lg text-on-surface">
+          Trier par
+          <NativeSelect name="tri" defaultValue={tri}>
+            <option value="recentes">Plus récentes</option>
+            <option value="nom">Nom</option>
+          </NativeSelect>
+        </label>
+        <Button type="submit" variant="secondary">
+          <Search className="size-5" aria-hidden />
+          Rechercher
+        </Button>
+      </form>
 
-      {/* Invitations reçues */}
-      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6">
-        <h2 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
-          Invitations en attente
-          {pendingRequests.length > 0 && (
-            <span className="bg-error text-on-error text-xs font-bold px-2 py-0.5 rounded-full">
-              {pendingRequests.length}
-            </span>
-          )}
-        </h2>
+      <p role="status" className="text-body-md text-on-surface-variant">
+        {relations.length} {relations.length > 1 ? 'relations' : 'relation'}
+        {q && ` pour « ${q} »`}
+      </p>
 
-        {pendingRequests.length === 0 ? (
-          <div className="text-center py-8 text-on-surface-muted">
-            Aucune invitation en attente pour le moment.
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {pendingRequests.map((req) => (
-              <div key={req.id} className="flex flex-col sm:flex-row items-center justify-between p-4 border border-outline-variant rounded-xl hover:border-outline-variant transition-colors gap-4">
-                <Link href={`/annuaire/${req.requester.id}`} className="flex items-center gap-4 group">
-                  <div className="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0">
-                    {req.requester.avatar_url ? (
-                      <Image src={req.requester.avatar_url} alt="Avatar" width={56} height={56} className="object-cover w-full h-full" />
-                    ) : (
-                      <User className="m-auto h-full w-8 text-on-surface-muted" />
-                    )}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-on-surface group-hover:text-primary transition-colors">
-                      {req.requester.prenom} {req.requester.nom}
-                    </h3>
-                    <p className="text-sm text-on-surface-muted">{req.requester.specialite || req.requester.categorie}</p>
-                  </div>
-                </Link>
-                
-                <NetworkActions requestId={req.id} />
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Relations actives */}
-      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6">
-        <h2 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
-          Mes relations ({activeConnections.length})
-        </h2>
-
-        {activeConnections.length === 0 ? (
-          <div className="text-center py-8 text-on-surface-muted">
-            Vous n'avez pas encore de relations. Parcourez l'annuaire pour vous connecter avec d'autres membres !
-            <div className="mt-4">
-              <Link href="/annuaire" className="inline-block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium hover:bg-primary/90 transition-colors">
-                Explorer l'annuaire
-              </Link>
-            </div>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {activeConnections.map((user) => (
-              <div key={user.id} className="flex flex-col sm:flex-row items-center justify-between p-4 border border-outline-variant rounded-xl hover:border-primary/20 transition-colors gap-4 bg-surface-container-low/50">
-                <Link href={`/annuaire/${user.id}`} className="flex items-center gap-3 w-full">
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-container-lowest shrink-0 shadow-sm">
-                    {user.avatar_url ? (
-                      <Image src={user.avatar_url} alt="Avatar" width={48} height={48} className="object-cover w-full h-full" />
-                    ) : (
-                      <User className="m-auto h-full w-6 text-on-surface-muted" />
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-on-surface truncate">
-                      {user.prenom} {user.nom}
-                    </h3>
-                    <p className="text-xs text-on-surface-muted truncate">{user.specialite || user.categorie}</p>
-                  </div>
-                </Link>
-                
-                <Link href={`/membres/messages?user=${user.id}`} className="p-2.5 text-on-surface-muted hover:text-primary hover:bg-primary-container rounded-xl transition-colors shrink-0" title="Envoyer un message">
-                  <MessageCircle size={20} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      {relations.length === 0 ? (
+        <EmptyState
+          icon={<Search />}
+          title="Aucune relation ne correspond à votre recherche"
+          description="Essayez avec moins de mots, ou une autre orthographe."
+          action={<Button variant="secondary" href={`${BASE}?onglet=relations`}>Effacer la recherche</Button>}
+        />
+      ) : (
+        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {relations.map((m) => (
+            <li key={m.id}>
+              <RelationCard member={m} />
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

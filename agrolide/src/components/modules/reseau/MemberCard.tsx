@@ -24,7 +24,7 @@ const categoryVariant = (c: string | null): BadgeVariant => {
  * et un seul geste (Se connecter / Invitation envoyée / Accepter / Message).
  * Un seul lien principal (le nom) couvre toute la carte ; les boutons restent des cibles distinctes.
  */
-export function MemberCard({ member, onIgnore }: { member: MemberSummary; /** Fourni pour une suggestion : ajoute le bouton « Ignorer ». */ onIgnore?: () => void }) {
+export function MemberCard({ member, onIgnore, libelleEnAttente }: { member: MemberSummary; /** Fourni pour une suggestion : ajoute le bouton « Ignorer ». */ onIgnore?: () => void; libelleEnAttente?: string }) {
   const name = displayName(member)
   const category = categorieLabel(member.categorie)
   const place = [member.ville, member.pays].filter(Boolean).join(', ')
@@ -100,6 +100,7 @@ export function MemberCard({ member, onIgnore }: { member: MemberSummary; /** Fo
           state={member.state}
           connectionId={member.connectionId}
           ouvertContact={member.ouvert_contact}
+          libelleEnAttente={libelleEnAttente}
         />
         {onIgnore && (
           <Button variant="text" fullWidth onClick={onIgnore} aria-label={`Ignorer la suggestion : ${name}`}>

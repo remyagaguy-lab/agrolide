@@ -4,8 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import { Check, Clock, MessageCircle, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { sendConnectionRequest } from '@/app/actions/connections'
-import { acceptConnectionRequest, declineConnectionRequest } from '@/app/actions/network'
+import { acceptConnectionRequest, declineConnectionRequest, sendConnectionRequest } from '@/app/actions/connections'
 import type { ConnectionState } from '@/lib/reseau/profil'
 
 export interface ConnectionActionsProps {
@@ -16,6 +15,8 @@ export interface ConnectionActionsProps {
   connectionId: string | null
   /** `false` : le membre ne souhaite pas recevoir d'invitations. */
   ouvertContact: boolean | null
+  /** Libellé du statut d'une invitation envoyée (« Invitation envoyée » par défaut). */
+  libelleEnAttente?: string
 }
 
 /**
@@ -23,7 +24,7 @@ export interface ConnectionActionsProps {
  * Se connecter → Invitation envoyée (retirable) ; Accepter / Ignorer ; Message.
  * L'état est mis à jour tout de suite, sans recharger la page, et annoncé aux lecteurs d'écran.
  */
-export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact }: ConnectionActionsProps) {
+export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact, libelleEnAttente = 'Invitation envoyée' }: ConnectionActionsProps) {
   const [state, setState] = React.useState<ConnectionState>(initialState)
   const [connectionId, setConnectionId] = React.useState<string | null>(initialId)
   const [pending, startTransition] = React.useTransition()
@@ -102,10 +103,10 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
         <>
           <p className="flex min-h-12 items-center justify-center gap-2 rounded-control bg-surface-container text-label-lg text-on-surface-variant">
             <Clock className="size-5" aria-hidden />
-            Invitation envoyée
+            {libelleEnAttente}
           </p>
           {connectionId && (
-            <Button variant="text" size="sm" fullWidth className="min-h-11" onClick={withdraw} loading={pending} aria-label={`Retirer l’invitation envoyée à ${name}`}>
+            <Button variant="text" fullWidth onClick={withdraw} loading={pending} aria-label={`Retirer l’invitation envoyée à ${name}`}>
               Retirer l’invitation
             </Button>
           )}

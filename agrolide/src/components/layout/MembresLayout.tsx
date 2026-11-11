@@ -51,7 +51,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
   ]
 
   const navPersonal: NavItem[] = [
-    { name: "Mon Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
+    { name: "Mon réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Messages", href: "/membres/messages", icon: Mail },
     { name: "Mes Formations", href: "/membres/formations", icon: BookOpen },
     { name: "Mon Profil", href: "/membres/profil", icon: User },
@@ -61,7 +61,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
   const mobileNavItems: NavItem[] = [
     { name: "Accueil", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
-    { name: "Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
+    { name: "Mon réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Formations", href: "/membres/formations", icon: BookOpen },
   ]
   const moreItems: NavItem[] = [

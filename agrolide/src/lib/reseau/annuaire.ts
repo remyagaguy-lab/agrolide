@@ -67,7 +67,7 @@ export async function fetchMonProfil(viewerId: string): Promise<ProfilPourScore 
   return row ? profilDepuisLigne(row) : null
 }
 
-const SELECT_CARTE = {
+export const SELECT_CARTE = {
   id: users.id,
   prenom: users.prenom,
   nom: users.nom,
@@ -81,7 +81,7 @@ const SELECT_CARTE = {
   ouvert_contact: users.ouvert_contact,
 }
 
-type LigneCarte = {
+export type LigneCarte = {
   id: string
   prenom: string | null
   nom: string | null
@@ -95,7 +95,7 @@ type LigneCarte = {
   ouvert_contact: boolean | null
 }
 
-const carte = (r: LigneCarte, state: ConnectionState, connectionId: string | null): MemberSummary => ({
+export const carte = (r: LigneCarte, state: ConnectionState, connectionId: string | null): MemberSummary => ({
   id: r.id,
   prenom: r.prenom,
   nom: r.nom,
