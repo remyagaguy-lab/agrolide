@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
-import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
+import { checkDocumentAccess } from '@/lib/documents/access'
 
 // Configuration S3/R2
 const s3Client = new S3Client({
@@ -16,29 +16,20 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
   try {
     const { id } = await params;
     
-    // In a real app we check the auth token
-    const authHeader = request.headers.get('authorization')
-    
-    // For this demo, we can just allow it if the document is public
-    // Let's fetch the document from Drizzle
+    const access = await checkDocumentAccess(id)
+    if (!access.ok) {
+      return NextResponse.json({ error: access.error }, { status: access.status })
+    }
+    const { document, isPublic } = access
     const { db } = await import('@/db')
     const { documents } = await import('@/db/schema')
     const { eq } = await import('drizzle-orm')
-    
-    const document = await db.query.documents.findFirst({
-      columns: { fichier_r2_key: true, nb_telechargements: true },
-      where: eq(documents.id, id)
-    })
-      
-    if (!document) {
-      return NextResponse.json({ error: 'Document introuvable' }, { status: 404 })
-    }
-    
-    // Mettre à jour le compteur de consultations (téléchargements)
+
+    // Compteur de téléchargements (uniquement pour un accès autorisé)
     await db.update(documents)
       .set({ nb_telechargements: (document.nb_telechargements || 0) + 1 })
       .where(eq(documents.id, id))
-      
+
     // Utiliser le client S3 pour récupérer directement le flux depuis le bucket privé
     const command = new GetObjectCommand({
       Bucket: process.env.R2_BUCKET_NAME || 'agrolide-biblio',
@@ -62,7 +53,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     return new NextResponse(Buffer.from(bytes), {
       headers: {
         'Content-Type': 'application/pdf',
-        'Cache-Control': 'public, max-age=3600, stale-while-revalidate=86400',
+        'Cache-Control': isPublic ? 'public, max-age=3600, stale-while-revalidate=86400' : 'private, no-store',
         'Content-Disposition': contentDisposition
       }
     })

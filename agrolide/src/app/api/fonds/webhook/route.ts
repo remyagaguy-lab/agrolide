@@ -12,18 +12,22 @@ export async function POST(request: NextRequest) {
   const payload = await request.text()
   const sig = request.headers.get('stripe-signature') as string
 
+  // Sans secret, impossible de vérifier la signature : on refuse (jamais de bypass).
+  if (!endpointSecret) {
+    console.error('STRIPE_WEBHOOK_SECRET manquant : webhook refusé')
+    return NextResponse.json({ error: 'Webhook non configuré' }, { status: 500 })
+  }
+  if (!sig) {
+    return NextResponse.json({ error: 'Signature manquante' }, { status: 400 })
+  }
+
   let event: Stripe.Event
 
   try {
-    if (!endpointSecret) {
-      console.warn("Pas de STRIPE_WEBHOOK_SECRET, on skip la vérification de signature pour le test local.")
-      event = JSON.parse(payload) as Stripe.Event
-    } else {
-      event = stripe.webhooks.constructEvent(payload, sig, endpointSecret)
-    }
+    event = stripe.webhooks.constructEvent(payload, sig, endpointSecret)
   } catch (err: any) {
     console.error(`Webhook Error: ${err.message}`)
-    return NextResponse.json({ error: `Webhook Error: ${err.message}` }, { status: 400 })
+    return NextResponse.json({ error: 'Signature invalide' }, { status: 400 })
   }
 
   if (event.type === 'checkout.session.completed') {
