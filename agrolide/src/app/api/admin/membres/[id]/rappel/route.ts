@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
-import { auth } from "@/lib/auth/server"
+import { requireAdmin } from "@/lib/auth/admin"
 import { Resend } from "resend"
 import { db } from "@/db"
 import { users } from "@/db/schema"
@@ -10,15 +10,8 @@ export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { userId } = await auth()
-  if (!userId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
-
-  const profile = await db.select({ role_plateforme: users.role_plateforme })
-    .from(users).where(eq(users.id, userId)).limit(1).then(r => r[0])
-
-  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme || '')) {
-    return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
-  }
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   const { email, nom } = await request.json()
   if (!email || !nom) return NextResponse.json({ error: "Email et nom requis" }, { status: 400 })

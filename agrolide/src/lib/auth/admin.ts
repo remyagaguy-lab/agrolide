@@ -15,11 +15,13 @@ export type AdminCheck =
  * Contrôle d'accès admin unique pour les routes /api/admin/**.
  * Le rôle est relu dans D1 (jamais décidé avec le seul jeton) ; ADMIN_EMAILS sert de secours.
  *
+ * `roles` restreint les rôles acceptés (ex. ['super_admin']).
+ *
  * Usage :
  *   const admin = await requireAdmin()
  *   if (!admin.ok) return admin.response
  */
-export async function requireAdmin(): Promise<AdminCheck> {
+export async function requireAdmin(roles: string[] = ADMIN_ROLES): Promise<AdminCheck> {
   const { userId, email } = await auth()
   if (!userId) {
     return { ok: false, response: NextResponse.json({ error: 'Non autorisé' }, { status: 401 }) }
@@ -33,7 +35,7 @@ export async function requireAdmin(): Promise<AdminCheck> {
     .limit(1)
     .then((r) => r[0])
 
-  if (!profile || !ADMIN_ROLES.includes(profile.role_plateforme || '')) {
+  if (!profile || !roles.includes(profile.role_plateforme || '')) {
     return { ok: false, response: NextResponse.json({ error: 'Accès refusé' }, { status: 403 }) }
   }
   return { ok: true, userId }

@@ -19,12 +19,12 @@ const supabaseHost = process.env.NEXT_PUBLIC_SUPABASE_URL
 const cspReportOnly = [
   "default-src 'self'",
   // Next injecte des scripts/styles inline (pas de nonce) ; Google Analytics (consentement cookies)
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com https://challenges.cloudflare.com",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob: https://img.youtube.com https://images.unsplash.com https://*.r2.dev https://*.r2.cloudflarestorage.com https://*.supabase.co https://*.google-analytics.com https://*.googletagmanager.com",
   "font-src 'self' data:",
-  `connect-src 'self' https://${supabaseHost} wss://${supabaseHost} https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.ingest.sentry.io https://*.ingest.de.sentry.io https://*.r2.cloudflarestorage.com`,
-  "frame-src https://www.youtube.com https://www.youtube-nocookie.com",
+  `connect-src 'self' https://${supabaseHost} wss://${supabaseHost} https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.ingest.sentry.io https://*.ingest.de.sentry.io https://challenges.cloudflare.com https://*.r2.cloudflarestorage.com`,
+  "frame-src https://challenges.cloudflare.com https://www.youtube.com https://www.youtube-nocookie.com",
   "worker-src 'self' blob:",
   "media-src 'self' https://*.r2.dev https://*.r2.cloudflarestorage.com",
   "object-src 'none'",

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { rateLimit } from '@/lib/security/rate-limit'
+import { verifyTurnstile } from '@/lib/security/turnstile'
 import { Resend } from 'resend'
 import { z } from 'zod'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
@@ -35,6 +36,8 @@ export async function POST(request: NextRequest) {
   try {
     const limited = await rateLimit(request, 'demandes', 5, 600)
     if (limited) return limited
+    const bot = await verifyTurnstile(request)
+    if (bot) return bot
 
     const body = await request.json()
     const result = demandeSchema.safeParse(body)

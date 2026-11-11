@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
+import { Turnstile, turnstileEnabled } from "@/components/ui/Turnstile"
 import { Loader2 } from "lucide-react"
 
 export default function DonationForm({ campagneId }: { campagneId: string }) {
@@ -18,6 +19,7 @@ export default function DonationForm({ campagneId }: { campagneId: string }) {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
 
   const handleMontantClick = (val: number) => {
@@ -44,7 +46,7 @@ export default function DonationForm({ campagneId }: { campagneId: string }) {
     try {
       const res = await fetch('/api/fonds/don', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-turnstile-token': turnstileToken },
         body: JSON.stringify({
           campagneId,
           montant_fcfa: montant,
@@ -180,7 +182,8 @@ export default function DonationForm({ campagneId }: { campagneId: string }) {
           </label>
         </div>
 
-        <Button type="submit" variant="primary" disabled={isSubmitting || montant < 1000} className="w-full h-14 text-lg font-bold mt-6 bg-[#fcb726] hover:bg-[#f99e1d] text-gray-900 border-none">
+        <Turnstile onToken={setTurnstileToken} resetSignal={isSubmitting} />
+        <Button type="submit" variant="primary" disabled={isSubmitting || montant < 1000 || (turnstileEnabled && !turnstileToken)} className="w-full h-14 text-lg font-bold mt-6 bg-[#fcb726] hover:bg-[#f99e1d] text-gray-900 border-none">
           {isSubmitting ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Préparation...</> : `Soutenir avec ${montant.toLocaleString('fr-FR')} FCFA`}
         </Button>
       </div>

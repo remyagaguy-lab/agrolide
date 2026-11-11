@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { rateLimit } from '@/lib/security/rate-limit'
+import { verifyTurnstile } from '@/lib/security/turnstile'
 import Stripe from 'stripe'
 import { z } from 'zod'
 
@@ -20,6 +21,8 @@ export async function POST(request: NextRequest) {
   try {
     const limited = await rateLimit(request, 'don', 10, 600)
     if (limited) return limited
+    const bot = await verifyTurnstile(request)
+    if (bot) return bot
 
     const parsed = donSchema.safeParse(await request.json())
     if (!parsed.success) {
