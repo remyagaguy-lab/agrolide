@@ -3,17 +3,17 @@ import dynamic from "next/dynamic"
 
 const RevenueChart = dynamic(
   () => import("./RevenueChart").then(m => m.RevenueChart),
-  { ssr: false, loading: () => <div className="h-[220px] bg-gray-50 rounded-lg animate-pulse" /> }
+  { ssr: false, loading: () => <div className="h-[220px] bg-surface-container-low rounded-lg animate-pulse" /> }
 )
 
 const DonutChart = dynamic(
   () => import("./DonutChart").then(m => m.DonutChart),
-  { ssr: false, loading: () => <div className="h-[180px] bg-gray-50 rounded-lg animate-pulse" /> }
+  { ssr: false, loading: () => <div className="h-[180px] bg-surface-container-low rounded-lg animate-pulse" /> }
 )
 
 const LineChart = dynamic(
   () => import("./LineChart").then(m => m.LineChart),
-  { ssr: false, loading: () => <div className="h-[250px] bg-gray-50 rounded-lg animate-pulse" /> }
+  { ssr: false, loading: () => <div className="h-[250px] bg-surface-container-low rounded-lg animate-pulse" /> }
 )
 
 export function AdminRevenueChart(props: React.ComponentProps<typeof RevenueChart>) {

@@ -25,7 +25,7 @@ export function RevenueChart({ data }: RevenueChartProps) {
             `${Number(v).toLocaleString("fr-FR")} FCFA`,
             name === "cotisations" ? "Cotisations" : "Dons"
           ]}
-          labelClassName="font-semibold text-gray-700"
+          labelClassName="font-semibold text-on-surface-variant"
           contentStyle={{ border: "1px solid #e5e7eb", borderRadius: 8, fontSize: 12 }}
         />
         <Bar dataKey="cotisations" fill="#1b5e38" radius={[4, 4, 0, 0]} />
