@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
-import { useUser } from '@clerk/nextjs'
+import { useUser } from '@/lib/auth/client'
 import { useSearchParams } from 'next/navigation'
 import { Send, Loader2, MessageCircle, User } from 'lucide-react'
 import { format } from 'date-fns'

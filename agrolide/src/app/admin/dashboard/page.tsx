@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { db } from "@/db"
 import { users, articles, documents, cotisations, contributions, opportunites, evenements, inscriptions_formation, forum_messages } from "@/db/schema"
@@ -67,7 +67,7 @@ const statutColors: Record<string, string> = {
 
 export default async function AdminDashboardPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   const now = new Date()
   const firstDayOfMonth = new Date(now.getFullYear(), now.getMonth(), 1).toISOString()

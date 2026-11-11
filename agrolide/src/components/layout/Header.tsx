@@ -3,7 +3,7 @@ import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Show, UserButton } from "@clerk/nextjs"
+import { Show, UserButton } from "@/lib/auth/client"
 
 const NAV_LINKS = [
   { href: "/",                label: "Accueil" },

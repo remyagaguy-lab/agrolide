@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { db } from "@/db"
 import { users, cotisations } from "@/db/schema"
@@ -17,7 +17,7 @@ export default async function AdminMembresPage({
   searchParams: Promise<{ q?: string; categorie?: string; statut?: string; pays?: string; page?: string }>
 }) {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   const params = await searchParams
   const page = Math.max(1, parseInt(params.page || "1"))

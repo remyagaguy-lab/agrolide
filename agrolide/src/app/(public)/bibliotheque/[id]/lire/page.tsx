@@ -5,7 +5,7 @@ import { SecurePDFViewerWrapper } from '@/components/modules/bibliotheque/Secure
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq } from 'drizzle-orm'
-import { auth } from '@clerk/nextjs/server'
+import { auth } from '@/lib/auth/server'
 import { QuotaTracker } from '@/components/modules/bibliotheque/QuotaTracker'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {

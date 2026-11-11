@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Urbanist, Libre_Baskerville } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
+import { AuthProvider } from "@/lib/auth/client";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import "./globals.css";
 
@@ -51,7 +51,7 @@ export default function RootLayout({
   }
 
   return (
-    <ClerkProvider>
+    <AuthProvider>
       <html
         lang="fr"
         className={`${urbanist.variable} ${baskerville.variable} h-full antialiased`}
@@ -67,6 +67,6 @@ export default function RootLayout({
           <CookieBanner />
         </body>
       </html>
-    </ClerkProvider>
+    </AuthProvider>
   );
 }

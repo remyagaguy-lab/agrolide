@@ -1,6 +1,6 @@
 "use client"
 
-import { useClerk } from "@clerk/nextjs"
+import { useClerk } from "@/lib/auth/client"
 import { LogOut } from "lucide-react"
 
 export function LogoutButton() {

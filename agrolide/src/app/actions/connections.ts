@@ -2,7 +2,7 @@
 
 import { db } from '@/db';
 import { user_connections } from '@/db/schema';
-import { auth } from '@clerk/nextjs/server';
+import { auth } from '@/lib/auth/server';
 import { eq, and, or } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 

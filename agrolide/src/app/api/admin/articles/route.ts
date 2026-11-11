@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from "next/server"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { revalidatePath } from "next/cache"
 import { db } from "@/db"
 import { users, articles } from "@/db/schema"

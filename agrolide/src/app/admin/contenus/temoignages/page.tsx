@@ -1,7 +1,7 @@
 import { db } from "@/db"
 import { temoignages } from "@/db/schema"
 import { asc } from "drizzle-orm"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { Star } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
@@ -21,7 +21,7 @@ const TEMOIGNAGE_FIELDS = [
 
 export default async function AdminTemoignagesPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   let temoignagesList: any[] = []
   try {

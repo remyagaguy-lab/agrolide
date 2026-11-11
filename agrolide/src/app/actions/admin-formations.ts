@@ -3,7 +3,7 @@
 import { db } from '@/db'
 import { formations, sessions_formation, users } from '@/db/schema'
 import { eq, desc } from 'drizzle-orm'
-import { auth } from '@clerk/nextjs/server'
+import { auth } from '@/lib/auth/server'
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();

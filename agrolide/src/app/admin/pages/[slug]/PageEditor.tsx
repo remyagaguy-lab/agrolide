@@ -6,7 +6,7 @@ import { Save, CheckCircle, ArrowLeft } from "lucide-react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { revalidateEverything } from "@/app/actions/revalidate"
-import { useAuth } from "@clerk/nextjs"
+import { useAuth } from "@/lib/auth/client"
 
 const ArticleEditorForm = dynamic(
   () => import("@/app/admin/contenus/articles/[id]/ArticleEditorForm").then(m => m.ArticleEditorForm),

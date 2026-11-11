@@ -2,7 +2,7 @@ import { db } from "@/db"
 import { agripreneurs } from "@/db/schema"
 import { desc } from "drizzle-orm"
 import { redirect } from "next/navigation"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { Sprout } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
@@ -22,7 +22,7 @@ const AGRIPRENEUR_FIELDS = [
 
 export default async function AdminAgripreneursPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   let agripreneursList: any[] = []
   try {

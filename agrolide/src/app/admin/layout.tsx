@@ -2,7 +2,7 @@ export const dynamic = 'force-dynamic';
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { headers } from "next/headers"
-import { auth, currentUser } from "@clerk/nextjs/server"
+import { auth, currentUser, isBootstrapAdminEmail } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -17,12 +17,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const { userId } = await auth()
   const user = await currentUser()
   
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   const email = user?.emailAddresses?.[0]?.emailAddress;
 
-  // Bypasser la vérification D1 pour l'admin principal si problème de synchro Clerk/D1
-  const isSuperAdminEmail = email === 'remyagaguy@gmail.com' || email === 'koumantega952002@gmail.com';
+  // Administrateurs de secours définis par la variable d'environnement ADMIN_EMAILS
+  const isSuperAdminEmail = isBootstrapAdminEmail(email);
 
   // Vérifier le rôle admin dans D1
   let profile = null

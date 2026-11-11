@@ -6,7 +6,7 @@ import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, and, ne } from 'drizzle-orm'
-import { auth } from '@clerk/nextjs/server'
+import { auth } from '@/lib/auth/server'
 import { QuotaTracker } from '@/components/modules/bibliotheque/QuotaTracker'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {

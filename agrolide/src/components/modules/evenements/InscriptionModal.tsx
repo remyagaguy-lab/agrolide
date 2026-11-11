@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, CheckCircle, Loader2 } from 'lucide-react'
-import { useUser } from '@clerk/nextjs'
+import { useUser } from '@/lib/auth/client'
 
 interface InscriptionModalProps {
   isOpen: boolean

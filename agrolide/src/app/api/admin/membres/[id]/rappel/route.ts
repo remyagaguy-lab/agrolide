@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { Resend } from "resend"
 import { db } from "@/db"
 import { users } from "@/db/schema"

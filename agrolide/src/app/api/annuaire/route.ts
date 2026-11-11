@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/db'
 import { users } from '@/db/schema'
 import { eq, or, and, like, inArray, count as countFn, isNull } from 'drizzle-orm'
-import { auth } from '@clerk/nextjs/server'
+import { auth } from '@/lib/auth/server'
 
 export const dynamic = 'force-dynamic'
 

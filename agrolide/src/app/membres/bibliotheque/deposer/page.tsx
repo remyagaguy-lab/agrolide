@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Upload, FileText, AlertCircle, Loader2 } from 'lucide-react'
-import { useAuth } from '@clerk/nextjs'
+import { useAuth } from '@/lib/auth/client'
 
 const formSchema = z.object({
   titre: z.string().min(3, 'Le titre est requis'),
