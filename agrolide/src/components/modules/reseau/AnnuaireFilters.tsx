@@ -7,18 +7,19 @@ import { Button } from '@/components/ui/Button'
 import { FormField } from '@/components/ui/FormField'
 import { Input } from '@/components/ui/Input'
 import { NativeSelect } from '@/components/ui/Select'
-import { filtersToQuery, type AnnuaireFilters as Filters } from '@/lib/reseau/filtres'
-import { CATEGORIES, PAYS, PAYS_AUTRE, THEMATIQUES } from '@/lib/reseau/profil'
+import { filtersToQuery, type AnnuaireFilters as Filters, type Tri } from '@/lib/reseau/filtres'
+import { CATEGORIES, LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES } from '@/lib/reseau/profil'
 
 /**
  * Recherche et filtres de l'annuaire. Un vrai formulaire (méthode GET) : fonctionne sans JavaScript,
  * et l'état vit dans l'adresse de la page (lien partageable, bouton Précédent fonctionnel).
  * Sur mobile, les filtres se replient derrière un bouton « Filtres » ; sur ordinateur ils sont toujours visibles.
  */
-export function AnnuaireFilters({ basePath, initial }: { basePath: string; initial: Filters }) {
+export function AnnuaireFilters({ basePath, initial, triParDefaut }: { basePath: string; initial: Filters; triParDefaut: Tri }) {
   const router = useRouter()
   const [pending, startTransition] = React.useTransition()
-  const activeCount = [initial.pays, initial.categorie, initial.theme].filter(Boolean).length + (initial.tri !== 'recents' ? 1 : 0)
+  const triActuel = initial.tri ?? triParDefaut
+  const activeCount = [initial.pays, initial.categorie, initial.theme, initial.langue].filter(Boolean).length + (triActuel !== triParDefaut ? 1 : 0)
   const [open, setOpen] = React.useState(activeCount > 0)
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -62,7 +63,7 @@ export function AnnuaireFilters({ basePath, initial }: { basePath: string; initi
         </div>
       </div>
 
-      <div id="filtres-annuaire" className={open ? 'grid gap-4 sm:grid-cols-2 lg:grid-cols-4' : 'hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-4'}>
+      <div id="filtres-annuaire" className={open ? 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5' : 'hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5'}>
         <FormField label="Pays">
           <NativeSelect name="pays" defaultValue={initial.pays}>
             <option value="">Tous les pays</option>
@@ -88,8 +89,17 @@ export function AnnuaireFilters({ basePath, initial }: { basePath: string; initi
             ))}
           </NativeSelect>
         </FormField>
+        <FormField label="Langue">
+          <NativeSelect name="langue" defaultValue={initial.langue}>
+            <option value="">Toutes les langues</option>
+            {LANGUES.map((l) => (
+              <option key={l} value={l}>{l}</option>
+            ))}
+          </NativeSelect>
+        </FormField>
         <FormField label="Trier par">
-          <NativeSelect name="tri" defaultValue={initial.tri}>
+          <NativeSelect name="tri" defaultValue={triActuel}>
+            <option value="pertinence">Pertinence pour vous</option>
             <option value="recents">Inscrits récemment</option>
             <option value="nom">Nom (A à Z)</option>
           </NativeSelect>

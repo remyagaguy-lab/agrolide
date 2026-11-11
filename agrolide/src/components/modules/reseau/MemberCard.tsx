@@ -1,8 +1,9 @@
 import * as React from 'react'
 import Link from 'next/link'
-import { MapPin } from 'lucide-react'
+import { Check, MapPin } from 'lucide-react'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge, type BadgeVariant } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import { categorieLabel, displayName, type MemberSummary } from '@/lib/reseau/profil'
 import { ConnectionActions } from './ConnectionActions'
 
@@ -23,7 +24,7 @@ const categoryVariant = (c: string | null): BadgeVariant => {
  * et un seul geste (Se connecter / Invitation envoyée / Accepter / Message).
  * Un seul lien principal (le nom) couvre toute la carte ; les boutons restent des cibles distinctes.
  */
-export function MemberCard({ member }: { member: MemberSummary }) {
+export function MemberCard({ member, onIgnore }: { member: MemberSummary; /** Fourni pour une suggestion : ajoute le bouton « Ignorer ». */ onIgnore?: () => void }) {
   const name = displayName(member)
   const category = categorieLabel(member.categorie)
   const place = [member.ville, member.pays].filter(Boolean).join(', ')
@@ -78,7 +79,21 @@ export function MemberCard({ member }: { member: MemberSummary }) {
         </ul>
       )}
 
-      <div className="relative z-10 mt-auto">
+      {member.raisons && member.raisons.length > 0 && (
+        <div>
+          <p className="text-label-md text-on-surface-variant">Pourquoi cette suggestion</p>
+          <ul className="mt-1 space-y-1">
+            {member.raisons.map((r) => (
+              <li key={r} className="flex items-start gap-1.5 text-body-sm text-on-surface">
+                <Check className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+                <span>{r}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div className="relative z-10 mt-auto space-y-1">
         <ConnectionActions
           memberId={member.id}
           name={name}
@@ -86,6 +101,11 @@ export function MemberCard({ member }: { member: MemberSummary }) {
           connectionId={member.connectionId}
           ouvertContact={member.ouvert_contact}
         />
+        {onIgnore && (
+          <Button variant="text" fullWidth onClick={onIgnore} aria-label={`Ignorer la suggestion : ${name}`}>
+            Ignorer
+          </Button>
+        )}
       </div>
     </article>
   )

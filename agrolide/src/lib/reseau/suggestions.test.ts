@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { classerSuggestions, profilSuffisant, scoreSuggestion, SEUIL_SUGGESTION, type CandidatPourScore, type ProfilPourScore } from './suggestions'
-import { motsSignificatifs, normaliser } from './texte'
+import { motifGlob, motsSignificatifs, normaliser } from './texte'
 import { completionProfil, profilSchema } from './profil-schema'
 
 const moi: ProfilPourScore = {
@@ -169,4 +169,11 @@ test('completionProfil : calculée sur les champs réels', () => {
   assert.equal(c.pourcentage, Math.round((4 / 13) * 100))
   assert.ok(c.manquants.includes('Langues'))
   assert.ok(!c.manquants.includes('Thématiques'))
+})
+
+test('motifGlob : classes de caractères pour casse et accents, caractères spéciaux protégés', () => {
+  const m = motifGlob('élevage')
+  assert.ok(m.startsWith('*[') && m.endsWith(']*'))
+  assert.match(m, /\[eEéÉèÈêÊëË\]|\[eE[^\]]*\]/)
+  assert.match(motifGlob('a*b'), /[*]/)
 })

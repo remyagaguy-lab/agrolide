@@ -5,12 +5,16 @@ import { Metadata } from 'next'
 import { ChevronLeft, ChevronRight, Search, UserRound, X } from 'lucide-react'
 import { auth } from '@/lib/auth/server'
 import { buttonVariants, Button } from '@/components/ui/Button'
+import { Alert } from '@/components/ui/Alert'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { SkeletonGrid } from '@/components/ui/Skeleton'
 import { AnnuaireFilters } from '@/components/modules/reseau/AnnuaireFilters'
 import { MemberCard } from '@/components/modules/reseau/MemberCard'
-import { fetchAnnuaire, filtersToQuery, MAX_RESULTS, parseFilters, type AnnuaireFilters as Filters } from '@/lib/reseau/annuaire'
+import { SuggestionGrid } from '@/components/modules/reseau/SuggestionGrid'
+import { fetchAnnuaire, fetchMonProfil, filtersToQuery, MAX_RESULTS, parseFilters, triParDefaut, type AnnuaireFilters as Filters } from '@/lib/reseau/annuaire'
+import { profilSuffisant } from '@/lib/reseau/suggestions'
 import { categorieLabel } from '@/lib/reseau/profil'
+import type { ProfilPourScore } from '@/lib/reseau/suggestions'
 
 export const metadata: Metadata = {
   title: 'Annuaire des membres',
@@ -26,7 +30,12 @@ export default async function AnnuaireMembresPage({ searchParams }: { searchPara
   const { userId } = await auth()
   if (!userId) redirect(`/login?next=${encodeURIComponent(BASE)}`)
 
-  const filters = parseFilters(await searchParams)
+  const [brut, moi] = await Promise.all([searchParams, fetchMonProfil(userId)])
+  const suffisant = moi ? profilSuffisant(moi) : false
+  const parDefaut = triParDefaut(suffisant)
+  const filters = parseFilters(brut)
+  // Tri par défaut : « pertinence » si le profil est assez renseigné, sinon « inscrits récemment ».
+  const effectifs: Filters = { ...filters, tri: filters.tri ?? parDefaut }
 
   return (
     <div className="space-y-6">
@@ -37,12 +46,12 @@ export default async function AnnuaireMembresPage({ searchParams }: { searchPara
         </p>
       </header>
 
-      <AnnuaireFilters basePath={BASE} initial={filters} />
+      <AnnuaireFilters basePath={BASE} initial={effectifs} triParDefaut={parDefaut} />
       <ActiveFilters filters={filters} />
 
       {/* La clé relance l'affichage de chargement à chaque nouvelle recherche. */}
-      <Suspense key={filtersToQuery(filters)} fallback={<SkeletonGrid count={6} />}>
-        <Results viewerId={userId} filters={filters} />
+      <Suspense key={filtersToQuery(effectifs)} fallback={<SkeletonGrid count={6} />}>
+        <Results viewerId={userId} filters={effectifs} moi={moi} profilSuffisant={suffisant} />
       </Suspense>
     </div>
   )
@@ -53,6 +62,7 @@ function ActiveFilters({ filters }: { filters: Filters }) {
   if (filters.q) chips.push({ label: `Recherche : ${filters.q}`, next: { ...filters, q: '', page: 1 } })
   if (filters.pays) chips.push({ label: `Pays : ${filters.pays}`, next: { ...filters, pays: '', page: 1 } })
   if (filters.categorie) chips.push({ label: `Catégorie : ${categorieLabel(filters.categorie)}`, next: { ...filters, categorie: '', page: 1 } })
+  if (filters.langue) chips.push({ label: `Langue : ${filters.langue}`, next: { ...filters, langue: '', page: 1 } })
   if (filters.theme) chips.push({ label: `Thématique : ${filters.theme}`, next: { ...filters, theme: '', page: 1 } })
   if (chips.length === 0) return null
 
@@ -77,9 +87,10 @@ function ActiveFilters({ filters }: { filters: Filters }) {
   )
 }
 
-async function Results({ viewerId, filters }: { viewerId: string; filters: Filters }) {
-  const result = await fetchAnnuaire(viewerId, filters)
-  const hasFilters = Boolean(filters.q || filters.pays || filters.categorie || filters.theme)
+async function Results({ viewerId, filters, moi, profilSuffisant }: { viewerId: string; filters: Filters; moi: ProfilPourScore | null; profilSuffisant: boolean }) {
+  const result = await fetchAnnuaire(viewerId, filters, moi)
+  const hasFilters = Boolean(filters.q || filters.pays || filters.categorie || filters.theme || filters.langue)
+  const pertinence = filters.tri === 'pertinence' && moi !== null
 
   if (result.total === 0) {
     return hasFilters ? (
@@ -102,19 +113,36 @@ async function Results({ viewerId, filters }: { viewerId: string; filters: Filte
   const pageHref = (page: number) => `${BASE}${filtersToQuery({ ...filters, page })}`
 
   return (
-    <section aria-label="Résultats">
+    <div role="region" aria-label="Résultats">
       <p role="status" className="mb-4 text-body-md text-on-surface-variant">
         {result.total} {result.total > 1 ? 'membres' : 'membre'}
         {result.total > MAX_RESULTS && ` · les ${MAX_RESULTS} premiers sont affichés, affinez votre recherche pour voir les autres`}
+        {result.tronque && ' · liste limitée aux inscriptions les plus récentes, affinez votre recherche pour voir les autres'}
       </p>
 
-      <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {result.members.map((m) => (
-          <li key={m.id}>
-            <MemberCard member={m} />
-          </li>
-        ))}
-      </ul>
+      {pertinence && !profilSuffisant && (
+        <Alert variant="info" className="mb-4">
+          <p>Complétez votre profil pour recevoir de vraies suggestions : sans spécialité, thématiques, langues ou pays, rien ne permet de vous comparer aux autres membres.</p>
+          <Button variant="secondary" href="/membres/profil/modifier" className="mt-3">Compléter mon profil</Button>
+        </Alert>
+      )}
+      {pertinence && (
+        <p className="mb-4 text-body-sm text-on-surface-muted">
+          Les membres déjà en relation avec vous ou invités ne sont pas proposés ici : choisissez « Inscrits récemment » pour tout voir.
+        </p>
+      )}
+
+      {pertinence ? (
+        <SuggestionGrid members={result.members} />
+      ) : (
+        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          {result.members.map((m) => (
+            <li key={m.id}>
+              <MemberCard member={m} />
+            </li>
+          ))}
+        </ul>
+      )}
 
       {result.pageCount > 1 && (
         <nav aria-label="Pagination" className="mt-8 flex items-center justify-center gap-3">
@@ -139,6 +167,6 @@ async function Results({ viewerId, filters }: { viewerId: string; filters: Filte
           )}
         </nav>
       )}
-    </section>
+    </div>
   )
 }

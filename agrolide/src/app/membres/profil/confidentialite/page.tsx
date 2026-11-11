@@ -55,7 +55,7 @@ export default async function ConfidentialitePage() {
   return (
     <div className="mx-auto max-w-3xl space-y-6">
       <header className="space-y-2">
-        <Link href="/membres/profil" className={buttonVariants({ variant: "text", size: "sm", className: "-ml-3" })}>
+        <Link href="/membres/profil" className={buttonVariants({ variant: "text", className: "-ml-3" })}>
           <ChevronLeft className="size-5" aria-hidden />
           Mon profil
         </Link>

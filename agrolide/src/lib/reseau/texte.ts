@@ -59,3 +59,33 @@ export function motsSignificatifs(texte: string | null | undefined): Map<string,
   }
   return out
 }
+
+/** Variantes d'écriture d'une lettre normalisée : elle-même, sa majuscule et toutes ses formes accentuées. */
+const VARIANTES = (() => {
+  const m = new Map<string, Set<string>>()
+  for (const [de, vers] of REPLIS) {
+    if (vers.length !== 1) continue // les ligatures (œ, æ) ne se replient pas en une lettre
+    if (!m.has(vers)) m.set(vers, new Set([vers, vers.toUpperCase()]))
+    m.get(vers)!.add(de)
+  }
+  return m
+})()
+
+/**
+ * Motif SQLite `GLOB` (sensible à la casse, avec classes de caractères) qui retrouve le terme saisi
+ * quelles que soient la casse et les accents du texte stocké : « elevage » trouve « Élevage », « ÉLEVAGE ».
+ * Aucune fonction n'est appliquée aux colonnes : la recherche reste rapide et sans limite d'imbrication SQL.
+ * Limite connue : les ligatures (œ, æ) ne se retrouvent pas avec leur écriture en deux lettres.
+ */
+export function motifGlob(terme: string): string {
+  let out = '*'
+  for (const ch of normaliser(terme)) {
+    const variantes = VARIANTES.get(ch)
+    if (variantes) out += `[${[...variantes].join('')}]`
+    else if (ch === '*' || ch === '?' || ch === '[') out += `[${ch}]`
+    else if (ch === "'") out += "['’]"
+    else if (/[a-z]/i.test(ch)) out += `[${ch.toLowerCase()}${ch.toUpperCase()}]`
+    else out += ch
+  }
+  return out + '*'
+}

@@ -43,7 +43,7 @@ export default async function ProfilModifierPage() {
         <p className="text-body-md text-on-surface-variant">
           Ces informations s’affichent sur votre carte dans l’annuaire des membres.
         </p>
-        <Link href="/membres/profil/confidentialite" className={buttonVariants({ variant: "text", size: "sm" })}>
+        <Link href="/membres/profil/confidentialite" className={buttonVariants({ variant: "text" })}>
           <ShieldCheck className="size-5" aria-hidden />
           Gérer la confidentialité de mon profil
         </Link>
