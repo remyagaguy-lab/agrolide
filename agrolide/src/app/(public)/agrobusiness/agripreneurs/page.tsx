@@ -57,11 +57,11 @@ export default async function AgripreneursPage() {
                 Success stories à venir !
               </h2>
               <p className="text-on-surface-variant text-lg mb-8 max-w-xl mx-auto">
-                La première cohorte d'incubation est en cours de sélection. Revenez bientôt pour découvrir les profils de nos brillants agripreneurs et suivre leur évolution.
+                La première cohorte d'incubation n'a pas encore démarré. Les profils des agripreneurs accompagnés seront présentés ici.
               </p>
               <div className="flex justify-center gap-4">
                 <Link href="/agrobusiness/incubation">
-                  <Button variant="primary">Faire partie de la 1ère cohorte</Button>
+                  <Button variant="primary">Candidater à l'incubation</Button>
                 </Link>
               </div>
             </div>

@@ -79,7 +79,7 @@ export default function DemandeServiceForm() {
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
         </div>
         <h3 className="text-2xl font-bold text-on-success-container mb-2">Demande envoyée !</h3>
-        <p className="text-success">Merci {formData.prenom}, votre demande a bien été reçue. Un expert vous contactera sous 48h.</p>
+        <p className="text-success">Merci {formData.prenom}, votre demande a bien été reçue. Un expert vous recontactera rapidement, 72 h au maximum.</p>
       </div>
     )
   }

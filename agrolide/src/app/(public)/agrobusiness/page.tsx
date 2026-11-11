@@ -61,15 +61,12 @@ export default function AgrobusinessPage() {
 
             {/* Service 3 */}
             <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm border-2 border-primary flex flex-col h-full relative">
-              <div className="absolute -top-4 right-6 bg-tertiary text-on-tertiary text-xs font-bold px-3 py-1 rounded-full">
-                Programme Phare
-              </div>
               <div className="w-14 h-14 bg-info-container rounded-lg flex items-center justify-center text-info mb-6">
                 <Briefcase size={28} />
               </div>
               <h3 className="text-xl font-bold text-on-surface mb-4">Incubation & Accélération</h3>
               <p className="text-on-surface-variant mb-6 flex-grow">
-                Programmes complets pour les agripreneurs : mentorat, préparation au pitch investisseurs et mise en réseau.
+                Programmes complets pour les agripreneurs : mentorat, coaching au pitch et préparation du dossier de financement.
               </p>
               <Link href="/agrobusiness/incubation" className="mt-auto">
                 <Button className="w-full flex items-center justify-center gap-2">
@@ -89,7 +86,7 @@ export default function AgrobusinessPage() {
               Demander un accompagnement
             </h2>
             <p className="text-on-surface-variant">
-              Remplissez ce formulaire pour nous faire part de vos besoins. Un de nos experts vous contactera sous 48h.
+              Remplissez ce formulaire pour nous faire part de vos besoins. Un de nos experts vous recontacte rapidement, 72 h au maximum.
             </p>
           </div>
 

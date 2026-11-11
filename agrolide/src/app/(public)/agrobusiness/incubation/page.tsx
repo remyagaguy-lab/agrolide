@@ -18,14 +18,11 @@ export default function IncubationPage() {
       {/* Hero */}
       <section className="bg-surface-brand py-20 text-on-surface-brand text-center">
         <div className="container mx-auto px-4">
-          <div className="inline-block bg-tertiary text-on-tertiary px-4 py-1 rounded-full text-sm font-bold tracking-wider mb-6">
-            PROGRAMME PHARE
-          </div>
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
             Programme d'Incubation
           </h1>
           <p className="text-xl max-w-2xl mx-auto text-on-surface-brand/90">
-            Un accompagnement intensif de 6 mois pour lancer et pérenniser votre startup agricole avec le soutien de mentors experts.
+            Un programme d'accompagnement intensif pour lancer et pérenniser votre projet agricole, avec le soutien de mentors experts.
           </p>
         </div>
       </section>
@@ -69,7 +66,7 @@ export default function IncubationPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-on-surface">Préparation aux investisseurs</h4>
-                    <p className="text-on-surface-variant text-sm mt-1">Apprenez à pitcher votre projet et accédez à notre réseau de business angels et fonds d'investissement partenaires.</p>
+                    <p className="text-on-surface-variant text-sm mt-1">Apprenez à présenter votre projet et à préparer votre dossier de financement, avec un coaching dédié au pitch et aux appels à projets.</p>
                   </div>
                 </div>
               </div>
@@ -111,7 +108,7 @@ export default function IncubationPage() {
               Dépôt de candidature
             </h2>
             <p className="text-on-surface-variant">
-              La prochaine cohorte débute bientôt. Soumettez votre projet pour évaluation par notre comité de sélection.
+              La première cohorte n'a pas encore démarré. Déposez votre candidature : elle sera étudiée par notre comité de sélection et nous vous informerons de l'ouverture de la sélection.
             </p>
           </div>
 
