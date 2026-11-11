@@ -1,10 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { checkDocumentAccess } from '@/lib/documents/access'
+import { auth } from '@/lib/auth/server'
 
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
     
+    // Réservé aux membres : la lecture des visiteurs passe par /api/bibliotheque/download (quota)
+    const { userId } = await auth()
+    if (!userId) return new NextResponse('Connexion requise', { status: 401 })
+
     const access = await checkDocumentAccess(id)
     if (!access.ok) {
       return new NextResponse(access.error, { status: access.status })

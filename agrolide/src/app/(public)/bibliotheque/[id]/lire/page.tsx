@@ -4,9 +4,8 @@ import { SecurePDFViewerWrapper } from '@/components/modules/bibliotheque/Secure
 
 import { db } from '@/db'
 import { documents } from '@/db/schema'
-import { eq } from 'drizzle-orm'
-import { auth } from '@/lib/auth/server'
-import { QuotaTracker } from '@/components/modules/bibliotheque/QuotaTracker'
+import { eq, and, ne } from 'drizzle-orm'
+import { AussiAimerColonne } from '@/components/modules/bibliotheque/AussiAimerColonne'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -21,13 +20,31 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 export default async function SecureReaderPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const { userId } = await auth();
-  const session = userId ? { user: { id: userId } } : null;
-  const isLoggedIn = !!session?.user
+  const current = await db.query.documents.findFirst({
+    columns: { thematique: true },
+    where: eq(documents.id, id),
+  })
+  // Suggestions : même thématique d'abord, sinon les plus récents
+  let suggestions = current?.thematique
+    ? await db.query.documents.findMany({
+        columns: { id: true, titre: true, type_doc: true, thematique: true },
+        where: and(eq(documents.statut, 'publie'), eq(documents.thematique, current.thematique), ne(documents.id, id)),
+        limit: 5,
+      })
+    : []
+  if (suggestions.length < 3) {
+    const more = await db.query.documents.findMany({
+      columns: { id: true, titre: true, type_doc: true, thematique: true },
+      where: and(eq(documents.statut, 'publie'), ne(documents.id, id)),
+      orderBy: (d, { desc }) => [desc(d.published_at)],
+      limit: 5,
+    })
+    const seen = new Set(suggestions.map((d) => d.id))
+    suggestions = [...suggestions, ...more.filter((d) => !seen.has(d.id))].slice(0, 5)
+  }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <QuotaTracker documentId={id} isLoggedIn={isLoggedIn} />
+    <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
       {/* Retour */}
       <Link href={`/bibliotheque/${id}`} className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-green-700 mb-6 transition-colors font-medium">
         <ArrowLeft className="w-4 h-4" />
@@ -39,7 +56,10 @@ export default async function SecureReaderPage({ params }: { params: Promise<{ i
         <p className="text-gray-500 text-sm">Le téléchargement, la sélection et le clic droit sont désactivés pour protéger ce document.</p>
       </div>
 
-      <SecurePDFViewerWrapper documentId={id} />
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-6">
+        <SecurePDFViewerWrapper documentId={id} />
+        <AussiAimerColonne docs={suggestions} />
+      </div>
     </div>
   )
 }

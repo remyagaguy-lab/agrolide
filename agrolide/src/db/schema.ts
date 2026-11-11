@@ -658,3 +658,14 @@ export const leconsRelations = relations(formation_lecons, ({ one }) => ({
     references: [formation_modules.id],
   }),
 }));
+
+// Lectures gratuites de visiteurs non connectés (filet anti-contournement du quota).
+// `empreinte` = hash(IP + navigateur), jamais l'IP en clair.
+export const lectures_anonymes = sqliteTable("lectures_anonymes", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  empreinte: text("empreinte").notNull(),
+  document_id: text("document_id").notNull(),
+  created_at: text("created_at").notNull(),
+}, (t) => [
+  index("idx_lectures_anonymes_empreinte").on(t.empreinte, t.created_at),
+]);

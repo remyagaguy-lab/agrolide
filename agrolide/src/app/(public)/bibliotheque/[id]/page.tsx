@@ -7,7 +7,6 @@ import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, and, ne } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
-import { QuotaTracker } from '@/components/modules/bibliotheque/QuotaTracker'
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -55,7 +54,6 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <QuotaTracker documentId={id} isLoggedIn={isLoggedIn} />
       {/* Retour */}
       <Link href="/bibliotheque" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 mb-8 transition-colors">
         <ArrowLeft className="w-4 h-4" />

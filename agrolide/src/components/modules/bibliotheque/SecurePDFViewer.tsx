@@ -5,6 +5,7 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack, AlertCircle, Info } from 'lucide-react'
+import { EncartInscription } from './EncartInscription'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useAuth } from '@/lib/auth/client'
@@ -26,6 +27,9 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   
   const [quotaReached, setQuotaReached] = useState<boolean>(false)
   const [readCount, setReadCount] = useState<number>(0)
+  const [readLimit, setReadLimit] = useState<number>(3)
+  const nextPath = `/bibliotheque/${documentId}/lire`
+  const showEncarts = isLoaded && !userId
 
   useEffect(() => {
     // Empêcher le clic droit sur toute la zone du lecteur
@@ -66,32 +70,26 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   useEffect(() => {
     if (!isLoaded) return; // Wait for session check
 
+    let objectUrl: string | null = null
+    let cancelled = false
     const fetchSecureUrl = async () => {
       try {
-        // Si l'utilisateur n'est pas connecté, vérifier le quota
-        if (!userId) {
-          const savedDocsStr = localStorage.getItem('agrolide_read_docs')
-          let readDocs: string[] = savedDocsStr ? JSON.parse(savedDocsStr) : []
-          
-          if (!readDocs.includes(documentId)) {
-            if (readDocs.length >= 5) {
-              // Quota atteint et document non débloqué
-              setQuotaReached(true)
-              setLoading(false)
-              return
-            } else {
-              // Nouveau document lu, on l'ajoute
-              readDocs.push(documentId)
-              localStorage.setItem('agrolide_read_docs', JSON.stringify(readDocs))
-            }
-          }
-          
-          setReadCount(readDocs.length)
+        // Le serveur décide (quota de lectures gratuites, cookie signé) : le navigateur ne fait que l'afficher.
+        const res = await fetch(`/api/bibliotheque/download/${documentId}`, { credentials: 'same-origin' })
+        if (res.status === 402) {
+          setQuotaReached(true)
+          return
         }
-
-        // L'API route proxie maintenant directement le flux binaire
-        // Nous donnons juste l'URL à react-pdf qui se chargera du fetch
-        setPdfUrl(`/api/bibliotheque/download/${documentId}`)
+        if (!res.ok) throw new Error(res.status === 404 ? 'Document introuvable' : 'Erreur de chargement')
+        const used = res.headers.get('X-Quota-Used')
+        if (used) {
+          setReadCount(Number(used))
+          setReadLimit(Number(res.headers.get('X-Quota-Limit') || 3))
+        }
+        const blob = await res.blob()
+        if (cancelled) return
+        objectUrl = URL.createObjectURL(blob)
+        setPdfUrl(objectUrl)
       } catch (err: any) {
         setError(err.message || 'Erreur de chargement')
       } finally {
@@ -99,6 +97,10 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       }
     }
     fetchSecureUrl()
+    return () => {
+      cancelled = true
+      if (objectUrl) URL.revokeObjectURL(objectUrl)
+    }
   }, [documentId, userId, isLoaded])
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
@@ -116,7 +118,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     setScale(prevScale => Math.min(Math.max(0.5, prevScale + offset), 3))
   }
 
-  if (loading || status === 'loading') {
+  if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-[600px] bg-gray-50 rounded-xl">
         <Loader2 className="w-10 h-10 animate-spin text-green-700 mb-4" />
@@ -131,15 +133,15 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6">
           <AlertCircle className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">Quota Gratuit Atteint</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-3">Vous avez lu vos 3 documents gratuits 🎉</h3>
         <p className="text-gray-600 mb-8 max-w-md">
-          Vous avez épuisé votre quota de <strong>5 consultations gratuites</strong>. Pour continuer à explorer notre bibliothèque et lire ce document, créez un compte gratuitement.
+          Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte Agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
-          <Link href={`/rejoindre`} className="flex-1 px-4 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
             Créer mon compte
           </Link>
-          <Link href={`/login?redirect=/bibliotheque/${documentId}/lire`} className="flex-1 px-4 py-3 bg-white text-green-700 border border-green-200 rounded-lg font-medium hover:bg-green-50 transition-colors">
+          <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-white text-green-700 border border-green-200 rounded-lg font-medium hover:bg-green-50 transition-colors">
             Se connecter
           </Link>
         </div>
@@ -158,16 +160,16 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   return (
     <div className="flex flex-col items-center bg-gray-100 rounded-xl overflow-hidden border border-gray-200 relative">
       
-      {/* Quota Banner for Visitors */}
-      {!userId && readCount > 0 && readCount <= 5 && (
-        <div className="w-full bg-blue-50 border-b border-blue-100 p-3 flex items-center justify-between z-10 text-sm">
-          <div className="flex items-center text-blue-800">
+      {/* Bandeau permanent pour les visiteurs */}
+      {showEncarts && (
+        <div className="sticky top-0 w-full bg-green-700 text-white px-3 py-2 flex items-center justify-between gap-3 z-20 text-xs sm:text-sm">
+          <span className="flex items-center min-w-0">
             <Info className="w-4 h-4 mr-2 flex-shrink-0" />
-            <span>
-              Mode visiteur : <strong>{readCount} / 5</strong> documents gratuits consultés.
+            <span className="truncate">
+              Mode visiteur{readCount > 0 && <> : <strong>{readCount}/{readLimit}</strong> documents gratuits</>} · Lisez sans pub en créant un compte
             </span>
-          </div>
-          <Link href="/rejoindre" className="text-blue-700 hover:text-blue-900 font-semibold text-xs ml-4 whitespace-nowrap">
+          </span>
+          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="shrink-0 rounded-md bg-white px-3 py-1 font-semibold text-green-800 hover:bg-green-50">
             Créer un compte
           </Link>
         </div>
@@ -273,7 +275,12 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
                   {/* Transparent anti-drag overlay */}
                   <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
                 </div>
-              ))
+              )).flatMap((el, index) => [
+                el,
+                ...(showEncarts && index !== numPages - 1 && index % 3 === 0
+                  ? [<EncartInscription key={`encart_${index}`} next={nextPath} />]
+                  : []),
+              ])
             ) : (
               <div className="relative shadow-xl">
                 <Page 
@@ -299,6 +306,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
                 <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
               </div>
             )}
+            {viewMode === 'single' && showEncarts && <EncartInscription next={nextPath} variant="compact" />}
           </div>
         </Document>
       </div>
