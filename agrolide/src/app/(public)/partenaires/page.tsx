@@ -100,7 +100,7 @@ export default async function PartenairesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
             <div className="space-y-8">
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-primary font-heading font-[700] text-[11px] tracking-[0.15em] uppercase">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-accent-leaf font-heading font-[700] text-[11px] tracking-[0.15em] uppercase">
                 <span className="w-2 h-2 rounded-full bg-accent-sun" />
                 Collaboration
               </div>

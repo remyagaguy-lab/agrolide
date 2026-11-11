@@ -114,7 +114,7 @@ export default async function NousSoutenirPage() {
 
               {/* Contexte & Impact */}
               <div>
-                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-primary font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
+                <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-accent-leaf font-heading font-[700] text-[11px] tracking-[0.15em] uppercase mb-6">
                   <span className="w-2 h-2 rounded-full bg-accent-sun" />
                   Transparence
                 </div>
