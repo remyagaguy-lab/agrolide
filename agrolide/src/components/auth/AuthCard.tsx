@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 
@@ -11,8 +12,15 @@ export function AuthCard({ title, subtitle, children, footer }: {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <Link href="/" className="block text-center font-heading font-extrabold text-2xl text-[#1b5e38] mb-6">
-          agrolide
+        <Link href="/" aria-label="Retour à l'accueil agrolide" className="mb-6 flex justify-center">
+          <Image
+            src="/images/logo-agrolide.webp"
+            alt="agrolide"
+            width={480}
+            height={135}
+            priority
+            className="h-[56px] w-auto"
+          />
         </Link>
         <h1 className="text-center text-2xl font-heading font-extrabold text-gray-900">{title}</h1>
         {subtitle && <p className="mt-2 text-center text-sm text-gray-600">{subtitle}</p>}

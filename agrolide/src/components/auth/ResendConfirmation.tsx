@@ -34,7 +34,7 @@ export function ResendConfirmation({ email: initialEmail = '', showInput = true 
     })
     setLoading(false)
     if (error) return setError(translateAuthError(error.message))
-    setMessage('E-mail renvoyé. Vérifiez votre boîte de réception et vos courriers indésirables.')
+    setMessage('E-mail renvoyé. Vérifiez votre boîte de réception et votre dossier spam.')
     setWait(COOLDOWN_SECONDS)
   }
 
