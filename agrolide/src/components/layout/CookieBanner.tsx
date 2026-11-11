@@ -39,39 +39,30 @@ export function CookieBanner() {
 
       {/* Affichage de la bannière si aucun choix n'a été fait */}
       {showBanner && (
-        <div 
-          role="alertdialog" 
+        <div
+          role="alertdialog"
           aria-live="polite"
           aria-modal="false"
           aria-labelledby="cookie-heading"
           aria-describedby="cookie-desc"
-          className="fixed bottom-6 right-6 z-50 w-[calc(100%-3rem)] md:w-full max-w-[420px] bg-[#18181b] border border-gray-800 shadow-2xl rounded-xl p-5 flex flex-col gap-3 font-urbanist"
+          className="fixed bottom-6 right-6 z-50 flex w-[calc(100%-3rem)] max-w-[420px] flex-col gap-3 rounded-card border border-on-surface-brand/10 bg-inverse-surface p-5 text-inverse-on-surface shadow-elev-4 md:w-full"
         >
           <div>
-            <h3 id="cookie-heading" className="text-lg font-semibold text-white mb-1">Nous respectons votre vie privée.</h3>
-            <p id="cookie-desc" className="text-sm text-gray-400 leading-snug">
+            <h2 id="cookie-heading" className="mb-1 text-title-md">Nous respectons votre vie privée.</h2>
+            <p id="cookie-desc" className="text-body-sm opacity-90">
               Nous utilisons des cookies pour améliorer votre expérience de navigation, diffuser des contenus personnalisés et analyser notre trafic. En cliquant sur « Tout accepter », vous consentez à notre utilisation des cookies.
             </p>
           </div>
-          <div className="flex flex-wrap md:flex-nowrap gap-2 mt-1">
-            <button 
-              onClick={handleDecline} 
-              className="flex-1 min-w-[100px] py-2.5 px-3 text-xs font-medium text-white border border-gray-600 rounded-md hover:bg-gray-800 transition-colors"
-            >
+          <div className="mt-1 flex flex-wrap gap-2 md:flex-nowrap">
+            <Button type="button" variant="ghost-dark" size="sm" onClick={handleDecline} className="min-w-[100px] flex-1 px-3">
               Personnaliser
-            </button>
-            <button 
-              onClick={handleDecline} 
-              className="flex-1 min-w-[100px] py-2.5 px-3 text-xs font-medium text-white border border-gray-600 rounded-md hover:bg-gray-800 transition-colors"
-            >
+            </Button>
+            <Button type="button" variant="ghost-dark" size="sm" onClick={handleDecline} className="min-w-[100px] flex-1 px-3">
               Tout rejeter
-            </button>
-            <button 
-              onClick={handleAccept} 
-              className="flex-1 min-w-[100px] py-2.5 px-3 text-xs font-semibold bg-primary-700 hover:bg-primary-800 text-white rounded-md transition-colors"
-            >
+            </Button>
+            <Button type="button" variant="primary" size="sm" onClick={handleAccept} className="min-w-[100px] flex-1 px-3">
               Accepter tout
-            </button>
+            </Button>
           </div>
         </div>
       )}

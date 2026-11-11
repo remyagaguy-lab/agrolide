@@ -1,38 +1,25 @@
 "use client"
 import * as React from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { Menu, X } from "lucide-react"
 import { Show, UserButton } from "@/lib/auth/client"
+import { Button } from "@/components/ui/Button"
+import { IconButton } from "@/components/ui/IconButton"
+import { Logo } from "@/components/ui/Logo"
+import { cn } from "@/lib/utils/formatters"
 
 const NAV_LINKS = [
   { href: "/",                label: "Accueil" },
   { href: "/qui-sommes-nous", label: "Qui sommes-nous" },
   { href: "/actualites",      label: "Actualités" },
   { href: "/nos-actions",     label: "Nos actions" },
-  { href: "/formations", label: "Formations" },
+  { href: "/formations",      label: "Formations" },
   { href: "/bibliotheque",    label: "Bibliothèque" },
   { href: "/blog",            label: "Blog" },
 ]
 
-function IconMenu() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-      <line x1="3" y1="6" x2="21" y2="6"/>
-      <line x1="3" y1="12" x2="21" y2="12"/>
-      <line x1="3" y1="18" x2="21" y2="18"/>
-    </svg>
-  )
-}
-
-function IconClose() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-      <line x1="18" y1="6" x2="6" y2="18"/>
-      <line x1="6" y1="6" x2="18" y2="18"/>
-    </svg>
-  )
-}
+const navLink = "whitespace-nowrap rounded-tag text-label-lg transition-colors duration-150 ease-standard"
 
 export function Header() {
   const pathname = usePathname()
@@ -47,111 +34,98 @@ export function Header() {
 
   React.useEffect(() => { setOpen(false) }, [pathname])
 
+  // Échap referme le menu mobile.
+  React.useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false)
+    document.addEventListener("keydown", onKey)
+    return () => document.removeEventListener("keydown", onKey)
+  }, [open])
+
   const isHeroPage = pathname === "/"
-  const bgClass = scrolled || open || !isHeroPage
-    ? "bg-white border-b border-[#e8e8e4]"
-    : "bg-transparent border-b border-transparent"
+  const solid = scrolled || open || !isHeroPage
 
   return (
-    <header className={`sticky top-0 z-50 w-full transition-all duration-200 ${bgClass}`}>
-      <div className="max-w-[1100px] mx-auto flex h-[72px] items-center justify-between px-6">
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full border-b transition-[background-color,border-color] duration-200 ease-standard",
+        solid ? "border-outline-variant bg-surface-container-lowest" : "border-transparent bg-transparent",
+      )}
+    >
+      <div className="mx-auto flex h-[72px] max-w-[1100px] items-center justify-between gap-6 px-6">
+        <Logo href="/" size="md" priority />
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center flex-shrink-0">
-          <Image
-            src="/agrolide-png.png"
-            alt="agrolide"
-            width={400}
-            height={120}
-            className="h-[72px] w-auto object-contain scale-[1.6] origin-left transition-all duration-200"
-            priority
-          />
-        </Link>
-
-        {/* Nav Desktop */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Navigation desktop */}
+        <nav aria-label="Navigation principale" className="hidden items-center gap-6 lg:flex">
           {NAV_LINKS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`font-heading font-[600] text-[13px] tracking-[0.01em] transition-colors ${
-                pathname === l.href
-                  ? "text-[#1b5e38]"
-                  : "text-[#666] hover:text-[#1b5e38]"
-              }`}
+              aria-current={pathname === l.href ? "page" : undefined}
+              className={cn(
+                navLink,
+                "inline-flex min-h-11 items-center",
+                pathname === l.href ? "text-primary" : "text-on-surface-variant hover:text-primary",
+              )}
             >
               {l.label}
             </Link>
           ))}
         </nav>
 
-        {/* CTA Desktop */}
-        <div className="hidden md:flex items-center gap-5">
+        {/* Actions desktop */}
+        <div className="hidden items-center gap-4 lg:flex">
           <Show when="signed-out">
-            <Link
-              href="/login"
-              className="font-heading font-[600] text-[13px] text-[#666] hover:text-[#1b5e38] transition-colors"
-            >
+            <Link href="/login" className={cn(navLink, "inline-flex min-h-11 items-center text-on-surface-variant hover:text-primary")}>
               Connexion
             </Link>
-            <Link
-              href="/rejoindre"
-              className="bg-[#1b5e38] text-white font-heading font-[700] px-[18px] py-[9px] text-[13px] rounded-md hover:bg-[#164d2e] transition-colors"
-            >
-              Rejoindre
-            </Link>
+            <Button href="/rejoindre" variant="secondary" size="sm">Rejoindre</Button>
           </Show>
           <Show when="signed-in">
-            <Link
-              href="/membres/dashboard"
-              className="font-heading font-[600] text-[13px] text-[#1b5e38] hover:text-[#164d2e] transition-colors"
-            >
+            <Link href="/membres/dashboard" className={cn(navLink, "inline-flex min-h-11 items-center text-primary")}>
               Mon espace
             </Link>
             <UserButton />
           </Show>
         </div>
 
-        {/* Hamburger Mobile */}
-        <button
-          className="md:hidden text-[#1a1a1a] transition-colors"
+        {/* Bouton menu mobile */}
+        <IconButton
+          label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          className="lg:hidden"
+          aria-expanded={open}
+          aria-controls="menu-mobile"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Menu"
         >
-          {open ? <IconClose /> : <IconMenu />}
-        </button>
+          {open ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
+        </IconButton>
       </div>
 
-      {/* Menu Mobile */}
+      {/* Menu mobile */}
       {open && (
-        <div className="md:hidden bg-white border-t border-[#e8e8e4]">
-          <nav className="max-w-[1100px] mx-auto px-6 py-6 flex flex-col gap-5">
+        <div id="menu-mobile" className="border-t border-outline-variant bg-surface-container-lowest lg:hidden">
+          <nav aria-label="Navigation principale" className="mx-auto flex max-w-[1100px] flex-col px-6 py-4">
             {NAV_LINKS.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
-                className="font-heading font-[600] text-[16px] text-[#1a1a1a] hover:text-[#1b5e38] transition-colors"
+                aria-current={pathname === l.href ? "page" : undefined}
+                className={cn(
+                  "flex min-h-12 items-center rounded-control text-title-md transition-colors duration-150 ease-standard",
+                  pathname === l.href ? "text-primary" : "text-on-surface hover:text-primary",
+                )}
               >
                 {l.label}
               </Link>
             ))}
-            <div className="border-t border-[#e8e8e4] pt-5 flex flex-col gap-3">
+            <div className="mt-3 flex flex-col gap-3 border-t border-outline-variant pt-5">
               <Show when="signed-out">
-                <Link href="/login" className="font-heading font-[600] text-[15px] text-[#666]">
-                  Connexion
-                </Link>
-                <Link
-                  href="/rejoindre"
-                  className="bg-[#1b5e38] text-white font-heading font-[700] px-[20px] py-[12px] text-[14px] text-center rounded-md hover:bg-[#164d2e] transition-colors"
-                >
-                  Rejoindre le réseau
-                </Link>
+                <Button href="/login" variant="outline" fullWidth>Connexion</Button>
+                <Button href="/rejoindre" variant="secondary" fullWidth>Rejoindre le réseau</Button>
               </Show>
               <Show when="signed-in">
-                <Link href="/membres/dashboard" className="font-heading font-[600] text-[15px] text-[#1b5e38]">
-                  Mon espace
-                </Link>
-                <div className="pt-2 flex items-center justify-start">
+                <Button href="/membres/dashboard" variant="secondary" fullWidth>Mon espace</Button>
+                <div className="flex items-center justify-start pt-1">
                   <UserButton />
                 </div>
               </Show>
