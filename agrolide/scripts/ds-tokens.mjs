@@ -147,7 +147,7 @@ ${sysVars(light)}
 }
 
 /* Niveau 2 — système, thème sombre (activé par <html data-theme="dark">) */
-:root[data-theme='dark'] {
+[data-theme='dark'] {
   color-scheme: dark;
 ${sysVars(dark)}
 }

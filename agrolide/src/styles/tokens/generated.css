@@ -132,7 +132,7 @@
 }
 
 /* Niveau 2 — système, thème sombre (activé par <html data-theme="dark">) */
-:root[data-theme='dark'] {
+[data-theme='dark'] {
   color-scheme: dark;
   --ag-sys-color-primary: #92d5a5;
   --ag-sys-color-on-primary: #00391d;

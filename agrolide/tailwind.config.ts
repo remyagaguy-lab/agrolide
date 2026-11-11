@@ -38,7 +38,7 @@ const config: Config = {
           fond:   '#f8f8f6',
           border: '#e8e8e4',
           light:  '#f0f0ee',
-          muted:  '#9a9a96',
+          muted:  '#757571',
           texte:  '#4a4a4a',
           titre:  '#1a1a1a',
         },
