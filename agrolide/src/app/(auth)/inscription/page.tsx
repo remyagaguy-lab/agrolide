@@ -5,8 +5,16 @@ import Link from 'next/link'
 import { createSupabaseBrowser } from '@/lib/supabase/client'
 import { GoogleButton } from '@/components/auth/GoogleButton'
 import { ResendConfirmation } from '@/components/auth/ResendConfirmation'
+<<<<<<< HEAD
 import { safeNext } from '@/lib/auth/safe-next'
 import { AuthCard, buttonClass, inputClass, translateAuthError } from '@/components/auth/AuthCard'
+=======
+import { AuthCard, authLinkClass, translateAuthError } from '@/components/auth/AuthCard'
+import { Alert } from '@/components/ui/Alert'
+import { Button } from '@/components/ui/Button'
+import { FormField } from '@/components/ui/FormField'
+import { Input } from '@/components/ui/Input'
+>>>>>>> 50e60ce (refactor(auth): pages d'authentification migrées vers le design system)
 
 export default function InscriptionPage() {
   const [form, setForm] = useState({ prenom: '', nom: '', email: '', password: '' })
@@ -45,7 +53,7 @@ export default function InscriptionPage() {
   if (sent) {
     return (
       <AuthCard title="Vérifiez votre boîte e-mail" subtitle={`Un lien de confirmation a été envoyé à ${form.email}.`}>
-        <p className="text-sm text-gray-600 text-center">
+        <p className="text-center text-body-md text-on-surface-variant">
           Cliquez sur le lien pour activer votre compte (valable 15 minutes). Pensez à vérifier votre dossier spam.
         </p>
         <ResendConfirmation email={form.email} showInput={false} />
@@ -57,31 +65,27 @@ export default function InscriptionPage() {
     <AuthCard
       title="Rejoindre le réseau"
       subtitle="Créez votre compte membre gratuitement"
-      footer={<>Déjà membre ? <Link href="/login" className="font-semibold text-[#1b5e38]">Se connecter</Link></>}
+      footer={<>Déjà membre ? <Link href="/login" className={authLinkClass}>Se connecter</Link></>}
     >
       <GoogleButton next={nextParam} />
       <form onSubmit={onSubmit} className="space-y-5">
-        {error && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
-        <div className="grid grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="prenom" className="mb-1 block text-sm font-medium text-gray-700">Prénom</label>
-            <input id="prenom" required autoComplete="given-name" value={form.prenom} onChange={set('prenom')} className={inputClass} />
-          </div>
-          <div>
-            <label htmlFor="nom" className="mb-1 block text-sm font-medium text-gray-700">Nom</label>
-            <input id="nom" required autoComplete="family-name" value={form.nom} onChange={set('nom')} className={inputClass} />
-          </div>
+        {error && <Alert variant="error">{error}</Alert>}
+        <div className="grid gap-4 sm:grid-cols-2">
+          <FormField label="Prénom" required>
+            <Input required autoComplete="given-name" value={form.prenom} onChange={set('prenom')} />
+          </FormField>
+          <FormField label="Nom" required>
+            <Input required autoComplete="family-name" value={form.nom} onChange={set('nom')} />
+          </FormField>
         </div>
-        <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-medium text-gray-700">Adresse e-mail</label>
-          <input id="email" type="email" required autoComplete="email" value={form.email} onChange={set('email')} className={inputClass} />
-        </div>
-        <div>
-          <label htmlFor="password" className="mb-1 block text-sm font-medium text-gray-700">Mot de passe (8 caractères min.)</label>
-          <input id="password" type="password" required minLength={8} autoComplete="new-password" value={form.password} onChange={set('password')} className={inputClass} />
-        </div>
-        <button type="submit" disabled={loading} className={buttonClass}>{loading ? 'Création…' : 'Créer mon compte'}</button>
-        <p className="text-center text-[12px] text-gray-500">
+        <FormField label="Adresse e-mail" required>
+          <Input type="email" required autoComplete="email" value={form.email} onChange={set('email')} />
+        </FormField>
+        <FormField label="Mot de passe" hint="8 caractères minimum." required>
+          <Input type="password" required minLength={8} autoComplete="new-password" value={form.password} onChange={set('password')} />
+        </FormField>
+        <Button type="submit" variant="secondary" fullWidth loading={loading}>{loading ? 'Création…' : 'Créer mon compte'}</Button>
+        <p className="text-center text-body-sm text-on-surface-muted">
           En créant un compte, vous acceptez de recevoir notre newsletter « Parlons agriculture ». Vous pourrez vous désabonner à tout moment.
         </p>
       </form>

@@ -3,7 +3,11 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import Link from 'next/link'
 import { createSupabaseBrowser } from '@/lib/supabase/client'
-import { AuthCard, buttonClass, inputClass, translateAuthError } from '@/components/auth/AuthCard'
+import { AuthCard, authLinkClass, translateAuthError } from '@/components/auth/AuthCard'
+import { Alert } from '@/components/ui/Alert'
+import { Button } from '@/components/ui/Button'
+import { FormField } from '@/components/ui/FormField'
+import { Input } from '@/components/ui/Input'
 
 /**
  * Deux modes :
@@ -50,12 +54,11 @@ export default function ResetPasswordClient() {
     return (
       <AuthCard title="Nouveau mot de passe" subtitle="Choisissez un mot de passe d’au moins 8 caractères">
         <form onSubmit={saveNewPassword} className="space-y-5">
-          {error && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
-          <div>
-            <label htmlFor="new-password" className="mb-1 block text-sm font-medium text-gray-700">Nouveau mot de passe</label>
-            <input id="new-password" type="password" required minLength={8} autoComplete="new-password" placeholder="8 caractères minimum" value={password} onChange={(e) => setPassword(e.target.value)} className={inputClass} />
-          </div>
-          <button type="submit" disabled={loading} className={buttonClass}>{loading ? 'Enregistrement…' : 'Enregistrer'}</button>
+          {error && <Alert variant="error">{error}</Alert>}
+          <FormField label="Nouveau mot de passe" hint="8 caractères minimum." required>
+            <Input type="password" required minLength={8} autoComplete="new-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </FormField>
+          <Button type="submit" variant="secondary" fullWidth loading={loading}>{loading ? 'Enregistrement…' : 'Enregistrer'}</Button>
         </form>
       </AuthCard>
     )
@@ -65,18 +68,17 @@ export default function ResetPasswordClient() {
     <AuthCard
       title="Mot de passe oublié"
       subtitle="Recevez un lien de réinitialisation par e-mail"
-      footer={<Link href="/login" className="font-semibold text-[#1b5e38]">Retour à la connexion</Link>}
+      footer={<Link href="/login" className={authLinkClass}>Retour à la connexion</Link>}
     >
       {message ? (
-        <p className="text-sm text-gray-700 text-center">{message}</p>
+        <Alert variant="success">{message}</Alert>
       ) : (
         <form onSubmit={requestLink} className="space-y-5">
-          {error && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
-          <div>
-            <label htmlFor="reset-email" className="mb-1 block text-sm font-medium text-gray-700">Adresse e-mail de votre compte</label>
-            <input id="reset-email" type="email" required autoComplete="email" placeholder="vous@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} className={inputClass} />
-          </div>
-          <button type="submit" disabled={loading} className={buttonClass}>{loading ? 'Envoi…' : 'Envoyer le lien'}</button>
+          {error && <Alert variant="error">{error}</Alert>}
+          <FormField label="Adresse e-mail de votre compte" required>
+            <Input type="email" required autoComplete="email" placeholder="vous@exemple.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </FormField>
+          <Button type="submit" variant="secondary" fullWidth loading={loading}>{loading ? 'Envoi…' : 'Envoyer le lien'}</Button>
         </form>
       )}
     </AuthCard>

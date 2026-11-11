@@ -1,42 +1,35 @@
-import Image from 'next/image'
-import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { Logo } from '@/components/ui/Logo'
 
-/** Carte commune aux pages de connexion, d'inscription et de mot de passe. */
-export function AuthCard({ title, subtitle, children, footer }: {
+/** Page commune aux écrans de connexion, d'inscription, de mot de passe et d'accueil des nouveaux membres. */
+export function AuthCard({ title, subtitle, children, footer, wide }: {
   title: string
   subtitle?: string
   children: ReactNode
   footer?: ReactNode
+  /** Carte plus large (formulaires longs comme l'onboarding). */
+  wide?: boolean
 }) {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <Link href="/" aria-label="Retour à l'accueil agrolide" className="mb-6 flex justify-center">
-          <Image
-            src="/images/logo-agrolide.webp"
-            alt="agrolide"
-            width={480}
-            height={135}
-            priority
-            className="h-[56px] w-auto"
-          />
-        </Link>
-        <h1 className="text-center text-2xl font-heading font-extrabold text-gray-900">{title}</h1>
-        {subtitle && <p className="mt-2 text-center text-sm text-gray-600">{subtitle}</p>}
+    <div className="flex min-h-screen flex-col justify-center bg-surface-container-low px-4 py-12 sm:px-6 lg:px-8">
+      <div className="text-center sm:mx-auto sm:w-full sm:max-w-md">
+        <div className="mb-6 flex justify-center">
+          <Logo href="/" size="lg" priority />
+        </div>
+        <h1 className="text-headline-sm text-on-surface">{title}</h1>
+        {subtitle && <p className="mt-2 text-body-md text-on-surface-variant">{subtitle}</p>}
       </div>
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-6 shadow-sm border border-gray-100 rounded-2xl sm:px-10">{children}</div>
-        {footer && <div className="mt-6 text-center text-sm text-gray-500">{footer}</div>}
+      <div className={wide ? 'mt-8 sm:mx-auto sm:w-full sm:max-w-xl' : 'mt-8 sm:mx-auto sm:w-full sm:max-w-md'}>
+        <div className="rounded-panel border border-outline-variant bg-surface-container-lowest px-6 py-8 sm:px-10">{children}</div>
+        {footer && <div className="mt-6 text-center text-body-md text-on-surface-variant">{footer}</div>}
       </div>
     </div>
   )
 }
 
-export const inputClass =
-  'block w-full rounded-lg border border-gray-300 px-3 py-2.5 text-sm shadow-sm focus:border-[#1b5e38] focus:outline-none focus:ring-1 focus:ring-[#1b5e38]'
-export const buttonClass =
-  'w-full rounded-lg bg-[#1b5e38] px-4 py-3 text-sm font-semibold text-white hover:bg-[#164d2e] disabled:opacity-60 transition-colors'
+/** Style des liens textuels des pages d'authentification. */
+export const authLinkClass =
+  'rounded-tag font-semibold text-primary underline-offset-4 hover:underline'
 
 export function translateAuthError(message: string) {
   const m = message.toLowerCase()

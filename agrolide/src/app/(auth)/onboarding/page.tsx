@@ -3,23 +3,31 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { submitOnboarding } from '@/app/actions/onboarding'
-import { CheckCircle2, User, Building, Briefcase, GraduationCap, Loader2, Heart } from 'lucide-react'
+import { CheckCircle2, User, Building, Briefcase, GraduationCap, Heart } from 'lucide-react'
+import { AuthCard } from '@/components/auth/AuthCard'
+import { Alert } from '@/components/ui/Alert'
+import { Button } from '@/components/ui/Button'
+import { FormField } from '@/components/ui/FormField'
+import { Input } from '@/components/ui/Input'
+import { NativeSelect } from '@/components/ui/Select'
+import { Textarea } from '@/components/ui/Textarea'
+import { cn } from '@/lib/utils/formatters'
+
+const profiles = [
+  { id: 'passionne', label: 'Passionné', icon: Heart, desc: 'Curieux ou non-professionnel' },
+  { id: 'junior', label: 'Junior / Étudiant', icon: GraduationCap, desc: 'Vous débutez dans le secteur' },
+  { id: 'professionnel', label: 'Professionnel', icon: User, desc: 'Vous êtes un acteur du secteur' },
+  { id: 'partenaire', label: 'Partenaire', icon: Building, desc: 'Entreprise, ONG, Coopérative' },
+  { id: 'senior', label: 'Sénior', icon: Briefcase, desc: 'Vous avez une forte expérience' },
+]
+
+const paysOptions = ["Sénégal", "Côte d'Ivoire", "Cameroun", "Bénin", "Togo", "Mali", "Burkina Faso", "Guinée", "Congo", "Gabon", "RDC", "Madagascar", "Maroc", "Tunisie", "Algérie", "France", "Canada"]
 
 export default function OnboardingPage() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [categorie, setCategorie] = useState('professionnel')
-
-  const profiles = [
-    { id: 'passionne', label: 'Passionné', icon: Heart, desc: 'Curieux ou non-professionnel' },
-    { id: 'junior', label: 'Junior / Étudiant', icon: GraduationCap, desc: 'Vous débutez dans le secteur' },
-    { id: 'professionnel', label: 'Professionnel', icon: User, desc: 'Vous êtes un acteur du secteur' },
-    { id: 'partenaire', label: 'Partenaire', icon: Building, desc: 'Entreprise, ONG, Coopérative' },
-    { id: 'senior', label: 'Sénior', icon: Briefcase, desc: 'Vous avez une forte expérience' },
-  ]
-
-  const paysOptions = ["Sénégal", "Côte d'Ivoire", "Cameroun", "Bénin", "Togo", "Mali", "Burkina Faso", "Guinée", "Congo", "Gabon", "RDC", "Madagascar", "Maroc", "Tunisie", "Algérie", "France", "Canada"]
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -40,142 +48,77 @@ export default function OnboardingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md text-center">
-        <h2 className="text-3xl font-extrabold text-gray-900 font-heading">
-          Bienvenue sur agrolide !
-        </h2>
-        <p className="mt-2 text-sm text-gray-600">
-          Complétez votre profil pour rejoindre l'annuaire public du réseau.
-        </p>
-      </div>
-
-      <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-xl">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10 border border-gray-100">
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            
-            {/* Choix du profil */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-4">
-                Quel est votre profil ? *
-              </label>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {profiles.map((p) => {
-                  const Icon = p.icon
-                  const isSelected = categorie === p.id
-                  return (
-                    <div
-                      key={p.id}
-                      onClick={() => setCategorie(p.id)}
-                      className={`cursor-pointer relative border rounded-xl p-4 flex flex-col items-center text-center transition-all ${
-                        isSelected 
-                          ? 'border-primary-500 bg-primary-50 ring-2 ring-primary-500' 
-                          : 'border-gray-200 hover:border-primary-300 hover:bg-gray-50'
-                      }`}
-                    >
-                      {isSelected && (
-                        <CheckCircle2 className="absolute top-2 right-2 w-5 h-5 text-primary-600" />
-                      )}
-                      <Icon className={`w-8 h-8 mb-2 ${isSelected ? 'text-primary-600' : 'text-gray-400'}`} />
-                      <span className={`font-semibold text-sm ${isSelected ? 'text-primary-900' : 'text-gray-900'}`}>
-                        {p.label}
-                      </span>
-                      <span className="text-xs text-gray-500 mt-1">{p.desc}</span>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-
-            {/* Spécialité */}
-            <div>
-              <label htmlFor="specialite" className="block text-sm font-medium text-gray-700">
-                Spécialité / Fonction
-              </label>
-              <div className="mt-1">
-                <input
-                  id="specialite"
-                  name="specialite"
-                  type="text"
-                  placeholder="Ex: Ingénieur Agronome, Consultant, etc."
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                />
-              </div>
-            </div>
-
-            {/* Pays et Ville */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="pays" className="block text-sm font-medium text-gray-700">
-                  Pays de résidence *
-                </label>
-                <div className="mt-1">
-                  <select
-                    id="pays"
-                    name="pays"
-                    required
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm bg-white focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                  >
-                    <option value="">Sélectionnez un pays</option>
-                    {paysOptions.map(p => (
-                      <option key={p} value={p}>{p}</option>
-                    ))}
-                    <option value="Autre">Autre</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="ville" className="block text-sm font-medium text-gray-700">
-                  Ville *
-                </label>
-                <div className="mt-1">
+    <AuthCard
+      wide
+      title="Bienvenue sur agrolide !"
+      subtitle="Complétez votre profil pour rejoindre l'annuaire public du réseau."
+    >
+      <form className="space-y-6" onSubmit={handleSubmit}>
+        {/* Choix du profil : groupe de boutons radio (clavier : flèches) */}
+        <fieldset>
+          <legend className="mb-3 text-label-lg text-on-surface">
+            Quel est votre profil ? <span aria-hidden="true" className="text-error">*</span>
+          </legend>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {profiles.map((p) => {
+              const Icon = p.icon
+              const isSelected = categorie === p.id
+              return (
+                <label
+                  key={p.id}
+                  className={cn(
+                    'relative flex min-h-12 cursor-pointer flex-col items-center rounded-card border p-4 text-center transition-colors duration-150 ease-standard',
+                    'has-[:focus-visible]:outline has-[:focus-visible]:outline-[length:var(--ag-sys-focus-width)] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-focus-ring',
+                    isSelected
+                      ? 'border-primary bg-primary-container text-on-primary-container ring-1 ring-primary'
+                      : 'border-outline-variant bg-surface-container-lowest text-on-surface hover:border-outline',
+                  )}
+                >
                   <input
-                    id="ville"
-                    name="ville"
-                    type="text"
-                    required
-                    placeholder="Ex: Dakar"
-                    className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
+                    type="radio"
+                    name="profil-categorie"
+                    value={p.id}
+                    checked={isSelected}
+                    onChange={() => setCategorie(p.id)}
+                    className="sr-only"
                   />
-                </div>
-              </div>
-            </div>
+                  {isSelected && <CheckCircle2 className="absolute right-2 top-2 size-5 text-primary" aria-hidden="true" />}
+                  <Icon className={cn('mb-2 size-8', isSelected ? 'text-primary' : 'text-on-surface-muted')} aria-hidden="true" />
+                  <span className="text-title-sm">{p.label}</span>
+                  <span className={cn('mt-1 text-body-sm', isSelected ? 'text-on-primary-container' : 'text-on-surface-muted')}>{p.desc}</span>
+                </label>
+              )
+            })}
+          </div>
+        </fieldset>
 
-            {/* Biographie */}
-            <div>
-              <label htmlFor="biographie" className="block text-sm font-medium text-gray-700">
-                Courte biographie
-              </label>
-              <div className="mt-1">
-                <textarea
-                  id="biographie"
-                  name="biographie"
-                  rows={3}
-                  placeholder="Présentez-vous en quelques mots..."
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-primary-500 focus:border-primary-500 sm:text-sm"
-                />
-              </div>
-            </div>
+        <FormField label="Spécialité / Fonction">
+          <Input name="specialite" type="text" placeholder="Ex : ingénieur agronome, consultant…" />
+        </FormField>
 
-            {error && (
-              <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-md p-3">
-                {error}
-              </div>
-            )}
-
-            <div>
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full flex justify-center py-2.5 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50"
-              >
-                {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : 'Terminer mon inscription'}
-              </button>
-            </div>
-          </form>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <FormField label="Pays de résidence" required>
+            <NativeSelect name="pays" required defaultValue="">
+              <option value="">Sélectionnez un pays</option>
+              {paysOptions.map((p) => (
+                <option key={p} value={p}>{p}</option>
+              ))}
+              <option value="Autre">Autre</option>
+            </NativeSelect>
+          </FormField>
+          <FormField label="Ville" required>
+            <Input name="ville" type="text" required placeholder="Ex : Dakar" />
+          </FormField>
         </div>
-      </div>
-    </div>
+
+        <FormField label="Courte biographie">
+          <Textarea name="biographie" rows={3} placeholder="Présentez-vous en quelques mots…" />
+        </FormField>
+
+        {error && <Alert variant="error">{error}</Alert>}
+
+        <Button type="submit" variant="secondary" fullWidth loading={loading}>Terminer mon inscription</Button>
+      </form>
+    </AuthCard>
   )
 }

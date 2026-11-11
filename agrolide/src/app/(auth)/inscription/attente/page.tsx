@@ -1,48 +1,36 @@
 "use client"
 
 import { useSearchParams } from "next/navigation"
-import Link from "next/link"
-import { Mail, ArrowRight } from "lucide-react"
+import { Mail } from "lucide-react"
 import { Suspense } from "react"
+import { AuthCard } from "@/components/auth/AuthCard"
+import { Button } from "@/components/ui/Button"
+import { Spinner } from "@/components/ui/Spinner"
 
 function AttenteContent() {
   const searchParams = useSearchParams()
   const email = searchParams?.get('email')
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-12 px-8 shadow-sm border border-[var(--color-gris-clair)] sm:rounded-2xl text-center">
-          <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto text-blue-500 mb-6">
-            <Mail size={40} />
-          </div>
-          
-          <h2 className="text-3xl font-heading font-extrabold text-gray-900 mb-4">
-            Vérifiez votre boîte mail
-          </h2>
-          
-          <div className="text-lg text-[var(--color-gris-texte)] mb-8">
-            <p>Nous venons d'envoyer un lien de confirmation à :</p>
-            <p className="font-bold text-gray-900 mt-2">{email || "votre adresse email"}</p>
-          </div>
-          
-          <div className="bg-gray-50 p-4 rounded-lg text-sm text-gray-600 mb-8 border border-gray-100">
-            <p>Veuillez cliquer sur le lien contenu dans cet email pour vérifier votre adresse et passer à l'étape du paiement de votre cotisation.</p>
-            <p className="mt-2 text-xs text-gray-500">(Vérifiez également votre dossier spam)</p>
-          </div>
-          
-          <Link href="/" className="inline-flex items-center gap-2 text-[var(--color-vert-principal)] font-bold hover:text-green-700">
-            Retour à l'accueil <ArrowRight size={18} />
-          </Link>
+    <AuthCard title="Vérifiez votre boîte mail" subtitle="Nous venons d’envoyer un lien de confirmation à :">
+      <div className="text-center">
+        <span aria-hidden="true" className="mx-auto mb-5 inline-flex size-16 items-center justify-center rounded-full bg-primary-container text-on-primary-container">
+          <Mail className="size-8" />
+        </span>
+        <p className="text-title-md text-on-surface">{email || "votre adresse e-mail"}</p>
+        <div className="mt-6 rounded-card bg-surface-container p-4 text-left text-body-md text-on-surface-variant">
+          <p>Cliquez sur le lien contenu dans cet e-mail pour vérifier votre adresse et passer à l’étape du paiement de votre cotisation.</p>
+          <p className="mt-2 text-body-sm text-on-surface-muted">Pensez à vérifier votre dossier spam.</p>
         </div>
+        <Button href="/" variant="text" className="mt-6">Retour à l’accueil</Button>
       </div>
-    </div>
+    </AuthCard>
   )
 }
 
 export default function AttentePage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Chargement...</div>}>
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center"><Spinner className="size-8 text-primary" /></div>}>
       <AttenteContent />
     </Suspense>
   )

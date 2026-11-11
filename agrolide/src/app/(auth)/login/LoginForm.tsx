@@ -7,7 +7,11 @@ import { createSupabaseBrowser } from '@/lib/supabase/client'
 import { safeNext } from '@/lib/auth/safe-next'
 import { GoogleButton } from '@/components/auth/GoogleButton'
 import { ResendConfirmation } from '@/components/auth/ResendConfirmation'
-import { AuthCard, buttonClass, inputClass, translateAuthError } from '@/components/auth/AuthCard'
+import { AuthCard, authLinkClass, translateAuthError } from '@/components/auth/AuthCard'
+import { Alert } from '@/components/ui/Alert'
+import { Button } from '@/components/ui/Button'
+import { FormField } from '@/components/ui/FormField'
+import { Input } from '@/components/ui/Input'
 
 const URL_ERRORS: Record<string, string> = {
   lien_invalide: 'Ce lien est invalide ou a expiré. Demandez-en un nouveau.',
@@ -44,23 +48,23 @@ export default function LoginForm() {
     <AuthCard
       title="Connexion"
       subtitle="Accédez à votre espace membre"
-      footer={<>Pas encore membre ? <Link href="/inscription" className="font-semibold text-[#1b5e38]">Créer un compte</Link></>}
+      footer={<>Pas encore membre ? <Link href="/inscription" className={authLinkClass}>Créer un compte</Link></>}
     >
       <GoogleButton next={next} />
       <form onSubmit={onSubmit} className="space-y-5">
-        {error && <p role="alert" className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>}
+        {error && <Alert variant="error">{error}</Alert>}
+        <FormField label="Adresse e-mail" required>
+          <Input type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </FormField>
         <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-medium text-gray-700">Adresse e-mail</label>
-          <input id="email" type="email" required autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className={inputClass} />
+          <FormField label="Mot de passe" required>
+            <Input type="password" required autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </FormField>
+          <p className="mt-2 text-right text-body-sm">
+            <Link href="/reset-password" className={authLinkClass}>Mot de passe oublié ?</Link>
+          </p>
         </div>
-        <div>
-          <div className="mb-1 flex items-center justify-between">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Mot de passe</label>
-            <Link href="/reset-password" className="text-xs font-medium text-[#1b5e38]">Mot de passe oublié ?</Link>
-          </div>
-          <input id="password" type="password" required autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} className={inputClass} />
-        </div>
-        <button type="submit" disabled={loading} className={buttonClass}>{loading ? 'Connexion…' : 'Se connecter'}</button>
+        <Button type="submit" variant="secondary" fullWidth loading={loading}>{loading ? 'Connexion…' : 'Se connecter'}</Button>
       </form>
       {needsConfirm && <ResendConfirmation email={email} />}
     </AuthCard>
