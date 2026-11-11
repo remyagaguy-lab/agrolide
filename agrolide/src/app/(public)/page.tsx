@@ -177,7 +177,7 @@ export default async function HomePage() {
     <div className="flex flex-col min-h-screen">
 
       {/* ── HERO ─────────────────────────────────── */}
-      <section className="bg-[#1b5e38] relative overflow-hidden pt-0 md:pt-0">
+      <section className="bg-surface-brand relative overflow-hidden pt-0 md:pt-0">
         {/* Motif Background for texture (placed behind the image) */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
@@ -196,33 +196,31 @@ export default async function HomePage() {
             className="object-cover object-[center_80%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_60%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_40%)]"
           />
           {/* Calque d'assombrissement uniquement sur mobile pour le contraste */}
-          <div className="absolute inset-0 bg-[#1b5e38]/60 md:hidden" />
+          <div className="absolute inset-0 bg-surface-brand/60 md:hidden" />
         </div>
 
         <div className="max-w-[1100px] mx-auto px-6 pt-[32px] pb-0 md:pt-[48px] relative z-20">
           <div className="max-w-[900px]">
-            <div className="inline-block px-4 py-2 rounded-full border border-white/20 bg-black/20 md:bg-transparent md:border-white/10 text-[#fcb726] font-heading font-[700] text-[11px] tracking-[0.2em] uppercase mb-6 backdrop-blur-sm md:backdrop-blur-none">
-              Le premier réseau agricole africain
-            </div>
-            <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-white leading-[1.08] tracking-[-0.03em] mb-8 drop-shadow-xl md:drop-shadow-none">
+
+            <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-on-surface-brand leading-[1.08] tracking-[-0.03em] mb-8 drop-shadow-xl md:drop-shadow-none">
               Fédérer la chaîne<br />
               agricole, pour conquérir<br />
-              <span className="text-[#fcb726] drop-shadow-md md:drop-shadow-none">la souveraineté alimentaire</span>
+              <span className="text-accent-sun drop-shadow-md md:drop-shadow-none">la souveraineté alimentaire</span>
             </h1>
-            <p className="font-sans text-[16px] text-white max-w-[600px] leading-[1.8] mb-10 drop-shadow-lg md:drop-shadow-none font-medium md:font-normal">
+            <p className="font-sans text-[16px] text-on-surface-brand max-w-[600px] leading-[1.8] mb-10 drop-shadow-lg md:drop-shadow-none font-medium md:font-normal">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.{" "}
-              <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Étudiants en agronomie</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Ingénieurs Agronomes</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Chercheurs</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Entreprises Agricoles</strong>, <strong className="text-[#f99e1d] font-[800] drop-shadow-sm md:drop-shadow-none">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
+              <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Étudiants en agronomie</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Ingénieurs Agronomes</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Chercheurs</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Entreprises Agricoles</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/rejoindre"
-                className="bg-white text-[#1b5e38] font-heading font-[700] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-[#f0f7f0] transition-colors"
+                className="bg-on-surface-brand text-surface-brand font-heading font-[700] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-primary-container transition-colors"
               >
                 Rejoindre le réseau
               </Link>
               <Link
                 href="#actions"
-                className="border border-[rgba(255,255,255,0.28)] text-white font-heading font-[600] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-white/10 transition-colors"
+                className="border border-on-surface-brand/30 text-on-surface-brand font-heading font-[600] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-white/10 transition-colors"
               >
                 Nos actions
               </Link>
@@ -233,49 +231,49 @@ export default async function HomePage() {
       </section>
 
       {/* ── SECTION STATS ── */}
-      <section className="bg-blanc border-b border-gris-border py-[16px] md:!py-[28px]">
+      <section className="bg-blanc border-b border-outline-variant py-[16px] md:!py-[28px]">
         <div className="container px-2 md:px-6">
-          <div className="grid grid-cols-4 divide-x divide-gris-border">
+          <div className="grid grid-cols-4 divide-x divide-outline-variant">
             <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
-                500<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal">+</span>
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
+                500<span className="font-[400] text-[12px] md:text-[18px] text-primary">+</span>
               </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Membres actifs</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Membres actifs</div>
             </div>
             <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
-                5<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal"> pays</span>
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
+                5<span className="font-[400] text-[12px] md:text-[18px] text-primary"> pays</span>
               </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Pays africains</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Pays africains</div>
             </div>
             <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
-                700<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal">+</span>
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
+                700<span className="font-[400] text-[12px] md:text-[18px] text-primary">+</span>
               </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Ressources techniques</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Ressources techniques</div>
             </div>
             <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-vert-profond leading-none mb-1">
-                100<span className="font-[400] text-[12px] md:text-[18px] text-vert-principal">%</span>
+              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
+                100<span className="font-[400] text-[12px] md:text-[18px] text-primary">%</span>
               </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-gris-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Dédiés à l'Afrique</div>
+              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Dédiés à l'Afrique</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── LEAD MAGNET (CRO) ── */}
-      <section className="bg-gradient-to-r from-orange-50 to-orange-100 py-12 border-b border-orange-200">
+      <section className="bg-tertiary-container py-12 border-b border-tertiary/30">
         <div className="container">
-          <div className="bg-white rounded-2xl shadow-xl border border-orange-100 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold uppercase tracking-wider mb-4">
                 <BookOpen className="w-4 h-4" /> Guide Gratuit
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4 font-heading">
+              <h2 className="text-3xl font-bold text-on-surface mb-4 font-heading">
                 Le Manuel de l'Agroécologie en Afrique de l'Ouest
               </h2>
-              <p className="text-gray-600 mb-6 text-lg">
+              <p className="text-on-surface-variant mb-6 text-lg">
                 Découvrez les 10 pratiques essentielles pour adapter vos cultures aux changements climatiques et augmenter vos rendements sans intrants chimiques.
               </p>
               <form className="flex flex-col sm:flex-row gap-3">
@@ -283,23 +281,23 @@ export default async function HomePage() {
                   type="email" 
                   placeholder="Votre adresse e-mail..."
                   aria-label="Votre adresse e-mail"
-                  className="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  className="flex-1 px-4 py-3 rounded-lg border border-outline focus:outline-none focus:ring-2 focus:ring-tertiary focus:border-tertiary"
                   required
                 />
                 <button 
                   type="submit" 
-                  className="px-6 py-3 bg-orange-600 text-white font-bold rounded-lg hover:bg-orange-700 transition-colors shadow-md"
+                  className="px-6 py-3 bg-tertiary text-on-tertiary font-bold rounded-lg hover:bg-tertiary-hover transition-colors shadow-md"
                 >
                   Recevoir le PDF
                 </button>
               </form>
             </div>
             <div className="md:w-1/3 flex justify-center relative">
-              <div className="w-48 h-64 bg-gray-200 rounded-lg shadow-2xl relative rotate-3 transform hover:rotate-0 transition-transform duration-300 overflow-hidden border-4 border-white">
+              <div className="w-48 h-64 bg-surface-container-high rounded-lg shadow-2xl relative rotate-3 transform hover:rotate-0 transition-transform duration-300 overflow-hidden border-4 border-surface-container-lowest">
                 <Image src="/hero-background.webp" alt="Couverture du guide" fill sizes="250px" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80 flex flex-col justify-end p-4">
                   <div className="text-white font-heading font-bold text-lg leading-tight mb-1">MANUEL PRATIQUE</div>
-                  <div className="text-orange-300 text-sm font-medium">Agroécologie</div>
+                  <div className="text-accent-sun text-sm font-medium">Agroécologie</div>
                 </div>
               </div>
             </div>
@@ -308,15 +306,15 @@ export default async function HomePage() {
       </section>
 
       {/* ── RAISON D'ÊTRE ── */}
-      <section className="bg-[#fcfbf9] border-b border-[#f0ece1]">
+      <section className="bg-surface border-b border-outline-variant">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-[55%_1fr] gap-[48px] items-start">
             {/* Colonne gauche */}
             <div>
               <SectionLabel>Notre raison d'être</SectionLabel>
-              <h2 className="text-h2 mb-6">
+              <h2 className="text-headline-md mb-6">
                 Transformer la fragmentation en{" "}
-                <span className="text-vert-profond">cohésion continentale</span>
+                <span className="text-primary">cohésion continentale</span>
               </h2>
               <p className="text-body-lg mb-4">
                 L'agriculture représente jusqu'à 40 % du PIB africain et emploie la majorité de notre population active. Pourtant, les acteurs de la chaîne de valeur évoluent de manière fragmentée, sans cadre de collaboration pérenne.
@@ -324,13 +322,13 @@ export default async function HomePage() {
               <p className="text-body-lg mb-8">
                 agrolide est né d'une ambition collective : doter l'Afrique d'un écosystème professionnel intégré, capable de mobiliser les ressources, renforcer les compétences et incuber les projets qui feront notre souveraineté alimentaire.
               </p>
-              <Link href="/qui-sommes-nous" className="btn-text">
+              <Link href="/qui-sommes-nous" className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary">
                 En savoir plus <IconArrowRight />
               </Link>
             </div>
 
             {/* Colonne droite */}
-            <div className="hidden md:block relative bg-gris-light rounded-card aspect-[4/3] overflow-hidden shadow-lg">
+            <div className="hidden md:block relative bg-surface-container rounded-card aspect-[4/3] overflow-hidden shadow-lg">
               <Image 
                 src="/raison-detre.webp" 
                 alt="Cohésion continentale en agriculture africaine" 
@@ -344,117 +342,117 @@ export default async function HomePage() {
       </section>
 
       {/* ── LES 4 FREINS ── layout horizontal inspiré template Features ── */}
-      <section className="bg-gradient-to-b from-[#f0f6f0] to-[#e8efe8] border-b border-[#dce6dc]">
+      <section className="bg-surface-container-low border-b border-outline-variant">
         <div className="container">
           <div className="text-center max-w-[640px] mx-auto mb-12">
             <SectionLabel className="mx-auto flex justify-center text-center">Constat</SectionLabel>
-            <h2 className="text-h2 text-gris-titre">
+            <h2 className="text-headline-md text-on-surface">
               L'agriculture africaine face à 4 freins majeurs
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">01</div>
-              <h3 className="text-h3 text-gris-titre mb-2">Isolement professionnel</h3>
-              <p className="text-[14px] text-gris-texte leading-[1.65]">
+              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">01</div>
+              <h3 className="text-title-lg text-on-surface mb-2">Isolement professionnel</h3>
+              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
                 Peu de réseaux solides permettent aux agronomes d'échanger et de collaborer efficacement sur le continent africain.
               </p>
             </Card>
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">02</div>
-              <h3 className="text-h3 text-gris-titre mb-2">Documentation inadaptée</h3>
-              <p className="text-[14px] text-gris-texte leading-[1.65]">
+              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">02</div>
+              <h3 className="text-title-lg text-on-surface mb-2">Documentation inadaptée</h3>
+              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
                 La quasi-totalité des ressources techniques ignore les réalités climatiques et pédologiques propres à l'Afrique.
               </p>
             </Card>
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">03</div>
-              <h3 className="text-h3 text-gris-titre mb-2">Déficit d'accompagnement</h3>
-              <p className="text-[14px] text-gris-texte leading-[1.65]">
+              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">03</div>
+              <h3 className="text-title-lg text-on-surface mb-2">Déficit d'accompagnement</h3>
+              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
                 Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré.
               </p>
             </Card>
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-vert-principal uppercase tracking-[0.1em] mb-3">04</div>
-              <h3 className="text-h3 text-gris-titre mb-2">Recherche sous-valorisée</h3>
-              <p className="text-[14px] text-gris-texte leading-[1.65]">
+              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">04</div>
+              <h3 className="text-title-lg text-on-surface mb-2">Recherche sous-valorisée</h3>
+              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
                 Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain.
               </p>
             </Card>
           </div>
 
-          <p className="text-center font-heading font-[700] text-[17px] text-gris-titre mt-8">
+          <p className="text-center font-heading font-[700] text-[17px] text-on-surface mt-8">
             agrolide a été fondé pour briser ces quatre barrières simultanément et débloquer le potentiel de notre continent.
           </p>
         </div>
       </section>
 
       {/* ── 3 DOMAINES D'ACTIVITÉ ── */}
-      <section id="actions" className="bg-white">
+      <section id="actions" className="bg-surface-container-lowest">
         <div className="container">
           <div className="text-center mb-12">
             <SectionLabel className="mx-auto flex justify-center text-center">Notre approche</SectionLabel>
-            <h2 className="text-h2 text-gris-titre">
+            <h2 className="text-headline-md text-on-surface">
               Un écosystème intégré en 3 piliers d'action
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
             <Link href="/annuaire" className="block group">
-              <Card variant="feature" className="h-full flex flex-col group-hover:border-[#c8c8c4] group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
-                <div className="card-feature-icon">
-                  <Users size={20} strokeWidth={1.5} color="#1b5e38" />
+              <Card variant="feature" className="h-full flex flex-col group-hover:border-outline-variant group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
+                <div className="mb-4 flex size-11 items-center justify-center rounded-[10px] bg-primary-container">
+                  <Users size={20} strokeWidth={1.5} className="text-primary" />
                 </div>
-                <h3 className="text-h3 text-gris-titre mb-2">Mobilisation & Réseautage</h3>
-                <p className="text-[14px] text-gris-texte leading-[1.65] mb-6">
+                <h3 className="text-title-lg text-on-surface mb-2">Mobilisation & Réseautage</h3>
+                <p className="text-[14px] text-on-surface-variant leading-[1.65] mb-6">
                   Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.
                 </p>
-                <div className="btn-text mt-auto">Découvrir <IconArrowRight /></div>
+                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
               </Card>
             </Link>
 
             <Link href="/formations" className="block group">
-              <Card variant="feature" className="h-full flex flex-col group-hover:border-[#c8c8c4] group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
-                <div className="card-feature-icon">
-                  <BookOpen size={20} strokeWidth={1.5} color="#1b5e38" />
+              <Card variant="feature" className="h-full flex flex-col group-hover:border-outline-variant group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
+                <div className="mb-4 flex size-11 items-center justify-center rounded-[10px] bg-primary-container">
+                  <BookOpen size={20} strokeWidth={1.5} className="text-primary" />
                 </div>
-                <h3 className="text-h3 text-gris-titre mb-2">Formation & Insertion</h3>
-                <p className="text-[14px] text-gris-texte leading-[1.65] mb-6">
+                <h3 className="text-title-lg text-on-surface mb-2">Formation & Insertion</h3>
+                <p className="text-[14px] text-on-surface-variant leading-[1.65] mb-6">
                   Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.
                 </p>
-                <div className="btn-text mt-auto">Découvrir <IconArrowRight /></div>
+                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
               </Card>
             </Link>
 
             <Link href="/agrobusiness" className="block group">
-              <Card variant="feature" className="h-full flex flex-col group-hover:border-[#c8c8c4] group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
-                <div className="card-feature-icon">
-                  <TrendingUp size={20} strokeWidth={1.5} color="#1b5e38" />
+              <Card variant="feature" className="h-full flex flex-col group-hover:border-outline-variant group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
+                <div className="mb-4 flex size-11 items-center justify-center rounded-[10px] bg-primary-container">
+                  <TrendingUp size={20} strokeWidth={1.5} className="text-primary" />
                 </div>
-                <h3 className="text-h3 text-gris-titre mb-2">Agrobusiness & Consulting</h3>
-                <p className="text-[14px] text-gris-texte leading-[1.65] mb-6">
+                <h3 className="text-title-lg text-on-surface mb-2">Agrobusiness & Consulting</h3>
+                <p className="text-[14px] text-on-surface-variant leading-[1.65] mb-6">
                   Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.
                 </p>
-                <div className="btn-text mt-auto">Découvrir <IconArrowRight /></div>
+                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
               </Card>
             </Link>
           </div>
         </div>
       </section>
       {/* ── SECTION PLATEFORME (BENTO GRID) ── */}
-      <section className="bg-gris-fond py-section-lg relative overflow-hidden">
+      <section className="bg-surface-container-low py-24 relative overflow-hidden">
         {/* Cercles décoratifs (Glassmorphism / Glow) */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#50a853]/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#f99e1d]/5 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-leaf/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-tertiary/5 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3" />
 
         <div className="container relative z-10">
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-h2 text-gris-titre mb-4">
-              L'écosystème <span className="text-vert-principal">complet</span>
+            <h2 className="text-headline-md text-on-surface mb-4">
+              L'écosystème <span className="text-primary">complet</span>
             </h2>
-            <p className="text-gris-texte text-[16px] leading-[1.6]">
+            <p className="text-on-surface-variant text-[16px] leading-[1.6]">
               Une plateforme innovante au service de la mutualisation des ressources entre les acteurs de la chaîne de valeur agricole africaine.
             </p>
           </div>
@@ -462,61 +460,61 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
             {/* Bloc 1 : Espace d'échange (Pleine largeur sur grand écran) */}
-            <div className="lg:col-span-12 group bg-gradient-to-br from-[#f0f7f0] to-[#e3f0e3] rounded-[24px] border border-[#d2e3d2] overflow-hidden hover:shadow-[0_12px_40px_rgba(80,168,83,0.15)] transition-all duration-500">
+            <div className="lg:col-span-12 group bg-primary-container rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-[0_12px_40px_rgba(80,168,83,0.15)] transition-all duration-500">
               <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
                 <div className="p-10 md:p-16 flex flex-col justify-center">
-                  <div className="w-14 h-14 bg-vert-clair text-vert-principal rounded-[16px] flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 bg-primary-container text-primary rounded-[16px] flex items-center justify-center mb-6">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                   </div>
-                  <h3 className="text-[32px] font-heading font-[800] text-gris-titre mb-4 leading-tight">Espace d'échange agricole</h3>
-                  <p className="text-[16px] text-gris-texte leading-[1.7] mb-8 max-w-[400px]">
+                  <h3 className="text-[32px] font-heading font-[800] text-on-surface mb-4 leading-tight">Espace d'échange agricole</h3>
+                  <p className="text-[16px] text-on-surface-variant leading-[1.7] mb-8 max-w-[400px]">
                     Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités et découvrez de nouvelles opportunités.
                   </p>
-                  <Link href="/rejoindre" className="inline-flex items-center gap-2 font-heading font-[700] text-vert-principal hover:text-vert-profond transition-colors w-fit">
+                  <Link href="/rejoindre" className="inline-flex items-center gap-2 font-heading font-[700] text-primary hover:text-primary transition-colors w-fit">
                     Rejoindre les discussions <IconArrowRight />
                   </Link>
                 </div>
-                <div className="relative min-h-[300px] lg:min-h-[400px] bg-white/40 overflow-hidden">
-                  <Image src="/plateforme-forum-ui.webp" alt="Espace d'échange" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-white/60 shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
+                <div className="relative min-h-[300px] lg:min-h-[400px] bg-surface-container-lowest/40 overflow-hidden">
+                  <Image src="/plateforme-forum-ui.webp" alt="Espace d'échange" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-outline-variant shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
                 </div>
               </div>
             </div>
 
             {/* Bloc 2 : Annuaire (Moitié gauche) */}
-            <div className="lg:col-span-6 group bg-gradient-to-br from-[#fffaf0] to-[#fce8d5] rounded-[24px] border border-[#f5d5b5] overflow-hidden hover:shadow-[0_12px_40px_rgba(249,158,29,0.15)] transition-all duration-500 flex flex-col">
+            <div className="lg:col-span-6 group bg-tertiary-container rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-[0_12px_40px_rgba(249,158,29,0.15)] transition-all duration-500 flex flex-col">
               <div className="p-10 flex-1">
-                <div className="w-14 h-14 bg-[#fff3e0] text-orange-accent rounded-[16px] flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-surface-container-lowest text-on-tertiary-container rounded-[16px] flex items-center justify-center mb-6">
                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <h3 className="text-[26px] font-heading font-[800] text-gris-titre mb-4 leading-tight">Annuaire Panafricain</h3>
-                <p className="text-[15px] text-gris-texte leading-[1.7] mb-8">
+                <h3 className="text-[26px] font-heading font-[800] text-on-surface mb-4 leading-tight">Annuaire Panafricain</h3>
+                <p className="text-[15px] text-on-surface-variant leading-[1.7] mb-8">
                   Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent.
                 </p>
-                <Link href="/annuaire" className="inline-flex items-center gap-2 font-heading font-[700] text-[#c26a00] hover:text-[#995400] transition-colors">
+                <Link href="/annuaire" className="inline-flex items-center gap-2 font-heading font-[700] text-on-tertiary-container hover:text-on-tertiary-container/80 transition-colors">
                   Explorer le réseau <IconArrowRight />
                 </Link>
               </div>
-              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
-                <Image src="/plateforme-annuaire-ui.webp" alt="Annuaire Panafricain" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
+              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-surface-container-lowest/40 overflow-hidden">
+                <Image src="/plateforme-annuaire-ui.webp" alt="Annuaire Panafricain" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top border-t border-outline-variant transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 
             {/* Bloc 3 : Bibliothèque (Moitié droite) */}
-            <div className="lg:col-span-6 group bg-gradient-to-br from-[#f8f9f6] to-[#e6ebe3] rounded-[24px] border border-[#d0dbcb] overflow-hidden hover:shadow-[0_12px_40px_rgba(135,142,44,0.12)] transition-all duration-500 flex flex-col">
+            <div className="lg:col-span-6 group bg-surface-container rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-[0_12px_40px_rgba(135,142,44,0.12)] transition-all duration-500 flex flex-col">
               <div className="p-10 flex-1">
-                <div className="w-14 h-14 bg-vert-clair text-vert-profond rounded-[16px] flex items-center justify-center mb-6">
+                <div className="w-14 h-14 bg-primary-container text-primary rounded-[16px] flex items-center justify-center mb-6">
                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M2 7h20"/><path d="M4 7v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/></svg>
                 </div>
-                <h3 className="text-[26px] font-heading font-[800] text-gris-titre mb-4 leading-tight">Bibliothèque de Ressources</h3>
-                <p className="text-[15px] text-gris-texte leading-[1.7] mb-8">
+                <h3 className="text-[26px] font-heading font-[800] text-on-surface mb-4 leading-tight">Bibliothèque de Ressources</h3>
+                <p className="text-[15px] text-on-surface-variant leading-[1.7] mb-8">
                   Accédez à des centaines de documents techniques, thèses et guides pratiques spécifiquement adaptés aux sols africains.
                 </p>
-                <Link href="/bibliotheque" className="inline-flex items-center gap-2 font-heading font-[700] text-vert-principal hover:text-vert-profond transition-colors">
+                <Link href="/bibliotheque" className="inline-flex items-center gap-2 font-heading font-[700] text-primary hover:text-primary transition-colors">
                   Consulter les guides <IconArrowRight />
                 </Link>
               </div>
-              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-white/40 overflow-hidden">
-                <Image src="/plateforme-bibliotheque-ui.webp" alt="Bibliothèque de Ressources" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top border-t border-white/60 transform group-hover:scale-[1.03] transition-transform duration-700" />
+              <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-surface-container-lowest/40 overflow-hidden">
+                <Image src="/plateforme-bibliotheque-ui.webp" alt="Bibliothèque de Ressources" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top border-t border-outline-variant transform group-hover:scale-[1.03] transition-transform duration-700" />
               </div>
             </div>
 
@@ -527,11 +525,11 @@ export default async function HomePage() {
 
 
       {/* ── TÉMOIGNAGES ── */}
-      <section className="bg-gris-fond">
+      <section className="bg-surface-container-low">
         <div className="container">
           <div className="text-center mb-16">
             <SectionLabel className="mx-auto flex justify-center text-center">Témoignages</SectionLabel>
-            <h2 className="text-h2 text-gris-titre">
+            <h2 className="text-headline-md text-on-surface">
               La voix du réseau
             </h2>
           </div>
@@ -546,17 +544,17 @@ export default async function HomePage() {
                 quote: "L'accompagnement d'Agrolide m'a aidé à passer de l'idée au marché en moins de six mois. Le réseau de mentors est exceptionnel." },
             ].map((t) => (
               <Card key={t.initials} className="flex flex-col h-full">
-                <div className="font-baskerville text-[48px] text-[#d4ead4] leading-[0.8] mt-2">"</div>
-                <p className="font-baskerville italic text-[14px] text-[#444] leading-[1.85] flex-1 mt-4">
+                <div className="font-baskerville text-[48px] text-primary-container leading-[0.8] mt-2">"</div>
+                <p className="font-baskerville italic text-[14px] text-on-surface-variant leading-[1.85] flex-1 mt-4">
                   {t.quote}
                 </p>
-                <div className="border-t border-[#f0f0f0] mt-4 pt-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gris-light flex items-center justify-center text-vert-principal font-heading font-[700] text-[13px] flex-shrink-0">
+                <div className="border-t border-outline-variant mt-4 pt-4 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-heading font-[700] text-[13px] flex-shrink-0">
                     {t.initials}
                   </div>
                   <div className="flex flex-col">
-                    <div className="font-heading font-[600] text-[13px] text-gris-titre leading-tight">{t.name}</div>
-                    <div className="font-sans text-[12px] text-gris-muted mt-0.5">{t.role} · {t.country}</div>
+                    <div className="font-heading font-[600] text-[13px] text-on-surface leading-tight">{t.name}</div>
+                    <div className="font-sans text-[12px] text-on-surface-muted mt-0.5">{t.role} · {t.country}</div>
                   </div>
                 </div>
               </Card>
@@ -572,11 +570,11 @@ export default async function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
             <div>
               <SectionLabel>Ressources</SectionLabel>
-              <h2 className="text-h2 text-gris-titre">
+              <h2 className="text-headline-md text-on-surface">
                 Derniers articles
               </h2>
             </div>
-            <Link href="/blog" className="btn-text self-start md:self-auto mb-2 md:mb-0">
+            <Link href="/blog" className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary self-start md:self-auto mb-2 md:mb-0">
               Tous les articles <IconArrowRight />
             </Link>
           </div>
@@ -591,8 +589,8 @@ export default async function HomePage() {
 
               return (
               <Link href={`/blog/${item.slug}`} key={i} className="block group">
-                <Card className="card-blog p-0 h-full flex flex-col overflow-hidden">
-                  <div className="relative w-full h-48 bg-gray-100">
+                <Card className="p-0 h-full flex flex-col overflow-hidden">
+                  <div className="relative w-full h-48 bg-surface-container">
                     {item.image_une_url && (
                       <Image 
                         src={item.image_une_url} 
@@ -602,17 +600,17 @@ export default async function HomePage() {
                       />
                     )}
                     <div className="absolute top-4 left-4 z-10">
-                      <Badge variant="category" className="bg-vert-pale text-vert-profond shadow-sm">{item.categorie || "Article"}</Badge>
+                      <Badge variant="category" className="bg-primary-container text-primary shadow-sm">{item.categorie || "Article"}</Badge>
                     </div>
                   </div>
-                  <div className="card-blog-body flex flex-col flex-1 p-6">
-                    <h3 className="font-heading font-[700] text-[15px] text-gris-titre leading-[1.4] mb-2 group-hover:text-[#1b5e38] transition-colors">{item.titre}</h3>
-                    <p className="font-sans text-[13px] text-gris-texte line-clamp-2 mb-4 flex-1">
+                  <div className="flex flex-col flex-1 p-6">
+                    <h3 className="font-heading font-[700] text-[15px] text-on-surface leading-[1.4] mb-2 group-hover:text-primary transition-colors">{item.titre}</h3>
+                    <p className="font-sans text-[13px] text-on-surface-variant line-clamp-2 mb-4 flex-1">
                       {item.extrait}
                     </p>
-                    <div className="font-sans text-[12px] text-gris-texte mt-auto pt-4 border-t border-[#f0f0f0] flex justify-between items-center">
+                    <div className="font-sans text-[12px] text-on-surface-variant mt-auto pt-4 border-t border-outline-variant flex justify-between items-center">
                       <span className="font-medium">{articleDate} · 5 min</span>
-                      <span className="font-medium text-gray-700 truncate max-w-[120px]">Par {auteurName}</span>
+                      <span className="font-medium text-on-surface-variant truncate max-w-[120px]">Par {auteurName}</span>
                     </div>
                   </div>
                 </Card>

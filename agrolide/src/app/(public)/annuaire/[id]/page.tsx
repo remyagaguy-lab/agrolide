@@ -111,7 +111,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
 
       <div className="bg-surface-container-lowest rounded-3xl shadow-sm border border-outline-variant overflow-hidden">
         {/* Couverture */}
-        <div className="h-32 bg-primary"></div>
+        <div className="h-32 bg-surface-brand"></div>
         
         {/* Header Profil */}
         <div className="px-8 pb-8 relative">

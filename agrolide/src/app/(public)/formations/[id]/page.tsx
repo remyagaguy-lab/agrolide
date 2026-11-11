@@ -85,7 +85,7 @@ export default async function FormationPublicPage({
   return (
     <div className="min-h-screen bg-surface-container-lowest relative">
       {/* Banner Background */}
-      <div className="absolute top-0 left-0 right-0 h-[180px] md:h-[260px] bg-primary z-0" />
+      <div className="absolute top-0 left-0 right-0 h-[180px] md:h-[260px] bg-surface-brand z-0" />
       
       <div className="container relative z-10 pt-8 md:pt-16 pb-24">
         

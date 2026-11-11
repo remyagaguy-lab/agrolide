@@ -71,7 +71,7 @@ export default async function LearnLayout({
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-background">
       {/* Top Navigation Bar */}
-      <header className="flex-shrink-0 h-16 border-b border-on-surface-brand/20 flex items-center justify-between px-4 lg:px-8 bg-primary text-on-primary z-10">
+      <header className="flex-shrink-0 h-16 border-b border-on-surface-brand/20 flex items-center justify-between px-4 lg:px-8 bg-surface-brand text-on-primary z-10">
         <div className="flex items-center gap-4">
           <Link 
             href={`/formations/${formation.id}`} 

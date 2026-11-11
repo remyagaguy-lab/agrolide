@@ -147,7 +147,7 @@ export default function DesignSystemPage() {
                 <Alert variant="warning" title="Attention" className="max-w-sm">Cotisation bientôt expirée.</Alert>
               </div>
             </div>
-            <p className="mt-3 text-body-sm text-on-surface-muted">Le mode sombre global reste désactivé (DARK_MODE_ENABLED dans src/lib/theme.ts) tant que l’accueil, la liste des formations et EventCard n’ont pas migré ; la bascule Clair / Sombre / Système est déjà montée et apparaîtra à l’activation.</p>
+            <p className="mt-3 text-body-sm text-on-surface-muted">Le mode sombre est actif sur tout le site : bascule Clair / Sombre / Système dans l’en-tête public et le menu du compte (voir src/lib/theme.ts).</p>
 
             <h3 className="mb-3 mt-12 text-title-md">Accents graphiques (jamais du texte sur fond clair)</h3>
             <div className="flex flex-wrap gap-3">

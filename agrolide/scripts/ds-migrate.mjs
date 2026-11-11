@@ -17,9 +17,6 @@ const targets = args.filter((a) => !a.startsWith('--'))
 
 // Fichiers à ne pas toucher (travail non commité de l'utilisateur, périmètre d'autres sessions, fichiers du système).
 const SKIP = [
-  'src/app/(public)/page.tsx',
-  'src/app/(public)/formations/page.tsx',
-  'src/components/modules/evenements/EventCard.tsx',
   'src/app/design-system',
   'src/components/ui',
   'src/styles',

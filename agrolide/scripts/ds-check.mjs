@@ -9,7 +9,6 @@
  *  - src/components/ui : bibliothèque de composants
  *  - logos de marques tierces (Google, WhatsApp, LinkedIn) : couleurs imposées par les marques
  *  - PDF et graphiques déjà branchés sur src/styles/tokens.ts ou sur les variables --ag-sys-*
- *  - « héritage » : fichiers en attente de migration, À VIDER (voir Design-System.md §10)
  */
 import { readdirSync, readFileSync, statSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
@@ -27,10 +26,6 @@ const ALLOW_FILES = new Map([
   ['src/app/actions/admin-documents.ts', 'gabarit e-mail HTML (couleurs en ligne)'],
   ['src/components/auth/GoogleButton.tsx', 'logo Google (couleurs de marque imposées)'],
   ['src/components/modules/formations/CertificatPDF.tsx', 'PDF branché sur tokens.ts'],
-  // Héritage : à retirer au fur et à mesure de la migration
-  ['src/app/(public)/page.tsx', 'héritage : fichier en attente de validation'],
-  ['src/app/(public)/formations/page.tsx', 'héritage : fichier en attente de validation'],
-  ['src/components/modules/evenements/EventCard.tsx', 'héritage : fichier en attente de validation'],
 ])
 
 const HEX = /(?<![&\w/#-])#(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6}|[0-9a-fA-F]{3})(?![\w-])/g

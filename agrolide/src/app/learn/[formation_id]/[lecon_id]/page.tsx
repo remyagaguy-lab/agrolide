@@ -98,7 +98,7 @@ export default async function LeconPage({
   return (
     <div className="flex flex-col min-h-full bg-surface-container-lowest">
       {/* Corporate Header for Reading Mode */}
-      <section className="pt-12 md:pt-16 pb-12 bg-primary">
+      <section className="pt-12 md:pt-16 pb-12 bg-surface-brand">
         <div className="container max-w-3xl mx-auto px-6">
           <div className="flex flex-col gap-4">
             <div>
