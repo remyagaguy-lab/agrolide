@@ -53,6 +53,7 @@ const externalCourses = [
         "Proposer des améliorations durables"
       ]
     })
+  }
 ];
 
 async function seed() {
