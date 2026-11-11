@@ -120,47 +120,47 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
 
           {success ? (
             <div className="py-12 text-center">
-              <div className="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+              <div className="mx-auto w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="w-8 h-8" />
               </div>
-              <Dialog.Title className="text-xl font-bold text-gray-900 mb-2">
+              <Dialog.Title className="text-xl font-bold text-on-surface mb-2">
                 Document publié !
               </Dialog.Title>
-              <Dialog.Description className="text-gray-600">
+              <Dialog.Description className="text-on-surface-variant">
                 Le document a été mis en ligne et est accessible à tous.
               </Dialog.Description>
             </div>
           ) : (
             <>
               <div className="mb-2">
-                <Dialog.Title className="text-xl font-bold text-gray-900">
+                <Dialog.Title className="text-xl font-bold text-on-surface">
                   Publier un Document
                 </Dialog.Title>
-                <Dialog.Description className="text-gray-500 mt-1 text-sm">
+                <Dialog.Description className="text-on-surface-muted mt-1 text-sm">
                   Ajoutez un nouveau PDF à la bibliothèque.
                 </Dialog.Description>
               </div>
 
               {error && (
-                <div className="p-3 bg-red-50 text-red-700 border border-red-200 rounded-lg text-sm">
+                <div className="p-3 bg-error-container text-error border border-error/30 rounded-lg text-sm">
                   {error}
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700">Titre *</label>
-                  <input required name="titre" value={formData.titre} onChange={handleChange} type="text" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
+                  <label className="text-sm font-medium text-on-surface-variant">Titre *</label>
+                  <input required name="titre" value={formData.titre} onChange={handleChange} type="text" className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary" />
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-700">Auteur(s) *</label>
-                    <input required name="auteur" value={formData.auteur} onChange={handleChange} type="text" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500" />
+                    <label className="text-sm font-medium text-on-surface-variant">Auteur(s) *</label>
+                    <input required name="auteur" value={formData.auteur} onChange={handleChange} type="text" className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary" />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-700">Type *</label>
-                    <select required name="type" value={formData.type} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500">
+                    <label className="text-sm font-medium text-on-surface-variant">Type *</label>
+                    <select required name="type" value={formData.type} onChange={handleChange} className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary">
                       <option value="guide_pratique">Guide Pratique</option>
                       <option value="rapport">Rapport</option>
                       <option value="article">Article</option>
@@ -171,8 +171,8 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700">Thématique *</label>
-                  <select required name="thematique" value={formData.thematique} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500">
+                  <label className="text-sm font-medium text-on-surface-variant">Thématique *</label>
+                  <select required name="thematique" value={formData.thematique} onChange={handleChange} className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary">
                     <option value="agrobusiness">Agrobusiness</option>
                     <option value="innovation">Innovation</option>
                     <option value="changement_climatique">Changement climatique</option>
@@ -182,19 +182,19 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700">Résumé *</label>
-                  <textarea required name="resume" value={formData.resume} onChange={handleChange} rows={3} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 resize-y" />
+                  <label className="text-sm font-medium text-on-surface-variant">Résumé *</label>
+                  <textarea required name="resume" value={formData.resume} onChange={handleChange} rows={3} className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary resize-y" />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-700">Fichier PDF *</label>
-                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-xl cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors">
+                  <label className="text-sm font-medium text-on-surface-variant">Fichier PDF *</label>
+                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-outline border-dashed rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                       <Upload className="w-8 h-8 text-gray-400 mb-2" />
-                      <p className="text-sm text-gray-500 font-medium">
+                      <p className="text-sm text-on-surface-muted font-medium">
                         {file ? file.name : "Cliquez pour sélectionner un PDF"}
                       </p>
-                      {file && <p className="text-xs text-primary-600 mt-1">{(file.size / (1024*1024)).toFixed(2)} Mo</p>}
+                      {file && <p className="text-xs text-primary mt-1">{(file.size / (1024*1024)).toFixed(2)} Mo</p>}
                     </div>
                     <input type="file" className="hidden" accept=".pdf,application/pdf" onChange={(e) => setFile(e.target.files?.[0] || null)} />
                   </label>
@@ -203,7 +203,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                 <button 
                   type="submit" 
                   disabled={loading}
-                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-6"
+                  className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-6"
                 >
                   {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Publier le document"}
                 </button>

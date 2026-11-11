@@ -98,13 +98,13 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-12">
       {/* Sidebar Filtres */}
       <div className="lg:col-span-3 space-y-6 md:sticky md:top-24 h-fit">
-        <div className="bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-5">
+        <div className="bg-white border border-outline-variant rounded-2xl shadow-sm p-5">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="font-bold text-gray-900 flex items-center gap-2">
+            <h3 className="font-bold text-on-surface flex items-center gap-2">
               <Filter className="w-4 h-4 text-gray-400" /> Filtres
             </h3>
             {(search || type || thematique) && (
-              <button onClick={resetFilters} className="text-xs text-red-600 hover:text-red-800 flex items-center gap-1 font-bold">
+              <button onClick={resetFilters} className="text-xs text-error hover:text-on-error-container flex items-center gap-1 font-bold">
                 <X className="w-3 h-3" /> Réinitialiser
               </button>
             )}
@@ -120,7 +120,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Titre, mots-clés..."
-                  className="w-full pl-8 pr-3 py-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all"
+                  className="w-full pl-8 pr-3 py-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all"
                 />
                 <Search className="w-4 h-4 text-gray-400 absolute left-2.5 top-3" />
               </div>
@@ -132,7 +132,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
               <select 
                 value={type}
                 onChange={(e) => setType(e.target.value)}
-                className="w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all"
+                className="w-full p-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all"
               >
                 <option value="">Tous les types</option>
                 <option value="these">Thèse</option>
@@ -150,7 +150,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
               <select 
                 value={thematique}
                 onChange={(e) => setThematique(e.target.value)}
-                className="w-full p-2.5 border border-gray-200 rounded-2xl text-sm focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] bg-gray-50/50 outline-none transition-all"
+                className="w-full p-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all"
               >
                 <option value="">Toutes</option>
                 <option value="Agroécologie">Agroécologie</option>
@@ -168,8 +168,8 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
         {loading && documents.length === 0 ? (
           <SkeletonGrid count={6} />
         ) : error ? (
-          <div className="text-center py-12 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-6">
-            <p className="text-red-600 font-medium">{error}</p>
+          <div className="text-center py-12 bg-white border border-outline-variant rounded-2xl shadow-sm p-6">
+            <p className="text-error font-medium">{error}</p>
           </div>
         ) : documents.length > 0 ? (
           <>
@@ -191,13 +191,13 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             )}
           </>
         ) : (
-          <div className="text-center py-16 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-8 flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-4">
+          <div className="text-center py-16 bg-white border border-outline-variant rounded-2xl shadow-sm p-8 flex flex-col items-center">
+            <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-4">
               <Search className="w-8 h-8 text-gray-300" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900 mb-1">Aucun document trouvé</h3>
-            <p className="text-gray-500">Essayez de modifier vos filtres de recherche.</p>
-            <button onClick={resetFilters} className="mt-4 text-[#1b5e38] hover:text-[#145030] font-bold">
+            <h3 className="text-lg font-bold text-on-surface mb-1">Aucun document trouvé</h3>
+            <p className="text-on-surface-muted">Essayez de modifier vos filtres de recherche.</p>
+            <button onClick={resetFilters} className="mt-4 text-primary hover:text-primary font-bold">
               Réinitialiser les filtres
             </button>
           </div>

@@ -62,20 +62,20 @@ export default function EventsClient() {
       {/* Header & Controls */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Événements & Communauté</h1>
-          <p className="text-gray-600 mt-2">Participez à nos formations, webinaires et rencontres.</p>
+          <h1 className="text-3xl font-bold text-on-surface">Événements & Communauté</h1>
+          <p className="text-on-surface-variant mt-2">Participez à nos formations, webinaires et rencontres.</p>
         </div>
         
-        <div className="flex bg-gray-100 p-1 rounded-xl">
+        <div className="flex bg-surface-container p-1 rounded-xl">
           <button 
             onClick={() => setView('list')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'list' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'list' ? 'bg-white shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
             <List className="w-4 h-4" /> Liste
           </button>
           <button 
             onClick={() => setView('calendar')}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'calendar' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'}`}
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'calendar' ? 'bg-white shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
             <CalendarIcon className="w-4 h-4" /> Calendrier
           </button>
@@ -84,8 +84,8 @@ export default function EventsClient() {
 
       {/* Filters (only show in list view for simplicity) */}
       {view === 'list' && (
-        <div className="bg-white p-4 rounded-2xl border border-gray-100 shadow-sm mb-8 flex flex-wrap gap-4 items-center">
-          <div className="flex items-center gap-2 text-gray-500">
+        <div className="bg-white p-4 rounded-2xl border border-outline-variant shadow-sm mb-8 flex flex-wrap gap-4 items-center">
+          <div className="flex items-center gap-2 text-on-surface-muted">
             <Filter className="w-4 h-4" />
             <span className="text-sm font-medium">Filtres :</span>
           </div>
@@ -93,7 +93,7 @@ export default function EventsClient() {
           <select 
             value={filterType} 
             onChange={e => setFilterType(e.target.value)}
-            className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 outline-none focus:ring-2 focus:ring-primary-500"
+            className="text-sm border border-outline-variant rounded-lg px-3 py-2 bg-surface-container-low outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="tous">Tous les types</option>
             <option value="webinaire">Webinaire</option>
@@ -105,7 +105,7 @@ export default function EventsClient() {
           <select 
             value={filterFormat} 
             onChange={e => setFilterFormat(e.target.value)}
-            className="text-sm border border-gray-200 rounded-lg px-3 py-2 bg-gray-50 outline-none focus:ring-2 focus:ring-primary-500"
+            className="text-sm border border-outline-variant rounded-lg px-3 py-2 bg-surface-container-low outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="tous">Tous les formats</option>
             <option value="en_ligne">En ligne uniquement</option>
@@ -115,7 +115,7 @@ export default function EventsClient() {
           {(filterType !== 'tous' || filterFormat !== 'tous') && (
             <button 
               onClick={() => { setFilterType('tous'); setFilterFormat('tous'); }}
-              className="text-sm text-red-500 hover:bg-red-50 px-2 py-1.5 rounded-lg transition-colors flex items-center gap-1"
+              className="text-sm text-error hover:bg-error-container px-2 py-1.5 rounded-lg transition-colors flex items-center gap-1"
             >
               <X className="w-3 h-3" /> Réinitialiser
             </button>
@@ -125,7 +125,7 @@ export default function EventsClient() {
 
       {/* Content */}
       {loading ? (
-        <div className="py-20 text-center text-gray-500">Chargement des événements...</div>
+        <div className="py-20 text-center text-on-surface-muted">Chargement des événements...</div>
       ) : view === 'calendar' ? (
         <div className="mb-12">
           <CustomCalendar 
@@ -139,14 +139,14 @@ export default function EventsClient() {
         <div className="space-y-12">
           {/* Upcoming Events */}
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-              <span className="w-2 h-6 bg-primary-500 rounded-full"></span>
+            <h2 className="text-xl font-bold text-on-surface mb-6 flex items-center gap-2">
+              <span className="w-2 h-6 bg-accent-leaf rounded-full"></span>
               Événements à venir
             </h2>
             
             {upcomingEvents.length === 0 ? (
-              <div className="text-center py-12 bg-gray-50 rounded-2xl border border-gray-100">
-                <p className="text-gray-500">Aucun événement à venir ne correspond à vos critères.</p>
+              <div className="text-center py-12 bg-surface-container-low rounded-2xl border border-outline-variant">
+                <p className="text-on-surface-muted">Aucun événement à venir ne correspond à vos critères.</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -163,8 +163,8 @@ export default function EventsClient() {
 
           {/* Past Events */}
           {pastEvents.length > 0 && (
-            <div className="border-t border-gray-100 pt-8">
-              <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+            <div className="border-t border-outline-variant pt-8">
+              <h2 className="text-xl font-bold text-on-surface mb-6 flex items-center gap-2">
                 <span className="w-2 h-6 bg-gray-300 rounded-full"></span>
                 Événements passés
               </h2>

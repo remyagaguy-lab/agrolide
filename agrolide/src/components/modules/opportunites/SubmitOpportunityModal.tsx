@@ -66,80 +66,80 @@ export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess, isA
 
           {success ? (
             <div className="py-12 text-center">
-              <div className="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+              <div className="mx-auto w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="w-8 h-8" />
               </div>
-              <Dialog.Title className="text-xl font-bold text-gray-900 mb-2">
+              <Dialog.Title className="text-xl font-bold text-on-surface mb-2">
                 {isAdmin ? "Opportunité publiée !" : "Opportunité soumise !"}
               </Dialog.Title>
-              <Dialog.Description className="text-gray-600">
+              <Dialog.Description className="text-on-surface-variant">
                 {isAdmin ? "L'opportunité est maintenant visible par tous les membres." : "Merci pour votre partage. Votre opportunité sera examinée par nos administrateurs avant d'être publiée sur la plateforme."}
               </Dialog.Description>
             </div>
           ) : (
             <>
               <div className="mb-2">
-                <Dialog.Title className="text-xl font-bold text-gray-900">
+                <Dialog.Title className="text-xl font-bold text-on-surface">
                   {isAdmin ? "Publier une opportunité" : "Partager une opportunité"}
                 </Dialog.Title>
-                <Dialog.Description className="text-gray-500 mt-1 text-sm">
+                <Dialog.Description className="text-on-surface-muted mt-1 text-sm">
                   {isAdmin ? "Créez une offre qui sera visible immédiatement." : "Proposez un emploi, un financement ou un partenariat à la communauté."}
                 </Dialog.Description>
               </div>
 
               {error && (
-                <div className="p-3 bg-red-50 text-red-700 border border-red-200 rounded-lg text-sm">
+                <div className="p-3 bg-error-container text-error border border-error/30 rounded-lg text-sm">
                   {error}
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700">Titre *</label>
-                  <input required name="titre" value={formData.titre} onChange={handleChange} type="text" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none" />
+                  <label className="text-sm font-medium text-on-surface-variant">Titre *</label>
+                  <input required name="titre" value={formData.titre} onChange={handleChange} type="text" className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary outline-none" />
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-700">Type *</label>
-                    <select required name="type_opp" value={formData.type_opp} onChange={handleChange} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none">
+                    <label className="text-sm font-medium text-on-surface-variant">Type *</label>
+                    <select required name="type_opp" value={formData.type_opp} onChange={handleChange} className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary outline-none">
                       <option value="emploi">Offres d'emploi</option>
                       <option value="bourse">Bourse d'étude</option>
                       <option value="appel">Appel à projet</option>
                     </select>
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-700">Date limite</label>
-                    <input name="date_limite" value={formData.date_limite} onChange={handleChange} type="date" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none" />
+                    <label className="text-sm font-medium text-on-surface-variant">Date limite</label>
+                    <input name="date_limite" value={formData.date_limite} onChange={handleChange} type="date" className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary outline-none" />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700">Description *</label>
-                  <textarea required name="description" value={formData.description} onChange={handleChange} rows={4} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none resize-y" />
+                  <label className="text-sm font-medium text-on-surface-variant">Description *</label>
+                  <textarea required name="description" value={formData.description} onChange={handleChange} rows={4} className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary outline-none resize-y" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-700">Lieu</label>
-                    <input name="lieu" value={formData.lieu} onChange={handleChange} type="text" placeholder="Ville, Pays ou 'En ligne'" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none" />
+                    <label className="text-sm font-medium text-on-surface-variant">Lieu</label>
+                    <input name="lieu" value={formData.lieu} onChange={handleChange} type="text" placeholder="Ville, Pays ou 'En ligne'" className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary outline-none" />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-700">Montant / Salaire</label>
-                    <input name="montant" value={formData.montant} onChange={handleChange} type="text" placeholder="ex: 50 000 FCFA" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none" />
+                    <label className="text-sm font-medium text-on-surface-variant">Montant / Salaire</label>
+                    <input name="montant" value={formData.montant} onChange={handleChange} type="text" placeholder="ex: 50 000 FCFA" className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary outline-none" />
                   </div>
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-sm font-medium text-gray-700">Lien externe (Optionnel)</label>
-                  <input name="lien_externe" value={formData.lien_externe} onChange={handleChange} type="url" placeholder="https://..." className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none" />
+                  <label className="text-sm font-medium text-on-surface-variant">Lien externe (Optionnel)</label>
+                  <input name="lien_externe" value={formData.lien_externe} onChange={handleChange} type="url" placeholder="https://..." className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary outline-none" />
                 </div>
 
-                <div className="pt-4 flex gap-3 justify-end border-t border-gray-100">
-                  <button type="button" onClick={onClose} disabled={loading} className="px-4 py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-lg transition-colors">
+                <div className="pt-4 flex gap-3 justify-end border-t border-outline-variant">
+                  <button type="button" onClick={onClose} disabled={loading} className="px-4 py-2 text-on-surface-variant font-medium hover:bg-surface-container rounded-lg transition-colors">
                     Annuler
                   </button>
-                  <button type="submit" disabled={loading || !formData.titre} className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2">
+                  <button type="submit" disabled={loading || !formData.titre} className="px-6 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors flex items-center gap-2">
                     {loading && <Loader2 className="w-4 h-4 animate-spin" />}
                     Soumettre
                   </button>

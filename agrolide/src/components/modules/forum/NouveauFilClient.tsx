@@ -74,26 +74,26 @@ export default function NouveauFilClient() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 space-y-6">
-      <Link href="/membres/forum" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+      <Link href="/membres/forum" className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-muted hover:text-on-surface transition-colors">
         <ArrowLeft className="w-4 h-4" /> Retour au forum
       </Link>
       
       <div>
-        <h1 className="text-3xl font-bold text-gray-900">Nouveau sujet</h1>
-        <p className="text-gray-600 mt-2">Lancez une nouvelle discussion avec la communauté.</p>
+        <h1 className="text-3xl font-bold text-on-surface">Nouveau sujet</h1>
+        <p className="text-on-surface-variant mt-2">Lancez une nouvelle discussion avec la communauté.</p>
       </div>
       
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
-        {error && <div className="p-3 bg-red-50 text-red-700 rounded-lg text-sm">{error}</div>}
+      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant space-y-6">
+        {error && <div className="p-3 bg-error-container text-error rounded-lg text-sm">{error}</div>}
         
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">Catégorie *</label>
+          <label className="text-sm font-medium text-on-surface-variant">Catégorie *</label>
           <select 
             required
             disabled={loadingCats}
             value={formData.categorie_id}
             onChange={e => setFormData({ ...formData, categorie_id: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+            className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none"
           >
             {loadingCats ? <option>Chargement...</option> : categories.map(c => (
               <option key={c.id} value={c.id}>{c.nom}</option>
@@ -102,34 +102,34 @@ export default function NouveauFilClient() {
         </div>
         
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">Titre du sujet *</label>
+          <label className="text-sm font-medium text-on-surface-variant">Titre du sujet *</label>
           <input 
             type="text" 
             required
             value={formData.titre}
             onChange={e => setFormData({ ...formData, titre: e.target.value })}
-            className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none"
+            className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none"
             placeholder="Ex: Conseils pour la culture hors-sol de la tomate"
           />
         </div>
         
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">Premier message *</label>
+          <label className="text-sm font-medium text-on-surface-variant">Premier message *</label>
           <textarea 
             required
             maxLength={3000}
             value={formData.contenu}
             onChange={e => setFormData({ ...formData, contenu: e.target.value })}
-            className="w-full h-48 px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none resize-y"
+            className="w-full h-48 px-4 py-3 border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none resize-y"
             placeholder="Décrivez votre sujet, posez votre question... (Markdown supporté)"
           />
         </div>
         
-        <div className="flex justify-end pt-4 border-t border-gray-100">
+        <div className="flex justify-end pt-4 border-t border-outline-variant">
           <button 
             type="submit"
             disabled={submitting || !formData.titre.trim() || !formData.contenu.trim()}
-            className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors disabled:opacity-50"
+            className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors disabled:opacity-50"
           >
             {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Publier le sujet'}
           </button>

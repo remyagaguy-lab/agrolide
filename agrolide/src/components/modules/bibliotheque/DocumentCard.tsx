@@ -34,24 +34,24 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
   }
 
   const getBadgeColor = (type_doc: string) => {
-    if (!type_doc) return 'bg-gray-100 text-gray-800';
+    if (!type_doc) return 'bg-surface-container text-on-surface';
     switch (type_doc.toLowerCase()) {
       case 'these': return 'bg-purple-100 text-purple-800'
-      case 'memoire': return 'bg-blue-100 text-blue-800'
-      case 'fiche_technique': return 'bg-emerald-100 text-emerald-800'
-      case 'guide_pratique': return 'bg-amber-100 text-amber-800'
+      case 'memoire': return 'bg-info-container text-on-info-container'
+      case 'fiche_technique': return 'bg-success-container text-on-success-container'
+      case 'guide_pratique': return 'bg-warning-container text-on-warning-container'
       case 'article': return 'bg-rose-100 text-rose-800'
-      case 'rapport': return 'bg-slate-100 text-slate-800'
-      default: return 'bg-gray-100 text-gray-800'
+      case 'rapport': return 'bg-surface-container text-on-surface'
+      default: return 'bg-surface-container text-on-surface'
     }
   }
 
   const href = `/bibliotheque/${document.id}`
 
   return (
-    <Link href={href} className={`group flex flex-col h-full bg-white border border-[#e8e8e4] rounded-2xl shadow-sm hover:border-[#1b5e38] hover:shadow-md transition-all overflow-hidden`}>
+    <Link href={href} className={`group flex flex-col h-full bg-white border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all overflow-hidden`}>
       {/* En-tête miniature */}
-      <div className="h-32 bg-gray-50 flex items-center justify-center border-b border-gray-100 relative group-hover:bg-gray-100 transition-colors">
+      <div className="h-32 bg-surface-container-low flex items-center justify-center border-b border-outline-variant relative group-hover:bg-surface-container transition-colors">
         <FileText className="w-12 h-12 text-gray-400" strokeWidth={1.5} />
         <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full ${getBadgeColor(document.type_doc)}`}>
           {formatType(document.type_doc)}
@@ -60,16 +60,16 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
 
       {/* Contenu */}
       <div className="p-4 flex flex-col flex-1">
-        <h3 className="font-bold text-[#1a1a1a] text-sm line-clamp-2 mb-1 group-hover:text-[#1b5e38] transition-colors">
+        <h3 className="font-bold text-on-surface text-sm line-clamp-2 mb-1 group-hover:text-primary transition-colors">
           {document.titre}
         </h3>
         
-        <p className="text-sm text-gray-500 mb-4 line-clamp-1">
+        <p className="text-sm text-on-surface-muted mb-4 line-clamp-1">
           {document.auteurs || 'Auteur inconnu'}
         </p>
         
         <div className="mt-auto space-y-2">
-          <div className="flex items-center text-xs text-gray-500 gap-4">
+          <div className="flex items-center text-xs text-on-surface-muted gap-4">
             {document.annee && (
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-3.5 h-3.5" />
@@ -84,18 +84,18 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
             )}
           </div>
           
-          <div className="flex items-center justify-between pt-3 mt-3 border-t border-[#e8e8e4]">
-            <div className="flex items-center gap-1.5 text-xs font-medium text-gray-500">
+          <div className="flex items-center justify-between pt-3 mt-3 border-t border-outline-variant">
+            <div className="flex items-center gap-1.5 text-xs font-medium text-on-surface-muted">
               <Eye className="w-3.5 h-3.5" />
               <span>{document.nb_telechargements || 0}</span>
             </div>
             
             {publicView ? (
-              <span className="text-xs font-medium text-green-700 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-medium text-success opacity-0 group-hover:opacity-100 transition-opacity">
                 Consulter →
               </span>
             ) : (
-              <span className="text-xs font-medium text-green-700 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-xs font-medium text-success opacity-0 group-hover:opacity-100 transition-opacity">
                 Consulter →
               </span>
             )}

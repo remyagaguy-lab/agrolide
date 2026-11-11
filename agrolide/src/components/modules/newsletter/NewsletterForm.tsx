@@ -57,15 +57,15 @@ export function NewsletterForm() {
   if (!isOpen) return null
 
   return (
-    <div className="fixed bottom-4 right-4 z-[100] w-[calc(100%-2rem)] md:w-[450px] bg-white rounded-2xl shadow-2xl border border-[#d6e5db] overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-500">
+    <div className="fixed bottom-4 right-4 z-[100] w-[calc(100%-2rem)] md:w-[450px] bg-white rounded-2xl shadow-2xl border border-outline-variant overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-500">
       
       {/* Decorative top bar */}
-      <div className="h-1.5 w-full bg-[#1b5e38]" />
+      <div className="h-1.5 w-full bg-primary" />
 
       {/* Close Button */}
       <button 
         onClick={closePopup}
-        className="absolute top-4 right-4 p-1.5 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors z-20"
+        className="absolute top-4 right-4 p-1.5 text-gray-400 hover:text-on-surface-variant hover:bg-surface-container rounded-full transition-colors z-20"
         aria-label="Fermer"
       >
         <X className="w-5 h-5" />
@@ -78,16 +78,16 @@ export function NewsletterForm() {
       />
       
       <div className="relative z-10 p-6 md:p-8">
-        <h3 className="text-xl md:text-2xl font-heading font-bold mb-2 text-[#1b5e38]">Parlons agriculture</h3>
+        <h3 className="text-xl md:text-2xl font-heading font-bold mb-2 text-primary">Parlons agriculture</h3>
         
         {status === "success" ? (
-          <div className="bg-[#e6f0e9] border border-[#d6e5db] rounded-xl p-4 mt-4">
-            <h4 className="text-lg font-bold text-[#1b5e38] mb-1">🎉 Bienvenue !</h4>
-            <p className="text-gray-700 text-sm">{message}</p>
+          <div className="bg-primary-container border border-outline-variant rounded-xl p-4 mt-4">
+            <h4 className="text-lg font-bold text-primary mb-1">🎉 Bienvenue !</h4>
+            <p className="text-on-surface-variant text-sm">{message}</p>
           </div>
         ) : (
           <>
-            <p className="text-sm text-gray-600 mb-5 pr-4">
+            <p className="text-sm text-on-surface-variant mb-5 pr-4">
               Recevez nos meilleures analyses et opportunités de financement.
             </p>
 
@@ -99,19 +99,19 @@ export function NewsletterForm() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={status === "loading"}
-                className="w-full px-4 py-2.5 rounded-xl text-gray-900 bg-gray-50 border border-gray-200 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1b5e38] disabled:opacity-70 text-sm"
+                className="w-full px-4 py-2.5 rounded-xl text-on-surface bg-surface-container-low border border-outline-variant placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-70 text-sm"
               />
               <button
                 type="submit"
                 disabled={status === "loading" || !email}
-                className="w-full font-bold text-white bg-[#1b5e38] hover:bg-[#154a2b] transition-colors px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md disabled:opacity-70 disabled:cursor-not-allowed text-sm flex justify-center items-center"
+                className="w-full font-bold text-white bg-primary hover:bg-primary/90 transition-colors px-4 py-2.5 rounded-xl shadow-sm hover:shadow-md disabled:opacity-70 disabled:cursor-not-allowed text-sm flex justify-center items-center"
               >
                 {status === "loading" ? "Inscription..." : "S'inscrire"}
               </button>
             </form>
             
             {status === "error" && (
-              <p className="text-red-700 text-xs mt-3 font-medium bg-red-50 p-2 rounded border border-red-100">
+              <p className="text-error text-xs mt-3 font-medium bg-error-container p-2 rounded border border-error/30">
                 {message}
               </p>
             )}

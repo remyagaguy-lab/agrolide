@@ -75,28 +75,28 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
         <Dialog.Overlay className="fixed inset-0 bg-slate-900/60 z-50 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
         <Dialog.Content className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-2xl">
           
-          <Dialog.Close aria-label="Fermer" className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-gray-100 data-[state=open]:text-gray-500">
+          <Dialog.Close aria-label="Fermer" className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-surface-container data-[state=open]:text-on-surface-muted">
             <X className="h-4 w-4" />
             <span className="sr-only">Fermer</span>
           </Dialog.Close>
           {!isLoaded ? (
             <div className="py-12 flex justify-center">
-              <Loader2 className="w-8 h-8 animate-spin text-primary-500" />
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
             </div>
           ) : success ? (
             <div className="py-8 text-center">
-              <div className="mx-auto w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+              <div className="mx-auto w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mb-4">
                 <CheckCircle className="w-8 h-8" />
               </div>
-              <Dialog.Title className="text-xl font-bold text-gray-900 mb-2">
+              <Dialog.Title className="text-xl font-bold text-on-surface mb-2">
                 Inscription confirmée !
               </Dialog.Title>
-              <Dialog.Description className="text-gray-600 mb-6">
+              <Dialog.Description className="text-on-surface-variant mb-6">
                 Vous êtes bien inscrit(e) à l'événement <strong>{event.titre}</strong>. Un email de confirmation a été envoyé.
               </Dialog.Description>
               <button
                 onClick={onClose}
-                className="w-full py-2.5 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-xl text-sm transition-colors"
+                className="w-full py-2.5 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl text-sm transition-colors"
               >
                 Fermer
               </button>
@@ -104,23 +104,23 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
           ) : (
             <>
               <div className="mb-4">
-                <Dialog.Title className="text-xl font-bold text-gray-900">
+                <Dialog.Title className="text-xl font-bold text-on-surface">
                   Inscription à l'événement
                 </Dialog.Title>
-                <Dialog.Description className="text-gray-500 mt-2">
+                <Dialog.Description className="text-on-surface-muted mt-2">
                   {event.titre}
                 </Dialog.Description>
               </div>
 
               {error && (
-                <div className="p-3 bg-red-50 text-red-700 border border-red-200 rounded-lg text-sm mb-4">
+                <div className="p-3 bg-error-container text-error border border-error/30 rounded-lg text-sm mb-4">
                   {error}
                 </div>
               )}
 
               {user ? (
                 <div className="py-4">
-                  <p className="text-gray-700 mb-6">
+                  <p className="text-on-surface-variant mb-6">
                     Vous êtes connecté(e) en tant que <strong>{user.primaryEmailAddress?.emailAddress}</strong>. 
                     Vous pouvez confirmer votre inscription en un clic !
                   </p>
@@ -130,14 +130,14 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                       type="button"
                       onClick={onClose}
                       disabled={submitting}
-                      className="px-4 py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-lg transition-colors"
+                      className="px-4 py-2 text-on-surface-variant font-medium hover:bg-surface-container rounded-lg transition-colors"
                     >
                       Annuler
                     </button>
                     <button
                       onClick={() => handleSubmit()}
                       disabled={submitting}
-                      className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                      className="px-6 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                     >
                       {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
                       Confirmer l'inscription
@@ -148,37 +148,37 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-1">
-                      <label className="text-sm font-medium text-gray-700">Prénom <span className="text-red-500">*</span></label>
+                      <label className="text-sm font-medium text-on-surface-variant">Prénom <span className="text-error">*</span></label>
                       <input 
                         type="text" 
                         required
                         value={prenom}
                         onChange={e => setPrenom(e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
+                        className="w-full px-3 py-2 border border-outline rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
                         placeholder="John" 
                       />
                     </div>
                     <div className="space-y-1">
-                      <label className="text-sm font-medium text-gray-700">Nom <span className="text-red-500">*</span></label>
+                      <label className="text-sm font-medium text-on-surface-variant">Nom <span className="text-error">*</span></label>
                       <input 
                         type="text" 
                         required
                         value={nom}
                         onChange={e => setNom(e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
+                        className="w-full px-3 py-2 border border-outline rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
                         placeholder="Doe" 
                       />
                     </div>
                   </div>
                   
                   <div className="space-y-1">
-                    <label className="text-sm font-medium text-gray-700">Adresse e-mail <span className="text-red-500">*</span></label>
+                    <label className="text-sm font-medium text-on-surface-variant">Adresse e-mail <span className="text-error">*</span></label>
                     <input 
                       type="email" 
                       required
                       value={email}
                       onChange={e => setEmail(e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" 
+                      className="w-full px-3 py-2 border border-outline rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" 
                       placeholder="john.doe@exemple.com" 
                     />
                   </div>
@@ -188,14 +188,14 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                       type="button"
                       onClick={onClose}
                       disabled={submitting}
-                      className="px-4 py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-lg transition-colors"
+                      className="px-4 py-2 text-on-surface-variant font-medium hover:bg-surface-container rounded-lg transition-colors"
                     >
                       Annuler
                     </button>
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+                      className="px-6 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
                     >
                       {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
                       S'inscrire

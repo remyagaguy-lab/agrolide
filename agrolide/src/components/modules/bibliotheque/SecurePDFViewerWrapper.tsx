@@ -7,6 +7,6 @@ export const SecurePDFViewerWrapper = dynamic(
   () => import('./SecurePDFViewer').then(mod => mod.SecurePDFViewer),
   {
     ssr: false,
-    loading: () => <div className="text-center p-12 text-gray-500">Chargement de la liseuse sécurisée...</div>
+    loading: () => <div className="text-center p-12 text-on-surface-muted">Chargement de la liseuse sécurisée...</div>
   }
 )

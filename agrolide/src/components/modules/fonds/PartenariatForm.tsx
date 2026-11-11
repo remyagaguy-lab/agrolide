@@ -53,12 +53,12 @@ export default function PartenariatForm() {
 
   if (success) {
     return (
-      <div className="bg-green-50 p-8 rounded-2xl border border-green-200 text-center">
-        <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+      <div className="bg-success-container p-8 rounded-2xl border border-success/30 text-center">
+        <div className="w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mx-auto mb-4">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
         </div>
-        <h3 className="text-2xl font-bold text-green-800 mb-2">Demande envoyée !</h3>
-        <p className="text-green-700">Merci de l'intérêt que vous portez à agrolide. Notre équipe des partenariats vous contactera très rapidement pour discuter de cette collaboration.</p>
+        <h3 className="text-2xl font-bold text-on-success-container mb-2">Demande envoyée !</h3>
+        <p className="text-success">Merci de l'intérêt que vous portez à agrolide. Notre équipe des partenariats vous contactera très rapidement pour discuter de cette collaboration.</p>
       </div>
     )
   }
@@ -66,12 +66,12 @@ export default function PartenariatForm() {
   return (
     <form onSubmit={handleSubmit} className="bg-white p-8 md:p-10 rounded-2xl border border-[var(--color-gris-clair)] shadow-sm">
       <div className="text-center mb-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Devenir Partenaire / Sponsor</h2>
-        <p className="text-gray-600">Associez votre image à la transition agricole en Afrique.</p>
+        <h2 className="text-2xl font-bold text-on-surface mb-2">Devenir Partenaire / Sponsor</h2>
+        <p className="text-on-surface-variant">Associez votre image à la transition agricole en Afrique.</p>
       </div>
 
       {errorMsg && (
-        <div className="mb-6 p-4 bg-red-50 text-red-700 rounded-xl border border-red-200 text-sm">
+        <div className="mb-6 p-4 bg-error-container text-error rounded-xl border border-error/30 text-sm">
           {errorMsg}
         </div>
       )}
@@ -79,19 +79,19 @@ export default function PartenariatForm() {
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-gray-700" htmlFor="raison_sociale">Raison sociale / Nom de l'organisation *</label>
+            <label className="text-sm font-semibold text-on-surface-variant" htmlFor="raison_sociale">Raison sociale / Nom de l'organisation *</label>
             <Input id="raison_sociale" required value={formData.raison_sociale} onChange={handleChange} placeholder="Ex: Agence Francaise de Dev..." />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-gray-700" htmlFor="secteur">Secteur d'activité *</label>
+            <label className="text-sm font-semibold text-on-surface-variant" htmlFor="secteur">Secteur d'activité *</label>
             <Input id="secteur" required value={formData.secteur} onChange={handleChange} placeholder="Ex: Finance, Institutionnel, Tech..." />
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-gray-700" htmlFor="nature_collaboration">Nature de la collaboration souhaitée *</label>
-            <select id="nature_collaboration" required value={formData.nature_collaboration} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-gray-700">
+            <label className="text-sm font-semibold text-on-surface-variant" htmlFor="nature_collaboration">Nature de la collaboration souhaitée *</label>
+            <select id="nature_collaboration" required value={formData.nature_collaboration} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-on-surface-variant">
               <option value="">Sélectionnez...</option>
               <option value="sponsoring_financier">Sponsoring Financier</option>
               <option value="partenariat_technique">Partenariat Technique</option>
@@ -101,8 +101,8 @@ export default function PartenariatForm() {
             </select>
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-gray-700" htmlFor="budget">Budget estimatif (Optionnel)</label>
-            <select id="budget" value={formData.budget} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-gray-700">
+            <label className="text-sm font-semibold text-on-surface-variant" htmlFor="budget">Budget estimatif (Optionnel)</label>
+            <select id="budget" value={formData.budget} onChange={handleChange} className="w-full h-12 px-4 rounded-md border border-[var(--color-gris-clair)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-vert-principal)] text-on-surface-variant">
               <option value="">Ne se prononce pas</option>
               <option value="< 5000">Moins de 5 000 €</option>
               <option value="5000 - 15000">5 000 € - 15 000 €</option>
@@ -113,12 +113,12 @@ export default function PartenariatForm() {
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-semibold text-gray-700" htmlFor="email">Email professionnel de contact *</label>
+          <label className="text-sm font-semibold text-on-surface-variant" htmlFor="email">Email professionnel de contact *</label>
           <Input id="email" type="email" required value={formData.email} onChange={handleChange} placeholder="contact@organisation.com" />
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-semibold text-gray-700" htmlFor="message">Votre message *</label>
+          <label className="text-sm font-semibold text-on-surface-variant" htmlFor="message">Votre message *</label>
           <Textarea 
             id="message" 
             required

@@ -22,7 +22,7 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
   const initials = nameParts.map(n => n.charAt(0)).join('').substring(0, 2).toUpperCase()
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow group flex flex-col h-full">
+    <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden hover:shadow-md transition-shadow group flex flex-col h-full">
       <div className="p-6 pb-0 flex items-center gap-4 mb-4">
         {agripreneur.photo_url ? (
           <Image 
@@ -30,17 +30,17 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
             alt={nom} 
             width={64} 
             height={64} 
-            className="rounded-full object-cover w-16 h-16 border-2 border-primary-100"
+            className="rounded-full object-cover w-16 h-16 border-2 border-outline-variant"
           />
         ) : (
-          <div className="w-16 h-16 rounded-full bg-primary-100 text-primary-700 flex items-center justify-center text-xl font-bold border-2 border-primary-50">
+          <div className="w-16 h-16 rounded-full bg-primary-container text-primary flex items-center justify-center text-xl font-bold border-2 border-outline-variant">
             {initials || '?'}
           </div>
         )}
         <div>
-          <h3 className="font-bold text-gray-900 text-lg">{nom}</h3>
+          <h3 className="font-bold text-on-surface text-lg">{nom}</h3>
           {agripreneur.pays && (
-            <div className="flex items-center text-sm text-gray-500 mt-1">
+            <div className="flex items-center text-sm text-on-surface-muted mt-1">
               <MapPin className="w-3.5 h-3.5 mr-1" /> {agripreneur.pays}
             </div>
           )}
@@ -53,17 +53,17 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
             {agripreneur.secteur}
           </div>
         )}
-        <h4 className="font-bold text-xl text-primary-800 mb-2">{agripreneur.projet}</h4>
+        <h4 className="font-bold text-xl text-primary mb-2">{agripreneur.projet}</h4>
         {agripreneur.description && (
-          <p className="text-gray-600 text-sm flex-grow line-clamp-3">
+          <p className="text-on-surface-variant text-sm flex-grow line-clamp-3">
             {agripreneur.description}
           </p>
         )}
       </div>
 
       {agripreneur.lien_web && (
-        <div className="px-6 py-4 border-t border-gray-100 bg-gray-50 group-hover:bg-primary-50 transition-colors">
-          <a href={agripreneur.lien_web} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-primary-700 font-semibold text-sm">
+        <div className="px-6 py-4 border-t border-outline-variant bg-surface-container-low group-hover:bg-primary-container transition-colors">
+          <a href={agripreneur.lien_web} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-primary font-semibold text-sm">
             Découvrir le projet <ExternalLink className="w-4 h-4" />
           </a>
         </div>

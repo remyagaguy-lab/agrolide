@@ -103,39 +103,39 @@ export default function AnnuaireClient() {
       <div className="flex flex-col md:flex-row gap-8 items-start">
         {/* Sidebar Filters */}
         <div className={`md:w-72 shrink-0 ${showFiltersMobile ? 'fixed inset-0 z-50 bg-white p-6 overflow-y-auto' : 'hidden md:block'}`}>
-          <div className="flex items-center justify-between md:hidden mb-8 pb-4 border-b border-gray-100">
-            <h2 className="text-2xl font-extrabold font-heading text-gray-900">Filtres</h2>
-            <button onClick={() => setShowFiltersMobile(false)} className="p-2 bg-gray-50 hover:bg-gray-100 text-gray-500 rounded-full transition-colors">
+          <div className="flex items-center justify-between md:hidden mb-8 pb-4 border-b border-outline-variant">
+            <h2 className="text-2xl font-extrabold font-heading text-on-surface">Filtres</h2>
+            <button onClick={() => setShowFiltersMobile(false)} className="p-2 bg-surface-container-low hover:bg-surface-container text-on-surface-muted rounded-full transition-colors">
               <X className="w-6 h-6" />
             </button>
           </div>
 
-          <div className="space-y-6 md:sticky md:top-24 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm md:p-5">
+          <div className="space-y-6 md:sticky md:top-24 bg-white border border-outline-variant rounded-2xl shadow-sm md:p-5">
             
             {/* Recherche */}
             <div>
               <label className="dash-label mb-3 block">Recherche</label>
               <div className="relative group">
-                <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2 group-focus-within:text-[#50a853] transition-colors" />
+                <Search className="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2 group-focus-within:text-primary transition-colors" />
                 <input 
                   type="text" 
                   placeholder="Nom, spécialité..."
                   value={search}
                   onChange={e => { setSearch(e.target.value); setPage(1); }}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-50/50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] focus:bg-white outline-none text-sm transition-all"
+                  className="w-full pl-10 pr-4 py-3 bg-surface-container-low/50 border border-outline-variant rounded-2xl focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf focus:bg-white outline-none text-sm transition-all"
                 />
               </div>
             </div>
 
             {/* Mentorat */}
-            <label className="flex items-center gap-3 cursor-pointer p-4 bg-gradient-to-r from-[#f99e1d]/10 to-white rounded-2xl border border-[#f99e1d]/20 hover:border-[#f99e1d]/40 hover:shadow-sm transition-all group">
+            <label className="flex items-center gap-3 cursor-pointer p-4 bg-gradient-to-r from-[#f99e1d]/10 to-white rounded-2xl border border-tertiary/20 hover:border-tertiary/40 hover:shadow-sm transition-all group">
               <input 
                 type="checkbox" 
                 checked={mentoratOnly}
                 onChange={e => { setMentoratOnly(e.target.checked); setPage(1); }}
-                className="w-5 h-5 text-[#f99e1d] rounded-md border-gray-300 focus:ring-[#f99e1d]"
+                className="w-5 h-5 text-on-tertiary-container rounded-md border-outline focus:ring-tertiary"
               />
-              <span className="text-sm font-bold text-gray-800 group-hover:text-gray-900">Ouverts au mentorat</span>
+              <span className="text-sm font-bold text-on-surface group-hover:text-on-surface">Ouverts au mentorat</span>
             </label>
 
             {/* Pays (Dropdown avec recherche intégrée) */}
@@ -143,14 +143,14 @@ export default function AnnuaireClient() {
               <label className="dash-label mb-3 block flex items-center justify-between">
                 Pays
                 {selectedPays.length > 0 && (
-                  <span className="bg-[#e8f5e9] text-[#1b5e38] px-2 py-0.5 rounded-full text-[10px] font-bold">
+                  <span className="bg-success-container text-primary px-2 py-0.5 rounded-full text-[10px] font-bold">
                     {selectedPays.length}
                   </span>
                 )}
               </label>
               <button 
                 onClick={() => setIsPaysOpen(!isPaysOpen)}
-                className={`w-full bg-white border ${isPaysOpen ? 'border-[#50a853] ring-2 ring-[#50a853]/10' : 'border-gray-200'} rounded-2xl px-4 py-3 text-left text-sm text-gray-700 flex justify-between items-center hover:border-[#50a853]/50 hover:bg-gray-50 transition-all`}
+                className={`w-full bg-white border ${isPaysOpen ? 'border-accent-leaf ring-2 ring-accent-leaf/10' : 'border-outline-variant'} rounded-2xl px-4 py-3 text-left text-sm text-on-surface-variant flex justify-between items-center hover:border-accent-leaf/50 hover:bg-surface-container-low transition-all`}
               >
                 <span className="truncate font-medium">
                   {selectedPays.length === 0 ? "Tous les pays" : `${selectedPays.length} pays sélectionné(s)`}
@@ -159,8 +159,8 @@ export default function AnnuaireClient() {
               </button>
               
               {isPaysOpen && (
-                <div className="absolute z-20 mt-2 w-full bg-white border border-[#e8e8e4] rounded-2xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-2">
-                  <div className="p-3 border-b border-gray-100 bg-gray-50/50">
+                <div className="absolute z-20 mt-2 w-full bg-white border border-outline-variant rounded-2xl shadow-lg overflow-hidden animate-in fade-in slide-in-from-top-2">
+                  <div className="p-3 border-b border-outline-variant bg-surface-container-low/50">
                     <div className="relative">
                       <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
                       <input 
@@ -168,24 +168,24 @@ export default function AnnuaireClient() {
                         placeholder="Rechercher un pays..." 
                         value={paysSearch}
                         onChange={(e) => setPaysSearch(e.target.value)}
-                        className="w-full bg-white border border-gray-200 rounded-xl text-sm pl-9 pr-3 py-2 focus:ring-2 focus:ring-[#50a853]/30 focus:border-[#50a853] outline-none transition-shadow"
+                        className="w-full bg-white border border-outline-variant rounded-xl text-sm pl-9 pr-3 py-2 focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf outline-none transition-shadow"
                       />
                     </div>
                   </div>
                   <div className="max-h-60 overflow-y-auto custom-scrollbar p-2 space-y-0.5">
                     {paysOptions.filter(p => p.toLowerCase().includes(paysSearch.toLowerCase())).map(p => (
-                      <label key={p} className="flex items-center gap-3 cursor-pointer p-2.5 hover:bg-[#e8f5e9]/50 rounded-xl transition-colors group">
+                      <label key={p} className="flex items-center gap-3 cursor-pointer p-2.5 hover:bg-success-container/50 rounded-xl transition-colors group">
                         <input 
                           type="checkbox"
                           checked={selectedPays.includes(p)}
                           onChange={() => toggleFilter(selectedPays, setSelectedPays, p)}
-                          className="w-4 h-4 text-[#1b5e38] rounded border-gray-300 focus:ring-[#50a853] transition-colors"
+                          className="w-4 h-4 text-primary rounded border-outline focus:ring-accent-leaf transition-colors"
                         />
-                        <span className={`text-sm ${selectedPays.includes(p) ? 'font-bold text-[#1b5e38]' : 'text-gray-700 group-hover:text-gray-900'}`}>{p}</span>
+                        <span className={`text-sm ${selectedPays.includes(p) ? 'font-bold text-primary' : 'text-on-surface-variant group-hover:text-on-surface'}`}>{p}</span>
                       </label>
                     ))}
                     {paysOptions.filter(p => p.toLowerCase().includes(paysSearch.toLowerCase())).length === 0 && (
-                      <div className="p-4 text-center text-sm text-gray-500">Aucun pays trouvé</div>
+                      <div className="p-4 text-center text-sm text-on-surface-muted">Aucun pays trouvé</div>
                     )}
                   </div>
                 </div>
@@ -197,14 +197,14 @@ export default function AnnuaireClient() {
               <label className="dash-label mb-3 block">Catégorie</label>
               <div className="space-y-1.5">
                 {catOptions.map(cat => (
-                  <label key={cat} className="flex items-center gap-3 cursor-pointer group p-2 -mx-2 hover:bg-[#e8f5e9]/30 rounded-xl transition-colors">
+                  <label key={cat} className="flex items-center gap-3 cursor-pointer group p-2 -mx-2 hover:bg-success-container/30 rounded-xl transition-colors">
                     <input 
                       type="checkbox"
                       checked={selectedCategories.includes(cat.toLowerCase())}
                       onChange={() => toggleFilter(selectedCategories, setSelectedCategories, cat.toLowerCase())}
-                      className="w-4 h-4 text-[#1b5e38] rounded border-gray-300 focus:ring-[#50a853] transition-colors"
+                      className="w-4 h-4 text-primary rounded border-outline focus:ring-accent-leaf transition-colors"
                     />
-                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">{cat}</span>
+                    <span className="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">{cat}</span>
                   </label>
                 ))}
               </div>
@@ -215,14 +215,14 @@ export default function AnnuaireClient() {
               <label className="dash-label mb-3 block">Spécialité</label>
               <div className="space-y-1.5 max-h-64 overflow-y-auto custom-scrollbar pr-2">
                 {specOptions.map(spec => (
-                  <label key={spec} className="flex items-center gap-3 cursor-pointer group p-2 -mx-2 hover:bg-[#e8f5e9]/30 rounded-xl transition-colors">
+                  <label key={spec} className="flex items-center gap-3 cursor-pointer group p-2 -mx-2 hover:bg-success-container/30 rounded-xl transition-colors">
                     <input 
                       type="checkbox"
                       checked={selectedSpecialites.includes(spec)}
                       onChange={() => toggleFilter(selectedSpecialites, setSelectedSpecialites, spec)}
-                      className="w-4 h-4 text-[#1b5e38] rounded border-gray-300 focus:ring-[#50a853] transition-colors"
+                      className="w-4 h-4 text-primary rounded border-outline focus:ring-accent-leaf transition-colors"
                     />
-                    <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900">{spec}</span>
+                    <span className="text-sm font-medium text-on-surface-variant group-hover:text-on-surface">{spec}</span>
                   </label>
                 ))}
               </div>
@@ -235,13 +235,13 @@ export default function AnnuaireClient() {
         <div className="flex-1 min-w-0 w-full">
           
           {/* Header Mobile & Stats Desktop */}
-          <div className="flex flex-col sm:flex-row items-center justify-between mb-6 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-4 gap-4">
-            <div className="text-gray-600 flex items-center gap-3 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-between mb-6 bg-white border border-outline-variant rounded-2xl shadow-sm p-4 gap-4">
+            <div className="text-on-surface-variant flex items-center gap-3 w-full sm:w-auto">
               {loading ? (
-                <span className="flex items-center gap-2 font-medium text-[#1b5e38]"><Loader2 className="w-5 h-5 animate-spin"/> Actualisation...</span>
+                <span className="flex items-center gap-2 font-medium text-primary"><Loader2 className="w-5 h-5 animate-spin"/> Actualisation...</span>
               ) : (
                 <div className="flex items-center gap-2">
-                  <span className="bg-[#e8f5e9] text-[#1b5e38] px-3 py-1 rounded-full text-sm font-bold flex items-center gap-2">
+                  <span className="bg-success-container text-primary px-3 py-1 rounded-full text-sm font-bold flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4" /> {totalCount}
                   </span>
                   <span className="font-medium">membres trouvés</span>
@@ -251,7 +251,7 @@ export default function AnnuaireClient() {
             
             <button 
               onClick={() => setShowFiltersMobile(true)}
-              className="md:hidden w-full sm:w-auto flex items-center justify-center gap-2 text-sm font-bold bg-[#e8f5e9] text-[#1b5e38] px-5 py-2.5 rounded-2xl hover:bg-[#d4edda] transition-colors"
+              className="md:hidden w-full sm:w-auto flex items-center justify-center gap-2 text-sm font-bold bg-success-container text-primary px-5 py-2.5 rounded-2xl hover:bg-success-container transition-colors"
             >
               <Filter className="w-4 h-4" /> Filtres de recherche
             </button>
@@ -263,19 +263,19 @@ export default function AnnuaireClient() {
               <SkeletonGrid count={8} />
             </div>
           ) : members.length === 0 ? (
-            <div className="py-16 text-center bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-8 flex flex-col items-center">
-              <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-4">
+            <div className="py-16 text-center bg-white border border-outline-variant rounded-2xl shadow-sm p-8 flex flex-col items-center">
+              <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-4">
                 <Search className="w-8 h-8 text-gray-300" />
               </div>
-              <h3 className="text-xl font-extrabold text-gray-900 mb-2">Aucun membre trouvé</h3>
-              <p className="text-gray-500 max-w-md">Nous n'avons trouvé aucun membre correspondant à vos critères. Essayez d'élargir votre recherche.</p>
+              <h3 className="text-xl font-extrabold text-on-surface mb-2">Aucun membre trouvé</h3>
+              <p className="text-on-surface-muted max-w-md">Nous n'avons trouvé aucun membre correspondant à vos critères. Essayez d'élargir votre recherche.</p>
               <button onClick={() => {
                 setSearch('');
                 setSelectedPays([]);
                 setSelectedCategories([]);
                 setSelectedSpecialites([]);
                 setMentoratOnly(false);
-              }} className="mt-6 text-[#1b5e38] font-bold hover:underline">
+              }} className="mt-6 text-primary font-bold hover:underline">
                 Réinitialiser les filtres
               </button>
             </div>
@@ -293,17 +293,17 @@ export default function AnnuaireClient() {
                   <button 
                     disabled={page === 1}
                     onClick={() => setPage(p => p - 1)}
-                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-[#e8e8e4] hover:border-[#1b5e38] hover:text-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-outline-variant hover:border-primary hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </button>
-                  <span className="text-xs font-bold text-gray-600 bg-white border border-[#e8e8e4] rounded-xl px-4 py-2.5">
-                    Page <span className="text-gray-900">{page}</span> / {totalPages}
+                  <span className="text-xs font-bold text-on-surface-variant bg-white border border-outline-variant rounded-xl px-4 py-2.5">
+                    Page <span className="text-on-surface">{page}</span> / {totalPages}
                   </span>
                   <button 
                     disabled={page === totalPages}
                     onClick={() => setPage(p => p + 1)}
-                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-[#e8e8e4] hover:border-[#1b5e38] hover:text-[#1b5e38] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    className="w-10 h-10 flex items-center justify-center rounded-xl bg-white border border-outline-variant hover:border-primary hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </button>

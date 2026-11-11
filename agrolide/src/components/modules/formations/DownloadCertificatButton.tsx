@@ -23,7 +23,7 @@ export function DownloadCertificatButton({ nom, prenom, formationTitre, dateDebu
 
   if (!isClient) {
     return (
-      <button disabled className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-500 rounded-lg text-sm font-medium">
+      <button disabled className="inline-flex items-center gap-2 px-4 py-2 bg-surface-container text-on-surface-muted rounded-lg text-sm font-medium">
         <Loader2 className="w-4 h-4 animate-spin" /> Chargement...
       </button>
     )
@@ -37,7 +37,7 @@ export function DownloadCertificatButton({ nom, prenom, formationTitre, dateDebu
       {({ blob, url, loading, error }) => (
         <button
           disabled={loading}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 disabled:opacity-50"
+          className="inline-flex items-center gap-2 px-4 py-2 bg-success text-white rounded-lg text-sm font-medium hover:bg-green-800 disabled:opacity-50"
         >
           {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
           {loading ? 'Génération...' : 'Télécharger le certificat'}

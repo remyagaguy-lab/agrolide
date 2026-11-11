@@ -49,7 +49,7 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
     return (
       <Link 
         href={`/membres/messages?user=${memberId}`}
-        className="flex-1 md:flex-none bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
+        className="flex-1 md:flex-none bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
       >
         <MessageCircle className="w-5 h-5" /> Message
       </Link>
@@ -60,7 +60,7 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
     return (
       <button 
         disabled
-        className="flex-1 md:flex-none bg-gray-100 text-gray-500 px-5 py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 cursor-not-allowed"
+        className="flex-1 md:flex-none bg-surface-container text-on-surface-muted px-5 py-2.5 rounded-xl font-medium flex items-center justify-center gap-2 cursor-not-allowed"
       >
         <Clock className="w-5 h-5" /> En attente
       </button>
@@ -83,13 +83,13 @@ export default function ConnectButton({ memberId, status: initialStatus }: Conne
       <button 
         onClick={handleConnect}
         disabled={isPending}
-        className="flex-1 md:flex-none bg-primary-600 hover:bg-primary-700 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
+        className="flex-1 md:flex-none bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm"
       >
         {isPending ? <Clock className="w-5 h-5 animate-spin" /> : <UserPlus className="w-5 h-5" />} 
         {isPending ? 'Envoi...' : 'Se connecter'}
       </button>
       {errorMsg && (
-        <p className="text-red-500 text-xs font-medium max-w-[200px] text-center">{errorMsg}</p>
+        <p className="text-error text-xs font-medium max-w-[200px] text-center">{errorMsg}</p>
       )}
     </div>
   )

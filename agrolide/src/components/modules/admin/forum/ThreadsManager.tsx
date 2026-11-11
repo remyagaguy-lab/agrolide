@@ -72,47 +72,47 @@ export default function ThreadsManager() {
 
   if (isFormOpen) {
     return (
-      <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm max-w-3xl mx-auto space-y-6">
-        <h2 className="text-xl font-bold text-gray-900">Nouvelle discussion officielle</h2>
+      <div className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm max-w-3xl mx-auto space-y-6">
+        <h2 className="text-xl font-bold text-on-surface">Nouvelle discussion officielle</h2>
         
         <form onSubmit={handleCreate} className="space-y-4">
           <div className="space-y-1">
-            <label className="text-sm font-medium text-gray-700">Catégorie *</label>
+            <label className="text-sm font-medium text-on-surface-variant">Catégorie *</label>
             <select 
               required 
               value={formData.categorie_id} 
               onChange={e=>setFormData({...formData, categorie_id: e.target.value})}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full px-3 py-2 border border-outline rounded-lg outline-none focus:ring-2 focus:ring-primary"
             >
               {categories.map(c => <option key={c.id} value={c.id}>{c.nom}</option>)}
             </select>
           </div>
           <div className="space-y-1">
-            <label className="text-sm font-medium text-gray-700">Titre de la discussion *</label>
+            <label className="text-sm font-medium text-on-surface-variant">Titre de la discussion *</label>
             <input 
               required 
               type="text" 
               value={formData.titre} 
               onChange={e=>setFormData({...formData, titre: e.target.value})}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full px-3 py-2 border border-outline rounded-lg outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
           <div className="space-y-1">
-            <label className="text-sm font-medium text-gray-700">Premier message *</label>
+            <label className="text-sm font-medium text-on-surface-variant">Premier message *</label>
             <textarea 
               required 
               rows={5}
               value={formData.contenu} 
               onChange={e=>setFormData({...formData, contenu: e.target.value})}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500"
+              className="w-full px-3 py-2 border border-outline rounded-lg outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
           
           <div className="flex justify-end gap-3 pt-4">
-            <button type="button" onClick={() => setIsFormOpen(false)} className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-xl font-medium">
+            <button type="button" onClick={() => setIsFormOpen(false)} className="px-4 py-2 text-on-surface-variant hover:bg-surface-container rounded-xl font-medium">
               Annuler
             </button>
-            <button type="submit" disabled={processing==='new'} className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-xl font-medium flex items-center gap-2">
+            <button type="submit" disabled={processing==='new'} className="px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-xl font-medium flex items-center gap-2">
               {processing === 'new' ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Créer et publier'}
             </button>
           </div>
@@ -124,15 +124,15 @@ export default function ThreadsManager() {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-gray-900">Discussions</h2>
-        <button onClick={() => setIsFormOpen(true)} className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-medium">
+        <h2 className="text-xl font-bold text-on-surface">Discussions</h2>
+        <button onClick={() => setIsFormOpen(true)} className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-medium">
           <Plus className="w-4 h-4" /> Nouvelle discussion
         </button>
       </div>
 
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <table className="w-full text-left text-sm">
-          <thead className="bg-gray-50 border-b border-gray-100 text-gray-600">
+          <thead className="bg-surface-container-low border-b border-outline-variant text-on-surface-variant">
             <tr>
               <th className="p-4 font-semibold">Titre</th>
               <th className="p-4 font-semibold">Catégorie</th>
@@ -141,26 +141,26 @@ export default function ThreadsManager() {
               <th className="p-4 font-semibold text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
+          <tbody className="divide-y divide-outline-variant">
             {loading ? (
-              <tr><td colSpan={5} className="p-8 text-center text-gray-500">Chargement...</td></tr>
+              <tr><td colSpan={5} className="p-8 text-center text-on-surface-muted">Chargement...</td></tr>
             ) : threads.length === 0 ? (
-              <tr><td colSpan={5} className="p-8 text-center text-gray-500">Aucune discussion</td></tr>
+              <tr><td colSpan={5} className="p-8 text-center text-on-surface-muted">Aucune discussion</td></tr>
             ) : threads.map(thread => (
-              <tr key={thread.id} className="hover:bg-gray-50 transition-colors">
-                <td className="p-4 font-bold text-gray-900 max-w-xs truncate" title={thread.titre}>
+              <tr key={thread.id} className="hover:bg-surface-container-low transition-colors">
+                <td className="p-4 font-bold text-on-surface max-w-xs truncate" title={thread.titre}>
                   <div className="flex items-center gap-2">
                     <MessageCircle className="w-4 h-4 text-gray-400" /> {thread.titre}
                   </div>
                 </td>
-                <td className="p-4 text-gray-600">{thread.categorie?.nom}</td>
-                <td className="p-4 text-gray-900">{thread.auteur?.prenom} {thread.auteur?.nom}</td>
-                <td className="p-4 text-gray-500">{format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}</td>
+                <td className="p-4 text-on-surface-variant">{thread.categorie?.nom}</td>
+                <td className="p-4 text-on-surface">{thread.auteur?.prenom} {thread.auteur?.nom}</td>
+                <td className="p-4 text-on-surface-muted">{format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}</td>
                 <td className="p-4 flex justify-end gap-2">
-                  <Link href={`/membres/forum/fil/${thread.id}`} target="_blank" className="p-2 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors" title="Voir sur le site">
+                  <Link href={`/membres/forum/fil/${thread.id}`} target="_blank" className="p-2 text-info bg-info-container hover:bg-info-container rounded-lg transition-colors" title="Voir sur le site">
                     <ExternalLink className="w-4 h-4" />
                   </Link>
-                  <button onClick={() => handleDelete(thread.id)} disabled={processing===thread.id} className="p-2 text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors" title="Supprimer la discussion">
+                  <button onClick={() => handleDelete(thread.id)} disabled={processing===thread.id} className="p-2 text-error bg-error-container hover:bg-error-container rounded-lg transition-colors" title="Supprimer la discussion">
                     {processing === thread.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
                   </button>
                 </td>

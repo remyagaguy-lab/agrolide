@@ -62,30 +62,30 @@ export default function CustomCalendar({
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+    <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-gray-50">
+      <div className="flex items-center justify-between p-4 border-b border-outline-variant bg-surface-container-low">
         <button 
           onClick={prevMonth}
-          className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+          className="p-2 hover:bg-surface-container-high rounded-full transition-colors"
         >
-          <ChevronLeft className="w-5 h-5 text-gray-600" />
+          <ChevronLeft className="w-5 h-5 text-on-surface-variant" />
         </button>
-        <h2 className="text-lg font-bold text-gray-900 capitalize">
+        <h2 className="text-lg font-bold text-on-surface capitalize">
           {format(currentDate, dateFormat, { locale: fr })}
         </h2>
         <button 
           onClick={nextMonth}
-          className="p-2 hover:bg-gray-200 rounded-full transition-colors"
+          className="p-2 hover:bg-surface-container-high rounded-full transition-colors"
         >
-          <ChevronRight className="w-5 h-5 text-gray-600" />
+          <ChevronRight className="w-5 h-5 text-on-surface-variant" />
         </button>
       </div>
 
       {/* Days of week header */}
-      <div className="grid grid-cols-7 border-b border-gray-100">
+      <div className="grid grid-cols-7 border-b border-outline-variant">
         {['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'].map((day) => (
-          <div key={day} className="py-2 text-center text-xs font-semibold text-gray-500 uppercase">
+          <div key={day} className="py-2 text-center text-xs font-semibold text-on-surface-muted uppercase">
             {day}
           </div>
         ))}
@@ -100,12 +100,12 @@ export default function CustomCalendar({
           return (
             <div 
               key={day.toString()}
-              className={`min-h-[100px] p-2 border-b border-r border-gray-100 relative
-                ${!isSameMonth(day, monthStart) ? 'bg-gray-50/50 text-gray-400' : 'text-gray-700'}
-                ${isToday(day) ? 'bg-primary-50/30' : ''}
+              className={`min-h-[100px] p-2 border-b border-r border-outline-variant relative
+                ${!isSameMonth(day, monthStart) ? 'bg-surface-container-low/50 text-gray-400' : 'text-on-surface-variant'}
+                ${isToday(day) ? 'bg-primary-container/30' : ''}
               `}
             >
-              <div className={`text-right text-sm mb-1 ${isToday(day) ? 'font-bold text-primary-600' : ''}`}>
+              <div className={`text-right text-sm mb-1 ${isToday(day) ? 'font-bold text-primary' : ''}`}>
                 {format(day, 'd')}
               </div>
               
@@ -114,10 +114,10 @@ export default function CustomCalendar({
                   <button
                     key={evt.id}
                     onClick={() => onEventClick(evt)}
-                    className="text-xs p-1 rounded bg-primary-50 text-primary-700 border border-primary-100 truncate text-left hover:bg-primary-100 transition-colors w-full"
+                    className="text-xs p-1 rounded bg-primary-container text-primary border border-outline-variant truncate text-left hover:bg-primary-container transition-colors w-full"
                     title={evt.titre}
                   >
-                    <span className="w-2 h-2 rounded-full bg-primary-500 inline-block mr-1"></span>
+                    <span className="w-2 h-2 rounded-full bg-accent-leaf inline-block mr-1"></span>
                     {evt.titre}
                   </button>
                 ))}

@@ -52,7 +52,7 @@ export default function MessagesManager() {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-gray-900">Recherche globale des messages</h2>
+        <h2 className="text-xl font-bold text-on-surface">Recherche globale des messages</h2>
       </div>
 
       <form onSubmit={handleSearch} className="flex gap-2 mb-6">
@@ -61,37 +61,37 @@ export default function MessagesManager() {
           placeholder="Rechercher un mot-clé dans les messages..." 
           value={search}
           onChange={e => setSearch(e.target.value)}
-          className="flex-1 px-4 py-2 border border-gray-300 rounded-xl outline-none focus:ring-2 focus:ring-primary-500"
+          className="flex-1 px-4 py-2 border border-outline rounded-xl outline-none focus:ring-2 focus:ring-primary"
         />
-        <button type="submit" className="px-4 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-xl flex items-center gap-2">
+        <button type="submit" className="px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-xl flex items-center gap-2">
           <Search className="w-5 h-5" /> Rechercher
         </button>
       </form>
 
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-        <div className="divide-y divide-gray-100">
+      <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
+        <div className="divide-y divide-outline-variant">
           {loading ? (
-            <div className="p-8 text-center text-gray-500 flex flex-col items-center">
+            <div className="p-8 text-center text-on-surface-muted flex flex-col items-center">
               <Loader2 className="w-8 h-8 animate-spin mb-2" />
               Chargement...
             </div>
           ) : messages.length === 0 ? (
-            <div className="p-8 text-center text-gray-500">Aucun message trouvé</div>
+            <div className="p-8 text-center text-on-surface-muted">Aucun message trouvé</div>
           ) : messages.map(msg => (
-            <div key={msg.id} className="p-4 hover:bg-gray-50 flex justify-between items-start gap-4">
+            <div key={msg.id} className="p-4 hover:bg-surface-container-low flex justify-between items-start gap-4">
               <div className="flex-1 space-y-1">
-                <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <span className="font-bold text-gray-900">{msg.auteur?.prenom} {msg.auteur?.nom}</span>
+                <div className="flex items-center gap-2 text-sm text-on-surface-muted">
+                  <span className="font-bold text-on-surface">{msg.auteur?.prenom} {msg.auteur?.nom}</span>
                   <span>•</span>
                   <span>{format(new Date(msg.created_at), "dd MMM yyyy HH:mm", { locale: fr })}</span>
                   <span>•</span>
-                  <span className="bg-gray-100 px-2 py-0.5 rounded text-xs">Fil : {msg.fil?.titre}</span>
+                  <span className="bg-surface-container px-2 py-0.5 rounded text-xs">Fil : {msg.fil?.titre}</span>
                 </div>
-                <div className="text-gray-800 text-sm whitespace-pre-wrap font-sans">
+                <div className="text-on-surface text-sm whitespace-pre-wrap font-sans">
                   {msg.contenu}
                 </div>
               </div>
-              <button onClick={() => handleDelete(msg.id)} disabled={processing===msg.id} className="p-2 text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors shrink-0">
+              <button onClick={() => handleDelete(msg.id)} disabled={processing===msg.id} className="p-2 text-error bg-error-container hover:bg-error-container rounded-lg transition-colors shrink-0">
                 {processing === msg.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
               </button>
             </div>

@@ -34,17 +34,17 @@ export function TableOfContents() {
   if (headings.length === 0) return null
 
   return (
-    <div className="bg-gray-50 rounded-xl border border-[var(--color-gris-clair)] overflow-hidden">
+    <div className="bg-surface-container-low rounded-xl border border-[var(--color-gris-clair)] overflow-hidden">
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between p-5 lg:cursor-default"
       >
-        <h3 className="font-heading font-bold text-lg text-gray-900">Sommaire</h3>
-        <ChevronDown size={20} className={`text-gray-500 lg:hidden transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        <h3 className="font-heading font-bold text-lg text-on-surface">Sommaire</h3>
+        <ChevronDown size={20} className={`text-on-surface-muted lg:hidden transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       
       <div className={`px-5 pb-5 transition-all duration-300 ${isOpen ? 'block' : 'hidden lg:block'}`}>
-        <ul className="space-y-3 border-t border-gray-200 pt-4">
+        <ul className="space-y-3 border-t border-outline-variant pt-4">
           {headings.map((heading) => (
             <li 
               key={heading.id} 

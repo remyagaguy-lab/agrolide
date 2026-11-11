@@ -8,9 +8,9 @@ export default function MerciBanner() {
   if (params.get("merci") !== "true") return null
   return (
     <div className="max-w-[1200px] mx-auto px-6 mt-10">
-      <div className="bg-[#f0f7f0] border border-[#1b5e38]/20 text-[#1b5e38] p-6 rounded-2xl flex flex-col md:flex-row items-center gap-4 shadow-sm text-center md:text-left">
+      <div className="bg-primary-container border border-primary/20 text-primary p-6 rounded-2xl flex flex-col md:flex-row items-center gap-4 shadow-sm text-center md:text-left">
         <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-          <Heart className="w-6 h-6 text-[#1b5e38]" />
+          <Heart className="w-6 h-6 text-primary" />
         </div>
         <div>
           <p className="font-heading font-[800] text-[20px]">Un immense merci pour votre générosité !</p>

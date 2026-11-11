@@ -84,15 +84,15 @@ export default function CategoriesManager() {
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-xl font-bold text-gray-900">Catégories du Forum</h2>
-        <button onClick={startCreate} className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-medium">
+        <h2 className="text-xl font-bold text-on-surface">Catégories du Forum</h2>
+        <button onClick={startCreate} className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-medium">
           <Plus className="w-4 h-4" /> Nouvelle catégorie
         </button>
       </div>
 
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+      <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden">
         <table className="w-full text-left text-sm">
-          <thead className="bg-gray-50 border-b border-gray-100 text-gray-600">
+          <thead className="bg-surface-container-low border-b border-outline-variant text-on-surface-variant">
             <tr>
               <th className="p-4 font-semibold">Ordre</th>
               <th className="p-4 font-semibold">Nom</th>
@@ -100,42 +100,42 @@ export default function CategoriesManager() {
               <th className="p-4 font-semibold text-right">Actions</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
+          <tbody className="divide-y divide-outline-variant">
             {editingId === 'new' && (
-              <tr className="bg-gray-50/50">
+              <tr className="bg-surface-container-low/50">
                 <td className="p-4"><input type="number" value={formData.ordre} onChange={e=>setFormData({...formData, ordre: parseInt(e.target.value)})} className="w-16 p-1 border rounded" /></td>
                 <td className="p-4"><input type="text" placeholder="Nom" value={formData.nom} onChange={e=>setFormData({...formData, nom: e.target.value})} className="w-full p-1 border rounded" /></td>
                 <td className="p-4"><input type="text" placeholder="Description" value={formData.description} onChange={e=>setFormData({...formData, description: e.target.value})} className="w-full p-1 border rounded" /></td>
                 <td className="p-4 text-right flex justify-end gap-2">
-                  <button onClick={handleCreate} disabled={processing==='new'} className="text-green-600 p-1 bg-green-50 rounded hover:bg-green-100"><Save className="w-4 h-4" /></button>
-                  <button onClick={() => setEditingId(null)} className="text-gray-500 p-1 bg-gray-100 rounded hover:bg-gray-200"><X className="w-4 h-4" /></button>
+                  <button onClick={handleCreate} disabled={processing==='new'} className="text-success p-1 bg-success-container rounded hover:bg-success-container"><Save className="w-4 h-4" /></button>
+                  <button onClick={() => setEditingId(null)} className="text-on-surface-muted p-1 bg-surface-container rounded hover:bg-surface-container-high"><X className="w-4 h-4" /></button>
                 </td>
               </tr>
             )}
             
             {loading ? (
-              <tr><td colSpan={4} className="p-8 text-center text-gray-500">Chargement...</td></tr>
+              <tr><td colSpan={4} className="p-8 text-center text-on-surface-muted">Chargement...</td></tr>
             ) : categories.map(cat => (
               editingId === cat.id ? (
-                <tr key={cat.id} className="bg-gray-50/50">
+                <tr key={cat.id} className="bg-surface-container-low/50">
                   <td className="p-4"><input type="number" value={formData.ordre} onChange={e=>setFormData({...formData, ordre: parseInt(e.target.value)})} className="w-16 p-1 border rounded" /></td>
                   <td className="p-4"><input type="text" value={formData.nom} onChange={e=>setFormData({...formData, nom: e.target.value})} className="w-full p-1 border rounded" /></td>
                   <td className="p-4"><input type="text" value={formData.description} onChange={e=>setFormData({...formData, description: e.target.value})} className="w-full p-1 border rounded" /></td>
                   <td className="p-4 text-right flex justify-end gap-2">
-                    <button onClick={() => handleUpdate(cat.id)} disabled={processing===cat.id} className="text-green-600 p-1 bg-green-50 rounded hover:bg-green-100"><Save className="w-4 h-4" /></button>
-                    <button onClick={() => setEditingId(null)} className="text-gray-500 p-1 bg-gray-100 rounded hover:bg-gray-200"><X className="w-4 h-4" /></button>
+                    <button onClick={() => handleUpdate(cat.id)} disabled={processing===cat.id} className="text-success p-1 bg-success-container rounded hover:bg-success-container"><Save className="w-4 h-4" /></button>
+                    <button onClick={() => setEditingId(null)} className="text-on-surface-muted p-1 bg-surface-container rounded hover:bg-surface-container-high"><X className="w-4 h-4" /></button>
                   </td>
                 </tr>
               ) : (
-                <tr key={cat.id} className="hover:bg-gray-50 transition-colors">
-                  <td className="p-4 text-gray-500">{cat.ordre}</td>
-                  <td className="p-4 font-bold text-gray-900">{cat.nom}</td>
-                  <td className="p-4 text-gray-600">{cat.description}</td>
+                <tr key={cat.id} className="hover:bg-surface-container-low transition-colors">
+                  <td className="p-4 text-on-surface-muted">{cat.ordre}</td>
+                  <td className="p-4 font-bold text-on-surface">{cat.nom}</td>
+                  <td className="p-4 text-on-surface-variant">{cat.description}</td>
                   <td className="p-4 flex justify-end gap-2">
-                    <button onClick={() => startEdit(cat)} className="p-2 text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors" title="Modifier">
+                    <button onClick={() => startEdit(cat)} className="p-2 text-info bg-info-container hover:bg-info-container rounded-lg transition-colors" title="Modifier">
                       <Edit2 className="w-4 h-4" />
                     </button>
-                    <button onClick={() => handleDelete(cat.id)} disabled={processing===cat.id} className="p-2 text-red-600 bg-red-50 hover:bg-red-100 rounded-lg transition-colors" title="Supprimer">
+                    <button onClick={() => handleDelete(cat.id)} disabled={processing===cat.id} className="p-2 text-error bg-error-container hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
                       {processing === cat.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
                     </button>
                   </td>

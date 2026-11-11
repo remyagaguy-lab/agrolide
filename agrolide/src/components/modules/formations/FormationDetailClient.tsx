@@ -56,19 +56,19 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header Formation */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 mb-8">
+      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-8 mb-8">
         <div className="flex flex-wrap gap-2 mb-4">
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-50 text-green-700">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-success-container text-success">
             {formation.thematique}
           </span>
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-700">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-surface-container text-on-surface-variant">
             {formation.modalite}
           </span>
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700">
+          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-info-container text-info">
             {formation.niveau}
           </span>
           {isGratuit ? (
-            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-green-100 text-green-800">
+            <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-success-container text-on-success-container">
               Gratuit
             </span>
           ) : (
@@ -78,25 +78,25 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
           )}
         </div>
         
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{formation.titre}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-on-surface mb-6">{formation.titre}</h1>
         
-        <div className="prose prose-green max-w-none text-gray-600 mb-8">
+        <div className="prose prose-green max-w-none text-on-surface-variant mb-8">
           <p className="whitespace-pre-line">{formation.description}</p>
         </div>
         
         {/* Intervenants */}
         {formation.intervenants && formation.intervenants.length > 0 && (
-          <div className="border-t border-gray-100 pt-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Intervenant(s)</h3>
+          <div className="border-t border-outline-variant pt-8">
+            <h3 className="text-lg font-semibold text-on-surface mb-4">Intervenant(s)</h3>
             <div className="flex flex-wrap gap-6">
               {formation.intervenants.map((intervenant: any) => (
                 <div key={intervenant.id} className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-lg">
+                  <div className="w-12 h-12 rounded-full bg-success-container flex items-center justify-center text-success font-bold text-lg">
                     {intervenant.nom.charAt(0)}
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900">{intervenant.nom}</div>
-                    <div className="text-sm text-gray-500">{intervenant.titre}</div>
+                    <div className="font-medium text-on-surface">{intervenant.nom}</div>
+                    <div className="text-sm text-on-surface-muted">{intervenant.titre}</div>
                   </div>
                 </div>
               ))}
@@ -106,14 +106,14 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
       </div>
 
       {message && (
-        <div className={`p-4 rounded-xl mb-8 flex items-start gap-3 ${message.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+        <div className={`p-4 rounded-xl mb-8 flex items-start gap-3 ${message.type === 'success' ? 'bg-success-container text-on-success-container' : 'bg-error-container text-on-error-container'}`}>
           {message.type === 'success' ? <Check className="w-5 h-5 flex-shrink-0" /> : <AlertCircle className="w-5 h-5 flex-shrink-0" />}
           <p className="font-medium">{message.text}</p>
         </div>
       )}
 
       {/* Sessions à venir */}
-      <h2 className="text-2xl font-bold text-gray-900 mb-6">Sessions programmées</h2>
+      <h2 className="text-2xl font-bold text-on-surface mb-6">Sessions programmées</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {sessions.filter((s: any) => new Date(s.date_debut) >= new Date()).length > 0 ? (
           sessions.filter((s: any) => new Date(s.date_debut) >= new Date()).map((session: any) => {
@@ -123,21 +123,21 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
             const isAttentePaiement = ins?.statut === 'en_attente_paiement'
             
             return (
-              <div key={session.id} className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 flex flex-col">
+              <div key={session.id} className="bg-white rounded-2xl border border-outline-variant shadow-sm p-6 flex flex-col">
                 <div className="space-y-4 mb-6 flex-1">
-                  <div className="flex items-center text-gray-700">
-                    <Calendar className="w-5 h-5 mr-3 text-green-600" />
+                  <div className="flex items-center text-on-surface-variant">
+                    <Calendar className="w-5 h-5 mr-3 text-success" />
                     <span className="font-medium">
                       {new Date(session.date_debut).toLocaleDateString('fr-FR')} au {new Date(session.date_fin).toLocaleDateString('fr-FR')}
                     </span>
                   </div>
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-on-surface-variant">
                     <MapPin className="w-5 h-5 mr-3 text-gray-400" />
                     <span>{session.lieu}</span>
                   </div>
-                  <div className="flex items-center text-gray-600">
+                  <div className="flex items-center text-on-surface-variant">
                     <Users className="w-5 h-5 mr-3 text-gray-400" />
-                    <span className={isWaitlist ? "text-red-600 font-medium" : "font-medium"}>
+                    <span className={isWaitlist ? "text-error font-medium" : "font-medium"}>
                       {session.places_restantes} place(s) restante(s) sur {session.places_totales}
                     </span>
                   </div>
@@ -145,7 +145,7 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
                 
                 <div className="mt-auto">
                   {isInscrit ? (
-                    <div className="w-full text-center py-3 rounded-xl font-medium bg-gray-100 text-gray-600 flex items-center justify-center gap-2">
+                    <div className="w-full text-center py-3 rounded-xl font-medium bg-surface-container text-on-surface-variant flex items-center justify-center gap-2">
                       <Check className="w-4 h-4" /> 
                       {isAttentePaiement ? 'En attente de paiement' : 'Inscrit ✓'}
                     </div>
@@ -155,8 +155,8 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
                       disabled={loading === session.id}
                       className={`w-full py-3 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 ${
                         isWaitlist 
-                          ? 'bg-amber-100 text-amber-800 hover:bg-amber-200' 
-                          : 'bg-green-700 text-white hover:bg-green-800'
+                          ? 'bg-warning-container text-on-warning-container hover:bg-amber-200' 
+                          : 'bg-success text-white hover:bg-green-800'
                       }`}
                     >
                       {loading === session.id ? (
@@ -171,8 +171,8 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
             )
           })
         ) : (
-          <div className="col-span-full p-8 text-center bg-white rounded-2xl border border-gray-100">
-            <p className="text-gray-500">Aucune session n'est programmée pour le moment.</p>
+          <div className="col-span-full p-8 text-center bg-white rounded-2xl border border-outline-variant">
+            <p className="text-on-surface-muted">Aucune session n'est programmée pour le moment.</p>
           </div>
         )}
       </div>
@@ -180,28 +180,28 @@ export function FormationDetailClient({ initialFormation }: { initialFormation: 
       {/* Avis */}
       {formation.avis_formation && formation.avis_formation.length > 0 && (
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Avis des participants</h2>
+          <h2 className="text-2xl font-bold text-on-surface mb-6">Avis des participants</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {formation.avis_formation.map((avis: any) => (
-              <div key={avis.id} className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+              <div key={avis.id} className="bg-white p-6 rounded-2xl border border-outline-variant shadow-sm">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden relative">
+                  <div className="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden relative">
                     {avis.profiles?.avatar_url ? (
                       <Image src={avis.profiles.avatar_url} alt={`Avatar de ${avis.profiles.first_name || 'utilisateur'}`} fill sizes="40px" className="object-cover" />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-500 font-bold">
+                      <div className="w-full h-full flex items-center justify-center text-on-surface-muted font-bold">
                         {avis.profiles?.prenom?.charAt(0)}
                       </div>
                     )}
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900">{avis.profiles?.prenom} {avis.profiles?.nom}</div>
+                    <div className="font-medium text-on-surface">{avis.profiles?.prenom} {avis.profiles?.nom}</div>
                     <div className="flex text-yellow-400 text-sm">
                       {'★'.repeat(avis.note)}{'☆'.repeat(5 - avis.note)}
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-600 italic">"{avis.commentaire}"</p>
+                <p className="text-on-surface-variant italic">"{avis.commentaire}"</p>
               </div>
             ))}
           </div>

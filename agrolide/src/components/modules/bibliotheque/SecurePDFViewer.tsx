@@ -120,28 +120,28 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
 
   if (loading) {
     return (
-      <div className="flex flex-col items-center justify-center h-[600px] bg-gray-50 rounded-xl">
-        <Loader2 className="w-10 h-10 animate-spin text-green-700 mb-4" />
-        <p className="text-gray-500 font-medium">Sécurisation et chargement du document...</p>
+      <div className="flex flex-col items-center justify-center h-[600px] bg-surface-container-low rounded-xl">
+        <Loader2 className="w-10 h-10 animate-spin text-success mb-4" />
+        <p className="text-on-surface-muted font-medium">Sécurisation et chargement du document...</p>
       </div>
     )
   }
 
   if (quotaReached) {
     return (
-      <div className="flex flex-col items-center justify-center h-[600px] bg-gray-50 rounded-xl border border-gray-200 p-6 text-center">
+      <div className="flex flex-col items-center justify-center h-[600px] bg-surface-container-low rounded-xl border border-outline-variant p-6 text-center">
         <div className="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-6">
           <AlertCircle className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">Vous avez lu vos 3 documents gratuits 🎉</h3>
-        <p className="text-gray-600 mb-8 max-w-md">
+        <h3 className="text-2xl font-bold text-on-surface mb-3">Vous avez lu vos 3 documents gratuits 🎉</h3>
+        <p className="text-on-surface-variant mb-8 max-w-md">
           Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte Agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 w-full max-w-sm">
-          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-green-700 text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
+          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-success text-white rounded-lg font-medium hover:bg-green-800 transition-colors">
             Créer mon compte
           </Link>
-          <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-white text-green-700 border border-green-200 rounded-lg font-medium hover:bg-green-50 transition-colors">
+          <Link href={`/login?next=${encodeURIComponent(nextPath)}`} className="flex-1 px-4 py-3 bg-white text-success border border-success/30 rounded-lg font-medium hover:bg-success-container transition-colors">
             Se connecter
           </Link>
         </div>
@@ -151,44 +151,44 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
 
   if (error || !pdfUrl) {
     return (
-      <div className="flex flex-col items-center justify-center h-[600px] bg-red-50 rounded-xl">
-        <p className="text-red-600 font-medium">{error || 'Erreur'}</p>
+      <div className="flex flex-col items-center justify-center h-[600px] bg-error-container rounded-xl">
+        <p className="text-error font-medium">{error || 'Erreur'}</p>
       </div>
     )
   }
 
   return (
-    <div className="flex flex-col items-center bg-gray-100 rounded-xl overflow-hidden border border-gray-200 relative">
+    <div className="flex flex-col items-center bg-surface-container rounded-xl overflow-hidden border border-outline-variant relative">
       
       {/* Bandeau permanent pour les visiteurs */}
       {showEncarts && (
-        <div className="sticky top-0 w-full bg-green-700 text-white px-3 py-2 flex items-center justify-between gap-3 z-20 text-xs sm:text-sm">
+        <div className="sticky top-0 w-full bg-success text-white px-3 py-2 flex items-center justify-between gap-3 z-20 text-xs sm:text-sm">
           <span className="flex items-center min-w-0">
             <Info className="w-4 h-4 mr-2 flex-shrink-0" />
             <span className="truncate">
               Mode visiteur{readCount > 0 && <> : <strong>{readCount}/{readLimit}</strong> documents gratuits</>} · Lisez sans pub en créant un compte
             </span>
           </span>
-          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="shrink-0 rounded-md bg-white px-3 py-1 font-semibold text-green-800 hover:bg-green-50">
+          <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="shrink-0 rounded-md bg-white px-3 py-1 font-semibold text-on-success-container hover:bg-success-container">
             Créer un compte
           </Link>
         </div>
       )}
 
       {/* Toolbar */}
-      <div className="w-full bg-white border-b border-gray-200 p-2 sm:p-4 flex flex-wrap items-center justify-between gap-2 shadow-sm z-10">
+      <div className="w-full bg-white border-b border-outline-variant p-2 sm:p-4 flex flex-wrap items-center justify-between gap-2 shadow-sm z-10">
         <div className="flex items-center gap-2 sm:gap-4">
           <button 
             onClick={() => changeScale(-0.2)} 
-            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
+            className="p-1 sm:p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors"
             title="Dézoomer"
           >
             <ZoomOut className="w-5 h-5" />
           </button>
-          <span className="text-xs sm:text-sm font-medium text-gray-600 w-10 sm:w-12 text-center">{Math.round(scale * 100)}%</span>
+          <span className="text-xs sm:text-sm font-medium text-on-surface-variant w-10 sm:w-12 text-center">{Math.round(scale * 100)}%</span>
           <button 
             onClick={() => changeScale(0.2)} 
-            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors"
+            className="p-1 sm:p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors"
             title="Zoomer"
           >
             <ZoomIn className="w-5 h-5" />
@@ -198,7 +198,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         <div className="flex items-center gap-2 sm:gap-4">
           <button
             onClick={() => setViewMode(viewMode === 'single' ? 'continuous' : 'single')}
-            className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg text-gray-600 transition-colors flex items-center gap-2 text-xs sm:text-sm font-medium mr-2"
+            className="p-1 sm:p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors flex items-center gap-2 text-xs sm:text-sm font-medium mr-2"
             title="Changer le mode d'affichage"
           >
             {viewMode === 'single' ? <FileStack className="w-4 h-4 sm:w-5 sm:h-5" /> : <Maximize className="w-4 h-4 sm:w-5 sm:h-5" />}
@@ -210,23 +210,23 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
               <button
                 disabled={pageNumber <= 1}
                 onClick={() => changePage(-1)}
-                className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+                className="p-1 sm:p-2 hover:bg-surface-container rounded-lg disabled:opacity-50 text-on-surface-variant transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <span className="text-xs sm:text-sm font-medium text-gray-700">
+              <span className="text-xs sm:text-sm font-medium text-on-surface-variant">
                 Page {pageNumber} / {numPages || '--'}
               </span>
               <button
                 disabled={pageNumber >= numPages}
                 onClick={() => changePage(1)}
-                className="p-1 sm:p-2 hover:bg-gray-100 rounded-lg disabled:opacity-50 text-gray-600 transition-colors"
+                className="p-1 sm:p-2 hover:bg-surface-container rounded-lg disabled:opacity-50 text-on-surface-variant transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
             </>
           ) : (
-            <span className="text-xs sm:text-sm font-medium text-gray-700">
+            <span className="text-xs sm:text-sm font-medium text-on-surface-variant">
               {numPages ? `${numPages} pages au total` : 'Chargement...'}
             </span>
           )}
@@ -236,18 +236,18 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       {/* Secure PDF Container */}
       <div 
         ref={containerRef}
-        className="relative w-full h-[60vh] sm:h-[800px] overflow-auto flex justify-center p-4 sm:p-8 bg-[#e5e5e5] select-none"
+        className="relative w-full h-[60vh] sm:h-[800px] overflow-auto flex justify-center p-4 sm:p-8 bg-surface-container-high select-none"
         style={{ WebkitUserSelect: 'none', userSelect: 'none' }}
       >
         <Document
           file={pdfUrl}
           onLoadSuccess={onDocumentLoadSuccess}
-          loading={<Loader2 className="w-10 h-10 animate-spin text-green-700 mx-auto mt-20" />}
+          loading={<Loader2 className="w-10 h-10 animate-spin text-success mx-auto mt-20" />}
           onLoadError={(err) => {
             console.error("Erreur détaillée react-pdf:", err)
             setError(`Erreur: ${err.message || 'Impossible de charger le PDF'}`)
           }}
-          error={<div className="text-red-500 mt-20">Impossible de charger le PDF.</div>}
+          error={<div className="text-error mt-20">Impossible de charger le PDF.</div>}
         >
           <div className="flex flex-col gap-6 items-center w-full">
             {viewMode === 'continuous' ? (

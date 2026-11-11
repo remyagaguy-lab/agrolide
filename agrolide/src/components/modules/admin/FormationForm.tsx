@@ -51,44 +51,44 @@ export default function FormationForm({ initialData, onSuccess, onCancel }: Form
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+    <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 rounded-2xl border border-outline-variant shadow-sm">
       <div className="flex justify-between items-center mb-6">
-        <h2 className="text-xl font-bold text-gray-900">
+        <h2 className="text-xl font-bold text-on-surface">
           {initialData ? "Modifier la formation" : "Nouvelle formation"}
         </h2>
         
-        <label className="flex items-center gap-2 cursor-pointer bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200">
+        <label className="flex items-center gap-2 cursor-pointer bg-surface-container-low px-3 py-1.5 rounded-lg border border-outline-variant">
           <input 
             type="checkbox" 
             checked={formData.statut === "publie"} 
             onChange={(e) => setFormData({ ...formData, statut: e.target.checked ? "publie" : "brouillon" })}
-            className="w-4 h-4 text-green-600 rounded focus:ring-green-500"
+            className="w-4 h-4 text-success rounded focus:ring-success"
           />
-          <span className="text-sm font-medium text-gray-700">Publié en ligne</span>
+          <span className="text-sm font-medium text-on-surface-variant">Publié en ligne</span>
         </label>
       </div>
 
-      {error && <div className="p-3 bg-red-50 text-red-700 rounded-lg text-sm">{error}</div>}
+      {error && <div className="p-3 bg-error-container text-error rounded-lg text-sm">{error}</div>}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2 md:col-span-2">
-          <label className="text-sm font-medium text-gray-700">Titre de la formation *</label>
-          <input required type="text" name="titre" value={formData.titre} onChange={handleChange} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" />
+          <label className="text-sm font-medium text-on-surface-variant">Titre de la formation *</label>
+          <input required type="text" name="titre" value={formData.titre} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-success outline-none" />
         </div>
 
         <div className="space-y-2 md:col-span-2">
-          <label className="text-sm font-medium text-gray-700">Description</label>
-          <textarea name="description" value={formData.description} onChange={handleChange} rows={4} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" />
+          <label className="text-sm font-medium text-on-surface-variant">Description</label>
+          <textarea name="description" value={formData.description} onChange={handleChange} rows={4} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-success outline-none" />
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">Thématique *</label>
-          <input required type="text" name="thematique" value={formData.thematique} onChange={handleChange} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" placeholder="Ex: Entrepreneuriat" />
+          <label className="text-sm font-medium text-on-surface-variant">Thématique *</label>
+          <input required type="text" name="thematique" value={formData.thematique} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-success outline-none" placeholder="Ex: Entrepreneuriat" />
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">Niveau *</label>
-          <select required name="niveau" value={formData.niveau} onChange={handleChange} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none">
+          <label className="text-sm font-medium text-on-surface-variant">Niveau *</label>
+          <select required name="niveau" value={formData.niveau} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-success outline-none">
             <option value="Débutant">Débutant</option>
             <option value="Intermédiaire">Intermédiaire</option>
             <option value="Avancé">Avancé</option>
@@ -97,8 +97,8 @@ export default function FormationForm({ initialData, onSuccess, onCancel }: Form
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">Modalité *</label>
-          <select required name="modalite" value={formData.modalite} onChange={handleChange} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none">
+          <label className="text-sm font-medium text-on-surface-variant">Modalité *</label>
+          <select required name="modalite" value={formData.modalite} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-success outline-none">
             <option value="En ligne">En ligne</option>
             <option value="Présentiel">Présentiel</option>
             <option value="Hybride">Hybride</option>
@@ -106,16 +106,16 @@ export default function FormationForm({ initialData, onSuccess, onCancel }: Form
         </div>
 
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-700">Prix (FCFA) *</label>
-          <input required type="number" min="0" name="prix" value={formData.prix} onChange={handleChange} className="w-full px-4 py-2 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 outline-none" placeholder="0 pour gratuit" />
+          <label className="text-sm font-medium text-on-surface-variant">Prix (FCFA) *</label>
+          <input required type="number" min="0" name="prix" value={formData.prix} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-success outline-none" placeholder="0 pour gratuit" />
         </div>
       </div>
 
-      <div className="flex gap-4 justify-end pt-4 border-t border-gray-100">
-        <button type="button" onClick={onCancel} className="px-6 py-2 text-gray-600 font-medium hover:bg-gray-100 rounded-xl transition-colors">
+      <div className="flex gap-4 justify-end pt-4 border-t border-outline-variant">
+        <button type="button" onClick={onCancel} className="px-6 py-2 text-on-surface-variant font-medium hover:bg-surface-container rounded-xl transition-colors">
           Annuler
         </button>
-        <button type="submit" disabled={loading} className="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl transition-colors flex items-center gap-2">
+        <button type="submit" disabled={loading} className="px-6 py-2 bg-success hover:bg-success text-white font-medium rounded-xl transition-colors flex items-center gap-2">
           {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Enregistrer"}
         </button>
       </div>

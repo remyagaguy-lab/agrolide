@@ -37,20 +37,20 @@ export function FormationCard({ formation }: FormationCardProps) {
   const isGratuit = !formation.prix || formation.prix === 0
 
   return (
-    <div className="bg-white rounded-2xl border border-[#e8e8e4] shadow-sm overflow-hidden flex flex-col h-full hover:border-[#1b5e38] hover:shadow-md transition-all group">
+    <div className="bg-white rounded-2xl border border-outline-variant shadow-sm overflow-hidden flex flex-col h-full hover:border-primary hover:shadow-md transition-all group">
       <div className="p-4 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-3 gap-2">
           <div className="flex flex-wrap gap-1.5">
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#f0f7f0] text-[#1b5e38] border border-[#c3dec4] uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-primary-container text-primary border border-outline-variant uppercase tracking-wider">
               {formation.thematique}
             </span>
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-gray-50 text-gray-600 border border-[#e8e8e4] uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container-low text-on-surface-variant border border-outline-variant uppercase tracking-wider">
               {formation.modalite}
             </span>
           </div>
           
           {isGratuit ? (
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-green-50 text-green-700 border border-green-200 uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-success-container text-success border border-success/30 uppercase tracking-wider">
               Gratuit
             </span>
           ) : (
@@ -60,16 +60,16 @@ export function FormationCard({ formation }: FormationCardProps) {
           )}
         </div>
         
-        <h3 className="text-sm font-bold text-[#1a1a1a] mb-1.5 line-clamp-2 group-hover:text-[#1b5e38] transition-colors leading-snug">
+        <h3 className="text-sm font-bold text-on-surface mb-1.5 line-clamp-2 group-hover:text-primary transition-colors leading-snug">
           {formation.titre}
         </h3>
         
-        <p className="text-xs text-gray-500 line-clamp-2 mb-4 flex-1">
+        <p className="text-xs text-on-surface-muted line-clamp-2 mb-4 flex-1">
           {formation.description}
         </p>
         
-        <div className="space-y-2 mt-auto pt-3 border-t border-[#e8e8e4]">
-          <div className="flex items-center text-[11px] text-gray-500 font-medium">
+        <div className="space-y-2 mt-auto pt-3 border-t border-outline-variant">
+          <div className="flex items-center text-[11px] text-on-surface-muted font-medium">
             <Calendar className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
             <span className="truncate">
               {nextSession 
@@ -78,14 +78,14 @@ export function FormationCard({ formation }: FormationCardProps) {
             </span>
           </div>
           {nextSession && (
-            <div className="flex justify-between items-center text-[11px] text-gray-500 font-medium">
+            <div className="flex justify-between items-center text-[11px] text-on-surface-muted font-medium">
               <div className="flex items-center">
                 <MapPin className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
                 <span className="truncate max-w-[100px]">{nextSession.lieu}</span>
               </div>
               <div className="flex items-center">
                 <Users className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
-                <span className={nextSession.places_restantes <= 0 ? "text-red-600" : ""}>
+                <span className={nextSession.places_restantes <= 0 ? "text-error" : ""}>
                   {nextSession.places_restantes} place{nextSession.places_restantes > 1 ? 's' : ''}
                 </span>
               </div>
@@ -94,10 +94,10 @@ export function FormationCard({ formation }: FormationCardProps) {
         </div>
       </div>
       
-      <div className="px-4 py-3 bg-gray-50 border-t border-[#e8e8e4] mt-auto">
+      <div className="px-4 py-3 bg-surface-container-low border-t border-outline-variant mt-auto">
         <Link 
           href={`/membres/formations/${formation.id}`}
-          className="flex items-center justify-center w-full gap-1.5 text-[11px] font-bold text-[#1b5e38] uppercase tracking-wider hover:text-[#144a2c] transition-colors"
+          className="flex items-center justify-center w-full gap-1.5 text-[11px] font-bold text-primary uppercase tracking-wider hover:text-primary transition-colors"
         >
           En savoir plus
           <ChevronRight className="w-3.5 h-3.5" />

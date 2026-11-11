@@ -33,7 +33,7 @@ export default function ForumClient() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="dash-page-title">Forum Communautaire</h1>
-          <p className="text-gray-500 mt-2 text-sm">Discutez, partagez et trouvez des réponses avec les autres membres.</p>
+          <p className="text-on-surface-muted mt-2 text-sm">Discutez, partagez et trouvez des réponses avec les autres membres.</p>
         </div>
         <Link 
           href="/membres/forum/nouveau" 
@@ -44,19 +44,19 @@ export default function ForumClient() {
       </div>
 
       {loading ? (
-        <div className="py-16 text-center text-gray-400 bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-8">Chargement du forum...</div>
+        <div className="py-16 text-center text-gray-400 bg-white border border-outline-variant rounded-2xl shadow-sm p-8">Chargement du forum...</div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => (
-            <div key={cat.id} className="bg-white border border-[#e8e8e4] rounded-2xl shadow-sm overflow-hidden">
-              <div className="bg-[#f8faf8] px-5 py-3 border-b border-[#e8e8e4] flex justify-between items-center">
-                <h2 className="text-sm font-bold text-[#1a1a1a]">{cat.nom}</h2>
-                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-[10px] font-bold text-[#1b5e38] bg-[#f0f7f0] px-2 py-1 rounded hover:bg-[#e3f0e3] transition-colors border border-transparent hover:border-[#c3dec4]">
+            <div key={cat.id} className="bg-white border border-outline-variant rounded-2xl shadow-sm overflow-hidden">
+              <div className="bg-surface-container-low px-5 py-3 border-b border-outline-variant flex justify-between items-center">
+                <h2 className="text-sm font-bold text-on-surface">{cat.nom}</h2>
+                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-[10px] font-bold text-primary bg-primary-container px-2 py-1 rounded hover:bg-primary-container transition-colors border border-transparent hover:border-outline-variant">
                   Voir
                 </Link>
               </div>
               
-              <div className="divide-y divide-gray-50">
+              <div className="divide-y divide-outline-variant">
                 {cat.recent_threads.length === 0 ? (
                   <div className="p-5 text-center text-gray-400 text-xs">
                     Aucun sujet. Soyez le premier !
@@ -66,15 +66,15 @@ export default function ForumClient() {
                     <Link 
                       key={thread.id} 
                       href={`/membres/forum/fil/${thread.id}`}
-                      className="block p-4 hover:bg-gray-50 transition-colors group"
+                      className="block p-4 hover:bg-surface-container-low transition-colors group"
                     >
                       <div className="flex justify-between items-start gap-4">
                         <div className="flex-1 min-w-0">
-                          <h3 className="text-sm font-bold text-gray-800 truncate mb-1 group-hover:text-[#1b5e38] transition-colors">
+                          <h3 className="text-sm font-bold text-on-surface truncate mb-1 group-hover:text-primary transition-colors">
                             {thread.titre}
                           </h3>
-                          <div className="flex items-center gap-1.5 text-[10px] text-gray-500">
-                            <span className="font-semibold text-gray-600">
+                          <div className="flex items-center gap-1.5 text-[10px] text-on-surface-muted">
+                            <span className="font-semibold text-on-surface-variant">
                               {thread.auteur?.prenom}
                             </span>
                             <span>•</span>
@@ -84,7 +84,7 @@ export default function ForumClient() {
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center gap-1 text-[#1b5e38] bg-[#f0f7f0] px-2 py-0.5 rounded text-[10px] font-bold shrink-0 border border-[#e8e8e4]">
+                        <div className="flex items-center gap-1 text-primary bg-primary-container px-2 py-0.5 rounded text-[10px] font-bold shrink-0 border border-outline-variant">
                           <MessageSquare className="w-3 h-3" />
                           {thread.nb_reponses}
                         </div>

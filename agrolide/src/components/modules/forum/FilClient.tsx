@@ -81,24 +81,24 @@ export default function FilClient({ filId }: FilClientProps) {
     }
   }
 
-  if (loading) return <div className="py-20 text-center text-gray-500">Chargement...</div>
-  if (!thread) return <div className="py-20 text-center text-red-500">Fil introuvable.</div>
+  if (loading) return <div className="py-20 text-center text-on-surface-muted">Chargement...</div>
+  if (!thread) return <div className="py-20 text-center text-error">Fil introuvable.</div>
 
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
       {/* Header */}
-      <div className="bg-white border border-[#e8e8e4] rounded-2xl p-5 shadow-sm">
-        <Link href={`/membres/forum/categorie/${thread.categorie_id}`} className="inline-flex items-center gap-1.5 text-xs font-bold text-gray-500 hover:text-gray-900 transition-colors mb-3">
+      <div className="bg-white border border-outline-variant rounded-2xl p-5 shadow-sm">
+        <Link href={`/membres/forum/categorie/${thread.categorie_id}`} className="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface-muted hover:text-on-surface transition-colors mb-3">
           <ArrowLeft className="w-3.5 h-3.5" /> Retour à {thread.categorie?.nom}
         </Link>
         <div className="flex items-start gap-3 mb-2">
-          <h1 className="text-lg md:text-xl font-bold text-[#1a1a1a] flex-1 font-heading">{thread.titre}</h1>
-          <span className="bg-[#f0f7f0] text-[#1b5e38] px-2.5 py-1 rounded border border-[#c3dec4] text-[10px] font-bold uppercase tracking-wider shrink-0">
+          <h1 className="text-lg md:text-xl font-bold text-on-surface flex-1 font-heading">{thread.titre}</h1>
+          <span className="bg-primary-container text-primary px-2.5 py-1 rounded border border-outline-variant text-[10px] font-bold uppercase tracking-wider shrink-0">
             {thread.categorie?.nom}
           </span>
         </div>
-        <div className="flex items-center gap-2 text-[11px] font-medium text-gray-500">
-          <span>Par <span className="font-bold text-gray-700">{thread.auteur?.prenom} {thread.auteur?.nom}</span></span>
+        <div className="flex items-center gap-2 text-[11px] font-medium text-on-surface-muted">
+          <span>Par <span className="font-bold text-on-surface-variant">{thread.auteur?.prenom} {thread.auteur?.nom}</span></span>
           <span>•</span>
           <span>{format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}</span>
         </div>
@@ -107,18 +107,18 @@ export default function FilClient({ filId }: FilClientProps) {
       {/* Messages */}
       <div className="space-y-6">
         {messages.map((msg, index) => (
-          <div key={msg.id} className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden flex flex-col sm:flex-row">
+          <div key={msg.id} className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col sm:flex-row">
             {/* Profil Sidebar */}
-            <div className="bg-[#f8faf8] p-4 sm:w-40 sm:border-r border-[#e8e8e4] flex flex-col items-center text-center shrink-0">
-              <div className="w-12 h-12 bg-white border border-[#e8e8e4] rounded-xl flex items-center justify-center mb-2 shadow-sm overflow-hidden relative">
+            <div className="bg-surface-container-low p-4 sm:w-40 sm:border-r border-outline-variant flex flex-col items-center text-center shrink-0">
+              <div className="w-12 h-12 bg-white border border-outline-variant rounded-xl flex items-center justify-center mb-2 shadow-sm overflow-hidden relative">
                 {msg.auteur?.avatar_url ? (
                   <Image src={msg.auteur.avatar_url} alt="Avatar" fill sizes="48px" className="object-cover" />
                 ) : (
                   <User className="w-6 h-6 text-gray-400" />
                 )}
               </div>
-              <div className="font-bold text-[#1a1a1a] text-xs truncate w-full">{msg.auteur?.prenom}</div>
-              <div className="font-medium text-gray-500 text-[10px] truncate w-full">{msg.auteur?.nom}</div>
+              <div className="font-bold text-on-surface text-xs truncate w-full">{msg.auteur?.prenom}</div>
+              <div className="font-medium text-on-surface-muted text-[10px] truncate w-full">{msg.auteur?.nom}</div>
             </div>
             
             {/* Contenu */}
@@ -130,14 +130,14 @@ export default function FilClient({ filId }: FilClientProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   <span>#{index + 1}</span>
-                  <button onClick={() => handleReport(msg.id)} className="text-gray-400 hover:text-red-500 transition-colors p-1" title="Signaler">
+                  <button onClick={() => handleReport(msg.id)} className="text-gray-400 hover:text-error transition-colors p-1" title="Signaler">
                     <AlertTriangle className="w-3.5 h-3.5" />
                   </button>
                 </div>
               </div>
               
               <div 
-                className="prose prose-sm max-w-none text-gray-700 flex-1"
+                className="prose prose-sm max-w-none text-on-surface-variant flex-1"
                 dangerouslySetInnerHTML={{ __html: marked.parse(msg.contenu) as string }}
               />
             </div>
@@ -148,39 +148,39 @@ export default function FilClient({ filId }: FilClientProps) {
 
       {/* Reply Form */}
       {thread.statut === 'ouvert' ? (
-        <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-5">
-          <h3 className="text-sm font-bold text-[#1a1a1a] mb-3">Répondre</h3>
+        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+          <h3 className="text-sm font-bold text-on-surface mb-3">Répondre</h3>
           {currentUser ? (
             <form onSubmit={handleReply}>
               <textarea 
                 value={replyContent}
                 onChange={e => setReplyContent(e.target.value)}
                 placeholder="Écrivez votre réponse ici... (Markdown supporté)"
-                className="w-full h-24 p-3 text-sm border border-gray-200 rounded-xl focus:ring-2 focus:ring-[#50a853] focus:border-transparent outline-none resize-y font-sans"
+                className="w-full h-24 p-3 text-sm border border-outline-variant rounded-xl focus:ring-2 focus:ring-accent-leaf focus:border-transparent outline-none resize-y font-sans"
                 maxLength={3000}
                 required
               />
               <div className="flex justify-between items-center mt-3">
-                <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wider">
+                <div className="text-[10px] text-on-surface-muted font-medium uppercase tracking-wider">
                   {replyContent.length}/3000 caractères
                 </div>
                 <button 
                   type="submit" 
                   disabled={replying || !replyContent.trim()}
-                  className="bg-[#1b5e38] hover:bg-[#144a2c] disabled:opacity-50 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors"
+                  className="bg-primary hover:bg-primary/90 disabled:opacity-50 text-white px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors"
                 >
                   <Send className="w-3.5 h-3.5" /> Publier
                 </button>
               </div>
             </form>
           ) : (
-            <div className="bg-gray-50 p-4 rounded-xl text-center text-xs text-gray-600 border border-[#e8e8e4]">
+            <div className="bg-surface-container-low p-4 rounded-xl text-center text-xs text-on-surface-variant border border-outline-variant">
               Vous devez être connecté pour participer à la discussion.
             </div>
           )}
         </div>
       ) : (
-        <div className="bg-gray-50 p-4 rounded-xl text-center text-xs text-gray-500 font-medium border border-[#e8e8e4]">
+        <div className="bg-surface-container-low p-4 rounded-xl text-center text-xs text-on-surface-muted font-medium border border-outline-variant">
           🔒 Ce sujet a été fermé. Il n'est plus possible d'y répondre.
         </div>
       )}

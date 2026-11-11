@@ -22,28 +22,28 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
   const isExpired = opp.date_limite && new Date(opp.date_limite) < new Date()
 
   return (
-    <div className={`group bg-white border border-[#e8e8e4] rounded-2xl shadow-sm hover:border-[#1b5e38] hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
+    <div className={`group bg-white border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
       <div className="p-5 flex-grow">
         <div className="flex justify-between items-start mb-3">
-          <span className="bg-[#f0f7f0] text-[#1b5e38] border border-[#c3dec4] px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
+          <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
             {getIcon(opp.type_opp)} {opp.type_opp}
           </span>
           {isExpired && (
-            <span className="bg-red-50 text-red-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
+            <span className="bg-error-container text-error px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
               Expiré
             </span>
           )}
         </div>
         
-        <h3 className="text-sm font-bold text-[#1a1a1a] mb-2 group-hover:text-[#1b5e38] transition-colors leading-snug">
+        <h3 className="text-sm font-bold text-on-surface mb-2 group-hover:text-primary transition-colors leading-snug">
           {opp.titre}
         </h3>
         
-        <p className="text-xs text-gray-500 line-clamp-2 mb-4">
+        <p className="text-xs text-on-surface-muted line-clamp-2 mb-4">
           {opp.description}
         </p>
         
-        <div className="space-y-1.5 text-xs text-gray-500">
+        <div className="space-y-1.5 text-xs text-on-surface-muted">
           {opp.lieu && (
             <div className="flex items-center gap-2">
               <MapPin className="w-3.5 h-3.5 text-gray-400 shrink-0" />
@@ -54,7 +54,7 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
           {opp.montant && (
             <div className="flex items-center gap-2">
               <DollarSign className="w-3.5 h-3.5 text-gray-400 shrink-0" />
-              <span className="font-bold text-gray-700">{opp.montant}</span>
+              <span className="font-bold text-on-surface-variant">{opp.montant}</span>
             </div>
           )}
           
@@ -73,12 +73,12 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
             href={opp.lien_externe}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2 bg-gray-50 hover:bg-[#f0f7f0] hover:text-[#1b5e38] text-gray-600 font-bold rounded-lg text-[11px] transition-colors flex items-center justify-center gap-1.5 border border-[#e8e8e4] uppercase tracking-wider"
+            className="w-full py-2 bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-[11px] transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider"
           >
             Voir l'offre <ExternalLink className="w-3 h-3" />
           </a>
         ) : (
-          <div className="bg-gray-50 py-2 text-center rounded-lg text-[11px] text-gray-500 font-bold border border-[#e8e8e4] uppercase tracking-wider">
+          <div className="bg-surface-container-low py-2 text-center rounded-lg text-[11px] text-on-surface-muted font-bold border border-outline-variant uppercase tracking-wider">
             Contactez l'auteur
           </div>
         )}
