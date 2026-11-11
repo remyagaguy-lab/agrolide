@@ -1,42 +1,72 @@
 import { redirect } from "next/navigation"
-import { ProfilForm } from "./ProfilForm"
+import Link from "next/link"
+import { ShieldCheck } from "lucide-react"
+import { eq } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
-import { eq } from "drizzle-orm"
+import { parseList } from "@/lib/reseau/profil"
+import { buttonVariants } from "@/components/ui/Button"
+import { ProfilForm } from "./ProfilForm"
+
+export const metadata = { title: "Modifier mon profil" }
 
 export default async function ProfilModifierPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/login")
+  if (!userId) redirect("/login?next=/membres/profil/modifier")
 
-  const userRows = await db.select({
-    id: users.id,
-    prenom: users.prenom,
-    nom: users.nom,
-    entreprise: users.organisation,
-    bio: users.biographie,
-    avatar_url: users.photo_url
-  })
-  .from(users)
-  .where(eq(users.id, userId))
-  .limit(1)
-
-  const profile = userRows[0] ? {
-    ...userRows[0],
-    telephone: ""
-  } : null
-
-  if (!profile) redirect("/login")
+  const [row] = await db
+    .select({
+      prenom: users.prenom,
+      nom: users.nom,
+      organisation: users.organisation,
+      specialite: users.specialite,
+      pays: users.pays,
+      ville: users.ville,
+      niveau_etudes: users.niveau_etudes,
+      biographie: users.biographie,
+      secteurs_expertise: users.secteurs_expertise,
+      langues: users.langues,
+      linkedin_url: users.linkedin_url,
+      site_web_url: users.site_web_url,
+      photo_url: users.photo_url,
+    })
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1)
+  if (!row) redirect("/login")
 
   return (
-    <div className="max-w-[800px] mx-auto space-y-6 py-6 px-2 md:px-4">
-      <div className="mb-4">
-        <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading">Modifier mon Profil</h1>
-        <p className="mt-1 text-on-surface-muted text-xs">Mettez à jour vos informations personnelles et professionnelles.</p>
-      </div>
-      
-      <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-5 md:p-6">
-        <ProfilForm initialData={profile} />
+    <div className="mx-auto max-w-3xl space-y-6">
+      <header className="space-y-2">
+        <h1 className="text-headline-md text-on-surface">Modifier mon profil</h1>
+        <p className="text-body-md text-on-surface-variant">
+          Ces informations s’affichent sur votre carte dans l’annuaire des membres.
+        </p>
+        <Link href="/membres/profil/confidentialite" className={buttonVariants({ variant: "text", size: "sm" })}>
+          <ShieldCheck className="size-5" aria-hidden />
+          Gérer la confidentialité de mon profil
+        </Link>
+      </header>
+
+      <div className="rounded-card border border-outline-variant bg-surface-container-lowest p-5 md:p-6">
+        <ProfilForm
+          initial={{
+            prenom: row.prenom ?? "",
+            nom: row.nom ?? "",
+            organisation: row.organisation ?? "",
+            specialite: row.specialite ?? "",
+            pays: row.pays ?? "",
+            ville: row.ville ?? "",
+            niveau_etudes: row.niveau_etudes ?? "",
+            biographie: row.biographie ?? "",
+            thematiques: parseList(row.secteurs_expertise),
+            langues: parseList(row.langues),
+            linkedin_url: row.linkedin_url ?? "",
+            site_web_url: row.site_web_url ?? "",
+            photo_url: row.photo_url ?? "",
+          }}
+        />
       </div>
     </div>
   )

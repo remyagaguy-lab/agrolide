@@ -17,6 +17,8 @@ interface ProfileSummaryWidgetProps {
   categorie?: string | null
   isAdhesionActive?: boolean
   joursRestants?: number
+  /** Valeur réelle de `annuaire_visible` (vide = visible, comme dans l’annuaire). */
+  annuaireVisible?: boolean | null
 }
 
 export function ProfileSummaryWidget({
@@ -28,9 +30,9 @@ export function ProfileSummaryWidget({
   pays,
   isAdhesionActive = false,
   joursRestants = 0,
+  annuaireVisible,
 }: ProfileSummaryWidgetProps) {
   const displayName = prenom ? `${prenom}${nom ? ` ${nom}` : ""}` : "Membre"
-  const isProfileComplete = Boolean(specialite && organisation && pays)
   const hasValidPhoto = Boolean(photo_url && (photo_url.startsWith("http") || photo_url.startsWith("/")))
 
   return (
@@ -75,11 +77,15 @@ export function ProfileSummaryWidget({
       {/* Visibilité dans l'annuaire */}
       <div className="mb-3.5 flex items-center justify-between rounded-card bg-surface-container p-3 text-body-sm">
         <span className="flex items-center gap-2 font-semibold text-on-surface">
-          <span aria-hidden="true" className="size-2 rounded-full bg-accent-leaf" />
+          <span aria-hidden="true" className={cn("size-2 rounded-full", annuaireVisible === false ? "bg-outline" : "bg-accent-leaf")} />
           Annuaire des pairs
         </span>
-        <Badge variant="junior">{isProfileComplete ? "Profil complet" : "Visibilité active"}</Badge>
+        <Badge variant={annuaireVisible === false ? "neutral" : "success"}>{annuaireVisible === false ? "Masqué" : "Visible"}</Badge>
       </div>
+
+      <Button href="/membres/profil/confidentialite" variant="text" size="sm" fullWidth className="mb-1">
+        Gérer ma visibilité
+      </Button>
 
       <Button href="/membres/profil" variant="tonal" size="sm" fullWidth>
         Modifier mon profil

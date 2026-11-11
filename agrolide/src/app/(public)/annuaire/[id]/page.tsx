@@ -186,12 +186,12 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
             <div className="mt-4 md:mt-8 flex gap-3 w-full md:w-auto">
               {userId === id ? (
                 <Link 
-                  href="/parametres/profil"
+                  href="/membres/profil/modifier"
                   className="flex-1 md:flex-none bg-surface-container-lowest text-on-surface-variant px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm border border-outline-variant hover:bg-surface-container-low"
                 >
                   Modifier mon profil
                 </Link>
-              ) : member.ouvert_contact ? (
+              ) : member.ouvert_contact !== false ? (
                 <ConnectButton memberId={member.id} status={connectionStatus} />
               ) : (
                 <div className="px-5 py-2.5 rounded-xl bg-surface-container-low text-on-surface-muted font-medium text-sm border border-outline-variant">

@@ -19,14 +19,11 @@ import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
+import { parseList, safeExternalUrl } from "@/lib/reseau/profil"
+import { completionProfil } from "@/lib/reseau/profil-schema"
 
 export const metadata = { title: "Mon Profil" }
 
-function getProfileCompletion(profile: any) {
-  const fields = ['prenom', 'nom', 'email', 'ville', 'pays', 'specialite', 'organisation', 'biographie', 'linkedin_url', 'site_web_url', 'langues', 'niveau_etudes', 'secteurs_expertise', 'photo_url'];
-  const filled = fields.filter(f => profile[f] && String(profile[f]).trim() !== '').length;
-  return Math.round((filled / fields.length) * 100);
-}
 
 export default async function ProfilPage() {
   const { userId } = await auth()
@@ -37,7 +34,7 @@ export default async function ProfilPage() {
 
   if (!profile) redirect("/login")
 
-  const completion = getProfileCompletion(profile);
+  const completion = completionProfil({ ...profile, thematiques: parseList(profile.secteurs_expertise) }).pourcentage;
 
   return (
     <div className="max-w-[1000px] mx-auto space-y-4 h-full flex flex-col">
@@ -45,7 +42,10 @@ export default async function ProfilPage() {
         <div>
           <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading leading-tight">Mon Profil</h1>
           <p className="text-[11px] text-on-surface-muted font-medium mt-0.5">
-            Gérez vos informations personnelles et professionnelles.
+            Gérez vos informations personnelles et professionnelles.{" "}
+            <Link href="/membres/profil/confidentialite" className="text-primary underline underline-offset-2">
+              Confidentialité du profil
+            </Link>
           </p>
         </div>
         <Link 
@@ -158,7 +158,7 @@ export default async function ProfilPage() {
                 <div className="md:col-span-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
                   <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Domaines d'expertise</p>
                   <p className="text-[11px] font-medium text-on-surface-variant">
-                    {profile.secteurs_expertise || 'Aucun domaine spécifié.'}
+                    {parseList(profile.secteurs_expertise).join(', ') || 'Aucun domaine spécifié.'}
                   </p>
                 </div>
                 
@@ -167,7 +167,7 @@ export default async function ProfilPage() {
                   <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Langues parlées</p>
                   <p className="text-[11px] font-medium text-on-surface flex items-center gap-1.5">
                     <Languages size={14} className="text-on-surface-muted" />
-                    {profile.langues || 'Non renseigné'}
+                    {parseList(profile.langues).join(', ') || 'Non renseigné'}
                   </p>
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default async function ProfilPage() {
                     </div>
                     <div>
                       <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Site Web</p>
-                      <a href={profile.site_web_url} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
+                      <a href={safeExternalUrl(profile.site_web_url) ?? undefined} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
                         {profile.site_web_url}
                       </a>
                     </div>
@@ -227,7 +227,7 @@ export default async function ProfilPage() {
                     </div>
                     <div>
                       <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">LinkedIn</p>
-                      <a href={profile.linkedin_url} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
+                      <a href={safeExternalUrl(profile.linkedin_url) ?? undefined} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
                         Voir le profil
                       </a>
                     </div>

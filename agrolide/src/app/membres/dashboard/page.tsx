@@ -55,7 +55,8 @@ export default async function DashboardPage() {
       specialite: users.specialite,
       organisation: users.organisation,
       ville: users.ville,
-      pays: users.pays
+      pays: users.pays,
+      annuaire_visible: users.annuaire_visible
     })
     .from(users)
     .where(eq(users.id, userId))
@@ -243,6 +244,7 @@ export default async function DashboardPage() {
             categorie={profile.categorie}
             isAdhesionActive={isAdhesionActive}
             joursRestants={joursRestants}
+            annuaireVisible={profile.annuaire_visible}
           />
         </div>
 

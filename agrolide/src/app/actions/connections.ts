@@ -12,10 +12,12 @@ export async function sendConnectionRequest(receiverId: string) {
   if (receiverId === userId) return { error: "Vous ne pouvez pas vous inviter vous-même." };
 
   const receiver = await db.query.users.findFirst({
-    columns: { id: true, annuaire_visible: true },
+    columns: { id: true, annuaire_visible: true, ouvert_contact: true },
     where: (u, { eq }) => eq(u.id, receiverId),
   });
   if (!receiver || receiver.annuaire_visible === false) return { error: "Ce membre est introuvable." };
+  // Décision D2 : seul un refus explicite ferme les invitations (valeur vide = ouvert).
+  if (receiver.ouvert_contact === false) return { error: "Ce membre ne reçoit pas d’invitations." };
 
   // Check if connection already exists
   const existing = await db.query.user_connections.findFirst({

@@ -88,3 +88,22 @@ export function safeExternalUrl(raw: string | null | undefined): string | null {
     return null
   }
 }
+
+/** Langues proposées à la saisie du profil (liste fermée ; les valeurs déjà saisies ailleurs restent conservées). */
+export const LANGUES = [
+  'Français', 'Anglais', 'Arabe', 'Portugais', 'Espagnol', 'Swahili', 'Wolof', 'Lingala', 'Bambara', 'Malgache',
+] as const
+
+/** Grandes régions, uniquement pour les pays proposés à l'inscription (aucune région pour France et Canada). */
+export const REGIONS: Record<string, readonly string[]> = {
+  "Afrique de l'Ouest": ['Sénégal', "Côte d'Ivoire", 'Bénin', 'Togo', 'Mali', 'Burkina Faso', 'Guinée'],
+  'Afrique centrale': ['Cameroun', 'Congo', 'Gabon', 'RDC'],
+  'Afrique du Nord': ['Maroc', 'Tunisie', 'Algérie'],
+  'Océan Indien': ['Madagascar'],
+}
+
+export function regionDe(pays: string | null | undefined): string | null {
+  if (!pays) return null
+  for (const [region, liste] of Object.entries(REGIONS)) if (liste.includes(pays)) return region
+  return null
+}
