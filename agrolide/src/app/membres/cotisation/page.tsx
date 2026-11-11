@@ -40,8 +40,8 @@ export default async function CotisationPage() {
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
       <div>
-        <h1 className="text-xl md:text-2xl font-bold text-[#1a1a1a] font-heading mb-1">Ma Cotisation</h1>
-        <p className="text-xs text-gray-500">Gérez votre abonnement et accédez à votre historique de paiement.</p>
+        <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading mb-1">Ma Cotisation</h1>
+        <p className="text-xs text-on-surface-muted">Gérez votre abonnement et accédez à votre historique de paiement.</p>
       </div>
 
       {showPaymentBlock && (
@@ -51,17 +51,17 @@ export default async function CotisationPage() {
                <AlertTriangle className="text-orange-600 w-5 h-5" strokeWidth={2.5} />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-[#1a1a1a]">
+              <h2 className="text-lg font-bold text-on-surface">
                 Finaliser votre adhésion {profile.categorie}
               </h2>
-              <p className="text-xs text-gray-600 mt-1.5 leading-relaxed">
+              <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
                 Pour profiter pleinement de tous les avantages du réseau, veuillez régler votre cotisation annuelle de <strong className="text-orange-600 text-sm bg-orange-100 border border-orange-200 px-2 py-0.5 rounded ml-1">{montantFCFA} FCFA</strong>.
               </p>
             </div>
           </div>
           
           <div className="p-6">
-            <h3 className="font-bold text-[#1a1a1a] mb-6 text-center text-sm">Choisissez votre mode de paiement</h3>
+            <h3 className="font-bold text-on-surface mb-6 text-center text-sm">Choisissez votre mode de paiement</h3>
             
             {/* Composant Client pour gérer les appels API de paiement */}
             <PaiementBoutons 
@@ -69,71 +69,71 @@ export default async function CotisationPage() {
             />
             
             <div className="mt-6 flex items-center justify-center gap-1.5 text-[11px] text-gray-400 font-bold uppercase tracking-wider">
-              <CheckCircle size={14} className="text-green-500" /> Paiements 100% sécurisés
+              <CheckCircle size={14} className="text-success" /> Paiements 100% sécurisés
             </div>
           </div>
         </div>
       )}
 
       {!showPaymentBlock && cotisationActive && (
-        <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-[#f0f7f0] border border-[#c3dec4] rounded-full flex items-center justify-center text-[#1b5e38] shrink-0 shadow-sm">
+            <div className="w-12 h-12 bg-primary-container border border-outline-variant rounded-full flex items-center justify-center text-primary shrink-0 shadow-sm">
               <CheckCircle size={24} strokeWidth={2.5} />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-[#1a1a1a] mb-0.5">Adhésion active</h2>
-              <p className="text-xs text-gray-500">Valable jusqu'au <strong className="text-gray-900 bg-gray-50 border border-[#e8e8e4] px-1.5 py-0.5 rounded">{cotisationActive.date_fin ? new Date(cotisationActive.date_fin).toLocaleDateString('fr-FR') : 'N/A'}</strong></p>
+              <h2 className="text-lg font-bold text-on-surface mb-0.5">Adhésion active</h2>
+              <p className="text-xs text-on-surface-muted">Valable jusqu'au <strong className="text-on-surface bg-surface-container-low border border-outline-variant px-1.5 py-0.5 rounded">{cotisationActive.date_fin ? new Date(cotisationActive.date_fin).toLocaleDateString('fr-FR') : 'N/A'}</strong></p>
             </div>
           </div>
-          <div className="text-right bg-gray-50 p-3 rounded-xl border border-[#e8e8e4]">
-            <span className="inline-block px-3 py-1 bg-white shadow-sm border border-[#e8e8e4] rounded text-[10px] font-bold text-gray-600 uppercase tracking-wider mb-2">
+          <div className="text-right bg-surface-container-low p-3 rounded-xl border border-outline-variant">
+            <span className="inline-block px-3 py-1 bg-white shadow-sm border border-outline-variant rounded text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-2">
               Méthode: {cotisationActive.methode === 'stripe' ? 'Carte Bancaire' : 'Mobile Money'}
             </span>
-            <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wider">Montant payé: <span className="text-gray-900">{cotisationActive.montant_fcfa} FCFA</span></p>
+            <p className="text-[11px] text-on-surface-muted font-bold uppercase tracking-wider">Montant payé: <span className="text-on-surface">{cotisationActive.montant_fcfa} FCFA</span></p>
           </div>
         </div>
       )}
 
       {/* Historique */}
-      <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden">
-        <div className="px-5 py-4 border-b border-[#e8e8e4] flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-gray-50 border border-[#e8e8e4] rounded-lg flex items-center justify-center">
-             <Clock size={16} className="text-[#1b5e38]" />
+      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
+        <div className="px-5 py-4 border-b border-outline-variant flex items-center gap-2.5">
+          <div className="w-8 h-8 bg-surface-container-low border border-outline-variant rounded-lg flex items-center justify-center">
+             <Clock size={16} className="text-primary" />
           </div>
-          <h3 className="font-heading font-bold text-sm text-[#1a1a1a]">
+          <h3 className="font-heading font-bold text-sm text-on-surface">
             Historique de paiements
           </h3>
         </div>
         
         <div className="overflow-x-auto">
           <table className="w-full text-left text-[11px]">
-            <thead className="bg-[#f8faf8]">
-              <tr className="text-gray-500 uppercase tracking-wider font-bold">
-                <th className="px-4 py-3 border-b border-[#e8e8e4]">Date</th>
-                <th className="px-4 py-3 border-b border-[#e8e8e4]">Montant</th>
-                <th className="px-4 py-3 border-b border-[#e8e8e4]">Méthode</th>
-                <th className="px-4 py-3 border-b border-[#e8e8e4]">Statut</th>
-                <th className="px-4 py-3 border-b border-[#e8e8e4]">Période de validité</th>
+            <thead className="bg-surface-container-low">
+              <tr className="text-on-surface-muted uppercase tracking-wider font-bold">
+                <th className="px-4 py-3 border-b border-outline-variant">Date</th>
+                <th className="px-4 py-3 border-b border-outline-variant">Montant</th>
+                <th className="px-4 py-3 border-b border-outline-variant">Méthode</th>
+                <th className="px-4 py-3 border-b border-outline-variant">Statut</th>
+                <th className="px-4 py-3 border-b border-outline-variant">Période de validité</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#e8e8e4]">
+            <tbody className="divide-y divide-outline-variant">
               {cotisations && cotisations.length > 0 ? (
                 cotisations.map((cotis: any) => (
-                  <tr key={cotis.id} className="hover:bg-gray-50 transition-colors">
-                    <td className="px-4 py-3 font-medium text-gray-600">{new Date(cotis.created_at).toLocaleDateString('fr-FR')}</td>
-                    <td className="px-4 py-3 font-bold text-[#1a1a1a]">{cotis.montant_fcfa} FCFA</td>
+                  <tr key={cotis.id} className="hover:bg-surface-container-low transition-colors">
+                    <td className="px-4 py-3 font-medium text-on-surface-variant">{new Date(cotis.created_at).toLocaleDateString('fr-FR')}</td>
+                    <td className="px-4 py-3 font-bold text-on-surface">{cotis.montant_fcfa} FCFA</td>
                     <td className="px-4 py-3 capitalize">
-                       <span className="bg-gray-50 border border-[#e8e8e4] px-2 py-0.5 rounded text-[10px] font-bold text-gray-600 uppercase tracking-wider">{cotis.methode}</span>
+                       <span className="bg-surface-container-low border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">{cotis.methode}</span>
                     </td>
                     <td className="px-4 py-3">
                       <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border ${
-                        cotis.statut === 'valide' ? 'bg-[#f0f7f0] text-[#1b5e38] border-[#c3dec4]' : 'bg-red-50 text-red-700 border-red-200'
+                        cotis.statut === 'valide' ? 'bg-primary-container text-primary border-outline-variant' : 'bg-error-container text-error border-error/30'
                       }`}>
                         {cotis.statut}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-gray-500 font-medium">
+                    <td className="px-4 py-3 text-on-surface-muted font-medium">
                       {new Date(cotis.date_debut).toLocaleDateString('fr-FR')} - {new Date(cotis.date_fin).toLocaleDateString('fr-FR')}
                     </td>
                   </tr>

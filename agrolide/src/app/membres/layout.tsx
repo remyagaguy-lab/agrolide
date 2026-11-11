@@ -79,18 +79,18 @@ export default async function MembresRootLayout({
     }
 
     return (
-      <div className="min-h-screen bg-gray-50 flex flex-col">
+      <div className="min-h-screen bg-surface-container-low flex flex-col">
         {/* Header moved to MembresLayout for client-side routing state */}
 
         {/* Traitement des statuts */}
 
         {statut === "suspendu" && (
           <div className="flex-1 flex items-center justify-center p-4">
-            <div className="bg-white p-8 rounded-xl border border-red-200 shadow-sm max-w-md text-center">
-              <AlertCircle className="mx-auto text-red-500 mb-4" size={48} />
-              <h2 className="text-xl font-bold text-red-700 mb-2">Compte suspendu</h2>
-              <p className="text-gray-600 mb-6">Votre compte a été suspendu par un administrateur. Veuillez nous contacter pour plus d'informations.</p>
-              <a href="mailto:contact@agrolide.org" className="inline-block bg-red-50 text-red-700 font-medium px-4 py-2 rounded hover:bg-red-100">
+            <div className="bg-white p-8 rounded-xl border border-error/30 shadow-sm max-w-md text-center">
+              <AlertCircle className="mx-auto text-error mb-4" size={48} />
+              <h2 className="text-xl font-bold text-error mb-2">Compte suspendu</h2>
+              <p className="text-on-surface-variant mb-6">Votre compte a été suspendu par un administrateur. Veuillez nous contacter pour plus d'informations.</p>
+              <a href="mailto:contact@agrolide.org" className="inline-block bg-error-container text-error font-medium px-4 py-2 rounded hover:bg-error-container">
                 Contacter le support
               </a>
             </div>
@@ -99,7 +99,7 @@ export default async function MembresRootLayout({
 
         {/* Si le compte est expiré, on affiche une bannière non fermable */}
         {statut === "expire" && (
-          <div className="bg-red-600 text-white p-4 text-center font-bold flex items-center justify-center gap-2">
+          <div className="bg-error text-white p-4 text-center font-bold flex items-center justify-center gap-2">
             <AlertCircle size={20} />
             Votre adhésion a expiré. Pour continuer à profiter du réseau, veuillez renouveler votre cotisation.
             <Link href="/membres/cotisation" className="underline ml-2 hover:text-red-100">

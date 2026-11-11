@@ -43,14 +43,14 @@ export default async function ProfilPage() {
     <div className="max-w-[1000px] mx-auto space-y-4 h-full flex flex-col">
       <div className="flex justify-between items-center shrink-0">
         <div>
-          <h1 className="text-xl md:text-2xl font-bold text-[#1a1a1a] font-heading leading-tight">Mon Profil</h1>
-          <p className="text-[11px] text-gray-500 font-medium mt-0.5">
+          <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading leading-tight">Mon Profil</h1>
+          <p className="text-[11px] text-on-surface-muted font-medium mt-0.5">
             Gérez vos informations personnelles et professionnelles.
           </p>
         </div>
         <Link 
           href="/membres/profil/modifier" 
-          className="flex items-center gap-1.5 px-4 py-2 bg-[#1b5e38] text-white text-[11px] font-bold rounded-lg hover:bg-[#144a2c] transition-colors shadow-sm"
+          className="flex items-center gap-1.5 px-4 py-2 bg-primary text-white text-[11px] font-bold rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
         >
           <Edit size={14} /> Modifier
         </Link>
@@ -59,14 +59,14 @@ export default async function ProfilPage() {
       <div className="flex-1 overflow-y-auto custom-scrollbar pb-10 min-h-0">
         
         {/* En-tête du profil */}
-        <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] overflow-hidden relative mb-6">
+        <div className="bg-white rounded-2xl shadow-sm border border-outline-variant overflow-hidden relative mb-6">
           <div className="h-32 w-full bg-gradient-to-r from-[#1b5e38] via-[#217346] to-[#0c361e] relative overflow-hidden">
              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:20px_20px]"></div>
           </div>
           
           <div className="px-6 pb-6 relative">
-            <div className="absolute -top-12 left-6 w-24 h-24 bg-white rounded-2xl p-1 shadow-sm border border-[#e8e8e4]">
-              <div className="w-full h-full bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center relative">
+            <div className="absolute -top-12 left-6 w-24 h-24 bg-white rounded-2xl p-1 shadow-sm border border-outline-variant">
+              <div className="w-full h-full bg-surface-container-low rounded-xl overflow-hidden flex items-center justify-center relative">
                 {profile.photo_url ? (
                   <Image src={profile.photo_url} alt="Avatar" fill sizes="96px" className="object-cover" />
                 ) : (
@@ -77,31 +77,31 @@ export default async function ProfilPage() {
             
             <div className="ml-28 pt-2 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
               <div>
-                <h2 className="text-xl font-heading font-bold text-[#1a1a1a] tracking-tight flex items-center gap-2">
+                <h2 className="text-xl font-heading font-bold text-on-surface tracking-tight flex items-center gap-2">
                   {profile.prenom} {profile.nom}
                   {profile.statut_adhesion === 'payant' && (
-                    <ShieldCheck size={16} className="text-[#1b5e38]" />
+                    <ShieldCheck size={16} className="text-primary" />
                   )}
                 </h2>
-                <div className="text-xs text-gray-500 font-bold mt-1 flex flex-wrap items-center gap-2">
+                <div className="text-xs text-on-surface-muted font-bold mt-1 flex flex-wrap items-center gap-2">
                    {profile.specialite && (
                      <span className="uppercase tracking-wider">{profile.specialite}</span>
                    )}
                    {profile.specialite && <span className="w-1 h-1 rounded-full bg-gray-300"></span>}
-                   <span className="text-[#1b5e38]">Membre {profile.categorie}</span>
+                   <span className="text-primary">Membre {profile.categorie}</span>
                    <span className="w-1 h-1 rounded-full bg-gray-300"></span>
                    <span className="capitalize">{profile.statut_adhesion}</span>
                 </div>
               </div>
               
               {/* Jauge de complétion */}
-              <div className="bg-gray-50 border border-[#e8e8e4] rounded-xl p-3 w-full md:w-48 shrink-0">
+              <div className="bg-surface-container-low border border-outline-variant rounded-xl p-3 w-full md:w-48 shrink-0">
                 <div className="flex justify-between items-end mb-1.5">
-                  <span className="text-[10px] font-bold text-gray-500 uppercase tracking-wider">Complétion</span>
-                  <span className="text-xs font-bold text-[#1a1a1a]">{completion}%</span>
+                  <span className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">Complétion</span>
+                  <span className="text-xs font-bold text-on-surface">{completion}%</span>
                 </div>
-                <div className="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-[#1b5e38] rounded-full transition-all duration-500" style={{ width: `${completion}%` }}></div>
+                <div className="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+                  <div className="h-full bg-primary rounded-full transition-all duration-500" style={{ width: `${completion}%` }}></div>
                 </div>
                 {completion < 100 && (
                   <p className="text-[9px] text-orange-600 mt-1.5 font-medium flex items-center gap-1">
@@ -120,52 +120,52 @@ export default async function ProfilPage() {
             
             {/* Bio */}
             {profile.biographie && (
-              <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-5">
-                <h3 className="font-heading font-bold text-sm text-[#1a1a1a] flex items-center gap-2 mb-3">
-                   <BookOpen size={14} className="text-[#1b5e38]" /> À propos
+              <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+                <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-3">
+                   <BookOpen size={14} className="text-primary" /> À propos
                 </h3>
-                <p className="text-[11px] text-gray-600 leading-relaxed font-medium">
+                <p className="text-[11px] text-on-surface-variant leading-relaxed font-medium">
                   {profile.biographie}
                 </p>
               </div>
             )}
 
             {/* Expérience & Compétences */}
-            <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-5">
-              <h3 className="font-heading font-bold text-sm text-[#1a1a1a] flex items-center gap-2 mb-4">
-                 <Star size={14} className="text-[#1b5e38]" /> Expertise & Parcours
+            <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+              <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-4">
+                 <Star size={14} className="text-primary" /> Expertise & Parcours
               </h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Spécialité */}
-                <div className="bg-[#fcfdfc] p-3 rounded-xl border border-[#e8e8e4]">
+                <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant">
                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Spécialité Principale</p>
-                  <span className="inline-block px-2.5 py-1 bg-[#dff0e0] text-[#1b5e38] rounded-md text-[10px] font-bold uppercase tracking-wider">
+                  <span className="inline-block px-2.5 py-1 bg-primary-container text-primary rounded-md text-[10px] font-bold uppercase tracking-wider">
                     {profile.specialite || 'Non renseignée'}
                   </span>
                 </div>
                 
                 {/* Niveau d'études */}
-                <div className="bg-[#fcfdfc] p-3 rounded-xl border border-[#e8e8e4]">
+                <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant">
                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Niveau d'études</p>
-                  <p className="text-xs font-bold text-[#1a1a1a] flex items-center gap-1.5">
+                  <p className="text-xs font-bold text-on-surface flex items-center gap-1.5">
                     <GraduationCap size={14} className="text-gray-400" />
                     {profile.niveau_etudes || 'Non renseigné'}
                   </p>
                 </div>
                 
                 {/* Secteurs d'expertise */}
-                <div className="md:col-span-2 bg-[#fcfdfc] p-3 rounded-xl border border-[#e8e8e4]">
+                <div className="md:col-span-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Domaines d'expertise</p>
-                  <p className="text-[11px] font-medium text-gray-600">
+                  <p className="text-[11px] font-medium text-on-surface-variant">
                     {profile.secteurs_expertise || 'Aucun domaine spécifié.'}
                   </p>
                 </div>
                 
                 {/* Langues */}
-                <div className="md:col-span-2 bg-[#fcfdfc] p-3 rounded-xl border border-[#e8e8e4]">
+                <div className="md:col-span-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1.5">Langues parlées</p>
-                  <p className="text-[11px] font-medium text-[#1a1a1a] flex items-center gap-1.5">
+                  <p className="text-[11px] font-medium text-on-surface flex items-center gap-1.5">
                     <Languages size={14} className="text-gray-400" />
                     {profile.langues || 'Non renseigné'}
                   </p>
@@ -178,29 +178,29 @@ export default async function ProfilPage() {
           <div className="space-y-6">
             
             {/* Contact */}
-            <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-5">
-              <h3 className="font-heading font-bold text-sm text-[#1a1a1a] flex items-center gap-2 mb-4">
-                 <User size={14} className="text-[#1b5e38]" /> Contact
+            <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+              <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-4">
+                 <User size={14} className="text-primary" /> Contact
               </h3>
               
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <div className="mt-0.5 text-gray-400 bg-gray-50 p-1.5 rounded-lg border border-[#e8e8e4]">
+                  <div className="mt-0.5 text-gray-400 bg-surface-container-low p-1.5 rounded-lg border border-outline-variant">
                     <Mail size={12} />
                   </div>
                   <div>
                     <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Email</p>
-                    <p className="text-[11px] font-bold text-[#1a1a1a] break-all">{profile.email}</p>
+                    <p className="text-[11px] font-bold text-on-surface break-all">{profile.email}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="mt-0.5 text-gray-400 bg-gray-50 p-1.5 rounded-lg border border-[#e8e8e4]">
+                  <div className="mt-0.5 text-gray-400 bg-surface-container-low p-1.5 rounded-lg border border-outline-variant">
                     <MapPin size={12} />
                   </div>
                   <div>
                     <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Localisation</p>
-                    <p className="text-[11px] font-bold text-[#1a1a1a]">
+                    <p className="text-[11px] font-bold text-on-surface">
                       {profile.ville ? `${profile.ville}, ` : ''}{profile.pays || 'Non renseignée'}
                     </p>
                   </div>
@@ -208,12 +208,12 @@ export default async function ProfilPage() {
 
                 {profile.site_web_url && (
                   <div className="flex items-start gap-3">
-                    <div className="mt-0.5 text-blue-500 bg-blue-50 p-1.5 rounded-lg border border-blue-100">
+                    <div className="mt-0.5 text-info bg-info-container p-1.5 rounded-lg border border-info/30">
                       <Globe size={12} />
                     </div>
                     <div>
                       <p className="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Site Web</p>
-                      <a href={profile.site_web_url} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-blue-600 hover:underline break-all">
+                      <a href={profile.site_web_url} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
                         {profile.site_web_url}
                       </a>
                     </div>
@@ -222,7 +222,7 @@ export default async function ProfilPage() {
                 
                 {profile.linkedin_url && (
                   <div className="flex items-start gap-3">
-                    <div className="mt-0.5 text-[#0a66c2] bg-[#f0f7ff] p-1.5 rounded-lg border border-[#d6e8ff]">
+                    <div className="mt-0.5 text-[#0a66c2] bg-info-container p-1.5 rounded-lg border border-outline-variant">
                       <IconLinkedIn />
                     </div>
                     <div>
@@ -237,23 +237,23 @@ export default async function ProfilPage() {
             </div>
 
             {/* Organisation */}
-            <div className="bg-white rounded-2xl shadow-sm border border-[#e8e8e4] p-5">
-              <h3 className="font-heading font-bold text-sm text-[#1a1a1a] flex items-center gap-2 mb-4">
-                 <Briefcase size={14} className="text-[#1b5e38]" /> Organisation
+            <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-5">
+              <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-4">
+                 <Briefcase size={14} className="text-primary" /> Organisation
               </h3>
               
               {profile.organisation ? (
-                <div className="bg-[#fcfdfc] p-3 rounded-xl border border-[#e8e8e4] flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center border border-[#e8e8e4]">
+                <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center border border-outline-variant">
                     <Briefcase size={16} className="text-gray-400" />
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-[#1a1a1a]">{profile.organisation}</p>
-                    <p className="text-[10px] text-gray-500 mt-0.5 font-medium">Entreprise / Association</p>
+                    <p className="text-xs font-bold text-on-surface">{profile.organisation}</p>
+                    <p className="text-[10px] text-on-surface-muted mt-0.5 font-medium">Entreprise / Association</p>
                   </div>
                 </div>
               ) : (
-                <p className="text-[11px] text-gray-500 text-center py-4 italic">
+                <p className="text-[11px] text-on-surface-muted text-center py-4 italic">
                   Aucune organisation renseignée.
                 </p>
               )}

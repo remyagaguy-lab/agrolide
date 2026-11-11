@@ -52,7 +52,7 @@ export function PaiementBoutons({ categorie }: { categorie: string }) {
   return (
     <div>
       {error && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 text-[#d32f2f] text-sm rounded-md text-center">
+        <div className="mb-4 p-3 bg-error-container border border-error/30 text-error text-sm rounded-md text-center">
           {error}
         </div>
       )}

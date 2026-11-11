@@ -32,7 +32,7 @@ export default async function MembresBibliothequePage({ searchParams }: { search
     <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4 space-y-6">
       <div>
         <h1 className="dash-page-title">Bibliothèque</h1>
-        <p className="mt-2 text-gray-500 text-sm">Recherchez et consultez nos ressources documentaires.</p>
+        <p className="mt-2 text-on-surface-muted text-sm">Recherchez et consultez nos ressources documentaires.</p>
       </div>
       
       <BibliothequeClient 

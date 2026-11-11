@@ -111,26 +111,26 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
       
       {error && (
-        <div className="p-4 bg-red-50 border border-red-200 text-[#d32f2f] text-sm rounded-md">
+        <div className="p-4 bg-error-container border border-error/30 text-error text-sm rounded-md">
           {error}
         </div>
       )}
 
       {success && (
-        <div className="p-4 bg-green-50 border border-green-200 text-green-700 text-sm rounded-md">
+        <div className="p-4 bg-success-container border border-success/30 text-success text-sm rounded-md">
           Votre profil a été mis à jour avec succès.
         </div>
       )}
 
       {/* Avatar Section */}
       <div>
-        <h3 className="text-sm font-bold text-[#1a1a1a] mb-3 border-b border-[#e8e8e4] pb-1">Photo de profil</h3>
+        <h3 className="text-sm font-bold text-on-surface mb-3 border-b border-outline-variant pb-1">Photo de profil</h3>
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 bg-[#f0f7f0] border border-[#c3dec4] rounded-xl overflow-hidden flex items-center justify-center relative group">
+          <div className="w-16 h-16 bg-primary-container border border-outline-variant rounded-xl overflow-hidden flex items-center justify-center relative group">
             {avatarUrl ? (
               <img src={avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
             ) : (
-              <User size={24} className="text-[#1b5e38]/50" />
+              <User size={24} className="text-primary/50" />
             )}
             
             {/* Loading overlay */}
@@ -153,66 +153,66 @@ export function ProfilForm({ initialData, sessionToken }: { initialData: any, se
               type="button" 
               onClick={() => fileInputRef.current?.click()}
               disabled={isUploading}
-              className="bg-white border border-[#e8e8e4] text-gray-600 px-3 py-1.5 rounded-lg text-xs font-bold hover:border-[#1b5e38] transition-colors flex items-center gap-1.5"
+              className="bg-white border border-outline-variant text-on-surface-variant px-3 py-1.5 rounded-lg text-xs font-bold hover:border-primary transition-colors flex items-center gap-1.5"
             >
               <Camera size={14} /> {isUploading ? "Upload..." : "Changer la photo"}
             </button>
-            <p className="text-[10px] text-gray-500 mt-1 font-bold uppercase tracking-wider">Format JPEG, PNG, WEBP. Max 2MB.</p>
+            <p className="text-[10px] text-on-surface-muted mt-1 font-bold uppercase tracking-wider">Format JPEG, PNG, WEBP. Max 2MB.</p>
           </div>
         </div>
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-sm font-bold text-[#1a1a1a] border-b border-[#e8e8e4] pb-1">Informations Générales</h3>
+        <h3 className="text-sm font-bold text-on-surface border-b border-outline-variant pb-1">Informations Générales</h3>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 block">Prénom *</label>
-            <Input {...register("prenom")} className={`w-full p-2 border border-[#e8e8e4] rounded-lg text-xs focus:ring-1 focus:ring-[#1b5e38] focus:border-[#1b5e38] bg-gray-50 outline-none transition-all ${errors.prenom ? "border-red-500" : ""}`} />
-            {errors.prenom && <p className="mt-1 text-[10px] text-red-500 font-bold">{errors.prenom.message}</p>}
+            <label className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1 block">Prénom *</label>
+            <Input {...register("prenom")} className={`w-full p-2 border border-outline-variant rounded-lg text-xs focus:ring-1 focus:ring-primary focus:border-primary bg-surface-container-low outline-none transition-all ${errors.prenom ? "border-error" : ""}`} />
+            {errors.prenom && <p className="mt-1 text-[10px] text-error font-bold">{errors.prenom.message}</p>}
           </div>
           <div>
-            <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 block">Nom *</label>
-            <Input {...register("nom")} className={`w-full p-2 border border-[#e8e8e4] rounded-lg text-xs focus:ring-1 focus:ring-[#1b5e38] focus:border-[#1b5e38] bg-gray-50 outline-none transition-all ${errors.nom ? "border-red-500" : ""}`} />
-            {errors.nom && <p className="mt-1 text-[10px] text-red-500 font-bold">{errors.nom.message}</p>}
+            <label className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1 block">Nom *</label>
+            <Input {...register("nom")} className={`w-full p-2 border border-outline-variant rounded-lg text-xs focus:ring-1 focus:ring-primary focus:border-primary bg-surface-container-low outline-none transition-all ${errors.nom ? "border-error" : ""}`} />
+            {errors.nom && <p className="mt-1 text-[10px] text-error font-bold">{errors.nom.message}</p>}
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 block">Téléphone</label>
-            <Input {...register("telephone")} className="w-full p-2 border border-[#e8e8e4] rounded-lg text-xs focus:ring-1 focus:ring-[#1b5e38] focus:border-[#1b5e38] bg-gray-50 outline-none transition-all" />
+            <label className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1 block">Téléphone</label>
+            <Input {...register("telephone")} className="w-full p-2 border border-outline-variant rounded-lg text-xs focus:ring-1 focus:ring-primary focus:border-primary bg-surface-container-low outline-none transition-all" />
           </div>
           <div>
-            <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 block">Entreprise / Organisation</label>
-            <Input {...register("entreprise")} className="w-full p-2 border border-[#e8e8e4] rounded-lg text-xs focus:ring-1 focus:ring-[#1b5e38] focus:border-[#1b5e38] bg-gray-50 outline-none transition-all" />
+            <label className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1 block">Entreprise / Organisation</label>
+            <Input {...register("entreprise")} className="w-full p-2 border border-outline-variant rounded-lg text-xs focus:ring-1 focus:ring-primary focus:border-primary bg-surface-container-low outline-none transition-all" />
           </div>
         </div>
         
         <div>
-          <label className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-1 block">Biographie (À propos)</label>
+          <label className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1 block">Biographie (À propos)</label>
           <Textarea 
             {...register("bio")} 
             placeholder="Parlez-nous un peu de vous et de votre projet..."
-            className={`w-full p-2 border border-[#e8e8e4] rounded-lg text-xs focus:ring-1 focus:ring-[#1b5e38] focus:border-[#1b5e38] bg-gray-50 outline-none transition-all min-h-[100px] resize-none ${errors.bio ? "border-red-500" : ""}`}
+            className={`w-full p-2 border border-outline-variant rounded-lg text-xs focus:ring-1 focus:ring-primary focus:border-primary bg-surface-container-low outline-none transition-all min-h-[100px] resize-none ${errors.bio ? "border-error" : ""}`}
           />
           <div className="flex justify-between mt-1">
             <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Présentez-vous aux autres membres du réseau.</p>
-            {errors.bio && <p className="text-[10px] text-red-500 font-bold">{errors.bio.message}</p>}
+            {errors.bio && <p className="text-[10px] text-error font-bold">{errors.bio.message}</p>}
           </div>
         </div>
       </div>
 
-      <div className="pt-2 flex justify-end gap-3 border-t border-[#e8e8e4]">
+      <div className="pt-2 flex justify-end gap-3 border-t border-outline-variant">
         <button 
           type="button" 
           onClick={() => router.push("/membres/profil")} 
-          className="bg-white border border-[#e8e8e4] text-gray-600 px-4 py-2 rounded-lg text-xs font-bold hover:border-[#1b5e38] transition-colors mt-4"
+          className="bg-white border border-outline-variant text-on-surface-variant px-4 py-2 rounded-lg text-xs font-bold hover:border-primary transition-colors mt-4"
           disabled={isSaving}
         >
           Annuler
         </button>
-        <button type="submit" className="bg-[#1b5e38] hover:bg-[#144a2c] text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors shadow-sm mt-4" disabled={isSaving || isUploading}>
+        <button type="submit" className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-colors shadow-sm mt-4" disabled={isSaving || isUploading}>
           {isSaving ? (
             <><Loader2 size={14} className="animate-spin" /> Enregistrement...</>
           ) : (

@@ -40,7 +40,7 @@ export default async function FormationDetailPage({ params }: { params: Promise<
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen py-8">
+    <div className="bg-surface-container-low min-h-screen py-8">
       <FormationDetailClient 
         initialFormation={formationData as any} 
       />

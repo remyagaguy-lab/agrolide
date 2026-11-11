@@ -29,17 +29,17 @@ export default async function EvenementsPage() {
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-8">
       <div>
-        <h1 className="text-xl md:text-2xl font-bold text-[#1a1a1a] font-heading">Événements</h1>
-        <p className="mt-1 text-gray-500 text-xs">Participez aux rencontres, conférences et ateliers du réseau Agrolide.</p>
+        <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading">Événements</h1>
+        <p className="mt-1 text-on-surface-muted text-xs">Participez aux rencontres, conférences et ateliers du réseau Agrolide.</p>
       </div>
 
       {/* Événements à venir */}
       <div>
         <div className="flex items-center gap-2 mb-4">
-          <div className="w-8 h-8 rounded-lg bg-[#e8f5e9] flex items-center justify-center">
-            <Calendar className="w-4 h-4 text-[#1b5e38]" />
+          <div className="w-8 h-8 rounded-lg bg-success-container flex items-center justify-center">
+            <Calendar className="w-4 h-4 text-primary" />
           </div>
-          <h2 className="text-lg font-bold text-[#1a1a1a] font-heading">À venir</h2>
+          <h2 className="text-lg font-bold text-on-surface font-heading">À venir</h2>
         </div>
 
         {aVenir.length > 0 ? (
@@ -48,28 +48,28 @@ export default async function EvenementsPage() {
               const evtDate = evt.date_debut ? new Date(evt.date_debut) : null
               const isValid = evtDate && !isNaN(evtDate.getTime())
               return (
-                <div key={evt.id} className="bg-white border border-[#e8e8e4] rounded-2xl shadow-sm hover:border-[#1b5e38] hover:shadow-md transition-all p-5 flex flex-col group">
+                <div key={evt.id} className="bg-white border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all p-5 flex flex-col group">
                   <div className="flex justify-between items-start mb-3">
-                    <span className="bg-[#f0f7f0] text-[#1b5e38] px-2 py-0.5 rounded text-[10px] font-bold border border-[#c3dec4] uppercase tracking-wider">
+                    <span className="bg-primary-container text-primary px-2 py-0.5 rounded text-[10px] font-bold border border-outline-variant uppercase tracking-wider">
                       {evt.type_evt || "Événement"}
                     </span>
                     {isValid && (
-                      <div className="flex flex-col items-center bg-gray-50 border border-[#e8e8e4] text-[#1a1a1a] rounded-lg px-2 py-1 min-w-[40px] group-hover:bg-[#1b5e38] group-hover:text-white group-hover:border-[#1b5e38] transition-colors">
+                      <div className="flex flex-col items-center bg-surface-container-low border border-outline-variant text-on-surface rounded-lg px-2 py-1 min-w-[40px] group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-colors">
                         <span className="text-sm font-extrabold leading-none">{evtDate.getDate()}</span>
                         <span className="text-[8px] font-bold uppercase mt-0.5">{evtDate.toLocaleDateString('fr-FR', { month: 'short' })}</span>
                       </div>
                     )}
                   </div>
 
-                  <h3 className="text-sm font-bold text-[#1a1a1a] mb-1.5 leading-snug line-clamp-2 group-hover:text-[#1b5e38] transition-colors">{evt.titre}</h3>
+                  <h3 className="text-sm font-bold text-on-surface mb-1.5 leading-snug line-clamp-2 group-hover:text-primary transition-colors">{evt.titre}</h3>
                   
                   {evt.description && (
-                    <p className="text-xs text-gray-500 mb-3 line-clamp-2">{evt.description}</p>
+                    <p className="text-xs text-on-surface-muted mb-3 line-clamp-2">{evt.description}</p>
                   )}
 
-                  <div className="mt-auto space-y-1.5 pt-3 border-t border-[#e8e8e4]">
+                  <div className="mt-auto space-y-1.5 pt-3 border-t border-outline-variant">
                     {isValid && (
-                      <div className="flex items-center text-xs text-gray-500">
+                      <div className="flex items-center text-xs text-on-surface-muted">
                         <Clock className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
                         {evtDate.toLocaleString('fr-FR', {
                           weekday: 'long', day: 'numeric', month: 'long',
@@ -78,7 +78,7 @@ export default async function EvenementsPage() {
                       </div>
                     )}
                     {evt.lieu && (
-                      <div className="flex items-center text-xs text-gray-500">
+                      <div className="flex items-center text-xs text-on-surface-muted">
                         <MapPin className="w-3.5 h-3.5 mr-1.5 text-gray-400 shrink-0" />
                         {evt.lieu}
                       </div>
@@ -90,7 +90,7 @@ export default async function EvenementsPage() {
                       href={evt.lien} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="bg-gray-50 hover:bg-[#f0f7f0] hover:text-[#1b5e38] text-gray-600 font-bold rounded-lg text-[11px] transition-colors flex items-center justify-center gap-1.5 border border-[#e8e8e4] uppercase tracking-wider w-full mt-3 py-2"
+                      className="bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-[11px] transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider w-full mt-3 py-2"
                     >
                       S'inscrire <ExternalLink className="w-3 h-3" />
                     </a>
@@ -100,12 +100,12 @@ export default async function EvenementsPage() {
             })}
           </div>
         ) : (
-          <div className="bg-white border border-[#e8e8e4] rounded-2xl shadow-sm p-8 text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center mb-3">
+          <div className="bg-white border border-outline-variant rounded-2xl shadow-sm p-8 text-center flex flex-col items-center">
+            <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-3">
               <Calendar className="w-6 h-6 text-gray-300" />
             </div>
-            <h3 className="text-sm font-bold text-[#1a1a1a] mb-1">Aucun événement programmé</h3>
-            <p className="text-xs text-gray-500">Revenez bientôt pour découvrir nos prochains événements.</p>
+            <h3 className="text-sm font-bold text-on-surface mb-1">Aucun événement programmé</h3>
+            <p className="text-xs text-on-surface-muted">Revenez bientôt pour découvrir nos prochains événements.</p>
           </div>
         )}
       </div>
@@ -114,10 +114,10 @@ export default async function EvenementsPage() {
       {passes.length > 0 && (
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <div className="w-8 h-8 rounded-lg bg-gray-50 border border-[#e8e8e4] flex items-center justify-center">
-              <Clock className="w-4 h-4 text-gray-500" />
+            <div className="w-8 h-8 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center">
+              <Clock className="w-4 h-4 text-on-surface-muted" />
             </div>
-            <h2 className="text-lg font-bold text-[#1a1a1a] font-heading">Événements passés</h2>
+            <h2 className="text-lg font-bold text-on-surface font-heading">Événements passés</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -125,9 +125,9 @@ export default async function EvenementsPage() {
               const evtDate = evt.date_debut ? new Date(evt.date_debut) : null
               const isValid = evtDate && !isNaN(evtDate.getTime())
               return (
-                <div key={evt.id} className="bg-white border border-[#e8e8e4] rounded-xl shadow-sm p-4 opacity-70 hover:opacity-100 transition-opacity">
+                <div key={evt.id} className="bg-white border border-outline-variant rounded-xl shadow-sm p-4 opacity-70 hover:opacity-100 transition-opacity">
                   <div className="flex justify-between items-start mb-2">
-                    <span className="bg-gray-50 text-gray-600 px-2 py-0.5 rounded text-[10px] font-bold border border-[#e8e8e4] uppercase tracking-wider">
+                    <span className="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold border border-outline-variant uppercase tracking-wider">
                       {evt.type_evt || "Événement"}
                     </span>
                     {isValid && (
@@ -136,9 +136,9 @@ export default async function EvenementsPage() {
                       </span>
                     )}
                   </div>
-                  <h3 className="text-sm font-bold text-gray-900 line-clamp-2 leading-snug">{evt.titre}</h3>
+                  <h3 className="text-sm font-bold text-on-surface line-clamp-2 leading-snug">{evt.titre}</h3>
                   {evt.lieu && (
-                    <div className="flex items-center text-[11px] text-gray-500 mt-1.5">
+                    <div className="flex items-center text-[11px] text-on-surface-muted mt-1.5">
                       <MapPin className="w-3 h-3 mr-1" /> {evt.lieu}
                     </div>
                   )}

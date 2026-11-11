@@ -88,31 +88,31 @@ export default async function NetworkPage() {
   return (
     <div className="max-w-4xl mx-auto space-y-8">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Mon Réseau</h1>
-        <p className="text-gray-500 mt-1">Gérez vos invitations et vos relations professionnelles</p>
+        <h1 className="text-2xl font-bold text-on-surface">Mon Réseau</h1>
+        <p className="text-on-surface-muted mt-1">Gérez vos invitations et vos relations professionnelles</p>
       </div>
 
       {/* Invitations reçues */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-        <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-6">
+        <h2 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
           Invitations en attente
           {pendingRequests.length > 0 && (
-            <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+            <span className="bg-error text-white text-xs font-bold px-2 py-0.5 rounded-full">
               {pendingRequests.length}
             </span>
           )}
         </h2>
 
         {pendingRequests.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
+          <div className="text-center py-8 text-on-surface-muted">
             Aucune invitation en attente pour le moment.
           </div>
         ) : (
           <div className="space-y-4">
             {pendingRequests.map((req) => (
-              <div key={req.id} className="flex flex-col sm:flex-row items-center justify-between p-4 border border-gray-100 rounded-xl hover:border-gray-200 transition-colors gap-4">
+              <div key={req.id} className="flex flex-col sm:flex-row items-center justify-between p-4 border border-outline-variant rounded-xl hover:border-outline-variant transition-colors gap-4">
                 <Link href={`/annuaire/${req.requester.id}`} className="flex items-center gap-4 group">
-                  <div className="w-14 h-14 rounded-full overflow-hidden bg-gray-100 shrink-0">
+                  <div className="w-14 h-14 rounded-full overflow-hidden bg-surface-container shrink-0">
                     {req.requester.avatar_url ? (
                       <Image src={req.requester.avatar_url} alt="Avatar" width={56} height={56} className="object-cover w-full h-full" />
                     ) : (
@@ -120,10 +120,10 @@ export default async function NetworkPage() {
                     )}
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 group-hover:text-[#1b5e38] transition-colors">
+                    <h3 className="font-bold text-on-surface group-hover:text-primary transition-colors">
                       {req.requester.prenom} {req.requester.nom}
                     </h3>
-                    <p className="text-sm text-gray-500">{req.requester.specialite || req.requester.categorie}</p>
+                    <p className="text-sm text-on-surface-muted">{req.requester.specialite || req.requester.categorie}</p>
                   </div>
                 </Link>
                 
@@ -135,16 +135,16 @@ export default async function NetworkPage() {
       </div>
 
       {/* Relations actives */}
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-        <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+      <div className="bg-white rounded-2xl shadow-sm border border-outline-variant p-6">
+        <h2 className="text-lg font-bold text-on-surface mb-4 flex items-center gap-2">
           Mes relations ({activeConnections.length})
         </h2>
 
         {activeConnections.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
+          <div className="text-center py-8 text-on-surface-muted">
             Vous n'avez pas encore de relations. Parcourez l'annuaire pour vous connecter avec d'autres membres !
             <div className="mt-4">
-              <Link href="/annuaire" className="inline-block bg-[#1b5e38] text-white px-6 py-2.5 rounded-xl font-medium hover:bg-[#14472a] transition-colors">
+              <Link href="/annuaire" className="inline-block bg-primary text-white px-6 py-2.5 rounded-xl font-medium hover:bg-primary/90 transition-colors">
                 Explorer l'annuaire
               </Link>
             </div>
@@ -152,7 +152,7 @@ export default async function NetworkPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {activeConnections.map((user) => (
-              <div key={user.id} className="flex flex-col sm:flex-row items-center justify-between p-4 border border-gray-100 rounded-xl hover:border-[#1b5e38]/20 transition-colors gap-4 bg-gray-50/50">
+              <div key={user.id} className="flex flex-col sm:flex-row items-center justify-between p-4 border border-outline-variant rounded-xl hover:border-primary/20 transition-colors gap-4 bg-surface-container-low/50">
                 <Link href={`/annuaire/${user.id}`} className="flex items-center gap-3 w-full">
                   <div className="w-12 h-12 rounded-full overflow-hidden bg-white shrink-0 shadow-sm">
                     {user.avatar_url ? (
@@ -162,14 +162,14 @@ export default async function NetworkPage() {
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-bold text-gray-900 truncate">
+                    <h3 className="font-bold text-on-surface truncate">
                       {user.prenom} {user.nom}
                     </h3>
-                    <p className="text-xs text-gray-500 truncate">{user.specialite || user.categorie}</p>
+                    <p className="text-xs text-on-surface-muted truncate">{user.specialite || user.categorie}</p>
                   </div>
                 </Link>
                 
-                <Link href={`/membres/messages?user=${user.id}`} className="p-2.5 text-gray-500 hover:text-[#1b5e38] hover:bg-[#dff0e0] rounded-xl transition-colors shrink-0" title="Envoyer un message">
+                <Link href={`/membres/messages?user=${user.id}`} className="p-2.5 text-on-surface-muted hover:text-primary hover:bg-primary-container rounded-xl transition-colors shrink-0" title="Envoyer un message">
                   <MessageCircle size={20} />
                 </Link>
               </div>

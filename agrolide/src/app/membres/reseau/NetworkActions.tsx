@@ -40,7 +40,7 @@ export default function NetworkActions({ requestId }: { requestId: string }) {
       <button 
         onClick={handleDecline} 
         disabled={isPending}
-        className="w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 hover:bg-red-50 transition-colors disabled:opacity-50"
+        className="w-10 h-10 rounded-full flex items-center justify-center text-gray-400 hover:text-error hover:bg-error-container transition-colors disabled:opacity-50"
         title="Ignorer"
       >
         <X size={20} />
@@ -48,7 +48,7 @@ export default function NetworkActions({ requestId }: { requestId: string }) {
       <button 
         onClick={handleAccept} 
         disabled={isPending}
-        className="px-4 py-2 bg-[#1b5e38] text-white font-medium rounded-xl hover:bg-[#14472a] transition-colors flex items-center gap-2 disabled:opacity-75"
+        className="px-4 py-2 bg-primary text-white font-medium rounded-xl hover:bg-primary/90 transition-colors flex items-center gap-2 disabled:opacity-75"
       >
         {isPending ? <Loader2 className="animate-spin" size={18} /> : <Check size={18} />}
         Accepter

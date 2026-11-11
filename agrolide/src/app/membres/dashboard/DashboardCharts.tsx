@@ -71,7 +71,7 @@ export function ProfileCompletionChart() {
         </PieChart>
       </ResponsiveContainer>
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-        <span className="text-lg font-bold text-[#1a1a1a] font-heading">85%</span>
+        <span className="text-lg font-bold text-on-surface font-heading">85%</span>
       </div>
     </div>
   )
