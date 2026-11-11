@@ -19,7 +19,9 @@ export default async function FormationPublicPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const formation = await db.query.formations.findFirst({
+  // Formation, session et inscription sont indépendantes : une seule attente.
+  const [formation, { userId }, existing] = await Promise.all([
+  db.query.formations.findFirst({
     where: eq(formations.id, id),
     with: {
       modules: {
@@ -31,7 +33,19 @@ export default async function FormationPublicPage({
         },
       },
     },
-  });
+  }),
+    auth(),
+    auth().then(({ userId: uid }) =>
+      uid
+        ? db.query.inscriptions_formation.findFirst({
+            where: and(
+              eq(inscriptions_formation.membre_id, uid),
+              eq(inscriptions_formation.formation_id, id)
+            ),
+          })
+        : null
+    ),
+  ]);
 
   if (!formation) {
     notFound();
@@ -45,18 +59,10 @@ export default async function FormationPublicPage({
     ? `${Math.floor(totalDuree / 60)}h${totalDuree % 60 > 0 ? ` ${totalDuree % 60}min` : ''}` 
     : `${totalDuree} min`;
 
-  // Auth & Enrollment check
-  const { userId } = await auth();
   const isLoggedIn = !!userId;
   let isEnrolled = false;
 
   if (isLoggedIn && userId) {
-    const existing = await db.query.inscriptions_formation.findFirst({
-      where: and(
-        eq(inscriptions_formation.membre_id, userId),
-        eq(inscriptions_formation.formation_id, formation.id)
-      )
-    });
     if (existing) {
       isEnrolled = true;
     }
