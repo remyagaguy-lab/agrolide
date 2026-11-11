@@ -4,6 +4,7 @@ import { db } from '@/db'
 import { formations, sessions_formation, users } from '@/db/schema'
 import { eq, desc } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
+import { revalidatePath, revalidateTag } from 'next/cache'
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();
@@ -44,6 +45,8 @@ export async function getAdminFormations() {
 export async function deleteFormation(id: string) {
   await checkAdmin()
   await db.delete(formations).where(eq(formations.id, id))
+  revalidateTag('formations', 'max')
+  revalidatePath('/formations')
 }
 
 export async function upsertFormation(id: string | null, payload: any) {
@@ -68,4 +71,6 @@ export async function upsertFormation(id: string | null, payload: any) {
       created_at: new Date().toISOString()
     })
   }
+  revalidateTag('formations', 'max')
+  revalidatePath('/formations')
 }

@@ -1,6 +1,6 @@
 import { NextResponse, NextRequest } from "next/server"
 import { auth } from "@/lib/auth/server"
-import { revalidatePath } from "next/cache"
+import { revalidatePath, revalidateTag } from "next/cache"
 import { db } from "@/db"
 import { users, articles } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -28,6 +28,8 @@ export async function POST(request: NextRequest) {
     }).returning({ id: articles.id })
 
     revalidatePath('/blog')
+    revalidateTag('articles', 'max')
+    revalidatePath('/')
     revalidatePath('/admin/contenus/articles')
 
     return NextResponse.json({ success: true, id: inserted[0].id })

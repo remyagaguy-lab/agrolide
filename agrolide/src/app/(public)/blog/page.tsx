@@ -1,9 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { db } from "@/db"
-import { articles } from "@/db/schema"
-import { eq, desc, like, and } from "drizzle-orm"
+import { getPublishedArticles } from "@/lib/cache/public-queries"
 import { ArticleCard } from "@/components/ui/ArticleCard"
 import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
@@ -27,13 +25,7 @@ export default async function BlogPage({
     const categoryParam = resolvedParams.category
     const searchParam = resolvedParams.search
 
-    let allArticles = await db.query.articles.findMany({
-      where: eq(articles.statut, 'publie'),
-      orderBy: [desc(articles.published_at)],
-      with: {
-        auteur: true
-      }
-    })
+    let allArticles = await getPublishedArticles()
 
     // Filtres JS (D1 SQLite ne supporte pas ilike)
     if (categoryParam && typeof categoryParam === 'string') {

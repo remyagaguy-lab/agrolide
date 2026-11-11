@@ -2,6 +2,9 @@ import { Metadata } from "next"
 import { db } from "@/db"
 import { campagnes_financement, contributions as contributionsTable } from "@/db/schema"
 import { eq, desc } from "drizzle-orm"
+import { Suspense } from "react"
+import MerciBanner from "@/components/modules/fonds/MerciBanner"
+import { getCampagneData } from "@/lib/cache/public-queries"
 import DonationForm from "@/components/modules/fonds/DonationForm"
 import { Heart, Target, TrendingUp, Users, CheckCircle2 } from "lucide-react"
 
@@ -13,32 +16,15 @@ export const metadata: Metadata = {
 
 export const revalidate = 1800 // ISR toutes les 30 minutes
 
-export default async function NousSoutenirPage({ searchParams }: { searchParams: Promise<{ merci?: string }> }) {
-  const params = await searchParams;
+export default async function NousSoutenirPage() {
+  // 1+2. Campagne active et contributions validées (requêtes parallèles, en cache)
+  const { campagne, contributions } = await getCampagneData()
 
-  // 1. Récupérer la campagne active
-  const campagne = await db.select()
-    .from(campagnes_financement)
-    .where(eq(campagnes_financement.active, true))
-    .orderBy(desc(campagnes_financement.created_at))
-    .limit(1)
-    .then(r => r[0])
-
-  // 2. Calculer le total collecté
   let totalCollecte = 0
   let progressPercentage = 0
   let recentDonors: any[] = []
 
   if (campagne) {
-    const contributions = await db.select({
-      montant_fcfa: contributionsTable.montant_fcfa,
-      prenom: contributionsTable.prenom,
-      anonyme: contributionsTable.anonyme,
-      created_at: contributionsTable.created_at
-    })
-    .from(contributionsTable)
-    .where(eq(contributionsTable.statut, 'valide'))
-
     if (contributions) {
       totalCollecte = contributions.reduce((sum, c) => sum + Number(c.montant_fcfa), 0)
       progressPercentage = Math.min(100, Math.round((totalCollecte / campagne.objectif_fcfa) * 100))
@@ -78,19 +64,9 @@ export default async function NousSoutenirPage({ searchParams }: { searchParams:
       </section>
 
       {/* ── MESSAGE DE REMERCIEMENT ──────────────── */}
-      {params?.merci === 'true' && (
-        <div className="max-w-[1200px] mx-auto px-6 mt-10">
-          <div className="bg-[#f0f7f0] border border-[#1b5e38]/20 text-[#1b5e38] p-6 rounded-2xl flex flex-col md:flex-row items-center gap-4 shadow-sm text-center md:text-left">
-            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 shadow-sm">
-              <Heart className="w-6 h-6 text-[#1b5e38]" />
-            </div>
-            <div>
-              <p className="font-heading font-[800] text-[20px]">Un immense merci pour votre générosité !</p>
-              <p className="font-sans text-[15px] opacity-80 mt-1">Votre don a bien été enregistré. Vous recevrez un reçu par email d'ici quelques minutes.</p>
-            </div>
-          </div>
-        </div>
-      )}
+      <Suspense fallback={null}>
+        <MerciBanner />
+      </Suspense>
 
       {/* ── CONTENU PRINCIPAL ────────────────────── */}
       <section className="py-[40px] md:py-[80px] bg-[#f8f8f6]">
