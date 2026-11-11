@@ -36,12 +36,12 @@ export default function NosActionsPage() {
       </section>
 
       {/* ── PILIER 1 : MOBILISATION ─────────────────────────────────── */}
-      <section className="bg-blanc">
+      <section className="bg-surface-container-lowest">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
             <div className="order-2 md:order-1">
               <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
-                <Users size={32} strokeWidth={1.5} color="#1b5e38" />
+                <Users size={32} strokeWidth={1.5} className="text-primary" />
               </div>
               <h2 className="text-h2 text-on-surface mb-4">
                 1. Mobilisation & Réseautage
@@ -76,7 +76,6 @@ export default function NosActionsPage() {
               </Link>
             </div>
             <div className="order-1 md:order-2 bg-surface-container-low rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#f0f7f0] to-[#ffffff]"></div>
                 <Users size={120} strokeWidth={0.5} className="text-primary/20 relative z-10" />
             </div>
           </div>
@@ -87,13 +86,12 @@ export default function NosActionsPage() {
       <section className="bg-surface-container-low border-y border-outline-variant">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
-            <div className="bg-blanc rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant shadow-sm">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#ffffff] to-[#f8f8f6]"></div>
+            <div className="bg-surface-container-lowest rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant shadow-sm">
                 <BookOpen size={120} strokeWidth={0.5} className="text-primary/20 relative z-10" />
             </div>
             <div>
               <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
-                <BookOpen size={32} strokeWidth={1.5} color="#1b5e38" />
+                <BookOpen size={32} strokeWidth={1.5} className="text-primary" />
               </div>
               <h2 className="text-h2 text-on-surface mb-4">
                 2. Formation & Insertion
@@ -107,14 +105,14 @@ export default function NosActionsPage() {
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <Card className="!p-5 bg-blanc border-outline-variant shadow-sm">
+                <Card className="!p-5 bg-surface-container-lowest border-outline-variant shadow-sm">
                   <div className="flex items-center gap-3 mb-3">
                     <BookMarked size={20} className="text-primary" />
                     <h3 className="font-heading font-[700] text-[16px]">Bibliothèque</h3>
                   </div>
                   <p className="text-[14px] text-on-surface-variant">Le répertoire de thèses, mémoires et fiches techniques adaptées à l'Afrique.</p>
                 </Card>
-                <Card className="!p-5 bg-blanc border-outline-variant shadow-sm">
+                <Card className="!p-5 bg-surface-container-lowest border-outline-variant shadow-sm">
                   <div className="flex items-center gap-3 mb-3">
                     <BookOpen size={20} className="text-primary" />
                     <h3 className="font-heading font-[700] text-[16px]">Formations</h3>
@@ -137,12 +135,12 @@ export default function NosActionsPage() {
       </section>
 
       {/* ── PILIER 3 : AGROBUSINESS ─────────────────────────────────── */}
-      <section className="bg-blanc">
+      <section className="bg-surface-container-lowest">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
             <div className="order-2 md:order-1">
-              <div className="w-[64px] h-[64px] rounded-[16px] bg-[#fdf5e6] flex items-center justify-center mb-6">
-                <TrendingUp size={32} strokeWidth={1.5} color="#f99e1d" />
+              <div className="w-[64px] h-[64px] rounded-[16px] bg-tertiary-container flex items-center justify-center mb-6">
+                <TrendingUp size={32} strokeWidth={1.5} className="text-on-tertiary-container" />
               </div>
               <h2 className="text-h2 text-on-surface mb-4">
                 3. Agrobusiness & Consulting
@@ -176,8 +174,7 @@ export default function NosActionsPage() {
                 Découvrir nos services
               </Link>
             </div>
-            <div className="order-1 md:order-2 bg-[#fcf8f2] rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-[#f5ead6]">
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#fcf8f2] to-[#ffffff]"></div>
+            <div className="order-1 md:order-2 bg-tertiary-container rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant">
                 <TrendingUp size={120} strokeWidth={0.5} className="text-on-tertiary-container/20 relative z-10" />
             </div>
           </div>

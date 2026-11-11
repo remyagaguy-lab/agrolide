@@ -17,19 +17,19 @@ export function RevenueChart({ data }: RevenueChartProps) {
   return (
     <ResponsiveContainer width="100%" height={220}>
       <BarChart data={data} margin={{ top: 4, right: 4, left: 0, bottom: 0 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-        <XAxis dataKey="mois" tick={{ fontSize: 11, fill: "#9ca3af" }} />
-        <YAxis tickFormatter={formatFCFA} tick={{ fontSize: 11, fill: "#9ca3af" }} width={48} />
+        <CartesianGrid strokeDasharray="3 3" stroke="var(--ag-sys-color-outline-variant)" />
+        <XAxis dataKey="mois" tick={{ fontSize: 11, fill: "var(--ag-sys-color-on-surface-muted)" }} />
+        <YAxis tickFormatter={formatFCFA} tick={{ fontSize: 11, fill: "var(--ag-sys-color-on-surface-muted)" }} width={48} />
         <Tooltip
           formatter={(v, name) => [
             `${Number(v).toLocaleString("fr-FR")} FCFA`,
             name === "cotisations" ? "Cotisations" : "Dons"
           ]}
           labelClassName="font-semibold text-on-surface-variant"
-          contentStyle={{ border: "1px solid #e5e7eb", borderRadius: 8, fontSize: 12 }}
+          contentStyle={{ background: "var(--ag-sys-color-surface-container-lowest)", color: "var(--ag-sys-color-on-surface)", border: "1px solid var(--ag-sys-color-outline-variant)", borderRadius: 8, fontSize: 12 }}
         />
-        <Bar dataKey="cotisations" fill="#1b5e38" radius={[4, 4, 0, 0]} />
-        <Bar dataKey="dons" fill="#86efac" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="cotisations" fill="var(--ag-sys-color-primary)" radius={[4, 4, 0, 0]} />
+        <Bar dataKey="dons" fill="var(--ag-sys-color-accent-leaf)" radius={[4, 4, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   )
