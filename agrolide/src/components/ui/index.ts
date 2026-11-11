@@ -7,6 +7,9 @@ export { Avatar, AvatarGroup, type AvatarProps, type AvatarSize } from './Avatar
 export { Badge, type BadgeProps, type BadgeVariant } from './Badge'
 export { Button, buttonVariants, type ButtonProps, type ButtonSize, type ButtonVariant } from './Button'
 export { Card, CardDescription, CardTitle, type CardProps, type CardVariant } from './Card'
+export {
+  DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
+} from './DropdownMenu'
 export { EmptyState, type EmptyStateProps } from './EmptyState'
 export { FormField, Label, type FormFieldProps } from './FormField'
 export { IconButton, type IconButtonProps } from './IconButton'

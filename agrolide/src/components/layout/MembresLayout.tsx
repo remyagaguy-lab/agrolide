@@ -2,23 +2,24 @@
 
 import * as React from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useClerk } from "@/lib/auth/client"
 import { MembresUserMenu } from "./MembresUserMenu"
+import { Logo } from "@/components/ui/Logo"
+import { Modal, ModalContent, ModalDescription, ModalTitle, ModalTrigger } from "@/components/ui/Modal"
+import { cn } from "@/lib/utils/formatters"
 import {
-  LayoutDashboard, 
-  User, 
-  Users, 
-  Library, 
-  BookOpen, 
-  Calendar, 
-  MessageSquare, 
-  Briefcase, 
-  Mail, 
-  CreditCard,
+  LayoutDashboard,
+  User,
+  Users,
+  Library,
+  BookOpen,
+  Calendar,
+  Briefcase,
+  Mail,
   LogOut,
-  Bell
+  Bell,
+  Menu,
 } from "lucide-react"
 
 interface MembresLayoutProps {
@@ -27,16 +28,19 @@ interface MembresLayoutProps {
   pendingRequestsCount?: number
 }
 
+type NavItem = { name: string; href: string; icon: React.ComponentType<{ className?: string; strokeWidth?: number; "aria-hidden"?: boolean }>; badge?: number }
+
 export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: MembresLayoutProps) {
   const pathname = usePathname()
   const { signOut } = useClerk()
+  const [moreOpen, setMoreOpen] = React.useState(false)
 
   const handleLogout = async () => {
     await signOut({ redirectUrl: "/" })
   }
 
   // --- Sidebar Navigation ---
-  const navMain = [
+  const navMain: NavItem[] = [
     { name: "Dashboard", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
     { name: "Bibliothèque", href: "/membres/bibliotheque", icon: Library },
@@ -46,157 +50,103 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
     { name: "Formations", href: "/formations", icon: BookOpen },
   ]
 
-  const navPersonal = [
+  const navPersonal: NavItem[] = [
     { name: "Mon Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
     { name: "Messages", href: "/membres/messages", icon: Mail },
     { name: "Mes Formations", href: "/membres/formations", icon: BookOpen },
     { name: "Mon Profil", href: "/membres/profil", icon: User },
   ]
 
-  const mobileNavItems = [
+  // Barre du bas (mobile) : 4 destinations + « Plus » (5 maximum, comme le recommande Material 3).
+  const mobileNavItems: NavItem[] = [
     { name: "Accueil", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
     { name: "Réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
-    { name: "Biblio", href: "/membres/bibliotheque", icon: Library },
-    { name: "Formations", href: "/formations", icon: BookOpen },
-    { name: "Mes Formations", href: "/membres/formations", icon: BookOpen },
-    { name: "Profil", href: "/membres/profil", icon: User },
+    { name: "Formations", href: "/membres/formations", icon: BookOpen },
+  ]
+  const moreItems: NavItem[] = [
+    { name: "Mon profil", href: "/membres/profil", icon: User },
+    { name: "Bibliothèque", href: "/membres/bibliotheque", icon: Library },
+    { name: "Messages", href: "/membres/messages", icon: Mail },
+    { name: "Événements", href: "/membres/evenements", icon: Calendar },
+    { name: "Opportunités", href: "/membres/opportunites", icon: Briefcase },
+    { name: "Catalogue des formations", href: "/formations", icon: BookOpen },
   ]
 
+  const isActiveFor = (href: string) =>
+    pathname === href || (href !== "/membres/dashboard" && pathname?.startsWith(`${href}/`))
+
+  const sidebarLink = (item: NavItem) => {
+    const isActive = isActiveFor(item.href)
+    return (
+      <Link
+        key={item.name}
+        href={item.href}
+        aria-current={isActive ? "page" : undefined}
+        className={cn(
+          "relative flex min-h-12 items-center gap-3 rounded-l-card px-4 py-3 text-label-lg transition-colors duration-150 ease-standard",
+          isActive
+            ? "fusion-active z-20 bg-surface-container-low font-bold text-primary"
+            : "mr-4 font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface",
+        )}
+      >
+        <item.icon className={cn("size-[18px]", isActive ? "text-primary" : "text-on-surface-muted")} strokeWidth={isActive ? 2.5 : 2} aria-hidden />
+        <span>{item.name}</span>
+        {item.badge ? (
+          <span className="ml-auto rounded-full bg-error px-2 py-0.5 text-label-sm text-on-error">
+            <span className="sr-only">Demandes en attente : </span>
+            {item.badge}
+          </span>
+        ) : null}
+      </Link>
+    )
+  }
+
   return (
-    <div className="h-screen bg-[#f8f9fa] flex font-sans overflow-hidden">
-      
-      <style dangerouslySetInnerHTML={{__html: `
-        .fusion-active::before {
-          content: "";
-          position: absolute;
-          right: 0;
-          top: -24px;
-          width: 24px;
-          height: 24px;
-          border-bottom-right-radius: 24px;
-          box-shadow: 12px 12px 0 12px #f8f9fa;
-          pointer-events: none;
-        }
-        .fusion-active::after {
-          content: "";
-          position: absolute;
-          right: 0;
-          bottom: -24px;
-          width: 24px;
-          height: 24px;
-          border-top-right-radius: 24px;
-          box-shadow: 12px -12px 0 12px #f8f9fa;
-          pointer-events: none;
-        }
-      `}} />
+    <div className="flex h-screen overflow-hidden bg-surface-container-low">
       {/* ================= VERTICAL SIDEBAR (DESKTOP) ================= */}
-      <aside className="hidden lg:flex flex-col w-[260px] shrink-0 h-full bg-[#f4f8f4] z-30 relative">
-        {/* Logo */}
-        <div className="h-20 flex items-center px-6 shrink-0">
-          <Link href="/membres/dashboard" className="flex items-center flex-shrink-0">
-            <Image
-              src="/images/logo-agrolide.webp"
-              alt="agrolide"
-              width={480}
-              height={135}
-              className="h-11 w-auto"
-              priority
-            />
-          </Link>
+      <aside className="relative z-30 hidden h-full w-[260px] shrink-0 flex-col bg-surface-container lg:flex">
+        <div className="flex h-20 shrink-0 items-center px-6">
+          <Logo href="/membres/dashboard" size="md" priority />
         </div>
 
-        {/* Navigation Area */}
-        <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pl-4 py-4 flex flex-col gap-5 relative z-10 custom-scrollbar">
-          
-          {/* Main Menu */}
+        <nav aria-label="Navigation de l'espace membre" className="custom-scrollbar relative z-10 flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto overflow-x-hidden py-4 pl-4">
           <div>
-            <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Menu Principal</div>
-            <nav className="flex flex-col gap-1">
-              {navMain.map((item) => {
-                const isActive = pathname === item.href || (item.href !== "/membres/dashboard" && pathname?.startsWith(`${item.href}/`))
-                return (
-                  <Link 
-                    key={item.name}
-                    href={item.href}
-                    className={`relative flex items-center gap-3 px-4 py-3 transition-[background-color,color] rounded-l-2xl ${
-                      isActive 
-                        ? 'bg-[#f8f9fa] text-[#1b5e38] font-bold fusion-active z-20' 
-                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium mr-4'
-                    }`}
-                  >
-                    <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : "text-gray-400"} />
-                    <span className="text-sm">{item.name}</span>
-                  </Link>
-                )
-              })}
-            </nav>
+            <p className="mb-3 px-2 text-label-sm uppercase tracking-wider text-on-surface-muted">Menu principal</p>
+            <div className="flex flex-col gap-1">{navMain.map(sidebarLink)}</div>
           </div>
-
-          {/* Personal Utilities */}
           <div>
-            <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3 px-2">Personnel</div>
-            <nav className="flex flex-col gap-1">
-              {navPersonal.map((item) => {
-                const isActive = pathname === item.href || pathname?.startsWith(`${item.href}/`)
-                return (
-                  <Link 
-                    key={item.name}
-                    href={item.href}
-                    className={`relative flex items-center gap-3 px-4 py-3 transition-[background-color,color] rounded-l-2xl ${
-                      isActive 
-                        ? 'bg-[#f8f9fa] text-[#1b5e38] font-bold fusion-active z-20' 
-                        : 'text-gray-500 hover:bg-gray-100/50 hover:text-gray-900 font-medium mr-4'
-                    }`}
-                  >
-                    <item.icon size={18} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : "text-gray-400"} />
-                    <span className="text-sm">{item.name}</span>
-                    {item.badge ? (
-                      <span className="ml-auto bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
-                        {item.badge}
-                      </span>
-                    ) : null}
-                  </Link>
-                )
-              })}
-            </nav>
+            <p className="mb-3 px-2 text-label-sm uppercase tracking-wider text-on-surface-muted">Personnel</p>
+            <div className="flex flex-col gap-1">{navPersonal.map(sidebarLink)}</div>
           </div>
+        </nav>
 
-        </div>
-
-        {/* Logout Bottom Area */}
-        <div className="p-4 mt-auto shrink-0">
-          <button 
+        <div className="mt-auto shrink-0 p-4">
+          <button
+            type="button"
             onClick={handleLogout}
-            className="flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-gray-500 hover:bg-red-50 hover:text-red-600 transition-all font-medium"
+            className="ag-state flex min-h-12 w-full items-center gap-3 rounded-control px-3 text-label-lg font-medium text-on-surface-variant hover:text-error"
           >
-            <LogOut size={18} strokeWidth={2} />
-            <span className="text-sm">Déconnexion</span>
+            <LogOut className="size-[18px]" aria-hidden />
+            <span>Déconnexion</span>
           </button>
         </div>
       </aside>
 
       {/* ================= MAIN CONTENT AREA ================= */}
-      <div className="flex-1 flex flex-col min-w-0 h-full overflow-hidden">
-        
-        {/* Mobile Header Only (Hidden on Desktop) */}
-        <header className="lg:hidden h-14 bg-white border-b border-[#e8e8e4] z-20 flex items-center justify-between px-4 shrink-0">
-          <Link href="/membres/dashboard" className="flex items-center flex-shrink-0">
-            <Image
-              src="/images/logo-agrolide.webp"
-              alt="agrolide"
-              width={480}
-              height={135}
-              className="h-8 w-auto"
-              priority
-            />
-          </Link>
-
+      <div className="flex h-full min-w-0 flex-1 flex-col overflow-hidden">
+        {/* En-tête mobile */}
+        <header className="z-20 flex h-14 shrink-0 items-center justify-between border-b border-outline-variant bg-surface-container-lowest px-4 lg:hidden">
+          <Logo href="/membres/dashboard" size="sm" priority />
           <div className="flex items-center gap-2">
-            <Link href="/membres/reseau" className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors relative">
-              <Bell size={18} strokeWidth={2} />
+            <Link
+              href="/membres/reseau"
+              aria-label={pendingRequestsCount > 0 ? `Demandes de connexion (${pendingRequestsCount} en attente)` : "Demandes de connexion"}
+              className="ag-state relative flex size-11 items-center justify-center rounded-full text-on-surface-variant"
+            >
+              <Bell className="size-5" aria-hidden />
               {pendingRequestsCount > 0 && (
-                <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500 border-2 border-white"></span>
+                <span className="absolute right-2.5 top-2.5 size-2.5 rounded-full border-2 border-surface-container-lowest bg-error" />
               )}
             </Link>
             <MembresUserMenu profile={profile} compact />
@@ -204,52 +154,90 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
         </header>
 
         {/* Barre supérieure (desktop) : menu du compte toujours visible */}
-        <div className="hidden lg:flex h-16 shrink-0 items-center justify-end gap-3 px-6">
-          <Link href="/membres/reseau" aria-label="Demandes de connexion" className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-white transition-colors relative">
-            <Bell size={18} strokeWidth={2} />
+        <div className="hidden h-16 shrink-0 items-center justify-end gap-3 px-6 lg:flex">
+          <Link
+            href="/membres/reseau"
+            aria-label={pendingRequestsCount > 0 ? `Demandes de connexion (${pendingRequestsCount} en attente)` : "Demandes de connexion"}
+            className="ag-state relative flex size-11 items-center justify-center rounded-control text-on-surface-variant"
+          >
+            <Bell className="size-5" aria-hidden />
             {pendingRequestsCount > 0 && (
-              <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-red-500 border-2 border-[#f8f9fa]"></span>
+              <span className="absolute right-2.5 top-2.5 size-2.5 rounded-full border-2 border-surface-container-low bg-error" />
             )}
           </Link>
           <MembresUserMenu profile={profile} />
         </div>
 
         {/* SCROLLABLE PAGE CONTENT */}
-        <main className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-3 md:p-5 lg:p-6 pb-24 md:pb-6 relative">
-          <div className="max-w-[1400px] mx-auto h-full">
-            {children}
-          </div>
+        <main id="contenu" className="custom-scrollbar relative min-h-0 flex-1 overflow-y-auto p-3 pb-28 md:p-5 md:pb-28 lg:p-6 lg:pb-6">
+          <div className="mx-auto h-full max-w-[1400px]">{children}</div>
         </main>
       </div>
 
       {/* ================= BOTTOM NAVIGATION (MOBILE) ================= */}
-      <nav className="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 z-50 px-2 pb-safe shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
-        <div className="flex justify-around items-center h-20 px-2">
+      <nav
+        aria-label="Navigation principale"
+        className="fixed bottom-0 left-0 z-50 w-full border-t border-outline-variant bg-surface-container-lowest px-2 pb-[env(safe-area-inset-bottom)] lg:hidden"
+      >
+        <div className="flex h-20 items-center justify-around px-1">
           {mobileNavItems.map((item) => {
-            const isActive = pathname === item.href || (item.href !== "/membres/dashboard" && pathname?.startsWith(`${item.href}/`))
+            const isActive = isActiveFor(item.href)
             return (
-              <Link 
-                key={item.name} 
+              <Link
+                key={item.name}
                 href={item.href}
-                className={`relative flex flex-col items-center justify-center w-16 h-16 rounded-[16px] space-y-1.5 transition-all ${
-                  isActive 
-                    ? "bg-[#dff0e0] text-[#1b5e38] font-bold shadow-sm" 
-                    : "text-gray-400 hover:text-gray-900 font-medium"
-                }`}
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "relative flex h-16 min-w-16 flex-1 flex-col items-center justify-center gap-1 rounded-card text-label-sm transition-colors duration-150 ease-standard",
+                  isActive ? "bg-primary-container font-bold text-on-primary-container" : "font-medium text-on-surface-variant",
+                )}
               >
-                <div className="relative">
-                  <item.icon size={22} strokeWidth={isActive ? 2.5 : 2} className={isActive ? "text-[#1b5e38]" : ""} />
+                <span className="relative">
+                  <item.icon className="size-[22px]" strokeWidth={isActive ? 2.5 : 2} aria-hidden />
                   {item.badge ? (
-                    <span className="absolute -top-1 -right-2 w-2.5 h-2.5 rounded-full bg-red-500 border-2 border-white"></span>
+                    <span className="absolute -right-1.5 -top-1 size-2.5 rounded-full border-2 border-surface-container-lowest bg-error">
+                      <span className="sr-only">{item.badge} demandes en attente</span>
+                    </span>
                   ) : null}
-                </div>
-                <span className="text-[10px]">{item.name}</span>
+                </span>
+                <span>{item.name}</span>
               </Link>
             )
           })}
+
+          <Modal open={moreOpen} onOpenChange={setMoreOpen}>
+            <ModalTrigger className="relative flex h-16 min-w-16 flex-1 flex-col items-center justify-center gap-1 rounded-card text-label-sm font-medium text-on-surface-variant">
+              <Menu className="size-[22px]" aria-hidden />
+              <span>Plus</span>
+            </ModalTrigger>
+            <ModalContent className="gap-2">
+              <ModalTitle>Plus de destinations</ModalTitle>
+              <ModalDescription className="sr-only">Autres pages de l’espace membre</ModalDescription>
+              <nav aria-label="Autres pages" className="mt-2 flex flex-col">
+                {moreItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setMoreOpen(false)}
+                    className="ag-state flex min-h-12 items-center gap-3 rounded-control px-3 text-body-md text-on-surface"
+                  >
+                    <item.icon className="size-5 text-on-surface-muted" aria-hidden />
+                    {item.name}
+                  </Link>
+                ))}
+                <button
+                  type="button"
+                  onClick={handleLogout}
+                  className="ag-state mt-1 flex min-h-12 items-center gap-3 rounded-control px-3 text-body-md text-error"
+                >
+                  <LogOut className="size-5" aria-hidden />
+                  Déconnexion
+                </button>
+              </nav>
+            </ModalContent>
+          </Modal>
         </div>
       </nav>
-
     </div>
   )
 }
