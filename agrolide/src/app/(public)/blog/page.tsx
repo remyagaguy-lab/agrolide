@@ -88,9 +88,9 @@ export default async function BlogPage({
                   <div className="lg:col-span-2">
                     <Link 
                       href={`/blog/${featuredMain.slug}`} 
-                      className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-gray-100"
+                      className="group flex flex-col h-full bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
                     >
-                      <div className="relative w-full aspect-[16/9] overflow-hidden bg-gray-100">
+                      <div className="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
                         {featuredMain.image_une_url ? (
                           <Image 
                             src={featuredMain.image_une_url} 
@@ -105,25 +105,25 @@ export default async function BlogPage({
                       </div>
                       <div className="p-8 flex flex-col flex-grow">
                         <div className="flex items-center gap-3 text-sm mb-4">
-                          <span className="font-bold text-[#1b5e38] uppercase tracking-wider text-xs">
+                          <span className="font-bold text-primary uppercase tracking-wider text-xs">
                             {featuredMain.categorie || "Général"}
                           </span>
                           <span className="text-gray-300">•</span>
-                          <span className="text-gray-500 font-medium text-xs">
+                          <span className="text-on-surface-muted font-medium text-xs">
                             {format(new Date(featuredMain.published_at || ''), 'dd MMMM yyyy', { locale: fr })}
                           </span>
                         </div>
-                        <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 group-hover:text-[#1b5e38] transition-colors leading-tight">
+                        <h2 className="text-3xl font-heading font-bold text-on-surface mb-4 group-hover:text-primary transition-colors leading-tight">
                           {featuredMain.titre}
                         </h2>
-                        <p className="text-gray-600 text-base line-clamp-3 mb-6">
+                        <p className="text-on-surface-variant text-base line-clamp-3 mb-6">
                           {featuredMain.extrait}
                         </p>
-                        <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                          <span className="text-xs text-gray-500 font-medium truncate max-w-[200px]">
+                        <div className="mt-auto flex items-center justify-between border-t border-outline-variant pt-4">
+                          <span className="text-xs text-on-surface-muted font-medium truncate max-w-[200px]">
                             Par {featuredMain.auteur ? `${featuredMain.auteur.prenom} ${featuredMain.auteur.nom}` : (featuredMain.auteur_externe || "Équipe Agrolide")}
                           </span>
-                          <div className="flex items-center text-sm font-bold text-[#1b5e38] group-hover:translate-x-1 transition-transform duration-300">
+                          <div className="flex items-center text-sm font-bold text-primary group-hover:translate-x-1 transition-transform duration-300">
                             Lire l'article 
                             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                           </div>
@@ -139,9 +139,9 @@ export default async function BlogPage({
                     <Link 
                       href={`/blog/${article.slug}`} 
                       key={article.id} 
-                      className="group flex flex-col flex-1 bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-gray-100"
+                      className="group flex flex-col flex-1 bg-white rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
                     >
-                      <div className="relative w-full h-48 overflow-hidden bg-gray-100">
+                      <div className="relative w-full h-48 overflow-hidden bg-surface-container">
                         {article.image_une_url ? (
                           <Image 
                             src={article.image_une_url} 
@@ -155,19 +155,19 @@ export default async function BlogPage({
                       </div>
                       <div className="p-6 flex flex-col flex-grow">
                         <div className="flex items-center gap-3 text-sm mb-3">
-                          <span className="font-bold text-[#1b5e38] uppercase tracking-wider text-xs">
+                          <span className="font-bold text-primary uppercase tracking-wider text-xs">
                             {article.categorie || "Général"}
                           </span>
                           <span className="text-gray-300">•</span>
-                          <span className="text-gray-500 font-medium text-xs">
+                          <span className="text-on-surface-muted font-medium text-xs">
                             {format(new Date(article.published_at || ''), 'dd MMM yyyy', { locale: fr })}
                           </span>
                         </div>
-                        <h3 className="text-xl font-heading font-bold text-gray-900 group-hover:text-[#1b5e38] transition-colors leading-tight line-clamp-3 mb-4 flex-grow">
+                        <h3 className="text-xl font-heading font-bold text-on-surface group-hover:text-primary transition-colors leading-tight line-clamp-3 mb-4 flex-grow">
                           {article.titre}
                         </h3>
-                        <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                          <span className="text-xs text-gray-500 font-medium truncate max-w-[140px]">
+                        <div className="mt-auto flex items-center justify-between border-t border-outline-variant pt-4">
+                          <span className="text-xs text-on-surface-muted font-medium truncate max-w-[140px]">
                             Par {article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe Agrolide")}
                           </span>
                         </div>
@@ -179,9 +179,9 @@ export default async function BlogPage({
             )}
 
             {/* Filter and Search Bar */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10 py-6 border-y border-gray-200">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10 py-6 border-y border-outline-variant">
               <div className="flex items-center gap-4 w-full md:w-auto">
-                <span className="text-sm font-bold text-gray-500 uppercase tracking-wider hidden md:block">Filtrer :</span>
+                <span className="text-sm font-bold text-on-surface-muted uppercase tracking-wider hidden md:block">Filtrer :</span>
                 <BlogFilter currentCategory={categoryParam as string} categories={categories} />
               </div>
               <form action="/blog" method="GET" className="relative w-full md:w-72">
@@ -191,7 +191,7 @@ export default async function BlogPage({
                   name="search" 
                   defaultValue={searchParam as string || ''}
                   placeholder="Rechercher un article..." 
-                  className="w-full pl-11 pr-4 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:border-[#1b5e38] focus:ring-1 focus:ring-[#1b5e38] transition-shadow" 
+                  className="w-full pl-11 pr-4 py-2.5 border border-outline rounded-full text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" 
                 />
                 <svg className="w-4 h-4 absolute left-4 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
               </form>
@@ -199,10 +199,10 @@ export default async function BlogPage({
 
             {/* Main Article Grid */}
             {!displayArticles || displayArticles.length === 0 ? (
-              <div className="text-center py-24 bg-white rounded-3xl border border-gray-100 shadow-sm">
-                <p className="text-xl text-gray-500">Aucun article ne correspond à votre recherche.</p>
+              <div className="text-center py-24 bg-white rounded-3xl border border-outline-variant shadow-sm">
+                <p className="text-xl text-on-surface-muted">Aucun article ne correspond à votre recherche.</p>
                 {(categoryParam || searchParam) && (
-                  <Link href="/blog" className="inline-block mt-4 text-[#1b5e38] font-bold hover:underline">
+                  <Link href="/blog" className="inline-block mt-4 text-primary font-bold hover:underline">
                     Réinitialiser les filtres
                   </Link>
                 )}
@@ -233,11 +233,11 @@ export default async function BlogPage({
     )
   } catch (err: any) {
     return (
-      <div className="min-h-screen flex items-center justify-center p-8 bg-red-50 text-red-900">
+      <div className="min-h-screen flex items-center justify-center p-8 bg-error-container text-on-error-container">
         <div className="max-w-2xl bg-white p-8 rounded-2xl shadow-xl">
           <h1 className="text-2xl font-bold mb-4">Erreur de rendu Serveur !</h1>
           <p className="mb-4 text-sm font-mono whitespace-pre-wrap">{err.message}</p>
-          <pre className="text-xs bg-gray-100 p-4 rounded overflow-auto">{err.stack}</pre>
+          <pre className="text-xs bg-surface-container p-4 rounded overflow-auto">{err.stack}</pre>
         </div>
       </div>
     )

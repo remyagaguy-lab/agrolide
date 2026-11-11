@@ -11,13 +11,13 @@ export const metadata: Metadata = {
 
 export default function SuccesInscriptionPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col min-h-screen bg-surface-container-low items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-2xl shadow-sm border border-[var(--color-gris-clair)] text-center">
-        <div className="mx-auto w-24 h-24 bg-green-50 rounded-full flex items-center justify-center text-[var(--color-vert-principal)] mb-6 shadow-sm">
+        <div className="mx-auto w-24 h-24 bg-success-container rounded-full flex items-center justify-center text-[var(--color-vert-principal)] mb-6 shadow-sm">
           <PartyPopper size={48} />
         </div>
         
-        <h2 className="text-3xl font-heading font-extrabold text-gray-900">
+        <h2 className="text-3xl font-heading font-extrabold text-on-surface">
           Félicitations !
         </h2>
         
@@ -25,7 +25,7 @@ export default function SuccesInscriptionPage() {
           Votre compte est désormais actif et votre cotisation a bien été prise en compte. Bienvenue au sein du réseau agrolide !
         </p>
 
-        <div className="bg-[#E8F3EB] rounded-xl p-6 mb-8 text-left border border-green-100 text-[var(--color-vert-principal)] text-sm space-y-2">
+        <div className="bg-[#E8F3EB] rounded-xl p-6 mb-8 text-left border border-success/30 text-[var(--color-vert-principal)] text-sm space-y-2">
           <p><strong>Prochaines étapes recommandées :</strong></p>
           <ul className="list-disc pl-5 space-y-1">
             <li>Complétez votre profil dans l'annuaire</li>

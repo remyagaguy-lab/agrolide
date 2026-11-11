@@ -64,7 +64,7 @@ export function EnrollButton({
     <button 
       onClick={handleEnroll}
       disabled={loading}
-      className={`inline-flex items-center justify-center bg-[#f99e1d] hover:bg-[#fcb726] text-white font-heading font-[700] text-[15px] px-[28px] py-[12px] rounded-lg transition-colors min-h-[48px] disabled:opacity-70 ${className || ''}`}
+      className={`inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-white font-heading font-[700] text-[15px] px-[28px] py-[12px] rounded-lg transition-colors min-h-[48px] disabled:opacity-70 ${className || ''}`}
     >
       {loading && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
       {!isLoggedIn 

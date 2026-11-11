@@ -27,26 +27,26 @@ export default function ActualitesClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-12">
+    <div className="min-h-screen bg-surface-container-low pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-4 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Actualités du Réseau</h1>
-          <p className="text-gray-600 mt-2">Restez informé de tout ce qui se passe dans la communauté Agrolide.</p>
+          <h1 className="text-3xl font-bold text-on-surface">Actualités du Réseau</h1>
+          <p className="text-on-surface-variant mt-2">Restez informé de tout ce qui se passe dans la communauté Agrolide.</p>
         </div>
         <div className="flex flex-wrap items-center gap-4">
           <button 
             onClick={() => setIsOppModalOpen(true)}
-            className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm text-sm"
+            className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm text-sm"
           >
             <Plus className="w-4 h-4" /> Proposer une opportunité
           </button>
           
-          <div className="flex items-center gap-2 bg-white p-2 rounded-xl shadow-sm border border-gray-100">
+          <div className="flex items-center gap-2 bg-white p-2 rounded-xl shadow-sm border border-outline-variant">
             <Filter className="w-5 h-5 text-gray-400 ml-2" />
             <select 
               value={filter}
               onChange={(e) => setFilter(e.target.value as any)}
-              className="border-none outline-none focus:ring-0 bg-transparent text-gray-700 font-medium cursor-pointer py-1 pr-4"
+              className="border-none outline-none focus:ring-0 bg-transparent text-on-surface-variant font-medium cursor-pointer py-1 pr-4"
             >
               <option value="tous">Toutes les actualités</option>
               <option value="evenements">Événements</option>
@@ -64,17 +64,17 @@ export default function ActualitesClient() {
             <SkeletonGrid count={6} />
           </div>
         ) : error ? (
-          <div className="text-center py-12 bg-red-50 rounded-2xl border border-red-100 flex flex-col items-center justify-center">
-            <AlertCircle className="w-10 h-10 text-red-500 mb-4" />
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Impossible de charger les actualités</h3>
-            <p className="text-gray-600 mb-4">{error}</p>
-            <button onClick={fetchData} className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+          <div className="text-center py-12 bg-error-container rounded-2xl border border-error/30 flex flex-col items-center justify-center">
+            <AlertCircle className="w-10 h-10 text-error mb-4" />
+            <h3 className="text-lg font-bold text-on-surface mb-2">Impossible de charger les actualités</h3>
+            <p className="text-on-surface-variant mb-4">{error}</p>
+            <button onClick={fetchData} className="px-4 py-2 bg-white border border-outline-variant rounded-lg text-sm font-medium hover:bg-surface-container-low transition-colors">
               Réessayer
             </button>
           </div>
         ) : filteredItems.length === 0 ? (
-          <div className="text-center py-12 bg-white rounded-2xl border border-gray-100">
-            <p className="text-gray-500">Aucune actualité ne correspond à vos critères.</p>
+          <div className="text-center py-12 bg-white rounded-2xl border border-outline-variant">
+            <p className="text-on-surface-muted">Aucune actualité ne correspond à vos critères.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -129,21 +129,21 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
       <div className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-xl flex flex-col">
-        <div className="sticky top-0 bg-white border-b border-gray-100 p-4 flex justify-between items-center z-10">
-          <h2 className="text-xl font-bold text-gray-900 pr-8">{event.titre}</h2>
-          <button aria-label="Fermer les détails" onClick={onClose} className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors text-gray-600">
+        <div className="sticky top-0 bg-white border-b border-outline-variant p-4 flex justify-between items-center z-10">
+          <h2 className="text-xl font-bold text-on-surface pr-8">{event.titre}</h2>
+          <button aria-label="Fermer les détails" onClick={onClose} className="p-2 bg-surface-container hover:bg-surface-container-high rounded-full transition-colors text-on-surface-variant">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
           </button>
         </div>
         
         <div className="p-6 flex-grow">
           {event.image_url && (
-            <div className="mb-6 rounded-xl overflow-hidden bg-gray-100 relative w-full h-[400px]">
+            <div className="mb-6 rounded-xl overflow-hidden bg-surface-container relative w-full h-[400px]">
               <Image src={event.image_url} alt="Affiche" fill sizes="(max-width: 768px) 100vw, 800px" className="object-contain" />
             </div>
           )}
           
-          <div className="prose prose-green max-w-none text-gray-700">
+          <div className="prose prose-green max-w-none text-on-surface-variant">
             {event.description ? (
               marked ? (
                 <div dangerouslySetInnerHTML={{ __html: marked.parse(event.description) }} />
@@ -151,20 +151,20 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
                 <p>Chargement de la description...</p>
               )
             ) : (
-              <p className="italic text-gray-500">Aucune description disponible pour cet événement.</p>
+              <p className="italic text-on-surface-muted">Aucune description disponible pour cet événement.</p>
             )}
           </div>
         </div>
         
-        <div className="sticky bottom-0 bg-white border-t border-gray-100 p-4 flex justify-end gap-3">
-          <button onClick={onClose} className="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium rounded-xl transition-colors">
+        <div className="sticky bottom-0 bg-white border-t border-outline-variant p-4 flex justify-end gap-3">
+          <button onClick={onClose} className="px-6 py-2 bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-medium rounded-xl transition-colors">
             Fermer
           </button>
           
           {new Date(event.date_debut) >= new Date() && (
             <button 
               onClick={onInscrire} 
-              className="px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-xl transition-colors shadow-sm"
+              className="px-6 py-2 bg-primary hover:bg-primary/90 text-white font-medium rounded-xl transition-colors shadow-sm"
             >
               S'inscrire à l'événement
             </button>

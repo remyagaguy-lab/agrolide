@@ -92,10 +92,10 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
   const getBadgeClass = (cat: string) => {
     switch(cat?.toLowerCase()) {
       case 'senior': return 'bg-purple-100 text-purple-700 border-purple-200'
-      case 'professionnel': return 'bg-blue-100 text-blue-700 border-blue-200'
+      case 'professionnel': return 'bg-info-container text-info border-info/30'
       case 'partenaire': return 'bg-orange-100 text-orange-700 border-orange-200'
-      case 'junior': return 'bg-green-100 text-green-700 border-green-200'
-      default: return 'bg-gray-100 text-gray-700 border-gray-200'
+      case 'junior': return 'bg-success-container text-success border-success/30'
+      default: return 'bg-surface-container text-on-surface-variant border-outline-variant'
     }
   }
 
@@ -105,11 +105,11 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
-      <Link href="/annuaire" className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+      <Link href="/annuaire" className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-muted hover:text-on-surface transition-colors">
         <ArrowLeft className="w-4 h-4" /> Retour à l'annuaire
       </Link>
 
-      <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
+      <div className="bg-white rounded-3xl shadow-sm border border-outline-variant overflow-hidden">
         {/* Couverture */}
         <div className="h-32 bg-gradient-to-r from-primary-600 to-primary-800"></div>
         
@@ -118,7 +118,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
           <div className="flex flex-col md:flex-row justify-between items-start gap-6">
             <div className="flex flex-col md:flex-row gap-6 -mt-12">
               <div className="w-32 h-32 rounded-2xl bg-white p-1.5 shadow-sm shrink-0">
-                <div className="w-full h-full rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center text-4xl font-bold overflow-hidden border border-gray-100 relative">
+                <div className="w-full h-full rounded-xl bg-primary-container text-primary flex items-center justify-center text-4xl font-bold overflow-hidden border border-outline-variant relative">
                   {member.photo_url ? (
                     <Image src={member.photo_url} alt={displayName} fill sizes="128px" className="object-cover" />
                   ) : (
@@ -128,7 +128,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
               </div>
               <div className="mt-2 md:mt-14 space-y-1">
                 <div className="flex items-center gap-3">
-                  <h1 className="text-3xl font-bold text-gray-900">{displayName}</h1>
+                  <h1 className="text-3xl font-bold text-on-surface">{displayName}</h1>
                   {member.categorie && (
                     <span className={`px-2.5 py-1 rounded-full text-xs font-bold capitalize border ${getBadgeClass(member.categorie)}`}>
                       {member.categorie}
@@ -136,7 +136,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
                   )}
                 </div>
                 
-                <div className="flex items-center gap-4 text-sm text-gray-600 font-medium">
+                <div className="flex items-center gap-4 text-sm text-on-surface-variant font-medium">
                   {member.specialite && (
                     <div className="flex items-center gap-1.5">
                       <Briefcase className="w-4 h-4" /> {member.specialite}
@@ -157,14 +157,14 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
               {userId === id ? (
                 <Link 
                   href="/parametres/profil"
-                  className="flex-1 md:flex-none bg-white text-gray-700 px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm border border-gray-200 hover:bg-gray-50"
+                  className="flex-1 md:flex-none bg-white text-on-surface-variant px-5 py-2.5 rounded-xl font-medium transition-colors flex items-center justify-center gap-2 shadow-sm border border-outline-variant hover:bg-surface-container-low"
                 >
                   Modifier mon profil
                 </Link>
               ) : member.ouvert_contact ? (
                 <ConnectButton memberId={member.id} status={connectionStatus} />
               ) : (
-                <div className="px-5 py-2.5 rounded-xl bg-gray-50 text-gray-500 font-medium text-sm border border-gray-100">
+                <div className="px-5 py-2.5 rounded-xl bg-surface-container-low text-on-surface-muted font-medium text-sm border border-outline-variant">
                   N'accepte pas les messages
                 </div>
               )}
@@ -177,10 +177,10 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
         {/* Colonne Principale */}
         <div className="md:col-span-2 space-y-8">
                  {/* Biographie */}
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">À propos</h2>
+          <div className="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant">
+            <h2 className="text-xl font-bold text-on-surface mb-4">À propos</h2>
             {member.biographie ? (
-              <p className="text-gray-600 leading-relaxed whitespace-pre-wrap">{member.biographie}</p>
+              <p className="text-on-surface-variant leading-relaxed whitespace-pre-wrap">{member.biographie}</p>
             ) : (
               <p className="text-gray-400 italic">Aucune biographie renseignée.</p>
             )}
@@ -188,9 +188,9 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
 
           {/* Contributions */}
           {docs && docs.length > 0 && (
-            <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-              <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-primary-500" />
+            <div className="bg-white p-8 rounded-3xl shadow-sm border border-outline-variant">
+              <h2 className="text-xl font-bold text-on-surface mb-6 flex items-center gap-2">
+                <FileText className="w-5 h-5 text-primary" />
                 Contributions à la bibliothèque
               </h2>
               <div className="space-y-3">
@@ -198,10 +198,10 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
                   <Link 
                     key={doc.id} 
                     href={`/bibliotheque/${doc.id}`}
-                    className="block p-4 rounded-xl border border-gray-100 hover:border-primary-200 hover:bg-primary-50/50 transition-colors group"
+                    className="block p-4 rounded-xl border border-outline-variant hover:border-outline-variant hover:bg-primary-container/50 transition-colors group"
                   >
-                    <div className="font-bold text-gray-900 group-hover:text-primary-700 transition-colors">{doc.titre}</div>
-                    <div className="text-sm text-gray-500 capitalize mt-1">{doc.type_doc?.replace('_', ' ')}</div>
+                    <div className="font-bold text-on-surface group-hover:text-primary transition-colors">{doc.titre}</div>
+                    <div className="text-sm text-on-surface-muted capitalize mt-1">{doc.type_doc?.replace('_', ' ')}</div>
                   </Link>
                 ))}
               </div>
@@ -213,14 +213,14 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
         <div className="space-y-8">
           
           {/* Tags */}
-          <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 space-y-6">
+          <div className="bg-white p-6 rounded-3xl shadow-sm border border-outline-variant space-y-6">
             
             {sectors && sectors.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Expertise</h3>
+                <h3 className="text-sm font-bold text-on-surface uppercase tracking-wider mb-3">Expertise</h3>
                 <div className="flex flex-wrap gap-2">
                   {sectors.map((s: string, i: number) => (
-                    <span key={i} className="bg-primary-50 text-primary-700 px-3 py-1.5 rounded-lg text-sm font-medium">
+                    <span key={i} className="bg-primary-container text-primary px-3 py-1.5 rounded-lg text-sm font-medium">
                       {s}
                     </span>
                   ))}
@@ -230,10 +230,10 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
 
             {languages && languages.length > 0 && (
               <div>
-                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Langues</h3>
+                <h3 className="text-sm font-bold text-on-surface uppercase tracking-wider mb-3">Langues</h3>
                 <div className="flex flex-wrap gap-2">
                   {languages.map((l: string, i: number) => (
-                    <span key={i} className="bg-gray-50 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium border border-gray-100">
+                    <span key={i} className="bg-surface-container-low text-on-surface-variant px-3 py-1.5 rounded-lg text-sm font-medium border border-outline-variant">
                       {l}
                     </span>
                   ))}
@@ -244,15 +244,15 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
             {/* Liens Web */}
             {(member.linkedin_url || member.site_web_url) && (
               <div>
-                <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">Sur le web</h3>
+                <h3 className="text-sm font-bold text-on-surface uppercase tracking-wider mb-3">Sur le web</h3>
                 <div className="space-y-2 text-sm font-medium">
                   {member.linkedin_url && (
-                    <a href={member.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline p-2 rounded-lg hover:bg-blue-50 transition-colors">
+                    <a href={member.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-info hover:underline p-2 rounded-lg hover:bg-info-container transition-colors">
                       <ExternalLink className="w-4 h-4" /> Profil LinkedIn
                     </a>
                   )}
                   {member.site_web_url && (
-                    <a href={member.site_web_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-600 hover:text-gray-900 hover:underline p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                    <a href={member.site_web_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:underline p-2 rounded-lg hover:bg-surface-container-low transition-colors">
                       <Globe className="w-4 h-4" /> Site internet
                     </a>
                   )}

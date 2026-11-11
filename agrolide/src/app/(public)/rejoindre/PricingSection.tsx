@@ -14,16 +14,16 @@ export default function PricingSection() {
     return (
       <>
         <div className="flex items-baseline gap-[3px] mb-[4px]">
-          <span className="font-[700] text-[13px] text-[#1b5e38]">FCFA</span>
-          <span className="font-[900] text-[26px] text-[#1b5e38] leading-none">
+          <span className="font-[700] text-[13px] text-primary">FCFA</span>
+          <span className="font-[900] text-[26px] text-primary leading-none">
             {isAnnual ? formatPrice(annualPrice) : formatPrice(monthlyPrice)}
           </span>
         </div>
-        <div className="text-[11px] text-[#9a9a96] mb-[14px] min-h-[32px]">
+        <div className="text-[11px] text-on-surface-muted mb-[14px] min-h-[32px]">
           {isAnnual ? (
-            <>par an · soit <span className="text-[#50a853] font-[600]">{formatPrice(monthlyEquivalent)} FCFA/mois</span></>
+            <>par an · soit <span className="text-primary font-[600]">{formatPrice(monthlyEquivalent)} FCFA/mois</span></>
           ) : (
-            <>par mois, sans engagement<br/><span className="text-[#50a853] font-[600]">soit {formatPrice(annualPrice)} FCFA/an en annuel</span></>
+            <>par mois, sans engagement<br/><span className="text-primary font-[600]">soit {formatPrice(annualPrice)} FCFA/an en annuel</span></>
           )}
         </div>
       </>
@@ -33,62 +33,62 @@ export default function PricingSection() {
   const periodeParam = isAnnual ? "annuel" : "mensuel"
 
   return (
-    <div className="bg-[#ffffff] min-h-screen pb-[64px] pt-[32px] md:pt-[64px] font-urbanist">
+    <div className="bg-surface-container-lowest min-h-screen pb-[64px] pt-[32px] md:pt-[64px] font-urbanist">
       <div className="max-w-[1200px] mx-auto px-6">
         
         <div className="max-w-[840px] mx-auto">
           {/* Header */}
           <div className="text-center mb-[8px]">
-            <span className="text-[11px] font-[700] tracking-[0.1em] uppercase text-[#50a853]">Adhésion</span>
+            <span className="text-[11px] font-[700] tracking-[0.1em] uppercase text-primary">Adhésion</span>
           </div>
-          <h1 className="font-[900] text-[28px] md:text-[36px] text-center text-[#1a1a1a] tracking-[-0.02em] mb-[6px]">
+          <h1 className="font-[900] text-[28px] md:text-[36px] text-center text-on-surface tracking-[-0.02em] mb-[6px]">
             Choisissez votre profil dans le réseau
           </h1>
-          <div className="text-[13px] text-[#9a9a96] text-center mb-[32px]">
+          <div className="text-[13px] text-on-surface-muted text-center mb-[32px]">
             Rejoignez gratuitement ou accédez aux avantages complets selon votre parcours.
           </div>
 
           {/* Toggle */}
           <div className="flex flex-col items-center justify-center mb-[40px]">
-            <div className="inline-flex bg-[#f0f0ee] p-1 rounded-full relative">
+            <div className="inline-flex bg-surface-container p-1 rounded-full relative">
               <button
                 onClick={() => setIsAnnual(false)}
-                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${!isAnnual ? 'text-white' : 'text-[#9a9a96] hover:text-[#1a1a1a]'}`}
+                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${!isAnnual ? 'text-white' : 'text-on-surface-muted hover:text-on-surface'}`}
               >
                 Mensuel
               </button>
               <button
                 onClick={() => setIsAnnual(true)}
-                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${isAnnual ? 'text-white' : 'text-[#9a9a96] hover:text-[#1a1a1a]'}`}
+                className={`relative z-10 w-[110px] py-[8px] text-[13px] font-[700] rounded-full transition-colors ${isAnnual ? 'text-white' : 'text-on-surface-muted hover:text-on-surface'}`}
               >
                 Annuel
-                <span className="absolute -top-[12px] -right-[15px] bg-[#fcb726] text-[#1a1a1a] text-[10px] font-[800] px-[8px] py-[3px] rounded-full whitespace-nowrap shadow-sm">
+                <span className="absolute -top-[12px] -right-[15px] bg-accent-sun text-on-surface text-[10px] font-[800] px-[8px] py-[3px] rounded-full whitespace-nowrap shadow-sm">
                   2 mois offerts
                 </span>
               </button>
               <div
-                className={`absolute top-1 bottom-1 w-[110px] bg-[#1b5e38] rounded-full transition-transform duration-300 ease-out ${isAnnual ? 'translate-x-[110px]' : 'translate-x-0'}`}
+                className={`absolute top-1 bottom-1 w-[110px] bg-primary rounded-full transition-transform duration-300 ease-out ${isAnnual ? 'translate-x-[110px]' : 'translate-x-0'}`}
               ></div>
             </div>
           </div>
 
           {/* Passionné Card */}
-          <div className="border border-[#e8e8e4] rounded-xl p-6 md:p-7 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white mb-8">
+          <div className="border border-outline-variant rounded-xl p-6 md:p-7 grid grid-cols-1 md:grid-cols-2 gap-6 bg-white mb-8">
             <div>
-              <div className="inline-flex items-center gap-[6px] bg-[#e8f5e9] rounded-[5px] px-[12px] py-[4px] mb-[12px]">
-                <span className="text-[11px] font-[700] text-[#1b5e38] tracking-[0.05em]">Gratuit · Sans engagement</span>
+              <div className="inline-flex items-center gap-[6px] bg-success-container rounded-[5px] px-[12px] py-[4px] mb-[12px]">
+                <span className="text-[11px] font-[700] text-primary tracking-[0.05em]">Gratuit · Sans engagement</span>
               </div>
-              <h3 className="font-[800] text-[17px] text-[#1a1a1a] mb-[4px]">Passionné du domaine agricole</h3>
-              <p className="text-[12px] text-[#9a9a96] leading-[1.6] mb-[16px]">
+              <h3 className="font-[800] text-[17px] text-on-surface mb-[4px]">Passionné du domaine agricole</h3>
+              <p className="text-[12px] text-on-surface-muted leading-[1.6] mb-[16px]">
                 Pour les curieux, les étudiants en exploration et toute personne attachée à l'agriculture africaine sans exercer professionnellement.
               </p>
-              <div className="font-[900] text-[28px] text-[#1b5e38] mb-[4px] leading-none">0 FCFA</div>
-              <div className="text-[11px] text-[#9a9a96]">Accès gratuit, pour toujours</div>
+              <div className="font-[900] text-[28px] text-primary mb-[4px] leading-none">0 FCFA</div>
+              <div className="text-[11px] text-on-surface-muted">Accès gratuit, pour toujours</div>
               <div className="flex items-center flex-wrap gap-[12px] mt-[16px]">
-                <Link href="/inscription?categorie=passionne" className="inline-flex items-center gap-[6px] bg-[#1b5e38] text-white text-[13px] font-[700] px-[20px] py-[10px] rounded-[7px] hover:bg-[#145030] transition-colors">
+                <Link href="/inscription?categorie=passionne" className="inline-flex items-center gap-[6px] bg-primary text-white text-[13px] font-[700] px-[20px] py-[10px] rounded-[7px] hover:bg-primary/90 transition-colors">
                   <UserPlus size={14} /> Rejoindre gratuitement
                 </Link>
-                <button className="inline-flex items-center gap-[6px] text-[#1b5e38] text-[13px] font-[600] underline decoration-transparent hover:decoration-[#1b5e38] transition-colors">
+                <button className="inline-flex items-center gap-[6px] text-primary text-[13px] font-[600] underline decoration-transparent hover:decoration-[#1b5e38] transition-colors">
                   Voir les avantages <ArrowRight size={13} />
                 </button>
               </div>
@@ -106,9 +106,9 @@ export default function PricingSection() {
               ].map((feat, i) => (
                 <div key={i} className="flex items-start gap-[8px] text-[12px]">
                   <div className="mt-[2px] flex-shrink-0">
-                    {feat.included ? <Check size={14} className="text-[#50a853]" /> : <X size={14} className="text-[#d0d0d0]" />}
+                    {feat.included ? <Check size={14} className="text-primary" /> : <X size={14} className="text-[#d0d0d0]" />}
                   </div>
-                  <span className={feat.included ? "text-[#1a1a1a]" : "text-[#9a9a96]"}>{feat.text}</span>
+                  <span className={feat.included ? "text-on-surface" : "text-on-surface-muted"}>{feat.text}</span>
                 </div>
               ))}
             </div>
@@ -116,9 +116,9 @@ export default function PricingSection() {
 
           {/* Separator */}
           <div className="flex items-center gap-[12px] mb-[24px]">
-            <div className="flex-1 h-[1px] bg-[#e8e8e4]"></div>
-            <div className="text-[11px] font-[700] text-[#9a9a96] uppercase tracking-[0.06em]">Profils membres avec accès complet</div>
-            <div className="flex-1 h-[1px] bg-[#e8e8e4]"></div>
+            <div className="flex-1 h-[1px] bg-surface-container-high"></div>
+            <div className="text-[11px] font-[700] text-on-surface-muted uppercase tracking-[0.06em]">Profils membres avec accès complet</div>
+            <div className="flex-1 h-[1px] bg-surface-container-high"></div>
           </div>
         </div>
 
@@ -126,24 +126,24 @@ export default function PricingSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[14px]">
           
           {/* Junior */}
-          <div className="border border-[#e8e8e4] rounded-xl p-[20px] flex flex-col bg-white">
-            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#e8f5e9] text-[#1b5e38]">
+          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-white">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-success-container text-primary">
               <GraduationCap size={18} />
             </div>
-            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Junior</div>
-            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Étudiants en agronomie, jeunes diplômés et passionnés en phase d'insertion.</div>
+            <div className="font-[800] text-[15px] text-on-surface mb-[3px]">Junior</div>
+            <div className="text-[11px] text-on-surface-muted leading-[1.5] mb-[12px]">Étudiants en agronomie, jeunes diplômés et passionnés en phase d'insertion.</div>
             
             <PriceBlock annualPrice={10000} monthlyPrice={1000} />
             
-            <Link href={`/inscription?categorie=junior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-[#e8e8e4] text-[#1a1a1a] hover:border-[#1b5e38] hover:text-[#1b5e38] hover:bg-[#f0f7f0] mb-[14px]">
+            <Link href={`/inscription?categorie=junior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-outline-variant text-on-surface hover:border-primary hover:text-primary hover:bg-primary-container mb-[14px]">
               S'inscrire comme Junior
             </Link>
-            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
-            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Inclus dans Junior :</div>
+            <hr className="border-t border-outline-variant mb-[12px]" />
+            <div className="text-[10px] font-[700] text-on-surface-muted uppercase tracking-[0.07em] mb-[8px]">Inclus dans Junior :</div>
             <div className="flex flex-col gap-[6px] flex-1">
               {[
                 { text: "Profil dans l'annuaire continental", included: true },
-                { text: <>Bibliothèque numérique <span className="text-[#50a853] font-[600]">(20 docs/mois)</span></>, included: true },
+                { text: <>Bibliothèque numérique <span className="text-primary font-[600]">(20 docs/mois)</span></>, included: true },
                 { text: "Webinaires publics et privés", included: true },
                 { text: "Forum communautaire", included: true },
                 { text: "Opportunités d'emploi et stages", included: true },
@@ -152,38 +152,38 @@ export default function PricingSection() {
               ].map((feat, i) => (
                 <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45]">
                   <div className="mt-[1px] flex-shrink-0">
-                    {feat.included ? <Check size={13} className="text-[#50a853]" /> : <X size={13} className="text-[#d0d0d0]" />}
+                    {feat.included ? <Check size={13} className="text-primary" /> : <X size={13} className="text-[#d0d0d0]" />}
                   </div>
-                  <span className={feat.included ? "text-[#1a1a1a]" : "text-[#9a9a96]"}>{feat.text}</span>
+                  <span className={feat.included ? "text-on-surface" : "text-on-surface-muted"}>{feat.text}</span>
                 </div>
               ))}
             </div>
-            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+            <div className="text-[11px] font-[600] text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
               Voir tous les avantages <ArrowRight size={12} />
             </div>
           </div>
 
           {/* Professionnel */}
-          <div className="border-[2px] border-[#1b5e38] rounded-xl p-[20px] flex flex-col bg-white relative mt-[12px] md:mt-0">
-            <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 bg-[#1b5e38] text-white text-[10px] font-[800] px-[12px] py-[3px] rounded-full whitespace-nowrap tracking-[0.04em]">
+          <div className="border-[2px] border-primary rounded-xl p-[20px] flex flex-col bg-white relative mt-[12px] md:mt-0">
+            <div className="absolute -top-[12px] left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-[800] px-[12px] py-[3px] rounded-full whitespace-nowrap tracking-[0.04em]">
               Le plus populaire
             </div>
-            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#1b5e38] text-white">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-primary text-white">
               <Briefcase size={18} />
             </div>
-            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Professionnel</div>
-            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Agronomes, ingénieurs, chercheurs, consultants et entrepreneurs actifs.</div>
+            <div className="font-[800] text-[15px] text-on-surface mb-[3px]">Professionnel</div>
+            <div className="text-[11px] text-on-surface-muted leading-[1.5] mb-[12px]">Agronomes, ingénieurs, chercheurs, consultants et entrepreneurs actifs.</div>
             
             <PriceBlock annualPrice={25000} monthlyPrice={2500} />
 
-            <Link href={`/inscription?categorie=professionnel&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-[#1b5e38] text-white hover:bg-[#145030] mb-[14px]">
+            <Link href={`/inscription?categorie=professionnel&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-primary text-white hover:bg-primary/90 mb-[14px]">
               S'inscrire comme Professionnel
             </Link>
-            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
-            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Tout Junior, plus :</div>
+            <hr className="border-t border-outline-variant mb-[12px]" />
+            <div className="text-[10px] font-[700] text-on-surface-muted uppercase tracking-[0.07em] mb-[8px]">Tout Junior, plus :</div>
             <div className="flex flex-col gap-[6px] flex-1">
               {[
-                { text: <>Bibliothèque numérique <span className="text-[#50a853] font-[600]">illimitée</span></> },
+                { text: <>Bibliothèque numérique <span className="text-primary font-[600]">illimitée</span></> },
                 { text: "Messagerie interne membres" },
                 { text: "Dépôt de documents (thèses, guides...)" },
                 { text: "Sessions techniques privées" },
@@ -191,34 +191,34 @@ export default function PricingSection() {
                 { text: "Certificats de formation téléchargeables" },
                 { text: "Visibilité dans l'annuaire complet" },
               ].map((feat, i) => (
-                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-[#1a1a1a]">
+                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-on-surface">
                   <div className="mt-[1px] flex-shrink-0">
-                    <Check size={13} className="text-[#50a853]" />
+                    <Check size={13} className="text-primary" />
                   </div>
                   <span>{feat.text}</span>
                 </div>
               ))}
             </div>
-            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+            <div className="text-[11px] font-[600] text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
               Voir tous les avantages <ArrowRight size={12} />
             </div>
           </div>
 
           {/* Partenaire */}
-          <div className="border border-[#e8e8e4] rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
-            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#f0f7f0] text-[#1b5e38]">
+          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-primary-container text-primary">
               <Building2 size={18} />
             </div>
-            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Partenaire</div>
-            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Entreprises agricoles, coopératives, ONG, agritech et institutions de recherche.</div>
+            <div className="font-[800] text-[15px] text-on-surface mb-[3px]">Partenaire</div>
+            <div className="text-[11px] text-on-surface-muted leading-[1.5] mb-[12px]">Entreprises agricoles, coopératives, ONG, agritech et institutions de recherche.</div>
             
             <PriceBlock annualPrice={70000} monthlyPrice={7000} />
 
-            <Link href={`/inscription?categorie=partenaire&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-[#e8e8e4] text-[#1a1a1a] hover:border-[#1b5e38] hover:text-[#1b5e38] hover:bg-[#f0f7f0] mb-[14px]">
+            <Link href={`/inscription?categorie=partenaire&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-transparent border-[1.5px] border-outline-variant text-on-surface hover:border-primary hover:text-primary hover:bg-primary-container mb-[14px]">
               S'inscrire comme Partenaire
             </Link>
-            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
-            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Tout Professionnel, plus :</div>
+            <hr className="border-t border-outline-variant mb-[12px]" />
+            <div className="text-[10px] font-[700] text-on-surface-muted uppercase tracking-[0.07em] mb-[8px]">Tout Professionnel, plus :</div>
             <div className="flex flex-col gap-[6px] flex-1">
               {[
                 "Vitrine entreprise dans l'annuaire",
@@ -229,34 +229,34 @@ export default function PricingSection() {
                 "Montage d'appels à projets collectifs",
                 "Paiement par virement sur facture",
               ].map((text, i) => (
-                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-[#1a1a1a]">
+                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-on-surface">
                   <div className="mt-[1px] flex-shrink-0">
-                    <Check size={13} className="text-[#50a853]" />
+                    <Check size={13} className="text-primary" />
                   </div>
                   <span>{text}</span>
                 </div>
               ))}
             </div>
-            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+            <div className="text-[11px] font-[600] text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
               Voir tous les avantages <ArrowRight size={12} />
             </div>
           </div>
 
           {/* Sénior */}
-          <div className="border border-[#e8e8e4] rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
-            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-[#fef3e2] text-[#8a4e00]">
+          <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-white mt-[6px] md:mt-0">
+            <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-tertiary-container text-on-tertiary-container">
               <Award size={18} />
             </div>
-            <div className="font-[800] text-[15px] text-[#1a1a1a] mb-[3px]">Sénior</div>
-            <div className="text-[11px] text-[#9a9a96] leading-[1.5] mb-[12px]">Experts, chercheurs émérites, mentors et investisseurs qui contribuent bénévolement.</div>
+            <div className="font-[800] text-[15px] text-on-surface mb-[3px]">Sénior</div>
+            <div className="text-[11px] text-on-surface-muted leading-[1.5] mb-[12px]">Experts, chercheurs émérites, mentors et investisseurs qui contribuent bénévolement.</div>
             
             <PriceBlock annualPrice={45000} monthlyPrice={4500} />
 
-            <Link href={`/inscription?categorie=senior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-[#f99e1d] text-white hover:bg-[#fcb726] mb-[14px]">
+            <Link href={`/inscription?categorie=senior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-[700] text-[13px] text-center transition-colors bg-tertiary text-white hover:bg-accent-sun mb-[14px]">
               S'inscrire comme Sénior
             </Link>
-            <hr className="border-t border-[#f0f0ee] mb-[12px]" />
-            <div className="text-[10px] font-[700] text-[#9a9a96] uppercase tracking-[0.07em] mb-[8px]">Tout Professionnel, plus :</div>
+            <hr className="border-t border-outline-variant mb-[12px]" />
+            <div className="text-[10px] font-[700] text-on-surface-muted uppercase tracking-[0.07em] mb-[8px]">Tout Professionnel, plus :</div>
             <div className="flex flex-col gap-[6px] flex-1">
               {[
                 "Espace mentorat dédié",
@@ -267,15 +267,15 @@ export default function PricingSection() {
                 "Valorisation de votre expertise africaine",
                 "Profil prioritaire dans les résultats",
               ].map((text, i) => (
-                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-[#1a1a1a]">
+                <div key={i} className="flex items-start gap-[7px] text-[11px] leading-[1.45] text-on-surface">
                   <div className="mt-[1px] flex-shrink-0">
-                    <Check size={13} className="text-[#50a853]" />
+                    <Check size={13} className="text-primary" />
                   </div>
                   <span>{text}</span>
                 </div>
               ))}
             </div>
-            <div className="text-[11px] font-[600] text-[#1b5e38] mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
+            <div className="text-[11px] font-[600] text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
               Voir les critères de sélection <ArrowRight size={12} />
             </div>
           </div>
@@ -283,7 +283,7 @@ export default function PricingSection() {
         </div>
 
         {/* Payment Note */}
-        <div className="flex items-center justify-center gap-[6px] text-center mt-[32px] text-[11px] text-[#9a9a96]">
+        <div className="flex items-center justify-center gap-[6px] text-center mt-[32px] text-[11px] text-on-surface-muted">
           <Lock size={14} className="flex-shrink-0" />
           <span>Paiement sécurisé par Mobile Money (Orange, MTN, Moov, Wave) ou carte bancaire · Engagement annuel résiliable</span>
         </div>

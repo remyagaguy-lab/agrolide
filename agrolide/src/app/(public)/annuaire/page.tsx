@@ -34,7 +34,7 @@ export default async function AnnuairePublicPage() {
       </div>
 
       {/* CTA Section */}
-      <section className="bg-[#f8f8f6] py-20 px-4">
+      <section className="bg-surface-container-low py-20 px-4">
         <div className="max-w-3xl mx-auto">
           <div className="rounded-3xl p-10 md:p-14 text-center" style={{ background: 'linear-gradient(135deg, #fcb726 0%, #f5a800 100%)' }}>
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4" style={{ color: '#1a1a1a' }}>

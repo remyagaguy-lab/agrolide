@@ -44,11 +44,11 @@ export default function IncubationPage() {
               
               <div className="space-y-6 mt-8">
                 <div className="flex gap-4">
-                  <div className="mt-1 w-10 h-10 rounded-full bg-blue-50 text-blue-600 flex flex-shrink-0 items-center justify-center">
+                  <div className="mt-1 w-10 h-10 rounded-full bg-info-container text-info flex flex-shrink-0 items-center justify-center">
                     <BookOpen size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Formations pratiques</h4>
+                    <h4 className="font-bold text-on-surface">Formations pratiques</h4>
                     <p className="text-[var(--color-gris-texte)] text-sm mt-1">Acquérez les compétences essentielles en gestion financière, marketing agricole et structuration juridique.</p>
                   </div>
                 </div>
@@ -58,7 +58,7 @@ export default function IncubationPage() {
                     <Users size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Mentorat personnalisé</h4>
+                    <h4 className="font-bold text-on-surface">Mentorat personnalisé</h4>
                     <p className="text-[var(--color-gris-texte)] text-sm mt-1">Soyez suivi par un expert de votre filière qui vous guidera dans vos choix stratégiques.</p>
                   </div>
                 </div>
@@ -68,18 +68,18 @@ export default function IncubationPage() {
                     <Target size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900">Préparation aux investisseurs</h4>
+                    <h4 className="font-bold text-on-surface">Préparation aux investisseurs</h4>
                     <p className="text-[var(--color-gris-texte)] text-sm mt-1">Apprenez à pitcher votre projet et accédez à notre réseau de business angels et fonds d'investissement partenaires.</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gray-50 p-8 rounded-2xl border border-[var(--color-gris-clair)] relative">
+            <div className="bg-surface-container-low p-8 rounded-2xl border border-[var(--color-gris-clair)] relative">
               <div className="absolute -top-6 -right-6 text-[var(--color-orange-accent)] opacity-20">
                 <Rocket size={120} />
               </div>
-              <h3 className="text-xl font-heading font-bold text-gray-900 mb-6 relative z-10">Critères d'éligibilité</h3>
+              <h3 className="text-xl font-heading font-bold text-on-surface mb-6 relative z-10">Critères d'éligibilité</h3>
               <ul className="space-y-4 relative z-10 text-[var(--color-gris-texte)]">
                 <li className="flex items-start gap-3">
                   <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--color-vert-principal)] flex-shrink-0"></div>
@@ -104,7 +104,7 @@ export default function IncubationPage() {
       </section>
 
       {/* Formulaire de candidature */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200" id="postuler">
+      <section className="py-24 bg-surface-container-low border-t border-outline-variant" id="postuler">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">

@@ -23,7 +23,7 @@ export default async function AgripreneursPage() {
     .orderBy(desc(agripreneursTable.created_at))
 
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-surface-container-low">
       {/* Header */}
       <section className="bg-[var(--color-vert-principal)] py-16 text-white text-center">
         <div className="container mx-auto px-4">
@@ -53,7 +53,7 @@ export default async function AgripreneursPage() {
               <div className="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center mx-auto text-[var(--color-orange-accent)] mb-6">
                 <Rocket size={48} />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-heading font-bold text-on-surface mb-4">
                 Success stories à venir !
               </h2>
               <p className="text-[var(--color-gris-texte)] text-lg mb-8 max-w-xl mx-auto">

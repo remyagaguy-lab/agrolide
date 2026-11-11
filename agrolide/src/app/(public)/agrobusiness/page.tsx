@@ -28,7 +28,7 @@ export default function AgrobusinessPage() {
       </section>
 
       {/* Services */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-surface-container-low">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-heading font-bold text-[var(--color-vert-principal)] mb-4">
@@ -42,7 +42,7 @@ export default function AgrobusinessPage() {
               <div className="w-14 h-14 bg-orange-50 rounded-lg flex items-center justify-center text-[var(--color-orange-accent)] mb-6">
                 <FileText size={28} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Études & Business Plans</h3>
+              <h3 className="text-xl font-bold text-on-surface mb-4">Études & Business Plans</h3>
               <p className="text-[var(--color-gris-texte)] mb-6 flex-grow">
                 Études de faisabilité, études de marché et rédaction de business plans bancables pour sécuriser vos financements.
               </p>
@@ -50,10 +50,10 @@ export default function AgrobusinessPage() {
 
             {/* Service 2 */}
             <div className="bg-white p-8 rounded-2xl shadow-sm border border-[var(--color-gris-clair)] flex flex-col h-full">
-              <div className="w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center text-[var(--color-vert-principal)] mb-6">
+              <div className="w-14 h-14 bg-success-container rounded-lg flex items-center justify-center text-[var(--color-vert-principal)] mb-6">
                 <LineChart size={28} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Conseil Stratégique</h3>
+              <h3 className="text-xl font-bold text-on-surface mb-4">Conseil Stratégique</h3>
               <p className="text-[var(--color-gris-texte)] mb-6 flex-grow">
                 Appui technique aux exploitations, optimisation des processus de production et structuration de chaînes de valeur.
               </p>
@@ -67,7 +67,7 @@ export default function AgrobusinessPage() {
               <div className="w-14 h-14 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600 mb-6">
                 <Briefcase size={28} />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Incubation & Accélération</h3>
+              <h3 className="text-xl font-bold text-on-surface mb-4">Incubation & Accélération</h3>
               <p className="text-[var(--color-gris-texte)] mb-6 flex-grow">
                 Programmes complets pour les agripreneurs : mentorat, préparation au pitch investisseurs et mise en réseau.
               </p>

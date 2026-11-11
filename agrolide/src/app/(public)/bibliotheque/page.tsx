@@ -65,7 +65,7 @@ export default async function BibliothequePublicPage() {
           <p className="text-white/70 text-lg mb-6 max-w-2xl mx-auto font-sans">
             Accédez à notre collection de{' '}
             {count > 0 ? (
-              <span className="font-semibold text-[#fcb726]">{count} documents</span>
+              <span className="font-semibold text-on-tertiary-container">{count} documents</span>
             ) : (
               'documents'
             )}{' '}
@@ -74,7 +74,7 @@ export default async function BibliothequePublicPage() {
 
           <Link
             href="/rejoindre"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#fcb726] text-[#1a1a1a] font-heading font-[700] text-sm hover:bg-[#e5a620] transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-surface font-heading font-[700] text-sm hover:bg-[#e5a620] transition-colors"
           >
             Devenir membre
             <ArrowRight className="w-4 h-4" />
@@ -89,10 +89,10 @@ export default async function BibliothequePublicPage() {
 
           {/* Section title */}
           <div className="flex items-center justify-between mb-8">
-            <h2 className="font-heading font-[800] text-2xl text-[#1a1a1a]">Tous les documents</h2>
+            <h2 className="font-heading font-[800] text-2xl text-on-surface">Tous les documents</h2>
           </div>
 
-          <Suspense fallback={<div className="text-center py-12 text-gray-500">Chargement de la bibliothèque...</div>}>
+          <Suspense fallback={<div className="text-center py-12 text-on-surface-muted">Chargement de la bibliothèque...</div>}>
             <BibliothequeClient 
               initialData={{ 
                 data: documents, 
@@ -107,12 +107,12 @@ export default async function BibliothequePublicPage() {
       </section>
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="bg-vert-clair py-[96px] text-center">
+      <section className="bg-primary-container py-[96px] text-center">
         <div className="container flex flex-col items-center">
-          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-vert-profond leading-[1.2] max-w-[700px] mx-auto mb-4">
+          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-primary leading-[1.2] max-w-[700px] mx-auto mb-4">
             Accédez à la bibliothèque complète
           </h2>
-          <p className="font-sans font-[400] text-[14px] text-gris-texte mb-[28px]">
+          <p className="font-sans font-[400] text-[14px] text-on-surface-variant mb-[28px]">
             Rejoignez Agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
           </p>
           <Link href="/rejoindre" className="btn-primary inline-flex items-center">

@@ -160,7 +160,7 @@ export default async function BlogPostPage({
       />
       
       {/* Hero Section */}
-      <section className="bg-white border-b border-gray-200">
+      <section className="bg-white border-b border-outline-variant">
         <div className="container mx-auto px-4 max-w-6xl py-8 md:py-16">
           <Breadcrumb items={breadcrumbItems} />
           
@@ -172,16 +172,16 @@ export default async function BlogPostPage({
                   {article.categorie || "Général"}
                 </span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-gray-900 leading-[1.2] tracking-tight mb-5">
+              <h1 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold text-on-surface leading-[1.2] tracking-tight mb-5">
                 {article.titre}
               </h1>
               {article.extrait && (
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+                <p className="text-base md:text-lg text-on-surface-variant leading-relaxed mb-6">
                   {article.extrait}
                 </p>
               )}
               
-              <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-gray-500 mb-6">
+              <div className="flex flex-wrap items-center gap-2 text-sm font-medium text-on-surface-muted mb-6">
                 <div className="flex items-center gap-2">
                   {article.auteur?.photo_url ? (
                     <Image src={article.auteur.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
@@ -209,7 +209,7 @@ export default async function BlogPostPage({
               {/* Tags éventuels (optionnels, on peut mettre la catégorie ici aussi ou des tags si on en a) */}
               <ul className="flex flex-wrap gap-2">
                 <li>
-                  <span className="inline-flex rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-medium text-gray-600">
+                  <span className="inline-flex rounded-full border border-outline-variant bg-surface-container-low px-3 py-1 text-xs font-medium text-on-surface-variant">
                     {article.categorie || "Général"}
                   </span>
                 </li>
@@ -219,7 +219,7 @@ export default async function BlogPostPage({
             {/* Colonne Droite : Image */}
             <div className="w-full">
               {article.image_une_url ? (
-                <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100 shadow-sm">
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-surface-container shadow-sm">
                   <Image 
                     src={article.image_une_url} 
                     alt={article.titre}
@@ -229,7 +229,7 @@ export default async function BlogPostPage({
                   />
                 </div>
               ) : (
-                <div className="relative w-full aspect-video rounded-xl bg-gray-100 border border-gray-200 flex items-center justify-center">
+                <div className="relative w-full aspect-video rounded-xl bg-surface-container border border-outline-variant flex items-center justify-center">
                   <span className="text-gray-400">Image indisponible</span>
                 </div>
               )}
@@ -239,12 +239,12 @@ export default async function BlogPostPage({
       </section>
 
       {/* Article Body */}
-      <section className="bg-white border-b border-gray-200">
+      <section className="bg-white border-b border-outline-variant">
         <div className="container mx-auto px-4 max-w-6xl py-12 md:py-16">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] xl:gap-x-12">
             
             {/* Sidebar (TOC + Share) - Ordre 1 sur desktop, mais order-2 sur mobile */}
-            <div className="w-full order-2 lg:order-1 lg:border-r lg:border-gray-100 lg:pr-8">
+            <div className="w-full order-2 lg:order-1 lg:border-r lg:border-outline-variant lg:pr-8">
               <div className="sticky top-24 space-y-8">
                 <div>
                   <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400 mb-4">
@@ -253,7 +253,7 @@ export default async function BlogPostPage({
                   <TableOfContents />
                 </div>
                 
-                <div className="pt-6 border-t border-gray-100 hidden lg:block">
+                <div className="pt-6 border-t border-outline-variant hidden lg:block">
                   <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400 mb-4">
                     Partager
                   </p>
@@ -262,7 +262,7 @@ export default async function BlogPostPage({
                       href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 transition-colors"
+                      className="w-9 h-9 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-info-container hover:text-info hover:border-info/30 transition-colors"
                     >
                       in
                     </a>
@@ -270,7 +270,7 @@ export default async function BlogPostPage({
                       href={`https://wa.me/?text=${encodedTitle} ${encodedUrl}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-colors"
+                      className="w-9 h-9 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-success-container hover:text-success hover:border-success/30 transition-colors"
                     >
                       <MessageCircle size={16} />
                     </a>
@@ -283,21 +283,21 @@ export default async function BlogPostPage({
             <div className="w-full order-1 lg:order-2">
               <div 
                 className="prose prose-lg max-w-none 
-                  prose-headings:font-heading prose-headings:font-bold prose-headings:text-gray-900 prose-headings:scroll-mt-28
-                  prose-h2:text-[1.75rem] prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-2 prose-h2:border-b prose-h2:border-gray-100
+                  prose-headings:font-heading prose-headings:font-bold prose-headings:text-on-surface prose-headings:scroll-mt-28
+                  prose-h2:text-[1.75rem] prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-2 prose-h2:border-b prose-h2:border-outline-variant
                   prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-                  prose-p:text-[1.0625rem] prose-p:leading-[1.8] prose-p:text-gray-700 prose-p:mb-6
+                  prose-p:text-[1.0625rem] prose-p:leading-[1.8] prose-p:text-on-surface-variant prose-p:mb-6
                   prose-a:text-[var(--color-vert-principal)] prose-a:no-underline prose-a:font-medium hover:prose-a:underline
-                  prose-strong:text-gray-900
-                  prose-ul:list-disc prose-ul:pl-6 prose-ul:text-gray-700 prose-ul:mb-6
-                  prose-ol:list-decimal prose-ol:pl-6 prose-ol:text-gray-700 prose-ol:mb-6
+                  prose-strong:text-on-surface
+                  prose-ul:list-disc prose-ul:pl-6 prose-ul:text-on-surface-variant prose-ul:mb-6
+                  prose-ol:list-decimal prose-ol:pl-6 prose-ol:text-on-surface-variant prose-ol:mb-6
                   prose-li:mb-2
-                  prose-blockquote:border-l-4 prose-blockquote:border-[var(--color-vert-principal)] prose-blockquote:bg-gray-50 prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:rounded-r-lg prose-blockquote:text-gray-800 prose-blockquote:italic"
+                  prose-blockquote:border-l-4 prose-blockquote:border-[var(--color-vert-principal)] prose-blockquote:bg-surface-container-low prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:rounded-r-lg prose-blockquote:text-on-surface prose-blockquote:italic"
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
               />
 
               {/* Partage Mobile */}
-              <div className="mt-12 lg:hidden flex flex-col items-start gap-4 border-t border-gray-100 pt-8">
+              <div className="mt-12 lg:hidden flex flex-col items-start gap-4 border-t border-outline-variant pt-8">
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-gray-400">
                   Partager cet article
                 </p>
@@ -306,7 +306,7 @@ export default async function BlogPostPage({
                     href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                    className="w-10 h-10 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-info-container hover:text-info transition-colors"
                   >
                     in
                   </a>
@@ -314,7 +314,7 @@ export default async function BlogPostPage({
                     href={`https://wa.me/?text=${encodedTitle} ${encodedUrl}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-gray-50 border border-gray-200 text-gray-600 flex items-center justify-center hover:bg-green-50 hover:text-green-600 transition-colors"
+                    className="w-10 h-10 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-success-container hover:text-success transition-colors"
                   >
                     <MessageCircle size={18} />
                   </a>
@@ -323,11 +323,11 @@ export default async function BlogPostPage({
 
               {/* CTA Fin d'article */}
               {!htmlContent.includes('class="custom-cta"') && (
-                <div className="mt-16 p-8 bg-[#f8faf8] rounded-2xl border border-[var(--color-vert-clair)]">
-                  <h3 className="text-xl md:text-2xl font-heading font-bold text-gray-900 mb-3">
+                <div className="mt-16 p-8 bg-surface-container-low rounded-2xl border border-[var(--color-vert-clair)]">
+                  <h3 className="text-xl md:text-2xl font-heading font-bold text-on-surface mb-3">
                     Besoin de développer votre réseau agricole ?
                   </h3>
-                  <p className="text-gray-600 mb-6 text-sm md:text-base">
+                  <p className="text-on-surface-variant mb-6 text-sm md:text-base">
                     Rejoignez des milliers de professionnels sur agrolide et accédez à des ressources exclusives pour développer votre projet.
                   </p>
                   <Link href="/rejoindre">
@@ -344,9 +344,9 @@ export default async function BlogPostPage({
 
       {/* Articles similaires */}
       {similarArticles && similarArticles.length > 0 && (
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-16 md:py-24 bg-surface-container-low">
           <div className="container mx-auto px-4 max-w-6xl">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-10">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-on-surface mb-10">
               Articles similaires
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
