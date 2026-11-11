@@ -50,6 +50,18 @@ const SOCIALS = [
   { href: "https://www.youtube.com/@agrolide", icon: <Youtube {...lineProps} />, label: "YouTube" },
 ]
 
+/* Courbe de HorizonDivider (crest : M0 52 Q 48 6 100 56), échantillonnée en polygone ; --h = hauteur du séparateur. */
+const HORIZON_CLIP = (() => {
+  const pts: string[] = []
+  for (let i = 0; i <= 24; i++) {
+    const t = i / 24
+    const x = 2 * (1 - t) * t * 48 + t * t * 100
+    const y = (1 - t) ** 2 * 52 + 2 * (1 - t) * t * 6 + t * t * 56
+    pts.push(`${x.toFixed(2)}% calc(var(--h) * ${(y / 100).toFixed(4)})`)
+  }
+  return `polygon(${pts.join(", ")}, 100% 100%, 0 100%)`
+})()
+
 const footerLink = "inline-flex min-h-11 items-center rounded-tag text-body-sm text-on-surface-brand/80 transition-colors duration-150 ease-standard hover:text-on-surface-brand"
 const footerHeading = "mb-1 text-label-sm uppercase tracking-[0.14em] text-on-surface-brand"
 
@@ -82,9 +94,13 @@ export function Footer() {
       )}
 
       {/* ── PIED DE PAGE : bandeau vert de marque avec motif ── */}
-      <footer className="relative overflow-hidden bg-surface-brand pb-9 pt-[60px] text-on-surface-brand">
-        {/* Le motif s'estompe en haut : sinon les plants sont tranchés net sous la courbe de transition. */}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 [-webkit-mask-image:linear-gradient(to_bottom,transparent,black_140px)] [mask-image:linear-gradient(to_bottom,transparent,black_140px)]">
+      <footer className="relative overflow-x-clip bg-surface-brand pb-9 pt-[60px] text-on-surface-brand">
+        {/* Le motif remonte jusque sous la courbe de transition (découpé selon cette courbe) : il va jusqu'au bord du vert. */}
+        <div
+          aria-hidden="true"
+          className={`pointer-events-none absolute inset-x-0 bottom-0 [--h:2.5rem] sm:[--h:3.5rem] lg:[--h:5rem] ${showGlobalCTA ? "top-[calc(var(--h)*-1)] [clip-path:var(--horizon-clip)]" : "top-0"}`}
+          style={{ "--horizon-clip": HORIZON_CLIP } as React.CSSProperties}
+        >
           <Motif size={800} opacity={0.045} className="text-on-surface-brand" />
         </div>
 
@@ -155,10 +171,10 @@ export function Footer() {
                 href="https://whatsapp.com/channel/0029VbBd42p8V0tgiDJwzU2T"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`${footerLink} gap-2 whitespace-nowrap`}
+                className="inline-flex min-h-11 items-center gap-2 rounded-tag text-body-sm font-medium text-[#25D366] transition-opacity duration-150 ease-standard hover:opacity-80 md:whitespace-nowrap" /* ds-check:ignore couleur de marque WhatsApp */
               >
-                <IconWhatsApp className="size-4 shrink-0" /> Rejoindre la chaîne
-                <span className="sr-only"> WhatsApp (nouvel onglet)</span>
+                <IconWhatsApp className="size-4 shrink-0" /> Rejoindre la chaîne WhatsApp
+                <span className="sr-only"> (nouvel onglet)</span>
               </a>
             </div>
           </div>
