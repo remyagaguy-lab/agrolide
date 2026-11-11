@@ -98,11 +98,11 @@ export default async function LeconPage({
   return (
     <div className="flex flex-col min-h-full bg-white">
       {/* Corporate Header for Reading Mode */}
-      <section className="pt-12 md:pt-16 pb-12 bg-[#1b5e38]">
+      <section className="pt-12 md:pt-16 pb-12 bg-primary">
         <div className="container max-w-3xl mx-auto px-6">
           <div className="flex flex-col gap-4">
             <div>
-              <span className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-[#50a853] bg-[#0f351f] px-3 py-1 rounded-full">
+              <span className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-on-surface-brand bg-on-surface-brand/15 px-3 py-1 rounded-full">
                 {formation.modules.find(m => m.id === currentLeconFull.module_id)?.titre}
               </span>
             </div>
@@ -116,7 +116,7 @@ export default async function LeconPage({
       {/* Main Content */}
       <main className="flex-1 w-full max-w-3xl mx-auto px-6 py-10 md:py-16 bg-white">
         {/* Markdown Content */}
-        <div className="prose prose-slate prose-lg max-w-none mb-16 prose-headings:font-urbanist prose-headings:text-[#1a1a1a] prose-p:font-baskerville prose-p:text-[#4a4a4a] prose-p:leading-[1.8] prose-li:font-baskerville prose-li:text-[#4a4a4a] prose-a:text-[#1b5e38] prose-strong:font-bold prose-strong:text-[#1a1a1a]">
+        <div className="prose prose-slate prose-lg max-w-none mb-16 prose-headings:font-urbanist prose-headings:text-on-surface prose-p:font-baskerville prose-p:text-on-surface-variant prose-p:leading-[1.8] prose-li:font-baskerville prose-li:text-on-surface-variant prose-a:text-primary prose-strong:font-bold prose-strong:text-on-surface">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {currentLeconFull.contenu}
           </ReactMarkdown>
@@ -124,8 +124,8 @@ export default async function LeconPage({
 
         {/* Quiz Section */}
         {quizData && quizData.length > 0 && (
-          <div className="mt-16 pt-12 border-t border-[#e8e8e4]" id="quiz-section">
-            <h2 className="font-urbanist text-h3 text-[#1a1a1a] mb-8">Vérifiez vos connaissances</h2>
+          <div className="mt-16 pt-12 border-t border-outline-variant" id="quiz-section">
+            <h2 className="font-urbanist text-h3 text-on-surface mb-8">Vérifiez vos connaissances</h2>
             <Quiz 
               questions={quizData} 
               formationId={formationId}
@@ -137,12 +137,12 @@ export default async function LeconPage({
       </main>
 
       {/* Bottom Navigation Bar */}
-      <div className="bg-white border-t border-[#e8e8e4] py-6 sticky bottom-0 z-20">
+      <div className="bg-white border-t border-outline-variant py-6 sticky bottom-0 z-20">
         <div className="container max-w-3xl mx-auto px-6 flex items-center justify-between">
           {previousLecon ? (
             <Link 
               href={`/learn/${formationId}/${previousLecon.id}`}
-              className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-[#e8e8e4] hover:border-[#1b5e38] hover:text-[#1b5e38] hover:bg-[#f0f7f0] text-[#1a1a1a] font-urbanist font-[600] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-all"
+              className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-outline-variant hover:border-primary hover:text-primary hover:bg-primary-container text-on-surface font-urbanist font-[600] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-all"
             >
               <ChevronLeft className="w-5 h-5 mr-2" />
               Précédent
@@ -155,7 +155,7 @@ export default async function LeconPage({
             isCompleted || !quizData || quizData.length === 0 ? (
               <Link 
                 href={`/learn/${formationId}/${nextLecon.id}`}
-                className="inline-flex items-center justify-center bg-[#f99e1d] hover:bg-[#fcb726] text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+                className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
               >
                 Suivant
                 <ChevronRight className="w-5 h-5 ml-2" />
@@ -163,7 +163,7 @@ export default async function LeconPage({
             ) : (
               <button 
                 disabled
-                className="inline-flex items-center justify-center bg-[#f0f0ee] text-[#9a9a96] font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors cursor-not-allowed"
+                className="inline-flex items-center justify-center bg-surface-container text-on-surface-muted font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors cursor-not-allowed"
                 title="Validez le quiz pour passer à la suite"
               >
                 Suivant bloqué
@@ -173,7 +173,7 @@ export default async function LeconPage({
           ) : (
             <Link 
               href={`/formations/${formationId}`}
-              className="inline-flex items-center justify-center bg-[#1b5e38] hover:bg-[#145030] text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               <CheckCircle2 className="w-5 h-5 mr-2" />
               Terminer la formation

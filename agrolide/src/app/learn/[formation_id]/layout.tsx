@@ -71,7 +71,7 @@ export default async function LearnLayout({
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-background">
       {/* Top Navigation Bar */}
-      <header className="flex-shrink-0 h-16 border-b border-[#14472a] flex items-center justify-between px-4 lg:px-8 bg-[#1b5e38] text-white z-10">
+      <header className="flex-shrink-0 h-16 border-b border-on-surface-brand/20 flex items-center justify-between px-4 lg:px-8 bg-primary text-white z-10">
         <div className="flex items-center gap-4">
           <Link 
             href={`/formations/${formation.id}`} 
@@ -89,9 +89,9 @@ export default async function LearnLayout({
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-3 text-sm">
             <span className="text-white/80 font-medium">{progressPercent}% terminé</span>
-            <div className="w-24 h-2 bg-[#0f351f] rounded-full overflow-hidden">
+            <div className="w-24 h-2 bg-on-surface-brand/15 rounded-full overflow-hidden">
               <div 
-                className="h-full bg-[#f99e1d] rounded-full transition-all duration-500 ease-in-out" 
+                className="h-full bg-tertiary rounded-full transition-all duration-500 ease-in-out" 
                 style={{ width: `${progressPercent}%` }}
               />
             </div>
@@ -101,15 +101,15 @@ export default async function LearnLayout({
 
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar Navigation */}
-        <aside className="w-80 flex-shrink-0 border-r border-[#e8e8e4] bg-[#f8f8f6] hidden md:flex flex-col">
-          <div className="p-5 border-b border-[#e8e8e4]">
-            <h2 className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-[#1b5e38]">Sommaire du cours</h2>
+        <aside className="w-80 flex-shrink-0 border-r border-outline-variant bg-surface-container-low hidden md:flex flex-col">
+          <div className="p-5 border-b border-outline-variant">
+            <h2 className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-primary">Sommaire du cours</h2>
           </div>
           <div className="flex-1 overflow-y-auto">
             <div className="p-2 space-y-4">
               {formation.modules.map((mod, index) => (
                 <div key={mod.id} className="space-y-1">
-                  <div className="px-5 py-3 font-urbanist font-bold text-[13px] text-[#1a1a1a] uppercase tracking-wide">
+                  <div className="px-5 py-3 font-urbanist font-bold text-[13px] text-on-surface uppercase tracking-wide">
                     Module {index + 1}: {mod.titre}
                   </div>
                   <div className="space-y-0.5">
@@ -123,13 +123,13 @@ export default async function LearnLayout({
                           {isUnlocked ? (
                             <Link 
                               href={`/learn/${formation.id}/${lecon.id}`}
-                              className="flex items-start gap-3 px-5 py-3 text-sm transition-colors group hover:bg-[#1b5e38]/5 text-[#4a4a4a] font-urbanist rounded-lg mx-2"
+                              className="flex items-start gap-3 px-5 py-3 text-sm transition-colors group hover:bg-primary/5 text-on-surface-variant font-urbanist rounded-lg mx-2"
                             >
                               <div className="mt-0.5 flex-shrink-0">
                                 {isCompleted ? (
-                                  <CheckCircle2 className="w-6 h-6 text-[#50a853]" />
+                                  <CheckCircle2 className="w-6 h-6 text-primary" />
                                 ) : (
-                                  <div className="w-6 h-6 rounded-full border border-[#c0c0bc] flex items-center justify-center text-[11px] font-bold text-[#9a9a96] group-hover:border-[#1b5e38] group-hover:text-[#1b5e38] group-hover:bg-[#1b5e38]/10 transition-colors">
+                                  <div className="w-6 h-6 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-on-surface-muted group-hover:border-primary group-hover:text-primary group-hover:bg-primary/10 transition-colors">
                                     {globalIndex + 1}
                                   </div>
                                 )}
@@ -137,9 +137,9 @@ export default async function LearnLayout({
                               <span className="line-clamp-2 mt-0.5">{lecon.titre}</span>
                             </Link>
                           ) : (
-                            <div className="flex items-start gap-3 px-5 py-3 text-sm opacity-50 cursor-not-allowed text-[#4a4a4a] font-urbanist rounded-lg mx-2">
+                            <div className="flex items-start gap-3 px-5 py-3 text-sm opacity-50 cursor-not-allowed text-on-surface-variant font-urbanist rounded-lg mx-2">
                               <div className="mt-0.5 flex-shrink-0">
-                                <div className="w-6 h-6 rounded-full border border-[#e8e8e4] bg-[#f0f0ee] flex items-center justify-center text-[#9a9a96]">
+                                <div className="w-6 h-6 rounded-full border border-outline-variant bg-surface-container flex items-center justify-center text-on-surface-muted">
                                   <Lock className="w-3 h-3" />
                                 </div>
                               </div>
