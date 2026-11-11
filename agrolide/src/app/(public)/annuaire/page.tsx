@@ -1,59 +1,108 @@
 import React from 'react'
 import { Metadata } from 'next'
-import AnnuaireClient from '@/components/modules/annuaire/AnnuaireClient'
-import Link from 'next/link'
+import { EyeOff, Mail, MessageCircle, Search, UserPlus } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import { FeatureCard } from '@/components/ui/FeatureCard'
+import { PageHero } from '@/components/ui/PageHero'
+import { Section } from '@/components/ui/Section'
+import { StepList } from '@/components/ui/StepList'
 
 export const metadata: Metadata = {
-  title: "Annuaire des Acteurs Agricoles",
-  description: "Trouvez et connectez-vous avec les experts, ingénieurs et partenaires du premier réseau agricole africain. Rejoignez notre annuaire pour accélérer la transition agroécologique.",
-  alternates: { canonical: '/annuaire' }
+  title: "Annuaire du réseau",
+  description:
+    "L'annuaire du réseau agrolide est réservé aux membres connectés : retrouvez d'autres membres, envoyez des invitations et échangez par la messagerie du réseau.",
+  alternates: { canonical: '/annuaire' },
 }
 
-export const revalidate = 3600 // ISR toutes les heures
+// Page statique : aucune donnée de membre n'est lue ici.
+export const revalidate = 3600
 
-export default async function AnnuairePublicPage() {
+const ANNUAIRE_MEMBRES = '/membres/annuaire'
+
+export default function AnnuairePublicPage() {
   return (
-    <div className="min-h-screen text-on-surface">
-      {/* ── Hero Section ── */}
-      <section className="bg-surface-brand pt-32 pb-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block mb-5 px-4 py-1.5 rounded-full text-sm font-heading font-bold bg-accent-sun text-on-accent">
-            Réseau Agrolide
-          </span>
-          <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-on-surface-brand mb-6 leading-tight tracking-tight">
-            Annuaire du réseau
-          </h1>
-          <p className="text-lg md:text-xl text-on-surface-brand/80 font-sans max-w-2xl mx-auto leading-relaxed">
-            Connectez-vous avec des experts, chercheurs et entrepreneurs à travers toute l'Afrique. Partagez vos expériences, trouvez des partenaires et accélérez la transition agroécologique.
-          </p>
-        </div>
-      </section>
+    <>
+      <PageHero
+        nextTone="low"
+        label="Réseau agrolide"
+        title="L'annuaire du réseau est réservé aux membres."
+        description="Pour protéger les données personnelles de ses membres, agrolide ne publie pas la liste de ses membres. Connectez-vous pour retrouver d'autres acteurs agricoles et échanger avec eux."
+        actions={
+          <>
+            <Button href="/inscription">Rejoindre le réseau</Button>
+            <Button href={ANNUAIRE_MEMBRES} variant="ghost-dark">
+              Accéder à l&apos;annuaire
+            </Button>
+          </>
+        }
+      />
 
-      <div className="max-w-[1600px] mx-auto px-4 py-12">
-        <AnnuaireClient />
-      </div>
-
-      {/* CTA Section */}
-      <section className="bg-surface-container-low py-20 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="rounded-3xl p-10 md:p-14 text-center bg-tertiary text-on-tertiary">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl mb-4">
-              Vous souhaitez apparaître dans l'annuaire ?
-            </h2>
-            <p className="font-sans text-lg mb-8 max-w-xl mx-auto">
-              S'enregistrer dans l'annuaire est le meilleur moyen de vous connecter avec des pairs et de contribuer à la transition agroécologique en Afrique.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/inscription"
-                className="inline-block font-heading font-bold py-3.5 px-8 rounded-control transition-colors bg-primary text-on-primary hover:bg-primary/90"
-              >
-                S'enregistrer
-              </Link>
-            </div>
-          </div>
+      <Section
+        id="fonctionnement"
+        tone="low"
+        label="Dans l'annuaire"
+        title="Retrouver, se connecter, échanger"
+      >
+        <div className="grid gap-6 md:grid-cols-3">
+          <FeatureCard icon={<Search />} title="Retrouver un membre">
+            Recherchez par nom, pays ou domaine d&apos;activité, et filtrez par catégorie de membre.
+          </FeatureCard>
+          <FeatureCard icon={<UserPlus />} title="Envoyer une invitation">
+            Invitez un membre à se connecter à vous : la personne accepte ou ignore votre invitation.
+          </FeatureCard>
+          <FeatureCard icon={<MessageCircle />} title="Échanger">
+            Une fois la connexion acceptée, discutez avec elle par la messagerie du réseau.
+          </FeatureCard>
         </div>
-      </section>
-    </div>
+      </Section>
+
+      <Section
+        id="donnees"
+        tone="surface"
+        label="Vos données"
+        title="Un annuaire pensé pour protéger ses membres"
+      >
+        <div className="grid gap-6 md:grid-cols-2">
+          <FeatureCard icon={<EyeOff />} title="Pas de liste publique">
+            Les profils de l&apos;annuaire ne sont consultables qu&apos;après connexion à votre compte.
+          </FeatureCard>
+          <FeatureCard icon={<Mail />} title="Coordonnées non affichées">
+            L&apos;adresse e-mail et le numéro de téléphone d&apos;un membre ne figurent jamais sur son profil.
+          </FeatureCard>
+        </div>
+      </Section>
+
+      <Section
+        id="rejoindre"
+        tone="low"
+        label="Rejoindre"
+        title="Comment faire partie de l'annuaire"
+      >
+        <StepList
+          items={[
+            {
+              title: 'Créez votre compte',
+              description: 'Indiquez votre pays, votre spécialité et votre catégorie de membre.',
+            },
+            {
+              title: 'Complétez votre profil',
+              description: 'Une photo et une courte présentation aident les autres membres à vous reconnaître.',
+            },
+            {
+              title: 'Connectez-vous aux autres membres',
+              description: "Parcourez l'annuaire, envoyez des invitations et échangez par la messagerie.",
+            },
+          ]}
+        />
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          <Button variant="secondary" href="/inscription">
+            Créer mon compte
+          </Button>
+          <Button variant="text" href={`/login?next=${encodeURIComponent(ANNUAIRE_MEMBRES)}`}>
+            J&apos;ai déjà un compte
+          </Button>
+        </div>
+      </Section>
+    </>
   )
 }

@@ -2,7 +2,9 @@ import React from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, Briefcase, MessageCircle, ExternalLink, Globe, FileText, ArrowLeft } from 'lucide-react'
+import { MapPin, Briefcase, MessageCircle, ExternalLink, Globe, FileText, ArrowLeft, Lock } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import { EmptyState } from '@/components/ui/EmptyState'
 import { Metadata } from 'next'
 import { db } from '@/db'
 import { users, documents } from '@/db/schema'
@@ -27,36 +29,62 @@ function parseSafeArray(val: string | null | any): string[] {
   return trimmed.split(',').map(s => s.trim()).filter(Boolean);
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
-  const { id } = await params
-  
-  const member = await db.select({
-    prenom: users.prenom,
-    nom: users.nom
-  })
-  .from(users)
-  .where(eq(users.id, id))
-  .limit(1)
-  .then(r => r[0])
+/** N'accepte que des liens http(s) : un `javascript:` stocké en base ne devient jamais un lien actif. */
+function safeExternalUrl(raw: string | null | undefined): string | null {
+  if (!raw) return null
+  try {
+    const url = new URL(raw.trim())
+    return url.protocol === 'https:' || url.protocol === 'http:' ? url.toString() : null
+  } catch {
+    return null
+  }
+}
 
+// Fiche réservée aux membres connectés : aucune donnée de profil n'est lue ni affichée pour un visiteur,
+// et le titre de la page ne révèle pas le nom (pas d'énumération, pas d'indexation).
+export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: member ? `${member.prenom} ${member.nom} | Profil Agrolide` : 'Profil | Agrolide',
-    alternates: {
-      canonical: `/annuaire/${id}`
-    }
+    title: 'Profil membre | Agrolide',
+    robots: { index: false, follow: false },
   }
 }
 
 export default async function FicheProfilPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
 
+  const { userId } = await auth();
+
+  if (!userId) {
+    return (
+      <div className="container max-w-2xl py-16 md:py-24">
+        <EmptyState
+          icon={<Lock />}
+          title="Ce profil est réservé aux membres"
+          description="Connectez-vous pour consulter les profils du réseau agrolide, vous connecter aux autres membres et échanger avec eux."
+          action={
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button variant="secondary" href={`/login?next=${encodeURIComponent(`/annuaire/${id}`)}`}>
+                Se connecter
+              </Button>
+              <Button variant="outline" href="/inscription">
+                Rejoindre le réseau
+              </Button>
+            </div>
+          }
+        />
+      </div>
+    )
+  }
+
   // Fetch du profil
   const member = await db.select().from(users).where(eq(users.id, id)).limit(1).then(r => r[0])
 
   if (!member) notFound()
 
-  // Fetch connection status if logged in
-  const { userId } = await auth();
+  // Un membre qui a quitté l'annuaire n'est consultable que par lui-même.
+  if (member.annuaire_visible === false && userId !== id) notFound()
+
+  // Fetch connection status
   let connectionStatus: 'accepted' | 'pending_sent' | 'pending_received' | null = null;
   if (userId && userId !== id) {
     const conn = await db.query.user_connections.findFirst({
@@ -102,10 +130,12 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
   const displayName = `${member.prenom} ${member.nom}`
   const sectors = parseSafeArray(member.secteurs_expertise)
   const languages = parseSafeArray(member.langues)
+  const linkedinUrl = safeExternalUrl(member.linkedin_url)
+  const siteWebUrl = safeExternalUrl(member.site_web_url)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-8">
-      <Link href="/annuaire" className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-muted hover:text-on-surface transition-colors">
+      <Link href="/membres/annuaire" className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-muted hover:text-on-surface transition-colors">
         <ArrowLeft className="w-4 h-4" /> Retour à l'annuaire
       </Link>
 
@@ -242,17 +272,17 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
             )}
             
             {/* Liens Web */}
-            {(member.linkedin_url || member.site_web_url) && (
+            {(linkedinUrl || siteWebUrl) && (
               <div>
                 <h3 className="text-sm font-bold text-on-surface uppercase tracking-wider mb-3">Sur le web</h3>
                 <div className="space-y-2 text-sm font-medium">
-                  {member.linkedin_url && (
-                    <a href={member.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-info hover:underline p-2 rounded-lg hover:bg-info-container transition-colors">
+                  {linkedinUrl && (
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-info hover:underline p-2 rounded-lg hover:bg-info-container transition-colors">
                       <ExternalLink className="w-4 h-4" /> Profil LinkedIn
                     </a>
                   )}
-                  {member.site_web_url && (
-                    <a href={member.site_web_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:underline p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+                  {siteWebUrl && (
+                    <a href={siteWebUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:underline p-2 rounded-lg hover:bg-surface-container-low transition-colors">
                       <Globe className="w-4 h-4" /> Site internet
                     </a>
                   )}
