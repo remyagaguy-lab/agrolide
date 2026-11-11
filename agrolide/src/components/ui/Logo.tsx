@@ -2,6 +2,7 @@ import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { cn } from '@/lib/utils/formatters'
+import { Emblem } from '@/components/brand/Emblem'
 
 export type LogoVariant = 'horizontal' | 'symbol'
 export type LogoSize = 'sm' | 'md' | 'lg' | 'xl'
@@ -27,9 +28,8 @@ export function Logo({ variant = 'horizontal', size = 'md', tone = 'auto', href,
 
   let content: React.ReactNode
   if (variant === 'symbol') {
-    content = (
-      <Image src="/images/logo-agrolide-symbole.webp" alt="agrolide" width={256} height={259} priority={priority} className={cls} />
-    )
+    // Emblème vectoriel exact (net à toutes les tailles), tracé depuis le favicon de la marque
+    content = <Emblem variant="couleur" title="agrolide" className={cls} />
   } else if (tone === 'on-dark') {
     content = (
       <Image src="/images/logo-agrolide-blanc.webp" alt="agrolide" width={480} height={135} priority={priority} className={cls} />

@@ -4,7 +4,7 @@ import {
   TableCaption, TableCell, TableHead, TableHeader, TableRow, ToastProvider,
 } from '@/components/ui'
 import { brand, darkColors, lightColors, refPalette, type ColorRole } from '@/styles/tokens'
-import { Arche, ArchPhoto, HorizonDivider, Motif } from '@/components/brand'
+import { Arche, ArchPhoto, Emblem, HorizonDivider, Motif } from '@/components/brand'
 import { Interactive } from './Interactive'
 
 export const metadata: Metadata = {
@@ -264,19 +264,55 @@ export default function DesignSystemPage() {
             </div>
           </Section>
 
-          <Section id="identite" title="Identité visuelle : arche, horizon, motif" intro="Les formes de la marque (arche du soleil levant, collines, motif plante) sont des composants du design system : elles se règlent par couleur de texte, restent décoratives et se limitent à quelques usages par page.">
-            <h3 className="mb-3 text-title-md">L’arche (Arche)</h3>
-            <div className="grid gap-4 md:grid-cols-4">
-              <div className="flex flex-col items-center gap-2 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="frame" className="w-32 text-primary" /><code className="text-label-sm text-on-surface-muted">frame + soleil</code></div>
-              <div className="flex flex-col items-center gap-2 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="frame" sun={false} className="w-32 text-primary" /><code className="text-label-sm text-on-surface-muted">frame sans soleil</code></div>
-              <div className="flex flex-col items-center gap-2 rounded-card bg-surface-brand p-6 text-on-surface-brand"><Arche variant="frame" className="w-32 text-on-surface-brand" /><code className="text-label-sm">sur vert (blanc)</code></div>
-              <div className="flex flex-col items-center gap-2 rounded-card bg-primary-container p-6"><Arche variant="solid" className="w-32 text-primary/25" /><code className="text-label-sm text-on-primary-container">solid (filigrane)</code></div>
+          <Section id="identite" title="Identité visuelle : arche, horizon, motif" intro="Les formes de la marque (emblème rond, arche du soleil levant, motif plante) sont des composants du design system : elles se règlent par couleur de texte, restent décoratives et se limitent à quelques usages par page.">
+            <h3 className="mb-3 text-title-md">Deux styles : plein et creux</h3>
+            <p className="mb-4 max-w-3xl text-body-md text-on-surface-variant">
+              Les formes sont des vecteurs tracés depuis les pixels des originaux (<code>scripts/forme/vectorize.py</code>), jamais redessinés à la main. L’<strong>arche</strong> existe en <em>plein</em> (dôme et bande pleins) et en <em>creux</em> (arche épaisse, bande en contour) ; l’<strong>emblème</strong> rond du favicon en couleur, en <em>plein</em> (silhouette) et en <em>creux</em> (contour).
+            </p>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="flex flex-col items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="plein" className="w-44 text-primary" /><code className="text-label-sm text-on-surface-muted">Arche variant=&quot;plein&quot;</code></div>
+              <div className="flex flex-col items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="creux" sun={false} className="w-44 text-primary" /><code className="text-label-sm text-on-surface-muted">Arche variant=&quot;creux&quot; sun=&#123;false&#125;</code></div>
+              <div className="flex flex-col items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="creux" className="w-44 text-primary" /><code className="text-label-sm text-on-surface-muted">Arche variant=&quot;creux&quot; (avec soleil)</code></div>
+            </div>
+            <div className="mt-4 grid gap-4 md:grid-cols-3">
+              <div className="flex flex-col items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Emblem variant="couleur" title="Emblème agrolide" className="w-40" /><code className="text-label-sm text-on-surface-muted">Emblem variant=&quot;couleur&quot;</code></div>
+              <div className="flex flex-col items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Emblem variant="plein" className="w-40 text-primary" /><code className="text-label-sm text-on-surface-muted">Emblem variant=&quot;plein&quot;</code></div>
+              <div className="flex flex-col items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Emblem variant="creux" className="w-40 text-primary" strokeWidth={4} /><code className="text-label-sm text-on-surface-muted">Emblem variant=&quot;creux&quot; strokeWidth=&#123;4&#125;</code></div>
             </div>
 
-            <h3 className="mb-3 mt-10 text-title-md">Photo dans le soleil (ArchPhoto)</h3>
+            <h3 className="mb-3 mt-10 text-title-md">Tailles et fonds (16 → 96 px)</h3>
+            <p className="mb-4 max-w-3xl text-body-md text-on-surface-variant">
+              En dessous de 48 px, préférer le <em>plein</em> ou la version <em>couleur</em> : le contour d’origine (trait de 3 sur 1044) disparaît. Sur vert profond, la version couleur n’est pas adaptée (le trait vert s’y confond) : utiliser le plein en blanc.
+            </p>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="rounded-card border border-outline-variant bg-surface p-5">
+                <p className="mb-3 text-label-md text-on-surface-muted">Fond clair</p>
+                <div className="flex items-end gap-5">{[16, 24, 32, 48, 96].map((n) => (<Emblem key={n} variant="couleur" style={{ width: n }} />))}</div>
+                <div className="mt-4 flex items-end gap-5 text-primary">{[16, 24, 32, 48, 96].map((n) => (<Emblem key={n} variant="plein" style={{ width: n }} />))}</div>
+                <div className="mt-4 flex items-end gap-5 text-primary">{[16, 24, 32, 48, 96].map((n) => (<Arche key={n} variant="plein" style={{ width: n }} />))}</div>
+              </div>
+              <div className="rounded-card bg-surface-brand p-5 text-on-surface-brand">
+                <p className="mb-3 text-label-md">Vert profond (blanc)</p>
+                <div className="flex items-end gap-5">{[16, 24, 32, 48, 96].map((n) => (<Emblem key={n} variant="plein" style={{ width: n }} />))}</div>
+                <div className="mt-4 flex items-end gap-5">{[16, 24, 32, 48, 96].map((n) => (<Emblem key={n} variant="creux" strokeWidth={n < 48 ? 12 : 6} style={{ width: n }} />))}</div>
+                <div className="mt-4 flex items-end gap-5">{[16, 24, 32, 48, 96].map((n) => (<Arche key={n} variant="creux" sun={false} style={{ width: n }} />))}</div>
+              </div>
+              <div data-theme="dark" className="rounded-card border border-outline-variant bg-surface p-5 text-on-surface">
+                <p className="mb-3 text-label-md text-on-surface-variant">Fond sombre</p>
+                <div className="flex items-end gap-5">{[16, 24, 32, 48, 96].map((n) => (<Emblem key={n} variant="couleur" style={{ width: n }} />))}</div>
+                <div className="mt-4 flex items-end gap-5">{[16, 24, 32, 48, 96].map((n) => (<Emblem key={n} variant="plein" style={{ width: n }} />))}</div>
+                <div className="mt-4 flex items-end gap-5">{[16, 24, 32, 48, 96].map((n) => (<Arche key={n} variant="creux" style={{ width: n }} />))}</div>
+              </div>
+            </div>
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <div className="flex items-center justify-center rounded-card bg-primary-container p-6"><Arche variant="plein" className="w-48 text-primary/25" /></div>
+              <div className="flex items-center justify-center rounded-card bg-surface-container p-6 text-on-surface-variant"><Emblem variant="plein" className="w-24" /></div>
+            </div>
+
+            <h3 className="mb-3 mt-10 text-title-md">Photo dans l’arche (ArchPhoto)</h3>
             <div className="grid items-center gap-6 md:grid-cols-2">
               <ArchPhoto src="/hero-background.webp" alt="Champs agricoles au lever du soleil" className="max-w-md" />
-              <p className="text-body-md text-on-surface-variant">L’image est découpée par le disque solaire du logo et cerclée de l’arche et des collines. À réserver aux visuels forts (équipe, terrain, en-tête de section), une seule par écran.</p>
+              <p className="text-body-md text-on-surface-variant">L’image est découpée par l’ouverture exacte de l’arche (le même tracé que <code>Arche variant=&quot;creux&quot;</code>) et cerclée de l’arche et de la bande. À réserver aux visuels forts (équipe, terrain, en-tête de section), une seule par écran.</p>
             </div>
 
             <h3 className="mb-3 mt-10 text-title-md">Transition d’horizon (HorizonDivider) et motif (Motif)</h3>

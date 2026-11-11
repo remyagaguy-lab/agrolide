@@ -60,3 +60,8 @@ scratch/
 # Export de membres (contient des hash)
 scripts/users-export.json
 !.env.example
+
+# tracé : sorties volumineuses de verify.py
+/scripts/forme/verification/
+/scripts/forme/__pycache__/
+__pycache__/

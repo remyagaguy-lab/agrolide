@@ -25,6 +25,7 @@ const ALLOW_PREFIX = [
 const ALLOW_FILES = new Map([
   ['src/app/actions/admin-documents.ts', 'gabarit e-mail HTML (couleurs en ligne)'],
   ['src/components/auth/GoogleButton.tsx', 'logo Google (couleurs de marque imposées)'],
+  ['src/components/brand/forme-paths.ts', 'tracés générés par scripts/forme/vectorize.py (tons de feuille mesurés sur l’emblème source)'],
   ['src/components/modules/formations/CertificatPDF.tsx', 'PDF branché sur tokens.ts'],
 ])
 

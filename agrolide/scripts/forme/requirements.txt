@@ -1,0 +1,6 @@
+numpy
+opencv-python-headless
+contourpy
+scipy
+pillow
+resvg-py
