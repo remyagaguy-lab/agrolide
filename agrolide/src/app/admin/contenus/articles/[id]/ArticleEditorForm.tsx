@@ -16,7 +16,7 @@ import {
   Bold, Italic, List, ListOrdered, Link as LinkIcon, 
   Image as ImageIcon, Heading2, Heading3, Loader2, Save, Send 
 } from "lucide-react"
-import { useAuth } from "@clerk/nextjs"
+import { useAuth } from "@/lib/auth/client"
 
 export function ArticleEditorForm({ initialData }: { initialData?: any }) {
   const router = useRouter()

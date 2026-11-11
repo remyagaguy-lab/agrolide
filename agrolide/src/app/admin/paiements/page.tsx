@@ -1,7 +1,7 @@
 import { db } from "@/db"
 import { cotisations, contributions } from "@/db/schema"
 import { desc, gte, lte, eq, and } from "drizzle-orm"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { CreditCard, AlertCircle, Clock } from "lucide-react"
 import RappelButton from "./RappelButton"
@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 
 export default async function AdminPaiementsPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   const now = new Date()
   const in30Days = new Date(Date.now() + 30 * 86400_000).toISOString()

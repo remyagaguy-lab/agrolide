@@ -1,7 +1,7 @@
 import { db } from "@/db"
 import { partenaires, contacts_partenariat } from "@/db/schema"
 import { desc, asc } from "drizzle-orm"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { Handshake, Mail } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
@@ -22,7 +22,7 @@ const PARTENAIRE_FIELDS = [
 
 export default async function AdminPartenairesPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   let contacts: any[] = []
   let partenairesList: any[] = []

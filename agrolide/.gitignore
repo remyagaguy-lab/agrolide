@@ -56,3 +56,7 @@ next-env.d.ts
 
 # scratch scripts
 scratch/
+
+# Export de membres (contient des hash)
+scripts/users-export.json
+!.env.example

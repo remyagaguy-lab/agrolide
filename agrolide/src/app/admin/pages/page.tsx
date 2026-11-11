@@ -1,7 +1,7 @@
 import { db } from "@/db"
 import { pages_statiques } from "@/db/schema"
 import { asc } from "drizzle-orm"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { FileEdit, Globe } from "lucide-react"
@@ -20,7 +20,7 @@ const PAGE_LABELS: Record<string, string> = {
 
 export default async function AdminPagesPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   let pages: any[] = []
   try {

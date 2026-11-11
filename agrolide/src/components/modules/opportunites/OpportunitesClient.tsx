@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useUser } from '@clerk/nextjs'
+import { useUser } from '@/lib/auth/client'
 import OpportunityCard from './OpportunityCard'
 import SubmitOpportunityModal from './SubmitOpportunityModal'
 import { Plus, Search, Filter } from 'lucide-react'

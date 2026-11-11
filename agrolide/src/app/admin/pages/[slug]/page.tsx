@@ -1,5 +1,5 @@
 import { redirect, notFound } from "next/navigation"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { pages_statiques } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function AdminPageEditorPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   const page = await db.select().from(pages_statiques).where(eq(pages_statiques.slug, slug)).limit(1).then(r => r[0])
 

@@ -7,7 +7,7 @@ import * as Popover from '@radix-ui/react-popover'
 import { formatDistanceToNow } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { getNotifications, markAsReadAction } from '@/app/actions/notifications'
-import { useUser } from '@clerk/nextjs'
+import { useUser } from '@/lib/auth/client'
 
 export default function NotificationBell() {
   const [notifications, setNotifications] = useState<any[]>([])

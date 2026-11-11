@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { auth, currentUser } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq, and } from "drizzle-orm"
@@ -48,92 +48,12 @@ export default async function MembresRootLayout({
 
       profile = userRows[0] || null
     } catch (error) {
-      console.error("[MOUCHARD] Erreur lors de la récupération initiale du profil:", error)
+      console.error("[membres] Erreur lors de la récupération initiale du profil:", error)
     }
 
-    // FALLBACK SI LE WEBHOOK N'A PAS FONCTIONNÉ (ex: en dev local avec Google OAuth)
+    // Premier passage (ou compte non encore lié) : /auth/callback crée ou lie le profil D1.
     if (!profile) {
-      console.warn(`[CLERK FALLBACK] Profil introuvable pour ${userId}. Création automatique depuis Clerk...`);
-      try {
-        const user = await currentUser();
-        if (user) {
-          const primaryEmail = user.emailAddresses[0]?.emailAddress;
-          if (primaryEmail) {
-            // Vérifier si un compte existe déjà avec cet email (ex: ancien compte NextAuth)
-            const existingUserRows = await db.select({
-              id: users.id,
-              email: users.email,
-              image: users.image,
-              photo_url: users.photo_url
-            })
-            .from(users)
-            .where(eq(users.email, primaryEmail))
-            .limit(1)
-
-            const existingUser = existingUserRows[0] || null
-
-            if (existingUser) {
-              console.warn(`[CLERK FALLBACK] Email ${primaryEmail} existant. Mise à jour de l'ID vers Clerk ID...`);
-              await db.update(users).set({ 
-                id: userId,
-                image: user.imageUrl || existingUser.image,
-                photo_url: user.imageUrl || existingUser.photo_url
-              }).where(eq(users.email, primaryEmail));
-            } else {
-              console.warn(`[CLERK FALLBACK] Nouvel utilisateur. Insertion en base...`);
-              await db.insert(users).values({
-                id: userId,
-                email: primaryEmail,
-                name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || null,
-                prenom: user.firstName || null,
-                nom: user.lastName || null,
-                image: user.imageUrl || null,
-                photo_url: user.imageUrl || null,
-                role_plateforme: 'membre',
-                statut_adhesion: 'gratuit',
-                annuaire_visible: true,
-                newsletter_brevo: true,
-                created_at: new Date().toISOString(),
-                updated_at: new Date().toISOString(),
-              }).onConflictDoNothing();
-            }
-            
-            // Recharger le profil fraîchement inséré ou mis à jour
-            const finalUserRows = await db.select({
-              id: users.id,
-              email: users.email,
-              name: users.name,
-              prenom: users.prenom,
-              nom: users.nom,
-              image: users.image,
-              photo_url: users.photo_url,
-              role_plateforme: users.role_plateforme,
-              statut_adhesion: users.statut_adhesion,
-              categorie: users.categorie,
-              specialite: users.specialite,
-              biographie: users.biographie,
-              ville: users.ville,
-              pays: users.pays,
-              created_at: users.created_at,
-              updated_at: users.updated_at
-            })
-            .from(users)
-            .where(eq(users.id, userId))
-            .limit(1)
-
-            profile = finalUserRows[0] || null
-          }
-        }
-      } catch (error) {
-        console.error("[CLERK FALLBACK] Erreur critique lors de la tentative de fallback Clerk:", error)
-      }
-    }
-
-    console.log(`[MOUCHARD] Vérification d'accès à /membres. Session Clerk ID: ${userId} | Profil en base de données trouvé: ${profile ? 'OUI' : 'NON'}`);
-
-    if (!profile) {
-      console.error(`[MOUCHARD] AVERTISSEMENT: Impossible de trouver ou créer le profil BDD pour l'utilisateur Clerk (${userId}). Redirection vers login.`);
-      redirect(`/login?error=Profil+introuvable`)
+      redirect("/auth/callback?next=/membres/dashboard")
     }
 
     // 3. Redirection onboarding si pas de catégorie (ex: login via Google sans passer par le formulaire)
@@ -155,7 +75,7 @@ export default async function MembresRootLayout({
         ));
       pendingRequestsCount = pendingRows.length;
     } catch (e) {
-      console.error("[MOUCHARD] Erreur recup pending requests:", e);
+      console.error("[membres] Erreur recup pending requests:", e);
     }
 
     return (

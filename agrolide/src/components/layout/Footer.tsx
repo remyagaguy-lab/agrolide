@@ -272,7 +272,15 @@ export function Footer() {
           {/* Bas de footer */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-sans text-[12px] text-white/20">
-              © 2025 agrolide. Tous droits réservés.
+              © 2026 agrolide. Tous droits réservés. · Réalisé par{" "}
+              <a
+                href="https://orkedio.pages.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/50 transition-colors"
+              >
+                Orkedio
+              </a>
             </p>
             <div className="flex gap-6">
               <Link href="/mentions-legales" className="font-sans text-[12px] text-white/20 hover:text-white/50 transition-colors">

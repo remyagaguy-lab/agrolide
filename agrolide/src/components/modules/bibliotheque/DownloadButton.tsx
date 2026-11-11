@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Eye, Download, Loader2, AlertCircle, Lock } from 'lucide-react'
 import { checkTrocEligibility, getDocumentUrl } from '@/app/actions/bibliotheque'
 import Link from 'next/link'
-import { useAuth } from '@clerk/nextjs'
+import { useAuth } from '@/lib/auth/client'
 
 export function DownloadButton({ documentId }: { documentId: string }) {
   const [loading, setLoading] = useState(false)

@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
-import { Urbanist, Libre_Baskerville } from "next/font/google";
-import { ClerkProvider } from "@clerk/nextjs";
+import localFont from "next/font/local";
+import { AuthProvider } from "@/lib/auth/client";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import "./globals.css";
 
-const urbanist = Urbanist({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
+// Polices embarquées (fichiers dans src/app/fonts) : plus de dépendance à Google Fonts.
+const urbanist = localFont({
+  src: './fonts/Urbanist-latin.woff2',
+  weight: '100 900',
+  style: 'normal',
   variable: '--font-urbanist',
   display: 'swap',
   preload: true,
 })
 
-const baskerville = Libre_Baskerville({
-  subsets: ['latin'],
-  weight: ['400'],
-  style: ['normal', 'italic'],
+const baskerville = localFont({
+  src: [
+    { path: './fonts/LibreBaskerville-latin.woff2', weight: '400 700', style: 'normal' },
+    { path: './fonts/LibreBaskerville-latin-italic.woff2', weight: '400 700', style: 'italic' },
+  ],
   variable: '--font-baskerville',
   display: 'swap',
   preload: false,
@@ -51,7 +54,7 @@ export default function RootLayout({
   }
 
   return (
-    <ClerkProvider>
+    <AuthProvider>
       <html
         lang="fr"
         className={`${urbanist.variable} ${baskerville.variable} h-full antialiased`}
@@ -67,6 +70,6 @@ export default function RootLayout({
           <CookieBanner />
         </body>
       </html>
-    </ClerkProvider>
+    </AuthProvider>
   );
 }

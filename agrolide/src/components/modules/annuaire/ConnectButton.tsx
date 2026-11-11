@@ -5,7 +5,7 @@ import { UserPlus, MessageCircle, Clock } from 'lucide-react'
 import { sendConnectionRequest } from '@/app/actions/connections'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { useAuth } from '@clerk/nextjs'
+import { useAuth } from '@/lib/auth/client'
 
 interface ConnectButtonProps {
   memberId: string;

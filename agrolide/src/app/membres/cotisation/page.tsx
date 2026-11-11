@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users, cotisations as cotisationsTable } from "@/db/schema"
 import { eq, desc } from "drizzle-orm"

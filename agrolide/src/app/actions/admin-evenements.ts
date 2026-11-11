@@ -1,6 +1,6 @@
 'use server'
 
-import { auth } from '@clerk/nextjs/server'
+import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { evenements, inscriptions_evenement, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'

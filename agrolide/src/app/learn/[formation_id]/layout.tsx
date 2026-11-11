@@ -4,7 +4,7 @@ import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle2, Lock } from "lucide-react";
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth/server";
 import { progression_lecons } from "@/db/schema";
 import { redirect } from "next/navigation";
 

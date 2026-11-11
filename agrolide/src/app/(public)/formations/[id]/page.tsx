@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { CheckCircle2, Clock, BookOpen, GraduationCap, ExternalLink, Plus, Minus, Share2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
-import { auth } from "@clerk/nextjs/server";
+import { auth } from "@/lib/auth/server";
 import { inscriptions_formation } from "@/db/schema";
 import { and } from "drizzle-orm";
 import { EnrollButton } from "./EnrollButton";

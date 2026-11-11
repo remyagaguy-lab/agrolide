@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { articles } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -9,7 +9,7 @@ import { ArrowLeft } from "lucide-react"
 
 export default async function ArticleEditPage({ params }: { params: Promise<{ id: string }> }) {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   let article = null
   const resolvedParams = await params

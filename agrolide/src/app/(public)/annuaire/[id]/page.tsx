@@ -8,7 +8,7 @@ import { db } from '@/db'
 import { users, documents } from '@/db/schema'
 import { eq, and, desc } from 'drizzle-orm'
 import ConnectButton from '@/components/modules/annuaire/ConnectButton'
-import { auth } from '@clerk/nextjs/server'
+import { auth } from '@/lib/auth/server'
 import { user_connections } from '@/db/schema'
 
 function parseSafeArray(val: string | null | any): string[] {

@@ -7,7 +7,7 @@ import 'react-pdf/dist/Page/TextLayer.css'
 import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack, AlertCircle, Info } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useAuth } from '@clerk/nextjs'
+import { useAuth } from '@/lib/auth/client'
 
 // Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'

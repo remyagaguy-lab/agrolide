@@ -1,7 +1,7 @@
 import { db } from "@/db"
 import { users, documents } from "@/db/schema"
 import { asc } from "drizzle-orm"
-import { auth } from "@clerk/nextjs/server"
+import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { Users, BookOpen, Download, UserCheck } from "lucide-react"
 import { AdminLineChart } from "@/components/admin/ChartsWrapper"
@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 
 export default async function AdminAnalyticsPage() {
   const { userId } = await auth()
-  if (!userId) redirect("/sign-in")
+  if (!userId) redirect("/login")
 
   let profiles: any[] = []
   let docs: any[] = []

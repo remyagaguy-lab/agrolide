@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/db";
 import { progression_lecons } from "@/db/schema";
-import { auth } from "@/auth";
+import { auth } from "@/lib/auth/server";
 import { and, eq } from "drizzle-orm";
 
 export async function POST(

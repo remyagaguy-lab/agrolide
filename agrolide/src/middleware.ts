@@ -1,49 +1,33 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
-import { NextResponse } from 'next/server'
+import { NextResponse, type NextRequest } from 'next/server'
+import { updateSession } from '@/lib/supabase/middleware'
 
-const isMembreRoute = createRouteMatcher(['/membres(.*)'])
-const isAdminRoute = createRouteMatcher(['/admin(.*)'])
+/**
+ * Protège /membres et /admin avec Supabase Auth.
+ * - Visiteur non connecté  -> redirection vers /login?next=<page demandée>
+ * - Le contrôle fin du rôle admin se fait dans app/admin/layout.tsx (D1 + app_metadata).
+ * IMPORTANT : ne pas entourer ce code d'un try/catch global qui avalerait les redirections.
+ */
 
-export default clerkMiddleware(async (auth, request) => {
-  try {
-    // Rediriger vers le login si non connecté pour routes protégées
-    if (isMembreRoute(request) || isAdminRoute(request)) {
-      const { userId } = await auth();
-      console.log(`[MOUCHARD MIDDLEWARE] Accès à ${request.nextUrl.pathname}. Utilisateur connecté Clerk: ${userId ? 'OUI (' + userId + ')' : 'NON'}`);
-      await auth.protect()
-    }
+const PROTECTED_PREFIXES = ['/membres', '/admin']
 
-    // Vérifier le rôle admin pour les routes admin
-    if (isAdminRoute(request)) {
-      const { sessionClaims, userId } = await auth()
-      const role = (sessionClaims?.metadata as any)?.role
-      
-      // Bypass pour les administrateurs principaux par leur ID Clerk
-      const isSuperAdminId = userId === 'user_3HEMG7ZcpynYXbhaG8MGHxHmAuC' || userId === 'user_3HJO6en8yGy4GBgIt5GzwJEZ4AO';
-      
-      if (!isSuperAdminId && role !== 'super_admin' && role !== 'admin_content') {
-        const url = request.nextUrl.clone()
-        url.pathname = '/membres/dashboard'
-        return NextResponse.redirect(url)
-      }
-    }
-  } catch (error: any) {
-    return new NextResponse(
-      JSON.stringify({
-        error: "Middleware Crash",
-        message: error.message,
-        stack: error.stack,
-      }),
-      { status: 500, headers: { 'content-type': 'application/json' } }
-    );
+export async function middleware(request: NextRequest) {
+  const { pathname, search } = request.nextUrl
+
+  const { getResponse, claims } = await updateSession(request)
+  const isProtected = PROTECTED_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`))
+
+  if (isProtected && !claims) {
+    const url = request.nextUrl.clone()
+    url.pathname = '/login'
+    url.search = `?next=${encodeURIComponent(pathname + search)}`
+    return NextResponse.redirect(url)
   }
-})
+
+  return getResponse()
+}
 
 export const config = {
   matcher: [
-    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    // Always run for Clerk's auto-proxy path
-    '/__clerk/:path*',
-    '/(api|trpc)(.*)',
+    '/((?!_next/static|_next/image|favicon.ico|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|avif|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest|pdf|txt|xml)).*)',
   ],
 }
