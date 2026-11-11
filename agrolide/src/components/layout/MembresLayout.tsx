@@ -5,7 +5,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useClerk } from "@/lib/auth/client"
-import { 
+import { MembresUserMenu } from "./MembresUserMenu"
+import {
   LayoutDashboard, 
   User, 
   Users, 
@@ -95,18 +96,18 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
         <div className="h-20 flex items-center px-6 shrink-0">
           <Link href="/membres/dashboard" className="flex items-center flex-shrink-0">
             <Image
-              src="/agrolide-png.png"
+              src="/images/logo-agrolide.webp"
               alt="agrolide"
-              width={240}
-              height={80}
-              className="h-12 w-auto object-contain scale-[2.2] origin-left"
+              width={480}
+              height={135}
+              className="h-11 w-auto"
               priority
             />
           </Link>
         </div>
 
         {/* Navigation Area */}
-        <div className="flex-1 pl-4 py-4 flex flex-col gap-6 relative z-10">
+        <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pl-4 py-4 flex flex-col gap-5 relative z-10 custom-scrollbar">
           
           {/* Main Menu */}
           <div>
@@ -182,11 +183,11 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
         <header className="lg:hidden h-14 bg-white border-b border-[#e8e8e4] z-20 flex items-center justify-between px-4 shrink-0">
           <Link href="/membres/dashboard" className="flex items-center flex-shrink-0">
             <Image
-              src="/agrolide-png.png"
+              src="/images/logo-agrolide.webp"
               alt="agrolide"
-              width={160}
-              height={50}
-              className="h-8 w-auto object-contain scale-[1.8] origin-left"
+              width={480}
+              height={135}
+              className="h-8 w-auto"
               priority
             />
           </Link>
@@ -198,15 +199,20 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
                 <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-red-500 border-2 border-white"></span>
               )}
             </Link>
-            <Link href="/membres/profil" className="w-8 h-8 rounded-lg bg-gray-100 overflow-hidden relative border border-[#e8e8e4] shrink-0">
-              {profile?.avatar_url ? (
-                <Image src={profile.avatar_url} alt="Avatar" fill sizes="32px" className="object-cover" />
-              ) : (
-                <User size={16} className="m-auto h-full text-gray-400" />
-              )}
-            </Link>
+            <MembresUserMenu profile={profile} compact />
           </div>
         </header>
+
+        {/* Barre supérieure (desktop) : menu du compte toujours visible */}
+        <div className="hidden lg:flex h-16 shrink-0 items-center justify-end gap-3 px-6">
+          <Link href="/membres/reseau" aria-label="Demandes de connexion" className="w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 hover:bg-white transition-colors relative">
+            <Bell size={18} strokeWidth={2} />
+            {pendingRequestsCount > 0 && (
+              <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-red-500 border-2 border-[#f8f9fa]"></span>
+            )}
+          </Link>
+          <MembresUserMenu profile={profile} />
+        </div>
 
         {/* SCROLLABLE PAGE CONTENT */}
         <main className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-3 md:p-5 lg:p-6 pb-24 md:pb-6 relative">
