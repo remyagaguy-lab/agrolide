@@ -11,6 +11,11 @@ const s3Client = new S3Client({
   },
 })
 
+// Buckets publics uniquement (les buckets privés ne sont jamais signés ici)
+const PUBLIC_BUCKETS = new Set([
+  process.env.NEXT_PUBLIC_R2_PUBLIC_BUCKET || 'agrolide-ressources',
+])
+
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
@@ -20,18 +25,29 @@ export async function GET(request: NextRequest) {
       return new NextResponse('Missing url parameter', { status: 400 })
     }
 
-    if (!urlParam.includes('r2.cloudflarestorage.com')) {
-      return NextResponse.redirect(urlParam)
+    // Uniquement des URL R2 (jamais de redirection vers un site externe)
+    let urlObj: URL
+    try {
+      urlObj = new URL(urlParam)
+    } catch {
+      return new NextResponse('Invalid url', { status: 400 })
+    }
+    if (urlObj.protocol !== 'https:' || !urlObj.hostname.endsWith('.r2.cloudflarestorage.com')) {
+      return new NextResponse('Forbidden', { status: 403 })
     }
 
-    const urlObj = new URL(urlParam)
-    const objectKey = decodeURIComponent(urlObj.pathname.substring(1))
-    
-    // Le nom du bucket est le sous-domaine
+    // Le nom du bucket est le sous-domaine : seul le bucket public est autorisé
     const bucketName = urlObj.hostname.split('.')[0]
+    if (!PUBLIC_BUCKETS.has(bucketName)) {
+      return new NextResponse('Forbidden', { status: 403 })
+    }
+    const objectKey = decodeURIComponent(urlObj.pathname.substring(1))
+    if (!objectKey || objectKey.includes('..')) {
+      return new NextResponse('Invalid key', { status: 400 })
+    }
 
     const command = new GetObjectCommand({
-      Bucket: bucketName || process.env.R2_BUCKET_NAME,
+      Bucket: bucketName,
       Key: objectKey,
       ResponseContentDisposition: 'inline'
     })

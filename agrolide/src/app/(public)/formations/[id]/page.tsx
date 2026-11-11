@@ -3,6 +3,7 @@ import { formations } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { CheckCircle2, Clock, BookOpen, GraduationCap, ExternalLink, Plus, Minus, Share2 } from "lucide-react";
@@ -18,7 +19,9 @@ export default async function FormationPublicPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const formation = await db.query.formations.findFirst({
+  // Formation, session et inscription sont indépendantes : une seule attente.
+  const [formation, { userId }, existing] = await Promise.all([
+  db.query.formations.findFirst({
     where: eq(formations.id, id),
     with: {
       modules: {
@@ -30,7 +33,19 @@ export default async function FormationPublicPage({
         },
       },
     },
-  });
+  }),
+    auth(),
+    auth().then(({ userId: uid }) =>
+      uid
+        ? db.query.inscriptions_formation.findFirst({
+            where: and(
+              eq(inscriptions_formation.membre_id, uid),
+              eq(inscriptions_formation.formation_id, id)
+            ),
+          })
+        : null
+    ),
+  ]);
 
   if (!formation) {
     notFound();
@@ -44,18 +59,10 @@ export default async function FormationPublicPage({
     ? `${Math.floor(totalDuree / 60)}h${totalDuree % 60 > 0 ? ` ${totalDuree % 60}min` : ''}` 
     : `${totalDuree} min`;
 
-  // Auth & Enrollment check
-  const { userId } = await auth();
   const isLoggedIn = !!userId;
   let isEnrolled = false;
 
   if (isLoggedIn && userId) {
-    const existing = await db.query.inscriptions_formation.findFirst({
-      where: and(
-        eq(inscriptions_formation.membre_id, userId),
-        eq(inscriptions_formation.formation_id, formation.id)
-      )
-    });
     if (existing) {
       isEnrolled = true;
     }
@@ -89,12 +96,25 @@ export default async function FormationPublicPage({
           <div className="w-full md:w-[420px] lg:w-[480px] flex-shrink-0">
             {formation.cover_image_url ? (
               <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-white border border-[#e8e8e4] p-1.5 md:p-2 aspect-[4/3] w-full">
-                <img 
-                  src={formation.cover_image_url} 
-                  alt={formation.titre}
-                  className="w-full h-full object-cover rounded-[6px]"
-                  loading="lazy"
-                />
+                {formation.cover_image_url.startsWith("/") ? (
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={formation.cover_image_url}
+                      alt={formation.titre}
+                      fill
+                      sizes="(min-width: 1024px) 480px, (min-width: 768px) 420px, 100vw"
+                      className="object-cover rounded-[6px]"
+                      priority
+                    />
+                  </div>
+                ) : (
+                  <img
+                    src={formation.cover_image_url}
+                    alt={formation.titre}
+                    className="w-full h-full object-cover rounded-[6px]"
+                    loading="lazy"
+                  />
+                )}
               </div>
             ) : (
               <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-[#1a2e22] border border-[#1b5e38] aspect-[4/3] w-full flex items-center justify-center p-6">

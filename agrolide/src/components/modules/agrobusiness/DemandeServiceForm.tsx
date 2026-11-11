@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
+import { Turnstile, turnstileEnabled } from "@/components/ui/Turnstile"
 import { Loader2 } from "lucide-react"
 
 export default function DemandeServiceForm() {
@@ -19,6 +20,7 @@ export default function DemandeServiceForm() {
   })
   const [file, setFile] = useState<File | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
   const [success, setSuccess] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
@@ -40,7 +42,7 @@ export default function DemandeServiceForm() {
     try {
       const res = await fetch('/api/agrobusiness/demandes', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-turnstile-token': turnstileToken },
         body: JSON.stringify({
           ...formData,
           fichier_nom: file ? file.name : undefined,
@@ -150,7 +152,8 @@ export default function DemandeServiceForm() {
           <Input id="fichier" type="file" onChange={handleFileChange} className="cursor-pointer bg-white" />
         </div>
 
-        <Button type="submit" variant="primary" disabled={isSubmitting} className="w-full text-lg h-14">
+        <Turnstile onToken={setTurnstileToken} resetSignal={isSubmitting} />
+        <Button type="submit" variant="primary" disabled={isSubmitting || (turnstileEnabled && !turnstileToken)} className="w-full text-lg h-14">
           {isSubmitting ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Envoi en cours...</> : "Envoyer ma demande"}
         </Button>
       </div>

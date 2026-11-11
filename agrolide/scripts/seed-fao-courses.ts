@@ -18,7 +18,7 @@ const faoCourses = [
     prix_fcfa: 0,
     statut: "publie",
     acces: "libre",
-    cover_image_url: "/images/formations/ext-fao-1.png",
+    cover_image_url: "/images/formations/ext-fao-1.webp",
     programme_json: JSON.stringify({
       contexte: "La gestion de l'eau est cruciale face à l'irrégularité des précipitations causée par le changement climatique.",
       public_cible: "Agriculteurs, techniciens agricoles, étudiants.",
@@ -43,7 +43,7 @@ const faoCourses = [
     prix_fcfa: 0,
     statut: "publie",
     acces: "libre",
-    cover_image_url: "/images/formations/ext-fao-2.png",
+    cover_image_url: "/images/formations/ext-fao-2.webp",
     programme_json: JSON.stringify({
       contexte: "L'agriculture intelligente face au climat (AIC) aide à orienter les actions nécessaires pour transformer les systèmes agricoles.",
       public_cible: "Agriculteurs, décideurs politiques, étudiants.",

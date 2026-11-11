@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
+import { Turnstile, turnstileEnabled } from "@/components/ui/Turnstile"
 import { Loader2 } from "lucide-react"
 
 export default function IncubationForm() {
@@ -21,6 +22,7 @@ export default function IncubationForm() {
   })
   const [file, setFile] = useState<File | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
   const [success, setSuccess] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
@@ -43,7 +45,7 @@ export default function IncubationForm() {
       // 1. Soumettre les données
       const res = await fetch('/api/agrobusiness/incubation', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-turnstile-token': turnstileToken },
         body: JSON.stringify({
           ...formData,
           cv_nom: file ? file.name : undefined,
@@ -175,7 +177,8 @@ export default function IncubationForm() {
         </div>
 
         <div className="pt-6">
-          <Button type="submit" variant="primary" disabled={isSubmitting} className="w-full text-lg h-14">
+          <Turnstile onToken={setTurnstileToken} resetSignal={isSubmitting} />
+          <Button type="submit" variant="primary" disabled={isSubmitting || (turnstileEnabled && !turnstileToken)} className="w-full text-lg h-14">
             {isSubmitting ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Envoi en cours...</> : "Soumettre ma candidature"}
           </Button>
           <p className="text-center text-xs text-gray-500 mt-4">

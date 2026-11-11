@@ -1,20 +1,13 @@
 import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
-import { auth } from "@/lib/auth/server"
+import { requireAdmin } from "@/lib/auth/admin"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq, asc } from "drizzle-orm"
 
 export async function GET(request: NextRequest) {
-  const { userId } = await auth()
-  if (!userId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
-
-  const profile = await db.select({ role_plateforme: users.role_plateforme })
-    .from(users).where(eq(users.id, userId)).limit(1).then(r => r[0])
-
-  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme || '')) {
-    return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
-  }
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   const url = new URL(request.url)
   const q = url.searchParams.get("q")

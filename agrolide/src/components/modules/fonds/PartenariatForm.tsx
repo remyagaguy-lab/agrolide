@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
+import { Turnstile, turnstileEnabled } from "@/components/ui/Turnstile"
 import { Loader2 } from "lucide-react"
 
 export default function PartenariatForm() {
@@ -16,6 +17,7 @@ export default function PartenariatForm() {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState('')
   const [success, setSuccess] = useState(false)
   const [errorMsg, setErrorMsg] = useState('')
 
@@ -31,7 +33,7 @@ export default function PartenariatForm() {
     try {
       const res = await fetch('/api/fonds/contact-partenariat', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'x-turnstile-token': turnstileToken },
         body: JSON.stringify(formData)
       })
 
@@ -127,7 +129,8 @@ export default function PartenariatForm() {
           />
         </div>
 
-        <Button type="submit" variant="primary" disabled={isSubmitting} className="w-full h-14 text-lg mt-4">
+        <Turnstile onToken={setTurnstileToken} resetSignal={isSubmitting} />
+        <Button type="submit" variant="primary" disabled={isSubmitting || (turnstileEnabled && !turnstileToken)} className="w-full h-14 text-lg mt-4">
           {isSubmitting ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Envoi...</> : "Envoyer la demande"}
         </Button>
       </div>

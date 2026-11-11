@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
-import { auth } from '@/lib/auth/server'
+import { requireAdmin } from "@/lib/auth/admin"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -9,17 +9,8 @@ export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { userId: currentUserId } = await auth();
-  if (!currentUserId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
-
-  const profile = await db.query.users.findFirst({
-    columns: { role_plateforme: true },
-    where: eq(users.id, currentUserId)
-  })
-
-  if (profile?.role_plateforme !== "super_admin") {
-    return NextResponse.json({ error: "Seul le super_admin peut promouvoir des administrateurs" }, { status: 403 })
-  }
+  const admin = await requireAdmin(["super_admin"])
+  if (!admin.ok) return admin.response
 
   try {
     const { id } = await params

@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit } from '@/lib/security/rate-limit'
+import { verifyTurnstile } from '@/lib/security/turnstile'
 import { Resend } from 'resend'
 import { z } from 'zod'
 
@@ -15,6 +17,11 @@ const partenariatSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    const limited = await rateLimit(request, 'contact-partenariat', 5, 600)
+    if (limited) return limited
+    const bot = await verifyTurnstile(request)
+    if (bot) return bot
+
     const body = await request.json()
     const result = partenariatSchema.safeParse(body)
     

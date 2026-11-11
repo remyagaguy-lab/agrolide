@@ -1,21 +1,12 @@
 import { NextResponse, NextRequest } from "next/server"
-import { auth } from "@/lib/auth/server"
+import { requireAdmin } from "@/lib/auth/admin"
 import { db } from "@/db"
-import { temoignages, users } from "@/db/schema"
+import { temoignages } from "@/db/schema"
 import { eq } from "drizzle-orm"
 
-async function checkAdmin() {
-  const { userId: currentUserId } = await auth()
-  if (!currentUserId) return false
-  const user = await db.query.users.findFirst({
-    columns: { role_plateforme: true },
-    where: eq(users.id, currentUserId)
-  })
-  return user && ["admin_content", "super_admin"].includes(user.role_plateforme || "")
-}
-
 export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  if (!await checkAdmin()) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   try {
     const { id } = await params
@@ -28,7 +19,8 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
 }
 
 export async function DELETE(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  if (!await checkAdmin()) return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   try {
     const { id } = await params

@@ -74,7 +74,7 @@ export function NewsletterForm() {
       {/* Motif Background (subtle) */}
       <div 
         className="absolute inset-0 z-0 opacity-5 pointer-events-none" 
-        style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "200px", backgroundRepeat: "repeat" }} 
+        style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "200px", backgroundRepeat: "repeat" }} 
       />
       
       <div className="relative z-10 p-6 md:p-8">

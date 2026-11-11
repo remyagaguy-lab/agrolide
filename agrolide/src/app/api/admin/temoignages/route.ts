@@ -1,11 +1,13 @@
 import { NextResponse, NextRequest } from "next/server"
-import { auth } from '@/lib/auth/server'
+import { requireAdmin } from '@/lib/auth/admin'
 import { db } from "@/db"
 import { temoignages } from "@/db/schema"
 import { asc } from "drizzle-orm"
 
 // GET : liste tous les témoignages
 export async function GET() {
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
   try {
     const data = await db.query.temoignages.findMany({
       orderBy: [asc(temoignages.ordre)]
@@ -18,8 +20,8 @@ export async function GET() {
 
 // POST : créer un témoignage
 export async function POST(request: NextRequest) {
-  const { userId: currentUserId } = await auth();
-  if (!currentUserId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   try {
     const body = await request.json()

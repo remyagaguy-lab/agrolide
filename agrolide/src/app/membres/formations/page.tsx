@@ -1,6 +1,6 @@
 import { Calendar, MapPin, CheckCircle, Clock, XCircle, BookOpen } from 'lucide-react'
 import Link from 'next/link'
-import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButton'
+import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButtonLazy'
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { inscriptions_formation, sessions_formation, formations, users } from '@/db/schema'

@@ -11,6 +11,28 @@ const withPWA = withPWAInit({
   disable: process.env.NODE_ENV === "development",
 });
 
+// CSP en mode « report-only » : elle signale (console du navigateur) sans rien bloquer.
+// Après une période d'observation sans alerte, renommer l'en-tête en Content-Security-Policy.
+const supabaseHost = process.env.NEXT_PUBLIC_SUPABASE_URL
+  ? new URL(process.env.NEXT_PUBLIC_SUPABASE_URL).host
+  : '*.supabase.co'
+const cspReportOnly = [
+  "default-src 'self'",
+  // Next injecte des scripts/styles inline (pas de nonce) ; Google Analytics (consentement cookies)
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://*.googletagmanager.com https://challenges.cloudflare.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https://img.youtube.com https://images.unsplash.com https://*.r2.dev https://*.r2.cloudflarestorage.com https://*.supabase.co https://*.google-analytics.com https://*.googletagmanager.com",
+  "font-src 'self' data:",
+  `connect-src 'self' https://${supabaseHost} wss://${supabaseHost} https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.ingest.sentry.io https://*.ingest.de.sentry.io https://challenges.cloudflare.com https://*.r2.cloudflarestorage.com`,
+  "frame-src https://challenges.cloudflare.com https://www.youtube.com https://www.youtube-nocookie.com",
+  "worker-src 'self' blob:",
+  "media-src 'self' https://*.r2.dev https://*.r2.cloudflarestorage.com",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+].join('; ')
+
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -43,6 +65,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Les anciennes couvertures PNG (chemins stockés en base) sont servies en WebP.
+  async rewrites() {
+    return [
+      { source: '/images/formations/:name.png', destination: '/images/formations/:name.webp' },
+    ]
+  },
   async headers() {
     return [
       {
@@ -54,6 +82,8 @@ const nextConfig: NextConfig = {
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
+          { key: 'Content-Security-Policy-Report-Only', value: cspReportOnly },
         ],
       },
     ]

@@ -1,23 +1,16 @@
 import { NextResponse, NextRequest } from "next/server"
-import { auth } from "@/lib/auth/server"
-import { revalidatePath } from "next/cache"
+import { requireAdmin } from "@/lib/auth/admin"
+import { revalidatePath, revalidateTag } from "next/cache"
 import { db } from "@/db"
-import { users, articles } from "@/db/schema"
+import { articles } from "@/db/schema"
 import { eq } from "drizzle-orm"
 
 export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { userId } = await auth()
-  if (!userId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
-
-  const profile = await db.select({ role_plateforme: users.role_plateforme })
-    .from(users).where(eq(users.id, userId)).limit(1).then(r => r[0])
-
-  if (!profile || !["admin_content", "super_admin"].includes(profile.role_plateforme || '')) {
-    return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
-  }
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   const { id } = await params
   const payload = await request.json()
@@ -28,6 +21,8 @@ export async function PATCH(
       .where(eq(articles.id, id))
 
     revalidatePath('/blog')
+    revalidateTag('articles', 'max')
+    revalidatePath('/')
     revalidatePath('/admin/contenus/articles')
 
     return NextResponse.json({ success: true })
@@ -40,14 +35,16 @@ export async function DELETE(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const { userId } = await auth()
-  if (!userId) return NextResponse.json({ error: "Non autorisé" }, { status: 401 })
+  const admin = await requireAdmin()
+  if (!admin.ok) return admin.response
 
   const { id } = await params
 
   try {
     await db.delete(articles).where(eq(articles.id, id))
     revalidatePath('/blog')
+    revalidateTag('articles', 'max')
+    revalidatePath('/')
     revalidatePath('/admin/contenus/articles')
     return NextResponse.json({ success: true })
   } catch (e: any) {

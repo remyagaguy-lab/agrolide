@@ -56,7 +56,7 @@ async function seedBusinessPlanV2() {
     niveau: "Débutant à Intermédiaire",
     modalite: "En ligne",
     prix_fcfa: 0,
-    cover_image_url: "/images/formations/cover_bp_agricole.png",
+    cover_image_url: "/images/formations/cover_bp_agricole.webp",
     statut: "publie",
     acces: "public",
   });

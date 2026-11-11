@@ -1,8 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { auth } from '@/lib/auth/server'
+import { rateLimit } from '@/lib/security/rate-limit'
 
 export async function POST(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
+    const { userId } = await auth()
+    if (!userId) return NextResponse.json({ error: 'Connexion requise' }, { status: 401 })
+    const limited = await rateLimit(request, 'forum-signaler', 20, 600)
+    if (limited) return limited
+
     const { id } = await params
+    if (!id || id.length > 100) return NextResponse.json({ error: 'Identifiant invalide' }, { status: 400 })
     
     const { db } = await import('@/db')
     const { forum_messages } = await import('@/db/schema')

@@ -1,9 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { db } from "@/db"
-import { articles } from "@/db/schema"
-import { eq, desc, like, and } from "drizzle-orm"
+import { getPublishedArticles } from "@/lib/cache/public-queries"
 import { ArticleCard } from "@/components/ui/ArticleCard"
 import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
@@ -27,13 +25,7 @@ export default async function BlogPage({
     const categoryParam = resolvedParams.category
     const searchParam = resolvedParams.search
 
-    let allArticles = await db.query.articles.findMany({
-      where: eq(articles.statut, 'publie'),
-      orderBy: [desc(articles.published_at)],
-      with: {
-        auteur: true
-      }
-    })
+    let allArticles = await getPublishedArticles()
 
     // Filtres JS (D1 SQLite ne supporte pas ilike)
     if (categoryParam && typeof categoryParam === 'string') {
@@ -74,7 +66,7 @@ export default async function BlogPage({
           {/* Motif Background */}
           <div 
             className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none" 
-            style={{ backgroundImage: "url('/images/motif-transparent.png')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
+            style={{ backgroundImage: "url('/images/motif-transparent.webp')", backgroundSize: "800px", backgroundRepeat: "repeat" }} 
           />
           <div className="container mx-auto px-4 relative z-10">
             <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
