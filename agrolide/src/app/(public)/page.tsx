@@ -182,19 +182,18 @@ export default async function HomePage() {
         {/* Motif Background for texture (placed behind the image) */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
 
-        <div className="max-w-[1100px] mx-auto px-6 pt-[32px] pb-0 md:pt-[48px] relative z-20 grid items-end gap-x-8 gap-y-6 md:grid-cols-[1fr_1.1fr]">
-          <div className="pb-8 md:pb-14 md:self-center">
+        <div className="relative z-20 mx-auto flex max-w-[1040px] flex-col items-center px-6 pt-8 text-center md:pt-14">
+          <div className="flex w-full flex-col items-center">
 
-            <h1 className="font-heading font-[800] text-[40px] md:text-[48px] lg:text-[56px] text-on-surface-brand leading-[1.08] tracking-[-0.03em] mb-8">
-              Fédérer la chaîne<br />
-              agricole, pour conquérir<br />
+            <h1 className="font-heading font-[800] text-[30px] sm:text-[40px] md:text-[46px] lg:text-[54px] text-on-surface-brand leading-[1.1] tracking-[-0.03em] mb-6">
+              Fédérer la chaîne agricole, pour conquérir{" "}
               <span className="text-accent-sun">la souveraineté alimentaire</span>
             </h1>
-            <p className="font-sans text-[16px] text-on-surface-brand max-w-[600px] leading-[1.8] mb-10">
+            <p className="font-sans text-[16px] text-on-surface-brand max-w-[640px] leading-[1.8] mb-8">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.{" "}
               <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Étudiants en agronomie</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Ingénieurs Agronomes</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Chercheurs</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Entreprises Agricoles</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               <Link
                 href="/rejoindre"
                 className="bg-on-surface-brand text-surface-brand font-heading font-[700] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-primary-container transition-colors"
@@ -209,12 +208,14 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
-          {/* Photo vue à travers l'arche de la marque : un seul visuel fort, en bas du héros. */}
-          <ArchPhoto
-            src="/hero-background.webp"
-            alt="Une agricultrice souriante tient une caisse de laitues fraîchement récoltées dans une serre"
-            className="mx-auto w-full max-w-[560px] text-on-surface-brand md:-mr-[7%] md:w-[114%] md:max-w-none md:translate-y-px"
-          />
+          {/* Photo vue à travers l'arche : le dôme se lève du bord bas du héros (soleil levant). Le bas de l'arche est volontairement coupé. */}
+          <div className="mt-10 aspect-[1954/900] w-[620px] max-w-full overflow-hidden md:mt-12">
+            <ArchPhoto
+              src="/hero-background.webp"
+              alt="Une agricultrice souriante tient une caisse de laitues fraîchement récoltées dans une serre"
+              className="text-on-surface-brand"
+            />
+          </div>
 
         </div>
       </section>
