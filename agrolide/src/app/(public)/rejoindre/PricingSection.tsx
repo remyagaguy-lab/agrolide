@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import { PageHero } from "@/components/ui/PageHero"
 import { Check, X, UserPlus, ArrowRight, GraduationCap, Briefcase, Building2, Award, Lock } from "lucide-react"
 
 export default function PricingSection() {
@@ -33,21 +34,16 @@ export default function PricingSection() {
   const periodeParam = isAnnual ? "annuel" : "mensuel"
 
   return (
-    <div className="bg-surface-container-lowest min-h-screen pb-[64px] pt-[32px] md:pt-[64px] font-urbanist">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <div className="bg-surface-container-lowest min-h-screen pb-16 font-urbanist">
+      <PageHero
+        nextTone="lowest"
+        label="Adhésion"
+        title="Choisissez votre profil dans le réseau"
+        description="Rejoignez gratuitement ou accédez aux avantages complets selon votre parcours."
+      />
+      <div className="max-w-[1200px] mx-auto px-6 pt-4 md:pt-6">
         
         <div className="max-w-[840px] mx-auto">
-          {/* Header */}
-          <div className="text-center mb-[8px]">
-            <span className="text-[11px] font-[700] tracking-[0.1em] uppercase text-primary">Adhésion</span>
-          </div>
-          <h1 className="font-[900] text-[28px] md:text-[36px] text-center text-on-surface tracking-[-0.02em] mb-[6px]">
-            Choisissez votre profil dans le réseau
-          </h1>
-          <div className="text-[13px] text-on-surface-muted text-center mb-[32px]">
-            Rejoignez gratuitement ou accédez aux avantages complets selon votre parcours.
-          </div>
-
           {/* Toggle */}
           <div className="flex flex-col items-center justify-center mb-[40px]">
             <div className="inline-flex bg-surface-container p-1 rounded-full relative">

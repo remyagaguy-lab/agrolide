@@ -2,9 +2,13 @@
 
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
-import { Filter, Plus, AlertCircle } from "lucide-react"
+import { Plus, AlertCircle } from "lucide-react"
 import { useActualites } from "@/hooks/useActualites"
 import { SkeletonGrid } from "@/components/ui/Skeleton"
+import { Button } from "@/components/ui/Button"
+import { EmptyState } from "@/components/ui/EmptyState"
+import { PageHero } from "@/components/ui/PageHero"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs"
 import EventCard from "@/components/modules/evenements/EventCard"
 import OpportunityCard from "@/components/modules/opportunites/OpportunityCard"
 import InscriptionModal from "@/components/modules/evenements/InscriptionModal"
@@ -81,74 +85,65 @@ export default function AgendaClient({ mode }: { mode: AgendaMode }) {
       <OpportunityCard key={`opp-${item.id}`} opp={item} />
     )
 
-  return (
-    <div className="min-h-screen bg-surface-container-low pt-24 pb-12">
-      <div className="max-w-7xl mx-auto px-4 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+  const results = loading ? (
+    <div className="py-2">
+      <SkeletonGrid count={6} />
+    </div>
+  ) : error ? (
+    <EmptyState
+      arche
+      icon={<AlertCircle />}
+      title="Impossible de charger cette page"
+      description={error}
+      action={<Button variant="outline" onClick={fetchData}>Réessayer</Button>}
+    />
+  ) : upcoming.length === 0 && past.length === 0 ? (
+    <EmptyState arche title={cfg.empty} />
+  ) : (
+    <div className="space-y-12">
+      {upcoming.length > 0 && (
         <div>
-          <h1 className="text-3xl font-bold text-on-surface">{cfg.title}</h1>
-          <p className="text-on-surface-variant mt-2">{cfg.subtitle}</p>
+          {isEvt && <h2 className="mb-4 text-title-lg text-on-surface">À venir</h2>}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{upcoming.map(renderItem)}</div>
         </div>
-        <div className="flex flex-wrap items-center gap-4">
-          {mode === "opportunites" && (
-            <button
-              onClick={() => setIsOppModalOpen(true)}
-              className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shadow-sm text-sm min-h-11"
-            >
-              <Plus className="w-4 h-4" aria-hidden="true" /> Proposer une opportunité
-            </button>
-          )}
-
-          {cfg.options.length > 0 && (
-            <div className="flex items-center gap-2 bg-surface-container-lowest p-2 rounded-xl shadow-sm border border-outline-variant">
-              <Filter className="w-5 h-5 text-on-surface-muted ml-2" aria-hidden="true" />
-              <select
-                aria-label="Filtrer"
-                value={filter}
-                onChange={(e) => setFilter(e.target.value)}
-                className="border-none outline-none focus:ring-0 bg-transparent text-on-surface-variant font-medium cursor-pointer py-1 pr-4"
-              >
-                {cfg.options.map((o) => (
-                  <option key={o.value} value={o.value}>{o.label}</option>
-                ))}
-              </select>
-            </div>
-          )}
+      )}
+      {past.length > 0 && (
+        <div>
+          <h2 className="mb-4 text-title-lg text-on-surface">{mode === "webinaires" ? "Webinaires passés" : "Événements passés"}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{past.map(renderItem)}</div>
         </div>
-      </div>
+      )}
+    </div>
+  )
 
-      <div className="max-w-7xl mx-auto px-4">
-        {loading ? (
-          <div className="py-8">
-            <SkeletonGrid count={6} />
-          </div>
-        ) : error ? (
-          <div className="text-center py-12 bg-error-container rounded-2xl border border-error/30 flex flex-col items-center justify-center">
-            <AlertCircle className="w-10 h-10 text-error mb-4" aria-hidden="true" />
-            <h2 className="text-lg font-bold text-on-surface mb-2">Impossible de charger cette page</h2>
-            <p className="text-on-surface-variant mb-4">{error}</p>
-            <button onClick={fetchData} className="px-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-sm font-medium hover:bg-surface-container-low transition-colors min-h-11">
-              Réessayer
-            </button>
-          </div>
-        ) : upcoming.length === 0 && past.length === 0 ? (
-          <div className="text-center py-12 bg-surface-container-lowest rounded-2xl border border-outline-variant">
-            <p className="text-on-surface-muted">{cfg.empty}</p>
-          </div>
+  return (
+    <div className="min-h-screen bg-surface-container-low">
+      <PageHero
+        nextTone="low"
+        label={mode === "opportunites" ? "Bourses, appels et emplois" : "Agenda du réseau"}
+        title={cfg.title}
+        description={cfg.subtitle}
+        actions={
+          mode === "opportunites" ? (
+            <Button variant="ghost-dark" onClick={() => setIsOppModalOpen(true)}>
+              <Plus className="size-4" aria-hidden="true" /> Proposer une opportunité
+            </Button>
+          ) : undefined
+        }
+      />
+
+      <div className="container pb-16">
+        {cfg.options.length > 0 ? (
+          <Tabs value={filter} onValueChange={setFilter}>
+            <TabsList aria-label={mode === "opportunites" ? "Filtrer par type d'opportunité" : "Filtrer par type d'événement"}>
+              {cfg.options.map((o) => (
+                <TabsTrigger key={o.value} value={o.value}>{o.label}</TabsTrigger>
+              ))}
+            </TabsList>
+            <TabsContent value={filter}>{results}</TabsContent>
+          </Tabs>
         ) : (
-          <div className="space-y-12">
-            {upcoming.length > 0 && (
-              <div>
-                {isEvt && <h2 className="mb-4 text-title-lg text-on-surface">À venir</h2>}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{upcoming.map(renderItem)}</div>
-              </div>
-            )}
-            {past.length > 0 && (
-              <div>
-                <h2 className="mb-4 text-title-lg text-on-surface">{mode === "webinaires" ? "Webinaires passés" : "Événements passés"}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{past.map(renderItem)}</div>
-              </div>
-            )}
-          </div>
+          results
         )}
       </div>
 

@@ -6,7 +6,7 @@ import { ArticleCard } from "@/components/ui/ArticleCard"
 import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
-import { Motif } from "@/components/brand"
+import { PageHero } from "@/components/ui/PageHero"
 
 export const metadata: Metadata = {
   title: "Blog & Actualités",
@@ -62,19 +62,12 @@ export default async function BlogPage({
 
     return (
       <div className="flex flex-col min-h-screen bg-surface-container-low">
-        {/* Hero Section (Original) */}
-        <section className="bg-surface-brand pt-12 pb-16 text-on-surface-brand text-center relative overflow-hidden">
-          {/* Motif Background */}
-          <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
-          <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
-              Blog & Actualités
-            </h1>
-            <p className="text-lg max-w-2xl mx-auto text-on-surface-brand/80">
-              Découvrez nos récits authentiques, nos analyses approfondies et nos retours d'expérience pour transformer l'agriculture africaine.
-            </p>
-          </div>
-        </section>
+        <PageHero
+          nextTone="low"
+          label="Blog & Actualités"
+          title="Récits, analyses et retours d'expérience"
+          description="Découvrez nos récits authentiques, nos analyses approfondies et nos retours d'expérience pour transformer l'agriculture africaine."
+        />
 
         <section className="py-12">
           <div className="container mx-auto px-4 max-w-7xl">

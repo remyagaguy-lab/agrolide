@@ -1,9 +1,12 @@
 import * as React from 'react'
+import { Arche } from '@/components/brand'
 import { cn } from '@/lib/utils/formatters'
 
 export interface EmptyStateProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   /** Icône décorative (lucide-react). */
   icon?: React.ReactNode
+  /** Pose l'arche de la marque (le soleil levant) au-dessus du texte : pour les pages et grandes sections vides. */
+  arche?: boolean
   title: React.ReactNode
   /** Explique pourquoi c'est vide et ce que la personne peut faire. */
   description?: React.ReactNode
@@ -12,7 +15,7 @@ export interface EmptyStateProps extends Omit<React.HTMLAttributes<HTMLDivElemen
 }
 
 /** État vide : liste sans résultat, section pas encore alimentée. Toujours proposer une suite logique. */
-export function EmptyState({ icon, title, description, action, className, ...props }: EmptyStateProps) {
+export function EmptyState({ icon, arche, title, description, action, className, ...props }: EmptyStateProps) {
   return (
     <div
       className={cn(
@@ -21,6 +24,7 @@ export function EmptyState({ icon, title, description, action, className, ...pro
       )}
       {...props}
     >
+      {arche && <Arche variant="creux" className="mb-5 w-28 text-primary/70" />}
       {icon && (
         <span aria-hidden="true" className="mb-4 inline-flex size-14 items-center justify-center rounded-full bg-primary-container text-on-primary-container [&>svg]:size-6">
           {icon}

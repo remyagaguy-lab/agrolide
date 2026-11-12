@@ -4,6 +4,8 @@ import { BookOpen, GraduationCap, Clock, ChevronRight, ExternalLink, Globe } fro
 import { db } from "@/db"
 import Link from 'next/link'
 import { Badge } from "@/components/ui/Badge"
+import { PageHero } from "@/components/ui/PageHero"
+import { EmptyState } from "@/components/ui/EmptyState"
 import CourseFilters from './CourseFilters'
 
 
@@ -55,24 +57,15 @@ export default async function FormationsPage(
 
   return (
     <div className="bg-surface-container-low min-h-screen pb-20 flex flex-col">
-      {/* Hero Section */}
-      {/* ── Hero Section ── */}
-      <section className="bg-surface-brand pt-32 pb-24 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block mb-5 px-4 py-1.5 rounded-full text-sm font-heading font-bold bg-accent-sun text-on-accent">
-            Formations
-          </span>
-          <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-on-surface-brand mb-6 leading-tight tracking-tight">
-            Développez vos compétences agricoles
-          </h1>
-          <p className="text-lg md:text-xl text-on-surface-brand/80 font-sans max-w-2xl mx-auto leading-relaxed">
-            Des formations pratiques et certifiantes animées par des experts de terrain pour lancer ou propulser votre exploitation.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        nextTone="low"
+        label="Formations"
+        title="Développez vos compétences agricoles"
+        description="Des formations pratiques et certifiantes animées par des experts de terrain pour lancer ou propulser votre exploitation."
+      />
 
       {/* Catalog Section with Sidebar */}
-      <section className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10 w-full mb-20">
+      <section className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-2 mb-20">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Sidebar */}
           <div className="w-full md:w-64 lg:w-72 shrink-0">
@@ -82,14 +75,7 @@ export default async function FormationsPage(
           {/* Grid */}
           <div className="flex-1">
             {allFormations.length === 0 ? (
-              <div className="bg-surface-container-lowest rounded-2xl shadow-lg p-10 md:p-16 text-center border border-outline-variant w-full">
-                <h2 className="text-3xl font-bold text-on-surface mb-4">
-                  Aucune formation trouvée
-                </h2>
-                <p className="text-lg text-on-surface-variant mb-8 max-w-xl mx-auto">
-                  Modifiez vos filtres pour découvrir nos autres programmes ou revenez bientôt !
-                </p>
-              </div>
+              <EmptyState arche title="Aucune formation trouvée" description="Modifiez vos filtres pour découvrir nos autres programmes ou revenez bientôt !" />
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                 {allFormations.map((formation) => {
