@@ -44,9 +44,16 @@ function rafraichir(badge = false) {
   revalidatePath(badge ? '/membres' : '/membres/reseau', 'layout');
 }
 
-export async function sendConnectionRequest(receiverId: string) {
+/** Longueur maximale de la note facultative jointe à une invitation. */
+const NOTE_INVITATION_MAX = 300;
+
+export async function sendConnectionRequest(receiverId: string, note?: string) {
   const { userId } = await auth();
   if (!userId) return { error: "Non autorisé" };
+  // Note facultative : texte brut, vide = aucune note.
+  if (note !== undefined && typeof note !== 'string') return { error: "Note invalide." };
+  const message = (note ?? '').trim();
+  if (message.length > NOTE_INVITATION_MAX) return { error: `La note ne doit pas dépasser ${NOTE_INVITATION_MAX} caractères.` };
   if (receiverId === userId) return { error: "Vous ne pouvez pas vous inviter vous-même." };
 
   const receiver = await db.query.users.findFirst({
@@ -90,6 +97,7 @@ export async function sendConnectionRequest(receiverId: string) {
     requester_id: userId,
     receiver_id: receiverId,
     status: 'pending',
+    message: message || null,
   }).returning({ id: user_connections.id });
 
   await notifier(receiverId, `${await nomDe(userId)} vous a invité(e) à vous connecter.`, '/membres/reseau?onglet=invitations');

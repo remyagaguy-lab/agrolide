@@ -91,6 +91,13 @@ export function MemberCard({
         </ul>
       )}
 
+      {member.state === 'pending_received' && member.note && (
+        <blockquote className="rounded-control border-l-4 border-primary bg-surface-container px-3 py-2">
+          <p className="text-label-md text-on-surface-variant">Note de {member.prenom?.trim() || name}</p>
+          <p className="mt-0.5 whitespace-pre-wrap break-words text-body-sm text-on-surface">{member.note}</p>
+        </blockquote>
+      )}
+
       {member.raisons && member.raisons.length > 0 && (
         <div>
           <p className="text-label-md text-on-surface-variant">{titreRaisons}</p>

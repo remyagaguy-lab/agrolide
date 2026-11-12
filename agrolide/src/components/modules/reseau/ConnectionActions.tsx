@@ -4,9 +4,14 @@ import * as React from 'react'
 import Link from 'next/link'
 import { Check, Clock, MessageCircle, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from '@/components/ui/Modal'
+import { Textarea } from '@/components/ui/Textarea'
 import { useToast } from '@/components/ui/Toast'
 import { acceptConnectionRequest, declineConnectionRequest, sendConnectionRequest } from '@/app/actions/connections'
 import type { ConnectionState } from '@/lib/reseau/profil'
+
+/** Même plafond que l'action serveur (qui reste la seule source de vérité). */
+const NOTE_MAX = 300
 
 export interface ConnectionActionsProps {
   memberId: string
@@ -32,6 +37,8 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
   const { toast } = useToast()
   const notify = (title: string) => toast({ title, variant: 'success' })
   const [error, setError] = React.useState('')
+  const [inviter, setInviter] = React.useState(false)
+  const [note, setNote] = React.useState('')
 
   const run = (task: () => Promise<void>) => {
     setError('')
@@ -46,8 +53,10 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
 
   const connect = () =>
     run(async () => {
-      const res = await sendConnectionRequest(memberId)
+      const res = await sendConnectionRequest(memberId, note.trim() || undefined)
       if (res && 'success' in res && res.success) {
+        setInviter(false)
+        setNote('')
         setState('pending_sent')
         setConnectionId(res.connectionId ?? null)
         notify(`Invitation envoyée à ${name}.`)
@@ -95,7 +104,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
         (ouvertContact === false ? (
           <p className="text-body-sm text-on-surface-muted">Ce membre ne reçoit pas d’invitations.</p>
         ) : (
-          <Button variant="outline" fullWidth onClick={connect} loading={pending} aria-label={`Se connecter à ${name}`}>
+          <Button variant="outline" fullWidth onClick={() => { setError(''); setInviter(true) }} aria-label={`Se connecter à ${name}`}>
             <UserPlus className="size-5" aria-hidden />
             Se connecter
           </Button>
@@ -144,6 +153,28 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
           )}
         </p>
       )}
+
+      <Modal open={inviter} onOpenChange={setInviter}>
+        <ModalContent>
+          <ModalHeader>
+            <ModalTitle>Inviter {name}</ModalTitle>
+            <ModalDescription>Vous pouvez joindre une courte note pour dire pourquoi vous souhaitez vous connecter. Elle est facultative.</ModalDescription>
+          </ModalHeader>
+          <Textarea
+            label="Note (facultative)"
+            hint={`${note.length}/${NOTE_MAX} caractères`}
+            value={note}
+            maxLength={NOTE_MAX}
+            rows={4}
+            onChange={(e) => setNote(e.target.value)}
+          />
+          {error && <p role="alert" className="text-body-sm text-error">{error}</p>}
+          <ModalFooter>
+            <Button variant="outline" onClick={() => setInviter(false)}>Annuler</Button>
+            <Button variant="secondary" onClick={connect} loading={pending}>Envoyer l’invitation</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </div>
   )
 }

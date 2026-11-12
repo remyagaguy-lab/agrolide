@@ -14,7 +14,7 @@ export type LigneReseau = MemberSummary & {
   depuis: string | null
 }
 
-type Lien = { connectionId: string; depuis: string | null }
+type Lien = { connectionId: string; depuis: string | null; message: string | null }
 
 /**
  * Lit l'autre membre de chaque ligne `user_connections` : une jointure par sens (je suis l'invitant / l'invité).
@@ -25,7 +25,7 @@ async function lire(viewerId: string, status: 'pending' | 'accepted', sens: 'env
   const moi = sens === 'envoyees' ? user_connections.requester_id : user_connections.receiver_id
   const statuts = status === 'accepted' ? ['accepted'] : sens === 'envoyees' ? ['pending', 'rejected'] : ['pending']
   const rows = await db
-    .select({ connectionId: user_connections.id, depuis: user_connections.created_at, ...SELECT_CARTE })
+    .select({ connectionId: user_connections.id, depuis: user_connections.created_at, message: user_connections.message, ...SELECT_CARTE })
     .from(user_connections)
     .innerJoin(users, eq(users.id, jointure))
     .where(
@@ -38,11 +38,13 @@ async function lire(viewerId: string, status: 'pending' | 'accepted', sens: 'env
     )
     .orderBy(desc(user_connections.created_at))
     .limit(LIMITE)
-  return rows.map(({ connectionId, depuis, ...ligne }) => ({ connectionId, depuis, ligne }))
+  return rows.map(({ connectionId, depuis, message, ...ligne }) => ({ connectionId, depuis, message, ligne }))
 }
 
 const versLigne = (r: Awaited<ReturnType<typeof lire>>[number], state: ConnectionState): LigneReseau => ({
   ...carte(r.ligne, state, r.connectionId),
+  // La note n'est montrée qu'à celui qui reçoit l'invitation.
+  note: state === 'pending_received' ? r.message : null,
   depuis: r.depuis,
 })
 

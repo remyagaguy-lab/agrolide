@@ -28,6 +28,7 @@ export interface FicheMembre {
   categorie: string | null
   biographie: string | null
   thematiques: string[]
+  centres_interet: string[]
   langues: string[]
   linkedin_url: string | null
   site_web_url: string | null
@@ -46,6 +47,8 @@ export interface Fiche {
   estMoi: boolean
   state: ConnectionState
   connectionId: string | null
+  /** Note jointe à l'invitation que ce membre m'a envoyée (seulement si elle est en attente de ma réponse). */
+  noteInvitation: string | null
   documents: Array<{ id: string; titre: string; type_doc: string | null }>
   /** `null` pour sa propre fiche, ou si mon profil n'existe pas. */
   communs: PointsCommuns | null
@@ -96,6 +99,7 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
       categorie: users.categorie,
       biographie: users.biographie,
       secteurs_expertise: users.secteurs_expertise,
+      centres_interet: users.centres_interet,
       langues: users.langues,
       linkedin_url: users.linkedin_url,
       site_web_url: users.site_web_url,
@@ -125,6 +129,7 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
     categorie: row.categorie,
     biographie: row.biographie,
     thematiques: parseList(row.secteurs_expertise),
+    centres_interet: parseList(row.centres_interet),
     langues: parseList(row.langues),
     linkedin_url: row.linkedin_url,
     site_web_url: row.site_web_url,
@@ -148,13 +153,14 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
     communs: null,
     relationsCommunes: { total: 0, noms: [] },
     proches: [],
+    noteInvitation: null,
   }
   if (estMoi) return vide
 
   const [moi, lien, mesLiens, sesLiens] = await Promise.all([
     fetchMonProfil(viewerId),
     db
-      .select({ id: user_connections.id, requester_id: user_connections.requester_id, status: user_connections.status })
+      .select({ id: user_connections.id, requester_id: user_connections.requester_id, status: user_connections.status, message: user_connections.message })
       .from(user_connections)
       .where(
         or(
@@ -192,6 +198,7 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
     ...vide,
     state,
     connectionId,
+    noteInvitation: state === 'pending_received' ? (lien?.message ?? null) : null,
     communs: communs && aDesPointsCommuns(communs) ? communs : null,
     relationsCommunes: { total: communsIds.length, noms },
     proches,

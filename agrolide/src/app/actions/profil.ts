@@ -36,7 +36,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   const v = parsed.data
 
   const [actuel] = await db
-    .select({ pays: users.pays, secteurs_expertise: users.secteurs_expertise, langues: users.langues })
+    .select({ pays: users.pays, secteurs_expertise: users.secteurs_expertise, centres_interet: users.centres_interet, langues: users.langues })
     .from(users)
     .where(eq(users.id, userId))
     .limit(1)
@@ -47,6 +47,9 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   if (!paysOk) champs.pays = 'Choisissez un pays dans la liste.'
   const themesAutorises = new Set<string>([...THEMATIQUES, ...parseList(actuel.secteurs_expertise)])
   if (v.thematiques.some((t) => !themesAutorises.has(t))) champs.thematiques = 'Choisissez des thématiques dans la liste.'
+  // Les centres d'intérêt reprennent la liste des thématiques (aucun libellé inventé) ; les valeurs déjà enregistrées sont conservées.
+  const interetsAutorises = new Set<string>([...THEMATIQUES, ...parseList(actuel.centres_interet)])
+  if (v.centres_interet.some((t) => !interetsAutorises.has(t))) champs.centres_interet = 'Choisissez des centres d’intérêt dans la liste.'
   const languesAutorisees = new Set<string>([...LANGUES, ...parseList(actuel.langues)])
   if (v.langues.some((l) => !languesAutorisees.has(l))) champs.langues = 'Choisissez des langues dans la liste.'
   if (Object.keys(champs).length > 0) return { success: false, error: 'Certains champs sont à corriger.', champs }
@@ -63,6 +66,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
       niveau_etudes: vide(v.niveau_etudes),
       biographie: vide(v.biographie),
       secteurs_expertise: v.thematiques.length ? JSON.stringify(v.thematiques) : null,
+      centres_interet: v.centres_interet.length ? JSON.stringify(v.centres_interet) : null,
       langues: v.langues.length ? JSON.stringify(v.langues) : null,
       linkedin_url: vide(v.linkedin_url),
       site_web_url: vide(v.site_web_url),

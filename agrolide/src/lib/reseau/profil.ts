@@ -51,6 +51,8 @@ export interface MemberSummary {
   state: ConnectionState
   /** Identifiant de la ligne `user_connections`, quand il existe (pour accepter, ignorer ou retirer). */
   connectionId: string | null
+  /** Note facultative jointe à une invitation reçue (texte brut, 300 caractères au plus). */
+  note?: string | null
   /** Raisons réellement calculées d'une suggestion (3 au plus) ; absent hors tri « pertinence ». */
   raisons?: string[]
   /** Tri « pertinence » : `true` = suggéré (seuil atteint), `false` = simple nouveau membre. */

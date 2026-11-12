@@ -152,6 +152,7 @@ test('profilSchema : liens https uniquement, champs vides acceptés', () => {
   assert.ok(ok.success)
   if (ok.success) {
     assert.deepEqual(ok.data.thematiques, ['Élevage'])
+    assert.deepEqual(ok.data.centres_interet, [])
     assert.equal(ok.data.linkedin_url, 'https://www.linkedin.com/in/awa')
   }
   for (const mauvais of ['http://exemple.org', 'javascript:alert(1)', 'exemple.org']) {
@@ -161,6 +162,14 @@ test('profilSchema : liens https uniquement, champs vides acceptés', () => {
     })
     assert.equal(r.success, false, mauvais)
   }
+})
+
+test('profilSchema : centres d’intérêt dédoublonnés, 12 au maximum', () => {
+  const socle = { prenom: 'Awa', nom: 'Kone', organisation: '', specialite: '', pays: '', ville: '', niveau_etudes: '', biographie: '', thematiques: [], langues: [], linkedin_url: '', site_web_url: '' }
+  const ok = profilSchema.safeParse({ ...socle, centres_interet: ['Agritech', 'Agritech', 'Commerce'] })
+  assert.ok(ok.success)
+  if (ok.success) assert.deepEqual(ok.data.centres_interet, ['Agritech', 'Commerce'])
+  assert.equal(profilSchema.safeParse({ ...socle, centres_interet: Array.from({ length: 13 }, (_, i) => 'x' + i) }).success, false)
 })
 
 test('completionProfil : calculée sur les champs réels', () => {

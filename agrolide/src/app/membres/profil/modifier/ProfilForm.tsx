@@ -27,6 +27,7 @@ export interface ProfilInitial {
   niveau_etudes: string
   biographie: string
   thematiques: string[]
+  centres_interet: string[]
   langues: string[]
   linkedin_url: string
   site_web_url: string
@@ -60,7 +61,7 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
     setValeurs((v) => ({ ...v, [cle]: valeur }))
   }
 
-  const bascule = (cle: "thematiques" | "langues", valeur: string) =>
+  const bascule = (cle: "thematiques" | "centres_interet" | "langues", valeur: string) =>
     maj(cle, valeurs[cle].includes(valeur) ? valeurs[cle].filter((x) => x !== valeur) : [...valeurs[cle], valeur])
 
   const completion = completionProfil({ ...valeurs, photo_url: photo })
@@ -207,6 +208,18 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
             ))}
           </ul>
           {erreurs.thematiques && <p id="erreur-thematiques" role="alert" className="text-body-sm text-error">{erreurs.thematiques}</p>}
+        </fieldset>
+        <fieldset className="space-y-2" aria-describedby={erreurs.centres_interet ? "erreur-interets" : undefined}>
+          <legend className="text-label-lg text-on-surface">Centres d’intérêt</legend>
+          <p className="text-body-sm text-on-surface-muted">Ce qui vous intéresse, même hors de votre spécialité. Visible sur votre fiche par les autres membres.</p>
+          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
+            {avecExistantes(THEMATIQUES, valeurs.centres_interet).map((t) => (
+              <li key={t}>
+                <ChoiceChip type="checkbox" checked={valeurs.centres_interet.includes(t)} onChange={() => bascule("centres_interet", t)}>{t}</ChoiceChip>
+              </li>
+            ))}
+          </ul>
+          {erreurs.centres_interet && <p id="erreur-interets" role="alert" className="text-body-sm text-error">{erreurs.centres_interet}</p>}
         </fieldset>
         <fieldset className="space-y-2" aria-describedby={erreurs.langues ? "erreur-langues" : undefined}>
           <legend className="text-label-lg text-on-surface">Langues parlées</legend>

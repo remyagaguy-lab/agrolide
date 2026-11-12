@@ -45,6 +45,8 @@ export const profilSchema = z.object({
   niveau_etudes: texte(80, "Niveau d'études"),
   biographie: texte(500, 'Biographie'),
   thematiques: liste(12, 'Thématiques'),
+  // Absent d'un formulaire ouvert avant la mise en ligne du champ : vide plutôt qu'une erreur.
+  centres_interet: liste(12, 'Centres d’intérêt').optional().default([]),
   langues: liste(12, 'Langues'),
   linkedin_url: lienHttps('Lien LinkedIn'),
   site_web_url: lienHttps('Site web'),

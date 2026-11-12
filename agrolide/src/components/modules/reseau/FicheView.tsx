@@ -101,6 +101,13 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
         </div>
       </Card>
 
+      {fiche.state === 'pending_received' && fiche.noteInvitation && (
+        <blockquote className="rounded-card border-l-4 border-primary bg-surface-container px-4 py-3">
+          <p className="text-label-lg text-on-surface-variant">Note de {prenom} jointe à son invitation</p>
+          <p className="mt-1 whitespace-pre-wrap break-words text-body-md text-on-surface">{fiche.noteInvitation}</p>
+        </blockquote>
+      )}
+
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="space-y-6 lg:col-span-2">
           <Bloc id="fiche-apropos" titre="À propos">
@@ -178,13 +185,23 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
         </div>
 
         <div className="space-y-6">
-          {(membre.thematiques.length > 0 || membre.langues.length > 0 || aDesLiens) && (
+          {(membre.thematiques.length > 0 || membre.centres_interet.length > 0 || membre.langues.length > 0 || aDesLiens) && (
             <Card role="region" aria-label="Expertise, langues et liens" className="space-y-5">
               {membre.thematiques.length > 0 && (
                 <div>
                   <h2 className="text-label-lg text-on-surface-variant">Thématiques</h2>
                   <ul className="mt-2 flex flex-wrap gap-1.5">
                     {membre.thematiques.map((t) => (
+                      <li key={t}><Badge variant="category">{t}</Badge></li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {membre.centres_interet.length > 0 && (
+                <div>
+                  <h2 className="text-label-lg text-on-surface-variant">Centres d’intérêt</h2>
+                  <ul className="mt-2 flex flex-wrap gap-1.5">
+                    {membre.centres_interet.map((t) => (
                       <li key={t}><Badge variant="category">{t}</Badge></li>
                     ))}
                   </ul>
