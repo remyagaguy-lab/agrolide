@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { ArrowRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Logo } from "@/components/ui/Logo"
-import { Horizon, HORIZON_MASQUE_TERRE_BORD, Motif } from "@/components/brand"
+import { Horizon, HORIZON_MASQUE_TERRE_BORD, Motif, PlanSoleil } from "@/components/brand"
 
 /*
  * Pictogrammes des réseaux sociaux : un seul jeu au trait (24 × 24, trait de 1,75, bouts arrondis, sans remplissage),
@@ -64,8 +64,10 @@ export function Footer() {
     <>
       {/* ── APPEL À L'ACTION GLOBAL ── */}
       {showGlobalCTA && (
-        <div className="bg-primary-container pt-20 text-center md:pt-24">
-          <div className="container flex flex-col items-center">
+        <div className="relative overflow-hidden bg-primary-container pt-20 text-center [--hz:2.5rem] [--ph:6rem] sm:[--hz:3.5rem] md:pt-24 lg:[--hz:5rem] md:[--ph:11rem]">
+          {/* Appel final : le soleil jaune (avec l'anneau orange de l'emblème) se lève sur la ligne d'horizon, à droite. */}
+          <PlanSoleil x="94%" y="calc(100% - var(--hz))" rayon="var(--ph)" echos={1} ton="soleil" fond="primary-container" />
+          <div className="container relative z-10 flex flex-col items-center">
             <h2 className="mx-auto mb-4 max-w-[700px] text-headline-md text-on-primary-container">
               Prêt à participer à la conquête de la souveraineté alimentaire&nbsp;?
             </h2>
@@ -77,7 +79,7 @@ export function Footer() {
             </Button>
           </div>
           {/* Horizon mesuré (les deux collines de l'emblème) vers le pied de page vert */}
-          <Horizon className="mt-16 text-surface-brand md:mt-20" />
+          <Horizon className="relative z-10 mt-28 text-surface-brand md:mt-24" />
         </div>
       )}
 

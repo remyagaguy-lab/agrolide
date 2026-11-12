@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Image from 'next/image'
 import { BookOpen, Search } from 'lucide-react'
+import { CarteSoleil } from '@/components/ui/CarteSoleil'
 import { Anneau, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
 
 const R = GEOMETRIE.rayons
@@ -255,25 +255,21 @@ export function Grammaire() {
         </ul>
       </div>
       <div className="mt-4 grid items-center gap-4 md:grid-cols-3">
-        <article className="@container relative aspect-[4/5] overflow-hidden rounded-card bg-surface-container shadow-elev-1">
-          <Image src="/images/formations/ext-fao-1.webp" alt="Parcelle irriguée au goutte-à-goutte, panneaux solaires et agricultrice" fill sizes="(min-width: 768px) 30vw, 100vw" className="object-cover" />
-          <PlanSoleil ton="clair" x="-4cqw" y="calc(100% + 4cqw)" rayon="80cqw" pas={14} />
-          <div className="absolute bottom-[8cqw] left-[7cqw] max-w-[56cqw]">
-            <p className="text-label-sm uppercase tracking-[0.1em] text-primary">Formation · 6 semaines</p>
-            <h4 className="mt-1.5 text-title-lg text-on-surface">Irrigation goutte-à-goutte sur petite parcelle</h4>
-          </div>
-        </article>
-        <article className="@container relative aspect-[4/5] overflow-hidden rounded-card bg-surface-container shadow-elev-1">
-          <Image src="/images/formations/ext-fao-1.webp" alt="Parcelle irriguée au goutte-à-goutte, panneaux solaires et agricultrice" fill sizes="(min-width: 768px) 30vw, 100vw" className="object-cover" />
-          <PlanSoleil ton="clair" x="50%" y="calc(100% + 7cqw)" rayon="65cqw" pas={14} />
-          <div className="absolute inset-x-0 bottom-[9cqw] px-8 text-center">
-            <p className="text-label-sm uppercase tracking-[0.1em] text-primary">Formation · 6 semaines</p>
-            <h4 className="mx-auto mt-1.5 max-w-[15rem] text-title-lg text-on-surface">Irrigation goutte-à-goutte sur petite parcelle</h4>
-          </div>
-        </article>
+        <CarteSoleil
+          placement="coin"
+          image={{ src: '/images/formations/ext-fao-1.webp', alt: 'Parcelle irriguée au goutte-à-goutte, panneaux solaires et agricultrice' }}
+          categorie="Formation · 6 semaines"
+          titre="Irrigation goutte-à-goutte sur petite parcelle"
+        />
+        <CarteSoleil
+          placement="centre"
+          image={{ src: '/images/formations/ext-fao-1.webp', alt: 'Parcelle irriguée au goutte-à-goutte, panneaux solaires et agricultrice' }}
+          categorie="Formation · 6 semaines"
+          titre="Irrigation goutte-à-goutte sur petite parcelle"
+        />
         <div className="space-y-3 text-body-sm text-on-surface-variant">
           <p>
-            Carte « titre dans le soleil » (formations à la une, pas les listes denses), soleil clair (<code>PlanSoleil ton=&quot;clair&quot;</code>)
+            Carte « titre dans le soleil » (composant <code>CarteSoleil</code> : formations à la une, pas les listes denses), soleil clair (<code>PlanSoleil ton=&quot;clair&quot;</code>)
             en deux placements :
           </p>
           <p>

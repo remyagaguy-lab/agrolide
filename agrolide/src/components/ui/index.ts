@@ -6,6 +6,7 @@ export { Alert, type AlertProps, type AlertVariant } from './Alert'
 export { Avatar, AvatarGroup, type AvatarProps, type AvatarSize } from './Avatar'
 export { Badge, type BadgeProps, type BadgeVariant } from './Badge'
 export { Button, buttonVariants, type ButtonProps, type ButtonSize, type ButtonVariant } from './Button'
+export { CarteSoleil, type CarteSoleilProps } from './CarteSoleil'
 export { Card, CardDescription, CardTitle, type CardProps, type CardVariant } from './Card'
 export {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,

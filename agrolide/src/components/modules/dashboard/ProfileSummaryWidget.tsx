@@ -3,6 +3,7 @@ import { ArrowRight, ShieldCheck, CreditCard } from "lucide-react"
 import { Avatar } from "@/components/ui/Avatar"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
+import { Anneau } from "@/components/brand"
 import { cn } from "@/lib/utils/formatters"
 import { Widget } from "./Widget"
 import { DATE_FIN_GRATUITE_LISIBLE, categorieSansCotisation, gratuiteEnCours } from "@/lib/adhesion"
@@ -20,6 +21,8 @@ interface ProfileSummaryWidgetProps {
   joursRestants?: number
   /** Valeur réelle de `annuaire_visible` (vide = visible, comme dans l’annuaire). */
   annuaireVisible?: boolean | null
+  /** Part du profil renseignée (0 à 100) : dessine l'anneau de progression autour de l'avatar. */
+  completion?: number
 }
 
 export function ProfileSummaryWidget({
@@ -33,6 +36,7 @@ export function ProfileSummaryWidget({
   isAdhesionActive = false,
   joursRestants = 0,
   annuaireVisible,
+  completion,
 }: ProfileSummaryWidgetProps) {
   const displayName = prenom ? `${prenom}${nom ? ` ${nom}` : ""}` : "Membre"
   // Pendant l'année gratuite (ou pour un profil Passionné), un membre sans cotisation payée n'a rien à régler.
@@ -43,7 +47,15 @@ export function ProfileSummaryWidget({
   return (
     <Widget className="shrink-0 p-5">
       <div className="mb-4 flex items-center gap-3.5">
-        <Avatar src={hasValidPhoto ? photo_url : null} name={prenom ? displayName : undefined} size="lg" className="rounded-card" />
+        {completion === undefined ? (
+          <Avatar src={hasValidPhoto ? photo_url : null} name={prenom ? displayName : undefined} size="lg" className="rounded-card" />
+        ) : (
+          /* Anneau de progression de l'emblème (ouvert en bas à gauche) autour de l'avatar. */
+          <span className="relative flex size-[4.5rem] shrink-0 items-center justify-center">
+            <Anneau mode="progression" valeur={completion / 100} label={`Profil complété à ${completion} %`} className="absolute inset-0 size-full text-primary" />
+            <Avatar src={hasValidPhoto ? photo_url : null} name={prenom ? displayName : undefined} size="lg" />
+          </span>
+        )}
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5">
             <h2 className="truncate text-title-md text-on-surface">{displayName}</h2>

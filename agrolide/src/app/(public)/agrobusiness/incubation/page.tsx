@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
 import { Rocket, Target, Users, BookOpen } from "lucide-react"
 import IncubationForm from "@/components/modules/agrobusiness/IncubationForm"
+import { Puce } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: "Programme d'Incubation",
@@ -79,19 +80,19 @@ export default function IncubationPage() {
               <h3 className="text-xl font-heading font-bold text-on-surface mb-6 relative z-10">Critères d'éligibilité</h3>
               <ul className="space-y-4 relative z-10 text-on-surface-variant">
                 <li className="flex items-start gap-3">
-                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-leaf flex-shrink-0"></div>
+                  <Puce />
                   <span>Projet basé en Afrique, ciblant une problématique de la chaîne de valeur agricole.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-leaf flex-shrink-0"></div>
+                  <Puce />
                   <span>Projet au stade de l'idéation validée, du prototype ou en amorçage (early stage).</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-leaf flex-shrink-0"></div>
+                  <Puce />
                   <span>L'équipe doit comprendre au moins un membre dédié à temps plein au projet.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-leaf flex-shrink-0"></div>
+                  <Puce />
                   <span>Avoir une proposition de valeur innovante et un modèle économique potentiellement viable.</span>
                 </li>
               </ul>
