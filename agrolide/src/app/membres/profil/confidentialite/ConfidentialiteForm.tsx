@@ -4,6 +4,7 @@ import * as React from "react"
 import { Eye, Save } from "lucide-react"
 import { Alert } from "@/components/ui/Alert"
 import { Button } from "@/components/ui/Button"
+import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from "@/components/ui/Modal"
 import { MemberCard } from "@/components/modules/reseau/MemberCard"
 import { updateConfidentialite } from "@/app/actions/profil"
 import type { MemberSummary } from "@/lib/reseau/profil"
@@ -44,8 +45,17 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
 
   const modifie = visible !== saved.annuaireVisible || contact !== saved.ouvertContact
 
-  const enregistrer = (e: React.FormEvent) => {
+  const [confirmer, setConfirmer] = React.useState(false)
+
+  const soumettre = (e: React.FormEvent) => {
     e.preventDefault()
+    // Masquer son profil a des conséquences : on les explique et on demande confirmation avant d'enregistrer.
+    if (saved.annuaireVisible && !visible) setConfirmer(true)
+    else enregistrer()
+  }
+
+  const enregistrer = () => {
+    setConfirmer(false)
     setMessage(null)
     startTransition(async () => {
       try {
@@ -64,7 +74,7 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
 
   return (
     <div className="space-y-8">
-      <form onSubmit={enregistrer} className="space-y-4">
+      <form onSubmit={soumettre} className="space-y-4">
         <ul className="space-y-3">
           <Reglage
             id="reglage-annuaire"
@@ -81,6 +91,10 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
             onChange={(v) => { setContact(v); setMessage(null) }}
           />
         </ul>
+
+        {saved.annuaireVisible && !visible && (
+          <Alert variant="warning">Vous allez masquer votre profil. Les conséquences vous seront détaillées avant l’enregistrement.</Alert>
+        )}
 
         <div aria-live="polite">{message && <Alert variant={message.type}>{message.text}</Alert>}</div>
 
@@ -106,6 +120,26 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
           <Alert variant="info">Vous n’apparaissez pas dans l’annuaire : aucun membre ne voit cette carte.</Alert>
         )}
       </div>
+      <Modal open={confirmer} onOpenChange={setConfirmer}>
+        <ModalContent>
+          <ModalHeader>
+            <ModalTitle>Masquer votre profil ?</ModalTitle>
+            <ModalDescription>Voici ce que cela change :</ModalDescription>
+          </ModalHeader>
+          <ul className="list-disc space-y-1.5 pl-5 text-body-md text-on-surface">
+            <li>Vous n’apparaissez plus dans l’annuaire ni dans les suggestions.</li>
+            <li>Votre fiche n’est plus consultable par les autres membres.</li>
+            <li>Personne ne peut plus vous inviter à vous connecter.</li>
+            <li>Les invitations en attente, reçues ou envoyées, disparaissent de « Mon réseau » tant que votre profil est masqué.</li>
+            <li>Vos relations actuelles sont conservées.</li>
+          </ul>
+          <p className="text-body-sm text-on-surface-variant">Vous pouvez réactiver votre profil à tout moment dans cette page.</p>
+          <ModalFooter>
+            <Button variant="outline" onClick={() => setConfirmer(false)}>Annuler</Button>
+            <Button variant="secondary" onClick={enregistrer} loading={pending}>Masquer mon profil</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </div>
   )
 }

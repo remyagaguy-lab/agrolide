@@ -3,7 +3,7 @@
 import { db } from '@/db';
 import { notifications, user_connections } from '@/db/schema';
 import { auth } from '@/lib/auth/server';
-import { and, count, eq } from 'drizzle-orm';
+import { and, count, eq, inArray } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 
 /** Invitations envoyées en attente au plus (freine le démarchage en masse). */
@@ -64,13 +64,18 @@ export async function sendConnectionRequest(receiverId: string) {
       ),
   });
   if (existing) {
-    return { error: "Une connexion ou une invitation existe déjà avec ce membre." };
+    // J'ai refusé son invitation plus tôt : je peux à mon tour l'inviter (l'ancienne ligne est remplacée).
+    if (existing.status === 'rejected' && existing.receiver_id === userId) {
+      await db.delete(user_connections).where(eq(user_connections.id, existing.id));
+    } else {
+      return { error: "Une connexion ou une invitation existe déjà avec ce membre." };
+    }
   }
 
   const [{ enAttente }] = await db
     .select({ enAttente: count() })
     .from(user_connections)
-    .where(and(eq(user_connections.requester_id, userId), eq(user_connections.status, 'pending')));
+    .where(and(eq(user_connections.requester_id, userId), inArray(user_connections.status, ['pending', 'rejected'])));
   if (enAttente >= MAX_INVITATIONS_EN_ATTENTE) {
     return {
       error: `Vous avez déjà ${MAX_INVITATIONS_EN_ATTENTE} invitations en attente. Retirez-en une ou attendez une réponse avant d’en envoyer d’autres.`,
@@ -108,8 +113,8 @@ export async function acceptConnectionRequest(connectionId: string): Promise<Res
   // L'invitant apprend que l'invitation est acceptée ; l'invité garde une trace dans ses notifications.
   const [nomInvitant, nomInvite] = await Promise.all([nomDe(connection.requester_id), nomDe(userId)]);
   await Promise.all([
-    notifier(connection.requester_id, `${nomInvite} a accepté votre invitation. Vous pouvez désormais échanger.`, `/membres/messages?user=${userId}`),
-    notifier(userId, `Vous êtes maintenant connecté(e) à ${nomInvitant}.`, `/membres/messages?user=${connection.requester_id}`),
+    notifier(connection.requester_id, `${nomInvite} a accepté votre invitation. Vous pouvez désormais échanger.`, '/membres/reseau?onglet=relations'),
+    notifier(userId, `Vous êtes maintenant connecté(e) à ${nomInvitant}.`, '/membres/reseau?onglet=relations'),
   ]);
 
   rafraichir(true);
@@ -117,9 +122,9 @@ export async function acceptConnectionRequest(connectionId: string): Promise<Res
 }
 
 /**
- * Ignorer une invitation reçue ou retirer une invitation envoyée : la ligne est supprimée
- * (ni l'un ni l'autre n'est averti, et chacun pourra de nouveau inviter l'autre).
- * Ne s'applique qu'aux invitations en attente ; pour une relation, voir `removeConnection`.
+ * Ignorer une invitation reçue : elle est marquée « refusée » ; l'invitant n'est pas averti et la voit toujours « En attente »
+ * (il ne peut pas réinviter ce membre, qui reste libre de l'inviter). Retirer une invitation envoyée : la ligne est supprimée.
+ * Ne s'applique qu'aux invitations non répondues ; pour une relation, voir `removeConnection`.
  */
 export async function declineConnectionRequest(connectionId: string): Promise<Resultat> {
   const { userId } = await auth();
@@ -130,13 +135,20 @@ export async function declineConnectionRequest(connectionId: string): Promise<Re
   });
   if (
     !connection ||
-    connection.status !== 'pending' ||
+    (connection.status !== 'pending' && connection.status !== 'rejected') ||
     (connection.receiver_id !== userId && connection.requester_id !== userId)
   ) {
     return { error: "Invitation introuvable ou déjà traitée." };
   }
 
-  await db.delete(user_connections).where(eq(user_connections.id, connectionId));
+  if (connection.receiver_id === userId) {
+    if (connection.status === 'rejected') return { success: true };
+    await db.update(user_connections)
+      .set({ status: 'rejected', updated_at: new Date().toISOString() })
+      .where(eq(user_connections.id, connectionId));
+  } else {
+    await db.delete(user_connections).where(eq(user_connections.id, connectionId));
+  }
 
   rafraichir(true);
   return { success: true };

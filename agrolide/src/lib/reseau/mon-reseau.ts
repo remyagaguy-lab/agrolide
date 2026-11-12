@@ -1,5 +1,5 @@
 import 'server-only'
-import { and, desc, eq } from 'drizzle-orm'
+import { and, desc, eq, inArray, isNull, or } from 'drizzle-orm'
 import { db } from '@/db'
 import { user_connections, users } from '@/db/schema'
 import { type ConnectionState, type MemberSummary } from './profil'
@@ -23,11 +23,19 @@ type Lien = { connectionId: string; depuis: string | null }
 async function lire(viewerId: string, status: 'pending' | 'accepted', sens: 'envoyees' | 'recues'): Promise<Array<Lien & { ligne: LigneCarte }>> {
   const jointure = sens === 'envoyees' ? user_connections.receiver_id : user_connections.requester_id
   const moi = sens === 'envoyees' ? user_connections.requester_id : user_connections.receiver_id
+  const statuts = status === 'accepted' ? ['accepted'] : sens === 'envoyees' ? ['pending', 'rejected'] : ['pending']
   const rows = await db
     .select({ connectionId: user_connections.id, depuis: user_connections.created_at, ...SELECT_CARTE })
     .from(user_connections)
     .innerJoin(users, eq(users.id, jointure))
-    .where(and(eq(moi, viewerId), eq(user_connections.status, status)))
+    .where(
+      and(
+        eq(moi, viewerId),
+        inArray(user_connections.status, statuts),
+        // Un membre qui a masqué son profil disparaît de mes invitations (pas de mes relations déjà établies).
+        status === 'pending' ? or(eq(users.annuaire_visible, true), isNull(users.annuaire_visible)) : undefined,
+      ),
+    )
     .orderBy(desc(user_connections.created_at))
     .limit(LIMITE)
   return rows.map(({ connectionId, depuis, ...ligne }) => ({ connectionId, depuis, ligne }))

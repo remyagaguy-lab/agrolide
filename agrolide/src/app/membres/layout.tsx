@@ -3,7 +3,7 @@ import Link from "next/link"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
-import { eq, and } from "drizzle-orm"
+import { eq, and, or, isNull } from "drizzle-orm"
 import { LogoutButton } from "@/components/ui/LogoutButton"
 import { MembresLayout } from "@/components/layout/MembresLayout"
 import { AlertCircle } from "lucide-react"
@@ -69,9 +69,12 @@ export default async function MembresRootLayout({
     try {
       const pendingRows = await db.select({ id: user_connections.id })
         .from(user_connections)
+        .innerJoin(users, eq(users.id, user_connections.requester_id))
         .where(and(
           eq(user_connections.receiver_id, userId),
-          eq(user_connections.status, 'pending')
+          eq(user_connections.status, 'pending'),
+          // Comme dans « Mon réseau » : un invitant qui a masqué son profil n'est pas compté.
+          or(eq(users.annuaire_visible, true), isNull(users.annuaire_visible))
         ));
       pendingRequestsCount = pendingRows.length;
     } catch (e) {

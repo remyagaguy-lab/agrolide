@@ -168,6 +168,8 @@ export async function fetchAnnuaire(
     let state: ConnectionState = 'none'
     if (link?.status === 'accepted') state = 'accepted'
     else if (link?.status === 'pending') state = link.requester_id === viewerId ? 'pending_sent' : 'pending_received'
+    // Invitation refusée : l'invitant la voit toujours « en attente » ; celui qui a refusé peut inviter à son tour.
+    else if (link?.status === 'rejected' && link.requester_id === viewerId) state = 'pending_sent'
     return carte(r, state, link?.id ?? null)
   })
 

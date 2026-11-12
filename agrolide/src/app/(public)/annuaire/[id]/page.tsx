@@ -96,6 +96,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
     });
     if (conn) {
       if (conn.status === 'accepted') connectionStatus = 'accepted';
+      else if (conn.status === 'rejected' && conn.requester_id === userId) connectionStatus = 'pending_sent';
       else if (conn.status === 'pending') {
         connectionStatus = conn.requester_id === userId ? 'pending_sent' : 'pending_received';
       }
