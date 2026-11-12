@@ -75,13 +75,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           {navLink("/admin/dashboard", "Dashboard", LayoutDashboard)}
           
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-on-surface-muted uppercase tracking-widest">Membres</p>
+            <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Membres</p>
           </div>
           {navLink("/admin/membres", "Gestion membres", Users)}
           {navLink("/admin/paiements", "Paiements", CreditCard)}
 
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-on-surface-muted uppercase tracking-widest">Contenu</p>
+            <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Contenu</p>
           </div>
           {navLink("/admin/contenus/articles", "Articles (Blog)", FileText)}
           {navLink("/admin/contenus/documents", "Documents", FolderOpen)}
@@ -91,14 +91,14 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           {navLink("/admin/forum", "Forum", MessageSquare)}
           
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-on-surface-muted uppercase tracking-widest">Vitrine</p>
+            <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Vitrine</p>
           </div>
           {navLink("/admin/contenus/partenaires", "Partenaires", Handshake)}
           {navLink("/admin/contenus/agripreneurs", "Agripreneurs", Sprout)}
           {navLink("/admin/contenus/temoignages", "Témoignages", Star)}
 
           <div className="pt-4 pb-1 px-3">
-            <p className="text-[10px] font-semibold text-on-surface-muted uppercase tracking-widest">Site</p>
+            <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Site</p>
           </div>
           {navLink("/admin/pages", "Pages statiques", Globe)}
           {navLink("/admin/agrobusiness", "Agrobusiness", FolderOpen)}

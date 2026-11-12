@@ -67,7 +67,7 @@ export default function NotificationBell() {
         <button className="relative p-2 text-on-surface-muted hover:bg-surface-container rounded-full transition-colors outline-none focus:ring-2 focus:ring-primary">
           <Bell className="w-6 h-6" />
           {unreadCount > 0 && (
-            <span className="absolute top-1 right-1 w-4 h-4 bg-error text-on-error text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-on-error">
+            <span className="absolute top-1 right-1 w-4 h-4 bg-error text-on-error text-label-sm font-bold rounded-full flex items-center justify-center border-2 border-on-error">
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
           )}
@@ -109,7 +109,7 @@ export default function NotificationBell() {
                       {notif.contenu && (
                         <p className="text-xs text-on-surface-muted mt-0.5 line-clamp-1">{notif.contenu}</p>
                       )}
-                      <p className="text-[10px] text-on-surface-muted mt-1">
+                      <p className="text-label-sm text-on-surface-muted mt-1">
                         {formatDistanceToNow(new Date(notif.created_at), { addSuffix: true, locale: fr })}
                       </p>
                     </div>

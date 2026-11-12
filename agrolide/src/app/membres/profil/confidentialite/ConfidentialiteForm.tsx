@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Eye, Save } from "lucide-react"
 import { Alert } from "@/components/ui/Alert"
+import { useToast } from "@/components/ui/Toast"
 import { Button } from "@/components/ui/Button"
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from "@/components/ui/Modal"
 import { MemberCard } from "@/components/modules/reseau/MemberCard"
@@ -42,6 +43,7 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
   const [saved, setSaved] = React.useState(initial)
   const [message, setMessage] = React.useState<{ type: "success" | "error"; text: string } | null>(null)
   const [pending, startTransition] = React.useTransition()
+  const { toast } = useToast()
 
   const modifie = visible !== saved.annuaireVisible || contact !== saved.ouvertContact
 
@@ -62,7 +64,7 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
         const res = await updateConfidentialite({ annuaire_visible: visible, ouvert_contact: contact })
         if (res.success) {
           setSaved({ annuaireVisible: visible, ouvertContact: contact })
-          setMessage({ type: "success", text: "Vos choix sont enregistrés." })
+          toast({ title: "Vos choix sont enregistrés", variant: "success" })
         } else {
           setMessage({ type: "error", text: res.error })
         }

@@ -1,6 +1,7 @@
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import React from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Briefcase, ExternalLink, FileText, Globe, MapPin, Pencil } from 'lucide-react'
+import { Briefcase, ExternalLink, FileText, Globe, MapPin, Pencil } from 'lucide-react'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge, type BadgeVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -49,10 +50,7 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
 
   return (
     <div className="mx-auto max-w-5xl space-y-6 px-4 py-6 md:py-8">
-      <Button variant="text" href="/membres/annuaire" className="-ml-3">
-        <ArrowLeft className="size-5" aria-hidden />
-        Retour à l’annuaire
-      </Button>
+      <Breadcrumb jsonLd={false} className="mb-0" items={[{ label: 'Annuaire', href: '/membres/annuaire' }, { label: name }]} />
 
       <Card role="region" aria-label={`Profil de ${name}`} className="p-5 md:p-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">

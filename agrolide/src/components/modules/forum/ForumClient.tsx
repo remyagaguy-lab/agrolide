@@ -52,7 +52,7 @@ export default function ForumClient() {
             <div key={cat.id} className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm overflow-hidden">
               <div className="bg-surface-container-low px-5 py-3 border-b border-outline-variant flex justify-between items-center">
                 <h2 className="text-sm font-bold text-on-surface">{cat.nom}</h2>
-                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-[10px] font-bold text-primary bg-primary-container px-2 py-1 rounded hover:bg-primary-container transition-colors border border-transparent hover:border-outline-variant">
+                <Link href={`/membres/forum/categorie/${cat.id}`} className="text-label-sm font-bold text-primary bg-primary-container px-2 py-1 rounded hover:bg-primary-container transition-colors border border-transparent hover:border-outline-variant">
                   Voir
                 </Link>
               </div>
@@ -74,7 +74,7 @@ export default function ForumClient() {
                           <h3 className="text-sm font-bold text-on-surface truncate mb-1 group-hover:text-primary transition-colors">
                             {thread.titre}
                           </h3>
-                          <div className="flex items-center gap-1.5 text-[10px] text-on-surface-muted">
+                          <div className="flex items-center gap-1.5 text-label-sm text-on-surface-muted">
                             <span className="font-semibold text-on-surface-variant">
                               {thread.auteur?.prenom}
                             </span>
@@ -85,7 +85,7 @@ export default function ForumClient() {
                             </div>
                           </div>
                         </div>
-                        <div className="flex items-center gap-1 text-primary bg-primary-container px-2 py-0.5 rounded text-[10px] font-bold shrink-0 border border-outline-variant">
+                        <div className="flex items-center gap-1 text-primary bg-primary-container px-2 py-0.5 rounded text-label-sm font-bold shrink-0 border border-outline-variant">
                           <MessageSquare className="w-3 h-3" />
                           {thread.nb_reponses}
                         </div>

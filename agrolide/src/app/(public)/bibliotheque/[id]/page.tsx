@@ -1,6 +1,7 @@
 import Link from 'next/link'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import { notFound } from 'next/navigation'
-import { ArrowLeft, Calendar, MapPin, Eye, Tag, FileText, User } from 'lucide-react'
+import { Calendar, MapPin, Eye, Tag, FileText, User } from 'lucide-react'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton'
 import { db } from '@/db'
@@ -54,11 +55,7 @@ export default async function DocumentDetailPage({ params }: { params: Promise<{
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Retour */}
-      <Link href="/bibliotheque" className="inline-flex items-center gap-2 text-sm text-on-surface-muted hover:text-on-surface mb-8 transition-colors">
-        <ArrowLeft className="w-4 h-4" />
-        Retour à la bibliothèque
-      </Link>
+      <Breadcrumb items={[{ label: 'Bibliothèque', href: '/bibliotheque' }, { label: document.titre }]} />
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Colonne Principale */}

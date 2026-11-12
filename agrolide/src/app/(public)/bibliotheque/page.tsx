@@ -57,7 +57,7 @@ export default async function BibliothequePublicPage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-          <h1 className="font-heading font-[800] text-3xl sm:text-4xl text-on-surface-brand mb-4 max-w-3xl mx-auto leading-tight">
+          <h1 className="font-heading font-extrabold text-3xl sm:text-4xl text-on-surface-brand mb-4 max-w-3xl mx-auto leading-tight">
             Bibliothèque agricole
           </h1>
 
@@ -73,7 +73,7 @@ export default async function BibliothequePublicPage() {
 
           <Link
             href="/rejoindre"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-accent font-heading font-[700] text-sm hover:bg-tertiary-hover transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-accent font-heading font-bold text-sm hover:bg-tertiary-hover transition-colors"
           >
             Devenir membre
             <ArrowRight className="w-4 h-4" />
@@ -88,7 +88,7 @@ export default async function BibliothequePublicPage() {
 
           {/* Section title */}
           <div className="flex items-center justify-between mb-8">
-            <h2 className="font-heading font-[800] text-2xl text-on-surface">Tous les documents</h2>
+            <h2 className="font-heading font-extrabold text-2xl text-on-surface">Tous les documents</h2>
           </div>
 
           <Suspense fallback={<div className="text-center py-12 text-on-surface-muted">Chargement de la bibliothèque...</div>}>
@@ -108,10 +108,10 @@ export default async function BibliothequePublicPage() {
       {/* ── CTA FINAL ────────────────────────────── */}
       <section className="bg-primary-container py-[96px] text-center">
         <div className="container flex flex-col items-center">
-          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-primary leading-[1.2] max-w-[700px] mx-auto mb-4">
+          <h2 className="font-heading font-black text-[clamp(24px,4vw,36px)] text-primary leading-[1.2] max-w-[700px] mx-auto mb-4">
             Accédez à la bibliothèque complète
           </h2>
-          <p className="font-sans font-[400] text-[14px] text-on-surface-variant mb-[28px]">
+          <p className="font-sans font-normal text-body-sm text-on-surface-variant mb-[28px]">
             Rejoignez Agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
           </p>
           <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>

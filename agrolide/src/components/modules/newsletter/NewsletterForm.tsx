@@ -114,7 +114,7 @@ export function NewsletterForm() {
               </p>
             )}
             
-            <p className="text-[11px] text-on-surface-muted mt-4 leading-tight">
+            <p className="text-label-sm text-on-surface-muted mt-4 leading-tight">
               En vous inscrivant, vous acceptez notre politique de confidentialité.
             </p>
           </>

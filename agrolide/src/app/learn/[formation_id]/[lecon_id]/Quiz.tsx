@@ -95,7 +95,7 @@ export function Quiz({
             setHasSubmitted(false);
             setScore(0);
             setIsFinished(false);
-          }} className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-outline-variant hover:border-primary hover:bg-primary-container text-on-surface font-urbanist font-[600] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-all">
+          }} className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-outline-variant hover:border-primary hover:bg-primary-container text-on-surface font-urbanist font-semibold text-body-md px-[28px] min-h-[48px] rounded-lg transition-all">
             Recommencer le quiz
           </button>
         </div>
@@ -162,14 +162,14 @@ export function Quiz({
             <button 
               onClick={handleSubmit} 
               disabled={selectedOption === null}
-              className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun disabled:bg-surface-container disabled:text-on-surface/38 disabled:cursor-not-allowed text-on-tertiary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun disabled:bg-surface-container disabled:text-on-surface/38 disabled:cursor-not-allowed text-on-tertiary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               Valider la réponse
             </button>
           ) : (
             <button 
               onClick={handleNext}
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               {currentQuestionIndex < questions.length - 1 ? "Question suivante" : "Terminer le quiz"}
               <ChevronRight className="ml-2 w-5 h-5" />

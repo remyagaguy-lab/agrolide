@@ -104,7 +104,7 @@ export default function NotificationsClient() {
                   {notif.contenu && (
                     <p className="text-xs text-on-surface-muted mt-1">{notif.contenu}</p>
                   )}
-                  <p className="text-[10px] text-on-surface-muted mt-1.5 font-bold uppercase tracking-wider">
+                  <p className="text-label-sm text-on-surface-muted mt-1.5 font-bold uppercase tracking-wider">
                     {format(new Date(notif.created_at), "d MMM yyyy 'à' HH:mm", { locale: fr })}
                   </p>
                 </div>

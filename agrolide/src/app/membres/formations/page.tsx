@@ -38,19 +38,19 @@ export default async function MesFormationsPage() {
 
   const getStatusBadge = (statut: string | null) => {
     if (statut === 'en_cours') {
-      return <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> En cours</span>
+      return <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> En cours</span>
     }
     switch (statut) {
       case 'inscrit':
-        return <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Inscrit</span>
+        return <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Inscrit</span>
       case 'en_attente_paiement':
-        return <span className="bg-tertiary-container text-on-warning-container border border-warning/40 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><Clock className="w-3 h-3" /> En attente</span>
+        return <span className="bg-tertiary-container text-on-warning-container border border-warning/40 px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 uppercase tracking-wider"><Clock className="w-3 h-3" /> En attente</span>
       case 'complete':
-        return <span className="bg-info-container text-info border border-info/30 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Terminée</span>
+        return <span className="bg-info-container text-info border border-info/30 px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 uppercase tracking-wider"><CheckCircle className="w-3 h-3" /> Terminée</span>
       case 'annule':
-        return <span className="bg-error-container text-error border border-error/30 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider"><XCircle className="w-3 h-3" /> Annulée</span>
+        return <span className="bg-error-container text-error border border-error/30 px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 uppercase tracking-wider"><XCircle className="w-3 h-3" /> Annulée</span>
       default:
-        return <span className="bg-surface-container-low text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1 uppercase tracking-wider">{statut || 'Inconnu'}</span>
+        return <span className="bg-surface-container-low text-on-surface-variant border border-outline-variant px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 uppercase tracking-wider">{statut || 'Inconnu'}</span>
     }
   }
 
@@ -94,7 +94,7 @@ export default async function MesFormationsPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
                     {getStatusBadge(ins.statut)}
-                    <span className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">
+                    <span className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider">
                       {isExternal ? formation.source_externe || 'Externe' : formation.modalite}
                     </span>
                   </div>

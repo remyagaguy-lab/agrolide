@@ -50,13 +50,13 @@ export default async function EvenementsPage() {
               return (
                 <div key={evt.id} className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all p-5 flex flex-col group">
                   <div className="flex justify-between items-start mb-3">
-                    <span className="bg-primary-container text-primary px-2 py-0.5 rounded text-[10px] font-bold border border-outline-variant uppercase tracking-wider">
+                    <span className="bg-primary-container text-primary px-2 py-0.5 rounded text-label-sm font-bold border border-outline-variant uppercase tracking-wider">
                       {evt.type_evt || "Événement"}
                     </span>
                     {isValid && (
                       <div className="flex flex-col items-center bg-surface-container-low border border-outline-variant text-on-surface rounded-lg px-2 py-1 min-w-[40px] group-hover:bg-primary group-hover:text-on-primary group-hover:border-primary transition-colors">
                         <span className="text-sm font-extrabold leading-none">{evtDate.getDate()}</span>
-                        <span className="text-[8px] font-bold uppercase mt-0.5">{evtDate.toLocaleDateString('fr-FR', { month: 'short' })}</span>
+                        <span className="text-label-sm font-bold uppercase mt-0.5">{evtDate.toLocaleDateString('fr-FR', { month: 'short' })}</span>
                       </div>
                     )}
                   </div>
@@ -90,7 +90,7 @@ export default async function EvenementsPage() {
                       href={evt.lien} 
                       target="_blank" 
                       rel="noreferrer"
-                      className="bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-[11px] transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider w-full mt-3 py-2"
+                      className="bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-label-sm transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider w-full mt-3 py-2"
                     >
                       S'inscrire <ExternalLink className="w-3 h-3" />
                     </a>
@@ -127,18 +127,18 @@ export default async function EvenementsPage() {
               return (
                 <div key={evt.id} className="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm p-4 opacity-70 hover:opacity-100 transition-opacity">
                   <div className="flex justify-between items-start mb-2">
-                    <span className="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold border border-outline-variant uppercase tracking-wider">
+                    <span className="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-label-sm font-bold border border-outline-variant uppercase tracking-wider">
                       {evt.type_evt || "Événement"}
                     </span>
                     {isValid && (
-                      <span className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">
+                      <span className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider">
                         {evtDate.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}
                       </span>
                     )}
                   </div>
                   <h3 className="text-sm font-bold text-on-surface line-clamp-2 leading-snug">{evt.titre}</h3>
                   {evt.lieu && (
-                    <div className="flex items-center text-[11px] text-on-surface-muted mt-1.5">
+                    <div className="flex items-center text-label-sm text-on-surface-muted mt-1.5">
                       <MapPin className="w-3 h-3 mr-1" /> {evt.lieu}
                     </div>
                   )}

@@ -101,7 +101,7 @@ export default async function FormationPublicPage({
           <div className="space-y-10">
             {/* Description intro */}
             <div>
-              <p className="font-body text-[16px] md:text-[17px] leading-[1.8] text-on-surface-variant">
+              <p className="font-body text-body-md md:text-body-lg leading-[1.8] text-on-surface-variant">
                 {formation.description}
               </p>
             </div>
@@ -112,12 +112,12 @@ export default async function FormationPublicPage({
                 <>
                   {extProgramme.contexte && (
                     <details open className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-[800] text-[16px] text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
+                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
                         Contexte
                         <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
                         <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
                       </summary>
-                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-[15px] leading-[1.75] text-on-surface-variant">
+                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-body-md leading-[1.75] text-on-surface-variant">
                         <div className="pt-2">{extProgramme.contexte}</div>
                       </div>
                     </details>
@@ -125,12 +125,12 @@ export default async function FormationPublicPage({
 
                   {extProgramme.public_cible && (
                     <details className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-[800] text-[16px] text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
+                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
                         Public cible
                         <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
                         <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
                       </summary>
-                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-[15px] leading-[1.75] text-on-surface-variant">
+                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-body-md leading-[1.75] text-on-surface-variant">
                         <div className="pt-2">{extProgramme.public_cible}</div>
                       </div>
                     </details>
@@ -138,7 +138,7 @@ export default async function FormationPublicPage({
 
                   {extProgramme.objectifs && extProgramme.objectifs.length > 0 && (
                     <details className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-[800] text-[16px] text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
+                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
                         Ce que vous allez apprendre
                         <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
                         <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
@@ -148,7 +148,7 @@ export default async function FormationPublicPage({
                           {extProgramme.objectifs.map((obj: string, i: number) => (
                             <div key={i} className="flex items-start gap-3">
                               <CheckCircle2 className="w-[18px] h-[18px] text-primary mt-[3px] flex-shrink-0" />
-                              <span className="font-heading text-[14px] font-medium text-on-surface leading-[1.5]">{obj}</span>
+                              <span className="font-heading text-body-sm font-medium text-on-surface leading-[1.5]">{obj}</span>
                             </div>
                           ))}
                         </div>
@@ -158,12 +158,12 @@ export default async function FormationPublicPage({
 
                   {extProgramme.presentation_structure && (
                     <details className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-[800] text-[16px] text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
+                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
                         À propos du partenaire
                         <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
                         <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
                       </summary>
-                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-[15px] leading-[1.75] text-on-surface-variant">
+                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-body-md leading-[1.75] text-on-surface-variant">
                         <div className="pt-2">{extProgramme.presentation_structure}</div>
                       </div>
                     </details>
@@ -172,7 +172,7 @@ export default async function FormationPublicPage({
               ) : (
                 /* Programme for internal formations */
                 <details open className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                  <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-[800] text-[16px] text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
+                  <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
                     Structure du cours
                     <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
                     <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
@@ -183,15 +183,15 @@ export default async function FormationPublicPage({
                         <div key={mod.id}>
                           <div className="flex items-start gap-3 mb-2">
                             <div className="w-8 h-8 rounded-full bg-surface-container-lowest border border-outline-variant flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
-                              <span className="font-heading text-primary font-[700] text-[13px]">
+                              <span className="font-heading text-primary font-bold text-xs">
                                 {String(index + 1).padStart(2, '0')}
                               </span>
                             </div>
                             <div>
-                              <h3 className="font-heading text-[15px] font-[700] leading-[1.3] text-on-surface mb-1">
+                              <h3 className="font-heading text-body-md font-bold leading-[1.3] text-on-surface mb-1">
                                 {mod.titre}
                               </h3>
-                              <p className="font-heading text-[14px] font-[400] leading-[1.5] text-on-surface-variant">
+                              <p className="font-heading text-body-sm font-normal leading-[1.5] text-on-surface-variant">
                                 {mod.description}
                               </p>
                             </div>
@@ -206,7 +206,7 @@ export default async function FormationPublicPage({
                                     {lecon.titre}
                                   </p>
                                   {lecon.duree_minutes && (
-                                    <p className="font-heading font-[400] text-[12px] text-on-surface-muted mt-0.5">
+                                    <p className="font-heading font-normal text-xs text-on-surface-muted mt-0.5">
                                       {lecon.duree_minutes} min
                                     </p>
                                   )}
@@ -228,39 +228,39 @@ export default async function FormationPublicPage({
             
             {/* Metadata Block (Grey box) */}
             <div className="bg-surface-container-low border border-outline-variant p-6 md:p-7 rounded-[12px]">
-              <h3 className="font-heading font-[800] text-[13px] uppercase tracking-wide text-on-surface mb-5">
+              <h3 className="font-heading font-extrabold text-xs uppercase tracking-wide text-on-surface mb-5">
                 Détails du cours
               </h3>
               
               <div className="space-y-5">
                 {!isExternal && (
                   <div>
-                    <span className="block font-heading text-[12px] uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Durée d'apprentissage</span>
-                    <span className="font-heading text-[15px] text-on-surface font-medium">{formattedDuree}</span>
+                    <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Durée d'apprentissage</span>
+                    <span className="font-heading text-body-md text-on-surface font-medium">{formattedDuree}</span>
                   </div>
                 )}
                 
                 <div>
-                  <span className="block font-heading text-[12px] uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Niveau</span>
-                  <span className="font-heading text-[15px] text-on-surface font-medium">{formation.niveau || "Tous niveaux"}</span>
+                  <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Niveau</span>
+                  <span className="font-heading text-body-md text-on-surface font-medium">{formation.niveau || "Tous niveaux"}</span>
                 </div>
 
                 <div>
-                  <span className="block font-heading text-[12px] uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Modalité</span>
-                  <span className="font-heading text-[15px] text-on-surface font-medium">{formation.modalite || "En ligne"}</span>
+                  <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Modalité</span>
+                  <span className="font-heading text-body-md text-on-surface font-medium">{formation.modalite || "En ligne"}</span>
                 </div>
 
                 {isExternal && (
                   <div>
-                    <span className="block font-heading text-[12px] uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Domaine / Source</span>
-                    <span className="font-heading text-[15px] text-primary font-semibold">{formation.source_externe || "Partenaire"}</span>
+                    <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Domaine / Source</span>
+                    <span className="font-heading text-body-md text-primary font-semibold">{formation.source_externe || "Partenaire"}</span>
                   </div>
                 )}
                 
                 {!isExternal && (
                   <div>
-                    <span className="block font-heading text-[12px] uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Modules</span>
-                    <span className="font-heading text-[15px] text-on-surface font-medium">{totalModules} modules</span>
+                    <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Modules</span>
+                    <span className="font-heading text-body-md text-on-surface font-medium">{totalModules} modules</span>
                   </div>
                 )}
               </div>
@@ -277,7 +277,7 @@ export default async function FormationPublicPage({
                 lienExterne={formation.lien_externe || ""}
                 className="w-full"
               />
-              <button className="w-full h-[48px] flex items-center justify-center gap-2 rounded-[8px] border-2 border-primary/20 bg-transparent text-primary font-heading font-[700] text-[15px] hover:bg-primary/5 transition-colors">
+              <button className="w-full h-[48px] flex items-center justify-center gap-2 rounded-[8px] border-2 border-primary/20 bg-transparent text-primary font-heading font-bold text-body-md hover:bg-primary/5 transition-colors">
                 <Share2 className="w-4 h-4" />
                 Partager ce cours
               </button>

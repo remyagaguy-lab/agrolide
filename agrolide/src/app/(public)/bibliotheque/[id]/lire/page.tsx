@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import { SecurePDFViewerWrapper } from '@/components/modules/bibliotheque/SecurePDFViewerWrapper'
 
 import { db } from '@/db'
@@ -45,11 +44,7 @@ export default async function SecureReaderPage({ params }: { params: Promise<{ i
 
   return (
     <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
-      {/* Retour */}
-      <Link href={`/bibliotheque/${id}`} className="inline-flex items-center gap-2 text-sm text-on-surface-muted hover:text-success mb-6 transition-colors font-medium">
-        <ArrowLeft className="w-4 h-4" />
-        Retour aux détails du document
-      </Link>
+      <Breadcrumb items={[{ label: 'Bibliothèque', href: '/bibliotheque' }, { label: 'Document', href: `/bibliotheque/${id}` }, { label: 'Lecture sécurisée' }]} />
       
       <div className="mb-4">
         <h1 className="text-2xl font-bold text-on-surface">Lecture Sécurisée</h1>

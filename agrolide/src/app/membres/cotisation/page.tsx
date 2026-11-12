@@ -68,7 +68,7 @@ export default async function CotisationPage() {
               categorie={profile.categorie ?? ''} 
             />
             
-            <div className="mt-6 flex items-center justify-center gap-1.5 text-[11px] text-on-surface-muted font-bold uppercase tracking-wider">
+            <div className="mt-6 flex items-center justify-center gap-1.5 text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
               <CheckCircle size={14} className="text-success" /> Paiements 100% sécurisés
             </div>
           </div>
@@ -87,10 +87,10 @@ export default async function CotisationPage() {
             </div>
           </div>
           <div className="text-right bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-            <span className="inline-block px-3 py-1 bg-surface-container-lowest shadow-sm border border-outline-variant rounded text-[10px] font-bold text-on-surface-variant uppercase tracking-wider mb-2">
+            <span className="inline-block px-3 py-1 bg-surface-container-lowest shadow-sm border border-outline-variant rounded text-label-sm font-bold text-on-surface-variant uppercase tracking-wider mb-2">
               Méthode: {cotisationActive.methode === 'stripe' ? 'Carte Bancaire' : 'Mobile Money'}
             </span>
-            <p className="text-[11px] text-on-surface-muted font-bold uppercase tracking-wider">Montant payé: <span className="text-on-surface">{cotisationActive.montant_fcfa} FCFA</span></p>
+            <p className="text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">Montant payé: <span className="text-on-surface">{cotisationActive.montant_fcfa} FCFA</span></p>
           </div>
         </div>
       )}
@@ -107,7 +107,7 @@ export default async function CotisationPage() {
         </div>
         
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-[11px]">
+          <table className="w-full text-left text-label-sm">
             <thead className="bg-surface-container-low">
               <tr className="text-on-surface-muted uppercase tracking-wider font-bold">
                 <th className="px-4 py-3 border-b border-outline-variant">Date</th>
@@ -124,10 +124,10 @@ export default async function CotisationPage() {
                     <td className="px-4 py-3 font-medium text-on-surface-variant">{new Date(cotis.created_at).toLocaleDateString('fr-FR')}</td>
                     <td className="px-4 py-3 font-bold text-on-surface">{cotis.montant_fcfa} FCFA</td>
                     <td className="px-4 py-3 capitalize">
-                       <span className="bg-surface-container-low border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold text-on-surface-variant uppercase tracking-wider">{cotis.methode}</span>
+                       <span className="bg-surface-container-low border border-outline-variant px-2 py-0.5 rounded text-label-sm font-bold text-on-surface-variant uppercase tracking-wider">{cotis.methode}</span>
                     </td>
                     <td className="px-4 py-3">
-                      <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border ${
+                      <span className={`px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider border ${
                         cotis.statut === 'valide' ? 'bg-primary-container text-primary border-outline-variant' : 'bg-error-container text-error border-error/30'
                       }`}>
                         {cotis.statut}

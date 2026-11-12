@@ -41,7 +41,7 @@ export default async function ProfilPage() {
       <div className="flex justify-between items-center shrink-0">
         <div>
           <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading leading-tight">Mon Profil</h1>
-          <p className="text-[11px] text-on-surface-muted font-medium mt-0.5">
+          <p className="text-label-sm text-on-surface-muted font-medium mt-0.5">
             Gérez vos informations personnelles et professionnelles.{" "}
             <Link href="/membres/profil/confidentialite" className="text-primary underline underline-offset-2">
               Confidentialité du profil
@@ -50,7 +50,7 @@ export default async function ProfilPage() {
         </div>
         <Link 
           href="/membres/profil/modifier" 
-          className="flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary text-[11px] font-bold rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
+          className="flex items-center gap-1.5 px-4 py-2 bg-primary text-on-primary text-label-sm font-bold rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
         >
           <Edit size={14} /> Modifier
         </Link>
@@ -97,14 +97,14 @@ export default async function ProfilPage() {
               {/* Jauge de complétion */}
               <div className="bg-surface-container-low border border-outline-variant rounded-xl p-3 w-full md:w-48 shrink-0">
                 <div className="flex justify-between items-end mb-1.5">
-                  <span className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">Complétion</span>
+                  <span className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider">Complétion</span>
                   <span className="text-xs font-bold text-on-surface">{completion}%</span>
                 </div>
                 <div className="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
                   <div className="h-full bg-primary rounded-full transition-all duration-500" style={{ width: `${completion}%` }}></div>
                 </div>
                 {completion < 100 && (
-                  <p className="text-[9px] text-warning mt-1.5 font-medium flex items-center gap-1">
+                  <p className="text-label-sm text-warning mt-1.5 font-medium flex items-center gap-1">
                     <AlertCircle size={10} /> Complétez votre profil
                   </p>
                 )}
@@ -124,7 +124,7 @@ export default async function ProfilPage() {
                 <h3 className="font-heading font-bold text-sm text-on-surface flex items-center gap-2 mb-3">
                    <BookOpen size={14} className="text-primary" /> À propos
                 </h3>
-                <p className="text-[11px] text-on-surface-variant leading-relaxed font-medium">
+                <p className="text-label-sm text-on-surface-variant leading-relaxed font-medium">
                   {profile.biographie}
                 </p>
               </div>
@@ -139,15 +139,15 @@ export default async function ProfilPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Spécialité */}
                 <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Spécialité Principale</p>
-                  <span className="inline-block px-2.5 py-1 bg-primary-container text-primary rounded-md text-[10px] font-bold uppercase tracking-wider">
+                  <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Spécialité Principale</p>
+                  <span className="inline-block px-2.5 py-1 bg-primary-container text-primary rounded-md text-label-sm font-bold uppercase tracking-wider">
                     {profile.specialite || 'Non renseignée'}
                   </span>
                 </div>
                 
                 {/* Niveau d'études */}
                 <div className="bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Niveau d'études</p>
+                  <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Niveau d'études</p>
                   <p className="text-xs font-bold text-on-surface flex items-center gap-1.5">
                     <GraduationCap size={14} className="text-on-surface-muted" />
                     {profile.niveau_etudes || 'Non renseigné'}
@@ -156,16 +156,16 @@ export default async function ProfilPage() {
                 
                 {/* Secteurs d'expertise */}
                 <div className="md:col-span-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Domaines d'expertise</p>
-                  <p className="text-[11px] font-medium text-on-surface-variant">
+                  <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Domaines d'expertise</p>
+                  <p className="text-label-sm font-medium text-on-surface-variant">
                     {parseList(profile.secteurs_expertise).join(', ') || 'Aucun domaine spécifié.'}
                   </p>
                 </div>
                 
                 {/* Langues */}
                 <div className="md:col-span-2 bg-surface-container-low p-3 rounded-xl border border-outline-variant">
-                  <p className="text-[10px] font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Langues parlées</p>
-                  <p className="text-[11px] font-medium text-on-surface flex items-center gap-1.5">
+                  <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-1.5">Langues parlées</p>
+                  <p className="text-label-sm font-medium text-on-surface flex items-center gap-1.5">
                     <Languages size={14} className="text-on-surface-muted" />
                     {parseList(profile.langues).join(', ') || 'Non renseigné'}
                   </p>
@@ -189,8 +189,8 @@ export default async function ProfilPage() {
                     <Mail size={12} />
                   </div>
                   <div>
-                    <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Email</p>
-                    <p className="text-[11px] font-bold text-on-surface break-all">{profile.email}</p>
+                    <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Email</p>
+                    <p className="text-label-sm font-bold text-on-surface break-all">{profile.email}</p>
                   </div>
                 </div>
                 
@@ -199,8 +199,8 @@ export default async function ProfilPage() {
                     <MapPin size={12} />
                   </div>
                   <div>
-                    <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Localisation</p>
-                    <p className="text-[11px] font-bold text-on-surface">
+                    <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Localisation</p>
+                    <p className="text-label-sm font-bold text-on-surface">
                       {profile.ville ? `${profile.ville}, ` : ''}{profile.pays || 'Non renseignée'}
                     </p>
                   </div>
@@ -212,8 +212,8 @@ export default async function ProfilPage() {
                       <Globe size={12} />
                     </div>
                     <div>
-                      <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Site Web</p>
-                      <a href={safeExternalUrl(profile.site_web_url) ?? undefined} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
+                      <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">Site Web</p>
+                      <a href={safeExternalUrl(profile.site_web_url) ?? undefined} target="_blank" rel="noreferrer" className="text-label-sm font-bold text-info hover:underline break-all">
                         {profile.site_web_url}
                       </a>
                     </div>
@@ -226,8 +226,8 @@ export default async function ProfilPage() {
                       <IconLinkedIn />
                     </div>
                     <div>
-                      <p className="text-[9px] font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">LinkedIn</p>
-                      <a href={safeExternalUrl(profile.linkedin_url) ?? undefined} target="_blank" rel="noreferrer" className="text-[11px] font-bold text-info hover:underline break-all">
+                      <p className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider mb-0.5">LinkedIn</p>
+                      <a href={safeExternalUrl(profile.linkedin_url) ?? undefined} target="_blank" rel="noreferrer" className="text-label-sm font-bold text-info hover:underline break-all">
                         Voir le profil
                       </a>
                     </div>
@@ -249,11 +249,11 @@ export default async function ProfilPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-on-surface">{profile.organisation}</p>
-                    <p className="text-[10px] text-on-surface-muted mt-0.5 font-medium">Entreprise / Association</p>
+                    <p className="text-label-sm text-on-surface-muted mt-0.5 font-medium">Entreprise / Association</p>
                   </div>
                 </div>
               ) : (
-                <p className="text-[11px] text-on-surface-muted text-center py-4 italic">
+                <p className="text-label-sm text-on-surface-muted text-center py-4 italic">
                   Aucune organisation renseignée.
                 </p>
               )}

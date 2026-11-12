@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { AuthProvider } from "@/lib/auth/client";
 import { CookieBanner } from "@/components/layout/CookieBanner";
+import { ToastProvider } from "@/components/ui/Toast";
 import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
@@ -70,7 +71,9 @@ export default function RootLayout({
           />
         </head>
         <body className="min-h-full flex flex-col">
-          {children}
+          <ToastProvider>
+            {children}
+          </ToastProvider>
           <CookieBanner />
         </body>
       </html>

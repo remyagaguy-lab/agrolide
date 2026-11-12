@@ -25,11 +25,11 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
     <div className={`group bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
       <div className="p-5 flex-grow">
         <div className="flex justify-between items-start mb-3">
-          <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
+          <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider">
             {getIcon(opp.type_opp)} {opp.type_opp}
           </span>
           {isExpired && (
-            <span className="bg-error-container text-error px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">
+            <span className="bg-error-container text-error px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider">
               Expiré
             </span>
           )}
@@ -73,12 +73,12 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
             href={opp.lien_externe}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2 bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-[11px] transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider"
+            className="w-full py-2 bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-label-sm transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider"
           >
             Voir l'offre <ExternalLink className="w-3 h-3" />
           </a>
         ) : (
-          <div className="bg-surface-container-low py-2 text-center rounded-lg text-[11px] text-on-surface-muted font-bold border border-outline-variant uppercase tracking-wider">
+          <div className="bg-surface-container-low py-2 text-center rounded-lg text-label-sm text-on-surface-muted font-bold border border-outline-variant uppercase tracking-wider">
             Contactez l'auteur
           </div>
         )}

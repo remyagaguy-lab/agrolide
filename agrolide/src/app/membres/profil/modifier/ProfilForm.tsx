@@ -4,6 +4,7 @@ import * as React from "react"
 import { useRouter } from "next/navigation"
 import { Camera, Save } from "lucide-react"
 import { Alert } from "@/components/ui/Alert"
+import { useToast } from "@/components/ui/Toast"
 import { Avatar } from "@/components/ui/Avatar"
 import { Button } from "@/components/ui/Button"
 import { ChoiceChip } from "@/components/ui/ChoiceChip"
@@ -42,6 +43,7 @@ const avecExistantes = (proposees: readonly string[], choisies: string[]) => [
 
 export function ProfilForm({ initial }: { initial: ProfilInitial }) {
   const router = useRouter()
+  const { toast } = useToast()
   const fileInputRef = React.useRef<HTMLInputElement>(null)
 
   const [valeurs, setValeurs] = React.useState<Valeurs>(() => {
@@ -51,12 +53,10 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
   const [photo, setPhoto] = React.useState(initial.photo_url)
   const [erreurs, setErreurs] = React.useState<Record<string, string>>({})
   const [erreurGenerale, setErreurGenerale] = React.useState("")
-  const [enregistre, setEnregistre] = React.useState(false)
   const [pending, startTransition] = React.useTransition()
   const [envoiPhoto, setEnvoiPhoto] = React.useState(false)
 
   const maj = <K extends keyof Valeurs>(cle: K, valeur: Valeurs[K]) => {
-    setEnregistre(false)
     setValeurs((v) => ({ ...v, [cle]: valeur }))
   }
 
@@ -94,12 +94,11 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
     e.preventDefault()
     setErreurs({})
     setErreurGenerale("")
-    setEnregistre(false)
     startTransition(async () => {
       try {
         const res = await updateProfil(valeurs)
         if (res.success) {
-          setEnregistre(true)
+          toast({ title: "Profil enregistré", description: "Vos modifications sont prises en compte.", variant: "success" })
           router.refresh()
         } else {
           setErreurs(res.champs ?? {})
@@ -139,7 +138,6 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
 
       <div aria-live="polite" className="empty:hidden">
         {erreurGenerale && <Alert variant="error">{erreurGenerale}</Alert>}
-        {enregistre && <Alert variant="success">Votre profil est enregistré.</Alert>}
       </div>
 
       <div role="group" aria-labelledby="photo-titre" className="space-y-3">

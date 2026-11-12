@@ -102,7 +102,7 @@ export default async function LeconPage({
         <div className="container max-w-3xl mx-auto px-6">
           <div className="flex flex-col gap-4">
             <div>
-              <span className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-on-surface-brand bg-on-surface-brand/15 px-3 py-1 rounded-full">
+              <span className="font-urbanist font-bold text-label-sm uppercase tracking-[0.1em] text-on-surface-brand bg-on-surface-brand/15 px-3 py-1 rounded-full">
                 {formation.modules.find(m => m.id === currentLeconFull.module_id)?.titre}
               </span>
             </div>
@@ -142,7 +142,7 @@ export default async function LeconPage({
           {previousLecon ? (
             <Link 
               href={`/learn/${formationId}/${previousLecon.id}`}
-              className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-outline-variant hover:border-primary hover:text-primary hover:bg-primary-container text-on-surface font-urbanist font-[600] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-all"
+              className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-outline-variant hover:border-primary hover:text-primary hover:bg-primary-container text-on-surface font-urbanist font-semibold text-body-md px-[28px] min-h-[48px] rounded-lg transition-all"
             >
               <ChevronLeft className="w-5 h-5 mr-2" />
               Précédent
@@ -155,7 +155,7 @@ export default async function LeconPage({
             isCompleted || !quizData || quizData.length === 0 ? (
               <Link 
                 href={`/learn/${formationId}/${nextLecon.id}`}
-                className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-on-tertiary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+                className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-on-tertiary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
               >
                 Suivant
                 <ChevronRight className="w-5 h-5 ml-2" />
@@ -163,7 +163,7 @@ export default async function LeconPage({
             ) : (
               <button 
                 disabled
-                className="inline-flex items-center justify-center bg-surface-container text-on-surface-muted font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors cursor-not-allowed"
+                className="inline-flex items-center justify-center bg-surface-container text-on-surface-muted font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors cursor-not-allowed"
                 title="Validez le quiz pour passer à la suite"
               >
                 Suivant bloqué
@@ -173,7 +173,7 @@ export default async function LeconPage({
           ) : (
             <Link 
               href={`/formations/${formationId}`}
-              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-[700] text-[15px] px-[28px] min-h-[48px] rounded-lg transition-colors"
+              className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               <CheckCircle2 className="w-5 h-5 mr-2" />
               Terminer la formation

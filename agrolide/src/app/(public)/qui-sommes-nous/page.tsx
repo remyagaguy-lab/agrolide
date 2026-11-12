@@ -268,8 +268,9 @@ export default function QuiSommesNousPage() {
       </Section>
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="bg-primary-container py-20 text-center md:py-24">
-        <div className="container flex flex-col items-center">
+      <section className="relative overflow-hidden bg-primary-container py-20 text-center md:py-24">
+        <Motif size={1000} opacity={0.06} variant="complet" className="text-primary" />
+        <div className="container relative z-10 flex flex-col items-center">
           <h2 className="text-headline-md text-primary mx-auto mb-8 max-w-2xl">
             Prêt à faire partie de l'histoire&nbsp;?
           </h2>

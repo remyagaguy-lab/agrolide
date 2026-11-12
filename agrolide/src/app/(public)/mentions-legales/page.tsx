@@ -11,41 +11,41 @@ export default function MentionsLegalesPage() {
     <div className="bg-surface-container-low min-h-screen pb-[80px] pt-[40px] md:pt-[80px] font-urbanist">
       <div className="max-w-[800px] mx-auto px-6">
         <div className="bg-surface-container-lowest rounded-2xl p-8 md:p-12 shadow-sm border border-outline-variant">
-          <h1 className="font-[900] text-[32px] md:text-[40px] text-on-surface tracking-[-0.02em] mb-[8px]">
+          <h1 className="text-headline-lg text-on-surface mb-2">
             Mentions Légales
           </h1>
-          <p className="text-[14px] text-on-surface-muted mb-[32px]">
+          <p className="text-body-sm text-on-surface-muted mb-[32px]">
             En vigueur au 1er Janvier 2026
           </p>
 
-          <div className="text-[15px] text-on-surface-variant leading-[1.8] flex flex-col gap-8">
+          <div className="text-body-md text-on-surface-variant leading-[1.8] flex flex-col gap-8">
             <div>
-              <h2 className="text-[20px] font-[800] mb-[12px] text-primary">1. Éditeur du site</h2>
+              <h2 className="text-title-lg mb-3 text-primary">1. Éditeur du site</h2>
               <p>
                 Le site <strong>agrolide.org</strong> est édité par l'organisation <strong>agrolide</strong>.<br />
                 Siège social : Lomé, Togo<br />
-                Email : <a href="mailto:contact@agrolide.org" className="text-primary hover:underline font-[600]">contact@agrolide.org</a>
+                Email : <a href="mailto:contact@agrolide.org" className="text-primary hover:underline font-semibold">contact@agrolide.org</a>
               </p>
             </div>
 
             <div>
-              <h2 className="text-[20px] font-[800] mb-[12px] text-primary">2. Directeur de la publication</h2>
+              <h2 className="text-title-lg mb-3 text-primary">2. Directeur de la publication</h2>
               <p>
                 Le directeur de la publication est <strong>Remyaga Guy KOUMANTEGA</strong>, en qualité de Fondateur & CEO du réseau agrolide.
               </p>
             </div>
 
             <div>
-              <h2 className="text-[20px] font-[800] mb-[12px] text-primary">3. Hébergement</h2>
+              <h2 className="text-title-lg mb-3 text-primary">3. Hébergement</h2>
               <p>
                 Le site est hébergé par <strong>Vercel Inc.</strong><br />
                 Siège social : 340 S Lemon Ave #4133 Walnut, CA 91789, USA<br />
-                Site web : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-[600]">vercel.com</a>
+                Site web : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-semibold">vercel.com</a>
               </p>
             </div>
 
             <div>
-              <h2 className="text-[20px] font-[800] mb-[12px] text-primary">4. Propriété intellectuelle</h2>
+              <h2 className="text-title-lg mb-3 text-primary">4. Propriété intellectuelle</h2>
               <p>
                 L'ensemble de ce site relève de la législation internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
               </p>
@@ -55,7 +55,7 @@ export default function MentionsLegalesPage() {
             </div>
 
             <div>
-              <h2 className="text-[20px] font-[800] mb-[12px] text-primary">5. Responsabilité</h2>
+              <h2 className="text-title-lg mb-3 text-primary">5. Responsabilité</h2>
               <p>
                 L'éditeur s'efforce de fournir sur le site agrolide.org des informations aussi précises que possible. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
               </p>

@@ -41,20 +41,20 @@ export function FormationCard({ formation }: FormationCardProps) {
       <div className="p-4 flex-1 flex flex-col">
         <div className="flex justify-between items-start mb-3 gap-2">
           <div className="flex flex-wrap gap-1.5">
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-primary-container text-primary border border-outline-variant uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-primary-container text-primary border border-outline-variant uppercase tracking-wider">
               {formation.thematique}
             </span>
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container-low text-on-surface-variant border border-outline-variant uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-surface-container-low text-on-surface-variant border border-outline-variant uppercase tracking-wider">
               {formation.modalite}
             </span>
           </div>
           
           {isGratuit ? (
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-success-container text-success border border-success/30 uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-success-container text-success border border-success/30 uppercase tracking-wider">
               Gratuit
             </span>
           ) : (
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-on-warning-container border border-warning/40 uppercase tracking-wider">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-tertiary-container text-on-warning-container border border-warning/40 uppercase tracking-wider">
               {formation.prix} FCFA
             </span>
           )}
@@ -69,7 +69,7 @@ export function FormationCard({ formation }: FormationCardProps) {
         </p>
         
         <div className="space-y-2 mt-auto pt-3 border-t border-outline-variant">
-          <div className="flex items-center text-[11px] text-on-surface-muted font-medium">
+          <div className="flex items-center text-label-sm text-on-surface-muted font-medium">
             <Calendar className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
             <span className="truncate">
               {nextSession 
@@ -78,7 +78,7 @@ export function FormationCard({ formation }: FormationCardProps) {
             </span>
           </div>
           {nextSession && (
-            <div className="flex justify-between items-center text-[11px] text-on-surface-muted font-medium">
+            <div className="flex justify-between items-center text-label-sm text-on-surface-muted font-medium">
               <div className="flex items-center">
                 <MapPin className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
                 <span className="truncate max-w-[100px]">{nextSession.lieu}</span>
@@ -97,7 +97,7 @@ export function FormationCard({ formation }: FormationCardProps) {
       <div className="px-4 py-3 bg-surface-container-low border-t border-outline-variant mt-auto">
         <Link 
           href={`/membres/formations/${formation.id}`}
-          className="flex items-center justify-center w-full gap-1.5 text-[11px] font-bold text-primary uppercase tracking-wider hover:text-primary transition-colors"
+          className="flex items-center justify-center w-full gap-1.5 text-label-sm font-bold text-primary uppercase tracking-wider hover:text-primary transition-colors"
         >
           En savoir plus
           <ChevronRight className="w-3.5 h-3.5" />

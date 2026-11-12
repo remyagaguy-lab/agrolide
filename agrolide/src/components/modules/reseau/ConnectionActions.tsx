@@ -4,6 +4,7 @@ import * as React from 'react'
 import Link from 'next/link'
 import { Check, Clock, MessageCircle, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { useToast } from '@/components/ui/Toast'
 import { acceptConnectionRequest, declineConnectionRequest, sendConnectionRequest } from '@/app/actions/connections'
 import type { ConnectionState } from '@/lib/reseau/profil'
 
@@ -28,7 +29,8 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
   const [state, setState] = React.useState<ConnectionState>(initialState)
   const [connectionId, setConnectionId] = React.useState<string | null>(initialId)
   const [pending, startTransition] = React.useTransition()
-  const [message, setMessage] = React.useState('')
+  const { toast } = useToast()
+  const notify = (title: string) => toast({ title, variant: 'success' })
   const [error, setError] = React.useState('')
 
   const run = (task: () => Promise<void>) => {
@@ -48,7 +50,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
       if (res && 'success' in res && res.success) {
         setState('pending_sent')
         setConnectionId(res.connectionId ?? null)
-        setMessage(`Invitation envoyée à ${name}.`)
+        notify(`Invitation envoyée à ${name}.`)
       } else {
         setError(
           res && 'error' in res && res.error === 'Non autorisé'
@@ -65,7 +67,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
       if (res.error) return setError(res.error)
       setState('none')
       setConnectionId(null)
-      setMessage(`Invitation à ${name} retirée.`)
+      notify(`Invitation à ${name} retirée.`)
     })
 
   const accept = () =>
@@ -74,7 +76,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
       const res = await acceptConnectionRequest(connectionId)
       if (res.error) return setError(res.error)
       setState('accepted')
-      setMessage(`Vous êtes maintenant connecté(e) à ${name}.`)
+      notify(`Vous êtes maintenant connecté(e) à ${name}.`)
     })
 
   const ignore = () =>
@@ -84,7 +86,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
       if (res.error) return setError(res.error)
       setState('none')
       setConnectionId(null)
-      setMessage(`Invitation de ${name} ignorée.`)
+      notify(`Invitation de ${name} ignorée.`)
     })
 
   return (
@@ -132,9 +134,6 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
         </Button>
       )}
 
-      <p role="status" className="sr-only">
-        {message}
-      </p>
       {error && (
         <p role="alert" className="text-body-sm text-error">
           {error}{' '}

@@ -44,15 +44,15 @@ export default async function WebinairesPage() {
               <div key={webinaire.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5 flex flex-col hover:border-primary/30 transition-colors">
                 <div className="flex justify-between items-start mb-3">
                   {webinaire.acces === 'public' ? (
-                    <span className="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 border border-outline-variant">
+                    <span className="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider flex items-center gap-1 border border-outline-variant">
                       <Unlock size={10} /> Public
                     </span>
                   ) : (
-                    <span className="bg-info-container text-info px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 border border-info/30">
+                    <span className="bg-info-container text-info px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider flex items-center gap-1 border border-info/30">
                       <Lock size={10} /> Membres
                     </span>
                   )}
-                  <span className="bg-primary-container text-primary px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider flex items-center gap-1 border border-outline-variant">
+                  <span className="bg-primary-container text-primary px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider flex items-center gap-1 border border-outline-variant">
                     <Video size={10} /> En direct
                   </span>
                 </div>
@@ -61,7 +61,7 @@ export default async function WebinairesPage() {
                 <p className="text-xs text-on-surface-muted mb-4 line-clamp-2 flex-grow leading-relaxed">{webinaire.description}</p>
                 
                 <div className="space-y-2 pt-3 border-t border-outline-variant">
-                  <div className="flex items-center text-[11px] font-medium text-on-surface-variant">
+                  <div className="flex items-center text-label-sm font-medium text-on-surface-variant">
                     <Calendar size={12} className="mr-1.5 text-on-surface-muted" />
                     {new Date(webinaire.date_prevue).toLocaleString('fr-FR', {
                       weekday: 'long',
@@ -72,7 +72,7 @@ export default async function WebinairesPage() {
                       minute: '2-digit'
                     })}
                   </div>
-                  <div className="flex items-center text-[11px] font-medium text-on-surface-variant">
+                  <div className="flex items-center text-label-sm font-medium text-on-surface-variant">
                     <Clock size={12} className="mr-1.5 text-on-surface-muted" />
                     Durée estimée : {webinaire.duree_minutes} minutes
                   </div>
@@ -124,7 +124,7 @@ export default async function WebinairesPage() {
                   <p className="text-xs text-on-surface-muted mb-3 flex-1 line-clamp-2 leading-relaxed">{webinaire.description}</p>
                   
                   <div className="flex items-center justify-between mt-auto pt-3 border-t border-outline-variant">
-                    <span className="text-[10px] text-on-surface-muted font-bold uppercase tracking-wider">
+                    <span className="text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
                       Diffusé le {new Date(webinaire.date_prevue).toLocaleDateString('fr-FR')}
                     </span>
                     
@@ -133,7 +133,7 @@ export default async function WebinairesPage() {
                         href={webinaire.lien_ressource}
                         target="_blank"
                         rel="noreferrer" 
-                        className="text-[10px] font-bold text-primary uppercase tracking-wider hover:underline"
+                        className="text-label-sm font-bold text-primary uppercase tracking-wider hover:underline"
                       >
                         Voir ressources
                       </a>

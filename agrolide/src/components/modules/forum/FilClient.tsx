@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Clock, AlertTriangle, Send, User } from 'lucide-react'
+import { Clock, AlertTriangle, Send, User } from 'lucide-react'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import { formatDistanceToNow, format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { marked } from 'marked'
@@ -88,16 +89,14 @@ export default function FilClient({ filId }: FilClientProps) {
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
       {/* Header */}
       <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-5 shadow-sm">
-        <Link href={`/membres/forum/categorie/${thread.categorie_id}`} className="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface-muted hover:text-on-surface transition-colors mb-3">
-          <ArrowLeft className="w-3.5 h-3.5" /> Retour à {thread.categorie?.nom}
-        </Link>
+        <Breadcrumb jsonLd={false} className="mb-3" items={[{ label: 'Forum', href: '/membres/forum' }, { label: thread.categorie?.nom ?? 'Catégorie', href: `/membres/forum/categorie/${thread.categorie_id}` }, { label: thread.titre }]} />
         <div className="flex items-start gap-3 mb-2">
           <h1 className="text-lg md:text-xl font-bold text-on-surface flex-1 font-heading">{thread.titre}</h1>
-          <span className="bg-primary-container text-primary px-2.5 py-1 rounded border border-outline-variant text-[10px] font-bold uppercase tracking-wider shrink-0">
+          <span className="bg-primary-container text-primary px-2.5 py-1 rounded border border-outline-variant text-label-sm font-bold uppercase tracking-wider shrink-0">
             {thread.categorie?.nom}
           </span>
         </div>
-        <div className="flex items-center gap-2 text-[11px] font-medium text-on-surface-muted">
+        <div className="flex items-center gap-2 text-label-sm font-medium text-on-surface-muted">
           <span>Par <span className="font-bold text-on-surface-variant">{thread.auteur?.prenom} {thread.auteur?.nom}</span></span>
           <span>•</span>
           <span>{format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}</span>
@@ -118,12 +117,12 @@ export default function FilClient({ filId }: FilClientProps) {
                 )}
               </div>
               <div className="font-bold text-on-surface text-xs truncate w-full">{msg.auteur?.prenom}</div>
-              <div className="font-medium text-on-surface-muted text-[10px] truncate w-full">{msg.auteur?.nom}</div>
+              <div className="font-medium text-on-surface-muted text-label-sm truncate w-full">{msg.auteur?.nom}</div>
             </div>
             
             {/* Contenu */}
             <div className="p-5 flex-1 flex flex-col">
-              <div className="flex justify-between items-center mb-3 text-[10px] text-on-surface-muted font-bold uppercase tracking-wider">
+              <div className="flex justify-between items-center mb-3 text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
                 <div className="flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" />
                   {formatDistanceToNow(new Date(msg.created_at), { addSuffix: true, locale: fr })}
@@ -161,7 +160,7 @@ export default function FilClient({ filId }: FilClientProps) {
                 required
               />
               <div className="flex justify-between items-center mt-3">
-                <div className="text-[10px] text-on-surface-muted font-medium uppercase tracking-wider">
+                <div className="text-label-sm text-on-surface-muted font-medium uppercase tracking-wider">
                   {replyContent.length}/3000 caractères
                 </div>
                 <button 

@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react'
 
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Loader2, ArrowLeft } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import Link from 'next/link'
 
 export default function NouveauFilClient() {
@@ -74,9 +75,7 @@ export default function NouveauFilClient() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 space-y-6">
-      <Link href="/membres/forum" className="inline-flex items-center gap-2 text-sm font-medium text-on-surface-muted hover:text-on-surface transition-colors">
-        <ArrowLeft className="w-4 h-4" /> Retour au forum
-      </Link>
+      <Breadcrumb jsonLd={false} className="mb-0" items={[{ label: 'Forum', href: '/membres/forum' }, { label: 'Nouveau sujet' }]} />
       
       <div>
         <h1 className="text-3xl font-bold text-on-surface">Nouveau sujet</h1>

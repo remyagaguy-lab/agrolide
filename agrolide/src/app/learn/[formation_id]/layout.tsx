@@ -103,13 +103,13 @@ export default async function LearnLayout({
         {/* Sidebar Navigation */}
         <aside className="w-80 flex-shrink-0 border-r border-outline-variant bg-surface-container-low hidden md:flex flex-col">
           <div className="p-5 border-b border-outline-variant">
-            <h2 className="font-urbanist font-bold text-[11px] uppercase tracking-[0.1em] text-primary">Sommaire du cours</h2>
+            <h2 className="font-urbanist font-bold text-label-sm uppercase tracking-[0.1em] text-primary">Sommaire du cours</h2>
           </div>
           <div className="flex-1 overflow-y-auto">
             <div className="p-2 space-y-4">
               {formation.modules.map((mod, index) => (
                 <div key={mod.id} className="space-y-1">
-                  <div className="px-5 py-3 font-urbanist font-bold text-[13px] text-on-surface uppercase tracking-wide">
+                  <div className="px-5 py-3 font-urbanist font-bold text-xs text-on-surface uppercase tracking-wide">
                     Module {index + 1}: {mod.titre}
                   </div>
                   <div className="space-y-0.5">
@@ -129,7 +129,7 @@ export default async function LearnLayout({
                                 {isCompleted ? (
                                   <CheckCircle2 className="w-6 h-6 text-primary" />
                                 ) : (
-                                  <div className="w-6 h-6 rounded-full border border-outline flex items-center justify-center text-[11px] font-bold text-on-surface-muted group-hover:border-primary group-hover:text-primary group-hover:bg-primary/10 transition-colors">
+                                  <div className="w-6 h-6 rounded-full border border-outline flex items-center justify-center text-label-sm font-bold text-on-surface-muted group-hover:border-primary group-hover:text-primary group-hover:bg-primary/10 transition-colors">
                                     {globalIndex + 1}
                                   </div>
                                 )}

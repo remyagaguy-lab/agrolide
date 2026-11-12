@@ -3,7 +3,8 @@
 import React, { useState, useEffect } from 'react'
 
 import Link from 'next/link'
-import { MessageSquare, Clock, ArrowLeft, Plus } from 'lucide-react'
+import { MessageSquare, Clock, Plus } from 'lucide-react'
+import Breadcrumb from '@/components/ui/Breadcrumb'
 import { formatDistanceToNow, format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
@@ -49,9 +50,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
 
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
-      <Link href="/membres/forum" className="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface-muted hover:text-on-surface transition-colors">
-        <ArrowLeft className="w-3.5 h-3.5" /> Retour au forum
-      </Link>
+      <Breadcrumb jsonLd={false} className="mb-0" items={[{ label: 'Forum', href: '/membres/forum' }, { label: categorie?.nom ?? 'Catégorie' }]} />
       
       {loading && !categorie ? (
         <div className="py-20 text-center text-on-surface-muted">Chargement...</div>
@@ -75,9 +74,9 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
               <table className="w-full text-left">
                 <thead className="bg-surface-container-low border-b border-outline-variant">
                   <tr>
-                    <th className="px-4 py-3 text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">Sujet</th>
-                    <th className="px-4 py-3 text-[10px] font-bold text-on-surface-muted uppercase tracking-wider text-center">Réponses</th>
-                    <th className="px-4 py-3 text-[10px] font-bold text-on-surface-muted uppercase tracking-wider">Dernière activité</th>
+                    <th className="px-4 py-3 text-label-sm font-bold text-on-surface-muted uppercase tracking-wider">Sujet</th>
+                    <th className="px-4 py-3 text-label-sm font-bold text-on-surface-muted uppercase tracking-wider text-center">Réponses</th>
+                    <th className="px-4 py-3 text-label-sm font-bold text-on-surface-muted uppercase tracking-wider">Dernière activité</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-outline-variant">
@@ -93,17 +92,17 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
                         <td className="px-4 py-3">
                           <Link href={`/membres/forum/fil/${thread.id}`} className="block">
                             <h3 className="text-sm font-bold text-on-surface mb-0.5 group-hover:text-primary transition-colors">{thread.titre}</h3>
-                            <div className="text-[11px] text-on-surface-muted">
+                            <div className="text-label-sm text-on-surface-muted">
                               Par <span className="font-bold text-on-surface-variant">{thread.auteur?.prenom} {thread.auteur?.nom}</span> le {format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}
                             </div>
                           </Link>
                         </td>
                         <td className="px-4 py-3 text-center">
-                          <div className="inline-flex items-center justify-center min-w-[24px] h-6 bg-primary-container text-primary rounded-full text-[10px] font-bold border border-outline-variant">
+                          <div className="inline-flex items-center justify-center min-w-[24px] h-6 bg-primary-container text-primary rounded-full text-label-sm font-bold border border-outline-variant">
                             {thread.nb_reponses}
                           </div>
                         </td>
-                        <td className="px-4 py-3 text-[11px] text-on-surface-muted">
+                        <td className="px-4 py-3 text-label-sm text-on-surface-muted">
                           <div className="flex items-center gap-1.5">
                             <Clock className="w-3.5 h-3.5 text-on-surface-muted" />
                             {formatDistanceToNow(new Date(thread.last_activity_at), { addSuffix: true, locale: fr })}
@@ -126,7 +125,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
                 >
                   Précédent
                 </button>
-                <span className="text-[11px] font-bold text-on-surface-muted">
+                <span className="text-label-sm font-bold text-on-surface-muted">
                   Page {page} / {totalPages}
                 </span>
                 <button 

@@ -1,7 +1,8 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
-import { ArrowLeft, Rocket } from "lucide-react"
+import { Rocket } from "lucide-react"
+import Breadcrumb from "@/components/ui/Breadcrumb"
 import AgripreneurCard from "@/components/modules/agrobusiness/AgripreneurCard"
 
 import { db } from "@/db"
@@ -27,9 +28,7 @@ export default async function AgripreneursPage() {
       {/* Header */}
       <section className="bg-surface-brand py-16 text-on-surface-brand text-center">
         <div className="container mx-auto px-4">
-          <Link href="/agrobusiness" className="inline-flex items-center gap-2 text-on-surface-brand/80 hover:text-on-surface-brand transition-colors mb-6 text-sm">
-            <ArrowLeft size={16} /> Retour à l'Agrobusiness
-          </Link>
+          <Breadcrumb tone="dark" className="justify-center" items={[{ label: 'Agrobusiness', href: '/agrobusiness' }, { label: 'Nos agripreneurs' }]} />
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">
             Nos Agripreneurs
           </h1>

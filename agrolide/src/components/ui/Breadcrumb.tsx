@@ -12,6 +12,8 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[]
   /** `dark` : sur le fond vert profond d'un héros (texte clair). */
   tone?: 'default' | 'dark'
+  /** Données structurées schema.org (désactiver dans l'espace membre : pages non indexées). */
+  jsonLd?: boolean
   className?: string
 }
 
@@ -21,7 +23,7 @@ const tones = {
 } as const
 
 /** Fil d'Ariane (avec données structurées schema.org). Chaque ancêtre est un lien ; la page courante porte aria-current. */
-export default function Breadcrumb({ items, tone = 'default', className }: BreadcrumbProps) {
+export default function Breadcrumb({ items, tone = 'default', jsonLd: withJsonLd = true, className }: BreadcrumbProps) {
   const t = tones[tone]
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -44,10 +46,12 @@ export default function Breadcrumb({ items, tone = 'default', className }: Bread
 
   return (
     <>
+      {withJsonLd && (
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      )}
       <nav aria-label="Fil d'Ariane" className={cn('mb-6 flex text-body-sm', t.nav, className)}>
         <ol className="flex flex-wrap items-center gap-y-1">
           <li>

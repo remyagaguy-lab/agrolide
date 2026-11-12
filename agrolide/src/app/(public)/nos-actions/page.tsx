@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/Card"
 import { PageHero } from "@/components/ui/PageHero"
 import { buttonVariants, type ButtonVariant } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight, Check } from "lucide-react"
-import { ArchPhoto } from "@/components/brand"
+import { ArchPhoto, Motif } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: "Nos actions",
@@ -155,8 +155,9 @@ export default function NosActionsPage() {
       })}
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="bg-primary-container py-20 text-center md:py-24">
-        <div className="container flex flex-col items-center">
+      <section className="relative overflow-hidden bg-primary-container py-20 text-center md:py-24">
+        <Motif size={1000} opacity={0.06} variant="complet" className="text-primary" />
+        <div className="container relative z-10 flex flex-col items-center">
           <h2 className="mx-auto mb-4 max-w-2xl text-headline-md text-primary">
             Prêt à bénéficier de tout notre écosystème&nbsp;?
           </h2>
