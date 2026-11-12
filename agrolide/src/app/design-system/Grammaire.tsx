@@ -306,13 +306,13 @@ export function Grammaire() {
       <div className="mt-6 max-w-3xl space-y-2 text-body-md text-on-surface-variant">
         <h3 className="text-title-md text-on-surface">Applications dans les composants</h3>
         <p>
-          <strong className="text-on-surface">Pictogrammes libres</strong> : les icônes ne sont plus insérées dans l’arche (12/11/2026) ; elles se posent
-          directement sur la carte ou la section, en trait de 1,75, couleur de marque. L’arche porte uniquement des chiffres (date d’événement, numéro d’étape).
+          <strong className="text-on-surface">Pictogrammes libres</strong> : les icônes ne sont pas insérées dans l’arche (décision du 12/11/2026) ; elles se posent
+          directement sur la carte ou la section, en trait de 1,75, couleur de marque. L’arche (le dôme) garde les chiffres : date d’événement, numéro d’étape (décision confirmée).
         </p>
         <p>
           <strong className="text-on-surface">Pied de page</strong> : <code>Horizon</code> aux couleurs du vert de marque ; le motif remonte jusqu’à la ligne
-          de l’horizon (masque <code>HORIZON_MASQUE_TERRE_BORD</code>). <strong className="text-on-surface">404</strong> : soleil couchant (<code>PlanSoleil ton=&quot;soleil&quot;</code>, 1 écho)
-          posé sous le texte. <strong className="text-on-surface">État vide</strong> : soleil pâle qui descend du bord haut.{' '}
+          de l’horizon (masque <code>HORIZON_MASQUE_TERRE_BORD</code>). <strong className="text-on-surface">404</strong> : l’emblème éclaté entier (<code>EmblemEclate variante=&quot;soleil&quot;</code>)
+          au-dessus du texte, jamais coupé. <strong className="text-on-surface">État vide</strong> : soleil pâle qui descend du bord haut.{' '}
           <strong className="text-on-surface">Chargement</strong> : <code>Spinner</code> = <code>Anneau mode=&quot;chargement&quot;</code>.{' '}
           <strong className="text-on-surface">Carte d’article</strong> : <code>Feuille</code> devant la catégorie. <strong className="text-on-surface">Carte d’événement</strong> : jour dans le dôme, mois dessous.
         </p>
