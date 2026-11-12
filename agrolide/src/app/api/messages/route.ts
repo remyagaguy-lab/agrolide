@@ -33,17 +33,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Vous devez être connecté(e) avec ce membre pour lui envoyer un message." }, { status: 403 })
     }
 
-    // On retire l'ancienne restriction basée sur la catégorie, car les connexions gèrent la confiance.
-    // Le contrôle "ouvert_contact" reste pertinent globalement ou pourrait être fusionné avec la logique des connexions.
-    // Vérifier si le destinataire accepte les messages
-    const destinataire = await db.query.users.findFirst({
-      columns: { ouvert_contact: true },
-      where: eq(users.id, destinataire_id)
-    })
-    
-    if (!destinataire?.ouvert_contact) {
-      return NextResponse.json({ error: "Ce membre n'accepte pas les messages." }, { status: 403 })
-    }
+    // ouvert_contact ne bloque que les NOUVELLES invitations : entre relations déjà acceptées,
+    // seule la connexion « accepted » (vérifiée ci-dessus) est exigée.
 
     // Insérer le message
     const [msg] = await db.insert(messages).values({
@@ -63,7 +54,7 @@ export async function POST(request: NextRequest) {
       user_id: destinataire_id,
       contenu: `Nouveau message de ${expediteur?.prenom} ${expediteur?.nom}: ` + contenu.substring(0, 100) + (contenu.length > 100 ? '...' : ''),
       type: 'message',
-      lien: `/membres/messages/${userId}`
+      lien: `/membres/messages?user=${userId}`
     }).returning()
 
     // Diffuser via le WebSocket Server (Durable Object)
