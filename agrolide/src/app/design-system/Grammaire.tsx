@@ -290,8 +290,21 @@ export function Grammaire() {
           </p>
         </div>
       </div>
+      <div className="mt-6 max-w-3xl space-y-2 text-body-md text-on-surface-variant">
+        <h3 className="text-title-md text-on-surface">En-tête de rubrique (PageHero)</h3>
+        <p>
+          Bandeau vert profond ; <code>Sillons coin=&quot;haut-droite&quot;</code> à 10 % d’opacité (30 % de la largeur sur mobile, 10 rem à
+          768 px, 20 rem à 1024 px, 26 rem dès 1280 px) ; <code>Horizon</code> aux couleurs de la section suivante. Le motif de marque n’y est plus : il ne se
+          superpose pas aux sillons.
+        </p>
+        <p>
+          Titre en <code>headline-md</code> sur mobile, <code>display-md</code> dès 768 px, sur 2 lignes au plus sur bureau (sans réduire le corps) ;
+          sous-titre plus étroit que le titre (28 rem mobile, 30 rem bureau, équilibré) pour l’effet de flèche vers les boutons ; les sillons ne
+          passent jamais sous une ligne de texte (mesuré de 375 à 1440 px sur les 12 pages).
+        </p>
+      </div>
       <p className="mt-4 max-w-3xl text-body-sm text-on-surface-muted">
-        <code>HorizonDivider</code> (courbes approchées) reste disponible pour les pages existantes ; <code>Horizon</code> le remplacera page par page.{' '}
+        <code>HorizonDivider</code> (courbes approchées) reste disponible pour le pied de page ; <code>Horizon</code> le remplacera.{' '}
         Les marqueurs dessinés à part (arche avec sillon, emblème plein) sont retirés : toutes les formes sont désormais déduites de l’emblème.
       </p>
     </>

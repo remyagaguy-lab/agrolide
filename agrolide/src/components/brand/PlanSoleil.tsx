@@ -43,10 +43,10 @@ export interface PlanSoleilProps {
 }
 
 const TON: Record<PlanSoleilTon, string> = {
-  marque: "var(--color-surface-brand)",
-  soleil: "var(--color-accent-sun)",
-  pale: "var(--color-primary-container)",
-  clair: "var(--color-surface-container-lowest)",
+  marque: "var(--ag-sys-color-surface-brand)",
+  soleil: "var(--ag-sys-color-accent-sun)",
+  pale: "var(--ag-sys-color-primary-container)",
+  clair: "var(--ag-sys-color-surface-container-lowest)",
 }
 /** Opacité des échos translucides (ton `clair`), du plus proche au plus lointain. */
 const VOILE = [0.42, 0.24, 0.12]
@@ -61,7 +61,7 @@ const MELANGE = [0.34, 0.17, 0.07]
  */
 export function PlanSoleil({ x, y, rayon, echos = 3, ton = "marque", fond = "surface", pas = "embleme", className }: PlanSoleilProps) {
   const plan = TON[ton]
-  const fondVar = fond === "photo" ? "var(--ag-ref-neutral-100)" : `var(--color-${fond})`
+  const fondVar = fond === "photo" ? "var(--ag-ref-neutral-100)" : `var(--ag-sys-color-${fond})`
   const cercles = Array.from({ length: echos }, (_, i) => {
     const k = echos - i // du plus grand au plus petit
     const r = pas === "embleme" ? `calc(${rayon} * ${RAPPORTS_ECHOS[k - 1].toFixed(4)})` : `calc(${rayon} + ${k * pas}px)`

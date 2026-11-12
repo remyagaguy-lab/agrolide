@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { HorizonDivider, Motif } from '@/components/brand'
+import { Horizon, Sillons } from '@/components/brand'
 import { cn } from '@/lib/utils/formatters'
 
-/** Fond de la section qui suit le héros : la courbe d'horizon prend cette couleur. */
+/** Fond de la section qui suit le héros : l'horizon prend cette couleur. */
 export type PageHeroNextTone = 'surface' | 'low' | 'lowest' | 'container'
 
 const nextTones: Record<PageHeroNextTone, string> = {
@@ -26,23 +26,24 @@ export interface PageHeroProps {
 }
 
 /**
- * En-tête de page publique : bandeau vert profond, motif plante discret, courbe d'horizon vers la section suivante.
- * Sans dégradé ni effet de flou. Le contenu de la page commence juste après.
+ * En-tête de page publique, composé avec la grammaire des formes : bandeau vert profond, sillons de l'emblème en
+ * mouvement de coin (haut droite, 10 %), horizon mesuré (les deux collines de l'emblème) vers la section suivante.
+ * Titre `headline-md` sur mobile, `display-md` ensuite ; sous-titre plus étroit que le titre (effet de flèche vers les boutons).
  */
 export function PageHero({ label, title, description, actions, nextTone = 'surface', className, children }: PageHeroProps) {
   return (
-    <section className={cn('relative overflow-hidden bg-surface-brand pb-0 pt-12 text-on-surface-brand md:pt-16 lg:pt-20', className)}>
-      <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
-      <div className="container relative z-10 pb-12 md:pb-16">
+    <section className={cn('relative overflow-hidden bg-surface-brand py-0 text-on-surface-brand', className)}>
+      <Sillons coin="haut-droite" opacite={0.1} className="w-[30%] md:w-40 lg:w-80 xl:w-[26rem]" />
+      <div className="container relative z-10 pb-12 pt-12 md:pb-16 md:pt-20">
         <div className="max-w-3xl">
           {label && <p className="mb-3 text-label-md uppercase tracking-[0.12em] text-accent-sun">{label}</p>}
-          <h1 className="text-display-md text-balance">{title}</h1>
-          {description && <p className="mt-5 max-w-2xl text-body-lg text-on-surface-brand/85">{description}</p>}
+          <h1 className="text-headline-md text-balance md:text-display-md">{title}</h1>
+          {description && <p className="mt-5 max-w-[28rem] text-body-lg text-balance text-on-surface-brand/85 md:max-w-[30rem]">{description}</p>}
           {actions && <div className="mt-8 flex flex-wrap items-center gap-3">{actions}</div>}
           {children}
         </div>
       </div>
-      <HorizonDivider className={cn('relative z-10', nextTones[nextTone])} />
+      <Horizon className={cn('relative z-10', nextTones[nextTone])} />
     </section>
   )
 }
