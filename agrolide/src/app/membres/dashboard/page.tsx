@@ -2,7 +2,8 @@ import { redirect } from "next/navigation"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users, notifications, evenements, articles, documents, opportunites, cotisations, formations } from "@/db/schema"
-import { eq, desc, gte } from "drizzle-orm"
+import { and, eq, desc, gte, notInArray } from "drizzle-orm"
+import { TYPES_HORS_CLOCHE } from "@/lib/notifications"
 import {
   Library,
   Users,
@@ -102,7 +103,7 @@ export default async function DashboardPage() {
     }),
 
     db.query.notifications.findMany({
-      where: eq(notifications.user_id, userId),
+      where: and(eq(notifications.user_id, userId), notInArray(notifications.type, TYPES_HORS_CLOCHE)),
       orderBy: [desc(notifications.created_at)],
       limit: 5
     }),

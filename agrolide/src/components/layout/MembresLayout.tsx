@@ -18,9 +18,9 @@ import {
   Briefcase,
   Mail,
   LogOut,
-  Bell,
   Menu,
 } from "lucide-react"
+import NotificationBell from "@/components/shared/NotificationBell"
 
 interface MembresLayoutProps {
   children: React.ReactNode
@@ -144,32 +144,14 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
         <header className="z-20 flex h-14 shrink-0 items-center justify-between border-b border-outline-variant bg-surface-container-lowest px-4 lg:hidden">
           <Logo href="/membres/dashboard" size="sm" priority />
           <div className="flex items-center gap-2">
-            <Link
-              href="/membres/reseau"
-              aria-label={pendingRequestsCount > 0 ? `Demandes de connexion (${pendingRequestsCount} en attente)` : "Demandes de connexion"}
-              className="ag-state relative flex size-11 items-center justify-center rounded-full text-on-surface-variant"
-            >
-              <Bell className="size-5" aria-hidden />
-              {pendingRequestsCount > 0 && (
-                <span className="absolute right-2.5 top-2.5 size-2.5 rounded-full border-2 border-surface-container-lowest bg-error" />
-              )}
-            </Link>
+            <NotificationBell userId={profile?.id} className="rounded-full" />
             <MembresUserMenu profile={profile} compact />
           </div>
         </header>
 
         {/* Barre supérieure (desktop) : menu du compte toujours visible */}
         <div className="hidden h-16 shrink-0 items-center justify-end gap-3 px-6 lg:flex">
-          <Link
-            href="/membres/reseau"
-            aria-label={pendingRequestsCount > 0 ? `Demandes de connexion (${pendingRequestsCount} en attente)` : "Demandes de connexion"}
-            className="ag-state relative flex size-11 items-center justify-center rounded-control text-on-surface-variant"
-          >
-            <Bell className="size-5" aria-hidden />
-            {pendingRequestsCount > 0 && (
-              <span className="absolute right-2.5 top-2.5 size-2.5 rounded-full border-2 border-surface-container-low bg-error" />
-            )}
-          </Link>
+          <NotificationBell userId={profile?.id} />
           <MembresUserMenu profile={profile} />
         </div>
 
