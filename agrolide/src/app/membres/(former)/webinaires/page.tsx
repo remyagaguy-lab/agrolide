@@ -1,26 +1,78 @@
-import { Calendar, Clock, Video, Lock, Unlock } from 'lucide-react'
+import Link from 'next/link'
+import { and, asc, desc, eq, gte, isNotNull, lt } from 'drizzle-orm'
+import { Calendar, Clock, ExternalLink, Lock, Unlock, User, Video } from 'lucide-react'
+import { db } from '@/db'
+import { evenements, webinaires } from '@/db/schema'
+import { Badge } from '@/components/ui/Badge'
+import { buttonVariants } from '@/components/ui/Button'
+import { EmptyState } from '@/components/ui/EmptyState'
+
 export const metadata = { title: "Webinaires" }
 
-export const revalidate = 3600 // Cache 1h
-async function getWebinaires() {
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8787'
-  try {
-    const res = await fetch(`${API_URL}/api/webinaires`, { next: { revalidate: 3600 } })
-    if (!res.ok) return []
-    const json = await res.json()
-    return json.data || []
-  } catch (e) {
-    console.error('Erreur fetch webinaires:', e)
-    return []
-  }
+/** Une séance à venir, qu'elle vienne de la table des webinaires ou du calendrier des événements. */
+interface SeanceAVenir {
+  cle: string
+  titre: string
+  description: string | null
+  date: string
+  dureeMinutes: number | null
+  intervenant: string | null
+  acces: string | null
+  /** Direct YouTube (webinaires) ou fiche de l'événement (inscription dans l'espace membre). */
+  action: { href: string; libelle: string; externe: boolean } | null
 }
 
+const formaterDate = (iso: string) =>
+  new Date(iso).toLocaleString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' })
+
 export default async function WebinairesPage() {
-  const webinaires = await getWebinaires()
-  
-  const now = new Date()
-  const aVenir = webinaires.filter((w: any) => new Date(w.date_prevue) > now)
-  const replays = webinaires.filter((w: any) => new Date(w.date_prevue) <= now && w.youtube_id)
+  const maintenant = new Date().toISOString()
+
+  let aVenir: SeanceAVenir[] = []
+  let replays: (typeof webinaires.$inferSelect)[] = []
+
+  try {
+    const [prochains, replaysRows, evenementsWebinaires] = await Promise.all([
+      db.select().from(webinaires).where(gte(webinaires.date_heure, maintenant)).orderBy(asc(webinaires.date_heure)),
+      // Replays : séances passées dont l'enregistrement est en ligne.
+      db.select().from(webinaires)
+        .where(and(lt(webinaires.date_heure, maintenant), isNotNull(webinaires.youtube_id)))
+        .orderBy(desc(webinaires.date_heure))
+        .limit(12),
+      db.select().from(evenements)
+        .where(and(eq(evenements.type_evt, 'webinaire'), eq(evenements.publie, true), gte(evenements.date_debut, maintenant)))
+        .orderBy(asc(evenements.date_debut)),
+    ])
+
+    replays = replaysRows
+
+    aVenir = [
+      ...prochains.map((w): SeanceAVenir => ({
+        cle: `w-${w.id}`,
+        titre: w.titre,
+        description: w.description,
+        date: w.date_heure,
+        dureeMinutes: w.duree_minutes,
+        intervenant: w.intervenant,
+        acces: w.acces,
+        action: w.youtube_live_id
+          ? { href: `https://www.youtube.com/watch?v=${encodeURIComponent(w.youtube_live_id)}`, libelle: 'Rejoindre le direct', externe: true }
+          : null,
+      })),
+      ...evenementsWebinaires.map((e): SeanceAVenir => ({
+        cle: `e-${e.id}`,
+        titre: e.titre,
+        description: e.description,
+        date: e.date_debut,
+        dureeMinutes: null,
+        intervenant: null,
+        acces: null,
+        action: { href: `/membres/evenements/${e.id}`, libelle: "Voir et s'inscrire", externe: false },
+      })),
+    ].sort((a, b) => a.date.localeCompare(b.date))
+  } catch (e) {
+    console.error('Erreur lecture des webinaires:', e)
+  }
 
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-8">
@@ -30,128 +82,115 @@ export default async function WebinairesPage() {
       </div>
 
       {/* Webinaires à venir */}
-      <div>
+      <section aria-labelledby="webinaires-a-venir">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-8 h-8 rounded-lg bg-primary-container border border-outline-variant flex items-center justify-center">
-            <Calendar size={14} className="text-primary" />
+            <Calendar size={14} className="text-primary" aria-hidden="true" />
           </div>
-          <h2 className="text-lg font-bold text-on-surface font-heading">À venir</h2>
+          <h2 id="webinaires-a-venir" className="text-lg font-bold text-on-surface font-heading">À venir</h2>
         </div>
-        
+
         {aVenir.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            {aVenir.map((webinaire: any) => (
-              <div key={webinaire.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5 flex flex-col hover:border-primary/30 transition-colors">
-                <div className="flex justify-between items-start mb-3">
-                  {webinaire.acces === 'public' ? (
-                    <span className="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider flex items-center gap-1 border border-outline-variant">
-                      <Unlock size={10} /> Public
-                    </span>
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {aVenir.map((s) => (
+              <li key={s.cle} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5 flex flex-col hover:border-primary/30 transition-colors">
+                <div className="flex justify-between items-start mb-3 gap-2">
+                  {s.acces === 'public' ? (
+                    <Badge variant="neutral" className="uppercase tracking-wider"><Unlock size={10} aria-hidden="true" /> Public</Badge>
+                  ) : s.acces ? (
+                    <Badge variant="info" className="uppercase tracking-wider"><Lock size={10} aria-hidden="true" /> Membres</Badge>
+                  ) : <span />}
+                  <Badge variant="success" className="uppercase tracking-wider"><Video size={10} aria-hidden="true" /> En direct</Badge>
+                </div>
+
+                <h3 className="text-sm font-bold text-on-surface mb-1.5">{s.titre}</h3>
+                {s.description && <p className="text-xs text-on-surface-muted mb-4 line-clamp-3 flex-grow leading-relaxed">{s.description}</p>}
+
+                <div className="space-y-2 pt-3 mt-auto border-t border-outline-variant">
+                  <p className="flex items-center text-label-sm font-medium text-on-surface-variant first-letter:capitalize">
+                    <Calendar size={12} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
+                    {formaterDate(s.date)}
+                  </p>
+                  {s.dureeMinutes ? (
+                    <p className="flex items-center text-label-sm font-medium text-on-surface-variant">
+                      <Clock size={12} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
+                      Durée estimée : {s.dureeMinutes} minutes
+                    </p>
+                  ) : null}
+                  {s.intervenant ? (
+                    <p className="flex items-center text-label-sm font-medium text-on-surface-variant">
+                      <User size={12} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
+                      {s.intervenant}
+                    </p>
+                  ) : null}
+                </div>
+
+                {s.action && (
+                  s.action.externe ? (
+                    <a href={s.action.href} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'secondary', size: 'sm', fullWidth: true, className: 'mt-4' })}>
+                      {s.action.libelle} <ExternalLink size={14} aria-hidden="true" />
+                    </a>
                   ) : (
-                    <span className="bg-info-container text-info px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider flex items-center gap-1 border border-info/30">
-                      <Lock size={10} /> Membres
-                    </span>
-                  )}
-                  <span className="bg-primary-container text-primary px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider flex items-center gap-1 border border-outline-variant">
-                    <Video size={10} /> En direct
-                  </span>
-                </div>
-                
-                <h3 className="text-sm font-bold text-on-surface mb-1.5">{webinaire.titre}</h3>
-                <p className="text-xs text-on-surface-muted mb-4 line-clamp-2 flex-grow leading-relaxed">{webinaire.description}</p>
-                
-                <div className="space-y-2 pt-3 border-t border-outline-variant">
-                  <div className="flex items-center text-label-sm font-medium text-on-surface-variant">
-                    <Calendar size={12} className="mr-1.5 text-on-surface-muted" />
-                    {new Date(webinaire.date_prevue).toLocaleString('fr-FR', {
-                      weekday: 'long',
-                      year: 'numeric',
-                      month: 'long',
-                      day: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    })}
-                  </div>
-                  <div className="flex items-center text-label-sm font-medium text-on-surface-variant">
-                    <Clock size={12} className="mr-1.5 text-on-surface-muted" />
-                    Durée estimée : {webinaire.duree_minutes} minutes
-                  </div>
-                </div>
-                
-                <button className="w-full mt-4 py-2 bg-primary text-on-primary rounded-lg text-xs font-bold hover:bg-primary/90 transition-colors shadow-sm">
-                  M'inscrire au webinaire
-                </button>
-              </div>
+                    <Link href={s.action.href} className={buttonVariants({ variant: 'secondary', size: 'sm', fullWidth: true, className: 'mt-4' })}>
+                      {s.action.libelle}
+                    </Link>
+                  )
+                )}
+              </li>
             ))}
-          </div>
+          </ul>
         ) : (
-          <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-8 text-center mb-8 flex flex-col items-center">
-            <div className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center border border-outline-variant mb-3">
-              <Calendar size={16} className="text-on-surface-muted" />
-            </div>
-            <p className="text-xs text-on-surface-muted font-bold uppercase tracking-wider">Aucun webinaire programmé pour le moment.</p>
-          </div>
+          <EmptyState
+            icon={<Calendar />}
+            title="Aucun webinaire programmé"
+            description="Les prochaines séances en direct apparaîtront ici dès qu'elles seront annoncées."
+          />
         )}
-      </div>
+      </section>
 
       {/* Replays */}
-      <div>
+      <section aria-labelledby="webinaires-replays">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-8 h-8 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center">
-            <Video size={14} className="text-on-surface-muted" />
+            <Video size={14} className="text-on-surface-muted" aria-hidden="true" />
           </div>
-          <h2 className="text-lg font-bold text-on-surface font-heading">Replays récents</h2>
+          <h2 id="webinaires-replays" className="text-lg font-bold text-on-surface font-heading">Replays récents</h2>
         </div>
-        
+
         {replays.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {replays.map((webinaire: any) => (
-              <div key={webinaire.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col opacity-95 hover:opacity-100 transition-opacity">
-                {/* Embed YouTube Responsive */}
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {replays.map((w) => (
+              <li key={w.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col">
                 <div className="relative w-full aspect-video bg-inverse-surface border-b border-outline-variant">
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
-                    src={`https://www.youtube.com/embed/${webinaire.youtube_id}`}
-                    title={webinaire.titre}
-                    frameBorder="0"
+                    src={`https://www.youtube-nocookie.com/embed/${encodeURIComponent(w.youtube_id!)}`}
+                    title={w.titre}
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                  ></iframe>
+                  />
                 </div>
-                
+
                 <div className="p-4 flex-1 flex flex-col">
-                  <h3 className="text-sm font-bold text-on-surface mb-1.5">{webinaire.titre}</h3>
-                  <p className="text-xs text-on-surface-muted mb-3 flex-1 line-clamp-2 leading-relaxed">{webinaire.description}</p>
-                  
-                  <div className="flex items-center justify-between mt-auto pt-3 border-t border-outline-variant">
-                    <span className="text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
-                      Diffusé le {new Date(webinaire.date_prevue).toLocaleDateString('fr-FR')}
-                    </span>
-                    
-                    {webinaire.lien_ressource && (
-                      <a 
-                        href={webinaire.lien_ressource}
-                        target="_blank"
-                        rel="noreferrer" 
-                        className="text-label-sm font-bold text-primary uppercase tracking-wider hover:underline"
-                      >
-                        Voir ressources
-                      </a>
-                    )}
-                  </div>
+                  <h3 className="text-sm font-bold text-on-surface mb-1.5">{w.titre}</h3>
+                  {w.description && <p className="text-xs text-on-surface-muted mb-3 flex-1 line-clamp-2 leading-relaxed">{w.description}</p>}
+                  <p className="mt-auto pt-3 border-t border-outline-variant text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
+                    Diffusé le {new Date(w.date_heure).toLocaleDateString('fr-FR')}
+                    {w.intervenant ? ` · ${w.intervenant}` : ''}
+                  </p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         ) : (
-          <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-8 text-center flex flex-col items-center">
-             <div className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center border border-outline-variant mb-3">
-              <Video size={16} className="text-on-surface-muted" />
-            </div>
-            <p className="text-xs text-on-surface-muted font-bold uppercase tracking-wider">Aucun replay disponible pour le moment.</p>
-          </div>
+          <EmptyState
+            icon={<Video />}
+            title="Aucun replay disponible"
+            description="Les enregistrements des webinaires passés seront publiés ici."
+          />
         )}
-      </div>
+      </section>
     </div>
   )
 }
