@@ -5,6 +5,10 @@ import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { revalidatePath } from "next/cache"
+import { estCategorie, libelleCategorie } from "@/lib/adhesion"
+import { demandeValidation } from "@/lib/categorie"
+import { appliquerChangement, notifierAdminsDemandeCategorie } from "@/lib/categorie.server"
+import { notifier } from "@/lib/notifications.server"
 
 export async function submitOnboarding(formData: FormData) {
   try {
@@ -36,7 +40,8 @@ export async function submitOnboarding(formData: FormData) {
 
     await db.update(users)
       .set({
-        categorie: categorie,
+        // Partenaire et Sénior demandent la validation d'un administrateur : en attendant, le membre est Professionnel.
+        categorie: estCategorie(categorie) && demandeValidation(categorie) ? "professionnel" : categorie,
         biographie: biographie || null,
         specialite: specialite || null,
         pays: pays,
@@ -44,6 +49,16 @@ export async function submitOnboarding(formData: FormData) {
         updated_at: new Date().toISOString()
       })
       .where(eq(users.id, userId))
+
+    if (estCategorie(categorie) && demandeValidation(categorie)) {
+      try {
+        const res = await appliquerChangement(userId, categorie)
+        await notifier(userId, { type: "cotisation", contenu: res.message, lien: "/membres/profil/modifier" })
+        await notifierAdminsDemandeCategorie(`Un nouveau membre demande le profil « ${libelleCategorie(categorie)} » à l'inscription.`)
+      } catch (e) {
+        console.error("Demande de catégorie à l'inscription non enregistrée:", e)
+      }
+    }
 
     revalidatePath("/membres/dashboard")
     revalidatePath("/annuaire")
