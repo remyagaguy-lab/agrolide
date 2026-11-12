@@ -5,8 +5,8 @@ import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { PageHero } from "@/components/ui/PageHero"
 import { buttonVariants, type ButtonVariant } from "@/components/ui/Button"
-import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight, Check } from "lucide-react"
-import { ArchPhoto, Motif } from "@/components/brand"
+import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight } from "lucide-react"
+import { ArchPhoto, Motif, Puce } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: "Nos actions",
@@ -90,7 +90,7 @@ export default function NosActionsPage() {
         <ul className="mt-4 max-w-2xl space-y-2 text-body-lg text-on-surface-brand/85">
           {["Briser l'isolement des professionnels de l'agriculture", "Renforcer les compétences techniques et managériales", "Catalyser la réussite des projets agricoles africains"].map((t) => (
             <li key={t} className="flex items-start gap-3">
-              <Check aria-hidden="true" className="mt-1.5 size-4 shrink-0 text-accent-sun" />
+              <Puce className="[&_svg]:text-accent-sun" />
               {t}
             </li>
           ))}
@@ -116,8 +116,8 @@ export default function NosActionsPage() {
                   <SectionLabel>{p.label}</SectionLabel>
                   <h2 id={`${p.id}-titre`} className="mb-4 text-headline-md text-on-surface">{p.titre}</h2>
                   <p className="mb-3 text-body-lg text-on-surface-variant">{p.intro}</p>
-                  <ul className="mb-6 list-disc space-y-2 pl-5 text-body-md text-on-surface-variant">
-                    {p.points.map((pt) => <li key={pt}>{pt}</li>)}
+                  <ul className="mb-6 space-y-2 text-body-md text-on-surface-variant">
+                    {p.points.map((pt) => <li key={pt} className="flex items-start gap-2.5"><Puce />{pt}</li>)}
                   </ul>
 
                   <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">

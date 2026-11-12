@@ -2,6 +2,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils/formatters"
 import Link from "next/link"
 import Image from "next/image"
+import { Feuille } from "@/components/brand"
 
 export interface ArticleCardProps {
   slug: string;
@@ -52,7 +53,8 @@ export function ArticleCard({
       </div>
       <div className="p-6 md:p-8 flex flex-col flex-grow">
         <div className="flex items-center gap-3 text-sm mb-3">
-          <span className="font-bold text-primary uppercase tracking-wider text-xs">
+          <span className="inline-flex items-center gap-1.5 font-bold text-primary uppercase tracking-wider text-xs">
+            <Feuille className="w-3 text-accent-leaf" />
             {category}
           </span>
           <span className="text-outline">•</span>

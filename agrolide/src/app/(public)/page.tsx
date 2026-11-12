@@ -9,7 +9,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp, MessageSquare, Library } from "lucide-react"
-import { ArcheBadge, Emblem, Feuille, HORIZON_CREUX, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
+import { Emblem, Feuille, HORIZON_CREUX, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: {
@@ -403,7 +403,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
             <Link href="/annuaire" className="block group">
               <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
-                <ArcheBadge className="mb-4 w-16"><Users /></ArcheBadge>
+                <Users aria-hidden="true" className="mb-4 size-10 text-primary" strokeWidth={1.75} />
                 <h3 className="text-title-lg text-on-surface mb-2">Mobilisation & Réseautage</h3>
                 <p className="mb-6 text-body-md text-on-surface-variant">
                   Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.
@@ -414,7 +414,7 @@ export default async function HomePage() {
 
             <Link href="/formations" className="block group">
               <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
-                <ArcheBadge className="mb-4 w-16"><BookOpen /></ArcheBadge>
+                <BookOpen aria-hidden="true" className="mb-4 size-10 text-primary" strokeWidth={1.75} />
                 <h3 className="text-title-lg text-on-surface mb-2">Formation & Insertion</h3>
                 <p className="mb-6 text-body-md text-on-surface-variant">
                   Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.
@@ -425,7 +425,7 @@ export default async function HomePage() {
 
             <Link href="/agrobusiness" className="block group">
               <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
-                <ArcheBadge className="mb-4 w-16"><TrendingUp /></ArcheBadge>
+                <TrendingUp aria-hidden="true" className="mb-4 size-10 text-primary" strokeWidth={1.75} />
                 <h3 className="text-title-lg text-on-surface mb-2">Agrobusiness & Consulting</h3>
                 <p className="mb-6 text-body-md text-on-surface-variant">
                   Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.
@@ -456,7 +456,7 @@ export default async function HomePage() {
             <div className="lg:col-span-12 group bg-primary-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2">
               <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
                 <div className="p-10 md:p-16 flex flex-col justify-center">
-                  <ArcheBadge ton="marque" className="mb-6 w-16"><MessageSquare /></ArcheBadge>
+                  <MessageSquare aria-hidden="true" className="mb-6 size-10 text-primary" strokeWidth={1.75} />
                   <h3 className="mb-4 text-headline-md text-on-surface">Espace d'échange agricole</h3>
                   <p className="mb-8 max-w-[400px] text-body-lg text-on-surface-variant">
                     Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités et découvrez de nouvelles opportunités.
@@ -474,7 +474,7 @@ export default async function HomePage() {
             {/* Bloc 2 : Annuaire (Moitié gauche) */}
             <div className="lg:col-span-6 group bg-tertiary-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2 flex flex-col">
               <div className="p-10 flex-1">
-                <ArcheBadge ton="marque" className="mb-6 w-16"><Users /></ArcheBadge>
+                <Users aria-hidden="true" className="mb-6 size-10 text-primary" strokeWidth={1.75} />
                 <h3 className="mb-4 text-headline-sm text-on-surface">Annuaire Panafricain</h3>
                 <p className="mb-8 text-body-md text-on-surface-variant">
                   Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent.
@@ -491,7 +491,7 @@ export default async function HomePage() {
             {/* Bloc 3 : Bibliothèque (Moitié droite) */}
             <div className="lg:col-span-6 group bg-surface-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2 flex flex-col">
               <div className="p-10 flex-1">
-                <ArcheBadge ton="marque" className="mb-6 w-16"><Library /></ArcheBadge>
+                <Library aria-hidden="true" className="mb-6 size-10 text-primary" strokeWidth={1.75} />
                 <h3 className="mb-4 text-headline-sm text-on-surface">Bibliothèque de Ressources</h3>
                 <p className="mb-8 text-body-md text-on-surface-variant">
                   Accédez à des centaines de documents techniques, thèses et guides pratiques spécifiquement adaptés aux sols africains.

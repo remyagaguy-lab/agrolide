@@ -46,11 +46,11 @@ const LIGNES: Ligne[] = [
     forme: 'Arche (le dôme)',
     composant: '<Arche variant="plein">, <ArcheBadge>',
     origine: 'La silhouette de l’emblème au-dessus de sa 1re ligne blanche (anneau, ciel, collines), IoU 0,991. Le sillon autrefois accolé dessous est retiré (12/11/2026).',
-    role: 'PORTEUR à taille moyenne : badge de pictogramme, date d’événement, numéro d’étape.',
+    role: 'PORTEUR de CHIFFRES à taille moyenne : date d’événement, numéro d’étape. Les pictogrammes n’y sont plus insérés (décision du 12/11/2026) : ils restent libres, posés directement sur la carte ou la section.',
     tailles: 'Badge 40 à 112 px, contenu au centre optique du dôme (axe de symétrie, mi-hauteur de la corde verticale).',
-    couleurs: 'Jaune soleil + pictogramme vert ; vert + pictogramme blanc ; blanc sur photo (carte).',
-    interdit: 'Lui recoller un sillon, le poser sur une photo pour porter un titre (c’est le rôle du soleil), le poser seul en onglet sur un bord, l’utiliser comme cadre photo au trait, le centrer sous un titre, empiler plusieurs dômes.',
-    demo: <ArcheBadge className="w-14"><BookOpen /></ArcheBadge>,
+    couleurs: 'Jaune soleil + chiffre vert ; vert + chiffre blanc.',
+    interdit: 'Y insérer un pictogramme, lui recoller un sillon, le poser sur une photo pour porter un titre (c’est le rôle du soleil), le poser seul en onglet sur un bord, l’utiliser comme cadre photo au trait, le centrer sous un titre, empiler plusieurs dômes.',
+    demo: <ArcheBadge className="w-14">3</ArcheBadge>,
   },
   {
     forme: 'Fenêtre',
@@ -303,8 +303,22 @@ export function Grammaire() {
           passent jamais sous une ligne de texte (mesuré de 375 à 1440 px sur les 12 pages).
         </p>
       </div>
+      <div className="mt-6 max-w-3xl space-y-2 text-body-md text-on-surface-variant">
+        <h3 className="text-title-md text-on-surface">Applications dans les composants</h3>
+        <p>
+          <strong className="text-on-surface">Pictogrammes libres</strong> : les icônes ne sont plus insérées dans l’arche (12/11/2026) ; elles se posent
+          directement sur la carte ou la section, en trait de 1,75, couleur de marque. L’arche porte uniquement des chiffres (date d’événement, numéro d’étape).
+        </p>
+        <p>
+          <strong className="text-on-surface">Pied de page</strong> : <code>Horizon</code> aux couleurs du vert de marque ; le motif remonte jusqu’à la ligne
+          de l’horizon (masque <code>HORIZON_MASQUE_TERRE_BORD</code>). <strong className="text-on-surface">404</strong> : soleil couchant (<code>PlanSoleil ton=&quot;soleil&quot;</code>, 1 écho)
+          posé sous le texte. <strong className="text-on-surface">État vide</strong> : soleil pâle qui descend du bord haut.{' '}
+          <strong className="text-on-surface">Chargement</strong> : <code>Spinner</code> = <code>Anneau mode=&quot;chargement&quot;</code>.{' '}
+          <strong className="text-on-surface">Carte d’article</strong> : <code>Feuille</code> devant la catégorie. <strong className="text-on-surface">Carte d’événement</strong> : jour dans le dôme, mois dessous.
+        </p>
+      </div>
       <p className="mt-4 max-w-3xl text-body-sm text-on-surface-muted">
-        <code>HorizonDivider</code> (courbes approchées) reste disponible pour le pied de page ; <code>Horizon</code> le remplacera.{' '}
+        <code>HorizonDivider</code> (courbes approchées) n’est plus utilisé par les pages (remplacé par <code>Horizon</code>).{' '}
         Les marqueurs dessinés à part (arche avec sillon, emblème plein) sont retirés : toutes les formes sont désormais déduites de l’emblème.
       </p>
     </>

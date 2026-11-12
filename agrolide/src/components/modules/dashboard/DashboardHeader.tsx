@@ -3,7 +3,6 @@ import { Calendar as CalendarIcon, UserCheck, ArrowUpRight } from "lucide-react"
 import { Badge, type BadgeVariant } from "@/components/ui/Badge"
 import { buttonVariants } from "@/components/ui/Button"
 import Link from "next/link"
-import { Arche, Motif } from "@/components/brand"
 
 interface DashboardHeaderProps {
   prenom?: string | null
@@ -44,9 +43,6 @@ export function DashboardHeader({ prenom, nom, categorie, specialite, organisati
       aria-label="Bienvenue"
       className="relative shrink-0 overflow-hidden rounded-card bg-surface-brand p-5 text-on-surface-brand md:p-6"
     >
-      {/* Décor de marque : motif discret et soleil levant en filigrane (décoratifs). */}
-      <Motif size={600} opacity={0.05} className="text-on-surface-brand" />
-      <Arche variant="plein" className="pointer-events-none absolute -bottom-10 right-4 z-0 hidden w-60 text-on-surface-brand/[0.07] lg:block" />
       <div className="relative z-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
         <div className="min-w-0 space-y-2">
           <div className="flex flex-wrap items-center gap-2.5">

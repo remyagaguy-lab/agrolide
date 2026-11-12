@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { ArrowRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Logo } from "@/components/ui/Logo"
-import { HorizonDivider, Motif } from "@/components/brand"
+import { Horizon, HORIZON_MASQUE_TERRE_BORD, Motif } from "@/components/brand"
 
 /*
  * Pictogrammes des réseaux sociaux : un seul jeu au trait (24 × 24, trait de 1,75, bouts arrondis, sans remplissage),
@@ -50,18 +50,6 @@ const SOCIALS = [
   { href: "https://www.youtube.com/@agrolide", icon: <Youtube {...lineProps} />, label: "YouTube" },
 ]
 
-/* Courbe de HorizonDivider (crest : M0 52 Q 48 6 100 56), échantillonnée en polygone ; --h = hauteur du séparateur. */
-const HORIZON_CLIP = (() => {
-  const pts: string[] = []
-  for (let i = 0; i <= 24; i++) {
-    const t = i / 24
-    const x = 2 * (1 - t) * t * 48 + t * t * 100
-    const y = (1 - t) ** 2 * 52 + 2 * (1 - t) * t * 6 + t * t * 56
-    pts.push(`${x.toFixed(2)}% calc(var(--h) * ${(y / 100).toFixed(4)})`)
-  }
-  return `polygon(${pts.join(", ")}, 100% 100%, 0 100%)`
-})()
-
 const footerLink = "inline-flex min-h-11 items-center rounded-tag text-body-sm text-on-surface-brand/80 transition-colors duration-150 ease-standard hover:text-on-surface-brand"
 const footerHeading = "mb-1 text-label-sm uppercase tracking-[0.14em] text-on-surface-brand"
 
@@ -88,18 +76,31 @@ export function Footer() {
               Rejoindre le réseau <ArrowRight className="size-4" aria-hidden="true" />
             </Button>
           </div>
-          {/* Transition organique (collines du logo) vers le pied de page vert */}
-          <HorizonDivider className="mt-16 text-surface-brand md:mt-20" />
+          {/* Horizon mesuré (les deux collines de l'emblème) vers le pied de page vert */}
+          <Horizon className="mt-16 text-surface-brand md:mt-20" />
         </div>
       )}
 
       {/* ── PIED DE PAGE : bandeau vert de marque avec motif ── */}
       <footer className="relative overflow-x-clip bg-surface-brand pb-9 pt-[60px] text-on-surface-brand">
-        {/* Le motif remonte jusque sous la courbe de transition (découpé selon cette courbe) : il va jusqu'au bord du vert. */}
+        {/* Le motif remonte jusque sous l'horizon (masque de la terre, même ligne que <Horizon>) : il va jusqu'au bord du vert. */}
         <div
           aria-hidden="true"
-          className={`pointer-events-none absolute inset-x-0 bottom-0 [--h:2.5rem] sm:[--h:3.5rem] lg:[--h:5rem] ${showGlobalCTA ? "top-[calc(var(--h)*-1)] [clip-path:var(--horizon-clip)]" : "top-0"}`}
-          style={{ "--horizon-clip": HORIZON_CLIP } as React.CSSProperties}
+          className={`pointer-events-none absolute inset-x-0 bottom-0 [--h:2.5rem] sm:[--h:3.5rem] lg:[--h:5rem] ${showGlobalCTA ? "top-[calc(var(--h)*-1)]" : "top-0"}`}
+          style={
+            showGlobalCTA
+              ? {
+                  maskImage: `${HORIZON_MASQUE_TERRE_BORD}, linear-gradient(black, black)`,
+                  WebkitMaskImage: `${HORIZON_MASQUE_TERRE_BORD}, linear-gradient(black, black)`,
+                  maskSize: "100% var(--h), 100% calc(100% - var(--h) + 1px)",
+                  WebkitMaskSize: "100% var(--h), 100% calc(100% - var(--h) + 1px)",
+                  maskPosition: "top, bottom",
+                  WebkitMaskPosition: "top, bottom",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskRepeat: "no-repeat",
+                }
+              : undefined
+          }
         >
           <Motif size={800} opacity={0.045} className="text-on-surface-brand" />
         </div>

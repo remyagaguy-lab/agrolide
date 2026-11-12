@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/formatters"
 import { Arche, ARCHE } from "./Arche"
 
 export interface ArcheBadgeProps {
-  /** Pictogramme (lucide-react, 24 × 24 en trait) ou court texte (jour d'une date, chiffre d'étape). */
+  /** Court texte : jour d'une date, chiffre d'étape. Pas de pictogramme : les icônes restent libres (décision du 12/11/2026). */
   children: React.ReactNode
   /** soleil : dôme jaune, contenu vert (sur fond vert ou clair) ; marque : dôme vert, contenu blanc. */
   ton?: "soleil" | "marque"
@@ -14,10 +14,10 @@ export interface ArcheBadgeProps {
 const { centre, inscrit } = ARCHE
 
 /**
- * Badge : le dôme de l'emblème porte un pictogramme ou un chiffre à son CENTRE OPTIQUE
+ * Badge : le dôme de l'emblème porte un chiffre à son CENTRE OPTIQUE
  * (axe de symétrie du dôme, mi-hauteur de sa corde verticale).
- * Pictogramme : 60 % du cercle inscrit du dôme. Texte : centré sur la hauteur des capitales (text-box), corps de 30 % de la largeur.
- * Rôle : tête de carte de service ou de valeur, étape d'un parcours, jour d'un événement.
+ * Texte : centré sur la hauteur des capitales (text-box), corps de 30 % de la largeur.
+ * Rôle : étape d'un parcours, jour d'un événement.
  */
 export function ArcheBadge({ children, ton = "soleil", className }: ArcheBadgeProps) {
   const texte = typeof children === "string" || typeof children === "number"

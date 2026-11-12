@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Calendar, MapPin, Globe, Users, Clock, FileText, Download } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
+import { ArcheBadge } from '@/components/brand'
 
 type Evenement = {
   id: string
@@ -79,7 +80,13 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
         </Link>
       )}
       <div className="p-6 flex-grow">
-        <div className="flex justify-between items-start mb-4">
+        <div className="flex items-start gap-4 mb-4">
+          {/* Date : le jour au centre optique du dôme de la marque, le mois dessous. */}
+          <div className="w-14 shrink-0 text-center">
+            <ArcheBadge ton={isPast ? 'marque' : 'soleil'} className="w-14">{format(dateDebut, 'd')}</ArcheBadge>
+            <p className="mt-1 text-label-sm uppercase text-on-surface-variant">{format(dateDebut, 'MMM', { locale: fr })}</p>
+          </div>
+          <div className="flex min-w-0 flex-1 flex-wrap items-start justify-between gap-2">
           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-container text-primary">
             {getEventIcon(event.type_evt)} {formatType(event.type_evt)}
           </span>
@@ -88,6 +95,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
               <Globe className="w-3 h-3" /> En ligne
             </span>
           )}
+          </div>
         </div>
         
         <Link href={`/evenements/${event.id}`}>

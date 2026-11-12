@@ -25,6 +25,13 @@ const CIEL = `M${X0} ${Y_HAUT - MARGE}V${Y_HAUT}A${G.r} ${G.r} 0 0 1 ${V[0]} ${V
 export const HORIZON_MASQUE_TERRE = `url("data:image/svg+xml,${encodeURIComponent(
   `<svg xmlns='http://www.w3.org/2000/svg' viewBox='${VB_CIEL}' preserveAspectRatio='none'><path d='${TERRE}' fill='black'/></svg>`,
 )}")`
+/**
+ * Masque CSS de la TERRE dans le cadre `terre` (celui de `<Horizon>` par défaut, crête gauche au bord haut) : pour un calque
+ * (motif, texture) qui remonte sous un `<Horizon>` et doit s'arrêter exactement sur sa ligne. Mêmes tailles que ci-dessus.
+ */
+export const HORIZON_MASQUE_TERRE_BORD = `url("data:image/svg+xml,${encodeURIComponent(
+  `<svg xmlns='http://www.w3.org/2000/svg' viewBox='${VB}' preserveAspectRatio='none'><path d='${TERRE}' fill='black'/></svg>`,
+)}")`
 /** Position du creux en V dans le cadre `ciel`, en % (pour y poser le sceau). */
 export const HORIZON_CREUX = { x: ((V[0] - X0) / (X1 - X0)) * 100, y: ((V[1] - (Y_HAUT - MARGE)) / (Y_BAS - Y_HAUT + MARGE)) * 100 }
 

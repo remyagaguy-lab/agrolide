@@ -1,25 +1,17 @@
 import * as React from 'react'
+import { Anneau } from '@/components/brand'
 import { cn } from '@/lib/utils/formatters'
 
-export interface SpinnerProps extends React.SVGAttributes<SVGSVGElement> {
+export interface SpinnerProps {
   /** Texte lu par les lecteurs d'écran. Mettre `null` si le spinner est purement décoratif (ex. dans un bouton déjà nommé). */
   label?: string | null
+  className?: string
 }
 
-/** Indicateur de chargement. Hérite de la couleur du texte (`currentColor`). Immobile si l'utilisateur réduit les animations. */
-export function Spinner({ className, label = 'Chargement', ...props }: SpinnerProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      className={cn('size-4 animate-spin motion-reduce:animate-none', className)}
-      role={label ? 'status' : undefined}
-      aria-label={label ?? undefined}
-      aria-hidden={label ? undefined : true}
-      {...props}
-    >
-      <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="3" opacity="0.25" />
-      <path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-    </svg>
-  )
+/**
+ * Indicateur de chargement : l'anneau de l'emblème (avec son ouverture) qui tourne. Hérite de la couleur du texte (`currentColor`).
+ * Immobile si l'utilisateur réduit les animations. Trait épaissi (x1,8) pour rester lisible en petit.
+ */
+export function Spinner({ className, label = 'Chargement' }: SpinnerProps) {
+  return <Anneau mode="chargement" epaisseur={1.8} label={label} className={cn('size-4', className)} />
 }
