@@ -1,0 +1,259 @@
+{
+ "source": "Favicon agrolide.png",
+ "taille": [
+  2000,
+  2000
+ ],
+ "centre": [
+  1007.62,
+  996.08
+ ],
+ "cercles": {
+  "soleil-clair": {
+   "c": [
+    1008.36,
+    996.98
+   ],
+   "r": 339.58,
+   "residu_moyen": 0.44,
+   "residu_max": 0.93
+  },
+  "soleil": {
+   "c": [
+    1007.52,
+    995.48
+   ],
+   "r": 394.57,
+   "residu_moyen": 0.56,
+   "residu_max": 1.96
+  },
+  "anneau-int": {
+   "c": [
+    1007.42,
+    996.81
+   ],
+   "r": 454.56,
+   "residu_moyen": 0.37,
+   "residu_max": 1.08
+  },
+  "anneau-ext": {
+   "c": [
+    1007.19,
+    995.05
+   ],
+   "r": 515.49,
+   "residu_moyen": 0.35,
+   "residu_max": 1.47
+  }
+ },
+ "anneau_ouverture_deg": [
+  106.5,
+  133.4
+ ],
+ "creux_du_v_mesure": [
+  1023.0,
+  1021.6
+ ],
+ "arcs": {
+  "colline-gauche": {
+   "c": [
+    611.24,
+    1567.31
+   ],
+   "r": 683.45,
+   "residu_moyen": 0.31,
+   "residu_max": 2.44
+  },
+  "colline-droite": {
+   "c": [
+    1340.75,
+    1859.41
+   ],
+   "r": 895.59,
+   "residu_moyen": 0.34,
+   "residu_max": 2.16
+  },
+  "sillon-1-haut": {
+   "c": [
+    1339.35,
+    1874.78
+   ],
+   "r": 848.59,
+   "residu_moyen": 0.89,
+   "residu_max": 2.83
+  },
+  "sillon-1-bas": {
+   "c": [
+    1339.32,
+    1815.12
+   ],
+   "r": 736.46,
+   "residu_moyen": 0.52,
+   "residu_max": 2.45
+  },
+  "sillon-2-haut": {
+   "c": [
+    1335.67,
+    1800.05
+   ],
+   "r": 658.68,
+   "residu_moyen": 0.56,
+   "residu_max": 1.78
+  },
+  "sillon-2-bas": {
+   "c": [
+    1357.7,
+    1779.03
+   ],
+   "r": 590.66,
+   "residu_moyen": 0.54,
+   "residu_max": 2.12
+  },
+  "feuille-haut": {
+   "c": [
+    1360.37,
+    1791.13
+   ],
+   "r": 540.01,
+   "residu_moyen": 0.23,
+   "residu_max": 0.95
+  },
+  "feuille-bas": {
+   "c": [
+    1002.82,
+    998.16
+   ],
+   "r": 465.16,
+   "residu_moyen": 0.18,
+   "residu_max": 0.63
+  }
+ },
+ "controle_iou": {
+  "ciel (disque intérieur moins collines) / croissant + soleil": 0.9851,
+  "soleil (disque orange moins collines) / orange + jaune": 0.985,
+  "soleil clair (disque jaune moins collines) / jaune": 0.9502,
+  "anneau (moitié haute) / vert": 0.9774,
+  "feuille (lentille) / intérieur de la feuille": 0.9892,
+  "sillon 1 (couronne excentrée) / bande blanche": 0.9771,
+  "sillon 2 (couronne excentrée) / bande blanche": 0.9816
+ },
+ "geometrie": {
+  "repere": "pixels de Favicon agrolide.png (2000 x 2000, y vers le bas)",
+  "centre": [
+   1007.62,
+   996.08
+  ],
+  "rayons": {
+   "soleil-clair": 339.58,
+   "soleil": 394.57,
+   "anneau-int": 454.56,
+   "anneau-ext": 515.49
+  },
+  "anneauOuverture": [
+   106.5,
+   133.4
+  ],
+  "horizon": {
+   "gauche": {
+    "c": [
+     611.24,
+     1567.31
+    ],
+    "r": 683.45
+   },
+   "droite": {
+    "c": [
+     1340.75,
+     1859.41
+    ],
+    "r": 895.59
+   },
+   "creux": [
+    1023.23,
+    1022.0
+   ]
+  },
+  "sillons": [
+   {
+    "c": [
+     1340.75,
+     1859.41
+    ],
+    "r": 895.59
+   },
+   {
+    "c": [
+     1339.35,
+     1874.78
+    ],
+    "r": 848.59
+   },
+   {
+    "c": [
+     1339.32,
+     1815.12
+    ],
+    "r": 736.46
+   },
+   {
+    "c": [
+     1335.67,
+     1800.05
+    ],
+    "r": 658.68
+   },
+   {
+    "c": [
+     1357.7,
+     1779.03
+    ],
+    "r": 590.66
+   },
+   {
+    "c": [
+     1360.37,
+     1791.13
+    ],
+    "r": 540.01
+   }
+  ],
+  "feuille": {
+   "haut": {
+    "c": [
+     1360.37,
+     1791.13
+    ],
+    "r": 540.01
+   },
+   "bas": {
+    "c": [
+     1002.82,
+     998.16
+    ],
+    "r": 465.16
+   },
+   "pointes": [
+    [
+     935.08,
+     1458.36
+    ],
+    [
+     1392.56,
+     1252.08
+    ]
+   ]
+  },
+  "feuilleD": "M935.08 1458.36A540.01 540.01 0 0 1 1392.56 1252.08A465.16 465.16 0 0 1 935.08 1458.36Z",
+  "feuilleVB": [
+   935.08,
+   1251.12,
+   457.48,
+   212.2
+  ],
+  "anneauD": {
+   "d": "M652.9 1326.87A485.02 485.02 0 1 1 899.33 1468.86",
+   "epaisseur": 60.93,
+   "rayon": 485.02
+  }
+ }
+}

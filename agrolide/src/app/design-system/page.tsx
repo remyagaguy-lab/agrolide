@@ -6,6 +6,7 @@ import {
 import { brand, darkColors, lightColors, refPalette, type ColorRole } from '@/styles/tokens'
 import { Arche, ArchPhoto, Emblem, HorizonDivider, Motif } from '@/components/brand'
 import { Interactive } from './Interactive'
+import { Grammaire } from './Grammaire'
 
 export const metadata: Metadata = {
   title: 'Design system',
@@ -115,7 +116,7 @@ export default function DesignSystemPage() {
               Jetons, composants et règles d’usage. Page interne : non indexée, absente du plan du site. Version 1 : 11/11/2026.
             </p>
             <nav aria-label="Sections" className="mt-6 flex flex-wrap gap-2">
-              {[['couleurs', 'Couleurs'], ['typographie', 'Typographie'], ['formes', 'Formes et mouvement'], ['composants', 'Composants'], ['donnees', 'Données'], ['identite', 'Identité'], ['logo', 'Logo'], ['regles', 'Règles']].map(([id, label]) => (
+              {[['couleurs', 'Couleurs'], ['typographie', 'Typographie'], ['formes', 'Formes et mouvement'], ['composants', 'Composants'], ['donnees', 'Données'], ['identite', 'Identité'], ['grammaire', 'Grammaire des formes'], ['logo', 'Logo'], ['regles', 'Règles']].map(([id, label]) => (
                 <a key={id} href={`#${id}`} className="ag-state inline-flex min-h-11 items-center rounded-full border border-on-surface-brand/30 px-4 text-label-md">{label}</a>
               ))}
             </nav>
@@ -340,6 +341,10 @@ export default function DesignSystemPage() {
               <Motif size={400} opacity={0.1} className="text-primary" />
               <p className="relative z-10 text-title-md text-on-primary-container">Le même motif, en vert, sur fond clair</p>
             </div>
+          </Section>
+
+          <Section id="grammaire" title="Grammaire des formes" intro="Toutes les formes de la marque viennent de l’emblème du favicon. Chacune a un rôle précis, des tailles, des couleurs et des interdits ; une autre forme prend le relais quand le rôle change. Version 1 : 12/11/2026.">
+            <Grammaire />
           </Section>
 
           <Section id="logo" title="Logo" intro="Composant Logo : version couleur sur fond clair, version blanche sur vert profond (ou en mode sombre), symbole seul pour les petits formats. Respecter la zone de protection : au moins la hauteur du « o » autour.">

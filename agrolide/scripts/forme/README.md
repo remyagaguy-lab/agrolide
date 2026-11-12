@@ -52,3 +52,19 @@ Rastérisation resvg à l'échelle exacte de la source, IoU du masque, distance 
 échantillonnées) et le contour sous-pixel de la source (moyenne, p95, max), images de différence
 (rouge : vecteur en trop, bleu : manque), planches 16/24/32/48/96 px sur fond clair, vert `#1b5e38` et `#101510`.
 Les scores sont consignés dans le dossier de notes (`Design-System-formes-verification.md`).
+
+## Primitives de l'emblème (`primitives.py`)
+L'emblème se décompose en cercles ; le script le **mesure** (aucun point posé à la main) et en tire les primitives du design system :
+- **soleil** : 4 cercles concentriques (soleil clair, soleil, anneau int./ext.), frontières radiales au niveau 0,5 du champ de
+  couverture sur 61 rayons de la moitié haute, ajustement de cercle (moindres carrés) ; rapports des échos ×1,162 / ×1,339 / ×1,518 ;
+- **anneau** : couronne et ouverture (angles où la couronne est blanche) ;
+- **horizon** : arcs des deux collines (bas du ciel = croissant blanc + soleil) et leur creux en V ;
+- **sillons** : bords des deux bandes blanches de droite (arcs de centres décalés sous la feuille) ;
+- **feuille** : lentille, intersection de deux disques ajustés sur l'intérieur de la feuille.
+
+```bash
+python scripts/forme/primitives.py --src "<chemin>/Branding/Identité"
+```
+Sorties : `src/components/brand/geometrie.ts` (consommé par `PlanSoleil`, `Sillons`, `Horizon`, `Feuille`, `Anneau`),
+`public/design-assets/{soleil,anneau,horizon,sillons,feuille}.svg`, `scripts/forme/primitives.json` (mesures, résidus, IoU).
+Résidus moyens 0,2 à 0,9 px ; IoU de contrôle 0,95 à 0,99. Règles d'usage : page `/design-system#grammaire`.
