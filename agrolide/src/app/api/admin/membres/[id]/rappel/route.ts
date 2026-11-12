@@ -1,60 +1,58 @@
 import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
-import { requireAdmin } from "@/lib/auth/admin"
+import { and, eq, sql } from "drizzle-orm"
 import { Resend } from "resend"
+import { requireAdmin } from "@/lib/auth/admin"
 import { notifier } from "@/lib/notifications.server"
 import { db } from "@/db"
-import { users } from "@/db/schema"
-import { eq } from "drizzle-orm"
+import { cotisations, users } from "@/db/schema"
+import { FIN_ADHESION_GRATUITE, joursAvant, paiementOuvert } from "@/lib/adhesion"
+import { construireRappel } from "@/app/api/cron/rappels-adhesion/email"
 
+/**
+ * Rappel manuel d'un administrateur : même texte que le rappel automatique, adapté à la situation réelle du membre
+ * (fin de l'année gratuite ou fin d'une cotisation payée). Aucune trace d'unicité : un envoi manuel reste possible à tout moment.
+ */
 export async function POST(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
   const admin = await requireAdmin()
   if (!admin.ok) return admin.response
 
-  const { email, nom } = await request.json()
-  if (!email || !nom) return NextResponse.json({ error: "Email et nom requis" }, { status: 400 })
-
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
-    await resend.emails.send({
-      from: "agrolide <noreply@agrolide.org>",
-      to: email,
-      subject: "⚠️ Votre adhésion agrolide expire bientôt",
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px;">
-          <img src="https://agrolide.org/agrolide-png.png" alt="agrolide" style="height: 40px; margin-bottom: 24px;" />
-          <h2 style="color: #1b5e38; margin-bottom: 16px;">Bonjour ${nom},</h2>
-          <p style="color: #374151; line-height: 1.6;">
-            Votre adhésion au réseau <strong>agrolide</strong> expire dans <strong>moins de 30 jours</strong>.
-          </p>
-          <p style="color: #374151; line-height: 1.6;">
-            Pour continuer à bénéficier de tous les avantages du réseau (bibliothèque, forum, annuaire, formations…), 
-            pensez à renouveler votre cotisation avant l'expiration.
-          </p>
-          <div style="text-align: center; margin: 32px 0;">
-            <a href="https://agrolide.org/membres/cotisation" 
-               style="background-color: #1b5e38; color: white; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 15px;">
-              Renouveler mon adhésion
-            </a>
-          </div>
-          <p style="color: #9ca3af; font-size: 13px;">
-            Si vous avez des questions, contactez-nous à <a href="mailto:contact@agrolide.org">contact@agrolide.org</a>
-          </p>
-          <p style="color: #9ca3af; font-size: 12px; margin-top: 24px;">
-            L'équipe agrolide — Réseau africain de l'agriculture
-          </p>
-        </div>
-      `,
-    })
     const { id } = await params
-    await notifier(id, {
-      type: "cotisation",
-      contenu: "Votre adhésion expire dans moins de 30 jours. Pensez à renouveler votre cotisation.",
-      lien: "/membres/cotisation",
+    const [membre] = await db
+      .select({ email: users.email, prenom: users.prenom, categorie: users.categorie, statut: users.statut_adhesion })
+      .from(users)
+      .where(eq(users.id, id))
+      .limit(1)
+    if (!membre) return NextResponse.json({ error: "Membre introuvable" }, { status: 404 })
+
+    const [payee] = await db
+      .select({ fin: sql<string | null>`max(${cotisations.date_fin})` })
+      .from(cotisations)
+      .where(and(eq(cotisations.membre_id, id), eq(cotisations.statut, "valide")))
+    const finPayee = payee?.fin ? payee.fin.slice(0, 10) : null
+
+    const origine = finPayee ? "payante" : "gratuite"
+    const echeance = finPayee ?? FIN_ADHESION_GRATUITE
+    const jours = Math.max(0, joursAvant(echeance))
+    const texte = construireRappel({
+      prenom: membre.prenom,
+      categorie: membre.categorie,
+      type: jours === 0 ? "j0" : jours <= 7 ? "j7" : "j30",
+      jours,
+      echeance,
+      origine,
+      paiementOuvert: paiementOuvert(),
     })
+
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    const { error } = await resend.emails.send({ from: "agrolide <noreply@agrolide.org>", to: membre.email, subject: texte.sujet, html: texte.html })
+    if (error) return NextResponse.json({ error: error.message }, { status: 502 })
+
+    await notifier(id, { type: "cotisation", contenu: texte.notification, lien: "/membres/cotisation" })
     return NextResponse.json({ success: true })
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 })

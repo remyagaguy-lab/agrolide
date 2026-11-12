@@ -722,3 +722,17 @@ export const demandes_categorie = sqliteTable("demandes_categorie", {
   index("idx_demandes_categorie_statut").on(t.statut, t.created_at),
   index("idx_demandes_categorie_user").on(t.user_id, t.statut),
 ]);
+
+/**
+ * Rappels d'adhésion déjà envoyés (migration drizzle/0008_rappels_adhesion.sql) : la clé unique
+ * (membre, palier j30 | j7 | j0, échéance AAAA-MM-JJ) empêche d'envoyer deux fois le même rappel.
+ */
+export const rappels_adhesion = sqliteTable("rappels_adhesion", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  user_id: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  type: text("type").notNull(),
+  echeance: text("echeance").notNull(),
+  envoye_le: text("envoye_le").notNull(),
+}, (t) => [
+  uniqueIndex("uq_rappels_adhesion").on(t.user_id, t.type, t.echeance),
+]);
