@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { cn } from "@/lib/utils/formatters"
 import { Widget } from "./Widget"
+import { DATE_FIN_GRATUITE_LISIBLE, categorieSansCotisation, gratuiteEnCours } from "@/lib/adhesion"
 
 interface ProfileSummaryWidgetProps {
   prenom?: string | null
@@ -28,11 +29,15 @@ export function ProfileSummaryWidget({
   specialite,
   organisation,
   pays,
+  categorie,
   isAdhesionActive = false,
   joursRestants = 0,
   annuaireVisible,
 }: ProfileSummaryWidgetProps) {
   const displayName = prenom ? `${prenom}${nom ? ` ${nom}` : ""}` : "Membre"
+  // Pendant l'année gratuite (ou pour un profil Passionné), un membre sans cotisation payée n'a rien à régler.
+  const gratuit = !isAdhesionActive && (categorieSansCotisation(categorie) || gratuiteEnCours())
+  const adhesionOk = isAdhesionActive || gratuit
   const hasValidPhoto = Boolean(photo_url && (photo_url.startsWith("http") || photo_url.startsWith("/")))
 
   return (
@@ -52,7 +57,7 @@ export function ProfileSummaryWidget({
       <div
         className={cn(
           "mb-3.5 rounded-card p-3.5",
-          isAdhesionActive ? "bg-success-container text-on-success-container" : "bg-warning-container text-on-warning-container",
+          adhesionOk ? "bg-success-container text-on-success-container" : "bg-warning-container text-on-warning-container",
         )}
       >
         <div className="mb-2 flex items-center justify-between gap-2">
@@ -60,16 +65,22 @@ export function ProfileSummaryWidget({
             <CreditCard className="size-4" aria-hidden="true" />
             Adhésion annuelle
           </p>
-          <Badge variant={isAdhesionActive ? "success" : "warning"} className="bg-surface-container-lowest">
-            {isAdhesionActive ? "Active" : "En attente"}
+          <Badge variant={adhesionOk ? "success" : "warning"} className="bg-surface-container-lowest">
+            {isAdhesionActive ? "Active" : gratuit ? "Gratuite" : "En attente"}
           </Badge>
         </div>
-        <p className="mb-3 flex items-center justify-between text-body-sm">
-          <span>{isAdhesionActive ? `${joursRestants} jours restants` : "Cotisation annuelle requise"}</span>
-          <span className="font-semibold">{isAdhesionActive ? "À jour" : "À régulariser"}</span>
+        <p className="mb-3 flex items-center justify-between gap-2 text-body-sm">
+          <span>
+            {isAdhesionActive
+              ? `${joursRestants} jours restants`
+              : gratuit
+                ? categorieSansCotisation(categorie) ? "Gratuite, sans limite de durée" : `Gratuite jusqu'au ${DATE_FIN_GRATUITE_LISIBLE}`
+                : "Cotisation annuelle requise"}
+          </span>
+          <span className="shrink-0 font-semibold">{adhesionOk ? "À jour" : "À régulariser"}</span>
         </p>
-        <Button href="/membres/cotisation" variant={isAdhesionActive ? "outline" : "secondary"} size="sm" fullWidth className={isAdhesionActive ? "bg-surface-container-lowest" : undefined}>
-          {isAdhesionActive ? "Gérer ma cotisation" : "Régler ma cotisation"}
+        <Button href="/membres/cotisation" variant={adhesionOk ? "outline" : "secondary"} size="sm" fullWidth className={adhesionOk ? "bg-surface-container-lowest" : undefined}>
+          {isAdhesionActive ? "Gérer ma cotisation" : gratuit ? "Voir mon adhésion" : "Régler ma cotisation"}
           <ArrowRight className="size-3.5" aria-hidden="true" />
         </Button>
       </div>

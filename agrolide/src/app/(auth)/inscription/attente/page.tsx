@@ -19,7 +19,7 @@ function AttenteContent() {
         </span>
         <p className="text-title-md text-on-surface">{email || "votre adresse e-mail"}</p>
         <div className="mt-6 rounded-card bg-surface-container p-4 text-left text-body-md text-on-surface-variant">
-          <p>Cliquez sur le lien contenu dans cet e-mail pour vérifier votre adresse et passer à l’étape du paiement de votre cotisation.</p>
+          <p>Cliquez sur le lien contenu dans cet e-mail pour vérifier votre adresse et accéder à votre espace membre. Votre adhésion est gratuite, aucun paiement n’est demandé.</p>
           <p className="mt-2 text-body-sm text-on-surface-muted">Pensez à vérifier votre dossier spam.</p>
         </div>
         <Button href="/" variant="text" className="mt-6">Retour à l’accueil</Button>

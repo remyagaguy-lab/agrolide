@@ -22,7 +22,7 @@ export default function SuccesInscriptionPage() {
         </h2>
         
         <p className="text-lg text-on-surface-variant mb-8">
-          Votre compte est désormais actif et votre cotisation a bien été prise en compte. Bienvenue au sein du réseau agrolide !
+          Votre compte est désormais actif. Bienvenue au sein du réseau agrolide !
         </p>
 
         <div className="bg-primary-container rounded-xl p-6 mb-8 text-left border border-success/30 text-primary text-sm space-y-2">

@@ -3,8 +3,17 @@ import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users, cotisations as cotisationsTable } from "@/db/schema"
 import { eq, desc } from "drizzle-orm"
-import { CreditCard, Smartphone, CheckCircle, Clock, AlertTriangle } from "lucide-react"
+import { CheckCircle, Clock, AlertTriangle, Gift } from "lucide-react"
 import { PaiementBoutons } from "./PaiementBoutons"
+import {
+  DATE_FIN_GRATUITE_LISIBLE,
+  categorieSansCotisation,
+  formaterFcfa,
+  gratuiteEnCours,
+  libelleCategorie,
+  paiementOuvert,
+  tarifAnnuel,
+} from "@/lib/adhesion"
 
 export const metadata = { title: "Ma Cotisation" }
 
@@ -33,9 +42,15 @@ export default async function CotisationPage() {
 
   const cotisationActive = cotisations?.find(c => c.statut === 'valide')
   
-  const showPaymentBlock = profile.statut_adhesion === 'en_attente_paiement' || profile.statut_adhesion === 'expire'
+  const sansCotisation = categorieSansCotisation(profile.categorie)
+  const gratuite = gratuiteEnCours()
+  // Le paiement n'est proposé que lorsqu'il est ouvert (fin de la gratuité ou ouverture volontaire) : jamais de bouton inactif.
+  const showPaymentBlock =
+    !sansCotisation && paiementOuvert() && (profile.statut_adhesion === 'en_attente_paiement' || profile.statut_adhesion === 'expire')
+  const showGratuitBlock = !showPaymentBlock && !cotisationActive && (sansCotisation || gratuite)
 
-  const montantFCFA = profile.categorie === 'junior' ? "5 000" : profile.categorie === 'professionnel' ? "15 000" : "Sur devis"
+  const tarif = tarifAnnuel(profile.categorie)
+  const montantFCFA = tarif ? formaterFcfa(tarif) : "Sur devis"
 
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
@@ -52,10 +67,10 @@ export default async function CotisationPage() {
             </div>
             <div>
               <h2 className="text-lg font-bold text-on-surface">
-                Finaliser votre adhésion {profile.categorie}
+                Finaliser votre adhésion {libelleCategorie(profile.categorie)}
               </h2>
               <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-                Pour profiter pleinement de tous les avantages du réseau, veuillez régler votre cotisation annuelle de <strong className="text-warning text-sm bg-warning-container border border-warning/40 px-2 py-0.5 rounded ml-1">{montantFCFA} FCFA</strong>.
+                Pour profiter pleinement de tous les avantages du réseau, veuillez régler votre cotisation annuelle de <strong className="text-warning text-sm bg-warning-container border border-warning/40 px-2 py-0.5 rounded ml-1">{montantFCFA}</strong>.
               </p>
             </div>
           </div>
@@ -71,6 +86,35 @@ export default async function CotisationPage() {
             <div className="mt-6 flex items-center justify-center gap-1.5 text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
               <CheckCircle size={14} className="text-success" /> Paiements 100% sécurisés
             </div>
+          </div>
+        </div>
+      )}
+
+      {showGratuitBlock && (
+        <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6 flex items-start gap-4">
+          <div className="w-12 h-12 bg-success-container border border-outline-variant rounded-full flex items-center justify-center text-primary shrink-0">
+            <Gift size={24} aria-hidden="true" />
+          </div>
+          <div className="space-y-1.5">
+            {sansCotisation ? (
+              <>
+                <h2 className="text-lg font-bold text-on-surface">Votre profil Passionné est gratuit</h2>
+                <p className="text-body-sm text-on-surface-variant">Aucune cotisation n'est demandée, sans limite de durée.</p>
+              </>
+            ) : (
+              <>
+                <h2 className="text-lg font-bold text-on-surface">Adhésion gratuite jusqu'au {DATE_FIN_GRATUITE_LISIBLE}</h2>
+                <p className="text-body-sm text-on-surface-variant">
+                  Aucun paiement n'est demandé pour l'instant : vous profitez de tous les services du profil {libelleCategorie(profile.categorie)}.
+                  Nous vous écrirons avant la fin de cette période.
+                </p>
+                {tarif ? (
+                  <p className="text-body-sm text-on-surface-muted">
+                    Tarif annuel prévu ensuite, à titre indicatif : <span className="font-semibold">{formaterFcfa(tarif)}</span>.
+                  </p>
+                ) : null}
+              </>
+            )}
           </div>
         </div>
       )}

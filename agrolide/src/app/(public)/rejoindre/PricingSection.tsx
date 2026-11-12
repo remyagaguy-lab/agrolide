@@ -3,33 +3,28 @@
 import { useState } from "react"
 import Link from "next/link"
 import { PageHero } from "@/components/ui/PageHero"
+import { DATE_FIN_GRATUITE_LISIBLE, TARIFS_ANNUELS_FCFA, formaterFcfa, tarifMensuel } from "@/lib/adhesion"
 import { Check, X, UserPlus, ArrowRight, GraduationCap, Briefcase, Building2, Award, Lock } from "lucide-react"
 
 export default function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(true)
 
-  const formatPrice = (p: number) => p.toLocaleString('fr-FR').replace(/\s/g, ' ')
-
-  const PriceBlock = ({ annualPrice, monthlyPrice }: { annualPrice: number, monthlyPrice: number }) => {
-    const monthlyEquivalent = Math.round(annualPrice / 12)
-    return (
-      <>
-        <div className="flex items-baseline gap-[3px] mb-[4px]">
-          <span className="font-bold text-xs text-primary">FCFA</span>
-          <span className="font-black text-[26px] text-primary leading-none">
-            {isAnnual ? formatPrice(annualPrice) : formatPrice(monthlyPrice)}
-          </span>
-        </div>
-        <div className="text-label-sm text-on-surface-muted mb-[14px] min-h-[32px]">
-          {isAnnual ? (
-            <>par an · soit <span className="text-primary font-semibold">{formatPrice(monthlyEquivalent)} FCFA/mois</span></>
-          ) : (
-            <>par mois, sans engagement<br/><span className="text-primary font-semibold">soit {formatPrice(annualPrice)} FCFA/an en annuel</span></>
-          )}
-        </div>
-      </>
-    )
-  }
+  // Adhésion gratuite pour tous jusqu'à la date de lib/adhesion : les tarifs restent affichés, au second plan, pour la suite.
+  const PriceBlock = ({ annualPrice, monthlyPrice }: { annualPrice: number, monthlyPrice: number }) => (
+    <>
+      <div className="mb-[4px]">
+        <span className="font-black text-[26px] text-primary leading-none">Gratuit</span>
+        <span className="block text-label-sm font-semibold text-primary mt-[2px]">jusqu&apos;au {DATE_FIN_GRATUITE_LISIBLE}</span>
+      </div>
+      <div className="text-label-sm text-on-surface-muted mb-[14px] min-h-[32px]">
+        {isAnnual ? (
+          <>Puis <span className="font-semibold">{formaterFcfa(annualPrice)}</span> par an<br/>(tarif indicatif)</>
+        ) : (
+          <>Puis <span className="font-semibold">{formaterFcfa(monthlyPrice)}</span> par mois, sans engagement<br/>(tarif indicatif)</>
+        )}
+      </div>
+    </>
+  )
 
   const periodeParam = isAnnual ? "annuel" : "mensuel"
 
@@ -39,7 +34,7 @@ export default function PricingSection() {
         nextTone="lowest"
         label="Adhésion"
         title="Choisissez votre profil dans le réseau"
-        description="Rejoignez gratuitement ou accédez aux avantages complets selon votre parcours."
+        description={`Adhésion gratuite pour tous jusqu'au ${DATE_FIN_GRATUITE_LISIBLE} : choisissez le profil qui vous correspond, vous pourrez en changer plus tard.`}
       />
       <div className="max-w-[1200px] mx-auto px-6 pt-4 md:pt-6">
         
@@ -129,7 +124,7 @@ export default function PricingSection() {
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Junior</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Étudiants en agronomie, jeunes diplômés et passionnés en phase d'insertion.</div>
             
-            <PriceBlock annualPrice={10000} monthlyPrice={1000} />
+            <PriceBlock annualPrice={TARIFS_ANNUELS_FCFA.junior} monthlyPrice={tarifMensuel('junior')} />
             
             <Link href={`/inscription?categorie=junior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-bold text-xs text-center transition-colors bg-transparent border-[1.5px] border-outline-variant text-on-surface hover:border-primary hover:text-primary hover:bg-primary-container mb-[14px]">
               S'inscrire comme Junior
@@ -170,7 +165,7 @@ export default function PricingSection() {
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Professionnel</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Agronomes, ingénieurs, chercheurs, consultants et entrepreneurs actifs.</div>
             
-            <PriceBlock annualPrice={25000} monthlyPrice={2500} />
+            <PriceBlock annualPrice={TARIFS_ANNUELS_FCFA.professionnel} monthlyPrice={tarifMensuel('professionnel')} />
 
             <Link href={`/inscription?categorie=professionnel&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-bold text-xs text-center transition-colors bg-primary text-on-primary hover:bg-primary/90 mb-[14px]">
               S'inscrire comme Professionnel
@@ -208,7 +203,7 @@ export default function PricingSection() {
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Partenaire</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Entreprises agricoles, coopératives, ONG, agritech et institutions de recherche.</div>
             
-            <PriceBlock annualPrice={70000} monthlyPrice={7000} />
+            <PriceBlock annualPrice={TARIFS_ANNUELS_FCFA.partenaire} monthlyPrice={tarifMensuel('partenaire')} />
 
             <Link href={`/inscription?categorie=partenaire&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-bold text-xs text-center transition-colors bg-transparent border-[1.5px] border-outline-variant text-on-surface hover:border-primary hover:text-primary hover:bg-primary-container mb-[14px]">
               S'inscrire comme Partenaire
@@ -246,7 +241,7 @@ export default function PricingSection() {
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Sénior</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Experts, chercheurs émérites, mentors et investisseurs qui contribuent bénévolement.</div>
             
-            <PriceBlock annualPrice={45000} monthlyPrice={4500} />
+            <PriceBlock annualPrice={TARIFS_ANNUELS_FCFA.senior} monthlyPrice={tarifMensuel('senior')} />
 
             <Link href={`/inscription?categorie=senior&periode=${periodeParam}`} className="block w-full py-[10px] rounded-[7px] font-bold text-xs text-center transition-colors bg-tertiary text-on-tertiary hover:bg-accent-sun mb-[14px]">
               S'inscrire comme Sénior
@@ -281,7 +276,7 @@ export default function PricingSection() {
         {/* Payment Note */}
         <div className="flex items-center justify-center gap-[6px] text-center mt-[32px] text-label-sm text-on-surface-muted">
           <Lock size={14} className="flex-shrink-0" />
-          <span>Paiement sécurisé par Mobile Money (Orange, MTN, Moov, Wave) ou carte bancaire · Engagement annuel résiliable</span>
+          <span>Aucun paiement avant le {DATE_FIN_GRATUITE_LISIBLE}, nous vous préviendrons bien avant · Ensuite : Mobile Money ou carte bancaire, engagement annuel résiliable</span>
         </div>
 
       </div>

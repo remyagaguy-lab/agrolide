@@ -9,6 +9,7 @@ import { MembresLayout } from "@/components/layout/MembresLayout"
 import { AlertCircle } from "lucide-react"
 import { user_connections, messages } from "@/db/schema"
 import { sansBloques } from "@/lib/reseau/blocage.server"
+import { paiementOuvert } from "@/lib/adhesion"
 
 export default async function MembresRootLayout({
   children,
@@ -120,7 +121,7 @@ export default async function MembresRootLayout({
         )}
 
         {/* Si le compte est expiré, on affiche une bannière non fermable */}
-        {statut === "expire" && (
+        {statut === "expire" && paiementOuvert() && (
           <div className="bg-error text-on-error p-4 text-center font-bold flex items-center justify-center gap-2">
             <AlertCircle size={20} />
             Votre adhésion a expiré. Pour continuer à profiter du réseau, veuillez renouveler votre cotisation.

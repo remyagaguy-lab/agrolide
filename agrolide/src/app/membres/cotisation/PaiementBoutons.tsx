@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/Button"
 import { CreditCard, Smartphone, Loader2 } from "lucide-react"
 import { sendGAEvent } from "@next/third-parties/google"
+import { DATE_FIN_GRATUITE_LISIBLE, paiementOuvert } from "@/lib/adhesion"
 
 export function PaiementBoutons({ categorie }: { categorie: string }) {
   const [isLoading, setIsLoading] = useState<string | null>(null)
@@ -47,6 +48,15 @@ export function PaiementBoutons({ categorie }: { categorie: string }) {
       setError(err.message || "Une erreur est survenue")
       setIsLoading(null)
     }
+  }
+
+  // Garde-fou : tant que le paiement n'est pas ouvert, aucun bouton (même si le composant est rendu par erreur).
+  if (!paiementOuvert()) {
+    return (
+      <p className="text-center text-body-sm text-on-surface-variant">
+        Le paiement n'est pas encore ouvert : votre adhésion est gratuite jusqu'au {DATE_FIN_GRATUITE_LISIBLE}.
+      </p>
+    )
   }
 
   return (
