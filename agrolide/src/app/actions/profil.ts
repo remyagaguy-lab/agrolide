@@ -1,13 +1,17 @@
 'use server'
 
 import { db } from '@/db'
-import { users } from '@/db/schema'
-import { eq } from 'drizzle-orm'
+import { demandes_categorie, users } from '@/db/schema'
+import { and, eq, inArray } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
 import { LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES, parseList } from '@/lib/reseau/profil'
 import { profilSchema } from '@/lib/reseau/profil-schema'
+import { CATEGORIES_ADHESION, libelleCategorie, type CategorieAdhesion } from '@/lib/adhesion'
+import type { ModeChangement } from '@/lib/categorie'
+import { appliquerChangement, notifierAdminsDemandeCategorie } from '@/lib/categorie.server'
+import { notifier } from '@/lib/notifications.server'
 
 export type ResultatProfil =
   | { success: true }
@@ -103,6 +107,67 @@ export async function updateConfidentialite(payload: unknown): Promise<ResultatP
   revalidatePath('/membres/profil/confidentialite')
   revalidatePath('/membres/dashboard')
   revalidatePath('/membres/annuaire')
+  return { success: true }
+}
+
+const categorieSchema = z.object({ categorie: z.enum(CATEGORIES_ADHESION as [CategorieAdhesion, ...CategorieAdhesion[]]) })
+
+export type ResultatCategorie =
+  | { success: true; mode: ModeChangement; message: string }
+  | { success: false; error: string }
+
+const rafraichirCategorie = () => {
+  for (const chemin of ['/membres/profil', '/membres/profil/modifier', '/membres/dashboard', '/membres/annuaire', '/membres/cotisation']) {
+    revalidatePath(chemin)
+  }
+}
+
+/**
+ * Changement de catégorie en libre-service. Les règles (libre, validation administrateur pour Partenaire et Sénior,
+ * régularisation / prochaine échéance une fois le paiement actif) sont dans `@/lib/categorie`, le client les rejoue seulement pour prévenir.
+ */
+export async function changerCategorie(payload: unknown): Promise<ResultatCategorie> {
+  const { userId } = await auth()
+  if (!userId) return { success: false, error: 'Votre session a expiré. Reconnectez-vous pour changer de catégorie.' }
+  const parsed = categorieSchema.safeParse(payload)
+  if (!parsed.success) return { success: false, error: 'Catégorie invalide.' }
+
+  const [membre] = await db.select({ categorie: users.categorie, prenom: users.prenom, nom: users.nom }).from(users).where(eq(users.id, userId)).limit(1)
+  if (!membre) return { success: false, error: 'Profil introuvable.' }
+  if (!membre.categorie) return { success: false, error: 'Terminez d’abord votre inscription pour choisir une catégorie.' }
+
+  let resultat
+  try {
+    resultat = await appliquerChangement(userId, parsed.data.categorie)
+  } catch (e) {
+    console.error('Erreur changerCategorie:', e)
+    return { success: false, error: 'Le changement n’a pas pu être enregistré. Réessayez dans un instant.' }
+  }
+  if (resultat.mode === 'identique') return { success: true, mode: resultat.mode, message: resultat.message }
+
+  await notifier(userId, { type: 'cotisation', contenu: resultat.message, lien: resultat.regularisationFcfa > 0 ? '/membres/cotisation' : '/membres/profil/modifier' })
+  if (resultat.mode === 'validation') {
+    const nomMembre = `${membre.prenom ?? ''} ${membre.nom ?? ''}`.trim() || 'Un membre'
+    await notifierAdminsDemandeCategorie(`${nomMembre} demande le profil « ${libelleCategorie(parsed.data.categorie)} » (actuellement « ${libelleCategorie(membre.categorie)} »).`)
+  }
+  rafraichirCategorie()
+  return { success: true, mode: resultat.mode, message: resultat.message }
+}
+
+/** Annule la demande de catégorie en cours (validation en attente ou changement programmé). */
+export async function annulerDemandeCategorie(): Promise<{ success: true } | { success: false; error: string }> {
+  const { userId } = await auth()
+  if (!userId) return { success: false, error: 'Votre session a expiré. Reconnectez-vous.' }
+  try {
+    await db
+      .update(demandes_categorie)
+      .set({ statut: 'annulee', traite_le: new Date().toISOString() })
+      .where(and(eq(demandes_categorie.user_id, userId), inArray(demandes_categorie.statut, ['en_attente', 'programmee'])))
+  } catch (e) {
+    console.error('Erreur annulerDemandeCategorie:', e)
+    return { success: false, error: 'La demande n’a pas pu être annulée.' }
+  }
+  rafraichirCategorie()
   return { success: true }
 }
 

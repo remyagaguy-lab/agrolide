@@ -701,3 +701,24 @@ export const lectures_anonymes = sqliteTable("lectures_anonymes", {
 }, (t) => [
   index("idx_lectures_anonymes_empreinte").on(t.empreinte, t.created_at),
 ]);
+
+/**
+ * Demandes et historique de changement de catégorie (migration drizzle/0007_demandes_categorie.sql).
+ * Statuts : en_attente (validation admin : Partenaire, Sénior) | programmee (baisse à l'échéance) | acceptee | refusee | annulee.
+ */
+export const demandes_categorie = sqliteTable("demandes_categorie", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  user_id: text("user_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  categorie_avant: text("categorie_avant"),
+  categorie_demandee: text("categorie_demandee").notNull(),
+  statut: text("statut").notNull(),
+  effet_le: text("effet_le"),
+  regularisation_fcfa: integer("regularisation_fcfa"),
+  motif_refus: text("motif_refus"),
+  created_at: text("created_at").notNull(),
+  traite_le: text("traite_le"),
+  traite_par: text("traite_par"),
+}, (t) => [
+  index("idx_demandes_categorie_statut").on(t.statut, t.created_at),
+  index("idx_demandes_categorie_user").on(t.user_id, t.statut),
+]);

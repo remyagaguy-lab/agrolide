@@ -1,10 +1,11 @@
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { db } from "@/db"
-import { users, cotisations } from "@/db/schema"
-import { eq, desc, inArray, like, or, and } from "drizzle-orm"
+import { users, cotisations, demandes_categorie } from "@/db/schema"
+import { eq, desc, inArray, like, or, and, count } from "drizzle-orm"
 import { MembresTable } from "./MembresTable"
-import { Users } from "lucide-react"
+import Link from "next/link"
+import { Users, UserCog } from "lucide-react"
 
 export const metadata = { title: "Gestion des membres" }
 export const dynamic = 'force-dynamic'
@@ -79,8 +80,19 @@ export default async function AdminMembresPage({
     cotisation_expiry: expiryMap[m.id] || null,
   }))
 
+  // Demandes de Partenaire / Sénior à valider (la table peut manquer avant la migration)
+  let demandesEnAttente = 0
+  try {
+    const [r] = await db.select({ n: count() }).from(demandes_categorie).where(eq(demandes_categorie.statut, "en_attente"))
+    demandesEnAttente = Number(r?.n ?? 0)
+  } catch (e) {}
+
   return (
     <div className="space-y-6 pb-10">
+      <Link href="/admin/membres/demandes-categorie" className="inline-flex min-h-11 items-center gap-2 rounded-card border border-outline-variant bg-surface-container-lowest px-4 text-body-sm font-semibold text-primary hover:bg-primary-container">
+        <UserCog className="size-4" aria-hidden="true" />
+        Demandes de changement de catégorie{demandesEnAttente > 0 ? ` (${demandesEnAttente} à traiter)` : ""}
+      </Link>
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 bg-success-container text-success rounded-xl flex items-center justify-center">
           <Users size={20} />

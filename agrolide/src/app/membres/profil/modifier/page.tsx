@@ -1,12 +1,14 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
 import { ShieldCheck } from "lucide-react"
-import { eq } from "drizzle-orm"
+import { and, desc, eq, inArray } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
-import { users } from "@/db/schema"
+import { demandes_categorie, users } from "@/db/schema"
 import { parseList } from "@/lib/reseau/profil"
 import { buttonVariants } from "@/components/ui/Button"
+import { finCotisationPayee } from "@/lib/categorie.server"
+import { CategorieSection, type DemandeOuverte } from "./CategorieSection"
 import { ProfilForm } from "./ProfilForm"
 
 export const metadata = { title: "Modifier mon profil" }
@@ -31,11 +33,32 @@ export default async function ProfilModifierPage() {
       linkedin_url: users.linkedin_url,
       site_web_url: users.site_web_url,
       photo_url: users.photo_url,
+      categorie: users.categorie,
     })
     .from(users)
     .where(eq(users.id, userId))
     .limit(1)
   if (!row) redirect("/login")
+
+  // Demande de catégorie en cours et cotisation payée : la table peut manquer avant la migration, on affiche alors la page sans demande.
+  let demandeOuverte: DemandeOuverte | null = null
+  let finCotisation: string | null = null
+  try {
+    const [d] = await db
+      .select({ categorie: demandes_categorie.categorie_demandee, statut: demandes_categorie.statut, effetLe: demandes_categorie.effet_le })
+      .from(demandes_categorie)
+      .where(and(eq(demandes_categorie.user_id, userId), inArray(demandes_categorie.statut, ["en_attente", "programmee"])))
+      .orderBy(desc(demandes_categorie.created_at))
+      .limit(1)
+    if (d) demandeOuverte = { categorie: d.categorie, statut: d.statut as DemandeOuverte["statut"], effetLe: d.effetLe }
+  } catch (e) {
+    console.error("[profil/modifier] demandes de catégorie indisponibles :", e)
+  }
+  try {
+    finCotisation = await finCotisationPayee(userId)
+  } catch (e) {
+    console.error("[profil/modifier] cotisation illisible :", e)
+  }
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -49,6 +72,8 @@ export default async function ProfilModifierPage() {
           Gérer la confidentialité de mon profil
         </Link>
       </header>
+
+      <CategorieSection actuelle={row.categorie} finCotisationPayee={finCotisation} demandeOuverte={demandeOuverte} />
 
       <div className="rounded-card border border-outline-variant bg-surface-container-lowest p-5 md:p-6">
         <ProfilForm

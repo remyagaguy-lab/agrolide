@@ -13,6 +13,13 @@ export async function submitOnboarding(formData: FormData) {
       return { success: false, error: "Non autorisé." }
     }
 
+    // La catégorie ne se choisit qu'une fois ici : ensuite elle se change depuis « Modifier mon profil »
+    // (avec validation administrateur pour Partenaire et Sénior), sans contourner ces règles par cette action.
+    const [existant] = await db.select({ categorie: users.categorie }).from(users).where(eq(users.id, userId)).limit(1)
+    if (existant?.categorie) {
+      return { success: false, error: "Votre profil est déjà complété. Pour changer de catégorie, rendez-vous dans « Modifier mon profil »." }
+    }
+
     const categorie = formData.get("categorie") as string
     const biographie = formData.get("biographie") as string
     const specialite = formData.get("specialite") as string
