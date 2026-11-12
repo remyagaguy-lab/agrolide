@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00675",
+  "sha256": "7b783dd446c367bd7ba3978ceda50a0c1dfd7241befe1f112ad866e685681897",
+  "nom_original": "Poivronoucapsciciumannum,fichetechniquecomplète_1668595177296.pdf",
+  "chemin_relatif_source": "OD_Docs/Poivronoucapsciciumannum,fichetechniquecomplète_1668595177296.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 89747,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "poivron",
+  "pays": "France",
+  "annee": 2022,
+  "auteurs": "Homejardin",
+  "source_organisation": "Homejardin",
+  "mots_cles": [
+    "poivron",
+    "capsicum annuum",
+    "jardinage",
+    "varietes",
+    "france metropolitaine"
+  ],
+  "titre_trouve": "Poivron ou capsicum annuum",
+  "titre": "Fiche de culture du poivron - Homejardin",
+  "resume": "Fiche pratique de 4 pages issue du site web Homejardin décrivant la culture du poivron en France métropolitaine : variétés recommandées, calendrier lunaire et conseils de jardinage.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Contenu extrait d'un site web privé soumis au droit d'auteur et calibré pour le jardinage tempéré français, archivé sans publication.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "Tout le contenu du site concernant le JARDINAGE est rédigé en considérant qu'il concerne avant tout les végétaux cultivés en France Métropolitaine."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00675__fiche-de-culture-du-poivron-homejardin.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00675__fiche-de-culture-du-poivron-homejardin.pdf"
+}

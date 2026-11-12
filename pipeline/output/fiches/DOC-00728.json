@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00728",
+  "sha256": "89cbb1e408fefc6caf89089b786ce6cd3f34ff1eec15a68c3f9a5507eb1fe2a1",
+  "nom_original": "Stratégies de défenses des plantes.pdf",
+  "chemin_relatif_source": "OD_Docs/Stratégies de défenses des plantes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4581478,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 56,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2018,
+  "auteurs": "Mme Brahimi L.",
+  "source_organisation": null,
+  "mots_cles": [
+    "defense des plantes",
+    "protection des vegetaux",
+    "phytopathologie",
+    "phytoalexines",
+    "immunite vegetale"
+  ],
+  "titre_trouve": "Stratégies de défenses des plantes",
+  "titre": "Stratégies de défenses des plantes : Mécanismes physiologiques et moléculaires",
+  "resume": "Support de cours en diapositives pour la spécialité Phytopharmacie et Protection des Végétaux, analysant les défenses physiques, chimiques (phytoalexines, protéines PR) et voies de signalisation des plantes.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire spécialisé sans licence ouverte de diffusion, archivé pour documentation interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.92
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Stratégies de défenses des plantes Mme BRAHIMI L. Département de Biotechnologie Spécialité/: Phytopharmacie et Protection des Végétaux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00728__strategies-de-defenses-des-plantes-mecanismes-physiolog.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00728__strategies-de-defenses-des-plantes-mecanismes-physiolog.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00157",
+  "sha256": "f822096a9d8c28a7bdf6c621a2dcba826faaf184adc1172f996ab690735ebb22",
+  "nom_original": "ATE.docx",
+  "chemin_relatif_source": "OD_Docs/ATE.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 2026002,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "aquaculture",
+    "pisciculture",
+    "larves",
+    "burkina faso",
+    "exercices"
+  ],
+  "titre_trouve": null,
+  "titre": "Exercices d'évaluation en aquaculture et reproduction piscicole (ATE)",
+  "resume": "Document de travail contenant des exercices d'évaluation sur l'identification des espèces piscicoles, le nourrissage des larves et la reproduction artificielle au Burkina Faso.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Énoncé d'exercice scolaire brut en format bureautique, fragmentaire et non publié : archivage interne uniquement.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.8,
+    "completude": 0.7
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Donner les noms communs des espèces aquatiques A ; B et C ? (l’espèce D n’existe pas au Burkina)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00157__exercices-d-evaluation-en-aquaculture-et-reproduction-p.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00157__exercices-d-evaluation-en-aquaculture-et-reproduction-p.pdf"
+}

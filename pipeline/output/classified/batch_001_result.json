@@ -1,0 +1,655 @@
+{
+  "batch_number": 1,
+  "results": [
+    {
+      "id": "DOC-00001",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["transversal"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["gestion de projet", "cycle de projet", "planification", "management"],
+      "titre_trouve": "Gestion de projet",
+      "titre": "Gestion de projet : concepts fondamentaux et cycle de vie",
+      "resume": "Support de présentation universitaire exposant les concepts fondamentaux du management de projet, de sa genèse à son exécution et son évaluation finale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["incomplet", "auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours non converti sans mention d'auteur ni de licence libre ; archivé en interne.",
+      "confiance": {
+        "classification": 0.8,
+        "droits": 0.85,
+        "completude": 0.7
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Gestion_de_projet_université.ppt"
+        },
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "PowerPoint Document"
+        },
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "IMPULSION = c est la naissance du projet LA REALISATION = c est le moment ou on fait (exécution)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00002",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": ["gestion_exploitation"],
+      "type_doc": "ouvrage",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["producteur", "technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Cameroun",
+      "annee": 2019,
+      "auteurs": "Loïc Kamwa Silatchom",
+      "source_organisation": "Living Books Publishing",
+      "mots_cles": ["agrobusiness", "entrepreneuriat agricole", "afrique", "rentabilite", "cameroun"],
+      "titre_trouve": "10 Clés pour réussir dans l'agrobusiness en Afrique",
+      "titre": "10 Clés pour réussir dans l'agrobusiness en Afrique",
+      "resume": "Ouvrage pratique partageant l'expérience de terrain de l'auteur pour monter et rentabiliser un projet agro-pastoral en Afrique, abordant financement, gestion et commercialisation.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous copyright strict avec ISBN déposé, reproduction interdite sans autorisation de l'éditeur.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "10 CLéS pour réussir dans l'agrobusiness en afrique"
+        },
+        {
+          "champ": "auteurs",
+          "page": 3,
+          "extrait": "Loïc Kamwa Silatchom"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 4,
+          "extrait": "Copyright © 2019 par Loïc Kamwa Silatchom. Tous droits réservés pour tous les pays. ISBN : 978-1-6880-5863-7"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00003",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["production_vegetale", "cultures_maraicheres"],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": "Sénégal",
+      "annee": 2022,
+      "auteurs": "Chérif Amdy Goudiaby",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["business plan", "horticulture", "casamance", "senegal", "rentabilite"],
+      "titre_trouve": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE DANS LA REGION DE CASAMANCE",
+      "titre": "Business plan d'une exploitation agricole horticole en Casamance",
+      "resume": "Plan d'affaires réel pour la création d'une exploitation horticole en Casamance, comprenant l'étude de marché, l'analyse SWOT, la stratégie commerciale et les comptes prévisionnels.",
+      "statut_droits": "donnees_personnelles_confidentiel",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["donnees_personnelles", "confidentiel_interne"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Dossier privé d'investissement comportant des données personnelles nominatives et patrimoniales du promoteur.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE DANS LA REGION DE CASAMANCE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Initiateur : CHERIF AMDY GOUDIABY"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Tel: (+221 77 ) Business plan - GOUDIABY"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00004",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["entrepreneuriat_agricole"],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["etudiant", "technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Tunisie",
+      "annee": 2019,
+      "auteurs": "Walid Bouzir, Mouna Haouachi",
+      "source_organisation": "Union Européenne (Erasmus+)",
+      "mots_cles": ["modele business plan", "canevas", "etude de marche", "plan financier", "tri"],
+      "titre_trouve": "Mon Business Plan",
+      "titre": "Modèle simplifié de plan d'affaires pour projet entrepreneurial",
+      "resume": "Canevas type de plan d'affaires structuré couvrant l'analyse stratégique, le plan commercial, l'organisation de la production et les prévisions financières (VAN, TRI).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Modèle pédagogique issu d'un projet de renforcement des capacités soutenu par l'Union européenne, librement réutilisable.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Mon Business Plan Resume Project"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Project n.: 561988-EPP-1-2015-1-IT-EPPKA2-CBHE-SP"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Walid Bouzir, Mouna Haouachi"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00005",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["agroeconomie"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["poulet de chair", "compte d'exploitation", "devis", "aliment volaille", "rentabilite"],
+      "titre_trouve": "Devis de 1000 poulets de chair sur 45 jours",
+      "titre": "Devis et compte d'exploitation pour 1000 poulets de chair sur 45 jours",
+      "resume": "Fiche technico-économique chiffrant les dépenses d'intrants (poussins, aliment démarrage/croissance/finition) et le bénéfice net prévisionnel pour un élevage de 1000 poulets de chair.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Capture d'un post informel de réseau social sans attribution d'auteur ni licence formelle de rediffusion.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.65,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Devis de 1000 poulets de chair sur 45 jours"
+        },
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "Poussins: Âge 1 jour Prix 550 FCFA unité"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Mode payant facebook"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00006",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["entrepreneuriat_agricole"],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2020,
+      "auteurs": "Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec (MAPAQ)",
+      "source_organisation": "Gouvernement du Québec",
+      "mots_cles": ["plan d'affaires", "demarrage entreprise agricole", "quebec", "financement agricole", "gestion"],
+      "titre_trouve": "GUIDE DE RÉDACTION D’UN PLAN D’AFFAIRES POUR LE DÉMARRAGE D’UNE ENTREPRISE AGRICOLE",
+      "titre": "Guide de rédaction d'un plan d'affaires agricole",
+      "resume": "Guide méthodologique officiel québécois détaillant la structuration et la rédaction des différentes sections d'un plan d'affaires pour créer une entreprise agricole.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "membres",
+      "motif_decision": "Guide méthodologique de qualité mais orienté vers le contexte juridique et fiscal québécois ; réservé aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DE RÉDACTION D’UN PLAN D’AFFAIRES POUR LE DÉMARRAGE D’UNE ENTREPRISE AGRICOLE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 3,
+          "extrait": "Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 35,
+          "extrait": "© Gouvernement du Québec | Mise à jour janvier 2020 ISBN 978-2-550-77881-3 (PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00007",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["financement_credit_assurance"],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "entrepreneur_porteur_projet"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "Robert Houdayer",
+      "source_organisation": "Université Paris-Dauphine",
+      "mots_cles": ["evaluation financiere", "ingenierie de projets", "rentabilite", "bfr", "montage financier"],
+      "titre_trouve": "Evaluation Financière Des Projets : Ingénierie de projets et décision d’investissement",
+      "titre": "Évaluation financière des projets : ingénierie et investissement",
+      "resume": "Manuel de référence de 460 pages traitant en profondeur de la modélisation financière, des dotations aux amortissements, du besoin en fonds de roulement et des critères de rentabilité des investissements.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial académique sous copyright éditeur sans licence libre de rediffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Evaluation Financière Des Projets Ingénierie de projets et décision d’investissement"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Robert Houdayer"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Collection Techniques de Gestion Dirigée par Yves Simon, Professeur à l’Université de Paris IX-Dauphine"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00008",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["entrepreneuriat_agricole"],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2016,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Fondation Suisse pour l'Encouragement (FSE)",
+      "mots_cles": ["business plan", "canevas", "plan marketing", "financement", "gestion financiere"],
+      "titre_trouve": "Business plan type - PLAN DE BASE",
+      "titre": "Trame type de plan d'affaires pour création d'entreprise",
+      "resume": "Fiche pratique détaillant la structure d'un business plan complet : portrait d'entreprise, analyse marché et concurrence, plan marketing, logistique et projections financières.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "membres",
+      "motif_decision": "Modèle pratique de base pour les créateurs d'entreprise, diffusable aux membres.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Business plan type PLAN DE BASE"
+        },
+        {
+          "champ": "resume",
+          "page": 2,
+          "extrait": "Condensé en une seule page du contenu du business plan."
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "FSE___Fiche_Business_plan.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00009",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": ["ressources_naturelles_environnement", "agroecologie_agriculture_durable"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso, Togo, Bénin",
+      "annee": 2020,
+      "auteurs": "Partenariat National de l’Eau du Burkina Faso, GWP-AO, SIE",
+      "source_organisation": "Partenariat Régional de l’Eau de l’Afrique de l’Ouest (GWP-AO)",
+      "mots_cles": ["exploitation agricole", "burkina faso", "togo", "benin", "changement climatique", "gestion de l'eau"],
+      "titre_trouve": "Guide technique d’une exploitation agricole BURKINA FASO ƴ TOGO ƴ BÉNIN",
+      "titre": "Guide technique d'une exploitation agricole : Burkina Faso, Togo, Bénin",
+      "resume": "Guide technique opérationnel pour optimiser la conduite agroécologique et la gestion des flux de matières et d'eau au sein des exploitations agricoles en Afrique de l'Ouest.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel complet de référence pour l'Afrique de l'Ouest, produit dans le cadre du projet TonFuturTonClimat.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide technique d’une exploitation agricole BURKINA FASO ƴ TOGO ƴ BÉNIN"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Secrétariat international de l’eau et le Partenariat Régional de l’eau de l’Afrique de l’Ouest"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Partenariat National de l’Eau du Burkina Faso, en collaboration avec le Partenariat Régional de l’Eau de l’Afrique de l’Ouest (GWP-AO)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00010",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": ["agroalimentaire", "entreprise_agroalimentaire"],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Tunisie",
+      "annee": 2022,
+      "auteurs": "Ahlem Ghazouani, Marouane Chikhaoui",
+      "source_organisation": "APIA / Association ELIS",
+      "mots_cles": ["entrepreneuriat agricole", "agroalimentaire", "chaine de valeur", "tunisie", "creation d'entreprise"],
+      "titre_trouve": "Guide de l'entreprenariat agricole et agroalimentaire",
+      "titre": "Guide de l'entrepreneuriat agricole et agroalimentaire",
+      "resume": "Ouvrage de référence exhaustif (164 pages) analysant les chaînes de valeur, les démarches d'installation et l'écosystème d'accompagnement des porteurs de projets agricoles et agroalimentaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide complet élaboré avec le soutien de la coopération italienne et de l'APIA, destiné à la diffusion auprès des entrepreneurs agricoles.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "Guide de l’entreprenariat agricole et agroalimentaire"
+        },
+        {
+          "champ": "auteurs",
+          "page": 4,
+          "extrait": "Mme. Ahlem Ghazouani et M. Marouane Chikhaoui"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "Agence de Promotion des Investissements Agricoles (APIA) et de l’association ELIS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00011",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": ["gestion_exploitation"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Tchad",
+      "annee": 2016,
+      "auteurs": "RONGEAD, PADL-GRN",
+      "source_organisation": "Union Européenne",
+      "mots_cles": ["entreprendre dans l'agriculture", "tchad", "gestion exploitation", "ecole d'entrepreneuriat", "giz"],
+      "titre_trouve": "Manuel de formation : « entreprendre dans l’agriculture »",
+      "titre": "Manuel de formation : entreprendre dans l'agriculture au Tchad",
+      "resume": "Manuel pédagogique de 57 pages structuré en 10 modules pratiques pour apprendre aux producteurs ruraux à gérer leur exploitation comme une entreprise rentable et diversifiée.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel officiel de vulgarisation de la coopération Tchad-UE basé sur la méthodologie GIZ, conçu pour les producteurs sahéliens.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Manuel de formation : « entreprendre dans l’agriculture »"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "COOPERATION TCHAD – UNION EUROPEENNE Programme d’Appui au Développement Local"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Manuel de formation réalisé en collaboration avec RONGEAD"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00012",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": ["gestion_projet_business_plan"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2021,
+      "auteurs": "Bénin Théodore Tse",
+      "source_organisation": "Centre de Formation Professionnelle (Kadiogo)",
+      "mots_cles": ["cours entrepreneuriat", "burkina faso", "formation professionnelle", "creation d'activite", "kadiogo"],
+      "titre_trouve": "COURS DE FORMATION EN ENTREPRENEURIAT",
+      "titre": "Cours de formation en entrepreneuriat agricole et professionnel",
+      "resume": "Support de cours professionnel dispensé au Kadiogo présentant les concepts clés de l'esprit d'entreprise, les qualités d'un bon entrepreneur et les étapes de création d'une activité.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours enseignant non publié dans un circuit formel libre, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COURS DE FORMATION EN ENTREPRENEURIAT"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Chargé du cours : BENIN Théodore TSE"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Province du Kadiogo Centre de Formation Professionnelle"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00013",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": ["gestion_projet_business_plan"],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["producteur"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Bénin",
+      "annee": 2020,
+      "auteurs": "Nafoureh Ashley Ahandessi",
+      "source_organisation": "Smartmind Entrepreneur / ADR-Coaching",
+      "mots_cles": ["idee d'entreprise", "coaching agricole", "clientele cible", "agrobusiness", "benin"],
+      "titre_trouve": "ETAPE 1 : REUSSIR A TROUVER SON IDEE GAGNANTE",
+      "titre": "Trouver son idée gagnante d'entreprise agricole",
+      "resume": "Fiche d'accompagnement entrepreneurial guidant le futur promoteur agricole pour identifier une opportunité rentable, formaliser son idée et définir son avatar client.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de coaching propriétaire protégé par copyright d'un cabinet privé de conseil sans licence ouverte.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ETAPE 1 : REUSSIR A TROUVER SON IDEE GAGNANTE - CONSTRUIRE UNE ENTREPRISE AGRICOLE DE REVE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Nafoureh Ashley AHANDESSI"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "© SMARTMIND ENTREPRENEUR | Nafoureh Ashley AHANDESSI"
+        }
+      ]
+    }
+  ]
+}

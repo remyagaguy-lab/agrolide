@@ -1,0 +1,79 @@
+{
+  "id": "DOC-01055",
+  "sha256": "6737d6bb01ec394e237715f2286e4a891f3b2750fc0521724f464bbe0590d58b",
+  "nom_original": "tunisie_projet_de_developpement_agricole_integre_pdai_de_zaghouan.pdf",
+  "chemin_relatif_source": "OD_Docs/tunisie_projet_de_developpement_agricole_integre_pdai_de_zaghouan.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 375044,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 13,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "politiques_strategies",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Tunisie",
+  "annee": 2014,
+  "auteurs": "RACHID NAFTI",
+  "source_organisation": "Banque Africaine de Développement (BAD) / Ministère de l'Agriculture (Tunisie)",
+  "mots_cles": [
+    "bad",
+    "pdai",
+    "tunisie",
+    "developpement agricole integre",
+    "pges",
+    "zaghouan",
+    "gestion environnementale"
+  ],
+  "titre_trouve": "Projet de développement agricole intégré (PDAI) de Zaghouan : Résumé du plan de gestion environnementale et sociale",
+  "titre": "Projet de développement agricole intégré de Zaghouan : Plan de gestion environnementale et sociale",
+  "resume": "Résumé du plan de gestion environnementale et sociale (PGES) établi pour le Projet de développement agricole intégré (PDAI) de Zaghouan en Tunisie sous l'égide de la Banque Africaine de Développement.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport institutionnel complet de la Banque Africaine de Développement (BAD) sur la gestion environnementale d'un projet de développement agricole, diffusable aux membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Titre du projet: Projet de développement agricole intégré (PDAI) de Zaghouan"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Département: OSAN Division: OSAN I Numéro de projet: P-TN-AA0-009 Pays: TUNISIE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01055__projet-de-developpement-agricole-integre-de-zaghouan-pl.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/politiques_strategies/DOC-01055__projet-de-developpement-agricole-integre-de-zaghouan-pl.pdf"
+}

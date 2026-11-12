@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00910",
+  "sha256": "3d80f90a616743aafb426c283ef9934fe903a9e6acd4dd889390335ead0decda",
+  "nom_original": "fiche-technique-sorgo.pdf",
+  "chemin_relatif_source": "OD_Docs/fiche-technique-sorgo.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 188487,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "sorgho",
+  "pays": "Mali",
+  "annee": 2011,
+  "auteurs": "Botorou Ouendeba, Niaba Teme",
+  "source_organisation": "IER / INTSORMIL / IICEM",
+  "mots_cles": [
+    "sorgho",
+    "variete grinkan",
+    "mali",
+    "itineraire technique",
+    "commercialisation"
+  ],
+  "titre_trouve": "FICHE DE PRODUCTION ET DE COMMERCIALISATION DU SORGHO, MALI",
+  "titre": "Fiche de production et de commercialisation du sorgho (Variété Grinkan au Mali)",
+  "resume": "Fiche technique et commerciale de l'IER et INTSORMIL sur la variété de sorgho Grinkan au Mali : calendrier agronomique, gestion de la fertilité, récolte et commercialisation coopérative.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Publication officielle de recherche et développement agricole (IER/INTSORMIL) pour les producteurs sahéliens, libre de droits.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE DE PRODUCTION ET DE COMMERCIALISATION DU SORGHO, MALI mars 2011"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00910__fiche-de-production-et-de-commercialisation-du-sorgho-v.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00910__fiche-de-production-et-de-commercialisation-du-sorgho-v.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00191",
+  "sha256": "79b684d64c3f412872c927e1e41dcbca1381ab1ff0c52b242a474d4bda79a154",
+  "nom_original": "Agrodok_24_Agriculture_Urbaine_La_culture_des_legumes_en_ville@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_24_Agriculture_Urbaine_La_culture_des_legumes_en_ville@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1381908,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476116516-Agriculture_urbaine.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00167",
+  "groupe_doublon_id": "GRP-0015",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00167 (Agrodok 24 : Agriculture urbaine - La culture des légumes en ville).",
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maraîchage",
+  "annee": 2005,
+  "auteurs": "Jeroen Boland",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "agrodok",
+    "agriculture urbaine",
+    "legumes",
+    "maraichage urbain",
+    "jardin potager",
+    "irrigation"
+  ],
+  "titre_trouve": "Agrodok 24 - Agriculture urbaine : la culture des légumes en ville",
+  "titre": "Agrodok 24 : Agriculture urbaine - La culture des légumes en ville",
+  "resume": "Manuel pratique détaillant les techniques d'agriculture urbaine et périurbaine pour la production maraîchère à petite échelle, la fertilité et la gestion de l'eau.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Série Agrodok No. 24 Agrodok 24 - Agriculture urbaine : la culture des légumes en ville"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© Fondation Agromisa, Wageningen, 2005. ISBN Agromisa: 90-8573-016-3"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00191__agrodok-24-agriculture-urbaine-la-culture-des-legumes-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00191__agrodok-24-agriculture-urbaine-la-culture-des-legumes-e.pdf"
+}

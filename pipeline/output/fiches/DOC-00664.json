@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00664",
+  "sha256": "2d66730a76af0ce9c461ed87006b15a3a485494be1fc92f4f0b0add8b10271f7",
+  "nom_original": "Pesticide et Herbicide PDF (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Pesticide et Herbicide PDF (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1035088,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 21,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Bénin",
+  "annee": 2021,
+  "auteurs": "K. Marcel Assanse",
+  "source_organisation": "Marko's Corporation",
+  "mots_cles": [
+    "biopesticides",
+    "engrais bio",
+    "benin",
+    "fabrication artisanale",
+    "protection des cultures"
+  ],
+  "titre_trouve": "Production Artisanale d’Engrais, Pesticides, Herbicides et Insecticides Bio",
+  "titre": "Guide pratique : Production artisanale d'engrais, pesticides, herbicides et insecticides bio au Bénin",
+  "resume": "Manuel pratique de formation décrivant les procédés artisanaux de fabrication de biofertilisants foliaires, insectifuges et biopesticides à base de plantes locales (Cassia alata, neem) au Bénin.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de formation locale sur la fabrication d'intrants biologiques au Bénin, complet et opérationnel.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Production Artisanale d’Engrais, Pesticides, Herbicides et Insecticides Bio"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "MARKO’S CORPORATION FORMATION REDACTION K. Marcel ASSANSE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00664__guide-pratique-production-artisanale-d-engrais-pesticid.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00664__guide-pratique-production-artisanale-d-engrais-pesticid.pdf"
+}

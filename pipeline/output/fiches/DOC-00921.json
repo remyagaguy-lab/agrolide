@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00921",
+  "sha256": "00a511c76ce398fb6130265a7ae81dc8ea565d95efa83e39bb415025c64f67a4",
+  "nom_original": "fruits au sirop compotes confitures gelees cerises confites.pdf",
+  "chemin_relatif_source": "OD_Docs/fruits au sirop compotes confitures gelees cerises confites.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 51766,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479537376-fruits_au_sirop_compotes_confitures_gelees_cerises_confites.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_fruits_legumes",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "fruits transformés",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA",
+  "mots_cles": [
+    "fruits transformes",
+    "confiture",
+    "fruits au sirop",
+    "confisage",
+    "agroalimentaire",
+    "diagramme de fabrication"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité FRUITS TRANSFORMES (2)",
+  "titre": "Synoptique technologique : Transformation des fruits (sirop, confitures, confisage)",
+  "resume": "Diagramme de procédé industriel détaillant les étapes unitaires de transformation des fruits : cerises confites, fruits au sirop, compotes, confitures et gelées (du triage au sertissage).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Planche synoptique de procédé isolée (page 2 d'une série technologique), archivée pour documentation technique.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.75,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité FRUITS TRANSFORMES (2)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00921__synoptique-technologique-transformation-des-fruits-siro.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_fruits_legumes/DOC-00921__synoptique-technologique-transformation-des-fruits-siro.pdf"
+}

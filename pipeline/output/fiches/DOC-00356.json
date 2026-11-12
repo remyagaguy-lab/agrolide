@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00356",
+  "sha256": "121c268d937130f01dface4287baf29c6562ea230a8cfb010884adb2d77a7efd",
+  "nom_original": "Données calcul porosité.docx",
+  "chemin_relatif_source": "OD_Docs/Données calcul porosité.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 14902,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "porosite du sol",
+    "masse volumique",
+    "physique du sol",
+    "pedologie",
+    "exercice corrige"
+  ],
+  "titre_trouve": "Porosité sol - Correction : Calcul de la Porosité du Sol",
+  "titre": "Exercice corrigé de physique du sol : Calcul de la porosité et de la masse volumique",
+  "resume": "Fiche pédagogique présentant un exercice d'application résolu sur le calcul de la masse volumique sèche, du volume des vides et de la porosité totale d'un échantillon de sol.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Court exercice didactique non sourcé sans mention d'auteur ou de licence, à valider avant mise à disposition.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Correction : Calcul de la Porosité du Sol"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "La porosité est une propriété clé qui affecte la capacité du sol à retenir l’eau"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00356__exercice-corrige-de-physique-du-sol-calcul-de-la-porosi.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00356__exercice-corrige-de-physique-du-sol-calcul-de-la-porosi.pdf"
+}

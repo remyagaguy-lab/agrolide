@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00397",
+  "sha256": "86ef22fc7f42a8bcc2db93a64bbc716473ff8e8527925007399d5bb28b0822cf",
+  "nom_original": "Exercice positionnement asp.docx",
+  "chemin_relatif_source": "OD_Docs/Exercice positionnement asp.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 81939,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Moustapha",
+  "source_organisation": null,
+  "mots_cles": [
+    "aspersion",
+    "irrigation par aspersion",
+    "dimensionnement",
+    "pluviometrie",
+    "rampes d'arrosage",
+    "ecartement"
+  ],
+  "titre_trouve": "Positionnement des asperseur cas pour un module de 1ha",
+  "titre": "Note de calcul : positionnement et dimensionnement d'un réseau d'aspersion sur un module de 1 ha",
+  "resume": "Fiche technique de calcul hydraulique définissant le nombre d'asperseurs, de rampes, les débits et la pluviométrie horaire pour la couverture intégrale par aspersion d'un module d'un hectare.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Note de calcul de dimensionnement hydraulique sans licence libre, archivée pour usage interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Positionnement des asperseur cas pour un module de 1ha (216 m x 48m)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00397__note-de-calcul-positionnement-et-dimensionnement-d-un-r.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00397__note-de-calcul-positionnement-et-dimensionnement-d-un-r.pdf"
+}

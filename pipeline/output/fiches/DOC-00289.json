@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00289",
+  "sha256": "9b46f90e759b61d2d223239e3490cdbb48942838eabf231f5d479ff4eeb8f1f6",
+  "nom_original": "Chapitre 1 partie 1.pdf",
+  "chemin_relatif_source": "OD_Docs/Chapitre 1 partie 1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 157349,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2010,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "matiere organique",
+    "eaux naturelles",
+    "qualite de l'eau",
+    "substances humiques",
+    "chimie de l'eau"
+  ],
+  "titre_trouve": "Chapitre I : Classification de la matière Organique des eaux naturelles",
+  "titre": "Classification de la matière organique des eaux naturelles",
+  "resume": "Revue bibliographique universitaire sur la caractérisation, l'origine et les classes de matières organiques dissoutes dans les eaux naturelles de surface.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre bibliographique extrait d'un travail académique non publié, incomplet et archivé.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.88,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre I : Classification de la matière Organique des eaux naturelles"
+    }
+  ],
+  "ensemble_id": "ENS-0013",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00289__classification-de-la-matiere-organique-des-eaux-naturel.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00289__classification-de-la-matiere-organique-des-eaux-naturel.pdf"
+}

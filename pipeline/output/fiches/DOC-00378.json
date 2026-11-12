@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00378",
+  "sha256": "fe7f4fd1a0c4f96de6784874f6a686a2674118fb7b45ecbfdcb59283bcfccee0",
+  "nom_original": "Echantillonnage.pdf",
+  "chemin_relatif_source": "OD_Docs/Echantillonnage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 76424,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "fruits",
+  "pays": "Canada",
+  "annee": 2014,
+  "auteurs": "Ministère de l'Agriculture et de l'Aquaculture du Nouveau-Brunswick",
+  "source_organisation": "Ministère de l'Agriculture et de l'Aquaculture (Nouveau-Brunswick)",
+  "mots_cles": [
+    "analyse foliaire",
+    "echantillonnage de tissus vegetaux",
+    "fertilisation",
+    "nutrition minerale",
+    "arboriculture"
+  ],
+  "titre_trouve": "Échantillonnage de tissus végétaux Les avantages de l’analyse foliaire pour l’agriculture",
+  "titre": "Guide d'échantillonnage de tissus végétaux et diagnostic par analyse foliaire",
+  "resume": "Fiche technique décrivant le protocole d'échantillonnage foliaire pour diagnostiquer l'équilibre nutritif des cultures fruitières et ajuster la fertilisation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle de bonne qualité sur l'échantillonnage foliaire, adaptable aux arboriculteurs et techniciens malgré un contexte tempéré d'origine.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Échantillonnage de tissus végétaux Les avantages de l’analyse foliaire pour l’agriculture"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00378__guide-d-echantillonnage-de-tissus-vegetaux-et-diagnosti.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00378__guide-d-echantillonnage-de-tissus-vegetaux-et-diagnosti.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-01063",
+  "sha256": "3dd645bc8978ea7855406bc0d97a6f6997bc7e2de604b08918711fee4e42c263",
+  "nom_original": "zootechnie-spéciale.pdf",
+  "chemin_relatif_source": "OD_Docs/zootechnie-spéciale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 684739,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 54,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "bovins / cuniculture",
+  "pays": "Algérie",
+  "annee": 2018,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "zootechnie speciale",
+    "elevage bovin",
+    "cuniculture",
+    "lapin",
+    "conduite d'elevage",
+    "algerie"
+  ],
+  "titre_trouve": "Zootechnie spéciale : L’élevage bovin et cuniculture",
+  "titre": "Cours de zootechnie spéciale : élevage bovin et cuniculture",
+  "resume": "Support de cours universitaire abordant les filières animales spécifiques : conduite technique de l'élevage bovin (rationnement, ambiance du bâtiment) et de la cuniculture (fumier, viande, peau et poil).",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non publié sous licence libre, conservé en archives pédagogiques pour les filières animales.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L’ELEVAGE BOVIN I. Situation de l’élevage bovin en Algérie"
+    },
+    {
+      "champ": "autre",
+      "page": 54,
+      "extrait": "La peau... On utilise surtout celui du lapin Angora"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01063__cours-de-zootechnie-speciale-elevage-bovin-et-cunicultu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-01063__cours-de-zootechnie-speciale-elevage-bovin-et-cunicultu.pdf"
+}

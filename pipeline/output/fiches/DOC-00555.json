@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00555",
+  "sha256": "b01e2f7677deb200ba700c03846a92285108a24602e18a43ad02c3d89701ce9a",
+  "nom_original": "Les animaux de la ferme.pdf",
+  "chemin_relatif_source": "OD_Docs/Les animaux de la ferme.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 322853,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2012,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "imagier",
+    "animaux de la ferme",
+    "pedagogie enfantine",
+    "vocabulaire"
+  ],
+  "titre_trouve": "les animaux de la ferme imagiers",
+  "titre": "Imagier des animaux de la ferme",
+  "resume": "Support illustré de vocabulaire élémentaire pour enfants de maternelle recensant les animaux domestiques de la ferme.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Imagier destiné aux enfants des écoles primaires, sans teneur technique d'élevage, hors cible professionnelle.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "les animaux de la ferme imagiers (Métadonnées titre)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00555__imagier-des-animaux-de-la-ferme.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00555__imagier-des-animaux-de-la-ferme.pdf"
+}

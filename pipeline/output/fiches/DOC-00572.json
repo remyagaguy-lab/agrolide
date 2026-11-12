@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00572",
+  "sha256": "ddc5dbf43748d4bce7c6c1083f4cfce0e070a45990eaca23ca58bbb7389bcc0a",
+  "nom_original": "L’échantillonnage de sol et de feuilles .pdf",
+  "chemin_relatif_source": "OD_Docs/L’échantillonnage de sol et de feuilles .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 317800,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "bleuet",
+  "pays": "Canada",
+  "annee": 2010,
+  "auteurs": "Marie-Ève Moreau, Véronique Moreau, Jean Lafond",
+  "source_organisation": "Club Conseil Bleuet / Agriculture et Agroalimentaire Canada",
+  "mots_cles": [
+    "echantillonnage de sol",
+    "analyse foliaire",
+    "fertilite du sol",
+    "bleuet sauvage",
+    "agronomie"
+  ],
+  "titre_trouve": "La production du bleuet sauvage dans une perspective de développement durable - 9.1 L’échantillonnage de sol et de feuilles",
+  "titre": "L’échantillonnage de sol et de feuilles en verger de bleuets sauvages",
+  "resume": "Fiche méthodologique décrivant le protocole de prélèvement et de conditionnement d'échantillons de sol et de feuilles pour le suivi de la fertilité en culture pérenne.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Section isolée (chapitre 9.1) d'un guide québécois en zone boréale tempérée, archivée car incomplète.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La production du bleuet sauvage… dans une perspective de développement durable ... 9.1 L’échantillonnage de sol et de feuilles"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00572__lechantillonnage-de-sol-et-de-feuilles-en-verger-de-ble.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00572__lechantillonnage-de-sol-et-de-feuilles-en-verger-de-ble.pdf"
+}

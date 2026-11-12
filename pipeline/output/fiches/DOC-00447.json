@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00447",
+  "sha256": "384f89352754b3344602bb709cd6c42e28b5da10982caf3ddf2f31cd53f1cfba",
+  "nom_original": "Fiche_technico-economique_piment_vert_Dosso_Juin2017.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche_technico-economique_piment_vert_Dosso_Juin2017.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 660259,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "piment",
+  "pays": "Niger",
+  "annee": 2017,
+  "auteurs": "Chambre Régionale d'Agriculture de Dosso",
+  "source_organisation": "CRA Dosso / RECA Niger",
+  "mots_cles": [
+    "piment vert",
+    "fiche technico-economique",
+    "dosso",
+    "niger",
+    "maraichage",
+    "rentabilite"
+  ],
+  "titre_trouve": "Fiche technico-économique pour le piment vert - Région de Dosso",
+  "titre": "Fiche technico-économique : Culture du piment vert à Dosso",
+  "resume": "Fiche technico-économique de la CRA de Dosso présentant la conduite de culture du piment vert au Niger, avec bilan financier complet (charges, produit brut, marge brute et gestion des risques).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique et financier institutionnel de la Chambre Régionale d'Agriculture de Dosso, conçu pour l'appui-conseil aux maraîchers sahéliens.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technico-économique pour le piment vert"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00447__fiche-technico-economique-culture-du-piment-vert-a-doss.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00447__fiche-technico-economique-culture-du-piment-vert-a-doss.pdf"
+}

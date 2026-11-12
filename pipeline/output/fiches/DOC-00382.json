@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00382",
+  "sha256": "47d3ef4638cc5234c5b6b77e214cc11fb1c48c8d58944ed1cbe688e8902227f1",
+  "nom_original": "Elevage de la volaille villageoise.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage de la volaille villageoise.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7188754,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 103,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Network for Smallholder Poultry Development",
+  "source_organisation": "Network for Smallholder Poultry Development / DANIDA",
+  "mots_cles": [
+    "aviculture villageoise",
+    "volaille",
+    "poulet local",
+    "habitat avicole",
+    "alimentation volaille",
+    "sante animale",
+    "danida"
+  ],
+  "titre_trouve": "Elevage de la Volaille Villageoise Un manuel technique sur la production avicole à petite échelle",
+  "titre": "Élevage de la volaille villageoise : manuel technique sur la production avicole à petite échelle",
+  "resume": "Manuel pratique complet et illustré abordant la conduite, le logement, l'alimentation, la santé, la rentabilité et la génétique de l'aviculture rurale familiale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel de référence sur l'aviculture villageoise tropicale, libre de diffusion institutionnelle (DANIDA) et de très forte valeur pour le terrain.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Elevage de la Volaille Villageoise Un manuel technique sur la production avicole à petite échelle"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00382__elevage-de-la-volaille-villageoise-manuel-technique-sur.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00382__elevage-de-la-volaille-villageoise-manuel-technique-sur.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00892",
+  "sha256": "ad8ccecde6a6e73f299ac4c426fc81cdf8388a8b33cd30cc5acdd15cea93ea89",
+  "nom_original": "elever caille pour l-ornement.pdf",
+  "chemin_relatif_source": "OD_Docs/elever caille pour l-ornement.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1243125,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "droits_reserves",
+    "contexte_non_adapte",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2009,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "cailles d'ornement",
+    "colin de virginie",
+    "voliere",
+    "aviculture d'agrement"
+  ],
+  "titre_trouve": "Élever des cailles pour l’ornement",
+  "titre": "Élever des cailles pour l'ornement (Extrait d'ouvrage)",
+  "resume": "Extrait d'un ouvrage spécialisé consacré à l'élevage amateur et d'agrément des cailles et colins en volière d'ornement (sélection des mutations et races colorées).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un livre d'élevage ornemental sous droits réservés et sans utilité directe pour la production agricole africaine.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.9,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Élever des cailles pour l’ornement"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00892__elever-des-cailles-pour-l-ornement-extrait-d-ouvrage.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00892__elever-des-cailles-pour-l-ornement-extrait-d-ouvrage.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00738",
+  "sha256": "d194e803c8435ade68a841935188e28a29be2018bca322e451ab3d7eebf1534d",
+  "nom_original": "T1_INCUB.pdf",
+  "chemin_relatif_source": "OD_Docs/T1_INCUB.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 333129,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Côte d'Ivoire",
+  "annee": 2002,
+  "auteurs": "Christian Favre",
+  "source_organisation": "SECAAR (Service Chrétien d'Animation Rurale)",
+  "mots_cles": [
+    "incubateur a petrole",
+    "couveuse artisanale",
+    "aviculture",
+    "poussins",
+    "secaar",
+    "cote d'ivoire"
+  ],
+  "titre_trouve": "CONSTRUIRE SON INCUBATEUR A PETROLE",
+  "titre": "Construire son incubateur à pétrole pour la production de poussins",
+  "resume": "Guide pratique d'auto-construction d'un incubateur avicole artisanal à pétrole, conçu par le SECAAR pour permettre la production de poussins en milieu rural sans électricité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de technologie appropriée diffusé par le SECAAR pour l'aviculture villageoise en Afrique, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CONSTRUIRE SON INCUBATEUR A PETROLE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Diffusé par: SECAAR - 06 B. P. 2037 - Abidjan 06 - CÔTE D'IVOIRE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00738__construire-son-incubateur-a-petrole-pour-la-production.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00738__construire-son-incubateur-a-petrole-pour-la-production.pdf"
+}

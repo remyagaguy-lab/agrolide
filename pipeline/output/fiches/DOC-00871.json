@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00871",
+  "sha256": "8dd6c8be06a432e5e2cbb923b0394430ad602800d0270bc7e2545f3c3f0db528",
+  "nom_original": "downloaded_3_146.pdf",
+  "chemin_relatif_source": "OD_Docs/downloaded_3_146.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 648968,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2016,
+  "auteurs": "Association Sahel People Service (SPS), AFAFA, SECAAR",
+  "source_organisation": "SECAAR",
+  "mots_cles": [
+    "zai",
+    "agroecologie",
+    "conservation des sols",
+    "zipelle",
+    "sahel",
+    "restauration des terres"
+  ],
+  "titre_trouve": "La technique du Zaï",
+  "titre": "La technique du Zaï : Restauration des terres dégradées au Sahel",
+  "resume": "Guide pratique illustré décrivant la technique agroécologique du zaï : creusement des poquets, apport de matière organique, rétention de l'eau et outillage adapté au Sahel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique d'agroécologie sahélienne de référence, complet et librement diffusé par l'ONG SECAAR.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Diffusé par Secaar ... La technique du Zaï"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00871__la-technique-du-zai-restauration-des-terres-degradees-a.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00871__la-technique-du-zai-restauration-des-terres-degradees-a.pdf"
+}

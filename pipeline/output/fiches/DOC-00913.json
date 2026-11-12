@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00913",
+  "sha256": "0eecf770e0a4ae8db3b573a6b2079d62bb9a7f8a350c1a091f855c2c5b9e9f3a",
+  "nom_original": "fiche_technique_amarante_cra_niamey (1).pdf",
+  "chemin_relatif_source": "OD_Docs/fiche_technique_amarante_cra_niamey (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 536709,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "amarante",
+  "pays": "Niger",
+  "annee": 2023,
+  "auteurs": "Mme Iboune Mariama, Assouman Djibo Ayouba",
+  "source_organisation": "Chambre Régionale d'Agriculture de Niamey",
+  "mots_cles": [
+    "amarante",
+    "maraichage urbain",
+    "legume-feuille",
+    "niamey",
+    "cra niger"
+  ],
+  "titre_trouve": "Pratiques des producteurs pour la culture de l’amarante",
+  "titre": "Fiche technique : Pratiques des producteurs pour la culture de l'amarante à Niamey",
+  "resume": "Fiche technique de la CRA de Niamey décrivant la culture maraîchère de l'amarante : semis, repiquage, gestion de l'eau, fumure organique et protection phytosanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique officielle de vulgarisation agricole de la CRA de Niamey, directement exploitable par les producteurs maraîchers.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chambre Régionale d’Agriculture de Niamey Fiche technique Pratiques des producteurs pour la culture de l’amarante"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00913__fiche-technique-pratiques-des-producteurs-pour-la-cultu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00913__fiche-technique-pratiques-des-producteurs-pour-la-cultu.pdf"
+}

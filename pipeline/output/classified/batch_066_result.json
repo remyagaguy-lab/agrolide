@@ -1,0 +1,875 @@
+{
+  "batch_number": 66,
+  "results": [
+    {
+      "id": "DOC-01007",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2025,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physiologie vegetale",
+        "eau et plantes",
+        "transpiration",
+        "continuum sol plante atmosphere",
+        "assimilats",
+        "cours"
+      ],
+      "titre_trouve": "L’eau et les plantes",
+      "titre": "Cours de physiologie végétale : L'eau et les plantes (Absorption, transport et assimilats)",
+      "resume": "Support de cours universitaire de physiologie végétale abordant les rôles de l'eau, le continuum sol-plante-atmosphère, les mécanismes d'absorption racinaire et la distribution des assimilats.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours académique de physiologie végétale non publié sous licence libre, classé en archive.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’eau et les plantes"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "90-98% de l’eau absorbée par la plante est perdue par évaporation - transpiration"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01008",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "phytopathologie",
+        "maladies des plantes",
+        "protection des cultures",
+        "cours",
+        "scan"
+      ],
+      "titre_trouve": "phytopath g 3",
+      "titre": "Cours de phytopathologie générale (Partie 3)",
+      "resume": "Document scanné contenant la troisième partie d'un cours de phytopathologie générale portant sur les maladies des plantes et la protection des cultures.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé nécessitant une reconnaissance optique de caractères (OCR) pour vérification du contenu et des droits.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "phytopath g 3"
+        },
+        {
+          "champ": "drapeaux_ajoutes",
+          "page": 1,
+          "extrait": "ocr_necessaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01009",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "phytopathologie",
+        "maladies des cultures",
+        "protection des vegetaux",
+        "cours",
+        "scan"
+      ],
+      "titre_trouve": "phytopathologie générale 1",
+      "titre": "Cours de phytopathologie générale (Partie 1)",
+      "resume": "Document scanné constituant la première partie d'un polycopié de cours de phytopathologie générale sur les agents pathogènes des végétaux.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte indexable nécessitant un traitement OCR et une validation humaine de son statut juridique.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "phytopathologie générale 1"
+        },
+        {
+          "champ": "drapeaux_ajoutes",
+          "page": 1,
+          "extrait": "ocr_necessaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01010",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "plantes_aromatiques_medicinales"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment et poivron",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "228AgroConseil",
+      "source_organisation": "228AgroConseil",
+      "mots_cles": [
+        "piment",
+        "poivron",
+        "cultures maraicheres",
+        "itineraire technique",
+        "pepiniere",
+        "togo"
+      ],
+      "titre_trouve": "228AgroConseil La culture du piment/poivron",
+      "titre": "Itinéraire technique de la culture du piment et du poivron au Togo",
+      "resume": "Guide pratique illustré détaillant la conduite de la culture du piment et du poivron en Afrique tropicale : choix du site, variétés, pépinière, repiquage, fertilisation, récolte et débouchés.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support de vulgarisation et de conseil agricole complet, adapté aux producteurs maraîchers ouest-africains.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "228AgroConseil La culture du piment/poivron"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "228AgroConseil"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01012",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "plantes aromatiques",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "plantes aromatiques",
+        "aromates",
+        "production vegetale",
+        "scan",
+        "ocr"
+      ],
+      "titre_trouve": "plantes aromatique",
+      "titre": "Document sur les plantes aromatiques et médicinales",
+      "resume": "Fascicule numérisé non océrisé consacré à l'identification et aux caractéristiques agronomiques des plantes aromatiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier numérisé sans texte exploitable nécessitant un traitement OCR avant qualification et publication.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "plantes aromatique"
+        },
+        {
+          "champ": "drapeaux_ajoutes",
+          "page": 1,
+          "extrait": "ocr_necessaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01013",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "conservation_post_recolte",
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "plats cuisines appertises",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "appertisation",
+        "plats cuisines",
+        "conserve",
+        "sterilisation",
+        "poisson",
+        "viande",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "PLATS CUISINES APPERTISES",
+      "titre": "Diagramme de procédé industriel : Plats cuisinés appertisés de poissons, viandes et pâtes farcies",
+      "resume": "Schéma technologique synthétique illustrant les étapes de fabrication et de stérilisation (appertisation) des plats cuisinés industriels à base de poisson, de viande et de pâtes farcies.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de procédé agroalimentaire claire et utile pour la conception d'unités de transformation et de conserverie.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PLATS CUISINES APPERTISES"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01014",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "politiques_strategies"
+      ],
+      "type_doc": "actes_conference",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "decideur_institution",
+        "enseignant_chercheur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture en cage (tilapia)",
+      "pays": "Ouganda",
+      "annee": 2008,
+      "auteurs": "Matthias Halwart, John F. Moehl (éd.)",
+      "source_organisation": "FAO",
+      "mots_cles": [
+        "pisciculture en cage",
+        "fao",
+        "tilapia du nil",
+        "aquaculture afrique",
+        "lac volta",
+        "actes atelier"
+      ],
+      "titre_trouve": "Atelier régional d’experts de la FAO sur la Pisciculture en cage en Afrique",
+      "titre": "Pisciculture en cage en Afrique : Actes de l'atelier régional d'experts de la FAO (Entebbe, Ouganda)",
+      "resume": "Rapport et actes de l'atelier régional de la FAO présentant l'état des lieux, les technologies de cages flottantes, le cadre réglementaire et les perspectives de l'aquaculture en cage en Afrique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Publication de référence de la FAO de plus de 140 pages, accessible aux membres de la plateforme.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Atelier régional d’experts de la FAO sur la Pisciculture en cage en Afrique"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "ORGANISATION DES NATIONS UNIES POUR L’ALIMENTATION ET L’AGRICULTURE Rome, 2008"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01015",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "conservation_post_recolte",
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "poisson fume et charcuterie",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "poisson fume",
+        "batonnets panes",
+        "fumage",
+        "porc transforme",
+        "charcuterie",
+        "procede agroalimentaire"
+      ],
+      "titre_trouve": "POISSONS FUMES ET BATONNETS SURGELES",
+      "titre": "Diagrammes de procédés : Poissons fumés, bâtonnets panés surgelés et charcuterie porcine",
+      "resume": "Fiches techniques sous forme de schémas de fabrication détaillant les étapes industrielles de transformation du poisson (fumage traditionnel et ionisé, panure) et de la poitrine de porc (salage, étuvage, séchage).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle illustrant les procédés de transformation et de fumage des produits animaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "POISSONS FUMES ET BATONNETS SURGELES"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01016",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "cultures_de_rente",
+        "transformation_fruits_legumes"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "poivre",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Fulliquet J.",
+      "source_organisation": null,
+      "mots_cles": [
+        "poivre",
+        "piper nigrum",
+        "epice",
+        "poivre noir",
+        "poivre blanc",
+        "sarawak",
+        "culture tropicale"
+      ],
+      "titre_trouve": "LE POIVRE",
+      "titre": "Monographie sur le poivre (Piper nigrum) : Botanique, origines, transformation et qualités",
+      "resume": "Document complet présentant la culture du poivrier (Piper nigrum), les origines géographiques, les procédés de transformation des baies (poivre noir, blanc, vert) et les normes de calibrage commercial.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide documentaire détaillé sur la filière poivre, ses variétés et sa transformation post-récolte en milieu tropical.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE POIVRE"
+        },
+        {
+          "champ": "filiere",
+          "page": 2,
+          "extrait": "Les grains de poivre sont les grains des baies du Piper nigrum"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01017",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "poivron",
+      "pays": "France",
+      "annee": 2016,
+      "auteurs": "Jérôme LECERF",
+      "source_organisation": "Service du Développement Rural (SDR)",
+      "mots_cles": [
+        "poivron",
+        "capsicum annuum",
+        "fiche technique",
+        "culture tropicale",
+        "solanacees",
+        "protection phytosanitaire"
+      ],
+      "titre_trouve": "Service du développement rural - 2016 Le poivron (Capsicum annuum L.)",
+      "titre": "Fiche technique de culture du poivron en milieu tropical (SDR)",
+      "resume": "Guide agronomique complet sur la culture du poivron en climat tropical, couvrant les exigences climatiques, l'itinéraire cultural de la pépinière à la récolte, et la protection phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle officielle de haute qualité agronomique pour la culture tropicale du poivron.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Service du développement rural - 2016 Le poivron (Capsicum annuum L.)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Service du développement rural"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01018",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "foresterie_agroforesterie",
+        "biodiversite_ecologie"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "protection des cultures",
+      "pays": "Algérie",
+      "annee": 2022,
+      "auteurs": "Dr. Omar KHALADI",
+      "source_organisation": "Université 8 mai 1945 Guelma",
+      "mots_cles": [
+        "entomologie agricole",
+        "nematologie",
+        "acridiens",
+        "ravageurs des cultures",
+        "protection des vegetaux",
+        "polycopie"
+      ],
+      "titre_trouve": "ENTOMOLOGIE ET NÉMATOLOGIE AGRICOLE ET FORESTIÈRE",
+      "titre": "Polycopié de cours : Entomologie et nématologie agricole et forestière (Master 1)",
+      "resume": "Polycopié universitaire exhaustif traitant de la morphologie, de la biologie et de la lutte intégrée contre les insectes, acridiens et nématodes ravageurs des cultures agricoles et forestières.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non diffusé sous licence libre, archivé pour référence académique.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ENTOMOLOGIE ET NÉMATOLOGIE AGRICOLE ET FORESTIÈRE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Université 8 mai 1945 Guelma Polycopie de cours destiné aux étudiants en Master 1"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01019",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pomme de terre",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "228AgroConseil",
+      "source_organisation": "228AgroConseil",
+      "mots_cles": [
+        "pomme de terre",
+        "tubercules",
+        "prégermination",
+        "semences",
+        "itineraire technique",
+        "togo"
+      ],
+      "titre_trouve": "228AgroConseil Culture de la pomme de terre",
+      "titre": "Itinéraire technique de culture de la pomme de terre en Afrique de l'Ouest",
+      "resume": "Guide pratique de formation détaillant la culture de la pomme de terre : prégermination des tubercules, choix variétal, préparation du sol, plantation, entretien et commercialisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de vulgarisation agricole directement utilisable par les producteurs et techniciens en zone tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "228AgroConseil Culture de la pomme de terre"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "228AgroConseil"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01020",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": [
+        "equipements_technologie",
+        "conservation_post_recolte"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "pomme de terre transformee",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "pomme de terre transformee",
+        "frites surgelees",
+        "flocons de puree",
+        "procede agroalimentaire",
+        "transformation tubercules"
+      ],
+      "titre_trouve": "POMMES DE TERRE TRANSFORMÉES",
+      "titre": "Diagramme de procédé industriel : Transformation de la pomme de terre (Frites, purée, croquettes)",
+      "resume": "Schéma technologique synthétique détaillant les opérations unitaires de transformation de la pomme de terre en frites surgelées, flocons de purée déshydratés et produits élaborés.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique industrielle utile pour les porteurs de projets d'unités de transformation agroalimentaire des tubercules.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "POMMES DE TERRE TRANSFORMÉES"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01021",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "elevage_general"
+      ],
+      "type_doc": "cours",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture (pondeuse et chair)",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "aviculture",
+        "poulet de chair",
+        "poule pondeuse",
+        "formation avicole",
+        "scan",
+        "ocr"
+      ],
+      "titre_trouve": "pondeuse & chaire formation",
+      "titre": "Manuel de formation à l'aviculture : Poules pondeuses et poulets de chair",
+      "resume": "Support de formation avicole numérisé sans couche texte, abordant la conduite technique de l'élevage des poules pondeuses et des poulets de chair.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte indexable nécessitant un OCR pour identifier précisément le formateur et vérifier les droits.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "pondeuse & chaire formation"
+        },
+        {
+          "champ": "drapeaux_ajoutes",
+          "page": 1,
+          "extrait": "ocr_necessaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01022",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "lait et produits laitiers",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "poudre de lait",
+        "tour d atomisation",
+        "laiterie",
+        "agroalimentaire",
+        "transformation laitiere",
+        "alimentation animale"
+      ],
+      "titre_trouve": "POUDRES DE LAIT",
+      "titre": "Diagramme de procédé industriel : Fabrication des poudres de lait (Atomisation et rouleaux)",
+      "resume": "Schéma technologique synthétique décrivant les étapes industrielles de fabrication des poudres de lait pour alimentation humaine et animale : écrémage, évaporation, atomisation et conditionnement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique claire sur les technologies de concentration et séchage du lait, utile pour les professionnels de l'agroalimentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "POUDRES DE LAIT"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    }
+  ]
+}

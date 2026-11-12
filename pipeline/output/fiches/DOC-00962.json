@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00962",
+  "sha256": "4ef64c0a01969f122a1f24fb4c16969fdb2d5514c42258975070e6d4fb8b4dbd",
+  "nom_original": "itineraire-technique-peli-pdt--rev-novembre14.pdf",
+  "chemin_relatif_source": "OD_Docs/itineraire-technique-peli-pdt--rev-novembre14.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1538992,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 33,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "pomme de terre",
+  "pays": "Canada",
+  "annee": 2014,
+  "auteurs": "Nadia Surdek",
+  "source_organisation": "PleineTerre / MAPAQ / CDAQ",
+  "mots_cles": [
+    "pomme de terre",
+    "itineraire technique",
+    "solanacee",
+    "mapaq",
+    "fertilisation",
+    "protection phytosanitaire",
+    "quebec"
+  ],
+  "titre_trouve": "Itinéraire technique de la pomme de terre",
+  "titre": "Itinéraire technique de la culture de la pomme de terre (Québec)",
+  "resume": "Guide technique de 33 pages structurant chronologiquement l'ensemble des étapes de production de la pomme de terre : préparation du sol, plantation, fertilisation raisonnée, protection phytosanitaire intégrée et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Itinéraire technique institutionnel de référence (MAPAQ) d'une grande valeur méthodologique pour la production de tubercules, diffusable en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Itinéraire technique de la pomme de terre Pour les producteurs horticoles et les conseillers agronomiques"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Conseil pour le développement de l'Agriculture du Québec Direction régionale du Bas-Saint-Laurent, MAPAQ"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00962__itineraire-technique-de-la-culture-de-la-pomme-de-terre.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00962__itineraire-technique-de-la-culture-de-la-pomme-de-terre.pdf"
+}

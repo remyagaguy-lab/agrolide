@@ -1,0 +1,72 @@
+{
+  "id": "DOC-01005",
+  "sha256": "c9d9d4f3cbee0a3645e49cc619e92e0f6613161ffb1beb2dc0bfb298bc41982e",
+  "nom_original": "pdf_44.pdf",
+  "chemin_relatif_source": "OD_Docs/pdf_44.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1521316,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 39,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "tilapia",
+  "pays": "Togo",
+  "annee": 2011,
+  "auteurs": "Amakoé Adjanké",
+  "source_organisation": "CTOP (Coordination Togolaise des Organisations Paysannes)",
+  "mots_cles": [
+    "pisciculture",
+    "oreochromis niloticus",
+    "tilapia",
+    "alevins",
+    "ctop",
+    "togo",
+    "gestion piscicole"
+  ],
+  "titre_trouve": "Production d’alevins et gestion de ferme piscicole : Manuel de formation en pisciculture",
+  "titre": "Production d'alevins et gestion d'une ferme piscicole (Manuel CTOP Togo)",
+  "resume": "Manuel de formation pratique de la CTOP Togo couvrant la reproduction artificielle du tilapia (Oreochromis niloticus), l'alevinage, l'alimentation, le suivi sanitaire et la gestion technico-économique d'une ferme aquacole.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel de formation complet produit pour une organisation paysanne faîtière (CTOP), hautement pertinent pour l'aquaculture tropicale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Manuel de formation en pisciculture ... PRODUCTION D’ALEVINS ET GESTION DE FERME PISCICOLE C.T.O.P"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01005__production-d-alevins-et-gestion-d-une-ferme-piscicole-m.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-01005__production-d-alevins-et-gestion-d-une-ferme-piscicole-m.pdf"
+}

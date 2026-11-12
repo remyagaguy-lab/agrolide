@@ -1,0 +1,79 @@
+{
+  "id": "DOC-01068",
+  "sha256": "9bfe9da07e931d06d9e3c84d6d71952aa10910d0dec375385114b0c56e4d472c",
+  "nom_original": "15.pdf",
+  "chemin_relatif_source": "OD_traites/15.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 1705631,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476185597-15.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 50,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "huiles_sucre_corps_gras",
+  "type_doc": "rapport",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "oléiculture / huile d'olive",
+  "pays": "Tunisie",
+  "annee": 2016,
+  "auteurs": "M.B.A",
+  "source_organisation": "République Tunisienne (APIA / Ministère de l'Agriculture)",
+  "mots_cles": [
+    "huile d'olive biologique",
+    "transformation",
+    "conditionnement",
+    "etude de faisabilite",
+    "tunisie",
+    "rentabilite",
+    "normes coi"
+  ],
+  "titre_trouve": "Transformation et conditionnement de l’huile d’olive biologique",
+  "titre": "Étude de projet : Transformation et conditionnement de l'huile d'olive biologique en Tunisie",
+  "resume": "Dossier technico-économique complet de 50 pages sur la création d'une unité de trituration et de mise en bouteille d'huile d'olive bio : technologie, normes de qualité COI, analyse de marché et modèle financier de rentabilité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Étude technico-économique institutionnelle complète de valorisation oléicole, réservée aux membres porteurs de projets et conseillers.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Transformation et conditionnement de l’huile d’olive biologique Janvier 2016"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "REPUBLIQUE TUNISIENNE (métadonnées titre)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01068__etude-de-projet-transformation-et-conditionnement-de-l.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/huiles_sucre_corps_gras/DOC-01068__etude-de-projet-transformation-et-conditionnement-de-l.pdf"
+}

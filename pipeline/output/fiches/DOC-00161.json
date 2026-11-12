@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00161",
+  "sha256": "eb5ade4dda117f3e2ec0301be3edff57d101c6f8c181cce53c63651cf5a4f84f",
+  "nom_original": "AgriMag-arabe-decembre-2024.pdf",
+  "chemin_relatif_source": "OD_Docs/AgriMag-arabe-decembre-2024.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 26708256,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "langue_peu_exploitable"
+  ],
+  "nb_pages": 16,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "periodique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "autre",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2024,
+  "auteurs": "Société d'Édition Agricole",
+  "source_organisation": "Agriculture du Maghreb",
+  "mots_cles": [
+    "agriculture du maghreb",
+    "arabe",
+    "palmier dattier",
+    "terfas",
+    "oignon",
+    "maroc"
+  ],
+  "titre_trouve": "Agriculture du Maghreb N° 164 - Décembre 2024",
+  "titre": "Agriculture du Maghreb N° 164 : Supplément en langue arabe (Décembre 2024)",
+  "resume": "Supplément en langue arabe du magazine Agriculture du Maghreb (décembre 2024), traitant de la filière palmier dattier, de la truffe des sables et de la dégradation des sols.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Supplément rédigé intégralement en langue arabe, peu directement exploitable pour le public francophone subsaharien d'Agrolide.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "langue",
+      "page": 1,
+      "extrait": "مجلة مهنية مختصة بقطاع اخلضر و الفواكه، احلبوب، الزراعات السكرية و تربية املواشي"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agriculture du Maghreb N° 164 - Décembre 2024"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00161__agriculture-du-maghreb-n-164-supplement-en-langue-arabe.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00161__agriculture-du-maghreb-n-164-supplement-en-langue-arabe.pdf"
+}

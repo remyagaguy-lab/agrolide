@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00347",
+  "sha256": "c7b059c5dbb7f3bc7fc800328e57d599bd5bc99d8ed579a742d63b885982a8bf",
+  "nom_original": "Devoir 2.docx",
+  "chemin_relatif_source": "OD_Docs/Devoir 2.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 26441,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "pisciculture / tilapia et silure",
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "EMESA",
+  "source_organisation": "École des Métiers de l'Élevage et de la Santé Animale (EMESA)",
+  "mots_cles": [
+    "pisciculture",
+    "tilapia",
+    "silure",
+    "hormone 17a-mt",
+    "dimensionnement",
+    "examen",
+    "emesa"
+  ],
+  "titre_trouve": "Pisciculture / TSE EMESA Décembre 2020 Exercice",
+  "titre": "Épreuve de pisciculture : production d'alevins de silures et tilapias (EMESA)",
+  "resume": "Sujet d'examen professionnel de l'EMESA pour techniciens d'élevage, comprenant des exercices de calcul sur l'inversion sexuelle du tilapia par le 17α-MT, l'alimentation et la gestion de géniteurs de silures.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Épreuve d'examen interne d'une école professionnelle d'élevage sans autorisation de diffusion ouverte, conservée en archives pédagogiques.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Pisciculture / TSE EMESA Décembre 2020 Exercice"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Mr Traoré vous contacte pour un projet de productions d’alevins de silures et de tilapia"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00347__epreuve-de-pisciculture-production-d-alevins-de-silures.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00347__epreuve-de-pisciculture-production-d-alevins-de-silures.pdf"
+}

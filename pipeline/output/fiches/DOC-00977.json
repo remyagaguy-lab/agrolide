@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00977",
+  "sha256": "dee2008a8de53c3bace00a58719d60bd32748d7b73632e91cdd5f17067e17e75",
+  "nom_original": "les ingredients d_aliment vollailes(1).pdf",
+  "chemin_relatif_source": "OD_Docs/les ingredients d_aliment vollailes(1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 153212,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00976",
+  "groupe_doublon_id": "GRP-0064",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00976 (Formule artisanale d'aliment enrichi et vitamines pour volailles (Ferme Ouiya)).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2017,
+  "auteurs": "Désiré Ouiya (Ferme Ouiya)",
+  "source_organisation": "Ferme Ouiya",
+  "mots_cles": [
+    "alimentation volaille",
+    "vitamine bio",
+    "grains germes",
+    "chenilles",
+    "ferme ouiya",
+    "burkina faso"
+  ],
+  "titre_trouve": "Technique de fabrication de la vitamine bio",
+  "titre": "Formule artisanale d'aliment enrichi et vitamines pour volailles (Ferme Ouiya)",
+  "resume": "Fiche de recette et méthode de fabrication artisanale d'un complément alimentaire biologique pour volailles à base de céréales germées, légumineuses et farine d'insectes au Burkina Faso.",
+  "statut_droits": "droits_reserves_commercial",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "droits",
+      "page": 1,
+      "extrait": "NB : la reproduction et la vente de ce document est interdite. Les auteurs seront poursuivis"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FERME OUIYA Technique de fabrication de la vitamine bio"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00977__formule-artisanale-d-aliment-enrichi-et-vitamines-pour.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00977__formule-artisanale-d-aliment-enrichi-et-vitamines-pour.pdf"
+}

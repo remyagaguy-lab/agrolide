@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00442",
+  "sha256": "1909ef495939800bf11bf391e37a699360f6248e511126637db8013c8f587f0d",
+  "nom_original": "FicheTechniqueCultureduPoivronCapsicumannunBiologique_AgricultureauCameroun.pdf",
+  "chemin_relatif_source": "OD_Docs/FicheTechniqueCultureduPoivronCapsicumannunBiologique_AgricultureauCameroun.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 287874,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "poivron",
+  "pays": "Cameroun",
+  "annee": 2018,
+  "auteurs": "Agriculture au Cameroun",
+  "source_organisation": "Agriculture au Cameroun",
+  "mots_cles": [
+    "poivron",
+    "agriculture biologique",
+    "fiche technique",
+    "maraichage",
+    "cameroun",
+    "capsicum"
+  ],
+  "titre_trouve": "Fiche Technique : Culture du Poivron ( Capsicum annun ) Biologique",
+  "titre": "Fiche technique : Culture biologique du poivron au Cameroun",
+  "resume": "Fiche technique synthétique présentant la conduite biologique de la culture du poivron au Cameroun : pépinière ombragée, préparation du sol, repiquage, fertilisation organique et récolte.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00441.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche Technique : Culture du Poivron ( Capsicum annun ) Biologique"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0068",
+  "canonique_id": "DOC-00441",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00442__fiche-technique-culture-biologique-du-poivron-au-camero.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00442__fiche-technique-culture-biologique-du-poivron-au-camero.pdf"
+}

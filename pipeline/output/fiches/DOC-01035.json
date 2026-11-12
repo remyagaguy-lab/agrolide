@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01035",
+  "sha256": "8e019a4a2ddefa5c3f3d8c0cc002da6e527ffa9b1da121cd877a6ac40389e7ad",
+  "nom_original": "revision_calcul_dose_nette_intervalle_et_durée_d_irrigation.pdf",
+  "chemin_relatif_source": "OD_Docs/revision_calcul_dose_nette_intervalle_et_durée_d_irrigation.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 69244,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "orge",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "dose nette",
+    "intervalle d'irrigation",
+    "duree d'irrigation",
+    "rfu",
+    "bilan hydrique"
+  ],
+  "titre_trouve": "revision calcul dose nette intervalle et durée d'irrigation Exercice N° 02 :",
+  "titre": "Calcul de la dose nette, de l'intervalle et de la durée d'irrigation",
+  "resume": "Exercice corrigé de calcul hydraulique et agronomique déterminant la dose nette, l'intervalle et la durée d'arrosage d'une culture sur 20 hectares.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche d'exercice technique pratique sans mention de droits d'auteur, conservée en base d'archivage documentaire.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "revision calcul dose nette intervalle et durée d'irrigation Exercice N° 02 :"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01035__calcul-de-la-dose-nette-de-l-intervalle-et-de-la-duree.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-01035__calcul-de-la-dose-nette-de-l-intervalle-et-de-la-duree.pdf"
+}

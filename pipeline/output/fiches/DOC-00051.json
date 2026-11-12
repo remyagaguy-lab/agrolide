@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00051",
+  "sha256": "8e7dad3d44c729d672d27d336af661915b022af0371b986afac7f80f95933db5",
+  "nom_original": "résumé 2 Zoologie  L2.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Zoologie/Zoologie/résumé 2 Zoologie  L2.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 15379405,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 29,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "zoologie",
+    "cours l2",
+    "biologie animale",
+    "sciences de base",
+    "classification animale"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 2 de zoologie - Licence 2",
+  "resume": "Deuxième partie d'un cours universitaire synthétique de zoologie de niveau L2, traitant de la systématique et de l'organisation biologique animale.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible nécessitant OCR et vérification humaine de la source et des droits.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.35,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "résumé 2 Zoologie  L2.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0008",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00051__resume-2-de-zoologie-licence-2.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00051__resume-2-de-zoologie-licence-2.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00565",
+  "sha256": "f51b545a505455396205efe4c3f6dd2656e28ae42b59b9bd7ac7a01d7faa91e4",
+  "nom_original": "Les_Bases_Culture_Blé_Dur.pdf",
+  "chemin_relatif_source": "OD_Docs/Les_Bases_Culture_Blé_Dur.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1199472,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "blé",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Organismes agricoles méditerranéens",
+  "mots_cles": [
+    "ble dur",
+    "cereales",
+    "fertilisation azotee",
+    "itineraire technique",
+    "qualite meuniere"
+  ],
+  "titre_trouve": "Blé dur - Fiche technique",
+  "titre": "Fiche technique : Conduite et fertilisation du blé dur",
+  "resume": "Fiche technique synthétique décrivant les bonnes pratiques culturales du blé dur : gestion de la fertilisation azotée fractionnée, stades phénologiques et rentabilité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique agricole complète d'origine institutionnelle, diffusable publiquement malgré un contexte d'origine méditerranéen.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Blé dur\nFiche technique\nLes enjeux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00565__fiche-technique-conduite-et-fertilisation-du-ble-dur.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00565__fiche-technique-conduite-et-fertilisation-du-ble-dur.pdf"
+}

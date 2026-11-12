@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00107",
+  "sha256": "89aa6949c3e6410e6fcc9b1b26443a66e00e06a5e3b5bf6c582bd898d0cefbf5",
+  "nom_original": "20_DTR_02P_Fiche_Technique_sorgho_EL.pdf",
+  "chemin_relatif_source": "OD_Docs/20_DTR_02P_Fiche_Technique_sorgho_EL.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 703074,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "sorgho",
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Éliane Lemaitre",
+  "source_organisation": null,
+  "mots_cles": [
+    "sorgho",
+    "fourrage",
+    "ensilage",
+    "valeur nutritive",
+    "conduite de culture"
+  ],
+  "titre_trouve": "Fiche technique Sorgho",
+  "titre": "Fiche technique : Conduite et valorisation du sorgho fourrager",
+  "resume": "Fiche synthétique présentant les caractéristiques agronomiques, types variétaux (monocoupe, multicoupes), itinéraires de culture et modes de valorisation fourragère (ensilage, pâture) du sorgho.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Validation humaine requise (confiance={'classification': 0.92, 'droits': 0.8, 'completude': 0.95}, accord_audit=True).",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique Sorgho"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "LEMAITRE Eliane"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0069",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00107__fiche-technique-conduite-et-valorisation-du-sorgho-four.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00107__fiche-technique-conduite-et-valorisation-du-sorgho-four.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00340",
+  "sha256": "32c3898228d136c959180c7cd7d7a3daa4db4287f2064022456250c17d9e71ba",
+  "nom_original": "De-la-ferme-á-la-fromagerie.pdf",
+  "chemin_relatif_source": "OD_Docs/De-la-ferme-á-la-fromagerie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1469760,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "lait / fromage",
+  "pays": "Algérie",
+  "annee": 2025,
+  "auteurs": "BOUAZDI",
+  "source_organisation": "Institut Technique Des Elevages (ITELV)",
+  "mots_cles": [
+    "fromagerie",
+    "transformation laitiere",
+    "lait de chevre",
+    "lait de vache",
+    "coagulation",
+    "affinage"
+  ],
+  "titre_trouve": "De la ferme à la fromagerie",
+  "titre": "De la ferme à la fromagerie : guide de transformation fromagère artisanale",
+  "resume": "Fiche technique de l'ITELV synthétisant les étapes de production du fromage fermier : collecte et qualité du lait, maturation, emprésurage, coagulation, moulage, égouttage, salage et affinage.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique complète de vulgarisation produite par un institut technique public (ITELV), directement exploitable pour la valorisation artisanale du lait.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "De-la-ferme-á-la-fromagerie (nom du fichier)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Institut Technique Des Elevages, ITELV. Les zouines Baba Ali- BP 03/A. Birtouta - Alger - Algérie"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00340__de-la-ferme-a-la-fromagerie-guide-de-transformation-fro.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00340__de-la-ferme-a-la-fromagerie-guide-de-transformation-fro.pdf"
+}

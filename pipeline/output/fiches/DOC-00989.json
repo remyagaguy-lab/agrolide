@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00989",
+  "sha256": "b95bd5fb363c05bd3946bfa92d8d7ba5896e6178e1ce08ee195795bd2a991500",
+  "nom_original": "maîtrise de l_hygiène de la filière Viande.pdf",
+  "chemin_relatif_source": "OD_Docs/maîtrise de l_hygiène de la filière Viande.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3131535,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 29,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "qualite_securite_normes",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "viande",
+  "pays": "France",
+  "annee": 2007,
+  "auteurs": "Centre d’Information des Viandes (CIV)",
+  "source_organisation": "Centre d’Information des Viandes (CIV)",
+  "mots_cles": [
+    "filiere viande",
+    "hygiene alimentaire",
+    "paquet hygiene",
+    "abattoir",
+    "civ",
+    "tracabilite"
+  ],
+  "titre_trouve": "Maîtrise de l’hygiène dans la filière viande De l’éleveur au consommateur",
+  "titre": "Maîtrise de l'hygiène dans la filière viande : de l'éleveur au consommateur (CIV)",
+  "resume": "Guide pratique du Centre d'Information des Viandes sur la maîtrise sanitaire dans la filière viande : bonnes pratiques d'élevage, hygiène à l'abattoir et conservation de la viande.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide technique institutionnel sur la sécurité sanitaire des viandes selon les normes européennes, consultable par les membres de la plateforme.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Maîtrise de l’hygiène dans la filière viande De l’éleveur au consommateur"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00989__maitrise-de-l-hygiene-dans-la-filiere-viande-de-l-eleve.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/qualite_securite_normes/DOC-00989__maitrise-de-l-hygiene-dans-la-filiere-viande-de-l-eleve.pdf"
+}

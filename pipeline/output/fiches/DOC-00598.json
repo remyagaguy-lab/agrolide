@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00598",
+  "sha256": "e5f00df243dabf7365889a35bae2e9775145e08175cfd83b7ef72736454c87c7",
+  "nom_original": "MUSCLES CUTANES TETE.pptx",
+  "chemin_relatif_source": "OD_Docs/MUSCLES CUTANES TETE.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 5113425,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 54,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "anatomie",
+    "muscles",
+    "tete",
+    "medecine humaine",
+    "myologie"
+  ],
+  "titre_trouve": "Les muscles de la tête",
+  "titre": "Anatomie humaine : Les muscles cutanés de la tête",
+  "resume": "Support de cours en diaporama détaillant la myologie de la tête humaine : muscles masticateurs, peauciers de la face, du crâne et innervation par le nerf facial.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Cours d'anatomie et myologie de la tête relevant de la médecine humaine, hors du périmètre agronomique et vétérinaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.7,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "I. Les muscles de la tête"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00598__anatomie-humaine-les-muscles-cutanes-de-la-tete.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00598__anatomie-humaine-les-muscles-cutanes-de-la-tete.pdf"
+}

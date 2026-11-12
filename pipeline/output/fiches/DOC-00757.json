@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00757",
+  "sha256": "121c87b527cb55556363e40872be1af58fb79c1157cabe2cae2b7fb1dec06f2d",
+  "nom_original": "Traitement des de la volailleà base de plantes médicinales.pdf",
+  "chemin_relatif_source": "OD_Docs/Traitement des de la volailleà base de plantes médicinales.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 659437,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Bénin",
+  "annee": 2015,
+  "auteurs": "Serge Egide Paulin MENSAH, André Boya ABOH, Delphin Olorounto KOUDANDE, Isidore GBEGO TOSSA, Guy Apollinaire MENSAH",
+  "source_organisation": "Institut National des Recherches Agricoles du Bénin (INRAB)",
+  "mots_cles": [
+    "inrab",
+    "benin",
+    "volaille",
+    "plantes medicinales",
+    "pharmacopee veterinaire",
+    "sante avicole",
+    "cames"
+  ],
+  "titre_trouve": "Traitement des maladies de la volaille à base de plantes médicinales",
+  "titre": "Traitement des maladies de la volaille à base de plantes médicinales (INRAB)",
+  "resume": "Fiche technique officielle de l'INRAB présentant les remèdes vétérinaires traditionnels scientifiquement validés à base de plantes médicinales béninoises pour soigner et prévenir les affections des volailles.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique officielle de recherche et de vulgarisation de l'INRAB, libre de diffusion institutionnelle et de très haute pertinence pour l'aviculture africaine.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE Traitement des maladies de la volaille à base de plantes médicinales"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Institut National des Recherches Agricoles du Bénin Centre de Recherches Agricoles à vocation Nationale"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00757__traitement-des-maladies-de-la-volaille-a-base-de-plante.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00757__traitement-des-maladies-de-la-volaille-a-base-de-plante.pdf"
+}

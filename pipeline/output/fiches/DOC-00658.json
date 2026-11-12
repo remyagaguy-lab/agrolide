@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00658",
+  "sha256": "41ab295a6f20020843fe1bdacc0deeb1625565a1206aae61ad6efc4a3d2e24ed",
+  "nom_original": "Pascaline-Production_ananas_semi_intensivered.pdf",
+  "chemin_relatif_source": "OD_Docs/Pascaline-Production_ananas_semi_intensivered.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1197500,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 80,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "ananas",
+  "pays": "Polynésie française",
+  "annee": 2018,
+  "auteurs": "Marie Pascaline Sturma",
+  "source_organisation": "ISTOM",
+  "mots_cles": [
+    "ananas",
+    "agriculture biologique",
+    "polynesie francaise",
+    "memoire",
+    "istom",
+    "production semi-intensive"
+  ],
+  "titre_trouve": "Étude de la faisabilité de la production d’ananas semi-intensive en agriculture biologique dans le contexte polynésien",
+  "titre": "Mémoire : Faisabilité de la production d'ananas semi-intensive en agriculture biologique (Polynésie)",
+  "resume": "Mémoire d'ingénieur ISTOM évaluant la faisabilité agronomique et technico-économique de la culture biologique de l'ananas à Moorea (Polynésie française) dans le cadre du programme INTEGRE.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire de fin d'études d'ingénieur (ISTOM), archivé conformément à la règle stricte régissant les travaux académiques non publiés.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Étude de la faisabilité de la production d’ananas semi-intensive en agriculture biologique dans le contexte polynésien"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00658__memoire-faisabilite-de-la-production-d-ananas-semi-inte.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00658__memoire-faisabilite-de-la-production-d-ananas-semi-inte.pdf"
+}

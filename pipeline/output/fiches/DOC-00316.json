@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00316",
+  "sha256": "02f638022ba274a2ed74308d29e948256ca3d48b50cae49c31179a49b3482503",
+  "nom_original": "Cours de microbiologie du sol_Oustani Mebrouka.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours de microbiologie du sol_Oustani Mebrouka.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2616236,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 73,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Mabrouka Oustani",
+  "source_organisation": "Université Kasdi Merbah d'Ouargla",
+  "mots_cles": [
+    "microbiologie du sol",
+    "bacteries",
+    "actinomycetes",
+    "champignons du sol",
+    "cycles biogeochimiques"
+  ],
+  "titre_trouve": "Cours de microbiologie du sol",
+  "titre": "Cours de microbiologie du sol : diversité microbienne et dynamique biologique",
+  "resume": "Polycopié universitaire de Master 1 présentant les grands groupes microbiens édaphiques (bactéries, actinomycètes, champignons) et leurs rôles biochimiques essentiels.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Cours universitaire complet de spécialité sans licence libre explicite ; archivé pour usage pédagogique interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours de microbiologie du sol Préparé par Dr : Oustani Mabrouka"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00316__cours-de-microbiologie-du-sol-diversite-microbienne-et.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00316__cours-de-microbiologie-du-sol-diversite-microbienne-et.pdf"
+}

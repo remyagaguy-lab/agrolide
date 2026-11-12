@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00336",
+  "sha256": "9f980571e0bd4146c1ac44f8bc6b998da1b6673d112d300680ff1402206f3d53",
+  "nom_original": "Cultures_maraichères_Ould_Kiar_R.pdf",
+  "chemin_relatif_source": "OD_Docs/Cultures_maraichères_Ould_Kiar_R.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3620807,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 85,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Ould Kiar R.",
+  "source_organisation": "ITCMI / INVA / MADR",
+  "mots_cles": [
+    "cultures maraicheres",
+    "pepiniere",
+    "culture protegee",
+    "hors-sol",
+    "habillage racinaire"
+  ],
+  "titre_trouve": "CULTURES MARAICHÈRES",
+  "titre": "Cultures maraîchères : conduite des plants et interventions techniques (L3)",
+  "resume": "Diaporama pédagogique de Licence 3 en production végétale détaillant les interventions techniques maraîchères, la conduite en pépinière, l'habillage racinaire, les cultures protégées et les cultures hors-sol.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non assorti d'une licence libre de diffusion, conservé en archives pédagogiques.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MATIÈRE : CULTURES MARAICHÈRES"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "L3 spécialité « Production végétale »"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00336__cultures-maraicheres-conduite-des-plants-et-interventio.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00336__cultures-maraicheres-conduite-des-plants-et-interventio.pdf"
+}

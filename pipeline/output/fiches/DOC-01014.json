@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01014",
+  "sha256": "400f3f7f74d15bd1e5be961f55405660976b420b28ed2d548b587a37a0098820",
+  "nom_original": "poisson.pdf",
+  "chemin_relatif_source": "OD_Docs/poisson.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4157657,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 142,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "actes_conference",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution",
+    "enseignant_chercheur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture en cage (tilapia)",
+  "pays": "Ouganda",
+  "annee": 2008,
+  "auteurs": "Matthias Halwart, John F. Moehl (éd.)",
+  "source_organisation": "FAO",
+  "mots_cles": [
+    "pisciculture en cage",
+    "fao",
+    "tilapia du nil",
+    "aquaculture afrique",
+    "lac volta",
+    "actes atelier"
+  ],
+  "titre_trouve": "Atelier régional d’experts de la FAO sur la Pisciculture en cage en Afrique",
+  "titre": "Pisciculture en cage en Afrique : Actes de l'atelier régional d'experts de la FAO (Entebbe, Ouganda)",
+  "resume": "Rapport et actes de l'atelier régional de la FAO présentant l'état des lieux, les technologies de cages flottantes, le cadre réglementaire et les perspectives de l'aquaculture en cage en Afrique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Publication de référence de la FAO de plus de 140 pages, accessible aux membres de la plateforme.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Atelier régional d’experts de la FAO sur la Pisciculture en cage en Afrique"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "ORGANISATION DES NATIONS UNIES POUR L’ALIMENTATION ET L’AGRICULTURE Rome, 2008"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01014__pisciculture-en-cage-en-afrique-actes-de-l-atelier-regi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-01014__pisciculture-en-cage-en-afrique-actes-de-l-atelier-regi.pdf"
+}

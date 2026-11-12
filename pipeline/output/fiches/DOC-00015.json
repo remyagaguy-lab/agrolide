@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00015",
+  "sha256": "3a2807bc0f3e666ee23877c70972eab2dcfb5bd056ca5eddcb148310651a7f10",
+  "nom_original": "exploitation agricole.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/exploitation agricole.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 1865856,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles"
+  ],
+  "nb_pages": 34,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "horticulture",
+  "pays": "Sénégal",
+  "annee": 2017,
+  "auteurs": "Diap Touré",
+  "source_organisation": null,
+  "mots_cles": [
+    "business plan",
+    "exploitation agricole",
+    "horticulture",
+    "senegal",
+    "etude financiere"
+  ],
+  "titre_trouve": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE",
+  "titre": "Business plan d'un projet d'exploitation agricole horticole au Sénégal",
+  "resume": "Dossier complet de plan d'affaires pour la création d'une exploitation agricole horticole au Sénégal, comprenant étude de marché, volet technique et prévisions financières.",
+  "statut_droits": "donnees_personnelles_confidentiel",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Contient des données personnelles et financières privées non anonymisées (nom, téléphone, situation patrimoniale) : archivage interne uniquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Prometteur : Diap TOURE - Tel : (+221) 772157512-Email : ddiap99@yahoo.fr"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0003",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00015__business-plan-d-un-projet-d-exploitation-agricole-horti.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00015__business-plan-d-un-projet-d-exploitation-agricole-horti.pdf"
+}

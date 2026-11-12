@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00810",
+  "sha256": "5082252e40639b1c2f702c83582770ecc289acc4e670351b6ecc41b92c57e4fa",
+  "nom_original": "ca1176fr.pdf",
+  "chemin_relatif_source": "OD_Docs/ca1176fr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2307146,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 52,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "qualite_securite_normes",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution",
+    "entrepreneur_porteur_projet",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2018,
+  "auteurs": "FAO, OMS",
+  "source_organisation": "FAO / OMS (Codex Alimentarius)",
+  "mots_cles": [
+    "codex alimentarius",
+    "securite sanitaire des aliments",
+    "normes alimentaires",
+    "fao",
+    "oms",
+    "qualite des aliments"
+  ],
+  "titre_trouve": "COMPRENDRE LE CODEX ALIMENTARIUS",
+  "titre": "Comprendre le Codex Alimentarius (5e édition, FAO / OMS)",
+  "resume": "Guide institutionnel de la FAO et de l'OMS présentant l'organisation, les normes internationales et le rôle du Codex Alimentarius pour la sécurité sanitaire des aliments.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide institutionnel mondial officiel FAO/OMS sur les normes de sécurité sanitaire des aliments, en libre diffusion.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CODEX ALIMENTARIUS COMPRENDRE LE CODEX ALIMENTARIUS"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Organisation des Nations Unies pour l’alimentation et l’agriculture et Organisation mondiale de la Santé"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00810__comprendre-le-codex-alimentarius-5e-edition-fao-oms.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/qualite_securite_normes/DOC-00810__comprendre-le-codex-alimentarius-5e-edition-fao-oms.pdf"
+}

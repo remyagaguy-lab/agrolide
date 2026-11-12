@@ -1,0 +1,70 @@
+{
+  "id": "DOC-01003",
+  "sha256": "6c894c39b7ccbb465ec1207397cfd41d8f0a5f0fe6a3cb318623690628a26045",
+  "nom_original": "pates alimentaires nouilles spaghettis macaronis couscous.pdf",
+  "chemin_relatif_source": "OD_Docs/pates alimentaires nouilles spaghettis macaronis couscous.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 37946,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479921188-pates_alimentaires_nouilles_spaghettis_macaronis_couscous.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "pâtes alimentaires et semoulerie",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "pates alimentaires",
+    "couscous",
+    "semoule de ble dur",
+    "extrusion",
+    "diagramme de procede",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité PATES ALIMENTAIRES",
+  "titre": "Diagramme de procédé technologique : Fabrication des pâtes alimentaires et du couscous",
+  "resume": "Schéma synoptique de fabrication agroalimentaire illustrant les différentes filières industrielles de production des pâtes (spaghettis, macaronis, nouilles) et du couscous à partir de semoule de blé dur.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique technique synthétique et complet sur la transformation industrielle des céréales en pâtes et couscous, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité PATES ALIMENTAIRES ... ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01003__diagramme-de-procede-technologique-fabrication-des-pate.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-01003__diagramme-de-procede-technologique-fabrication-des-pate.pdf"
+}

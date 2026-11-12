@@ -1,0 +1,86 @@
+{
+  "id": "DOC-00204",
+  "sha256": "e47f7c474971e63cc5a917afc09b45f01213a0bb85ed4bafd25ffb84658fb659",
+  "nom_original": "Agrodok_44_Ethnomedecine_veterinaire_betail_en_afrique_subsaharienne@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_44_Ethnomedecine_veterinaire_betail_en_afrique_subsaharienne@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 756343,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 91,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bétail",
+  "pays": null,
+  "annee": 2007,
+  "auteurs": "Ngeh J. Toyang, Jacob Wanyama, Mopoi Nuwanyakpa, Sali Django",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "ethnomedecine veterinaire",
+    "sante animale",
+    "plantes medicinales",
+    "pharmacopee veterinaire",
+    "betail",
+    "afrique subsaharienne"
+  ],
+  "titre_trouve": "Agrodok 44 - Ethnomédecine vétérinaire une approche pratique du traitement des maladies du bétail en Afrique subsaharienne",
+  "titre": "Ethnomédecine vétérinaire : traitement des maladies du bétail en Afrique subsaharienne",
+  "resume": "Guide pratique de pharmacopée et d'ethnomédecine vétérinaire décrivant les remèdes traditionnels à base de plantes locales pour soigner les pathologies courantes du bétail en Afrique subsaharienne.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "Autorisation de reproduction Agromisa",
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Provenance @EpubsFR : application stricte de la consigne interdisant la diffusion institutionnelle pour les fichiers @EpubsFR, archivage obligatoire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 44 - Ethnomédecine vétérinaire une approche pratique du traitement des maladies du bétail en Afrique subsaharienne"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Ngeh J. Toyang Jacob Wanyama Mopoi Nuwanyakpa Sali Django"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Les informations contenues dans ce manuel peuvent être reproduites sous forme de texte imprimé, de photocopie, de microfilm ou autres."
+    }
+  ],
+  "groupe_doublon_id": "GRP-0017",
+  "canonique_id": null,
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Provenance @EpubsFR : application stricte de la consigne interdisant la diffusion institutionnelle pour les fichiers @EpubsFR, archivage obligatoire."
+  },
+  "nom_fichier_final": "DOC-00204__ethnomedecine-veterinaire-traitement-des-maladies-du-be.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00204__ethnomedecine-veterinaire-traitement-des-maladies-du-be.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00713",
+  "sha256": "1b88b51f0756c67c7d510861624a2ef5122039c33e07ca19eebe319a5f7431a5",
+  "nom_original": "Résumé POLLUTION (version iSlam Bek).pdf",
+  "chemin_relatif_source": "OD_Docs/Résumé POLLUTION (version iSlam Bek).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1022554,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "B-Yacine",
+  "source_organisation": null,
+  "mots_cles": [
+    "pollution",
+    "environnement",
+    "ecosysteme",
+    "biotope",
+    "biocenose",
+    "smog",
+    "ecologie"
+  ],
+  "titre_trouve": "Résumé de module Pollution Quelques généralités et définitions",
+  "titre": "Résumé de cours : Module pollution de l'environnement et écologie générale",
+  "resume": "Synthèse de cours abordant les définitions clés de l'écologie (biotope, biocénose, écosystèmes), les différentes composantes de la biosphère et les mécanismes de la pollution atmosphérique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de révision académique non diffusé sous licence ouverte, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé de module Pollution Quelques généralités et définitions"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Un écosystème est composé de 2 éléments : Biotope + Biocénose = écosystème"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00713__resume-de-cours-module-pollution-de-l-environnement-et.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00713__resume-de-cours-module-pollution-de-l-environnement-et.pdf"
+}

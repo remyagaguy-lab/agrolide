@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00655",
+  "sha256": "0859a809c64326e6e6c9157fec0232857686e44799f1abbfe1e3dab3ffa01033",
+  "nom_original": "PROJET D_ELEVAGE DE 500 POULES PONDEUSES-2.pdf",
+  "chemin_relatif_source": "OD_Docs/PROJET D_ELEVAGE DE 500 POULES PONDEUSES-2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1924521,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "confidentiel_interne"
+  ],
+  "nb_pages": 16,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "poule pondeuse",
+  "pays": "Togo",
+  "annee": 2012,
+  "auteurs": "LUPAJOTE-TOGO",
+  "source_organisation": "LUPAJOTE-TOGO",
+  "mots_cles": [
+    "business plan avicole",
+    "poules pondeuses",
+    "projet d'elevage",
+    "togo",
+    "compte d'exploitation",
+    "aviculture"
+  ],
+  "titre_trouve": "Projet d’élevage de deux bandes de 500 poules pondeuses dans le village d’Avéta au Togo dans la préfecture du Golfe",
+  "titre": "Modèle de projet d'élevage de 1 000 poules pondeuses au Togo (Avéta)",
+  "resume": "Dossier de projet d'entreprise et étude de faisabilité technico-financière pour l'installation d'un élevage avicole de deux bandes de 500 poules pondeuses au Togo (bâtiment, budget, marges et seuil de rentabilité).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document de projet associatif interne élaboré pour une levée de fonds locale, archivé pour consultation méthodologique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Projet d’élevage de deux bandes de 500 poules pondeuses dans le village d’Avéta au Togo"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00655__modele-de-projet-d-elevage-de-1-000-poules-pondeuses-au.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00655__modele-de-projet-d-elevage-de-1-000-poules-pondeuses-au.pdf"
+}

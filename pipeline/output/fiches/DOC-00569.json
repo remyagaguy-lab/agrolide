@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00569",
+  "sha256": "c3e09c55edfdce695beb26236be89b8c7410a2e51ad35e36b480bc66504a9770",
+  "nom_original": "Lutter-contre-les-parasites-du-mouton.pdf",
+  "chemin_relatif_source": "OD_Docs/Lutter-contre-les-parasites-du-mouton.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 238283,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ovins",
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "CTA",
+  "source_organisation": "CTA",
+  "mots_cles": [
+    "mouton",
+    "ovins",
+    "parasites",
+    "vermifugation",
+    "sante animale",
+    "elevage pastoral"
+  ],
+  "titre_trouve": "Lutter contre les parasites du mouton - Collection Guides pratiques du CTA, No 15",
+  "titre": "Lutter contre les parasites du mouton (Guide pratique CTA n° 15)",
+  "resume": "Guide pratique illustré du CTA présentant les méthodes de prévention et de contrôle des parasites internes et externes chez le mouton en élevage tropical.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "reproduction libre non commerciale sous mention de source",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel du CTA libre de droits non commerciaux, directement exploitable par les éleveurs de petits ruminants.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Collection Guides pratiques du CTA, No 15 ... © CTA 2008 - ISSN 1874-8864 L’information contenue dans ce guide peut être librement reproduite"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00569__lutter-contre-les-parasites-du-mouton-guide-pratique-ct.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00569__lutter-contre-les-parasites-du-mouton-guide-pratique-ct.pdf"
+}

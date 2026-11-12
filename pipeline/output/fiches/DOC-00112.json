@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00112",
+  "sha256": "90d873818d5fba49e8eaaf04d993ec387c92b20ad055045732ffc8aecf340211",
+  "nom_original": "2eme se de.pdf",
+  "chemin_relatif_source": "OD_Docs/2eme se de.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2147589,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 24,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "embryologie humaine",
+    "medecine",
+    "nidation",
+    "blastocyste"
+  ],
+  "titre_trouve": "Deuxième semaine du développement embryonnaire",
+  "titre": "Cours d'embryologie humaine : Deuxième semaine du développement embryonnaire",
+  "resume": "Support de cours médical et QCM sur la deuxième semaine du développement embryonnaire humain, traitant de la nidation, de la pré-gastrulation et des annexes embryonnaires.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de médecine humaine (embryologie) hors du périmètre agricole d'Agrolide et incomplet.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Deuxième semaine du développement embryonnaire"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00112__cours-d-embryologie-humaine-deuxieme-semaine-du-develop.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00112__cours-d-embryologie-humaine-deuxieme-semaine-du-develop.pdf"
+}

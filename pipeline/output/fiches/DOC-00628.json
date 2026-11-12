@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00628",
+  "sha256": "159f77a5e7a7c6fda3e77224343e8056924cddafe2b087e6e2e8ae23ffb05dd2",
+  "nom_original": "NIEBE.pdf",
+  "chemin_relatif_source": "OD_Docs/NIEBE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1051351,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "niébé",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "niebe",
+    "vigna unguiculata",
+    "legumineuse",
+    "itineraire technique",
+    "fertilisation",
+    "conservation post-recolte",
+    "cameroun"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU NIEBE (Vigna unguiculata)",
+  "titre": "Technologie de production du niébé (Vigna unguiculata)",
+  "resume": "Fiche technique détaillée de l'IFATI sur l'itinéraire technique complet du niébé en Afrique centrale : préparation du sol, semis, fertilisation minérale, protection phytosanitaire et stockage post-récolte à l'Actellic ou huile de neem.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle claire et complète pour la production et le stockage du niébé, diffusable librement en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DU NIEBE (Vigna unguiculata)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00628__technologie-de-production-du-niebe-vigna-unguiculata.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00628__technologie-de-production-du-niebe-vigna-unguiculata.pdf"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00144",
+  "sha256": "cb62efe70219c86a333ad34c7d08fa4885fbde27b9350beae01cf67a33d2db91",
+  "nom_original": "AFAF - Agroforesterie filiere - Maraichage@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/AFAF - Agroforesterie filiere - Maraichage@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 773217,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "Yasmine Evieux",
+  "source_organisation": "Association Française d'Agroforesterie (AFAF)",
+  "mots_cles": [
+    "agroforesterie",
+    "maraichage",
+    "arbres champetres",
+    "haies",
+    "agriculture durable",
+    "france"
+  ],
+  "titre_trouve": "AGROFORESTERIE ET MARAICHAGE produire et protéger",
+  "titre": "Agroforesterie et maraîchage : Produire et protéger",
+  "resume": "Fiche d'information de l'Association Française d'Agroforesterie présentant l'intérêt agronomique, écologique et économique d'associer arbres et cultures maraîchères.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'un canal de partage non officiel (@EpubsFR) et centré sur le contexte agroclimatique et réglementaire français.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "AGROFORESTERIE ET MARAICHAGE produire et protéger Qu’est-ce que l’agroforesterie ?"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00144__agroforesterie-et-maraichage-produire-et-proteger.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00144__agroforesterie-et-maraichage-produire-et-proteger.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00288",
+  "sha256": "5d2eb40959916a4b1398f0464a35c8a133357a981aaa6520e38d309e5a030422",
+  "nom_original": "Chap II éléments climatiques SS.pdf",
+  "chemin_relatif_source": "OD_Docs/Chap II éléments climatiques SS.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1262689,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 23,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "climat_changement_climatique",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Dalila Beddal",
+  "source_organisation": "Université Mohammed Boudiaf - M'sila",
+  "mots_cles": [
+    "bioclimatologie",
+    "elements climatiques",
+    "temperature",
+    "precipitations",
+    "stations meteorologiques"
+  ],
+  "titre_trouve": "Matière : Bioclimatologie (UET) - Chapitre II : Eléments climatiques",
+  "titre": "Éléments climatiques en bioclimatologie (Master 1 Science du Sol)",
+  "resume": "Chapitre de cours universitaire examinant les grandeurs physiques mesurables du climat (température, vent, humidité, précipitations) et leur rôle écologique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un polycopié universitaire sans licence libre, archivé.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Université Mohammed Boudiaf-M’sila ... Master I : Science du sol (SS) ... Chapitre II : Eléments climatiques"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00288__elements-climatiques-en-bioclimatologie-master-1-scienc.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/climat_changement_climatique/DOC-00288__elements-climatiques-en-bioclimatologie-master-1-scienc.pdf"
+}

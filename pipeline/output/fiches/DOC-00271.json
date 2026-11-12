@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00271",
+  "sha256": "c767577c068aafa82b539bbac037a7019467f4abc186d329e3fe3a05984c4f1c",
+  "nom_original": "CLIMATOLOGIE-1.pdf",
+  "chemin_relatif_source": "OD_Docs/CLIMATOLOGIE-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 550271,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 25,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "climat_changement_climatique",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2013,
+  "auteurs": "Jean-Baptiste Ndong",
+  "source_organisation": "Université Cheikh Anta Diop de Dakar (UCAD)",
+  "mots_cles": [
+    "climatologie",
+    "meteorologie",
+    "precipitation",
+    "pression atmospherique",
+    "temperature",
+    "Senegal"
+  ],
+  "titre_trouve": "LES ELEMENTS DE LA CLIMATOLOGIE",
+  "titre": "Les éléments de la climatologie (Licence 2 Géographie)",
+  "resume": "Support de cours universitaire présentant les bases de la climatologie générale : pression atmosphérique, températures, humidité, nébulosité, précipitations, vents et indices climatiques.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, archivé pour consultation interne conformément aux règles métier.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LES ELEMENTS DE LA CLIMATOLOGIE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Dr Jean-Baptiste NDONG"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00271__les-elements-de-la-climatologie-licence-2-geographie.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/climat_changement_climatique/DOC-00271__les-elements-de-la-climatologie-licence-2-geographie.pdf"
+}

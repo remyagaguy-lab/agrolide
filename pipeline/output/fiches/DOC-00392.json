@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00392",
+  "sha256": "34fda04c71221f633f02a54b505b54e036c075c3bc6cd49ad0d97e90733ae4b0",
+  "nom_original": "Encyclopédie pratique du chat (Bulard-Cordeau B. et al.).pdf",
+  "chemin_relatif_source": "OD_Docs/Encyclopédie pratique du chat (Bulard-Cordeau B. et al.).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 159551137,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "ocr_necessaire",
+    "droits_reserves"
+  ],
+  "nb_pages": 225,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Brigitte Bulard-Cordeau",
+  "source_organisation": null,
+  "mots_cles": [
+    "chat",
+    "animal de compagnie",
+    "felin",
+    "encyclopedie"
+  ],
+  "titre_trouve": null,
+  "titre": "Encyclopédie pratique du chat",
+  "resume": "Ouvrage encyclopédique consacré aux chats de compagnie (races félines, comportement, alimentation et soins de santé pour animaux domestiques de compagnie).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Ouvrage sur les chats domestiques (animaux de compagnie), totalement hors périmètre agricole et sous droits d'auteur commerciaux.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.95,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Encyclopédie pratique du chat (Bulard-Cordeau B. et al.)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00392__encyclopedie-pratique-du-chat.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00392__encyclopedie-pratique-du-chat.pdf"
+}

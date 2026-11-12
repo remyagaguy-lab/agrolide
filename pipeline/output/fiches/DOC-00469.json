@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00469",
+  "sha256": "ac977ee90dbe7e6b03be65aa218d92e0912ee0173f499328ce0f7cfd9e438b44",
+  "nom_original": "Gestion des récoltes et post récolte du riz.docx",
+  "chemin_relatif_source": "OD_Docs/Gestion des récoltes et post récolte du riz.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 10822567,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "conservation_post_recolte",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "riz",
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "riz",
+    "post-recolte",
+    "sechage",
+    "battage",
+    "paddy",
+    "stockage",
+    "qualite"
+  ],
+  "titre_trouve": "GESTION DES RECOLTES DU RIZ",
+  "titre": "Gestion des récoltes et post-récolte du riz",
+  "resume": "Guide pratique sur les opérations de récolte et de post-récolte du riz paddy : critères de maturité, techniques de fauche, séchage, battage, contrôle d'humidité et stockage de qualité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fichier docx porteur du drapeau conversion_requise interdisant la publication immédiate (public) ; réorienté vers a_valider_humain pour conversion en PDF.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GESTION DES RECOLTES DU RIZ"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Fichier docx porteur du drapeau conversion_requise interdisant la publication immédiate (public) ; réorienté vers a_valider_humain pour conversion en PDF."
+  },
+  "nom_fichier_final": "DOC-00469__gestion-des-recoltes-et-post-recolte-du-riz.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/conservation_post_recolte/DOC-00469__gestion-des-recoltes-et-post-recolte-du-riz.pdf"
+}

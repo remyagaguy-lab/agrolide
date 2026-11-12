@@ -1,0 +1,81 @@
+{
+  "id": "DOC-01091",
+  "sha256": "3f94ca348059c50f4fa90372ab67d5d96ff924aa63272996f55bcd88c722ce16",
+  "nom_original": "intrants_volume_1_version_finale_fvrier-20152.docx",
+  "chemin_relatif_source": "intrants_volume_1_version_finale_fvrier-20152.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 1897559,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "politiques_strategies",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2015,
+  "auteurs": "Ministère de l'Agriculture et de la Sécurité Alimentaire",
+  "source_organisation": "Ministère de l'Agriculture et de la Sécurité Alimentaire du Burkina Faso",
+  "mots_cles": [
+    "intrants agricoles",
+    "equipements agricoles",
+    "burkina faso",
+    "machinisme agricole",
+    "politique agricole"
+  ],
+  "titre_trouve": "PLACE ET ROLE DES INTRANTS ET DES EQUIPEMENTS AGRICOLES DANS L’AGRICULTURE BURKINABE",
+  "titre": "Étude sur les intrants et les équipements agricoles au Burkina Faso (Volume 1)",
+  "resume": "Rapport sectoriel d'analyse sur l'approvisionnement, l'utilisation et l'impact des intrants et matériels agricoles sur les systèmes de production au Burkina Faso.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document non-PDF avec conversion_requise, interdisant le statut de publication immédiate (membres) tant qu'il n'a pas été converti et validé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.92
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PLACE ET ROLE DES INTRANTS ET DES EQUIPEMENTS AGRICOLES DANS L’AGRICULTURE BURKINABE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "CARACTERISTIQUES DE L’AGRICULTURE BURKINABE"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Document non-PDF avec conversion_requise, interdisant le statut de publication immédiate (membres) tant qu'il n'a pas été converti et validé."
+  },
+  "nom_fichier_final": "DOC-01091__etude-sur-les-intrants-et-les-equipements-agricoles-au.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/politiques_strategies/DOC-01091__etude-sur-les-intrants-et-les-equipements-agricoles-au.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00070",
+  "sha256": "80d82d582eceda0cfbb147ba59677d98f8b0622fc6e488540c4690841b449b9a",
+  "nom_original": "05_cours_vegetal_250820_212756.pdf",
+  "chemin_relatif_source": "OD_Docs/05_cours_vegetal_250820_212756.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 456147,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "contexte_non_adapte",
+    "incomplet"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2020,
+  "auteurs": "E. Bordes",
+  "source_organisation": null,
+  "mots_cles": [
+    "botanique",
+    "appareil vegetatif",
+    "appareil reproducteur",
+    "angiospermes",
+    "racines",
+    "fecondation"
+  ],
+  "titre_trouve": "Chap 3 : Organisation d'une plante",
+  "titre": "Organisation d'une plante : appareil végétatif et reproduction",
+  "resume": "Support de cours illustré (chapitre 3) sur la morphologie végétale, les organes de la plante (racine, tige, feuille) et la reproduction sexuée.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre 3 isolé d'un cours généraliste tempéré, incomplet et non adapté pour publication directe.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.8,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chap 3 : Organisation d'une plante I. L'appareil végétatif"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00070__organisation-d-une-plante-appareil-vegetatif-et-reprodu.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00070__organisation-d-une-plante-appareil-vegetatif-et-reprodu.pdf"
+}

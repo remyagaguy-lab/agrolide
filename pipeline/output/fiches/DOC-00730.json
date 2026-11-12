@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00730",
+  "sha256": "40a7fe2e27bfc0871ee4bfad28bc0fa8c53099fdc64de78c606ec702c94928a5",
+  "nom_original": "Sujet Chimie Du Sol (01) - Fr.pdf",
+  "chemin_relatif_source": "OD_Docs/Sujet Chimie Du Sol (01) - Fr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 292815,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "chimie du sol",
+    "cec",
+    "cations echangeables",
+    "exercices",
+    "saturation en bases"
+  ],
+  "titre_trouve": "Sujet Chimie Du Sol (01)",
+  "titre": "Sujet d'exercices : Chimie du sol et capacité d'échange cationique (CEC)",
+  "resume": "Fiche d'exercices universitaires de chimie du sol portant sur le calcul de la capacité d'échange cationique (CEC), de la somme des bases échangeables et du taux de saturation du complexe adsorbant.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Sujet d'examen universitaire non assorti d'une licence libre de diffusion, archivé.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Sujet Chimie Du Sol (01) Exercice 01 :Un échantillon de 300 g de sol contient les cations fixés sur le colloïde"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00730__sujet-d-exercices-chimie-du-sol-et-capacite-d-echange-c.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00730__sujet-d-exercices-chimie-du-sol-et-capacite-d-echange-c.pdf"
+}

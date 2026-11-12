@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00605",
+  "sha256": "01aa9b1096c6f238f8cc21be0e99c89ccfeef6138bfb324aab5936242b4fd13a",
+  "nom_original": "Manuel_Plantes_medicinales_pour_le_soin_de_la_famille_au_Burkina.pdf",
+  "chemin_relatif_source": "OD_Docs/Manuel_Plantes_medicinales_pour_le_soin_de_la_famille_au_Burkina.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4570424,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 260,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2009,
+  "auteurs": "Jean-Pierre Nicolas",
+  "source_organisation": "Association Jardins du Monde",
+  "mots_cles": [
+    "plantes medicinales",
+    "burkina faso",
+    "pharmacopee traditionnelle",
+    "ethnobotanique",
+    "sante familiale",
+    "zone soudanienne"
+  ],
+  "titre_trouve": "Plantes médicinales pour le soin de la famille au Burkina Faso",
+  "titre": "Plantes médicinales pour le soin de la famille au Burkina Faso",
+  "resume": "Manuel illustré de 260 pages décrivant les plantes médicinales du domaine soudanien en Afrique de l'Ouest, leurs propriétés thérapeutiques, modes de préparation et posologies pour la santé familiale et communautaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Ouvrage de référence complet publié par l'ONG Jardins du Monde sur les plantes médicinales d'Afrique de l'Ouest, accessible aux membres.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Plantes médicinales pour le soin de la famille au Burkina Faso"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00605__plantes-medicinales-pour-le-soin-de-la-famille-au-burki.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00605__plantes-medicinales-pour-le-soin-de-la-famille-au-burki.pdf"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00755",
+  "sha256": "4aa1cbf82c6084fd6a2dbd843506f8bd06b70243bb7ae1eea74076727fe8e427",
+  "nom_original": "Tout sur le Compost (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Tout sur le Compost (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 18578638,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 230,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2007,
+  "auteurs": "Lili Michaud",
+  "source_organisation": "Éditions MultiMondes",
+  "mots_cles": [
+    "compost",
+    "amendements organiques",
+    "matiere organique",
+    "fertilisation",
+    "guide pratique"
+  ],
+  "titre_trouve": "Tout sur le compost : le connaître, le faire, l’acheter et l’utiliser",
+  "titre": "Tout sur le compost : le connaître, le faire, l'acheter et l'utiliser",
+  "resume": "Ouvrage de référence sur la fabrication et l'utilisation du compost : matières compostables, processus biologique, gestion des andains, achat et épandage pour fertiliser les sols.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial publié sous droits réservés stricts (© Éditions MultiMondes, ISBN 978-2-89544-106-9), non publiable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Compost Tout sur le Le connaitre, le faire, l’acheter et l’utiliser"
+    },
+    {
+      "champ": "autre",
+      "page": 5,
+      "extrait": "© Éditions MultiMondes 2007 ISBN 978-2-89544-106-9"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00755__tout-sur-le-compost-le-connaitre-le-faire-l-acheter-et.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00755__tout-sur-le-compost-le-connaitre-le-faire-l-acheter-et.pdf"
+}

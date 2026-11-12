@@ -1,0 +1,141 @@
+{
+  "batch_number": 38,
+  "audits": [
+    {
+      "id": "DOC-00720",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00721",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00722",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00724",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00725",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00726",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00727",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00728",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00729",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00730",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00731",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00732",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00733",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00734",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00735",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00736",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00737",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    }
+  ]
+}

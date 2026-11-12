@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00138",
+  "sha256": "e9dc5269bbe26d9bc7415f00f79e573fd9e1e4d8fb25a2da2f2b30281fdeb828",
+  "nom_original": "8_cocosol culture hors sol.pdf",
+  "chemin_relatif_source": "OD_Docs/8_cocosol culture hors sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5277282,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476059309-8_cocosol_culture_hors_sol.pdf",
+  "nb_telechargements_existant": 1,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "droits_reserves"
+  ],
+  "nb_pages": 64,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "culture_sous_abri_hors_sol",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cultures maraîchères",
+  "pays": "Côte d'Ivoire",
+  "annee": 2014,
+  "auteurs": "COCOSOL",
+  "source_organisation": "COCOSOL",
+  "mots_cles": [
+    "agriculture hors-sol",
+    "hydroponie",
+    "fibre de coco",
+    "cultures maraicheres",
+    "cote d'ivoire"
+  ],
+  "titre_trouve": "L’ AGRICULTURE HORS SOL Pour une agriculture saine, rentable et respectueuse de l’environnement.",
+  "titre": "Guide de l'agriculture hors-sol sur substrat de fibre de coco en Côte d'Ivoire",
+  "resume": "Guide pratique et de promotion présentant les techniques d'agriculture hors-sol et d'hydroponie sur substrat de fibre de coco pour les cultures maraîchères en Côte d'Ivoire.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document promotionnel propriétaire élaboré par une entreprise privée sans licence ouverte, archivé sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L’ AGRICULTURE HORS SOL Pour une agriculture saine, rentable et respectueuse de l’environnement."
+    },
+    {
+      "champ": "auteurs",
+      "page": 3,
+      "extrait": "COCOSOL est une entreprise privée basée en Côte D’ivoire qui développe et fait la promotion de l’agriculture hors sol (hydroponie) des cultures maraichères"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0012",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00138__guide-de-l-agriculture-hors-sol-sur-substrat-de-fibre-d.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/culture_sous_abri_hors_sol/DOC-00138__guide-de-l-agriculture-hors-sol-sur-substrat-de-fibre-d.pdf"
+}

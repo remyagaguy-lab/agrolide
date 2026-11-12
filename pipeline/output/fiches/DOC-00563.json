@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00563",
+  "sha256": "d459b284a74c7cf75a99467b7486eb279ad305ea18bdb16d281c9ad648d324c8",
+  "nom_original": "Les vergers de grand rendement.pdf",
+  "chemin_relatif_source": "OD_Docs/Les vergers de grand rendement.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 234492623,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "droits_reserves",
+    "contexte_non_adapte",
+    "obsolete",
+    "donnees_phyto_a_verifier"
+  ],
+  "nb_pages": 425,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": null,
+  "auteurs": "Robert Régnier",
+  "source_organisation": "Librairie de l'Académie d'Agriculture",
+  "mots_cles": [
+    "arboriculture fruitiere",
+    "pommier",
+    "poirier",
+    "vergers",
+    "protection des cultures"
+  ],
+  "titre_trouve": "Les vergers de grand rendement : Pommier, Poirier, Prunier, Cerisier",
+  "titre": "Les vergers de grand rendement : Pommier, poirier, prunier, cerisier",
+  "resume": "Traité d'arboriculture fruitière tempérée détaillant les techniques d'établissement, de conduite et de protection phytosanitaire des vergers de pommiers, poiriers et pruniers.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial protégé par le droit d'auteur et portant sur des espèces fruitières de climat tempéré, archivé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 5,
+      "extrait": "LES VERGERS DE GRAND RENDEMENT POMMIER - POIRIER PRUNIER CERISIER"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00563__les-vergers-de-grand-rendement-pommier-poirier-prunier.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00563__les-vergers-de-grand-rendement-pommier-poirier-prunier.pdf"
+}

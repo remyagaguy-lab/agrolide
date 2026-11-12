@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00545",
+  "sha256": "280571add34bbab2ddf2de995389a0c0298f2f444a36621f153fc424f7611a20",
+  "nom_original": "Le Manuel Du Généraliste - Chirurgie Et Anestesie.pdf",
+  "chemin_relatif_source": "OD_Docs/Le Manuel Du Généraliste - Chirurgie Et Anestesie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7247317,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 83,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2002,
+  "auteurs": "M. Poupard",
+  "source_organisation": "Éditions Elsevier SAS",
+  "mots_cles": [
+    "chirurgie humaine",
+    "anesthesie",
+    "medecine generale",
+    "soins hospitaliers"
+  ],
+  "titre_trouve": "Le Manuel Du Généraliste - Chirurgie Et Anestesie",
+  "titre": "Le Manuel du généraliste : chirurgie et anesthésie humaine",
+  "resume": "Manuel médical de 83 pages traitant de la prise en charge clinique, préopératoire et anesthésique des patients en médecine humaine.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Ouvrage médical de chirurgie humaine sous copyright Elsevier, totalement hors du champ d'application de la plateforme Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Le Manuel Du Généraliste - Chirurgie Et Anestesie.pdf"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© 2002 Editions Scientifiques et Médicales Elsevier SAS. Tous droits réservés."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00545__le-manuel-du-generaliste-chirurgie-et-anesthesie-humain.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00545__le-manuel-du-generaliste-chirurgie-et-anesthesie-humain.pdf"
+}

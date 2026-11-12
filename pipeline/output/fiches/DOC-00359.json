@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00359",
+  "sha256": "29f27071a06ed11b64ecb9456854e96be86c836aabc13c4c42a1cd195c296549",
+  "nom_original": "ESPERANCE ELEVAGE PROGRAMME DE VACCINATION DES POUSSINS.pdf",
+  "chemin_relatif_source": "OD_Docs/ESPERANCE ELEVAGE PROGRAMME DE VACCINATION DES POUSSINS.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 126547,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Boureima SINON (Espérance Élevage)",
+  "source_organisation": "Espérance Élevage",
+  "mots_cles": [
+    "aviculture",
+    "vaccination poussin",
+    "prophylaxie",
+    "newcastle",
+    "gumboro",
+    "burkina faso"
+  ],
+  "titre_trouve": "Programme de vaccination à titre préventif des poussins du 1er jour à l’âge adulte",
+  "titre": "Programme de vaccination préventive des poussins du 1er jour à l'âge adulte",
+  "resume": "Protocole synthétique de prophylaxie vaccinale et sanitaire pour poussins de la naissance à 140 jours, couvrant la maladie de Newcastle, Gumboro et la variole aviaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Validation humaine requise (confiance={'classification': 0.95, 'droits': 0.8, 'completude': 0.95}, accord_audit=True).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Programme de vaccination à titre préventif des poussins du 1er jour à l’âge adulte"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "ESPERANCE ELEVAGE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00359__programme-de-vaccination-preventive-des-poussins-du-1er.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00359__programme-de-vaccination-preventive-des-poussins-du-1er.pdf"
+}

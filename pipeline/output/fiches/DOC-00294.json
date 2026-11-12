@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00294",
+  "sha256": "4bba87818bb80f1351c392e09f54415d6e6b843ed62fe7f3547216b1297ef2c2",
+  "nom_original": "Chimie du sol.pdf",
+  "chemin_relatif_source": "OD_Docs/Chimie du sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5048008,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 42,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "Jean-Yves Massenet",
+  "source_organisation": "Lycée de Mesnières",
+  "mots_cles": [
+    "pedologie",
+    "chimie du sol",
+    "complexe adsorbant",
+    "capacite d'echange cationique",
+    "acidite"
+  ],
+  "titre_trouve": "CHAPITRE V : CHIMIE DU SOL",
+  "titre": "Chimie du sol : complexe adsorbant, acidité et fertilité (BTS Gestion Forestière)",
+  "resume": "Cours complet de chimie du sol pour étudiants forestiers, traitant en détail du complexe adsorbant argilo-humique, de l'acidité et de la dynamique des nutriments.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre d'un polycopié forestier tempéré non libre, archivé conformément aux directives.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.88
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "5ème version ( mars 2013 )\nCHAPITRE V :\nCHIMIE DU SOL"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00294__chimie-du-sol-complexe-adsorbant-acidite-et-fertilite-b.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00294__chimie-du-sol-complexe-adsorbant-acidite-et-fertilite-b.pdf"
+}

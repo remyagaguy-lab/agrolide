@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00841",
+  "sha256": "777e071487fc7d9a2358d03b404e7d20b02de3f6d8c962f681d27da6b9430661",
+  "nom_original": "constituants solides du sol.pdf",
+  "chemin_relatif_source": "OD_Docs/constituants solides du sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6276465,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 44,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2010,
+  "auteurs": "Jean-Yves Massenet",
+  "source_organisation": "Lycée horticole et forestier de Mesnières",
+  "mots_cles": [
+    "pedologie",
+    "sol",
+    "constituants mineraux",
+    "matiere organique",
+    "argiles",
+    "humus",
+    "floculation"
+  ],
+  "titre_trouve": "CHAPITRE III : LES CONSTITUANTS SOLIDES DU SOL",
+  "titre": "Pédologie - Chapitre 3 : Les constituants solides du sol",
+  "resume": "Support de cours de pédologie pour BTS forestier détaillant la fraction solide du sol : constituants minéraux (argiles, sables), matières organiques et complexes argilo-humiques.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un cours de BTS forestier sans licence ouverte, incomplet, classé en archive non publiée.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CHAPITRE III : LES CONSTITUANTS SOLIDES DU SOL Jean-Yves MASSENET"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00841__pedologie-chapitre-3-les-constituants-solides-du-sol.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00841__pedologie-chapitre-3-les-constituants-solides-du-sol.pdf"
+}

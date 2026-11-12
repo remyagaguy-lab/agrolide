@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00847",
+  "sha256": "43dadf7dafa659404f1f099b4d9385e7784faa2ba725352d1cf6b56b7eb18c7d",
+  "nom_original": "cours hydraulique pastorale et gestion de l_eau.pdf",
+  "chemin_relatif_source": "OD_Docs/cours hydraulique pastorale et gestion de l_eau.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2850507,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 21,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "A. Rahmani",
+  "source_organisation": "Centre Universitaire de Naâma",
+  "mots_cles": [
+    "hydraulique pastorale",
+    "gestion de l'eau",
+    "qualite des eaux",
+    "irrigation",
+    "agro-pastoralisme",
+    "zones arides"
+  ],
+  "titre_trouve": "Cours : Hydraulique pastorale et gestion de l’eau Master 2 : Agro-pastoralisme",
+  "titre": "Hydraulique pastorale et gestion de l'eau",
+  "resume": "Cours de Master sur le cycle de l'eau, les ressources hydriques en zones pastorales arides, l'hydrochimie et l'évaluation de la qualité des eaux d'irrigation et d'abreuvement par le diagramme de Wilcox.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié académique universitaire interne non libre de droits, archivé conformément à la règle 6.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours : Hydraulique pastorale et gestion de l’eau Master 2 : Agro-pastoralisme"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Par : A. RAHMANI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00847__hydraulique-pastorale-et-gestion-de-l-eau.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00847__hydraulique-pastorale-et-gestion-de-l-eau.pdf"
+}

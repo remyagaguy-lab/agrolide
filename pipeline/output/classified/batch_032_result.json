@@ -1,0 +1,797 @@
+{
+  "batch_number": 32,
+  "results": [
+    {
+      "id": "DOC-00474",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "Benjamin Voedzi",
+      "source_organisation": "Knowledge Academy",
+      "mots_cles": [
+        "pintade",
+        "aviculture",
+        "elevage avicole",
+        "togo",
+        "volailles locales"
+      ],
+      "titre_trouve": "Guide D_élevage Des Pintades",
+      "titre": "Guide d'élevage des pintades (Togo)",
+      "resume": "Extrait d'un guide pratique d'aviculture sur l'élevage des pintades au Togo, abordant l'origine de l'espèce, les races et les modes d'élevage (document incomplet).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "pages_manquantes"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document incomplet (5 pages présentes sur au moins 13 selon le sommaire) : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "incomplet",
+          "page": 3,
+          "extrait": "CONCLUSION 13 (le document ne compte que 5 pages)"
+        },
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Benjamin VOEDZI KNOWLEDGE ACADEMY +22896103382 Les pintades : des gardiennes silencieuses de la biodiversité"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00475",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": "Côte d'Ivoire",
+      "annee": 2020,
+      "auteurs": "Doh Koffi Sébastien",
+      "source_organisation": null,
+      "mots_cles": [
+        "pisciculture hors sol",
+        "bacs beton",
+        "clarias",
+        "tilapia",
+        "cote d'ivoire",
+        "aquaculture"
+      ],
+      "titre_trouve": "LA PISCICULTURE HORS SOL",
+      "titre": "Guide pratique de la pisciculture hors sol en bacs",
+      "resume": "Guide pratique complet sur l'élevage piscicole hors sol (bacs en béton et bâchés) en Afrique de l'Ouest : choix du site, gestion de l'eau, espèces cultivables et alimentation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide pratique terrain complet à forte valeur technique mais sans mention explicite de statut de diffusion : validation des droits requise.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.6,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA PISCICULTURE HORS SOL"
+        },
+        {
+          "champ": "auteur",
+          "page": 1,
+          "extrait": "Doh Koffi sébastien (métadonnées PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00476",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "sésame",
+      "pays": "Burkina Faso",
+      "annee": 2021,
+      "auteurs": "Ministère de l'Agriculture du Burkina Faso, JICA",
+      "source_organisation": "DGPV Burkina Faso / PRPS-BF / JICA",
+      "mots_cles": [
+        "sesame",
+        "production de sesame",
+        "itineraire technique",
+        "vulgarisation",
+        "burkina faso",
+        "jica"
+      ],
+      "titre_trouve": "Manuel de vulgarisation de la production de sésame : Approche PRPS-BF",
+      "titre": "Manuel de vulgarisation de la production de sésame au Burkina Faso",
+      "resume": "Manuel technique complet de vulgarisation pour la culture du sésame au Burkina Faso, élaboré par la DGPV et la JICA, couvrant le semis, l'entretien, la récolte et la post-récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel officiel de vulgarisation agricole (Ministère de l'Agriculture du Burkina Faso / JICA), complet et libre de diffusion pour les producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Manuel de vulgarisation de la production de sésame : Approche PRPS-BF"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "MINISTERE DE L’AGRICULTURE, DES AMENAGEMENTS HYDRO-AGRICOLES ET DE LA MECANISATION - DIRECTION GENERALE DES PRODUCTIONS VEGETALES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00477",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "arboriculture_fruitiere",
+        "protection_des_cultures"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maraîchage",
+      "pays": "Burundi",
+      "annee": 2019,
+      "auteurs": "Ministère de l'Agriculture du Burundi",
+      "source_organisation": "Projet d'appui aux filières horticoles / Burundi",
+      "mots_cles": [
+        "cultures fruitieres",
+        "cultures maraicheres",
+        "guide de bonnes pratiques",
+        "burundi",
+        "horticulture"
+      ],
+      "titre_trouve": "GUIDE DE BONNES PRATIQUES DE PRODUCTION DES FRUITS ET LEGUMES",
+      "titre": "Guide technique de production des cultures fruitières et maraîchères au Burundi",
+      "resume": "Guide technique exhaustif de bonnes pratiques de production horticole au Burundi, détaillant la conduite agronomique, la fertilisation et la protection intégrée des fruits et légumes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique institutionnel de référence pour la production fruitière et maraîchère en Afrique tropicale, complet et publiable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "GUIDE DE BONNES PRATIQUES DE PRODUCTION DES FRUITS ET LEGUMES"
+        },
+        {
+          "champ": "contexte",
+          "page": 1,
+          "extrait": "Guide technique de production des cultures fruitières et maraîchères"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00478",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cuniculture",
+      "pays": "Bénin",
+      "annee": 2007,
+      "auteurs": "Yaou Djago, Marc Kpodékon, François Lebas",
+      "source_organisation": "Association Cuniculture / Université d'Abomey-Calavi",
+      "mots_cles": [
+        "cuniculture",
+        "lapin",
+        "elevage tropical",
+        "afrique de l'ouest",
+        "benin",
+        "alimentation cunicole"
+      ],
+      "titre_trouve": "LE GUIDE PRATIQUE DE L’ÉLEVEUR DE LAPINS EN AFRIQUE DE L’OUEST",
+      "titre": "Guide pratique de l'éleveur de lapins en Afrique de l'Ouest",
+      "resume": "Manuel de référence sur la cuniculture en milieu tropical ouest-africain : biologie, reproduction, alimentation à base de ressources locales, logement et santé du lapin.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Document en libre accès sur le Web (cuniculture.info)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence sur la cuniculture tropicale, diffusé en libre accès officiel par l'Association Cuniculture pour les éleveurs africains.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE GUIDE PRATIQUE DE L’ÉLEVEUR DE LAPINS EN AFRIQUE DE L’OUEST"
+        },
+        {
+          "champ": "licence_detectee",
+          "page": 1,
+          "extrait": "Document en libre accès sur le Web à : http://www.cuniculture.info/ Docs/Elevage/Tropic-01.htm"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00480",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "ruminants"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2018,
+      "auteurs": "Léda Villeneuve",
+      "source_organisation": "CEPOQ (Centre d'expertise en production ovine du Québec)",
+      "mots_cles": [
+        "batiments d'elevage",
+        "bergerie",
+        "ovins",
+        "caprins",
+        "amenagement",
+        "quebec"
+      ],
+      "titre_trouve": "GUIDE D’AMÉNAGEMENT DES BÂTIMENTS POUR PETITS RUMINANTS DE BOUCHERIE",
+      "titre": "Guide d'aménagement des bâtiments pour petits ruminants de boucherie",
+      "resume": "Recueil de fiches techniques et plans d'aménagement de bâtiments d'élevage pour ovins et caprins de boucherie, conçu pour le contexte québécois.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique québécois conçu pour un climat tempéré froid et des stabulations fermées, inadapté aux conditions tropicales africaines.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE D’AMÉNAGEMENT DES BÂTIMENTS POUR PETITS RUMINANTS DE BOUCHERIE"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 45,
+          "extrait": "résultat d’un travail concerté entre la Société des éleveurs de moutons de races pures du Québec"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00481",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "CARI",
+      "source_organisation": "CARI (Centre d'Actions et de Réalisations Internationales)",
+      "mots_cles": [
+        "gestion durable des terres",
+        "gdt",
+        "montage de projet",
+        "desertification",
+        "cari",
+        "sahel"
+      ],
+      "titre_trouve": "Guide de montage de projets de GDT - CARI",
+      "titre": "Guide de montage de projets de gestion durable des terres (CARI)",
+      "resume": "Guide méthodologique de l'ONG CARI pour la conception et le montage de projets de gestion durable des terres (GDT), nécessitant un traitement OCR.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible de l'ONG CARI; OCR nécessaire pour vérification du contenu et validation humaine.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.5,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide de montage de projets de GDT - CARI (métadonnées PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00482",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "qualite_securite_normes",
+        "porcins"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "porc",
+      "pays": "France",
+      "annee": 2025,
+      "auteurs": "Centre d’Etude et de Ressources sur la Diversification (CERD)",
+      "source_organisation": "CERD / Chambres d'agriculture",
+      "mots_cles": [
+        "transformation fermiere",
+        "charcuterie",
+        "porc",
+        "haccp",
+        "bonnes pratiques d'hygiene",
+        "pms"
+      ],
+      "titre_trouve": "Guide de Bonnes Pratiques pour la transformation fermière de produits à base de porc",
+      "titre": "Guide de bonnes pratiques pour la transformation fermière de viande porcine",
+      "resume": "Guide complet sur la charcuterie et la transformation fermière de viande de porc : réglementation sanitaire, méthode HACCP, diagrammes de fabrication et traçabilité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide complet institutionnel de référence sur la transformation porcine et l'HACCP, mis à disposition des membres pour l'adaptation technique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide de Bonnes Pratiques pour la transformation fermière de produits à base de porc Version 2025"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00483",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2014,
+      "auteurs": "Jennifer Llewellyn",
+      "source_organisation": "Ministère de l'Agriculture de l'Ontario (MAAARO)",
+      "mots_cles": [
+        "pepiniere",
+        "plantes d'ornement",
+        "lutte integree",
+        "degres-jours",
+        "ontario"
+      ],
+      "titre_trouve": "GUIDE DES PLANTES DE PÉPINIÈRE ET D’ORNEMENT, CULTURE ET LUTTE INTÉGRÉE",
+      "titre": "Guide des plantes de pépinière et d'ornement : culture et lutte intégrée",
+      "resume": "Guide technique du ministère de l'Ontario sur la production en pépinière, la fertilité des substrats et la gestion intégrée des ravageurs des plantes ornementales.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide officiel canadien consacré à l'horticulture ornementale tempérée et aux espèces boréales, inadapté au contexte tropical d'Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "GUIDE DES PLANTES DE PÉPINIÈRE ET D’ORNEMENT, CULTURE ET LUTTE INTÉGRÉE"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 4,
+          "extrait": "Cherchez-vous sur Internet de l’information sur les plantes de pépinière et d’ornement? Consultez le site www.ontario.ca/cultures"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00484",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": [
+        "cereales"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "organisations_paysannes"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "sorgho",
+      "pays": "Burkina Faso",
+      "annee": 2008,
+      "auteurs": "Kirsten vom Brocke, Clarisse Barro-Kondombo, Gilles Trouche, David Kambou, Grégoire Palé, Dominique Compaoré",
+      "source_organisation": "CIRAD / INERA / Fondation McKnight",
+      "mots_cles": [
+        "sorgho",
+        "production de semences",
+        "semences paysannes",
+        "burkina faso",
+        "cirad",
+        "inera"
+      ],
+      "titre_trouve": "Production de semences de sorgho en milieu paysan au Burkina Faso",
+      "titre": "Production de semences de sorgho en milieu paysan au Burkina Faso",
+      "resume": "Manuel illustré détaillant les étapes de la sélection et de la production de semences de qualité de sorgho en milieu paysan sahélien (Burkina Faso et Mali).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique illustré CIRAD/INERA de vulgarisation pour les producteurs de semences au Sahel, complet et diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Production de semences de sorgho en milieu paysan au Burkina Faso"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Fonds français pour l’environnement mondial (Ffem) et la Fondation McKnight Cirad INERA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00485",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Mali",
+      "annee": 2004,
+      "auteurs": "Laprovet, Vétérinaires Sans Frontières, Initiative Conseil Développement",
+      "source_organisation": "Union Africaine - BIRA / VSF / MAE France",
+      "mots_cles": [
+        "aviculture villageoise",
+        "sante animale",
+        "maladie de newcastle",
+        "veterinaire",
+        "ua-bira",
+        "vsf"
+      ],
+      "titre_trouve": "GUIDE DU VETERINAIRE Animateur-Formateur en Aviculture Villageoise",
+      "titre": "Guide du vétérinaire formateur en aviculture villageoise (UA-BIRA)",
+      "resume": "Guide méthodologique et clinique pour le diagnostic pratique, le traitement et la prophylaxie des maladies dominantes des volailles villageoises en Afrique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide de formation vétérinaire de référence édité sous l'égide de l'Union Africaine (UA-BIRA) et VSF pour la santé aviaire villageoise.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DU VETERINAIRE Animateur- Formateur en Aviculture Villageoise"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Diffusion: UA-BIRA Conception LAPROVET VETERINAIRES SANS FRONTIERES INITIATIVE CONSEIL DEVELOPPEMENT Bamako – Mali"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00486",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "tubercules_racines",
+        "cereales",
+        "cultures_maraicheres"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "banane plantain",
+      "pays": "Cameroun",
+      "annee": 2015,
+      "auteurs": "M. Tindo, A. Tagne, J. M. Mpe, M. Ayodele, A. Ndikontar",
+      "source_organisation": "FAO / Ministère de l'Agriculture du Cameroun / IITA",
+      "mots_cles": [
+        "banane plantain",
+        "mais",
+        "manioc",
+        "tomate",
+        "nuisibles",
+        "protection des cultures",
+        "fao",
+        "cameroun"
+      ],
+      "titre_trouve": "GUIDE TECHNIQUE SUR LES NUISIBLES DE LA BANANE PLANTAIN, LE MAÏS, LE MANIOC ET LA TOMATE",
+      "titre": "Guide technique sur les nuisibles de la banane plantain, du maïs, du manioc et de la tomate",
+      "resume": "Manuel complet de la FAO et du Ministère de l'Agriculture du Cameroun sur l'identification et la gestion intégrée des ravageurs et maladies des cultures vivrières majeures.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique FAO / Cameroun complet et de haute valeur agronomique pour le diagnostic et la protection des cultures vivrières tropicales.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE TECHNIQUE SUR LES NUISIBLES DE LA BANANE PLANTAIN, LE MAÏS, LE MANIOC ET LA TOMATE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Gouvernement du Camerounais et la FAO qui ont permis la réalisation de ce projet"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00487",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2016,
+      "auteurs": "GAFPAM",
+      "source_organisation": "GAFPAM / ADM",
+      "mots_cles": [
+        "poulailler familial",
+        "aviculture villageoise",
+        "poules locales",
+        "bambou",
+        "elevage avicole"
+      ],
+      "titre_trouve": "GUIDE PRATIQUE DU POULAILLER FAMILIAL",
+      "titre": "Guide pratique du poulailler familial en matériaux locaux",
+      "resume": "Guide pratique d'aviculture familiale expliquant la construction d'un poulailler amélioré en matériaux locaux (bambous, nattes), l'alimentation et la santé des poules.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique associatif très accessible pour les éleveurs ruraux, détaillant la conduite d'un poulailler familial à faible coût.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE PRATIQUE DU POULAILLER FAMILIAL Formation GAFPAM"
+        },
+        {
+          "champ": "materiaux",
+          "page": 4,
+          "extrait": "Matériels de construction du poulailler type GAFPAM : Fournitures végétales : 20 Bambous de Chine, 15 Nattes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00489",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "sante_animale",
+        "alimentation_animale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "CEVA Santé Animale",
+      "source_organisation": "CEVA Santé Animale",
+      "mots_cles": [
+        "mouton",
+        "elevage ovin",
+        "afrique subsaharienne",
+        "mediterranee",
+        "sante animale",
+        "ceva"
+      ],
+      "titre_trouve": "GUIDE DE L’ÉLEVAGE DU MOUTON MÉDITERRANÉEN ET TROPICAL",
+      "titre": "Guide de l'élevage du mouton méditerranéen et tropical (CEVA)",
+      "resume": "Ouvrage complet de conduite d'élevage et de pathologie ovine en milieu tropical et méditerranéen : races, reproduction, alimentation et prévention sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Manuel vétérinaire complet édité par CEVA Santé Animale pour l'élevage ovin en régions chaude et tropicale, mis à disposition des membres.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DE L’ÉLEVAGE DU MOUTON MÉDITERRANÉEN ET TROPICAL"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "Témoignage de l'importance que lui accorde CEVA SANTE ANIMALE qui l’a érigée au rang d’espèce prioritaire"
+        }
+      ]
+    }
+  ]
+}

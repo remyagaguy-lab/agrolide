@@ -1,0 +1,153 @@
+{
+  "batch_number": 5,
+  "audits": [
+    {
+      "id": "DOC-00084",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00085",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00086",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00087",
+      "accord": false,
+      "champs_en_desaccord": [
+        "decision"
+      ],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {
+        "decision": "a_valider_humain"
+      },
+      "arbitrage": "Le drapeau bloquant licence_nc interdit la décision public ou membres selon les règles d'audit; orientation vers a_valider_humain."
+    },
+    {
+      "id": "DOC-00088",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00089",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00090",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00091",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00092",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00093",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00094",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00095",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00096",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "membres",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00098",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00099",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00100",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00101",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "exclu_hors_perimetre",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00102",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    }
+  ]
+}

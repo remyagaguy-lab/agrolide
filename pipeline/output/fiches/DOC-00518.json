@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00518",
+  "sha256": "1acc691921c191273ce508a0f30f9e787d97ec4423f24e29832c0fb0a8c662d3",
+  "nom_original": "Krebs.pdf",
+  "chemin_relatif_source": "OD_Docs/Krebs.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 409266,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "MXP TAIBECHE",
+  "source_organisation": null,
+  "mots_cles": [
+    "cycle de krebs",
+    "biochimie",
+    "metabolisme",
+    "respiration cellulaire",
+    "sciences de base"
+  ],
+  "titre_trouve": null,
+  "titre": "Schéma du cycle de Krebs (Biochimie métabolique)",
+  "resume": "Fiche synthétique d'une page représentant le schéma métabolique du cycle de Krebs (acide citrique) pour les étudiants en sciences biologiques et agronomiques.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Schéma d'une seule page sans texte extractible (OCR nécessaire) sur le cycle de Krebs, nécessitant une validation humaine de son intégration.",
+  "confiance": {
+    "classification": 0.58,
+    "droits": 0.35,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Krebs.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00518__schema-du-cycle-de-krebs-biochimie-metabolique.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00518__schema-du-cycle-de-krebs-biochimie-metabolique.pdf"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00509",
+  "sha256": "b2e97e1973e17125762174ceb346e29f5115d39d4fc9e13afc8658b902c9d49d",
+  "nom_original": "Indices climatiques.docx",
+  "chemin_relatif_source": "OD_Docs/Indices climatiques.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 28010,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "climat_changement_climatique",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "indices climatiques",
+    "de martonne",
+    "emberger",
+    "aridite",
+    "agrometeorologie",
+    "amenagement hydroagricole"
+  ],
+  "titre_trouve": "Aménagement Hydroagricole - Indices climatiques",
+  "titre": "Exercices corrigés sur les indices climatiques en aménagement hydroagricole",
+  "resume": "Fiche d'exercices corrigés en agrométéorologie et hydraulique agricole détaillant le calcul et l'interprétation des indices bioclimatiques (De Martonne, Emberger, Gaussen, SPI) en milieu aride et semi-aride.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de travaux dirigés non publié au format Word (.docx), sans licence libre explicite. Archivé en interne.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Aménagement Hydroagricole Indices climatique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00509__exercices-corriges-sur-les-indices-climatiques-en-amena.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/climat_changement_climatique/DOC-00509__exercices-corriges-sur-les-indices-climatiques-en-amena.pdf"
+}

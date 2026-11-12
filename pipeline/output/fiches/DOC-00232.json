@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00232",
+  "sha256": "b14f642417cb9c0ccc54eef25a93a8ef80f86c5be3a35bddf4e18568e5819a11",
+  "nom_original": "Avis de recrutement 16 postes UP-2.pdf",
+  "chemin_relatif_source": "OD_Docs/Avis de recrutement 16 postes UP-2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1045051,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "obsolete"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "autre",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "avis de recrutement",
+    "offre d'emploi",
+    "administration",
+    "postes"
+  ],
+  "titre_trouve": null,
+  "titre": "Avis de recrutement pour seize postes universitaires",
+  "resume": "Avis d'appel à candidatures et de recrutement institutionnel pour seize postes. Document administratif ponctuel et obsolète, hors du périmètre documentaire d'Agrolide.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document administratif éphémère (avis de recrutement obsolète) sans valeur pédagogique ou agronomique durable, hors du périmètre de la bibliothèque.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Avis de recrutement 16 postes UP-2.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00232__avis-de-recrutement-pour-seize-postes-universitaires.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00232__avis-de-recrutement-pour-seize-postes-universitaires.pdf"
+}

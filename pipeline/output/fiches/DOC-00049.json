@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00049",
+  "sha256": "6f2e4860e5bb0e7de188e8c094ae26ad6cf25def187cf510fb945119ace41c52",
+  "nom_original": "Résumé3 Physiologie végétale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Physiologie végétale/Physiologie végétale/Résumé3 Physiologie végétale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 3077477,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 22,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "physiologie vegetale",
+    "cours",
+    "biologie vegetale",
+    "sciences de base",
+    "resume"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 3 de physiologie végétale",
+  "resume": "Troisième fascicule d'un résumé de cours de physiologie végétale, destiné à l'apprentissage et aux révisions en sciences agronomiques et biologiques.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte indexable nécessitant un OCR préalable et une vérification humaine du statut éditorial.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.35,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé3 Physiologie végétale.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0007",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00049__resume-3-de-physiologie-vegetale.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00049__resume-3-de-physiologie-vegetale.pdf"
+}

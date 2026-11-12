@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00795",
+  "sha256": "8bdb2a30808df3c2f6a6c6a08b02f5eb0519784f3aa755c4c450660dbfcd3ec3",
+  "nom_original": "angrais bio (2).pdf",
+  "chemin_relatif_source": "OD_Docs/angrais bio (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2417261,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479090482-angrais_bio__2_.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 25,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "Chambre Nationale d'Agriculture du Burkina Faso (CNA)",
+  "source_organisation": "Chambre Nationale d'Agriculture du Burkina Faso",
+  "mots_cles": [
+    "engrais bio",
+    "biofertilisants",
+    "biopesticides",
+    "neem",
+    "burkina faso",
+    "agroecologie"
+  ],
+  "titre_trouve": "Guide sur l'utilisation des produits d'extraits naturels, biopesticides et biofertilisants",
+  "titre": "Fabrication et utilisation des biofertilisants et biopesticides (CNA Burkina)",
+  "resume": "Guide pratique de la Chambre Nationale d'Agriculture du Burkina Faso sur la préparation d'extraits de neem, de biopesticides et de biofertilisants liquides.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de la Chambre d'Agriculture du Burkina Faso sur les fertilisants et pesticides bio, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "CHAMBRE NATIONALE D’AGRICULTURE BURKINA FASO"
+    },
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "LES POSSIBILITES D’UTILISATION DES PRODUITS D’EXTRAIT NATURELS"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0051",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00795__fabrication-et-utilisation-des-biofertilisants-et-biope.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00795__fabrication-et-utilisation-des-biofertilisants-et-biope.pdf"
+}

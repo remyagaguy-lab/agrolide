@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00510",
+  "sha256": "d62c12f6b8c05926d8c97755d14fba7187f1a9e19785eb182c34ac9d2fd6144d",
+  "nom_original": "Influencesurlesvegetaux.pdf",
+  "chemin_relatif_source": "OD_Docs/Influencesurlesvegetaux.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 565007,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Jardins du Nord",
+  "mots_cles": [
+    "calendrier lunaire",
+    "jardinage avec la lune",
+    "horticulture",
+    "potager",
+    "biodynamie"
+  ],
+  "titre_trouve": "Calendrier lunaire : Influence de la lune sur les végétaux",
+  "titre": "Calendrier lunaire : influence de la lune sur les végétaux",
+  "resume": "Fiche pratique amateur de 8 pages compilant des croyances et règles de jardinage avec les phases lunaires et les constellations zodiacales pour les travaux potagers.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Compilation amateur de conseils de jardinage lunaire et astrologique sans rigueur agronomique, inadaptée aux priorités de la plateforme. Archivé.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.8,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Calendrier lunaire : Influence de la lune sur les végétaux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00510__calendrier-lunaire-influence-de-la-lune-sur-les-vegetau.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00510__calendrier-lunaire-influence-de-la-lune-sur-les-vegetau.pdf"
+}

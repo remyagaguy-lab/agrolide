@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00507",
+  "sha256": "b4164d75a956606fcdc8c0959dcc44756cf0f2cc2b4a68c6f373c3639b78f2fa",
+  "nom_original": "ITK-Martinique-Gombo-2014.pdf",
+  "chemin_relatif_source": "OD_Docs/ITK-Martinique-Gombo-2014.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 584435,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "gombo",
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Chambre d'Agriculture de la Martinique",
+  "source_organisation": "Chambre d'Agriculture de la Martinique",
+  "mots_cles": [
+    "gombo",
+    "abelmoschus esculentus",
+    "itineraire technique",
+    "maraichage tropical",
+    "martinique"
+  ],
+  "titre_trouve": "Fiche d’Itinéraire technique - GOMBO",
+  "titre": "Fiche d'itinéraire technique de la culture du gombo",
+  "resume": "Fiche technique opérationnelle de 2 pages de la Chambre d'Agriculture de Martinique détaillant la conduite de la culture tropicale du gombo : semis, amendements, calendrier, ravageurs et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle complète et directement applicable pour la production tropicale de gombo, culture maraîchère majeure en zone tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche d’Itinéraire technique GOMBO"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Chambre d’Agriculture Martinique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00507__fiche-d-itineraire-technique-de-la-culture-du-gombo.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00507__fiche-d-itineraire-technique-de-la-culture-du-gombo.pdf"
+}

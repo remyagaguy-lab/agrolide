@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00069",
+  "sha256": "80a540083bd7d83f8ba12cf774205c8d5837337a9e118d25a9db2e4d8d72d82d",
+  "nom_original": "04-2_L_aviculture_tropicale-1.pdf",
+  "chemin_relatif_source": "OD_Docs/04-2_L_aviculture_tropicale-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 139457,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 30,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Patrick Harvey",
+  "source_organisation": "CTA",
+  "mots_cles": [
+    "aviculture tropicale",
+    "poulet local",
+    "radio rurale",
+    "pathologies aviaires",
+    "elevage villageois"
+  ],
+  "titre_trouve": "L’AVICULTURE TROPICALE",
+  "titre": "L'aviculture tropicale : Pack radio rurale CTA",
+  "resume": "Dossier pédagogique et fiches techniques du CTA pour animateurs ruraux portant sur l'aviculture villageoise tropicale, la santé aviaire et le logement.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique et fiches techniques du CTA pour la vulgarisation en milieu tropical, libre de diffusion institutionnelle.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PROGRAMME DE RADIO RURALE No 04/2 L’AVICULTURE TROPICALE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Le Centre technique de coopération agricole et rurale (CTA)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00069__l-aviculture-tropicale-pack-radio-rurale-cta.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00069__l-aviculture-tropicale-pack-radio-rurale-cta.pdf"
+}

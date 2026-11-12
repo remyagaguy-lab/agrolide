@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00169",
+  "sha256": "7a1e31d953fea009122a5742fdb7ec0f76d907f0b3dabc20411cd2eb82c7f1ee",
+  "nom_original": "AgricultureBiodynamique@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/AgricultureBiodynamique@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 11766906,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 28,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "Ulrich Schreier",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "biodynamie",
+    "rudolf steiner",
+    "agriculture durable",
+    "preparations",
+    "rythmes lunaires"
+  ],
+  "titre_trouve": "La Biodynamie un chemin prometteur vers l’agriculture durable de demain",
+  "titre": "La Biodynamie : un chemin prometteur vers l'agriculture durable de demain",
+  "resume": "Ouvrage présentant les principes de l'agriculture biodynamique inspirés de Rudolf Steiner, abordant la fertilisation, les rythmes lunaires et les préparations spécifiques.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'une release warez @EpubsFR sans licence libre, pertinence marginale pour l'agriculture tropicale.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.92,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La Biodynamie un chemin prometteur vers l’agriculture durable de demain"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Ulrich Schreier"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00169__la-biodynamie-un-chemin-prometteur-vers-l-agriculture-d.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00169__la-biodynamie-un-chemin-prometteur-vers-l-agriculture-d.pdf"
+}

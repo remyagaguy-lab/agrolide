@@ -1,0 +1,625 @@
+{
+  "batch_number": 27,
+  "results": [
+    {
+      "id": "DOC-00398",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["irrigation goutte a goutte", "pertes de charge", "hydraulique agricole", "rampe", "darcy-weisbach"],
+      "titre_trouve": "Exercice sur le calcul des pertes de charge dans les rampes et portes rampes d'un réseau d'irrigation goutte à goutte.",
+      "titre": "Exercice corrigé : Calcul des pertes de charge en irrigation goutte-à-goutte",
+      "resume": "Exercice d'application et son corrigé détaillé sur le dimensionnement hydraulique et le calcul des pertes de charge dans les rampes d'un réseau d'irrigation au goutte-à-goutte.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support d'exercice pédagogique non publié officiellement, archivé pour formation interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Exercice sur le calcul des pertes de charge dans les rampes et portes rampes d'un réseau d'irrigation goutte à goutte."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00399",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "orge",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["dose d'irrigation", "frequence d'irrigation", "rfu", "capacite au champ", "calcul d'arrosage"],
+      "titre_trouve": "Exercice : Dose et fréquence d'irrigation",
+      "titre": "Exercice corrigé : Calcul de la dose nette et de la fréquence d'irrigation",
+      "resume": "Exercice pratique corrigé de calcul agronomique de la réserve facilement utilisable (RFU), de la dose nette d'arrosage et de la fréquence d'irrigation pour une parcelle cultivée.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Exercice d'application académique sans mention d'éditeur ni licence de diffusion ouverte, archivé pour formation.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Quelle est la dose nette d’arrosage a apporte ? Quelle est la frequence d’irrigation ?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00400",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "decideur_institution"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Micheline Ouamega-Nikiema",
+      "source_organisation": "CTA / Ministère de l'Agriculture et des Aménagements Hydrauliques",
+      "mots_cles": ["demi-lunes", "ces/drs", "recuperation des terres", "capitalisation d'experiences", "burkina faso"],
+      "titre_trouve": "LES DEMI-LUNES, UNE TECHNIQUE AGRICOLE EFFICACE POUR LA MISE EN CULTURE DES TERRES ABANDONNÉES",
+      "titre": "Les demi-lunes, une technique agricole efficace pour la mise en culture des terres abandonnées",
+      "resume": "Fiche de capitalisation d'expériences documentant l'application de la technique des demi-lunes pour la conservation des eaux et des sols et la récupération des terres agricoles dégradées au Sahel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Document institutionnel de capitalisation d'expérience pratique sur les demi-lunes au Sahel, hautement pertinent et diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LES DEMI-LUNES, UNE TECHNIQUE AGRICOLE EFFICACE POUR LA MISE EN CULTURE DES TERRES ABANDONNÉES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00401",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["decideur_institution"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Pierre-Marie Cogné",
+      "source_organisation": "Cyathea",
+      "mots_cles": ["diagnostic agronomique", "analyse de sol", "fertilisation organique", "paniandy", "la reunion"],
+      "titre_trouve": "Expertise agronomique : Diagnostic du site de Paniandy (Bras Panon)",
+      "titre": "Expertise agronomique et écologique : Diagnostic du site de Paniandy (Bras Panon)",
+      "resume": "Rapport d'expertise agronomique et écologique réalisant le diagnostic physique, pédologique et agronomique des parcelles du site de Paniandy à La Réunion, avec analyses de sol.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Rapport d'expertise commandité pour un site local spécifique à La Réunion (bureau d'études privé), sans licence de diffusion publique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Expertise agronomique Diagnostic du site de Paniandy (Bras Panon)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00402",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["decideur_institution"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2023,
+      "auteurs": "Badrani Fadil",
+      "source_organisation": "Conservatoire National des Arts et Métiers (CNAM) / ESGT",
+      "mots_cles": ["plan local d'urbanisme", "plu bioclimatique", "paris", "immobilier", "urbanisme"],
+      "titre_trouve": "Plan Local d’Urbanisme Bioclimatique de la ville de Paris : Quels impacts sur les projets de construction ? Quelles conséquences sur le milieu économique parisien ?",
+      "titre": "Plan Local d'Urbanisme Bioclimatique de la ville de Paris : impacts économiques et constructifs",
+      "resume": "Mémoire de fin d'études du CNAM analysant les impacts du nouveau PLU bioclimatique de Paris sur les projets de construction et le secteur immobilier de la capitale française.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Mémoire académique d'école d'ingénieurs topographes sur l'urbanisme parisien, totalement hors du périmètre agricole.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Plan Local d’Urbanisme Bioclimatique de la ville de Paris : Quels impacts sur les projets de construction ?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00403",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["sante_animale", "alimentation_animale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poulet",
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["aviculture bio", "prophylaxie", "phytotherapie veterinaire", "moringa", "neem", "poulet de chair"],
+      "titre_trouve": "FICHE DE SUIVI DES SUJETS EN ELEVAGE BIO",
+      "titre": "Fiche de suivi et prophylaxie naturelle en aviculture biologique (J1 à J90)",
+      "resume": "Fiche pratique de rationnement alimentaire et de programme de prophylaxie naturelle (neem, moringa, caïlcedrat) sur 90 jours pour l'élevage avicole biologique en milieu tropical.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique très utile d'aviculture bio tropicale mais sans auteur ni licence identifiés, archivée en attente de traçabilité des droits.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.6,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE DE SUIVI DES SUJETS EN ELEVAGE BIO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00404",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "arachide",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Programme ACMA2 / IFDC-Bénin",
+      "source_organisation": "IFDC / Programme ACMA2",
+      "mots_cles": ["arachide", "itineraire technique", "acma2", "ifdc", "benin", "bonnes pratiques agricoles"],
+      "titre_trouve": "FICHE TECHNIQUE: ITINERAIRE TECHNIQUE DE L’ARACHIDE",
+      "titre": "Itinéraire technique de l'arachide (Fiche technique 2 Programme ACMA2)",
+      "resume": "Guide technique officiel du programme ACMA2 détaillant les bonnes pratiques agricoles pour la production d'arachide au Bénin : choix du terrain, semis, fertilisation, désherbage et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de vulgarisation officielle du programme ACMA2/IFDC pour la filière arachide au Bénin, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE: ITINERAIRE TECHNIQUE DE L’ARACHIDE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 8,
+          "extrait": "Contacts Programme ACMA2 IFDC-BENIN : Cotonou, Bénin"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00405",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Programme ACMA2 / IFDC-Bénin",
+      "source_organisation": "IFDC / Programme ACMA2",
+      "mots_cles": ["piment", "itineraire technique", "maraichage", "acma2", "ifdc", "benin"],
+      "titre_trouve": "FICHE TECHNIQUE: ITINERAIRE TECHNIQUE DU PIMENT",
+      "titre": "Itinéraire technique du piment (Fiche technique 5 Programme ACMA2)",
+      "resume": "Fiche technique complète du programme ACMA2 détaillant l'itinéraire cultural du piment au Bénin : pépinière, repiquage, gestion intégrée des ravageurs et de l'eau, récolte et rendements.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle officielle du programme ACMA2/IFDC sur le piment au Bénin, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "L’objectif de cette fiche est d’aider les producteurs à respecter l’itinéraire technique de la culture du piment"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 8,
+          "extrait": "Contacts Programme ACMA2 IFDC-BENIN : Cotonou, Bénin"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00406",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment",
+      "pays": "Cameroun",
+      "annee": 2018,
+      "auteurs": "Agriculture au Cameroun",
+      "source_organisation": "Agriculture au Cameroun",
+      "mots_cles": ["piment bio", "culture biologique", "cameroun", "pepiniere", "maraichage"],
+      "titre_trouve": "FICHE TECHNIQUE : Comment cultiver du Piment Bio",
+      "titre": "Fiche technique : Comment cultiver du piment biologique au Cameroun",
+      "resume": "Fiche technique synthétique guidant les maraîchers pour la production biologique du piment : préparation de la pépinière, fertilisation organique, traitements au neem et récolte.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Article de vulgarisation web issu d'un site privé camerounais sans licence de réutilisation explicite, archivé.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE : Comment cultiver du Piment Bio By Agriculture au Cameroun 6 février 2018"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00407",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maïs",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Programme ACMA2 / IFDC-Bénin",
+      "source_organisation": "IFDC / Programme ACMA2",
+      "mots_cles": ["mais", "itineraire technique", "acma2", "ifdc", "benin", "ocr necessaire"],
+      "titre_trouve": null,
+      "titre": "Itinéraire technique du maïs (Fiche technique 1 Programme ACMA2)",
+      "resume": "Fiche technique du programme ACMA2 sur l'itinéraire cultural du maïs au Bénin (semis, fertilisation, entretien, récolte). Document scanné nécessitant un traitement OCR.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche technique institutionnelle ACMA2 sur le maïs, mais le fichier ne contient aucun texte extractible (OCR nécessaire avant publication).",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.8,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE_TECHNIQUE_1_ITINERAIRE_TECHNIQUE_DU_MAÏS_MAIZE_TECHNICAL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00409",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "soja",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Programme ACMA2 / IFDC-Bénin",
+      "source_organisation": "IFDC / Programme ACMA2",
+      "mots_cles": ["soja", "itineraire technique", "acma2", "ifdc", "benin", "bonnes pratiques agricoles"],
+      "titre_trouve": "FICHE TECHNIQUE 3 : ITINÉRAIRE TECHNIQUE DU SOJA",
+      "titre": "Itinéraire technique du soja (Fiche technique 3 Programme ACMA2)",
+      "resume": "Fiche technique officielle du programme ACMA2 présentant les pratiques culturales recommandées pour la production de soja au Bénin : choix variétal, semis, désherbage et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de terrain du programme ACMA2/IFDC sur le soja au Bénin, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "L’objectif de cette fiche sur les bonnes pratiques de production du soja est de présenter les conditions et les pratiques culturales recommandées pour une bonne production de soja au Bénin."
+        },
+        {
+          "champ": "source_organisation",
+          "page": 8,
+          "extrait": "Contacts Programme ACMA2 IFDC-BENIN : Cotonou, Bénin"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00410",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aubergine",
+      "pays": "Bénin",
+      "annee": 2018,
+      "auteurs": "Lys A. Aglinglo, Olafèmi R. Adjinda, Eric C. Legba, Rachidi Francisco, Nicodème V. Fassinou Hotègni, Enoch G. Achigan-Dako",
+      "source_organisation": "Laboratoire de Génétique, Horticulture et Sciences Semencières (GBioS) / Université d'Abomey-Calavi (UAC)",
+      "mots_cles": ["aubergine", "solanum melongena", "gbios", "uac", "maraichage", "benin"],
+      "titre_trouve": "FICHE TECHNIQUE SYNTHETIQUE POUR LA PRODUCTION DE L’AUBERGINE (Solanum melongena L.)",
+      "titre": "Fiche technique synthétique pour la production de l'aubergine (GBioS / UAC)",
+      "resume": "Fiche technique du laboratoire GBioS (UAC) détaillant la conduite de l'aubergine au Bénin : pépinière, repiquage, buttage, désherbage, taille/tuteurage et protection sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de vulgarisation maraîchère de l'Université d'Abomey-Calavi (GBioS) validée pour le Bénin, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE SYNTHETIQUE POUR LA PRODUCTION DE L’AUBERGINE (Solanum melongena L.)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "© Laboratory of Genetics Horticulture and Seed Science (GBioS) 2018"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00411",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "concombre",
+      "pays": "Bénin",
+      "annee": null,
+      "auteurs": "GBioS / Université d'Abomey-Calavi (UAC)",
+      "source_organisation": "GBioS - Université d'Abomey-Calavi",
+      "mots_cles": ["concombre", "cucumis sativus", "maraichage urbain", "gbios", "benin", "agroecologie"],
+      "titre_trouve": "FICHE TECHNIQUE SYNTHÉTIQUE POUR LA PRODUCTION DU CONCOMBRE (Cucumis Sativus L.)",
+      "titre": "Fiche technique synthétique pour la production du concombre (GBioS / UAC)",
+      "resume": "Guide pratique synthétique pour la production agroécologique de concombre en zone tropicale : choix variétal, fertilisation équilibrée, récolte soignée et rendements.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de vulgarisation maraîchère du laboratoire GBioS (Bénin), diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE SYNTHÉTIQUE POUR LA PRODUCTION DU CONCOMBRE (Cucumis Sativus L.) Source : GBioS UACs"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00412",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": ["ressources_naturelles_environnement"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Bénin",
+      "annee": null,
+      "auteurs": "GBioS / Université d'Abomey-Calavi (UAC)",
+      "source_organisation": "GBioS - Université d'Abomey-Calavi",
+      "mots_cles": ["niebe", "vigna unguiculata", "legumineuse", "gbios", "benin", "fertilite des sols"],
+      "titre_trouve": "FICHE TECHNIQUE SYNTHÉTIQUE POUR LA PRODUCTION DU DU NIÉBÉ (Vigna unguculata, (L) Walp)",
+      "titre": "Fiche technique synthétique pour la production du niébé (GBioS / UAC)",
+      "resume": "Fiche technique synthétique du laboratoire GBioS (UAC) pour la culture du niébé au Bénin : atouts nutritionnels et agronomiques, fixation d'azote et protection phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de vulgarisation agricole du laboratoire GBioS (Bénin) pour la production du niébé, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE SYNTHÉTIQUE POUR LA PRODUCTION DU DU NIÉBÉ (Vigna unguculata, (L) Walp) Source : GBioS UAC"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00413",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": ["aviculture"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poulet",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["aviculture", "diagnostic sante", "fientes de poule", "pathologie aviaire", "observation elevage"],
+      "titre_trouve": "A quoi ressemble la fiente du poulet normale ?",
+      "titre": "Observation des fientes de poulet : indicateur de santé et diagnostic précoce",
+      "resume": "Guide pratique d'observation des fientes de volailles permettant aux éleveurs d'évaluer l'état sanitaire du cheptel et de repérer précocement les troubles digestifs et maladies.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche pratique d'observation sanitaire avicole très instructive mais anonyme sans droits définis, archivée en attente de validation.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.6,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "A quoi ressemble la fiente du poulet normale?"
+        }
+      ]
+    }
+  ]
+}

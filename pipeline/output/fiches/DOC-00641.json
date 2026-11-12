@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00641",
+  "sha256": "404268ed5626d26d1bc17f780fb5daf4040caf01d0993bc95d59e72530aa0abd",
+  "nom_original": "P20113313.pdf",
+  "chemin_relatif_source": "OD_Docs/P20113313.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1918472,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 129,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "these",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "papaye",
+  "pays": "France",
+  "annee": 2011,
+  "auteurs": "Claire-Marie Fabert",
+  "source_organisation": "Université de Limoges - Faculté de Pharmacie",
+  "mots_cles": [
+    "carica papaya",
+    "papayer",
+    "pharmacognosie",
+    "papaine",
+    "chymopapaine",
+    "ethnopharmacologie",
+    "these"
+  ],
+  "titre_trouve": "LE PAPAYER, CARICA PAPAYA L., DE LA MEDECINE TRADITONNELLE A LA MEDECINE ACTUELLE. ETUDES BOTANIQUE ET PHARMACOGNOSIQUE.",
+  "titre": "Le papayer (Carica papaya L.) de la médecine traditionnelle à la médecine actuelle : études botanique et pharmacognosique",
+  "resume": "Thèse d'exercice en pharmacie de 129 pages analysant la botanique, la phytochimie des enzymes du latex (papaïne, chymopapaïne) et les applications thérapeutiques traditionnelles et modernes de Carica papaya L.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Thèse universitaire d'exercice pour le diplôme de docteur en pharmacie, archivée pour la recherche sans publication directe (Règle Métier 1).",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE PAPAYER, CARICA PAPAYA L., DE LA MEDECINE TRADITONNELLE A LA MEDECINE ACTUELLE. ETUDES BOTANIQUE ET PHARMACOGNOSIQUE."
+    },
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "THESE POUR LE DIPLOME D'ETAT DE DOCTEUR EN PHARMACIE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00641__le-papayer-carica-papaya-l-de-la-medecine-traditionnell.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00641__le-papayer-carica-papaya-l-de-la-medecine-traditionnell.pdf"
+}

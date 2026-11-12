@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00297",
+  "sha256": "d95caafe348615bb6a2111d35f9898685559ea2c8dad8cfa3b230276ff09c27f",
+  "nom_original": "Colza.pdf",
+  "chemin_relatif_source": "OD_Docs/Colza.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7810349,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "titre_introuvable",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "autre",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "colza",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "colza",
+    "oleagineux",
+    "culture",
+    "production vegetale",
+    "scan"
+  ],
+  "titre_trouve": null,
+  "titre": "Guide technique sur la culture du colza (Document scanné)",
+  "resume": "Fichier PDF scanné sans couche texte exploitable portant sur la culture du colza, à soumettre à l'OCR pour analyse de contenu et des droits.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible, droits et complétude à vérifier après OCR.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Colza.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00297__guide-technique-sur-la-culture-du-colza-document-scanne.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00297__guide-technique-sur-la-culture-du-colza-document-scanne.pdf"
+}

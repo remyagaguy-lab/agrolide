@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00240",
+  "sha256": "b8996c2443f666b783ab1552f0a4f0e5a94294f04b68edf44c246585a6c0fa1c",
+  "nom_original": "BOTANIQUE L3 2017 (Cour Complet)_250820_211959.pdf",
+  "chemin_relatif_source": "OD_Docs/BOTANIQUE L3 2017 (Cour Complet)_250820_211959.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 20126142,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "titre_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 50,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "botanique",
+    "cours l3",
+    "anatomie vegetale",
+    "systematique",
+    "sciences vegetales"
+  ],
+  "titre_trouve": null,
+  "titre": "Cours complet de botanique - Licence 3 (2017)",
+  "resume": "Cours universitaire de botanique de niveau Licence 3 sous forme de document scanné, nécessitant un traitement OCR pour son exploitation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné volumineux sans couche texte nécessitant un OCR pour évaluer le contenu, la complétude et les droits.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: BOTANIQUE L3 2017 (Cour Complet)_250820_211959.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00240__cours-complet-de-botanique-licence-3-2017.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00240__cours-complet-de-botanique-licence-3-2017.pdf"
+}

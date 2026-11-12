@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00148",
+  "sha256": "404984d78504c0325e9475c712afa65908ff37df000df6d83af678cd88ba5151",
+  "nom_original": "AIL.pdf",
+  "chemin_relatif_source": "OD_Docs/AIL.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1118167,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ail",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "ail",
+    "cultures maraicheres",
+    "itineraire technique",
+    "fertilisation",
+    "cameroun",
+    "conservation"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’AIL",
+  "titre": "Fiche technique de production de l'ail au Cameroun",
+  "resume": "Fiche technique synthétique sur la production de l'ail en Afrique tropicale, détaillant les exigences de sol, la fertilisation, les soins culturaux et le séchage.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique pratique et complète sur la culture de l'ail en milieu tropical, d'un institut agréé, publiée en accès libre.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DE L’AIL GENERALITES I. EXIGENCES CULTURALES II. CONDUITE DE LA CULTURE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00148__fiche-technique-de-production-de-l-ail-au-cameroun.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00148__fiche-technique-de-production-de-l-ail-au-cameroun.pdf"
+}

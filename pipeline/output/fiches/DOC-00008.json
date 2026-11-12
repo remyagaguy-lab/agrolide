@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00008",
+  "sha256": "8650e486720a18f45a780b131f76f7dfb08942ce11a5c40f11f470718ce669bd",
+  "nom_original": "FSE___Fiche_Business_plan.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/FSE___Fiche_Business_plan.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 102969,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479547531-FSE___Fiche_Business_plan.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 13,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2016,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Fondation Suisse pour l'Encouragement (FSE)",
+  "mots_cles": [
+    "business plan",
+    "canevas",
+    "plan marketing",
+    "financement",
+    "gestion financiere"
+  ],
+  "titre_trouve": "Business plan type - PLAN DE BASE",
+  "titre": "Trame type de plan d'affaires pour création d'entreprise",
+  "resume": "Fiche pratique détaillant la structure d'un business plan complet : portrait d'entreprise, analyse marché et concurrence, plan marketing, logistique et projections financières.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Modèle pratique de base pour les créateurs d'entreprise, diffusable aux membres.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Business plan type PLAN DE BASE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Condensé en une seule page du contenu du business plan."
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "FSE___Fiche_Business_plan.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00008__trame-type-de-plan-d-affaires-pour-creation-d-entrepris.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00008__trame-type-de-plan-d-affaires-pour-creation-d-entrepris.pdf"
+}

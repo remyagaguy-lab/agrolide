@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00830",
+  "sha256": "493a66ab403c318dade61342fdad684f259ee475a58bfe1fda199efae8f1ec3e",
+  "nom_original": "chimie-envir-de-leau-1.pdf",
+  "chemin_relatif_source": "OD_Docs/chimie-envir-de-leau-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2234638,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 75,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Dr N. Belmiloud",
+  "source_organisation": "Université Hassiba Benbouali de Chlef",
+  "mots_cles": [
+    "chimie environnementale",
+    "hydrogeologie",
+    "eaux souterraines",
+    "mineralisation",
+    "qualite de l'eau"
+  ],
+  "titre_trouve": "MODULE: CHIMIE ENVIRONNEMENTALE DE L’EAU",
+  "titre": "Chimie environnementale de l'eau : Cours et diaporama de formation",
+  "resume": "Support de cours en diapositives sur la chimie des eaux souterraines et superficielles : processus de minéralisation, dissolution, précipitation et polluants.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support pédagogique universitaire sous forme de diaporama sans licence libre, archivé en non publié.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE: CHIMIE ENVIRONNEMENTALE DE L’EAU Université Hassiba Benbouali de Chlef"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00830__chimie-environnementale-de-l-eau-cours-et-diaporama-de.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00830__chimie-environnementale-de-l-eau-cours-et-diaporama-de.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00739",
+  "sha256": "ebcfa7e17f80908a7bae766195d43074603a873223ebe66083856e418ef662fd",
+  "nom_original": "TARO ET MACABO.pdf",
+  "chemin_relatif_source": "OD_Docs/TARO ET MACABO.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1311936,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "racines et tubercules",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "taro",
+    "macabo",
+    "colocasia esculenta",
+    "xanthosoma sagittifolium",
+    "cameroun",
+    "tubercules"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU TARO (Colocasia esculenta) ET MACABO (Xanthosoma sagittifolium)",
+  "titre": "Technologie de production du taro (Colocasia esculenta) et macabo (Xanthosoma sagittifolium)",
+  "resume": "Guide technique complet de formation professionnelle sur la culture du taro et du macabo au Cameroun : exigences écologiques, multiplication, conduite culturale et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique de formation professionnelle agréé par le MINEFOP (Cameroun) pour la culture vivrière du taro et macabo, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DU TARO (Colocasia esculenta) ET MACABO (Xanthosoma sagittifolium)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00739__technologie-de-production-du-taro-colocasia-esculenta-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00739__technologie-de-production-du-taro-colocasia-esculenta-e.pdf"
+}

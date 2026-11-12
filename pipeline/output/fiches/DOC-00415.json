@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00415",
+  "sha256": "2ddeeebefc5a3614fa10d1af6b504ae4a6ca9ffe52aa199cec0cde7f7682be71",
+  "nom_original": "FORAGE_DEAU_Procedes_et_mesures.pdf",
+  "chemin_relatif_source": "OD_Docs/FORAGE_DEAU_Procedes_et_mesures.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8277312,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 149,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2016,
+  "auteurs": "Bouselsal Boualem",
+  "source_organisation": "Université Kasdi Merbah-Ouargla",
+  "mots_cles": [
+    "forage d'eau",
+    "hydrogeologie",
+    "ouvrages de captage",
+    "piezometrie",
+    "algerie",
+    "cours universitaire"
+  ],
+  "titre_trouve": "FORAGE D’EAU Procédés et mesures",
+  "titre": "Forage d'eau : Procédés et mesures en hydrogéologie",
+  "resume": "Cours universitaire d'hydrogéologie de l'Université de Ouargla détaillant les techniques de forage d'eau, les ouvrages de captage, la piézométrie et les essais de débit.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire sans licence libre explicite, archivé pour respect des droits patrimoniaux académiques.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Auteur: Dr. Bouselsal Boualem Maître de Conférences ... Université de Kasdi Merbah-Ouargla"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00415__forage-d-eau-procedes-et-mesures-en-hydrogeologie.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00415__forage-d-eau-procedes-et-mesures-en-hydrogeologie.pdf"
+}

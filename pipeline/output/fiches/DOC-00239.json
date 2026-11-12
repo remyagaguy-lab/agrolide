@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00239",
+  "sha256": "b4c442c2e3429acd519be43444cfc83150d578242889044722c5e53cf9c8d25e",
+  "nom_original": "BLE_TENDRE_EHLG.pdf",
+  "chemin_relatif_source": "OD_Docs/BLE_TENDRE_EHLG.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 804267,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "blé",
+  "pays": "France",
+  "annee": 2017,
+  "auteurs": "Manue Bonus",
+  "source_organisation": "Euskal Herriko Laborantza Ganbara (EHLG)",
+  "mots_cles": [
+    "ble tendre",
+    "fiche technique",
+    "semis",
+    "maladies du ble",
+    "fertilisation",
+    "pays basque"
+  ],
+  "titre_trouve": "LE BLÉ TENDRE",
+  "titre": "Fiche technique : Itinéraire technique du blé tendre",
+  "resume": "Fiche technique décrivant l'itinéraire agronomique du blé tendre au Pays basque : stades phénologiques, densité de semis, fertilisation et maladies.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique agricole en zone tempérée (Pays basque), contexte pédoclimatique non adapté à l'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE BLÉ TENDRE Vous retrouverez dans cette fiche technique certains points importants sur l'itinéraire technique du blé tendre"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00239__fiche-technique-itineraire-technique-du-ble-tendre.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00239__fiche-technique-itineraire-technique-du-ble-tendre.pdf"
+}

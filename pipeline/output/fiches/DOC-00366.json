@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00366",
+  "sha256": "7fd5dd257d85ac9b8365767c14745a824900f6055b649ff06fb7f45e5675ea36",
+  "nom_original": "EXER ASPersion.docx",
+  "chemin_relatif_source": "OD_Docs/EXER ASPersion.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 14402,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "ENIGMA",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "aspersion",
+    "pompage",
+    "hauteur manometrique totale",
+    "puissance pompe"
+  ],
+  "titre_trouve": "Calcul aspersion",
+  "titre": "Dimensionnement d'un réseau d'irrigation par aspersion et choix de la pompe",
+  "resume": "Exercice de calcul appliqué déterminant le débit total, la hauteur manométrique totale (HMT) et la puissance de pompage requise pour 100 asperseurs.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche d'exercice technique pratique sans droits ni éditeur identifié (créateur anonyme), archivée conformément aux règles de diffusion.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Calcul aspersion Pour faire fonctionner 100 asperseurs avec un débit individuel de 1,8 m³/h"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00366__dimensionnement-d-un-reseau-d-irrigation-par-aspersion.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00366__dimensionnement-d-un-reseau-d-irrigation-par-aspersion.pdf"
+}

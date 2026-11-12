@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01085",
+  "sha256": "d212e2d83d86a81b553546e17d61214144e5d021e33986d2f4456057a1b3c28c",
+  "nom_original": "guide-compostage.pdf",
+  "chemin_relatif_source": "OD_traites/guide-compostage.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 846048,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479644103-guide-compostage.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 39,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "energie_dechets_valorisation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "decideur_institution"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Agence Nationale des Déchets",
+  "source_organisation": "Agence Nationale des Déchets",
+  "mots_cles": [
+    "compost",
+    "compostage",
+    "biodechets",
+    "valorisation des dechets",
+    "fertilite du sol"
+  ],
+  "titre_trouve": "Généralités sur le compost",
+  "titre": "Guide pratique du compostage et de valorisation des biodéchets",
+  "resume": "Guide méthodologique et pratique de l'Agence Nationale des Déchets d'Algérie détaillant les principes du compostage, la gestion des biodéchets et les bienfaits du compost pour les sols.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel complet de l'Agence Nationale des Déchets d'Algérie, libre de diffusion et facilement adaptable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "Généralités sur le compost ... Le compost, c’est quoi ? ... Et le compostage ?"
+    },
+    {
+      "champ": "autre",
+      "page": 39,
+      "extrait": "Agence Nationale des Déchets, Alger, Algérie, www.and.dz"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01085__guide-pratique-du-compostage-et-de-valorisation-des-bio.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/energie_dechets_valorisation/DOC-01085__guide-pratique-du-compostage-et-de-valorisation-des-bio.pdf"
+}

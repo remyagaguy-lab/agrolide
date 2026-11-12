@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00293",
+  "sha256": "27fc61a229c1258a75e494c41feba20cc0b0451ad876de90467eb5729125488a",
+  "nom_original": "Chapitre_4_levage_de_lapin_pdf_filename=_UTF_8_Chapitre_204_20.pdf",
+  "chemin_relatif_source": "OD_Docs/Chapitre_4_levage_de_lapin_pdf_filename=_UTF_8_Chapitre_204_20.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 315581,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cuniculture",
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "François Lebas",
+  "source_organisation": "Cuniculture",
+  "mots_cles": [
+    "cuniculture",
+    "lapin",
+    "pathologie cunicole",
+    "elevage tropical",
+    "hygiene",
+    "prophylaxie"
+  ],
+  "titre_trouve": "Élevage du lapin en milieu tropical – Chapitre 4 – Assurer la bonne santé de l'animal (maladies, santé, hygiène)",
+  "titre": "Élevage du lapin en milieu tropical : Chapitre 4, Assurer la bonne santé de l'élevage",
+  "resume": "Chapitre spécialisé sur la santé et la prophylaxie de l'élevage cunicole en zone tropicale, détaillant les pathologies digestives, respiratoires, virales et la gestion sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait partiel (chapitre 4 uniquement) d'un guide technique cunicole de référence, archivé car incomplet.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Élevage du lapin en milieu tropical – Chapitre 4 – Assurer la bonne santé de l'animal (maladies, santé, hygiène)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00293__elevage-du-lapin-en-milieu-tropical-chapitre-4-assurer.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00293__elevage-du-lapin-en-milieu-tropical-chapitre-4-assurer.pdf"
+}

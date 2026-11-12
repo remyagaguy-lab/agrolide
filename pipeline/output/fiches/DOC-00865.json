@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00865",
+  "sha256": "d5de8d5ce6bb8ca834f0529d106b9257c15cf46098fc9a1afb09c3fca55b88e7",
+  "nom_original": "doc-1.pdf",
+  "chemin_relatif_source": "OD_Docs/doc-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 480980,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "fiche_technique",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2009,
+  "auteurs": "Centre d'Information sur l'Eau (C.I.Eau)",
+  "source_organisation": "C.I.Eau",
+  "mots_cles": [
+    "cycle de l'eau",
+    "infographie",
+    "evaporation",
+    "precipitations",
+    "infiltration",
+    "ressource en eau"
+  ],
+  "titre_trouve": "LE CYCLE DE L’EAU",
+  "titre": "Le cycle de l'eau en quatre grandes phases",
+  "resume": "Poster pédagogique d'une page résumant le cycle naturel de l'eau (évaporation, condensation, précipitations, ruissellement et infiltration) et la préservation de la ressource.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support d'initiation scolaire d'une seule page, sans portée agronomique opérationnelle, archivé pour illustration.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE CYCLE DE L’EAU le cycle de l’eau en quatre grandes phases"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00865__le-cycle-de-l-eau-en-quatre-grandes-phases.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00865__le-cycle-de-l-eau-en-quatre-grandes-phases.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00264",
+  "sha256": "8c72e6b478d8b8b7cdbe10e1a70d4e24fc2d88ced8a0fc7a322faf0a062468c8",
+  "nom_original": "CAFEIER.pdf",
+  "chemin_relatif_source": "OD_Docs/CAFEIER.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1276852,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479357988-CAFEIER.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "cultures_de_rente",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "café",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "cafeier",
+    "culture de rente",
+    "pepiniere",
+    "recolte",
+    "sechage cafe",
+    "cameroun"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE CULTURE DU CAFEIER",
+  "titre": "Technologie de culture du caféier : conduite et post-récolte",
+  "resume": "Fiche technique complète de 10 pages détaillant les exigences pédoclimatiques, la gestion en pépinière, l'installation de la plantation et les méthodes de séchage du café.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle complète issue d'un institut de formation professionnelle agréé par le MINEFOP au Cameroun.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE CULTURE DU CAFEIER"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00264__technologie-de-culture-du-cafeier-conduite-et-post-reco.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_de_rente/DOC-00264__technologie-de-culture-du-cafeier-conduite-et-post-reco.pdf"
+}

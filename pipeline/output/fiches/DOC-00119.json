@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00119",
+  "sha256": "d89ba217531a972f1bab7c137b09c4c2a93439a062fba5b986c4ab8eda36acaa",
+  "nom_original": "458062.pdf",
+  "chemin_relatif_source": "OD_Docs/458062.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2976646,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "papaye",
+  "pays": null,
+  "annee": 1968,
+  "auteurs": "André Lassoudière",
+  "source_organisation": "IFAC / CIRAD",
+  "mots_cles": [
+    "papayer",
+    "genetique",
+    "carica papaya",
+    "arboriculture fruitiere",
+    "cirad"
+  ],
+  "titre_trouve": "LE PAPAYER (Deuxième partie) DESCRIPTION ET GÉNÉTIQUE",
+  "titre": "Le papayer (2e partie) : Description botanique et génétique",
+  "resume": "Article de recherche scientifique analysant la morphologie végétative, le déterminisme génétique du sexe, les chromosomes et les méthodes de sélection du papayer en milieu tropical.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique historique complet publié par l'IFAC/CIRAD dans la revue Fruits, réservé aux membres pour la recherche.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE PAPA YEJ< (2• partie) DESCRIPTION ET GÉNÉTIQUE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "par A. LASSOUDIÈRE (l. l'. A. C.)."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00119__le-papayer-2e-partie-description-botanique-et-genetique.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00119__le-papayer-2e-partie-description-botanique-et-genetique.pdf"
+}

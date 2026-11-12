@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00648",
+  "sha256": "0dbae27568b3da8369bce7e873ce93acfe17e5ccdee201f5e9ef0d63f88581e5",
+  "nom_original": "PISTACHE.pdf",
+  "chemin_relatif_source": "OD_Docs/PISTACHE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1012231,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pistache africaine",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "pistache africaine",
+    "cucumeropsis mannii",
+    "egusi",
+    "oleagineux",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTON DU PISTACHE(Cucumeropsis manii)",
+  "titre": "Fiche technique : Technologie de production du pistache (Cucumeropsis mannii)",
+  "resume": "Fiche technique de l'IFATI détaillant la production du pistache africain (courge à graines oléagineuses Cucumeropsis mannii) : préparation du sol, semis, entretien, traitements et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle de formation professionnelle sur une culture locale d'oléagineux très valorisée en Afrique centrale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTON DU PISTACHE(Cucumeropsis manii)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00648__fiche-technique-technologie-de-production-du-pistache-c.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00648__fiche-technique-technologie-de-production-du-pistache-c.pdf"
+}

@@ -1,0 +1,759 @@
+{
+  "batch_number": 70,
+  "results": [
+    {
+      "id": "DOC-01071",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Antoine Gardarin",
+      "source_organisation": "AgroParisTech / INRA",
+      "mots_cles": [
+        "agroecologie",
+        "agriculture durable",
+        "grandes cultures",
+        "agroparistech",
+        "services ecosystemiques"
+      ],
+      "titre_trouve": "L'agroécologie : principes, méthodes & processus clés à dynamiser en systèmes de grandes cultures pour l'agriculture de demain",
+      "titre": "L'agroécologie : Principes, méthodes et processus clés en grandes cultures",
+      "resume": "Présentation scientifique d'AgroParisTech exposant les fondements, l'historique et les leviers agronomiques de l'agroécologie dans les systèmes de grandes cultures.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de présentation universitaire sans licence ouverte explicite, archivé pour respect des droits d'auteur académiques.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L'agroécologie : principes, méthodes & processus clés à dynamiser en systèmes de grandes cultures pour l'agriculture de demain Antoine Gardarin AgroParisTech"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01072",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tomate",
+      "pays": "Sénégal",
+      "annee": 2008,
+      "auteurs": "Jean-Paul Courchinoux",
+      "source_organisation": null,
+      "mots_cles": [
+        "tomate",
+        "cultures maraicheres",
+        "afrique tropicale",
+        "technisem",
+        "protection des cultures",
+        "saison seche"
+      ],
+      "titre_trouve": "La culture de la tomate - Fiche technique Tomate",
+      "titre": "Fiche technique : La culture de la tomate en Afrique tropicale",
+      "resume": "Fiche technique pratique pour la culture de la tomate en milieu tropical africain, détaillant le choix variétal adapté, la pépinière et la lutte contre les ravageurs.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique rédigée par un auteur indépendant sans cadre institutionnel ni licence ouverte explicite, archivée à titre documentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.78,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique Tomate – JP Courchinoux Décembre 2008 La culture de la tomate 1. Généralités"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01073",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "entrepreneuriat_agricole"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2019,
+      "auteurs": "Commission de développement économique des Premières Nations du Québec et du Labrador (CDEPNQL)",
+      "source_organisation": "CDEPNQL",
+      "mots_cles": [
+        "plan d'affaires",
+        "business plan",
+        "entrepreneuriat",
+        "gestion de projet",
+        "quebec",
+        "cdepnql"
+      ],
+      "titre_trouve": "GUIDE DE RÉDACTION DE PLAN D’AFFAIRES PREMIÈRE ÉDITION",
+      "titre": "Guide de rédaction de plan d'affaires (CDEPNQL Québec)",
+      "resume": "Guide pratique méthodologique pour la structuration et la rédaction d'un plan d'affaires d'entreprise : description du projet, étude de marché et prévisions.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide méthodologique généraliste québécois d'affaires sans spécificité agricole tropicale, archivé à titre de modèle documentaire.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DE RÉDACTION DE PLAN D’AFFAIRES PREMIÈRE ÉDITION"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01074",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "energie_dechets_valorisation",
+      "domaines_secondaires": [
+        "fertilisation_amendements",
+        "horticulture_jardinage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2006,
+      "auteurs": "Josée Duplessis, Pierre Morency",
+      "source_organisation": "NOVA Envirocom / Recyc-Québec",
+      "mots_cles": [
+        "compostage domestique",
+        "dechets organiques",
+        "bac a compost",
+        "recyc-quebec",
+        "amendement"
+      ],
+      "titre_trouve": "Le compostage facilité : guide sur le compostage domestique",
+      "titre": "Le compostage facilité : Guide sur le compostage domestique",
+      "resume": "Guide complet québécois expliquant les principes et techniques du compostage domestique des matières résiduelles organiques pour le jardin et les potagers.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide institutionnel québécois consacré au compostage domestique résidentiel sous climat froid, archivé car non adapté au contexte rural tropical.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Le compostage facilité : guide sur le compostage domestique NOVA Envirocom"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01075",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "qualite_securite_normes"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2024,
+      "auteurs": "Bio Nouvelle-Aquitaine",
+      "source_organisation": "Bio Nouvelle-Aquitaine",
+      "mots_cles": [
+        "agriculture biologique",
+        "reglementation bio",
+        "intrants uab",
+        "certification bio",
+        "nouvelle-aquitaine",
+        "france"
+      ],
+      "titre_trouve": "produire en agriculture biologique - Guide agriculture BIO",
+      "titre": "Produire en agriculture biologique : Guide réglementaire et technique 2024",
+      "resume": "Guide professionnel complet de Bio Nouvelle-Aquitaine détaillant la réglementation européenne, les cahiers des charges et les intrants autorisés en agriculture biologique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide professionnel officiel centré sur la réglementation européenne et les homologations d'intrants en France, non transposable au contexte subsaharien.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "BIO NOUVELLE-AQUITAINE produire en agriculture biologique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01076",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "article",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2024,
+      "auteurs": "Marie-Liesse Vermeire, Raphaël Belmin",
+      "source_organisation": "CIRAD / ISRA / The Conversation",
+      "mots_cles": [
+        "agriculture durable",
+        "agroecologie",
+        "permaculture",
+        "agriculture de conservation",
+        "cirad",
+        "isra",
+        "the conversation"
+      ],
+      "titre_trouve": "Les sept familles de l’agriculture durable",
+      "titre": "Les sept familles de l'agriculture durable",
+      "resume": "Article de synthèse rédigé par des chercheurs du Cirad et de l'ISRA comparant les principes, pratiques et finalités des sept principaux modèles d'agriculture durable.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "CC BY-ND",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Article de vulgarisation scientifique d'excellence par le CIRAD et l'ISRA, publié sous licence ouverte Creative Commons sur The Conversation.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Marie-Liesse Vermeire Chercheuse en écologie du sol, Cirad Raphaël Belmin Chercheur en agronomie, Cirad / ISRA Dakar"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01077",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "Gilles Cavalli",
+      "source_organisation": "Éditions France Agricole",
+      "mots_cles": [
+        "agripreneur",
+        "entrepreneuriat agricole",
+        "gestion d'exploitation",
+        "agriculture durable",
+        "france agricole"
+      ],
+      "titre_trouve": "Manager une entreprise agricole durable",
+      "titre": "Manager une entreprise agricole durable (Extrait)",
+      "resume": "Extrait de l'ouvrage de Gilles Cavalli aux Éditions France Agricole guidant le chef d'entreprise agricole dans sa démarche entrepreneuriale et ses choix stratégiques.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait promotionnel incomplet d'un ouvrage commercial sous copyright des Éditions France Agricole, archivé sans publication.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Manager une entreprise agricole durable Gilles Cavalli AGRIDÉCISIONS Gestion de l’entreprise agricole"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01078",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "sol_fertilite",
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Nouvelle-Calédonie",
+      "annee": 2016,
+      "auteurs": "Frédérique Ablain-Barrière",
+      "source_organisation": "Direction du Développement Rural de la province Sud (Nouvelle-Calédonie)",
+      "mots_cles": [
+        "fertilisation",
+        "nutrition des plantes",
+        "fertilite du sol",
+        "plan de fumure",
+        "cultures perennes",
+        "nouvelle-caledonie"
+      ],
+      "titre_trouve": "BESOINS DE LA PLANTE ET GESTION DU SOL - CULTURES PERENNES",
+      "titre": "Besoins de la plante et gestion de la fertilité du sol en cultures pérennes",
+      "resume": "Support de formation professionnelle de la DDR Nouvelle-Calédonie expliquant la nutrition minérale, la fertilité des sols et l'élaboration d'un plan de fumure.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support de formation institutionnel complet de la Direction du Développement Rural de Nouvelle-Calédonie, mis à disposition des membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Direction du Développement Rural de la province Sud BESOINS DE LA PLANTE ET GESTION DU SOL Formateurs: Frédérique ABLAIN-BARRIERE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01079",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "qualite_securite_normes",
+      "domaines_secondaires": [
+        "transformation_fruits_legumes",
+        "entreprise_agroalimentaire"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "fruits et légumes",
+      "pays": "Belgique",
+      "annee": 2021,
+      "auteurs": "AFSCA",
+      "source_organisation": "AFSCA Belgique",
+      "mots_cles": [
+        "haccp",
+        "transformation fruits et legumes",
+        "bonnes pratiques d'hygiene",
+        "autocontrole",
+        "securite alimentaire",
+        "afsca"
+      ],
+      "titre_trouve": "Module Préparation et transformation de fruits et légumes (Module GL G-044)",
+      "titre": "Guide HACCP : Préparation et transformation de fruits et légumes",
+      "resume": "Guide d'application HACCP et de bonnes pratiques d'hygiène pour les ateliers de transformation de fruits et légumes : diagrammes de flux et points critiques (CCP).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide institutionnel officiel d'application des principes HACCP pour la transformation de fruits et légumes, accessible aux membres d'Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Préparation et transformation de fruits et légumes Module GL G-044 version 1 d.d. 12-1-2021"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01080",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "economie_filieres_marches",
+        "protection_des_cultures"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tomate",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Armel C. G. Mensah, Rachidatou Sikirou, Françoise Assogba Komlan, B. Barthélémy Yarou, Soul-Kifouly Midingoyi, Judith Honfoga, Marie-Épiphane Dossoumou, Nathalie G. Kpéra, Alice A. K. Djinadou",
+      "source_organisation": "INRAB / PADMAR / MAEP Bénin",
+      "mots_cles": [
+        "tomate",
+        "maraichage",
+        "inrab",
+        "benin",
+        "padmar",
+        "referentiel technico-economique",
+        "itineraire technique"
+      ],
+      "titre_trouve": "MIEUX PRODUIRE LA TOMATE EN TOUTE PÉRIODE AU BÉNIN",
+      "titre": "Mieux produire la tomate en toute période au Bénin : Référentiel technico-économique",
+      "resume": "Référentiel technico-économique de référence de l'INRAB et du PADMAR pour la production de tomate au Bénin : itinéraires techniques, rentabilité et calendrier.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Référentiel technico-économique institutionnel complet de l'INRAB pour la filière maraîchère, publié en accès libre pour les producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "MIEUX PRODUIRE LA TOMATE EN TOUTE PÉRIODE AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB) Projet d’Appui au Développement du Maraîchage (PADMAR)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01081",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "cultures_maraicheres",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "article",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "tomate",
+      "pays": "France",
+      "annee": 2002,
+      "auteurs": "Alter Agri / ABioDoc",
+      "source_organisation": "ITAB / ABioDoc",
+      "mots_cles": [
+        "tomate",
+        "maladies",
+        "ravageurs",
+        "mildiou",
+        "agriculture biologique",
+        "alter agri",
+        "protection des cultures"
+      ],
+      "titre_trouve": "Maladies et ravageurs de la tomate - Alter Agri n°51",
+      "titre": "Maladies et ravageurs de la tomate en agriculture biologique (Alter Agri)",
+      "resume": "Fiche technique issue de la revue Alter Agri décrivant les symptômes et méthodes de prophylaxie contre le mildiou et les pucerons de la tomate en agriculture biologique.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Article extrait d'une revue technique sous droits réservés, axé sur la protection biologique de la tomate en zone tempérée.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Alter Agri • janvier/février 2002 • n°51 Maladies et ravageurs de la tomate"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01082",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "tournesol",
+      "pays": "France",
+      "annee": 2017,
+      "auteurs": "Mathieu Marguerie",
+      "source_organisation": "Bio Provence / Région PACA",
+      "mots_cles": [
+        "tournesol",
+        "oleagineux",
+        "agriculture biologique",
+        "grandes cultures bio",
+        "paca",
+        "marge brute"
+      ],
+      "titre_trouve": "Culture du TOURNESOL en Bio - Fiches techniques #9 Grandes cultures bio",
+      "titre": "Culture du tournesol en agriculture biologique (Guide Bio de PACA)",
+      "resume": "Fiche technico-économique de Bio Provence détaillant la conduite culturale, le désherbage mécanique et le calcul des charges pour le tournesol biologique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique régionale française pour la culture du tournesol en région PACA, non adaptée au contexte agroécologique sahélien.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiches techniques #9 Grandes cultures bio Culture du TOURNESOL en Bio Rédaction : Mathieu Marguerie Bio Provence"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01083",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "fertilisation_amendements",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Gérald Huber, Christiane Schaub",
+      "source_organisation": "Chambre d'Agriculture du Bas-Rhin (CA67)",
+      "mots_cles": [
+        "matiere organique",
+        "fertilite des sols",
+        "humus",
+        "amendements organiques",
+        "chambre d'agriculture",
+        "alsace"
+      ],
+      "titre_trouve": "La fertilité des sols : L’importance de la matière organique - Guide des amendements organiques",
+      "titre": "La fertilité des sols : L'importance de la matière organique (Guide CA67)",
+      "resume": "Guide technique de la Chambre d'Agriculture du Bas-Rhin expliquant les rôles de l'humus, les mécanismes d'humification et la valorisation des amendements organiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique de Chambre d'agriculture française étalonné pour les sols et pratiques agricoles d'Alsace, non adapté aux sols tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La fertilité des sols : L’importance de la matière organique HUBER Gérald SCHAUB Christiane Décembre 2011"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01084",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "economie_filieres_marches",
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tomate",
+      "pays": "Niger",
+      "annee": 2020,
+      "auteurs": "Kaou Mamadou, Djibo M. Issiakou, Madou A. Ali, Sidi I. Ouattara, Boubacar Dan Marafa, Zakey Yayé",
+      "source_organisation": "CRA Agadez / RECA Niger",
+      "mots_cles": [
+        "tomate",
+        "cultures maraicheres",
+        "agadez",
+        "air",
+        "niger",
+        "reca",
+        "fiche technico-economique",
+        "compte d'exploitation"
+      ],
+      "titre_trouve": "Fiche technico-économique pour la culture de la tomate Région d’Agadez",
+      "titre": "Fiche technico-économique de la culture de la tomate à Agadez",
+      "resume": "Fiche technico-économique de la CRA d'Agadez fournissant l'itinéraire technique oasien, le calendrier cultural et le compte d'exploitation prévisionnel de la tomate.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technico-économique sahélienne de terrain complète et chiffrée, éditée par la CRA d'Agadez et le RECA, diffusée librement aux producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chambre Régionale d’Agriculture d’Agadez Fiche technico-économique pour la culture de la tomate Région d’Agadez"
+        }
+      ]
+    }
+  ]
+}

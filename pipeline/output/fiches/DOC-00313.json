@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00313",
+  "sha256": "3e92518ac73328a408de6d4a4269b19560288c86bb399a1932fb4d2d872aa625",
+  "nom_original": "Cours caractéristiques et taxonomie Partie 2.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours caractéristiques et taxonomie Partie 2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7142328,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "droits_reserves",
+    "incomplet"
+  ],
+  "nb_pages": 84,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Ibrahim Elkhalil Benzohra",
+  "source_organisation": null,
+  "mots_cles": [
+    "phytopathologie",
+    "champignons",
+    "ascomycetes",
+    "taxonomie",
+    "maladies des plantes"
+  ],
+  "titre_trouve": "Caractéristiques et taxonomie des agents phytopathogènes",
+  "titre": "Taxonomie des agents phytopathogènes : Ascomycètes et Septomycètes (Partie 2)",
+  "resume": "Cours universitaire spécialisé de niveau Master décrivant la taxonomie, les structures de reproduction et les ordres des champignons Ascomycètes phytopathogènes.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Partie 2 d'un cours universitaire spécialisé non libre de droits ; document incomplet à archiver.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Caractéristiques et taxonomie des agents phytopathogènes"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00313__taxonomie-des-agents-phytopathogenes-ascomycetes-et-sep.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00313__taxonomie-des-agents-phytopathogenes-ascomycetes-et-sep.pdf"
+}

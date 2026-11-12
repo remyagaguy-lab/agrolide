@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00882",
+  "sha256": "95bac69f5c2239d1f15d378ca0a0c58192ff68304f107e32e2776686b650191e",
+  "nom_original": "elevage poule N.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage poule N.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1881093,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 41,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Niger",
+  "annee": 2016,
+  "auteurs": "Abdou Ganahi, Dambagi Gilbert Maizama, Adamou Assane, et al.",
+  "source_organisation": "Ministère de l'Agriculture et de l'Élevage du Niger (MAG/EL) / PPAAO",
+  "mots_cles": [
+    "aviculture",
+    "poules",
+    "elevage avicole",
+    "niger",
+    "sahel",
+    "ppaoo",
+    "inran"
+  ],
+  "titre_trouve": "Guide de l'élevage de poules au Niger",
+  "titre": "Guide pratique d'élevage des poules au Niger (MAG/EL - PPAAO)",
+  "resume": "Manuel technique national de référence élaboré par les experts nigériens (MAG/EL, INRAN, PPAAO) couvrant l'alimentation, l'habitat, la prophylaxie et la gestion de la volaille.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique institutionnel de référence élaboré par le Ministère de l'Agriculture du Niger et le PPAAO, libre d'accès pour les producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Ministère de l’Agriculture et de l’Elevage ... DGPIA ... PPAAO/WAAP ... INRAN"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00882__guide-pratique-d-elevage-des-poules-au-niger-mag-el-ppa.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00882__guide-pratique-d-elevage-des-poules-au-niger-mag-el-ppa.pdf"
+}

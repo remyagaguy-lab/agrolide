@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00946",
+  "sha256": "73e95dd092f1b48bb04a380f6971078172b72012bc169484bbe54c5e9852e13b",
+  "nom_original": "guide_ovin_et_caprin_Songhai-2.pdf",
+  "chemin_relatif_source": "OD_Docs/guide_ovin_et_caprin_Songhai-2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 569609,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "petits ruminants",
+  "pays": "Bénin",
+  "annee": 2015,
+  "auteurs": "Centre Songhaï",
+  "source_organisation": "Centre Songhaï (Porto-Novo, Bénin)",
+  "mots_cles": [
+    "centre songhai",
+    "ovins",
+    "caprins",
+    "elevage ovin",
+    "benin",
+    "petits ruminants"
+  ],
+  "titre_trouve": null,
+  "titre": "Guide d'élevage ovin et caprin (Centre Songhaï)",
+  "resume": "Fascicule pratique du Centre Songhaï détaillant les méthodes agroécologiques de conduite des ovins et des caprins en milieu tropical (OCR nécessaire).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fascicule d'élevage du Centre Songhaï scanné sans texte exploitable; nécessite un traitement OCR et une validation humaine.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.55,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "guide_ovin_et_caprin_Songhai-2.pdf (nom du fichier)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00946__guide-d-elevage-ovin-et-caprin-centre-songhai.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00946__guide-d-elevage-ovin-et-caprin-centre-songhai.pdf"
+}

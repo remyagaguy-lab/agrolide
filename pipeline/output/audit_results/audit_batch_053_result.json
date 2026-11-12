@@ -1,0 +1,177 @@
+{
+  "batch_number": 53,
+  "audits": [
+    {
+      "id": "DOC-01025",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01026",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "membres",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01027",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01028",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01029",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01030",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Document émanant d'une société commerciale privée (Ivograin) avec le drapeau bloquant 'contenu_commercial' ; les règles interdisent formellement 'public' ou 'membres' et 'diffusion_institutionnelle' ne s'applique pas aux entreprises commerciales."
+    },
+    {
+      "id": "DOC-01031",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01032",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01033",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "membres",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01034",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01035",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01036",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01037",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01038",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01039",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01040",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01041",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "decision"
+      ],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {
+        "droits": "inconnu",
+        "decision": "a_valider_humain"
+      },
+      "arbitrage": "Document pratique informel rédigé par un formateur individuel (Formation EBEM - Zi'Grazio Ouedraogo) sans rattachement institutionnel. Le statut de droits est 'inconnu' (et non 'diffusion_institutionnelle'). Les recettes et allégations thérapeutiques avicoles artisanales nécessitent une validation vétérinaire préalable."
+    },
+    {
+      "id": "DOC-01042",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01043",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01044",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-01007",
+  "sha256": "3a6ed2937ecbe5ab096cd6b0e57b2f42d969a491359dee6af9c74350cb000b50",
+  "nom_original": "phy vegt_250820_212558.pdf",
+  "chemin_relatif_source": "OD_Docs/phy vegt_250820_212558.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1936768,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 13,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2025,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "physiologie vegetale",
+    "eau et plantes",
+    "transpiration",
+    "continuum sol plante atmosphere",
+    "assimilats",
+    "cours"
+  ],
+  "titre_trouve": "L’eau et les plantes",
+  "titre": "Cours de physiologie végétale : L'eau et les plantes (Absorption, transport et assimilats)",
+  "resume": "Support de cours universitaire de physiologie végétale abordant les rôles de l'eau, le continuum sol-plante-atmosphère, les mécanismes d'absorption racinaire et la distribution des assimilats.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours académique de physiologie végétale non publié sous licence libre, classé en archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L’eau et les plantes"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "90-98% de l’eau absorbée par la plante est perdue par évaporation - transpiration"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01007__cours-de-physiologie-vegetale-l-eau-et-les-plantes-abso.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-01007__cours-de-physiologie-vegetale-l-eau-et-les-plantes-abso.pdf"
+}

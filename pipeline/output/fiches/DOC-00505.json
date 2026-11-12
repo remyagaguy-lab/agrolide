@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00505",
+  "sha256": "f1f0d080479e5c2fe07a2412d252f669c7a17500c108c5a7f39ef69be5f66c74",
+  "nom_original": "ISA_Brown_CS_product_guide_cage_EN_L1211-1.pdf",
+  "chemin_relatif_source": "OD_Docs/ISA_Brown_CS_product_guide_cage_EN_L1211-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2459344,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 16,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "en",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Hendrix Genetics",
+  "source_organisation": "Hendrix Genetics",
+  "mots_cles": [
+    "isa brown",
+    "laying hens",
+    "poultry",
+    "cage housing",
+    "egg production",
+    "aviculture"
+  ],
+  "titre_trouve": "Product Guide ISA Brown Cage housing",
+  "titre": "ISA Brown Commercial Layer Product Guide : Cage Housing",
+  "resume": "Guide technique professionnel de Hendrix Genetics (16 pages) détaillant les standards de performance, les programmes d'alimentation et la conduite d'élevage en cage des poules pondeuses ISA Brown.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique d'une entreprise privée de sélection animale (Hendrix Genetics / ISA B.V.) : document commercial sous droits réservés, requalifié en droits_reserves_commercial et non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Product Guide ISA Brown Cage housing"
+    },
+    {
+      "champ": "autre",
+      "page": 16,
+      "extrait": "Backed by a strong portfolio of leading brands, Hendrix Genetics"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Guide technique d'une entreprise privée de sélection animale (Hendrix Genetics / ISA B.V.) : document commercial sous droits réservés, requalifié en droits_reserves_commercial et non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00505__isa-brown-commercial-layer-product-guide-cage-housing.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00505__isa-brown-commercial-layer-product-guide-cage-housing.pdf"
+}

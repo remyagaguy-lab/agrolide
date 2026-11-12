@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00402",
+  "sha256": "a9324d84c07acd8f1caecd59389b458f19452d6a672079eff7321eb93fedbfd0",
+  "nom_original": "FADIL Badrani.pdf",
+  "chemin_relatif_source": "OD_Docs/FADIL Badrani.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3419523,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 74,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "decideur_institution"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2023,
+  "auteurs": "Badrani Fadil",
+  "source_organisation": "Conservatoire National des Arts et Métiers (CNAM) / ESGT",
+  "mots_cles": [
+    "plan local d'urbanisme",
+    "plu bioclimatique",
+    "paris",
+    "immobilier",
+    "urbanisme"
+  ],
+  "titre_trouve": "Plan Local d’Urbanisme Bioclimatique de la ville de Paris : Quels impacts sur les projets de construction ? Quelles conséquences sur le milieu économique parisien ?",
+  "titre": "Plan Local d'Urbanisme Bioclimatique de la ville de Paris : impacts économiques et constructifs",
+  "resume": "Mémoire de fin d'études du CNAM analysant les impacts du nouveau PLU bioclimatique de Paris sur les projets de construction et le secteur immobilier de la capitale française.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Mémoire académique d'école d'ingénieurs topographes sur l'urbanisme parisien, totalement hors du périmètre agricole.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Plan Local d’Urbanisme Bioclimatique de la ville de Paris : Quels impacts sur les projets de construction ?"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00402__plan-local-d-urbanisme-bioclimatique-de-la-ville-de-par.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00402__plan-local-d-urbanisme-bioclimatique-de-la-ville-de-par.pdf"
+}

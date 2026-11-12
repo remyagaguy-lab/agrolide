@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00131",
+  "sha256": "bf4056cf2a7c72d76b10819b0dd78665bbff832c7f1eafa5ccc977f419b1d2a5",
+  "nom_original": "60c3639b0ef0a5f66ef268c0e86c8cd16b8d82b7 (1).pdf",
+  "chemin_relatif_source": "OD_Docs/60c3639b0ef0a5f66ef268c0e86c8cd16b8d82b7 (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5028247,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 119,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "France",
+  "annee": 2005,
+  "auteurs": "Joseph Argouarc'h",
+  "source_organisation": "CFPPA Rennes Le Rheu / Educagri",
+  "mots_cles": [
+    "maraichage biologique",
+    "cultures legumieres",
+    "fiches technico-economiques",
+    "itineraire technique",
+    "marge brute"
+  ],
+  "titre_trouve": "Les cultures légumières en agriculture biologique : Fiches technico-économiques des principaux légumes",
+  "titre": "Les cultures légumières en agriculture biologique : fiches technico-économiques",
+  "resume": "Guide technico-économique détaillé pour les principales productions maraîchères biologiques de plein champ et sous abri : planification, temps de travaux, fertilisation et calcul des marges brutes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique institutionnel d'un centre de formation agricole public (CFPPA/Educagri), diffusable en accès public pour son intérêt méthodologique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les cultures légumières en agriculture biologique Fiches technico-économiques des principaux légumes"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0010",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00131__les-cultures-legumieres-en-agriculture-biologique-fiche.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00131__les-cultures-legumieres-en-agriculture-biologique-fiche.pdf"
+}

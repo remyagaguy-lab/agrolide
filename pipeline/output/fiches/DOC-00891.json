@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00891",
+  "sha256": "d6472e05f6e74f162e2446e465479823d02082e434a703a1076512669aa16c05",
+  "nom_original": "elevagr des canard.pdf",
+  "chemin_relatif_source": "OD_Docs/elevagr des canard.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1046701,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 89,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "S.J. van der Meulen, G. den Dikken",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "canards",
+    "aviculture",
+    "agrodok",
+    "incubation",
+    "canetons",
+    "alimentation"
+  ],
+  "titre_trouve": "L'élevage de canards",
+  "titre": "L'élevage de canards (Agrodok 33)",
+  "resume": "Manuel pratique complet de la collection Agrodok (Agromisa/CTA) couvrant toutes les étapes de l'élevage des canards en milieu tropical : races, logement, alimentation, reproduction et santé.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00178.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 33 - L’élevage de canards"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0067",
+  "canonique_id": "DOC-00178",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00891__l-elevage-de-canards-agrodok-33.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00891__l-elevage-de-canards-agrodok-33.pdf"
+}

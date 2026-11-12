@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00694",
+  "sha256": "1f0c089bdc49ee290571e683628680c39fcd6009503660b04891f03ca34e7050",
+  "nom_original": "Préservation de la qualité des blés durant le stockage (2).pdf",
+  "chemin_relatif_source": "OD_Docs/Préservation de la qualité des blés durant le stockage (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1161234,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 26,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "conservation_post_recolte",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "blé",
+  "pays": "Maroc",
+  "annee": 2014,
+  "auteurs": "Abdeslam Acharki",
+  "source_organisation": null,
+  "mots_cles": [
+    "ble",
+    "stockage des grains",
+    "minoterie",
+    "post-recolte",
+    "qualite sanitaire",
+    "nuisibles"
+  ],
+  "titre_trouve": "Préservation de la Qualité des Blés Durant le Stockage Casablanca : Juin 2014 M. Abdeslam ACHARKI",
+  "titre": "Préservation de la qualité des blés durant le stockage en minoterie",
+  "resume": "Présentation technique sur les bonnes pratiques de conservation post-récolte du blé en minoterie industrielle : contrôle réception, ventilation et gestion des nuisibles.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Présentation professionnelle sur le stockage du blé sans licence explicite de diffusion publique, archivée pour usage documentaire.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.5,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Préservation de la Qualité des Blés Durant le Stockage Casablanca : Juin 2014 M. Abdeslam ACHARKI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00694__preservation-de-la-qualite-des-bles-durant-le-stockage.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/conservation_post_recolte/DOC-00694__preservation-de-la-qualite-des-bles-durant-le-stockage.pdf"
+}

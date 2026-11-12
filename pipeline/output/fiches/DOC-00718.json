@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00718",
+  "sha256": "4c31333a8111a9e1f304231c6e8e1f690db6eb67e5ccacb443a2cf678b211dfd",
+  "nom_original": "Rôles,_objectifs_du_travail_du_sol_et_modes_d_actions_des_outils.pdf",
+  "chemin_relatif_source": "OD_Docs/Rôles,_objectifs_du_travail_du_sol_et_modes_d_actions_des_outils.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 950561,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 9,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2016,
+  "auteurs": "Bernard Angonin",
+  "source_organisation": "Direction du Développement Rural de la province Sud (Nouvelle-Calédonie)",
+  "mots_cles": [
+    "travail du sol",
+    "outils agricoles",
+    "structure du sol",
+    "mecanisation",
+    "agronomie"
+  ],
+  "titre_trouve": "Rôles, objectifs du travail du sol et modes d’actions des outils",
+  "titre": "Rôles, objectifs du travail du sol et modes d'actions des outils",
+  "resume": "Guide technique de la Direction du Développement Rural de Nouvelle-Calédonie détaillant les objectifs agronomiques du travail du sol, l'aération, la rétention d'eau et le mode d'action des outils aratoires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide technique institutionnel sur la préparation des sols et les outils aratoires, diffusable aux membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Direction du Développement Rural de la province Sud ... ROLES, OBJECTIFS DU TRAVAIL DU SOL ET MODES D'ACTIONS DES OUTILS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00718__roles-objectifs-du-travail-du-sol-et-modes-d-actions-de.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00718__roles-objectifs-du-travail-du-sol-et-modes-d-actions-de.pdf"
+}

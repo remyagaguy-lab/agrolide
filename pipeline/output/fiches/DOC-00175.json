@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00175",
+  "sha256": "728ce7239d67b516ce5a7bdfe6dedd8ca5d6fecdac53dacfa3fc63036f1f6f05",
+  "nom_original": "Agrodok - 2 - Fertilite du sol@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok - 2 - Fertilite du sol@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1018831,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 88,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 1998,
+  "auteurs": "Laura van Schöll",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "fertilite du sol",
+    "engrais vert",
+    "matiere organique",
+    "amendement",
+    "agrodok"
+  ],
+  "titre_trouve": "AGRODOK 2 GERER LA FERTILITÉ DU SOL",
+  "titre": "Gérer la fertilité du sol (Agrodok 2)",
+  "resume": "Guide pratique pour maintenir et améliorer la fertilité des sols tropicaux : gestion de la matière organique, engrais verts, compost et diagnostic de terrain.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document provenant d'un partage non autorisé @EpubsFR sans licence libre explicite, archivé conformément à la règle 4.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "AGRODOK 2 GERER LA FERTILITÉ DU SOL"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Laura van Schöll"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00175__gerer-la-fertilite-du-sol-agrodok-2.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00175__gerer-la-fertilite-du-sol-agrodok-2.pdf"
+}

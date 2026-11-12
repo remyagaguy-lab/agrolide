@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00387",
+  "sha256": "feca362efcf7ad35ba525ec44ea96631459ca179a0a1772659d8fca37f09f836",
+  "nom_original": "Elevage-des-poulets-Goliath.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage-des-poulets-Goliath.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 351914,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 22,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Bénin",
+  "annee": 2024,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "poulet goliath",
+    "aviculture",
+    "benin",
+    "volaille rustique",
+    "alimentation volaille",
+    "couvaison artificielle",
+    "rentabilite"
+  ],
+  "titre_trouve": null,
+  "titre": "Guide pratique d'élevage des poulets Goliath au Bénin",
+  "resume": "Guide technique pratique décrivant la conduite de la race de poulet rustique améliorée « Goliath » au Bénin : normes d'habitat, formulation alimentaire, gestion des pathologies, incubation artificielle et gestion économique.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide pratique pertinent sur le poulet Goliath au Bénin mais sans mention d'auteur ni d'organisme source explicite, nécessitant une validation humaine des droits avant diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "Les poulets baptisés « Goliath » sont une race rustique originaire du Bénin"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00387__guide-pratique-d-elevage-des-poulets-goliath-au-benin.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00387__guide-pratique-d-elevage-des-poulets-goliath-au-benin.pdf"
+}

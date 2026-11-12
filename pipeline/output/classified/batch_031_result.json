@@ -1,0 +1,775 @@
+{
+  "batch_number": 31,
+  "results": [
+    {
+      "id": "DOC-00459",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Génération D'Impact",
+      "source_organisation": "Génération D'Impact",
+      "mots_cles": [
+        "pisciculture",
+        "clarias",
+        "tilapia",
+        "etang",
+        "bassin",
+        "cage flottante"
+      ],
+      "titre_trouve": null,
+      "titre": "Formation en pisciculture - Comparatif des systèmes d'élevage",
+      "resume": "Fiche technique comparant les différents systèmes d'élevage piscicole (étang, bassin hors-sol, cages flottantes et cages fixes) : avantages, inconvénients et espèces recommandées (clarias et tilapia).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique pratique et directement exploitable sur les structures d'élevage piscicole en milieu tropical, issue d'une organisation de formation.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "sous_domaine",
+          "page": 1,
+          "extrait": "Espèce adaptée *clarias *tilapia"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00460",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "Bernard Sié Kansié",
+      "source_organisation": "ECHO West Africa",
+      "mots_cles": [
+        "engrais liquide",
+        "biofertilisant",
+        "matiere organique",
+        "agroecologie",
+        "afrique de l'ouest"
+      ],
+      "titre_trouve": "La préparation de l’engrais liquide bio",
+      "titre": "La préparation de l'engrais liquide bio",
+      "resume": "Fiche technique d'ECHO Afrique de l'Ouest décrivant la méthode de fabrication d'un engrais liquide biologique en 14 jours à base de matières organiques locales pour les petits exploitants.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche pratique libre de droits issue d'ECHO Afrique de l'Ouest, hautement pertinente pour la fertilisation biologique des cultures.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La préparation de l’engrais liquide bio"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00461",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "Mira Élevage",
+      "source_organisation": "Mira Élevage",
+      "mots_cles": [
+        "aviculture",
+        "poulet de chair",
+        "pondeuses",
+        "cailles",
+        "pintades",
+        "afrique de l'ouest"
+      ],
+      "titre_trouve": "Comment réussir son activité avicole ?",
+      "titre": "Comment réussir son activité avicole - Guide de formation",
+      "resume": "Support complet de formation de 71 diapositives sur la conduite d'un élevage avicole en Afrique de l'Ouest : poulets de chair, poules pondeuses, coquelets, pintades et cailles.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Présentation complète de formation avicole adaptée au contexte ouest-africain, idéale pour l'espace réservé aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Comment réussir son activité avicole ?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00462",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "irrigation",
+        "formules",
+        "hydraulique agricole",
+        "gestion de l'eau"
+      ],
+      "titre_trouve": null,
+      "titre": "Formules de calcul pour l'irrigation",
+      "resume": "Recueil numérisé de 6 pages regroupant des formules techniques de calcul pour les systèmes d'irrigation agricole. Nécessite une reconnaissance optique de caractères (OCR).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document technique numérisé sans texte exploitable, nécessitant un traitement OCR et une vérification de la complétude et des droits.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Formuls de l_irrigation.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00463",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "genetique_reproduction",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "fecondation",
+        "reproduction animale",
+        "embryologie",
+        "ruminants",
+        "suides",
+        "gynecologie veterinaire"
+      ],
+      "titre_trouve": "FECONDATION",
+      "titre": "Cours de physiologie de la reproduction animale - La fécondation",
+      "resume": "Diaporama universitaire de 34 diapositives détaillant les étapes cellulaires de la fécondation animale (capacitation, réaction acrosomiale, nidation) et la gynécologie comparée.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours académique non libre de droits, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "sous_domaine",
+          "page": 34,
+          "extrait": "équidés, les suidés et les ruminants"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00464",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "tubercules_racines"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "patate douce",
+      "pays": null,
+      "annee": 2011,
+      "auteurs": "Georges Thewys",
+      "source_organisation": "COLEACP / PIP",
+      "mots_cles": [
+        "patate douce",
+        "bonnes pratiques phytosanitaires",
+        "protection des cultures",
+        "maladies",
+        "ravageurs",
+        "pays acp"
+      ],
+      "titre_trouve": "GUIDE DE BONNES PRATIQUES PHYTOSANITAIRES POUR LA PATATE DOUCE (IPOMEA BATATAS) EN PAYS ACP",
+      "titre": "Guide de bonnes pratiques phytosanitaires pour la patate douce en pays ACP",
+      "resume": "Guide technique de référence du COLEACP/PIP détaillant les ravageurs, maladies et méthodes de lutte intégrée pour la culture de la patate douce dans les pays d'Afrique, Caraïbes et Pacifique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide officiel de référence du COLEACP pour les pays ACP, essentiel pour la protection phytosanitaire de la patate douce.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DE BONNES PRATIQUES PHYTOSANITAIRES POUR LA PATATE DOUCE (IPOMEA BATATAS) EN PAYS ACP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00465",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gombo",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI",
+      "mots_cles": [
+        "gombo",
+        "abelmoschus esculentus",
+        "maraichage",
+        "itineraire technique",
+        "cameroun"
+      ],
+      "titre_trouve": "LA TECHNOLOGIE DE CULTURE DU GOMBO",
+      "titre": "Fiche technique sur la culture du gombo",
+      "resume": "Fiche technique de 5 pages de l'IFATI décrivant la conduite de la culture du gombo en Afrique centrale : préparation du sol, semis, irrigation, fertilisation, traitements et conservation post-récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète et immédiatement applicable pour la production maraîchère de gombo en zone tropicale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "LA TECHNOLOGIE DE CULTURE DU GOMBO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00466",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "goyave",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI",
+      "mots_cles": [
+        "goyavier",
+        "psidium guajava",
+        "arboriculture fruitiere",
+        "pepiniere",
+        "cameroun"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU GOYAVIER(Psidium guyava)",
+      "titre": "Technologie de production du goyavier",
+      "resume": "Guide technique de 11 pages de l'IFATI sur la culture du goyavier : exigences agro-écologiques, multiplication générative et végétative, conduite de la pépinière, plantation, entretien et lutte phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet et adapté au milieu tropical pour la création et la gestion d'un verger de goyaviers.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DU GOYAVIER(Psidium guyava)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00467",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2009,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "defense des cultures",
+        "protection phytosanitaire",
+        "ravageurs",
+        "maladies",
+        "agronomie"
+      ],
+      "titre_trouve": null,
+      "titre": "Guide pratique de défense des cultures",
+      "resume": "Ouvrage numérisé volumineux de 588 pages consacré à la protection des cultures et à la défense phytosanitaire. Nécessite un traitement OCR pour identifier l'éditeur et le contenu.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Ouvrage complet numérisé sans texte exploitable (scan brut de 588 pages), nécessitant un OCR et une vérification des droits d'auteur.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE PRATIQUE DE DEFFENCE DES CULTURES.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00468",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2016,
+      "auteurs": "Université Cheikh Anta Diop de Dakar (UCAD)",
+      "source_organisation": "UCAD",
+      "mots_cles": [
+        "geographie agraire",
+        "systemes agraires",
+        "terroirs",
+        "senegal",
+        "ucad"
+      ],
+      "titre_trouve": "H 124 GEOGRAPHIE AGRAIRE",
+      "titre": "Cours de géographie agraire - UCAD Dakar",
+      "resume": "Polycopié de cours universitaire de 27 pages de l'UCAD (Dakar) consacré à la géographie agraire : évolution des paysages ruraux, organisation spatiale des terroirs et systèmes agraires africains.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours académique de l'UCAD non assorti d'une licence libre de diffusion, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "UCAD DE DAKAR FLSH DEPARTEMENT D’HISTOIRE H 124 GEOGRAPHIE AGRAIRE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00469",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "conservation_post_recolte",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "riz",
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "riz",
+        "post-recolte",
+        "sechage",
+        "battage",
+        "paddy",
+        "stockage",
+        "qualite"
+      ],
+      "titre_trouve": "GESTION DES RECOLTES DU RIZ",
+      "titre": "Gestion des récoltes et post-récolte du riz",
+      "resume": "Guide pratique sur les opérations de récolte et de post-récolte du riz paddy : critères de maturité, techniques de fauche, séchage, battage, contrôle d'humidité et stockage de qualité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique très utile et directement applicable pour réduire les pertes post-récolte du riz paddy en milieu tropical.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GESTION DES RECOLTES DU RIZ"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00470",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "cereales"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "riz",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Service de la Surveillance Phytosanitaire et des Interventions",
+      "source_organisation": "Service de la Surveillance Phytosanitaire et des Interventions",
+      "mots_cles": [
+        "riz",
+        "nuisibles",
+        "ravageurs",
+        "heteronychus",
+        "trichispa sericea",
+        "protection des cultures"
+      ],
+      "titre_trouve": "LES NUISIBLES DU RIZ ET LES MÉTHODES DE LUTTE",
+      "titre": "Les nuisibles du riz et les méthodes de lutte",
+      "resume": "Guide technique illustré du Service de la surveillance phytosanitaire détaillant l'identification des ravageurs du riz (coléoptères, chrysomèles) et les méthodes de lutte chimique et agronomique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support officiel de surveillance phytosanitaire hautement pertinent pour le diagnostic et le traitement des ravageurs du riz.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LES NUISIBLES DU RIZ ET LES MÉTHODES DE LUTTE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00471",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gingembre",
+      "pays": "Côte d'Ivoire",
+      "annee": 2020,
+      "auteurs": "Fonds Interprofessionnel pour la Recherche et le Conseil Agricoles (FIRCA)",
+      "source_organisation": "FIRCA",
+      "mots_cles": [
+        "gingembre",
+        "filiere",
+        "firca",
+        "cote d'ivoire",
+        "commercialisation",
+        "transformation"
+      ],
+      "titre_trouve": "LA FILIERE GINGEMBRE",
+      "titre": "La filière gingembre en Côte d'Ivoire - Bilan et perspectives",
+      "resume": "Rapport institutionnel de 14 pages du FIRCA dressant l'état des lieux, les projets d'appui aux productrices et les perspectives de recherche et de valorisation de la filière gingembre en Côte d'Ivoire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport institutionnel complet du FIRCA sur la filière gingembre, publiable pour les membres de la plateforme.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA FILIERE GINGEMBRE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00472",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "glycolyse",
+        "biochimie",
+        "pyruvate",
+        "acetyl-coa",
+        "metabolisme"
+      ],
+      "titre_trouve": "2-Devenir du Pyruvate",
+      "titre": "Cours de biochimie - La glycolyse et le métabolisme du pyruvate",
+      "resume": "Support partiel de cours de biochimie de 11 pages portant sur les voies métaboliques cellulaires : dégradation du glucose, décarboxylation oxydative du pyruvate et formation de l'acétyl-CoA.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "ocr_necessaire"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel de cours de biochimie (11 pages sur plus de 53) sans licence libre, archivé sans publication.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.8,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "complet",
+          "page": 10,
+          "extrait": "53"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00473",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2013,
+      "auteurs": "FAO",
+      "source_organisation": "FAO",
+      "mots_cles": [
+        "agriculture intelligente face au climat",
+        "fao",
+        "adaptation climatique",
+        "securite alimentaire",
+        "durabilite"
+      ],
+      "titre_trouve": "Guide de référence L’AGRICULTURE INTELLIGENTE FACE AU CLIMAT Résumé exécutif",
+      "titre": "L'agriculture intelligente face au climat - Guide de référence (Résumé exécutif)",
+      "resume": "Synthèse exécutive de 6 pages de la FAO présentant le concept d'agriculture intelligente face au climat (AIC) : leviers d'action pour la sécurité alimentaire, l'adaptation et l'atténuation du changement climatique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Document de référence institutionnel de la FAO en libre diffusion, hautement stratégique pour l'adaptation climatique en agriculture.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide de référence L’AGRICULTURE INTELLIGENTE FACE AU CLIMAT Résumé exécutif"
+        }
+      ]
+    }
+  ]
+}

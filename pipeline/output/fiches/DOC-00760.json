@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00760",
+  "sha256": "df3ccee683e9992c58e8aabb0c5f806ee44c607328a3c3bd479855089f1c3a6b",
+  "nom_original": "Traitement_des_eaux.pdf",
+  "chemin_relatif_source": "OD_Docs/Traitement_des_eaux.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 12488595,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 310,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 1991,
+  "auteurs": "François Berné, Jean Cordonnier",
+  "source_organisation": "Éditions Technip",
+  "mots_cles": [
+    "traitement des eaux",
+    "epuration",
+    "genie de l'eau",
+    "filtration",
+    "decantation",
+    "editions technip"
+  ],
+  "titre_trouve": "Traitement des eaux",
+  "titre": "Traitement des eaux : procédés et technologies",
+  "resume": "Ouvrage technique de référence de François Berné et Jean Cordonnier détaillant les procédés physico-chimiques et biologiques de traitement, d'épuration et de clarification des eaux.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial des Éditions Technip protégé par copyright, conservé en archives documentaires sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Traitement des eaux (métadonnées titre)"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "By François Berné, Jean Cordonnier (métadonnées auteur)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00760__traitement-des-eaux-procedes-et-technologies.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00760__traitement-des-eaux-procedes-et-technologies.pdf"
+}

@@ -1,0 +1,742 @@
+{
+  "batch_number": 58,
+  "results": [
+    {
+      "id": "DOC-00871",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "eau_irrigation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2016,
+      "auteurs": "Association Sahel People Service (SPS), AFAFA, SECAAR",
+      "source_organisation": "SECAAR",
+      "mots_cles": [
+        "zai",
+        "agroecologie",
+        "conservation des sols",
+        "zipelle",
+        "sahel",
+        "restauration des terres"
+      ],
+      "titre_trouve": "La technique du Zaï",
+      "titre": "La technique du Zaï : Restauration des terres dégradées au Sahel",
+      "resume": "Guide pratique illustré décrivant la technique agroécologique du zaï : creusement des poquets, apport de matière organique, rétention de l'eau et outillage adapté au Sahel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique d'agroécologie sahélienne de référence, complet et librement diffusé par l'ONG SECAAR.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Diffusé par Secaar ... La technique du Zaï"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00872",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "sol_fertilite"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "sol",
+        "capacite de retention",
+        "calcul de dose",
+        "drainage"
+      ],
+      "titre_trouve": "Paramètres d'un sol irrigué",
+      "titre": "Exercices corrigés sur les paramètres de l'eau et du sol en irrigation",
+      "resume": "Série d'exercices pratiques résolus portant sur les calculs hydrauliques de base en irrigation : capacité de rétention d'eau, dose d'arrosage et drainage.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Feuille d'exercices pédagogiques informelle sans licence de diffusion libre, archivée.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.8,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Paramètres d'un sol irrigué.\nExercice 1 : Calcul de la capacité de rétention d'eau"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00873",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "boissons",
+      "domaines_secondaires": [
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "distillerie",
+        "eaux de vie",
+        "vinasses",
+        "engrais organiques",
+        "valorisation des sous-produits"
+      ],
+      "titre_trouve": "eaux de vie anthocyanes huiles essentielles engrais organiques",
+      "titre": "Schéma technologique de valorisation des eaux-de-vie et sous-produits de vin",
+      "resume": "Synoptique industriel illustrant les étapes de distillation, séparation et valorisation des sous-produits viticoles en alcools, tartrates et engrais.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "contexte_non_adapte",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Schéma de procédé isolé sans texte explicatif, contextualisé en viticulture tempérée, archivé.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.7,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ISAA-MF 2004\nTechnologie clé de compétitivité dans l’activité\nEAU DE VIE ET SOUS-PRODUITS DE VIN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00874",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": [
+        "foresterie_agroforesterie",
+        "sol_fertilite"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "École Nationale Supérieure des Forêts de Khenchela",
+      "source_organisation": "ENSF Khenchela",
+      "mots_cles": [
+        "ecologie generale",
+        "foresterie",
+        "ecosysteme",
+        "facteurs ecologiques",
+        "pedologie",
+        "algerie"
+      ],
+      "titre_trouve": "Ecologie générale - 2ème Année Tronc Commun - Ecole nationale superieure des Forets – Khenchela",
+      "titre": "Cours d'écologie générale (École Nationale Supérieure des Forêts de Khenchela)",
+      "resume": "Cours complet d'écologie générale pour étudiants forestiers abordant les concepts d'écosystèmes, de facteurs biotiques et abiotiques et les propriétés édaphiques des sols.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours d'une grande école forestière algérienne sans licence de réutilisation publique, archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "« Ecologie générale » \n2ème Année Tronc Commun ... Ecole nationale superieure des Forets – Khenchela-"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00875",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "gestion_projet_business_plan"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Vanuatu",
+      "annee": 1995,
+      "auteurs": "Dr Robinet",
+      "source_organisation": "CIRAD-EMVT",
+      "mots_cles": [
+        "aviculture",
+        "etude de faisabilite",
+        "elevage multiplicateur",
+        "poulet de chair",
+        "pondeuses",
+        "vanuatu"
+      ],
+      "titre_trouve": "ÉTUDE DE FAISABILITÉ D'UN PROJET ÉLEVAGE MULTIPLICATEUR DE VOLAILLES A VOCATION MIXTE CHAIR-PONTE AU VANUATU",
+      "titre": "Étude de faisabilité d'un élevage multiplicateur avicole mixte chair-ponte",
+      "resume": "Rapport d'expertise et étude de faisabilité technico-économique complète pour la mise en place d'un élevage multiplicateur avicole (bâtiments, alimentation, budget).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport d'étude de faisabilité institutionnel complet (CIRAD-EMVT), utile pour les porteurs de projet avicoles, réservé aux membres.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ÉTUDE DE FAISABILITÉ D'UN PROJET ÉLEVAGE MULTIPLICATEUR DE VOLAILLES A VOCATION MIXTE CHAIR-PONTE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00876",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2018,
+      "auteurs": "Sophie Crépin-Leblond",
+      "source_organisation": "Les Simples de Sophie",
+      "mots_cles": [
+        "poules pondeuses",
+        "atelier avicole",
+        "plein air",
+        "aviculture biologique",
+        "vente directe"
+      ],
+      "titre_trouve": "Formation Poules Pondeuses : créer son atelier de 250 pondeuses",
+      "titre": "Créer son atelier de 250 poules pondeuses de plein air",
+      "resume": "Support de formation présentant l'organisation matérielle, le travail quotidien et la gestion d'un atelier fermier de 250 poules pondeuses en plein air.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_personnelles",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document privé issu d'une formation payante en France contenant des coordonnées téléphoniques directes, archivé.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Formation Poules Pondeuses : créer son atelier de 250 pondeuses"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00877",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pintade",
+      "pays": "Mali",
+      "annee": 2008,
+      "auteurs": "Projet PROSEL",
+      "source_organisation": "PROSEL Mali",
+      "mots_cles": [
+        "pintadeaux",
+        "meleagriculture",
+        "trichomonose",
+        "aviculture villageoise",
+        "mali",
+        "sahel"
+      ],
+      "titre_trouve": "MODULE DE FORMATION DES ELEVEURS RELAIS : ELEVAGE DES PINTADEAUX",
+      "titre": "Élevage des pintadeaux : guide de formation des éleveurs relais (PROSEL)",
+      "resume": "Guide pratique malien destiné aux éleveurs relais, détaillant les soins aux jeunes pintadeaux, le chauffage au nid et les traitements contre la trichomonose.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Module de formation pratique sahélien complet sur l'aviculture villageoise (pintadeaux), en diffusion institutionnelle publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PROSEL ... MODULE DE FORMATION DES ELEVEURS RELAIS \n \nELEVAGE DES PINTADEAUX"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00879",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "canard",
+      "pays": null,
+      "annee": 1990,
+      "auteurs": "Isabella Romboli",
+      "source_organisation": "CIHEAM",
+      "mots_cles": [
+        "canard de barbarie",
+        "cairina moschata",
+        "elevage extensif",
+        "aviculture",
+        "croissance",
+        "palmipedes"
+      ],
+      "titre_trouve": "Quelques données sur l’élevage extensif du Canard de Barbarie",
+      "titre": "Quelques données sur l’élevage extensif du canard de Barbarie",
+      "resume": "Article scientifique du CIHEAM synthétisant les données zootechniques sur l'élevage extensif du canard de Barbarie : caractéristiques de la race, rationnement et courbes de croissance.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Open Access CIHEAM",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Publication scientifique complète issue du CIHEAM sur les palmipèdes, diffusable auprès des membres de la communauté.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Quelques données sur l’élevage extensif du \nCanard de Barbarie \nIsabella ROMBOLI"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00880",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pintade",
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "meleagriculture",
+        "pintade",
+        "elevage avicole",
+        "pintadeaux",
+        "burkina faso",
+        "zootechnie"
+      ],
+      "titre_trouve": "ELEVAGE DE LA PINTADE ( MELEAGRICULTURE )",
+      "titre": "Guide d'élevage de la pintade (Méléagriculture)",
+      "resume": "Manuel pratique détaillant la conduite d'un élevage de pintades en Afrique de l'Ouest : caractéristiques de l'espèce, normes d'habitat, conduite des pintadeaux et hygiène.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document source au format ODT nécessitant conversion et validation face au PDF correspondant.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ELEVAGE DE LA PINTADE ( MELEAGRICULTURE ) PINTADES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00881",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pintade",
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Joyce Clarence",
+      "source_organisation": null,
+      "mots_cles": [
+        "meleagriculture",
+        "pintade",
+        "elevage avicole",
+        "pintadeaux",
+        "burkina faso",
+        "itineraire technique"
+      ],
+      "titre_trouve": "ELEVAGE DE LA PINTADE (MELEAGRICULTURE)",
+      "titre": "Guide pratique d'élevage de la pintade en Afrique de l'Ouest",
+      "resume": "Manuel technique illustré de 14 pages sur la méléagriculture tropicale : gestion du troupeau, claustration, prévention des mortalités de pintadeaux et calendrier sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet sur l'élevage des pintades au Sahel, d'intérêt majeur pour les éleveurs ouest-africains.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ELEVAGE DE LA PINTADE \n(MELEAGRICULTURE) \n \nPINTADES:"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00882",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Niger",
+      "annee": 2016,
+      "auteurs": "Abdou Ganahi, Dambagi Gilbert Maizama, Adamou Assane, et al.",
+      "source_organisation": "Ministère de l'Agriculture et de l'Élevage du Niger (MAG/EL) / PPAAO",
+      "mots_cles": [
+        "aviculture",
+        "poules",
+        "elevage avicole",
+        "niger",
+        "sahel",
+        "ppaoo",
+        "inran"
+      ],
+      "titre_trouve": "Guide de l'élevage de poules au Niger",
+      "titre": "Guide pratique d'élevage des poules au Niger (MAG/EL - PPAAO)",
+      "resume": "Manuel technique national de référence élaboré par les experts nigériens (MAG/EL, INRAN, PPAAO) couvrant l'alimentation, l'habitat, la prophylaxie et la gestion de la volaille.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique institutionnel de référence élaboré par le Ministère de l'Agriculture du Niger et le PPAAO, libre d'accès pour les producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Ministère de l’Agriculture et de l’Elevage ... DGPIA ... PPAAO/WAAP ... INRAN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00883",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "porcins",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "porcins",
+      "pays": null,
+      "annee": 2011,
+      "auteurs": "Johan van 't Klooster, Arie Wingelaar",
+      "source_organisation": "Fondation Agromisa et CTA",
+      "mots_cles": [
+        "elevage porcin",
+        "porc",
+        "zones tropicales",
+        "agrodok",
+        "cta",
+        "zootechnie tropicale"
+      ],
+      "titre_trouve": "L’élevage des porcs dans les zones tropicales - Série Agrodok No. 1",
+      "titre": "L’élevage des porcs dans les zones tropicales (Agrodok n° 1)",
+      "resume": "Manuel pratique de référence sur la conduite de l'élevage porcin en milieu tropical : logement, alimentation, reproduction, soins de santé et gestion économique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Diffusion institutionnelle CTA / Agrodok",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Manuel technique complet de la collection Agrodok (CTA/Agromisa), accessible à la communauté des membres de la plateforme.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Série Agrodok No. 1 \nL’élevage des porcs dans les zones tropicales"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00884",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale",
+        "alimentation_animale"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Sénégal, Bénin, Tchad",
+      "annee": 2013,
+      "auteurs": "S.B. Ayssiwede, A. Dieng, M.R.B. Houinato, C.A.A.M. Chrysostome, Y. Issa, J.-L. Hornick, A. Missohou",
+      "source_organisation": "EISMV Dakar / Annales de Médecine Vétérinaire",
+      "mots_cles": [
+        "aviculture traditionnelle",
+        "poulet local",
+        "senegal",
+        "afrique subsaharienne",
+        "eismv",
+        "zootechnie"
+      ],
+      "titre_trouve": "Elevage des poulets traditionnels ou indigènes au Sénégal et en Afrique Subsaharienne : état des lieux et contraintes",
+      "titre": "Élevage des poulets traditionnels au Sénégal et en Afrique subsaharienne",
+      "resume": "Article de synthèse scientifique analysant la situation, les performances zootechniques et les contraintes sanitaires et nutritionnelles de l'aviculture traditionnelle en Afrique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Open Access académique (Ann. Méd. Vét.)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique complet publié en libre accès sur l'aviculture subsaharienne, mis à disposition des membres et chercheurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Elevage des poulets traditionnels ou indigènes au Sénégal et en Afrique Subsaharienne : état des lieux et contraintes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00885",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Gabon",
+      "annee": 2014,
+      "auteurs": "Institut Gabonais d’Appui au Développement (IGAD)",
+      "source_organisation": "IGAD Gabon",
+      "mots_cles": [
+        "poules pondeuses",
+        "poussiniere",
+        "phase de demarrage",
+        "aviculture",
+        "gabon",
+        "equipements avicoles"
+      ],
+      "titre_trouve": "Élevage de poules pondeuses : LA CONDUITE DE LA PHASE DE DÉMARRAGE - Guide pratique",
+      "titre": "Élevage de poules pondeuses : conduite de la phase de démarrage (IGAD Gabon)",
+      "resume": "Guide pratique illustré détaillant la préparation de la poussinière, la gestion du chauffage, l'alimentation et le budget d'équipement en FCFA pour le démarrage des poussins.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel gabonais complet et directement opérationnel pour les éleveurs de volailles, en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Institut Gabonais d’Appui au Développement ... Élevage de poules pondeuses \nLA CONDUITE DE LA \nPHASE DE DÉMARRAGE \nGuide pratique"
+        }
+      ]
+    }
+  ]
+}

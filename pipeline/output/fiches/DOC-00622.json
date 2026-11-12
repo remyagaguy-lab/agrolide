@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00622",
+  "sha256": "abf32e5345908222e27ceca46d9b701923e0e26a89e718e423edc46c2d1ec556",
+  "nom_original": "Mémento de zootechnie pdf.pdf",
+  "chemin_relatif_source": "OD_Docs/Mémento de zootechnie pdf.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 14833388,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 281,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "zootechnie",
+    "memento",
+    "elevage",
+    "nutrition animale",
+    "production animale"
+  ],
+  "titre_trouve": "Mémento de zootechnie",
+  "titre": "Mémento de zootechnie",
+  "resume": "Ouvrage de référence de 281 pages sur les principes de la zootechnie et des productions animales, scanné sans texte exploitable (OCR requis).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00621.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.4,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Mémento de zootechnie pdf.pdf (nom du fichier)"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0074",
+  "canonique_id": "DOC-00621",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00622__memento-de-zootechnie.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-00622__memento-de-zootechnie.pdf"
+}

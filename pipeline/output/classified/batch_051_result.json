@@ -1,0 +1,696 @@
+{
+  "batch_number": 51,
+  "results": [
+    {
+      "id": "DOC-00763",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": [
+        "conservation_post_recolte",
+        "entreprise_agroalimentaire"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "manioc",
+      "pays": "République Démocratique du Congo",
+      "annee": 2014,
+      "auteurs": "N.M. Mahungu, S.M. Lukombo",
+      "source_organisation": "IITA",
+      "mots_cles": [
+        "manioc",
+        "transformation du manioc",
+        "gari",
+        "fufu",
+        "iita",
+        "rdc",
+        "farine panifiable"
+      ],
+      "titre_trouve": "TRANSFORMATION DU MANIOC Manuel de formation destiné aux agents de transformation",
+      "titre": "Transformation du manioc : Manuel de formation pour les agents de transformation",
+      "resume": "Manuel pratique de l'IITA en RDC détaillant les procédés de transformation des tubercules et feuilles de manioc en gari, fufu, cossettes et farine de haute qualité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Manuel technique complet de formation publié par l'IITA RDC, mis à disposition des membres pour la formation professionnelle agricole.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "TRANSFORMATION DU MANIOC Manuel de formation destiné aux agents de transformation Institut International d’Agriculture Tropicale (IITA)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00764",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Suisse",
+      "annee": 1999,
+      "auteurs": "Pierre Nessmann",
+      "source_organisation": "Éditions OPEASI",
+      "mots_cles": [
+        "jardinage",
+        "horticulture",
+        "plantes ornementales",
+        "potager",
+        "suisse",
+        "amenagement de jardin"
+      ],
+      "titre_trouve": "UN VOYAGE AU CŒUR DU JARDINAGE...",
+      "titre": "Un voyage au cœur du jardinage",
+      "resume": "Ouvrage encyclopédique illustré sur l'aménagement de jardins et l'horticulture en milieu tempéré, couvrant la connaissance des sols, des végétaux et la multiplication des plantes.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial protégé par copyright (Éditions OPEASI) et centré sur le jardinage en climat tempéré, archivé sans publication.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 332,
+          "extrait": "© OPEASI CH-LUZERN ISBN 3 907 498 70-4"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00765",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "agronomie_generale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "Guy Richard, Pierre Stengel, Gilles Lemaire, Pierre Cellier, Egizio Valceschini",
+      "source_organisation": "Éditions Quæ / INRA",
+      "mots_cles": [
+        "agronomie",
+        "inra",
+        "agroecologie",
+        "environnement",
+        "changement climatique",
+        "recherche agronomique"
+      ],
+      "titre_trouve": "Une agronomie pour le XXIe siècle",
+      "titre": "Une agronomie pour le XXIe siècle",
+      "resume": "Ouvrage collectif de l'Inra publié aux Éditions Quæ retraçant l'évolution de la recherche agronomique vers l'agroécologie et la préservation de l'environnement.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial protégé par le droit d'auteur (Éditions Quæ), archivé sans diffusion publique conformément aux règles de propriété intellectuelle.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.99,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 4,
+          "extrait": "© Éditions Quæ, 2019. ISBN : 978-2-7592-2937-6 Toute reproduction, même partielle, du présent ouvrage est interdite sans autorisation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00766",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "organisations_paysannes",
+        "vulgarisation_conseil"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "enseignant_chercheur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2009,
+      "auteurs": "Nicolas Ferraton, Isabelle Touzard",
+      "source_organisation": "CTA, Éditions Quæ, Presses agronomiques de Gembloux",
+      "mots_cles": [
+        "agriculture familiale",
+        "diagnostic agraire",
+        "systemes de production",
+        "cta",
+        "gestion d'exploitation",
+        "afrique tropicale"
+      ],
+      "titre_trouve": "Comprendre l’agriculture familiale Diagnostic des systèmes de production",
+      "titre": "Comprendre l'agriculture familiale : Diagnostic des systèmes de production",
+      "resume": "Guide méthodologique de référence (CTA/Quæ) pour réaliser l'analyse-diagnostic des systèmes de production et exploitations agricoles familiales tropicales.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage sous copyright commercial (Éditions Quæ / Presses agronomiques de Gembloux) avec interdiction de reproduction, archivé sans diffusion libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 4,
+          "extrait": "© Quæ, CTA, Presses agronomiques de Gembloux 2009 ISBN (Quæ) : 978-2-7592-0340-6 Toute reproduction même partielle du présent ouvrage est interdite"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00767",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "these",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Thomas Mambrini",
+      "source_organisation": "Université Paris-Sud",
+      "mots_cles": [
+        "photovoltaique",
+        "spectre solaire",
+        "cellules solaires",
+        "physique",
+        "genie electrique"
+      ],
+      "titre_trouve": "Caractérisation de panneaux solaires photovoltaïques en conditions réelles d’implantation et en fonction des différentes technologies",
+      "titre": "Caractérisation de panneaux solaires photovoltaïques en conditions réelles",
+      "resume": "Thèse de doctorat en physique appliquée portant sur la modélisation spectrale et la caractérisation extérieure de différentes technologies de panneaux solaires photovoltaïques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Thèse de physique et génie électrique consacrée aux cellules solaires photovoltaïques, hors du périmètre agronomique et agricole d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 2,
+          "extrait": "UNIVERSITE PARIS-SUD DISCIPLINE PHYSIQUE THÈSE DE DOCTORAT Caractérisation de panneaux solaires photovoltaïques en conditions réelles d'implantation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00768",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "voie des pentoses phosphates",
+        "glucose 6-phosphate",
+        "nadph",
+        "metabolisme",
+        "enzymologie"
+      ],
+      "titre_trouve": "Biochimie métabolique : voie des pentoses phosphates",
+      "titre": "Biochimie métabolique : La voie des pentoses phosphates",
+      "resume": "Support de cours de biochimie métabolique décrivant les étapes enzymatiques de la phase oxydative et non oxydative de la voie des pentoses phosphates.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche de cours universitaire de biochimie sans licence de diffusion ouverte, archivée à titre documentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.80,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Biochimie métabolique : voie des pentoses phosphates VOIE DES PENTOSES PHOSPHATES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00769",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovins",
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Velmarr Online Training (VOT)",
+      "source_organisation": "Velmarr Online Training",
+      "mots_cles": [
+        "embouche",
+        "engraissement",
+        "bovins",
+        "ovins",
+        "caprins",
+        "afrique de l'ouest",
+        "conformation bouchere"
+      ],
+      "titre_trouve": "MODULE I : PRINCIPES DE L’EMBOUCHE ET SELECION DES ANIMAUX POUR L’ENGRAISSEMENT",
+      "titre": "Principes de l'embouche et sélection des ruminants pour l'engraissement",
+      "resume": "Module de formation pratique détaillant les principes de l'embouche bovine, ovine et caprine en Afrique de l'Ouest et les critères de sélection des animaux.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours issu d'un organisme de formation commerciale en ligne sans licence libre, archivé sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "VOT Velmarr Online Training EMBOUCHE MODULE I : PRINCIPES DE L’EMBOUCHE ET SELECION DES ANIMAUX POUR L’ENGRAISSEMENT"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00770",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": "Belgique",
+      "annee": null,
+      "auteurs": "Magasins Aveve",
+      "source_organisation": "Aveve Belgique",
+      "mots_cles": [
+        "vaccination volailles",
+        "vermifugation",
+        "poules",
+        "sante animale",
+        "belgique",
+        "aveve"
+      ],
+      "titre_trouve": "Vacciner et vermifuger vos poules",
+      "titre": "Vacciner et vermifuger vos poules (Conseil Aveve Belgique)",
+      "resume": "Conseils pratiques pour éleveurs amateurs issus du site commercial Aveve en Belgique, expliquant l'utilité des vaccins et vermifuges pour poules de basse-cour.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Article extrait d'un site web commercial belge pour éleveurs amateurs en milieu tempéré, sans licence ouverte.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Vacciner et vermifuger vos poules Les poules savent bien prendre soin d’elles-mêmes. https://magasinsaveve.be"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00771",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "elevage_general"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "Dr. Nébié",
+      "source_organisation": null,
+      "mots_cles": [
+        "vaccins",
+        "serums",
+        "immunologie veterinaire",
+        "sante animale",
+        "technicien d'elevage",
+        "burkina faso"
+      ],
+      "titre_trouve": "Vaccins et sérums pour tse2",
+      "titre": "Vaccins et sérums en santé animale (Cours pour techniciens d'élevage)",
+      "resume": "Support de cours pédagogique sur l'immunologie vétérinaire destiné aux techniciens d'élevage, couvrant la composition des vaccins, les adjuvants et les protocoles.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours magistral pour techniciens d'élevage sans licence libre explicite, archivé pour respect des droits d'auteur académiques.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Vaccins et sérums pour tse2 Vaccins Définition: Préparation antigénique qui a pour but d’induire chez l’animal"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00772",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "politiques_strategies",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie, Tunisie, Libye",
+      "annee": 2015,
+      "auteurs": "Hasan Quarrouch, Djamel Latrech, Khatim Kherraz, Maxime Thibon, Jihed Ghannem",
+      "source_organisation": "Observatoire du Sahara et du Sahel (OSS)",
+      "mots_cles": [
+        "irrigation",
+        "eau souterraine",
+        "sass",
+        "observatoire du sahara et du sahel",
+        "oasis",
+        "algerie",
+        "tunisie"
+      ],
+      "titre_trouve": "Pour une meilleure valorisation de l’eau d’irrigation dans le bassin du SASS Diagnostic et recommandations",
+      "titre": "Valorisation de l'eau d'irrigation dans le bassin du SASS (Diagnostic et recommandations)",
+      "resume": "Rapport de synthèse de l'Observatoire du Sahara et du Sahel (OSS) formulant des recommandations stratégiques pour l'efficience de l'eau d'irrigation oasienne.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport institutionnel de référence de l'Observatoire du Sahara et du Sahel sur la gestion de l'eau agricole, mis à disposition des membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "SYSTÈME AQUIFÈRE DU SAHARA SEPTENTRIONAL Pour une meilleure valorisation de l’eau d’irrigation dans le bassin du SASS OBSERVATOIRE DU SAHARA ET DU SAHEL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00773",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "ruminants",
+        "alimentation_animale",
+        "aviculture",
+        "petit_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ruminants",
+      "pays": "Mali",
+      "annee": 1986,
+      "auteurs": "Ministère de l'Agriculture de la République du Mali, USAID, SECID",
+      "source_organisation": "Ministère de l'Agriculture du Mali / USAID",
+      "mots_cles": [
+        "zootechnie",
+        "embouche bovine",
+        "elevage pastoral",
+        "petits ruminants",
+        "mali",
+        "sahel",
+        "usaid"
+      ],
+      "titre_trouve": "ZOOTECHNIE Tome III - ELEVAGE ET EMBOUCHE à l'usage des Centres d'Apprentissage Agricole",
+      "titre": "Zootechnie : Élevage et embouche au Mali (Tome III)",
+      "resume": "Manuel de référence du Ministère de l'Agriculture du Mali et de l'USAID pour la formation des techniciens en zootechnie, pâturages, embouche bovine et petits élevages.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Manuel institutionnel complet de zootechnie sahélienne développé par le Ministère de l'Agriculture du Mali et l'USAID, publié pour les membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MINISTERE DE L'AGRICULTURE REPUBLIQUE DU MALI ZOOTECHNIE Tome III- ELEVAGE ET EMBOUCHE à l'usage des Centres d'Apprentissage Agricole PROJET CAA 1986 USAID"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00774",
+      "domaine_principal": "transversal",
+      "sous_domaine": "methodologie_recherche",
+      "domaines_secondaires": [
+        "agriculture_generale"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 1974,
+      "auteurs": "Michel Sébillotte",
+      "source_organisation": "ORSTOM / INA Paris-Grignon",
+      "mots_cles": [
+        "agronomie",
+        "methodologie agronomique",
+        "sebillotte",
+        "epistemologie",
+        "orstom",
+        "diagnostic de l'agronome"
+      ],
+      "titre_trouve": "Agronomie et agriculture. Essai d’analyse des tâches de l’agronome",
+      "titre": "Agronomie et agriculture : Essai d'analyse des tâches de l'agronome",
+      "resume": "Article fondateur de Michel Sébillotte définissant l'agronomie comme discipline scientifique, ses démarches théoriques, le diagnostic et ses liens avec les pratiques agricoles.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique historique de référence de l'ORSTOM/IRD, accessible aux membres pour la formation méthodologique agronomique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agronomie et agriculture. Essai d’analyse des tâches de l’agronome Michel SEBILLOTTE Maître de Conférences Institut National Agronomique Paris-Grignon"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00775",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "aquaculture",
+      "pays": "France",
+      "annee": 2017,
+      "auteurs": "BioMar SAS",
+      "source_organisation": "BioMar SAS",
+      "mots_cles": [
+        "aquaculture",
+        "tilapia",
+        "poisson-chat africain",
+        "alimentation aquacole",
+        "granules extrudes",
+        "biomar"
+      ],
+      "titre_trouve": "GAMMES D’ALIMENTS POUR TILAPIAS ET POISSONS-CHATS AFRICAINS",
+      "titre": "Gammes d'aliments et rationnement pour tilapias et poissons-chats africains",
+      "resume": "Brochure technique de BioMar présentant les programmes nutritionnels, calibres d'aliment et tables de rationnement pour le tilapia et le poisson-chat africain.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Brochure commerciale éditée par un fabricant d'aliments industriels (BioMar), archivée sans diffusion ouverte.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GAMMES D’ALIMENTS POUR TILAPIAS ET POISSONS-CHATS AFRICAINS LET’S INNOVATE AQUACULTURE www.biomar.fr"
+        }
+      ]
+    }
+  ]
+}

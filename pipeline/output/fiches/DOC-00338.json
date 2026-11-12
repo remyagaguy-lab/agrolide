@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00338",
+  "sha256": "853f1624ce9c2f239e919ea7b957bd6b16419ed595e4e0c24103d0e7d96995dc",
+  "nom_original": "DEVIS DE POULAILLER (550têtes de chair)-converti.pdf",
+  "chemin_relatif_source": "OD_Docs/DEVIS DE POULAILLER (550têtes de chair)-converti.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 195817,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aviculture",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture / poulet de chair",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "devis",
+    "poulet de chair",
+    "aviculture",
+    "budget previsionnel",
+    "fcfa"
+  ],
+  "titre_trouve": "DEVIS DE POULAILLER *Pour une bande de 55O têtes de poulets de chair",
+  "titre": "Devis estimatif d'un poulailler pour 550 poulets de chair",
+  "resume": "Budget prévisionnel chiffré en FCFA pour la conduite d'une bande de 550 poulets de chair, détaillant les postes d'achat des poussins, aliments (démarrage/croissance), vaccins, chauffage et matériel d'élevage.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document informel pratique sans mention d'auteur ni de licence libre explicite, archivé pour servir de modèle d'exploitation.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "DEVIS DE POULAILLER *Pour une bande de 55O têtes de poulets de chair"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Poussins : 550poussins à 460f par tête soit 253000FCFA"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00338__devis-estimatif-d-un-poulailler-pour-550-poulets-de-cha.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00338__devis-estimatif-d-un-poulailler-pour-550-poulets-de-cha.pdf"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00113",
+  "sha256": "f5bc797ce590d6a9461508a8cd3f8bf1fabf3089defc91b076eda9fcf63ce617",
+  "nom_original": "3 fondements de votre autosuffisance alimentaire@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/3 fondements de votre autosuffisance alimentaire@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2946870,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 13,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2021,
+  "auteurs": "Piero San Giorgio",
+  "source_organisation": null,
+  "mots_cles": [
+    "autosuffisance alimentaire",
+    "resilience",
+    "potager",
+    "autonomie",
+    "petit elevage"
+  ],
+  "titre_trouve": "Les 3 fondements de votre autosuffisance alimentaire",
+  "titre": "Les 3 fondements de votre autosuffisance alimentaire",
+  "resume": "Livret présentant les principes de base pour développer une autonomie alimentaire familiale à travers le jardinage vivrier et le petit élevage domestique en contexte tempéré.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Publication commerciale privée sous droits réservés (@EpubsFR), non diffusable publiquement et contexte occidental tempéré.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.95,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Les 3 fondements de votre autosuffisance alimentaire Piero San Giorgio"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Piero San Giorgio"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00113__les-3-fondements-de-votre-autosuffisance-alimentaire.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00113__les-3-fondements-de-votre-autosuffisance-alimentaire.pdf"
+}

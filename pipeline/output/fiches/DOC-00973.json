@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00973",
+  "sha256": "5810af95db0430af0dc396ab2e92db29f2d50f164d97ca24375dadfe75c1e2b8",
+  "nom_original": "le-lapin.pdf",
+  "chemin_relatif_source": "OD_Docs/le-lapin.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 730964,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00383",
+  "groupe_doublon_id": "GRP-0029",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00383 (Fiche conseil sur le lapin de compagnie (caractéristiques, diète et santé)).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "lapin",
+  "pays": "Canada",
+  "annee": 2017,
+  "auteurs": "Julie Dufour",
+  "source_organisation": "Centre Hospitalier Universitaire Vétérinaire (CHUV) de Montréal",
+  "mots_cles": [
+    "lapin",
+    "animal de compagnie",
+    "lagomorphe",
+    "alimentation lapin",
+    "reproduction lapin"
+  ],
+  "titre_trouve": "LE LAPIN",
+  "titre": "Fiche conseil sur le lapin de compagnie (caractéristiques, diète et santé)",
+  "resume": "Fiche de vulgarisation vétérinaire du CHUV de Montréal présentant les caractéristiques biologiques, les principales races de compagnie, la longévité, la diète et la reproduction chez le lapin domestique.",
+  "statut_droits": "droits_reserves_commercial",
+  "complet": true,
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "LE LAPIN Hôpital des animaux de compagnie Centre hospitalier universitaire vétérinaire"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Ce document ne peut en aucun cas être utilisé dans un cadre commercial sans autorisation expresse de l'auteur."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00973__fiche-conseil-sur-le-lapin-de-compagnie-caracteristique.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00973__fiche-conseil-sur-le-lapin-de-compagnie-caracteristique.pdf"
+}

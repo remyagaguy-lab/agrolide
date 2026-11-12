@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00880",
+  "sha256": "b93a017b1c3ece76251c28cc15f6291660246397a3409be7484f0ed737a294f9",
+  "nom_original": "elevage pintade.odt",
+  "chemin_relatif_source": "OD_Docs/elevage pintade.odt",
+  "indice_ancien_dossier": null,
+  "format_source": "odt",
+  "taille_octets": 41210,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pintade",
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "meleagriculture",
+    "pintade",
+    "elevage avicole",
+    "pintadeaux",
+    "burkina faso",
+    "zootechnie"
+  ],
+  "titre_trouve": "ELEVAGE DE LA PINTADE ( MELEAGRICULTURE )",
+  "titre": "Guide d'élevage de la pintade (Méléagriculture)",
+  "resume": "Manuel pratique détaillant la conduite d'un élevage de pintades en Afrique de l'Ouest : caractéristiques de l'espèce, normes d'habitat, conduite des pintadeaux et hygiène.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "fragment",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (fragment) du document canonique DOC-00881.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ELEVAGE DE LA PINTADE ( MELEAGRICULTURE ) PINTADES"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0076",
+  "canonique_id": "DOC-00881",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00880__guide-d-elevage-de-la-pintade-meleagriculture.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00880__guide-d-elevage-de-la-pintade-meleagriculture.pdf"
+}

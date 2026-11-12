@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00324",
+  "sha256": "3ae47bf1a333441af6927d7b2e3deca90aedabd4082b5df7d6bddf37eeadc553",
+  "nom_original": "Cours-Élevage-bovin Ourgla.docx",
+  "chemin_relatif_source": "OD_Docs/Cours-Élevage-bovin Ourgla.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 6869960,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "bovins",
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "BOUMADDA Abdelbasset",
+  "source_organisation": "Université Kasdi Merbah Ouargla",
+  "mots_cles": [
+    "elevage bovin",
+    "bovins viande",
+    "production laitiere",
+    "reproduction bovine",
+    "gestation"
+  ],
+  "titre_trouve": "Cours : Elevage Bovin",
+  "titre": "Cours d’élevage bovin : Conduite, reproduction et productions",
+  "resume": "Polycopié de cours universitaire présentant les systèmes d'élevage bovin en Algérie, la reproduction, le diagnostic de gestation et les productions de lait et de viande.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support universitaire au format document de travail non publié sous licence libre.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Université Kasdi Merbah Ouargla Département des sciences agronomiques Cours : Elevage Bovin"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00324__cours-delevage-bovin-conduite-reproduction-et-productio.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00324__cours-delevage-bovin-conduite-reproduction-et-productio.pdf"
+}

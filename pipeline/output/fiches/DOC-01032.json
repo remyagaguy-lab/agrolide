@@ -1,0 +1,72 @@
+{
+  "id": "DOC-01032",
+  "sha256": "9542f6ba7e3024f48829e7e69317bc3427992ae85e08f2843ea175f0b7c22307",
+  "nom_original": "pur-sang arabe & Barbe.pdf",
+  "chemin_relatif_source": "OD_Docs/pur-sang arabe & Barbe.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 497116,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "fiche_technique",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": "équin",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "cheval",
+    "pur-sang arabe",
+    "cheval barbe",
+    "equides",
+    "hippotechnie",
+    "races equines"
+  ],
+  "titre_trouve": "Arabe en bref On ne présente plus le pur-sang arabe !",
+  "titre": "Les races équines Pur-Sang Arabe et Barbe : histoire et caractéristiques",
+  "resume": "Fiche descriptive retraçant l'origine historique, les caractéristiques morphologiques et les aptitudes sportives des chevaux Pur-sang arabe et Barbe.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document descriptif sur les races équines sans source identifiée et d'intérêt marginal pour l'agriculture subsaharienne, archivé.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Arabe en bref On ne présente plus le pur-sang arabe !"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01032__les-races-equines-pur-sang-arabe-et-barbe-histoire-et-c.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-01032__les-races-equines-pur-sang-arabe-et-barbe-histoire-et-c.pdf"
+}

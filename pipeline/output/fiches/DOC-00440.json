@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00440",
+  "sha256": "ad257b8b84ea6351732cd18bba437a4dea5a2383e3be726ab17028955eaf6817",
+  "nom_original": "FicheE14_alimvolailles.pdf",
+  "chemin_relatif_source": "OD_Docs/FicheE14_alimvolailles.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 741964,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "volaille",
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Réseau GAB / FRAB",
+  "source_organisation": "Réseau GAB / FRAB",
+  "mots_cles": [
+    "alimentation avicole",
+    "acides amines",
+    "nutrition volaille",
+    "aviculture biologique",
+    "energie proteine"
+  ],
+  "titre_trouve": "Alimentation des volailles : équilibrer l’énergie et les protéines de sa ration",
+  "titre": "Fiche technique : Équilibrer l'énergie et les protéines dans l'alimentation des volailles",
+  "resume": "Fiche technique synthétique expliquant l'importance du profil en acides aminés (lysine, méthionine) et le rationnement énergétique chez les volailles pour optimiser croissance et santé.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Fiche technique institutionnelle du réseau GAB/FRAB complète, réservée aux membres pour sa valeur didactique en formulation alimentaire.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Alimentation des volailles : équilibrer l’énergie et les protéines de sa ration"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Les fiches Techniques du réseau GAB/FRAB"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00440__fiche-technique-equilibrer-l-energie-et-les-proteines-d.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00440__fiche-technique-equilibrer-l-energie-et-les-proteines-d.pdf"
+}

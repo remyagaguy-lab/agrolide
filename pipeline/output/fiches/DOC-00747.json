@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00747",
+  "sha256": "45f16c161270c66815b7caf45ea583d725ac5430995a92eb2f7166255c96e72c",
+  "nom_original": "TRAITEMENT BIO TÉMOIGNE.pdf",
+  "chemin_relatif_source": "OD_Docs/TRAITEMENT BIO TÉMOIGNE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5002892,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "titre_introuvable",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 19,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "traitement bio",
+    "protection biologique",
+    "temoignages",
+    "biopesticides",
+    "ocr necessaire"
+  ],
+  "titre_trouve": null,
+  "titre": "Traitements biologiques et témoignages de producteurs (Document scanné)",
+  "resume": "Document de 19 pages compilant des recettes et témoignages sur les traitements biologiques des cultures. Fichier scanné sans flux textuel nécessitant un OCR.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document pratique sur les traitements biologiques sans flux de texte extractible, nécessitant un traitement OCR et une revue humaine.",
+  "confiance": {
+    "classification": 0.6,
+    "droits": 0.3,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "TRAITEMENT BIO TÉMOIGNE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00747__traitements-biologiques-et-temoignages-de-producteurs-d.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00747__traitements-biologiques-et-temoignages-de-producteurs-d.pdf"
+}

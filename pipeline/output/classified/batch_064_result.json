@@ -1,0 +1,630 @@
+{
+  "batch_number": 64,
+  "results": [
+    {
+      "id": "DOC-00974",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": ["ruminants"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "petits ruminants",
+      "pays": null,
+      "annee": 2010,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["coccidiose ovine", "agneaux", "sante animale", "parasitisme", "diclazuril", "traitement veterinaire"],
+      "titre_trouve": "LES COCCIDIOSES OVINES",
+      "titre": "Les coccidioses ovines : symptômes, diagnostic et traitements vétérinaires",
+      "resume": "Fiche technique vétérinaire synthétisant les symptômes cliniques, les méthodes de diagnostic et les protocoles de traitement médicamenteux des coccidioses chez les agneaux.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique vétérinaire anonyme sans licence explicite de diffusion, archivée pour consultation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.6,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LES COCCIDIOSES OVINES SYMPTÔMES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00976",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": ["aviculture"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2017,
+      "auteurs": "Désiré Ouiya (Ferme Ouiya)",
+      "source_organisation": "Ferme Ouiya",
+      "mots_cles": ["alimentation volaille", "vitamine bio", "grains germes", "chenilles", "ferme ouiya", "burkina faso"],
+      "titre_trouve": "Technique de fabrication de la vitamine bio",
+      "titre": "Formule artisanale d'aliment enrichi et vitamines pour volailles (Ferme Ouiya)",
+      "resume": "Fiche de recette et méthode de fabrication artisanale d'un complément alimentaire biologique pour volailles à base de céréales germées, légumineuses et farine d'insectes au Burkina Faso.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document privé portant une mention explicite d'interdiction de reproduction et de poursuites judiciaires, non publiable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "droits",
+          "page": 1,
+          "extrait": "NB : la reproduction et la vente de ce document est interdite. Les auteurs seront poursuivis"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FERME OUIYA Technique de fabrication de la vitamine bio"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00978",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": ["protection_des_cultures", "cultures_maraicheres"],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": null,
+      "annee": 2010,
+      "auteurs": "Louise Riotte",
+      "source_organisation": "Éditions du Gerfaut",
+      "mots_cles": ["compagnonnage des plantes", "jardinage bio", "associations vegetales", "tomates", "carottes"],
+      "titre_trouve": null,
+      "titre": "Les tomates aiment les carottes : associations et compagnonnage végétal au potager",
+      "resume": "Ouvrage complet de 162 pages sur le compagnonnage des plantes et les associations bénéfiques au potager pour repousser les ravageurs et stimuler la croissance. Scan nécessitant OCR.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "ocr_necessaire"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous droits d'auteur exclusifs (traduction du best-seller de Louise Riotte), scanné sans licence libre.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "les tomates aiment les carottes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00979",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["maladies", "scan", "ocr necessaire", "document incomplet"],
+      "titre_trouve": null,
+      "titre": "Document non identifié sur les maladies (les-maladies-1)",
+      "resume": "Document d'une seule page scannée sans texte extractible, portant sur les maladies (végétales ou animales). Nécessite un traitement OCR et une revue humaine.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "incomplet", "titre_introuvable", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier d'une seule page scannée sans couche texte, contenu et statut juridique impossibles à établir sans OCR et validation humaine.",
+      "confiance": {
+        "classification": 0.4,
+        "droits": 0.2,
+        "completude": 0.3
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "les-maladies-1"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00980",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "equipements_technologie",
+      "domaines_secondaires": ["transformation_cereales_tubercules"],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "boulangerie",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["levure boulangere", "melasse", "diagramme de fabrication", "fermentation", "agroalimentaire"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité LEVURE BOULANGERE",
+      "titre": "Diagramme de procédé technologique de fabrication de la levure boulangère",
+      "resume": "Fiche schéma synoptique détaillant le diagramme de flux technologique et les bilans matières de la fabrication industrielle de levure boulangère fraîche et sèche à base de mélasse.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Schéma technologique synthétique et clair de fabrication agroalimentaire issu de la collection ISAA-MF, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité LEVURE BOULANGERE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00981",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale", "sante_animale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poulet local",
+      "pays": "Burkina Faso",
+      "annee": 2009,
+      "auteurs": "Inades-Formation Burkina",
+      "source_organisation": "Inades-Formation / CTA",
+      "mots_cles": ["elevage familial", "poules locales", "inades-formation", "cta", "burkina faso", "aviculture villageoise"],
+      "titre_trouve": "PRODUIRE MIEUX L’élevage familial des poules",
+      "titre": "L'élevage familial des poules (Collection Produire Mieux - Inades-Formation / CTA)",
+      "resume": "Manuel pratique complet de 72 pages guidant pas à pas l'aviculture villageoise au Burkina Faso : habitat, alimentation équilibrée, soins de santé et gestion économique du troupeau.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de vulgarisation avicole paysanne d'Inades-Formation et du CTA, hautement pertinent et diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PRODUIRE MIEUX L’élevage familial des poules INADES FORMATION BURKINA"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Ce document a été réalisé avec l’assistance financière du Centre Technique de Coopération Agricole et Rurale (CTA)."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00982",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2013,
+      "auteurs": "Gregory N. Mankiw",
+      "source_organisation": "De Boeck Supérieur",
+      "mots_cles": ["macroeconomie", "de boeck", "mankiw", "economie generale", "manuel universitaire"],
+      "titre_trouve": "Macroéconomie",
+      "titre": "Macroéconomie (Manuel universitaire De Boeck - 6e édition)",
+      "resume": "Manuel universitaire de référence en macroéconomie générale traitant des théories de la croissance, des cycles économiques, de la monnaie et des politiques budgétaires.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "ensemble_partiel"],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Manuel commercial de macroéconomie générale sous droits réservés (De Boeck), totalement hors du périmètre agricole.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.98,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Macroéconomie Gregory N. Mankiw Traduction de la 8e édition américaine par Jihad C. El Naboulsi"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00984",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Mali",
+      "annee": 2012,
+      "auteurs": "Togo Shinohara, JIRCAS / IER",
+      "source_organisation": "JIRCAS / Institut d'Économie Rurale (IER Mali)",
+      "mots_cles": ["compostage", "fertilite du sol", "jircas", "ier mali", "gerena", "matiere organique"],
+      "titre_trouve": "TECHNIQUE DU COMPOSTAGE Annexe: Manuel technique 6",
+      "titre": "Technique du compostage (Manuel technique 6 JIRCAS / IER Mali)",
+      "resume": "Manuel technique pratique illustré détaillant la fabrication du compost en fosse et en tas au Mali : matières premières, humidification, aération, maturation et épandage au champ.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique officiel issu de la coopération JIRCAS/IER pour la fertilité des sols au Sahel, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "TECHNIQUE DU COMPOSTAGE Japan International Research Center for Agricultural Sciences Annexe: Manuel technique 6"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT D’ECONOMIE RURALE Décembre 2012"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00985",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": ["aviculture", "ruminants"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "petit élevage",
+      "pays": null,
+      "annee": 2013,
+      "auteurs": "Projet PANA ASA",
+      "source_organisation": "Projet PANA ASA / PNUD / FEM",
+      "mots_cles": ["petit elevage", "poules", "caprins", "ovins", "pana asa", "adaptation climatique"],
+      "titre_trouve": "MANUEL D’ELEVAGE DE PETITS BETAILS POUR LES ZONES D’INTERVENTION DU PROJET PANA ASA",
+      "titre": "Manuel d'élevage de petit bétail : volailles, ovins et caprins (Projet PANA ASA)",
+      "resume": "Guide pratique d'élevage paysan conçu pour le projet PANA ASA couvrant la conduite des poules, des chèvres et des moutons en zone tropicale : habitat, alimentation et prophylaxie.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique de vulgarisation institutionnelle du projet PANA pour les éleveurs ruraux, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MANUEL D’ELEVAGE DE PETITS BETAILS POUR LES ZONES D’INTERVENTION DU PROJET PANA ASA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00986",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": ["cultures_maraicheres"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cultures maraîchères",
+      "pays": "Sénégal",
+      "annee": 2014,
+      "auteurs": "Mbaye Ndiaye",
+      "source_organisation": "Direction de la Protection des Végétaux (DPV Sénégal) / PADEN",
+      "mots_cles": ["protection des cultures", "maraichage", "niayes", "dpv senegal", "ravageurs", "maladies vegetales"],
+      "titre_trouve": "MANUELSUR LES PRINCIPAUX RAVAGEURS ET MALADIES DES CULTURES MARAICHERESDANS LA ZONE DES NIAYES",
+      "titre": "Principaux ravageurs et maladies des cultures maraîchères dans la zone des Niayes (Sénégal)",
+      "resume": "Manuel de référence de 103 pages de la Direction de la Protection des Végétaux du Sénégal détaillant l'identification, la biologie et les méthodes de lutte contre les ennemis des légumes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel complet de référence de la Direction de la Protection des Végétaux du Sénégal pour la santé des cultures maraîchères, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MANUELSUR LES PRINCIPAUX RAVAGEURS ET MALADIES DES CULTURES MARAICHERESDANS LA ZONE DES NIAYES"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "REPUBLIQUE DU SENEGAL Ministère Chargé de l'Agriculture Direction de la Protection des Végétaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00987",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "these",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["etudiant"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Congo",
+      "annee": 1998,
+      "auteurs": "Ernest Kouakoua",
+      "source_organisation": "ORSTOM (IRD) / Université Henri Poincaré",
+      "mots_cles": ["sols ferrallitiques", "matiere organique", "stabilite structurale", "congo", "orstom", "these"],
+      "titre_trouve": "LA MATIERE ORGANIQUE ET LA STABILITE STRUCTURALE D'HORIZONS DE SURFACE DE SOLS FERRALLITIQUES ARGILEUX. EFFET DU MODE DE GESTION DES TERRES",
+      "titre": "La matière organique et la stabilité structurale des sols ferrallitiques argileux (Thèse ORSTOM)",
+      "resume": "Thèse de doctorat ORSTOM de 219 pages analysant la dynamique de la matière organique et la stabilité structurale des sols ferrallitiques sous différents modes de gestion au Congo et au Brésil.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Thèse de doctorat en sciences du sol (ORSTOM/Université de Nancy), systématiquement archivée sans publication directe selon la règle métier.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA MATIERE ORGANIQUE ET LA STABILITE STRUCTURALE D'HORIZONS DE SURFACE DE SOLS FERRALLITIQUES ARGILEUX."
+        },
+        {
+          "champ": "type_doc",
+          "page": 3,
+          "extrait": "pour l'obtention du doctorat de l'université Henri Poincaré, Nancy I, spécialité Sciences du sol"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00988",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "equipements_technologie",
+      "domaines_secondaires": ["huiles_sucre_corps_gras"],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "transformation agroalimentaire",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["mayonnaise", "emulsion", "diagramme de fabrication", "sauces", "agroalimentaire"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité MAYONNAISE",
+      "titre": "Diagramme de procédé technologique de fabrication de la mayonnaise émulsionnée",
+      "resume": "Fiche schéma synoptique présentant le procédé de fabrication et les étapes unitaires de formulation et d'émulsion industrielle de la mayonnaise (ISAA-MF).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Schéma technologique synthétique et clair de fabrication agroalimentaire issu de la collection ISAA-MF, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité MAYONNAISE MAYONNAISE EMULSIONNEE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00989",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "qualite_securite_normes",
+      "domaines_secondaires": ["transformation_produits_animaux"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "viande",
+      "pays": "France",
+      "annee": 2007,
+      "auteurs": "Centre d’Information des Viandes (CIV)",
+      "source_organisation": "Centre d’Information des Viandes (CIV)",
+      "mots_cles": ["filiere viande", "hygiene alimentaire", "paquet hygiene", "abattoir", "civ", "tracabilite"],
+      "titre_trouve": "Maîtrise de l’hygiène dans la filière viande De l’éleveur au consommateur",
+      "titre": "Maîtrise de l'hygiène dans la filière viande : de l'éleveur au consommateur (CIV)",
+      "resume": "Guide pratique du Centre d'Information des Viandes sur la maîtrise sanitaire dans la filière viande : bonnes pratiques d'élevage, hygiène à l'abattoir et conservation de la viande.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique institutionnel sur la sécurité sanitaire des viandes selon les normes européennes, consultable par les membres de la plateforme.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Maîtrise de l’hygiène dans la filière viande De l’éleveur au consommateur"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00990",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2008,
+      "auteurs": "Khaled Meftah",
+      "source_organisation": "Université / GenieCivilPDF.com",
+      "mots_cles": ["mecanique des sols", "genie civil", "geotechnique", "fondations", "tassement"],
+      "titre_trouve": "COURS ET EXERCICES DE MECANIQUE DES SOLS",
+      "titre": "Cours et exercices de mécanique des sols et géotechnique (Génie civil)",
+      "resume": "Manuel de cours universitaire et recueil d'exercices de mécanique des sols pour le génie civil : identification des sols, hydraulique, contraintes et calcul de fondations.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Polycopié de cours de mécanique des sols et géotechnique pour le génie civil et les travaux publics, hors du domaine agricole.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COURS ET EXERCICES DE MECANIQUE DES SOLS Khaled MEFTAH"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00991",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "amarante",
+      "pays": "Suisse",
+      "annee": 2021,
+      "auteurs": "Jasmin Beer, Hansueli Brassel",
+      "source_organisation": "Biofarm Genossenschaft",
+      "mots_cles": ["amarante", "pseudo-cereale", "agriculture biologique", "biofarm", "plante c4", "fiche technique"],
+      "titre_trouve": "Fiche technique pour la culture d’amarante à grains en agriculture biologique",
+      "titre": "Fiche technique pour la culture d'amarante à grains en agriculture biologique",
+      "resume": "Fiche technique de la coopérative Biofarm sur la conduite de l'amarante à grains bio : exigences pédo-climatiques en plante C4, semis, désherbage mécanique et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique agronomique claire sur une pseudo-céréale rustique (plante C4), utile et adaptable, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique pour la culture d’amarante à grains en agriculture biologique"
+        }
+      ]
+    }
+  ]
+}

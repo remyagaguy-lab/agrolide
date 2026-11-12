@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00454",
+  "sha256": "8adb8e8a89e73773b11775c6e75f6106e6426d4aec928d043b9b6f93c10deffb",
+  "nom_original": "Forets nourricieres.PDF",
+  "chemin_relatif_source": "OD_Docs/Forets nourricieres.PDF",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 73357533,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 304,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2024,
+  "auteurs": "Caroline Dufour-L'Arrivée, Mélika Bazin",
+  "source_organisation": "Éditions Écosociété",
+  "mots_cles": [
+    "forets nourricieres",
+    "permaculture",
+    "agroforesterie",
+    "quebec",
+    "amenagement communautaire"
+  ],
+  "titre_trouve": "Les forêts nourricières: guide d'aménagement pour les communautés",
+  "titre": "Les forêts nourricières : Guide d'aménagement pour les communautés",
+  "resume": "Ouvrage québécois complet guidant la conception, l'implantation et la gestion participative de forêts nourricières et jardins-forêts en climat tempéré nordique.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial sous droits d'auteur réservés (éditions 2024) traitant d'agroforesterie en climat tempéré québécois.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les forêts nourricières Guide d’aménagement pour les communautés"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00454__les-forets-nourricieres-guide-d-amenagement-pour-les-co.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00454__les-forets-nourricieres-guide-d-amenagement-pour-les-co.pdf"
+}

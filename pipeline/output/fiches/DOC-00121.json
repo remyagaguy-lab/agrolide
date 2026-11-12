@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00121",
+  "sha256": "e586712a5f9ae96c7e3fba815ce93e594edf9879ebfd9e7f086465f2b0c5e0f1",
+  "nom_original": "4_6010467561479607559.pdf",
+  "chemin_relatif_source": "OD_Docs/4_6010467561479607559.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2074936,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 67,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "École Supérieure d'Agronomie de Mostaganem",
+  "source_organisation": "École Supérieure d'Agronomie de Mostaganem",
+  "mots_cles": [
+    "pedologie",
+    "science du sol",
+    "proprietes physico-chimiques",
+    "agronomie",
+    "formation du sol"
+  ],
+  "titre_trouve": "Pédologie",
+  "titre": "Cours de Pédologie : formation, constituants et propriétés physico-chimiques du sol",
+  "resume": "Support de cours complet de pédologie pour étudiants en agronomie, couvrant les processus de formation des sols, leurs constituants minéraux et organiques, ainsi que leurs propriétés physico-chimiques et leurs fonctions écologiques.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non publié sous licence libre, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Il s’agit de la « Pédologie », dont l’objectif est de mettre à la disposition des étudiants un document de première nécessité"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00121__cours-de-pedologie-formation-constituants-et-proprietes.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00121__cours-de-pedologie-formation-constituants-et-proprietes.pdf"
+}

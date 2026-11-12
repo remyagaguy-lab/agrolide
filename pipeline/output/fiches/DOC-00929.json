@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00929",
+  "sha256": "fa4c7bafe8f32f7206f93ba8d86a9e3b0919136ac6b636be0aec195d7060e60c",
+  "nom_original": "guide du veau d_élevage.pdf",
+  "chemin_relatif_source": "OD_Docs/guide du veau d_élevage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 819993,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "bovin",
+  "pays": "Algérie",
+  "annee": 2000,
+  "auteurs": "Institut Technique de l'Élevage Bovin et Ovin (ITEBO)",
+  "source_organisation": "ITEBO Algérie",
+  "mots_cles": [
+    "veau d'elevage",
+    "bovin",
+    "sevrage",
+    "colostrum",
+    "itebo",
+    "algerie",
+    "conduite d'elevage"
+  ],
+  "titre_trouve": "CONDUITE DU VEAU D ELEVAGE",
+  "titre": "Guide technique : Conduite du veau d'élevage (ITEBO)",
+  "resume": "Guide d'élevage de l'ITEBO présentant les soins et la conduite nutritionnelle du veau de la naissance au sevrage : prise colostrale, plan d'allaitement artificiel, rationnement et logement.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de vulgarisation institutionnelle édité par l'institut technique d'élevage (ITEBO) pour la conduite des jeunes bovins.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CONDUITE DU VEAU D ELEVAGE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00929__guide-technique-conduite-du-veau-d-elevage-itebo.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00929__guide-technique-conduite-du-veau-d-elevage-itebo.pdf"
+}

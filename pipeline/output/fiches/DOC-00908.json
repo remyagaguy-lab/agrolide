@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00908",
+  "sha256": "a53a3534c4d8a1da3c8c3ac9545c1d864ee79542c1163a62313f09405629cb5f",
+  "nom_original": "fiche-technique-5-la-technique-du-zai.pdf",
+  "chemin_relatif_source": "OD_Docs/fiche-technique-5-la-technique-du-zai.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 432043,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2018,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Inter-Réseaux / FIDAfrique",
+  "mots_cles": [
+    "zai",
+    "conservation des eaux et sols",
+    "restauration des terres",
+    "sahel",
+    "compostage"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE #5 - LA TECHNIQUE DU ZAI",
+  "titre": "Fiche technique : La technique du zaï pour la restauration des terres au Sahel",
+  "resume": "Fiche technique détaillée sur la pratique traditionnelle et mécanisée du zaï au Sahel : creusement des poquets, apport de compost, captage des eaux de ruissellement et régénération des sols dégradés.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique de référence pour la restauration des sols et l'agriculture de conservation au Sahel, en accès libre.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE #5 - LA TECHNIQUE DU ZAI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00908__fiche-technique-la-technique-du-zai-pour-la-restauratio.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00908__fiche-technique-la-technique-du-zai-pour-la-restauratio.pdf"
+}

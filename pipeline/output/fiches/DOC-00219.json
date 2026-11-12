@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00219",
+  "sha256": "3514adb022c1b24046842394babc2ef2014de5df801f512a2d7a3fe70c14df59",
+  "nom_original": "Analyse des pratiques d_embouche.pdf",
+  "chemin_relatif_source": "OD_Docs/Analyse des pratiques d_embouche.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 717205,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 13,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ovins",
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "Sanon Hadja Oumou, Zorma Antoine, Simian Aziz, Obulbiga M. Ferdinand, Compaoré Emmanuel",
+  "source_organisation": "INERA / Université Nazi Boni",
+  "mots_cles": [
+    "embouche ovine",
+    "ovins",
+    "burkina faso",
+    "sahel",
+    "alimentation animale",
+    "inera"
+  ],
+  "titre_trouve": "Analyse des pratiques d’embouche ovine dans deux zones semi-arides du Burkina Faso",
+  "titre": "Analyse des pratiques d'embouche ovine dans deux zones semi-arides du Burkina Faso",
+  "resume": "Article de recherche scientifique analysant les pratiques des producteurs, la gestion de l'alimentation et les performances technico-économiques de l'embouche ovine en zone sahélienne au Burkina Faso.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Open Access",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique publié en libre accès dans le Journal of Applied Biosciences, complet et hautement pertinent pour la filière ovine.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Journal of Applied Biosciences 150: 15390 - 15402 ... Analyse des pratiques d’embouche ovine dans deux zones semi-arides du Burkina Faso"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00219__analyse-des-pratiques-d-embouche-ovine-dans-deux-zones.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00219__analyse-des-pratiques-d-embouche-ovine-dans-deux-zones.pdf"
+}

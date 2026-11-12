@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00437",
+  "sha256": "f6350703b7a307453ae5c47547bc5726a75e1da790b7753b7a610f3cd637daaf",
+  "nom_original": "Fiche-technique-NIEBE.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche-technique-NIEBE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1769012,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "niébé",
+  "pays": "Cameroun",
+  "annee": 2024,
+  "auteurs": "Projet de développement rural Région du Nord Cameroun",
+  "source_organisation": "Projet Région du Nord Cameroun",
+  "mots_cles": [
+    "niebe",
+    "semences",
+    "multiplication semenciere",
+    "cameroun",
+    "legumineuses"
+  ],
+  "titre_trouve": "LES SEMENCES ET LES TECHNIQUES DE MULTIPLICATION",
+  "titre": "Fiche technique : Multiplication des semences de niébé au Nord-Cameroun",
+  "resume": "Guide pratique (2024) détaillant les normes, acteurs et techniques de multiplication semencière du niébé dans la région du Nord-Cameroun : sélection variétale, conduite et certification.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique complète issue d'un projet de développement agricole au Nord-Cameroun, axée sur la production semencière de niébé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LES SEMENCES ET LES TECHNIQUES DE MULTIPLICATION"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 6,
+      "extrait": "dans la Région du Nord au Cameroun"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00437__fiche-technique-multiplication-des-semences-de-niebe-au.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00437__fiche-technique-multiplication-des-semences-de-niebe-au.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00048",
+  "sha256": "c1cc49b5534e6b5e43874e0f190961b81df2b46e1e7847ae81dee35ae49099eb",
+  "nom_original": "Résumé2 Physiologie végétale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Physiologie végétale/Physiologie végétale/Résumé2 Physiologie végétale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 2358872,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 15,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "physiologie vegetale",
+    "cours",
+    "biologie vegetale",
+    "sciences de base",
+    "resume"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 2 de physiologie végétale",
+  "resume": "Fascicule numérisé constituant la deuxième partie d'un résumé de cours universitaire de physiologie végétale pour étudiants en agronomie et sciences naturelles.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fichier numérisé sans couche texte exploitable (OCR requis) et sans éléments probants sur les droits de diffusion.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.35,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé2 Physiologie végétale.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0007",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00048__resume-2-de-physiologie-vegetale.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00048__resume-2-de-physiologie-vegetale.pdf"
+}

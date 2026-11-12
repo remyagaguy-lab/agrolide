@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00661",
+  "sha256": "1fd6ac81558ca34dcef0e08e87f33849ef249cabc564929799eb346ad4b045e2",
+  "nom_original": "Perfectionnement SM1 - Principes de l_AB.pdf",
+  "chemin_relatif_source": "OD_Docs/Perfectionnement SM1 - Principes de l_AB.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5947270,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 36,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Nouvelle-Calédonie",
+  "annee": 2016,
+  "auteurs": "Georges Tieya",
+  "source_organisation": "Direction du Développement Rural de la province Sud",
+  "mots_cles": [
+    "agriculture biologique",
+    "agroecologie",
+    "certification bio",
+    "norme biologique",
+    "nouvelle-caledonie"
+  ],
+  "titre_trouve": "Les principes de l'agriculture biologique Perfectionnement niveau 1",
+  "titre": "Formation aux principes de l'agriculture biologique et certification (Province Sud)",
+  "resume": "Support de formation professionnelle sur les fondements de l'agriculture biologique tropicale : gestion agronomique de la fertilité, protection des cultures, traçabilité et étiquetage certifié.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Support de formation institutionnelle complet émanant de la Province Sud, réservé aux membres pour l'ingénierie de certification bio.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les principes de l'agriculture biologique Le 12 octobre 2016 Formateur: Georges TIEYA"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Direction du Développement Rural de la province Sud"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00661__formation-aux-principes-de-l-agriculture-biologique-et.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00661__formation-aux-principes-de-l-agriculture-biologique-et.pdf"
+}

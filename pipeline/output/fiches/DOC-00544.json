@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00544",
+  "sha256": "71b4e1227b6cc426b81dfd8d4ca38fcb4119542cec7240e1dcd3556842d24193",
+  "nom_original": "Larousse-agricole.pdf",
+  "chemin_relatif_source": "OD_Docs/Larousse-agricole.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6854833,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 755,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale",
+    "production_animale"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "Éditions Larousse (compilé par Assim Bouafia)",
+  "source_organisation": "Éditions Larousse",
+  "mots_cles": [
+    "dictionnaire agricole",
+    "larousse agricole",
+    "encyclopedie agronomie",
+    "elevage",
+    "agriculture"
+  ],
+  "titre_trouve": "Larousse agricole",
+  "titre": "Larousse agricole : dictionnaire encyclopédique de l'agriculture",
+  "resume": "Dictionnaire encyclopédique de référence de 755 pages couvrant l'ensemble du vocabulaire, des techniques agronomiques, zootechniques et agroalimentaires.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage de référence commercial protégé par le droit d'auteur des Éditions Larousse ; reproduction interdite.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Larousse-agricole.pdf"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Réalisé par : L’ing. BOUAFIA Assim"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00544__larousse-agricole-dictionnaire-encyclopedique-de-l-agri.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00544__larousse-agricole-dictionnaire-encyclopedique-de-l-agri.pdf"
+}

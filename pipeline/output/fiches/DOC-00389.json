@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00389",
+  "sha256": "612af3f536728cab7f94ba91fd16232af3d6854a47240460a8bce9f16c3e93ce",
+  "nom_original": "Elevage_poules_pondeuses.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage_poules_pondeuses.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 248824,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet"
+  ],
+  "nb_pages": 30,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Maroc",
+  "annee": 2009,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "poules pondeuses",
+    "aviculture",
+    "oeufs de consommation",
+    "conduite d'elevage",
+    "leghorn",
+    "rhode island red"
+  ],
+  "titre_trouve": "TECHNIQUES DE CONDUITE DES ELEVAGES DE POULES PONDEUSES D’œufs DE CONSOMMATON",
+  "titre": "Techniques de conduite des élevages de poules pondeuses d'œufs de consommation",
+  "resume": "Support technique détaillant les bases génétiques (Leghorn, Rhode Island Red) et la conduite d'élevage des poules pondeuses : régimes alimentaires, abreuvement et préparation du bâtiment de ponte.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours non libre et incomplet (texte interrompu à la page 30), conservé à des fins d'archivage interne sans publication.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.7
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "TECHNIQUES DE CONDUITE DES ELEVAGES DE POULES PONDEUSES D’œufs DE CONSOMMATON"
+    },
+    {
+      "champ": "autre",
+      "page": 30,
+      "extrait": "b- Bâtiment comme pour le"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00389__techniques-de-conduite-des-elevages-de-poules-pondeuses.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00389__techniques-de-conduite-des-elevages-de-poules-pondeuses.pdf"
+}

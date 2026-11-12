@@ -1,0 +1,710 @@
+{
+  "batch_number": 52,
+  "results": [
+    {
+      "id": "DOC-00776",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["agroeconomie", "economie_filieres_marches"],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["enseignant_chercheur", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gombo",
+      "pays": "Tchad",
+      "annee": 2012,
+      "auteurs": "Alkhali Saleh, Sena Yassine Gaye, Simon Assegninou",
+      "source_organisation": "FAO / RADHORT",
+      "mots_cles": ["gombo", "tchad", "cultures maraicheres", "marche maraicher", "gombo sec", "radhort"],
+      "titre_trouve": "Importance économique et travaux de recherche sur le gombo",
+      "titre": "Importance économique et travaux de recherche sur le gombo au Tchad",
+      "resume": "Rapport technique et économique de 10 pages analysant la filière gombo au Tchad : zones de production irriguées, circuits de commercialisation du gombo frais et sec et revenus générés.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Publication institutionnelle FAO (réseau RADHORT) en accès libre sur une culture maraîchère sahélienne stratégique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Importance économique et travaux de recherche sur le gombo RADHORT"
+        },
+        {
+          "champ": "auteurs",
+          "page": 3,
+          "extrait": "Alkhali SALEH, Sena Yassine GAYE, Simon ASSEGNINOU, N’Djaména, Tchad"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "author FAO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00777",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "equipements_technologie",
+      "domaines_secondaires": ["boissons"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2015,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["formulation alimentaire", "plans d'experiences", "rheologie", "boissons", "agroalimentaire"],
+      "titre_trouve": "Formulation et alimentation",
+      "titre": "Formulation et procédés dans l'industrie agroalimentaire",
+      "resume": "Support pédagogique approfondi de 25 pages traitant des méthodes de formulation alimentaire, des plans de mélange, de la rhéologie et de l'analyse sensorielle des produits transformés.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document pédagogique d'origine informelle sans mention claire d'auteur institutionnel ni licence ouverte de diffusion.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Formulation et alimentation"
+        },
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "Formulation d’une boisson à l’aide d’un plan de mélange"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00778",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": ["ressources_naturelles_environnement", "agroecologie_agriculture_durable"],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["etudiant", "decideur_institution"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Éric Mollard, Annie Walter",
+      "source_organisation": "IRD Éditions",
+      "mots_cles": ["systemes agraires", "agricultures singulieres", "riziculture", "terres arides", "ird"],
+      "titre_trouve": "Agricultures singulières",
+      "titre": "Agricultures singulières : systèmes de culture et pratiques traditionnelles",
+      "resume": "Ouvrage scientifique collectif de 345 pages publié par l'IRD analysant la diversité et la créativité des systèmes agraires locaux à travers le monde, notamment en Afrique tropicale.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre scientifique sous copyright strict d'éditeur (IRD Éditions, 2008) avec interdiction expresse de reproduction intégrale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Agricultures singulières IRD Éditions Institut de recherche pour le développement Paris, 2008"
+        },
+        {
+          "champ": "auteurs",
+          "page": 3,
+          "extrait": "Éric Mollard, Annie Walter Éditeurs scientifiques"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 4,
+          "extrait": "toute représentation ou reproduction intégrale ou partielle faite sans le consentement de l’auteur ou de ses ayants droit ou ayants cause, est illicite"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00780",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": ["agroecologie_agriculture_durable", "sol_fertilite"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "etudiant"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2006,
+      "auteurs": "Association Française d'Agroforesterie (AFAF)",
+      "source_organisation": "Association Française d'Agroforesterie",
+      "mots_cles": ["agroforesterie", "agrisylviculture", "sylvopastoralisme", "sequestration carbone", "haies"],
+      "titre_trouve": null,
+      "titre": "Définition et atouts de l'agroforesterie",
+      "resume": "Fiche de synthèse de 3 pages définissant les concepts d'agrisylviculture et de sylvopastoralisme, et résumant leurs bénéfices pour la séquestration du carbone et la protection des sols.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique d'information publique diffusée librement par l'Association Française d'Agroforesterie.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "w w w . a g r o f o r e s t e r i e . f r Activité associant sur les mêmes parcelles une vocation mixte"
+        },
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "Les parcelles cultivables portant des cultures agricoles intercalaires et des arbres forestiers correspondent à l'agrisylviculture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00781",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": ["ressources_naturelles_environnement", "sol_fertilite"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2022,
+      "auteurs": "Dr. Brahimi",
+      "source_organisation": "Université de Blida",
+      "mots_cles": ["cours d'agronomie", "science du sol", "pedogenese", "texture", "retention en eau", "blida"],
+      "titre_trouve": "Cours d’Agronomie I",
+      "titre": "Cours d'agronomie I : science du sol et relations eau-sol",
+      "resume": "Polycopié complet de 40 pages de cours et travaux dirigés de l'Université de Blida couvrant les constituants du sol, la morphologie pédologique, la classification et le bilan hydrique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours enseignant universitaire non édité dans un circuit libre officiel ; archivé pour usage documentaire interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours d’Agronomie I UE : Unité Fondamentale 1"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Par: Dr. BRAHIMI"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "agronomie 1 cours et TD univ Blida"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00783",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2012,
+      "auteurs": "Damien Joubert",
+      "source_organisation": "Lycée du Parc",
+      "mots_cles": ["agronomie", "metier d'agronome", "orientation", "agroalimentaire"],
+      "titre_trouve": "« Pourquoi être agronome ? »",
+      "titre": "Pourquoi être agronome ? Découverte du métier et des enjeux agronomiques",
+      "resume": "Diaporama d'orientation professionnelle de 37 diapositives présenté par un ancien élève ingénieur agronome, introduisant les enjeux globaux de l'agriculture et de l'alimentation.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support personnel d'orientation en lycée français non publié sous licence libre, non adapté au contexte opérationnel africain.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "« Pourquoi être agronome ? » Lycée du Parc, 7 Septembre 2012"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Damien Joubert, ancien du Lycée du Parc"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00784",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": ["protection_des_cultures", "agronomie_generale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "agrumes",
+      "pays": "Polynésie française",
+      "annee": 2018,
+      "auteurs": "Direction de l’agriculture de Polynésie française, CIRAD",
+      "source_organisation": "Direction de l’agriculture de Polynésie française",
+      "mots_cles": ["agrumes", "citrus", "itineraire technique", "maladies agrumes", "ravageurs", "arboriculture tropicale"],
+      "titre_trouve": "LA CULTURE DES AGRUMES EN POLYNESIE FRANÇAISE",
+      "titre": "La culture des agrumes : itinéraire technique, maladies et ravageurs",
+      "resume": "Fiche technique officielle de 20 pages détaillant la conduite culturale des agrumes en milieu tropical insulaire : sélection parcellaire, préparation du sol, greffage, taille et protection phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique officielle complète éditée par un service public d'agriculture en libre diffusion pour les arboriculteurs tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE – REEDITION 2018 LA CULTURE DES AGRUMES EN POLYNESIE FRANÇAISE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Direction de l’agriculture B.P.100, 98 713 Pape’ete – Tahiti - Polynésie française"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00785",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": ["semences_amelioration"],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["etudiant", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "papaye",
+      "pays": "Mali, Niger",
+      "annee": 2017,
+      "auteurs": "Abdoulaye Sidibé, Maman Sani Ladan Harouna, Bakary Mamourou Traoré, Moussa Abdoulaye, Ousmane Niangaly",
+      "source_organisation": "IPR/IFRA de Katibougou / IJBCS",
+      "mots_cles": ["micropropagation", "papayer", "carica papaya", "mali", "culture in vitro", "katibougou"],
+      "titre_trouve": "Micropropagation de deux variétés de papayer (Carica papaya L.) à l’IPR/ IFRA de Katibougou, Mali",
+      "titre": "Micropropagation in vitro de deux variétés de papayer au Mali",
+      "resume": "Article de recherche scientifique de 19 pages évaluant les protocoles de désinfection, d'initiation, de prolifération et d'enracinement in vitro des variétés de papayer Solo n°8 et Bluestem au Mali.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (AJOL / IJBCS)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique de recherche agronomique africaine en Open Access (AJOL), mis à disposition des membres de la communauté.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Micropropagation de deux variétés de papayer (Carica papaya L.) à l’IPR/ IFRA de Katibougou, Mali"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "IPR/ IFRA de Katibougou, Laboratoire d’Agro-Physio-Génétique et de Biotechnologies Végétales, Mali"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Int. J. Biol. Chem. Sci. Available online at http://www.ifgdg.org http://ajol.info/index.php/ijbcs"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00787",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Paul Bado",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["alimentation volaille", "poules pondeuses", "ration avicole", "provende", "aviculture tropicale"],
+      "titre_trouve": "L’ALIMENTATION DE LA VOLAILLE",
+      "titre": "L'alimentation pratique de la volaille et des poules pondeuses",
+      "resume": "Guide pratique d'initiation de 11 pages détaillant les besoins nutritifs de la volaille (eau, énergie, protéines, calcium) et les règles de rationnement des poules pondeuses en climat chaud.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document pratique individuel sans mention d'organisme éditeur officiel ni licence de rediffusion publique formelle.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "L’ALIMENTATION DE LA VOLAILLE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "author paulbado26@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00788",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Université",
+      "mots_cles": ["alimentation des volailles", "master production animale", "nutrition avicole", "cours"],
+      "titre_trouve": "alimentation des volailles .master production animale",
+      "titre": "Alimentation des volailles (Master production animale)",
+      "resume": "Support de cours universitaire de Master en production animale de 48 pages scanné sans couche texte, consacré à la nutrition et l'alimentation des volailles.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan de cours universitaire sans texte extractible (CamScanner), validation requise après extraction OCR.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.5,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "alimentation des volailles .master production animale"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Scanned by CamScanner"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00789",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale"],
+      "type_doc": "actes_conference",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["enseignant_chercheur", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Marie Bourin, Isabelle Bouvarel",
+      "source_organisation": "ITAVI / INRA",
+      "mots_cles": ["poules pondeuses", "aviculture biologique", "alimentation 100% bio", "feverole", "itavi"],
+      "titre_trouve": "ALIMENTATION 100% BIO POUR LES POULES PONDEUSES : Résultat d’essais conduits en station expérimentale",
+      "titre": "Alimentation 100% biologique pour les poules pondeuses",
+      "resume": "Compte rendu d'essais expérimentaux de 9 pages conduit par l'ITAVI évaluant l'effet de rations 100% biologiques (incorporation de féverole) sur les performances de ponte et la qualité des œufs.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "membres",
+      "motif_decision": "Communication technique institutionnelle de l'ITAVI en libre accès, réservée aux membres compte tenu de son cadre d'élevage biologique tempéré.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ALIMENTATION 100% BIO POUR LES POULES PONDEUSES : Résultat d’essais conduits en station expérimentale"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Marie BOURIN, Isabelle BOUVAREL Institut Technique de l’Aviculture"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ITAB/CRAPDL/IBB/ITAVI/INRA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00790",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": ["elevage_general"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Université",
+      "mots_cles": ["alimentation animale", "zootechnie", "nutrition", "master production animale"],
+      "titre_trouve": "alimentation . master production animale",
+      "titre": "Alimentation animale (Master production animale)",
+      "resume": "Support de cours universitaire de 33 pages scanné sous CamScanner sans couche texte exploitable, abordant les principes de l'alimentation en production animale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document universitaire scanné sans texte machine exploitable, requérant une numérisation OCR et une validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.5,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "alimentation . master production animale"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Scanned by CamScanner"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00791",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "energie_dechets_valorisation",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2006,
+      "auteurs": "Jean-Paul Louineau",
+      "source_organisation": "Alliance Soleil Sarl / ETC Energy",
+      "mots_cles": ["electricite solaire", "systemes solaires domestiques", "formation photovoltaique", "electrification rurale"],
+      "titre_trouve": "MANUEL DU FORMATEUR Un outil pour l’enseignement de l’électricité solaire appliquée aux systèmes solaires domestiques",
+      "titre": "Manuel du formateur en électricité solaire appliquée aux systèmes domestiques",
+      "resume": "Manuel pédagogique de 228 pages structuré en 12 modules pour former des techniciens aux systèmes solaires photovoltaïques autonomes en zone rurale (modules, batteries, régulateurs, maintenance).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Manuel portant une clause stricte de réserve de droits interdisant toute reproduction sans autorisation préalable de l'éditeur.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MANUEL DU FORMATEUR Un outil pour l’enseignement de l’électricité solaire appliquée aux systèmes solaires domestiques"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Écrit par Jean-Paul Louineau, Alliance Soleil Sarl"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Tous droits réservés. Aucune partie de cette publication ne peut être reproduite sous aucune forme sans permission antérieure de ETC TTP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00792",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": ["equipements_technologie"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "entrepreneur_porteur_projet"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "blé",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["amidon de ble", "gluten", "fecule", "glutenines", "fractionnement ble", "amidonnerie"],
+      "titre_trouve": "AMIDONS ET GLUTENS DE BLE",
+      "titre": "Schéma de procédé industriel : amidons et glutens de blé",
+      "resume": "Diagramme synoptique technique d'une page détaillant l'ensemble des étapes unitaires du fractionnement du blé : empâtage, tamisage, centrifugation, séchage et extraction d'amidons et de glutens.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique technique industriel clair et complet de procédé agroalimentaire, librement diffusable pour la formation technique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité AMIDONS ET GLUTENS DE BLE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00793",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": ["huiles_sucre_corps_gras", "equipements_technologie"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "entrepreneur_porteur_projet"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "maïs",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["amidon de mais", "glucoserie", "isoglucose", "dextrose", "sorbitol", "huile de mais", "fractionnement"],
+      "titre_trouve": "PRODUITS DU MAIS",
+      "titre": "Schéma de fractionnement industriel et sous-produits du maïs",
+      "resume": "Planche synoptique de procédé industriel d'une page illustrant le raffinage complet du maïs : amidonnerie, glucoserie, production d'huiles de germes, d'aliments du bétail (gluten feed) et d'édulcorants.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique synoptique industrielle complète et libre de droits sur la valorisation agro-industrielle du maïs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PRODUITS DU MAIS"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    }
+  ]
+}

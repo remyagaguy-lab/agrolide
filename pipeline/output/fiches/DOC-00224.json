@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00224",
+  "sha256": "5d714058ab5d51306645ad80fa192cab5a24409ed57a00b77ab5bc7a4017f2c2",
+  "nom_original": "Antiparasitaires Internes.doc",
+  "chemin_relatif_source": "OD_Docs/Antiparasitaires Internes.doc",
+  "indice_ancien_dossier": null,
+  "format_source": "doc",
+  "taille_octets": 344064,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "antiparasitaires",
+    "sante animale",
+    "veterinaire",
+    "pharmacologie",
+    "amitraz"
+  ],
+  "titre_trouve": null,
+  "titre": "Cours de pharmacologie vétérinaire : les antiparasitaires",
+  "resume": "Support de cours et notes sur la pharmacologie vétérinaire et les molécules antiparasitaires, détaillant les modes d'action (récepteurs GABA), posologies, indications et contre-indications par espèce animale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document de travail universitaire au format Word (.doc) incomplet, sans licence libre ni métadonnées d'auteur. Archivé en interne.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.85,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "amitraz est contre-indiqué chez certaines espèces (chat, cheval)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00224__cours-de-pharmacologie-veterinaire-les-antiparasitaires.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00224__cours-de-pharmacologie-veterinaire-les-antiparasitaires.pdf"
+}

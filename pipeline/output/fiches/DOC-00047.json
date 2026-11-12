@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00047",
+  "sha256": "36db36f7b37880708e5d6838b29aadaaf8ed69ac8645fd57ea519fbb0fdeec0d",
+  "nom_original": "Résumé1 Physiologie végétale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Physiologie végétale/Physiologie végétale/Résumé1 Physiologie végétale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 707495,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "physiologie vegetale",
+    "nutrition hydrique",
+    "photosynthese",
+    "plantes c3 c4 cam",
+    "croissance vegetale"
+  ],
+  "titre_trouve": "Résumé de Physiologie végétale",
+  "titre": "Résumé de physiologie végétale : nutrition hydrique et photosynthèse",
+  "resume": "Synthèse de cours de physiologie végétale traitant de la nutrition hydrique, de l'absorption et du transit de l'eau, des mécanismes de photosynthèse chez les plantes C3, C4 et CAM, ainsi que des facteurs régulant la croissance végétale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document pédagogique interne non publié (support Word sans licence libre explicite) et partiel (partie 1 d'une série). Archivé en interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé de Physiologie végétale"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "La nutrition hydrique 1- Rôles d’eau chez les végétaux"
+    }
+  ],
+  "ensemble_id": "ENS-0007",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00047__resume-de-physiologie-vegetale-nutrition-hydrique-et-ph.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00047__resume-de-physiologie-vegetale-nutrition-hydrique-et-ph.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-01009",
+  "sha256": "94da7ae1b8a7c29db3bf00ea483a5f1f6aa6b09ba6f1668014f292dd7574b9cf",
+  "nom_original": "phytopathologie générale 1.pdf",
+  "chemin_relatif_source": "OD_Docs/phytopathologie générale 1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4029840,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "phytopathologie",
+    "maladies des cultures",
+    "protection des vegetaux",
+    "cours",
+    "scan"
+  ],
+  "titre_trouve": "phytopathologie générale 1",
+  "titre": "Cours de phytopathologie générale (Partie 1)",
+  "resume": "Document scanné constituant la première partie d'un polycopié de cours de phytopathologie générale sur les agents pathogènes des végétaux.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte indexable nécessitant un traitement OCR et une validation humaine de son statut juridique.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "phytopathologie générale 1"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ocr_necessaire"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01009__cours-de-phytopathologie-generale-partie-1.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-01009__cours-de-phytopathologie-generale-partie-1.pdf"
+}

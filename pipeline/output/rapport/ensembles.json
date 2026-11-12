@@ -1,0 +1,132 @@
+[
+  {
+    "ensemble_id": "ENS-0001",
+    "key": "OD_ArchivesExtraites\\Biochimie Structurale L2\\Biochimie Structurale L2::biochimie structurale",
+    "membres": [
+      "DOC-00017",
+      "DOC-00018",
+      "DOC-00019",
+      "DOC-00020",
+      "DOC-00021",
+      "DOC-00022",
+      "DOC-00023"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0002",
+    "key": "OD_ArchivesExtraites\\Biologie Végétale L1\\Biologie Végétale L1::biologie vegetale svi2 stu2",
+    "membres": [
+      "DOC-00024",
+      "DOC-00025",
+      "DOC-00026",
+      "DOC-00027",
+      "DOC-00028"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0003",
+    "key": "OD_ArchivesExtraites\\Botanique\\Botanique::botanique l2",
+    "membres": [
+      "DOC-00031",
+      "DOC-00032",
+      "DOC-00033"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0004",
+    "key": "OD_ArchivesExtraites\\Immunologie\\Immunologie::immunologie",
+    "membres": [
+      "DOC-00034",
+      "DOC-00035",
+      "DOC-00036",
+      "DOC-00037",
+      "DOC-00038"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0005",
+    "key": "OD_ArchivesExtraites\\Microbiologie\\Microbiologie::microbiologie",
+    "membres": [
+      "DOC-00039",
+      "DOC-00040",
+      "DOC-00041",
+      "DOC-00042",
+      "DOC-00043"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0006",
+    "key": "OD_ArchivesExtraites\\Physiologie Animale\\Physiologie Animale::physiologie animale",
+    "membres": [
+      "DOC-00044",
+      "DOC-00045",
+      "DOC-00046"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0007",
+    "key": "OD_ArchivesExtraites\\Physiologie végétale\\Physiologie végétale::physiologie vegetale",
+    "membres": [
+      "DOC-00047",
+      "DOC-00048",
+      "DOC-00049"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0008",
+    "key": "OD_ArchivesExtraites\\Zoologie\\Zoologie::zoologie l2",
+    "membres": [
+      "DOC-00050",
+      "DOC-00051",
+      "DOC-00052",
+      "DOC-00053",
+      "DOC-00054",
+      "DOC-00055"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0009",
+    "key": "OD_ArchivesExtraites\\biologie animales\\biologie animales::biologie animale",
+    "membres": [
+      "DOC-00056",
+      "DOC-00057",
+      "DOC-00058",
+      "DOC-00059",
+      "DOC-00060"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0010",
+    "key": "OD_ArchivesExtraites\\biologie cellulaire\\biologie cellulaire::biologie cellulaire",
+    "membres": [
+      "DOC-00062",
+      "DOC-00063",
+      "DOC-00064"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0011",
+    "key": "OD_Docs::biologie vegetale",
+    "membres": [
+      "DOC-00254",
+      "DOC-00827"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0012",
+    "key": "OD_Docs::cours de drs 2021 2022",
+    "membres": [
+      "DOC-00314",
+      "DOC-00315"
+    ]
+  },
+  {
+    "ensemble_id": "ENS-0013",
+    "key": "OD_Docs::series",
+    "membres": [
+      "DOC-00289",
+      "DOC-00824",
+      "DOC-00825"
+    ]
+  }
+]

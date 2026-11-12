@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00473",
+  "sha256": "4c3e2decdeb24cf8620bb0cc0bce5eb206e5d27e0b7d1616eefe0d6c80763b33",
+  "nom_original": "Guide AGRICULTURE INTELLIGENTE.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide AGRICULTURE INTELLIGENTE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 825497,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "climat_changement_climatique",
+  "type_doc": "guide_pratique",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2013,
+  "auteurs": "FAO",
+  "source_organisation": "FAO",
+  "mots_cles": [
+    "agriculture intelligente face au climat",
+    "fao",
+    "adaptation climatique",
+    "securite alimentaire",
+    "durabilite"
+  ],
+  "titre_trouve": "Guide de référence L’AGRICULTURE INTELLIGENTE FACE AU CLIMAT Résumé exécutif",
+  "titre": "L'agriculture intelligente face au climat - Guide de référence (Résumé exécutif)",
+  "resume": "Synthèse exécutive de 6 pages de la FAO présentant le concept d'agriculture intelligente face au climat (AIC) : leviers d'action pour la sécurité alimentaire, l'adaptation et l'atténuation du changement climatique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Document de référence institutionnel de la FAO en libre diffusion, hautement stratégique pour l'adaptation climatique en agriculture.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide de référence L’AGRICULTURE INTELLIGENTE FACE AU CLIMAT Résumé exécutif"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00473__l-agriculture-intelligente-face-au-climat-guide-de-refe.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/climat_changement_climatique/DOC-00473__l-agriculture-intelligente-face-au-climat-guide-de-refe.pdf"
+}

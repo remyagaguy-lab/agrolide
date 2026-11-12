@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00471",
+  "sha256": "775060fcd690589a1514aeda578f842462f58af918042a1667c94e6fdb9efd6a",
+  "nom_original": "Gingembre.pdf",
+  "chemin_relatif_source": "OD_Docs/Gingembre.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 355455,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "economie_filieres_marches",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "gingembre",
+  "pays": "Côte d'Ivoire",
+  "annee": 2020,
+  "auteurs": "Fonds Interprofessionnel pour la Recherche et le Conseil Agricoles (FIRCA)",
+  "source_organisation": "FIRCA",
+  "mots_cles": [
+    "gingembre",
+    "filiere",
+    "firca",
+    "cote d'ivoire",
+    "commercialisation",
+    "transformation"
+  ],
+  "titre_trouve": "LA FILIERE GINGEMBRE",
+  "titre": "La filière gingembre en Côte d'Ivoire - Bilan et perspectives",
+  "resume": "Rapport institutionnel de 14 pages du FIRCA dressant l'état des lieux, les projets d'appui aux productrices et les perspectives de recherche et de valorisation de la filière gingembre en Côte d'Ivoire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport institutionnel complet du FIRCA sur la filière gingembre, publiable pour les membres de la plateforme.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA FILIERE GINGEMBRE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00471__la-filiere-gingembre-en-cote-d-ivoire-bilan-et-perspect.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/economie_filieres_marches/DOC-00471__la-filiere-gingembre-en-cote-d-ivoire-bilan-et-perspect.pdf"
+}

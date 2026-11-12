@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00561",
+  "sha256": "9950e8efc58ea6573ec8cb20d487cbf509002bee5275eb3276f7c060ea4835b2",
+  "nom_original": "Les clémentiniers et autres petits agrumes ( etc.).pdf",
+  "chemin_relatif_source": "OD_Docs/Les clémentiniers et autres petits agrumes ( etc.).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 62914153,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 370,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "agrumes",
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "Camille Jacquemond, Franck Curk, Marion Heuzet",
+  "source_organisation": "Éditions Quæ (INRA / CIRAD)",
+  "mots_cles": [
+    "agrumes",
+    "clementinier",
+    "mandarine",
+    "arboriculture fruitiere",
+    "genetique des agrumes",
+    "Editions Quae"
+  ],
+  "titre_trouve": "Les clémentiniers et autres petits agrumes",
+  "titre": "Les clémentiniers et autres petits agrumes",
+  "resume": "Monographie scientifique et technique sur l'origine, la diversité génétique, la taxonomie et la gestion variétale des clémentiniers et des petits agrumes.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial des Éditions Quæ sous droits d'auteur stricts, conservé pour documentation interne sans rediffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les clémentiniers et autres petits agrumes"
+    },
+    {
+      "champ": "autre",
+      "page": 4,
+      "extrait": "© Éditions Quæ, 2013 / ISBN 978-2-7592-2068-7"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00561__les-clementiniers-et-autres-petits-agrumes.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00561__les-clementiniers-et-autres-petits-agrumes.pdf"
+}

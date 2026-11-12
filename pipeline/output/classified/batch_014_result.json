@@ -1,0 +1,500 @@
+{
+  "batch_number": 14,
+  "results": [
+    {
+      "id": "DOC-00197",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Nico van Wageningen, Johan Meinderts, Puck Bonnier, Henk Kasper",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["incubation", "oeufs", "couveuse", "poules", "aviculture tropicale"],
+      "titre_trouve": "Agrodok 34 L'incubation des oeufs par les poules et en couveuse",
+      "titre": "L'incubation des oeufs par les poules et en couveuse",
+      "resume": "Guide pratique détaillant les techniques d'incubation naturelle par les poules et d'incubation artificielle en couveuse en milieu tropical, du choix et stockage des oeufs jusqu'à l'éclosion et aux premiers soins des poussins.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de la collection institutionnelle CTA/Agromisa, destiné aux éleveurs en milieu tropical.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 34 L'incubation des oeufs par les poules et en couveuse"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Nico van Wageningen Johan Meinderts Puck Bonnier Henk Kasper"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00198",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": ["cereales", "legumineuses_oleagineux"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "semences",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Harry van den Burg",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["semences", "selection varietale", "cereales", "legumineuses", "multiplication de semences"],
+      "titre_trouve": "Agrodok 37 Production de semences à petite échelle avec l'ámélioration des variétés de céréales et de légumineuses à graines",
+      "titre": "Production de semences à petite échelle",
+      "resume": "Guide pratique complet sur la production, la sélection massale, le conditionnement et la conservation des semences artisanales de céréales et légumineuses adaptées aux petites exploitations tropicales.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique institutionnel de vulgarisation semencière complet et hautement pertinent pour les producteurs tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 37 Production de semences à petite échelle avec l'ámélioration des variétés de céréales et de légumineuses à graines"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Harry van den Burg"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00199",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": ["plantes_aromatiques_medicinales"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "produits forestiers non ligneux",
+      "pays": null,
+      "annee": 2006,
+      "auteurs": "Tinde van Andel",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["produits forestiers non ligneux", "pfnl", "plantes sauvages", "cueillette", "foret tropicale"],
+      "titre_trouve": "Agrodok 39 - Les produits forestiers autres que le bois d’œuvre la valeur des plantes sauvages",
+      "titre": "Les produits forestiers autres que le bois d’œuvre : la valeur des plantes sauvages",
+      "resume": "Manuel pratique sur l'identification, la récolte durable, la valorisation économique et la commercialisation des produits forestiers non ligneux (fruits, miel, résines, plantes médicinales) en milieu tropical.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de la collection Agrodok (CTA/Agromisa) sur la valorisation durable des ressources forestières.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 39 - Les produits forestiers autres que le bois d’œuvre la valeur des plantes sauvages"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Tinde van Andel"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00200",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_fruits_legumes",
+      "domaines_secondaires": ["conservation_post_recolte"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "fruits et légumes",
+      "pays": null,
+      "annee": 2003,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["conservation", "fruits", "legumes", "sechage", "transformation artisanale"],
+      "titre_trouve": null,
+      "titre": "La conservation des fruits et des légumes",
+      "resume": "Guide pratique Agrodok n°3 sur les techniques de conservation et de transformation artisanale des fruits et légumes en zone tropicale (séchage, confisage, saumure, mise en bocal).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["ocr_necessaire"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Couche texte PDF corrompue (encodage ToUnicode défaillant), OCR nécessaire pour exploiter et valider le texte complet.",
+      "confiance": {
+        "classification": 0.70,
+        "droits": 0.55,
+        "completude": 0.50
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier: Agrodok_3_La_conservation_des_fruits_et_des_legumes@EpubsFR.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00201",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["horticulture_jardinage"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "champignons",
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Peter Oei, Bram van Nieuwenhijzen",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["champignons", "pleurotes", "shiitakes", "auriculaires", "substrat", "fungiculture"],
+      "titre_trouve": "Agrodok 40 La culture des champignons à petite échelle pleurotes, shiitakes et auriculaires",
+      "titre": "La culture des champignons à petite échelle : pleurotes, shiitakes et auriculaires",
+      "resume": "Guide technique et pratique sur la culture artisanale de champignons comestibles (pleurotes, shiitakes, auriculaires) sur substrats de résidus agricoles en milieu tropical.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique Agrodok complet et diffusable sur une filière maraîchère à haute valeur ajoutée pour les petits producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 40 La culture des champignons à petite échelle pleurotes, shiitakes et auriculaires"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Peter Oei avec la contribution de Bram van Nieuwenhijzen"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00202",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["horticulture_jardinage"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "champignons",
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "Bram van Nieuwenhuijzen",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["champignons", "volvariella", "volvaire", "agaricus", "champignon de couche", "compostage"],
+      "titre_trouve": "Agrodok 41 - La culture des champignons à petite échelle - 2 Agaricus et Volvariella",
+      "titre": "La culture des champignons à petite échelle - 2 : Agaricus et Volvariella",
+      "resume": "Guide pratique détaillant la production de champignons de couche (Agaricus) et de volvaires (Volvariella) à petite échelle, incluant la préparation du compost et la conduite des récoltes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de vulgarisation de la collection CTA/Agromisa sur la fungiculture artisanale tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 41 - La culture des champignons à petite échelle - 2 Agaricus et Volvariella"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Bram van Nieuwenhuijzen"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00203",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2006,
+      "auteurs": "Janette Worm, Tim van Hattum",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["eau de pluie", "collecte d'eau", "stockage d'eau", "citernes", "eau potable", "zones semi-arides"],
+      "titre_trouve": "Agrodok 43 La collecte de l'eau de pluie à usage domestique",
+      "titre": "La collecte de l'eau de pluie à usage domestique",
+      "resume": "Manuel pratique expliquant comment capter, filtrer, stocker et purifier l'eau de pluie pour les besoins domestiques et d'hygiène des ménages ruraux en zone tropicale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet d'aménagement hydraulique domestique rural, édité par CTA/Agromisa et diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 43 La collecte de l'eau de pluie à usage domestique"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Janette Worm Tim van Hattum"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00204",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": ["ruminants", "plantes_aromatiques_medicinales"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bétail",
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "Ngeh J. Toyang, Jacob Wanyama, Mopoi Nuwanyakpa, Sali Django",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["ethnomedecine veterinaire", "sante animale", "plantes medicinales", "pharmacopee veterinaire", "betail", "afrique subsaharienne"],
+      "titre_trouve": "Agrodok 44 - Ethnomédecine vétérinaire une approche pratique du traitement des maladies du bétail en Afrique subsaharienne",
+      "titre": "Ethnomédecine vétérinaire : traitement des maladies du bétail en Afrique subsaharienne",
+      "resume": "Guide pratique de pharmacopée et d'ethnomédecine vétérinaire décrivant les remèdes traditionnels à base de plantes locales pour soigner les pathologies courantes du bétail en Afrique subsaharienne.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Autorisation de reproduction Agromisa",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide institutionnel Agrodok autorisant explicitement la reproduction, hautement pertinent pour la santé animale en milieu rural africain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 44 - Ethnomédecine vétérinaire une approche pratique du traitement des maladies du bétail en Afrique subsaharienne"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Ngeh J. Toyang Jacob Wanyama Mopoi Nuwanyakpa Sali Django"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "Les informations contenues dans ce manuel peuvent être reproduites sous forme de texte imprimé, de photocopie, de microfilm ou autres."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00205",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale", "sante_animale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2006,
+      "auteurs": "N. van Eekeren, A. Maas, H.W. Saatkamp, M. Verschuur",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["aviculture", "poules", "poulets villageois", "alimentation volaille", "habitat avicole", "sante aviaire"],
+      "titre_trouve": "Agrodok 4 L'élevage des poules à petite échelle",
+      "titre": "L'élevage des poules à petite échelle",
+      "resume": "Manuel pratique complet sur la conduite d'un élevage villageois de poules en milieu tropical : logement, incubation, alimentation équilibrée avec ressources locales et prévention des maladies.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel institutionnel complet de vulgarisation avicole de référence (CTA/Agromisa), cœur de cible pour les producteurs africains.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 4 L'élevage des poules à petite échelle"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "N. van Eekeren A. Maas H.W. Saatkamp M. Verschuur"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00206",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "arboriculture fruitière",
+      "pays": null,
+      "annee": 1999,
+      "auteurs": "Simone van Ee",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["arboriculture", "arbres fruitiers", "verger tropical", "greffage", "pepiniere", "zone tropicale"],
+      "titre_trouve": "AGRODOK 5 LA CULTURE FRUITIÈRE SOUS LES TROPIQUES",
+      "titre": "La culture fruitière sous les tropiques",
+      "resume": "Guide pratique sur l'installation et la conduite d'un verger fruitier en zone tropicale : choix du site, multiplication des arbres, plantation, entretien, fertilisation et récolte des fruits.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique institutionnel complet de la série Agrodok sur l'arboriculture fruitière tropicale, destiné aux producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "AGRODOK 5 LA CULTURE FRUITIÈRE SOUS LES TROPIQUES"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Simone van Ee"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00207",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["horticulture_jardinage"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maraîchage",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Ed Verheij, Henk Waaijenberg",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["jardin potager", "maraichage", "legumes", "permaculture tropicale", "securite alimentaire", "arrosage"],
+      "titre_trouve": "Agrodok 9 Le jardin potager dans les zones tropicales",
+      "titre": "Le jardin potager dans les zones tropicales",
+      "resume": "Guide pratique de référence sur la conception et la conduite d'un potager en milieu tropical pour assurer une production continue de légumes frais toute l'année, même en saison sèche.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique Agrodok complet, emblématique de la vulgarisation maraîchère tropicale, cœur de cible pour le public.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 9 Le jardin potager dans les zones tropicales"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Ed Verheij Henk Waaijenberg"
+        }
+      ]
+    }
+  ]
+}

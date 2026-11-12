@@ -1,0 +1,872 @@
+{
+  "batch_number": 24,
+  "results": [
+    {
+      "id": "DOC-00348",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "pisciculture",
+      "pays": "Burkina Faso",
+      "annee": null,
+      "auteurs": "Dr COULIBALY Badioula",
+      "source_organisation": "ENESA / EMESA / IFESA",
+      "mots_cles": [
+        "zoologie aquatique",
+        "aquaculture",
+        "silure",
+        "tilapia",
+        "burkina faso",
+        "examen"
+      ],
+      "titre_trouve": "ZOOLOGIE AQUATIQUE / TSE 1",
+      "titre": "Devoir de zoologie aquatique : Élevage de silures et tilapias au Burkina Faso",
+      "resume": "Sujet de devoir de zoologie aquatique pour techniciens supérieurs (TSE) au Burkina Faso, portant sur l'aquaculture de silures et tilapias en circuits aquaponie, RAS et étang.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Épreuve d'examen académique interne non libre de droits, archivée pour usage pédagogique sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ZOOLOGIE AQUATIQUE / TSE 1"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Dr COULIBALY Badioula a mené une expérience sur la qualité de l’eau dans 3 circuits d’aquaculture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00349",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "tilapia",
+      "pays": "Burkina Faso",
+      "annee": 2021,
+      "auteurs": "EMESA",
+      "source_organisation": "EMESA",
+      "mots_cles": [
+        "pisciculture",
+        "peche",
+        "tilapia",
+        "dimensionnement",
+        "circuit ferme",
+        "burkina faso"
+      ],
+      "titre_trouve": "DEVOIR DE PISCICULTURE ET PECHE",
+      "titre": "Devoir de pisciculture et pêche : Dimensionnement d'élevage intensif de tilapia (EMESA 2020-2021)",
+      "resume": "Épreuve d'examen de pisciculture et pêche pour techniciens supérieurs d'élevage portant sur le dimensionnement d'un circuit piscicole intensif pour tilapia.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Sujet de devoir académique interne d'école technique d'élevage, non destiné à la diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "EMESA DEVOIR DE PISCICULTURE ET PECHE CYCLE TSE"
+        },
+        {
+          "champ": "annee",
+          "page": 1,
+          "extrait": "ANNEE 2020-2021"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00350",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "genetique_reproduction"
+      ],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "pisciculture",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "ENESA",
+      "mots_cles": [
+        "zoologie aquatique",
+        "pisciculture",
+        "clarias",
+        "oreochromis",
+        "alevinage",
+        "burkina faso"
+      ],
+      "titre_trouve": "ZOOLOGIE AQUATIQUE / ATE 1",
+      "titre": "Devoir de zoologie aquatique : Reproduction et élevage de Clarias et Oreochromis (ATE 1)",
+      "resume": "Épreuve d'examen de zoologie aquatique portant sur la reproduction artificielle du poisson chat (Clarias), l'inversion sexuelle du tilapia et les observations au barrage de Loumbila.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Devoir d'évaluation académique interne d'une école de formation technique (ENESA), document non publié.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ZOOLOGIE AQUATIQUE / ATE 1"
+        },
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "Mr Bayala veut produire des alevins de Clarias et de Oreochromis"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00351",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "vulgarisation_conseil"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "suivi evaluation",
+        "gestion de projet",
+        "indicateurs smart",
+        "collecte de donnees",
+        "impact"
+      ],
+      "titre_trouve": "Pourquoi certains projets échouent à bien évaluer leur impact?",
+      "titre": "Pourquoi certains projets échouent à bien évaluer leur impact ? Défis et solutions en suivi-évaluation",
+      "resume": "Note synthétique analysant trois obstacles majeurs en suivi-évaluation de projets (indicateurs mal définis, manque de données fiables, mauvaise utilisation des résultats) et proposant des pistes d'amélioration.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Note anonyme sans source ni mention de licence claire, nécessite une validation humaine des droits avant diffusion.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pourquoi certains projets échouent à bien évaluer leur impact?"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Le suivi-évaluation (S&E) est essentiel pour mesurer l'efficacité d'un projet"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00352",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "cultures_de_rente"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gingembre",
+      "pays": "Madagascar",
+      "annee": 2010,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "gingembre",
+        "curcuma",
+        "zingiber officinale",
+        "epice",
+        "culture",
+        "madagascar",
+        "fiche technique"
+      ],
+      "titre_trouve": "LE GINGEMBRE - LE CURCUMA",
+      "titre": "Fiche technique de culture : Le gingembre et le curcuma",
+      "resume": "Fiche technique décrivant les exigences écologiques, les techniques culturales et la protection phytosanitaire du gingembre et du curcuma en zone tropicale (Madagascar).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle pratique sur la culture du gingembre et du curcuma adaptée aux producteurs et techniciens tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE GINGEMBRE - LE CURCUMA Famille : Zingiberacée Nom latin : Zingiber officinale"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "Nom malgache : Sakamalaho, Sakay tany, Sakarivo"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00354",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "qualite_securite_normes"
+      ],
+      "type_doc": "texte_officiel",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "decideur_institution",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "agriculture biologique",
+      "pays": "Burkina Faso",
+      "annee": 2013,
+      "auteurs": "Conseil National de l’Agriculture Biologique (CNABio), Lazare Yombi",
+      "source_organisation": "CNABio / HELVETAS Swiss Intercooperation",
+      "mots_cles": [
+        "agriculture biologique",
+        "norme burkinabe",
+        "cnabio",
+        "certification bio",
+        "production ecologique",
+        "burkina faso"
+      ],
+      "titre_trouve": "NORME BURKINABE EN AGRICULTURE BIOLOGIQUE : NORMES DE PRODUCTION DES DENREES AGRICOLES",
+      "titre": "Norme burkinabè en agriculture biologique (NAB-BF 01-10 : 2013) : Normes de production des denrées agricoles",
+      "resume": "Document normatif officiel du CNABio établissant le cahier des charges et les exigences techniques pour la production, la transformation et la certification des denrées agricoles biologiques au Burkina Faso.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Norme nationale officielle burkinabè en agriculture biologique publiée par le CNABio, essentielle pour la filière et diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "NORME BURKINABE EN AGRICULTURE BIOLOGIQUE NORMES DE PRODUCTION DES DENREES AGRICOLES"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "CONSEIL NATIONAL DE L’AGRICULTURE BIOLOGIQUE DU BURKINA FASO (CNABio)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00355",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "arboriculture fruitiere",
+      "pays": "France",
+      "annee": 2018,
+      "auteurs": "Chantal Roblin, Fabien Bouvard",
+      "source_organisation": "Chambres d’Agriculture Provence-Alpes-Côte d’Azur",
+      "mots_cles": [
+        "arboriculture fruitiere",
+        "agriculture biologique",
+        "couts de production",
+        "marge",
+        "france",
+        "paca"
+      ],
+      "titre_trouve": "L’arboriculture Fruitière en agriculture biologique Région Sud Provence Alpes Côte d’Azur",
+      "titre": "L’arboriculture fruitière en agriculture biologique : Références technico-économiques en région PACA",
+      "resume": "Guide technico-économique détaillant les temps de travaux, charges et coûts de production à l'hectare pour diverses productions fruitières biologiques en région Provence-Alpes-Côte d'Azur.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technico-économique de référence pour la région tempérée méditerranéenne française, peu adapté au contexte tropical subsaharien, conservé en archive.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "Région Sud Provence Alpes Côte d’Azur"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’arboriculture Fruitière en agriculture biologique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00356",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "porosite du sol",
+        "masse volumique",
+        "physique du sol",
+        "pedologie",
+        "exercice corrige"
+      ],
+      "titre_trouve": "Porosité sol - Correction : Calcul de la Porosité du Sol",
+      "titre": "Exercice corrigé de physique du sol : Calcul de la porosité et de la masse volumique",
+      "resume": "Fiche pédagogique présentant un exercice d'application résolu sur le calcul de la masse volumique sèche, du volume des vides et de la porosité totale d'un échantillon de sol.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Court exercice didactique non sourcé sans mention d'auteur ou de licence, à valider avant mise à disposition.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Correction : Calcul de la Porosité du Sol"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "La porosité est une propriété clé qui affecte la capacité du sol à retenir l’eau"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00357",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "ruminants",
+        "porcins"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "elevage bovin, ovin, porcin",
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "ANEFA",
+      "source_organisation": "ANEFA",
+      "mots_cles": [
+        "elevage",
+        "metiers de l elevage",
+        "bovins",
+        "porcins",
+        "emploi agricole",
+        "france"
+      ],
+      "titre_trouve": "L’élevage des gros animaux : L’emploi dans la filière en chiffres",
+      "titre": "Les métiers et l'emploi dans l'élevage de gros animaux en France",
+      "resume": "Plaquette d'information sur les métiers, les compétences requises et les perspectives d'emploi dans les filières de l'élevage bovin, ovin, caprin et porcin en France.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'orientation professionnelle spécifique au marché de l'emploi agricole en France métropolitaine, non pertinent pour l'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "L’élevage bovin viande représente 12% des exploitations en France"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "secteur de l’élevage des gros animaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00359",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Boureima SINON (Espérance Élevage)",
+      "source_organisation": "Espérance Élevage",
+      "mots_cles": [
+        "aviculture",
+        "vaccination poussin",
+        "prophylaxie",
+        "newcastle",
+        "gumboro",
+        "burkina faso"
+      ],
+      "titre_trouve": "Programme de vaccination à titre préventif des poussins du 1er jour à l’âge adulte",
+      "titre": "Programme de vaccination préventive des poussins du 1er jour à l'âge adulte",
+      "resume": "Protocole synthétique de prophylaxie vaccinale et sanitaire pour poussins de la naissance à 140 jours, couvrant la maladie de Newcastle, Gumboro et la variole aviaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de prophylaxie aviaire directement opérationnelle pour les éleveurs de volailles en Afrique tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Programme de vaccination à titre préventif des poussins du 1er jour à l’âge adulte"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "ESPERANCE ELEVAGE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00360",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "sol_fertilite"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "infiltration",
+        "besoin en eau",
+        "dimensionnement",
+        "hydraulique agricole"
+      ],
+      "titre_trouve": "QUANTITE D’EAU ET INFILTRATION",
+      "titre": "Exercice résolu : Calcul de la quantité d'eau d'irrigation et du temps d'infiltration",
+      "resume": "Exercice pratique d'hydraulique agricole expliquant la méthode de calcul du volume d'eau d'irrigation et du temps nécessaire à l'infiltration pour une parcelle d'un hectare.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Court exercice didactique non sourcé sans mention d'auteur, à vérifier avant toute diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "QUANTITE D’EAU ET INFILTRATION"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "évaluer les quantités d'eau d'irrigation nécessaires en fonction de l'infiltration d'un sol"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00361",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "borne d irrigation",
+        "debit",
+        "dimensionnement",
+        "reseau d irrigation",
+        "genie rural"
+      ],
+      "titre_trouve": "CALCUL DEBIT BORNE IRRIGATION",
+      "titre": "Méthode et calcul du débit d'une borne dans un réseau d'irrigation",
+      "resume": "Guide pratique exposant les étapes méthodologiques et un exemple de calcul pour déterminer le débit requis d'une borne d'irrigation en fonction des besoins en eau et de la surface.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche technique sans mention d'auteur ni d'organisme d'édition, statut des droits à confirmer.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CALCUL DEBIT BORNE IRRIGATION"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Le calcul du débit des bornes d'irrigation dans un réseau d'irrigation est essentiel"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00362",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "hydraulique",
+        "irrigation en charge",
+        "bernoulli",
+        "pertes de charge",
+        "debit",
+        "pression",
+        "exercices"
+      ],
+      "titre_trouve": "Calcul du débit d'eau dans un réseau d'irrigation en charge",
+      "titre": "Exercices corrigés d'hydraulique : Débit et pression dans un réseau d'irrigation en charge",
+      "resume": "Série de deux exercices d'hydraulique résolus détaillant le calcul du débit et de la vitesse d'écoulement sous pression et avec pertes de charge dans une conduite d'irrigation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche pédagogique non signée d'origine indéterminée, nécessite une validation humaine des droits avant diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calcul du débit d'eau dans un réseau d'irrigation en charge"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Une conduite d'irrigation de diamètre 100 mm est alimentée par une pompe"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00363",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation gravitaire",
+        "barrage",
+        "debit",
+        "pression",
+        "dimensionnement",
+        "genie rural"
+      ],
+      "titre_trouve": "Débit et pression réseau irrigation",
+      "titre": "Dimensionnement hydraulique : Calcul du débit et de la pression d'un réseau d'irrigation gravitaire",
+      "resume": "Exercice d'application détaillant la démarche de calcul du débit requis et de la pression disponible pour l'irrigation gravitaire d'un périmètre de 1000 hectares alimenté par un barrage.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche de calcul technique sans mention de source ni d'auteur, statut des droits à confirmer.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Débit et pression réseau irrigation"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "alimenter un réseau d'irrigation de 1000 ha à partir d'un barrage gravitaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00364",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation localisee",
+        "goutte-a-goutte",
+        "pluviometrie horaire",
+        "debit goutteur",
+        "dimensionnement"
+      ],
+      "titre_trouve": "Pluviométrie en irrigation localisée",
+      "titre": "Calcul de la pluviométrie horaire en irrigation localisée goutte-à-goutte",
+      "resume": "Fiche pratique détaillant le calcul de la pluviométrie horaire équivalente (mm/h) pour une installation d'irrigation goutte-à-goutte à partir du débit des goutteurs et de leur espacement.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche technique pratique d'auteur non précisé sans mention de licence, droits à clarifier avant publication.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pluviométrie en irrigation localisée"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Débit par hectare : Linéaire/ ha de gàg"
+        }
+      ]
+    }
+  ]
+}

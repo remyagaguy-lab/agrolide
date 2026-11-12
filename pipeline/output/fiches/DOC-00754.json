@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00754",
+  "sha256": "8453a771c689d35a8496faf0ff6771106b6d370a53bb53600318e7a4055d6998",
+  "nom_original": "These_YAO_N_zue_Benjamin[1].pdf",
+  "chemin_relatif_source": "OD_Docs/These_YAO_N_zue_Benjamin[1].pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7446846,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 225,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "conservation_post_recolte",
+  "type_doc": "these",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "fruits / papaye",
+  "pays": "Côte d'Ivoire",
+  "annee": 2013,
+  "auteurs": "Yao N’zué Benjamin",
+  "source_organisation": "Université Nangui Abrogoua (Côte d'Ivoire)",
+  "mots_cles": [
+    "papaye",
+    "conservation post-recolte",
+    "carica papaya",
+    "biochimie alimentaire",
+    "cote d'ivoire",
+    "maturite"
+  ],
+  "titre_trouve": "Conservation du fruit du papayer (Carica papaya L. var solo 8) par le contrôle du stade de maturité à la récolte et quelques activités biochimiques",
+  "titre": "Conservation post-récolte du fruit du papayer (var. Solo 8) en Côte d'Ivoire",
+  "resume": "Thèse de doctorat soutenue à l'Université Nangui Abrogoua sur les mécanismes biochimiques de maturation et l'optimisation des méthodes de conservation post-récolte de la papaye Solo 8.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Thèse de doctorat universitaire archivée pour la recherche agronomique, non diffusable publiquement sans accord d'édition.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Conservation du fruit du papayer (Carica papaya L. var solo 8) par le contrôle du stade de maturité à la récolte"
+    },
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "THESE DE DOCTORAT de l’Université Nangui Abrogoua en Sciences et Technologie des Aliments"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00754__conservation-post-recolte-du-fruit-du-papayer-var-solo.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/conservation_post_recolte/DOC-00754__conservation-post-recolte-du-fruit-du-papayer-var-solo.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00930",
+  "sha256": "136ba8be5a28543fa45a87ce1f61d84ce7682f876efbce997f6c226296e0c088",
+  "nom_original": "guide pondeuses 2.pdf",
+  "chemin_relatif_source": "OD_Docs/guide pondeuses 2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8376469,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 88,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "poule pondeuse",
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Ghislain Cloutier, SOCODEVI",
+  "source_organisation": "SOCODEVI",
+  "mots_cles": [
+    "poules pondeuses",
+    "poulettes",
+    "aviculture",
+    "biosecurite",
+    "socodevi",
+    "conduite d'elevage",
+    "ponte"
+  ],
+  "titre_trouve": "Guide d’élevage Poulettes et pondeuses",
+  "titre": "Guide d'élevage : Poulettes et poules pondeuses (SOCODEVI)",
+  "resume": "Manuel de référence très complet rédigé par SOCODEVI sur la gestion d'un élevage avicole de pondeuses : biosécurité, désinfection, élevage des poussins et poulettes, régie de ponte et suivi sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de référence institutionnel de l'ONG SOCODEVI, exhaustif et directement adapté à la professionnalisation des éleveurs avicoles.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide d’élevage Poulettes et pondeuses"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00930__guide-d-elevage-poulettes-et-poules-pondeuses-socodevi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00930__guide-d-elevage-poulettes-et-poules-pondeuses-socodevi.pdf"
+}

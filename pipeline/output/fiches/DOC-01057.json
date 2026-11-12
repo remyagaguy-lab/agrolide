@@ -1,0 +1,78 @@
+{
+  "id": "DOC-01057",
+  "sha256": "3c795c155d877821164c3c70d7fe89c96df9f9dc77692f95048c384079d4f8a1",
+  "nom_original": "veto5an_aviculture-elevage_dindon.docx",
+  "chemin_relatif_source": "OD_Docs/veto5an_aviculture-elevage_dindon.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 55232,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture / dindon",
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "ency-education.com",
+  "mots_cles": [
+    "aviculture",
+    "dindon",
+    "elevage avicole",
+    "cours veterinaire",
+    "densite d'elevage"
+  ],
+  "titre_trouve": "L'ELEVAGE DU DINDON",
+  "titre": "L'élevage du dindon : conduite zootechnique et normes d'élevage",
+  "resume": "Support de cours vétérinaire sur la zootechnie du dindon : caractéristiques éthologiques de l'espèce, gestion de la couvaison, alimentation et normes de densité par stade de croissance.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire de médecine vétérinaire sans licence libre explicite, archivé pour l'enseignement avicole.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L'ELEVAGE DU DINDON C'est un oiseau bruyant et volumineux"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "ency-education.com (métadonnées)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01057__l-elevage-du-dindon-conduite-zootechnique-et-normes-d-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-01057__l-elevage-du-dindon-conduite-zootechnique-et-normes-d-e.pdf"
+}

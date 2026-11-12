@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00108",
+  "sha256": "13e942a1592dd4e4372b07841afb1bc919ace756230f677b67fb8abb1d3cee96",
+  "nom_original": "25-influences_lune.pdf",
+  "chemin_relatif_source": "OD_Docs/25-influences_lune.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 787958,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "France",
+  "annee": 2016,
+  "auteurs": "Projet Bio Savane",
+  "source_organisation": "Bio Savane",
+  "mots_cles": [
+    "calendrier lunaire",
+    "agroecologie",
+    "biodynamie",
+    "jardinage",
+    "zone equatoriale"
+  ],
+  "titre_trouve": "LA LUNE ET SES INFLUENCES SUR L’AGRICULTURE",
+  "titre": "La Lune et ses influences sur l'agriculture en zone équatoriale",
+  "resume": "Fiche pratique détaillant l'influence des cycles et phases de la Lune sur la circulation de la sève, les semis, plantations et récoltes des cultures maraîchères et fruitières sous l'équateur.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique pratique d'agroécologie en zone équatoriale issue du projet Bio Savane, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA LUNE ET SES INFLUENCES SUR L’AGRICULTURE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "BIO SAVANE – CULTIVONS AUTREMENT : EXEMPLES LOCAUX DE TECHNIQUES AGRO-ÉCOLOGIQUES – 2016"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00108__la-lune-et-ses-influences-sur-l-agriculture-en-zone-equ.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00108__la-lune-et-ses-influences-sur-l-agriculture-en-zone-equ.pdf"
+}

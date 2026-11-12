@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00833",
+  "sha256": "3a814873701b185612c07ca8133ddaae5a8d20a29da22b4f5fcf9d6e0b52f8c0",
+  "nom_original": "compostage.pdf",
+  "chemin_relatif_source": "OD_Docs/compostage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3964635,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Polynésie française",
+  "annee": 2016,
+  "auteurs": "Programme DADP (Développement d’une Agriculture Durable dans le Pacifique)",
+  "source_organisation": "Programme DADP Tahiti",
+  "mots_cles": [
+    "compostage",
+    "engrais organique",
+    "fertilisation",
+    "maraichage",
+    "agriculture durable",
+    "matiere organique"
+  ],
+  "titre_trouve": "Fiche technique : Compostage facilité",
+  "titre": "Fiche technique : Compostage facilité en milieu tropical",
+  "resume": "Fiche pratique illustrée détaillant les étapes de fabrication et d'utilisation du compost en caisse (1 m³) pour les semis, le maraîchage et les vergers tropicaux.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique pratique et complète issue d'un programme institutionnel de développement agricole durable, directement applicable sur le terrain.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique Compostage facilité Programme DADP - Développement d’une Agriculture Durable dans le Pacifique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00833__fiche-technique-compostage-facilite-en-milieu-tropical.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00833__fiche-technique-compostage-facilite-en-milieu-tropical.pdf"
+}

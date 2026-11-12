@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00683",
+  "sha256": "f9f7ce5657b340f45192dc7aa530b569d5e1c0a898bc4c86d121c285afb176f6",
+  "nom_original": "Production végétale.pdf",
+  "chemin_relatif_source": "OD_Docs/Production végétale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7052934,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "incomplet"
+  ],
+  "nb_pages": 19,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "production vegetale",
+    "cours",
+    "agronomie",
+    "scan"
+  ],
+  "titre_trouve": null,
+  "titre": "Notes de cours - Production végétale",
+  "resume": "Document numérisé de 19 pages de notes de cours en production végétale sans texte extractible, scanné avec CamScanner. Nécessite un OCR complet.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné avec CamScanner sans texte exploitable (seule mention de filigrane), nécessitant un OCR et une validation humaine.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Production végétale.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00683__notes-de-cours-production-vegetale.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00683__notes-de-cours-production-vegetale.pdf"
+}

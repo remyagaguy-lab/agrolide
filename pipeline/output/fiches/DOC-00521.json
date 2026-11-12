@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00521",
+  "sha256": "d1d776589ba7c45cface12b1b8eca51cb0a7db15fb04a5b36d590bdcc5c03d9d",
+  "nom_original": "L3-D04-2015-Production-Animale.pdf",
+  "chemin_relatif_source": "OD_Docs/L3-D04-2015-Production-Animale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3104245,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 69,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "texte_officiel",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "decideur_institution",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2015,
+  "auteurs": "Université Ferhat Abbas Sétif 1, MESRS Algérie",
+  "source_organisation": "Université Ferhat Abbas Sétif 1 / MESRS",
+  "mots_cles": [
+    "offre de formation",
+    "canevas lmd",
+    "production animale",
+    "licence academique",
+    "algerie",
+    "setif"
+  ],
+  "titre_trouve": "OFFRE DE FORMATION L.M.D. LICENCE ACADEMIQUE 2014 - 2015 : Production Animale",
+  "titre": "Offre de formation LMD : Licence Académique Production Animale",
+  "resume": "Canevas officiel du programme pédagogique national pour la Licence LMD en Sciences Agronomiques, spécialité Production Animale (Université Sétif 1).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Canevas administratif d'habilitation universitaire algérien, classé en archive pour documentation institutionnelle.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "OFFRE DE FORMATION L.M.D. LICENCE ACADEMIQUE Spécialité Production Animale Université Ferhat Abbas, Sétif 1"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00521__offre-de-formation-lmd-licence-academique-production-an.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-00521__offre-de-formation-lmd-licence-academique-production-an.pdf"
+}

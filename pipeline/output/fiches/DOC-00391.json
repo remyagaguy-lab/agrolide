@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00391",
+  "sha256": "fdddc8a4bcfccc1fdee95fca9e42ddfdfe0362927ea46e34c46cbaa320c60ec3",
+  "nom_original": "Embouche ovine pour la tabaski.pdf",
+  "chemin_relatif_source": "OD_Docs/Embouche ovine pour la tabaski.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4368827,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 26,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "ruminants",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "petits ruminants",
+  "pays": "Bénin",
+  "annee": 2018,
+  "auteurs": "Janvier Hounguevou",
+  "source_organisation": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) / MAEP Bénin",
+  "mots_cles": [
+    "embouche ovine",
+    "tabaski",
+    "moutons",
+    "benin",
+    "giz",
+    "maep",
+    "alimentation ovine",
+    "ruminants"
+  ],
+  "titre_trouve": "GUIDE D’ELEVAGE SUR L’EMBOUCHE OVINE POUR LA TABASKI Généralités",
+  "titre": "Guide d'élevage sur l'embouche ovine pour la Tabaski au Bénin",
+  "resume": "Guide de formation technique et professionnelle agricole (GIZ / MAEP Bénin) sur l'embouche ovine pour la fête de la Tabaski : critères de sélection des béliers, conduite nutritionnelle et suivi sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de formation (GIZ / Ministère de l'Agriculture du Bénin) d'un intérêt direct pour les éleveurs de petits ruminants en Afrique tropicale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE D’ELEVAGE SUR L’EMBOUCHE OVINE POUR LA TABASKI Généralités"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Publié par la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH Projet Education et Formation Technique Professionnelle Agricole (EFTPA-CAADP)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00391__guide-d-elevage-sur-l-embouche-ovine-pour-la-tabaski-au.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00391__guide-d-elevage-sur-l-embouche-ovine-pour-la-tabaski-au.pdf"
+}

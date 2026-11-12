@@ -1,0 +1,605 @@
+{
+  "batch_number": 65,
+  "results": [
+    {
+      "id": "DOC-00992",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["gestion_exploitation", "alimentation_animale"],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2011,
+      "auteurs": "Aziz Simian, Moussa Bamogo",
+      "source_organisation": null,
+      "mots_cles": ["aviculture traditionnelle", "poulet bicyclette", "burkina faso", "incubation", "rentabilite avicole"],
+      "titre_trouve": "Aviculture traditionnelle améliorée",
+      "titre": "Aviculture traditionnelle améliorée au Burkina Faso (Module de formation)",
+      "resume": "Support de formation en diapositives sur la conduite de l'aviculture traditionnelle améliorée au Burkina Faso : habitat de la volaille, alimentation locale, incubation naturelle et rentabilité économique.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation de formateurs indépendants sans mention de licence libre, archivé pour usage documentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Aviculture traditionnelle améliorée Formateurs : AZIZ SIMIAN MOUSSA BAMOGO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00993",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["production_vegetale", "cultures_maraicheres"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Niger",
+      "annee": 2019,
+      "auteurs": "Adamou Mahaman Moustapha",
+      "source_organisation": "PromAP (GIZ / Ministère du Plan du Niger)",
+      "mots_cles": ["irrigation goutte-a-goutte", "niger", "promap", "giz", "economie d'eau", "dimensionnement"],
+      "titre_trouve": "MODULE DE FORMATION : IRRIGATION AU GOUTTE A GOUTTE",
+      "titre": "Module de formation : Irrigation au goutte-à-goutte (PromAP Niger / GIZ)",
+      "resume": "Guide pratique complet issu de la coopération nigéro-allemande (PromAP/GIZ) détaillant les aspects techniques de l'irrigation goutte-à-goutte au Sahel : dimensionnement, installation et exploitation du réseau.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de formation (GIZ / Ministère du Niger) complet et hautement stratégique pour l'irrigation sahélienne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Programme Nigéro – Allemand de Promotion de l’Agriculture Productive PromAP ... MODULE DE FORMATION : IRRIGATION AU GOUTTE A GOUTTE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00994",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_de_rente",
+      "domaines_secondaires": ["fertilisation_amendements"],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "canne à sucre",
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Noëlie Maurette",
+      "source_organisation": "CIRAD / UPR GREEN",
+      "mots_cles": ["canne a sucre", "fertilisation organique", "la reunion", "cirad", "memoire ingenieur", "valorisation agronomique"],
+      "titre_trouve": "Caractérisation des pratiques de fertilisation de la canne à sucre et de leurs déterminants dans le Territoire de la Côte Ouest de la Réunion",
+      "titre": "Pratiques de fertilisation de la canne à sucre à La Réunion (Mémoire d'ingénieur)",
+      "resume": "Mémoire de fin d'études d'ingénieur agronome réalisé au CIRAD analysant les pratiques de fertilisation minérale et organique de la canne à sucre ainsi que la valorisation des résidus à l'île de La Réunion.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire d'ingénieur universitaire sans licence libre, archivé conformément à la règle absolue sur les mémoires académiques.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "MÉMOIRE DE FIN D’ÉTUDES présenté pour l'obtention du DIPLOME D’INGENIEUR AGRONOME"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00995",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": ["arboriculture_fruitiere", "agroecologie_agriculture_durable"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "papaye",
+      "pays": "Niger",
+      "annee": 2024,
+      "auteurs": "Bibata Ali Outani, Haougui Adamou, Patrick Delmas, Aïssa Kimba, Mariama Iboune",
+      "source_organisation": "RECA Niger / INRAN / CRA Niamey",
+      "mots_cles": ["papayer", "ravageurs", "cochenille du papayer", "reca niger", "inran", "savon noir", "agroecologie"],
+      "titre_trouve": "Les principaux ravageurs du papayer au Niger",
+      "titre": "Les principaux ravageurs du papayer au Niger (Note phytosanitaire RECA / INRAN)",
+      "resume": "Note technique phytosanitaire de référence du RECA Niger et de l'INRAN décrivant la biologie, les dégâts et les traitements biologiques (savon noir) contre la cochenille et les virus du papayer.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Note phytosanitaire institutionnelle récente (2024) diffusée par le RECA Niger et l'INRAN, libre et essentielle pour les producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Réseau National des Chambres d’Agriculture du Niger ... Les principaux ravageurs du papayer au Niger Juillet 2024"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00996",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": ["sante_animale", "batiments_equipements_elevage"],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "ovins",
+      "pays": "France",
+      "annee": 2006,
+      "auteurs": "Dr Alain Fournier",
+      "source_organisation": "Éditions Artémis",
+      "mots_cles": ["elevage ovin", "mouton", "bergerie", "editions artemis", "alain fournier", "alimentation ovine"],
+      "titre_trouve": "L’élevage des moutons",
+      "titre": "L'élevage des moutons : Guide pratique (Éditions Artémis)",
+      "resume": "Livre pratique commercial des Éditions Artémis présentant l'anatomie, la physiologie, les races tempérées, les aménagements de bergerie et la santé du mouton.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial payant sous copyright strict (Éditions Artémis, ISBN 978-2-84416-456-8), archivé sans diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 89,
+          "extrait": "16 € Prix France TTC 9 782844 164568"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00997",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": ["alimentation_animale", "genetique_reproduction", "gestion_exploitation"],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "ovins",
+      "pays": "France",
+      "annee": 2012,
+      "auteurs": "Christian Dudouet",
+      "source_organisation": "Éditions France Agricole",
+      "mots_cles": ["production du mouton", "elevage ovin", "france agricole", "zootechnie", "reproduction ovine"],
+      "titre_trouve": "La production du mouton - 3e édition",
+      "titre": "La production du mouton : Toutes les techniques d'élevage (France Agricole)",
+      "resume": "Manuel de référence exhaustif des Éditions France Agricole détaillant la conduite technique, l'alimentation, la reproduction, le sanitaire et la gestion économique de l'élevage ovin.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial de référence sous copyright strict (Éditions France Agricole, ISBN 978-2-85557-215-4), archivé.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.99,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "La production du mouton © Éditions France Agricole, 2012 ISBN : 978-2-85557-215-4 Tous droits réservés pour tous pays"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00998",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": ["equipements_technologie", "qualite_securite_normes"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "œufs et ovoproduits",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["ovoproduits", "poudre d'oeuf", "pasteurisation", "diagramme de fabrication", "agroalimentaire"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité OVOPRODUITS",
+      "titre": "Diagramme de procédé technologique : Ovoproduits et poudres d'œufs",
+      "resume": "Schéma synoptique de procédé agroalimentaire exposant l'enchaînement des étapes de transformation des œufs : mirage, lavage, cassage, pasteurisation, ultrafiltration et atomisation en poudres.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique technique complet de procédé industriel agroalimentaire pour la valorisation des œufs, libre de diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité OVOPRODUITS ... ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00999",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": ["equipements_technologie"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "boulangerie et céréales",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["panification", "boulangerie", "biscottes", "cereales", "diagramme de fabrication", "farine"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité PAINS – BISCOTTES",
+      "titre": "Diagramme de procédé technologique : Panification et biscotterie",
+      "resume": "Schéma synoptique de fabrication en boulangerie industrielle détaillant les étapes de dosage, pétrissage, division, pointage, cuisson et surgélation des différents types de pains et biscottes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Diagramme de procédé technique complet sur la transformation meunière et la boulangerie, publiable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité PAINS – BISCOTTES ... ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01000",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["arboriculture_fruitiere"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "arboriculture fruitière et viticulture",
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "BRL / SudExpé",
+      "source_organisation": "BRL / SudExpé",
+      "mots_cles": ["irrigation fruitiere", "besoins en eau", "brl", "sud expe", "arboriculture", "vigne"],
+      "titre_trouve": "Irrigation fiches cultures fruitières et vignes (Partie 5)",
+      "titre": "Irrigation des cultures fruitières et de la vigne : Fiches techniques (BRL / SudExpé)",
+      "resume": "Série de fiches techniques d'irrigation par culture fruitière (pêcher, abricotier, pommier, olivier, vigne) indiquant les consommations en eau mensuelles et les coefficients culturaux en région méditerranéenne.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ensemble_partiel", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel d'un guide technique d'irrigation méditerranéen (partie 5), archivé conformément à la règle sur les ensembles incomplets.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "complet",
+          "page": 1,
+          "extrait": "Culture fruitière Abricotier précoce .... 75 ... Irrigation de la vigne de cuve ... 105/107 © BRL/COM © SUD EXPE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01001",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["protection_des_cultures", "fertilisation_amendements"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "cucurbitacées",
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "Jérôme Lecerf",
+      "source_organisation": "Direction de l'Agriculture de Polynésie française",
+      "mots_cles": ["pasteque", "melon", "cucurbitacees", "fiche technique", "polynesie francaise", "itineraire technique"],
+      "titre_trouve": "Fiche technique de culture : Pastèque et melon",
+      "titre": "Fiche technique de culture : La pastèque et le melon en milieu tropical",
+      "resume": "Fiche technique de culture maraîchère de la Direction de l'agriculture de Polynésie française détaillant l'itinéraire agronomique de la pastèque et du melon : semis, fertilisation, pollinisation et traitements phytosanitaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle complète pour la culture tropicale des cucurbitacées, diffusable au public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Direction de l’agriculture ... Pape’ete – Tahiti - Polynésie française ... La pastèque (Citrullus lanatus) et le melon (Cucumis melo)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01002",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["gestion_exploitation"],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pastèque",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "228AgroConseil",
+      "source_organisation": "228AgroConseil",
+      "mots_cles": ["pasteque", "culture de la pasteque", "togo", "228agroconseil", "maraichage", "semis"],
+      "titre_trouve": "228AgroConseil : Culture de la pastèque",
+      "titre": "Guide pratique en diaporama : Culture de la pastèque (228AgroConseil Togo)",
+      "resume": "Support de conseil en diapositives réalisé par 228AgroConseil au Togo présentant les bases de la production de pastèque : choix du site, sélection des variétés, entretien, récolte et commercialisation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de conseil privé sans mention de licence libre de redistribution, conservé en archive documentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "228AgroConseil Culture de la pastèque Sommaire 1-Généralités"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01003",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": ["equipements_technologie"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "pâtes alimentaires et semoulerie",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["pates alimentaires", "couscous", "semoule de ble dur", "extrusion", "diagramme de procede", "agroalimentaire"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité PATES ALIMENTAIRES",
+      "titre": "Diagramme de procédé technologique : Fabrication des pâtes alimentaires et du couscous",
+      "resume": "Schéma synoptique de fabrication agroalimentaire illustrant les différentes filières industrielles de production des pâtes (spaghettis, macaronis, nouilles) et du couscous à partir de semoule de blé dur.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique technique synthétique et complet sur la transformation industrielle des céréales en pâtes et couscous, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité PATES ALIMENTAIRES ... ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01004",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": ["porcins", "equipements_technologie"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "charcuterie et porc",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["pate de campagne", "charcuterie", "transformation de la viande", "porc", "diagramme de fabrication"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité PATES CHARCUTIERS",
+      "titre": "Diagramme de procédé technologique : Pâtés charcutiers et salaisons",
+      "resume": "Schéma synoptique technique détaillant les opérations unitaires de fabrication de charcuterie (pâté de campagne et pâté en croûte) : hachage, cutterage, embossage et barèmes de cuisson.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique de transformation charcutière complet et directement utilisable pour la formation agroalimentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité PATES CHARCUTIERS ... ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01005",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": ["gestion_exploitation", "alimentation_animale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tilapia",
+      "pays": "Togo",
+      "annee": 2011,
+      "auteurs": "Amakoé Adjanké",
+      "source_organisation": "CTOP (Coordination Togolaise des Organisations Paysannes)",
+      "mots_cles": ["pisciculture", "oreochromis niloticus", "tilapia", "alevins", "ctop", "togo", "gestion piscicole"],
+      "titre_trouve": "Production d’alevins et gestion de ferme piscicole : Manuel de formation en pisciculture",
+      "titre": "Production d'alevins et gestion d'une ferme piscicole (Manuel CTOP Togo)",
+      "resume": "Manuel de formation pratique de la CTOP Togo couvrant la reproduction artificielle du tilapia (Oreochromis niloticus), l'alevinage, l'alimentation, le suivi sanitaire et la gestion technico-économique d'une ferme aquacole.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel de formation complet produit pour une organisation paysanne faîtière (CTOP), hautement pertinent pour l'aquaculture tropicale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Manuel de formation en pisciculture ... PRODUCTION D’ALEVINS ET GESTION DE FERME PISCICOLE C.T.O.P"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01006",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": ["alimentation_animale", "gestion_exploitation"],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ovins",
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Christian Sidibé",
+      "source_organisation": null,
+      "mots_cles": ["embouche ovine", "alimentation des moutons", "tourteau de coton", "engraissement", "ruminants", "sahel"],
+      "titre_trouve": "Formation technique en embouche ovine",
+      "titre": "Formation technique en embouche ovine : Conduite et formules alimentaires",
+      "resume": "Support de formation en diapositives détaillant les types d'embouche ovine en zone sahélienne, la conduite zootechnique, la prophylaxie et des formules de rationnement équilibrées à base de sous-produits locaux.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation technique indépendant sans mention de licence libre, archivé pour documentation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Formation technique en embouche ovine Sidibé Christian Ingénieur en élevage"
+        }
+      ]
+    }
+  ]
+}

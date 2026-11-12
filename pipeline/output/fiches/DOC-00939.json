@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00939",
+  "sha256": "31d187fd75477dbebf75b0fd24756bc02864710b3f96352208f5375aeacd09a3",
+  "nom_original": "guide_bd_def_v7601360707431890010 (1).pdf",
+  "chemin_relatif_source": "OD_Docs/guide_bd_def_v7601360707431890010 (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5800280,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 38,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "blé dur",
+  "pays": "France",
+  "annee": 2021,
+  "auteurs": "ARVALIS - Institut du végétal",
+  "source_organisation": "ARVALIS - Institut du végétal",
+  "mots_cles": [
+    "ble dur",
+    "cereales",
+    "arvalis",
+    "region centre",
+    "itineraire technique",
+    "fertilisation"
+  ],
+  "titre_trouve": "GUIDE DU BLE DUR EN REGION CENTRE ET ILE DE FRANCE",
+  "titre": "Guide de culture du blé dur en région Centre et Île-de-France (ARVALIS)",
+  "resume": "Guide agronomique complet d'ARVALIS sur l'itinéraire technique du blé dur en France : choix variétal, fertilisation azotée, régulation et protection sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique ARVALIS spécifique à la céréaliculture tempérée en France métropolitaine, inadapté au contexte tropical d'Agrolide.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DU BLE DUR EN REGION CENTRE ET ILE DE FRANCE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Guide de culture du blé dur en région Centre et Ile de France © ARVALIS - Institut du végétal - Mars 2021"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00939__guide-de-culture-du-ble-dur-en-region-centre-et-ile-de.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00939__guide-de-culture-du-ble-dur-en-region-centre-et-ile-de.pdf"
+}

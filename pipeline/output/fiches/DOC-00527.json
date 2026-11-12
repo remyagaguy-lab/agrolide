@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00527",
+  "sha256": "5459ee60069d2bde1c1b540bbf0f822d07dbeeda55ab162abf793d98a33e359a",
+  "nom_original": "LA PRODUCTION DE SEMENCES.pdf",
+  "chemin_relatif_source": "OD_Docs/LA PRODUCTION DE SEMENCES.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 10730093,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 128,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet",
+    "enseignant_chercheur",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "semences",
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "FAO, AfricaSeeds",
+  "source_organisation": "FAO / AfricaSeeds",
+  "mots_cles": [
+    "semences",
+    "certification semenciere",
+    "controle de qualite",
+    "africaseeds",
+    "fao",
+    "afrique subsaharienne"
+  ],
+  "titre_trouve": "OUTILS DE FORMATION POUR LA PRODUCTION DE SEMENCES Module 3: Contrôle de la qualité et certification des semences",
+  "titre": "Contrôle de la qualité et certification des semences (Module 3 FAO/AfricaSeeds)",
+  "resume": "Manuel pratique de la FAO et d'AfricaSeeds détaillant les procédures de contrôle qualité, les normes de pureté et la certification des semences en Afrique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide institutionnel de formation pratique FAO/AfricaSeeds de référence pour la filière semencière africaine, libre de diffusion.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "OUTILS DE FORMATION POUR LA PRODUCTION DE SEMENCES Module 3: Contrôle de la qualité et certification des semences"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "ORGANISATION DES NATIONS UNIES POUR L'ALIMENTATION ET L'AGRICULTURE ET AFRICASEEDS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00527__controle-de-la-qualite-et-certification-des-semences-mo.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-00527__controle-de-la-qualite-et-certification-des-semences-mo.pdf"
+}

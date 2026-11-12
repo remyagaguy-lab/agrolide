@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00482",
+  "sha256": "a760cf88c2c48e59442386781f872bfe7d61446ca25faa61ac678b366b16674a",
+  "nom_original": "Guide des Bonnes Pratiques de Fabrication (GBPF) 2025.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide des Bonnes Pratiques de Fabrication (GBPF) 2025.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 21936450,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 180,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "porc",
+  "pays": "France",
+  "annee": 2025,
+  "auteurs": "Centre d’Etude et de Ressources sur la Diversification (CERD)",
+  "source_organisation": "CERD / Chambres d'agriculture",
+  "mots_cles": [
+    "transformation fermiere",
+    "charcuterie",
+    "porc",
+    "haccp",
+    "bonnes pratiques d'hygiene",
+    "pms"
+  ],
+  "titre_trouve": "Guide de Bonnes Pratiques pour la transformation fermière de produits à base de porc",
+  "titre": "Guide de bonnes pratiques pour la transformation fermière de viande porcine",
+  "resume": "Guide complet sur la charcuterie et la transformation fermière de viande de porc : réglementation sanitaire, méthode HACCP, diagrammes de fabrication et traçabilité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide complet institutionnel de référence sur la transformation porcine et l'HACCP, mis à disposition des membres pour l'adaptation technique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide de Bonnes Pratiques pour la transformation fermière de produits à base de porc Version 2025"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00482__guide-de-bonnes-pratiques-pour-la-transformation-fermie.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00482__guide-de-bonnes-pratiques-pour-la-transformation-fermie.pdf"
+}

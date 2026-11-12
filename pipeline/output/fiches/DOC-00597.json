@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00597",
+  "sha256": "bb4f49b281cc5a26448cca4b48b9ccd4521ea9b4eb32b07536e42b8f768379a8",
+  "nom_original": "MODULES De la formation ZM.pdf",
+  "chemin_relatif_source": "OD_Docs/MODULES De la formation ZM.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2089728,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "titre_introuvable",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "autre",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "formation",
+    "modules",
+    "document numerise"
+  ],
+  "titre_trouve": null,
+  "titre": "Modules de formation ZM",
+  "resume": "Fichier PDF numérisé de 12 pages sans texte extractible, intitulé 'MODULES De la formation ZM', nécessitant une reconnaissance optique de caractères pour indexation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document numérisé sans couche texte extractible nécessitant un OCR pour déterminer son contenu et ses droits de diffusion.",
+  "confiance": {
+    "classification": 0.4,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULES De la formation ZM.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00597__modules-de-formation-zm.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00597__modules-de-formation-zm.pdf"
+}

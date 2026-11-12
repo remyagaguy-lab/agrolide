@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01044",
+  "sha256": "91cd968b2f972529d6161432a826e3151dffd70f152476f56ea7219abd8742fa",
+  "nom_original": "sucre raffine sucre glace.pdf",
+  "chemin_relatif_source": "OD_Docs/sucre raffine sucre glace.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 42689,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480070919-sucre_raffine_sucre_glace.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "huiles_sucre_corps_gras",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "canne à sucre",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "sucre raffine",
+    "sucre glace",
+    "raffinage",
+    "diagramme de fabrication",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité SUCRE RAFFINE",
+  "titre": "Diagramme de fabrication industrielle du sucre raffiné et du sucre glace",
+  "resume": "Synoptique des opérations unitaires de raffinage sucrier : refonte du sucre brut, décoloration, microfiltration, cristallisations fractionnées et conditionnement des sucres.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique technique clair et complet sur le raffinage du sucre, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité SUCRE RAFFINE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01044__diagramme-de-fabrication-industrielle-du-sucre-raffine.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/huiles_sucre_corps_gras/DOC-01044__diagramme-de-fabrication-industrielle-du-sucre-raffine.pdf"
+}

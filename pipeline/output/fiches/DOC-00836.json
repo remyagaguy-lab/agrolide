@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00836",
+  "sha256": "dfef24e6c735b22050a2e847ce915aee134bf31f8609313c958b0bb465196d0e",
+  "nom_original": "concours ing.docx",
+  "chemin_relatif_source": "OD_Docs/concours ing.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 1769576,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "outil_modele",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pêche et aquaculture",
+  "pays": "Burkina Faso",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Ministère en charge des ressources halieutiques (Burkina Faso)",
+  "mots_cles": [
+    "aquaculture",
+    "ichtyologie",
+    "tilapia",
+    "clarias",
+    "burkina faso",
+    "concours ingenieur",
+    "qcm"
+  ],
+  "titre_trouve": null,
+  "titre": "QCM de concours d'ingénieur en halieutique et aquaculture au Burkina Faso",
+  "resume": "Banque de questions à choix multiples (QCM) d'épreuve de concours d'ingénieur portant sur l'ichtyologie, l'aquaculture tropicale et la faune aquatique du Burkina Faso.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Épreuve de concours au format docx sans attribution officielle ni licence ouverte, archivée en non publié.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "La seule espèce de crevette vivant dans les cours et plans d’eau du Burkina Faso est : Macrobrachium rosenbergii"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00836__qcm-de-concours-d-ingenieur-en-halieutique-et-aquacultu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00836__qcm-de-concours-d-ingenieur-en-halieutique-et-aquacultu.pdf"
+}

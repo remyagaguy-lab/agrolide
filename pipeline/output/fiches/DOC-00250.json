@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00250",
+  "sha256": "a4140962432d1637a82a07117db6ca2cc4741408b4004a6ef51ed66da3866a56",
+  "nom_original": "Bilan hydrique mensuel ble tiaret.docx",
+  "chemin_relatif_source": "OD_Docs/Bilan hydrique mensuel ble tiaret.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 22886,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": "blé dur",
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "ENIGMA",
+  "source_organisation": null,
+  "mots_cles": [
+    "bilan hydrique",
+    "cropwat",
+    "ble dur",
+    "irrigation",
+    "hauts plateaux",
+    "algerie"
+  ],
+  "titre_trouve": "Bilan hydrique mensuel (CROPWAT) : Irrigation culture Blé (haut plateau)",
+  "titre": "Bilan hydrique et programmation de l'irrigation du blé (Tiaret, CROPWAT)",
+  "resume": "Exercice corrigé de programmation de l'irrigation du blé dur sous CROPWAT basé sur les données climatiques des Hauts Plateaux algériens.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche d'exercice docx fragmentaire pour cas d'étude spécifique en Algérie, conservée en archive.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.7,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Irrigation culture Blé (haut plateau) Bilan hydrique mensuel (CROPWAT)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00250__bilan-hydrique-et-programmation-de-l-irrigation-du-ble.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00250__bilan-hydrique-et-programmation-de-l-irrigation-du-ble.pdf"
+}

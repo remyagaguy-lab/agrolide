@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00681",
+  "sha256": "58bef6cfb0074529797aea4c1f5eff9cded053c4e562f1b51711727452d54dfb",
+  "nom_original": "Poulet-de-chair-308-FR-2014.pdf",
+  "chemin_relatif_source": "OD_Docs/Poulet-de-chair-308-FR-2014.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 871819,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 16,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2014,
+  "auteurs": "Aviagen",
+  "source_organisation": "Aviagen",
+  "mots_cles": [
+    "poulet de chair",
+    "ross 308",
+    "aviagen",
+    "performances zootechniques",
+    "indice de consommation",
+    "alimentation"
+  ],
+  "titre_trouve": "NORMES ET VALEURS NOMINALES POUR LE POULET DE CHAIR ROSS 308",
+  "titre": "Normes et valeurs de performance du poulet de chair Ross 308",
+  "resume": "Guide technique de référence d'Aviagen présentant les tables officielles de performances zootechniques pour la souche Ross 308 : courbes de croissance, consommation d'aliment et indices de conversion.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Document technique de référence mondiale du sélectionneur Aviagen, indispensable pour le suivi des élevages de poulets de chair Ross 308.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "NORMES ET VALEURS NOMINALES POUR LE POULET DE CHAIR ROSS 308"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00681__normes-et-valeurs-de-performance-du-poulet-de-chair-ros.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00681__normes-et-valeurs-de-performance-du-poulet-de-chair-ros.pdf"
+}

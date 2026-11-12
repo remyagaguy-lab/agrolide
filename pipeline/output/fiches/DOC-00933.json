@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00933",
+  "sha256": "e86ebfdff046d9cb570053e215dee1e03881ee099e2ee51632efc164ae5610e1",
+  "nom_original": "guide-agronomique-des-grandes-cultures.pdf",
+  "chemin_relatif_source": "OD_Docs/guide-agronomique-des-grandes-cultures.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9571737,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 522,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "grandes cultures",
+  "pays": "Canada",
+  "annee": 2017,
+  "auteurs": "Christine Brown, Joanna Follings, Meghan Moran, Ben Rosser",
+  "source_organisation": "Ministère de l'Agriculture, de l'Alimentation et des Affaires rurales de l'Ontario (MAAARO)",
+  "mots_cles": [
+    "grandes cultures",
+    "agronomie",
+    "ontario",
+    "canada",
+    "mais",
+    "soja",
+    "maaaro"
+  ],
+  "titre_trouve": "GUIDE AGRONOMIQUE DES GRANDES CULTURES",
+  "titre": "Guide agronomique des grandes cultures (Publication 811F - MAAARO)",
+  "resume": "Manuel encyclopédique de référence de 522 pages publié par le ministère de l'Agriculture de l'Ontario, détaillant la conduite agronomique des grandes cultures (maïs, soya, céréales, fourrages) en climat tempéré nord-américain.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage officiel canadien de grande qualité scientifique mais dédié spécifiquement aux grandes cultures en climat tempéré froid ontarien (pertinence marginale pour l'Afrique subsaharienne).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE AGRONOMIQUE DES GRANDES CULTURES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00933__guide-agronomique-des-grandes-cultures-publication-811f.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00933__guide-agronomique-des-grandes-cultures-publication-811f.pdf"
+}

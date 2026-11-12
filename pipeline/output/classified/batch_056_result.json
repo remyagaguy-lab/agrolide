@@ -1,0 +1,655 @@
+{
+  "batch_number": 56,
+  "results": [
+    {
+      "id": "DOC-00842",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": ["alimentation_animale", "genetique_reproduction"],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "petits ruminants",
+      "pays": "Burkina Faso",
+      "annee": 2022,
+      "auteurs": "Christian Sidibé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["petits ruminants", "elevage caprin", "elevage ovin", "alimentation du betail", "reproduction", "burkina faso"],
+      "titre_trouve": "Contraintes de l’élevage des Petits Ruminants",
+      "titre": "Contraintes de l'élevage des petits ruminants au Burkina Faso",
+      "resume": "Support de présentation analysant les contraintes alimentaires saisonnières, sanitaires et les paramètres de reproduction des petits ruminants (ovins et caprins de race Mossi) au Burkina Faso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours diaporama non publié sous licence libre, archivé pour usage documentaire interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Contraintes de l’élevage des Petits Ruminants"
+        },
+        {
+          "champ": "pays",
+          "page": 3,
+          "extrait": "Le Burkina Faso tire la majeure partie de son revenu national des produits de l'élevage et de l'agriculture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00843",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["batiments_equipements_elevage", "alimentation_animale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2018,
+      "auteurs": "Novogen",
+      "source_organisation": "Novogen",
+      "mots_cles": ["pondeuses", "novogen brown", "aviculture commerciale", "elevage avicole", "poussiniere", "conduite d'elevage"],
+      "titre_trouve": "Guide d’élevage des pondeuses commerciales – NOVOgen BROWN",
+      "titre": "Guide d'élevage des pondeuses commerciales - NOVOgen Brown",
+      "resume": "Guide technique complet de conduite d'élevage de la poule pondeuse commerciale NOVOgen Brown : normes de température, gestion de la poussinière, alimentation, litière et biosécurité.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique commercial d'entreprise privée sans licence de rediffusion libre, archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Guide d’élevage des pondeuses commerciales – NOVOgen BROWN"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "WWW.NOVOGEN-LAYERS.COM"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00844",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": ["sante_animale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["ethologie", "bien-etre animal", "comportement animal", "cinq libertes", "protection animale"],
+      "titre_trouve": "Cours 1 : Ethologie et bien être : Contexte de bien-être animal",
+      "titre": "Éthologie et bien-être animal : principes fondamentaux",
+      "resume": "Support de cours universitaire introduisant les concepts d'éthologie appliquée, les cinq libertés fondamentales du rapport Brambell, la sensibilité animale et la Déclaration universelle des droits de l'animal.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, non diffusable publiquement.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours 1 : Ethologie et bien être : Contexte de bien-être animal"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00845",
+      "domaine_principal": "transversal",
+      "sous_domaine": "statistiques_biometrie",
+      "domaines_secondaires": ["sciences_de_base"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["biometrie", "statistiques", "travaux pratiques", "analyse de donnees"],
+      "titre_trouve": null,
+      "titre": "Cours de biométrie : travaux dirigés et travaux pratiques",
+      "resume": "Recueil de travaux dirigés et pratiques en biométrie et statistiques appliquées aux sciences du vivant. Document scanné de 52 pages sans couche texte extractible.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné de 52 pages sans texte extractible nécessitant un traitement OCR complet et une validation humaine des droits.",
+      "confiance": {
+        "classification": 0.60,
+        "droits": 0.40,
+        "completude": 0.50
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier: cours Biomètre-tp-td.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00846",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": ["biodiversite_ecologie"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "Mme Abdelaoui I.",
+      "source_organisation": "Université de Biskra (UMKB)",
+      "mots_cles": ["environnement", "developpement durable", "ressources naturelles", "ecologie", "biskra"],
+      "titre_trouve": "Module : Environnement et Développement Durable",
+      "titre": "Environnement et développement durable (L2 SNV Biskra)",
+      "resume": "Support de cours complet destiné aux étudiants de Licence en sciences agronomiques et biologiques, traitant des concepts d'environnement, des grands enjeux écologiques mondiaux et de la gestion durable des ressources naturelles.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire interne d'enseignant sans licence de diffusion ouverte, archivé.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "UMKB Faculté SNV Département : Agronomie Module : Environnement et Développement Durable"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Mme ABDELAOUI.I"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00847",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["sol_fertilite"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "A. Rahmani",
+      "source_organisation": "Centre Universitaire de Naâma",
+      "mots_cles": ["hydraulique pastorale", "gestion de l'eau", "qualite des eaux", "irrigation", "agro-pastoralisme", "zones arides"],
+      "titre_trouve": "Cours : Hydraulique pastorale et gestion de l’eau Master 2 : Agro-pastoralisme",
+      "titre": "Hydraulique pastorale et gestion de l'eau",
+      "resume": "Cours de Master sur le cycle de l'eau, les ressources hydriques en zones pastorales arides, l'hydrochimie et l'évaluation de la qualité des eaux d'irrigation et d'abreuvement par le diagramme de Wilcox.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié académique universitaire interne non libre de droits, archivé conformément à la règle 6.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours : Hydraulique pastorale et gestion de l’eau Master 2 : Agro-pastoralisme"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Par : A. RAHMANI"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00848",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": ["numerique_technologies", "methodologie_recherche"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2016,
+      "auteurs": "Nadia Boulelouah",
+      "source_organisation": "Université Hadj Lakhdar Batna",
+      "mots_cles": ["modelisation", "croissance des cultures", "simulation agronomique", "nutrition azotee", "rendement"],
+      "titre_trouve": "Modélisation : Utilisation des modèles de croissance des cultures",
+      "titre": "Modélisation : utilisation des modèles de croissance des cultures",
+      "resume": "Projet de cours pédagogique approfondi sur la modélisation agronomique et l'utilisation des modèles de simulation de la croissance et du développement des cultures végétales (dynamique de l'azote, surface foliaire, rendement).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié pédagogique universitaire interne soumis à validation académique, archivé.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Modélisation : Utilisation des modèles de croissance des cultures"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Dr. Nadia Boulelouah Enseignante-Chercheur Département des Sciences Agronomiques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00849",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": ["sante_animale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["ethologie", "protection animale", "bien-etre des animaux", "bioethique"],
+      "titre_trouve": "Ethologie et protection animale – Cours 1 : Bien-être, éthologie et protection des animaux",
+      "titre": "Éthologie et protection animale : notions de base",
+      "resume": "Fiche de cours synthétique abordant les motivations éthiques et biologiques du bien-être animal, les fondements de la bioéthique et l'historique des définitions scientifiques du bien-être des animaux d'élevage.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié d'enseignement non libre, archivé conformément aux règles métier.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Ethologie et protection animale – Cours 1 Bien-être, éthologie et protection des animaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00850",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": ["foresterie_agroforesterie", "sol_fertilite"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "pastoralisme",
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Imène Benzina",
+      "source_organisation": "Université Batna 2",
+      "mots_cles": ["amenagement steppique", "pastoralisme", "alfa", "parcours pastoraux", "zones arides", "algerie"],
+      "titre_trouve": "Aménagement steppique",
+      "titre": "Aménagement steppique et pastoral en zone aride",
+      "resume": "Présentation de cours de niveau Master 2 détaillant les techniques d'aménagement agro-pastoral, la dynamique des nappes alfatières, la gestion des parcours (rotation, mise en défens, charge animale) et la réhabilitation des zones arides.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire diaporama non libre de droits, archivé.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Aménagement steppique"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Chargée du cours Dr. Imène BENZINA Master 2 Ecologie des zones arides et semi arides"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00851",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": null,
+      "auteurs": "Nombré",
+      "source_organisation": "Institut Ben Gourion",
+      "mots_cles": ["hydraulique agricole", "irrigation", "boulis", "pompage", "mesure des debits", "burkina faso"],
+      "titre_trouve": "COURS HYDRAULIQUE GENERALE BTS 1ère année",
+      "titre": "Cours d'hydraulique générale (BTS 1ère année)",
+      "resume": "Polycopié de cours de BTS abordant l'hydrostatique, la dynamique des fluides, la mesure des débits, les ouvrages de captage et de stockage sahéliens (boulis, retenues, forages), ainsi que les systèmes de pompage et d'irrigation.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation technique BTS interne sans licence de rediffusion publique, archivé.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COURS HYDRAULIQUE GENERALE BTS 1ère année"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Institut Ben Gourion"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00852",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": ["statistiques_biometrie"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2016,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["statistiques descriptives", "quartiles", "mediane", "frequences", "seconde"],
+      "titre_trouve": "Seconde Cours : statistiques descriptives",
+      "titre": "Statistiques descriptives (classe de Seconde)",
+      "resume": "Fiche de cours de lycée d'enseignement général introduisant le vocabulaire des statistiques descriptives : population, échantillon, caractère quantitatif/qualitatif, fréquences, médiane et quartiles.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Cours scolaire généraliste de lycée hors contexte agricole tropical, non libre de droits.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Seconde Cours : statistiques descriptives"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00853",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": ["aviculture"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Kinvo’b Innov",
+      "source_organisation": "Kinvo’b Innov",
+      "mots_cles": ["couveuse artisanale", "fabrication couveuse", "incubation artificielle", "thermostat", "aviculture", "cablage"],
+      "titre_trouve": "Guide du fabriquant de couveuse",
+      "titre": "Guide du fabricant de couveuse artisanale",
+      "resume": "Manuel technique pas-à-pas pour la confection, l'assemblage, le câblage électrique et la programmation de thermostats électroniques pour couveuses artisanales (à pétrole et électriques) adaptées au contexte tropical.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage technique commercial avec mention explicite de reproduction interdite, archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide du fabriquant de couveuse KINVO’B INNOV"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "Toute reproduction ou vente du présent ouvrage par une tierce personne est strictement interdite."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00854",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": ["aviculture"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["couveuse", "fabrication couveuse", "thermostat xh-w3001", "stc-1000", "incubation des oeufs", "aviculture"],
+      "titre_trouve": "SUPPORT DE FORMATION SUR LA FABRICATION DES COUVEUSES",
+      "titre": "Fabrication et régulation des couveuses artisanales",
+      "resume": "Support pratique de formation expliquant les principes de l'incubation artificielle, la régulation thermique et hygrométrique, ainsi que le montage et câblage de couveuses avec les régulateurs XH-W3001 et STC-1000.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation non officiel sans licence libre, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.80,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "SUPPORT DE FORMATION SUR LA FABRICATION DES COUVEUSES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00855",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": ["transformation_fruits_legumes"],
+      "type_doc": "fiche_technique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "produits laitiers",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["cremes glacees", "sorbets", "glaces", "technologie laitiere", "foisonnement", "pasteurisation"],
+      "titre_trouve": "CREMES GLACEES – SORBETS",
+      "titre": "Schéma technologique : fabrication des crèmes glacées et sorbets",
+      "resume": "Diagramme synoptique industriel détaillant l'itinéraire technologique complet de fabrication des crèmes glacées, sorbets et glaces à l'eau : dosage, thermisation, homogénéisation, maturation, foisonnement et surgélation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Schéma technologique industriel isolé sans licence libre établie, archivé.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.80,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CREMES GLACEES – SORBETS"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00857",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "produits laitiers",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": ["creme laitiere", "ecremage", "pasteurisation", "fermentation", "produits laitiers", "agroalimentaire"],
+      "titre_trouve": "CREMES",
+      "titre": "Schéma technologique : transformation des crèmes laitières",
+      "resume": "Diagramme de procédé industriel illustrant les étapes de transformation de la crème laitière à partir du lait cru : écrémage, pasteurisation, fermentation, fabrication de crème fraîche, crème en poudre et crème concentrée.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche de procédé technique d'entreprise sans licence libre explicite, archivée.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.80,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CREMES"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    }
+  ]
+}

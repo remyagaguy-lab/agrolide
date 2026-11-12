@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00877",
+  "sha256": "fdfd5915def370726f0068e30102f86dbb5cce666bc512550fa705cb3aba79b7",
+  "nom_original": "elevage de pintadeaux.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage de pintadeaux.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 423880,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pintade",
+  "pays": "Mali",
+  "annee": 2008,
+  "auteurs": "Projet PROSEL",
+  "source_organisation": "PROSEL Mali",
+  "mots_cles": [
+    "pintadeaux",
+    "meleagriculture",
+    "trichomonose",
+    "aviculture villageoise",
+    "mali",
+    "sahel"
+  ],
+  "titre_trouve": "MODULE DE FORMATION DES ELEVEURS RELAIS : ELEVAGE DES PINTADEAUX",
+  "titre": "Élevage des pintadeaux : guide de formation des éleveurs relais (PROSEL)",
+  "resume": "Guide pratique malien destiné aux éleveurs relais, détaillant les soins aux jeunes pintadeaux, le chauffage au nid et les traitements contre la trichomonose.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Module de formation pratique sahélien complet sur l'aviculture villageoise (pintadeaux), en diffusion institutionnelle publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PROSEL ... MODULE DE FORMATION DES ELEVEURS RELAIS \n \nELEVAGE DES PINTADEAUX"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00877__elevage-des-pintadeaux-guide-de-formation-des-eleveurs.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00877__elevage-des-pintadeaux-guide-de-formation-des-eleveurs.pdf"
+}

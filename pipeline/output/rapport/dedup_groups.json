@@ -1,0 +1,1584 @@
+[
+  {
+    "groupe_id": "GRP-0001",
+    "canonique_id": "DOC-00004",
+    "membres": [
+      {
+        "id": "DOC-00004",
+        "role": "canonique",
+        "nom_original": "5_RESUME-Business-plan-simplifié.pdf",
+        "format": "pdf",
+        "nb_pages": 20
+      },
+      {
+        "id": "DOC-00127",
+        "role": "copie_exacte",
+        "nom_original": "5_RESUME-Business-plan-simplifié.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0002",
+    "canonique_id": "DOC-00010",
+    "membres": [
+      {
+        "id": "DOC-00010",
+        "role": "canonique",
+        "nom_original": "Guide_entreprenariat_agricole.pdf",
+        "format": "pdf",
+        "nb_pages": 164
+      },
+      {
+        "id": "DOC-00945",
+        "role": "copie_exacte",
+        "nom_original": "guide_entreprenariat_agricole.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0003",
+    "canonique_id": "DOC-00015",
+    "membres": [
+      {
+        "id": "DOC-00015",
+        "role": "canonique",
+        "nom_original": "exploitation agricole.pdf",
+        "format": "pdf",
+        "nb_pages": 34
+      },
+      {
+        "id": "DOC-00122",
+        "role": "copie_exacte",
+        "nom_original": "4_6028310418995283958.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0004",
+    "canonique_id": "DOC-00071",
+    "membres": [
+      {
+        "id": "DOC-00071",
+        "role": "canonique",
+        "nom_original": "07061bc9d3c38a134e6336d645b46be2ff724e7a (2).pdf",
+        "format": "pdf",
+        "nb_pages": 127
+      },
+      {
+        "id": "DOC-00072",
+        "role": "copie_exacte",
+        "nom_original": "07061bc9d3c38a134e6336d645b46be2ff724e7a.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0005",
+    "canonique_id": "DOC-00078",
+    "membres": [
+      {
+        "id": "DOC-00078",
+        "role": "canonique",
+        "nom_original": "1072-plant-maraichers-production (2).pdf",
+        "format": "pdf",
+        "nb_pages": 12
+      },
+      {
+        "id": "DOC-00079",
+        "role": "copie_exacte",
+        "nom_original": "1072-plant-maraichers-production.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0006",
+    "canonique_id": "DOC-00081",
+    "membres": [
+      {
+        "id": "DOC-00081",
+        "role": "canonique",
+        "nom_original": "1297_PDF_1.pdf",
+        "format": "pdf",
+        "nb_pages": 106
+      },
+      {
+        "id": "DOC-00333",
+        "role": "copie_exacte",
+        "nom_original": "Culture de Tomates.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0007",
+    "canonique_id": "DOC-00096",
+    "membres": [
+      {
+        "id": "DOC-00096",
+        "role": "canonique",
+        "nom_original": "19-536-550 (1).pdf",
+        "format": "pdf",
+        "nb_pages": 16
+      },
+      {
+        "id": "DOC-00097",
+        "role": "copie_exacte",
+        "nom_original": "19-536-550.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0008",
+    "canonique_id": "DOC-00110",
+    "membres": [
+      {
+        "id": "DOC-00110",
+        "role": "canonique",
+        "nom_original": "25_ ELEVAGE DE PINTADES _ SONGHAÏ.pdf",
+        "format": "pdf",
+        "nb_pages": 27
+      },
+      {
+        "id": "DOC-01011",
+        "role": "copie_exacte",
+        "nom_original": "pintades_elevage_songhai.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0009",
+    "canonique_id": "DOC-00115",
+    "membres": [
+      {
+        "id": "DOC-00115",
+        "role": "canonique",
+        "nom_original": "4 L’élevage des poules - Copie.pdf",
+        "format": "pdf",
+        "nb_pages": 98
+      },
+      {
+        "id": "DOC-00116",
+        "role": "copie_exacte",
+        "nom_original": "4 L’élevage des poules.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0010",
+    "canonique_id": "DOC-00131",
+    "membres": [
+      {
+        "id": "DOC-00131",
+        "role": "canonique",
+        "nom_original": "60c3639b0ef0a5f66ef268c0e86c8cd16b8d82b7 (1).pdf",
+        "format": "pdf",
+        "nb_pages": 119
+      },
+      {
+        "id": "DOC-00450",
+        "role": "copie_exacte",
+        "nom_original": "Fiches technico-économiques des principaux  légumes.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0011",
+    "canonique_id": "DOC-00133",
+    "membres": [
+      {
+        "id": "DOC-00133",
+        "role": "canonique",
+        "nom_original": "6_resultats_station_poules_pondeuses.pdf",
+        "format": "pdf",
+        "nb_pages": 9
+      },
+      {
+        "id": "DOC-00151",
+        "role": "copie_exacte",
+        "nom_original": "ALIMENTATION_100__BIO_POUR_POULES_PONDEUSES.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00786",
+        "role": "copie_exacte",
+        "nom_original": "aliment bio pour pondeuse(1) (1).pdf",
+        "format": "pdf",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00789",
+        "role": "copie_quasi_identique",
+        "nom_original": "alimentation poules pondeuses.pdf",
+        "format": "pdf",
+        "nb_pages": 9
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0012",
+    "canonique_id": "DOC-00138",
+    "membres": [
+      {
+        "id": "DOC-00138",
+        "role": "canonique",
+        "nom_original": "8_cocosol culture hors sol.pdf",
+        "format": "pdf",
+        "nb_pages": 64
+      },
+      {
+        "id": "DOC-00955",
+        "role": "copie_exacte",
+        "nom_original": "hydroponie.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0013",
+    "canonique_id": "DOC-00164",
+    "membres": [
+      {
+        "id": "DOC-00164",
+        "role": "canonique",
+        "nom_original": "Agriculture durable Chapitre et 2 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 14
+      },
+      {
+        "id": "DOC-00165",
+        "role": "copie_exacte",
+        "nom_original": "Agriculture durable Chapitre et 2.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0014",
+    "canonique_id": "DOC-00166",
+    "membres": [
+      {
+        "id": "DOC-00166",
+        "role": "canonique",
+        "nom_original": "Agriculture sous abri.pdf",
+        "format": "pdf",
+        "nb_pages": 87
+      },
+      {
+        "id": "DOC-00176",
+        "role": "copie_quasi_identique",
+        "nom_original": "Agrodok - 23 - Agriculture sous abris@EpubsFR.pdf",
+        "format": "pdf",
+        "nb_pages": 87
+      },
+      {
+        "id": "DOC-00779",
+        "role": "copie_exacte",
+        "nom_original": "agrodok-agriculture-sous-abri.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0015",
+    "canonique_id": "DOC-00167",
+    "membres": [
+      {
+        "id": "DOC-00167",
+        "role": "canonique",
+        "nom_original": "Agriculture urbaine.pdf",
+        "format": "pdf",
+        "nb_pages": 94
+      },
+      {
+        "id": "DOC-00191",
+        "role": "copie_exacte",
+        "nom_original": "Agrodok_24_Agriculture_Urbaine_La_culture_des_legumes_en_ville@EpubsFR.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0016",
+    "canonique_id": "DOC-00202",
+    "membres": [
+      {
+        "id": "DOC-00202",
+        "role": "canonique",
+        "nom_original": "Agrodok_41_La_culture_des_champignons_a_petite_echelle_2@EpubsFR.pdf",
+        "format": "pdf",
+        "nb_pages": 91
+      },
+      {
+        "id": "DOC-00542",
+        "role": "copie_exacte",
+        "nom_original": "La-culture-des-champignons-a-petite-echelle-2.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0017",
+    "canonique_id": "DOC-00204",
+    "membres": [
+      {
+        "id": "DOC-00204",
+        "role": "canonique",
+        "nom_original": "Agrodok_44_Ethnomedecine_veterinaire_betail_en_afrique_subsaharienne@EpubsFR.pdf",
+        "format": "pdf",
+        "nb_pages": 91
+      },
+      {
+        "id": "DOC-00723",
+        "role": "copie_quasi_identique",
+        "nom_original": "Soins_animaux_Afrique-subsaharienne.pdf",
+        "format": "pdf",
+        "nb_pages": 91
+      },
+      {
+        "id": "DOC-01056",
+        "role": "copie_exacte",
+        "nom_original": "unknown-agrodok-44-ethnomédecine-vétérinaire.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0018",
+    "canonique_id": "DOC-00234",
+    "membres": [
+      {
+        "id": "DOC-00234",
+        "role": "canonique",
+        "nom_original": "BANANIER PLANTAIN (2).pdf",
+        "format": "pdf",
+        "nb_pages": 32
+      },
+      {
+        "id": "DOC-00235",
+        "role": "copie_exacte",
+        "nom_original": "BANANIER PLANTAIN.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0019",
+    "canonique_id": "DOC-00251",
+    "membres": [
+      {
+        "id": "DOC-00251",
+        "role": "canonique",
+        "nom_original": "Biocénotique M1 S. Forestières  (2).pdf",
+        "format": "pdf",
+        "nb_pages": 19
+      },
+      {
+        "id": "DOC-00252",
+        "role": "copie_exacte",
+        "nom_original": "Biocénotique M1 S. Forestières .pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0020",
+    "canonique_id": "DOC-00270",
+    "membres": [
+      {
+        "id": "DOC-00270",
+        "role": "canonique",
+        "nom_original": "CHOU.pdf",
+        "format": "pdf",
+        "nb_pages": 8
+      },
+      {
+        "id": "DOC-00305",
+        "role": "copie_exacte",
+        "nom_original": "Copie de CHOU.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0021",
+    "canonique_id": "DOC-00303",
+    "membres": [
+      {
+        "id": "DOC-00303",
+        "role": "canonique",
+        "nom_original": "Compostage (2).ppt",
+        "format": "ppt",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00304",
+        "role": "copie_exacte",
+        "nom_original": "Compostage.ppt",
+        "format": "ppt",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0022",
+    "canonique_id": "DOC-00311",
+    "membres": [
+      {
+        "id": "DOC-00311",
+        "role": "canonique",
+        "nom_original": "Cours Production de plants et de semences Laghouat (2).pdf",
+        "format": "pdf",
+        "nb_pages": 61
+      },
+      {
+        "id": "DOC-00312",
+        "role": "copie_exacte",
+        "nom_original": "Cours Production de plants et de semences Laghouat.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0023",
+    "canonique_id": "DOC-00322",
+    "membres": [
+      {
+        "id": "DOC-00322",
+        "role": "canonique",
+        "nom_original": "Cours-agronomie-II-production-vegetale-1 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 17
+      },
+      {
+        "id": "DOC-00323",
+        "role": "copie_exacte",
+        "nom_original": "Cours-agronomie-II-production-vegetale-1.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0024",
+    "canonique_id": "DOC-00352",
+    "membres": [
+      {
+        "id": "DOC-00352",
+        "role": "canonique",
+        "nom_original": "Document_N01017 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 3
+      },
+      {
+        "id": "DOC-00353",
+        "role": "copie_exacte",
+        "nom_original": "Document_N01017.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0025",
+    "canonique_id": "DOC-00357",
+    "membres": [
+      {
+        "id": "DOC-00357",
+        "role": "canonique",
+        "nom_original": "ELEVAGE animaux troupeaux (2).pdf",
+        "format": "pdf",
+        "nb_pages": 4
+      },
+      {
+        "id": "DOC-00358",
+        "role": "copie_exacte",
+        "nom_original": "ELEVAGE animaux troupeaux.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0026",
+    "canonique_id": "DOC-00367",
+    "membres": [
+      {
+        "id": "DOC-00367",
+        "role": "canonique",
+        "nom_original": "EXER Déterminer humidite sol (2).docx",
+        "format": "docx",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00368",
+        "role": "copie_exacte",
+        "nom_original": "EXER Déterminer humidite sol.docx",
+        "format": "docx",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0027",
+    "canonique_id": "DOC-00369",
+    "membres": [
+      {
+        "id": "DOC-00369",
+        "role": "canonique",
+        "nom_original": "EXER VOLUME BASSIN REGULATION (2).docx",
+        "format": "docx",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00370",
+        "role": "copie_exacte",
+        "nom_original": "EXER VOLUME BASSIN REGULATION.docx",
+        "format": "docx",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0028",
+    "canonique_id": "DOC-00374",
+    "membres": [
+      {
+        "id": "DOC-00374",
+        "role": "canonique",
+        "nom_original": "EXERCICE CALCUL POSTE D_IRRIGATION (2).docx",
+        "format": "docx",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00375",
+        "role": "copie_exacte",
+        "nom_original": "EXERCICE CALCUL POSTE D_IRRIGATION.docx",
+        "format": "docx",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0029",
+    "canonique_id": "DOC-00383",
+    "membres": [
+      {
+        "id": "DOC-00383",
+        "role": "canonique",
+        "nom_original": "Elevage de lapin .pdf",
+        "format": "pdf",
+        "nb_pages": 2
+      },
+      {
+        "id": "DOC-00973",
+        "role": "copie_exacte",
+        "nom_original": "le-lapin.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0030",
+    "canonique_id": "DOC-00404",
+    "membres": [
+      {
+        "id": "DOC-00404",
+        "role": "canonique",
+        "nom_original": "FICHE-TECHNIQUE-2-ITINERAIRE-TECHNIQUE-DE-L’ARACHIDE-GROUNDNUT-TECHNICAL-ITINERARY.pdf",
+        "format": "pdf",
+        "nb_pages": 8
+      },
+      {
+        "id": "DOC-00408",
+        "role": "copie_exacte",
+        "nom_original": "FICHE_TECHNIQUE_2_ITINERAIRE_TECHNIQUE_DE_L’ARACHIDE_GROUNDNUT_TECHNICAL.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0031",
+    "canonique_id": "DOC-00431",
+    "membres": [
+      {
+        "id": "DOC-00431",
+        "role": "canonique",
+        "nom_original": "Fiche technique carotte.pdf",
+        "format": "pdf",
+        "nb_pages": 18
+      },
+      {
+        "id": "DOC-00817",
+        "role": "copie_exacte",
+        "nom_original": "carotte.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0032",
+    "canonique_id": "DOC-00451",
+    "membres": [
+      {
+        "id": "DOC-00451",
+        "role": "canonique",
+        "nom_original": "Fiches techniques PEAEP Nov 2020 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 69
+      },
+      {
+        "id": "DOC-00452",
+        "role": "copie_exacte",
+        "nom_original": "Fiches techniques PEAEP Nov 2020.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0033",
+    "canonique_id": "DOC-00478",
+    "membres": [
+      {
+        "id": "DOC-00478",
+        "role": "canonique",
+        "nom_original": "Guide complet de cuniculture (2).pdf",
+        "format": "pdf",
+        "nb_pages": 74
+      },
+      {
+        "id": "DOC-00479",
+        "role": "copie_exacte",
+        "nom_original": "Guide complet de cuniculture.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0034",
+    "canonique_id": "DOC-00485",
+    "membres": [
+      {
+        "id": "DOC-00485",
+        "role": "canonique",
+        "nom_original": "Guide sur les maladies - Copie.pdf",
+        "format": "pdf",
+        "nb_pages": 36
+      },
+      {
+        "id": "DOC-00934",
+        "role": "copie_exacte",
+        "nom_original": "guide-formateur-f.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00983",
+        "role": "copie_exacte",
+        "nom_original": "maladie et traitement (2).pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0035",
+    "canonique_id": "DOC-00487",
+    "membres": [
+      {
+        "id": "DOC-00487",
+        "role": "canonique",
+        "nom_original": "Guide-Pratique-Poulailler-Familial-1.pdf",
+        "format": "pdf",
+        "nb_pages": 13
+      },
+      {
+        "id": "DOC-00488",
+        "role": "copie_exacte",
+        "nom_original": "Guide-Pratique-Poulailler-Familial.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0036",
+    "canonique_id": "DOC-00490",
+    "membres": [
+      {
+        "id": "DOC-00490",
+        "role": "canonique",
+        "nom_original": "Guide_Technique_maraichage_bio_64_Aout2015_WEB_02 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 50
+      },
+      {
+        "id": "DOC-00491",
+        "role": "copie_exacte",
+        "nom_original": "Guide_Technique_maraichage_bio_64_Aout2015_WEB_02.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0037",
+    "canonique_id": "DOC-00494",
+    "membres": [
+      {
+        "id": "DOC-00494",
+        "role": "canonique",
+        "nom_original": "Guide_pratique_pour_élever_des_poules.pdf",
+        "format": "pdf",
+        "nb_pages": 43
+      },
+      {
+        "id": "DOC-00548",
+        "role": "copie_exacte",
+        "nom_original": "Le guide pratique POUR ELEVER DES POULES DANS SON JARDIN.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0038",
+    "canonique_id": "DOC-00497",
+    "membres": [
+      {
+        "id": "DOC-00497",
+        "role": "canonique",
+        "nom_original": "ID-SC-178-GUIDE-PRATIQUE-ELEVAGE-VOLAILLES-29-11-10.pdf",
+        "format": "pdf",
+        "nb_pages": 9
+      },
+      {
+        "id": "DOC-00878",
+        "role": "copie_exacte",
+        "nom_original": "elevage de volaille.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0039",
+    "canonique_id": "DOC-00539",
+    "membres": [
+      {
+        "id": "DOC-00539",
+        "role": "canonique",
+        "nom_original": "La respiration cellulaire et la chaîne respiratoire (1).pdf",
+        "format": "pdf",
+        "nb_pages": 28
+      },
+      {
+        "id": "DOC-00540",
+        "role": "copie_exacte",
+        "nom_original": "La respiration cellulaire et la chaîne respiratoire.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0040",
+    "canonique_id": "DOC-00579",
+    "membres": [
+      {
+        "id": "DOC-00579",
+        "role": "canonique",
+        "nom_original": "MANUEL D_AVICULTURE (2).pdf",
+        "format": "pdf",
+        "nb_pages": 68
+      },
+      {
+        "id": "DOC-00580",
+        "role": "copie_exacte",
+        "nom_original": "MANUEL D_AVICULTURE.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0041",
+    "canonique_id": "DOC-00581",
+    "membres": [
+      {
+        "id": "DOC-00581",
+        "role": "canonique",
+        "nom_original": "MANUEL ELEVAGE DES CARPES (2).pdf",
+        "format": "pdf",
+        "nb_pages": 51
+      },
+      {
+        "id": "DOC-00582",
+        "role": "copie_exacte",
+        "nom_original": "MANUEL ELEVAGE DES CARPES.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0042",
+    "canonique_id": "DOC-00584",
+    "membres": [
+      {
+        "id": "DOC-00584",
+        "role": "canonique",
+        "nom_original": "MANUEL ELEVAGE DES SILURES ET TILAPIA (2).pdf",
+        "format": "pdf",
+        "nb_pages": 26
+      },
+      {
+        "id": "DOC-00585",
+        "role": "copie_exacte",
+        "nom_original": "MANUEL ELEVAGE DES SILURES ET TILAPIA.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0043",
+    "canonique_id": "DOC-00589",
+    "membres": [
+      {
+        "id": "DOC-00589",
+        "role": "canonique",
+        "nom_original": "MARAI_Chapitre_3_Rendements (2).pdf",
+        "format": "pdf",
+        "nb_pages": 18
+      },
+      {
+        "id": "DOC-00590",
+        "role": "copie_exacte",
+        "nom_original": "MARAI_Chapitre_3_Rendements.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0044",
+    "canonique_id": "DOC-00604",
+    "membres": [
+      {
+        "id": "DOC-00604",
+        "role": "canonique",
+        "nom_original": "Manuel incubation des oeufs par les  poules et en couveuse.pdf",
+        "format": "pdf",
+        "nb_pages": 62
+      },
+      {
+        "id": "DOC-00958",
+        "role": "copie_exacte",
+        "nom_original": "incubation des oeufs par les poules et en couveuse.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0045",
+    "canonique_id": "DOC-00616",
+    "membres": [
+      {
+        "id": "DOC-00616",
+        "role": "canonique",
+        "nom_original": "Modules de Formation des Eleveurs Relais Volailles (2).pdf",
+        "format": "pdf",
+        "nb_pages": 9
+      },
+      {
+        "id": "DOC-00617",
+        "role": "copie_exacte",
+        "nom_original": "Modules de Formation des Eleveurs Relais Volailles.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0046",
+    "canonique_id": "DOC-00634",
+    "membres": [
+      {
+        "id": "DOC-00634",
+        "role": "canonique",
+        "nom_original": "OIGNON (2).pdf",
+        "format": "pdf",
+        "nb_pages": 7
+      },
+      {
+        "id": "DOC-00635",
+        "role": "copie_exacte",
+        "nom_original": "OIGNON.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0047",
+    "canonique_id": "DOC-00642",
+    "membres": [
+      {
+        "id": "DOC-00642",
+        "role": "canonique",
+        "nom_original": "PAPAYER (3).pdf",
+        "format": "pdf",
+        "nb_pages": 11
+      },
+      {
+        "id": "DOC-00643",
+        "role": "copie_exacte",
+        "nom_original": "PAPAYER.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0048",
+    "canonique_id": "DOC-00644",
+    "membres": [
+      {
+        "id": "DOC-00644",
+        "role": "canonique",
+        "nom_original": "PASTEQUE(1).pdf",
+        "format": "pdf",
+        "nb_pages": 8
+      },
+      {
+        "id": "DOC-00645",
+        "role": "copie_exacte",
+        "nom_original": "PASTEQUE.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0049",
+    "canonique_id": "DOC-00672",
+    "membres": [
+      {
+        "id": "DOC-00672",
+        "role": "canonique",
+        "nom_original": "PlaquetteMaraichage56pages-1WEB (2).pdf",
+        "format": "pdf",
+        "nb_pages": 56
+      },
+      {
+        "id": "DOC-00673",
+        "role": "copie_exacte",
+        "nom_original": "PlaquetteMaraichage56pages-1WEB.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0050",
+    "canonique_id": "DOC-00781",
+    "membres": [
+      {
+        "id": "DOC-00781",
+        "role": "canonique",
+        "nom_original": "agronomie 1 cours et TD univ Blida  (2).pdf",
+        "format": "pdf",
+        "nb_pages": 40
+      },
+      {
+        "id": "DOC-00782",
+        "role": "copie_exacte",
+        "nom_original": "agronomie 1 cours et TD univ Blida .pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0051",
+    "canonique_id": "DOC-00795",
+    "membres": [
+      {
+        "id": "DOC-00795",
+        "role": "canonique",
+        "nom_original": "angrais bio (2).pdf",
+        "format": "pdf",
+        "nb_pages": 25
+      },
+      {
+        "id": "DOC-00796",
+        "role": "copie_exacte",
+        "nom_original": "angrais bio.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0052",
+    "canonique_id": "DOC-00798",
+    "membres": [
+      {
+        "id": "DOC-00798",
+        "role": "canonique",
+        "nom_original": "archPP ‚pidemiologie mascaara (1).pptx",
+        "format": "pptx",
+        "nb_pages": 41
+      },
+      {
+        "id": "DOC-00799",
+        "role": "copie_exacte",
+        "nom_original": "archPP ‚pidemiologie mascaara.pptx",
+        "format": "pptx",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0053",
+    "canonique_id": "DOC-00853",
+    "membres": [
+      {
+        "id": "DOC-00853",
+        "role": "canonique",
+        "nom_original": "couveuse kinvos.pdf",
+        "format": "pdf",
+        "nb_pages": 29
+      },
+      {
+        "id": "DOC-00898",
+        "role": "copie_exacte",
+        "nom_original": "fabrication de couveuse .pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0054",
+    "canonique_id": "DOC-00855",
+    "membres": [
+      {
+        "id": "DOC-00855",
+        "role": "canonique",
+        "nom_original": "cremes glacees sorbets glaces.pdf",
+        "format": "pdf",
+        "nb_pages": 1
+      },
+      {
+        "id": "DOC-00856",
+        "role": "copie_exacte",
+        "nom_original": "cremes glacees sorbets glaces_2.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0055",
+    "canonique_id": "DOC-00884",
+    "membres": [
+      {
+        "id": "DOC-00884",
+        "role": "canonique",
+        "nom_original": "elevage.pdf",
+        "format": "pdf",
+        "nb_pages": 17
+      },
+      {
+        "id": "DOC-01066",
+        "role": "copie_exacte",
+        "nom_original": "élevage des poules traditionnelles.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0056",
+    "canonique_id": "DOC-00888",
+    "membres": [
+      {
+        "id": "DOC-00888",
+        "role": "canonique",
+        "nom_original": "elevage_depoules_pondeuses_elevage_en_batterie_SuperDoubleDeck_SuperTripleDeck (2).pdf",
+        "format": "pdf",
+        "nb_pages": 4
+      },
+      {
+        "id": "DOC-00889",
+        "role": "copie_exacte",
+        "nom_original": "elevage_depoules_pondeuses_elevage_en_batterie_SuperDoubleDeck_SuperTripleDeck.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0057",
+    "canonique_id": "DOC-00899",
+    "membres": [
+      {
+        "id": "DOC-00899",
+        "role": "canonique",
+        "nom_original": "fabrication provende 1 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 35
+      },
+      {
+        "id": "DOC-00900",
+        "role": "copie_exacte",
+        "nom_original": "fabrication provende 1.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0058",
+    "canonique_id": "DOC-00901",
+    "membres": [
+      {
+        "id": "DOC-00901",
+        "role": "canonique",
+        "nom_original": "farine_poisson_graisses_animales_huile_suif_saindoux_cretons_2.pdf",
+        "format": "pdf",
+        "nb_pages": 1
+      },
+      {
+        "id": "DOC-00902",
+        "role": "copie_exacte",
+        "nom_original": "farine_poisson_graisses_animales_huile_suif_saindoux_cretons_3.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0059",
+    "canonique_id": "DOC-00904",
+    "membres": [
+      {
+        "id": "DOC-00904",
+        "role": "canonique",
+        "nom_original": "faso_entrepreneur_n1 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 28
+      },
+      {
+        "id": "DOC-00905",
+        "role": "copie_exacte",
+        "nom_original": "faso_entrepreneur_n1.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0060",
+    "canonique_id": "DOC-00935",
+    "membres": [
+      {
+        "id": "DOC-00935",
+        "role": "canonique",
+        "nom_original": "guide-pour-bien-prendre-soin-de-ses-poules (2).pdf",
+        "format": "pdf",
+        "nb_pages": 4
+      },
+      {
+        "id": "DOC-00936",
+        "role": "copie_exacte",
+        "nom_original": "guide-pour-bien-prendre-soin-de-ses-poules.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0061",
+    "canonique_id": "DOC-00942",
+    "membres": [
+      {
+        "id": "DOC-00942",
+        "role": "canonique",
+        "nom_original": "guide_elevage_avi_fermiere (2).pdf",
+        "format": "pdf",
+        "nb_pages": 31
+      },
+      {
+        "id": "DOC-00943",
+        "role": "copie_exacte",
+        "nom_original": "guide_elevage_avi_fermiere.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-01067",
+        "role": "copie_exacte",
+        "nom_original": "✔️guide_elevage_polyvalent.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0062",
+    "canonique_id": "DOC-00964",
+    "membres": [
+      {
+        "id": "DOC-00964",
+        "role": "canonique",
+        "nom_original": "jgrc_guide_technique_de_l_elevage_2001 (2).pdf",
+        "format": "pdf",
+        "nb_pages": 38
+      },
+      {
+        "id": "DOC-00965",
+        "role": "copie_exacte",
+        "nom_original": "jgrc_guide_technique_de_l_elevage_2001.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0063",
+    "canonique_id": "DOC-00974",
+    "membres": [
+      {
+        "id": "DOC-00974",
+        "role": "canonique",
+        "nom_original": "les coccidioses ovines (2).pdf",
+        "format": "pdf",
+        "nb_pages": 2
+      },
+      {
+        "id": "DOC-00975",
+        "role": "copie_exacte",
+        "nom_original": "les coccidioses ovines.pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0064",
+    "canonique_id": "DOC-00976",
+    "membres": [
+      {
+        "id": "DOC-00976",
+        "role": "canonique",
+        "nom_original": "les ingredients d_aliment vollailes(1) (2).pdf",
+        "format": "pdf",
+        "nb_pages": 1
+      },
+      {
+        "id": "DOC-00977",
+        "role": "copie_exacte",
+        "nom_original": "les ingredients d_aliment vollailes(1).pdf",
+        "format": "pdf",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0065",
+    "canonique_id": "DOC-00653",
+    "membres": [
+      {
+        "id": "DOC-00012",
+        "role": "copie_quasi_identique",
+        "nom_original": "POULET_MIRA_COURS_ENTREPRENEURIAT_DISPENSE_LE_16_08_2021_GROUPE (2).docx",
+        "format": "docx",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00653",
+        "role": "canonique",
+        "nom_original": "POULET_MIRA_COURS_ENTREPRENEURIAT_DISPENSE_LE_16_08_2021_GROUPE.docx",
+        "format": "docx",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0066",
+    "canonique_id": "DOC-00092",
+    "membres": [
+      {
+        "id": "DOC-00092",
+        "role": "canonique",
+        "nom_original": "1674_PDF.pdf",
+        "format": "pdf",
+        "nb_pages": 85
+      },
+      {
+        "id": "DOC-00215",
+        "role": "copie_quasi_identique",
+        "nom_original": "Amelioration_de_l_incubation_et_de_l_elevage_des_poussins.pdf",
+        "format": "pdf",
+        "nb_pages": 85
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0067",
+    "canonique_id": "DOC-00178",
+    "membres": [
+      {
+        "id": "DOC-00178",
+        "role": "canonique",
+        "nom_original": "Agrodok - 33 - L_elevage de canard@EpubsFR.pdf",
+        "format": "pdf",
+        "nb_pages": 89
+      },
+      {
+        "id": "DOC-00891",
+        "role": "copie_quasi_identique",
+        "nom_original": "elevagr des canard.pdf",
+        "format": "pdf",
+        "nb_pages": 89
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0068",
+    "canonique_id": "DOC-00441",
+    "membres": [
+      {
+        "id": "DOC-00441",
+        "role": "canonique",
+        "nom_original": "FicheTechniqueCultureduPoivronCapsicumannunBiologique_AgricultureauCameroun (2).pdf",
+        "format": "pdf",
+        "nb_pages": 3
+      },
+      {
+        "id": "DOC-00442",
+        "role": "copie_quasi_identique",
+        "nom_original": "FicheTechniqueCultureduPoivronCapsicumannunBiologique_AgricultureauCameroun.pdf",
+        "format": "pdf",
+        "nb_pages": 3
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0069",
+    "canonique_id": "DOC-00107",
+    "membres": [
+      {
+        "id": "DOC-00107",
+        "role": "canonique",
+        "nom_original": "20_DTR_02P_Fiche_Technique_sorgho_EL.pdf",
+        "format": "pdf",
+        "nb_pages": 2
+      },
+      {
+        "id": "DOC-00430",
+        "role": "fragment",
+        "nom_original": "Fiche technique Sorgho (3).pdf",
+        "format": "pdf",
+        "nb_pages": 1
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0070",
+    "canonique_id": "DOC-00388",
+    "membres": [
+      {
+        "id": "DOC-00205",
+        "role": "copie_quasi_identique",
+        "nom_original": "Agrodok_4_L_élevage_des_poules_a_petite_echelle@EpubsFR.pdf",
+        "format": "pdf",
+        "nb_pages": 97
+      },
+      {
+        "id": "DOC-00388",
+        "role": "canonique",
+        "nom_original": "Elevage.des.Poules.a.petite_echelle_par_Agrodok.pdf",
+        "format": "pdf",
+        "nb_pages": 98
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0071",
+    "canonique_id": "DOC-00300",
+    "membres": [
+      {
+        "id": "DOC-00300",
+        "role": "canonique",
+        "nom_original": "Comment produir-Asticot.pdf",
+        "format": "pdf",
+        "nb_pages": 11
+      },
+      {
+        "id": "DOC-00301",
+        "role": "fragment",
+        "nom_original": "Comment produire les asticots pour les vollailes.docx",
+        "format": "docx",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0072",
+    "canonique_id": "DOC-00349",
+    "membres": [
+      {
+        "id": "DOC-00349",
+        "role": "canonique",
+        "nom_original": "Devoir pisciculture TSE.docx",
+        "format": "docx",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00863",
+        "role": "version_anterieure",
+        "nom_original": "devoir pisciculture ATE.docx",
+        "format": "docx",
+        "nb_pages": null
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0073",
+    "canonique_id": "DOC-00422",
+    "membres": [
+      {
+        "id": "DOC-00421",
+        "role": "copie_quasi_identique",
+        "nom_original": "Fabrication_de_la_provende_pour_ (2).pdf",
+        "format": "pdf",
+        "nb_pages": 15
+      },
+      {
+        "id": "DOC-00422",
+        "role": "canonique",
+        "nom_original": "Fabrication_de_la_provende_pour_.pdf",
+        "format": "pdf",
+        "nb_pages": 17
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0074",
+    "canonique_id": "DOC-00621",
+    "membres": [
+      {
+        "id": "DOC-00621",
+        "role": "canonique",
+        "nom_original": "Mémento de zootechnie - WWW.VETBOOKSTORE.COM.pdf",
+        "format": "pdf",
+        "nb_pages": 281
+      },
+      {
+        "id": "DOC-00622",
+        "role": "copie_quasi_identique",
+        "nom_original": "Mémento de zootechnie pdf.pdf",
+        "format": "pdf",
+        "nb_pages": 281
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0075",
+    "canonique_id": "DOC-00803",
+    "membres": [
+      {
+        "id": "DOC-00803",
+        "role": "canonique",
+        "nom_original": "aviculture bio-convert-.pdf",
+        "format": "pdf",
+        "nb_pages": 57
+      },
+      {
+        "id": "DOC-00804",
+        "role": "copie_quasi_identique",
+        "nom_original": "aviculture bio-converti.pdf",
+        "format": "pdf",
+        "nb_pages": 54
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0076",
+    "canonique_id": "DOC-00881",
+    "membres": [
+      {
+        "id": "DOC-00880",
+        "role": "fragment",
+        "nom_original": "elevage pintade.odt",
+        "format": "odt",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00881",
+        "role": "canonique",
+        "nom_original": "elevage pintade.pdf",
+        "format": "pdf",
+        "nb_pages": 14
+      }
+    ]
+  },
+  {
+    "groupe_id": "GRP-0077",
+    "canonique_id": "DOC-00932",
+    "membres": [
+      {
+        "id": "DOC-00931",
+        "role": "fragment",
+        "nom_original": "guide pratique elevage canards & oies_centre Songhai-1-2.doc",
+        "format": "doc",
+        "nb_pages": null
+      },
+      {
+        "id": "DOC-00932",
+        "role": "canonique",
+        "nom_original": "guide pratique elevage canards & oies_centre Songhai.pdf",
+        "format": "pdf",
+        "nb_pages": 30
+      }
+    ]
+  }
+]

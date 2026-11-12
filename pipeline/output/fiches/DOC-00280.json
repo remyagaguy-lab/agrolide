@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00280",
+  "sha256": "291bc3206ff919f365f6b3f1d2f670a02b48a3d2cffad7947007f836da8092ea",
+  "nom_original": "Cause rurale_Module pesticides.pdf",
+  "chemin_relatif_source": "OD_Docs/Cause rurale_Module pesticides.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5672948,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 36,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2023,
+  "auteurs": "Manoé Réné Sanou",
+  "source_organisation": "Direction Générale de la Protection des Végétaux (DGPV / MARAH Burkina Faso)",
+  "mots_cles": [
+    "pesticides",
+    "protection des cultures",
+    "bonnes pratiques phytosanitaires",
+    "securite sanitaire",
+    "DGPV",
+    "Burkina Faso"
+  ],
+  "titre_trouve": "USAGE SECURISE DES PESTICIDES",
+  "titre": "Usage sécurisé des pesticides : connaissances générales, risques et bonnes pratiques",
+  "resume": "Support de formation institutionnel sur la gestion raisonnée et sécurisée des produits phytopharmaceutiques : typologie des pesticides, risques sanitaires et environnementaux, et mesures de protection.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Support de sensibilisation officiel du Ministère de l'Agriculture du Burkina Faso, présentant un intérêt public majeur pour la santé et l'agriculture.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "USAGE SECURISE DES PESTICIDES"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Manoé Réné SANOU... Chef de service des Pesticides (DGPV/MARAH)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00280__usage-securise-des-pesticides-connaissances-generales-r.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00280__usage-securise-des-pesticides-connaissances-generales-r.pdf"
+}

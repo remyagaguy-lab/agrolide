@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00361",
+  "sha256": "1dbb2142062c765c2126df6762a24816cba56f911d45324f8481595bec28eac3",
+  "nom_original": "EX CALCUL DEBIT BORNE IRRIGATION.docx",
+  "chemin_relatif_source": "OD_Docs/EX CALCUL DEBIT BORNE IRRIGATION.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 13707,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "borne d irrigation",
+    "debit",
+    "dimensionnement",
+    "reseau d irrigation",
+    "genie rural"
+  ],
+  "titre_trouve": "CALCUL DEBIT BORNE IRRIGATION",
+  "titre": "Méthode et calcul du débit d'une borne dans un réseau d'irrigation",
+  "resume": "Guide pratique exposant les étapes méthodologiques et un exemple de calcul pour déterminer le débit requis d'une borne d'irrigation en fonction des besoins en eau et de la surface.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche technique sans mention d'auteur ni d'organisme d'édition, statut des droits à confirmer.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CALCUL DEBIT BORNE IRRIGATION"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Le calcul du débit des bornes d'irrigation dans un réseau d'irrigation est essentiel"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00361__methode-et-calcul-du-debit-d-une-borne-dans-un-reseau-d.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00361__methode-et-calcul-du-debit-d-une-borne-dans-un-reseau-d.pdf"
+}

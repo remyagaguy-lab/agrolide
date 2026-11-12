@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00637",
+  "sha256": "d0d4dcd917f4318fd830b82aaeb960b0f5fc02cd62ba4efd5d1d7204b6cb0fc4",
+  "nom_original": "OVOGENESE.pdf",
+  "chemin_relatif_source": "OD_Docs/OVOGENESE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 508641,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "genetique_reproduction",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "Dr L. Zemmouri",
+  "source_organisation": null,
+  "mots_cles": [
+    "ovogenese",
+    "reproduction animale",
+    "embryologie veterinaire",
+    "folliculogenese",
+    "cycle ovarien",
+    "mammiferes"
+  ],
+  "titre_trouve": "Cours Embryologie (1re année Vétérinaire et Agronomie) : OVOGENESE",
+  "titre": "Cours d'embryologie : l'ovogenèse et le cycle ovarien chez les mammifères d'élevage",
+  "resume": "Support de cours d'embryologie destiné aux étudiants vétérinaires et agronomes détaillant l'anatomie génitale femelle, la maturation ovocytaire, la folliculogenèse et la dynamique du cycle ovarien chez les mammifères.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire non libre, conservé à des fins d'archivage documentaire interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours Embryologie (1re année Vétérinaire et Agronomie) Dr ZEMMOURI. L OVOGENESE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00637__cours-d-embryologie-l-ovogenese-et-le-cycle-ovarien-che.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/genetique_reproduction/DOC-00637__cours-d-embryologie-l-ovogenese-et-le-cycle-ovarien-che.pdf"
+}

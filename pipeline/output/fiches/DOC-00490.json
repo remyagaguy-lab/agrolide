@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00490",
+  "sha256": "a82372b0f966962159832594c3e5008b7a485990c6405357f6b45209dde131ef",
+  "nom_original": "Guide_Technique_maraichage_bio_64_Aout2015_WEB_02 (2).pdf",
+  "chemin_relatif_source": "OD_Docs/Guide_Technique_maraichage_bio_64_Aout2015_WEB_02 (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3791700,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 50,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage biologique",
+  "pays": "France",
+  "annee": 2015,
+  "auteurs": "Ludivine Mignot",
+  "source_organisation": "Chambre d'Agriculture des Pyrénées-Atlantiques",
+  "mots_cles": [
+    "maraichage bio",
+    "installation agricole",
+    "rotation des cultures",
+    "gestion technico-economique",
+    "pyrenees-atlantiques"
+  ],
+  "titre_trouve": "Guide technique Agriculture Biologique : Installation en Maraîchage Biologique en Pyrénées-Atlantiques",
+  "titre": "Installation en maraîchage biologique : Guide technique (Pyrénées-Atlantiques)",
+  "resume": "Guide méthodologique de la Chambre d'Agriculture des Pyrénées-Atlantiques accompagnant la création d'une ferme maraîchère bio : assolements, choix du matériel, fertilité du sol et repères économiques.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide technique institutionnel complet pour porteurs de projet maraîcher, consultable par les membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide technique Agriculture Biologique Installation en Maraîchage Biologique en Pyrénées-Atlantiques"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0036",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00490__installation-en-maraichage-biologique-guide-technique-p.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00490__installation-en-maraichage-biologique-guide-technique-p.pdf"
+}

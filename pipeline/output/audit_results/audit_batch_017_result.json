@@ -1,0 +1,145 @@
+{
+  "batch_number": 17,
+  "audits": [
+    {
+      "id": "DOC-00314",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00315",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00316",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00317",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00319",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00320",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00321",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00322",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00324",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00325",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00326",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00327",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00328",
+      "accord": false,
+      "champs_en_desaccord": [
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "La diffusion (membres ou public) requiert une pertinence >= 2. Avec pertinence = 1 (contexte européen non adapté), le document doit être archivé (non_publie_archive)."
+    },
+    {
+      "id": "DOC-00329",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00330",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00331",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00332",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    }
+  ]
+}

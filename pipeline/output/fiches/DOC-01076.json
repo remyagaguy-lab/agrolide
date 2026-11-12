@@ -1,0 +1,73 @@
+{
+  "id": "DOC-01076",
+  "sha256": "8d57c430271f1371c5a667c1ca8f2131bfcd1b4ade9e7e997e8125fcb6ebf836",
+  "nom_original": "Les sept familles de l’agriculture durable.pdf",
+  "chemin_relatif_source": "OD_traites/Les sept familles de l’agriculture durable.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 3962451,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479834894-Les_sept_familles_de_l_agriculture_durable.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 9,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "article",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2024,
+  "auteurs": "Marie-Liesse Vermeire, Raphaël Belmin",
+  "source_organisation": "CIRAD / ISRA / The Conversation",
+  "mots_cles": [
+    "agriculture durable",
+    "agroecologie",
+    "permaculture",
+    "agriculture de conservation",
+    "cirad",
+    "isra",
+    "the conversation"
+  ],
+  "titre_trouve": "Les sept familles de l’agriculture durable",
+  "titre": "Les sept familles de l'agriculture durable",
+  "resume": "Article de synthèse rédigé par des chercheurs du Cirad et de l'ISRA comparant les principes, pratiques et finalités des sept principaux modèles d'agriculture durable.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-ND",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Article de vulgarisation scientifique d'excellence par le CIRAD et l'ISRA, publié sous licence ouverte Creative Commons sur The Conversation.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Marie-Liesse Vermeire Chercheuse en écologie du sol, Cirad Raphaël Belmin Chercheur en agronomie, Cirad / ISRA Dakar"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01076__les-sept-familles-de-l-agriculture-durable.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-01076__les-sept-familles-de-l-agriculture-durable.pdf"
+}

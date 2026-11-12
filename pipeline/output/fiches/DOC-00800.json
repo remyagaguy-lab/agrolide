@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00800",
+  "sha256": "3b3eab2ae55157e1dcc18b66f7ad27080ba96183fcdaeb6eee7989f9cf2e6b3c",
+  "nom_original": "atlas carte agricole algerie.pdf",
+  "chemin_relatif_source": "OD_Docs/atlas carte agricole algerie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 25072756,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 42,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "ouvrage",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2007,
+  "auteurs": "Institut National des Sols, de l'Irrigation et du Drainage (INSID)",
+  "source_organisation": "Ministère de l'Agriculture et du Développement Rural (MADR Algérie) / INSID",
+  "mots_cles": [
+    "carte agricole",
+    "atlas agricole",
+    "algerie",
+    "insid",
+    "zonage agro-ecologique",
+    "climat"
+  ],
+  "titre_trouve": "CARTE AGRICOLE DE L'ALGERIE",
+  "titre": "Atlas et carte agricole de l'Algérie (INSID / MADR)",
+  "resume": "Atlas cartographique institutionnel présentant les zones agro-écologiques, les filières dominantes par wilaya et les perspectives du secteur agricole algérien.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Atlas institutionnel officiel algérien, conservé pour documentation géographique et patrimoniale (pertinence 1 pour Agrolide).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CARTE AGRICOLE DE L'ALGERIE Ministère de l'Agriculture et du Développement Rural. 2007"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00800__atlas-et-carte-agricole-de-l-algerie-insid-madr.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00800__atlas-et-carte-agricole-de-l-algerie-insid-madr.pdf"
+}

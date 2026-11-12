@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00005",
+  "sha256": "e168c765857447319d11764bdd0093bd4986977224a3df0b14a741eedbe4b554",
+  "nom_original": "Devis 1000 poulet chair.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/Devis 1000 poulet chair.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 588278,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "poulet de chair",
+    "compte d'exploitation",
+    "devis",
+    "aliment volaille",
+    "rentabilite"
+  ],
+  "titre_trouve": "Devis de 1000 poulets de chair sur 45 jours",
+  "titre": "Devis et compte d'exploitation pour 1000 poulets de chair sur 45 jours",
+  "resume": "Fiche technico-économique chiffrant les dépenses d'intrants (poussins, aliment démarrage/croissance/finition) et le bénéfice net prévisionnel pour un élevage de 1000 poulets de chair.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Capture d'un post informel de réseau social sans attribution d'auteur ni licence formelle de rediffusion.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.65,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Devis de 1000 poulets de chair sur 45 jours"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Poussins: Âge 1 jour Prix 550 FCFA unité"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Mode payant facebook"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00005__devis-et-compte-d-exploitation-pour-1000-poulets-de-cha.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00005__devis-et-compte-d-exploitation-pour-1000-poulets-de-cha.pdf"
+}

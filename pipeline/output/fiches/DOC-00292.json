@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00292",
+  "sha256": "f9c777b6f4d5006d8c15bd155ade2657cac9eca48cb44b0c60da2c295223ad51",
+  "nom_original": "Chapitre IX La neurotransmission polycope PDF.pdf",
+  "chemin_relatif_source": "OD_Docs/Chapitre IX La neurotransmission polycope PDF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1089534,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "Dr. Loucif",
+  "source_organisation": "Université Chadli Bendjedid - El Tarf",
+  "mots_cles": [
+    "cytophysiologie",
+    "medecine veterinaire",
+    "neurotransmission",
+    "neurone",
+    "potentiel d'action"
+  ],
+  "titre_trouve": "Première année vétérinaire, Cours de cytophysiologie - Chapitre IX : La neurotransmission",
+  "titre": "Cours de cytophysiologie vétérinaire : Chapitre IX, La neurotransmission",
+  "resume": "Polycopié de cours pour étudiants vétérinaires décrivant l'organisation anatomique du neurone, la genèse du potentiel d'action et la transmission synaptique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un polycopié universitaire vétérinaire algérien sans licence libre.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.88,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Université Chadli Bendjedid- El Tarf ... Première année vétérinaire, Cours de cytophysiologie ... Chapitre IX : La neurotransmission"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00292__cours-de-cytophysiologie-veterinaire-chapitre-ix-la-neu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00292__cours-de-cytophysiologie-veterinaire-chapitre-ix-la-neu.pdf"
+}

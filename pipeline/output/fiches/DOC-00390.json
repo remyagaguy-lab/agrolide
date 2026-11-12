@@ -1,0 +1,85 @@
+{
+  "id": "DOC-00390",
+  "sha256": "8f973363a4c5db46854d38ad04c140c948436b8807821a9be17a95969bef0543",
+  "nom_original": "Elevage_poulet_chair.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage_poulet_chair.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 181599,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aviculture",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Maroc",
+  "annee": 2009,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "poulet de chair",
+    "aviculture",
+    "maroc",
+    "cout de revient",
+    "alimentation avicole",
+    "viande blanche"
+  ],
+  "titre_trouve": "Elevage de poulet de chair",
+  "titre": "L'élevage de poulet de chair au Maroc : conduite technique et analyse technico-économique",
+  "resume": "Support de cours décrivant la filière du poulet de chair au Maroc, les dynamiques de production de viande blanche et la décomposition détaillée des charges du coût de revient.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document de formation non libre et incomplet (texte interrompu à la page 17), archivé sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.75
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Elevage de poulet de chair"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Le nombre des élevages de poulet de chair au Maroc est de plus de 5000 unités"
+    },
+    {
+      "champ": "autre",
+      "page": 17,
+      "extrait": "Sur le plan économique, l’éleveur a intérêt à réaliser un prix de revient le plus faible possibl"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00390__l-elevage-de-poulet-de-chair-au-maroc-conduite-techniqu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00390__l-elevage-de-poulet-de-chair-au-maroc-conduite-techniqu.pdf"
+}

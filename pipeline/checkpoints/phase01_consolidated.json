@@ -1,0 +1,16 @@
+{
+  "total_inventorie": 1091,
+  "unique_sha256": 1024,
+  "exact_duplicates_sha256": 67,
+  "matched_existing_db": 111,
+  "skipped_non_doc": 156,
+  "by_format": {
+    "ppt": 8,
+    "pdf": 986,
+    "docx": 68,
+    "pptx": 21,
+    "doc": 6,
+    "xlsx": 1,
+    "odt": 1
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00724",
+  "sha256": "341ee5dba4c2a27d868bf9064cfcf18d81fa74a880f2f262952580a0b3e6eadc",
+  "nom_original": "Solo-FR-CR.pdf",
+  "chemin_relatif_source": "OD_Docs/Solo-FR-CR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1241925,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": null,
+  "annee": 2016,
+  "auteurs": "Technisem",
+  "source_organisation": "Technisem",
+  "mots_cles": [
+    "papaye",
+    "solo n°8",
+    "technisem",
+    "carica papaya",
+    "arboriculture fruitiere",
+    "fiche technique"
+  ],
+  "titre_trouve": "Carica papaya L. - Papaye SOLO N°8",
+  "titre": "Fiche variétale et technique : Papaye Solo N°8 (Technisem)",
+  "resume": "Fiche technique variétale du semencier Technisem exposant l'itinéraire technique complet de la papaye Solo N°8 en conditions tropicales : semis en pépinière, exigences climatiques, conduite et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique variétale complète diffusée par Technisem pour la production de papaye en zone tropicale, libre de droits.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Carica papaya L. Papaye SOLO N°8 Une variété à petits fruits adaptée à l’export comme aux marchés locaux !"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00724__fiche-varietale-et-technique-papaye-solo-n8-technisem.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00724__fiche-varietale-et-technique-papaye-solo-n8-technisem.pdf"
+}

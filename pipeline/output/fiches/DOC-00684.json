@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00684",
+  "sha256": "18bcb62a7de2963db440a841168a7898b0efc3c2f49ac68888445de280068432",
+  "nom_original": "Production+d_eau+potable+_+filières+et+procédés+de+traitement_Dunod+2015.pdf",
+  "chemin_relatif_source": "OD_Docs/Production+d_eau+potable+_+filières+et+procédés+de+traitement_Dunod+2015.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 114531595,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 432,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "ouvrage",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "decideur_institution"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2015,
+  "auteurs": "Bernard Legube",
+  "source_organisation": "Dunod",
+  "mots_cles": [
+    "eau potable",
+    "traitement de l'eau",
+    "filtration",
+    "desinfection",
+    "dunod",
+    "genie des procedes"
+  ],
+  "titre_trouve": "PRODUCTION D'EAU POTABLE Filières et procédés de traitement",
+  "titre": "Production d'eau potable - Filières et procédés de traitement",
+  "resume": "Ouvrage de référence universitaire de 432 pages publié chez Dunod détaillant l'ensemble des filières physico-chimiques et biologiques de traitement et de potabilisation des eaux.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial sous copyright strict des éditions Dunod (reproduction interdite), archivé sans diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.99,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "toute reproduction, partielle ou totale, de la présente publication est interdite sans autorisation de l'auteur, de son éditeur"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00684__production-d-eau-potable-filieres-et-procedes-de-traite.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00684__production-d-eau-potable-filieres-et-procedes-de-traite.pdf"
+}

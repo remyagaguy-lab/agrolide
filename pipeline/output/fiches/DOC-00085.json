@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00085",
+  "sha256": "a3e74c1be4c87aab1a66270817b7ae0111053ec14cfc3a30f46f3dacc6ea21aa",
+  "nom_original": "1442_PDF.pdf",
+  "chemin_relatif_source": "OD_Docs/1442_PDF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1312011,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 95,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Eira Carballo, Assiah van Eer, Ton van Schie, Aldin Hilbrands",
+  "source_organisation": "CTA / Fondation Agromisa",
+  "mots_cles": [
+    "pisciculture",
+    "etang piscicole",
+    "eau douce",
+    "agrodok",
+    "elevage de poissons"
+  ],
+  "titre_trouve": "Agrodok 15 - La pisciculture à petite échelle en eau douce",
+  "titre": "La pisciculture à petite échelle en eau douce (Agrodok 15)",
+  "resume": "Manuel pratique de la série Agrodok guidant la création et la gestion d'une exploitation piscicole familiale en eau douce : choix du site, construction d'étangs, alimentation et récolte en zone tropicale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de référence Agrodok (CTA/Agromisa) sur la pisciculture en milieu tropical, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 15 - La pisciculture à petite échelle en eau douce"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00085__la-pisciculture-a-petite-echelle-en-eau-douce-agrodok-1.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00085__la-pisciculture-a-petite-echelle-en-eau-douce-agrodok-1.pdf"
+}

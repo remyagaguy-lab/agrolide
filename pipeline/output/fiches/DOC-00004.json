@@ -1,0 +1,82 @@
+{
+  "id": "DOC-00004",
+  "sha256": "3dbd76c816a037422060b98197f86e5e3284da94dff7e2d33b52083feea2be97",
+  "nom_original": "5_RESUME-Business-plan-simplifié.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/5_RESUME-Business-plan-simplifié.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 407198,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 20,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Tunisie",
+  "annee": 2019,
+  "auteurs": "Walid Bouzir, Mouna Haouachi",
+  "source_organisation": "Union Européenne (Erasmus+)",
+  "mots_cles": [
+    "modele business plan",
+    "canevas",
+    "etude de marche",
+    "plan financier",
+    "tri"
+  ],
+  "titre_trouve": "Mon Business Plan",
+  "titre": "Modèle simplifié de plan d'affaires pour projet entrepreneurial",
+  "resume": "Canevas type de plan d'affaires structuré couvrant l'analyse stratégique, le plan commercial, l'organisation de la production et les prévisions financières (VAN, TRI).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Modèle pédagogique issu d'un projet de renforcement des capacités soutenu par l'Union européenne, librement réutilisable.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Mon Business Plan Resume Project"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Project n.: 561988-EPP-1-2015-1-IT-EPPKA2-CBHE-SP"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Walid Bouzir, Mouna Haouachi"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0001",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00004__modele-simplifie-de-plan-d-affaires-pour-projet-entrepr.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00004__modele-simplifie-de-plan-d-affaires-pour-projet-entrepr.pdf"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00736",
+  "sha256": "5973d041c46124bc4891f38b98c07c62af89aa382ec0245ac7a80e1341ffa781",
+  "nom_original": "Séance 9 PHY 1125.pdf",
+  "chemin_relatif_source": "OD_Docs/Séance 9 PHY 1125.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 256510,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Pachoukova",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "physique",
+    "diagrammes d'equilibre",
+    "pu-ga",
+    "yb-sn",
+    "thermodynamique"
+  ],
+  "titre_trouve": "SEANCE 9",
+  "titre": "Physique des matériaux : diagrammes de phases Yb-Sn et Pu-Ga (Séance 9 PHY 1125)",
+  "resume": "Exercices dirigés de thermodynamique physique appliqués aux diagrammes de phases des systèmes métalliques Ytterbium-Étain (Yb-Sn) et Plutonium-Gallium (Pu-Ga).",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Exercices universitaires de thermodynamique physique sur les diagrammes de phases métalliques (Yb-Sn, Pu-Ga), hors sujet.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Figure 1 : Diagramme d’équilibre liquide-solide Yb-Sn Figure 2 : Diagramme d’équilibre liquide-solide Pu-Ga"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00736__physique-des-materiaux-diagrammes-de-phases-yb-sn-et-pu.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00736__physique-des-materiaux-diagrammes-de-phases-yb-sn-et-pu.pdf"
+}

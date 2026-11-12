@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00524",
+  "sha256": "53f4c460d9069e20b6138fc1183d804ba1f3fa5757d870ff4775befe663917da",
+  "nom_original": "LA BIBLE DE L’ÉLEVEUR DE POULES .pdf",
+  "chemin_relatif_source": "OD_Docs/LA BIBLE DE L’ÉLEVEUR DE POULES .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2441773,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 98,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "Albert Larbalétrier, Édition retour des traditions",
+  "source_organisation": "Édition retour des traditions",
+  "mots_cles": [
+    "aviculture",
+    "poules pondeuses",
+    "poulailler",
+    "incubation",
+    "maladies des volailles"
+  ],
+  "titre_trouve": "LA BIBLE DE L’ÉLEVEUR DE POULES",
+  "titre": "La Bible de l'éleveur de poules",
+  "resume": "Manuel pratique sur l'élevage avicole familial en climat tempéré : construction du poulailler, alimentation, ponte, couvaison et hygiène.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial privé sous copyright strict (Tous droits réservés), exclu de publication.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Copyright © 2013 – Édition retour des traditions Tous droits réservés."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00524__la-bible-de-l-eleveur-de-poules.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00524__la-bible-de-l-eleveur-de-poules.pdf"
+}

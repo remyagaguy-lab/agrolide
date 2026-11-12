@@ -1,0 +1,73 @@
+{
+  "id": "DOC-01083",
+  "sha256": "9162ecd663f8fa3398f392a4f4bb99a2b854d9b382d99f7dba29a5d82409837b",
+  "nom_original": "ca67-amendements_organiques.pdf",
+  "chemin_relatif_source": "OD_traites/ca67-amendements_organiques.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 2071002,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479342221-ca67-amendements_organiques.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 46,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2011,
+  "auteurs": "Gérald Huber, Christiane Schaub",
+  "source_organisation": "Chambre d'Agriculture du Bas-Rhin (CA67)",
+  "mots_cles": [
+    "matiere organique",
+    "fertilite des sols",
+    "humus",
+    "amendements organiques",
+    "chambre d'agriculture",
+    "alsace"
+  ],
+  "titre_trouve": "La fertilité des sols : L’importance de la matière organique - Guide des amendements organiques",
+  "titre": "La fertilité des sols : L'importance de la matière organique (Guide CA67)",
+  "resume": "Guide technique de la Chambre d'Agriculture du Bas-Rhin expliquant les rôles de l'humus, les mécanismes d'humification et la valorisation des amendements organiques.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique de Chambre d'agriculture française étalonné pour les sols et pratiques agricoles d'Alsace, non adapté aux sols tropicaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La fertilité des sols : L’importance de la matière organique HUBER Gérald SCHAUB Christiane Décembre 2011"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01083__la-fertilite-des-sols-l-importance-de-la-matiere-organi.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-01083__la-fertilite-des-sols-l-importance-de-la-matiere-organi.pdf"
+}

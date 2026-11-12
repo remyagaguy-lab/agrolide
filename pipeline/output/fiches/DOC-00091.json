@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00091",
+  "sha256": "d3bff53adcd376312beafcb160e47b49fc605b0c7d89e5b53ef6318d6125dc87",
+  "nom_original": "1650452131_phytotop_pratique_agricole02.pdf",
+  "chemin_relatif_source": "OD_Docs/1650452131_phytotop_pratique_agricole02.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 88109,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476211119-1650452131_phytotop_pratique_agricole02.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "donnees_phyto_a_verifier",
+    "droits_reserves"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "piment",
+  "pays": "Côte d'Ivoire",
+  "annee": 2022,
+  "auteurs": "Phytotop",
+  "source_organisation": "Phytotop",
+  "mots_cles": [
+    "piment",
+    "fiche technique",
+    "itineraire technique",
+    "protection phytosanitaire",
+    "cote d'ivoire"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE : PIMENT",
+  "titre": "Fiche technique : Culture du piment en Côte d'Ivoire",
+  "resume": "Fiche technique pratique détaillant l'itinéraire technique de la culture du piment en Côte d'Ivoire : préparation de la pépinière, fertilisation, protection phytosanitaire et prévisions de rendement.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique commerciale émise par une entreprise privée d'intrants comportant des préconisations de produits propriétaires.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE : PIMENT"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00091__fiche-technique-culture-du-piment-en-cote-d-ivoire.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00091__fiche-technique-culture-du-piment-en-cote-d-ivoire.pdf"
+}

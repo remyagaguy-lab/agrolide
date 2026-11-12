@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00898",
+  "sha256": "706f48d6d02d36182a7d9d6b21e38689b77a47a2685dea03cf86458f3ec71507",
+  "nom_original": "fabrication de couveuse .pdf",
+  "chemin_relatif_source": "OD_Docs/fabrication de couveuse .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2845915,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00853",
+  "groupe_doublon_id": "GRP-0053",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00853 (Guide du fabricant de couveuse artisanale).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "annee": 2019,
+  "auteurs": "Kinvo’b Innov",
+  "source_organisation": "Kinvo’b Innov",
+  "mots_cles": [
+    "couveuse artisanale",
+    "fabrication couveuse",
+    "incubation artificielle",
+    "thermostat",
+    "aviculture",
+    "cablage"
+  ],
+  "titre_trouve": "Guide du fabriquant de couveuse",
+  "titre": "Guide du fabricant de couveuse artisanale",
+  "resume": "Manuel technique pas-à-pas pour la confection, l'assemblage, le câblage électrique et la programmation de thermostats électroniques pour couveuses artisanales (à pétrole et électriques) adaptées au contexte tropical.",
+  "statut_droits": "droits_reserves_commercial",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide du fabriquant de couveuse KINVO’B INNOV"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Toute reproduction ou vente du présent ouvrage par une tierce personne est strictement interdite."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00898__guide-du-fabricant-de-couveuse-artisanale.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00898__guide-du-fabricant-de-couveuse-artisanale.pdf"
+}

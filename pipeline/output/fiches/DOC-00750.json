@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00750",
+  "sha256": "d9897905567dddd7b46b305c02213476f3259c2ecb7133b183a897c89f3ea686",
+  "nom_original": "Technique d_un bon élevage poule.pdf",
+  "chemin_relatif_source": "OD_Docs/Technique d_un bon élevage poule.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1558172,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 70,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture / poulet de chair",
+  "pays": null,
+  "annee": 2009,
+  "auteurs": "Cobb-Vantress",
+  "source_organisation": "Cobb-Vantress",
+  "mots_cles": [
+    "cobb 500",
+    "poulet de chair",
+    "guide d'elevage",
+    "aviculture",
+    "ventilation",
+    "alimentation avicole",
+    "prophylaxie"
+  ],
+  "titre_trouve": "Guide d'élevage du poulet de chair Cobb",
+  "titre": "Guide d'élevage du poulet de chair Cobb",
+  "resume": "Guide technique exhaustif de 70 pages publié par Cobb-Vantress pour la conduite du poulet de chair : préparation du bâtiment, démarrage des poussins, ventilation, alimentation, abreuvement et biosécurité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique officiel de référence mondiale pour l'élevage du poulet de chair Cobb, diffusé librement par le sélectionneur pour ses éleveurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Le guide d'élevage poulet de chair cobb-vantress.com"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Guide d'élevage du poulet de chair Cobb L’engagement de Cobb"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00750__guide-d-elevage-du-poulet-de-chair-cobb.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00750__guide-d-elevage-du-poulet-de-chair-cobb.pdf"
+}

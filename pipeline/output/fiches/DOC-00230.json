@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00230",
+  "sha256": "e6712aa6b032a65b3f37844bcd97be02605a0a5ed77e82eeac3ac3b30786f089",
+  "nom_original": "Aubergine Africaine.pdf",
+  "chemin_relatif_source": "OD_Docs/Aubergine Africaine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 769829,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aubergine africaine",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "aubergine africaine",
+    "maraichage",
+    "solanum aethiopicum",
+    "culture maraichere",
+    "fiche technique"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique sur la culture de l'aubergine africaine",
+  "resume": "Fiche pratique numérisée de deux pages consacrée à l'itinéraire technique et à la production maraîchère de l'aubergine africaine (Solanum aethiopicum) en zone tropicale.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan CamScanner sans texte exploitable (OCR nécessaire) ; fiche technique à fort potentiel pour l'Afrique tropicale mais statut de droits à valider.",
+  "confiance": {
+    "classification": 0.58,
+    "droits": 0.35,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Aubergine Africaine.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00230__fiche-technique-sur-la-culture-de-l-aubergine-africaine.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00230__fiche-technique-sur-la-culture-de-l-aubergine-africaine.pdf"
+}

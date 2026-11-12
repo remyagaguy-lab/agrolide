@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00906",
+  "sha256": "36d8703e8864b8b9515569d4ca1edc56d8a90e8f67fb6868c102ee19fa3c10be",
+  "nom_original": "fiche gomboro +22663234345.pdf",
+  "chemin_relatif_source": "OD_Docs/fiche gomboro +22663234345.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6752831,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_phyto_a_verifier",
+    "contenu_commercial"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2022,
+  "auteurs": "Compaore Albert",
+  "source_organisation": null,
+  "mots_cles": [
+    "gumboro",
+    "volaille",
+    "sante animale",
+    "maladie aviaire",
+    "burkina faso"
+  ],
+  "titre_trouve": "Traitement bio preventif et curatif contre Gomboro chez la volaille",
+  "titre": "Fiche pratique sur le traitement traditionnel contre le Gumboro chez la volaille",
+  "resume": "Fiche informative proposant des remèdes traditionnels préventifs et curatifs contre la maladie de Gumboro chez les volailles au Burkina Faso.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche autoproduite sur WhatsApp sans validation vétérinaire scientifique, comportant des allégations thérapeutiques non vérifiées.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.7,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Traitement bio preventif et curatif contre Gomboro chez la volaille Ecrivez l'auteur sur whatsapp +22663234345"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00906__fiche-pratique-sur-le-traitement-traditionnel-contre-le.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00906__fiche-pratique-sur-le-traitement-traditionnel-contre-le.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00770",
+  "sha256": "e3bed0457a45054f764aca6ec2c233142e77c05a35ae9f3eac4b0cef750d64eb",
+  "nom_original": "Vacciner et vermifuger vos poules (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Vacciner et vermifuger vos poules (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1095210,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 11,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": "Belgique",
+  "annee": null,
+  "auteurs": "Magasins Aveve",
+  "source_organisation": "Aveve Belgique",
+  "mots_cles": [
+    "vaccination volailles",
+    "vermifugation",
+    "poules",
+    "sante animale",
+    "belgique",
+    "aveve"
+  ],
+  "titre_trouve": "Vacciner et vermifuger vos poules",
+  "titre": "Vacciner et vermifuger vos poules (Conseil Aveve Belgique)",
+  "resume": "Conseils pratiques pour éleveurs amateurs issus du site commercial Aveve en Belgique, expliquant l'utilité des vaccins et vermifuges pour poules de basse-cour.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Article extrait d'un site web commercial belge pour éleveurs amateurs en milieu tempéré, sans licence ouverte.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Vacciner et vermifuger vos poules Les poules savent bien prendre soin d’elles-mêmes. https://magasinsaveve.be"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00770__vacciner-et-vermifuger-vos-poules-conseil-aveve-belgiqu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00770__vacciner-et-vermifuger-vos-poules-conseil-aveve-belgiqu.pdf"
+}

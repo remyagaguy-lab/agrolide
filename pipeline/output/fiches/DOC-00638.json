@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00638",
+  "sha256": "1b5a3f43f4d599d7606b7433608f6e4304c5d3773cbc0b18e54a52cdc4be5ae2",
+  "nom_original": "Orge.pdf",
+  "chemin_relatif_source": "OD_Docs/Orge.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8414587,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "titre_introuvable",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "orge",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "orge",
+    "hordeum vulgare",
+    "cereale",
+    "conduite culturale",
+    "semis"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique sur la culture de l'orge",
+  "resume": "Fiche technique de 6 pages scannée sans couche de texte exploitable consacrée à la culture de l'orge (Hordeum vulgare), requérant un traitement OCR pour son exploitation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans OCR exploitable nécessitant une reconnaissance de texte et une validation humaine de son contenu et de ses droits.",
+  "confiance": {
+    "classification": 0.58,
+    "droits": 0.4,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Orge.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00638__fiche-technique-sur-la-culture-de-l-orge.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00638__fiche-technique-sur-la-culture-de-l-orge.pdf"
+}

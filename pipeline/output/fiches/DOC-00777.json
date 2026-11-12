@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00777",
+  "sha256": "1011a31986a0260acd34bfa6131bf00470c73601c5d96da97a0993d4fdab41da",
+  "nom_original": "ag-formulation-et-alimentation.pdf",
+  "chemin_relatif_source": "OD_Docs/ag-formulation-et-alimentation.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1888661,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 25,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "equipements_technologie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "formulation alimentaire",
+    "plans d'experiences",
+    "rheologie",
+    "boissons",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Formulation et alimentation",
+  "titre": "Formulation et procédés dans l'industrie agroalimentaire",
+  "resume": "Support pédagogique approfondi de 25 pages traitant des méthodes de formulation alimentaire, des plans de mélange, de la rhéologie et de l'analyse sensorielle des produits transformés.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document pédagogique d'origine informelle sans mention claire d'auteur institutionnel ni licence ouverte de diffusion.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.75,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Formulation et alimentation"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Formulation d’une boisson à l’aide d’un plan de mélange"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00777__formulation-et-procedes-dans-l-industrie-agroalimentair.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/equipements_technologie/DOC-00777__formulation-et-procedes-dans-l-industrie-agroalimentair.pdf"
+}

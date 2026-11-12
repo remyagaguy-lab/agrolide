@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00236",
+  "sha256": "fab82dd5b3399cd7d4fb253b266593fd424c0edf39766e32478919793253fd3c",
+  "nom_original": "BILAN PREMIERE OPERATION D_EMBOUCHE- PLIAM.pdf",
+  "chemin_relatif_source": "OD_Docs/BILAN PREMIERE OPERATION D_EMBOUCHE- PLIAM.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1186619,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 24,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "ruminants",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovins",
+  "pays": "Mali",
+  "annee": 2013,
+  "auteurs": "VSFB - ICD - Projet LIAM",
+  "source_organisation": "Vétérinaires Sans Frontières Belgique / ICD",
+  "mots_cles": [
+    "embouche",
+    "ruminants",
+    "mali",
+    "sahel",
+    "vsfb",
+    "femmes",
+    "bilan economique"
+  ],
+  "titre_trouve": "BILAN PREMIERE OPERATION D’EMBOUCHE Embouche des femmes",
+  "titre": "Bilan de la première opération d'embouche des femmes au Mali",
+  "resume": "Rapport d'évaluation de 24 pages réalisé par VSF-Belgique et ICD sur une opération pilote d'embouche menée par 14 groupements féminins dans les cercles de Nara et Nioro au Mali : rentabilité, alimentation et analyse SWOT.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport d'évaluation de projet ONG complet et documenté (VSF-Belgique / ICD au Mali) sur l'embouche animale féminine, pertinent pour les membres de la plateforme.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BILAN PREMIERE OPERATION D’EMBOUCHE Embouche des femmes"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "VSFB/ICD ... projet LIAM et Kondo Jigima dans le cadre du programme de Lutte Contre l’insecurité alimentaire dans les cercles de Nara et de Nioro"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00236__bilan-de-la-premiere-operation-d-embouche-des-femmes-au.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00236__bilan-de-la-premiere-operation-d-embouche-des-femmes-au.pdf"
+}

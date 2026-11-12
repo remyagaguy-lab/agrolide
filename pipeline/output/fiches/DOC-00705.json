@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00705",
+  "sha256": "7fc965cbfb43f155945f34b100994c0b1e93afc007875ae5718269c093dc8826",
+  "nom_original": "Resume MODULE IRRIGATION.docx",
+  "chemin_relatif_source": "OD_Docs/Resume MODULE IRRIGATION.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 53421,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "TAMSAOUETE Mustapha",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "efficience",
+    "eau sol plante",
+    "aspersion",
+    "goutte a goutte",
+    "cours"
+  ],
+  "titre_trouve": "RESUME MODULE IRRIGATION - Introduction générale à l’irrigation",
+  "titre": "Résumé de cours : Module d'initiation à l'irrigation agricole",
+  "resume": "Synthèse de cours abordant l'histoire de l'irrigation, les relations eau-sol-plante (ETP, ETM, réserve utile) et les taux d'efficience des systèmes d'arrosage.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours individuel non publié sous licence ouverte, classé en archive pédagogique interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "RESUME MODULE IRRIGATION Introduction générale à l’irrigation"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Système / Méthode | Efficience (%) Surface | 40 - 50 Aspersion | 75 – 85 Goutte a goutte | 80 - 95"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00705__resume-de-cours-module-d-initiation-a-l-irrigation-agri.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00705__resume-de-cours-module-d-initiation-a-l-irrigation-agri.pdf"
+}

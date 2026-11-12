@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00717",
+  "sha256": "796e3b1157723d2c495f0de4cd13973133853ee8a1daf1afd2a3ffcbf41efccf",
+  "nom_original": "Réussir l_injection des vaccins inactivés[1].pdf",
+  "chemin_relatif_source": "OD_Docs/Réussir l_injection des vaccins inactivés[1].pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4636496,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2007,
+  "auteurs": "Merial, Vincent Hélye",
+  "source_organisation": "Merial",
+  "mots_cles": [
+    "vaccination avicole",
+    "vaccins inactives",
+    "chaine du froid",
+    "hygiene",
+    "seringue",
+    "volaille"
+  ],
+  "titre_trouve": "Réussir l’injection des vaccins inactivés",
+  "titre": "Guide technique : Réussir l’injection des vaccins inactivés en aviculture",
+  "resume": "Affiche technique illustrée récapitulant les bonnes pratiques (à faire et à ne pas faire) avant, pendant et après l'injection de vaccins inactivés chez les volailles pour garantir l'efficacité vaccinale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique éditée par un laboratoire pharmaceutique vétérinaire privé (RCS Lyon 590 800 215 - Merial) avec illustrateur crédité. En l'absence de licence libre explicite, les droits sont réservés commerciaux et ne relèvent pas de la diffusion institutionnelle. Ne peut être rendu public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Réussir l’injection des vaccins inactivés"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Ne pas dépasser 1000 poulettes/heure/vaccinateur"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Fiche technique éditée par un laboratoire pharmaceutique vétérinaire privé (RCS Lyon 590 800 215 - Merial) avec illustrateur crédité. En l'absence de licence libre explicite, les droits sont réservés commerciaux et ne relèvent pas de la diffusion institutionnelle. Ne peut être rendu public."
+  },
+  "nom_fichier_final": "DOC-00717__guide-technique-reussir-linjection-des-vaccins-inactive.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00717__guide-technique-reussir-linjection-des-vaccins-inactive.pdf"
+}

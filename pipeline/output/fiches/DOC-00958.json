@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00958",
+  "sha256": "f1e8239f81bc9e3f0b2045a51f3fcec22f041dd373775f0abdcfbd6f0b1cc06e",
+  "nom_original": "incubation des oeufs par les poules et en couveuse.pdf",
+  "chemin_relatif_source": "OD_Docs/incubation des oeufs par les poules et en couveuse.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 586605,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00604",
+  "groupe_doublon_id": "GRP-0044",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00604 (L'incubation des œufs par les poules et en couveuse (Agrodok 34)).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "annee": 2004,
+  "auteurs": "Nico van Wageningen, Johan Meinderts, Puck Bonnier, Henk Kasper",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "incubation",
+    "oeufs",
+    "couveuse",
+    "poules",
+    "aviculture tropicale",
+    "agrodok"
+  ],
+  "titre_trouve": "L'incubation des oeufs par les poules et en couveuse",
+  "titre": "L'incubation des œufs par les poules et en couveuse (Agrodok 34)",
+  "resume": "Guide pratique détaillant les techniques d'incubation naturelle et artificielle des œufs de volailles en zone tropicale : sélection des œufs, conduite de la couvaison et fabrication de couveuses.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 34 - L’incubation des oeufs par les poules et en couveuse"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00958__l-incubation-des-ufs-par-les-poules-et-en-couveuse-agro.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00958__l-incubation-des-ufs-par-les-poules-et-en-couveuse-agro.pdf"
+}

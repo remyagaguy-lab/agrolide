@@ -1,0 +1,78 @@
+{
+  "id": "DOC-01045",
+  "sha256": "9b89f883c22727d902b3bdd19a958b426a6428388b2416b2389308296852b995",
+  "nom_original": "systeme d_irrigation.pdf",
+  "chemin_relatif_source": "OD_Docs/systeme d_irrigation.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6549975,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 74,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 1990,
+  "auteurs": "C. Brouwer, K. Prins, M. Kay, M. Heibloem",
+  "source_organisation": "FAO",
+  "mots_cles": [
+    "irrigation",
+    "gestion de l'eau",
+    "fao",
+    "aspersion",
+    "goutte-a-goutte"
+  ],
+  "titre_trouve": "GESTION DES EAUX EN IRRIGATION - Manuel de formation n° 5 : Méthodes d'irrigation",
+  "titre": "Méthodes d'irrigation (Manuel de formation n° 5 de la FAO)",
+  "resume": "Manuel de référence de la FAO détaillant le choix, la conception et la mise en œuvre des méthodes d'irrigation : irrigation gravitaire de surface, aspersion et micro-irrigation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel pratique de formation FAO complet et fondamental pour la maîtrise de l'irrigation agricole dans les pays en développement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "GESTION DES EAUX EN IRRIGATION Manuel de formation n° 5 Méthodes d'irrigation"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Division de la mise en valeur des terres et des eaux, FAO"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01045__methodes-d-irrigation-manuel-de-formation-n-5-de-la-fao.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-01045__methodes-d-irrigation-manuel-de-formation-n-5-de-la-fao.pdf"
+}

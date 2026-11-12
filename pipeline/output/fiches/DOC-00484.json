@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00484",
+  "sha256": "a48bcf644261fc473ba0f29ab07389c84d9f3a1ec0ea6168bccaa71e5d28f4da",
+  "nom_original": "Guide sorgho Burkina.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide sorgho Burkina.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1570352,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 17,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "sorgho",
+  "pays": "Burkina Faso",
+  "annee": 2008,
+  "auteurs": "Kirsten vom Brocke, Clarisse Barro-Kondombo, Gilles Trouche, David Kambou, Grégoire Palé, Dominique Compaoré",
+  "source_organisation": "CIRAD / INERA / Fondation McKnight",
+  "mots_cles": [
+    "sorgho",
+    "production de semences",
+    "semences paysannes",
+    "burkina faso",
+    "cirad",
+    "inera"
+  ],
+  "titre_trouve": "Production de semences de sorgho en milieu paysan au Burkina Faso",
+  "titre": "Production de semences de sorgho en milieu paysan au Burkina Faso",
+  "resume": "Manuel illustré détaillant les étapes de la sélection et de la production de semences de qualité de sorgho en milieu paysan sahélien (Burkina Faso et Mali).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique illustré CIRAD/INERA de vulgarisation pour les producteurs de semences au Sahel, complet et diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Production de semences de sorgho en milieu paysan au Burkina Faso"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Fonds français pour l’environnement mondial (Ffem) et la Fondation McKnight Cirad INERA"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00484__production-de-semences-de-sorgho-en-milieu-paysan-au-bu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-00484__production-de-semences-de-sorgho-en-milieu-paysan-au-bu.pdf"
+}

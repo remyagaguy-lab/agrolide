@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00115",
+  "sha256": "6c987900676968be09a232d8e6d97777153c02323995951505a1450f94d1079d",
+  "nom_original": "4 L’élevage des poules - Copie.pdf",
+  "chemin_relatif_source": "OD_Docs/4 L’élevage des poules - Copie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 872699,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 98,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "volaille",
+  "pays": null,
+  "annee": 2006,
+  "auteurs": "N. van Eekeren, A. Maas, H.W. Saatkamp, M. Verschuur",
+  "source_organisation": "Agromisa / CTA",
+  "mots_cles": [
+    "elevage de poules",
+    "aviculture",
+    "agrodok",
+    "cta",
+    "avicole"
+  ],
+  "titre_trouve": "L'élevage des poules à petite échelle",
+  "titre": "L'élevage des poules à petite échelle (Agrodok n°4)",
+  "resume": "Manuel pratique de référence décrivant toutes les étapes de l'aviculture villageoise sous les tropiques : poulailler, alimentation équilibrée, santé, prévention des maladies et rentabilité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel pratique de vulgarisation Agrodok / CTA complet, essentiel pour les éleveurs en Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 4 - L’élevage des poules à petite échelle"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© Fondation Agromisa et CTA, Wageningen, 2006."
+    }
+  ],
+  "groupe_doublon_id": "GRP-0009",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00115__l-elevage-des-poules-a-petite-echelle-agrodok-n4.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00115__l-elevage-des-poules-a-petite-echelle-agrodok-n4.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00581",
+  "sha256": "e76456faca99dc4bb5d2f2cf83ad59bc0d516b5a143221754ce71761cce34443",
+  "nom_original": "MANUEL ELEVAGE DES CARPES (2).pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL ELEVAGE DES CARPES (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3020461,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 51,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "carpe",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+  "source_organisation": "EFATI",
+  "mots_cles": [
+    "pisciculture",
+    "carpe commune",
+    "etang",
+    "reproduction piscicole",
+    "alimentation poisson"
+  ],
+  "titre_trouve": "ELEVAGE DE LA CARPE COMMUNE",
+  "titre": "Manuel d’élevage de la carpe commune en étang",
+  "resume": "Manuel pratique de pisciculture consacré à la carpe commune : écologie, reproduction naturelle et artificielle, alimentation, gestion des étangs et conduite d'élevage.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel de pisciculture pratique pour la formation professionnelle en milieu tropical, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES SOMMAIRE 1. ELEVAGE DE LA CARPE COMMUNE"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0041",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00581__manuel-delevage-de-la-carpe-commune-en-etang.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00581__manuel-delevage-de-la-carpe-commune-en-etang.pdf"
+}

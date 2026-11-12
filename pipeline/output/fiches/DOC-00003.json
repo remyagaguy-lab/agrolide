@@ -1,0 +1,84 @@
+{
+  "id": "DOC-00003",
+  "sha256": "6baa8902ba2b97f9c509f24a60ea345a12e37dcabe8d86def307bf3755853e52",
+  "nom_original": "556984495-Business-Plan-Dieidhiou.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/556984495-Business-Plan-Dieidhiou.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 422098,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles",
+    "confidentiel_interne"
+  ],
+  "nb_pages": 31,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "Sénégal",
+  "annee": 2022,
+  "auteurs": "Chérif Amdy Goudiaby",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "business plan",
+    "horticulture",
+    "casamance",
+    "senegal",
+    "rentabilite"
+  ],
+  "titre_trouve": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE DANS LA REGION DE CASAMANCE",
+  "titre": "Business plan d'une exploitation agricole horticole en Casamance",
+  "resume": "Plan d'affaires réel pour la création d'une exploitation horticole en Casamance, comprenant l'étude de marché, l'analyse SWOT, la stratégie commerciale et les comptes prévisionnels.",
+  "statut_droits": "donnees_personnelles_confidentiel",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Dossier privé d'investissement comportant des données personnelles nominatives et patrimoniales du promoteur.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE DANS LA REGION DE CASAMANCE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Initiateur : CHERIF AMDY GOUDIABY"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Tel: (+221 77 ) Business plan - GOUDIABY"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00003__business-plan-d-une-exploitation-agricole-horticole-en.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00003__business-plan-d-une-exploitation-agricole-horticole-en.pdf"
+}

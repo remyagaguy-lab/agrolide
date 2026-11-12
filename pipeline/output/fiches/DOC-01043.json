@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01043",
+  "sha256": "27e71f9eec9b382a7c22cdefae39c8373f4a59fc08ea01540e83c2090933ae76",
+  "nom_original": "sucre de betterave roux de canne melasse.pdf",
+  "chemin_relatif_source": "OD_Docs/sucre de betterave roux de canne melasse.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 47366,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480064385-sucre_de_betterave_roux_de_canne_melasse.pdf",
+  "nb_telechargements_existant": 1,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "huiles_sucre_corps_gras",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "canne à sucre",
+  "pays": "France",
+  "annee": 2005,
+  "auteurs": "Foucault",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "sucre roux",
+    "canne a sucre",
+    "sucrerie",
+    "diagramme de fabrication",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité SUCRE BRUT & SUCRE ROUX",
+  "titre": "Diagramme de fabrication industrielle : Sucre brut de betterave et sucre roux de canne",
+  "resume": "Schéma technique des opérations unitaires de fabrication du sucre roux de canne et de betterave : extraction par diffusion, épuration, évaporation, cuisson sous vide et cristallisation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique industriel complet décrivant la fabrication du sucre roux de canne, directement exploitable pour l'agro-industrie sucrière.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité SUCRE BRUT & SUCRE ROUX"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA - MF 2005"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01043__diagramme-de-fabrication-industrielle-sucre-brut-de-bet.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/huiles_sucre_corps_gras/DOC-01043__diagramme-de-fabrication-industrielle-sucre-brut-de-bet.pdf"
+}

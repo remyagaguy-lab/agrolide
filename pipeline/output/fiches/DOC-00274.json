@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00274",
+  "sha256": "fd400b34dd255d9781013c40f7f6934fe5cfb41506f8849cc50c7dc01605be59",
+  "nom_original": "COMMENT_BIEN_DEMARRER_L’ANNEE.pdf",
+  "chemin_relatif_source": "OD_Docs/COMMENT_BIEN_DEMARRER_L’ANNEE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1010965,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 19,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "République du Congo",
+  "annee": 2021,
+  "auteurs": "Prince Mboungou Batantou",
+  "source_organisation": null,
+  "mots_cles": [
+    "developpement personnel",
+    "motivation",
+    "objectifs",
+    "gestion financiere",
+    "finances personnelles"
+  ],
+  "titre_trouve": "COMMENT BIEN DEMARRER UNE NOUVELLE ANNEE ?",
+  "titre": "Comment bien démarrer une nouvelle année ? Comment débuter l'année comme un champion",
+  "resume": "Livret de développement personnel, motivation et conseils pratiques de gestion financière personnelle pour la planification des objectifs annuels.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de développement personnel et de coaching généraliste, totalement en dehors du périmètre agricole et agroalimentaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "COMMENT BIEN DEMARRER UNE NOUVELLE ANNEE ? Comment débuter l’année comme un Champion ?"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Prince MBOUNGOU BATANTOU"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00274__comment-bien-demarrer-une-nouvelle-annee-comment-debute.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00274__comment-bien-demarrer-une-nouvelle-annee-comment-debute.pdf"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00654",
+  "sha256": "d662c1c8d97cf8eb4339daa385ac31ff24d02a7ce873e7742c08f0c26dff36da",
+  "nom_original": "POYCOPE_MORPHOGENESE_VEGETALE_ET_REGULATION_HORMONALE_VRAI_Récupération.pdf",
+  "chemin_relatif_source": "OD_Docs/POYCOPE_MORPHOGENESE_VEGETALE_ET_REGULATION_HORMONALE_VRAI_Récupération.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6622509,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 101,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2022,
+  "auteurs": "Khalissa Abed-Cheniti",
+  "source_organisation": "Université Ferhat Abbas Sétif 1",
+  "mots_cles": [
+    "morphogenese vegetale",
+    "regulation hormonale",
+    "physiologie vegetale",
+    "auxine",
+    "agronomie",
+    "setif"
+  ],
+  "titre_trouve": "MORPHOGENESE VEGETALE ET REGULATION HORMONALE",
+  "titre": "Cours de morphogenèse végétale et régulation hormonale (Master Agronomie)",
+  "resume": "Polycopié de cours universitaire approfondi de Master en sciences agronomiques détaillant les processus cellulaires et physiologiques de la morphogenèse végétale et de la régulation par les phytohormones.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire d'enseignant sans licence de diffusion publique ouverte, conservé en archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MORPHOGENESE VEGETALE ET REGULATION HORMONALE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00654__cours-de-morphogenese-vegetale-et-regulation-hormonale.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00654__cours-de-morphogenese-vegetale-et-regulation-hormonale.pdf"
+}

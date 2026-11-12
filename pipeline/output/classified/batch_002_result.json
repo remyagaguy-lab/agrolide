@@ -1,0 +1,797 @@
+{
+  "batch_number": 2,
+  "results": [
+    {
+      "id": "DOC-00014",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "entrepreneuriat_agricole"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2017,
+      "auteurs": "Dar Al Moukawil",
+      "source_organisation": "Dar Al Moukawil",
+      "mots_cles": [
+        "business plan",
+        "creation d'entreprise",
+        "gestion financiere",
+        "etude de marche",
+        "entrepreneuriat"
+      ],
+      "titre_trouve": "GUIDE DAR AL MOUKAWIL 2 BUSINESS PLAN",
+      "titre": "Guide Dar Al Moukawil : Comment élaborer son business plan",
+      "resume": "Guide méthodologique et pratique expliquant étape par étape comment concevoir, structurer et chiffrer un business plan pour convaincre investisseurs et banquiers.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide méthodologique complet d'initiative institutionnelle (Dar Al Moukawil), libre d'accès pour les porteurs de projets.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DAR AL MOUKAWIL 2 BUSINESS PLAN"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 40,
+          "extrait": "Le contenu de ce guide est certifié par Mazars, cabinet d'audit, de conseil et de services comptables"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00015",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "horticulture",
+      "pays": "Sénégal",
+      "annee": 2017,
+      "auteurs": "Diap Touré",
+      "source_organisation": null,
+      "mots_cles": [
+        "business plan",
+        "exploitation agricole",
+        "horticulture",
+        "senegal",
+        "etude financiere"
+      ],
+      "titre_trouve": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE",
+      "titre": "Business plan d'un projet d'exploitation agricole horticole au Sénégal",
+      "resume": "Dossier complet de plan d'affaires pour la création d'une exploitation agricole horticole au Sénégal, comprenant étude de marché, volet technique et prévisions financières.",
+      "statut_droits": "donnees_personnelles_confidentiel",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_personnelles"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Contient des données personnelles et financières privées non anonymisées (nom, téléphone, situation patrimoniale) : archivage interne uniquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "BUSINESS PLAN D’UN PROJET D’EXPLOITATION AGRICOLE"
+        },
+        {
+          "champ": "donnees_personnelles",
+          "page": 2,
+          "extrait": "Prometteur : Diap TOURE - Tel : (+221) 772157512-Email : ddiap99@yahoo.fr"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00016",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Roger Aïm",
+      "source_organisation": "AFNOR Éditions",
+      "mots_cles": [
+        "gestion de projet",
+        "management de projet",
+        "planification",
+        "qualite",
+        "organisation"
+      ],
+      "titre_trouve": "Les fondamentaux de la gestion de projet",
+      "titre": "Les fondamentaux de la gestion de projet",
+      "resume": "Ouvrage méthodologique présentant les principes clés, outils et étapes de la gestion de projet, de la définition des objectifs jusqu'au pilotage et management de la qualité.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous droits d'auteur réservés (AFNOR Éditions 2011) : non publiable en accès libre, conservation pour archive.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les fondamentaux de la gestion de projet"
+        },
+        {
+          "champ": "droits",
+          "page": 2,
+          "extrait": "© AFNOR 2011 Couverture : création AFNOR Éditions Toute reproduction ou représentation intégrale ou partielle... est illicite"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00017",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie structurale",
+        "cours",
+        "licence 2",
+        "biologie"
+      ],
+      "titre_trouve": null,
+      "titre": "Biochimie structurale L2 : Résumé 0",
+      "resume": "Fiche de révision scannée de biochimie structurale pour étudiants de niveau Licence 2, nécessitant une reconnaissance optique de caractères (OCR) pour exploitation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible, issu d'une série universitaire; OCR et vérification humaine requises.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé0 Biochimie Structurale (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00018",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "cours",
+        "semestre 3",
+        "licence biologie"
+      ],
+      "titre_trouve": "Résumie biochimie S3",
+      "titre": "Biochimie structurale S3 : Résumé de cours 1",
+      "resume": "Fascicule de révision manuscrit ou scanné de biochimie structurale pour étudiants de semestre 3 (L2), nécessitant un traitement OCR pour être rendu accessible.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible issu d'une série étudiante; traitement OCR et validation humaine nécessaires.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumie biochimie S3 (métadonnée PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00019",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie structurale",
+        "cours",
+        "licence 2",
+        "biologie"
+      ],
+      "titre_trouve": null,
+      "titre": "Biochimie structurale L2 : Résumé 2",
+      "resume": "Fiche de révision scannée de biochimie structurale (fascicule 2) pour étudiants de niveau Licence 2, nécessitant un traitement OCR complet.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans couche texte exploitable; OCR préalable et validation humaine indispensables.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé2 Biochimie Structurale (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00020",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie structurale",
+        "cours",
+        "licence 2",
+        "biologie"
+      ],
+      "titre_trouve": null,
+      "titre": "Biochimie structurale L2 : Résumé 3",
+      "resume": "Fiche synthétique de révision de biochimie structurale (fascicule 3) pour étudiants de niveau Licence 2, non numérisée en mode texte (OCR nécessaire).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche scannée sans texte extractible; OCR et contrôle humain requis avant toute décision.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé3 Biochimie Structurale (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00021",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie structurale",
+        "cours",
+        "licence 2",
+        "biologie"
+      ],
+      "titre_trouve": null,
+      "titre": "Biochimie structurale L2 : Résumé 4",
+      "resume": "Fiche de synthèse scannée de biochimie structurale (fascicule 4) pour étudiants de niveau Licence 2, nécessitant une reconnaissance optique de caractères.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte numérique exploitable; traitement OCR et examen humain préalables requis.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé4 Biochimie Structurale (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00022",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie structurale",
+        "cours",
+        "licence 2",
+        "biologie"
+      ],
+      "titre_trouve": null,
+      "titre": "Biochimie structurale L2 : Résumé 5",
+      "resume": "Fascicule de révision scanné de biochimie structurale (fascicule 5) pour étudiants de Licence 2, sans couche texte exploitable (OCR nécessaire).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte exploitable; nécessite un traitement OCR et une validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé5 Biochimie Structurale (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00023",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Feriel",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "cours",
+        "licence 2",
+        "biologie"
+      ],
+      "titre_trouve": "résumé biochimie - by feriel",
+      "titre": "Biochimie structurale L2 : Résumé 6",
+      "resume": "Fascicule de révision scanné par application mobile (CamScanner) portant sur la biochimie structurale de L2, nécessitant une reconnaissance optique.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan CamScanner sans texte exploitable; OCR et vérification humaine nécessaires.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé biochimie - by feriel (métadonnée PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00024",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2020,
+      "auteurs": "DALIL INFO",
+      "source_organisation": "Université (filières SVI/STU)",
+      "mots_cles": [
+        "biologie vegetale",
+        "taxonomie",
+        "classification",
+        "spermaphytes",
+        "svi",
+        "stu"
+      ],
+      "titre_trouve": "Résumé de la matière Biologie végétale, Crédit 6, Coefficient 3",
+      "titre": "Résumé de cours de biologie végétale : SVI2 - STU2 (Fascicule 1)",
+      "resume": "Synthèse de cours de biologie végétale de première année universitaire (SVI/STU), abordant la classification végétale, les bryophytes, ptéridophytes et la formation des fruits.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fascicule de révision étudiant partiel (texte interrompu p. 15), non publié officiellement : archivage interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé de la matière Biologie végétale, Crédit 6, Coefficient 3"
+        },
+        {
+          "champ": "incomplet",
+          "page": 15,
+          "extrait": "1.1. Fruit charnu. C’est un fruit dont"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00025",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Université (filières SVI/STU)",
+      "mots_cles": [
+        "biologie vegetale",
+        "cours",
+        "svi",
+        "stu",
+        "licence 1"
+      ],
+      "titre_trouve": null,
+      "titre": "Biologie végétale SVI2 STU2 : Résumé de cours 2",
+      "resume": "Fascicule de révision scanné de biologie végétale pour étudiants de Licence 1 (SVI2/STU2), sans texte numérique exploitable (OCR requis).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans couche texte exploitable; OCR et validation humaine nécessaires.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé2 Biologie Végétale SVI2 STU2 (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00026",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Université (filières SVI/STU)",
+      "mots_cles": [
+        "biologie vegetale",
+        "cours",
+        "svi",
+        "stu",
+        "licence 1"
+      ],
+      "titre_trouve": null,
+      "titre": "Biologie végétale SVI2 STU2 : Résumé de cours 3",
+      "resume": "Fascicule de révision scanné de biologie végétale (volume 3) pour étudiants de première année (SVI2/STU2), nécessitant un traitement OCR complet.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan universitaire sans texte extractible; traitement OCR et validation humaine requis.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé3 Biologie Végétale SVI2 STU2 (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00027",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Université (filières SVI/STU)",
+      "mots_cles": [
+        "biologie vegetale",
+        "cours",
+        "svi",
+        "stu",
+        "licence 1"
+      ],
+      "titre_trouve": null,
+      "titre": "Biologie végétale SVI2 STU2 : Résumé de cours 4",
+      "resume": "Fascicule de révision scanné de biologie végétale (volume 4) destiné aux étudiants de première année universitaire, nécessitant une conversion OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fascicule scanné sans texte extractible; OCR et contrôle humain préalables requis.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé4 Biologie Végétale SVI2 STU2 (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00028",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Université (filières SVI/STU)",
+      "mots_cles": [
+        "biologie vegetale",
+        "cours",
+        "svi",
+        "stu",
+        "licence 1"
+      ],
+      "titre_trouve": null,
+      "titre": "Biologie végétale SVI2 STU2 : Résumé de cours 5",
+      "resume": "Fascicule de révision scanné de biologie végétale (volume 5) pour étudiants universitaires de L1 (SVI/STU), sans texte directement exploitable.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte numérique exploitable; traitement OCR et validation humaine requis.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé5 Biologie Végétale SVI2 STU2 (nom du fichier)"
+        }
+      ]
+    }
+  ]
+}

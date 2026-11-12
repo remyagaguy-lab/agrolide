@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00875",
+  "sha256": "b6ca38011b4ea9674cd80ca632898eea224950ec08d1ccd144a4ca1117337c96",
+  "nom_original": "elevage ID578275_1.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage ID578275_1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 344322,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "rapport",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "decideur_institution"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Vanuatu",
+  "annee": 1995,
+  "auteurs": "Dr Robinet",
+  "source_organisation": "CIRAD-EMVT",
+  "mots_cles": [
+    "aviculture",
+    "etude de faisabilite",
+    "elevage multiplicateur",
+    "poulet de chair",
+    "pondeuses",
+    "vanuatu"
+  ],
+  "titre_trouve": "ÉTUDE DE FAISABILITÉ D'UN PROJET ÉLEVAGE MULTIPLICATEUR DE VOLAILLES A VOCATION MIXTE CHAIR-PONTE AU VANUATU",
+  "titre": "Étude de faisabilité d'un élevage multiplicateur avicole mixte chair-ponte",
+  "resume": "Rapport d'expertise et étude de faisabilité technico-économique complète pour la mise en place d'un élevage multiplicateur avicole (bâtiments, alimentation, budget).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport d'étude de faisabilité institutionnel complet (CIRAD-EMVT), utile pour les porteurs de projet avicoles, réservé aux membres.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ÉTUDE DE FAISABILITÉ D'UN PROJET ÉLEVAGE MULTIPLICATEUR DE VOLAILLES A VOCATION MIXTE CHAIR-PONTE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00875__etude-de-faisabilite-d-un-elevage-multiplicateur-avicol.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00875__etude-de-faisabilite-d-un-elevage-multiplicateur-avicol.pdf"
+}

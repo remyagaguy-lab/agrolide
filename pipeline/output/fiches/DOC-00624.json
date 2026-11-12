@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00624",
+  "sha256": "ab876ad4ad258dda09e3c4796cac993b4564a8a4e8be6a377db89e51bea5c759",
+  "nom_original": "Métabolisme des Lipides.pdf",
+  "chemin_relatif_source": "OD_Docs/Métabolisme des Lipides.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4703237,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "biochimie",
+    "metabolisme des lipides",
+    "acides gras",
+    "cours"
+  ],
+  "titre_trouve": "Métabolisme des Lipides",
+  "titre": "Biochimie métabolique : Métabolisme des lipides",
+  "resume": "Fascicule manuscrit ou scanné de biochimie portant sur le métabolisme des lipides, sans couche texte exploitable (OCR requis).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan CamScanner sans couche texte; nécessite une reconnaissance OCR et un contrôle de conformité.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Métabolisme des Lipides (métadonnées PDF)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00624__biochimie-metabolique-metabolisme-des-lipides.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00624__biochimie-metabolique-metabolisme-des-lipides.pdf"
+}

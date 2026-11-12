@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00105",
+  "sha256": "befcbb919aca72e56435da4f95c12ce5857c00ee041002a3869aa66eaf002fad",
+  "nom_original": "2022_04_note_ble_solagro.pdf",
+  "chemin_relatif_source": "OD_Docs/2022_04_note_ble_solagro.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 690150,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "economie_filieres_marches",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "blé",
+  "pays": "France",
+  "annee": 2022,
+  "auteurs": "Christian Couturier, Sylvain Doublet",
+  "source_organisation": "Solagro",
+  "mots_cles": [
+    "ble",
+    "importations",
+    "marche cereales",
+    "securite alimentaire",
+    "solagro",
+    "geopolitique agricole"
+  ],
+  "titre_trouve": "Le blé : Limiter la dépendance aux importations",
+  "titre": "Le blé : Limiter la dépendance aux importations (Note d'information Solagro)",
+  "resume": "Note d'information analysant les dynamiques du marché mondial du blé, l'impact de la guerre russo-ukrainienne sur la sécurité d'approvisionnement et les leviers agroécologiques pour réduire la dépendance aux intrants et aux importations.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Note d'analyse institutionnelle complète de l'association Solagro sur les filières et marchés céréaliers mondiaux, diffusable aux membres.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Le blé : Limiter la dépendance aux importations"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00105__le-ble-limiter-la-dependance-aux-importations-note-d-in.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/economie_filieres_marches/DOC-00105__le-ble-limiter-la-dependance-aux-importations-note-d-in.pdf"
+}

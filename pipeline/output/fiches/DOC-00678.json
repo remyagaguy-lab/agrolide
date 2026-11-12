@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00678",
+  "sha256": "d5948fd8674d399508a9498e1d7ac1fa07584adb0961b31dd58353f3945b4eb6",
+  "nom_original": "Polycopié Arboriculture Fruitière.pdf",
+  "chemin_relatif_source": "OD_Docs/Polycopié Arboriculture Fruitière.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3086152,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 41,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Salima Guessoum",
+  "source_organisation": "Université Ferhat Abbas de Sétif",
+  "mots_cles": [
+    "arboriculture fruitiere",
+    "viticulture",
+    "taille des arbres",
+    "abricotier",
+    "setif",
+    "algerie"
+  ],
+  "titre_trouve": "Support pédagogique de la matière Arboriculture Fruitière et Viticulture",
+  "titre": "Cours d'arboriculture fruitière et viticulture - Master I",
+  "resume": "Support de cours de Master I de 41 pages de l'Université de Sétif couvrant les principes de l'arboriculture fruitière : morphologie, phénologie, techniques de taille et protection contre les bioagresseurs.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non libre de droits, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Support pédagogique de la matière Arboriculture Fruitière et Viticulture"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00678__cours-d-arboriculture-fruitiere-et-viticulture-master-i.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00678__cours-d-arboriculture-fruitiere-et-viticulture-master-i.pdf"
+}

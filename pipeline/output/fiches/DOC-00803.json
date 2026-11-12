@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00803",
+  "sha256": "665792a56d959bbfc1dea428fe93a6f022499b196c5641c22228f6a9a5b858b8",
+  "nom_original": "aviculture bio-convert-.pdf",
+  "chemin_relatif_source": "OD_Docs/aviculture bio-convert-.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1165658,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 57,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Omar Sawadogo",
+  "source_organisation": "Z-Production",
+  "mots_cles": [
+    "aviculture biologique",
+    "phytotherapie aviaire",
+    "poulet local",
+    "burkina faso",
+    "ferme z-production"
+  ],
+  "titre_trouve": "AVICULTURE BIOLOGIQUE",
+  "titre": "Guide pratique d'aviculture biologique et soins naturels (Z-Production)",
+  "resume": "Manuel pratique d'aviculture biologique au Burkina Faso : gestion de l'élevage, alimentation locale, couveuses et traitements préventifs à base de plantes.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support promotionnel et commercial d'une ferme privée proposant des services marchands, archivé sans rediffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Sawadogo Omar, directeur de la ferme Z-PRODUCTION. Prestation de service -VENTE DE POUSSINS -FORMATION EN LIGNE"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0075",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00803__guide-pratique-d-aviculture-biologique-et-soins-naturel.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00803__guide-pratique-d-aviculture-biologique-et-soins-naturel.pdf"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00128",
+  "sha256": "b0d4eac8180a52af955a8ec5389e9f720879d15493f59f53724653d8876a93ad",
+  "nom_original": "5_plantes_sauvages_comestibles_indispensables_en_survie@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/5_plantes_sauvages_comestibles_indispensables_en_survie@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4514030,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte",
+    "contenu_commercial"
+  ],
+  "nb_pages": 18,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2019,
+  "auteurs": "Apprendre Préparer Survivre",
+  "source_organisation": "Apprendre Préparer Survivre",
+  "mots_cles": [
+    "plantes sauvages",
+    "cueillette",
+    "survie",
+    "plantes comestibles",
+    "ortie",
+    "pissenlit"
+  ],
+  "titre_trouve": "Les 5 plantes sauvages comestibles indispensables en survie",
+  "titre": "Les 5 plantes sauvages comestibles indispensables en survie",
+  "resume": "Fascicule pratique présentant cinq plantes sauvages comestibles de la flore tempérée européenne (ortie, plantain, pissenlit, ail des ours, nombril de Vénus) et les consignes pour une cueillette sécurisée.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document commercial issu de @EpubsFR sous droits réservés et portant sur la flore sauvage tempérée.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Les 5 plantes sauvages comestibles indispensables en survie"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "DÉCOUVRIR LE GUIDE DE PRÉPARATION À LA SURVIE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00128__les-5-plantes-sauvages-comestibles-indispensables-en-su.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00128__les-5-plantes-sauvages-comestibles-indispensables-en-su.pdf"
+}

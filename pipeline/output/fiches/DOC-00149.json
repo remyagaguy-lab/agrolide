@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00149",
+  "sha256": "751b28f73a64da582b056ec0a038acadc00c14fb8f60ee8084e3e617ad61b40f",
+  "nom_original": "ALIMENT - FORMULES-VACCIN.pdf",
+  "chemin_relatif_source": "OD_Docs/ALIMENT - FORMULES-VACCIN.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 385662,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "donnees_personnelles",
+    "droits_reserves"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Omar Sawadogo",
+  "source_organisation": "Ferme Z-Production",
+  "mots_cles": [
+    "aviculture",
+    "poulets de chair",
+    "alimentation des volailles",
+    "vaccination aviaire",
+    "burkina faso"
+  ],
+  "titre_trouve": "Aliments et vaccins",
+  "titre": "Guide pratique d'aviculture : Alimentation, formules et prophylaxie vaccinale",
+  "resume": "Document pratique rédigé par un aviculteur burkinabé, présentant des conseils d'élevage, des formules d'aliments et un protocole de vaccination des volailles.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document commercial informel intégrant des données personnelles directes (numéro WhatsApp) et une promotion d'entreprise privée, archivé sans diffusion.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Je me nomme Sawadogo Omar Directeur de la ferme « Z-PRODUCTION » ... Tampouy a Ouagadougou (Burkina Faso)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00149__guide-pratique-d-aviculture-alimentation-formules-et-pr.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00149__guide-pratique-d-aviculture-alimentation-formules-et-pr.pdf"
+}

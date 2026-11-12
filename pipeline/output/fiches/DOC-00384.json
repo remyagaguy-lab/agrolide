@@ -1,0 +1,82 @@
+{
+  "id": "DOC-00384",
+  "sha256": "54849de3908cef9020b029a94b9845ffa2f1c9a2e0223a37dfb04563024ea312",
+  "nom_original": "Elevage des poules.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage des poules.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 53453699,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479569606-Guide__levage_de_volaille_.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive"
+  ],
+  "nb_pages": 113,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Sénégal",
+  "annee": 1997,
+  "auteurs": "Jean François Dayon, Brigitte Arbelot",
+  "source_organisation": "Institut Sénégalais de Recherches Agricoles (ISRA) / CIRAD-EMVT",
+  "mots_cles": [
+    "aviculture",
+    "poules",
+    "senegal",
+    "batiment d'elevage",
+    "sante avicole",
+    "guide d'elevage",
+    "isra",
+    "cirad"
+  ],
+  "titre_trouve": "GUIDE D'ELEVAGE DES VOLAILLES AU SENEGAL",
+  "titre": "Guide d'élevage des volailles au Sénégal",
+  "resume": "Guide pratique complet de 113 pages élaboré conjointement par l'ISRA et le CIRAD sur l'aviculture au Sénégal : conception des bâtiments d'élevage, conditions d'ambiance, biosécurité, désinfection et prophylaxie.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Présence du drapeau bloquant 'taille_excessive' qui interdit la publication directe (public/membres). Nécessite une validation humaine pour compression/optimisation avant mise en ligne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE D'ELEVAGE DES VOLAILLES AU SENEGAL"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Institut Sénégalais de Recherches Agricoles ISRA LNERV Dakar Sénégal CIRAD EMVT"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Présence du drapeau bloquant 'taille_excessive' qui interdit la publication directe (public/membres). Nécessite une validation humaine pour compression/optimisation avant mise en ligne."
+  },
+  "nom_fichier_final": "DOC-00384__guide-d-elevage-des-volailles-au-senegal.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00384__guide-d-elevage-des-volailles-au-senegal.pdf"
+}

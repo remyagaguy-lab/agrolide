@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00475",
+  "sha256": "e654c4b71b1c2bbeb8755ac6c6c10b6dfcba7a71d58dbcb0c02a568e81e2a30a",
+  "nom_original": "Guide Pisciculture Hors Sol.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide Pisciculture Hors Sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1931520,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 24,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": "Côte d'Ivoire",
+  "annee": 2020,
+  "auteurs": "Doh Koffi Sébastien",
+  "source_organisation": null,
+  "mots_cles": [
+    "pisciculture hors sol",
+    "bacs beton",
+    "clarias",
+    "tilapia",
+    "cote d'ivoire",
+    "aquaculture"
+  ],
+  "titre_trouve": "LA PISCICULTURE HORS SOL",
+  "titre": "Guide pratique de la pisciculture hors sol en bacs",
+  "resume": "Guide pratique complet sur l'élevage piscicole hors sol (bacs en béton et bâchés) en Afrique de l'Ouest : choix du site, gestion de l'eau, espèces cultivables et alimentation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide pratique terrain complet à forte valeur technique mais sans mention explicite de statut de diffusion : validation des droits requise.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.6,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA PISCICULTURE HORS SOL"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Doh Koffi sébastien (métadonnées PDF)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00475__guide-pratique-de-la-pisciculture-hors-sol-en-bacs.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00475__guide-pratique-de-la-pisciculture-hors-sol-en-bacs.pdf"
+}

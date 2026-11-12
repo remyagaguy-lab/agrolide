@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00618",
+  "sha256": "a3de01a70b13ec72b619d868d51daceeb7a110da2be1e89732d46ee032a292bc",
+  "nom_original": "Multiplication-des-plantes-horticoles-.pdf",
+  "chemin_relatif_source": "OD_Docs/Multiplication-des-plantes-horticoles-.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2723314,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 20,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2019,
+  "auteurs": "Dominique Boutherin, Gilbert Bron",
+  "source_organisation": "Éditions Lavoisier Tec & Doc",
+  "mots_cles": [
+    "multiplication vegetale",
+    "horticulture",
+    "bouturage",
+    "greffage",
+    "semis",
+    "lavoisier"
+  ],
+  "titre_trouve": "Multiplication des plantes horticoles",
+  "titre": "Multiplication des plantes horticoles (Éditions Lavoisier)",
+  "resume": "Extrait de l'ouvrage technique de référence des Éditions Lavoisier présentant les techniques de multiplication des végétaux horticoles (semis, bouturage, greffage).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait promotionnel d'un ouvrage commercial sous copyright exclusif Lavoisier Tec & Doc : conservation en archive interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Dominique Boutherin Gilbert Bron 3e édition Multiplication des plantes horticoles"
+    },
+    {
+      "champ": "droits",
+      "page": 3,
+      "extrait": "www.editions.lavoisier.fr 978-2-7430-1530-5"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00618__multiplication-des-plantes-horticoles-editions-lavoisie.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00618__multiplication-des-plantes-horticoles-editions-lavoisie.pdf"
+}

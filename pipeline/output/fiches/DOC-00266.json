@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00266",
+  "sha256": "03b543c803c92a950ba2cf6bd16bd20eb44d72ecdd4e41c8672dcd28073a618b",
+  "nom_original": "CALCUL SURFACE OCCUPEE PAR LES ASPERSEURS  TRIANGULAIRE.docx",
+  "chemin_relatif_source": "OD_Docs/CALCUL SURFACE OCCUPEE PAR LES ASPERSEURS  TRIANGULAIRE.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 13492,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "aspersion",
+    "irrigation",
+    "calcul surface",
+    "disposition triangulaire",
+    "materiel d'irrigation"
+  ],
+  "titre_trouve": "CALCUL SURFACE OCCUPEE PAR LES ASPERSEURS ANGULAIRE",
+  "titre": "Calcul de la surface irriguée par des asperseurs en disposition triangulaire",
+  "resume": "Exercice pratique d'ingénierie d'irrigation expliquant le calcul de la superficie arrosée et du taux de recouvrement pour des asperseurs disposés en quinconce triangulaire.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Note de calcul bureautique interne sans mention d'auteur officiel ni statut légal de diffusion.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CALCUL SURFACE OCCUPEE PAR LES ASPERSEURS ANGULAIRE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "La surface totale irriguée par 9 asperseurs disposés en configuration triangulaire est d'environ 9078.72 m²."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00266__calcul-de-la-surface-irriguee-par-des-asperseurs-en-dis.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00266__calcul-de-la-surface-irriguee-par-des-asperseurs-en-dis.pdf"
+}

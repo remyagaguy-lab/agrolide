@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00934",
+  "sha256": "283ea0b49baf5cfa72b6fef10f64f0a985390496c5b209da4bb47cd5dc9be794",
+  "nom_original": "guide-formateur-f.pdf",
+  "chemin_relatif_source": "OD_Docs/guide-formateur-f.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 268257,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00485",
+  "groupe_doublon_id": "GRP-0034",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00485 (Guide du vétérinaire formateur en aviculture villageoise (UA-BIRA)).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Mali",
+  "annee": 2004,
+  "auteurs": "Laprovet, Vétérinaires Sans Frontières, Initiative Conseil Développement",
+  "source_organisation": "Union Africaine - BIRA / VSF / MAE France",
+  "mots_cles": [
+    "aviculture villageoise",
+    "sante animale",
+    "maladie de newcastle",
+    "veterinaire",
+    "ua-bira",
+    "vsf"
+  ],
+  "titre_trouve": "GUIDE DU VETERINAIRE Animateur-Formateur en Aviculture Villageoise",
+  "titre": "Guide du vétérinaire formateur en aviculture villageoise (UA-BIRA)",
+  "resume": "Guide méthodologique et clinique pour le diagnostic pratique, le traitement et la prophylaxie des maladies dominantes des volailles villageoises en Afrique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DU VETERINAIRE Animateur- Formateur en Aviculture Villageoise"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Diffusion: UA-BIRA Conception LAPROVET VETERINAIRES SANS FRONTIERES INITIATIVE CONSEIL DEVELOPPEMENT Bamako – Mali"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00934__guide-du-veterinaire-formateur-en-aviculture-villageois.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00934__guide-du-veterinaire-formateur-en-aviculture-villageois.pdf"
+}

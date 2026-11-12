@@ -1,0 +1,776 @@
+{
+  "batch_number": 45,
+  "results": [
+    {
+      "id": "DOC-00672",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "semences_amelioration",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Chambres d'Agriculture d'Aquitaine",
+      "source_organisation": "Chambres d'Agriculture d'Aquitaine",
+      "mots_cles": [
+        "plants maraichers",
+        "agriculture biologique",
+        "semis",
+        "repiquage",
+        "aubergine",
+        "tomate"
+      ],
+      "titre_trouve": "Produire des plants en Agriculture Biologique",
+      "titre": "Produire des plants en agriculture biologique - Guide maraîchage",
+      "resume": "Guide technique de 56 pages des Chambres d'agriculture d'Aquitaine détaillant la production de plants maraîchers biologiques : choix du terreau, semis, irrigation, et fiches par espèce légumière.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique complet de pépinière maraîchère biologique, transposable pour les membres bien que rédigé pour le contexte aquitain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Produire des plants en Agriculture Biologique Chambres d'Agriculture d'Aquitaine"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00674",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "pois chiche",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "pois chiche",
+        "legumineuse",
+        "culture vivriere",
+        "itineraire technique"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique sur la culture du pois chiche",
+      "resume": "Document numérisé de 6 pages portant sur la conduite culturale du pois chiche. Nécessite une reconnaissance optique de caractères (OCR) pour en exploiter le contenu.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte exploitable nécessitant un traitement OCR pour déterminer son contenu exact et ses droits de diffusion.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pois chiche.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00675",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "poivron",
+      "pays": "France",
+      "annee": 2022,
+      "auteurs": "Homejardin",
+      "source_organisation": "Homejardin",
+      "mots_cles": [
+        "poivron",
+        "capsicum annuum",
+        "jardinage",
+        "varietes",
+        "france metropolitaine"
+      ],
+      "titre_trouve": "Poivron ou capsicum annuum",
+      "titre": "Fiche de culture du poivron - Homejardin",
+      "resume": "Fiche pratique de 4 pages issue du site web Homejardin décrivant la culture du poivron en France métropolitaine : variétés recommandées, calendrier lunaire et conseils de jardinage.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Contenu extrait d'un site web privé soumis au droit d'auteur et calibré pour le jardinage tempéré français, archivé sans publication.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "Tout le contenu du site concernant le JARDINAGE est rédigé en considérant qu'il concerne avant tout les végétaux cultivés en France Métropolitaine."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00676",
+      "domaine_principal": "transversal",
+      "sous_domaine": "statistiques_biometrie",
+      "domaines_secondaires": [
+        "methodologie_recherche"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Abdelkader Benkhaled",
+      "source_organisation": "Université Mustapha Stambouli de Mascara",
+      "mots_cles": [
+        "biostatistiques",
+        "statistique descriptive",
+        "probabilites",
+        "agronomie",
+        "biometrie",
+        "algerie"
+      ],
+      "titre_trouve": "Polycopié de Cours Biostatistiques Cours et exercices",
+      "titre": "Polycopié de cours de biostatistiques - Cours et exercices",
+      "resume": "Polycopié universitaire complet de 79 pages de l'Université de Mascara couvrant le programme de biostatistiques pour les étudiants de L2 en agronomie et biologie : statistiques descriptives, probabilités et tests d'hypothèses.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non assorti d'une licence libre de diffusion, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Polycopié de Cours Biostatistiques Cours et exercices"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00677",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Dr. Boualem Boumaaza",
+      "source_organisation": "Université Ibn Khaldoun Tiaret",
+      "mots_cles": [
+        "agronomie generale",
+        "science du sol",
+        "pedologie",
+        "bilan hydrique",
+        "reserve utile",
+        "algerie"
+      ],
+      "titre_trouve": "Agronomie générale I",
+      "titre": "Polycopié de cours d'agronomie générale I - Science du sol",
+      "resume": "Cours universitaire complet de 124 pages de l'Université de Tiaret sur l'agronomie générale et la pédologie : constituants du sol, matière organique, propriétés physiques, hydriques et chimiques (CEC).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours académique non libre de droits, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agronomie générale I Destinés aux étudiants de deuxième année du Tronc commun, sciences agronomiques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00678",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Salima Guessoum",
+      "source_organisation": "Université Ferhat Abbas de Sétif",
+      "mots_cles": [
+        "arboriculture fruitiere",
+        "viticulture",
+        "taille des arbres",
+        "abricotier",
+        "setif",
+        "algerie"
+      ],
+      "titre_trouve": "Support pédagogique de la matière Arboriculture Fruitière et Viticulture",
+      "titre": "Cours d'arboriculture fruitière et viticulture - Master I",
+      "resume": "Support de cours de Master I de 41 pages de l'Université de Sétif couvrant les principes de l'arboriculture fruitière : morphologie, phénologie, techniques de taille et protection contre les bioagresseurs.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non libre de droits, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Support pédagogique de la matière Arboriculture Fruitière et Viticulture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00679",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "porcins",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "porc",
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Fédération Régionale des Agriculteurs Biologiques de Midi-Pyrénées (FRAB)",
+      "source_organisation": "FRAB Midi-Pyrénées",
+      "mots_cles": [
+        "elevage porcin",
+        "porc bio",
+        "agriculture biologique",
+        "alimentation animale",
+        "france"
+      ],
+      "titre_trouve": "Quelques clés pour réussir son élevage porcin en AB",
+      "titre": "Quelques clés pour réussir son élevage porcin en agriculture biologique",
+      "resume": "Dossier technique de 16 pages de la FRAB Midi-Pyrénées sur l'élevage porcin biologique : normes européennes de conversion, aménagement des bâtiments, parcours et formulation des rations alimentaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique porcin calqué sur le cahier des charges européen et le contexte tempéré français, de pertinence marginale pour l'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Quelques clés pour réussir son élevage porcin en AB"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00680",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2012,
+      "auteurs": "Éditions du Point Vétérinaire",
+      "source_organisation": "Éditions du Point Vétérinaire",
+      "mots_cles": [
+        "poule pondeuse",
+        "constantes biologiques",
+        "biochimie sanguine",
+        "hematologie",
+        "medecine veterinaire"
+      ],
+      "titre_trouve": "POULE PONDEUSE Animaux de rente",
+      "titre": "Fiche mémo vétérinaire - Poule pondeuse",
+      "resume": "Fiche mémo de 2 pages éditée par Le Point Vétérinaire résumant les constantes biologiques, la biochimie sanguine, l'hématologie et les normes d'élevage de la poule pondeuse.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique protégée par le droit d'auteur des Éditions du Point Vétérinaire (reproduction interdite), archivée sans publication.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "Toute reproduction même partielle est interdite sans autorisation préalable des Editions du Point Vétérinaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00681",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2014,
+      "auteurs": "Aviagen",
+      "source_organisation": "Aviagen",
+      "mots_cles": [
+        "poulet de chair",
+        "ross 308",
+        "aviagen",
+        "performances zootechniques",
+        "indice de consommation",
+        "alimentation"
+      ],
+      "titre_trouve": "NORMES ET VALEURS NOMINALES POUR LE POULET DE CHAIR ROSS 308",
+      "titre": "Normes et valeurs de performance du poulet de chair Ross 308",
+      "resume": "Guide technique de référence d'Aviagen présentant les tables officielles de performances zootechniques pour la souche Ross 308 : courbes de croissance, consommation d'aliment et indices de conversion.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Document technique de référence mondiale du sélectionneur Aviagen, indispensable pour le suivi des élevages de poulets de chair Ross 308.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "NORMES ET VALEURS NOMINALES POUR LE POULET DE CHAIR ROSS 308"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00682",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation",
+        "production_vegetale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "infiltration",
+        "reserve utile",
+        "sol",
+        "capacite de retention",
+        "point de fletrissement",
+        "irrigation"
+      ],
+      "titre_trouve": "Infiltration et la réserve utile d'un sol",
+      "titre": "Calcul de l'infiltration et de la réserve utile d'un sol",
+      "resume": "Fiche pratique détaillant les formules et exemples de calcul du taux d'infiltration et de la réserve utile (RU) en eau du sol selon la texture (argileuse, limoneuse, sableuse).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche de calcul technique informelle sans mention de source ni licence de diffusion, archivée en l'état.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Infiltration et la réserve utile d'un sol"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00683",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "production vegetale",
+        "cours",
+        "agronomie",
+        "scan"
+      ],
+      "titre_trouve": null,
+      "titre": "Notes de cours - Production végétale",
+      "resume": "Document numérisé de 19 pages de notes de cours en production végétale sans texte extractible, scanné avec CamScanner. Nécessite un OCR complet.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné avec CamScanner sans texte exploitable (seule mention de filigrane), nécessitant un OCR et une validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Production végétale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00684",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Bernard Legube",
+      "source_organisation": "Dunod",
+      "mots_cles": [
+        "eau potable",
+        "traitement de l'eau",
+        "filtration",
+        "desinfection",
+        "dunod",
+        "genie des procedes"
+      ],
+      "titre_trouve": "PRODUCTION D'EAU POTABLE Filières et procédés de traitement",
+      "titre": "Production d'eau potable - Filières et procédés de traitement",
+      "resume": "Ouvrage de référence universitaire de 432 pages publié chez Dunod détaillant l'ensemble des filières physico-chimiques et biologiques de traitement et de potabilisation des eaux.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous copyright strict des éditions Dunod (reproduction interdite), archivé sans diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.99,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "toute reproduction, partielle ou totale, de la présente publication est interdite sans autorisation de l'auteur, de son éditeur"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00685",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Ricardo Kaniama",
+      "source_organisation": "Vision La Chèvre",
+      "mots_cles": [
+        "developpement personnel",
+        "finances personnelles",
+        "coaching",
+        "motivation"
+      ],
+      "titre_trouve": "PROJET VISION LA CHEVRE…",
+      "titre": "Programme Vision La Chèvre - Éradication de la pauvreté mentale",
+      "resume": "Plaquette promotionnelle de 10 pages d'un programme de coaching financier et de développement personnel fondé par Ricardo Kaniama, sans rapport avec l'élevage caprin.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de coaching et de développement personnel sans lien avec l'agriculture ou l'élevage caprin, exclu du périmètre Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 3,
+          "extrait": "Le Programme Mondial D’Éradication de La Pauvreté Mentale dit Vision La Chèvre est initié par une personne extraordinaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00686",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": null,
+      "auteurs": "Tasséré Ouédraogo",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "pondeuses",
+        "aviculture",
+        "business plan",
+        "gestion d'exploitation",
+        "burkina faso",
+        "rentabilite"
+      ],
+      "titre_trouve": null,
+      "titre": "Modèle de simulation technico-économique - Bande de pondeuses",
+      "resume": "Outil tableur de gestion technico-économique pour élevage de poules pondeuses au Burkina Faso : dimensionnement financier (1000 et 650 poussins), coûts alimentaires, seuil de ponte et trésorerie.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Tableur modèle technico-économique pertinent mais sans licence de diffusion explicite, à valider avant mise à disposition.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.6,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "Prix moyen/poule prete à la ponte"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00687",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "Albert Compaoré",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "prophylaxie",
+        "aviculture",
+        "moringa",
+        "neem",
+        "sante animale",
+        "burkina faso"
+      ],
+      "titre_trouve": "Guide Graduit",
+      "titre": "Guide de prophylaxie avicole du jour 1 au jour 90",
+      "resume": "Guide pratique de 17 pages élaboré par Albert Compaoré au Burkina Faso présentant un protocole de prophylaxie avicole sur 90 jours à base de moringa et de neem.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide distribué gratuitement mais contenant des encarts promotionnels et nécessitant un OCR complet pour valider les posologies vétérinaires.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.6,
+        "completude": 0.7
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide Graduit"
+        }
+      ]
+    }
+  ]
+}

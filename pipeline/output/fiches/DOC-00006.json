@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00006",
+  "sha256": "c184142f9aedf5e374a5e0887b31b9952a21caf7c85a95cbdd65ae70124a6ab5",
+  "nom_original": "Document_94982.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/Document_94982.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 1610595,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 36,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2020,
+  "auteurs": "Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec (MAPAQ)",
+  "source_organisation": "Gouvernement du Québec",
+  "mots_cles": [
+    "plan d'affaires",
+    "demarrage entreprise agricole",
+    "quebec",
+    "financement agricole",
+    "gestion"
+  ],
+  "titre_trouve": "GUIDE DE RÉDACTION D’UN PLAN D’AFFAIRES POUR LE DÉMARRAGE D’UNE ENTREPRISE AGRICOLE",
+  "titre": "Guide de rédaction d'un plan d'affaires agricole",
+  "resume": "Guide méthodologique officiel québécois détaillant la structuration et la rédaction des différentes sections d'un plan d'affaires pour créer une entreprise agricole.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Non-respect de la règle d'éligibilité : un document ayant une pertinence de 1 ne peut pas être diffusé (règle stricte pertinence >= 2 pour public ou membres). Avec le drapeau contexte_non_adapte (Québec), il doit être archivé (non_publie_archive).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DE RÉDACTION D’UN PLAN D’AFFAIRES POUR LE DÉMARRAGE D’UNE ENTREPRISE AGRICOLE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 3,
+      "extrait": "Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec"
+    },
+    {
+      "champ": "autre",
+      "page": 35,
+      "extrait": "© Gouvernement du Québec | Mise à jour janvier 2020 ISBN 978-2-550-77881-3 (PDF)"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Non-respect de la règle d'éligibilité : un document ayant une pertinence de 1 ne peut pas être diffusé (règle stricte pertinence >= 2 pour public ou membres). Avec le drapeau contexte_non_adapte (Québec), il doit être archivé (non_publie_archive)."
+  },
+  "nom_fichier_final": "DOC-00006__guide-de-redaction-d-un-plan-d-affaires-agricole.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00006__guide-de-redaction-d-un-plan-d-affaires-agricole.pdf"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00099",
+  "sha256": "1c4cd42c3cc4181b924121a0e783fd435c8e0ee7efa4349a45a0ac906377ee93",
+  "nom_original": "1extra-clarias (1).pdf",
+  "chemin_relatif_source": "OD_Docs/1extra-clarias (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2781866,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "droits_reserves"
+  ],
+  "nb_pages": 44,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "clarias",
+  "pays": "Côte d'Ivoire",
+  "annee": 2023,
+  "auteurs": "Konan Koffi Bertin",
+  "source_organisation": "Auteur indépendant",
+  "mots_cles": [
+    "clarias",
+    "pisciculture hors-sol",
+    "poisson-chat",
+    "cote d'ivoire",
+    "bac hors-sol",
+    "elevage de poisson"
+  ],
+  "titre_trouve": "LE CLARIAS : UNE ESPÈCE IDÉALE POUR LA PISCICULTURE EN BAC HORS-SOL (BHS)",
+  "titre": "Guide de la pisciculture du Clarias en bacs hors-sol",
+  "resume": "Guide pratique sur l'élevage du poisson-chat (Clarias gariepinus) en bacs hors-sol : conception des bacs, gestion de l'eau, alimentation, prophylaxie et rentabilité économique.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage pratique à vocation commerciale payante (2000 FCFA) vendu sous droits réservés par l'auteur sans licence de diffusion libre.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "LE CLARIAS : UNE ESPÈCE IDÉALE POUR LA PISCICULTURE EN BAC HORS-SOL (BHS)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00099__guide-de-la-pisciculture-du-clarias-en-bacs-hors-sol.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00099__guide-de-la-pisciculture-du-clarias-en-bacs-hors-sol.pdf"
+}

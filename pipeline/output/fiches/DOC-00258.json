@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00258",
+  "sha256": "86d01c2719774010d026ca2013b1445f2ce7eb17b3b95467501dccdc09ca5770",
+  "nom_original": "Bonnes pratiques agricoles pour le maïs.pdf",
+  "chemin_relatif_source": "OD_Docs/Bonnes pratiques agricoles pour le maïs.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 350126,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479272561-Bonnes_pratiques_agricoles_pour_le_ma_s.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maïs",
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Julika Stauber",
+  "source_organisation": "Access Agriculture",
+  "mots_cles": [
+    "mais",
+    "bonnes pratiques agricoles",
+    "fertilisation",
+    "semis",
+    "post-recolte"
+  ],
+  "titre_trouve": "Maïs - Bonnes pratiques agricoles",
+  "titre": "Guide des bonnes pratiques agricoles pour la culture du maïs",
+  "resume": "Guide pas à pas de vulgarisation décrivant les étapes clés de la production de maïs : choix du terrain, semis, fertilisation, désherbage et stockage sécurisé.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet de vulgarisation parfaitement ciblé pour les producteurs de maïs d'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Maïs - Bonnes pratiques agricoles"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Julika Stauber"
+    },
+    {
+      "champ": "autre",
+      "page": 6,
+      "extrait": "Avec des sémences et des intrants de qualité ainsi que les bonnes pratiques agricoles, nous avons récolté 3500 kg de maïs sur un hectare."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00258__guide-des-bonnes-pratiques-agricoles-pour-la-culture-du.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00258__guide-des-bonnes-pratiques-agricoles-pour-la-culture-du.pdf"
+}

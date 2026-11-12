@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00948",
+  "sha256": "b723de32ecf346941460a79b1e7be4e15312be66a461755e7f36084660eea521",
+  "nom_original": "guideorge1114.pdf",
+  "chemin_relatif_source": "OD_Docs/guideorge1114.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8499005,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 64,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "multilingue",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "céréales",
+  "pays": null,
+  "annee": 2014,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "orge",
+    "ble",
+    "cereales",
+    "guide technique",
+    "maghreb",
+    "arabe-francais"
+  ],
+  "titre_trouve": "Guide Blés Orge AR et FR",
+  "titre": "Guide technique de culture des blés et de l'orge",
+  "resume": "Guide technique bilingue (français et arabe) consacré à la conduite agronomique du blé et de l'orge, scanné sans couche texte exploitable (OCR requis).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide technique bilingue scanné sans texte numérique exploitable; traitement OCR et vérification des droits requis.",
+  "confiance": {
+    "classification": 0.8,
+    "droits": 0.45,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide Blés Orge AR et FR (sommaire PDF)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00948__guide-technique-de-culture-des-bles-et-de-l-orge.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00948__guide-technique-de-culture-des-bles-et-de-l-orge.pdf"
+}

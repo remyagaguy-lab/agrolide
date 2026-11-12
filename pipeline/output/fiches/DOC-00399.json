@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00399",
+  "sha256": "0314315aebf58fa37acb73061f2f8a2029a641715e41489559244872deaad29b",
+  "nom_original": "Exercicedose_et_frequence_d_irrigation_XXXXX_converti_2.pdf",
+  "chemin_relatif_source": "OD_Docs/Exercicedose_et_frequence_d_irrigation_XXXXX_converti_2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 107020,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "orge",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "dose d'irrigation",
+    "frequence d'irrigation",
+    "rfu",
+    "capacite au champ",
+    "calcul d'arrosage"
+  ],
+  "titre_trouve": "Exercice : Dose et fréquence d'irrigation",
+  "titre": "Exercice corrigé : Calcul de la dose nette et de la fréquence d'irrigation",
+  "resume": "Exercice pratique corrigé de calcul agronomique de la réserve facilement utilisable (RFU), de la dose nette d'arrosage et de la fréquence d'irrigation pour une parcelle cultivée.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Exercice d'application académique sans mention d'éditeur ni licence de diffusion ouverte, archivé pour formation.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.75,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Quelle est la dose nette d’arrosage a apporte ? Quelle est la frequence d’irrigation ?"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00399__exercice-corrige-calcul-de-la-dose-nette-et-de-la-frequ.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00399__exercice-corrige-calcul-de-la-dose-nette-et-de-la-frequ.pdf"
+}

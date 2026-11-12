@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00449",
+  "sha256": "e65c5fb07ea2e0b8197addee4ba698b86e31746abcfb75c1976698b4648a97f7",
+  "nom_original": "Fiche_technique_NIEBE-Teek-songo_Burkina+Faso.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche_technique_NIEBE-Teek-songo_Burkina+Faso.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 374491,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "niébé",
+  "pays": "Burkina Faso",
+  "annee": 2022,
+  "auteurs": "Ferdinand Obulbiga",
+  "source_organisation": "INERA Burkina Faso",
+  "mots_cles": [
+    "niebe",
+    "teek-songo",
+    "variete amelioree",
+    "striga",
+    "inera",
+    "burkina faso",
+    "semences"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE SIMPLIFIEE VARIETE DE NIEBE (Vigna unguiculata) Nom: TEEK-SONGO",
+  "titre": "Fiche technique : Variété améliorée de niébé TEEK-SONGO",
+  "resume": "Fiche technique simplifiée de l'INERA présentant la variété de niébé Teek-songo au Burkina Faso : caractéristiques agronomiques, résistance au Striga et aux virus, itinéraire technique et conservation en sacs PICS.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle de l'INERA présentant une variété améliorée de niébé résistante aux bioagresseurs au Burkina Faso.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE SIMPLIFIEE VARIETE DE NIEBE (Vigna unguiculata) Nom: TEEK-SONGO"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00449__fiche-technique-variete-amelioree-de-niebe-teek-songo.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00449__fiche-technique-variete-amelioree-de-niebe-teek-songo.pdf"
+}

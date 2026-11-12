@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00279",
+  "sha256": "67b9c78e5f3e1c19ad4b069339c8eea576797fe9a505c7996c6a16bff337ec55",
+  "nom_original": "Carnet_de_gestion_des_exploitations_agricoles_révisé_de_janvier.pdf",
+  "chemin_relatif_source": "OD_Docs/Carnet_de_gestion_des_exploitations_agricoles_révisé_de_janvier.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2242303,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 47,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_exploitation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2012,
+  "auteurs": "Pierre Rebuffel",
+  "source_organisation": "CIRAD",
+  "mots_cles": [
+    "carnet de gestion",
+    "gestion d'exploitation",
+    "conseil de gestion",
+    "charges d'exploitation",
+    "comptabilite agricole"
+  ],
+  "titre_trouve": "CARNET DE GESTION DES EXPLOITATIONS AGRICOLES",
+  "titre": "Carnet de gestion des exploitations agricoles (version révisée 2012)",
+  "resume": "Outil pratique et standardisé de suivi technico-économique des exploitations agricoles familiales : structure de l'exploitation, main d'œuvre, intrants, inventaire du cheptel et calcul des résultats.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Outil opérationnel complet d'aide à la gestion des exploitations agricoles paysannes, diffusable auprès des techniciens et producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CARNET DE GESTION DES EXPLOITATIONS AGRICOLES"
+    },
+    {
+      "champ": "annee",
+      "page": 1,
+      "extrait": "Carnet de gestion des exploitations agricoles révisé en janvier 2012"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00279__carnet-de-gestion-des-exploitations-agricoles-version-r.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_exploitation/DOC-00279__carnet-de-gestion-des-exploitations-agricoles-version-r.pdf"
+}

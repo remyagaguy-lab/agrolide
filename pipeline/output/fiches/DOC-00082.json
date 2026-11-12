@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00082",
+  "sha256": "18f74c3152b019261b204856f6c828772d8656b406fcc2559f8bea3b11421d76",
+  "nom_original": "12_appln_azote.pdf",
+  "chemin_relatif_source": "OD_Docs/12_appln_azote.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 997725,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "maïs",
+  "pays": null,
+  "annee": 2012,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "mais",
+    "azote",
+    "fertilisation",
+    "ammoniac anhydre",
+    "stabilisateurs"
+  ],
+  "titre_trouve": "Satisfaire les besoins en azote du maïs",
+  "titre": "Satisfaire les besoins en azote du maïs : stratégies d'application et stabilisateurs",
+  "resume": "Fiche technique de 2 pages présentant le fractionnement des apports azotés sur maïs et l'utilisation de stabilisateurs d'azote en grandes cultures intensives d'Amérique du Nord.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document technique anonyme sur l'ammoniac anhydre et les additifs chimiques en climat tempéré, droits indéterminés et non adapté à l'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Satisfaire les besoins en azote du maïs"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00082__satisfaire-les-besoins-en-azote-du-mais-strategies-d-ap.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00082__satisfaire-les-besoins-en-azote-du-mais-strategies-d-ap.pdf"
+}

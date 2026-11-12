@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00418",
+  "sha256": "30bf06a6e0f0a992bf0f93215f2a8d5a013ad8490567472b2053dce43336732e",
+  "nom_original": "FT_Aubergine_CRADosso_V1.pdf",
+  "chemin_relatif_source": "OD_Docs/FT_Aubergine_CRADosso_V1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 403485,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aubergine",
+  "pays": "Niger",
+  "annee": 2015,
+  "auteurs": "Chambre Régionale d'Agriculture de Dosso",
+  "source_organisation": "CRA Dosso / RECA Niger",
+  "mots_cles": [
+    "aubergine",
+    "cultures maraicheres",
+    "dosso",
+    "niger",
+    "reca",
+    "fiche technique",
+    "maraichage sahelien"
+  ],
+  "titre_trouve": "Fiche technique pour la culture de l’aubergine",
+  "titre": "Fiche technique pour la culture de l'aubergine au Niger",
+  "resume": "Fiche technique de terrain de la CRA Dosso pour la culture de l'aubergine au Sahel, détaillant les variétés, la pépinière, la fertilisation et la lutte contre les ravageurs.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique de vulgarisation agricole produite par une Chambre d'Agriculture publique sahélienne (CRA Dosso), libre de diffusion.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chambre Régionale d’Agriculture de Dosso Fiche technique pour la culture de l’aubergine Version (1) du 13 novembre 2015"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00418__fiche-technique-pour-la-culture-de-l-aubergine-au-niger.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00418__fiche-technique-pour-la-culture-de-l-aubergine-au-niger.pdf"
+}

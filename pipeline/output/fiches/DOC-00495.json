@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00495",
+  "sha256": "c127543b89328cf0d31f6a2adba8199485d1cd398cbe4509674b3907a10f407a",
+  "nom_original": "HARICOT.pdf",
+  "chemin_relatif_source": "OD_Docs/HARICOT.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 978928,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "haricot",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "haricot",
+    "phaseolus vulgaris",
+    "legumineuses",
+    "cameroun",
+    "fiche technique",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU HARICOT (Phaseolus vulgaris)",
+  "titre": "Technologie de production du haricot (Phaseolus vulgaris)",
+  "resume": "Fiche technique opérationnelle de l'IFATI Cameroun décrivant l'itinéraire technique complet de la culture du haricot (Phaseolus vulgaris) : variétés, exigences agronomiques, semis, protection et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique de vulgarisation complète et immédiatement applicable par les producteurs maraîchers et vivriers.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ... TECHNOLOGIE DE PRODUCTION DU HARICOT (Phaseolus vulgaris)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00495__technologie-de-production-du-haricot-phaseolus-vulgaris.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00495__technologie-de-production-du-haricot-phaseolus-vulgaris.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00649",
+  "sha256": "b512b318a5a041efe0be3653500b951e1b7bc1ff0d9fa68bc681a9ad354caeca",
+  "nom_original": "POIS CAJAN.pdf",
+  "chemin_relatif_source": "OD_Docs/POIS CAJAN.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1131605,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pois cajan",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "pois cajan",
+    "cajanus cajan",
+    "legumineuse",
+    "pois d'angole",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "TEHNOLOGIE DE PRODUCTION DU POIS CAJAN",
+  "titre": "Fiche technique : Technologie de production du pois cajan (Cajanus cajan)",
+  "resume": "Fiche technique de l'IFATI sur la culture du pois cajan en Afrique subsaharienne : exigences pédoclimatiques, semis, fertilisation, entretien, battage et conservation des grains.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique complète de l'IFATI pour la production d'une légumineuse vivrière et fertilisante essentielle pour l'Afrique tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TEHNOLOGIE DE PRODUCTION DU POIS CAJAN"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00649__fiche-technique-technologie-de-production-du-pois-cajan.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00649__fiche-technique-technologie-de-production-du-pois-cajan.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00342",
+  "sha256": "3a4b603e7a33f5ad7d366eb3158483ae5c9662374bd4584eca2119f5ab236863",
+  "nom_original": "Demi_lune_2024.pdf",
+  "chemin_relatif_source": "OD_Docs/Demi_lune_2024.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 656754,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2024,
+  "auteurs": "Savoirs de paysans",
+  "source_organisation": "Terre des Jeunes / INERA",
+  "mots_cles": [
+    "demi-lune",
+    "conservation des eaux et sols",
+    "sols degrades",
+    "lutte contre la desertification",
+    "burkina faso",
+    "sahel"
+  ],
+  "titre_trouve": "Fiche La demi-lune améliorée - Savoirs de paysans",
+  "titre": "La demi-lune améliorée : récupération des terres dégradées au Sahel",
+  "resume": "Fiche technique décrivant la méthode sahélienne de la demi-lune améliorée pour restaurer les sols encroûtés : excavation, apport de matière organique, piégeage des eaux de pluie et réhabilitation agricole au Burkina Faso.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique terrain de premier plan pour les zones semi-arides sahéliennes, issue d'un programme d'appui paysan et libre de diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche La demi-lune améliorée - Savoirs de paysans"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "Localisation Burkina Faso Contexte d’apparition Technique apparue chez en milieu paysan africain"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00342__la-demi-lune-amelioree-recuperation-des-terres-degradee.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00342__la-demi-lune-amelioree-recuperation-des-terres-degradee.pdf"
+}

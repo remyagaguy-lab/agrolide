@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00701",
+  "sha256": "6944ea3de812534dac0bef0bf73f698e812eea4a1c9c44c536a1f27dbf9e0d14",
+  "nom_original": "RTE-Oignon-definitif-2.pdf",
+  "chemin_relatif_source": "OD_Docs/RTE-Oignon-definitif-2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 13632295,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 56,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "oignon",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Armel C. Goudjo Mensah, Rachidatou Sikirou, Françoise Assogba Komlan, B. Barthélémy Yarou, Soul-Kifouly G. Midingoyi, Judith Honfoga, Marie Epiphane E. A. Dossoumou, Nathalie G. Kpera, Alice A. K. Djinadou",
+  "source_organisation": "INRAB / PADMAR / MAEP Bénin",
+  "mots_cles": [
+    "oignon",
+    "allium cepa",
+    "maraichage",
+    "referentiel technico-economique",
+    "inrab",
+    "padmar",
+    "benin"
+  ],
+  "titre_trouve": "MIEUX PRODUIRE L’OIGNON AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)",
+  "titre": "Mieux produire l'oignon au Bénin : référentiel technico-économique",
+  "resume": "Guide technique et économique de référence de l'INRAB détaillant les techniques culturales, la protection phytosanitaire et la rentabilité de l'oignon au Bénin.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Référentiel technico-économique institutionnel complet de l'INRAB pour la filière oignon, publiable en libre accès pour les producteurs et techniciens.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "MIEUX PRODUIRE L’OIGNON AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00701__mieux-produire-l-oignon-au-benin-referentiel-technico-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00701__mieux-produire-l-oignon-au-benin-referentiel-technico-e.pdf"
+}

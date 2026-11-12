@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01041",
+  "sha256": "a64af736135b1fac95b9142edd73f277eed225f33cc62c041d90150c1832ec8b",
+  "nom_original": "signe et traitement bio.pdf",
+  "chemin_relatif_source": "OD_Docs/signe et traitement bio.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 263478,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "volaille",
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "Zi'Grazio Ouédraogo",
+  "source_organisation": "Élevage Bio En Moi",
+  "mots_cles": [
+    "sante aviaire",
+    "phytotherapie",
+    "maladies des volailles",
+    "aviculture bio",
+    "burkina faso"
+  ],
+  "titre_trouve": "Tableau de maladies-signes-traitement bio",
+  "titre": "Tableau des maladies aviaires, symptômes et traitements biologiques en Afrique",
+  "resume": "Guide pratique sous forme de tableau synoptique associant les pathologies avicoles courantes (variole, coryza, Marek, Newcastle, coccidiose) à des traitements naturels à base de plantes locales.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document pratique informel rédigé par un formateur individuel (Formation EBEM - Zi'Grazio Ouedraogo) sans rattachement institutionnel. Le statut de droits est 'inconnu' (et non 'diffusion_institutionnelle'). Les recettes et allégations thérapeutiques avicoles artisanales nécessitent une validation v",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Tableau de maladies-signes-traitement bio"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Ce livret vous est proposé par OUEDRAOGO Zi’Grazio dans le but de faciliter l’apprentissage."
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Document pratique informel rédigé par un formateur individuel (Formation EBEM - Zi'Grazio Ouedraogo) sans rattachement institutionnel. Le statut de droits est 'inconnu' (et non 'diffusion_institutionnelle'). Les recettes et allégations thérapeutiques avicoles artisanales nécessitent une validation vétérinaire préalable."
+  },
+  "nom_fichier_final": "DOC-01041__tableau-des-maladies-aviaires-symptomes-et-traitements.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-01041__tableau-des-maladies-aviaires-symptomes-et-traitements.pdf"
+}

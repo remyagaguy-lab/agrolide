@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00774",
+  "sha256": "d49a8066de08ff93a540976bbbbe41780ed91920b771066a3217621a0f97bba7",
+  "nom_original": "_Agronomie_et_agriculture,_essai_d_analyse_des_tâches_de_l_agronome (2).pdf",
+  "chemin_relatif_source": "OD_Docs/_Agronomie_et_agriculture,_essai_d_analyse_des_tâches_de_l_agronome (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2735614,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480130800-_Agronomie_et_agriculture__essai_d_analyse_des_t_ches_de_l_agronome__2_.pdf",
+  "nb_telechargements_existant": 4,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 23,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "methodologie_recherche",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 1974,
+  "auteurs": "Michel Sébillotte",
+  "source_organisation": "ORSTOM / INA Paris-Grignon",
+  "mots_cles": [
+    "agronomie",
+    "methodologie agronomique",
+    "sebillotte",
+    "epistemologie",
+    "orstom",
+    "diagnostic de l'agronome"
+  ],
+  "titre_trouve": "Agronomie et agriculture. Essai d’analyse des tâches de l’agronome",
+  "titre": "Agronomie et agriculture : Essai d'analyse des tâches de l'agronome",
+  "resume": "Article fondateur de Michel Sébillotte définissant l'agronomie comme discipline scientifique, ses démarches théoriques, le diagnostic et ses liens avec les pratiques agricoles.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique historique de référence de l'ORSTOM/IRD, accessible aux membres pour la formation méthodologique agronomique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agronomie et agriculture. Essai d’analyse des tâches de l’agronome Michel SEBILLOTTE Maître de Conférences Institut National Agronomique Paris-Grignon"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00774__agronomie-et-agriculture-essai-d-analyse-des-taches-de.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/methodologie_recherche/DOC-00774__agronomie-et-agriculture-essai-d-analyse-des-taches-de.pdf"
+}

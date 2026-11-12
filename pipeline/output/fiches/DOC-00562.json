@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00562",
+  "sha256": "0df926a10e74dd1978706b532a29a0be2a184c2a977795b5bf1d1245affb579b",
+  "nom_original": "Les plantes contre la fatigue - Kurt Hostettmann.pdf",
+  "chemin_relatif_source": "OD_Docs/Les plantes contre la fatigue - Kurt Hostettmann.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 32106972,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 206,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "plantes médicinales",
+  "pays": "Suisse",
+  "annee": 2025,
+  "auteurs": "Kurt Hostettmann, Bernadette Biloa Messi",
+  "source_organisation": "Éditions Favre",
+  "mots_cles": [
+    "plantes medicinales",
+    "phytotherapie",
+    "guarana",
+    "cafeine",
+    "fatigue",
+    "plantes toniques"
+  ],
+  "titre_trouve": "Les plantes contre la fatigue",
+  "titre": "Les plantes contre la fatigue : pour mieux récupérer et renforcer le système immunitaire",
+  "resume": "Guide de phytothérapie décrivant les propriétés médicinales des plantes toniques, stimulantes et adaptogènes contre l'asthénie et pour le soutien de l'immunité.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial des Éditions Favre soumis à copyright intégral, archivé pour valorisation interne sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 5,
+      "extrait": "Dr Kurt Hostettmann ... POUR MIEUX RÉCUPÉRER APRÈS L’EFFORT COMBATTRE L’ÉPUISEMENT"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© 2025, Éditions Favre SA, Lausanne, Suisse ... Tous droits réservés pour tous pays."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00562__les-plantes-contre-la-fatigue-pour-mieux-recuperer-et-r.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00562__les-plantes-contre-la-fatigue-pour-mieux-recuperer-et-r.pdf"
+}

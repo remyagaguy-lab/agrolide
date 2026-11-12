@@ -1,0 +1,82 @@
+{
+  "id": "DOC-00013",
+  "sha256": "b5b5c3fbcd23f71829da29581f25a8b422cf94430f812c5ff814449a56e25763",
+  "nom_original": "Trouver_une_idee_dentreprise_agricole_de_rêve_.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/Trouver_une_idee_dentreprise_agricole_de_rêve_.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 312704,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Bénin",
+  "annee": 2020,
+  "auteurs": "Nafoureh Ashley Ahandessi",
+  "source_organisation": "Smartmind Entrepreneur / ADR-Coaching",
+  "mots_cles": [
+    "idee d'entreprise",
+    "coaching agricole",
+    "clientele cible",
+    "agrobusiness",
+    "benin"
+  ],
+  "titre_trouve": "ETAPE 1 : REUSSIR A TROUVER SON IDEE GAGNANTE",
+  "titre": "Trouver son idée gagnante d'entreprise agricole",
+  "resume": "Fiche d'accompagnement entrepreneurial guidant le futur promoteur agricole pour identifier une opportunité rentable, formaliser son idée et définir son avatar client.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de coaching propriétaire protégé par copyright d'un cabinet privé de conseil sans licence ouverte.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ETAPE 1 : REUSSIR A TROUVER SON IDEE GAGNANTE - CONSTRUIRE UNE ENTREPRISE AGRICOLE DE REVE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Nafoureh Ashley AHANDESSI"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "© SMARTMIND ENTREPRENEUR | Nafoureh Ashley AHANDESSI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00013__trouver-son-idee-gagnante-d-entreprise-agricole.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00013__trouver-son-idee-gagnante-d-entreprise-agricole.pdf"
+}

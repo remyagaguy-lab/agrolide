@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00329",
+  "sha256": "fe715d5f1cec8d17c65fb357e5ee17b35ca5c44dcdf612448db7ead343d74037",
+  "nom_original": "Cultiver le maïs en Afrique.pdf",
+  "chemin_relatif_source": "OD_Docs/Cultiver le maïs en Afrique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1589069,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 32,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maïs",
+  "pays": "Cameroun",
+  "annee": 2012,
+  "auteurs": "Maybelline Escalante-Ten Hoopen, Abdou Maïga",
+  "source_organisation": "CTA / ISF Cameroun",
+  "mots_cles": [
+    "mais",
+    "itineraire technique",
+    "stockage",
+    "transformation",
+    "pro-agro"
+  ],
+  "titre_trouve": "Production et transformation du maïs",
+  "titre": "Production et transformation du maïs (Guide Pro-Agro)",
+  "resume": "Guide pratique de la collection Pro-Agro exposant l'itinéraire technique complet du maïs en Afrique subsaharienne, de la préparation du sol à la transformation post-récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de référence publié par le CTA et ISF pour la vulgarisation auprès des producteurs africains.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Production et transformation du maïs COLLECTION PRO-AGRO Maybelline Escalante-Ten Hoopen & Abdou Maïga"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00329__production-et-transformation-du-mais-guide-pro-agro.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00329__production-et-transformation-du-mais-guide-pro-agro.pdf"
+}

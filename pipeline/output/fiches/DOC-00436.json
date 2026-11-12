@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00436",
+  "sha256": "e0cbfc6036ad91b893cb4bffafb9d1c6c3d069b37c6d3455e9690841fc430356",
+  "nom_original": "Fiche-technique-Ble-tendre_BDG_2019_VF2.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche-technique-Ble-tendre_BDG_2019_VF2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3637391,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "blé",
+  "pays": "France",
+  "annee": 2019,
+  "auteurs": "Anne Perrein",
+  "source_organisation": "Les Bios du Gers",
+  "mots_cles": [
+    "ble tendre",
+    "agriculture biologique",
+    "rotation",
+    "itineraire technique",
+    "desherbage mecanique"
+  ],
+  "titre_trouve": "Fiche-technique-Ble-tendre",
+  "titre": "Fiche technique : Conduite du blé tendre en agriculture biologique",
+  "resume": "Fiche technique détaillée sur la culture du blé tendre bio : place dans la rotation, préparation du sol, gestion des adventices sans chimie, fertilisation et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Pertinence de 1 incompatible avec le statut 'membres' (pertinence >= 2 requise). Fiche sur le blé en France (Gers), contexte non adapté, doit être classée en non_publie_archive.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 9,
+      "extrait": "Fiche « Préserver ses stocks de céréales des charançons » - Les Bios du Gers"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Anne PERREIN"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Pertinence de 1 incompatible avec le statut 'membres' (pertinence >= 2 requise). Fiche sur le blé en France (Gers), contexte non adapté, doit être classée en non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00436__fiche-technique-conduite-du-ble-tendre-en-agriculture-b.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00436__fiche-technique-conduite-du-ble-tendre-en-agriculture-b.pdf"
+}

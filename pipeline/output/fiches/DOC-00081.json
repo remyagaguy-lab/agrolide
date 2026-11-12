@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00081",
+  "sha256": "01dc5ca3c09752bd54d79405a5e1bbaeb33e470acfd5a0c3462e5a4f7b1cf34a",
+  "nom_original": "1297_PDF_1.pdf",
+  "chemin_relatif_source": "OD_Docs/1297_PDF_1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1146774,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476169357-1297_PDF_1.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 106,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "tomate",
+  "pays": null,
+  "annee": 2005,
+  "auteurs": "Shankara Naika, Joep van Lidt de Jeude, Marja de Goffau, Martin Hilmi, Barbara van Dam",
+  "source_organisation": "CTA / Fondation Agromisa",
+  "mots_cles": [
+    "tomate",
+    "culture maraichere",
+    "agrodok",
+    "protection phytosanitaire",
+    "transformation"
+  ],
+  "titre_trouve": "Agrodok 17 - La culture des tomates : production, transformation et commercialisation",
+  "titre": "La culture des tomates : production, transformation et commercialisation (Agrodok 17)",
+  "resume": "Guide pratique complet de la collection Agrodok couvrant la pépinière, la plantation, la lutte antiparasitaire, la récolte, la transformation artisanale et la vente de tomates en milieu tropical.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique Agrodok complet coédité par le CTA et Agromisa pour le développement agricole tropical, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 17 - La culture des tomates : production, transformation et commercialisation"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0006",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00081__la-culture-des-tomates-production-transformation-et-com.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00081__la-culture-des-tomates-production-transformation-et-com.pdf"
+}

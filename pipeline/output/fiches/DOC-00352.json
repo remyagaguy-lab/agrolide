@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00352",
+  "sha256": "673426f79aa33e15cf3b66071f18daa51448a9f74c064c3a2a539c81c8ae3b63",
+  "nom_original": "Document_N01017 (2).pdf",
+  "chemin_relatif_source": "OD_Docs/Document_N01017 (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 21685,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "gingembre",
+  "pays": "Madagascar",
+  "annee": 2010,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "gingembre",
+    "curcuma",
+    "zingiber officinale",
+    "epice",
+    "culture",
+    "madagascar",
+    "fiche technique"
+  ],
+  "titre_trouve": "LE GINGEMBRE - LE CURCUMA",
+  "titre": "Fiche technique de culture : Le gingembre et le curcuma",
+  "resume": "Fiche technique décrivant les exigences écologiques, les techniques culturales et la protection phytosanitaire du gingembre et du curcuma en zone tropicale (Madagascar).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle pratique sur la culture du gingembre et du curcuma adaptée aux producteurs et techniciens tropicaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE GINGEMBRE - LE CURCUMA Famille : Zingiberacée Nom latin : Zingiber officinale"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "Nom malgache : Sakamalaho, Sakay tany, Sakarivo"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0024",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00352__fiche-technique-de-culture-le-gingembre-et-le-curcuma.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00352__fiche-technique-de-culture-le-gingembre-et-le-curcuma.pdf"
+}

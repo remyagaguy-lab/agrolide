@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00890",
+  "sha256": "173d095bc7053e3fe6f34b1423572cbe5aad86b0229e75739e740628e0a30d40",
+  "nom_original": "elevage_familial_lapin.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage_familial_lapin.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 162286,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 42,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "petit élevage",
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "lapin",
+    "cuniculture",
+    "milieu rural",
+    "clapiers",
+    "alimentation",
+    "reproduction"
+  ],
+  "titre_trouve": "L'élevage familial du lapin en milieu rural africain",
+  "titre": "L'élevage familial du lapin en milieu rural africain",
+  "resume": "Guide pratique illustré détaillant la cuniculture villageoise en Afrique : choix des reproducteurs, construction de clapiers en matériaux locaux, rationnement et santé du cheptel.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide technique complet et hautement pertinent pour le milieu rural africain ; validation humaine requise sur l'organisme émetteur et les droits.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.65,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L'élevage familial du lapin en milieu rural africain"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00890__l-elevage-familial-du-lapin-en-milieu-rural-africain.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00890__l-elevage-familial-du-lapin-en-milieu-rural-africain.pdf"
+}

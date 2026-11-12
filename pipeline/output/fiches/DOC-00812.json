@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00812",
+  "sha256": "99306f72f6cfb0193041a1ffa0231331bc42d97e2675386ab542f68526fd0dbe",
+  "nom_original": "cafe moulu et lyophilise.pdf",
+  "chemin_relatif_source": "OD_Docs/cafe moulu et lyophilise.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 17077,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479352050-cafe_moulu_et_lyophilise.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "boissons",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "café",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "cafe",
+    "transformation agroalimentaire",
+    "voie humide",
+    "voie seche",
+    "torrefaction",
+    "lyophilisation"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité CAFES",
+  "titre": "Diagramme des procédés de transformation du café (voie sèche et voie humide)",
+  "resume": "Synoptique technique d'une page présentant le schéma complet de transformation post-récolte des cerises de caféier : voies sèche et humide, obtention du café vert, torréfaction, mouture et lyophilisation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique clair et complet des filières de transformation du café (voies sèche et humide), libre d'accès pour les transformateurs et étudiants.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité CAFES CAFE MOULU CAFE LYOPHILISE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00812__diagramme-des-procedes-de-transformation-du-cafe-voie-s.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/boissons/DOC-00812__diagramme-des-procedes-de-transformation-du-cafe-voie-s.pdf"
+}

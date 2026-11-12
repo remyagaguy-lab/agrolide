@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00302",
+  "sha256": "bcb8a334bf1229ac1313560a977cf536a4a23c67279273ddb2d5179007521779",
+  "nom_original": "Comment stimuler la ponte chez les poules.pdf",
+  "chemin_relatif_source": "OD_Docs/Comment stimuler la ponte chez les poules.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 234760,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "poules pondeuses",
+    "stimuler la ponte",
+    "ortie",
+    "alimentation avicole"
+  ],
+  "titre_trouve": "Comment stimuler la ponte chez les poules",
+  "titre": "Comment stimuler la ponte chez les poules",
+  "resume": "Fiche technique succincte recommandant l'utilisation de feuilles d'orties fraîches broyées dans l'aliment pour relancer la ponte chez les poules.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche pratique d'une page sans auteur identifié ni licence explicite ; à valider avant diffusion.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Comment stimuler la ponte chez les poules"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00302__comment-stimuler-la-ponte-chez-les-poules.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00302__comment-stimuler-la-ponte-chez-les-poules.pdf"
+}

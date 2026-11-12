@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01031",
+  "sha256": "3c2d15dc45c8b6bf1f7f6fb4f6179285713712315fcf3ab3f1de6177a25663a6",
+  "nom_original": "protecteur_azote_pascal_larose.pdf",
+  "chemin_relatif_source": "OD_Docs/protecteur_azote_pascal_larose.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1367953,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "article",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "maïs",
+  "pays": "Canada",
+  "annee": 2017,
+  "auteurs": "Pascal Larose",
+  "source_organisation": "Le Coopérateur (Sollio Groupe Coopératif)",
+  "mots_cles": [
+    "azote",
+    "fertilisation",
+    "mais",
+    "uree",
+    "volatilisation",
+    "lessivage",
+    "denitrification"
+  ],
+  "titre_trouve": "COOPERATEUR.COOP – AVRIL 2017 TEXTE DE PASCAL LAROSE, AGRONOME LA PÉRIODE D’APPLICATION DE L’AZOTE DANS LE MAÏS",
+  "titre": "Gestion et efficacité de la fertilisation azotée dans la culture du maïs",
+  "resume": "Article technique vulgarisant les processus de volatilisation, de lessivage et de dénitrification de l'azote dans le maïs et les moyens d'optimisation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Article agronomique clair expliquant les mécanismes de pertes azotées, utile pour raisonner la fertilisation du maïs malgré un contexte nord-américain.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "COOPERATEUR.COOP – AVRIL 2017 TEXTE DE PASCAL LAROSE, AGRONOME LA PÉRIODE D’APPLICATION DE L’AZOTE DANS LE MAÏS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01031__gestion-et-efficacite-de-la-fertilisation-azotee-dans-l.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-01031__gestion-et-efficacite-de-la-fertilisation-azotee-dans-l.pdf"
+}

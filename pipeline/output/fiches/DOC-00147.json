@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00147",
+  "sha256": "86fadafabc484571ed791c85d0a2e18a27d26724d5ab0dd294bdcf8d0d8517a9",
+  "nom_original": "AGRUMES.pdf",
+  "chemin_relatif_source": "OD_Docs/AGRUMES.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2036485,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 31,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "agrumes",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "agrumes",
+    "oranger",
+    "citronnier",
+    "arboriculture fruitiere",
+    "cameroun",
+    "itineraire technique"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE CULTURE DES AGRUMES",
+  "titre": "Technologie de culture des agrumes au Cameroun",
+  "resume": "Manuel de formation pratique sur la culture des agrumes au Cameroun, abordant les exigences pédoclimatiques, la plantation, l'entretien du verger et la récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet de conduite des agrumes en zone tropicale, issu d'un institut de formation agréé, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE CULTURE DES AGRUMES GENERALITES I. EXGENCES CULTURALES II. CONDUITE DE LA CULTURE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00147__technologie-de-culture-des-agrumes-au-cameroun.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00147__technologie-de-culture-des-agrumes-au-cameroun.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00364",
+  "sha256": "8de35bee4bb70d7990435f20a4a07586a2f37a372cb80b93070012d544fa59f6",
+  "nom_original": "EXE CALCUL PLUVIOMETRIE HORAIRE GG.docx",
+  "chemin_relatif_source": "OD_Docs/EXE CALCUL PLUVIOMETRIE HORAIRE GG.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 74656,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation localisee",
+    "goutte-a-goutte",
+    "pluviometrie horaire",
+    "debit goutteur",
+    "dimensionnement"
+  ],
+  "titre_trouve": "Pluviométrie en irrigation localisée",
+  "titre": "Calcul de la pluviométrie horaire en irrigation localisée goutte-à-goutte",
+  "resume": "Fiche pratique détaillant le calcul de la pluviométrie horaire équivalente (mm/h) pour une installation d'irrigation goutte-à-goutte à partir du débit des goutteurs et de leur espacement.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche technique pratique d'auteur non précisé sans mention de licence, droits à clarifier avant publication.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Pluviométrie en irrigation localisée"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Débit par hectare : Linéaire/ ha de gàg"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00364__calcul-de-la-pluviometrie-horaire-en-irrigation-localis.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00364__calcul-de-la-pluviometrie-horaire-en-irrigation-localis.pdf"
+}

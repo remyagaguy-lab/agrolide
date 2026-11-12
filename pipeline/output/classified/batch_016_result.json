@@ -1,0 +1,792 @@
+{
+  "batch_number": 16,
+  "results": [
+    {
+      "id": "DOC-00223",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "YAICI et ARAB",
+      "source_organisation": null,
+      "mots_cles": [
+        "embryologie humaine",
+        "placenta",
+        "annexes embryonnaires",
+        "medecine humaine",
+        "foetus"
+      ],
+      "titre_trouve": "Annexes embryonnaires",
+      "titre": "Annexes embryonnaires - Cours d'embryologie humaine",
+      "resume": "Chapitre de cours universitaire consacré aux annexes embryonnaires humaines (amnios, allantoïde, placenta humain). Document relevant de la médecine humaine hors du périmètre agronomique et vétérinaire.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document d'embryologie et médecine humaine (pages 303-304 d'un manuel médical), hors du périmètre agricole, vétérinaire et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Embryologie humaine YAICI et ARAB"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00224",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "antiparasitaires",
+        "sante animale",
+        "veterinaire",
+        "pharmacologie",
+        "amitraz"
+      ],
+      "titre_trouve": null,
+      "titre": "Cours de pharmacologie vétérinaire : les antiparasitaires",
+      "resume": "Support de cours et notes sur la pharmacologie vétérinaire et les molécules antiparasitaires, détaillant les modes d'action (récepteurs GABA), posologies, indications et contre-indications par espèce animale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document de travail universitaire au format Word (.doc) incomplet, sans licence libre ni métadonnées d'auteur. Archivé en interne.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.85,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "amitraz est contre-indiqué chez certaines espèces (chat, cheval)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00225",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Richard Blouin",
+      "source_organisation": "Université de Sherbrooke",
+      "mots_cles": [
+        "histologie humaine",
+        "appareil genital femelle",
+        "medecine humaine",
+        "ovaire"
+      ],
+      "titre_trouve": null,
+      "titre": "Histologie de l'appareil génital femelle humain",
+      "resume": "Présentation de diapositives consacrée à l'histologie et l'anatomie microscopique de l'appareil génital féminin humain (Université de Sherbrooke). Contenu médical hors du champ agronomique et vétérinaire.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Support de présentation PowerPoint consacré à l'histologie de l'appareil génital féminin humain (Université de Sherbrooke), hors du périmètre agronomique et vétérinaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "rblouin/_vti_bin/shtml.exe/histo/genfem/ova/ova.htm"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00226",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "anatomie humaine",
+        "appareil genital male",
+        "medecine humaine",
+        "embryologie"
+      ],
+      "titre_trouve": "Appareil génital mâle",
+      "titre": "Anatomie de l'appareil génital mâle et glande mammaire",
+      "resume": "Diaporama pédagogique de 18 diapositives sur l'appareil génital mâle humain et l'embryologie de la glande mammaire, destiné aux études médicales humaines et hors périmètre agricole.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Diaporama d'anatomie et embryologie médicale humaine, hors du périmètre agronomique et vétérinaire de la plateforme Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Appareil génital mâle ... L’organe copulateur (le pénis , la verge)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00227",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "F. Dufour",
+      "source_organisation": "Maison Dufour",
+      "mots_cles": [
+        "arboriculture fruitiere",
+        "arbres fruitiers",
+        "greffage",
+        "taille des arbres",
+        "pomologie"
+      ],
+      "titre_trouve": "Traité complet d'arboriculture fruitière",
+      "titre": "Traité complet d'arboriculture fruitière (6e édition)",
+      "resume": "Traité de référence de 614 pages sur l'arboriculture fruitière tempérée (Belgique/France), détaillant la multiplication, le greffage, la taille et la conduite des arbres fruitiers tempérés.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial de 614 pages sous droits réservés d'auteur/éditeur, axé sur l'arboriculture en climat tempéré. Non diffusable en libre accès, archivé en interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 5,
+          "extrait": "TRAITÉ COMPLET D'ARBORICULTURE FRUITIÈRE PAR F. DUFOUR"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00228",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "Cimbéton, FIB, CERIB",
+      "source_organisation": "Cimbéton",
+      "mots_cles": [
+        "assainissement collectif",
+        "genie civil",
+        "beton",
+        "reseaux d'egouts",
+        "btp"
+      ],
+      "titre_trouve": "Assainissement collectif : Conception et réalisation - OUVRAGES D’ASSAINISSEMENT EN BÉTON",
+      "titre": "Assainissement collectif : conception et réalisation des ouvrages en béton",
+      "resume": "Guide technique professionnel sur la conception et la pose des réseaux d'assainissement collectif urbain en béton selon la réglementation française. Document de génie civil et BTP hors du périmètre agricole.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Guide de génie civil et BTP urbain (réseaux d'assainissement collectif en béton selon les normes françaises CCTG), hors du périmètre agricole d'Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Assainissement collectif Conception et réalisation OUVRAGES D’ASSAINISSEMENT EN BÉTON"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00229",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Sandrine Heusser, Henri-Gabriel Dupuy",
+      "source_organisation": "Dunod",
+      "mots_cles": [
+        "biologie animale",
+        "atlas",
+        "grandes fonctions",
+        "nutrition animale",
+        "anatomie comparee"
+      ],
+      "titre_trouve": "ATLAS BIOLOGIE ANIMALE 2. Les grandes fonctions 2e édition",
+      "titre": "Atlas de biologie animale : Tome 2, Les grandes fonctions",
+      "resume": "Ouvrage universitaire illustré de référence (collection Sciences Sup, Dunod) présentant l'anatomie comparée et les grandes fonctions biologiques animales (nutrition, respiration, excrétion, relation, reproduction).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Manuel universitaire commercial édité par Dunod (ISBN 978-2-10-053797-6) protégé par le droit d'auteur. Non publiable en accès libre, archivé en interne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ATLAS BIOLOGIE ANIMALE 2. Les grandes fonctions 2e édition"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 4,
+          "extrait": "© Dunod, Paris, 2000, 2008 ISBN 978-2-10-053797-6"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00230",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aubergine africaine",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "aubergine africaine",
+        "maraichage",
+        "solanum aethiopicum",
+        "culture maraichere",
+        "fiche technique"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique sur la culture de l'aubergine africaine",
+      "resume": "Fiche pratique numérisée de deux pages consacrée à l'itinéraire technique et à la production maraîchère de l'aubergine africaine (Solanum aethiopicum) en zone tropicale.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan CamScanner sans texte exploitable (OCR nécessaire) ; fiche technique à fort potentiel pour l'Afrique tropicale mais statut de droits à valider.",
+      "confiance": {
+        "classification": 0.58,
+        "droits": 0.35,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Aubergine Africaine.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00231",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aubergine",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "aubergine",
+        "maraichage",
+        "solanum melongena",
+        "culture maraichere",
+        "fiche technique"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique sur la culture de l'aubergine européenne",
+      "resume": "Fiche technique numérisée de deux pages résumant les bonnes pratiques culturales pour la production maraîchère de l'aubergine classique (Solanum melongena).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Numérisation CamScanner sans texte exploitable (OCR requis) ; fiche technique maraîchère dont les droits et la source doivent être vérifiés.",
+      "confiance": {
+        "classification": 0.58,
+        "droits": 0.35,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Aubergine Européenne.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00232",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "avis de recrutement",
+        "offre d'emploi",
+        "administration",
+        "postes"
+      ],
+      "titre_trouve": null,
+      "titre": "Avis de recrutement pour seize postes universitaires",
+      "resume": "Avis d'appel à candidatures et de recrutement institutionnel pour seize postes. Document administratif ponctuel et obsolète, hors du périmètre documentaire d'Agrolide.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "obsolete"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document administratif éphémère (avis de recrutement obsolète) sans valeur pédagogique ou agronomique durable, hors du périmètre de la bibliothèque.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Avis de recrutement 16 postes UP-2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00233",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "avoine",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "avoine",
+        "cereales",
+        "culture cerealiere",
+        "avena sativa",
+        "fiche technique"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique sur la culture de l'avoine",
+      "resume": "Document technique numérisé de six pages présentant la conduite de la culture de l'avoine (Avena sativa) : exigences pédo-climatiques, semis, fertilisation et récolte.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible (OCR nécessaire) ; droits et provenance à valider avant toute diffusion.",
+      "confiance": {
+        "classification": 0.58,
+        "droits": 0.35,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Avoine.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00234",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "semences_amelioration"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "banane plantain",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI",
+      "mots_cles": [
+        "bananier plantain",
+        "technique pif",
+        "multiplication vegetative",
+        "rejets",
+        "cameroun",
+        "pepiniere"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DES REJETS DE BANANIER PLANTAIN PAR LA TECHNIQUE PIF (Plants Issus de Fragments de Tiges)",
+      "titre": "Production de rejets de bananier plantain par la technique PIF",
+      "resume": "Guide pratique complet de 32 pages détaillant la multiplication rapide de rejets sains de bananier plantain via la technique PIF (Plants Issus de Fragments de Tiges) : matériel, décortication, réactivation en pépinière, sevrage et conduite.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel complet (IFATI Cameroun) sur la technique PIF du bananier plantain, d'une grande valeur opérationnelle pour les producteurs ouest et centre-africains.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DES REJETS DE BANANIER PLANTAIN PAR LA TECHNIQUE PIF"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00236",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovins",
+      "pays": "Mali",
+      "annee": 2013,
+      "auteurs": "VSFB - ICD - Projet LIAM",
+      "source_organisation": "Vétérinaires Sans Frontières Belgique / ICD",
+      "mots_cles": [
+        "embouche",
+        "ruminants",
+        "mali",
+        "sahel",
+        "vsfb",
+        "femmes",
+        "bilan economique"
+      ],
+      "titre_trouve": "BILAN PREMIERE OPERATION D’EMBOUCHE Embouche des femmes",
+      "titre": "Bilan de la première opération d'embouche des femmes au Mali",
+      "resume": "Rapport d'évaluation de 24 pages réalisé par VSF-Belgique et ICD sur une opération pilote d'embouche menée par 14 groupements féminins dans les cercles de Nara et Nioro au Mali : rentabilité, alimentation et analyse SWOT.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport d'évaluation de projet ONG complet et documenté (VSF-Belgique / ICD au Mali) sur l'embouche animale féminine, pertinent pour les membres de la plateforme.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "BILAN PREMIERE OPERATION D’EMBOUCHE Embouche des femmes"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "VSFB/ICD ... projet LIAM et Kondo Jigima dans le cadre du programme de Lutte Contre l’insecurité alimentaire dans les cercles de Nara et de Nioro"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00237",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Khadra Boussaad",
+      "source_organisation": "Université de Batna-1",
+      "mots_cles": [
+        "bioecologie",
+        "bioagresseurs",
+        "protection des vegetaux",
+        "agroecosysteme",
+        "reseaux trophiques"
+      ],
+      "titre_trouve": "MODULE BIOECOLOGIE DES BIOAGRESSEURS (PARTIE 1)",
+      "titre": "Bioécologie des bioagresseurs : Introduction à l'agro-écosystème (Partie 1)",
+      "resume": "Polycopié de cours universitaire (L3 Protection des végétaux, Université de Batna-1) portant sur l'agro-écosystème, les chaînes trophiques et les pyramides écologiques en protection des cultures.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié universitaire non publié (sans licence libre explicite) et partiel (partie 1 isolée). Archivé en interne conformément aux règles de diffusion.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE BIOECOLOGIE DES BIOAGRESSEURS (PARTIE 1) Responsable de la matière : Mme BOUSSAAD Khadra"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "UNIVERSITE DE BATNA-1 INSTITUT DES SCIENCES VETERINAIRES ET DES SCIENCES AGRONOMIQUES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00238",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "Peter H. Raven, Ray Franklin Evert, Susan E. Eichhorn, Jules Bouharmont",
+      "source_organisation": "De Boeck Supérieur",
+      "mots_cles": [
+        "biologie vegetale",
+        "botanique",
+        "physiologie vegetale",
+        "anatomie vegetale",
+        "de boeck"
+      ],
+      "titre_trouve": "Biologie végétale",
+      "titre": "Biologie végétale (Raven, Evert, Eichhorn)",
+      "resume": "Traité complet de référence de 977 pages (éditions De Boeck) couvrant la biologie cellulaire végétale, l'anatomie, la physiologie, la génétique et la systématique du règne végétal.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "ocr_necessaire"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial complet de 977 pages édité par De Boeck Supérieur, strictement protégé par le droit d'auteur. Non publiable en accès libre, archivé en interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Biologie végétale - Par Peter H. Raven, Ray Franklin Evert, Susan E. Eichhorn, Jules Bouharmont"
+        }
+      ]
+    }
+  ]
+}

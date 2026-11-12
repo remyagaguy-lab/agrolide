@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00709",
+  "sha256": "4405027138aa090431a435cb0fd2fe1fa4cb661101533e6fc81ccfa748aca4d1",
+  "nom_original": "RÉSUMÉ Cytologie (1).pdf",
+  "chemin_relatif_source": "OD_Docs/RÉSUMÉ Cytologie (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4148222,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 86,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "NOURINE MAMMAR Abdellah",
+  "source_organisation": "Faculté de Médecine d'Alger",
+  "mots_cles": [
+    "cytologie",
+    "medecine humaine",
+    "biologie cellulaire",
+    "faculte de medecine d alger"
+  ],
+  "titre_trouve": "livre de cytologie, conçu spécialement pour les étudiants de première année de médecine",
+  "titre": "Manuel de cytologie pour étudiants en première année de médecine humaine",
+  "resume": "Support de cours et synthèse de cytologie humaine destiné aux étudiants de première année de médecine de la Faculté d'Alger, traitant de la structure et du fonctionnement cellulaire.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de médecine humaine générale sans application vétérinaire ou agronomique, exclu du périmètre de la plateforme.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Faculté de médecine d’Alger ... spécialement pour les étudiants de première année de médecine"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "livre de cytologie, conçu spécialement pour les étudiants de première année de médecine"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00709__manuel-de-cytologie-pour-etudiants-en-premiere-annee-de.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00709__manuel-de-cytologie-pour-etudiants-en-premiere-annee-de.pdf"
+}

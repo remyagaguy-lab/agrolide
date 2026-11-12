@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00866",
+  "sha256": "502ca0c3a4ccbab4a330e5b4a1c5dd77d852b1f56398ef29221589dc2dec5b7c",
+  "nom_original": "document_413442.pdf",
+  "chemin_relatif_source": "OD_Docs/document_413442.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2241583,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "article",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": null,
+  "annee": 1969,
+  "auteurs": "André Lassoudière",
+  "source_organisation": "Institut Français de Recherches Fruitières Outre-Mer (IFAC / CIRAD)",
+  "mots_cles": [
+    "papaye",
+    "Carica papaya",
+    "recolte",
+    "conditionnement",
+    "exportation",
+    "fruits tropicaux",
+    "IFAC",
+    "CIRAD"
+  ],
+  "titre_trouve": "LA PAPAYE : RÉCOLTE . CONDITIONNEMENT . EXPORTATION . PRODUITS TRANSFORMÉS",
+  "titre": "La papaye : récolte, conditionnement, exportation, produits transformés",
+  "resume": "Article technique et scientifique de l'IFAC sur la récolte, le traitement à l'eau chaude, le conditionnement pour l'exportation et les produits dérivés et sous-produits de la papaye.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "Open Access",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Publication technique de référence de l'IFAC/CIRAD (revue Fruits) en libre accès, directement opérationnelle pour la filière papaye.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA PAPAYE RÉCOLTE . CONDITIONNEMENT . EXPORTATION . PRODUITS TRANSFORMÉS"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "par A. LASSOUDIÈRE Institut Français de Recherches Fruitières Outre-Mer (I . F. A . C .)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00866__la-papaye-recolte-conditionnement-exportation-produits.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00866__la-papaye-recolte-conditionnement-exportation-produits.pdf"
+}

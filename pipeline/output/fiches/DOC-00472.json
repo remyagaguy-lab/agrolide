@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00472",
+  "sha256": "dd8cde380bb6f61cee42bcb85751271ff5cd26443d592ea1a6dc92d433b8fe43",
+  "nom_original": "Glycolyse_240128_233428.pdf",
+  "chemin_relatif_source": "OD_Docs/Glycolyse_240128_233428.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 10157263,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "ocr_necessaire",
+    "incomplet"
+  ],
+  "nb_pages": 11,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "glycolyse",
+    "biochimie",
+    "pyruvate",
+    "acetyl-coa",
+    "metabolisme"
+  ],
+  "titre_trouve": "2-Devenir du Pyruvate",
+  "titre": "Cours de biochimie - La glycolyse et le métabolisme du pyruvate",
+  "resume": "Support partiel de cours de biochimie de 11 pages portant sur les voies métaboliques cellulaires : dégradation du glucose, décarboxylation oxydative du pyruvate et formation de l'acétyl-CoA.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait partiel de cours de biochimie (11 pages sur plus de 53) sans licence libre, archivé sans publication.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.8,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 10,
+      "extrait": "53"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00472__cours-de-biochimie-la-glycolyse-et-le-metabolisme-du-py.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00472__cours-de-biochimie-la-glycolyse-et-le-metabolisme-du-py.pdf"
+}

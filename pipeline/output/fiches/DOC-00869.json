@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00869",
+  "sha256": "0f370abd6baa10d0124d032602b4366d9a9b11993da36e4529ce7d5b37f438bf",
+  "nom_original": "dossier-agronomie2012.pdf",
+  "chemin_relatif_source": "OD_Docs/dossier-agronomie2012.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9222759,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 68,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "rapport",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "decideur_institution",
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "Collectif (Agropolis International)",
+  "source_organisation": "Agropolis International",
+  "mots_cles": [
+    "agronomie",
+    "systemes de culture",
+    "Agropolis International",
+    "CIRAD",
+    "INRA",
+    "agroecologie",
+    "recherche agronomique"
+  ],
+  "titre_trouve": "Agronomie : plantes cultivées et systèmes de culture",
+  "titre": "Agronomie : plantes cultivées et systèmes de culture (Dossier Agropolis International)",
+  "resume": "Dossier thématique exhaustif présentant les compétences scientifiques, les équipes de recherche (CIRAD, INRA, IRD) et les projets innovants sur les systèmes de culture tropicaux et méditerranéens.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Dossier scientifique d'ensemble d'Agropolis International sur l'agronomie tropicale, mis à disposition des membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Agronomie : plantes cultivées et systèmes de culture"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Agropolis International est un campus dédié aux sciences « vertes »"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00869__agronomie-plantes-cultivees-et-systemes-de-culture-doss.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00869__agronomie-plantes-cultivees-et-systemes-de-culture-doss.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00290",
+  "sha256": "3ca846331193774bf595b85401035b67a98d64a239feee740716ee3dc58c392a",
+  "nom_original": "Chapitre 2 Environnement et Développement Durable.pdf",
+  "chemin_relatif_source": "OD_Docs/Chapitre 2 Environnement et Développement Durable.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 794221,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 16,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Imane Abdellaoui",
+  "source_organisation": null,
+  "mots_cles": [
+    "developpement durable",
+    "environnement",
+    "ressources naturelles",
+    "croissance demographique",
+    "equite sociale"
+  ],
+  "titre_trouve": "Cours environnement et Développement Durable - Chapitre 2 : Le développement durable",
+  "titre": "Cours environnement et développement durable : Chapitre 2, Le développement durable",
+  "resume": "Support didactique universitaire abordant l'historique, les principes d'équité et les objectifs du développement durable face aux défis écologiques globaux.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre d'un cours universitaire non publié sous licence libre, archivé.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours environnement et Développement Durable ... Chapitre 2 : Le développement durable"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00290__cours-environnement-et-developpement-durable-chapitre-2.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00290__cours-environnement-et-developpement-durable-chapitre-2.pdf"
+}

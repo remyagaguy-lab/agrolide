@@ -1,0 +1,84 @@
+{
+  "id": "DOC-00010",
+  "sha256": "f686db4e0b1de0bc5a9dac41f7a959b9c637bb848439068d7c40367e6ca51ec1",
+  "nom_original": "Guide_entreprenariat_agricole.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/Guide_entreprenariat_agricole.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 35477396,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 164,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Tunisie",
+  "annee": 2022,
+  "auteurs": "Ahlem Ghazouani, Marouane Chikhaoui",
+  "source_organisation": "APIA / Association ELIS",
+  "mots_cles": [
+    "entrepreneuriat agricole",
+    "agroalimentaire",
+    "chaine de valeur",
+    "tunisie",
+    "creation d'entreprise"
+  ],
+  "titre_trouve": "Guide de l'entreprenariat agricole et agroalimentaire",
+  "titre": "Guide de l'entrepreneuriat agricole et agroalimentaire",
+  "resume": "Ouvrage de référence exhaustif (164 pages) analysant les chaînes de valeur, les démarches d'installation et l'écosystème d'accompagnement des porteurs de projets agricoles et agroalimentaires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide complet élaboré avec le soutien de la coopération italienne et de l'APIA, destiné à la diffusion auprès des entrepreneurs agricoles.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "Guide de l’entreprenariat agricole et agroalimentaire"
+    },
+    {
+      "champ": "auteurs",
+      "page": 4,
+      "extrait": "Mme. Ahlem Ghazouani et M. Marouane Chikhaoui"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Agence de Promotion des Investissements Agricoles (APIA) et de l’association ELIS"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0002",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00010__guide-de-l-entrepreneuriat-agricole-et-agroalimentaire.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00010__guide-de-l-entrepreneuriat-agricole-et-agroalimentaire.pdf"
+}

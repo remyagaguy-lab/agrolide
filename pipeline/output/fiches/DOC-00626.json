@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00626",
+  "sha256": "577f4a1532d698e803de25056e6d17b41e4359eca88fef295392288bbd5deb5e",
+  "nom_original": "Méthodes+d’irrigation_en#milieu÷aride.pdf",
+  "chemin_relatif_source": "OD_Docs/Méthodes+d’irrigation_en#milieu÷aride.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3366755,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 57,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "rapport",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "Nicola Barbisan, Hugo De Sevin, François Gabarrot, Thibaut Le Gac, Quentin Rysak, Coralie Ullmann",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "milieu aride",
+    "goutte a goutte",
+    "aspersion",
+    "gestion de l'eau",
+    "economie d'eau"
+  ],
+  "titre_trouve": "Méthodes d’irrigation en milieu aride",
+  "titre": "Méthodes d'irrigation en milieu aride",
+  "resume": "Rapport d'étude d'ingénierie agronomique dressant un panorama technique des systèmes d'irrigation (gravitaire, aspersion, goutte-à-goutte) en milieu aride.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Projet d'étudiants ingénieurs non publié sous licence libre : conservation pour consultation interne et archivage.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Méthodes d’irrigation en milieu aride Barbisan nicola De sevin hugo Gabarrot françois 2012"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00626__methodes-d-irrigation-en-milieu-aride.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00626__methodes-d-irrigation-en-milieu-aride.pdf"
+}

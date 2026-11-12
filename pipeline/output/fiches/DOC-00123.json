@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00123",
+  "sha256": "139302030888a1b4e039e1258c5d4f47dc614f14fb0ca19944809150bac76759",
+  "nom_original": "4eme seem dev emb.pdf",
+  "chemin_relatif_source": "OD_Docs/4eme seem dev emb.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2223366,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 25,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "YAICI et ARAB",
+  "source_organisation": null,
+  "mots_cles": [
+    "embryologie humaine",
+    "medecine",
+    "developpement embryonnaire"
+  ],
+  "titre_trouve": "Quatrième semaine du développement embryonnaire",
+  "titre": "Quatrième semaine du développement embryonnaire (Embryologie humaine)",
+  "resume": "Support de cours et série de questions à choix multiples d'embryologie humaine abordant la morphogenèse, la délimitation de l'embryon et la neurulation au cours de la quatrième semaine de développement.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document médical portant sur l'embryologie humaine, strictement hors du périmètre agricole et agroalimentaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Quatrième semaine du développement embryonnaire"
+    },
+    {
+      "champ": "autre",
+      "page": 24,
+      "extrait": "Embryologie humaine YAICI et ARAB"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00123__quatrieme-semaine-du-developpement-embryonnaire-embryol.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00123__quatrieme-semaine-du-developpement-embryonnaire-embryol.pdf"
+}

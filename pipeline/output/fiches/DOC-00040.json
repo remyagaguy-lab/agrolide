@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00040",
+  "sha256": "70d3c6073c5fc7e1498be179fd445b2c98eefc8bd23de75dfc25536dcec602e4",
+  "nom_original": "Résumé2 Microbiologie.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Microbiologie/Microbiologie/Résumé2 Microbiologie.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 371619,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 8,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "agroalimentaire",
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "microbiologie",
+    "bacteries",
+    "mycetes",
+    "levures",
+    "virus",
+    "classification microbienne"
+  ],
+  "titre_trouve": "Chapitre1 : Le Monde Microbien",
+  "titre": "Résumé de microbiologie - Le monde microbien",
+  "resume": "Synthèse de cours de microbiologie générale de 8 pages abordant la classification et la diversité du monde microbien : mycètes (levures, moisissures), algues, protozoaires, bactéries et virus.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche de synthèse académique partielle non assortie d'une licence libre de diffusion, archivée pour usage interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre1 : Le Monde Microbien"
+    }
+  ],
+  "ensemble_id": "ENS-0005",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00040__resume-de-microbiologie-le-monde-microbien.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00040__resume-de-microbiologie-le-monde-microbien.pdf"
+}

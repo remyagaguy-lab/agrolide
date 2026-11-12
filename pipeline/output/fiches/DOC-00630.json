@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00630",
+  "sha256": "244a364eef56c29a5acf33aa356cc7ad06726c2b0a9e0e2cc1afecc264368756",
+  "nom_original": "Neoglucogenese_240128_233505.pdf",
+  "chemin_relatif_source": "OD_Docs/Neoglucogenese_240128_233505.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4145951,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "biochimie",
+    "neoglucogenese",
+    "glycolyse",
+    "metabolisme glucidique",
+    "bilan energetique",
+    "enzymes"
+  ],
+  "titre_trouve": null,
+  "titre": "Cours de biochimie : mécanismes et bilan énergétique de la néoglucogenèse",
+  "resume": "Support de cours concis de biochimie métabolique décrivant les réactions enzymatiques, le bilan de consommation d'ATP/GTP et la régulation réciproque entre la glycolyse et la néoglucogenèse.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours partiel de biochimie métabolique sans licence libre, archivé pour référence académique interne.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.75
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "La néoglucogenèse est énergétiquement couteuse"
+    },
+    {
+      "champ": "autre",
+      "page": 9,
+      "extrait": "Régulation réciproque de la néoglucogenèse et de la glycolyse+++"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00630__cours-de-biochimie-mecanismes-et-bilan-energetique-de-l.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00630__cours-de-biochimie-mecanismes-et-bilan-energetique-de-l.pdf"
+}

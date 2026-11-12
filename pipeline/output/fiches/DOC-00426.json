@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00426",
+  "sha256": "3e1c2351ba304345997fc1ae5b55fb023c6a404200466c0ac28dd7f037574453",
+  "nom_original": "Fertilisation des grandes cultures.pdf",
+  "chemin_relatif_source": "OD_Docs/Fertilisation des grandes cultures.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6539097,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 46,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "céréales",
+  "pays": "Suisse",
+  "annee": 2017,
+  "auteurs": "Sokrat Sinaj, Raphaël Charles, Alice Baux, Brice Dupuis, Jürg Hiltbrunner, Lilia Levy, Didier Pellet, Guillaume Blanchet, Bernard Jeangros",
+  "source_organisation": "Agroscope",
+  "mots_cles": [
+    "fertilisation",
+    "grandes cultures",
+    "cereales",
+    "colza",
+    "agroscope",
+    "fumure",
+    "suisse"
+  ],
+  "titre_trouve": "8/ Fertilisation des grandes cultures - Principes de fertilisation des cultures agricoles en Suisse (PRIF)",
+  "titre": "Fertilisation des grandes cultures (PRIF 2017 - Suisse)",
+  "resume": "Référentiel officiel d'Agroscope détaillant les normes et recommandations de fertilisation pour les grandes cultures (céréales à paille, oléagineux, tubercules) en Suisse.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Référentiel institutionnel suisse de fertilisation conçu pour les climats et sols tempérés, archivé car non adapté aux agroécosystèmes tropicaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "8/ Fertilisation des grandes cultures Sokrat Sinaj, Raphaël Charles... Agroscope, 1260 Nyon, Suisse"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00426__fertilisation-des-grandes-cultures-prif-2017-suisse.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00426__fertilisation-des-grandes-cultures-prif-2017-suisse.pdf"
+}

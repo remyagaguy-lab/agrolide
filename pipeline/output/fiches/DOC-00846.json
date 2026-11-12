@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00846",
+  "sha256": "0cf21bb57f54fe345d824b8617e1f278853e08003922266e315ae24c7d38bbb4",
+  "nom_original": "cours environnement et développement durable L2 SNV BISKRA.pdf",
+  "chemin_relatif_source": "OD_Docs/cours environnement et développement durable L2 SNV BISKRA.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1890438,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 46,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "Mme Abdelaoui I.",
+  "source_organisation": "Université de Biskra (UMKB)",
+  "mots_cles": [
+    "environnement",
+    "developpement durable",
+    "ressources naturelles",
+    "ecologie",
+    "biskra"
+  ],
+  "titre_trouve": "Module : Environnement et Développement Durable",
+  "titre": "Environnement et développement durable (L2 SNV Biskra)",
+  "resume": "Support de cours complet destiné aux étudiants de Licence en sciences agronomiques et biologiques, traitant des concepts d'environnement, des grands enjeux écologiques mondiaux et de la gestion durable des ressources naturelles.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire interne d'enseignant sans licence de diffusion ouverte, archivé.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "UMKB Faculté SNV Département : Agronomie Module : Environnement et Développement Durable"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Mme ABDELAOUI.I"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00846__environnement-et-developpement-durable-l2-snv-biskra.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00846__environnement-et-developpement-durable-l2-snv-biskra.pdf"
+}

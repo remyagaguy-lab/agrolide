@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00100",
+  "sha256": "022d235b8be8a31f6870fefdc21ff1adca10c65cf169908c53c5d91114a4875d",
+  "nom_original": "2-Résumé Yaici et Arab 2019-2020 (1).pdf",
+  "chemin_relatif_source": "OD_Docs/2-Résumé Yaici et Arab 2019-2020 (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2636514,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 33,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2019,
+  "auteurs": "Yaici et Arab",
+  "source_organisation": "Faculté de Médecine",
+  "mots_cles": [
+    "embryologie humaine",
+    "medecine",
+    "fecondation",
+    "blastocyste",
+    "qcm"
+  ],
+  "titre_trouve": "Première semaine du développement embryonnaire",
+  "titre": "Embryologie humaine : Première semaine du développement embryonnaire",
+  "resume": "Cours et QCM de première année de médecine portant sur la première semaine du développement embryonnaire humain (fécondation, segmentation, nidation).",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de médecine humaine (embryologie générale et QCM) totalement hors du périmètre agronomique, agricole et agroalimentaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Première semaine du développement embryonnaire"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00100__embryologie-humaine-premiere-semaine-du-developpement-e.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00100__embryologie-humaine-premiere-semaine-du-developpement-e.pdf"
+}

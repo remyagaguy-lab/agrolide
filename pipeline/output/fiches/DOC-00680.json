@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00680",
+  "sha256": "43c3e85009093a7f6b38b0cd44137717d0dc6f925d00833f8cabce5a8aa2eb3b",
+  "nom_original": "Poule_pondeuse-1.pdf",
+  "chemin_relatif_source": "OD_Docs/Poule_pondeuse-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1670525,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2012,
+  "auteurs": "Éditions du Point Vétérinaire",
+  "source_organisation": "Éditions du Point Vétérinaire",
+  "mots_cles": [
+    "poule pondeuse",
+    "constantes biologiques",
+    "biochimie sanguine",
+    "hematologie",
+    "medecine veterinaire"
+  ],
+  "titre_trouve": "POULE PONDEUSE Animaux de rente",
+  "titre": "Fiche mémo vétérinaire - Poule pondeuse",
+  "resume": "Fiche mémo de 2 pages éditée par Le Point Vétérinaire résumant les constantes biologiques, la biochimie sanguine, l'hématologie et les normes d'élevage de la poule pondeuse.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique protégée par le droit d'auteur des Éditions du Point Vétérinaire (reproduction interdite), archivée sans publication.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Toute reproduction même partielle est interdite sans autorisation préalable des Editions du Point Vétérinaire"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00680__fiche-memo-veterinaire-poule-pondeuse.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00680__fiche-memo-veterinaire-poule-pondeuse.pdf"
+}

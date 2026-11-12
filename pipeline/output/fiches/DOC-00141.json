@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00141",
+  "sha256": "166f6f972e6d8ad6e9e5534ff7a79c1da2be875b013103170efbf27c4d37b9ef",
+  "nom_original": "ACTERURS GESTIEON EAU PERIMERE IRRIUE.docx",
+  "chemin_relatif_source": "OD_Docs/ACTERURS GESTIEON EAU PERIMERE IRRIUE.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 40183,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "autre",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "gestion de l'eau",
+    "perimetre irrigue",
+    "acteurs",
+    "irrigation",
+    "comite de repartition"
+  ],
+  "titre_trouve": "Acteurs de la gestion de l’eau dans un périmètre irrigue",
+  "titre": "Acteurs de la gestion de l'eau dans un périmètre irrigué : Note de synthèse",
+  "resume": "Note de travail synthétisant en onze points clés le rôle et la concertation des acteurs dans la gestion et la répartition de l'eau sur un périmètre irrigué.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Brouillon très succinct de quelques lignes sans métadonnées ni contenu suffisamment élaboré pour une diffusion.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.7,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Acteurs de la gestion de l’eau dans un périmètre irrigue"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00141__acteurs-de-la-gestion-de-l-eau-dans-un-perimetre-irrigu.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00141__acteurs-de-la-gestion-de-l-eau-dans-un-perimetre-irrigu.pdf"
+}

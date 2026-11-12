@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00379",
+  "sha256": "2ca8411f381dda52799784f701c61ad4bee64e2cbf06dbf70bdc2545df3e01b0",
+  "nom_original": "Electronique,_terminale_STI_génie_électronique_2,_Analogique_Livre.pdf",
+  "chemin_relatif_source": "OD_Docs/Electronique,_terminale_STI_génie_électronique_2,_Analogique_Livre.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 67515316,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "ocr_necessaire",
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 219,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2010,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "electronique",
+    "genie electronique",
+    "analogique",
+    "terminale sti"
+  ],
+  "titre_trouve": "Electronique, terminale STI génie électronique 2, Analogique Livre",
+  "titre": "Électronique analogique - Terminale STI Génie électronique",
+  "resume": "Manuel scolaire de terminale STI traitant des circuits et systèmes électroniques analogiques, sans lien avec le secteur agricole.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Manuel scolaire de génie électronique analogique totalement hors du périmètre agricole et soumis aux droits d'auteur commerciaux.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.95,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Electronique,_terminale_STI_génie_électronique_2,_Analogique_Livre.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00379__electronique-analogique-terminale-sti-genie-electroniqu.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00379__electronique-analogique-terminale-sti-genie-electroniqu.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00914",
+  "sha256": "21268e372a9118e42510bce672b7c2d296b9420bc9b25904367202fdd1048c79",
+  "nom_original": "fonction cardiaque (2).pptx",
+  "chemin_relatif_source": "OD_Docs/fonction cardiaque (2).pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 1402885,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 39,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "fonction cardiaque",
+    "systeme cardiovasculaire",
+    "physiologie humaine",
+    "hemodynamique"
+  ],
+  "titre_trouve": "La FONCTION CARDIO VASCULAIRE",
+  "titre": "Cours sur la fonction cardiovasculaire et la physiologie cardiaque humaine",
+  "resume": "Diaporama médical universitaire détaillant l'anatomie, la mécanique contractile, la régulation hémodynamique et le contrôle nerveux de la fonction cardiaque chez l'humain.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de cardiologie et physiologie médicale humaine, strictement hors du périmètre agronomique d'Agrolide.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La FONCTION CARDIO VASCULAIRE I- INTRODICTION : La fonction essentielle du cœur est de maintenir la circulation du sang"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00914__cours-sur-la-fonction-cardiovasculaire-et-la-physiologi.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00914__cours-sur-la-fonction-cardiovasculaire-et-la-physiologi.pdf"
+}

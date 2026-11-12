@@ -1,0 +1,811 @@
+{
+  "batch_number": 34,
+  "results": [
+    {
+      "id": "DOC-00504",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "semences_amelioration"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "igname",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI",
+      "mots_cles": [
+        "igname",
+        "dioscorea",
+        "minisetts",
+        "tubercules",
+        "cameroun",
+        "itineraire technique"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’IGNAME",
+      "titre": "Technologie de production de l'igname",
+      "resume": "Guide technique et pédagogique complet de 18 pages sur la culture de l'igname : biologie de la plante, préparation du sol, multiplication par minisetts, entretien, gestion des maladies et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet d'un institut de formation professionnel agréé (IFATI Cameroun) sur l'igname, directement exploitable pour les producteurs tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE L’IGNAME"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00505",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "en",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Hendrix Genetics",
+      "source_organisation": "Hendrix Genetics",
+      "mots_cles": [
+        "isa brown",
+        "laying hens",
+        "poultry",
+        "cage housing",
+        "egg production",
+        "aviculture"
+      ],
+      "titre_trouve": "Product Guide ISA Brown Cage housing",
+      "titre": "ISA Brown Commercial Layer Product Guide : Cage Housing",
+      "resume": "Guide technique professionnel de Hendrix Genetics (16 pages) détaillant les standards de performance, les programmes d'alimentation et la conduite d'élevage en cage des poules pondeuses ISA Brown.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique officiel de Hendrix Genetics pour la souche de pondeuse ISA Brown très répandue en Afrique, d'utilité directe pour les éleveurs avicoles.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Product Guide ISA Brown Cage housing"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 16,
+          "extrait": "Backed by a strong portfolio of leading brands, Hendrix Genetics"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00506",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aubergine",
+      "pays": "France",
+      "annee": 2009,
+      "auteurs": "Chambre d'Agriculture de Haute-Garonne",
+      "source_organisation": "Chambre d'Agriculture de Haute-Garonne",
+      "mots_cles": [
+        "aubergine",
+        "agriculture biologique",
+        "itineraire technique",
+        "haute-garonne",
+        "maraichage"
+      ],
+      "titre_trouve": "AGRICULTURE BIOLOGIQUE - L’AUBERGINE",
+      "titre": "Itinéraire technique de l'aubergine en agriculture biologique",
+      "resume": "Fiche d'itinéraire technique et économique de 6 pages réalisée par la Chambre d'Agriculture de Haute-Garonne sur la culture de l'aubergine biologique : semis, fertilisation, protection bio et coûts.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique institutionnelle française en climat tempéré (Haute-Garonne) à pertinence marginale pour l'Afrique subsaharienne. Archivée en interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "AGRICULTURE BIOLOGIQUE L’AUBERGINE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00507",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gombo",
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Chambre d'Agriculture de la Martinique",
+      "source_organisation": "Chambre d'Agriculture de la Martinique",
+      "mots_cles": [
+        "gombo",
+        "abelmoschus esculentus",
+        "itineraire technique",
+        "maraichage tropical",
+        "martinique"
+      ],
+      "titre_trouve": "Fiche d’Itinéraire technique - GOMBO",
+      "titre": "Fiche d'itinéraire technique de la culture du gombo",
+      "resume": "Fiche technique opérationnelle de 2 pages de la Chambre d'Agriculture de Martinique détaillant la conduite de la culture tropicale du gombo : semis, amendements, calendrier, ravageurs et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle complète et directement applicable pour la production tropicale de gombo, culture maraîchère majeure en zone tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche d’Itinéraire technique GOMBO"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Chambre d’Agriculture Martinique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00508",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "pesticides",
+        "plasticulture",
+        "toxicite",
+        "sante humaine",
+        "protection des cultures"
+      ],
+      "titre_trouve": "Chapitre 2 : Les différents types de pesticides",
+      "titre": "Impacts des pesticides en plasticulture sur la santé et l'environnement",
+      "resume": "Extrait d'un travail universitaire (chapitres 2 et 3) analysant les familles de pesticides employés en plasticulture maraîchère, leurs modes d'action, leur toxicité environnementale et leurs risques pour la santé humaine.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel d'un mémoire universitaire (chapitres isolés sans page de garde officielle), non publiable en libre accès et archivé en interne.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chapitre 2 : Les différents types de pesticides"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00509",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "eau_irrigation"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "indices climatiques",
+        "de martonne",
+        "emberger",
+        "aridite",
+        "agrometeorologie",
+        "amenagement hydroagricole"
+      ],
+      "titre_trouve": "Aménagement Hydroagricole - Indices climatiques",
+      "titre": "Exercices corrigés sur les indices climatiques en aménagement hydroagricole",
+      "resume": "Fiche d'exercices corrigés en agrométéorologie et hydraulique agricole détaillant le calcul et l'interprétation des indices bioclimatiques (De Martonne, Emberger, Gaussen, SPI) en milieu aride et semi-aride.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de travaux dirigés non publié au format Word (.docx), sans licence libre explicite. Archivé en interne.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Aménagement Hydroagricole Indices climatique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00510",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Jardins du Nord",
+      "mots_cles": [
+        "calendrier lunaire",
+        "jardinage avec la lune",
+        "horticulture",
+        "potager",
+        "biodynamie"
+      ],
+      "titre_trouve": "Calendrier lunaire : Influence de la lune sur les végétaux",
+      "titre": "Calendrier lunaire : influence de la lune sur les végétaux",
+      "resume": "Fiche pratique amateur de 8 pages compilant des croyances et règles de jardinage avec les phases lunaires et les constellations zodiacales pour les travaux potagers.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Compilation amateur de conseils de jardinage lunaire et astrologique sans rigueur agronomique, inadaptée aux priorités de la plateforme. Archivé.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.8,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calendrier lunaire : Influence de la lune sur les végétaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00511",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "multilingue",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maïs",
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Blackhouse Animation Studios - GIZ",
+      "source_organisation": "GIZ / Blackhouse Animation Studios",
+      "mots_cles": [
+        "mais",
+        "bonnes pratiques agricoles",
+        "bpa",
+        "afrique de l'ouest",
+        "fertilisation",
+        "semences"
+      ],
+      "titre_trouve": "Faire de bonnes affaires avec la culture du maïs : Apprendre sur les Bonnes Pratiques Agricoles (BPA)",
+      "titre": "Bonnes pratiques agricoles pour la culture du maïs en Afrique de l'Ouest",
+      "resume": "Guide illustré bilingue de 12 pages présentant les Bonnes Pratiques Agricoles (BPA) du maïs au Cameroun, Côte d'Ivoire, Ghana, Nigéria et Togo : calendrier, fertilisation, densités et stockage.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de vulgarisation agricole complet sur le maïs en Afrique de l'Ouest et Centrale, hautement opérationnel pour les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Faire de bonnes affaires avec la culture du maïs Apprendre sur les Bonnes Pratiques Agricoles (BPA)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00512",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "cours agro3",
+        "techniques d'irrigation",
+        "gestion de l'eau",
+        "agronomie"
+      ],
+      "titre_trouve": "Initiation à l'irrigation : Techniques d'irrigation (AGRO3 2023-2024)",
+      "titre": "Initiation à l'irrigation et techniques d'arrosage (Cours AGRO3)",
+      "resume": "Diaporama universitaire de cours (niveau 3e année agronomie) introduisant les principes d'hydraulique agricole, les différents modes et matériels d'irrigation ainsi que la gestion de l'eau à la parcelle.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de présentation universitaire (.ppt) non publié, sans licence libre et sans identification formelle de l'auteur. Archivé en interne.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.85,
+        "completude": 0.75
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Initiation à l'irrigation Techniques d'irrigation AGRO3 2023 2024"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00513",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "blé",
+      "pays": "France",
+      "annee": 2012,
+      "auteurs": "Chambres d’Agriculture de Picardie, Agro-Transfert Ressources et Territoires",
+      "source_organisation": "Chambres d’Agriculture de Picardie",
+      "mots_cles": [
+        "ble tendre",
+        "picardie",
+        "itineraire technique",
+        "protection integree",
+        "adventices"
+      ],
+      "titre_trouve": "ITINÉRAIRES TECHNIQUES INTÉGRÉS DU blé tendre d’hiver EN PICARDIE - GUIDE PRATIQUE",
+      "titre": "Itinéraires techniques intégrés du blé tendre d'hiver en Picardie",
+      "resume": "Guide pratique de 28 pages conçu par les Chambres d'Agriculture de Picardie pour la gestion intégrée du blé tendre d'hiver : désherbage mécanique, leviers agronomiques et protection phytosanitaire ciblée.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique institutionnel de qualité mais spécifique au blé d'hiver en climat tempéré froid de Picardie, de pertinence marginale pour l'Afrique tropicale. Archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ITINéRAIRES TECHNIQUES INTéGRéS DU blé tendre d’hiver EN PICARDIE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00514",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "amenagement hydro-agricole",
+        "reseau d'irrigation",
+        "tour d'eau",
+        "canaux"
+      ],
+      "titre_trouve": "Structure générale d'un AHA",
+      "titre": "Structure générale d'un aménagement hydro-agricole (AHA)",
+      "resume": "Support de présentation PowerPoint décrivant la configuration technique d'un aménagement hydro-agricole (canaux d'amenée, distribution primaire à quaternaire, colature et gestion du tour d'eau).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama de cours universitaire partiel (suite de module) sans mention d'auteur ni licence libre. Archivé en interne.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.85,
+        "completude": 0.7
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Structure générale d un AHA Réseau d irrigation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00515",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "sol_fertilite"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "drainage",
+        "cours l3",
+        "sol et eau",
+        "besoins en eau",
+        "hydraulique agricole"
+      ],
+      "titre_trouve": "IRRIGATION ET DRAINAGE",
+      "titre": "Cours d'irrigation et drainage (Licence 3 Sol et Eau)",
+      "resume": "Cours universitaire complet de 41 pages destiné aux étudiants de Licence 3 en sciences du sol et de l'eau, abordant les relations sol-eau-plante, les techniques d'irrigation et la conception des réseaux de drainage.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non publié (support Word sans licence libre ni auteur identifié). Non publiable en accès libre, archivé en interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.88,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "IRRIGATION ET DRAINAGE IRRIGATION Introduction"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00516",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Isabelle Saporta",
+      "source_organisation": "Éditions Fayard",
+      "mots_cles": [
+        "agriculture intensive",
+        "pesticides",
+        "elevage industriel",
+        "environnement",
+        "politique agricole",
+        "fayard"
+      ],
+      "titre_trouve": "Le livre noir de l'agriculture",
+      "titre": "Le livre noir de l'agriculture (Isabelle Saporta)",
+      "resume": "Ouvrage d'investigation journalistique de 131 pages (éditions Fayard) dénonçant les dérives environnementales, sanitaires et économiques du modèle agricole productiviste et intensif.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial publié chez Fayard (ISBN 978-2-213-66460-6), strictement protégé par le droit d'auteur. Diffusion publique interdite, archivé en interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Le livre noir de l'agriculture"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "© Librairie Arthème Fayard, 2011. ISBN : 978-2-213-66460-6"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00517",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "riz",
+      "pays": "Burkina Faso",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "riz",
+        "burkina faso",
+        "nerica",
+        "riz irrigue",
+        "itineraire technique",
+        "ravageurs du riz"
+      ],
+      "titre_trouve": "ITINERAIRE TECHNIQUE OPTIMAL POUR LA PRODUCTION DU RIZ IRRIGUE",
+      "titre": "Itinéraire technique optimal de production du riz au Burkina Faso",
+      "resume": "Guide technique opérationnel détaillant la conduite de la riziculture irriguée et pluviale au Burkina Faso : choix des variétés NERICA, pépinière, fertilisation et identification des insectes ravageurs.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document technique au format Word (.docx) très pertinent pour la riziculture sahélienne mais sans mention d'auteur institutionnel ou de licence libre. Archivé en interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.88
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Quelques variétés de riz produites au BF ... ITINERAIRE TECHNIQUE OPTIMAL POUR LA PRODUCTION DU RIZ IRRIGUE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00518",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "MXP TAIBECHE",
+      "source_organisation": null,
+      "mots_cles": [
+        "cycle de krebs",
+        "biochimie",
+        "metabolisme",
+        "respiration cellulaire",
+        "sciences de base"
+      ],
+      "titre_trouve": null,
+      "titre": "Schéma du cycle de Krebs (Biochimie métabolique)",
+      "resume": "Fiche synthétique d'une page représentant le schéma métabolique du cycle de Krebs (acide citrique) pour les étudiants en sciences biologiques et agronomiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Schéma d'une seule page sans texte extractible (OCR nécessaire) sur le cycle de Krebs, nécessitant une validation humaine de son intégration.",
+      "confiance": {
+        "classification": 0.58,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Krebs.pdf"
+        }
+      ]
+    }
+  ]
+}

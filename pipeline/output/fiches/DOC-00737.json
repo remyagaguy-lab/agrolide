@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00737",
+  "sha256": "99ece73998011b6f52a5fc90615699d19acb2f8c9f5c138a1a1e547044db84f6",
+  "nom_original": "Sécurité Sanitaire des Aliments.pdf.pdf",
+  "chemin_relatif_source": "OD_Docs/Sécurité Sanitaire des Aliments.pdf.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5783042,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 247,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "qualite_securite_normes",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "securite sanitaire des aliments",
+    "hygiene alimentaire",
+    "controle qualite",
+    "haccp",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Sécurité sanitaire des aliments : Contrôle de qualité et hygiène des Aliments",
+  "titre": "Sécurité sanitaire des aliments : contrôle de qualité et hygiène alimentaire",
+  "resume": "Cours exhaustif de 247 pages abordant les principes fondamentaux de la sécurité sanitaire des denrées alimentaires, la microbiologie, le contrôle qualité, l'hygiène et la réglementation.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours volumineux non publié sous licence ouverte officielle, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.75,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Sécurité sanitaire des aliments Contrôle de qualité et hygiène des Aliments"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00737__securite-sanitaire-des-aliments-controle-de-qualite-et.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/qualite_securite_normes/DOC-00737__securite-sanitaire-des-aliments-controle-de-qualite-et.pdf"
+}

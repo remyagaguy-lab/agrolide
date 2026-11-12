@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00557",
+  "sha256": "44089a748ae456a18dabdbf28aecc45240655c3bf9345d78ad965208cecceb44",
+  "nom_original": "Les antiparasitaires II.pdf",
+  "chemin_relatif_source": "OD_Docs/Les antiparasitaires II.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2080724,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 98,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2011,
+  "auteurs": "Dr Nébié",
+  "source_organisation": "PATTEC / ELAT Burkina Faso",
+  "mots_cles": [
+    "antiparasitaires",
+    "sante animale",
+    "trypanocides",
+    "anthelminthiques",
+    "PATTEC",
+    "Burkina Faso",
+    "veterinaire"
+  ],
+  "titre_trouve": "Les Antiparasitaires",
+  "titre": "Les antiparasitaires en médecine vétérinaire au Burkina Faso",
+  "resume": "Support pédagogique complet (98 diapositives) sur l'utilisation des antiparasitaires vétérinaires au Burkina Faso : trypanocides, anthelminthiques, anticoccidiens et acaricides.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Module institutionnel de formation vétérinaire PATTEC de grande valeur pratique pour le contrôle des parasitoses animales en zone sahélienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les Antiparasitaires"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Formation ELAT/PATTEC"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00557__les-antiparasitaires-en-medecine-veterinaire-au-burkina.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00557__les-antiparasitaires-en-medecine-veterinaire-au-burkina.pdf"
+}

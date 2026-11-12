@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00978",
+  "sha256": "df226e22873dae83fabffb44b839c0fc6127688787c7e45519550843f7d6886f",
+  "nom_original": "les tomates aiment les carottes  .pdf",
+  "chemin_relatif_source": "OD_Docs/les tomates aiment les carottes  .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 65907919,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "ocr_necessaire",
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 162,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": null,
+  "annee": 2010,
+  "auteurs": "Louise Riotte",
+  "source_organisation": "Éditions du Gerfaut",
+  "mots_cles": [
+    "compagnonnage des plantes",
+    "jardinage bio",
+    "associations vegetales",
+    "tomates",
+    "carottes"
+  ],
+  "titre_trouve": null,
+  "titre": "Les tomates aiment les carottes : associations et compagnonnage végétal au potager",
+  "resume": "Ouvrage complet de 162 pages sur le compagnonnage des plantes et les associations bénéfiques au potager pour repousser les ravageurs et stimuler la croissance. Scan nécessitant OCR.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial sous droits d'auteur exclusifs (traduction du best-seller de Louise Riotte), scanné sans licence libre.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.95,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "les tomates aiment les carottes"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00978__les-tomates-aiment-les-carottes-associations-et-compagn.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00978__les-tomates-aiment-les-carottes-associations-et-compagn.pdf"
+}

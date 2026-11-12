@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00430",
+  "sha256": "04294f2e5f122dde6f5c7e2f1907bc887c1d32929573c0f3168cee20ae2781b5",
+  "nom_original": "Fiche technique Sorgho (3).pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche technique Sorgho (3).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1085404,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "sorgho",
+  "pays": "Belgique",
+  "annee": 2023,
+  "auteurs": "Florence Desmet, Liliane Doyen",
+  "source_organisation": "SPW-DGARNE",
+  "mots_cles": [
+    "sorgho",
+    "ensilage",
+    "fourrage",
+    "itineraire technique",
+    "alimentation animale"
+  ],
+  "titre_trouve": "Fiche technique: Sorgho",
+  "titre": "Fiche technique : Conduite et valorisation du sorgho ensilage et multi-coupes",
+  "resume": "Fiche synthétique comparant le sorgho au maïs en alimentation bovine : itinéraire cultural, densité de semis, désherbage, fertilisation azotée et techniques de récolte en ensilage.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "fragment",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (fragment) du document canonique DOC-00107.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique: Sorgho"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Par Desmet Florence et Doyen Liliane, SPW-DGARNE- Direction de la Recherche et du Développement de Huy"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0069",
+  "canonique_id": "DOC-00107",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00430__fiche-technique-conduite-et-valorisation-du-sorgho-ensi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00430__fiche-technique-conduite-et-valorisation-du-sorgho-ensi.pdf"
+}

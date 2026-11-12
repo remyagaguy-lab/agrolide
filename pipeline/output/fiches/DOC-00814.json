@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00814",
+  "sha256": "1145d60d05819fc08fb578f87e396cdbf66f449eaa9957f365800b8f3d2e1b71",
+  "nom_original": "calcul du bulbe d_humidification xxxx.docx",
+  "chemin_relatif_source": "OD_Docs/calcul du bulbe d_humidification xxxx.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 14240,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "bulbe d'humidification",
+    "irrigation goutte a goutte",
+    "hydraulique agricole",
+    "exercices corriges",
+    "capacite de retention"
+  ],
+  "titre_trouve": "Calcul du bulbe d'humidification et du pourcentage d'humidification en irrigation goutte à goutte",
+  "titre": "Exercices corrigés sur le bulbe d'humidification en irrigation goutte-à-goutte",
+  "resume": "Fiche d'exercices d'application résolus sur le dimensionnement du bulbe d'humidification, le taux d'humidification du sol et l'eau disponible sous irrigation localisée au goutte-à-goutte.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche d'exercices universitaires non publiée au format Word, sans licence libre explicite. Archivée en interne.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Calcul du bulbe d'humidification et du pourcentage d'humidification en irrigation goutte à goutte"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00814__exercices-corriges-sur-le-bulbe-d-humidification-en-irr.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00814__exercices-corriges-sur-le-bulbe-d-humidification-en-irr.pdf"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00073",
+  "sha256": "47a89da4c070381083cfb7666deb213b0d008a36fd7439ed35636771625c85a2",
+  "nom_original": "08-Plantes-abortives@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/08-Plantes-abortives@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1267213,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "droits_reserves",
+    "contenu_commercial",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 36,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "ouvrage",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "plantes abortives",
+    "ethnopharmacologie",
+    "plantes medicinales",
+    "botanique"
+  ],
+  "titre_trouve": null,
+  "titre": "Plantes abortives",
+  "resume": "Monographie ou fascicule documentaire consacré aux plantes abortives et à leurs principes actifs, issu d'une publication sous droits réservés.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document provenant d'une distribution commerciale protégée (@EpubsFR), archivé sans diffusion publique.",
+  "confiance": {
+    "classification": 0.8,
+    "droits": 0.9,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: 08-Plantes-abortives@EpubsFR.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00073__plantes-abortives.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00073__plantes-abortives.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00790",
+  "sha256": "28f3a881b47edfd064bef5d66a97e27b2a66a47726e8dac07a7e877d7007c3e7",
+  "nom_original": "alimentation.pdf",
+  "chemin_relatif_source": "OD_Docs/alimentation.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8041453,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 33,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "alimentation animale",
+    "zootechnie",
+    "nutrition",
+    "master production animale"
+  ],
+  "titre_trouve": "alimentation . master production animale",
+  "titre": "Alimentation animale (Master production animale)",
+  "resume": "Support de cours universitaire de 33 pages scanné sous CamScanner sans couche texte exploitable, abordant les principes de l'alimentation en production animale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document universitaire scanné sans texte machine exploitable, requérant une numérisation OCR et une validation humaine.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.5,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "alimentation . master production animale"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Scanned by CamScanner"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00790__alimentation-animale-master-production-animale.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00790__alimentation-animale-master-production-animale.pdf"
+}

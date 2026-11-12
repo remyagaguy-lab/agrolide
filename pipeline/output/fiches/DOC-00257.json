@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00257",
+  "sha256": "4cbc87264b67c7df0c112a658df88df58645faa377a3ba3d4963977391e87781",
+  "nom_original": "Blé tendre.pdf",
+  "chemin_relatif_source": "OD_Docs/Blé tendre.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8892066,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "blé tendre",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "ble tendre",
+    "cereales",
+    "itineraire technique",
+    "culture"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique de conduite de la culture du blé tendre",
+  "resume": "Document technique scanné de 5 pages présentant la conduite culturale du blé tendre, nécessitant un traitement OCR préalable.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche scannée sans couche texte exploitable ; décision suspendue à une vérification OCR et juridique.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.5,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Blé tendre.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00257__fiche-technique-de-conduite-de-la-culture-du-ble-tendre.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00257__fiche-technique-de-conduite-de-la-culture-du-ble-tendre.pdf"
+}

@@ -1,0 +1,749 @@
+{
+  "batch_number": 21,
+  "results": [
+    {
+      "id": "DOC-00300",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Élevage Bio Traoré",
+      "source_organisation": "Élevage Bio Traoré",
+      "mots_cles": [
+        "asticots",
+        "alimentation avicole",
+        "larves de mouches",
+        "proteines alternatives",
+        "volaille"
+      ],
+      "titre_trouve": "Comment produire les asticots pour les volailles ?",
+      "titre": "Comment produire les asticots pour les volailles ?",
+      "resume": "Guide pratique détaillant les techniques simples de production d'asticots à partir de résidus organiques locaux pour enrichir l'alimentation protéique des volailles en élevage fermier.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide pratique très pertinent pour l'aviculture tropicale issu d'un blog privé sans licence explicite ; validation des droits requise.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.65,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Comment produire les asticots pour les volailles ?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00301",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "asticots",
+        "alimentation avicole",
+        "larves",
+        "dechets organiques",
+        "volailles"
+      ],
+      "titre_trouve": "Comment produire les asticots pour les volailles?",
+      "titre": "Comment produire les asticots pour les volailles ?",
+      "resume": "Article pratique expliquant l'intérêt et le protocole de production d'asticots à base d'épluchures et déchets organiques pour apporter des protéines aux volailles fermières.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche technique très pertinente pour la ration avicole mais issue d'un fichier bureautique sans auteur ni licence formelle.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.6,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Comment produire les asticots pour les volailles?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00302",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "poules pondeuses",
+        "stimuler la ponte",
+        "ortie",
+        "alimentation avicole"
+      ],
+      "titre_trouve": "Comment stimuler la ponte chez les poules",
+      "titre": "Comment stimuler la ponte chez les poules",
+      "resume": "Fiche technique succincte recommandant l'utilisation de feuilles d'orties fraîches broyées dans l'aliment pour relancer la ponte chez les poules.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche pratique d'une page sans auteur identifié ni licence explicite ; à valider avant diffusion.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Comment stimuler la ponte chez les poules"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00303",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "fertilisation_amendements",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "compostage",
+        "matiere organique",
+        "fertilite du sol",
+        "dechets organiques",
+        "fumier"
+      ],
+      "titre_trouve": "Compostage",
+      "titre": "Guide de compostage et fertilisation organique des sols",
+      "resume": "Présentation didactique résumant le rôle de la matière organique dans la fertilité des sols et les étapes méthodologiques de fabrication d'un compost.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Présentation pratique sur le compostage sans auteur ni mention institutionnelle de licence ; validation requise.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.6,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Compostage (2).ppt"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00306",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "outil_modele",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2017,
+      "auteurs": "Abdel Illah Senhadji",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "glucides",
+        "qcm",
+        "oses",
+        "evaluation"
+      ],
+      "titre_trouve": "Cours :01 Les glucides",
+      "titre": "QCM d'évaluation sur les glucides et oses en biochimie",
+      "resume": "Série de questions à choix multiples (QCM) avec corrigé portant sur la structure, les fonctions et la classification des glucides en biochimie générale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support académique d'évaluation (QCM) non doté d'une licence libre et de faible pertinence directe pour la plateforme.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours :01 Les glucides"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00307",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "fertilisation_amendements"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Smail Mehda",
+      "source_organisation": "Université Echahid Hamma Lakhdar El-Oued",
+      "mots_cles": [
+        "pedologie",
+        "sol",
+        "fertilisation",
+        "texture",
+        "structure du sol",
+        "elements nutritifs"
+      ],
+      "titre_trouve": "Cours Agro-pédologie et fertilisation",
+      "titre": "Cours d'agro-pédologie et fertilisation des sols",
+      "resume": "Support de cours universitaire abordant les fondamentaux de la pédologie : genèse, horizons, texture, structure, dynamique de l'eau et éléments nutritifs du sol.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire sans licence libre de rediffusion publique ; archivé pour usage pédagogique interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours Agro-pédologie et fertilisation 2021/2022"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00308",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "semences_amelioration"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Mohamed Abbad",
+      "source_organisation": "Université Saad Dahlab de Blida",
+      "mots_cles": [
+        "agronomie",
+        "cycle vegetal",
+        "semences",
+        "rotation",
+        "rendement",
+        "conduite de culture"
+      ],
+      "titre_trouve": "Matière : Agronomie II - Partie 2 : Végétal",
+      "titre": "Cours d'agronomie générale : la plante cultivée et son environnement (Partie 2)",
+      "resume": "Support de cours universitaire traitant de la plante agricole, de la qualité des semences, du cycle végétatif, des associations microbiennes et de la conduite culturale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Partie 2 isolée d'un module d'enseignement universitaire et support non couvert par une licence libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Matière : Agronomie II - Partie 2 : Végétal"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00309",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "batiments_equipements_elevage",
+        "sante_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Algérie",
+      "annee": 2015,
+      "auteurs": "D. Boudouma",
+      "source_organisation": "École Nationale Supérieure Agronomique d'Alger",
+      "mots_cles": [
+        "aviculture",
+        "poulet de chair",
+        "batiments avicoles",
+        "alimentation",
+        "pathologies",
+        "stress thermique"
+      ],
+      "titre_trouve": "FORMATION EN AVICULTURE DES CADRES DUMINISTERE DE L’AGRICULTURE ET DU DEVELOPPEMENT RURAL",
+      "titre": "Formation approfondie en aviculture : filière, conduite d'élevage et stress thermique",
+      "resume": "Support pédagogique complet de 127 diapositives couvrant la filière avicole, la génétique, le logement, la nutrition, les pathologies et la gestion du stress thermique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support complet de formation ministérielle et universitaire sans licence de rediffusion publique libre ; archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FORMATION EN AVICULTURE DES CADRES DUMINISTERE DE L’AGRICULTURE ET DU DEVELOPPEMENT RURAL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00310",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "germination",
+        "semences",
+        "graine",
+        "physiologie vegetale",
+        "pouvoir germinatif"
+      ],
+      "titre_trouve": "Germination des semences",
+      "titre": "Cours sur la germination et la biologie des semences",
+      "resume": "Diaporama d'initiation sur la biologie des graines, les étapes de la germination, les états de vie latente et les facteurs conditionnant le pouvoir germinatif.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support d'initiation pédagogique sans auteur formel ni licence libre de rediffusion ; archivé.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Germination des semences"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00311",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": [
+        "agronomie_generale",
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2019,
+      "auteurs": "Hamida Mallem",
+      "source_organisation": "Université Amar Telidji de Laghouat",
+      "mots_cles": [
+        "semences",
+        "plants",
+        "pepiniere",
+        "amelioration des plantes",
+        "germination",
+        "multiplication vegetative"
+      ],
+      "titre_trouve": "Production de plants et de semences",
+      "titre": "Polycopié de cours : Production de plants et de semences",
+      "resume": "Cours universitaire complet détaillant l'amélioration génétique, la biologie des graines, les techniques de pépinière et la production de semences et plants certifiés.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire sous droits réservés de l'auteur et de l'université sans licence libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Polycopie de cours Production de plants et de semences"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00313",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Ibrahim Elkhalil Benzohra",
+      "source_organisation": null,
+      "mots_cles": [
+        "phytopathologie",
+        "champignons",
+        "ascomycetes",
+        "taxonomie",
+        "maladies des plantes"
+      ],
+      "titre_trouve": "Caractéristiques et taxonomie des agents phytopathogènes",
+      "titre": "Taxonomie des agents phytopathogènes : Ascomycètes et Septomycètes (Partie 2)",
+      "resume": "Cours universitaire spécialisé de niveau Master décrivant la taxonomie, les structures de reproduction et les ordres des champignons Ascomycètes phytopathogènes.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Partie 2 d'un cours universitaire spécialisé non libre de droits ; document incomplet à archiver.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Caractéristiques et taxonomie des agents phytopathogènes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00314",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Abdelghani Zedam",
+      "source_organisation": "Université Mohamed Boudiaf de M'sila",
+      "mots_cles": [
+        "drs",
+        "erosion hydrique",
+        "conservation des sols",
+        "ruissellement",
+        "degradation des terres"
+      ],
+      "titre_trouve": "La Défense et la Restauration des Sols (D R S) – Partie 1",
+      "titre": "Défense et restauration des sols (DRS) : érosion hydrique (Partie 1)",
+      "resume": "Support de cours de Master consacré aux mécanismes et formes de l'érosion hydrique des sols (en nappe, linéaire, en masse) et aux méthodes d'évaluation spatiale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Partie 1 d'un polycopié universitaire d'enseignement sans licence libre autorisant la diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La Défense et la Restauration des Sols (D R S) – Partie 1"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00315",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Abdelghani Zedam",
+      "source_organisation": "Université Mohamed Boudiaf de M'sila",
+      "mots_cles": [
+        "drs",
+        "erosion eolienne",
+        "lutte antierosive",
+        "brise-vent",
+        "conservation des eaux et sols"
+      ],
+      "titre_trouve": "La Défense et la Restauration des Sols (D R S) – Partie 2",
+      "titre": "Défense et restauration des sols (DRS) : lutte anti-érosive et érosion éolienne (Partie 2)",
+      "resume": "Deuxième volet du cours de DRS traitant des stratégies de lutte anti-érosive hydrique (aménagements, amélioration structurale) et des processus d'érosion éolienne.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Partie 2 d'un cycle de cours universitaire de sciences du sol, non couverte par une licence libre de diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La Défense et la Restauration des Sols (D R S) – Partie 2"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00316",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "biodiversite_ecologie"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Mabrouka Oustani",
+      "source_organisation": "Université Kasdi Merbah d'Ouargla",
+      "mots_cles": [
+        "microbiologie du sol",
+        "bacteries",
+        "actinomycetes",
+        "champignons du sol",
+        "cycles biogeochimiques"
+      ],
+      "titre_trouve": "Cours de microbiologie du sol",
+      "titre": "Cours de microbiologie du sol : diversité microbienne et dynamique biologique",
+      "resume": "Polycopié universitaire de Master 1 présentant les grands groupes microbiens édaphiques (bactéries, actinomycètes, champignons) et leurs rôles biochimiques essentiels.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Cours universitaire complet de spécialité sans licence libre explicite ; archivé pour usage pédagogique interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours de microbiologie du sol Préparé par Dr : Oustani Mabrouka"
+        }
+      ]
+    }
+  ]
+}

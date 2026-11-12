@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00999",
+  "sha256": "29edf3963e791ec134f0bdac262bf5d6f4bb54c2e9f4f7cc386cddceecbbe452",
+  "nom_original": "pain biscottes.pdf",
+  "chemin_relatif_source": "OD_Docs/pain biscottes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 44753,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479882102-pain_biscottes.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "boulangerie et céréales",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "panification",
+    "boulangerie",
+    "biscottes",
+    "cereales",
+    "diagramme de fabrication",
+    "farine"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité PAINS – BISCOTTES",
+  "titre": "Diagramme de procédé technologique : Panification et biscotterie",
+  "resume": "Schéma synoptique de fabrication en boulangerie industrielle détaillant les étapes de dosage, pétrissage, division, pointage, cuisson et surgélation des différents types de pains et biscottes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Diagramme de procédé technique complet sur la transformation meunière et la boulangerie, publiable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité PAINS – BISCOTTES ... ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00999__diagramme-de-procede-technologique-panification-et-bisc.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-00999__diagramme-de-procede-technologique-panification-et-bisc.pdf"
+}

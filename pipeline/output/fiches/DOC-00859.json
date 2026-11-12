@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00859",
+  "sha256": "3d1202642ac88d12ca71d12df6e09b89499f5a2c84a51b470ee7703d37bbe15c",
+  "nom_original": "culture_de_lamarante_légumefeuilles_tropical_avec_wageningen_university.pdf",
+  "chemin_relatif_source": "OD_Docs/culture_de_lamarante_légumefeuilles_tropical_avec_wageningen_university.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8942937,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 230,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "these",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "amarante",
+  "pays": "Bénin",
+  "annee": 1975,
+  "auteurs": "Gérardus J. H. Grubben",
+  "source_organisation": "Université de Wageningen (Landbouwhogeschool Wageningen)",
+  "mots_cles": [
+    "amarante",
+    "legume-feuilles",
+    "maraichage",
+    "Benin",
+    "Dahomey",
+    "phytotechnie tropicale",
+    "Wageningen"
+  ],
+  "titre_trouve": "LA CULTURE DE L'AMARANTE, LÉGUME-FEUILLES TROPICAL AVEC RÉFÉRENCE SPÉCIALE AU SUD-DAHOMEY",
+  "titre": "La culture de l'amarante, légume-feuilles tropical avec référence spéciale au Sud-Dahomey",
+  "resume": "Thèse agronomique majeure analysant les systèmes de culture maraîchers de l'amarante (Amaranthus cruentus) au Sud-Dahomey : écologie, fertilisation, ravageurs et sélection variétale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Thèse universitaire de référence, archivée dans le fonds documentaire interne conformément à la règle stricte régissant les thèses et mémoires.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA CULTURE DE L'AMARANTE, LÉGUME-FEUILLES TROPICAL AVEC RÉFÉRENCE SPÉCIALE AU SUD-DAHOMEY"
+    },
+    {
+      "champ": "type_doc",
+      "page": 2,
+      "extrait": "Cette communication est séparément publiée comme thèse par G. J. H. Grubben"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00859__la-culture-de-l-amarante-legume-feuilles-tropical-avec.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00859__la-culture-de-l-amarante-legume-feuilles-tropical-avec.pdf"
+}

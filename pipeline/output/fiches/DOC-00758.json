@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00758",
+  "sha256": "7bd714f7a0d0f3fde1c051f8e4801fedece61de603f797277cfc06c04e58fd13",
+  "nom_original": "Traitement des eaux usée cours.pdf",
+  "chemin_relatif_source": "OD_Docs/Traitement des eaux usée cours.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4137308,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 37,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2023,
+  "auteurs": "HAMMOUDI-SALEM Z.",
+  "source_organisation": "Université des Sciences et de la Technologie Houari Boumediene (USTHB)",
+  "mots_cles": [
+    "traitement des eaux usees",
+    "epuration",
+    "pollution aquatique",
+    "traitement biologique",
+    "usthb"
+  ],
+  "titre_trouve": "Traitement des eaux usées / GE / Master I",
+  "titre": "Cours de traitement des eaux usées : caractérisation et procédés biologiques (Master 1)",
+  "resume": "Support de cours de Master 1 en génie de l'environnement (USTHB) couvrant la caractérisation des pollutions d'eaux résiduaires, les normes de rejet, les traitements biologiques et l'aération des bassins.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire interne d'enseignant non publié sous licence libre, archivé pour référence académique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Traitement des eaux usées /GE/ Master I / FGMGP/USTHB/ Mme HAMMOUDI-SALEM. Z"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "USTHB"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00758__cours-de-traitement-des-eaux-usees-caracterisation-et-p.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00758__cours-de-traitement-des-eaux-usees-caracterisation-et-p.pdf"
+}

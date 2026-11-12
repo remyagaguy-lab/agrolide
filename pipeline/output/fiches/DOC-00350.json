@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00350",
+  "sha256": "0b9df98ef473525a8295da660e8481c19c941c1a32f1ea60d3f9d9398933a50e",
+  "nom_original": "Devoir.docx",
+  "chemin_relatif_source": "OD_Docs/Devoir.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 1431761,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "pisciculture",
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "ENESA",
+  "mots_cles": [
+    "zoologie aquatique",
+    "pisciculture",
+    "clarias",
+    "oreochromis",
+    "alevinage",
+    "burkina faso"
+  ],
+  "titre_trouve": "ZOOLOGIE AQUATIQUE / ATE 1",
+  "titre": "Devoir de zoologie aquatique : Reproduction et élevage de Clarias et Oreochromis (ATE 1)",
+  "resume": "Épreuve d'examen de zoologie aquatique portant sur la reproduction artificielle du poisson chat (Clarias), l'inversion sexuelle du tilapia et les observations au barrage de Loumbila.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Devoir d'évaluation académique interne d'une école de formation technique (ENESA), document non publié.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ZOOLOGIE AQUATIQUE / ATE 1"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Mr Bayala veut produire des alevins de Clarias et de Oreochromis"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00350__devoir-de-zoologie-aquatique-reproduction-et-elevage-de.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00350__devoir-de-zoologie-aquatique-reproduction-et-elevage-de.pdf"
+}

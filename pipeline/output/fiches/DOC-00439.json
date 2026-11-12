@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00439",
+  "sha256": "a54f6996ef536ef1e4a9c0fad1bfdff1b0b61925c023fa0abd60110a52fddfd0",
+  "nom_original": "Fiche-technique_-Poudre-de-graines-de-neem-contre-CLA-VF-en-Fcais.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche-technique_-Poudre-de-graines-de-neem-contre-CLA-VF-en-Fcais.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 835001,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maïs",
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "neem",
+    "chenille legionnaire",
+    "spodoptera frugiperda",
+    "biopesticide",
+    "protection des cultures"
+  ],
+  "titre_trouve": "Itinéraire de préparation d’extrait de la poudre de neem pour gérer les Chenilles Légionnaires d’Automne",
+  "titre": "Fiche technique : Préparation de poudre de neem contre la chenille légionnaire d'automne",
+  "resume": "Guide pratique de préparation et d'application d'un extrait aqueux de graines de neem (Azadirachta indica) pour lutter de façon biologique contre la chenille légionnaire (Spodoptera frugiperda).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche pratique de bioprotection contre la chenille légionnaire d'automne en Afrique, complète et diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Figure 3 : Itinéraire de préparation d’extrait de la poudre de neem pour gérer les Chenilles Légionnaires d’Automne"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00439__fiche-technique-preparation-de-poudre-de-neem-contre-la.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00439__fiche-technique-preparation-de-poudre-de-neem-contre-la.pdf"
+}

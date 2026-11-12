@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00282",
+  "sha256": "0eef04040770eae7c2fb13c7f5e0a46fbb6eb8d69079e8482a9c0cce0a7f86eb",
+  "nom_original": "Chap 1 Ecologie forestière.pdf",
+  "chemin_relatif_source": "OD_Docs/Chap 1 Ecologie forestière.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3404495,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": "foresterie",
+  "pays": "Algérie",
+  "annee": 2023,
+  "auteurs": "École Nationale Supérieure des Forêts (ENSF)",
+  "source_organisation": "ENSF",
+  "mots_cles": [
+    "ecologie forestiere",
+    "ecologie factorielle",
+    "foret mediterraneenne",
+    "cedre de l'Atlas",
+    "Algerie"
+  ],
+  "titre_trouve": "UEF 1 Ecologie forestière - Chapitre 1 Ecologie factorielle",
+  "titre": "Écologie forestière : Chapitre 1 - Écologie factorielle",
+  "resume": "Premier chapitre d'un cours universitaire d'écologie forestière traitant des notions de base de l'habitat écologique et des facteurs climatiques affectant les espèces forestières nord-africaines.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un cours universitaire algérien, non libre de droits et incomplet.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "UEF 1 Ecologie forestière ... Chapitre 1 Ecologie factorielle"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ENSF Pédagogie (Métadonnées créateur)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00282__ecologie-forestiere-chapitre-1-ecologie-factorielle.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00282__ecologie-forestiere-chapitre-1-ecologie-factorielle.pdf"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00993",
+  "sha256": "4e5dd36ccefac4986d9fe79dd381a50144d5c97253f119c23db0bb64bb10774c",
+  "nom_original": "module_goutte_goutte_16_janv_19.pdf",
+  "chemin_relatif_source": "OD_Docs/module_goutte_goutte_16_janv_19.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2455603,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 52,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Niger",
+  "annee": 2019,
+  "auteurs": "Adamou Mahaman Moustapha",
+  "source_organisation": "PromAP (GIZ / Ministère du Plan du Niger)",
+  "mots_cles": [
+    "irrigation goutte-a-goutte",
+    "niger",
+    "promap",
+    "giz",
+    "economie d'eau",
+    "dimensionnement"
+  ],
+  "titre_trouve": "MODULE DE FORMATION : IRRIGATION AU GOUTTE A GOUTTE",
+  "titre": "Module de formation : Irrigation au goutte-à-goutte (PromAP Niger / GIZ)",
+  "resume": "Guide pratique complet issu de la coopération nigéro-allemande (PromAP/GIZ) détaillant les aspects techniques de l'irrigation goutte-à-goutte au Sahel : dimensionnement, installation et exploitation du réseau.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de formation (GIZ / Ministère du Niger) complet et hautement stratégique pour l'irrigation sahélienne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Programme Nigéro – Allemand de Promotion de l’Agriculture Productive PromAP ... MODULE DE FORMATION : IRRIGATION AU GOUTTE A GOUTTE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00993__module-de-formation-irrigation-au-goutte-a-goutte-proma.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00993__module-de-formation-irrigation-au-goutte-a-goutte-proma.pdf"
+}

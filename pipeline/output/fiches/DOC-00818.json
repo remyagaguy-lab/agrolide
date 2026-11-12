@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00818",
+  "sha256": "5c8c6b9777f9928b894dab1f6f7bd0c829ad3083d88e85aba805ec21941236ee",
+  "nom_original": "catalogo_incubateur_solaire.pdf",
+  "chemin_relatif_source": "OD_Docs/catalogo_incubateur_solaire.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 653256,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "Aladino Solar",
+  "source_organisation": "Aladino Solar",
+  "mots_cles": [
+    "incubateur solaire",
+    "couveuse solaire",
+    "aviculture villageoise",
+    "eclosion",
+    "energie solaire",
+    "poulets"
+  ],
+  "titre_trouve": "ALADINO INCUBATEUR DES OEUF SOLAIRE",
+  "titre": "Guide d'utilisation de l'incubateur avicole solaire Aladino (96 œufs)",
+  "resume": "Notice technique et guide d'utilisation de 8 pages d'une couveuse solaire de 96 œufs fonctionnant sur batterie et panneaux solaires : réglage des capteurs, humidité, mirage et éclosion en milieu rural.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide d'utilisation pratique d'une technologie solaire d'incubation très adaptée aux exploitations avicoles familiales en zone rurale non raccordée.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ALADINO INCUBATEUR DES OEUF SOLAIRE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Cette machine incubateur peut incuber jusqu'à 96 oeuf il est très utile surtout dans les villages où l'électricité ne vient pas"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00818__guide-d-utilisation-de-l-incubateur-avicole-solaire-ala.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00818__guide-d-utilisation-de-l-incubateur-avicole-solaire-ala.pdf"
+}

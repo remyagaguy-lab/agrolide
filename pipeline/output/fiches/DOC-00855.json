@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00855",
+  "sha256": "f103a8f5d3e60fa97632c119a60e975187d2284a4183fa31e7b0f86b98dc67a1",
+  "nom_original": "cremes glacees sorbets glaces.pdf",
+  "chemin_relatif_source": "OD_Docs/cremes glacees sorbets glaces.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 31188,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "fiche_technique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "produits laitiers",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "cremes glacees",
+    "sorbets",
+    "glaces",
+    "technologie laitiere",
+    "foisonnement",
+    "pasteurisation"
+  ],
+  "titre_trouve": "CREMES GLACEES – SORBETS",
+  "titre": "Schéma technologique : fabrication des crèmes glacées et sorbets",
+  "resume": "Diagramme synoptique industriel détaillant l'itinéraire technologique complet de fabrication des crèmes glacées, sorbets et glaces à l'eau : dosage, thermisation, homogénéisation, maturation, foisonnement et surgélation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Schéma technologique industriel isolé sans licence libre établie, archivé.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.8,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité CREMES GLACEES – SORBETS"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0054",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00855__schema-technologique-fabrication-des-cremes-glacees-et.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00855__schema-technologique-fabrication-des-cremes-glacees-et.pdf"
+}

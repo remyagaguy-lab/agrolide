@@ -1,0 +1,69 @@
+{
+  "id": "DOC-01004",
+  "sha256": "670846e1d4d915c1ef9a8760a703cd22c46cbb8c5cba223367d206b547fe4fce",
+  "nom_original": "pates charcutiers.pdf",
+  "chemin_relatif_source": "OD_Docs/pates charcutiers.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 37567,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479932530-pates_charcutiers.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "charcuterie et porc",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "pate de campagne",
+    "charcuterie",
+    "transformation de la viande",
+    "porc",
+    "diagramme de fabrication"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité PATES CHARCUTIERS",
+  "titre": "Diagramme de procédé technologique : Pâtés charcutiers et salaisons",
+  "resume": "Schéma synoptique technique détaillant les opérations unitaires de fabrication de charcuterie (pâté de campagne et pâté en croûte) : hachage, cutterage, embossage et barèmes de cuisson.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique de transformation charcutière complet et directement utilisable pour la formation agroalimentaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité PATES CHARCUTIERS ... ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01004__diagramme-de-procede-technologique-pates-charcutiers-et.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-01004__diagramme-de-procede-technologique-pates-charcutiers-et.pdf"
+}

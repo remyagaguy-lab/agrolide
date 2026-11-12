@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00832",
+  "sha256": "2a215d827517e2c8860ecff2af51c7232dd0e0ed24abbfeb86c8c1aa87d6c6aa",
+  "nom_original": "compostage, fertilisants.pdf",
+  "chemin_relatif_source": "OD_Docs/compostage, fertilisants.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6635608,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Ministère de l'Économie - Services à la personne",
+  "source_organisation": "Direction générale des entreprises (France)",
+  "mots_cles": [
+    "compostage",
+    "fertilisation",
+    "jardinage",
+    "dechets verts",
+    "services a la personne"
+  ],
+  "titre_trouve": "Compostage et fertilisation",
+  "titre": "Fiche pratique de compostage et fertilisation pour le jardinage",
+  "resume": "Fiche technique d'initiation au compostage domestique et à la fertilisation du jardin, élaborée pour les professionnels des services à la personne en France.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique conçue pour le contexte réglementaire et horticole tempéré français, de faible pertinence en zone subsaharienne.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LES RESSOURCES PROFESSIONNELLES DES SERVICES À LA PERSONNE COMPOSTAGE ET FERTILISATION"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00832__fiche-pratique-de-compostage-et-fertilisation-pour-le-j.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00832__fiche-pratique-de-compostage-et-fertilisation-pour-le-j.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00341",
+  "sha256": "9fcd322ca8f98ddde73e220ae2ae36142cac842e4a2d2edc1ea9006aeb1f4308",
+  "nom_original": "Demarrage.pdf",
+  "chemin_relatif_source": "OD_Docs/Demarrage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 478290,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "fiche_technique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2006,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Centre de référence en agriculture et agroalimentaire du Québec (CRAAQ)",
+  "mots_cles": [
+    "demarrage entreprise",
+    "entrepreneuriat agricole",
+    "releve agricole",
+    "quebec",
+    "gestion d'exploitation"
+  ],
+  "titre_trouve": "DÉMARRAGE D’UNE ENTREPRISE AGRICOLE",
+  "titre": "Démarrage d'une entreprise agricole : fiche mode d'établissement",
+  "resume": "Fiche d'information sur les aspects organisationnels, financiers et relationnels du démarrage d'une nouvelle exploitation agricole au Québec, avec retour d'expérience d'une jeune agricultrice.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document d'orientation institutionnel canadien complet mais ancré dans le contexte institutionnel du Québec, archivé pour référence méthodologique.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "DÉMARRAGE D’UNE ENTREPRISE AGRICOLE DESCRIPTION DU MODE D’ÉTABLISSEMENT"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 3,
+      "extrait": "au cégep de Lévis-Lauzon"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00341__demarrage-d-une-entreprise-agricole-fiche-mode-d-etabli.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00341__demarrage-d-une-entreprise-agricole-fiche-mode-d-etabli.pdf"
+}

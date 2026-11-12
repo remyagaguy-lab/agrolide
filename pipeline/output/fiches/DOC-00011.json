@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00011",
+  "sha256": "7c2bca9c5a452df8939d99ac5640e52e7833d280f1192f378112cc18bcc9cf91",
+  "nom_original": "Manuel de formation entreprendre dans l_agriculture.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/Manuel de formation entreprendre dans l_agriculture.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 7193294,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 57,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Tchad",
+  "annee": 2016,
+  "auteurs": "RONGEAD, PADL-GRN",
+  "source_organisation": "Union Européenne",
+  "mots_cles": [
+    "entreprendre dans l'agriculture",
+    "tchad",
+    "gestion exploitation",
+    "ecole d'entrepreneuriat",
+    "giz"
+  ],
+  "titre_trouve": "Manuel de formation : « entreprendre dans l’agriculture »",
+  "titre": "Manuel de formation : entreprendre dans l'agriculture au Tchad",
+  "resume": "Manuel pédagogique de 57 pages structuré en 10 modules pratiques pour apprendre aux producteurs ruraux à gérer leur exploitation comme une entreprise rentable et diversifiée.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel officiel de vulgarisation de la coopération Tchad-UE basé sur la méthodologie GIZ, conçu pour les producteurs sahéliens.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Manuel de formation : « entreprendre dans l’agriculture »"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "COOPERATION TCHAD – UNION EUROPEENNE Programme d’Appui au Développement Local"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Manuel de formation réalisé en collaboration avec RONGEAD"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00011__manuel-de-formation-entreprendre-dans-l-agriculture-au.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00011__manuel-de-formation-entreprendre-dans-l-agriculture-au.pdf"
+}

@@ -1,0 +1,835 @@
+{
+  "batch_number": 42,
+  "results": [
+    {
+      "id": "DOC-00627",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "plantes_aromatiques_medicinales"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ndolé",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "ndole",
+        "vernonia",
+        "legume-feuille",
+        "cameroun",
+        "fiche technique",
+        "fertilisation",
+        "maraichage"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique de production du ndolé (Vernonia spp.) au Cameroun",
+      "resume": "Fiche technique pratique élaborée par l'IFATI pour la production du ndolé au Cameroun : préparation du terrain, repiquage, désherbage, fertilisation minérale et organique, traitements phytosanitaires et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle d'un institut de formation agricole camerounais sur un légume-feuille traditionnel majeur d'Afrique centrale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        },
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "GENERALITES I.2. LA PREPARATION DU CHAMP I.3. PLANTATION"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00628",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "niebe",
+        "vigna unguiculata",
+        "legumineuse",
+        "itineraire technique",
+        "fertilisation",
+        "conservation post-recolte",
+        "cameroun"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU NIEBE (Vigna unguiculata)",
+      "titre": "Technologie de production du niébé (Vigna unguiculata)",
+      "resume": "Fiche technique détaillée de l'IFATI sur l'itinéraire technique complet du niébé en Afrique centrale : préparation du sol, semis, fertilisation minérale, protection phytosanitaire et stockage post-récolte à l'Actellic ou huile de neem.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle claire et complète pour la production et le stockage du niébé, diffusable librement en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DU NIEBE (Vigna unguiculata)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00629",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Jean-Pierre Vaissaire",
+      "source_organisation": "Éditions France Agricole",
+      "mots_cles": [
+        "zootechnie",
+        "memento",
+        "animaux de rente",
+        "elevage",
+        "fiches pratiques"
+      ],
+      "titre_trouve": "Mémento de zootechnie",
+      "titre": "Mémento de zootechnie : l'essentiel à connaître sur l'élevage des animaux de rente (Extrait)",
+      "resume": "Extrait partiel de l'ouvrage de référence Mémento de zootechnie des Éditions France Agricole, présentant le sommaire général et les premières fiches de définitions zoologiques applicables aux animaux d'élevage.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel d'un livre commercial protégé par copyright (Éditions France Agricole), réservé à l'archivage interne sans publication.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Mémento de zootechnie L’essentiel à connaître sur l’élevage des animaux de rente Jean-Pierre Vaissaire"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 11,
+          "extrait": "ISBN 978-2-85557-261-3 Ce mémento de zootechnie rassemble de manière concise"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00630",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "neoglucogenese",
+        "glycolyse",
+        "metabolisme glucidique",
+        "bilan energetique",
+        "enzymes"
+      ],
+      "titre_trouve": null,
+      "titre": "Cours de biochimie : mécanismes et bilan énergétique de la néoglucogenèse",
+      "resume": "Support de cours concis de biochimie métabolique décrivant les réactions enzymatiques, le bilan de consommation d'ATP/GTP et la régulation réciproque entre la glycolyse et la néoglucogenèse.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours partiel de biochimie métabolique sans licence libre, archivé pour référence académique interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.75
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "La néoglucogenèse est énergétiquement couteuse"
+        },
+        {
+          "champ": "complet",
+          "page": 9,
+          "extrait": "Régulation réciproque de la néoglucogenèse et de la glycolyse+++"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00631",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "cultures_maraicheres",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maraîchage",
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Dr Wendnéyidé Mathieu Sawadogo",
+      "source_organisation": null,
+      "mots_cles": [
+        "nesidiocoris tenuis",
+        "lutte biologique",
+        "maraichage",
+        "tuta absoluta",
+        "aleurodes",
+        "burkina faso",
+        "protection des cultures"
+      ],
+      "titre_trouve": "Nesidiocoris tenuis, prédateur, alternative à la lutte chimique en maraichage?",
+      "titre": "Nesidiocoris tenuis, prédateur naturel : alternative à la lutte chimique en maraîchage",
+      "resume": "Présentation technique et scientifique sur le potentiel de la punaise miride Nesidiocoris tenuis comme auxiliaire de lutte biologique contre les ravageurs majeurs en maraîchage (Tuta absoluta, aleurodes, thrips) en Afrique de l'Ouest.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Présentation académique d'un chercheur burkinabè sans licence libre déclarée, conservée en archive pour son intérêt agroécologique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nesidiocoris tenuis, prédateur, alternative à la lutte chimique en maraichage? Dr SAWADOGO Wendnéyidé Mathieu"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00632",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": [
+        "foresterie_agroforesterie",
+        "transversal"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2019,
+      "auteurs": "Dr Sékouna Diatta",
+      "source_organisation": "Université Cheikh Anta Diop de Dakar (UCAD)",
+      "mots_cles": [
+        "ecologie vegetale",
+        "ucad",
+        "dendrometrie",
+        "echantillonnage",
+        "regeneration",
+        "biodiversite",
+        "senegal"
+      ],
+      "titre_trouve": "TRAVAUX PRATIQUES & DIRIGES D’ECOLOGIE VEGETALE",
+      "titre": "Travaux pratiques et dirigés d'écologie végétale (L3 SVT - UCAD)",
+      "resume": "Support de travaux pratiques et dirigés en écologie végétale de l'UCAD détaillant les niveaux d'organisation du vivant, les méthodes d'échantillonnage de la flore sahélienne et le calcul des taux et indices de régénération arborée.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de travaux pratiques universitaire non libre (UCAD), archivé pour consultation académique interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "TRAVAUX PRATIQUES & DIRIGES D’ECOLOGIE VEGETALE TP Ecologie Végétale L3SVT Dr Sékouna DIATTA Département de Biologie Végétale, FST-UCAD"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00633",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Suisse",
+      "annee": 2013,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Aviforum / Formation professionnelle suisse",
+      "mots_cles": [
+        "aviculture",
+        "nutrition volaille",
+        "poules pondeuses",
+        "alimentation avicole",
+        "qualite de l'oeuf",
+        "suisse"
+      ],
+      "titre_trouve": "B7-II Nourrir les volailles",
+      "titre": "Nourrir les volailles : formation professionnelle de l'aviculteur (Module B7-II)",
+      "resume": "Support pédagogique officiel de formation professionnelle agricole suisse sur la conduite alimentaire des volailles : formulation selon les stades de ponte, distribution, estimation des consommations et qualité des œufs.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "contexte_non_adapte",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel d'un manuel d'enseignement professionnel avicole suisse protégé par droits d'auteur.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "B7-II Nourrir les volailles Moyen d’enseignement pour la formation professionnelle de base de l’avicultrice, de l’aviculteur"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00634",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "oignon",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "oignon",
+        "allium cepa",
+        "cultures maraicheres",
+        "pepiniere",
+        "irrigation",
+        "thrips",
+        "cameroun"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’OIGNON (Allium cepa)",
+      "titre": "Technologie de production de l'oignon (Allium cepa) au Cameroun",
+      "resume": "Fiche technique opérationnelle de l'IFATI pour la conduite de l'oignon en Afrique tropicale : exigences pédoclimatiques, semis en pépinière, repiquage, entretien du sol, irrigation, fertilisation et lutte contre les thrips.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle claire et complète pour la culture maraîchère de l'oignon au Cameroun, diffusable en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE L’OIGNON (Allium cepa)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00636",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "transversal",
+        "production_vegetale"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Yacouba Sare",
+      "source_organisation": "ProXi_Tech Consulting",
+      "mots_cles": [
+        "mecanisation agricole",
+        "rentabilite",
+        "cout a l'hectare",
+        "tracteur",
+        "burkina faso",
+        "gestion d'exploitation",
+        "materiel agricole"
+      ],
+      "titre_trouve": "QUELLE OPTION DE MECANISATION POUR UNE RENTABILITE DE LA PRODUCTION AGRICOLE ?",
+      "titre": "Options de mécanisation et analyse de rentabilité pour la production agricole",
+      "resume": "Support de formation de 31 diapositives analysant les options de mécanisation agricole au Sahel : typologie des matériels, avantages et contraintes, calcul des charges à l'hectare et évaluation de la rentabilité financière.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation d'un cabinet de conseil privé sans licence libre explicite, archivé pour référence interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "QUELLE OPTION DE MECANISATION POUR UNE RENTABILITE DE LA PRODUCTION AGRICOLE ?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00637",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "genetique_reproduction",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "Dr L. Zemmouri",
+      "source_organisation": null,
+      "mots_cles": [
+        "ovogenese",
+        "reproduction animale",
+        "embryologie veterinaire",
+        "folliculogenese",
+        "cycle ovarien",
+        "mammiferes"
+      ],
+      "titre_trouve": "Cours Embryologie (1re année Vétérinaire et Agronomie) : OVOGENESE",
+      "titre": "Cours d'embryologie : l'ovogenèse et le cycle ovarien chez les mammifères d'élevage",
+      "resume": "Support de cours d'embryologie destiné aux étudiants vétérinaires et agronomes détaillant l'anatomie génitale femelle, la maturation ovocytaire, la folliculogenèse et la dynamique du cycle ovarien chez les mammifères.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non libre, conservé à des fins d'archivage documentaire interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours Embryologie (1re année Vétérinaire et Agronomie) Dr ZEMMOURI. L OVOGENESE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00638",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "orge",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "orge",
+        "hordeum vulgare",
+        "cereale",
+        "conduite culturale",
+        "semis"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique sur la culture de l'orge",
+      "resume": "Fiche technique de 6 pages scannée sans couche de texte exploitable consacrée à la culture de l'orge (Hordeum vulgare), requérant un traitement OCR pour son exploitation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans OCR exploitable nécessitant une reconnaissance de texte et une validation humaine de son contenu et de ses droits.",
+      "confiance": {
+        "classification": 0.58,
+        "droits": 0.4,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Orge.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00639",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "barrages",
+        "ouvrages d'irrigation",
+        "hydraulique agricole",
+        "deversoir",
+        "cours l3",
+        "eau et sol"
+      ],
+      "titre_trouve": "Cours : Ouvrage des systèmes d’irrigation",
+      "titre": "Cours d'ouvrages des systèmes d'irrigation (L3 Sol et Eau) : barrages, prises d'eau et déversoirs",
+      "resume": "Cours universitaire de 125 diapositives pour la filière Sol et Eau couvrant la conception et le dimensionnement des ouvrages de retenue et d'amenée d'eau pour l'irrigation agricole (barrages, déversoirs, pertuis).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non libre, archivé pour référence académique sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours Ouvrage des systèmes d’irrigation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00640",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "embryologie humaine",
+        "ovogenese",
+        "folliculogenese",
+        "medecine",
+        "qcm"
+      ],
+      "titre_trouve": "Ovogenèse et folliculogenèse",
+      "titre": "Ovogenèse et folliculogenèse (Embryologie humaine)",
+      "resume": "Support de cours médical et QCM sur l'ovogenèse et la folliculogenèse chez la femme au cours du développement embryonnaire et foetal humain.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document d'embryologie médicale humaine totalement hors du périmètre agricole et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Ovogenèse et folliculogenèse C’est la formation des gamètes femelles matures (ovocyte II bloqué en métaphase II) dans le sexe féminin."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00641",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "these",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "papaye",
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Claire-Marie Fabert",
+      "source_organisation": "Université de Limoges - Faculté de Pharmacie",
+      "mots_cles": [
+        "carica papaya",
+        "papayer",
+        "pharmacognosie",
+        "papaine",
+        "chymopapaine",
+        "ethnopharmacologie",
+        "these"
+      ],
+      "titre_trouve": "LE PAPAYER, CARICA PAPAYA L., DE LA MEDECINE TRADITONNELLE A LA MEDECINE ACTUELLE. ETUDES BOTANIQUE ET PHARMACOGNOSIQUE.",
+      "titre": "Le papayer (Carica papaya L.) de la médecine traditionnelle à la médecine actuelle : études botanique et pharmacognosique",
+      "resume": "Thèse d'exercice en pharmacie de 129 pages analysant la botanique, la phytochimie des enzymes du latex (papaïne, chymopapaïne) et les applications thérapeutiques traditionnelles et modernes de Carica papaya L.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Thèse universitaire d'exercice pour le diplôme de docteur en pharmacie, archivée pour la recherche sans publication directe (Règle Métier 1).",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE PAPAYER, CARICA PAPAYA L., DE LA MEDECINE TRADITONNELLE A LA MEDECINE ACTUELLE. ETUDES BOTANIQUE ET PHARMACOGNOSIQUE."
+        },
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "THESE POUR LE DIPLOME D'ETAT DE DOCTEUR EN PHARMACIE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00642",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "papaye",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "papayer",
+        "carica papaya",
+        "arboriculture fruitiere",
+        "cameroun",
+        "pepiniere",
+        "rendement",
+        "recolte"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU PAPAYER",
+      "titre": "Technologie de production du papayer au Cameroun",
+      "resume": "Fiche technique opérationnelle de l'IFATI pour la culture commerciale du papayer en Afrique centrale : choix des variétés, conduite de la pépinière, plantation, entretien, fertilisation, protection phytosanitaire et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle pratique et complète sur l'arboriculture de la papaye, diffusable librement en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DU PAPAYER"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    }
+  ]
+}

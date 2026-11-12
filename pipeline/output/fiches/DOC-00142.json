@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00142",
+  "sha256": "7658c06ee6b15103bbc777076f4b25881b8027001f51ac59b447c61f6922c092",
+  "nom_original": "ADDITIFS MB.pptx",
+  "chemin_relatif_source": "OD_Docs/ADDITIFS MB.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 2713553,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "nb_pages": 15,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "qualite_securite_normes",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Togo",
+  "annee": null,
+  "auteurs": "Komlan Lokou",
+  "source_organisation": "ESTBA - Université de Lomé",
+  "mots_cles": [
+    "additifs alimentaires",
+    "etiquetage",
+    "conservateurs",
+    "agroalimentaire",
+    "qualite alimentaire"
+  ],
+  "titre_trouve": "LES Additifs ALIMENTAIRES",
+  "titre": "Les additifs alimentaires : Définitions, étiquetage et catégories",
+  "resume": "Support de présentation universitaire sur les additifs alimentaires, expliquant leur rôle technologique, leur codification européenne et leur identification sur l'étiquetage.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Présentation académique réalisée par un étudiant de l'ESTBA Lomé, archivée sans diffusion ouverte formelle.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "PRESENTATEUR : LOKOU Komlan, étudiant en Science des Aliments et Technologie Agro-alimentaire (SATA-ESTBA)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00142__les-additifs-alimentaires-definitions-etiquetage-et-cat.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/qualite_securite_normes/DOC-00142__les-additifs-alimentaires-definitions-etiquetage-et-cat.pdf"
+}

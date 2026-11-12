@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00756",
+  "sha256": "0187fbcd86f4c67b9c69e78b7a8d1a688e1964cb42d73df8fa13ff1bfc42289b",
+  "nom_original": "Toutes_les_fleurs_de_Méditerranée_Christopher_Grey_Wilson,_Marjorie.pdf",
+  "chemin_relatif_source": "OD_Docs/Toutes_les_fleurs_de_Méditerranée_Christopher_Grey_Wilson,_Marjorie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 44023348,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 563,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "ouvrage",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": "flore méditerranéenne",
+  "pays": null,
+  "annee": 2000,
+  "auteurs": "Christopher Grey-Wilson, Marjorie Blamey",
+  "source_organisation": "Éditions Delachaux et Niestlé",
+  "mots_cles": [
+    "flore mediterraneenne",
+    "botanique",
+    "identification des plantes",
+    "arbres et arbustes",
+    "guide d'identification"
+  ],
+  "titre_trouve": "Toutes les fleurs de Méditerranée : les fleurs, les graminées, les arbres et arbustes",
+  "titre": "Toutes les fleurs de Méditerranée : fleurs, graminées, arbres et arbustes",
+  "resume": "Guide botanique complet identifiant la flore du bassin méditerranéen (Afrique du Nord et Europe du Sud) avec descriptions morphologiques et planches illustrées de plus de 100 familles végétales.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide commercial de référence protégé par le droit d'auteur (Éditions Delachaux et Niestlé, ISBN 2-603-01179-0), archivé sans diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "Toutes les fleurs de Méditerranée Planches en couleurs : Marjorie Blamey Textes et dessins : Christopher Grey-Wilson"
+    },
+    {
+      "champ": "autre",
+      "page": 5,
+      "extrait": "© Éditions Delachaux et Niestlé SA... ISBN : 2-60-301179-0"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00756__toutes-les-fleurs-de-mediterranee-fleurs-graminees-arbr.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00756__toutes-les-fleurs-de-mediterranee-fleurs-graminees-arbr.pdf"
+}

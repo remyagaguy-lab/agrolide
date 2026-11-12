@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00150",
+  "sha256": "c196fe1d3ae042c552816f728a030c112ea695684cae0bc2ec4924836eae1b06",
+  "nom_original": "ALIMENTATION PINTADE-CANARD-DINDE.pdf",
+  "chemin_relatif_source": "OD_Docs/ALIMENTATION PINTADE-CANARD-DINDE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2180872,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 27,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Sénégal",
+  "annee": 2020,
+  "auteurs": "Simplice B. Ayssiwede",
+  "source_organisation": "EISMV Dakar",
+  "mots_cles": [
+    "alimentation des volailles",
+    "pintade",
+    "canard",
+    "dinde",
+    "eismv",
+    "nutrition animale"
+  ],
+  "titre_trouve": "ALIMENTATION D’AUTRES VOLAILLES: Pintade, Canard et Dinde",
+  "titre": "Alimentation des volailles non conventionnelles : Pintade, canard et dinde",
+  "resume": "Support de cours universitaire de l'EISMV Dakar détaillant les besoins nutritionnels, le comportement alimentaire et les rations pour la pintade, le canard et la dinde.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non publié sous licence libre par l'EISMV Dakar, archivé selon les règles sur le matériel pédagogique académique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "ALIMENTATION D’AUTRES VOLAILLES: Pintade, Canard et Dinde cours présenté par Prof. Simplice B. AYSSIWEDE Vétérinaire, Zootechnicien-Nutritionniste ... EISMV-Dakar"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00150__alimentation-des-volailles-non-conventionnelles-pintade.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00150__alimentation-des-volailles-non-conventionnelles-pintade.pdf"
+}

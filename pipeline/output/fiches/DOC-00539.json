@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00539",
+  "sha256": "e83161c5516f162ce6f9bc7b12f574160e622e606458676628bd23baf4902d15",
+  "nom_original": "La respiration cellulaire et la chaîne respiratoire (1).pdf",
+  "chemin_relatif_source": "OD_Docs/La respiration cellulaire et la chaîne respiratoire (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3937038,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 28,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "Dr. Karim Loucif",
+  "source_organisation": "Université Chadli Bendjedid El Tarf",
+  "mots_cles": [
+    "respiration cellulaire",
+    "chaine respiratoire",
+    "mitochondrie",
+    "atp",
+    "sciences veterinaires"
+  ],
+  "titre_trouve": "Chapitre VII: La respiration cellulaire et la chaîne respiratoire",
+  "titre": "La respiration cellulaire et la chaîne respiratoire (Chapitre VII)",
+  "resume": "Support de cours universitaire de première année vétérinaire expliquant la biochimie de la respiration mitochondriale, le cycle de Krebs et la production d'ATP.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre VII isolé extrait d'un cours universitaire vétérinaire, non publiable conformément à la règle sur les ensembles partiels.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.7
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre VII: La respiration cellulaire et la chaîne respiratoire"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Dr. LOUCIF Karim Département des sciences vétérinaires"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0039",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00539__la-respiration-cellulaire-et-la-chaine-respiratoire-cha.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00539__la-respiration-cellulaire-et-la-chaine-respiratoire-cha.pdf"
+}

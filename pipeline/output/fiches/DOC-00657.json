@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00657",
+  "sha256": "6b425324e2ba0e672f8f877f1ef0d42232b021f0daacce753ffdac44a1e7c50f",
+  "nom_original": "PROVENCE-jan-fev-091.pdf",
+  "chemin_relatif_source": "OD_Docs/PROVENCE-jan-fev-091.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1163094,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte",
+    "obsolete"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "melon",
+  "pays": "France",
+  "annee": 2009,
+  "auteurs": "Chambre Régionale d'Agriculture PACA / Bio de Provence",
+  "source_organisation": "Chambre Régionale d'Agriculture PACA",
+  "mots_cles": [
+    "maraichage biologique",
+    "paca",
+    "melon",
+    "varietes bio",
+    "france",
+    "agriculture biologique"
+  ],
+  "titre_trouve": "Dispositif régional Bio de Provence –Chambre régionale d’agriculture PACA",
+  "titre": "Choix variétal en maraîchage biologique en région PACA (2009)",
+  "resume": "Guide régional de préconisations variétales pour le maraîchage biologique (notamment le melon sous abri et en plein champ) édité par la Chambre d'Agriculture de Provence-Alpes-Côte d'Azur.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document technique institutionnel français de 2009 portant sur des variétés maraîchères adaptées au climat méditerranéen européen, non pertinent pour l'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Dispositif régional Bio de Provence –Chambre régionale d’agriculture PACA"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00657__choix-varietal-en-maraichage-biologique-en-region-paca.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00657__choix-varietal-en-maraichage-biologique-en-region-paca.pdf"
+}

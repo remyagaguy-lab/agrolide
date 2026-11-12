@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00180",
+  "sha256": "71d91e7f7211715bb83113846e529f203020d1af6375c82f3403de6be4fbdf8c",
+  "nom_original": "Agrodok - 36 - La production de laitages@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok - 36 - La production de laitages@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 478335,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 79,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "produits laitiers",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Karin Rutgers, Pauline Ebing, Rogier Muller, Matty Weijenberg",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "laitages",
+    "fromage",
+    "yaourt",
+    "transformation du lait",
+    "agrodok"
+  ],
+  "titre_trouve": "Agrodok 36 La préparation de laitages",
+  "titre": "La préparation de laitages (Agrodok 36)",
+  "resume": "Guide pratique pour la transformation artisanale du lait à petite échelle dans les pays du Sud : fabrication de fromage, yaourt, beurre et règles d'hygiène.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document diffusé via la release @EpubsFR sans licence libre explicite, archivé selon la règle métier 4.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 36 La préparation de laitages"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Karin Rutgers Pauline Ebing Rogier Muller Matty Weijenberg"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00180__la-preparation-de-laitages-agrodok-36.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00180__la-preparation-de-laitages-agrodok-36.pdf"
+}

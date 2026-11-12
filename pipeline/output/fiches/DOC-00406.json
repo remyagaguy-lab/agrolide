@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00406",
+  "sha256": "ce6324ed59afd5913f0b845fb8ad7c94a90af8cf187be837309498cf0815bcf6",
+  "nom_original": "FICHETECHNIQUECommentcultiverduPimentBio_AgricultureauCameroun_1668595606325.pdf",
+  "chemin_relatif_source": "OD_Docs/FICHETECHNIQUECommentcultiverduPimentBio_AgricultureauCameroun_1668595606325.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 156563,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "piment",
+  "pays": "Cameroun",
+  "annee": 2018,
+  "auteurs": "Agriculture au Cameroun",
+  "source_organisation": "Agriculture au Cameroun",
+  "mots_cles": [
+    "piment bio",
+    "culture biologique",
+    "cameroun",
+    "pepiniere",
+    "maraichage"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE : Comment cultiver du Piment Bio",
+  "titre": "Fiche technique : Comment cultiver du piment biologique au Cameroun",
+  "resume": "Fiche technique synthétique guidant les maraîchers pour la production biologique du piment : préparation de la pépinière, fertilisation organique, traitements au neem et récolte.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Article de vulgarisation web issu d'un site privé camerounais sans licence de réutilisation explicite, archivé.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE : Comment cultiver du Piment Bio By Agriculture au Cameroun 6 février 2018"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00406__fiche-technique-comment-cultiver-du-piment-biologique-a.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00406__fiche-technique-comment-cultiver-du-piment-biologique-a.pdf"
+}

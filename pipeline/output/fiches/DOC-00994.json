@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00994",
+  "sha256": "49fab33a28e3dffdb677b3a64bc1e1489f00174f8e584bee2129148f4f4e95f5",
+  "nom_original": "mémoire en agronomie.pdf",
+  "chemin_relatif_source": "OD_Docs/mémoire en agronomie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2883381,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 94,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_de_rente",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "canne à sucre",
+  "pays": "France",
+  "annee": 2011,
+  "auteurs": "Noëlie Maurette",
+  "source_organisation": "CIRAD / UPR GREEN",
+  "mots_cles": [
+    "canne a sucre",
+    "fertilisation organique",
+    "la reunion",
+    "cirad",
+    "memoire ingenieur",
+    "valorisation agronomique"
+  ],
+  "titre_trouve": "Caractérisation des pratiques de fertilisation de la canne à sucre et de leurs déterminants dans le Territoire de la Côte Ouest de la Réunion",
+  "titre": "Pratiques de fertilisation de la canne à sucre à La Réunion (Mémoire d'ingénieur)",
+  "resume": "Mémoire de fin d'études d'ingénieur agronome réalisé au CIRAD analysant les pratiques de fertilisation minérale et organique de la canne à sucre ainsi que la valorisation des résidus à l'île de La Réunion.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire d'ingénieur universitaire sans licence libre, archivé conformément à la règle absolue sur les mémoires académiques.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "MÉMOIRE DE FIN D’ÉTUDES présenté pour l'obtention du DIPLOME D’INGENIEUR AGRONOME"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00994__pratiques-de-fertilisation-de-la-canne-a-sucre-a-la-reu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_de_rente/DOC-00994__pratiques-de-fertilisation-de-la-canne-a-sucre-a-la-reu.pdf"
+}

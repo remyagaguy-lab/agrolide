@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00360",
+  "sha256": "bc90ff9d36ef977d0e22db0a16949ba46503d06a8256220ad9a60499368fcf17",
+  "nom_original": "EX  QUANTITE D_EAU ET INFILTRATION.docx",
+  "chemin_relatif_source": "OD_Docs/EX  QUANTITE D_EAU ET INFILTRATION.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 14390,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "infiltration",
+    "besoin en eau",
+    "dimensionnement",
+    "hydraulique agricole"
+  ],
+  "titre_trouve": "QUANTITE D’EAU ET INFILTRATION",
+  "titre": "Exercice résolu : Calcul de la quantité d'eau d'irrigation et du temps d'infiltration",
+  "resume": "Exercice pratique d'hydraulique agricole expliquant la méthode de calcul du volume d'eau d'irrigation et du temps nécessaire à l'infiltration pour une parcelle d'un hectare.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Court exercice didactique non sourcé sans mention d'auteur, à vérifier avant toute diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "QUANTITE D’EAU ET INFILTRATION"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "évaluer les quantités d'eau d'irrigation nécessaires en fonction de l'infiltration d'un sol"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00360__exercice-resolu-calcul-de-la-quantite-d-eau-d-irrigatio.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00360__exercice-resolu-calcul-de-la-quantite-d-eau-d-irrigatio.pdf"
+}

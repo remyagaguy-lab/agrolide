@@ -1,0 +1,800 @@
+{
+  "batch_number": 30,
+  "results": [
+    {
+      "id": "DOC-00442",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poivron",
+      "pays": "Cameroun",
+      "annee": 2018,
+      "auteurs": "Agriculture au Cameroun",
+      "source_organisation": "Agriculture au Cameroun",
+      "mots_cles": [
+        "poivron",
+        "agriculture biologique",
+        "fiche technique",
+        "maraichage",
+        "cameroun",
+        "capsicum"
+      ],
+      "titre_trouve": "Fiche Technique : Culture du Poivron ( Capsicum annun ) Biologique",
+      "titre": "Fiche technique : Culture biologique du poivron au Cameroun",
+      "resume": "Fiche technique synthétique présentant la conduite biologique de la culture du poivron au Cameroun : pépinière ombragée, préparation du sol, repiquage, fertilisation organique et récolte.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Article technique extrait d'un portail web sans licence formelle explicite et avec des données de rendement atypiques nécessitant validation.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche Technique : Culture du Poivron ( Capsicum annun ) Biologique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00443",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "artemisia",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Audrey Sougnez",
+      "source_organisation": "La Maison de l'Artemisia",
+      "mots_cles": [
+        "artemisia annua",
+        "plante medicinale",
+        "paludisme",
+        "fiche technique",
+        "agroecologie",
+        "pepiniere"
+      ],
+      "titre_trouve": "Fiche 5 - Culture Artemisia annua",
+      "titre": "Fiche technique : Culture d'Artemisia annua",
+      "resume": "Fiche technique de La Maison de l'Artemisia décrivant l'itinéraire technique agroécologique pour la culture d'Artemisia annua en zone tropicale : préparation du sol, repiquage, entretien et irrigation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de l'ONG La Maison de l'Artemisia, libre de diffusion pour soutenir les producteurs locaux.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche 5 - Culture Artemisia annua"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00444",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Agrisol BF",
+      "source_organisation": "Agrisol BF",
+      "mots_cles": [
+        "ferticompost",
+        "compost",
+        "amendement organique",
+        "fertilisation",
+        "burkina faso",
+        "agrisol"
+      ],
+      "titre_trouve": "Fiche de présentation et d'utlisation de Ferticomost_Agrisol BF",
+      "titre": "Fiche technique et d'utilisation : Ferticompost (Agrisol BF)",
+      "resume": "Fiche commerciale et technique de présentation du Ferticompost par Agrisol BF, précisant la composition minérale et organique ainsi que les doses recommandées par type de culture au Burkina Faso.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Prospectus commercial promotionnel pour un produit fertilisant de marque privée (Agrisol BF).",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FERTICOMPOST, LE PRODUIT UTILE POUR UNE BONNE FERTLITE DU SOL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00445",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pomme de terre",
+      "pays": "Niger",
+      "annee": 2017,
+      "auteurs": "Chambre Régionale d'Agriculture de Maradi",
+      "source_organisation": "CRA Maradi / RECA Niger",
+      "mots_cles": [
+        "pomme de terre",
+        "fiche technico-economique",
+        "marge brute",
+        "maradi",
+        "niger",
+        "maraichage"
+      ],
+      "titre_trouve": "Fiche technico-économique pour la culture de la pomme de terre - Région de Maradi",
+      "titre": "Fiche technico-économique : Culture de la pomme de terre à Maradi",
+      "resume": "Fiche technico-économique de la Chambre Régionale d'Agriculture de Maradi détaillant l'itinéraire technique, le compte d'exploitation prévisionnel et les marges brutes de la pomme de terre au Niger.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technico-économique institutionnelle complète de la Chambre Régionale d'Agriculture de Maradi (RECA Niger), directement exploitable par les producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technico-économique pour la culture de la pomme de terre"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00446",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Niger",
+      "annee": 2016,
+      "auteurs": "Aimée Tchokanaka, Salissou El Ousmane, Cheik Amadou Bello, Mama Lawan Ibrah, Bachir Issoufou",
+      "source_organisation": "CRA Zinder / RECA Niger",
+      "mots_cles": [
+        "niebe",
+        "fiche technico-economique",
+        "zinder",
+        "niger",
+        "legumineuse",
+        "rentabilite agricole"
+      ],
+      "titre_trouve": "Fiche technico-économique pour la culture du niébé - Région de Zinder",
+      "titre": "Fiche technico-économique : Culture du niébé à Zinder",
+      "resume": "Fiche technico-économique de la CRA de Zinder analysant l'itinéraire technique de production du niébé sur 1 hectare au Niger, les coûts d'exploitation, les rendements et la rentabilité financière.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technico-économique institutionnelle de référence de la Chambre Régionale d'Agriculture de Zinder, libre de diffusion.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technico-économique pour la culture du niébé"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00447",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment",
+      "pays": "Niger",
+      "annee": 2017,
+      "auteurs": "Chambre Régionale d'Agriculture de Dosso",
+      "source_organisation": "CRA Dosso / RECA Niger",
+      "mots_cles": [
+        "piment vert",
+        "fiche technico-economique",
+        "dosso",
+        "niger",
+        "maraichage",
+        "rentabilite"
+      ],
+      "titre_trouve": "Fiche technico-économique pour le piment vert - Région de Dosso",
+      "titre": "Fiche technico-économique : Culture du piment vert à Dosso",
+      "resume": "Fiche technico-économique de la CRA de Dosso présentant la conduite de culture du piment vert au Niger, avec bilan financier complet (charges, produit brut, marge brute et gestion des risques).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique et financier institutionnel de la Chambre Régionale d'Agriculture de Dosso, conçu pour l'appui-conseil aux maraîchers sahéliens.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technico-économique pour le piment vert"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00448",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "chou",
+      "pays": "Niger",
+      "annee": 2017,
+      "auteurs": "Chambre Régionale d'Agriculture de Dosso",
+      "source_organisation": "CRA Dosso / RECA Niger",
+      "mots_cles": [
+        "chou",
+        "fiche technico-economique",
+        "dosso",
+        "niger",
+        "maraichage",
+        "rentabilite"
+      ],
+      "titre_trouve": "Fiche technico-économique pour la culture du chou - Région de Dosso",
+      "titre": "Fiche technico-économique : Culture du chou à Dosso",
+      "resume": "Fiche technico-économique de la Chambre Régionale d'Agriculture de Dosso précisant la conduite culturale du chou, les intrants nécessaires, la ventilation mensuelle des charges et les marges bénéficiaires au Niger.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technico-économique institutionnelle complète de la Chambre Régionale d'Agriculture de Dosso destinée aux producteurs maraîchers.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technico-économique pour la culture du chou"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00449",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "semences_amelioration",
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Burkina Faso",
+      "annee": 2022,
+      "auteurs": "Ferdinand Obulbiga",
+      "source_organisation": "INERA Burkina Faso",
+      "mots_cles": [
+        "niebe",
+        "teek-songo",
+        "variete amelioree",
+        "striga",
+        "inera",
+        "burkina faso",
+        "semences"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE SIMPLIFIEE VARIETE DE NIEBE (Vigna unguiculata) Nom: TEEK-SONGO",
+      "titre": "Fiche technique : Variété améliorée de niébé TEEK-SONGO",
+      "resume": "Fiche technique simplifiée de l'INERA présentant la variété de niébé Teek-songo au Burkina Faso : caractéristiques agronomiques, résistance au Striga et aux virus, itinéraire technique et conservation en sacs PICS.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de l'INERA présentant une variété améliorée de niébé résistante aux bioagresseurs au Burkina Faso.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE SIMPLIFIEE VARIETE DE NIEBE (Vigna unguiculata) Nom: TEEK-SONGO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00451",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "sol_fertilite",
+        "eau_irrigation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "Fabèkourè Cédric Kambiré, Nessan Bemissa Barro, Christian Legay",
+      "source_organisation": "CNRST / IRSAT / Autre Terre Burkina",
+      "mots_cles": [
+        "agroecologie",
+        "fiches techniques",
+        "burkina faso",
+        "cnrst",
+        "irsat",
+        "zai",
+        "gestion de l'eau",
+        "conservation post-recolte"
+      ],
+      "titre_trouve": "Recueil des pratiques agro-écologiques éprouvées et mises en œuvre au Burkina Faso",
+      "titre": "Recueil des pratiques agroécologiques au Burkina Faso (PEAEP)",
+      "resume": "Recueil de plus de 50 fiches techniques pratiques sur les innovations agroécologiques éprouvées au Burkina Faso : gestion de l'eau et des sols (zaï, demi-lunes), fertilisation organique et conservation post-récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Recueil officiel complet de fiches agroécologiques publié par le CNRST/IRSAT et l'ONG Autre Terre au Burkina Faso.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Recueil des pratiques agro-écologiques éprouvées et mises en œuvre au Burkina Faso"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00453",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "flore du sahara",
+        "botanique",
+        "sahara",
+        "biodiversite",
+        "especes vegetales",
+        "desert"
+      ],
+      "titre_trouve": null,
+      "titre": "Flore du Sahara",
+      "resume": "Ouvrage botanique d'identification et de systématique floristique des espèces végétales du Sahara (document numérisé nécessitant une reconnaissance optique de caractères OCR).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan intégral volumineux (247 pages, 214 Mo) sans couche texte exploitable, nécessitant un traitement OCR et une vérification juridique avant publication.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.5,
+        "completude": 0.55
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Flore du Sahara"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00454",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2024,
+      "auteurs": "Caroline Dufour-L'Arrivée, Mélika Bazin",
+      "source_organisation": "Éditions Écosociété",
+      "mots_cles": [
+        "forets nourricieres",
+        "permaculture",
+        "agroforesterie",
+        "quebec",
+        "amenagement communautaire"
+      ],
+      "titre_trouve": "Les forêts nourricières: guide d'aménagement pour les communautés",
+      "titre": "Les forêts nourricières : Guide d'aménagement pour les communautés",
+      "resume": "Ouvrage québécois complet guidant la conception, l'implantation et la gestion participative de forêts nourricières et jardins-forêts en climat tempéré nordique.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous droits d'auteur réservés (éditions 2024) traitant d'agroforesterie en climat tempéré québécois.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les forêts nourricières Guide d’aménagement pour les communautés"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00455",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2025,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "pisciculture",
+        "etang",
+        "choix du site",
+        "aquaculture",
+        "vidange",
+        "terrassement"
+      ],
+      "titre_trouve": "1. PISCICULTURE GENERALE",
+      "titre": "Formation en pisciculture générale : Partie 1 - Prospection et aménagement des étangs",
+      "resume": "Module de formation technique sur la pisciculture générale abordant les critères de prospection, le choix du site, la nature des sols, la topographie et la conception des étangs de pisciculture vidangeables.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "incomplet",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Première partie d'un cours de pisciculture extrait d'un ensemble en plusieurs tomes, tronqué en fin de document et sans mention claire de droits.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "1. PISCICULTURE GENERALE 1.1. PROSPECTION"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00456",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "eau_irrigation"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2025,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "pisciculture",
+        "gestion de l'eau",
+        "etang piscicole",
+        "qualite de l'eau",
+        "reproduction",
+        "aquaculture"
+      ],
+      "titre_trouve": "1. PISCICULTURE GENERALE (suite.) 1.3. GESTION D'EAU",
+      "titre": "Formation en pisciculture générale : Partie 2 - Gestion de l'eau et reproduction",
+      "resume": "Deuxième partie du cours de formation en pisciculture générale traitant de la gestion quantitative et qualitative de l'eau (besoins, oxygène dissous) et des bases de la reproduction des poissons d'étang.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "incomplet",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Deuxième volet d'un cours de pisciculture découpé, sans identification claire des auteurs ni des droits de diffusion.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "1. PISCICULTURE GENERALE (suite.) 1.3. GESTION D'EAU"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00457",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "ruminants"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "bovin lait",
+      "pays": "Vietnam",
+      "annee": 2008,
+      "auteurs": "Paulo Salgado",
+      "source_organisation": "CIRAD / Viện Chăn Nuôi",
+      "mots_cles": [
+        "vache laitiere",
+        "alimentation animale",
+        "rationnement",
+        "cirad",
+        "fourrage",
+        "lactation",
+        "ruminants"
+      ],
+      "titre_trouve": "Alimentation de la vache laitière",
+      "titre": "Formation à l'alimentation de la vache laitière (CIRAD / PRISE)",
+      "resume": "Support de présentation de formation du CIRAD sur l'alimentation de la vache laitière en milieu tropical : système digestif du ruminant, valorisation des fourrages, rationnement, état corporel et impact sur la lactation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support de formation institutionnel du CIRAD sur la nutrition des bovins laitiers, pertinent pour les techniciens et éleveurs membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Alimentation de la vache laitière formation préparée dans le cadre du partenariat CIRAD"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00458",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Génération D'Impact",
+      "source_organisation": "Génération D'Impact",
+      "mots_cles": [
+        "tilapia",
+        "clarias",
+        "pisciculture",
+        "biologie du poisson",
+        "sexage",
+        "aquaculture"
+      ],
+      "titre_trouve": "Biologie du Tilapia et du clarias",
+      "titre": "Biologie et sexage du Tilapia et du Clarias en pisciculture",
+      "resume": "Fiche technique illustrée sur la biologie comparée, l'anatomie externe et les méthodes pratiques de sexage du tilapia et du poisson-chat africain (clarias).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche pratique d'initiation au sexage et à l'anatomie du tilapia et du clarias, utile pour les pisciculteurs débutants.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Biologie du Tilapia et du clarias"
+        }
+      ]
+    }
+  ]
+}

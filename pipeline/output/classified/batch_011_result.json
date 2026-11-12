@@ -1,0 +1,775 @@
+{
+  "batch_number": 11,
+  "results": [
+    {
+      "id": "DOC-00153",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2017,
+      "auteurs": "Tutorat Niçois",
+      "source_organisation": "Université Nice Sophia Antipolis",
+      "mots_cles": [
+        "paces",
+        "qcm",
+        "physiologie",
+        "medecine",
+        "tutorat"
+      ],
+      "titre_trouve": "ANNATUT’ PACES - QCM Physiologie UE3b",
+      "titre": "Annatut' Physiologie UE3b : QCM de PACES (Tutorat Niçois)",
+      "resume": "Recueil d'annales et de QCM corrigés de physiologie humaine (UE3b) destiné aux étudiants de PACES (première année des études de santé, médecine).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de médecine humaine (PACES), hors du périmètre agricole, vétérinaire et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ANNATUT’ PACES - QCM Physiologie UE3b [Année 2017-2018]"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00154",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "Dr Nébié",
+      "source_organisation": null,
+      "mots_cles": [
+        "antibiotiques",
+        "sante animale",
+        "veterinaire",
+        "elevage",
+        "antibioresistance",
+        "posologie"
+      ],
+      "titre_trouve": "ANTIBIOTIQUES Généralités",
+      "titre": "Cours sur les antibiotiques en santé animale (TSE II)",
+      "resume": "Support de cours complet de pharmacologie vétérinaire détaillant les familles d'antibiotiques, modes d'action, indications chez les animaux d'élevage et risques de résistance.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours pédagogique spécialisé sans mention explicite de licence libre : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ANTIBIOTIQUES Généralités"
+        },
+        {
+          "champ": "sante_animale",
+          "page": 86,
+          "extrait": "dimétridazole : trichomonose (volaille, gibier), histomonose du pigeon, entérite hémorragique du porc"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00155",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "arachide",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "arachide",
+        "arachis hypogaea",
+        "itineraire technique",
+        "fertilisation",
+        "cameroun",
+        "rendement"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’ARACHIDE (Arachis hypogaea)",
+      "titre": "Technologie de production de l'arachide (Arachis hypogaea)",
+      "resume": "Fiche technique opérationnelle présentant l'itinéraire de culture de l'arachide en Afrique centrale : variétés, exigences agro-écologiques, conduite culturale et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète de formation professionnelle agricole (IFATI/MINEFOP), directement exploitable par les producteurs tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE L’ARACHIDE (Arachis hypogaea)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00156",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "artemisia",
+      "pays": "Madagascar",
+      "annee": 2002,
+      "auteurs": "Christian Favre",
+      "source_organisation": null,
+      "mots_cles": [
+        "artemisia annua",
+        "paludisme",
+        "plante medicinale",
+        "fiche technique",
+        "madagascar",
+        "cameroun"
+      ],
+      "titre_trouve": "ARTEMISIA ANNUA FICHE TECHNIQUE DE CULTURE (Madagascar-Cameroun)",
+      "titre": "Fiche technique de culture d'Artemisia annua (Madagascar - Cameroun)",
+      "resume": "Fiche technique pratique sur la culture de l'armoise annuelle (Artemisia annua) pour la production d'artémisinine antipaludique : semis, entretien, récolte et séchage.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle sur une plante médicinale stratégique, adaptée au contexte tropical africain (Madagascar et Cameroun).",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ARTEMISIA ANNUA FICHE TECHNIQUE DE CULTURE (Madagascar-Cameroun)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00157",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "aquaculture",
+        "pisciculture",
+        "larves",
+        "burkina faso",
+        "exercices"
+      ],
+      "titre_trouve": null,
+      "titre": "Exercices d'évaluation en aquaculture et reproduction piscicole (ATE)",
+      "resume": "Document de travail contenant des exercices d'évaluation sur l'identification des espèces piscicoles, le nourrissage des larves et la reproduction artificielle au Burkina Faso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Énoncé d'exercice scolaire brut en format bureautique, fragmentaire et non publié : archivage interne uniquement.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.8,
+        "completude": 0.7
+      },
+      "preuves": [
+        {
+          "champ": "aquaculture",
+          "page": 1,
+          "extrait": "Donner les noms communs des espèces aquatiques A ; B et C ? (l’espèce D n’existe pas au Burkina)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00158",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "periodique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2025,
+      "auteurs": "Société d'Édition Agricole",
+      "source_organisation": "Agriculture du Maghreb",
+      "mots_cles": [
+        "agriculture du maghreb",
+        "revue",
+        "siam",
+        "irrigation",
+        "protection des cultures",
+        "maroc"
+      ],
+      "titre_trouve": "Agriculture du Maghreb N° 167 - Avril 2025",
+      "titre": "Agriculture du Maghreb N° 167 - Spécial SIAM (Avril 2025)",
+      "resume": "Numéro spécial SIAM 2025 de la revue Agriculture du Maghreb abordant la gestion de l'irrigation goutte-à-goutte, la culture du pistachier et la protection phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Tous droits de reproduction autorisés avec mention impérative et complète du journal",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Revue professionnelle complète avec autorisation explicite de reproduction sous mention de source; accessible aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture du Maghreb N° 167 - Avril 2025"
+        },
+        {
+          "champ": "licence_detectee",
+          "page": 3,
+          "extrait": "Tous droits de reproduction autorisés avec mention impérative et complète du journal."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00159",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "periodique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2024,
+      "auteurs": "Société d'Édition Agricole",
+      "source_organisation": "Agriculture du Maghreb",
+      "mots_cles": [
+        "agriculture du maghreb",
+        "revue",
+        "secheresse",
+        "acacia",
+        "agroforesterie",
+        "maroc"
+      ],
+      "titre_trouve": "Agriculture du Maghreb N° 164 - Décembre 2024",
+      "titre": "Agriculture du Maghreb N° 164 (Décembre 2024)",
+      "resume": "Numéro 164 de la revue Agriculture du Maghreb consacré aux stratégies d'adaptation à la sécheresse, aux espèces agroforestières résilientes et aux techniques de culture.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Numéro complet de revue professionnelle agricole accessible aux membres d'Agrolide pour l'enrichissement technique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture du Maghreb N° 164 - Décembre 2024"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00160",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "periodique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2025,
+      "auteurs": "Société d'Édition Agricole",
+      "source_organisation": "Agriculture du Maghreb",
+      "mots_cles": [
+        "agriculture du maghreb",
+        "revue",
+        "adventices",
+        "stress hydrique",
+        "climat",
+        "maroc"
+      ],
+      "titre_trouve": "Agriculture du Maghreb N° 165 - Février 2025",
+      "titre": "Agriculture du Maghreb N° 165 (Février 2025)",
+      "resume": "Édition de février 2025 de la revue Agriculture du Maghreb axée sur la gestion de l'eau en milieu aride, la rotation culturale et le contrôle intégré des mauvaises herbes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Périodique professionnel complet distribué publiquement par l'éditeur, mis à disposition des membres de la plateforme.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture du Maghreb N° 165 - Février 2025"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00161",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "periodique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "autre",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2024,
+      "auteurs": "Société d'Édition Agricole",
+      "source_organisation": "Agriculture du Maghreb",
+      "mots_cles": [
+        "agriculture du maghreb",
+        "arabe",
+        "palmier dattier",
+        "terfas",
+        "oignon",
+        "maroc"
+      ],
+      "titre_trouve": "Agriculture du Maghreb N° 164 - Décembre 2024",
+      "titre": "Agriculture du Maghreb N° 164 : Supplément en langue arabe (Décembre 2024)",
+      "resume": "Supplément en langue arabe du magazine Agriculture du Maghreb (décembre 2024), traitant de la filière palmier dattier, de la truffe des sables et de la dégradation des sols.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "langue_peu_exploitable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Supplément rédigé intégralement en langue arabe, peu directement exploitable pour le public francophone subsaharien d'Agrolide.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "langue",
+          "page": 1,
+          "extrait": "مجلة مهنية مختصة بقطاع اخلضر و الفواكه، احلبوب، الزراعات السكرية و تربية املواشي"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture du Maghreb N° 164 - Décembre 2024"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00162",
+      "domaine_principal": "transversal",
+      "sous_domaine": "numerique_technologies",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "agroeconomie"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "en",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "États-Unis",
+      "annee": 2020,
+      "auteurs": "Annamaria Castrignanò, Gabriele Buttafuoco, Raj Khosla, Abdul M. Mouazen, Dimitrios Moshou, Olivier Naud",
+      "source_organisation": "Academic Press / Elsevier",
+      "mots_cles": [
+        "internet of things",
+        "smart farming",
+        "precision agriculture",
+        "decision support",
+        "elsevier"
+      ],
+      "titre_trouve": "Agricultural Internet of Things and Decision Support for Precision Smart Farming",
+      "titre": "Agricultural Internet of Things and Decision Support for Precision Smart Farming",
+      "resume": "Ouvrage de référence sur l'Internet des objets (IoT) et les systèmes d'aide à la décision appliqués à l'agriculture de précision et à l'agriculture intelligente.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial publié sous copyright exclusif Elsevier (2020) : non diffusable publiquement, conservé en archive interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "AGRICULTURAL INTERNET OF THINGS AND DECISION SUPPORT FOR PRECISION SMART FARMING"
+        },
+        {
+          "champ": "droits",
+          "page": 3,
+          "extrait": "Academic Press is an imprint of Elsevier Copyright © 2020 Elsevier Inc. All rights reserved."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00163",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "agriculture_contractuelle",
+      "domaines_secondaires": [
+        "organisations_paysannes"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "agriculture contractuelle",
+        "contrats agricoles",
+        "filiere",
+        "commercialisation"
+      ],
+      "titre_trouve": null,
+      "titre": "Agriculture contractuelle : Manuel et guide pratique",
+      "resume": "Document scanné volumineux (132 pages) consacré à l'agriculture contractuelle, nécessitant un traitement OCR complet et une vérification des droits.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné avec ACE Scanner sans couche texte extractible; OCR complet et vérification des droits requis.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture Contractuelle (1).pdf (nom du fichier)"
+        },
+        {
+          "champ": "ocr_necessaire",
+          "page": 1,
+          "extrait": "ACE Scanner"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00164",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "R. Belmess",
+      "source_organisation": "Université d'El Oued (SNV)",
+      "mots_cles": [
+        "agriculture durable",
+        "cours",
+        "agriculture conventionnelle",
+        "itineraires techniques",
+        "master"
+      ],
+      "titre_trouve": "SNV El Oued. Cours. Agriculture durable. Ch.I M1.P.V 2021",
+      "titre": "Cours d'agriculture durable : Chapitres 1 et 2 (Master 1 PV)",
+      "resume": "Support de cours universitaire (Master 1) présentant les bases théoriques et techniques de l'agriculture conventionnelle et les principes de la transition agroécologique durable.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire partiel (chapitres 1 et 2) sans licence de rediffusion : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "SNV El Oued. Cours. Agriculture durable. Ch.I M1.P.V 2021 BEL MESS.R"
+        },
+        {
+          "champ": "ensemble_partiel",
+          "page": 1,
+          "extrait": "Chapitre I Les bases théoriques et pratiques de l'agriculture conventionnelle."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00166",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "culture_sous_abri_hors_sol",
+      "domaines_secondaires": [
+        "cultures_maraicheres",
+        "horticulture_jardinage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maraîchage",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Ernst van Heurn, Kees van der Post",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "agrodok",
+        "agriculture sous abri",
+        "serres",
+        "tunnel plastique",
+        "climat tropical",
+        "horticulture"
+      ],
+      "titre_trouve": "Agrodok 23 - Agriculture sous abri : Structure, conditions requises et usage des serres sous différents climats",
+      "titre": "Agrodok 23 : Agriculture sous abri sous différents climats",
+      "resume": "Guide pratique complet de la collection Agrodok décrivant la conception, la construction et la gestion des serres et abris pour les cultures en climat tropical et subtropical.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence Agrodok (Agromisa/CTA), complet et destiné à la diffusion auprès des producteurs tropicaux.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Série Agrodok No. 23 Agrodok 23 - Agriculture sous abri Structure, conditions requises et usage des serres sous différents climats"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "© Fondation Agromisa, Wageningen, 2004. ISBN Agromisa: 90-77073-37-X"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00167",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "horticulture_jardinage",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maraîchage",
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Jeroen Boland",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "agrodok",
+        "agriculture urbaine",
+        "legumes",
+        "maraichage urbain",
+        "jardin potager",
+        "irrigation"
+      ],
+      "titre_trouve": "Agrodok 24 - Agriculture urbaine : la culture des légumes en ville",
+      "titre": "Agrodok 24 : Agriculture urbaine - La culture des légumes en ville",
+      "resume": "Manuel pratique détaillant les techniques d'agriculture urbaine et périurbaine pour la production maraîchère à petite échelle, la fertilité et la gestion de l'eau.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique Agrodok complet pour le maraîchage urbain tropical, librement diffusable pour les producteurs et porteurs de projet.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Série Agrodok No. 24 Agrodok 24 - Agriculture urbaine : la culture des légumes en ville"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "© Fondation Agromisa, Wageningen, 2005. ISBN Agromisa: 90-8573-016-3"
+        }
+      ]
+    }
+  ]
+}

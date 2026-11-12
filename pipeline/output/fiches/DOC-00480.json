@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00480",
+  "sha256": "c8066bd44263919a626a4e54b3dc12423c72dbbfca82bce9bf1bae92b01284aa",
+  "nom_original": "Guide d_aménagement des bâtiments d_embouche.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide d_aménagement des bâtiments d_embouche.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 47860906,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 45,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2018,
+  "auteurs": "Léda Villeneuve",
+  "source_organisation": "CEPOQ (Centre d'expertise en production ovine du Québec)",
+  "mots_cles": [
+    "batiments d'elevage",
+    "bergerie",
+    "ovins",
+    "caprins",
+    "amenagement",
+    "quebec"
+  ],
+  "titre_trouve": "GUIDE D’AMÉNAGEMENT DES BÂTIMENTS POUR PETITS RUMINANTS DE BOUCHERIE",
+  "titre": "Guide d'aménagement des bâtiments pour petits ruminants de boucherie",
+  "resume": "Recueil de fiches techniques et plans d'aménagement de bâtiments d'élevage pour ovins et caprins de boucherie, conçu pour le contexte québécois.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique québécois conçu pour un climat tempéré froid et des stabulations fermées, inadapté aux conditions tropicales africaines.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE D’AMÉNAGEMENT DES BÂTIMENTS POUR PETITS RUMINANTS DE BOUCHERIE"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 45,
+      "extrait": "résultat d’un travail concerté entre la Société des éleveurs de moutons de races pures du Québec"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00480__guide-d-amenagement-des-batiments-pour-petits-ruminants.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00480__guide-d-amenagement-des-batiments-pour-petits-ruminants.pdf"
+}

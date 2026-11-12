@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01020",
+  "sha256": "ca6f3e0cb6c79d8f8db70c3ada060fc76e46070bc455dc70612ff24a0dbd5858",
+  "nom_original": "pommes de terre frites flocons de puree croquettes dauphines.pdf",
+  "chemin_relatif_source": "OD_Docs/pommes de terre frites flocons de puree croquettes dauphines.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 19274,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479999996-pommes_de_terre_frites_flocons_de_puree_croquettes_dauphines.pdf",
+  "nb_telechargements_existant": 1,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "pomme de terre transformee",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "pomme de terre transformee",
+    "frites surgelees",
+    "flocons de puree",
+    "procede agroalimentaire",
+    "transformation tubercules"
+  ],
+  "titre_trouve": "POMMES DE TERRE TRANSFORMÉES",
+  "titre": "Diagramme de procédé industriel : Transformation de la pomme de terre (Frites, purée, croquettes)",
+  "resume": "Schéma technologique synthétique détaillant les opérations unitaires de transformation de la pomme de terre en frites surgelées, flocons de purée déshydratés et produits élaborés.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique industrielle utile pour les porteurs de projets d'unités de transformation agroalimentaire des tubercules.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "POMMES DE TERRE TRANSFORMÉES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01020__diagramme-de-procede-industriel-transformation-de-la-po.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-01020__diagramme-de-procede-industriel-transformation-de-la-po.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00734",
+  "sha256": "a5dfbe168fd3db2e460bfad57ce771020a4ce59e231a97e012ef4fab6a4d9d3c",
+  "nom_original": "Séance 10 PHY 1125.pdf",
+  "chemin_relatif_source": "OD_Docs/Séance 10 PHY 1125.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 235207,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Pachoukova",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "physique des materiaux",
+    "diagramme d'equilibre",
+    "thermodynamique",
+    "cours phy 1125"
+  ],
+  "titre_trouve": "SEANCE 10",
+  "titre": "Physique des matériaux : diagrammes d'équilibre liquide-solide Mg-Sm (Séance 10 PHY 1125)",
+  "resume": "Travaux dirigés universitaires de physique et thermodynamique des matériaux portant sur les diagrammes de phases métalliques et les courbes d'analyses thermiques du système Mg-Sm.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Travaux dirigés universitaires de physique des matériaux et thermodynamique des alliages métalliques (Mg-Sm), hors sujet.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SEANCE 10 Objectifs : Savoir interpréter les domaines des diagrammes d’équilibre"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Figure 3 : Diagramme d’équilibre liquide-solide Mg-Sm"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00734__physique-des-materiaux-diagrammes-d-equilibre-liquide-s.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00734__physique-des-materiaux-diagrammes-d-equilibre-liquide-s.pdf"
+}

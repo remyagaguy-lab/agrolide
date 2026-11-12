@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00805",
+  "sha256": "8852023b32eefb1fd11ef1e65f6474e585bc9e194cc5ee9059172343984f74a9",
+  "nom_original": "az813f.pdf",
+  "chemin_relatif_source": "OD_Docs/az813f.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 530848,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479181167-az813f.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": "Sénégal",
+  "annee": 2012,
+  "auteurs": "Bruno Telemans",
+  "source_organisation": "FAO / ISRA / CDH",
+  "mots_cles": [
+    "papayer",
+    "culture fruitiere",
+    "senegal",
+    "isra",
+    "fao",
+    "cdh camberene"
+  ],
+  "titre_trouve": "La culture du papayer au Sénégal",
+  "titre": "La culture du papayer au Sénégal : Guide pratique ISRA / FAO",
+  "resume": "Guide technique de référence de l'ISRA et de la FAO détaillant l'itinéraire de culture du papayer au Sénégal : pépinière, plantation, entretien et maladies.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique officiel FAO/ISRA complet et libre de diffusion, essentiel pour l'arboriculture fruitière tropicale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La culture du papayer au Sénégal CENTRE POUR LE DÉVELOPPEMENT DE L'HORTICULTURE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "ISRA Institut de Sénégalais de Recherches Agricoles FAO"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00805__la-culture-du-papayer-au-senegal-guide-pratique-isra-fa.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00805__la-culture-du-papayer-au-senegal-guide-pratique-isra-fa.pdf"
+}

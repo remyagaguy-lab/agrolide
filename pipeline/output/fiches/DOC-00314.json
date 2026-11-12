@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00314",
+  "sha256": "0b0603fcdc58adbdc4fd27c2d7bfe505deaf7a21b8c0e52ee6b9b891a708497b",
+  "nom_original": "Cours de DRS 2021-2022 Partie 1.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours de DRS 2021-2022 Partie 1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2020412,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "droits_reserves",
+    "incomplet"
+  ],
+  "nb_pages": 31,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Abdelghani Zedam",
+  "source_organisation": "Université Mohamed Boudiaf de M'sila",
+  "mots_cles": [
+    "drs",
+    "erosion hydrique",
+    "conservation des sols",
+    "ruissellement",
+    "degradation des terres"
+  ],
+  "titre_trouve": "La Défense et la Restauration des Sols (D R S) – Partie 1",
+  "titre": "Défense et restauration des sols (DRS) : érosion hydrique (Partie 1)",
+  "resume": "Support de cours de Master consacré aux mécanismes et formes de l'érosion hydrique des sols (en nappe, linéaire, en masse) et aux méthodes d'évaluation spatiale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Partie 1 d'un polycopié universitaire d'enseignement sans licence libre autorisant la diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La Défense et la Restauration des Sols (D R S) – Partie 1"
+    }
+  ],
+  "ensemble_id": "ENS-0012",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00314__defense-et-restauration-des-sols-drs-erosion-hydrique-p.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00314__defense-et-restauration-des-sols-drs-erosion-hydrique-p.pdf"
+}

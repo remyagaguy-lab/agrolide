@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00886",
+  "sha256": "034812441e6b053a2bc1cf15570f34bc07dfc0d8410262f1c259bbc8907602dc",
+  "nom_original": "elevage_Experience_Ferme_Kouna.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage_Experience_Ferme_Kouna.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 350721,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "fiche_technique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2014,
+  "auteurs": "Inter-réseaux Développement rural",
+  "source_organisation": "Inter-réseaux Développement rural / Ferme Kouna",
+  "mots_cles": [
+    "aviculture",
+    "burkina faso",
+    "ferme kouna",
+    "oeufs",
+    "filiere avicole",
+    "entrepreneuriat"
+  ],
+  "titre_trouve": "Stratégie de valorisation de la filière avicole L’expérience de la Ferme Kouna à Banfora",
+  "titre": "Valorisation de la filière avicole : L'expérience de la Ferme Kouna (Burkina Faso)",
+  "resume": "Fiche d'expérience d'Inter-réseaux analysant le modèle technico-économique de la Ferme Kouna à Banfora pour le développement durable de l'aviculture au Burkina Faso.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche d'expérience institutionnelle complète financée par l'AFD, documentant une réussite entrepreneuriale avicole diffusable en accès public.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Stratégie de valorisation de la filière avicole L’expérience de la Ferme Kouna à Banfora"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00886__valorisation-de-la-filiere-avicole-l-experience-de-la-f.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00886__valorisation-de-la-filiere-avicole-l-experience-de-la-f.pdf"
+}

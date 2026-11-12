@@ -1,0 +1,394 @@
+{
+  "batch_number": 71,
+  "results": [
+    {
+      "id": "DOC-01085",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "energie_dechets_valorisation",
+      "domaines_secondaires": [
+        "sol_fertilite"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "decideur_institution"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Agence Nationale des Déchets",
+      "source_organisation": "Agence Nationale des Déchets",
+      "mots_cles": [
+        "compost",
+        "compostage",
+        "biodechets",
+        "valorisation des dechets",
+        "fertilite du sol"
+      ],
+      "titre_trouve": "Généralités sur le compost",
+      "titre": "Guide pratique du compostage et de valorisation des biodéchets",
+      "resume": "Guide méthodologique et pratique de l'Agence Nationale des Déchets d'Algérie détaillant les principes du compostage, la gestion des biodéchets et les bienfaits du compost pour les sols.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel complet de l'Agence Nationale des Déchets d'Algérie, libre de diffusion et facilement adaptable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Généralités sur le compost ... Le compost, c’est quoi ? ... Et le compostage ?"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 39,
+          "extrait": "Agence Nationale des Déchets, Alger, Algérie, www.and.dz"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01086",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2015,
+      "auteurs": "Ministère du Développement durable, de l'Environnement et de la Lutte contre les changements climatiques",
+      "source_organisation": "Ministère du Développement durable, de l'Environnement et de la Lutte contre les changements climatiques (Québec)",
+      "mots_cles": [
+        "developpement durable",
+        "plan d action",
+        "politique environnementale",
+        "climat",
+        "quebec"
+      ],
+      "titre_trouve": "Guide d’élaboration d’un plan d’action de développement durable",
+      "titre": "Guide d’élaboration d’un plan d’action de développement durable",
+      "resume": "Guide méthodologique gouvernemental québécois décrivant les étapes d'élaboration d'un plan d'action de développement durable (PADD) pour les administrations publiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide méthodologique institutionnel conçu pour l'administration québécoise, contexte non adapté à l'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide d’élaboration d’un plan d’action de développement durable"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Ministère du Développement durable, de l'Environnement et de la Lutte contre les changements climatiques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01087",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2019,
+      "auteurs": "Babacar Sall",
+      "source_organisation": "Goethe-Institut",
+      "mots_cles": [
+        "gestion de projet",
+        "projet culturel",
+        "planification",
+        "ressources",
+        "formation"
+      ],
+      "titre_trouve": "MODULE 1 GESTION DE PROJETS",
+      "titre": "Gestion de projets : Module 1",
+      "resume": "Support de formation présentant les fondamentaux de la gestion de projet, ses définitions normatives, ses contraintes et ses spécificités appliquées aux projets culturels.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours non libre axé sur la gestion de projets culturels, archivé en raison de son statut et de sa pertinence marginale.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.88,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE 1 GESTION DE PROJETS"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Monsieur BABACAR SALL Goethe Institut"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01088",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "tomate",
+      "pays": null,
+      "annee": 2016,
+      "auteurs": "Jérôme Lecerf",
+      "source_organisation": "Direction de l’agriculture de Polynésie française",
+      "mots_cles": [
+        "tomate",
+        "maraichage",
+        "climat tropical",
+        "protection phytosanitaire",
+        "itineraire technique"
+      ],
+      "titre_trouve": "La tomate (Solanum lycopersicum L.)",
+      "titre": "Fiche technique de culture de la tomate en climat tropical",
+      "resume": "Fiche technique complète sur la culture de la tomate en milieu tropical : exigences de température, choix variétal, conduite culturale et traitements phytosanitaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète de la Direction de l'agriculture de Polynésie en diffusion institutionnelle, directement adaptable en zone tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La tomate (Solanum lycopersicum L.) est une espèce de plantes herbacées de la famille des Solanacées"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Direction de l’agriculture, Pape’ete – Tahiti - Polynésie française, www.service-public.pf/dag"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01089",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "tomate",
+      "pays": "Maroc",
+      "annee": 2023,
+      "auteurs": "Ahmed Wifaya, Rachid Bouharroud, Fatima Belghazi, Redouan Qessaoui",
+      "source_organisation": "Institut National de la Recherche Agronomique (INRA Maroc)",
+      "mots_cles": [
+        "tomate",
+        "maroc",
+        "exigences pedoclimatiques",
+        "nematodes",
+        "maraichage"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE SUR LA TOMATE",
+      "titre": "Fiche technique sur la culture de la tomate",
+      "resume": "Fiche technique agronomique de l'INRA Maroc détaillant les exigences pédoclimatiques, le choix variétal, la gestion du sol et les stratégies de protection phytosanitaire de la tomate.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique agronomique récente de l'INRA Maroc en diffusion institutionnelle, complète et adaptable pour le maraîchage.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "FICHE TECHNIQUE SUR LA TOMATE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Wifaya Ahmed, Bouharroud Rachid, Belghazi Fatima et Qessaoui Redouan"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01090",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Organisation internationale du Travail",
+      "source_organisation": "Organisation internationale du Travail (OIT)",
+      "mots_cles": [
+        "economie verte",
+        "emplois verts",
+        "transition ecologique",
+        "insertion professionnelle",
+        "oit"
+      ],
+      "titre_trouve": "Comment travailler dans l’économie verte ? Guide destiné aux jeunes, aux chercheurs d’emploi et à ceux qui les accompagnent",
+      "titre": "Comment travailler dans l'économie verte ?",
+      "resume": "Guide pratique de l'OIT orientant les jeunes et chercheurs d'emploi vers les métiers et opportunités de l'économie verte et de la transition écologique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de l'OIT sur l'emploi vert et durable, complet et diffusable auprès des jeunes et porteurs de projet.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Comment travailler dans l’économie verte ? Guide destiné aux jeunes, aux chercheurs d’emploi et à ceux qui les accompagnent"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "Copyright © Organisation internationale du Travail 2022"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01091",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "politiques_strategies",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2015,
+      "auteurs": "Ministère de l'Agriculture et de la Sécurité Alimentaire",
+      "source_organisation": "Ministère de l'Agriculture et de la Sécurité Alimentaire du Burkina Faso",
+      "mots_cles": [
+        "intrants agricoles",
+        "equipements agricoles",
+        "burkina faso",
+        "machinisme agricole",
+        "politique agricole"
+      ],
+      "titre_trouve": "PLACE ET ROLE DES INTRANTS ET DES EQUIPEMENTS AGRICOLES DANS L’AGRICULTURE BURKINABE",
+      "titre": "Étude sur les intrants et les équipements agricoles au Burkina Faso (Volume 1)",
+      "resume": "Rapport sectoriel d'analyse sur l'approvisionnement, l'utilisation et l'impact des intrants et matériels agricoles sur les systèmes de production au Burkina Faso.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport sectoriel d'étude institutionnelle complet sur les intrants et équipements agricoles au Burkina Faso, réservé aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.92
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PLACE ET ROLE DES INTRANTS ET DES EQUIPEMENTS AGRICOLES DANS L’AGRICULTURE BURKINABE"
+        },
+        {
+          "champ": "pays",
+          "page": 1,
+          "extrait": "CARACTERISTIQUES DE L’AGRICULTURE BURKINABE"
+        }
+      ]
+    }
+  ]
+}

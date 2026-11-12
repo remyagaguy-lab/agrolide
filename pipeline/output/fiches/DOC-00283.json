@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00283",
+  "sha256": "9ccf679f8b37cb9d76f866e6b65def21804d9adcea51d0ba4855d42f8e2c8a20",
+  "nom_original": "Chap 1.1.10._Bq de vaccins_2008.pdf",
+  "chemin_relatif_source": "OD_Docs/Chap 1.1.10._Bq de vaccins_2008.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 151099,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "texte_officiel",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Organisation Mondiale de la Santé Animale (OIE)",
+  "source_organisation": "OIE",
+  "mots_cles": [
+    "banque de vaccins",
+    "vaccination d'urgence",
+    "normes zoosanitaires",
+    "sante animale",
+    "OIE",
+    "epizootie"
+  ],
+  "titre_trouve": "LIGNES DIRECTRICES POUR LES NORMES INTERNATIONALES APPLICABLES AUX BANQUES DE VACCINS",
+  "titre": "Normes internationales applicables aux banques de vaccins (Manuel terrestre de l'OIE 2008)",
+  "resume": "Recommandations et normes internationales de l'OIE régissant la gestion stratégique, le stockage antigénique et le déploiement des banques de vaccins vétérinaires en situation d'urgence épizootique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé extrait du Manuel terrestre 2008 de l'OIE, archivé pour documentation normative de référence.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LIGNES DIRECTRICES POUR LES NORMES INTERNATIONALES APPLICABLES AUX BANQUES DE VACCINS"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Manuel terrestre de l’OIE 2008"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00283__normes-internationales-applicables-aux-banques-de-vacci.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00283__normes-internationales-applicables-aux-banques-de-vacci.pdf"
+}

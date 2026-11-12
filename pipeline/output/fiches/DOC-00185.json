@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00185",
+  "sha256": "cf1aba41978324a0b93ac7405c1994f4c9a2dc2bc07b376b776ed5daa4b57459",
+  "nom_original": "Agrodok_11_La_protection_des_sols_contre_l_erosion_dans_les_zones.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_11_La_protection_des_sols_contre_l_erosion_dans_les_zones.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1431245,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 100,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Hil Kuypers, Anne Mollema, Egger Topper",
+  "source_organisation": "Fondation Agromisa",
+  "mots_cles": [
+    "conservation des sols",
+    "lutte anti-erosive",
+    "erosion hydrique",
+    "erosion eolienne",
+    "zones tropicales"
+  ],
+  "titre_trouve": "La protection des sols contre l’érosion dans les zones tropicales",
+  "titre": "La protection des sols contre l’érosion dans les zones tropicales",
+  "resume": "Guide méthodologique et pratique sur les mécanismes de l'érosion des sols en milieu tropical et les techniques de conservation : aménagements mécaniques, biologiques et agronomiques.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet Agrodok issu d'une diffusion institutionnelle (Agromisa), publiable et d'un intérêt majeur pour la gestion des terres tropicales.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 11 - La protection des sols contre l’érosion dans les zones tropicales"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00185__la-protection-des-sols-contre-lerosion-dans-les-zones-t.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00185__la-protection-des-sols-contre-lerosion-dans-les-zones-t.pdf"
+}

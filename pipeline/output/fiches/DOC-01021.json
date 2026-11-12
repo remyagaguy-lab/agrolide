@@ -1,0 +1,80 @@
+{
+  "id": "DOC-01021",
+  "sha256": "c4c0bd5eb67f6253e332314b467c5ef26b16626519250ab60478c81322bc11d4",
+  "nom_original": "pondeuse & chaire formation.pdf",
+  "chemin_relatif_source": "OD_Docs/pondeuse & chaire formation.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3432030,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "nb_pages": 19,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "cours",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture (pondeuse et chair)",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "aviculture",
+    "poulet de chair",
+    "poule pondeuse",
+    "formation avicole",
+    "scan",
+    "ocr"
+  ],
+  "titre_trouve": "pondeuse & chaire formation",
+  "titre": "Manuel de formation à l'aviculture : Poules pondeuses et poulets de chair",
+  "resume": "Support de formation avicole numérisé sans couche texte, abordant la conduite technique de l'élevage des poules pondeuses et des poulets de chair.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte indexable nécessitant un OCR pour identifier précisément le formateur et vérifier les droits.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "pondeuse & chaire formation"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ocr_necessaire"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01021__manuel-de-formation-a-l-aviculture-poules-pondeuses-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-01021__manuel-de-formation-a-l-aviculture-poules-pondeuses-et.pdf"
+}

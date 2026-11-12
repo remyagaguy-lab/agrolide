@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00481",
+  "sha256": "49831b4837d502d39e0d005bd2966cdab8dae6b40ef629462b922d6caa75c858",
+  "nom_original": "Guide de montage de projets de GDT_CARI - LowQual.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide de montage de projets de GDT_CARI - LowQual.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6392649,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 28,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "CARI",
+  "source_organisation": "CARI (Centre d'Actions et de Réalisations Internationales)",
+  "mots_cles": [
+    "gestion durable des terres",
+    "gdt",
+    "montage de projet",
+    "desertification",
+    "cari",
+    "sahel"
+  ],
+  "titre_trouve": "Guide de montage de projets de GDT - CARI",
+  "titre": "Guide de montage de projets de gestion durable des terres (CARI)",
+  "resume": "Guide méthodologique de l'ONG CARI pour la conception et le montage de projets de gestion durable des terres (GDT), nécessitant un traitement OCR.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible de l'ONG CARI; OCR nécessaire pour vérification du contenu et validation humaine.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.5,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide de montage de projets de GDT - CARI (métadonnées PDF)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00481__guide-de-montage-de-projets-de-gestion-durable-des-terr.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00481__guide-de-montage-de-projets-de-gestion-durable-des-terr.pdf"
+}

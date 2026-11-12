@@ -1,0 +1,525 @@
+{
+  "batch_number": 13,
+  "results": [
+    {
+      "id": "DOC-00183",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": ["agroalimentaire"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "escargot",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Dr J.C. Cobbinah, Adri Vink, Ben Onwuka",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["heliciculture", "elevage d'escargots", "achatine", "afrique tropicale", "alimentation animale", "commercialisation"],
+      "titre_trouve": "L’élevage d’escargots : Production, transformation et commercialisation",
+      "titre": "L’élevage d’escargots : Production, transformation et commercialisation",
+      "resume": "Guide pratique complet sur l'héliciculture en milieu tropical : biologie de l'escargot géant africain, construction de l'escargotière, alimentation, reproduction, transformation et commercialisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique Agrodok issu d'une diffusion institutionnelle (CTA/Agromisa), directement publiable pour les producteurs et conseillers.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 47 - L’élevage d’escargots Production, transformation et commercialisation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00184",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": ["agroalimentaire"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "soja",
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Rienke Nieuwenhuis, Joke Nieuwelink",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["soja", "legumineuses", "culture du soja", "valeur nutritive", "transformation artisanale"],
+      "titre_trouve": "La culture du soja et d'autres légumineuses",
+      "titre": "La culture du soja et d'autres légumineuses",
+      "resume": "Manuel pratique sur la culture du soja et autres légumineuses tropicales, couvrant les techniques culturales, l'amélioration des sols et la transformation en produits alimentaires nutritifs.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée selon la règle métier.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 10 La culture du soja et d'autres légumineuses"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00185",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["agroecologie_agriculture_durable"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Hil Kuypers, Anne Mollema, Egger Topper",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["conservation des sols", "lutte anti-erosive", "erosion hydrique", "erosion eolienne", "zones tropicales"],
+      "titre_trouve": "La protection des sols contre l’érosion dans les zones tropicales",
+      "titre": "La protection des sols contre l’érosion dans les zones tropicales",
+      "resume": "Guide méthodologique et pratique sur les mécanismes de l'érosion des sols en milieu tropical et les techniques de conservation : aménagements mécaniques, biologiques et agronomiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet Agrodok issu d'une diffusion institutionnelle (Agromisa), publiable et d'un intérêt majeur pour la gestion des terres tropicales.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 11 - La protection des sols contre l’érosion dans les zones tropicales"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00186",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "conservation_post_recolte",
+      "domaines_secondaires": ["transformation_produits_animaux"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "viande et poisson",
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Brigitte Maas-van Berkel, Brigiet van den Boogaard, Corlien Heijnen",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["conservation", "viande", "poisson", "fumage", "sechage", "salage", "post-recolte"],
+      "titre_trouve": "La conservation du poisson et de la viande",
+      "titre": "La conservation du poisson et de la viande",
+      "resume": "Guide pratique présentant les méthodes artisanales de conservation du poisson et de la viande en milieu tropical : séchage, salage, fumage, fermentation et règles d'hygiène.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, archivé en non publié conformément aux règles de droits.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 12 La conservation du poisson et de la viande"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00187",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["agroecologie_agriculture_durable"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Justine Anschütz, Antoinette Kome, Marc Nederlof, Rob de Neef, Ton van de Ven",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["collecte de l'eau", "gestion de l'eau", "humidite du sol", "ruissellement", "zones arides"],
+      "titre_trouve": "Collecter l’eau et conserver l’humidité du sol",
+      "titre": "Collecter l’eau et conserver l’humidité du sol",
+      "resume": "Guide technique détaillant les méthodes de collecte des eaux de pluie et de ruissellement et les pratiques culturales de conservation de l'humidité du sol en zones sèches tropicales.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 13 - Collecter l’eau et conserver l’humidité du sol"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00188",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Eira Carballo, Assiah van Eer, Ton van Schie, Aldin Hilbrands",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["pisciculture", "eau douce", "etangs piscicoles", "tilapia", "silure", "alimentation des poissons"],
+      "titre_trouve": "La pisciculture à petite échelle en eau douce",
+      "titre": "La pisciculture à petite échelle en eau douce",
+      "resume": "Guide pratique pour la mise en place et la gestion d'une exploitation piscicole artisanale en eau douce : construction des étangs, choix des espèces, alimentation et récolte.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document provenant d'une diffusion @EpubsFR avec droits réservés sans licence libre, archivé en non publié.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 15 La pisciculture à petite échelle en eau douce"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00189",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "porcins",
+      "domaines_secondaires": ["alimentation_animale", "batiments_equipements_elevage"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "porc",
+      "pays": null,
+      "annee": 2003,
+      "auteurs": "Dick Muys, Geert Westenbrink, Johan Meinderts",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["elevage porcin", "porc", "porcherie", "alimentation porcine", "sante animale", "zones tropicales"],
+      "titre_trouve": "L’élevage des porcs dans les zones tropicales",
+      "titre": "L’élevage des porcs dans les zones tropicales",
+      "resume": "Guide complet d'initiation et de perfectionnement à l'élevage porcin en milieu tropical : logement, alimentation, reproduction, soins de santé et gestion économique.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 1 - L’élevage des porcs dans les zones tropicales"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00190",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "nutrition_alimentation",
+      "domaines_secondaires": ["transformation_cereales_tubercules"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Saskia van Gastel, Annoek van den Wijngaart",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["aliments de complement", "sevrage", "malnutrition", "farines infantiles", "nutrition communautaire"],
+      "titre_trouve": "La production artisanale d’aliments de complément",
+      "titre": "La production artisanale d’aliments de complément",
+      "resume": "Guide pratique sur la fabrication artisanale d'aliments de complément et de sevrage pour enfants à base de produits locaux afin de lutter contre la malnutrition infantile.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 22 - La production artisanale d’aliments de complément"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00192",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["production_animale", "agroeconomie"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["decideur_institution", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pastoralisme",
+      "pays": "Cameroun",
+      "annee": 2004,
+      "auteurs": "André Teyssier",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["hydraulique pastorale", "point d'eau", "troupeaux", "zone sahelo-soudanienne", "gestion communautaire", "abreuvement"],
+      "titre_trouve": "Créer et gérer un point d’eau pour les troupeaux de son village : Guide à l’usage des agents de développement rural en zone sahélo-soudanienne",
+      "titre": "Créer et gérer un point d’eau pour les troupeaux de son village",
+      "resume": "Guide méthodologique pour concevoir, aménager et gérer durablement des points d'eau pastoraux villageois en zone sahélo-soudanienne avec les communautés locales.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet Agrodok issu d'une diffusion institutionnelle (Agromisa), hautement pertinent pour l'hydraulique pastorale sahélienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 27 - Créer et gérer un point d’eau pour les troupeaux de son village Guide à l’usage des agents de développement rural en zone sahélo-soudanienne"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00193",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": ["fertilisation_amendements"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Joep van Lidth de Jeude",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["symptomes", "maladies des plantes", "ravageurs", "carences minerales", "diagnostic phytosanitaire"],
+      "titre_trouve": "Identification des dégâts causés aux cultures par les maladies, les animaux nuisibles et les carences minérales",
+      "titre": "Identification des dégâts causés aux cultures",
+      "resume": "Guide de diagnostic au champ permettant d'identifier les causes des dégâts sur les cultures tropicales : symptômes de maladies, attaques de ravageurs et carences minérales.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, archivé en non publié.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 28 - Identification des dégâts causés aux cultures par les maladies, les animaux nuisibles et les carences minérales"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00194",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": ["agroecologie_agriculture_durable"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "Piet Scheepens, Rik Hoevers",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["protection biologique", "lutte integree", "ennemis naturels", "bio-pesticides", "agroecologie"],
+      "titre_trouve": "La protection non chimique des cultures",
+      "titre": "La protection non chimique des cultures",
+      "resume": "Guide pratique sur les méthodes écologiques de protection des cultures tropicales : préservation des auxiliaires, pratiques culturales préventives et biopesticides.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, archivé en non publié.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 30 La protection non chimique des cultures"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00195",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "conservation_post_recolte",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cereales et legumineuses",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Jelle Hayma",
+      "source_organisation": "Fondation Agromisa",
+      "mots_cles": ["stockage", "post-recolte", "greniers", "silos", "insectes des grains", "conservation des recoltes"],
+      "titre_trouve": "Le stockage des produits agricoles tropicaux",
+      "titre": "Le stockage des produits agricoles tropicaux",
+      "resume": "Manuel pratique sur les techniques traditionnelles et améliorées de stockage et de conservation des récoltes (grains, tubercules) en climat tropical et lutte contre les ravageurs.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, archivé en non publié.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 31 - Le stockage des produits agricoles tropicaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00196",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "apiculture",
+      "domaines_secondaires": ["agroalimentaire"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "miel et cire",
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Leen van 't Leven, Willem-Jan Boot, Marieke Mutsaers, Piet Segeren, Hayo Velthuis",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": ["apiculture", "abeilles", "ruches", "miel", "cire", "zones tropicales"],
+      "titre_trouve": "L'apiculture dans les zones tropicales",
+      "titre": "L'apiculture dans les zones tropicales",
+      "resume": "Guide complet sur la conduite d'un rucher en zone tropicale : biologie des abeilles, modèles de ruches adaptées, récolte et valorisation du miel et de la cire.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 32 L'apiculture dans les zones tropicales"
+        }
+      ]
+    }
+  ]
+}

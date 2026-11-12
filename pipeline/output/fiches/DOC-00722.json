@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00722",
+  "sha256": "a407b0cb6d10af056d027af039a31a1b7dcdd2a655662b1bd8692515f3227feb",
+  "nom_original": "SUPPORT FORMATION PRO DET LIQUIDE.pdf",
+  "chemin_relatif_source": "OD_Docs/SUPPORT FORMATION PRO DET LIQUIDE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 975815,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 9,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "fiche_technique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "detergent liquide",
+    "produits d'entretien",
+    "chimie menagere",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "PARTIE 01 : TECHNOLOGIE DE LA PRODUCTION DES DETERGENTS LIQUIDES",
+  "titre": "Technologie de la production des détergents liquides (IFATI Cameroun)",
+  "resume": "Support de formation professionnelle de l'IFATI Cameroun portant sur la formulation chimique, la fabrication artisanale et industrielle de détergents liquides ménagers pour vaisselle.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Fabrication de détergents chimiques ménagers exclue du périmètre agronomique, zootechnique et agroalimentaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "PARTIE 01 : TECHNOLOGIE DE LA PRODUCTION DES DETERGENTS LIQUIDES ... Formulation des différents détergents liquides pour vaisselle"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00722__technologie-de-la-production-des-detergents-liquides-if.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00722__technologie-de-la-production-des-detergents-liquides-if.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-01082",
+  "sha256": "109ebed0e42ce2691d3145b9ae266973f35bfaa3cd73b19cc93d79877ab7e6ea",
+  "nom_original": "bio_de_paca_tournesol.pdf",
+  "chemin_relatif_source": "OD_traites/bio_de_paca_tournesol.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 1297409,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479242309-bio_de_paca_tournesol.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "tournesol",
+  "pays": "France",
+  "annee": 2017,
+  "auteurs": "Mathieu Marguerie",
+  "source_organisation": "Bio Provence / Région PACA",
+  "mots_cles": [
+    "tournesol",
+    "oleagineux",
+    "agriculture biologique",
+    "grandes cultures bio",
+    "paca",
+    "marge brute"
+  ],
+  "titre_trouve": "Culture du TOURNESOL en Bio - Fiches techniques #9 Grandes cultures bio",
+  "titre": "Culture du tournesol en agriculture biologique (Guide Bio de PACA)",
+  "resume": "Fiche technico-économique de Bio Provence détaillant la conduite culturale, le désherbage mécanique et le calcul des charges pour le tournesol biologique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique régionale française pour la culture du tournesol en région PACA, non adaptée au contexte agroécologique sahélien.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiches techniques #9 Grandes cultures bio Culture du TOURNESOL en Bio Rédaction : Mathieu Marguerie Bio Provence"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01082__culture-du-tournesol-en-agriculture-biologique-guide-bi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-01082__culture-du-tournesol-en-agriculture-biologique-guide-bi.pdf"
+}

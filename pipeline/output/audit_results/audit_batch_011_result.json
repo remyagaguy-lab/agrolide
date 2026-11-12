@@ -1,0 +1,208 @@
+{
+  "batch_number": 11,
+  "audits": [
+    {
+      "id": "DOC-00197",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Provenance du canal @EpubsFR avec mention 'Tous droits réservés' : requalifié en droits_reserves_commercial avec drapeau droits_reserves, archivé sans publication."
+    },
+    {
+      "id": "DOC-00198",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Fichier tagué @EpubsFR et droits de reproduction réservés : requalification obligatoire en droits_reserves_commercial et non_publie_archive."
+    },
+    {
+      "id": "DOC-00199",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00200",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "ocr_necessaire",
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Tag @EpubsFR imposant droits_reserves_commercial. Les droits réservés bloquent la diffusion indépendamment de l'OCR, archivage en non_publie_archive."
+    },
+    {
+      "id": "DOC-00201",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Document portant la marque @EpubsFR et droits réservés : requalifié en droits_reserves_commercial, archivage en non_publie_archive."
+    },
+    {
+      "id": "DOC-00202",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Fichier tagué @EpubsFR avec droits d'auteur réservés : requalification en droits_reserves_commercial, non publiable (non_publie_archive)."
+    },
+    {
+      "id": "DOC-00203",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Origine @EpubsFR avec copyright réservé : statut droits_reserves_commercial, non_publie_archive."
+    },
+    {
+      "id": "DOC-00204",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Provenance @EpubsFR : application stricte de la consigne interdisant la diffusion institutionnelle pour les fichiers @EpubsFR, archivage obligatoire."
+    },
+    {
+      "id": "DOC-00206",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Marque @EpubsFR dans le nom de fichier : requalifié en droits_reserves_commercial, archivage en non_publie_archive."
+    },
+    {
+      "id": "DOC-00207",
+      "accord": false,
+      "champs_en_desaccord": [
+        "droits",
+        "flags",
+        "decision"
+      ],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {
+        "droits": "droits_reserves_commercial",
+        "flags": [
+          "droits_reserves"
+        ],
+        "decision": "non_publie_archive"
+      },
+      "arbitrage": "Fichier issu du canal pirate @EpubsFR avec copyright réservé : requalifié en droits_reserves_commercial, décision non_publie_archive."
+    },
+    {
+      "id": "DOC-00208",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00209",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00210",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "membres",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-00211",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    }
+  ]
+}

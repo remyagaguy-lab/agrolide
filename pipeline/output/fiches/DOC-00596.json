@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00596",
+  "sha256": "be1fea122f1c715e780ed6af3a5c53de50382702d581d4ab5085e4b067a64eef",
+  "nom_original": "MODULE RIZ.docx",
+  "chemin_relatif_source": "OD_Docs/MODULE RIZ.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 33066,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "riz",
+  "pays": "Burkina Faso",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "DRHCO",
+  "mots_cles": [
+    "riz",
+    "itineraire technique",
+    "burkina faso",
+    "repiquage",
+    "fertilisation",
+    "oryza sativa"
+  ],
+  "titre_trouve": "ITINERAIRE TECHNIQUE DU RIZ",
+  "titre": "Itinéraire technique de la culture du riz au Burkina Faso",
+  "resume": "Guide pratique détaillant l'itinéraire technique complet de la riziculture au Burkina Faso : choix variétal (Oryza sativa et glaberrima), préparation du sol, repiquage et fertilisation minérale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fichier docx avec drapeau conversion_requise : publication directe 'public' interdite tant que le document n'est pas converti en PDF ; redirection vers 'a_valider_humain'.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Thème : «ITINERAIRE TECHNIQUE DU RIZ»"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Fichier docx avec drapeau conversion_requise : publication directe 'public' interdite tant que le document n'est pas converti en PDF ; redirection vers 'a_valider_humain'."
+  },
+  "nom_fichier_final": "DOC-00596__itineraire-technique-de-la-culture-du-riz-au-burkina-fa.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00596__itineraire-technique-de-la-culture-du-riz-au-burkina-fa.pdf"
+}

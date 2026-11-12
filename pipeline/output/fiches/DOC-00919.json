@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00919",
+  "sha256": "ca1501e3cdf0b17b57a28f2853e0d7476b583884598be8c8cc3248ffd2b92a0d",
+  "nom_original": "formation bovine smc .pdf",
+  "chemin_relatif_source": "OD_Docs/formation bovine smc .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4777169,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 156,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "presentation",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovins et ovins",
+  "pays": "Burkina Faso",
+  "annee": 2021,
+  "auteurs": "Sidibé Christian",
+  "source_organisation": null,
+  "mots_cles": [
+    "embouche bovine",
+    "embouche ovine",
+    "alimentation du betail",
+    "sous-produits agricoles",
+    "burkina faso"
+  ],
+  "titre_trouve": "Formation technique en embouche bovine et ovine",
+  "titre": "Formation technique en embouche bovine et ovine au Burkina Faso",
+  "resume": "Support de formation illustré de 156 diapositives sur l'embouche bovine et ovine au Sahel : systèmes d'élevage, conduite du troupeau, santé et formules alimentaires à base de sous-produits locaux.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de formation professionnelle sans licence libre explicite, archivé pour valorisation patrimoniale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Formation technique en embouche bovine et ovine Sidibé Christian Ingénieur en élevage"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00919__formation-technique-en-embouche-bovine-et-ovine-au-burk.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00919__formation-technique-en-embouche-bovine-et-ovine-au-burk.pdf"
+}

@@ -1,0 +1,765 @@
+{
+  "batch_number": 60,
+  "results": [
+    {
+      "id": "DOC-00906",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2022,
+      "auteurs": "Compaore Albert",
+      "source_organisation": null,
+      "mots_cles": [
+        "gumboro",
+        "volaille",
+        "sante animale",
+        "maladie aviaire",
+        "burkina faso"
+      ],
+      "titre_trouve": "Traitement bio preventif et curatif contre Gomboro chez la volaille",
+      "titre": "Fiche pratique sur le traitement traditionnel contre le Gumboro chez la volaille",
+      "resume": "Fiche informative proposant des remèdes traditionnels préventifs et curatifs contre la maladie de Gumboro chez les volailles au Burkina Faso.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_phyto_a_verifier",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche autoproduite sur WhatsApp sans validation vétérinaire scientifique, comportant des allégations thérapeutiques non vérifiées.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.7,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Traitement bio preventif et curatif contre Gomboro chez la volaille Ecrivez l'auteur sur whatsapp +22663234345"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00907",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Ooreka (Fine Media)",
+      "source_organisation": "Fine Media",
+      "mots_cles": [
+        "couveuse",
+        "incubation",
+        "poussin",
+        "bricolage avicole",
+        "materiel d'elevage"
+      ],
+      "titre_trouve": "Fabriquer une couveuse",
+      "titre": "Fiche pratique : Fabriquer soi-même une couveuse à poussins",
+      "resume": "Fiche pratique détaillant la construction artisanale d'une couveuse pour œufs fécondés : matériel requis (ampoule, boîte, thermomètre), réglages d'incubation et consignes d'éclosion.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "licence_nc"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Contenu sous droits réservés de la société commerciale Fine Media (Ooreka), non diffusable sur la plateforme.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Réponses d'experts Fabriquer une couveuse"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00908",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2018,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Inter-Réseaux / FIDAfrique",
+      "mots_cles": [
+        "zai",
+        "conservation des eaux et sols",
+        "restauration des terres",
+        "sahel",
+        "compostage"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE #5 - LA TECHNIQUE DU ZAI",
+      "titre": "Fiche technique : La technique du zaï pour la restauration des terres au Sahel",
+      "resume": "Fiche technique détaillée sur la pratique traditionnelle et mécanisée du zaï au Sahel : creusement des poquets, apport de compost, captage des eaux de ruissellement et régénération des sols dégradés.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de référence pour la restauration des sols et l'agriculture de conservation au Sahel, en accès libre.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE #5 - LA TECHNIQUE DU ZAI"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00909",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2010,
+      "auteurs": "Patricia JUNG",
+      "source_organisation": "Association Zoramb Naagtaaba (AZN)",
+      "mots_cles": [
+        "zai",
+        "burkina faso",
+        "compost",
+        "cereales",
+        "recuperation des terres"
+      ],
+      "titre_trouve": "Fiche technique 2 : le ZAÏ",
+      "titre": "Fiche technique : Le zaï traditionnel au Burkina Faso (AZN)",
+      "resume": "Fiche technique synthétique de l'ONG AZN présentant le zaï traditionnel dans la région de Guiè : dimensions des trous, apport de compost et valorisation des terres sahéliennes dégradées.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique pratique d'une association paysanne burkinabè pour la diffusion du zaï, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique 2 : le ZAÏ L’AZN développe cette technique dans la région de Guiè"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00910",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "organisations_paysannes"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "sorgho",
+      "pays": "Mali",
+      "annee": 2011,
+      "auteurs": "Botorou Ouendeba, Niaba Teme",
+      "source_organisation": "IER / INTSORMIL / IICEM",
+      "mots_cles": [
+        "sorgho",
+        "variete grinkan",
+        "mali",
+        "itineraire technique",
+        "commercialisation"
+      ],
+      "titre_trouve": "FICHE DE PRODUCTION ET DE COMMERCIALISATION DU SORGHO, MALI",
+      "titre": "Fiche de production et de commercialisation du sorgho (Variété Grinkan au Mali)",
+      "resume": "Fiche technique et commerciale de l'IER et INTSORMIL sur la variété de sorgho Grinkan au Mali : calendrier agronomique, gestion de la fertilité, récolte et commercialisation coopérative.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Publication officielle de recherche et développement agricole (IER/INTSORMIL) pour les producteurs sahéliens, libre de droits.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE DE PRODUCTION ET DE COMMERCIALISATION DU SORGHO, MALI mars 2011"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00911",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "fraise",
+      "pays": "France",
+      "annee": 2005,
+      "auteurs": "Myriam Carmentran",
+      "source_organisation": "Chambre d'Agriculture du Lot-et-Garonne (CA 47) / Ctifl",
+      "mots_cles": [
+        "fraise bio",
+        "fraisiculture",
+        "agriculture biologique",
+        "tunnels chenilles",
+        "ctifl"
+      ],
+      "titre_trouve": "GUIDE TECHNIQUE FRAISE PRODUCTION AGROBIOLOGIQUE",
+      "titre": "Guide technique de la fraise en production biologique (CA 47 / Ctifl)",
+      "resume": "Guide technique de la Chambre d'agriculture du Lot-et-Garonne sur la fraisiculture bio : réglementation européenne, exigences physiologiques, fertilisation organique et gestion sous abri.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique institutionnel de chambre d'agriculture française pour le climat tempéré, réservé à la consultation des membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE TECHNIQUE FRAISE PRODUCTION AGROBIOLOGIQUE Rédaction Myriam Carmentran CA 47"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00912",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "pintade",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "Synalaf, PMAF",
+      "source_organisation": "Synalaf",
+      "mots_cles": [
+        "pintade",
+        "label rouge",
+        "aviculture biologique",
+        "plein air",
+        "bien-etre animal"
+      ],
+      "titre_trouve": "La pintade fermière élevée en plein air Label Rouge et la pintade biologique",
+      "titre": "Fiche technique : Élevage de pintades fermières en plein air et bio",
+      "resume": "Fiche comparative du Synalaf et de la PMAF précisant les normes d'élevage de pintades en plein air (Label Rouge et Bio) : densités, parcours herbeux et bien-être animal.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Fiche informative d'organisations professionnelles françaises sur les cahiers des charges avicoles européens, accessible aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La pintade fermière élevée en plein air Label Rouge et la pintade biologique Synalaf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00913",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "amarante",
+      "pays": "Niger",
+      "annee": 2023,
+      "auteurs": "Mme Iboune Mariama, Assouman Djibo Ayouba",
+      "source_organisation": "Chambre Régionale d'Agriculture de Niamey",
+      "mots_cles": [
+        "amarante",
+        "maraichage urbain",
+        "legume-feuille",
+        "niamey",
+        "cra niger"
+      ],
+      "titre_trouve": "Pratiques des producteurs pour la culture de l’amarante",
+      "titre": "Fiche technique : Pratiques des producteurs pour la culture de l'amarante à Niamey",
+      "resume": "Fiche technique de la CRA de Niamey décrivant la culture maraîchère de l'amarante : semis, repiquage, gestion de l'eau, fumure organique et protection phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique officielle de vulgarisation agricole de la CRA de Niamey, directement exploitable par les producteurs maraîchers.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chambre Régionale d’Agriculture de Niamey Fiche technique Pratiques des producteurs pour la culture de l’amarante"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00914",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "fonction cardiaque",
+        "systeme cardiovasculaire",
+        "physiologie humaine",
+        "hemodynamique"
+      ],
+      "titre_trouve": "La FONCTION CARDIO VASCULAIRE",
+      "titre": "Cours sur la fonction cardiovasculaire et la physiologie cardiaque humaine",
+      "resume": "Diaporama médical universitaire détaillant l'anatomie, la mécanique contractile, la régulation hémodynamique et le contrôle nerveux de la fonction cardiaque chez l'humain.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de cardiologie et physiologie médicale humaine, strictement hors du périmètre agronomique d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La FONCTION CARDIO VASCULAIRE I- INTRODICTION : La fonction essentielle du cœur est de maintenir la circulation du sang"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00915",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": "Madagascar",
+      "annee": 1991,
+      "auteurs": "FAO, PNUD, Ministère de la Production Animale de Madagascar",
+      "source_organisation": "FAO / PNUD",
+      "mots_cles": [
+        "pisciculture",
+        "systemes aquacoles",
+        "gestion des alevins",
+        "madagascar",
+        "fao"
+      ],
+      "titre_trouve": "1. PISCICULTURE GENERALE (suite.)",
+      "titre": "Manuel de pisciculture générale : Systèmes de production et gestion des alevins",
+      "resume": "Fascicule de formation piscicole détaillant les systèmes de production aquacoles, le flux des matières en étang et le stockage temporaire des alevins.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Section partielle d'un manuel de formation piscicole malgache (début en 'suite'), conservée pour archivage.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "1. PISCICULTURE GENERALE (suite.) 1.5. SYSTEME DE PRODUCTION"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00916",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "carpe",
+      "pays": "Madagascar",
+      "annee": 1991,
+      "auteurs": "FAO, PNUD, Ministère de la Production Animale de Madagascar",
+      "source_organisation": "FAO / PNUD",
+      "mots_cles": [
+        "carpiculture",
+        "carpe commune",
+        "etangs piscicoles",
+        "reproduction",
+        "madagascar"
+      ],
+      "titre_trouve": "2. ELEVAGE DE LA CARPE COMMUNE",
+      "titre": "Manuel d’élevage de la carpe commune : Étapes de production et étangs",
+      "resume": "Module de formation sur la carpiculture en milieu rural malgache : sélection du site, aménagement des étangs de géniteurs et reproduction de la carpe.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fascicule incomplet et interrompu en cours de texte ('Ainsi, un...'), archivé en tant qu'ensemble partiel.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "2. ELEVAGE DE LA CARPE COMMUNE 2.1. INTRODUCTION"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00917",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "carpe",
+      "pays": "Madagascar",
+      "annee": 1991,
+      "auteurs": "FAO, PNUD, Ministère de la Production Animale de Madagascar",
+      "source_organisation": "FAO / PNUD",
+      "mots_cles": [
+        "alevinage",
+        "carpe commune",
+        "etang d'alevinage",
+        "marges brutes",
+        "madagascar"
+      ],
+      "titre_trouve": "2. ELEVAGE DE LA CARPE COMMUNE (suite.)",
+      "titre": "Manuel d’élevage de la carpe commune : Alevinage en étang et rentabilité",
+      "resume": "Fascicule de formation sur l'alevinage de la carpe commune en étang : facteurs écologiques et humains de réussite, alimentation et calcul des marges économiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Module partiel débutant par 'suite', archivé pour préservation sans publication directe.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "2. ELEVAGE DE LA CARPE COMMUNE (suite.) 2.5. ALEVINAGE EN ETANG"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00918",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "riz et poisson",
+      "pays": "Madagascar",
+      "annee": 1991,
+      "auteurs": "FAO, PNUD, Ministère de la Production Animale de Madagascar",
+      "source_organisation": "FAO / PNUD",
+      "mots_cles": [
+        "rizipisciculture",
+        "rizieres",
+        "poisson en riziere",
+        "madagascar",
+        "fao"
+      ],
+      "titre_trouve": "3. RIZIPISCICULTURE",
+      "titre": "Manuel de rizipisciculture : Conduite combinée du riz et du poisson",
+      "resume": "Fascicule pratique sur la rizipisciculture à Madagascar : choix des parcelles rizicoles, calendrier d'élevage avec le riz, gestion hydraulique et valorisation économique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre 3 isolé d'un manuel de formation rizipiscicole FAO/PNUD, archivé comme ensemble partiel.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "3. RIZIPISCICULTURE 3.1. CHOIX DES RIZIERES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00919",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovins et ovins",
+      "pays": "Burkina Faso",
+      "annee": 2021,
+      "auteurs": "Sidibé Christian",
+      "source_organisation": null,
+      "mots_cles": [
+        "embouche bovine",
+        "embouche ovine",
+        "alimentation du betail",
+        "sous-produits agricoles",
+        "burkina faso"
+      ],
+      "titre_trouve": "Formation technique en embouche bovine et ovine",
+      "titre": "Formation technique en embouche bovine et ovine au Burkina Faso",
+      "resume": "Support de formation illustré de 156 diapositives sur l'embouche bovine et ovine au Sahel : systèmes d'élevage, conduite du troupeau, santé et formules alimentaires à base de sous-produits locaux.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation professionnelle sans licence libre explicite, archivé pour valorisation patrimoniale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Formation technique en embouche bovine et ovine Sidibé Christian Ingénieur en élevage"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00920",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "produits laitiers",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "fromages fondus",
+        "technologie laitiere",
+        "sels de fonte",
+        "cutterage",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "FROMAGES FONDUS",
+      "titre": "Diagramme technologique de fabrication des fromages fondus",
+      "resume": "Synoptique de fabrication industrielle et artisanale des fromages fondus (à tartiner, en blocs, en tranches) : ingrédients, cutterage, cuisson, sels de fonte et conditionnement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Schéma technologique synthétique de transformation fromagère, mis à disposition des membres pour l'appui technique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité FROMAGES FONDUS"
+        }
+      ]
+    }
+  ]
+}

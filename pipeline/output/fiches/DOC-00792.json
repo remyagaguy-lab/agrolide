@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00792",
+  "sha256": "949cfd4b3ea1d505847ecf82630f94fcaec0bb947edad3fffad6fe6d72b02222",
+  "nom_original": "amidon de ble gluten glutenines fecule.pdf",
+  "chemin_relatif_source": "OD_Docs/amidon de ble gluten glutenines fecule.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 51010,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476282079-amidon_de_ble_gluten_glutenines_fecule.pdf",
+  "nb_telechargements_existant": 1,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "blé",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "amidon de ble",
+    "gluten",
+    "fecule",
+    "glutenines",
+    "fractionnement ble",
+    "amidonnerie"
+  ],
+  "titre_trouve": "AMIDONS ET GLUTENS DE BLE",
+  "titre": "Schéma de procédé industriel : amidons et glutens de blé",
+  "resume": "Diagramme synoptique technique d'une page détaillant l'ensemble des étapes unitaires du fractionnement du blé : empâtage, tamisage, centrifugation, séchage et extraction d'amidons et de glutens.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique technique industriel clair et complet de procédé agroalimentaire, librement diffusable pour la formation technique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité AMIDONS ET GLUTENS DE BLE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00792__schema-de-procede-industriel-amidons-et-glutens-de-ble.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-00792__schema-de-procede-industriel-amidons-et-glutens-de-ble.pdf"
+}

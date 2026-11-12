@@ -1,0 +1,845 @@
+{
+  "batch_number": 23,
+  "results": [
+    {
+      "id": "DOC-00332",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2016,
+      "auteurs": "BIO SAVANE / REAGI",
+      "source_organisation": "Réseau d'Echanges en Agroécologie Intertropicale (REAGI) / Ecophyto",
+      "mots_cles": [
+        "agroecologie",
+        "zone intertropicale",
+        "fertilite du sol",
+        "lutte biologique",
+        "guyane"
+      ],
+      "titre_trouve": "Cultivons autrement : exemples locaux de techniques agro-écologiques",
+      "titre": "Cultivons autrement : exemples locaux de techniques agro-écologiques",
+      "resume": "Guide pratique issu du réseau REAGI présentant des techniques agroécologiques adaptées aux zones tropicales humides : gestion biologique des sols, couverture végétale et alternatives aux produits phytopharmaceutiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet financé par des fonds publics (Ecophyto/Maaf) portant la mention explicite de gratuité, très pertinent pour l'agroécologie tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cultivons autrement : exemples locaux de techniques agro-écologiques"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "Le plan Ecophyto est piloté par le Ministère chargé de l’agriculture... Prix : Ne peut être vendu"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00334",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "piment / poivron",
+      "pays": "France",
+      "annee": 2022,
+      "auteurs": "Jardipartage",
+      "source_organisation": "Jardipartage",
+      "mots_cles": [
+        "poivron",
+        "piment",
+        "maraichage",
+        "potager",
+        "solanacees"
+      ],
+      "titre_trouve": "Culture du poivron et du piment",
+      "titre": "Culture du poivron et du piment : fiche potager",
+      "resume": "Fiche de vulgarisation du site Jardipartage décrivant la culture maraîchère du poivron et du piment (semis, repiquage, entretien, arrosage et récolte) en contexte tempéré.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Article de site commercial de jardinage sous copyright explicite (Tous droits réservés © Jardipartage), non publiable.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Culture du poivron et du piment © Jardipartage"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 7,
+          "extrait": "Tous droits réservés Voir la version ordinateur"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00335",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "culture_sous_abri_hors_sol"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "AISSAOUI Hichem",
+      "source_organisation": "Université Mohamed Khider Biskra",
+      "mots_cles": [
+        "cultures maraicheres",
+        "cours agronomie",
+        "abri serre",
+        "pepiniere",
+        "conservation legumes"
+      ],
+      "titre_trouve": "Cultures maraîchères I",
+      "titre": "Cours de cultures maraîchères I : Master 1 Production végétale",
+      "resume": "Support de cours universitaire abordant la classification des légumes, les conditions climatiques et édaphiques, les abris serres, la production de plants en pépinière, la plantation et l'entreposage frigorifique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire sans licence de diffusion publique explicite, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Intitulé de l’UEF ou Intitulé de la matière ou module : Cultures maraîchères I"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Université Mohamed Khider Biskra Faculté des Sciences Exactes et des Sciences de la Nature et de la Vie"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00336",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "culture_sous_abri_hors_sol"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Ould Kiar R.",
+      "source_organisation": "ITCMI / INVA / MADR",
+      "mots_cles": [
+        "cultures maraicheres",
+        "pepiniere",
+        "culture protegee",
+        "hors-sol",
+        "habillage racinaire"
+      ],
+      "titre_trouve": "CULTURES MARAICHÈRES",
+      "titre": "Cultures maraîchères : conduite des plants et interventions techniques (L3)",
+      "resume": "Diaporama pédagogique de Licence 3 en production végétale détaillant les interventions techniques maraîchères, la conduite en pépinière, l'habillage racinaire, les cultures protégées et les cultures hors-sol.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non assorti d'une licence libre de diffusion, conservé en archives pédagogiques.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MATIÈRE : CULTURES MARAICHÈRES"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "L3 spécialité « Production végétale »"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00337",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "cycle de krebs",
+        "biochimie",
+        "metabolisme",
+        "respiration cellulaire"
+      ],
+      "titre_trouve": null,
+      "titre": "Schémas et cours sur le cycle de Krebs",
+      "resume": "Document scanné composé de planches et schémas manuscrits illustrant le cycle de Krebs et les voies métaboliques cellulaires en biochimie fondamentale.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "titre_introuvable",
+        "auteur_introuvable",
+        "incomplet"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible nécessitant un traitement OCR et une validation humaine de l'auteur et des droits.",
+      "confiance": {
+        "classification": 0.6,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cycle de krebs_240128_235537 (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00338",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture / poulet de chair",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "devis",
+        "poulet de chair",
+        "aviculture",
+        "budget previsionnel",
+        "fcfa"
+      ],
+      "titre_trouve": "DEVIS DE POULAILLER *Pour une bande de 55O têtes de poulets de chair",
+      "titre": "Devis estimatif d'un poulailler pour 550 poulets de chair",
+      "resume": "Budget prévisionnel chiffré en FCFA pour la conduite d'une bande de 550 poulets de chair, détaillant les postes d'achat des poussins, aliments (démarrage/croissance), vaccins, chauffage et matériel d'élevage.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document informel pratique sans mention d'auteur ni de licence libre explicite, archivé pour servir de modèle d'exploitation.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "DEVIS DE POULAILLER *Pour une bande de 55O têtes de poulets de chair"
+        },
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "Poussins : 550poussins à 460f par tête soit 253000FCFA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00339",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "mûrier / sériciculture",
+      "pays": "France",
+      "annee": 1838,
+      "auteurs": "Gaillard",
+      "source_organisation": "BnF-Partenariats / Veuve Huzard",
+      "mots_cles": [
+        "murier",
+        "taille des arbres",
+        "sericiculture",
+        "arboriculture",
+        "ouvrage historique"
+      ],
+      "titre_trouve": "De la taille et de la culture du mûrier",
+      "titre": "De la taille et de la culture du mûrier",
+      "resume": "Traité d'arboriculture historique de 1838 détaillant la biologie de la sève, la plantation, la taille et les soins culturaux du mûrier destiné à l'élevage du ver à soie en France.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "obsolete",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Édition numérique commerciale protégée par copyright (BnF-Partenariats, Collection XIX, EAN 9782346142798) et contenu historique tempéré obsolète.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "Gaillard De la taille et de la culture du mûrier"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 48,
+          "extrait": "Collection XIX est une marque déposée de BnF-Partenariats... EAN : 9782346142798"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00340",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "lait / fromage",
+      "pays": "Algérie",
+      "annee": 2025,
+      "auteurs": "BOUAZDI",
+      "source_organisation": "Institut Technique Des Elevages (ITELV)",
+      "mots_cles": [
+        "fromagerie",
+        "transformation laitiere",
+        "lait de chevre",
+        "lait de vache",
+        "coagulation",
+        "affinage"
+      ],
+      "titre_trouve": "De la ferme à la fromagerie",
+      "titre": "De la ferme à la fromagerie : guide de transformation fromagère artisanale",
+      "resume": "Fiche technique de l'ITELV synthétisant les étapes de production du fromage fermier : collecte et qualité du lait, maturation, emprésurage, coagulation, moulage, égouttage, salage et affinage.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète de vulgarisation produite par un institut technique public (ITELV), directement exploitable pour la valorisation artisanale du lait.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "De-la-ferme-á-la-fromagerie (nom du fichier)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Institut Technique Des Elevages, ITELV. Les zouines Baba Ali- BP 03/A. Birtouta - Alger - Algérie"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00341",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2006,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Centre de référence en agriculture et agroalimentaire du Québec (CRAAQ)",
+      "mots_cles": [
+        "demarrage entreprise",
+        "entrepreneuriat agricole",
+        "releve agricole",
+        "quebec",
+        "gestion d'exploitation"
+      ],
+      "titre_trouve": "DÉMARRAGE D’UNE ENTREPRISE AGRICOLE",
+      "titre": "Démarrage d'une entreprise agricole : fiche mode d'établissement",
+      "resume": "Fiche d'information sur les aspects organisationnels, financiers et relationnels du démarrage d'une nouvelle exploitation agricole au Québec, avec retour d'expérience d'une jeune agricultrice.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'orientation institutionnel canadien complet mais ancré dans le contexte institutionnel du Québec, archivé pour référence méthodologique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "DÉMARRAGE D’UNE ENTREPRISE AGRICOLE DESCRIPTION DU MODE D’ÉTABLISSEMENT"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 3,
+          "extrait": "au cégep de Lévis-Lauzon"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00342",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2024,
+      "auteurs": "Savoirs de paysans",
+      "source_organisation": "Terre des Jeunes / INERA",
+      "mots_cles": [
+        "demi-lune",
+        "conservation des eaux et sols",
+        "sols degrades",
+        "lutte contre la desertification",
+        "burkina faso",
+        "sahel"
+      ],
+      "titre_trouve": "Fiche La demi-lune améliorée - Savoirs de paysans",
+      "titre": "La demi-lune améliorée : récupération des terres dégradées au Sahel",
+      "resume": "Fiche technique décrivant la méthode sahélienne de la demi-lune améliorée pour restaurer les sols encroûtés : excavation, apport de matière organique, piégeage des eaux de pluie et réhabilitation agricole au Burkina Faso.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique terrain de premier plan pour les zones semi-arides sahéliennes, issue d'un programme d'appui paysan et libre de diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche La demi-lune améliorée - Savoirs de paysans"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "Localisation Burkina Faso Contexte d’apparition Technique apparue chez en milieu paysan africain"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00343",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "foresterie",
+      "pays": null,
+      "annee": 2018,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "dendrometrie",
+        "inventaire forestier",
+        "cubage",
+        "mensurations des arbres",
+        "peuplements forestiers"
+      ],
+      "titre_trouve": "Dendrométrie",
+      "titre": "Cours de dendrométrie : mensurations forestières et relevés de végétation",
+      "resume": "Diaporama de cours universitaire de Licence 3 SVT présentant les méthodes de dendrométrie : mesure du diamètre, hauteur, volume de bois, dimension du houppier et réalisation de relevés de végétation forestière.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire sans licence de diffusion publique explicite, conservé pour les archives de formation forestière.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Dendrométrie 1"
+        },
+        {
+          "champ": "public_principal",
+          "page": 38,
+          "extrait": "Rendre le rapport après la date limite"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00344",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tomate / maïs",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Pascal de Jesus",
+      "source_organisation": null,
+      "mots_cles": [
+        "tomate",
+        "mais",
+        "nuisibles",
+        "mildiou",
+        "biopesticides",
+        "purin de neem",
+        "moringa"
+      ],
+      "titre_trouve": "Des nuisibles de la tomate et du maïs",
+      "titre": "Guide pratique des nuisibles de la tomate et du maïs et recettes de biopesticides",
+      "resume": "Guide de terrain identifiant les ravageurs et maladies de la tomate et du maïs (mildiou, pourritures, pucerons, chenilles) avec des recettes artisanales de biopesticides à base de neem, moringa, bicarbonate et tabac.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide pratique très pertinent mais comportant des préparations phytosanitaires artisanales (extraits de tabac) et un statut de droits à clarifier.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.65,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Des nuisibles de la tomate et du maïs Les nuisibles de la tomate"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Pascal de Jesus (métadonnées)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00345",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [],
+      "type_doc": "periodique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": "jardinage",
+      "pays": "France",
+      "annee": 2025,
+      "auteurs": "Détente Jardin",
+      "source_organisation": "Uni-médias / Détente Jardin",
+      "mots_cles": [
+        "jardinage",
+        "potager amateur",
+        "horticulture",
+        "magazine",
+        "fleurs"
+      ],
+      "titre_trouve": "Détente Jardin - Juillet-Août 2025",
+      "titre": "Détente Jardin : Numéro de Juillet-Août 2025",
+      "resume": "Numéro complet du magazine grand public français Détente Jardin consacré aux aménagements de jardin, aux fleurs d'ornement et au potager d'agrément estival en milieu tempéré.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte",
+        "ocr_necessaire"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Presse commerciale sous droits d'auteur stricts (magazine de kiosque), hors cible agronomique subsaharienne.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Detente Jardin - Juillet-Aout 2025 (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00346",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture / silure (Clarias)",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Ingénieur Zanga Zolo",
+      "source_organisation": null,
+      "mots_cles": [
+        "aquaculture",
+        "pisciculture",
+        "clarias",
+        "bacs en bache",
+        "fastank",
+        "devis",
+        "compte d'exploitation"
+      ],
+      "titre_trouve": "PROJET DE CONSTRUCTION DE 04 BACS EN BACHE (FASTANK) D'ELEVAGES DE Clarias",
+      "titre": "Projet d'élevage de Clarias en 4 bacs en bâche : devis et compte d'exploitation",
+      "resume": "Dossier technico-économique chiffré en FCFA pour la construction et l'exploitation de 4 bacs hors-sol en bâche (Fastank) de pisciculture de silures : coûts d'installation, alevins, aliment et prévisions de rentabilité.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document technico-économique concret rédigé par un professionnel indépendant sans licence libre explicite, conservé en archive pour modèle d'activité.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.75,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PROJETDECONSTRUCTIONDE04:BACSENBACHE(FASTANK)D'ELEVAGESDEClarias Devisetcompted'exploitation"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "FaitparIngZangaZolo(Aquaculture)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00347",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "pisciculture / tilapia et silure",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "EMESA",
+      "source_organisation": "École des Métiers de l'Élevage et de la Santé Animale (EMESA)",
+      "mots_cles": [
+        "pisciculture",
+        "tilapia",
+        "silure",
+        "hormone 17a-mt",
+        "dimensionnement",
+        "examen",
+        "emesa"
+      ],
+      "titre_trouve": "Pisciculture / TSE EMESA Décembre 2020 Exercice",
+      "titre": "Épreuve de pisciculture : production d'alevins de silures et tilapias (EMESA)",
+      "resume": "Sujet d'examen professionnel de l'EMESA pour techniciens d'élevage, comprenant des exercices de calcul sur l'inversion sexuelle du tilapia par le 17α-MT, l'alimentation et la gestion de géniteurs de silures.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Épreuve d'examen interne d'une école professionnelle d'élevage sans autorisation de diffusion ouverte, conservée en archives pédagogiques.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pisciculture / TSE EMESA Décembre 2020 Exercice"
+        },
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "Mr Traoré vous contacte pour un projet de productions d’alevins de silures et de tilapia"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00761",
+  "sha256": "e0c1c6137a23447366fae271f9fd5c27b7cdd1ce1b1b886f52f944f23ea9978d",
+  "nom_original": "Traitement_des_eaux_et_utilités.pdf",
+  "chemin_relatif_source": "OD_Docs/Traitement_des_eaux_et_utilités.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 20544460,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 487,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "S. ANKIK",
+  "source_organisation": null,
+  "mots_cles": [
+    "traitement des eaux",
+    "utilites industrielles",
+    "dessalement",
+    "osmose inverse",
+    "eaux residuaires",
+    "biogaz"
+  ],
+  "titre_trouve": "Traitement des eaux et utilités",
+  "titre": "Cours complet sur le traitement des eaux et les réseaux d'utilités industrielles",
+  "resume": "Support de cours approfondi de 487 diapositives couvrant la chimie des eaux, les eaux de process, le dessalement par osmose inverse, l'épuration des eaux résiduaires, la méthanisation des boues et les réseaux d'utilités.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire complet sans licence ouverte déclarée, archivé pour l'enseignement technique de l'eau.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Traitement des eaux et utilités S.ANKIK"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Chapitre I: Généralités sur l’eau Chapitre IV: Techniques de dessalement"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00761__cours-complet-sur-le-traitement-des-eaux-et-les-reseaux.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00761__cours-complet-sur-le-traitement-des-eaux-et-les-reseaux.pdf"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00776",
+  "sha256": "e5d09f87ce2e916dc141e4a1e47ea2357172a997099c23d31f00731c100ac96a",
+  "nom_original": "a-az802f.pdf",
+  "chemin_relatif_source": "OD_Docs/a-az802f.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 638974,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "gombo",
+  "pays": "Tchad",
+  "annee": 2012,
+  "auteurs": "Alkhali Saleh, Sena Yassine Gaye, Simon Assegninou",
+  "source_organisation": "FAO / RADHORT",
+  "mots_cles": [
+    "gombo",
+    "tchad",
+    "cultures maraicheres",
+    "marche maraicher",
+    "gombo sec",
+    "radhort"
+  ],
+  "titre_trouve": "Importance économique et travaux de recherche sur le gombo",
+  "titre": "Importance économique et travaux de recherche sur le gombo au Tchad",
+  "resume": "Rapport technique et économique de 10 pages analysant la filière gombo au Tchad : zones de production irriguées, circuits de commercialisation du gombo frais et sec et revenus générés.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Publication institutionnelle FAO (réseau RADHORT) en accès libre sur une culture maraîchère sahélienne stratégique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Importance économique et travaux de recherche sur le gombo RADHORT"
+    },
+    {
+      "champ": "auteurs",
+      "page": 3,
+      "extrait": "Alkhali SALEH, Sena Yassine GAYE, Simon ASSEGNINOU, N’Djaména, Tchad"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "author FAO"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00776__importance-economique-et-travaux-de-recherche-sur-le-go.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00776__importance-economique-et-travaux-de-recherche-sur-le-go.pdf"
+}

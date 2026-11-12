@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00516",
+  "sha256": "f1f4a9e61b47df9f8158ae208f6565aa6eabac51b0bfa3da83e8e82bffe0a8ce",
+  "nom_original": "Isabelle Saporta - Le livre noir de l_agriculture.pdf",
+  "chemin_relatif_source": "OD_Docs/Isabelle Saporta - Le livre noir de l_agriculture.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 889313,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 131,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "agroeconomie",
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "ouvrage",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2011,
+  "auteurs": "Isabelle Saporta",
+  "source_organisation": "Éditions Fayard",
+  "mots_cles": [
+    "agriculture intensive",
+    "pesticides",
+    "elevage industriel",
+    "environnement",
+    "politique agricole",
+    "fayard"
+  ],
+  "titre_trouve": "Le livre noir de l'agriculture",
+  "titre": "Le livre noir de l'agriculture (Isabelle Saporta)",
+  "resume": "Ouvrage d'investigation journalistique de 131 pages (éditions Fayard) dénonçant les dérives environnementales, sanitaires et économiques du modèle agricole productiviste et intensif.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial publié chez Fayard (ISBN 978-2-213-66460-6), strictement protégé par le droit d'auteur. Diffusion publique interdite, archivé en interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Le livre noir de l'agriculture"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "© Librairie Arthème Fayard, 2011. ISBN : 978-2-213-66460-6"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00516__le-livre-noir-de-l-agriculture-isabelle-saporta.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00516__le-livre-noir-de-l-agriculture-isabelle-saporta.pdf"
+}

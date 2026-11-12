@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00024",
+  "sha256": "b1bd370e02695dd8bf8779b5de66f12ba83ace819bd51045d601a5a9af93888d",
+  "nom_original": "Résumé1 Biologie Végétale SVI2 STU2.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Biologie Végétale L1/Biologie Végétale L1/Résumé1 Biologie Végétale SVI2 STU2.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 2000374,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 15,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2020,
+  "auteurs": "DALIL INFO",
+  "source_organisation": "Université (filières SVI/STU)",
+  "mots_cles": [
+    "biologie vegetale",
+    "taxonomie",
+    "classification",
+    "spermaphytes",
+    "svi",
+    "stu"
+  ],
+  "titre_trouve": "Résumé de la matière Biologie végétale, Crédit 6, Coefficient 3",
+  "titre": "Résumé de cours de biologie végétale : SVI2 - STU2 (Fascicule 1)",
+  "resume": "Synthèse de cours de biologie végétale de première année universitaire (SVI/STU), abordant la classification végétale, les bryophytes, ptéridophytes et la formation des fruits.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fascicule de révision étudiant partiel (texte interrompu p. 15), non publié officiellement : archivage interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé de la matière Biologie végétale, Crédit 6, Coefficient 3"
+    },
+    {
+      "champ": "autre",
+      "page": 15,
+      "extrait": "1.1. Fruit charnu. C’est un fruit dont"
+    }
+  ],
+  "ensemble_id": "ENS-0002",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00024__resume-de-cours-de-biologie-vegetale-svi2-stu2-fascicul.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00024__resume-de-cours-de-biologie-vegetale-svi2-stu2-fascicul.pdf"
+}

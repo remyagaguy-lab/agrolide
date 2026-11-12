@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00780",
+  "sha256": "7092c7ed1385192cfe556b3aa76ae4e6ee0ba594261fac8b409f9ef2c13f5a6c",
+  "nom_original": "agroforesterie_definition@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/agroforesterie_definition@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 194308,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2006,
+  "auteurs": "Association Française d'Agroforesterie (AFAF)",
+  "source_organisation": "Association Française d'Agroforesterie",
+  "mots_cles": [
+    "agroforesterie",
+    "agrisylviculture",
+    "sylvopastoralisme",
+    "sequestration carbone",
+    "haies"
+  ],
+  "titre_trouve": null,
+  "titre": "Définition et atouts de l'agroforesterie",
+  "resume": "Fiche de synthèse de 3 pages définissant les concepts d'agrisylviculture et de sylvopastoralisme, et résumant leurs bénéfices pour la séquestration du carbone et la protection des sols.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document taggé @EpubsFR issu d'un canal de diffusion non officiel : la règle métier interdit formellement la diffusion_institutionnelle pour les fichiers @EpubsFR. Les droits doivent être classés en droits_reserves_commercial avec le drapeau droits_reserves et la décision non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "w w w . a g r o f o r e s t e r i e . f r Activité associant sur les mêmes parcelles une vocation mixte"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Les parcelles cultivables portant des cultures agricoles intercalaires et des arbres forestiers correspondent à l'agrisylviculture"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Document taggé @EpubsFR issu d'un canal de diffusion non officiel : la règle métier interdit formellement la diffusion_institutionnelle pour les fichiers @EpubsFR. Les droits doivent être classés en droits_reserves_commercial avec le drapeau droits_reserves et la décision non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00780__definition-et-atouts-de-l-agroforesterie.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00780__definition-et-atouts-de-l-agroforesterie.pdf"
+}

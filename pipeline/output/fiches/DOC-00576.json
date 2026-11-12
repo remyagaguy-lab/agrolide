@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00576",
+  "sha256": "b7539c3be092c34d89ad85d61ed6a9724bde5cc8c7758d94a42cde22ac1789a9",
+  "nom_original": "MANUEL  PROFESIONNEL POUR PATE.pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL  PROFESIONNEL POUR PATE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 849830,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 17,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "porcins",
+  "pays": "Cameroun",
+  "annee": 2019,
+  "auteurs": "Innocent Tchoffo",
+  "source_organisation": "École de Formation en Agriculture et Technologies Innovantes (EFATI)",
+  "mots_cles": [
+    "pate de campagne",
+    "charcuterie",
+    "transformation carnee",
+    "agroalimentaire",
+    "cameroun",
+    "rentabilite"
+  ],
+  "titre_trouve": "MANUEL SUR LA PRODUCTION DU PATE DE CAMPAGNE USAGE PROFESIONNEL",
+  "titre": "Manuel professionnel de fabrication du pâté de campagne",
+  "resume": "Manuel technique et économique pour la fabrication artisanale de pâté de campagne en Afrique centrale : ingrédients, équipements de transformation et budget prévisionnel en FCFA.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique professionnel complet sur la transformation carnée et le calcul des marges en FCFA, hautement diffusable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ECOLE DE FORMATION EN AGRICLTURE ET TECHNOLOGIES INNOVANTES ... MANUEL SUR LA PRODUCTION DU PATE DE CAMPAGNE USAGE PROFESIONNEL"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00576__manuel-professionnel-de-fabrication-du-pate-de-campagne.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00576__manuel-professionnel-de-fabrication-du-pate-de-campagne.pdf"
+}

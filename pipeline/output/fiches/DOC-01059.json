@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01059",
+  "sha256": "9486c2da02963767c3a6e6d7c9f95065b47c573929e5f8580df653725c873bac",
+  "nom_original": "volailles.pdf",
+  "chemin_relatif_source": "OD_Docs/volailles.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 421821,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture / volailles",
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "CTA",
+  "source_organisation": "Centre technique de coopération agricole et rurale (CTA)",
+  "mots_cles": [
+    "cta",
+    "aviculture villageoise",
+    "volailles",
+    "elevage des poussins",
+    "couveuse artisanale",
+    "guide pratique"
+  ],
+  "titre_trouve": "Collection Guides pratiques du CTA, No 4",
+  "titre": "L'élevage des volailles : Guide pratique du CTA (No 4)",
+  "resume": "Guide pratique de référence du CTA détaillant les bonnes pratiques d'élevage des volailles en Afrique : couvaison, chauffage des poussins, alimentation, abreuvement et prévention des maladies.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Libre reproduction sous réserve de mention de la source (CTA)",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique du CTA libre de droits sous mention de source, de pertinence maximale (3) pour les petits producteurs avicoles africains.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Collection Guides pratiques du CTA, No 4"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "L’information contenue dans ce guide peut être librement reproduite à condition de mentionner la source."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01059__l-elevage-des-volailles-guide-pratique-du-cta-no-4.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-01059__l-elevage-des-volailles-guide-pratique-du-cta-no-4.pdf"
+}

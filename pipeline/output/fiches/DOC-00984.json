@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00984",
+  "sha256": "6ec065d388daabc67d7f154e5aeb3f3f6cfb8c4ebf8bc220054d6e37e1b31369",
+  "nom_original": "manual_guideline-_-_18.pdf",
+  "chemin_relatif_source": "OD_Docs/manual_guideline-_-_18.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1793220,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 24,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Mali",
+  "annee": 2012,
+  "auteurs": "Togo Shinohara, JIRCAS / IER",
+  "source_organisation": "JIRCAS / Institut d'Économie Rurale (IER Mali)",
+  "mots_cles": [
+    "compostage",
+    "fertilite du sol",
+    "jircas",
+    "ier mali",
+    "gerena",
+    "matiere organique"
+  ],
+  "titre_trouve": "TECHNIQUE DU COMPOSTAGE Annexe: Manuel technique 6",
+  "titre": "Technique du compostage (Manuel technique 6 JIRCAS / IER Mali)",
+  "resume": "Manuel technique pratique illustré détaillant la fabrication du compost en fosse et en tas au Mali : matières premières, humidification, aération, maturation et épandage au champ.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel pratique officiel issu de la coopération JIRCAS/IER pour la fertilité des sols au Sahel, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "TECHNIQUE DU COMPOSTAGE Japan International Research Center for Agricultural Sciences Annexe: Manuel technique 6"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT D’ECONOMIE RURALE Décembre 2012"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00984__technique-du-compostage-manuel-technique-6-jircas-ier-m.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00984__technique-du-compostage-manuel-technique-6-jircas-ier-m.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00259",
+  "sha256": "6bc9d69336fbf79bb5981bd50ed17dbe9cf2afe8b9e190bcca4445e8fde976ed",
+  "nom_original": "Bonnes__pratiques-CES-DRS-GIZ.pdf",
+  "chemin_relatif_source": "OD_Docs/Bonnes__pratiques-CES-DRS-GIZ.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4448205,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479288090-Bonnes__pratiques-CES-DRS-GIZ.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 60,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Sahel",
+  "annee": 2012,
+  "auteurs": "GIZ, BMZ",
+  "source_organisation": "GIZ",
+  "mots_cles": [
+    "ces drs",
+    "sahel",
+    "conservation des eaux et sols",
+    "demi-lunes",
+    "zai",
+    "resilience climatique"
+  ],
+  "titre_trouve": "Bonnes pratiques de CES/DRS. Contribution à l’adaptation au changement climatique et à la résilience des producteurs",
+  "titre": "Bonnes pratiques de CES/DRS au Sahel : adaptation au changement climatique",
+  "resume": "Manuel technique de référence de 60 pages détaillant les techniques d'aménagement et de conservation des eaux et sols au Sahel (demi-lunes, zaï, cordons pierreux, RNA).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de premier ordre publié par la GIZ, en libre accès pour la résilience agroécologique au Sahel.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Bonnes pratiques de CES/DRS. Contribution à l’adaptation au changement climatique et à la résilience des producteurs"
+    },
+    {
+      "champ": "autre",
+      "page": 60,
+      "extrait": "Ministère fédéral allemand de la Coopération économique et du Développement (BMZ)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00259__bonnes-pratiques-de-ces-drs-au-sahel-adaptation-au-chan.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00259__bonnes-pratiques-de-ces-drs-au-sahel-adaptation-au-chan.pdf"
+}

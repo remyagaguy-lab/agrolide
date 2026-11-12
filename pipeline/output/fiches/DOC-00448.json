@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00448",
+  "sha256": "24b7a8251a61d1905fef549fd452b8dbb11b7173b16bbd129cbfd91ef49142da",
+  "nom_original": "Fiche_technico_economique_chou_Dosso_Juillet2017.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche_technico_economique_chou_Dosso_Juillet2017.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 497099,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "chou",
+  "pays": "Niger",
+  "annee": 2017,
+  "auteurs": "Chambre Régionale d'Agriculture de Dosso",
+  "source_organisation": "CRA Dosso / RECA Niger",
+  "mots_cles": [
+    "chou",
+    "fiche technico-economique",
+    "dosso",
+    "niger",
+    "maraichage",
+    "rentabilite"
+  ],
+  "titre_trouve": "Fiche technico-économique pour la culture du chou - Région de Dosso",
+  "titre": "Fiche technico-économique : Culture du chou à Dosso",
+  "resume": "Fiche technico-économique de la Chambre Régionale d'Agriculture de Dosso précisant la conduite culturale du chou, les intrants nécessaires, la ventilation mensuelle des charges et les marges bénéficiaires au Niger.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technico-économique institutionnelle complète de la Chambre Régionale d'Agriculture de Dosso destinée aux producteurs maraîchers.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technico-économique pour la culture du chou"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00448__fiche-technico-economique-culture-du-chou-a-dosso.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00448__fiche-technico-economique-culture-du-chou-a-dosso.pdf"
+}

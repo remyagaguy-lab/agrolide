@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00255",
+  "sha256": "02e07f4c0931bdb20e3bd1fef15606a20bea02e645c4328e608b1955a46389de",
+  "nom_original": "Biostatistique.Djelfa.pdf · version 1.pdf",
+  "chemin_relatif_source": "OD_Docs/Biostatistique.Djelfa.pdf · version 1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 11491018,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 21,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "statistiques_biometrie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Université de Djelfa",
+  "mots_cles": [
+    "biostatistique",
+    "statistiques",
+    "agronomie",
+    "analyse de donnees"
+  ],
+  "titre_trouve": null,
+  "titre": "Cours de biostatistique (Université de Djelfa)",
+  "resume": "Polycopié de cours de biostatistique scanné à l'Université de Djelfa, nécessitant un traitement de reconnaissance optique de caractères pour son exploitation.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible issu d'un cours universitaire ; nécessite OCR et validation humaine.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.5,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Biostatistique.Djelfa.pdf"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "CamScanner 12-14-2020"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00255__cours-de-biostatistique-universite-de-djelfa.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/statistiques_biometrie/DOC-00255__cours-de-biostatistique-universite-de-djelfa.pdf"
+}

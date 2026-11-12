@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00920",
+  "sha256": "3811e4072d660bef8462dc23fe0681b2ca2b5288478f512091ff7c3af0ae7e12",
+  "nom_original": "fromages fondus.pdf",
+  "chemin_relatif_source": "OD_Docs/fromages fondus.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 42584,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479509097-fromages_fondus.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "produits laitiers",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "fromages fondus",
+    "technologie laitiere",
+    "sels de fonte",
+    "cutterage",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "FROMAGES FONDUS",
+  "titre": "Diagramme technologique de fabrication des fromages fondus",
+  "resume": "Synoptique de fabrication industrielle et artisanale des fromages fondus (à tartiner, en blocs, en tranches) : ingrédients, cutterage, cuisson, sels de fonte et conditionnement.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Validation humaine requise (confiance={'classification': 0.95, 'droits': 0.8, 'completude': 0.95}, accord_audit=True).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité FROMAGES FONDUS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00920__diagramme-technologique-de-fabrication-des-fromages-fon.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00920__diagramme-technologique-de-fabrication-des-fromages-fon.pdf"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00134",
+  "sha256": "d96c80dd57bec7543c69873dc9ef6bb3cb0dfc1ab30ecda2ca3bebdff1ac8c63",
+  "nom_original": "7- Etude à la neige N 84.pdf",
+  "chemin_relatif_source": "OD_Docs/7- Etude à la neige N 84.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 147376,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2008,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "genie civil",
+    "charge de neige",
+    "reglementation n84",
+    "toitures",
+    "structures"
+  ],
+  "titre_trouve": "Action de la neige selon N 84",
+  "titre": "Action de la neige sur les constructions selon le règlement N 84 en Algérie",
+  "resume": "Extrait technique de cours de génie civil définissant les règles de calcul de la charge statique de neige sur les toitures selon la norme algérienne N 84 selon les zones géographiques et altitudes.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de calcul de génie civil sur les charges de neige sur les toitures, totalement hors périmètre agricole et agroalimentaire.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.8,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CH. II : Etude à la neige selon (N 84) Action de la neige selon N 84"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00134__action-de-la-neige-sur-les-constructions-selon-le-regle.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00134__action-de-la-neige-sur-les-constructions-selon-le-regle.pdf"
+}

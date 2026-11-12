@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01037",
+  "sha256": "03cac93371a3d698fb30e6381b81c5d9cc26ce57520d5ec4756bf459d01666e6",
+  "nom_original": "résumé et td fertilisation et amendements .pdf",
+  "chemin_relatif_source": "OD_Docs/résumé et td fertilisation et amendements .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8023263,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 20,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "fertilisation",
+    "amendements",
+    "td",
+    "exercices",
+    "chimie du sol",
+    "engrais"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé de cours et travaux dirigés : fertilisation et amendements",
+  "resume": "Document scanné de 20 pages sans texte extractible comportant un résumé de cours et des travaux dirigés sur la fertilisation et les amendements.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fascicule de TD scanné sans couche texte nécessitant un OCR pour identifier son auteur, sa complétude et son statut de diffusion.",
+  "confiance": {
+    "classification": 0.8,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "résumé et td fertilisation et amendements .pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01037__resume-de-cours-et-travaux-diriges-fertilisation-et-ame.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-01037__resume-de-cours-et-travaux-diriges-fertilisation-et-ame.pdf"
+}

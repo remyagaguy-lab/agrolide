@@ -1,0 +1,862 @@
+{
+  "batch_number": 63,
+  "results": [
+    {
+      "id": "DOC-00956",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "politiques_strategies"
+      ],
+      "type_doc": "texte_officiel",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "FAO",
+      "source_organisation": "Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO)",
+      "mots_cles": [
+        "gestion durable des sols",
+        "fao",
+        "directives volontaires",
+        "fertilite des sols",
+        "erosion",
+        "services ecosystemiques"
+      ],
+      "titre_trouve": "Directives volontaires pour une gestion durable des sols",
+      "titre": "Directives volontaires pour une gestion durable des sols (FAO)",
+      "resume": "Document cadre de référence de la FAO établissant les principes techniques et d'action politique pour stopper l'érosion, maintenir la matière organique et assurer la fertilité durable des sols mondiaux.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Document officiel international de la FAO sur la gestion durable des sols, librement diffusable en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Directives volontaires pour une gestion durable des sols"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "ORGANISATION DES NATIONS UNIES POUR L’ALIMENTATION ET L’AGRICULTURE Rome, 2017"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00957",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "fertilisation_amendements",
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "these",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "canne à sucre",
+      "pays": "Maurice",
+      "annee": 2009,
+      "auteurs": "Aneeza Soobadar",
+      "source_organisation": "Université d'Avignon / MSIRI (Île Maurice)",
+      "mots_cles": [
+        "epandage",
+        "vinasse",
+        "cendre de bagasse",
+        "canne a sucre",
+        "fertilite des sols",
+        "ile maurice",
+        "these"
+      ],
+      "titre_trouve": "Impacts agronomiques et environnementaux de l’épandage de vinasse et de cendre de charbon/bagasse sur les terres agricoles de l’Île Maurice",
+      "titre": "Impacts agronomiques et environnementaux de l'épandage de vinasse et de cendre de charbon/bagasse à l'Île Maurice",
+      "resume": "Thèse doctorale de 194 pages analysant les effets agronomiques et les risques écotoxicologiques (lixiviation, métaux lourds, qualité des nappes) du recyclage de vinasses et de cendres de bagasse en culture de canne à sucre.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (HAL)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Thèse de doctorat universitaire archivée pour la recherche sans publication directe sur la plateforme (Règle Métier 1).",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Impacts agronomiques et environnementaux de l’épandage de vinasse et de cendre de charbon/bagasse sur les terres agricoles de l’Île Maurice"
+        },
+        {
+          "champ": "type_doc",
+          "page": 2,
+          "extrait": "THESE Présentée pour obtenir le grade de Docteur en Sciences de l’Université d’Avignon"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00959",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "États-Unis",
+      "annee": 2004,
+      "auteurs": "Robert B. Cialdini",
+      "source_organisation": "Éditions First-Gründ",
+      "mots_cles": [
+        "psychologie sociale",
+        "persuasion",
+        "manipulation",
+        "reciprocite",
+        "marketing"
+      ],
+      "titre_trouve": "INFLUENCE & MANIPULATION",
+      "titre": "Influence et manipulation : la psychologie de la persuasion",
+      "resume": "Livre de vulgarisation en psychologie sociale et marketing décrivant les mécanismes psychologiques universels d'influence et de persuasion (réciprocité, engagement, preuve sociale, autorité, rareté).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Ouvrage de psychologie sociale et marketing commercial sous droits d'auteur, totalement hors du périmètre agricole d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "ROBERT CIALDINI INFLUENCE & MANIPULATION"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "© Editions First-Gründ, 2004 pour l’édition française. ISBN 978-2-87691-874-0"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00960",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "cultures_maraicheres",
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2012,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Instituts Techniques Agricoles d'Algérie (ITDAS / ITGC Biskra)",
+      "mots_cles": [
+        "calendrier cultural",
+        "algerie",
+        "biskra",
+        "operations culturales",
+        "protection phytosanitaire",
+        "itdas",
+        "agronomie"
+      ],
+      "titre_trouve": "Calendrier des Opérations Culturales 2012",
+      "titre": "Calendrier des opérations culturales et de surveillance phytosanitaire (Biskra, Algérie)",
+      "resume": "Guide pratique exhaustif de 177 pages structuré mois par mois détaillant la planification des semis, de l'irrigation, de la fertilisation et des traitements phytosanitaires pour les cultures des zones arides algériennes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel complet de planification culturale en zone aride, librement diffusable en accès public pour les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Calendrier des Opérations Culturales 2012"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 4,
+          "extrait": "Calendrier de surveillance et dʼintervention phytosanitaire Adresses des Instituts Techniques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00961",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "article",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "fourrages",
+      "pays": "Canada",
+      "annee": 2007,
+      "auteurs": "Sonia Boucher",
+      "source_organisation": "IRDA / Le Producteur de Lait Québécois",
+      "mots_cles": [
+        "travail du sol",
+        "semis direct",
+        "matiere organique",
+        "activite biologique",
+        "productivite des sols",
+        "irda",
+        "quebec"
+      ],
+      "titre_trouve": null,
+      "titre": "Travail du sol et régie agricole : impacts sur la productivité et la biologie des sols",
+      "resume": "Article technique de vulgarisation de l'IRDA évaluant l'impact des pratiques de travail du sol (labour conventionnel vs semis direct) et des apports organiques sur l'activité microbienne et la fertilité physique des sols.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Article de vulgarisation agronomique institutionnelle de l'IRDA, pertinent et réservé aux membres de la plateforme.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE PRODUCTEUR DE LAIT QUÉBÉCOIS OCTOBRE 2007 CULTURE LA PRODUCTIVITÉ DES SOLS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00962",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "pomme de terre",
+      "pays": "Canada",
+      "annee": 2014,
+      "auteurs": "Nadia Surdek",
+      "source_organisation": "PleineTerre / MAPAQ / CDAQ",
+      "mots_cles": [
+        "pomme de terre",
+        "itineraire technique",
+        "solanacee",
+        "mapaq",
+        "fertilisation",
+        "protection phytosanitaire",
+        "quebec"
+      ],
+      "titre_trouve": "Itinéraire technique de la pomme de terre",
+      "titre": "Itinéraire technique de la culture de la pomme de terre (Québec)",
+      "resume": "Guide technique de 33 pages structurant chronologiquement l'ensemble des étapes de production de la pomme de terre : préparation du sol, plantation, fertilisation raisonnée, protection phytosanitaire intégrée et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Itinéraire technique institutionnel de référence (MAPAQ) d'une grande valeur méthodologique pour la production de tubercules, diffusable en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Itinéraire technique de la pomme de terre Pour les producteurs horticoles et les conseillers agronomiques"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Conseil pour le développement de l'Agriculture du Québec Direction régionale du Bas-Saint-Laurent, MAPAQ"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00963",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "cultures_maraicheres"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": null,
+      "auteurs": "Hans Wagner",
+      "source_organisation": "Éditions Terre Vivante",
+      "mots_cles": [
+        "compagnonnage vegetal",
+        "jardinage biologique",
+        "poireau",
+        "fraises",
+        "potager",
+        "associations de cultures"
+      ],
+      "titre_trouve": null,
+      "titre": "Le poireau préfère les fraises : les meilleures associations de plantes au potager",
+      "resume": "Livre de jardinage biologique scanné de 112 pages sans couche de texte exploitable, détaillant les principes et les tableaux d'associations bénéfiques entre légumes et petits fruits pour limiter les ravageurs.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "droits_reserves",
+        "contexte_non_adapte",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial protégé par le droit d'auteur (Éditions Terre Vivante) scanné sans OCR, archivé sans diffusion publique (Règle Métier 4).",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "jardinage-fr-le-poireau-prefere-les-fraises_112Pages.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00964",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "élevage pastoral",
+      "pays": null,
+      "annee": 2001,
+      "auteurs": "Société Japonaise des Ressources Vertes (JGRC)",
+      "source_organisation": "Japan Green Resources Corporation (JGRC)",
+      "mots_cles": [
+        "elevage pastoral",
+        "sahel",
+        "jgrc",
+        "fourrage",
+        "ressources fourrageres",
+        "bovins",
+        "ovins",
+        "lutte contre la desertification"
+      ],
+      "titre_trouve": "Guide technique de l’élevage : Le développement pastoral efficace passe par la production d'herbe",
+      "titre": "Guide technique de l'élevage sahélien : pastoralisme et valorisation fourragère (JGRC Vol. 7)",
+      "resume": "Guide technique de coopération internationale japonaise (JGRC) pour le Sahel exposant les méthodes d'élevage semi-intensif durable : gestion des pâturages, calcul de la capacité de charge à l'hectare et stockage de résidus de mil.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de terrain de la JGRC axé sur la gestion des ressources fourragères au Sahel, diffusable en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Société Japonaise des Ressources Vertes Documentation technique de la JGRC Vol. 7 Guide technique de l’élevage Le développement pastoral efficace passe par la production d'herbe"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "Générer l'abondance dans le Sahel par la lutte contre la désertification"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00966",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "boissons",
+      "domaines_secondaires": [
+        "transformation_fruits_legumes",
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "jus de fruits",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "jus de fruits",
+        "concentre de fruit",
+        "diagramme de fabrication",
+        "pasteurisation",
+        "filtration",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité JUS DE FRUITS",
+      "titre": "Diagramme de procédé technologique de fabrication de jus et concentrés de fruits",
+      "resume": "Fiche technique synoptique schématisant les opérations unitaires de fabrication des jus clarifiés et concentrés de fruits : réception, râpage, pressurage, déturbidisation, flash-pasteurisation, filtration et conditionnement stérile.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Schéma technologique de procédé agroalimentaire clair et directement exploitable pour les transformateurs de fruits tropicaux, en accès public.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité JUS DE FRUITS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00967",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "Dr Jean Seignalet, Pr Henri Joyeux",
+      "source_organisation": "Éditions François-Xavier de Guibert",
+      "mots_cles": [
+        "medecine",
+        "nutrition humaine",
+        "regime seignalet",
+        "immunologie",
+        "pathologies chroniques"
+      ],
+      "titre_trouve": "L'ALIMENTATION ou la troisième médecine",
+      "titre": "L'Alimentation ou la troisième médecine",
+      "resume": "Ouvrage de médecine humaine de 658 pages du Dr Seignalet détaillant la théorie du régime hypotoxique et les mécanismes immunologiques et intestinaux impliqués dans les maladies auto-immunes et inflammatoires chez l'homme.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Livre de médecine humaine clinique sous copyright commercial, strictement hors du périmètre agricole et d'élevage d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Docteur Jean SEIGNALET Préface du Professeur Henri JOYEUX L'ALIMENTATION ou la troisième médecine"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 2,
+          "extrait": "Jean Seignalet, docteur en médecine, ancien interne des hôpitaux de Montpellier est maître de conférences à la Faculté de médecine"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00968",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physique du sol",
+        "eau dans le sol",
+        "humidite",
+        "reserve utile",
+        "potentiel hydrique"
+      ],
+      "titre_trouve": null,
+      "titre": "Cours de pédologie : l'eau dans le sol (Partie 1)",
+      "resume": "Support de cours scanné de 14 pages sans texte extractible abordant les états et transferts de l'eau dans le sol (rétention capillaire, réserve utile, potentiel hydrique), nécessitant un OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "ensemble_partiel",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan partiel sans OCR exploitable nécessitant un traitement optique et une vérification humaine de la complétude et des droits.",
+      "confiance": {
+        "classification": 0.58,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "l_eau dans le sol 1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00969",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "sol_fertilite",
+        "transversal"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "drainage agricole",
+        "reseaux de drainage",
+        "assainissement agricole",
+        "hydraulique",
+        "gestion de l'eau"
+      ],
+      "titre_trouve": null,
+      "titre": "La conception des réseaux de drainage agricole",
+      "resume": "Document technique de 55 pages scanné sans couche texte portant sur le dimensionnement hydraulique, les critères pédologiques et l'aménagement des réseaux de drainage agricole, nécessitant un OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte exploitable nécessitant une reconnaissance optique et une validation humaine de son périmètre et de ses droits.",
+      "confiance": {
+        "classification": 0.58,
+        "droits": 0.4,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "la conception des réseaux de drainage.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00970",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "laitue",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "228AgroConseil",
+      "source_organisation": "228AgroConseil (Togo)",
+      "mots_cles": [
+        "laitue",
+        "lactuca sativa",
+        "cultures maraicheres",
+        "togo",
+        "repiquage",
+        "mildiou",
+        "fiche technique"
+      ],
+      "titre_trouve": "Culture de la laitue",
+      "titre": "Guide technique de culture de la laitue au Togo (228AgroConseil)",
+      "resume": "Support technique pratique de 228AgroConseil (Togo) pour la production maraîchère de la laitue : choix variétal résistant à la chaleur, semis, repiquage, désherbage, lutte contre le mildiou et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle de vulgarisation maraîchère togolaise, immédiatement exploitable par les producteurs d'Afrique tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "228AgroConseil Culture de la laitue"
+        },
+        {
+          "champ": "pays",
+          "page": 1,
+          "extrait": "228AgroConseil"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00971",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "eau_irrigation",
+        "protection_des_cultures",
+        "agroeconomie"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tomate",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "228AgroConseil",
+      "source_organisation": "228AgroConseil (Togo)",
+      "mots_cles": [
+        "tomate",
+        "solanum lycopersicum",
+        "maraichage",
+        "togo",
+        "tuteurage",
+        "irrigation",
+        "pepiniere",
+        "commercialisation"
+      ],
+      "titre_trouve": "La culture de la tomate",
+      "titre": "Guide technique de culture de la tomate au Togo (228AgroConseil)",
+      "resume": "Guide technique de vulgarisation maraîchère détaillant la conduite de la tomate en Afrique de l'Ouest : choix du site, pépinière, mise en place de l'irrigation, repiquage, tuteurage, fertilisation NPK et commercialisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique clair et opérationnel de vulgarisation agricole togolaise sur la culture maraîchère de la tomate, diffusable en accès public.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "228AgroConseil La culture de la tomate"
+        },
+        {
+          "champ": "pays",
+          "page": 1,
+          "extrait": "228AgroConseil"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00972",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "equipements_technologie",
+        "qualite_securite_normes"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "lait",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "lait concentre",
+        "lait concentre sucre",
+        "industrie laitiere",
+        "evaporation",
+        "uperisation",
+        "diagramme technologique"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité LAITS CONCENTRES",
+      "titre": "Diagramme de procédé technologique de fabrication des laits concentrés (sucré et non sucré)",
+      "resume": "Fiche synoptique de procédé agroalimentaire exposant l'itinéraire industriel complet des laits concentrés : réception du lait cru, écrémage, standardisation, upérisation, évaporation, micro-cristallisation et stérilisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Schéma technologique synthétique de référence industrielle pour la transformation laitière, diffusable en accès public pour les entrepreneurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité LAITS CONCENTRES"
+        }
+      ]
+    }
+  ]
+}

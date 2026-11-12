@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00911",
+  "sha256": "fb96b8df68b53eb5a1e106a020d9cb388576c54133b7d59fb5de9f2ac00f0785",
+  "nom_original": "fiche_fraise_bio.pdf",
+  "chemin_relatif_source": "OD_Docs/fiche_fraise_bio.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 212081,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "fraise",
+  "pays": "France",
+  "annee": 2005,
+  "auteurs": "Myriam Carmentran",
+  "source_organisation": "Chambre d'Agriculture du Lot-et-Garonne (CA 47) / Ctifl",
+  "mots_cles": [
+    "fraise bio",
+    "fraisiculture",
+    "agriculture biologique",
+    "tunnels chenilles",
+    "ctifl"
+  ],
+  "titre_trouve": "GUIDE TECHNIQUE FRAISE PRODUCTION AGROBIOLOGIQUE",
+  "titre": "Guide technique de la fraise en production biologique (CA 47 / Ctifl)",
+  "resume": "Guide technique de la Chambre d'agriculture du Lot-et-Garonne sur la fraisiculture bio : réglementation européenne, exigences physiologiques, fertilisation organique et gestion sous abri.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Pertinence de 1 avec contexte_non_adapte (culture de la fraise en climat tempéré français) : ne satisfait pas le critère 'pertinence >= 2' exigé pour une diffusion aux membres ; archivage documentaire sans diffusion (non_publie_archive).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE TECHNIQUE FRAISE PRODUCTION AGROBIOLOGIQUE Rédaction Myriam Carmentran CA 47"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Pertinence de 1 avec contexte_non_adapte (culture de la fraise en climat tempéré français) : ne satisfait pas le critère 'pertinence >= 2' exigé pour une diffusion aux membres ; archivage documentaire sans diffusion (non_publie_archive)."
+  },
+  "nom_fichier_final": "DOC-00911__guide-technique-de-la-fraise-en-production-biologique-c.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00911__guide-technique-de-la-fraise-en-production-biologique-c.pdf"
+}

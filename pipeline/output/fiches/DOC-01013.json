@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01013",
+  "sha256": "2cfe27da602082a30134e0050f68950ccb855d71ec0c74d0fef159819c6415ea",
+  "nom_original": "plats cuisines appertises de poissons viande pates farcies.pdf",
+  "chemin_relatif_source": "OD_Docs/plats cuisines appertises de poissons viande pates farcies.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 40900,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479966185-plats_cuisines_appertises_de_poissons_viande_pates_farcies.pdf",
+  "nb_telechargements_existant": 1,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "plats cuisines appertises",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "appertisation",
+    "plats cuisines",
+    "conserve",
+    "sterilisation",
+    "poisson",
+    "viande",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "PLATS CUISINES APPERTISES",
+  "titre": "Diagramme de procédé industriel : Plats cuisinés appertisés de poissons, viandes et pâtes farcies",
+  "resume": "Schéma technologique synthétique illustrant les étapes de fabrication et de stérilisation (appertisation) des plats cuisinés industriels à base de poisson, de viande et de pâtes farcies.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique de procédé agroalimentaire claire et utile pour la conception d'unités de transformation et de conserverie.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PLATS CUISINES APPERTISES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01013__diagramme-de-procede-industriel-plats-cuisines-appertis.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-01013__diagramme-de-procede-industriel-plats-cuisines-appertis.pdf"
+}

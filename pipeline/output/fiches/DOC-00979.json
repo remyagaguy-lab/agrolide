@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00979",
+  "sha256": "832d87ff8634582c24bf93a95f5165a4524bd3e0429b6a509e6a6bae0261c000",
+  "nom_original": "les-maladies-1.pdf",
+  "chemin_relatif_source": "OD_Docs/les-maladies-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 404432,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "incomplet",
+    "titre_introuvable",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "autre",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "maladies",
+    "scan",
+    "ocr necessaire",
+    "document incomplet"
+  ],
+  "titre_trouve": null,
+  "titre": "Document non identifié sur les maladies (les-maladies-1)",
+  "resume": "Document d'une seule page scannée sans texte extractible, portant sur les maladies (végétales ou animales). Nécessite un traitement OCR et une revue humaine.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fichier d'une seule page scannée sans couche texte, contenu et statut juridique impossibles à établir sans OCR et validation humaine.",
+  "confiance": {
+    "classification": 0.4,
+    "droits": 0.2,
+    "completude": 0.3
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "les-maladies-1"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00979__document-non-identifie-sur-les-maladies-les-maladies-1.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00979__document-non-identifie-sur-les-maladies-les-maladies-1.pdf"
+}

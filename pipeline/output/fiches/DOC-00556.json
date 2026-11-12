@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00556",
+  "sha256": "42ceeee8244d3bf9e056c65b73869bbc68e293ccab50b58e3fb5ed88869ff072",
+  "nom_original": "Les anti-inflammatoires.pdf",
+  "chemin_relatif_source": "OD_Docs/Les anti-inflammatoires.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 329330,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 30,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2012,
+  "auteurs": "Dr Nébié",
+  "source_organisation": "PATTEC / Direction des Services Vétérinaires du Burkina Faso",
+  "mots_cles": [
+    "anti-inflammatoires",
+    "pharmacologie veterinaire",
+    "AINS",
+    "sante animale",
+    "flunixine",
+    "Burkina Faso"
+  ],
+  "titre_trouve": "Les anti-inflammatoires",
+  "titre": "Les anti-inflammatoires en médecine vétérinaire",
+  "resume": "Diaporama de formation vétérinaire détaillant les mécanismes de l'inflammation, les molécules anti-inflammatoires (AINS, corticoïdes), leurs posologies et leurs contre-indications chez le bétail.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Support de formation institutionnelle vétérinaire au Burkina Faso, pertinent pour les techniciens et agents de santé animale.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les anti-inflammatoires"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "NEBIE (Métadonnées auteur)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00556__les-anti-inflammatoires-en-medecine-veterinaire.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00556__les-anti-inflammatoires-en-medecine-veterinaire.pdf"
+}

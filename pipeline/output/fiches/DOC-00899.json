@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00899",
+  "sha256": "8aedcdc820d6362a56b79c61fe4a6e4ce2becc474dd4dc728b8ff871568cbf8a",
+  "nom_original": "fabrication provende 1 (2).pdf",
+  "chemin_relatif_source": "OD_Docs/fabrication provende 1 (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 575388,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 35,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "provende",
+    "aliments composes",
+    "poules pondeuses",
+    "poulets de chair",
+    "formulation alimentaire",
+    "aviculture"
+  ],
+  "titre_trouve": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR",
+  "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair",
+  "resume": "Guide pratique complet de 35 pages sur la formulation et la fabrication artisanale d'aliments composés avicoles : besoins nutritionnels, matières premières locales et formules alimentaires.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide technique très pertinent pour l'alimentation avicole locale sans mention d'auteur ni d'organisme officiel ; validation des droits requise.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.6,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0057",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00899__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00899__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf"
+}

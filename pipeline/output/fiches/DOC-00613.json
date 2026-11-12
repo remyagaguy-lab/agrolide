@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00613",
+  "sha256": "56253401da474b47826fd54f94fe49da75984524127643881b0d5e7198cbdb44",
+  "nom_original": "Module-Agriculture-générale-TSA-2025.pdf",
+  "chemin_relatif_source": "OD_Docs/Module-Agriculture-générale-TSA-2025.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1113158,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 49,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2024,
+  "auteurs": "Abdul-Charif Cissé",
+  "source_organisation": "École Nationale de Formation Agricole de Matourkou (ENFAM)",
+  "mots_cles": [
+    "agronomie generale",
+    "cours",
+    "matourkou",
+    "burkina faso",
+    "technicien superieur",
+    "fertilite du sol"
+  ],
+  "titre_trouve": "MODULE D’AGRICULTURE GENERALE Cycle des Techniciens supérieurs en agriculture",
+  "titre": "Module d'agriculture générale : Cycle des techniciens supérieurs (ENFA Matourkou)",
+  "resume": "Support de cours complet d'agronomie tropicale générale dispensé à l'ENFA de Matourkou (Burkina Faso) : biologie végétale, climat, fertilité des sols et gestion culturale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de formation académique de l'ENFA Matourkou sans mention de licence libre : conservation en archive interne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE D’AGRICULTURE GENERALE Cycle des Techniciens supérieurs en agriculture"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ECOLE NATIONALE DE FORMATION AGRICOLE DE MATOURKOU BURKINA FASO"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00613__module-d-agriculture-generale-cycle-des-techniciens-sup.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00613__module-d-agriculture-generale-cycle-des-techniciens-sup.pdf"
+}

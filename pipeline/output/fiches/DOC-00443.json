@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00443",
+  "sha256": "6cf7467ff31cea3ce756a3fc1e3d332e259e55b50e32deb3996e458d64086d40",
+  "nom_original": "Fiche_5_Culture_annua_2020.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche_5_Culture_annua_2020.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 176499,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479469099-Fiche_5_Culture_annua_2020.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "artemisia",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Audrey Sougnez",
+  "source_organisation": "La Maison de l'Artemisia",
+  "mots_cles": [
+    "artemisia annua",
+    "plante medicinale",
+    "paludisme",
+    "fiche technique",
+    "agroecologie",
+    "pepiniere"
+  ],
+  "titre_trouve": "Fiche 5 - Culture Artemisia annua",
+  "titre": "Fiche technique : Culture d'Artemisia annua",
+  "resume": "Fiche technique de La Maison de l'Artemisia décrivant l'itinéraire technique agroécologique pour la culture d'Artemisia annua en zone tropicale : préparation du sol, repiquage, entretien et irrigation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle de l'ONG La Maison de l'Artemisia, libre de diffusion pour soutenir les producteurs locaux.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche 5 - Culture Artemisia annua"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00443__fiche-technique-culture-d-artemisia-annua.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00443__fiche-technique-culture-d-artemisia-annua.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00405",
+  "sha256": "0e1b102f74eb9c43557e4a3a8c6a7c154738666ea7939e37a5f8fba5a130639d",
+  "nom_original": "FICHE-TECHNIQUE-5-ITINERAIRE-TECHNIQUE-DU-PIMENT-PEPPER-TECHNICAL-ITINERARY (1).pdf",
+  "chemin_relatif_source": "OD_Docs/FICHE-TECHNIQUE-5-ITINERAIRE-TECHNIQUE-DU-PIMENT-PEPPER-TECHNICAL-ITINERARY (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2731744,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479455963-FICHE-TECHNIQUE-5-ITINERAIRE-TECHNIQUE-DU-PIMENT-PEPPER-TECHNICAL-ITINERARY.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "piment",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Programme ACMA2 / IFDC-Bénin",
+  "source_organisation": "IFDC / Programme ACMA2",
+  "mots_cles": [
+    "piment",
+    "itineraire technique",
+    "maraichage",
+    "acma2",
+    "ifdc",
+    "benin"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE: ITINERAIRE TECHNIQUE DU PIMENT",
+  "titre": "Itinéraire technique du piment (Fiche technique 5 Programme ACMA2)",
+  "resume": "Fiche technique complète du programme ACMA2 détaillant l'itinéraire cultural du piment au Bénin : pépinière, repiquage, gestion intégrée des ravageurs et de l'eau, récolte et rendements.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle officielle du programme ACMA2/IFDC sur le piment au Bénin, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "L’objectif de cette fiche est d’aider les producteurs à respecter l’itinéraire technique de la culture du piment"
+    },
+    {
+      "champ": "autre",
+      "page": 8,
+      "extrait": "Contacts Programme ACMA2 IFDC-BENIN : Cotonou, Bénin"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00405__itineraire-technique-du-piment-fiche-technique-5-progra.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00405__itineraire-technique-du-piment-fiche-technique-5-progra.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00409",
+  "sha256": "7ed67c3b8ebaa88985290e2e66c6dfe6a4949030e7468dc0adadefc4ca97b265",
+  "nom_original": "FICHE_TECHNIQUE_3_ITINERAIRE_TECHNIQUE_DU_SOJA_SOYABEAN_TECHNICAL.pdf",
+  "chemin_relatif_source": "OD_Docs/FICHE_TECHNIQUE_3_ITINERAIRE_TECHNIQUE_DU_SOJA_SOYABEAN_TECHNICAL.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2317677,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "soja",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Programme ACMA2 / IFDC-Bénin",
+  "source_organisation": "IFDC / Programme ACMA2",
+  "mots_cles": [
+    "soja",
+    "itineraire technique",
+    "acma2",
+    "ifdc",
+    "benin",
+    "bonnes pratiques agricoles"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE 3 : ITINÉRAIRE TECHNIQUE DU SOJA",
+  "titre": "Itinéraire technique du soja (Fiche technique 3 Programme ACMA2)",
+  "resume": "Fiche technique officielle du programme ACMA2 présentant les pratiques culturales recommandées pour la production de soja au Bénin : choix variétal, semis, désherbage et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle de terrain du programme ACMA2/IFDC sur le soja au Bénin, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "L’objectif de cette fiche sur les bonnes pratiques de production du soja est de présenter les conditions et les pratiques culturales recommandées pour une bonne production de soja au Bénin."
+    },
+    {
+      "champ": "autre",
+      "page": 8,
+      "extrait": "Contacts Programme ACMA2 IFDC-BENIN : Cotonou, Bénin"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00409__itineraire-technique-du-soja-fiche-technique-3-programm.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00409__itineraire-technique-du-soja-fiche-technique-3-programm.pdf"
+}

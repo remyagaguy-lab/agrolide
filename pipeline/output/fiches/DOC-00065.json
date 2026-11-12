@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00065",
+  "sha256": "da4b6dda8aaf07c76302044f91bb93a6f89bef284be703158a23e06e7a37639d",
+  "nom_original": "CE.docx",
+  "chemin_relatif_source": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/CE/CE.docx",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "docx",
+  "taille_octets": 12667,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "autre",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "BNEDER",
+  "source_organisation": "BNEDER",
+  "mots_cles": [
+    "conductivite electrique",
+    "salinite",
+    "eau d'irrigation",
+    "qualite de l'eau",
+    "palmier dattier"
+  ],
+  "titre_trouve": "La conductivité électrique",
+  "titre": "Note sur la conductivité électrique et la salinité des eaux d'irrigation",
+  "resume": "Courte note technique présentant les classes de risque salin selon la conductivité électrique et la tolérance des cultures (palmier, olivier, orge).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document de travail ou compte-rendu d'analyse d'échantillon brut (.docx) sans éditeur ni mandat institutionnel ; le statut de droits ne peut pas être 'diffusion_institutionnelle'.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.7,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La conductivité électrique La conductivité électrique ״CE״ mesurée à 25 c°"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Document de travail ou compte-rendu d'analyse d'échantillon brut (.docx) sans éditeur ni mandat institutionnel ; le statut de droits ne peut pas être 'diffusion_institutionnelle'."
+  },
+  "nom_fichier_final": "DOC-00065__note-sur-la-conductivite-electrique-et-la-salinite-des.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00065__note-sur-la-conductivite-electrique-et-la-salinite-des.pdf"
+}

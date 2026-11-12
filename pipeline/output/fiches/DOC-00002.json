@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00002",
+  "sha256": "3be15d2a5f2ddf73c3a1cf2b7f366eb577e8db273e21be7118975c500a1d474a",
+  "nom_original": "10-cles-pour-reussir-dans-lx27agro-business-en-afrique_compress (1).pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/10-cles-pour-reussir-dans-lx27agro-business-en-afrique_compress (1).pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 1146720,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 115,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "ouvrage",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Cameroun",
+  "annee": 2019,
+  "auteurs": "Loïc Kamwa Silatchom",
+  "source_organisation": "Living Books Publishing",
+  "mots_cles": [
+    "agrobusiness",
+    "entrepreneuriat agricole",
+    "afrique",
+    "rentabilite",
+    "cameroun"
+  ],
+  "titre_trouve": "10 Clés pour réussir dans l'agrobusiness en Afrique",
+  "titre": "10 Clés pour réussir dans l'agrobusiness en Afrique",
+  "resume": "Ouvrage pratique partageant l'expérience de terrain de l'auteur pour monter et rentabiliser un projet agro-pastoral en Afrique, abordant financement, gestion et commercialisation.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial sous copyright strict avec ISBN déposé, reproduction interdite sans autorisation de l'éditeur.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "10 CLéS pour réussir dans l'agrobusiness en afrique"
+    },
+    {
+      "champ": "auteurs",
+      "page": 3,
+      "extrait": "Loïc Kamwa Silatchom"
+    },
+    {
+      "champ": "autre",
+      "page": 4,
+      "extrait": "Copyright © 2019 par Loïc Kamwa Silatchom. Tous droits réservés pour tous les pays. ISBN : 978-1-6880-5863-7"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00002__10-cles-pour-reussir-dans-l-agrobusiness-en-afrique.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00002__10-cles-pour-reussir-dans-l-agrobusiness-en-afrique.pdf"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00064",
+  "sha256": "ad07866aa69f4d8051b10110e087aa2c80615a7622ba99852d7d21db9fdf95e4",
+  "nom_original": "Résumé4 Biologie Cellulaire.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/biologie cellulaire/biologie cellulaire/Résumé4 Biologie Cellulaire.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 831884,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "auteur_introuvable",
+    "titre_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "biologie cellulaire",
+    "cours",
+    "cytologie",
+    "sciences de base"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé de biologie cellulaire (Fascicule 4)",
+  "resume": "Fascicule universitaire scanné de 9 pages synthétisant des cours de biologie cellulaire, nécessitant un OCR avant valorisation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document court scanné sans texte, nécessitant une analyse OCR pour validation humaine.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: Résumé4 Biologie Cellulaire.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0010",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00064__resume-de-biologie-cellulaire-fascicule-4.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00064__resume-de-biologie-cellulaire-fascicule-4.pdf"
+}

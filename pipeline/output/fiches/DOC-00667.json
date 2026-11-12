@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00667",
+  "sha256": "2792c1b23de2822424c5e8d824b3299145edc834f06c685e9f46e6c657be9d6f",
+  "nom_original": "Physiologie végétale. MOUAS.pdf",
+  "chemin_relatif_source": "OD_Docs/Physiologie végétale. MOUAS.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3622273,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 37,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Yamina Mouas",
+  "source_organisation": "Université Blida 1",
+  "mots_cles": [
+    "physiologie vegetale",
+    "nutrition hydrique",
+    "nutrition minerale",
+    "photosynthese",
+    "germination"
+  ],
+  "titre_trouve": "Cours de PHYSIOLOGIE VEGETALE",
+  "titre": "Cours de physiologie végétale pour étudiants en sciences agronomiques (L2)",
+  "resume": "Polycopié de cours universitaire structuré (Université de Blida 1) couvrant la nutrition hydrique, l'absorption minérale, le métabolisme photosynthétique et la germination des semences.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours d'enseignant universitaire algérien non assorti d'une licence libre explicite.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours de PHYSIOLOGIE VEGETALE Destiné aux étudiants de deuxième année tronc commun (L2)"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Dr MOUAS Yamina Université Blida1 Faculté des Sciences de la Nature et de la Vie"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00667__cours-de-physiologie-vegetale-pour-etudiants-en-science.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00667__cours-de-physiologie-vegetale-pour-etudiants-en-science.pdf"
+}

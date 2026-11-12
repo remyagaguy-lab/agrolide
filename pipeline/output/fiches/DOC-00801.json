@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00801",
+  "sha256": "1c0ebc4e863734d0caaa7dfffb95721fe92912047f7d0ac511bf3b72344121a0",
+  "nom_original": "atlas cliniQUE Maladie aviaire V2.pdf",
+  "chemin_relatif_source": "OD_Docs/atlas cliniQUE Maladie aviaire V2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4099008,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 65,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "Dr. Ali Dahmani, Dr. Rachid-Rida Triki Yamani",
+  "source_organisation": "dzvet.net",
+  "mots_cles": [
+    "pathologie aviaire",
+    "autopsie avicole",
+    "newcastle",
+    "gumboro",
+    "coccidiose",
+    "diagnostic veterinaire"
+  ],
+  "titre_trouve": "Atlas de cas cliniques vétérinaires : Maladies aviaires",
+  "titre": "Atlas clinique des maladies aviaires et diagnostic nécropsique",
+  "resume": "Atlas photographique et clinique des principales pathologies aviaires (bactériennes, virales et parasitaires) illustrant les lésions caractéristiques à l'autopsie.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Atlas clinique de référence sur la santé aviaire, outil diagnostique précieux pour les techniciens et éleveurs en Afrique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Atlas de cas cliniques vétérinaires www.dzvet.net Dr. Ali DAHMANI Dr Rachid - Rida TRIKIYAMANI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00801__atlas-clinique-des-maladies-aviaires-et-diagnostic-necr.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00801__atlas-clinique-des-maladies-aviaires-et-diagnostic-necr.pdf"
+}

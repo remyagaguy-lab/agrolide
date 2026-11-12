@@ -1,0 +1,800 @@
+{
+  "batch_number": 38,
+  "results": [
+    {
+      "id": "DOC-00563",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": null,
+      "auteurs": "Robert Régnier",
+      "source_organisation": "Librairie de l'Académie d'Agriculture",
+      "mots_cles": [
+        "arboriculture fruitiere",
+        "pommier",
+        "poirier",
+        "vergers",
+        "protection des cultures"
+      ],
+      "titre_trouve": "Les vergers de grand rendement : Pommier, Poirier, Prunier, Cerisier",
+      "titre": "Les vergers de grand rendement : Pommier, poirier, prunier, cerisier",
+      "resume": "Traité d'arboriculture fruitière tempérée détaillant les techniques d'établissement, de conduite et de protection phytosanitaire des vergers de pommiers, poiriers et pruniers.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte",
+        "obsolete",
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial protégé par le droit d'auteur et portant sur des espèces fruitières de climat tempéré, archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 5,
+          "extrait": "LES VERGERS DE GRAND RENDEMENT POMMIER - POIRIER PRUNIER CERISIER"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00564",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2015,
+      "auteurs": "Véronique",
+      "source_organisation": null,
+      "mots_cles": [
+        "animaux",
+        "vocabulaire",
+        "pedagogie",
+        "ecole primaire",
+        "abecedaire"
+      ],
+      "titre_trouve": "Les animaux - 1",
+      "titre": "Fiche de vocabulaire illustrée : Les animaux (Enseignement primaire)",
+      "resume": "Fiche pédagogique élémentaire destinée à l'apprentissage du vocabulaire des animaux pour de jeunes élèves d'école primaire.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document pédagogique d'école élémentaire sans lien avec l'agriculture ou l'élevage professionnel, exclu car hors périmètre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.7,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les animaux - 1 \n \nUne abeille \nabeille \nUn âne \nâne"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00565",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "fertilisation_amendements"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "blé",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Organismes agricoles méditerranéens",
+      "mots_cles": [
+        "ble dur",
+        "cereales",
+        "fertilisation azotee",
+        "itineraire technique",
+        "qualite meuniere"
+      ],
+      "titre_trouve": "Blé dur - Fiche technique",
+      "titre": "Fiche technique : Conduite et fertilisation du blé dur",
+      "resume": "Fiche technique synthétique décrivant les bonnes pratiques culturales du blé dur : gestion de la fertilisation azotée fractionnée, stades phénologiques et rentabilité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique agricole complète d'origine institutionnelle, diffusable publiquement malgré un contexte d'origine méditerranéen.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Blé dur\nFiche technique\nLes enjeux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00566",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "politiques_strategies",
+      "domaines_secondaires": [
+        "economie_filieres_marches"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "decideur_institution",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Jean-Marc Boussard, Françoise Gérard, Marie-Gabrielle Piketty",
+      "source_organisation": "CIRAD",
+      "mots_cles": [
+        "politiques agricoles",
+        "liberalisation",
+        "commerce agricole international",
+        "economie agricole",
+        "marches agricoles"
+      ],
+      "titre_trouve": "Libéraliser l’agriculture mondiale ? Théories, modèles et réalités",
+      "titre": "Libéraliser l’agriculture mondiale ? Théories, modèles et réalités",
+      "resume": "Ouvrage économique de référence analysant les théories, modèles et conséquences concrètes de la libéralisation des échanges agricoles mondiaux sur les pays en développement.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous copyright payant (CIRAD, ISBN 2-87614-619-3), archivé pour des raisons de propriété intellectuelle.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Libéraliser l’agriculture mondiale ? Théories, modèles et réalités"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00567",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "politiques_strategies"
+      ],
+      "type_doc": "texte_officiel",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Comité Sahélien des Pesticides",
+      "source_organisation": "CILSS / CSP",
+      "mots_cles": [
+        "pesticides",
+        "homologation",
+        "comite sahelien des pesticides",
+        "protection des cultures",
+        "sahel"
+      ],
+      "titre_trouve": null,
+      "titre": "Liste globale des pesticides autorisés par le Comité Sahélien des Pesticides (Mai 2019)",
+      "resume": "Catalogue officiel listant l'ensemble des produits phytosanitaires homologués par le Comité Sahélien des Pesticides (CILSS) pour la région sahélienne en mai 2019.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document officiel sahélien scanné nécessitant un traitement OCR et une validation humaine de lisibilité des formulations phytosanitaires.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.8,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Liste_Globale_Pesticides_autorisés_CSP_Version_Mai_2019_1_1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00568",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2016,
+      "auteurs": "CILSS, CADDEL Consulting",
+      "source_organisation": "CILSS",
+      "mots_cles": [
+        "compost",
+        "compostiere",
+        "fertilisation organique",
+        "gestion durable des terres",
+        "sahel",
+        "agroecologie"
+      ],
+      "titre_trouve": "Livret technique de production du compost",
+      "titre": "Livret technique de production du compost (CILSS / PRGDT)",
+      "resume": "Manuel pratique illustré détaillant les étapes de fabrication du compost en milieu sahélien : aménagement de la fosse, empilement des matières, aération, suivi et dosage au champ.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique sahélien complet et opérationnel issu du CILSS, en accès libre pour les producteurs et conseillers.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PROGRAMME DE GESTION DURABLE DES TERRES ET D’ADAPTATION AUX CHANGEMENTS CLIMATIQUES AU SAHEL (PRGDT)\nLIVRET TECHNIQUE DE PRODUCTION DU COMPOST"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00569",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "ruminants"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ovins",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "CTA",
+      "source_organisation": "CTA",
+      "mots_cles": [
+        "mouton",
+        "ovins",
+        "parasites",
+        "vermifugation",
+        "sante animale",
+        "elevage pastoral"
+      ],
+      "titre_trouve": "Lutter contre les parasites du mouton - Collection Guides pratiques du CTA, No 15",
+      "titre": "Lutter contre les parasites du mouton (Guide pratique CTA n° 15)",
+      "resume": "Guide pratique illustré du CTA présentant les méthodes de prévention et de contrôle des parasites internes et externes chez le mouton en élevage tropical.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "reproduction libre non commerciale sous mention de source",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel du CTA libre de droits non commerciaux, directement exploitable par les éleveurs de petits ruminants.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Collection Guides pratiques du CTA, No 15 ... © CTA 2008 - ISSN 1874-8864 L’information contenue dans ce guide peut être librement reproduite"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00570",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "autre",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "luzerne",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "luzerne",
+        "fourrage",
+        "legumineuse",
+        "alimentation animale",
+        "culture fourragere"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique sur la culture de la luzerne (Document scanné)",
+      "resume": "Document technique scanné sans texte extractible consacré à la culture de la luzerne, nécessitant un traitement OCR préalable.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans couche texte, nécessitant une reconnaissance optique de caractères (OCR) et une vérification des droits.",
+      "confiance": {
+        "classification": 0.6,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Luzerne.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00571",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "elevage_general",
+        "aviculture",
+        "porcins",
+        "petit_elevage"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "France",
+      "annee": 1989,
+      "auteurs": "INRA",
+      "source_organisation": "INRA / Éditions Quae",
+      "mots_cles": [
+        "alimentation animale",
+        "monogastriques",
+        "porc",
+        "volaille",
+        "lapin",
+        "nutrition",
+        "tables inra"
+      ],
+      "titre_trouve": "L’alimentation des animaux monogastriques : porc, lapin, volailles",
+      "titre": "L’alimentation des animaux monogastriques : porc, lapin, volailles",
+      "resume": "Traité scientifique de référence de l'INRA établissant les besoins nutritionnels, recommandations alimentaires et tables de valeur nutritive pour porcs, volailles et lapins.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage scientifique de référence édité commercialement par l'INRA, archivé pour respect des droits d'auteur.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "L’alimentation des animaux monogastriques : porc, lapin, volailles"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00572",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "bleuet",
+      "pays": "Canada",
+      "annee": 2010,
+      "auteurs": "Marie-Ève Moreau, Véronique Moreau, Jean Lafond",
+      "source_organisation": "Club Conseil Bleuet / Agriculture et Agroalimentaire Canada",
+      "mots_cles": [
+        "echantillonnage de sol",
+        "analyse foliaire",
+        "fertilite du sol",
+        "bleuet sauvage",
+        "agronomie"
+      ],
+      "titre_trouve": "La production du bleuet sauvage dans une perspective de développement durable - 9.1 L’échantillonnage de sol et de feuilles",
+      "titre": "L’échantillonnage de sol et de feuilles en verger de bleuets sauvages",
+      "resume": "Fiche méthodologique décrivant le protocole de prélèvement et de conditionnement d'échantillons de sol et de feuilles pour le suivi de la fertilité en culture pérenne.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Section isolée (chapitre 9.1) d'un guide québécois en zone boréale tempérée, archivée car incomplète.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La production du bleuet sauvage… dans une perspective de développement durable ... 9.1 L’échantillonnage de sol et de feuilles"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00573",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "cuniculture",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "lapin",
+        "cuniculture",
+        "elevage",
+        "oryctolagus cuniculus"
+      ],
+      "titre_trouve": null,
+      "titre": "L’élevage de lapins (Oryctolagus cuniculus) [Fichier DOC non extrait]",
+      "resume": "Fichier au format DOC sur l'élevage cunicole dont le corps de texte n'a pas pu être extrait automatiquement, nécessitant une révision technique.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "corrompu",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier binaire Word sans texte exploitable dans l'extraction brute, à vérifier manuellement.",
+      "confiance": {
+        "classification": 0.5,
+        "droits": 0.4,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’élevage_de_lapins_(oryctolagus_cuniculus )_2.doc"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00574",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Nordine Benzerga",
+      "source_organisation": null,
+      "mots_cles": [
+        "ouvrages hydrauliques",
+        "irrigation",
+        "canaux d'irrigation",
+        "agro-equipement",
+        "hydraulique agricole"
+      ],
+      "titre_trouve": "Ouvrages Hydrauliques des systèmes d’irrigation",
+      "titre": "Ouvrages hydrauliques des systèmes d’irrigation (Cours Master 2 - Partie 1)",
+      "resume": "Support de cours de Master 2 traitant de la conception, du dimensionnement et du fonctionnement des réseaux de canaux et ouvrages hydrauliques d'irrigation.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Notes de cours universitaires de Master (partie 1) sans licence libre, archivées.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Ouvrages Hydrauliques des systèmes d’irrigation \nI. CONSIDERATIONS GENERALES SUR LES SYSTEMES D'IRRIGATION"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00575",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "manioc",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI",
+      "mots_cles": [
+        "manioc",
+        "tubercules",
+        "itineraire technique",
+        "recolte",
+        "cameroun",
+        "agriculture tropicale"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU MANIOC",
+      "titre": "Technologie de production du manioc (Guide de formation IFATI)",
+      "resume": "Manuel de formation pratique détaillant l'itinéraire technique complet de la culture du manioc : exigences agro-écologiques, bouturage, entretien, fertilisation et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique professionnel complet sur le manioc en zone tropicale humide, directement exploitable par les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ... TECHNOLOGIE DE PRODUCTION DU MANIOC"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00576",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "entreprise_agroalimentaire"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "porcins",
+      "pays": "Cameroun",
+      "annee": 2019,
+      "auteurs": "Innocent Tchoffo",
+      "source_organisation": "École de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "mots_cles": [
+        "pate de campagne",
+        "charcuterie",
+        "transformation carnee",
+        "agroalimentaire",
+        "cameroun",
+        "rentabilite"
+      ],
+      "titre_trouve": "MANUEL SUR LA PRODUCTION DU PATE DE CAMPAGNE USAGE PROFESIONNEL",
+      "titre": "Manuel professionnel de fabrication du pâté de campagne",
+      "resume": "Manuel technique et économique pour la fabrication artisanale de pâté de campagne en Afrique centrale : ingrédients, équipements de transformation et budget prévisionnel en FCFA.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique professionnel complet sur la transformation carnée et le calcul des marges en FCFA, hautement diffusable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ECOLE DE FORMATION EN AGRICLTURE ET TECHNOLOGIES INNOVANTES ... MANUEL SUR LA PRODUCTION DU PATE DE CAMPAGNE USAGE PROFESIONNEL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00577",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pastèque",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Équipe d'ingénieurs CREFNAC Africa Itnl",
+      "source_organisation": "CREFNAC Africa Itnl",
+      "mots_cles": [
+        "pasteque",
+        "cultures maraicheres",
+        "itineraire technique",
+        "semis",
+        "fertilisation",
+        "afrique centrale"
+      ],
+      "titre_trouve": "MANUEL PROFESSIONNEL DE CULTURE DE LA PASTEQUE",
+      "titre": "Manuel professionnel de culture de la pastèque en Afrique tropicale",
+      "resume": "Guide pratique détaillant les étapes techniques de la culture de la pastèque : préparation du sol, choix des variétés adaptées, fertilisation, irrigation et protection phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide maraîcher complet et adapté aux conditions tropicales africaines, diffusable publiquement pour les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MANUEL PROFESSIONNEL DE CULTURE DE LA PASTEQUE ... Rédigé par l’équipe d’ingénieurs crefnac Africa Itnl"
+        }
+      ]
+    }
+  ]
+}

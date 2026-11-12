@@ -1,0 +1,605 @@
+{
+  "batch_number": 48,
+  "results": [
+    {
+      "id": "DOC-00718",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2016,
+      "auteurs": "Bernard Angonin",
+      "source_organisation": "Direction du Développement Rural de la province Sud (Nouvelle-Calédonie)",
+      "mots_cles": ["travail du sol", "outils agricoles", "structure du sol", "mecanisation", "agronomie"],
+      "titre_trouve": "Rôles, objectifs du travail du sol et modes d’actions des outils",
+      "titre": "Rôles, objectifs du travail du sol et modes d'actions des outils",
+      "resume": "Guide technique de la Direction du Développement Rural de Nouvelle-Calédonie détaillant les objectifs agronomiques du travail du sol, l'aération, la rétention d'eau et le mode d'action des outils aratoires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique institutionnel sur la préparation des sols et les outils aratoires, diffusable aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Direction du Développement Rural de la province Sud ... ROLES, OBJECTIFS DU TRAVAIL DU SOL ET MODES D'ACTIONS DES OUTILS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00719",
+      "domaine_principal": "transversal",
+      "sous_domaine": "statistiques_biometrie",
+      "domaines_secondaires": ["production_vegetale", "agroeconomie"],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "arboriculture fruitière",
+      "pays": "Mali",
+      "annee": 2001,
+      "auteurs": "AFRISTAT, IER Mali, DNSI Mali",
+      "source_organisation": "AFRISTAT / IER Mali",
+      "mots_cles": ["statistiques agricoles", "production fruitiere", "afristat", "mali", "echantillonnage", "vergers"],
+      "titre_trouve": "ENQUETE TEST SUR L’ESTIMATION DE LA PRODUCTION FRUITIERE - RAPPORT FINAL",
+      "titre": "Enquête test sur l'estimation de la production fruitière au Mali (AFRISTAT)",
+      "resume": "Rapport méthodologique officiel d'AFRISTAT et de l'IER définissant un protocole statistique d'enquête pour l'estimation objective des rendements et de la production fruitière (mangues, agrumes, papayes) au Mali.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport institutionnel d'AFRISTAT apportant une méthodologie statistique rigoureuse, réservé aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "AFRISTAT ... ENQUETE TEST SUR L’ESTIMATION DE LA PRODUCTION FRUITIERE RAPPORT FINAL Série Méthodes n°5 mai 2001"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00720",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["stress hydrique", "irrigation", "evapotranspiration", "goutte-a-goutte", "besoins en eau"],
+      "titre_trouve": "STRESSE HYDRIQUE",
+      "titre": "Stress hydrique et gestion optimale de l'irrigation des cultures",
+      "resume": "Note technique synthétique résumant le calcul du bilan hydrique des cultures (ETc, pluies, irrigation), les symptômes physiologiques du stress ou de l'excès d'eau et les règles d'ajustement des arrosages.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Note technique anonyme sans licence libre explicite ni cadre institutionnel vérifiable, archivée.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "STRESSE HYDRIQUE Pour évaluer les effets du stress hydrique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00721",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "energie_dechets_valorisation",
+      "domaines_secondaires": ["agroecologie_agriculture_durable"],
+      "type_doc": "cours",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["producteur"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Bénin",
+      "annee": 2021,
+      "auteurs": "Moukadassou Mama Boukari",
+      "source_organisation": null,
+      "mots_cles": ["charbon ecologique", "biogaz", "pave ecologique", "valorisation des dechets", "benin"],
+      "titre_trouve": "FORMATION ECOLOGIQUE SUR LA FABRICATION DU BIOGAZ, PAVE ECOLOGIQUE ET CHARBON",
+      "titre": "Fabrication de charbon écologique, pavés écologiques et biogaz (Support de formation)",
+      "resume": "Support de formation pratique élaboré au Bénin détaillant les étapes de valorisation des déchets ménagers : fabrication de charbon vert par carbonisation, pavés plastiques et digesteur de biogaz.",
+      "statut_droits": "donnees_personnelles_confidentiel",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["donnees_personnelles"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation privé comportant des coordonnées personnelles (WhatsApp, email) et sans droits de redistribution.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FORMATION ECOLOGIQUE SUR LA FABRICATION DU BIOGAZ, PAVE ECOLOGIQUE ET CHARBON M. MAMA BOUKARI"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00722",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": ["detergent liquide", "produits d'entretien", "chimie menagere", "cameroun", "ifati"],
+      "titre_trouve": "PARTIE 01 : TECHNOLOGIE DE LA PRODUCTION DES DETERGENTS LIQUIDES",
+      "titre": "Technologie de la production des détergents liquides (IFATI Cameroun)",
+      "resume": "Support de formation professionnelle de l'IFATI Cameroun portant sur la formulation chimique, la fabrication artisanale et industrielle de détergents liquides ménagers pour vaisselle.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Fabrication de détergents chimiques ménagers exclue du périmètre agronomique, zootechnique et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "PARTIE 01 : TECHNOLOGIE DE LA PRODUCTION DES DETERGENTS LIQUIDES ... Formulation des différents détergents liquides pour vaisselle"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00723",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": ["plantes_aromatiques_medicinales", "elevage_general"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "santé animale",
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "Ngeh J. Toyang, Jacob Wanyama, Mopoi Nuwanyakpa, Sali Django",
+      "source_organisation": "Agromisa / CTA",
+      "mots_cles": ["ethnomedecine veterinaire", "agrodok 44", "sante animale", "plantes medicinales", "soins traditionnels"],
+      "titre_trouve": "Agrodok 44 - Ethnomédecine vétérinaire une approche pratique du traitement des maladies du bétail en Afrique subsaharienne",
+      "titre": "Ethnomédecine vétérinaire en Afrique subsaharienne (Agrodok 44)",
+      "resume": "Guide pratique complet de la collection Agrodok décrivant l'usage des plantes médicinales locales et les savoirs traditionnels pour soigner et prévenir les maladies du bétail en Afrique subsaharienne.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Agromisa - Libre de reproduction",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel de référence Agrodok/CTA libre et parfaitement adapté aux éleveurs en milieu tropical pour les soins vétérinaires.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Série Agrodok No. 44 ... Ethnomédecine vétérinaire une approche pratique du traitement des maladies du bétail en Afrique subsaharienne"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00724",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": ["semences_amelioration"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "papaye",
+      "pays": null,
+      "annee": 2016,
+      "auteurs": "Technisem",
+      "source_organisation": "Technisem",
+      "mots_cles": ["papaye", "solo n°8", "technisem", "carica papaya", "arboriculture fruitiere", "fiche technique"],
+      "titre_trouve": "Carica papaya L. - Papaye SOLO N°8",
+      "titre": "Fiche variétale et technique : Papaye Solo N°8 (Technisem)",
+      "resume": "Fiche technique variétale du semencier Technisem exposant l'itinéraire technique complet de la papaye Solo N°8 en conditions tropicales : semis en pépinière, exigences climatiques, conduite et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique variétale complète diffusée par Technisem pour la production de papaye en zone tropicale, libre de droits.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Carica papaya L. Papaye SOLO N°8 Une variété à petits fruits adaptée à l’export comme aux marchés locaux !"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00725",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Virginie Poussin, Cédric Hernandez",
+      "source_organisation": null,
+      "mots_cles": ["chat", "animal de compagnie", "soins aux felins", "veterinaire canin"],
+      "titre_trouve": "Son chat : 300 conseils pour en prendre soin",
+      "titre": "Son chat : 300 conseils pour en prendre soin",
+      "resume": "Livre grand public de conseils pratiques pour l'adoption, l'éducation, l'alimentation, le comportement et les soins quotidiens du chat de compagnie.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "contexte_non_adapte"],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Guide commercial sur les chats de compagnie, exclu du périmètre agricole et d'élevage productif d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 3,
+          "extrait": "Son chat : 300 conseils pour en prendre soin ... Choisir son compagnon ... Vivre avec son chat"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00726",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["alimentation_animale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "sorgho",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["sorgho fourrager", "culture fourragere", "alimentation animale", "céréales"],
+      "titre_trouve": null,
+      "titre": "Sorgho fourrager [Scan à traiter]",
+      "resume": "Document scanné de 6 pages traitant de la conduite et de la valeur fourragère du sorgho, nécessitant une reconnaissance optique de caractères (OCR) pour indexation complète.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable", "titre_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte exploitable (OCR nécessaire) ; validation humaine requise après extraction du texte.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Titre déduit du nom de fichier original : Sorgho fourrager.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00727",
+      "domaine_principal": "transversal",
+      "sous_domaine": "statistiques_biometrie",
+      "domaines_secondaires": ["methodologie_recherche", "agronomie_generale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Dr Habibi Brahim",
+      "source_organisation": "Université Hassiba Benbouali de Chlef",
+      "mots_cles": ["statistique appliquee", "biometrie", "agronomie", "master agronomie", "chlef"],
+      "titre_trouve": "UNIVERSITE HASSIBA BENBOUALI DE CHLEF - Polycopié Statistique appliquée",
+      "titre": "Statistique appliquée aux sciences agronomiques et de l'environnement (Cours Master 1)",
+      "resume": "Polycopié de cours universitaire de Master 1 de l'Université de Chlef traitant de l'organisation des données, des probabilités, des méthodes d'échantillonnage et des tests statistiques en agronomie.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non libre de droits, archivé conformément à la règle sur les travaux académiques.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "UNIVERSITE HASSIBA BENBOUALI DE CHLEF ... Polycopié Statistique appliquée MASTER 1 : Eau et Environnement Préparé par : Dr Habibi Brahim"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00728",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2018,
+      "auteurs": "Mme Brahimi L.",
+      "source_organisation": null,
+      "mots_cles": ["defense des plantes", "protection des vegetaux", "phytopathologie", "phytoalexines", "immunite vegetale"],
+      "titre_trouve": "Stratégies de défenses des plantes",
+      "titre": "Stratégies de défenses des plantes : Mécanismes physiologiques et moléculaires",
+      "resume": "Support de cours en diapositives pour la spécialité Phytopharmacie et Protection des Végétaux, analysant les défenses physiques, chimiques (phytoalexines, protéines PR) et voies de signalisation des plantes.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire spécialisé sans licence ouverte de diffusion, archivé pour documentation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.92
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Stratégies de défenses des plantes Mme BRAHIMI L. Département de Biotechnologie Spécialité/: Phytopharmacie et Protection des Végétaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00729",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["structure du sol", "pedologie", "porosite", "agronomie", "physique du sol"],
+      "titre_trouve": null,
+      "titre": "Structure du sol [Scan à traiter]",
+      "resume": "Document numérisé de 6 pages portant sur la structure du sol, la formation des agrégats et la porosité, nécessitant un traitement OCR pour exploitation et indexation complètes.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable", "titre_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte extractible (OCR nécessaire) ; validation humaine requise après extraction du contenu.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Titre déduit du nom de fichier original : Structure du sol.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00730",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["sciences_de_base"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["chimie du sol", "cec", "cations echangeables", "exercices", "saturation en bases"],
+      "titre_trouve": "Sujet Chimie Du Sol (01)",
+      "titre": "Sujet d'exercices : Chimie du sol et capacité d'échange cationique (CEC)",
+      "resume": "Fiche d'exercices universitaires de chimie du sol portant sur le calcul de la capacité d'échange cationique (CEC), de la somme des bases échangeables et du taux de saturation du complexe adsorbant.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Sujet d'examen universitaire non assorti d'une licence libre de diffusion, archivé.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Sujet Chimie Du Sol (01) Exercice 01 :Un échantillon de 300 g de sol contient les cations fixés sur le colloïde"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00731",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": ["ressources_naturelles_environnement", "agroeconomie"],
+      "type_doc": "periodique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "autre",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "arboriculture fruitière",
+      "pays": "Maroc",
+      "annee": 2025,
+      "auteurs": "Agriculture du Maghreb",
+      "source_organisation": "Agriculture du Maghreb",
+      "mots_cles": ["agriculture du maghreb", "arboriculture", "stress hydrique", "biostimulants", "maroc", "langue arabe"],
+      "titre_trouve": "Agriculture du Maghreb N° 167 - Avril 2025 (ملحق العدد 167)",
+      "titre": "Agriculture du Maghreb n°167 : Supplément technique en langue arabe (Avril 2025)",
+      "resume": "Supplément technique en arabe du magazine professionnel Agriculture du Maghreb (n°167), traitant de la biodiversité par les haies végétales, du stress hydrique de la vigne et des extraits d'algues marines.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Revue professionnelle agricole commerciale sous copyright éditeur strict, archivée sans rediffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture du Maghreb N° 167 - Avril 2025 www.agri-mag.com ملحق العدد 167 أبريل 2025"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00732",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": ["protection_des_cultures", "arboriculture_fruitiere"],
+      "type_doc": "periodique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "autre",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "olivier et légumineuses",
+      "pays": "Maroc",
+      "annee": 2024,
+      "auteurs": "Agriculture du Maghreb",
+      "source_organisation": "Agriculture du Maghreb",
+      "mots_cles": ["agriculture du maghreb", "olivier", "huile d'olive", "legumineuses", "maroc", "langue arabe"],
+      "titre_trouve": "Agriculture du Maghreb N° 163 - Novembre 2024 (ملحق العدد 163)",
+      "titre": "Agriculture du Maghreb n°163 : Supplément technique en langue arabe (Novembre 2024)",
+      "resume": "Supplément en langue arabe du périodique Agriculture du Maghreb (n°163) consacré à la production des légumineuses alimentaires, à la récolte mécanique des olives et à la lutte contre les ravageurs de l'olivier.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Magazine professionnel privé à vocation commerciale, réservé à l'archivage documentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture du Maghreb N° 163 - Novembre 2024 www.agri-mag.com ملحق العدد 163 نونبر 2024"
+        }
+      ]
+    }
+  ]
+}

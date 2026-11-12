@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00813",
+  "sha256": "9046aa7c4554c6df5ebf21954cf387ef21449e2c28f07a8f040fdcdc28ce8d3e",
+  "nom_original": "cahier_volaille_chapitre4_web.pdf",
+  "chemin_relatif_source": "OD_Docs/cahier_volaille_chapitre4_web.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2235216,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "contexte_non_adapte",
+    "incomplet"
+  ],
+  "nb_pages": 8,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2015,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "aviculture biologique",
+    "alimentation volaille",
+    "abreuvement",
+    "cout alimentaire",
+    "poulets de chair"
+  ],
+  "titre_trouve": "Acheter ou fabriquer son aliment ? (Cahier volaille - Chapitre 4)",
+  "titre": "Alimentation et abreuvement des volailles en agriculture biologique (Chapitre 4)",
+  "resume": "Chapitre 4 isolé de 8 pages d'un guide technique français sur l'aviculture biologique, abordant les stratégies alimentaires (fabrication à la ferme ou achat) et la qualité physico-chimique de l'eau d'abreuvement.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé (chapitre 4) d'un guide technique français d'élevage avicole biologique. Document partiel et en contexte tempéré, archivé en interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Acheter ou fabriquer son aliment ? Voir le chapitre 8 consacré à la fabrication de l’aliment à la ferme"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00813__alimentation-et-abreuvement-des-volailles-en-agricultur.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00813__alimentation-et-abreuvement-des-volailles-en-agricultur.pdf"
+}

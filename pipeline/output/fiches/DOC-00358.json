@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00358",
+  "sha256": "4772994f612801d156146d8fa456cd33ed0afca8db4fee44e4b042ef135f4395",
+  "nom_original": "ELEVAGE animaux troupeaux.pdf",
+  "chemin_relatif_source": "OD_Docs/ELEVAGE animaux troupeaux.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 555510,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00357",
+  "groupe_doublon_id": "GRP-0025",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00357 (Les métiers et l'emploi dans l'élevage de gros animaux en France).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "guide_pratique",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "elevage bovin, ovin, porcin",
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "ANEFA",
+  "source_organisation": "ANEFA",
+  "mots_cles": [
+    "elevage",
+    "metiers de l elevage",
+    "bovins",
+    "porcins",
+    "emploi agricole",
+    "france"
+  ],
+  "titre_trouve": "L’élevage des gros animaux : L’emploi dans la filière en chiffres",
+  "titre": "Les métiers et l'emploi dans l'élevage de gros animaux en France",
+  "resume": "Plaquette d'information sur les métiers, les compétences requises et les perspectives d'emploi dans les filières de l'élevage bovin, ovin, caprin et porcin en France.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "L’élevage bovin viande représente 12% des exploitations en France"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "secteur de l’élevage des gros animaux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00358__les-metiers-et-l-emploi-dans-l-elevage-de-gros-animaux.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-00358__les-metiers-et-l-emploi-dans-l-elevage-de-gros-animaux.pdf"
+}

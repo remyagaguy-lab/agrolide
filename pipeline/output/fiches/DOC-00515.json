@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00515",
+  "sha256": "5f934ffff2c1b21ca1cae4723c65ed4131a5d34ba8d7aaacf1334e78a811f2cd",
+  "nom_original": "Irrigation_et_drainage_Cours_L3_Sol_et_Eau.pdf",
+  "chemin_relatif_source": "OD_Docs/Irrigation_et_drainage_Cours_L3_Sol_et_Eau.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 800775,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 41,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "drainage",
+    "cours l3",
+    "sol et eau",
+    "besoins en eau",
+    "hydraulique agricole"
+  ],
+  "titre_trouve": "IRRIGATION ET DRAINAGE",
+  "titre": "Cours d'irrigation et drainage (Licence 3 Sol et Eau)",
+  "resume": "Cours universitaire complet de 41 pages destiné aux étudiants de Licence 3 en sciences du sol et de l'eau, abordant les relations sol-eau-plante, les techniques d'irrigation et la conception des réseaux de drainage.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire non publié (support Word sans licence libre ni auteur identifié). Non publiable en accès libre, archivé en interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.88,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "IRRIGATION ET DRAINAGE IRRIGATION Introduction"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00515__cours-d-irrigation-et-drainage-licence-3-sol-et-eau.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00515__cours-d-irrigation-et-drainage-licence-3-sol-et-eau.pdf"
+}

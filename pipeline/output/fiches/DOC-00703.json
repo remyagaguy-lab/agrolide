@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00703",
+  "sha256": "216183e2e6278e1a5ae962bd51d6397ce0d37d69b7990a4218df8795ccde287b",
+  "nom_original": "Reconnaissance_Méthodes de lutte_amrasca_biguttula.pdf",
+  "chemin_relatif_source": "OD_Docs/Reconnaissance_Méthodes de lutte_amrasca_biguttula.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2387275,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_phyto_a_verifier"
+  ],
+  "nb_pages": 32,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "coton",
+  "pays": "Burkina Faso",
+  "annee": 2023,
+  "auteurs": "Bekouanan Clovis Nabié",
+  "source_organisation": "Service de la surveillance phytosanitaire et des interventions (Burkina Faso)",
+  "mots_cles": [
+    "amrasca biguttula",
+    "jasside du coton",
+    "protection des cultures",
+    "ravageur invasif",
+    "coton",
+    "gombo",
+    "burkina faso"
+  ],
+  "titre_trouve": "Reconnaissance et Méthodes de lutte contre la nouvelle espèce de jassides (Amrasca biguttula) Par Bekouanan NABIE",
+  "titre": "Reconnaissance et méthodes de lutte contre le jasside invasif Amrasca biguttula",
+  "resume": "Présentation technique d'urgence phytosanitaire décrivant la bioécologie, les dégâts et les stratégies de lutte contre le nouveau jasside en Afrique de l'Ouest.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "La présence du drapeau donnees_phyto_a_verifier interdit la diffusion immédiate (public ou membres) tant que les recommandations phytosanitaires et homologations de produits n'ont pas été validées par un expert. La décision doit être a_valider_humain.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Reconnaissance et Méthodes de lutte contre la nouvelle espèce de jassides (Amrasca biguttula) Par Bekouanan NABIE"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "La présence du drapeau donnees_phyto_a_verifier interdit la diffusion immédiate (public ou membres) tant que les recommandations phytosanitaires et homologations de produits n'ont pas été validées par un expert. La décision doit être a_valider_humain."
+  },
+  "nom_fichier_final": "DOC-00703__reconnaissance-et-methodes-de-lutte-contre-le-jasside-i.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00703__reconnaissance-et-methodes-de-lutte-contre-le-jasside-i.pdf"
+}

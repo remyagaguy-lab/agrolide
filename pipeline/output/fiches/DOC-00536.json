@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00536",
+  "sha256": "df64c63d9296a1d56e96deda9503cc9fc6165273b0d26dfe6c1784d209658775",
+  "nom_original": "La Fonction Respiratoire.pptx",
+  "chemin_relatif_source": "OD_Docs/La Fonction Respiratoire.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 1754530,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 27,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "physiologie humaine",
+    "ventilation pulmonaire",
+    "anesthesie",
+    "hematose"
+  ],
+  "titre_trouve": "La Fonction Respiratoire",
+  "titre": "Cours de physiologie médicale : la fonction respiratoire humaine",
+  "resume": "Diaporama de cours de physiologie humaine traitant de la ventilation pulmonaire, de l'hématose et de l'intubation en anesthésie médicale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de physiologie et anesthésie médicale humaine, sans rapport avec le secteur agro-pastoral.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La Fonction Respiratoire I -Introduction"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "on procède donc à une intubation trachéale pour éviter toute pénétration d’aliments dans les voies respiratoires lors d’éventuels vomissements"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00536__cours-de-physiologie-medicale-la-fonction-respiratoire.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00536__cours-de-physiologie-medicale-la-fonction-respiratoire.pdf"
+}

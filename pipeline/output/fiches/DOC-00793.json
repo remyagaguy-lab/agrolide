@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00793",
+  "sha256": "f2c8f1c17e00a8032702e5444022619d7790f77d840b6eedcd560bc04249fb21",
+  "nom_original": "amidon_de_mais_gluten_dextrine_semoule_dextrose_isoglucose_sorbitol.pdf",
+  "chemin_relatif_source": "OD_Docs/amidon_de_mais_gluten_dextrine_semoule_dextrose_isoglucose_sorbitol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 54168,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479050760-amidon_de_mais_gluten_dextrine_semoule_dextrose_isoglucose_sorbitol.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "maïs",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "amidon de mais",
+    "glucoserie",
+    "isoglucose",
+    "dextrose",
+    "sorbitol",
+    "huile de mais",
+    "fractionnement"
+  ],
+  "titre_trouve": "PRODUITS DU MAIS",
+  "titre": "Schéma de fractionnement industriel et sous-produits du maïs",
+  "resume": "Planche synoptique de procédé industriel d'une page illustrant le raffinage complet du maïs : amidonnerie, glucoserie, production d'huiles de germes, d'aliments du bétail (gluten feed) et d'édulcorants.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique synoptique industrielle complète et libre de droits sur la valorisation agro-industrielle du maïs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PRODUITS DU MAIS"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00793__schema-de-fractionnement-industriel-et-sous-produits-du.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-00793__schema-de-fractionnement-industriel-et-sous-produits-du.pdf"
+}

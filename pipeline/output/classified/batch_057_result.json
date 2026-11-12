@@ -1,0 +1,758 @@
+{
+  "batch_number": 57,
+  "results": [
+    {
+      "id": "DOC-00858",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "transformation_cereales_tubercules"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "manioc",
+      "pays": "Cameroun",
+      "annee": 2015,
+      "auteurs": "Justin Kouakou, Samuel Nanga Nanga, Catherine Plagne-Ismail, Aman Mazalo Pali, Kukom Edoh Ognakossan",
+      "source_organisation": "CTA / ISF Cameroun",
+      "mots_cles": [
+        "manioc",
+        "tubercules",
+        "PRO-AGRO",
+        "CTA",
+        "transformation du manioc",
+        "gari",
+        "attieke",
+        "itineraire technique"
+      ],
+      "titre_trouve": "Production et transformation du manioc",
+      "titre": "Production et transformation du manioc (Guide PRO-AGRO)",
+      "resume": "Guide pratique illustré détaillant la conduite technique de la culture du manioc (choix du terrain, bouturage, entretien, récolte) et ses principaux procédés artisanaux de transformation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide de référence de la collection PRO-AGRO (CTA / ISF Cameroun), libre et directement applicable pour les producteurs et transformateurs tropicaux.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Production et transformation du manioc"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "La collection Pro-Agro est une coédition d’Ingénieurs Sans Frontières Cameroun (ISF Cameroun) et du Centre technique de coopération agricole et rurale (CTA)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00859",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "these",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "amarante",
+      "pays": "Bénin",
+      "annee": 1975,
+      "auteurs": "Gérardus J. H. Grubben",
+      "source_organisation": "Université de Wageningen (Landbouwhogeschool Wageningen)",
+      "mots_cles": [
+        "amarante",
+        "legume-feuilles",
+        "maraichage",
+        "Benin",
+        "Dahomey",
+        "phytotechnie tropicale",
+        "Wageningen"
+      ],
+      "titre_trouve": "LA CULTURE DE L'AMARANTE, LÉGUME-FEUILLES TROPICAL AVEC RÉFÉRENCE SPÉCIALE AU SUD-DAHOMEY",
+      "titre": "La culture de l'amarante, légume-feuilles tropical avec référence spéciale au Sud-Dahomey",
+      "resume": "Thèse agronomique majeure analysant les systèmes de culture maraîchers de l'amarante (Amaranthus cruentus) au Sud-Dahomey : écologie, fertilisation, ravageurs et sélection variétale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Thèse universitaire de référence, archivée dans le fonds documentaire interne conformément à la règle stricte régissant les thèses et mémoires.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA CULTURE DE L'AMARANTE, LÉGUME-FEUILLES TROPICAL AVEC RÉFÉRENCE SPÉCIALE AU SUD-DAHOMEY"
+        },
+        {
+          "champ": "type_doc",
+          "page": 2,
+          "extrait": "Cette communication est séparément publiée comme thèse par G. J. H. Grubben"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00860",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "drainage agricole",
+        "debit de drainage",
+        "hydraulique agricole",
+        "perimetre irrigue",
+        "ruissellement"
+      ],
+      "titre_trouve": "Débit d’un réseau de drainage",
+      "titre": "Calcul du débit d'un réseau de drainage agricole sur périmètre irrigué",
+      "resume": "Fiche synthétique de calcul hydraulique présentant la méthode rationnelle (Q = C*A*I) et son application numérique pour évaluer le débit d'évacuation d'un réseau de drainage.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche de calcul pratique sans auteur ni droits identifiés, conservée pour archivage interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Débit d’un réseau de drainage"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00861",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Dr Hien",
+      "source_organisation": "Ministère de l'Environnement, de l'Économie Verte et du Changement Climatique (Burkina Faso)",
+      "mots_cles": [
+        "demi-lunes",
+        "micro-bassins",
+        "CES DRS",
+        "adaptation au changement climatique",
+        "Burkina Faso",
+        "restauration des sols",
+        "Sahel"
+      ],
+      "titre_trouve": "Technologie 5: Demi-lunes (ou micro-bassins) agricoles",
+      "titre": "Demi-lunes (ou micro-bassins) agricoles : fiche technologique d'adaptation au Burkina Faso",
+      "resume": "Fiche technique d'adaptation climatique décrivant l'aménagement des demi-lunes agricoles pour concentrer les eaux de ruissellement et régénérer les sols encroûtés sahéliens.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche isolée extraite d'un rapport national d'évaluation technologique du Burkina Faso, archivée pour documentation.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie 5: Demi-lunes (ou micro-bassins) agricoles"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Evaluation des besoins technologiques pour l’adaptation dans les secteurs de l’agriculture et de la foresterie au Burkina Faso"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00862",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "elevage_general"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "decideur_institution",
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Togo, Mali, Sénégal",
+      "annee": 2011,
+      "auteurs": "René Billaz, Valentin Beauval",
+      "source_organisation": "Agronomes et Vétérinaires Sans Frontières (AVSF) / RURALTER",
+      "mots_cles": [
+        "aviculture villageoise",
+        "volaille traditionnelle",
+        "AVSF",
+        "Afrique de l'Ouest",
+        "Togo",
+        "Mali",
+        "Senegal",
+        "vaccination aviaire"
+      ],
+      "titre_trouve": "Développement de l’aviculture villageoise en Afrique de l’Ouest. Vingt ans d’expérience au Togo, au Mali et au Sénégal : bilan et perspectives",
+      "titre": "Développement de l'aviculture villageoise en Afrique de l'Ouest : 20 ans d'expérience au Togo, au Mali et au Sénégal",
+      "resume": "Rapport de capitalisation d'AVSF analysant 20 ans de projets avicoles au Togo, Mali et Sénégal : amélioration de l'habitat, alimentation, santé animale et organisation des filières.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport de capitalisation institutionnel complet d'AVSF sur l'aviculture ouest-africaine, mis à disposition des membres.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Développement de l’aviculture villageoise en Afrique de l’Ouest. Vingt ans d’expérience au Togo, au Mali et au Sénégal : bilan et perspectives"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Synthèse animée et rédigée par René Billaz et Valentin Beauval. ©AVSF - 2011"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00863",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "pisciculture",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "EMESA",
+      "mots_cles": [
+        "pisciculture",
+        "tilapia",
+        "silure",
+        "alevinage",
+        "devoir",
+        "Burkina Faso",
+        "EMESA"
+      ],
+      "titre_trouve": "DEVOIR DE PISCICULTURE ET PECHE",
+      "titre": "Sujet de devoir de pisciculture et pêche (Cycle Agents Techniques d'Élevage)",
+      "resume": "Épreuve d'évaluation d'un centre de formation technique comprenant des exercices de calcul sur la reproduction, l'incubation et le dimensionnement de bassins d'élevage de silures et tilapias.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Épreuve académique non publiée sous licence ouverte, archivée à des fins documentaires internes.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.8,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "DEVOIR DE PISCICULTURE ET PECHE CYCLE ATE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00864",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "petit_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Bénin",
+      "annee": 2011,
+      "auteurs": "Centre Songhaï, African Development Foundation (ADF)",
+      "source_organisation": "Centre Songhaï",
+      "mots_cles": [
+        "dindon",
+        "elevage de dindons",
+        "Centre Songhai",
+        "aviculture",
+        "Benin",
+        "guide pratique",
+        "alimentation volaille"
+      ],
+      "titre_trouve": "Elevage de dindons, Guide pratique (Centre Songhai, 12 p.)",
+      "titre": "Élevage de dindons : guide pratique",
+      "resume": "Guide pratique du Centre Songhaï détaillant la conduite de l'élevage de dindons au Bénin : démarrage des dindonneaux, alimentation à base de ressources locales, logement et santé.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique terrain du Centre Songhaï dédié à l'aviculture tropicale, complet et hautement adapté aux éleveurs ouest-africains.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Elevage de dindons, Guide pratique (Centre Songhai, 12 p.)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Rédigé et publié par le Centre Songhaï , en collaboration avec l'African Development Foundation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00865",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2009,
+      "auteurs": "Centre d'Information sur l'Eau (C.I.Eau)",
+      "source_organisation": "C.I.Eau",
+      "mots_cles": [
+        "cycle de l'eau",
+        "infographie",
+        "evaporation",
+        "precipitations",
+        "infiltration",
+        "ressource en eau"
+      ],
+      "titre_trouve": "LE CYCLE DE L’EAU",
+      "titre": "Le cycle de l'eau en quatre grandes phases",
+      "resume": "Poster pédagogique d'une page résumant le cycle naturel de l'eau (évaporation, condensation, précipitations, ruissellement et infiltration) et la préservation de la ressource.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support d'initiation scolaire d'une seule page, sans portée agronomique opérationnelle, archivé pour illustration.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE CYCLE DE L’EAU le cycle de l’eau en quatre grandes phases"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00866",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "conservation_post_recolte"
+      ],
+      "type_doc": "article",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "papaye",
+      "pays": null,
+      "annee": 1969,
+      "auteurs": "André Lassoudière",
+      "source_organisation": "Institut Français de Recherches Fruitières Outre-Mer (IFAC / CIRAD)",
+      "mots_cles": [
+        "papaye",
+        "Carica papaya",
+        "recolte",
+        "conditionnement",
+        "exportation",
+        "fruits tropicaux",
+        "IFAC",
+        "CIRAD"
+      ],
+      "titre_trouve": "LA PAPAYE : RÉCOLTE . CONDITIONNEMENT . EXPORTATION . PRODUITS TRANSFORMÉS",
+      "titre": "La papaye : récolte, conditionnement, exportation, produits transformés",
+      "resume": "Article technique et scientifique de l'IFAC sur la récolte, le traitement à l'eau chaude, le conditionnement pour l'exportation et les produits dérivés et sous-produits de la papaye.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Open Access",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Publication technique de référence de l'IFAC/CIRAD (revue Fruits) en libre accès, directement opérationnelle pour la filière papaye.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA PAPAYE RÉCOLTE . CONDITIONNEMENT . EXPORTATION . PRODUITS TRANSFORMÉS"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "par A. LASSOUDIÈRE Institut Français de Recherches Fruitières Outre-Mer (I . F. A . C .)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00867",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "sol_fertilite",
+        "agroeconomie",
+        "vulgarisation_conseil"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso, Éthiopie",
+      "annee": 2008,
+      "auteurs": "Danièle Clavel, Albert Barro, T. Belay, Rabah Lahmar, Florent Maraux",
+      "source_organisation": "CIRAD / INERA / VertigO",
+      "mots_cles": [
+        "zai mecanise",
+        "innovation agricole",
+        "Afrique sahelienne",
+        "Burkina Faso",
+        "restauration des sols",
+        "Opuntia",
+        "VertigO"
+      ],
+      "titre_trouve": "CHANGEMENTS TECHNIQUES ET DYNAMIQUE D’INNOVATION AGRICOLE EN AFRIQUE SAHELIENNE: le cas du Zaï mécanisé au Burkina Faso et de l’introduction d’une cactée en Ethiopie",
+      "titre": "Changements techniques et dynamique d'innovation agricole en Afrique sahélienne : le cas du Zaï mécanisé au Burkina Faso et d'une cactée en Éthiopie",
+      "resume": "Article de recherche analysant les dynamiques d'innovation paysanne et l'adoption de technologies agroécologiques au Sahel : zaï mécanisé à traction animale au Burkina Faso et cactée en Éthiopie.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (VertigO)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article de recherche en libre accès (VertigO) sur l'innovation rurale sahélienne, mis à disposition des membres.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CHANGEMENTS TECHNIQUES ET DYNAMIQUE D’INNOVATION AGRICOLE EN AFRIQUE SAHELIENNE: le cas du Zaï mécanisé au Burkina Faso et de l’introduction d’une cactée en Ethiopie"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "D. Clavel, A. Barro, T. Belay, R. Lahmar, F. Maraux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00868",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "agronomie_generale"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "agrumes, mangue",
+      "pays": null,
+      "annee": 2012,
+      "auteurs": "Henri Vannière",
+      "source_organisation": "CIRAD (UR HortSys)",
+      "mots_cles": [
+        "arboriculture fruitiere",
+        "agrumes",
+        "manguier",
+        "systemes de culture",
+        "verger tropical",
+        "CIRAD",
+        "maladies fruitieres"
+      ],
+      "titre_trouve": "Concept systèmes de culture fruitiers tropicaux et subtropicaux pérennes: cas des agrumes et du manguier",
+      "titre": "Systèmes de culture fruitiers tropicaux et subtropicaux pérennes : agrumes et manguier",
+      "resume": "Support de formation de haut niveau (102 diapositives) du CIRAD sur la conception agroécologique de vergers tropicaux pérennes, la physiologie de floraison et la gestion des maladies d'agrumes et manguiers.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support de formation institutionnel approfondi du CIRAD sur l'arboriculture fruitière tropicale, destiné aux membres et techniciens.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Concept systèmes de culture fruitiers tropicaux et subtropicaux pérennes: cas des agrumes et du manguier"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "H. VANNIERE UR HortSys CIRAD"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00869",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "agronomie_generale",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "decideur_institution",
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2012,
+      "auteurs": "Collectif (Agropolis International)",
+      "source_organisation": "Agropolis International",
+      "mots_cles": [
+        "agronomie",
+        "systemes de culture",
+        "Agropolis International",
+        "CIRAD",
+        "INRA",
+        "agroecologie",
+        "recherche agronomique"
+      ],
+      "titre_trouve": "Agronomie : plantes cultivées et systèmes de culture",
+      "titre": "Agronomie : plantes cultivées et systèmes de culture (Dossier Agropolis International)",
+      "resume": "Dossier thématique exhaustif présentant les compétences scientifiques, les équipes de recherche (CIRAD, INRA, IRD) et les projets innovants sur les systèmes de culture tropicaux et méditerranéens.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Dossier scientifique d'ensemble d'Agropolis International sur l'agronomie tropicale, mis à disposition des membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Agronomie : plantes cultivées et systèmes de culture"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Agropolis International est un campus dédié aux sciences « vertes »"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00870",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "entrepreneuriat_agricole",
+        "production_animale"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "caprins",
+      "pays": "France",
+      "annee": 2021,
+      "auteurs": "Lila Vanschrick, Ianis N'Debi, Florian Saubiez, Kayline Tuaz",
+      "source_organisation": null,
+      "mots_cles": [
+        "projet agricole",
+        "ferme collective",
+        "elevage caprin",
+        "fromagerie",
+        "agritourisme",
+        "installation agricole"
+      ],
+      "titre_trouve": "FERME COLLECTIVE EN POLYCULTURE ET ÉLEVAGE - DOSSIER DE PRÉSENTATION",
+      "titre": "Projet de ferme collective en polyculture et élevage caprin (Dossier de présentation)",
+      "resume": "Dossier de présentation d'un projet privé d'installation agricole collective en élevage caprin fromager, maraîchage biologique et agritourisme en France.",
+      "statut_droits": "donnees_personnelles_confidentiel",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_personnelles",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document privé de candidature contenant des données personnelles sensibles (numéros de téléphone et adresses électroniques individuelles).",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FERME COLLECTIVE EN POLYCULTURE ET ÉLEVAGE AVRIL 2021 DOSSIER DE PRÉSENTATION"
+        },
+        {
+          "champ": "drapeaux_ajoutes",
+          "page": 8,
+          "extrait": "Ianis 06 95 29 90 70 Lila 06 32 19 56 89 projetcollectifagritourisme@gmail.com"
+        }
+      ]
+    }
+  ]
+}

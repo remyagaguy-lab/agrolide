@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00326",
+  "sha256": "96b97a4f1fd12911c4655c6038ba0630825a07e70947a1f942e9baf35599192b",
+  "nom_original": "Cowpea-manual-FRENCH_VERSION.pdf",
+  "chemin_relatif_source": "OD_Docs/Cowpea-manual-FRENCH_VERSION.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1118223,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 67,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "niébé",
+  "pays": "Nigéria",
+  "annee": 2021,
+  "auteurs": "L.O. Omoigui, A.Y. Kamara, J. Batieno, T. Iorlamen, Z. Kouyate, J. Yirzagla, S. Diallo, U. Garba",
+  "source_organisation": "IITA",
+  "mots_cles": [
+    "niebe",
+    "afrique de l'ouest",
+    "itineraire technique",
+    "semences ameliorees",
+    "protection phytosanitaire"
+  ],
+  "titre_trouve": "Guide sur la production du niébé en Afrique de l’Ouest",
+  "titre": "Guide sur la production du niébé en Afrique de l'Ouest",
+  "resume": "Guide pratique complet de l'IITA détaillant l'itinéraire technique du niébé : choix du terrain, préparation du sol, variétés recommandées, densité, enrobage des semences et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel technique de référence publié par l'IITA pour l'Afrique de l'Ouest, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide sur la production du niébé en Afrique de l’Ouest"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00326__guide-sur-la-production-du-niebe-en-afrique-de-l-ouest.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00326__guide-sur-la-production-du-niebe-en-afrique-de-l-ouest.pdf"
+}

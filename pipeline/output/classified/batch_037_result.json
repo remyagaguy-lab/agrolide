@@ -1,0 +1,827 @@
+{
+  "batch_number": 37,
+  "results": [
+    {
+      "id": "DOC-00547",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "article",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovins",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Henri Calvet",
+      "source_organisation": "Revue d'élevage et de médecine vétérinaire des pays tropicaux (CIRAD)",
+      "mots_cles": [
+        "embouche bovine",
+        "engraissement",
+        "selection du betail",
+        "bovins",
+        "elevage tropical",
+        "CIRAD"
+      ],
+      "titre_trouve": "LE CHOIX DU BETAIL A SOUMETTRE A L'EMBOUCHE",
+      "titre": "Le choix du bétail à soumettre à l'embouche",
+      "resume": "Article zootechnique du CIRAD analysant les critères de sélection des bovins destinés à l'embouche en zone tropicale selon l'âge, le sexe, la race et l'état corporel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": "Open Access",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Article de référence de la REMVT/CIRAD en libre accès, directement opérationnel pour l'embouche bovine en Afrique tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE CHOIX DU BETAIL A SOUMETTRE A L'EMBOUCHE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "H. CALVET"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00549",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "horticulture",
+      "pays": "France",
+      "annee": 2010,
+      "auteurs": "Bénédicte Boudassou",
+      "source_organisation": null,
+      "mots_cles": [
+        "rosiers",
+        "roses",
+        "horticulture",
+        "jardinage ornemental",
+        "plantation",
+        "taille"
+      ],
+      "titre_trouve": null,
+      "titre": "Le livre des Roses : conseils de culture et entretien",
+      "resume": "Guide pratique illustré consacré à la culture des rosiers en climat tempéré : choix des variétés, plantation en conteneur ou pleine terre et techniques de taille.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial d'horticulture ornementale sous droits réservés, scanné sans OCR et adapté au climat tempéré.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier: Le livre des Roses-(Bénédicte Boudassou).pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00550",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "horticulture_jardinage"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "maraîchage",
+      "pays": "France",
+      "annee": 2020,
+      "auteurs": "Collectif (présenté par Alain Baraton)",
+      "source_organisation": "Flammarion",
+      "mots_cles": [
+        "potager",
+        "maraichage",
+        "legumes",
+        "calendrier potager",
+        "cultures potageres",
+        "climat tempere"
+      ],
+      "titre_trouve": "Le Potager du bon jardinier",
+      "titre": "Le Potager du bon jardinier",
+      "resume": "Manuel horticole présentant mois par mois les travaux à mener au potager et l'itinéraire cultural des différentes familles de légumes en climat tempéré européen.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial des Éditions Flammarion sous droits réservés, traitant du potager en climat tempéré métropolitain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "Collectif / Le Potager du bon jardinier / Flammarion"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00551",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "pêche",
+      "pays": "France",
+      "annee": 2016,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "silure",
+        "Silurus glanis",
+        "peche en eau douce",
+        "poisson carnassier",
+        "faune piscicole",
+        "France"
+      ],
+      "titre_trouve": "LE SILURE",
+      "titre": "Le Silure (Silurus glanis) : origine, biologie et techniques de pêche",
+      "resume": "Fiche descriptive sur l'écologie, l'expansion géographique et les techniques de capture du silure glane (Silurus glanis) dans les cours d'eau français.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche sur la pêche récréative d'une espèce européenne en France, sans droits établis et non adaptée à l'Afrique tropicale.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "LE SILURE / ORIGINE / Le Silure (Silurus glanis) est un poisson d’eau douce natif du continent européen."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00552",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "horticulture_jardinage",
+        "production_vegetale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "maraîchage",
+      "pays": "France",
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "permaculture",
+        "calendrier de semis",
+        "potager bio",
+        "agroecologie",
+        "jardinage naturel",
+        "semis"
+      ],
+      "titre_trouve": "Le Calendrier Sérénité - Votre Pense Bête pour bien commencer en Permaculture",
+      "titre": "Le Calendrier Sérénité : votre pense-bête pour bien commencer en permaculture",
+      "resume": "Guide pratique mensuel de jardinage agroécologique en permaculture présentant les calendriers de semis, de plantation et les associations végétales en climat tempéré.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "E-book commercial de permaculture sous droits réservés, conçu pour les cycles saisonniers du climat tempéré.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Le Calendrier Sérénité - Votre Pense Bête pour bien commencer en Permaculture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00553",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "lentille",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "lentille",
+        "Lens culinaris",
+        "legumineuse a graines",
+        "fiche technique",
+        "itineraire technique"
+      ],
+      "titre_trouve": null,
+      "titre": "Fiche technique sur la culture de la lentille",
+      "resume": "Document technique de 6 pages numérisé sous forme d'images sur la conduite de la lentille, nécessitant un traitement OCR pour identifier le texte et les auteurs.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "titre_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible ; nécessite une passe d'OCR et une vérification humaine pour confirmer les métadonnées et droits.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.55
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier: Lentille.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00554",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2012,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "imagier",
+        "animaux d'Afrique",
+        "pedagogie enfantine",
+        "vocabulaire",
+        "faune sauvage"
+      ],
+      "titre_trouve": "les animaux de l'afrique imagiers",
+      "titre": "Imagier des animaux de l'Afrique",
+      "resume": "Document scolaire de base présentant un imagier pour la petite enfance illustrant les noms d'animaux sauvages africains.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Support pédagogique d'éveil pour jeunes enfants, sans vocation agricole, hors périmètre d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "les animaux de l'afrique imagiers (Métadonnées titre)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00555",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2012,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "imagier",
+        "animaux de la ferme",
+        "pedagogie enfantine",
+        "vocabulaire"
+      ],
+      "titre_trouve": "les animaux de la ferme imagiers",
+      "titre": "Imagier des animaux de la ferme",
+      "resume": "Support illustré de vocabulaire élémentaire pour enfants de maternelle recensant les animaux domestiques de la ferme.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Imagier destiné aux enfants des écoles primaires, sans teneur technique d'élevage, hors cible professionnelle.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "les animaux de la ferme imagiers (Métadonnées titre)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00556",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "Dr Nébié",
+      "source_organisation": "PATTEC / Direction des Services Vétérinaires du Burkina Faso",
+      "mots_cles": [
+        "anti-inflammatoires",
+        "pharmacologie veterinaire",
+        "AINS",
+        "sante animale",
+        "flunixine",
+        "Burkina Faso"
+      ],
+      "titre_trouve": "Les anti-inflammatoires",
+      "titre": "Les anti-inflammatoires en médecine vétérinaire",
+      "resume": "Diaporama de formation vétérinaire détaillant les mécanismes de l'inflammation, les molécules anti-inflammatoires (AINS, corticoïdes), leurs posologies et leurs contre-indications chez le bétail.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support de formation institutionnelle vétérinaire au Burkina Faso, pertinent pour les techniciens et agents de santé animale.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les anti-inflammatoires"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "NEBIE (Métadonnées auteur)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00557",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2011,
+      "auteurs": "Dr Nébié",
+      "source_organisation": "PATTEC / ELAT Burkina Faso",
+      "mots_cles": [
+        "antiparasitaires",
+        "sante animale",
+        "trypanocides",
+        "anthelminthiques",
+        "PATTEC",
+        "Burkina Faso",
+        "veterinaire"
+      ],
+      "titre_trouve": "Les Antiparasitaires",
+      "titre": "Les antiparasitaires en médecine vétérinaire au Burkina Faso",
+      "resume": "Support pédagogique complet (98 diapositives) sur l'utilisation des antiparasitaires vétérinaires au Burkina Faso : trypanocides, anthelminthiques, anticoccidiens et acaricides.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Module institutionnel de formation vétérinaire PATTEC de grande valeur pratique pour le contrôle des parasitoses animales en zone sahélienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les Antiparasitaires"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Formation ELAT/PATTEC"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00558",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "biodiversite_ecologie"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "foresterie",
+      "pays": "Canada",
+      "annee": 2021,
+      "auteurs": "Becky Smethurst, Carolyn Fry",
+      "source_organisation": "Éditions Hurtubise",
+      "mots_cles": [
+        "arbres",
+        "foret",
+        "botanique",
+        "dendrologie",
+        "ecosysteme forestier",
+        "vulgarisation scientifique"
+      ],
+      "titre_trouve": "Les arbres : 10 éléments essentiels à savoir",
+      "titre": "Les arbres : 10 éléments essentiels à savoir",
+      "resume": "Livre de vulgarisation scientifique explorant la biologie des arbres, leur histoire évolutive, leurs interactions écosystémiques et leur contribution à l'équilibre planétaire.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial des Éditions Hurtubise protégé par le droit d'auteur, archivé sans mise à disposition publique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Les arbres / 10 éléments essentiels à savoir / BECKY SMETHURST"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 104,
+          "extrait": "Éditions Hurtubise"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00559",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2006,
+      "auteurs": "Philippe Prévost",
+      "source_organisation": "Éditions Tec & Doc (Lavoisier)",
+      "mots_cles": [
+        "agronomie generale",
+        "sciences du sol",
+        "systeme de culture",
+        "physiologie vegetale",
+        "enseignement agricole",
+        "Lavoisier"
+      ],
+      "titre_trouve": "Les bases de l'agriculture",
+      "titre": "Les bases de l'agriculture (3e édition)",
+      "resume": "Manuel classique d'agronomie générale exposant les bases scientifiques et méthodologiques de l'agriculture : système d'exploitation agrorurale, écophysiologie végétale et gestion des sols.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Manuel commercial sous droits d'auteur réservés (Éditions Tec & Doc Lavoisier), conservé en archive interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "3e édition / Philippe Prévost / Les bases de l'agriculture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00560",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2009,
+      "auteurs": "Abul K. Abbas, Andrew H. Lichtman",
+      "source_organisation": "Elsevier Masson",
+      "mots_cles": [
+        "immunologie humaine",
+        "medecine",
+        "anticorps",
+        "systeme immunitaire",
+        "pathologie humaine"
+      ],
+      "titre_trouve": "Les bases de l’immunologie fondamentale et clinique",
+      "titre": "Les bases de l'immunologie fondamentale et clinique (3e édition)",
+      "resume": "Traité d'immunologie fondamentale et clinique centré sur la médecine humaine et les pathologies infectieuses humaines (VIH, hépatites).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Ouvrage de médecine humaine clinique, totalement hors du périmètre agronomique et vétérinaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Les bases de l’immunologie fondamentale et clinique"
+        },
+        {
+          "champ": "auteurs",
+          "page": 3,
+          "extrait": "Abul K. Abbas, Andrew H. Lichtman"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00561",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "semences_amelioration"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "agrumes",
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "Camille Jacquemond, Franck Curk, Marion Heuzet",
+      "source_organisation": "Éditions Quæ (INRA / CIRAD)",
+      "mots_cles": [
+        "agrumes",
+        "clementinier",
+        "mandarine",
+        "arboriculture fruitiere",
+        "genetique des agrumes",
+        "Editions Quae"
+      ],
+      "titre_trouve": "Les clémentiniers et autres petits agrumes",
+      "titre": "Les clémentiniers et autres petits agrumes",
+      "resume": "Monographie scientifique et technique sur l'origine, la diversité génétique, la taxonomie et la gestion variétale des clémentiniers et des petits agrumes.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial des Éditions Quæ sous droits d'auteur stricts, conservé pour documentation interne sans rediffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les clémentiniers et autres petits agrumes"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 4,
+          "extrait": "© Éditions Quæ, 2013 / ISBN 978-2-7592-2068-7"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00562",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "agroalimentaire"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "plantes médicinales",
+      "pays": "Suisse",
+      "annee": 2025,
+      "auteurs": "Kurt Hostettmann, Bernadette Biloa Messi",
+      "source_organisation": "Éditions Favre",
+      "mots_cles": [
+        "plantes medicinales",
+        "phytotherapie",
+        "guarana",
+        "cafeine",
+        "fatigue",
+        "plantes toniques"
+      ],
+      "titre_trouve": "Les plantes contre la fatigue",
+      "titre": "Les plantes contre la fatigue : pour mieux récupérer et renforcer le système immunitaire",
+      "resume": "Guide de phytothérapie décrivant les propriétés médicinales des plantes toniques, stimulantes et adaptogènes contre l'asthénie et pour le soutien de l'immunité.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial des Éditions Favre soumis à copyright intégral, archivé pour valorisation interne sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 5,
+          "extrait": "Dr Kurt Hostettmann ... POUR MIEUX RÉCUPÉRER APRÈS L’EFFORT COMBATTRE L’ÉPUISEMENT"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "© 2025, Éditions Favre SA, Lausanne, Suisse ... Tous droits réservés pour tous pays."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00211",
+  "sha256": "09c9290bdfcada1d22d0966b80d83a346b3d01fac04c4b7b1a415f4b97d67c64",
+  "nom_original": "Aliment_poules_pondeuses(1) (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Aliment_poules_pondeuses(1) (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 241128,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": "Suisse",
+  "annee": 2014,
+  "auteurs": "Moulin de Burgholz SA",
+  "source_organisation": "Moulin de Burgholz SA",
+  "mots_cles": [
+    "poules pondeuses",
+    "alimentation avicole",
+    "poussins",
+    "rationnement",
+    "trofino"
+  ],
+  "titre_trouve": "Recommandations d‘alimentation - Aliment poules pondeuses",
+  "titre": "Recommandations d'alimentation pour poules pondeuses (Gamme Trofino)",
+  "resume": "Fiche commerciale et technique présentant les recommandations de rationnement et les caractéristiques nutritionnelles de la gamme d'aliments Trofino pour poussins, poulettes et pondeuses en Suisse.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Dépliant commercial pour produits d'un fabricant suisse, inadapté au contexte local et protégé par des droits commerciaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Moulin de Burgholz SA ... Recommandations d‘alimentation ... Aliment poules pondeuses"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00211__recommandations-d-alimentation-pour-poules-pondeuses-ga.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00211__recommandations-d-alimentation-pour-poules-pondeuses-ga.pdf"
+}

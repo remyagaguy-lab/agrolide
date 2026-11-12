@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00299",
+  "sha256": "e27b81a8edd71806b4a9a19d5ba27b351e3870261420ae1e6c4781f6cb098bbd",
+  "nom_original": "Comment nourrir des poules pondeuses.pdf",
+  "chemin_relatif_source": "OD_Docs/Comment nourrir des poules pondeuses.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 239317,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2018,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "poules pondeuses",
+    "alimentation avicole",
+    "ponte",
+    "nutrition animale",
+    "aviculture"
+  ],
+  "titre_trouve": "Comment nourrir des poules pondeuses",
+  "titre": "Comment bien nourrir des poules pondeuses",
+  "resume": "Fiche pratique détaillant la gestion de l'alimentation, les besoins nutritionnels spécifiques et l'hygiène du poulailler pour optimiser la ponte des poules.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide pratique très utile pour les aviculteurs mais dont la licence et la source originelle doivent être validées avant mise en ligne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Comment nourrir des poules pondeuses"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00299__comment-bien-nourrir-des-poules-pondeuses.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00299__comment-bien-nourrir-des-poules-pondeuses.pdf"
+}

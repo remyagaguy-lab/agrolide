@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00671",
+  "sha256": "fc139c1d69716c6f8b272d53fdd94d952a3db8f262d4c182feb0df9d6d7631be",
+  "nom_original": "Plannification des activités producteurs. Def.pdf",
+  "chemin_relatif_source": "OD_Docs/Plannification des activités producteurs. Def.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5504129,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 24,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_exploitation",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2023,
+  "auteurs": "La Cause Rurale",
+  "source_organisation": "La Cause Rurale",
+  "mots_cles": [
+    "plan de campagne",
+    "gestion d'exploitation",
+    "planification agricole",
+    "burkina faso",
+    "rentabilite"
+  ],
+  "titre_trouve": "COMMENT REUSSIR SA CAMPAGNE AGRICOLE?",
+  "titre": "Guide pratique : Comment élaborer son plan de campagne agricole au Burkina Faso",
+  "resume": "Guide méthodologique de gestion d'exploitation présentant les étapes clés pour planifier sa campagne agricole : bilan d'activité, calendrier prévisionnel, budget et suivi des cultures.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique et méthodologique complet de planification agricole édité par La Cause Rurale, diffusable publiquement pour les producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "COMMENT REUSSIR SA CAMPAGNE AGRICOLE?"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "BURKINA FASO TEL/WHATSAPP: 00226 61058787 Facebook: La cause rurale"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00671__guide-pratique-comment-elaborer-son-plan-de-campagne-ag.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_exploitation/DOC-00671__guide-pratique-comment-elaborer-son-plan-de-campagne-ag.pdf"
+}

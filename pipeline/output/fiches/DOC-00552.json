@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00552",
+  "sha256": "1c1759751b83fd3e09ae7f2ffaa84f280c8a3bd4e8666cb39e66e808ce7062f3",
+  "nom_original": "Le_calendrier_sérénité_votre_pense_bête_pour_bien_commencer_en_permaculture.pdf",
+  "chemin_relatif_source": "OD_Docs/Le_calendrier_sérénité_votre_pense_bête_pour_bien_commencer_en_permaculture.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 27748576,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 191,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "maraîchage",
+  "pays": "France",
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "permaculture",
+    "calendrier de semis",
+    "potager bio",
+    "agroecologie",
+    "jardinage naturel",
+    "semis"
+  ],
+  "titre_trouve": "Le Calendrier Sérénité - Votre Pense Bête pour bien commencer en Permaculture",
+  "titre": "Le Calendrier Sérénité : votre pense-bête pour bien commencer en permaculture",
+  "resume": "Guide pratique mensuel de jardinage agroécologique en permaculture présentant les calendriers de semis, de plantation et les associations végétales en climat tempéré.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "E-book commercial de permaculture sous droits réservés, conçu pour les cycles saisonniers du climat tempéré.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Le Calendrier Sérénité - Votre Pense Bête pour bien commencer en Permaculture"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00552__le-calendrier-serenite-votre-pense-bete-pour-bien-comme.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00552__le-calendrier-serenite-votre-pense-bete-pour-bien-comme.pdf"
+}

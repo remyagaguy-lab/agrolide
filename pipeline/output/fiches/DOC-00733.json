@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00733",
+  "sha256": "408f393794f34876833f62f6e8f1c4003a593be946aaf62cea651b04a7647555",
+  "nom_original": "Systemes de culture maraichere.pptx",
+  "chemin_relatif_source": "OD_Docs/Systemes de culture maraichere.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 688351,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "nb_pages": 24,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "Mohamed Mounir Saggaï",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "cultures maraicheres",
+    "milieu saharien",
+    "rotation",
+    "plasticulture",
+    "systemes agraires"
+  ],
+  "titre_trouve": "Chapitre 4: Les cultures maraichères",
+  "titre": "Les cultures maraîchères en milieu saharien : systèmes agraires et conduite (Chapitre 4)",
+  "resume": "Support de cours présentant les systèmes de culture maraîchère en milieu saharien : contraintes du milieu aride, espèces cultivées, plasticulture et rotations culturales.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non publié sous licence libre, archivé pour consultation académique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre 4: Les cultures maraichères SAGGAÏ Mohamed mounir"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 2,
+      "extrait": "Le milieu Saharien : potentialités et limites"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00733__les-cultures-maraicheres-en-milieu-saharien-systemes-ag.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00733__les-cultures-maraicheres-en-milieu-saharien-systemes-ag.pdf"
+}

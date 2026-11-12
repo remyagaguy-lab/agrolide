@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00844",
+  "sha256": "5b2857d0d313494e091cbe8a462c9b6564fe43087ab650d84c31e8438b8c89c7",
+  "nom_original": "cours 2 Ethologie.pdf",
+  "chemin_relatif_source": "OD_Docs/cours 2 Ethologie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1269327,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 9,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "ethologie",
+    "bien-etre animal",
+    "comportement animal",
+    "cinq libertes",
+    "protection animale"
+  ],
+  "titre_trouve": "Cours 1 : Ethologie et bien être : Contexte de bien-être animal",
+  "titre": "Éthologie et bien-être animal : principes fondamentaux",
+  "resume": "Support de cours universitaire introduisant les concepts d'éthologie appliquée, les cinq libertés fondamentales du rapport Brambell, la sensibilité animale et la Déclaration universelle des droits de l'animal.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, non diffusable publiquement.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours 1 : Ethologie et bien être : Contexte de bien-être animal"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00844__ethologie-et-bien-etre-animal-principes-fondamentaux.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-00844__ethologie-et-bien-etre-animal-principes-fondamentaux.pdf"
+}

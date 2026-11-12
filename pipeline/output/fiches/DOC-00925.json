@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00925",
+  "sha256": "2c76c84e1683369336bead7937913c286c0539aa230c6b1d5e4987dcb63018be",
+  "nom_original": "glycolyse.doc",
+  "chemin_relatif_source": "OD_Docs/glycolyse.doc",
+  "indice_ancien_dossier": null,
+  "format_source": "doc",
+  "taille_octets": 53760,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "corrompu",
+    "incomplet"
+  ],
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Taibeche",
+  "source_organisation": "Inconnue",
+  "mots_cles": [
+    "glycolyse",
+    "biochimie",
+    "fichier corrompu"
+  ],
+  "titre_trouve": null,
+  "titre": "Glycolyse (Fichier corrompu)",
+  "resume": "Fichier traitement de texte sans texte extractible, manifestement corrompu ou vide, relatif à la glycolyse.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_illisible",
+  "motif_decision": "Fichier traitement de texte corrompu ne contenant aucun texte exploitable.",
+  "confiance": {
+    "classification": 0.5,
+    "droits": 0.5,
+    "completude": 0.2
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "glycolyse"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_illisible",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00925__glycolyse-fichier-corrompu.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00925__glycolyse-fichier-corrompu.pdf"
+}

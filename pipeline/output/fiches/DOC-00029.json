@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00029",
+  "sha256": "18c02851bda48abf1b7812d29911df26fdcd4c74166dd25224a6e1077554bc9e",
+  "nom_original": "Résumé5 Botanique.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Botanique/Botanique/Résumé5 Botanique.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 2572885,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 25,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Abdallah Laiche",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "botanique",
+    "biologie vegetale",
+    "cours",
+    "sciences de base"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 5 - Cours de botanique",
+  "resume": "Document numérisé de 25 pages comportant des résumés de cours de botanique générale établis par Abdallah Laiche. Nécessite une reconnaissance optique de caractères (OCR).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte exploitable (filigrane nominatif uniquement), nécessitant un OCR et une validation humaine.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé5 Botanique.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00029__resume-5-cours-de-botanique.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00029__resume-5-cours-de-botanique.pdf"
+}

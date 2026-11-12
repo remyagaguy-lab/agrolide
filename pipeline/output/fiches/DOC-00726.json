@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00726",
+  "sha256": "03cdf0c39a12dcf1c0e1eb14844c468e1f74420d048aecfa4fd4b36a8b4de5d9",
+  "nom_original": "Sorgho fourrager.pdf",
+  "chemin_relatif_source": "OD_Docs/Sorgho fourrager.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7989579,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "sorgho",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "sorgho fourrager",
+    "culture fourragere",
+    "alimentation animale",
+    "céréales"
+  ],
+  "titre_trouve": null,
+  "titre": "Sorgho fourrager [Scan à traiter]",
+  "resume": "Document scanné de 6 pages traitant de la conduite et de la valeur fourragère du sorgho, nécessitant une reconnaissance optique de caractères (OCR) pour indexation complète.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte exploitable (OCR nécessaire) ; validation humaine requise après extraction du texte.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.35,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Titre déduit du nom de fichier original : Sorgho fourrager.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00726__sorgho-fourrager-scan-a-traiter.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00726__sorgho-fourrager-scan-a-traiter.pdf"
+}

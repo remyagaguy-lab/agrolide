@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00103",
+  "sha256": "75a2478573c0b3144288069bce8503b755be8f07823d1e36858618e774bf6900",
+  "nom_original": "20171016__manuel_delevage_poulet.pdf",
+  "chemin_relatif_source": "OD_Docs/20171016__manuel_delevage_poulet.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 840978,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "droits_reserves"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "poulet de chair",
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Hubbard",
+  "source_organisation": "Hubbard",
+  "mots_cles": [
+    "poulet de chair",
+    "aviculture",
+    "hubbard",
+    "conduite d'elevage",
+    "alimentation avicole",
+    "demarrage poussin"
+  ],
+  "titre_trouve": "Poulet de Chair : Manuel d’Élevage Croissance Rapide",
+  "titre": "Manuel d'élevage du poulet de chair à croissance rapide (Hubbard)",
+  "resume": "Guide technique de conduite d'élevage de poulets de chair conventionnels édité par le sélectionneur Hubbard : paramètres d'ambiance, démarrage, abreuvement, programmes d'éclairage et recommandations nutritionnelles.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Manuel technique d'entreprise commerciale privée (Hubbard) sous droits réservés, orienté vers la conduite de souches propriétaires.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Poulet de Chair Manuel d’Élevage Croissance Rapide"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00103__manuel-d-elevage-du-poulet-de-chair-a-croissance-rapide.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00103__manuel-d-elevage-du-poulet-de-chair-a-croissance-rapide.pdf"
+}

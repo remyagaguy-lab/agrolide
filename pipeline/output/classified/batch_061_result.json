@@ -1,0 +1,803 @@
+{
+  "batch_number": 61,
+  "results": [
+    {
+      "id": "DOC-00921",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_fruits_legumes",
+      "domaines_secondaires": [
+        "boissons"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "fruits transformés",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA",
+      "mots_cles": [
+        "fruits transformes",
+        "confiture",
+        "fruits au sirop",
+        "confisage",
+        "agroalimentaire",
+        "diagramme de fabrication"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité FRUITS TRANSFORMES (2)",
+      "titre": "Synoptique technologique : Transformation des fruits (sirop, confitures, confisage)",
+      "resume": "Diagramme de procédé industriel détaillant les étapes unitaires de transformation des fruits : cerises confites, fruits au sirop, compotes, confitures et gelées (du triage au sertissage).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Planche synoptique de procédé isolée (page 2 d'une série technologique), archivée pour documentation technique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité FRUITS TRANSFORMES (2)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00922",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "sol_fertilite",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Bénin",
+      "annee": 2013,
+      "auteurs": "Gustave D. Dagbénonbakin, André Jonas Djènontin, Nestor Ahoyo Adjovi, Mouinou Attanda Igué, Guy Apollinaire Mensah",
+      "source_organisation": "INRAB Bénin",
+      "mots_cles": [
+        "compost",
+        "residus de recolte",
+        "fertilisation organique",
+        "inrab",
+        "benin",
+        "fertilité des sols"
+      ],
+      "titre_trouve": "Fiche technique Production et Utilisation de Compost et Gestion des Résidus de Récolte",
+      "titre": "Fiche technique : Production et utilisation de compost et gestion des résidus de récolte",
+      "resume": "Fiche technique de référence de l'INRAB (Bénin) détaillant le processus de compostage en tas et en fosse, les matières organiques utilisables, le suivi de maturation et les doses d'apport au champ.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle officielle de l'INRAB (Bénin) pour la valorisation des résidus et la fabrication du compost.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique Production et Utilisation de Compost et Gestion des Résidus de Récolte"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00923",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2003,
+      "auteurs": "Conseil Scientifique de l'Environnement de Bretagne",
+      "source_organisation": "Conseil Régional de Bretagne",
+      "mots_cles": [
+        "gestion des sols",
+        "dechets organiques",
+        "bretagne",
+        "lisier",
+        "phosphore",
+        "azote",
+        "pollution des sols"
+      ],
+      "titre_trouve": "Gestion des sols et apports de déchets organiques en Bretagne",
+      "titre": "Gestion des sols et apports de déchets organiques en Bretagne (Rapport du CSE)",
+      "resume": "Rapport d'expertise environnementale du Conseil Scientifique de Bretagne sur les impacts agronomiques et écologiques des épandages massifs de lisiers et déchets organiques sur les sols tempérés armoricains.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Rapport institutionnel d'expertise centré sur la problématique agro-environnementale spécifique aux épandages de lisiers en Bretagne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Gestion des sols et apports de déchets organiques en Bretagne"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00924",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gingembre",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "228AgroConseil",
+      "source_organisation": "228AgroConseil",
+      "mots_cles": [
+        "gingembre",
+        "zingiber officinale",
+        "rhizome",
+        "semis",
+        "togo",
+        "agroconseil",
+        "itineraire technique"
+      ],
+      "titre_trouve": "La culture du gingembre",
+      "titre": "Guide pratique : La culture du gingembre au Togo",
+      "resume": "Guide pratique de vulgarisation en 15 diapositives présentant les étapes de la culture du gingembre : préparation des semences de rhizomes, traitement à la cendre, plantation, entretien, récolte et conservation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support didactique clair et complet de 228AgroConseil (Togo) pour l'accompagnement des producteurs de gingembre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La culture du gingembre"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00925",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Taibeche",
+      "source_organisation": "Inconnue",
+      "mots_cles": [
+        "glycolyse",
+        "biochimie",
+        "fichier corrompu"
+      ],
+      "titre_trouve": null,
+      "titre": "Glycolyse (Fichier corrompu)",
+      "resume": "Fichier traitement de texte sans texte extractible, manifestement corrompu ou vide, relatif à la glycolyse.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "corrompu",
+        "incomplet"
+      ],
+      "decision_publication": "exclu_illisible",
+      "motif_decision": "Fichier traitement de texte corrompu ne contenant aucun texte exploitable.",
+      "confiance": {
+        "classification": 0.5,
+        "droits": 0.5,
+        "completude": 0.2
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "glycolyse"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00926",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "eau_irrigation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Niger",
+      "annee": 2001,
+      "auteurs": "Société Japonaise des Ressources Vertes (JGRC)",
+      "source_organisation": "Société Japonaise des Ressources Vertes (JGRC)",
+      "mots_cles": [
+        "conservation des terres",
+        "lutte contre la desertification",
+        "sahel",
+        "niger",
+        "keita",
+        "jgrc",
+        "fertilite du sol"
+      ],
+      "titre_trouve": "Guide technique de la conservation des terres agricoles - Redonner au sol sa productivité dans une perspective durable",
+      "titre": "Guide technique de conservation des terres agricoles au Sahel (Vol. 5 - JGRC)",
+      "resume": "Guide technique complet de l'agence japonaise JGRC détaillant les méthodes de lutte contre la désertification et de conservation des eaux et des sols agricoles dans la zone sahélienne (expérience de Keita au Niger).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique de référence de la JGRC pour la restauration des sols et la lutte contre la désertification au Sahel.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide technique de la conservation des terres agricoles Redonner au sol sa productivité dans une perspective durable"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00927",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "gestion_exploitation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "poulet",
+      "pays": "France",
+      "annee": 2003,
+      "auteurs": "G. Deleuse, CIVAM Bio Gard",
+      "source_organisation": "CIVAM Bio Gard",
+      "mots_cles": [
+        "aviculture biologique",
+        "poulet bio",
+        "poules pondeuses",
+        "civam bio gard",
+        "france",
+        "elevage fermier"
+      ],
+      "titre_trouve": "Créer un atelier de volailles en Bio",
+      "titre": "Créer un atelier de volailles en bio : Poulets de chair et poules pondeuses (CIVAM Gard)",
+      "resume": "Guide pratique français du CIVAM Bio Gard présentant la création et la gestion d'un atelier avicole biologique (réglementation européenne, bâtiments, parcours, alimentation et rentabilité).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte",
+        "obsolete",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide commercial payant de 2003 basé sur les normes réglementaires européennes de l'agriculture biologique, inadapté au contexte ouest-africain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Créer un atelier de volailles en Bio Poulets de chair et/ou poules pondeuses"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00928",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "caille",
+      "pays": "Algérie",
+      "annee": 2003,
+      "auteurs": "Institut Technique des Élevages (ITELV)",
+      "source_organisation": "ITELV Algérie",
+      "mots_cles": [
+        "caille",
+        "coturniculture",
+        "elevage de cailles",
+        "itelv",
+        "algerie",
+        "incubation",
+        "petit elevage"
+      ],
+      "titre_trouve": "GUIDE D'ELEVAGE CAILLE",
+      "titre": "Guide technique d'élevage de la caille (ITELV Algérie)",
+      "resume": "Guide pratique officiel de l'ITELV détaillant la conduite d'élevage de la caille domestique : normes de logement au sol et en batterie, alimentation, ponte, incubation artificielle et engraissement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique officiel de l'Institut Technique des Élevages (ITELV) distribué gratuitement pour la promotion de la coturniculture.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MINISTERE DE L'AGRICULTURE ET DU DEVELOPPEMENT RURAL INSTITUT TECHNIQUE DES ELEVAGES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00929",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "bovin",
+      "pays": "Algérie",
+      "annee": 2000,
+      "auteurs": "Institut Technique de l'Élevage Bovin et Ovin (ITEBO)",
+      "source_organisation": "ITEBO Algérie",
+      "mots_cles": [
+        "veau d'elevage",
+        "bovin",
+        "sevrage",
+        "colostrum",
+        "itebo",
+        "algerie",
+        "conduite d'elevage"
+      ],
+      "titre_trouve": "CONDUITE DU VEAU D ELEVAGE",
+      "titre": "Guide technique : Conduite du veau d'élevage (ITEBO)",
+      "resume": "Guide d'élevage de l'ITEBO présentant les soins et la conduite nutritionnelle du veau de la naissance au sevrage : prise colostrale, plan d'allaitement artificiel, rationnement et logement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de vulgarisation institutionnelle édité par l'institut technique d'élevage (ITEBO) pour la conduite des jeunes bovins.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CONDUITE DU VEAU D ELEVAGE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00930",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "poule pondeuse",
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "Ghislain Cloutier, SOCODEVI",
+      "source_organisation": "SOCODEVI",
+      "mots_cles": [
+        "poules pondeuses",
+        "poulettes",
+        "aviculture",
+        "biosecurite",
+        "socodevi",
+        "conduite d'elevage",
+        "ponte"
+      ],
+      "titre_trouve": "Guide d’élevage Poulettes et pondeuses",
+      "titre": "Guide d'élevage : Poulettes et poules pondeuses (SOCODEVI)",
+      "resume": "Manuel de référence très complet rédigé par SOCODEVI sur la gestion d'un élevage avicole de pondeuses : biosécurité, désinfection, élevage des poussins et poulettes, régie de ponte et suivi sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence institutionnel de l'ONG SOCODEVI, exhaustif et directement adapté à la professionnalisation des éleveurs avicoles.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide d’élevage Poulettes et pondeuses"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00931",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "petit_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "canard",
+      "pays": "Bénin",
+      "annee": 2001,
+      "auteurs": "Centre Songhaï",
+      "source_organisation": "Centre Songhaï / SID",
+      "mots_cles": [
+        "canards",
+        "oies",
+        "palmipedes",
+        "centre songhai",
+        "benin",
+        "elevage avicole"
+      ],
+      "titre_trouve": "GUIDE PRATIQUE D'ELEVAGE OIES ET CANARDS",
+      "titre": "Guide pratique d'élevage : Oies et canards (Centre Songhaï - document Word)",
+      "resume": "Fichier source traitement de texte du guide pratique du Centre Songhaï sur l'élevage intégré d'oies et de canards en Afrique tropicale (bâtiments, alimentation, reproduction et santé).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Version de travail au format non-PDF d'un guide dont la version PDF finale et propre est publiée par ailleurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "http://www.songhai.org/"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00932",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "petit_elevage",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "canard",
+      "pays": "Bénin",
+      "annee": 2001,
+      "auteurs": "Centre Songhaï",
+      "source_organisation": "Centre Songhaï / Society for International Development",
+      "mots_cles": [
+        "canards",
+        "oies",
+        "palmipedes",
+        "centre songhai",
+        "benin",
+        "elevage fermier",
+        "guide pratique"
+      ],
+      "titre_trouve": "GUIDE PRATIQUE D'ELEVAGE OIES ET CANARDS",
+      "titre": "Guide pratique d'élevage : Oies et canards (Centre Songhaï)",
+      "resume": "Guide pratique illustré du Centre Songhaï décrivant la conduite agroécologique de l'élevage d'oies et de canards au Bénin : habitat en matériaux locaux, alimentation, reproduction, couvaison et soins sanitaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence édité par le Centre Songhaï pour la promotion de l'élevage de palmipèdes en Afrique de l'Ouest.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE PRATIQUE D'ELEVAGE OIES ET CANARDS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00933",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "cereales",
+        "legumineuses_oleagineux"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "grandes cultures",
+      "pays": "Canada",
+      "annee": 2017,
+      "auteurs": "Christine Brown, Joanna Follings, Meghan Moran, Ben Rosser",
+      "source_organisation": "Ministère de l'Agriculture, de l'Alimentation et des Affaires rurales de l'Ontario (MAAARO)",
+      "mots_cles": [
+        "grandes cultures",
+        "agronomie",
+        "ontario",
+        "canada",
+        "mais",
+        "soja",
+        "maaaro"
+      ],
+      "titre_trouve": "GUIDE AGRONOMIQUE DES GRANDES CULTURES",
+      "titre": "Guide agronomique des grandes cultures (Publication 811F - MAAARO)",
+      "resume": "Manuel encyclopédique de référence de 522 pages publié par le ministère de l'Agriculture de l'Ontario, détaillant la conduite agronomique des grandes cultures (maïs, soya, céréales, fourrages) en climat tempéré nord-américain.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage officiel canadien de grande qualité scientifique mais dédié spécifiquement aux grandes cultures en climat tempéré froid ontarien (pertinence marginale pour l'Afrique subsaharienne).",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE AGRONOMIQUE DES GRANDES CULTURES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00935",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "poules pondeuses",
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Bordeaux Métropole",
+      "source_organisation": "Bordeaux Métropole",
+      "mots_cles": [
+        "poules de jardin",
+        "bordeaux metropole",
+        "dechets menagers",
+        "aviculture urbaine",
+        "poules pondeuses"
+      ],
+      "titre_trouve": "POUR BIEN PRENDRE SOIN DE SES POULES",
+      "titre": "Guide pratique : Bien prendre soin de ses poules (Bordeaux Métropole)",
+      "resume": "Dépliant de sensibilisation de Bordeaux Métropole destiné aux citadins pour l'adoption de poules pondeuses de jardin afin de recycler les déchets organiques ménagers.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Brochure citadine française de réduction des déchets ménagers par l'adoption de poules de compagnie, non adaptée au contexte agro-pastoral africain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "POUR BIEN PRENDRE SOIN DE SES POULES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00937",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "sol_fertilite"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2021,
+      "auteurs": "La CoVe",
+      "source_organisation": "Communauté d'agglomération Ventoux Comtat Venaissin (CoVe)",
+      "mots_cles": [
+        "compostage",
+        "dechets verts",
+        "jardinage",
+        "composteur",
+        "vaucluse",
+        "cove",
+        "paillage"
+      ],
+      "titre_trouve": "Guide pratique LE COMPOSTAGE",
+      "titre": "Guide pratique : Le compostage domestique (La CoVe)",
+      "resume": "Guide pratique de sensibilisation au compostage domestique et au paillage édité par une collectivité territoriale française (La CoVe) pour la valorisation des déchets verts de jardin.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide pratique institutionnel français de compostage individuel de jardin, de pertinence marginale face aux besoins agricoles subsahariens.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide pratique LE COMPOSTAGE"
+        }
+      ]
+    }
+  ]
+}

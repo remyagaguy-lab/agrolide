@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00233",
+  "sha256": "73481590e2b0785846a3dea014ba5757792feea06a69995091d21603c07fc7a0",
+  "nom_original": "Avoine.pdf",
+  "chemin_relatif_source": "OD_Docs/Avoine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8264545,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "avoine",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "avoine",
+    "cereales",
+    "culture cerealiere",
+    "avena sativa",
+    "fiche technique"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique sur la culture de l'avoine",
+  "resume": "Document technique numérisé de six pages présentant la conduite de la culture de l'avoine (Avena sativa) : exigences pédo-climatiques, semis, fertilisation et récolte.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible (OCR nécessaire) ; droits et provenance à valider avant toute diffusion.",
+  "confiance": {
+    "classification": 0.58,
+    "droits": 0.35,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Avoine.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00233__fiche-technique-sur-la-culture-de-l-avoine.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00233__fiche-technique-sur-la-culture-de-l-avoine.pdf"
+}

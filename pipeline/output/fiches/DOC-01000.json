@@ -1,0 +1,74 @@
+{
+  "id": "DOC-01000",
+  "sha256": "bcf042198967f639f5cf36237eb29389f7f2a26a57074156429911c1f5afd2b1",
+  "nom_original": "partie5_irrigation_fiches_cultures_fruitieres_et_vignes.pdf",
+  "chemin_relatif_source": "OD_Docs/partie5_irrigation_fiches_cultures_fruitieres_et_vignes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1649386,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "contexte_non_adapte",
+    "incomplet"
+  ],
+  "nb_pages": 18,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "arboriculture fruitière et viticulture",
+  "pays": "France",
+  "annee": 2019,
+  "auteurs": "BRL / SudExpé",
+  "source_organisation": "BRL / SudExpé",
+  "mots_cles": [
+    "irrigation fruitiere",
+    "besoins en eau",
+    "brl",
+    "sud expe",
+    "arboriculture",
+    "vigne"
+  ],
+  "titre_trouve": "Irrigation fiches cultures fruitières et vignes (Partie 5)",
+  "titre": "Irrigation des cultures fruitières et de la vigne : Fiches techniques (BRL / SudExpé)",
+  "resume": "Série de fiches techniques d'irrigation par culture fruitière (pêcher, abricotier, pommier, olivier, vigne) indiquant les consommations en eau mensuelles et les coefficients culturaux en région méditerranéenne.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait partiel d'un guide technique d'irrigation méditerranéen (partie 5), archivé conformément à la règle sur les ensembles incomplets.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Culture fruitière Abricotier précoce .... 75 ... Irrigation de la vigne de cuve ... 105/107 © BRL/COM © SUD EXPE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01000__irrigation-des-cultures-fruitieres-et-de-la-vigne-fiche.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-01000__irrigation-des-cultures-fruitieres-et-de-la-vigne-fiche.pdf"
+}

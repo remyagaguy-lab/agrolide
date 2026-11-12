@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00590",
+  "sha256": "1df1b61d967c8a161e6abe2b18356620797bea0f661700e21a2d293ca37fe9d0",
+  "nom_original": "MARAI_Chapitre_3_Rendements.pdf",
+  "chemin_relatif_source": "OD_Docs/MARAI_Chapitre_3_Rendements.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 302936,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00589",
+  "groupe_doublon_id": "GRP-0043",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00589 (Planification des superficies de légumes nécessaires (Guide Équiterre)).",
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "gestion_exploitation",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "maraîchage",
+  "pays": "Canada",
+  "annee": 2009,
+  "auteurs": "Anne Weill",
+  "source_organisation": "Équiterre",
+  "mots_cles": [
+    "gestion maraichere",
+    "planification des superficies",
+    "rendements legumes",
+    "ferme biologique",
+    "paniers asc"
+  ],
+  "titre_trouve": "Planification des superficies de légumes nécessaires",
+  "titre": "Planification des superficies de légumes nécessaires (Guide Équiterre)",
+  "resume": "Chapitre méthodologique du guide Équiterre guidant l'évaluation des rendements, l'espacement des rangs et le dimensionnement des parcelles pour la distribution en paniers bio.",
+  "statut_droits": "droits_reserves_commercial",
+  "complet": false,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE 3 – CHAPITRE 3 Planification des superficies de légumes nécessaires"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00590__planification-des-superficies-de-legumes-necessaires-gu.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_exploitation/DOC-00590__planification-des-superficies-de-legumes-necessaires-gu.pdf"
+}

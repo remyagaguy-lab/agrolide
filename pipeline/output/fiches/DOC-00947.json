@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00947",
+  "sha256": "d39dce83eb4ce9a189c8e67082cf2cc47b277df8d4ad0b3f2baff8ab12effb30",
+  "nom_original": "guide_verger-maraicher_smart_GRAB_web.pdf",
+  "chemin_relatif_source": "OD_Docs/guide_verger-maraicher_smart_GRAB_web.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3947714,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 40,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2017,
+  "auteurs": "GRAB (Groupe de Recherche en Agriculture Biologique)",
+  "source_organisation": "GRAB / Projet SMART",
+  "mots_cles": [
+    "agroforesterie",
+    "verger-maraicher",
+    "arbres fruitiers",
+    "maraichage",
+    "agroecologie",
+    "grab"
+  ],
+  "titre_trouve": "ASSOCIER LÉGUMES ET ARBRES FRUITIERS EN AGROFORESTERIE",
+  "titre": "Associer légumes et arbres fruitiers en agroforesterie : Le verger-maraîcher (GRAB)",
+  "resume": "Guide méthodologique de référence du GRAB sur la conception et la conduite d'un verger-maraîcher associant maraîchage biologique et arbres fruitiers.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Open Access (archivé sur Organic Eprints orgprints.org/32135)",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide agroforestier de haute valeur technique, diffusé en libre accès sur l'archive internationale Organic Eprints.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ASSOCIER LÉGUMES ET ARBRES FRUITIERS EN AGROFORESTERIE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Archived at http://orgprints.org/32135"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00947__associer-legumes-et-arbres-fruitiers-en-agroforesterie.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00947__associer-legumes-et-arbres-fruitiers-en-agroforesterie.pdf"
+}

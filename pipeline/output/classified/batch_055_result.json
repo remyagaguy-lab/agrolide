@@ -1,0 +1,605 @@
+{
+  "batch_number": 55,
+  "results": [
+    {
+      "id": "DOC-00827",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Halmi Sihem",
+      "source_organisation": null,
+      "mots_cles": ["biologie vegetale", "angiospermes", "reproduction sexuee", "gametogenese", "pollinisation", "fecondation"],
+      "titre_trouve": "Chapitre 5 : La reproduction chez les angiospermes",
+      "titre": "Biologie végétale - Chapitre 5 : La reproduction chez les angiospermes",
+      "resume": "Support de cours universitaire traitant de la reproduction sexuée chez les angiospermes : gamétogenèse mâle et femelle, pollinisation et double fécondation.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ensemble_partiel", "incomplet"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un cours universitaire non libre et incomplet, archivé en non publié selon les règles métier.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chapitre 5 : La reproduction chez les angiospermes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00828",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "boissons",
+      "domaines_secondaires": ["equipements_technologie"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "chicorée",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA",
+      "mots_cles": ["chicoree", "torrefaction", "diagramme de flux", "procede industriel", "atomisation", "boisson"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité CHICOREE",
+      "titre": "Schéma de procédé industriel de transformation de la chicorée",
+      "resume": "Synoptique des étapes du procédé de transformation industrielle des racines de chicorée : lavage, découpage, torréfaction, extraction et atomisation.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte", "droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche synoptique industrielle dédiée à une filière tempérée, de faible pertinence en zone tropicale et sans licence libre.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.8,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CHICOREE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00829",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["sciences_de_base"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2017,
+      "auteurs": "Dr. BENMOUSSA Hasnia",
+      "source_organisation": "Université des Sciences et de la Technologie d’Oran Mohamed Boudiaf",
+      "mots_cles": ["chimie des eaux", "qualite de l'eau", "cycle de l'eau", "eaux naturelles", "traitement des eaux", "genie des procedes"],
+      "titre_trouve": "Chimie des eaux",
+      "titre": "Chimie des eaux - Cours de Master 1 Génie des procédés de l’environnement",
+      "resume": "Polycopié de cours universitaire complet sur la chimie des eaux naturelles : équilibres acido-basiques, minéralisation, paramètres physico-chimiques et qualité de l'eau.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié universitaire interne d'enseignant sans licence de diffusion libre, archivé en non publié conformément aux règles métier.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Polycopié Ce cours est destigné aux étudiants de Master 1 Génie des Procédés de l’Environnement. Chimie des eaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00830",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["sciences_de_base"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Dr N. Belmiloud",
+      "source_organisation": "Université Hassiba Benbouali de Chlef",
+      "mots_cles": ["chimie environnementale", "hydrogeologie", "eaux souterraines", "mineralisation", "qualite de l'eau"],
+      "titre_trouve": "MODULE: CHIMIE ENVIRONNEMENTALE DE L’EAU",
+      "titre": "Chimie environnementale de l'eau : Cours et diaporama de formation",
+      "resume": "Support de cours en diapositives sur la chimie des eaux souterraines et superficielles : processus de minéralisation, dissolution, précipitation et polluants.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support pédagogique universitaire sous forme de diaporama sans licence libre, archivé en non publié.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE: CHIMIE ENVIRONNEMENTALE DE L’EAU Université Hassiba Benbouali de Chlef"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00831",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "rapport",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2015,
+      "auteurs": "FAO - Groupe de travail WRB",
+      "source_organisation": "FAO",
+      "mots_cles": ["pedologie", "classification des sols", "WRB", "ressources en sols", "cartographie des sols", "FAO"],
+      "titre_trouve": "Base de référence mondiale pour les ressources en sols 2014, Mise à jour 2015 : Système international de classification des sols",
+      "titre": "Base de référence mondiale pour les ressources en sols (WRB 2014, MàJ 2015)",
+      "resume": "Ouvrage de référence de la FAO définissant le système international de classification des sols (WRB) pour caractériser les sols et établir des légendes cartographiques pédologiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport de référence complet de la FAO, issu d'une diffusion institutionnelle, mis à disposition des membres de la plateforme.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Base de référence mondiale pour les ressources en sols 2014 Mise à jour 2015 RAPPORT SUR LES RESSOURCES EN SOLS DU MONDE 106 FAO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00832",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": ["sol_fertilite", "horticulture_jardinage"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Ministère de l'Économie - Services à la personne",
+      "source_organisation": "Direction générale des entreprises (France)",
+      "mots_cles": ["compostage", "fertilisation", "jardinage", "dechets verts", "services a la personne"],
+      "titre_trouve": "Compostage et fertilisation",
+      "titre": "Fiche pratique de compostage et fertilisation pour le jardinage",
+      "resume": "Fiche technique d'initiation au compostage domestique et à la fertilisation du jardin, élaborée pour les professionnels des services à la personne en France.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique conçue pour le contexte réglementaire et horticole tempéré français, de faible pertinence en zone subsaharienne.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LES RESSOURCES PROFESSIONNELLES DES SERVICES À LA PERSONNE COMPOSTAGE ET FERTILISATION"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00833",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": ["agroecologie_agriculture_durable", "cultures_maraicheres"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Polynésie française",
+      "annee": 2016,
+      "auteurs": "Programme DADP (Développement d’une Agriculture Durable dans le Pacifique)",
+      "source_organisation": "Programme DADP Tahiti",
+      "mots_cles": ["compostage", "engrais organique", "fertilisation", "maraichage", "agriculture durable", "matiere organique"],
+      "titre_trouve": "Fiche technique : Compostage facilité",
+      "titre": "Fiche technique : Compostage facilité en milieu tropical",
+      "resume": "Fiche pratique illustrée détaillant les étapes de fabrication et d'utilisation du compost en caisse (1 m³) pour les semis, le maraîchage et les vergers tropicaux.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique pratique et complète issue d'un programme institutionnel de développement agricole durable, directement applicable sur le terrain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique Compostage facilité Programme DADP - Développement d’une Agriculture Durable dans le Pacifique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00834",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_fruits_legumes",
+      "domaines_secondaires": ["equipements_technologie"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "fruits et légumes",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA",
+      "mots_cles": ["transformation", "fruits et legumes", "concentres", "poudres", "flocons", "atomisation", "procede industriel"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité CONCENTRES DE FRUITS & LEGUMES",
+      "titre": "Schéma de procédé : Concentrés, poudres et flocons de fruits et légumes",
+      "resume": "Synoptique des étapes du procédé industriel de transformation des fruits et légumes en concentrés, poudres atomisées et flocons déshydratés.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Planche technique protégée (ISAA) sans licence libre, archivée en non publié conformément aux règles de droits.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CONCENTRES DE FRUITS & LEGUMES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00835",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["irrigation", "reseaux d'irrigation", "hydraulique agricole", "conception"],
+      "titre_trouve": null,
+      "titre": "Conception des réseaux d'irrigation",
+      "resume": "Document numérisé de 43 pages traitant de la conception des réseaux d'irrigation agricole. Nécessite une reconnaissance optique de caractères (OCR).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable", "titre_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné avec CamScanner sans texte extractible (OCR nécessaire) et droits indéterminés, nécessitant une validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier : conception des resaux d_irrigation.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00836",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "outil_modele",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller", "enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pêche et aquaculture",
+      "pays": "Burkina Faso",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Ministère en charge des ressources halieutiques (Burkina Faso)",
+      "mots_cles": ["aquaculture", "ichtyologie", "tilapia", "clarias", "burkina faso", "concours ingenieur", "qcm"],
+      "titre_trouve": null,
+      "titre": "QCM de concours d'ingénieur en halieutique et aquaculture au Burkina Faso",
+      "resume": "Banque de questions à choix multiples (QCM) d'épreuve de concours d'ingénieur portant sur l'ichtyologie, l'aquaculture tropicale et la faune aquatique du Burkina Faso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable", "titre_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Épreuve de concours au format docx sans attribution officielle ni licence ouverte, archivée en non publié.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "La seule espèce de crevette vivant dans les cours et plans d’eau du Burkina Faso est : Macrobrachium rosenbergii"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00837",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "apiculture",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "apiculture",
+      "pays": "Algérie",
+      "annee": 1985,
+      "auteurs": "Institut des Petits Élevages (ITPE)",
+      "source_organisation": "Ministère de l'Agriculture et de la Pêche",
+      "mots_cles": ["apiculture", "rucher", "ruche dadant", "ruche langstroth", "recolte de miel", "sante des abeilles"],
+      "titre_trouve": "GUIDE D'ELEVAGE CONDUITE D'UN RUCHER",
+      "titre": "Guide d'élevage : Conduite d'un rucher",
+      "resume": "Guide pratique de conduite d'un rucher : choix de l'emplacement, modèles de ruches (Dadant et Langstroth), matériel apicole, travaux saisonniers et prophylaxie.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["obsolete"],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet issu d'un institut technique ministériel (ITPE), publiable pour les apiculteurs malgré son ancienneté (1985).",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "INSTITUT DES PETITS ELEVAGES GUIDE D'ELEVAGE CONDUITE D'UN RUCHER MINISTERE DE L'AGRICULTURE ET DE LA PECHE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00838",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["aviculture"],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["producteur", "technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Drabo Sangoulé",
+      "source_organisation": null,
+      "mots_cles": ["aviculture", "poules pondeuses", "devis estimatif", "business plan", "alimentation avicole", "cfa"],
+      "titre_trouve": "Conduite d'élévage de 1000 futures pondeuses pour une periode de 7 mois",
+      "titre": "Devis estimatif pour la conduite d'un élevage de 1000 poules pondeuses",
+      "resume": "Modèle de devis estimatif détaillé pour l'installation et la conduite de 1000 poules pondeuses sur 7 mois en Afrique de l'Ouest : équipements, alimentation et prophylaxie.",
+      "statut_droits": "donnees_personnelles_confidentiel",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["donnees_personnelles"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Devis privé contenant des données nominatives d'un prestataire, sans licence de diffusion, classé en archive non publiée.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Conduite d'élévage de 1000 futures pondeuses pour une periode de 7 mois Dévis estimatif"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00839",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "huiles_sucre_corps_gras",
+      "domaines_secondaires": ["equipements_technologie"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": "sucre et confiserie",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA",
+      "mots_cles": ["confiserie", "dragees", "chocolat", "gomme arabique", "turbinage", "procede industriel"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité CONFISERIES EN DRAGEES",
+      "titre": "Schéma de procédé industriel : Fabrication de confiseries en dragées",
+      "resume": "Synoptique des étapes du procédé industriel de fabrication des dragées (dures, chocolat, liqueur, nougatine) : gommage, turbinage, enrobage et polissage.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Planche technique protégée (ISAA) sans licence libre, de faible pertinence pour le cœur de cible de la plateforme, archivée.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CONFISERIES EN DRAGEES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00840",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": ["conservation_post_recolte", "equipements_technologie"],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["entrepreneur_porteur_projet", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "poisson",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA",
+      "mots_cles": ["poisson", "conserves", "fumage", "surgelation", "saumurage", "sterilisation", "procede industriel"],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité CONSERVES DE POISSON",
+      "titre": "Schéma de procédé industriel : Conserves, surgelés et produits saurés de poisson",
+      "resume": "Synoptique des opérations unitaires de transformation du poisson : étêtage, éviscération, filetage, conserverie appertisée, surgélation et fumage.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Planche technique protégée (ISAA) sans licence libre, archivée en non publié conformément aux règles de droits.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CONSERVES DE POISSON"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00841",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["foresterie_agroforesterie", "sciences_de_base"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2010,
+      "auteurs": "Jean-Yves Massenet",
+      "source_organisation": "Lycée horticole et forestier de Mesnières",
+      "mots_cles": ["pedologie", "sol", "constituants mineraux", "matiere organique", "argiles", "humus", "floculation"],
+      "titre_trouve": "CHAPITRE III : LES CONSTITUANTS SOLIDES DU SOL",
+      "titre": "Pédologie - Chapitre 3 : Les constituants solides du sol",
+      "resume": "Support de cours de pédologie pour BTS forestier détaillant la fraction solide du sol : constituants minéraux (argiles, sables), matières organiques et complexes argilo-humiques.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ensemble_partiel", "incomplet"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un cours de BTS forestier sans licence ouverte, incomplet, classé en archive non publiée.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CHAPITRE III : LES CONSTITUANTS SOLIDES DU SOL Jean-Yves MASSENET"
+        }
+      ]
+    }
+  ]
+}

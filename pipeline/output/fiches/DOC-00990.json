@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00990",
+  "sha256": "1aa7574b4d215e1f84f8632f4543c71564695dac6f2282ad9c91876bc9c540ca",
+  "nom_original": "mecanique-sol.pdf",
+  "chemin_relatif_source": "OD_Docs/mecanique-sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 839943,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 98,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2008,
+  "auteurs": "Khaled Meftah",
+  "source_organisation": "Université / GenieCivilPDF.com",
+  "mots_cles": [
+    "mecanique des sols",
+    "genie civil",
+    "geotechnique",
+    "fondations",
+    "tassement"
+  ],
+  "titre_trouve": "COURS ET EXERCICES DE MECANIQUE DES SOLS",
+  "titre": "Cours et exercices de mécanique des sols et géotechnique (Génie civil)",
+  "resume": "Manuel de cours universitaire et recueil d'exercices de mécanique des sols pour le génie civil : identification des sols, hydraulique, contraintes et calcul de fondations.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Polycopié de cours de mécanique des sols et géotechnique pour le génie civil et les travaux publics, hors du domaine agricole.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "COURS ET EXERCICES DE MECANIQUE DES SOLS Khaled MEFTAH"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00990__cours-et-exercices-de-mecanique-des-sols-et-geotechniqu.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00990__cours-et-exercices-de-mecanique-des-sols-et-geotechniqu.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00308",
+  "sha256": "336bec3a3f1b20e1c0f3f16715a4f28bd84ec5f2b4d349c7ae1489f69dbc5ec0",
+  "nom_original": "Cours Agronomie  II- Partie végétal.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours Agronomie  II- Partie végétal.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1980587,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "droits_reserves",
+    "incomplet"
+  ],
+  "nb_pages": 46,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Mohamed Abbad",
+  "source_organisation": "Université Saad Dahlab de Blida",
+  "mots_cles": [
+    "agronomie",
+    "cycle vegetal",
+    "semences",
+    "rotation",
+    "rendement",
+    "conduite de culture"
+  ],
+  "titre_trouve": "Matière : Agronomie II - Partie 2 : Végétal",
+  "titre": "Cours d'agronomie générale : la plante cultivée et son environnement (Partie 2)",
+  "resume": "Support de cours universitaire traitant de la plante agricole, de la qualité des semences, du cycle végétatif, des associations microbiennes et de la conduite culturale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Partie 2 isolée d'un module d'enseignement universitaire et support non couvert par une licence libre.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Matière : Agronomie II - Partie 2 : Végétal"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00308__cours-d-agronomie-generale-la-plante-cultivee-et-son-en.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00308__cours-d-agronomie-generale-la-plante-cultivee-et-son-en.pdf"
+}

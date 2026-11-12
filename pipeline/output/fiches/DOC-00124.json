@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00124",
+  "sha256": "3dc7a3ef420f36f3b0d4ce3ab0769cddbaea20dd2e0ebd8837dabe7c36a9013a",
+  "nom_original": "5.Niebe_-1.pdf",
+  "chemin_relatif_source": "OD_Docs/5.Niebe_-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1150427,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 17,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "article",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": "Burkina Faso",
+  "annee": 2023,
+  "auteurs": "Karim Nébié, Inoussa Sanané, Boureima Tassembédo, Alizèta Sawadogo",
+  "source_organisation": "Journal of Applied Biosciences / INERA",
+  "mots_cles": [
+    "papaye",
+    "cochenille farineuse",
+    "paracoccus marginatus",
+    "burkina faso",
+    "protection des cultures",
+    "ravageurs"
+  ],
+  "titre_trouve": "Connaissance et pratiques de gestion de la cochenille farineuse du papayer Paracoccus marginatus (Hemiptera : Pseudococcidae) chez les producteurs de papaye dans la zone soudanienne du Burkina Faso",
+  "titre": "Pratiques de gestion de la cochenille farineuse du papayer au Burkina Faso",
+  "resume": "Article scientifique évaluant les connaissances paysannes et les méthodes de gestion de la cochenille farineuse du papayer (Paracoccus marginatus) dans la zone soudanienne du Burkina Faso.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Article de recherche en accès libre présentant des données de terrain directement applicables à la protection phytosanitaire du papayer en Afrique de l'Ouest.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Connaissance et pratiques de gestion de la cochenille farineuse du papayer Paracoccus marginatus"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00124__pratiques-de-gestion-de-la-cochenille-farineuse-du-papa.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00124__pratiques-de-gestion-de-la-cochenille-farineuse-du-papa.pdf"
+}

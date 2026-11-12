@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00687",
+  "sha256": "0f3adf62fce799f518079e9e7643af14e99a54972ce6e8324bedd6b9e8ea3f49",
+  "nom_original": "Prophylaxie du jour1- jour 90.pdf",
+  "chemin_relatif_source": "OD_Docs/Prophylaxie du jour1- jour 90.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 23810413,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "Albert Compaoré",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "prophylaxie",
+    "aviculture",
+    "moringa",
+    "neem",
+    "sante animale",
+    "burkina faso"
+  ],
+  "titre_trouve": "Guide Graduit",
+  "titre": "Guide de prophylaxie avicole du jour 1 au jour 90",
+  "resume": "Guide pratique de 17 pages élaboré par Albert Compaoré au Burkina Faso présentant un protocole de prophylaxie avicole sur 90 jours à base de moringa et de neem.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide distribué gratuitement mais contenant des encarts promotionnels et nécessitant un OCR complet pour valider les posologies vétérinaires.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.6,
+    "completude": 0.7
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide Graduit"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00687__guide-de-prophylaxie-avicole-du-jour-1-au-jour-90.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00687__guide-de-prophylaxie-avicole-du-jour-1-au-jour-90.pdf"
+}

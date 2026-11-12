@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00187",
+  "sha256": "8c001ba71f63a60634bb86e4d76c417719c5f428f23eeedee25932d08052cd9e",
+  "nom_original": "Agrodok_13_Collecter_l_eau_et_conserver_l_humidite_du_sol@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_13_Collecter_l_eau_et_conserver_l_humidite_du_sol@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2544300,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 106,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Justine Anschütz, Antoinette Kome, Marc Nederlof, Rob de Neef, Ton van de Ven",
+  "source_organisation": "Fondation Agromisa",
+  "mots_cles": [
+    "collecte de l'eau",
+    "gestion de l'eau",
+    "humidite du sol",
+    "ruissellement",
+    "zones arides"
+  ],
+  "titre_trouve": "Collecter l’eau et conserver l’humidité du sol",
+  "titre": "Collecter l’eau et conserver l’humidité du sol",
+  "resume": "Guide technique détaillant les méthodes de collecte des eaux de pluie et de ruissellement et les pratiques culturales de conservation de l'humidité du sol en zones sèches tropicales.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 13 - Collecter l’eau et conserver l’humidité du sol"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00187__collecter-leau-et-conserver-lhumidite-du-sol.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00187__collecter-leau-et-conserver-lhumidite-du-sol.pdf"
+}

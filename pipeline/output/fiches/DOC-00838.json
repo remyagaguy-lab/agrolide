@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00838",
+  "sha256": "80aa18219e8b67d07b04e070ff8d35aa2d237687b79afb328890e1d4065022b4",
+  "nom_original": "conduite d_élévage moderne.pdf",
+  "chemin_relatif_source": "OD_Docs/conduite d_élévage moderne.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 411046,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Drabo Sangoulé",
+  "source_organisation": null,
+  "mots_cles": [
+    "aviculture",
+    "poules pondeuses",
+    "devis estimatif",
+    "business plan",
+    "alimentation avicole",
+    "cfa"
+  ],
+  "titre_trouve": "Conduite d'élévage de 1000 futures pondeuses pour une periode de 7 mois",
+  "titre": "Devis estimatif pour la conduite d'un élevage de 1000 poules pondeuses",
+  "resume": "Modèle de devis estimatif détaillé pour l'installation et la conduite de 1000 poules pondeuses sur 7 mois en Afrique de l'Ouest : équipements, alimentation et prophylaxie.",
+  "statut_droits": "donnees_personnelles_confidentiel",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Devis privé contenant des données nominatives d'un prestataire, sans licence de diffusion, classé en archive non publiée.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Conduite d'élévage de 1000 futures pondeuses pour une periode de 7 mois Dévis estimatif"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00838__devis-estimatif-pour-la-conduite-d-un-elevage-de-1000-p.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00838__devis-estimatif-pour-la-conduite-d-un-elevage-de-1000-p.pdf"
+}

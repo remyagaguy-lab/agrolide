@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00018",
+  "sha256": "82c58d45a8eb705af49cc6b39a1f49d07c103a883bb24afa1a5571c19019d155",
+  "nom_original": "Résumé1 Biochimie Structurale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Biochimie Structurale L2/Biochimie Structurale L2/Résumé1 Biochimie Structurale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 10864450,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 61,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "biochimie",
+    "cours",
+    "semestre 3",
+    "licence biologie"
+  ],
+  "titre_trouve": "Résumie biochimie S3",
+  "titre": "Biochimie structurale S3 : Résumé de cours 1",
+  "resume": "Fascicule de révision manuscrit ou scanné de biochimie structurale pour étudiants de semestre 3 (L2), nécessitant un traitement OCR pour être rendu accessible.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible issu d'une série étudiante; traitement OCR et validation humaine nécessaires.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumie biochimie S3 (métadonnée PDF)"
+    }
+  ],
+  "ensemble_id": "ENS-0001",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00018__biochimie-structurale-s3-resume-de-cours-1.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00018__biochimie-structurale-s3-resume-de-cours-1.pdf"
+}

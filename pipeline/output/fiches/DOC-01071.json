@@ -1,0 +1,70 @@
+{
+  "id": "DOC-01071",
+  "sha256": "6452cc6b3ec8391d37e29ec72a157da8d3f66dae642c2c6b5441c8852e7fef97",
+  "nom_original": "Agroecologie.pdf",
+  "chemin_relatif_source": "OD_traites/Agroecologie.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 3693111,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476213239-Agroecologie.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 39,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "presentation",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Antoine Gardarin",
+  "source_organisation": "AgroParisTech / INRA",
+  "mots_cles": [
+    "agroecologie",
+    "agriculture durable",
+    "grandes cultures",
+    "agroparistech",
+    "services ecosystemiques"
+  ],
+  "titre_trouve": "L'agroécologie : principes, méthodes & processus clés à dynamiser en systèmes de grandes cultures pour l'agriculture de demain",
+  "titre": "L'agroécologie : Principes, méthodes et processus clés en grandes cultures",
+  "resume": "Présentation scientifique d'AgroParisTech exposant les fondements, l'historique et les leviers agronomiques de l'agroécologie dans les systèmes de grandes cultures.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de présentation universitaire sans licence ouverte explicite, archivé pour respect des droits d'auteur académiques.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L'agroécologie : principes, méthodes & processus clés à dynamiser en systèmes de grandes cultures pour l'agriculture de demain Antoine Gardarin AgroParisTech"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01071__l-agroecologie-principes-methodes-et-processus-cles-en.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-01071__l-agroecologie-principes-methodes-et-processus-cles-en.pdf"
+}

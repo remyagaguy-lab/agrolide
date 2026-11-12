@@ -1,0 +1,525 @@
+{
+  "batch_number": 33,
+  "results": [
+    {
+      "id": "DOC-00490",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["agroecologie_agriculture_durable", "gestion_exploitation"],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage biologique",
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Ludivine Mignot",
+      "source_organisation": "Chambre d'Agriculture des Pyrénées-Atlantiques",
+      "mots_cles": ["maraichage bio", "installation agricole", "rotation des cultures", "gestion technico-economique", "pyrenees-atlantiques"],
+      "titre_trouve": "Guide technique Agriculture Biologique : Installation en Maraîchage Biologique en Pyrénées-Atlantiques",
+      "titre": "Installation en maraîchage biologique : Guide technique (Pyrénées-Atlantiques)",
+      "resume": "Guide méthodologique de la Chambre d'Agriculture des Pyrénées-Atlantiques accompagnant la création d'une ferme maraîchère bio : assolements, choix du matériel, fertilité du sol et repères économiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique institutionnel complet pour porteurs de projet maraîcher, consultable par les membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide technique Agriculture Biologique Installation en Maraîchage Biologique en Pyrénées-Atlantiques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00492",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["conservation_post_recolte", "semences_amelioration"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "oignon",
+      "pays": "Niger",
+      "annee": 2012,
+      "auteurs": "Équipe d'experts PRODEX / INRAN / DGA / AGEX Oignon",
+      "source_organisation": "Ministère de l'Agriculture du Niger / INRAN / PRODEX",
+      "mots_cles": ["oignon", "guide de bonnes pratiques", "niger", "stockage", "conservation", "inran", "prodex"],
+      "titre_trouve": "Guide de bonnes pratiques de production, stockage et conservation de l'oignon",
+      "titre": "Guide de bonnes pratiques de production, stockage et conservation de l'oignon au Niger",
+      "resume": "Guide technique de vulgarisation du Ministère de l'Agriculture du Niger et de l'INRAN détaillant les pratiques de production semencière et maraîchère de l'oignon, ainsi que les magasins de stockage améliorés.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet et institutionnel nigérien, directement diffusable aux producteurs maraîchers sahéliens.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DE BONNES PRATIQUES DE PRODUCTION, STOCKAGE ET CONSERVATION DE L’OIGNON 1ière Edition, septembre 2012"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00493",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": ["protection_des_cultures", "conservation_post_recolte"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pomme de terre",
+      "pays": null,
+      "annee": 2011,
+      "auteurs": "Bruno Vanderhofstadt, Bernard Jouan, Jordi Tio Rottlan",
+      "source_organisation": "CDE / CTA / Agro Sans Frontière",
+      "mots_cles": ["pomme de terre", "afrique de l'ouest", "itineraire technique", "plants de semence", "cde", "cta"],
+      "titre_trouve": "Guide pratique de la culture de la pomme de terre en Afrique de l’Ouest",
+      "titre": "Guide pratique de la culture de la pomme de terre en Afrique de l'Ouest",
+      "resume": "Manuel technique de référence co-édité par le CDE et le CTA couvrant la conduite de la pomme de terre en Afrique de l'Ouest : choix des variétés, production de plants, fertilisation, ravageurs et conservation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence régionale publié par le CDE et le CTA, libre et hautement utile aux producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide pratique de la culture de la pomme de terre en Afrique de l’Ouest"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00494",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["petit_elevage"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "Christian Lars",
+      "source_organisation": "Édition retour des traditions / poulespondeuses.com",
+      "mots_cles": ["poules de jardin", "poules pondeuses", "aviculture amateur", "poulailler familial"],
+      "titre_trouve": "Le guide pratique POUR ELEVER DES POULES DANS SON JARDIN Destiné à tous les éleveurs amateurs",
+      "titre": "Pour élever des poules dans son jardin : Le guide pratique (Éleveurs amateurs)",
+      "resume": "Ouvrage pratique commercial guidant les éleveurs amateurs dans l'installation de poules pondeuses au jardin : choix des races tempérées, conception de l'enclos, alimentation et soins préventifs.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre numérique commercial sous copyright strict (Éditions retour des traditions), archivé sans diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "Copyright © 2013 – Édition retour des traditions ... Tous droits réservés."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00495",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": ["cultures_maraicheres"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "haricot",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": ["haricot", "phaseolus vulgaris", "legumineuses", "cameroun", "fiche technique", "ifati"],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU HARICOT (Phaseolus vulgaris)",
+      "titre": "Technologie de production du haricot (Phaseolus vulgaris)",
+      "resume": "Fiche technique opérationnelle de l'IFATI Cameroun décrivant l'itinéraire technique complet de la culture du haricot (Phaseolus vulgaris) : variétés, exigences agronomiques, semis, protection et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de vulgarisation complète et immédiatement applicable par les producteurs maraîchers et vivriers.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ... TECHNOLOGIE DE PRODUCTION DU HARICOT (Phaseolus vulgaris)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00496",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_de_rente",
+      "domaines_secondaires": ["foresterie_agroforesterie"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "hévéa",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": ["hevea", "latex", "saignee", "caoutchouc", "culture de rente", "cameroun", "ifati"],
+      "titre_trouve": "TECHNOLOGIE DE CULTURE DE L’HEVEA",
+      "titre": "Technologie de culture de l'hévéa (Guide de formation)",
+      "resume": "Guide technique de l'IFATI Cameroun détaillant la conduite d'une plantation d'hévéa : écologie, mise en place de la pépinière, plantation, techniques de saignée de l'écorce et conditionnement du latex.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète de formation professionnelle sur l'hévéaculture en zone tropicale humide, libre de diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ... TECHNOLOGIE DE CULTURE DE L’HEVEA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00497",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["qualite_securite_normes"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture biologique",
+      "pays": "France",
+      "annee": 2010,
+      "auteurs": "Ecocert France",
+      "source_organisation": "Ecocert",
+      "mots_cles": ["ecocert", "volailles bio", "certification biologique", "reglementation europeenne", "cahier d'elevage"],
+      "titre_trouve": "ID-SC-178 - GUIDE PRATIQUE ELEVAGE VOLAILLES - 29.11.10",
+      "titre": "Guide pratique de certification en élevage de volailles biologiques (Ecocert)",
+      "resume": "Guide réglementaire d'Ecocert synthétisant les normes européennes (RCE 834/2007 et 889/2008) pour l'élevage de volailles en agriculture biologique : conversion, alimentation, aménagements et documents de contrôle.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide de conformité réglementaire institutionnel utile pour les référentiels de certification biologique des membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "www.ecocert.fr ... ID-SC-178- GUIDE PRATIQUE ELEVAGE DE VOLAILLES – 29.11.10"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00498",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["protection_des_cultures", "fertilisation_amendements"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cultures maraîchères",
+      "pays": "Burkina Faso",
+      "annee": 1990,
+      "auteurs": "J. d'Arondel de Hayes, G. Traoré",
+      "source_organisation": "CIRAD / IRAT / INERA / CNRST",
+      "mots_cles": ["cultures maraicheres", "sahel", "burkina faso", "cirad", "inera", "fiches techniques", "farako-ba"],
+      "titre_trouve": "CULTURES MARAÎCHÈRES EN ZONE SOUDANO-SAHÉLIENNE RECUEIL DE FICHES TECHNIQUES",
+      "titre": "Cultures maraîchères en zone soudano-sahélienne : Recueil de fiches techniques",
+      "resume": "Recueil de référence du CIRAD et de l'INERA synthétisant 25 ans d'expérimentations maraîchères à la station de Farako-Bâ : pépinières, fertilisation, irrigation et fiches techniques par espèce légumière pour le Sahel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Recueil technique majeur du CIRAD/INERA directement destiné aux producteurs sahéliens, autorisé en diffusion institutionnelle.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "CULTURES MARAÎCHÈRES EN ZONE SOUDANO-SAHÉLIENNE RECUEIL DE FICHES TECHNIQUES J. d'ARONDEL de HAYES, G. TRAORE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00499",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": ["transformation_fruits_legumes"],
+      "type_doc": "periodique",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": ["entrepreneur_porteur_projet", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "ananas",
+      "pays": null,
+      "annee": 2014,
+      "auteurs": "Observatoire des Marchés du CIRAD (Hubert de Bon, Denis Loeillet, Eric Imbert)",
+      "source_organisation": "CIRAD",
+      "mots_cles": ["fruitrop", "ananas", "marche fruitier", "cirad", "asperge", "litchi madagascar"],
+      "titre_trouve": "FruiTrop Décembre 2014 - n°228 : Dossier du mois Ananas",
+      "titre": "FruiTrop n°228 : Dossier du mois Ananas et marchés mondiaux des fruits tropicaux",
+      "resume": "Numéro 228 de la revue économique spécialisée FruiTrop éditée par le CIRAD, comprenant une analyse détaillée du marché mondial de l'ananas, les cours internationaux et la filière litchi de Madagascar.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Revue commerciale sur abonnement payant (300 €/an) avec mention explicite de reproduction interdite, archivée.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "Tarif abonnement annuel 300 euros HT ... à l’usage exclusif des abonnés ... Toute reproduction interdite"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00500",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": ["semences_amelioration", "agronomie_generale"],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "banane",
+      "pays": "Burkina Faso",
+      "annee": 2004,
+      "auteurs": "Nanéma Kiswendsida Romaric",
+      "source_organisation": "Université Polytechnique de Bobo-Dioulasso (IDR)",
+      "mots_cles": ["banane douce", "musa acuminata", "burkina faso", "memoire idr", "systemes de culture", "bama"],
+      "titre_trouve": "LA CULTURE DE LA BANANE DOUCE (MUSA ACUMINATA ss-esp MALACCENSIS (N.W.) SIMMONDS) AU BURKINA FASO",
+      "titre": "La culture de la banane douce au Burkina Faso : cultivars et systèmes de culture",
+      "resume": "Mémoire de fin d'études d'ingénieur agronome caractérisant la diversité des cultivars de banane douce et les pratiques culturales des producteurs dans cinq zones de production au Burkina Faso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire d'ingénieur non assorti d'une licence libre de diffusion, archivé selon la règle stricte régissant les mémoires.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "MEMOIRE DE FIN D'ETUDES Présenté en vue de l'obtention du DIPLOME D'INGENIEUR DU DEVELOPPEMENT RURAL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00501",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["fertilisation_amendements"],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2013,
+      "auteurs": "Claude Bienvenu Zongo",
+      "source_organisation": "Université Polytechnique de Bobo-Dioulasso (IDR)",
+      "mots_cles": ["compost", "fertilite des sols", "yatenga", "burkina faso", "vulgarisation agricole", "memoire idr"],
+      "titre_trouve": "Etude diagnostique de la production du compost dans la province du Yatenga",
+      "titre": "Étude diagnostique de la production du compost dans la province du Yatenga (Burkina Faso)",
+      "resume": "Mémoire de fin de cycle d'ingénieur en vulgarisation agricole dressant le diagnostic des techniques de compostage paysan et de leur impact sur la régénération de la fertilité des sols dans le Yatenga.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire universitaire non libre de droits, archivé conformément à la règle stricte interdisant la publication directe des mémoires.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "MEMOIRE DE FIN DE CYCLE En vue de l'obtention du DIPLÔME D'INGENIEUR EN VULGARISATION AGRICOLE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00502",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["fertilisation_amendements", "semences_amelioration"],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gombo",
+      "pays": "Burkina Faso",
+      "annee": 2014,
+      "auteurs": "Inès Nadège Wendkûni Pizongo",
+      "source_organisation": "Université Polytechnique de Bobo-Dioulasso (IDR)",
+      "mots_cles": ["gombo", "abelmoschus esculentus", "fumure organique", "engrais chimiques", "burkina faso", "memoire master"],
+      "titre_trouve": "Réponse de variétés de gombo (Abelmoschus esculentus L) aux engrais chimiques et à la fumure organique",
+      "titre": "Réponse de variétés de gombo aux engrais chimiques et à la fumure organique",
+      "resume": "Mémoire de Master en production végétale évaluant l'effet comparé de doses de fumure minérale et organique sur la croissance, le rendement et la précocité de plusieurs variétés de gombo à Bobo-Dioulasso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire de Master universitaire, conservé en archivage non publié conformément aux exigences réglementaires.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "MEMOIRE DE FIN DE CYCLE Présenté en vue de l'obtention du DIPLOME DE MASTER EN PRODUCTION VEGETALE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00503",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": ["cultures_maraicheres"],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "decideur_institution"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cultures maraîchères",
+      "pays": "Burkina Faso",
+      "annee": 2016,
+      "auteurs": "Kiswendsida Parfait Tapsoba",
+      "source_organisation": "Université Polytechnique de Bobo-Dioulasso (IDR)",
+      "mots_cles": ["cultures maraicheres", "securite alimentaire", "burkina faso", "marches urbains", "memoire idr", "prix agricoles"],
+      "titre_trouve": "Contribution des cultures maraîchères a la sécurité alimentaire au Burkina Faso cas de Bobo-Dioulasso, Ouagadougou et Ouahigouya",
+      "titre": "Contribution des cultures maraîchères à la sécurité alimentaire au Burkina Faso",
+      "resume": "Mémoire d'ingénieur agronome en socio-économie rurale analysant l'impact des cultures maraîchères sur les revenus, la disponibilité en légumes et la sécurité alimentaire des ménages urbains au Burkina Faso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire académique d'ingénieur non publié sous licence libre, archivé selon la règle stricte sur les mémoires.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "MEMOIRE DE FIN DE CYCLE en vue de l'obtention du DIPLOME D'INGENIEUR DU DEVELOPPEMENT RURAL"
+        }
+      ]
+    }
+  ]
+}

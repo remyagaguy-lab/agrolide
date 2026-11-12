@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00817",
+  "sha256": "fe0d9cfc8f652a3d5fe1e21b03f84da888a1988742fc10698cdc176ee10dca97",
+  "nom_original": "carotte.pdf",
+  "chemin_relatif_source": "OD_Docs/carotte.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1867690,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00431",
+  "groupe_doublon_id": "GRP-0031",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00431 (Guide pratique : Itinéraire technique de la culture de la carotte au Togo).",
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "carotte",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "228AgroConseil",
+  "source_organisation": "228AgroConseil",
+  "mots_cles": [
+    "carotte",
+    "maraichage",
+    "itineraire technique",
+    "togo",
+    "legumes"
+  ],
+  "titre_trouve": "Culture de la carotte",
+  "titre": "Guide pratique : Itinéraire technique de la culture de la carotte au Togo",
+  "resume": "Guide pratique illustré détaillant les étapes de la culture de la carotte en zone tropicale : choix du site, préparation du sol, variétés adaptées, semis, entretien et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Culture de la carotte"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "228AgroConseil"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00817__guide-pratique-itineraire-technique-de-la-culture-de-la.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00817__guide-pratique-itineraire-technique-de-la-culture-de-la.pdf"
+}

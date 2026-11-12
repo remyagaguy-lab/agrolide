@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00252",
+  "sha256": "770069872953e1c1e9e7dde38b23412ec559f20a8fdd55d8056006227ea60ac3",
+  "nom_original": "Biocénotique M1 S. Forestières .pdf",
+  "chemin_relatif_source": "OD_Docs/Biocénotique M1 S. Forestières .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2222861,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00251",
+  "groupe_doublon_id": "GRP-0019",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00251 (Biocénotique et dynamique de la végétation (Master 1 Sciences Forestières)).",
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "mots_cles": [
+    "biocenotique",
+    "sciences forestieres",
+    "dynamique de la vegetation",
+    "ecosystemes",
+    "successions ecologiques",
+    "biomes"
+  ],
+  "titre_trouve": "Chapitre 1 : Dynamique de la végétation M1 S.Forestières",
+  "titre": "Biocénotique et dynamique de la végétation (Master 1 Sciences Forestières)",
+  "resume": "Support de cours universitaire pour Master 1 en sciences forestières abordant la dynamique des écosystèmes, les successions écologiques et les biomes mondiaux.",
+  "statut_droits": "travail_academique_non_publie",
+  "complet": false,
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre 1 : Dynamique de la végétation M1 S.Forestières"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00252__biocenotique-et-dynamique-de-la-vegetation-master-1-sci.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00252__biocenotique-et-dynamique-de-la-vegetation-master-1-sci.pdf"
+}

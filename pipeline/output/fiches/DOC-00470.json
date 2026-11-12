@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00470",
+  "sha256": "8b1de1b872cb712c26f8c39f19856d11ad27bb57025459a08a71c6d3169a7cf0",
+  "nom_original": "Gestion nuisibles du riz.docx",
+  "chemin_relatif_source": "OD_Docs/Gestion nuisibles du riz.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 13481071,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "riz",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Service de la Surveillance Phytosanitaire et des Interventions",
+  "source_organisation": "Service de la Surveillance Phytosanitaire et des Interventions",
+  "mots_cles": [
+    "riz",
+    "nuisibles",
+    "ravageurs",
+    "heteronychus",
+    "trichispa sericea",
+    "protection des cultures"
+  ],
+  "titre_trouve": "LES NUISIBLES DU RIZ ET LES MÉTHODES DE LUTTE",
+  "titre": "Les nuisibles du riz et les méthodes de lutte",
+  "resume": "Guide technique illustré du Service de la surveillance phytosanitaire détaillant l'identification des ravageurs du riz (coléoptères, chrysomèles) et les méthodes de lutte chimique et agronomique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fichier docx porteur du drapeau conversion_requise interdisant la diffusion directe (public) ; réorienté vers a_valider_humain pour conversion technique.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LES NUISIBLES DU RIZ ET LES MÉTHODES DE LUTTE"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Fichier docx porteur du drapeau conversion_requise interdisant la diffusion directe (public) ; réorienté vers a_valider_humain pour conversion technique."
+  },
+  "nom_fichier_final": "DOC-00470__les-nuisibles-du-riz-et-les-methodes-de-lutte.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00470__les-nuisibles-du-riz-et-les-methodes-de-lutte.pdf"
+}

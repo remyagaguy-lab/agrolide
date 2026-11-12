@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01010",
+  "sha256": "ff3ddc4743a7ac1b41b3662809b3d5080b8c176f68d9232b80ed9d0edf8a7e1c",
+  "nom_original": "piment(1).pdf",
+  "chemin_relatif_source": "OD_Docs/piment(1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1751138,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 15,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "piment et poivron",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "228AgroConseil",
+  "source_organisation": "228AgroConseil",
+  "mots_cles": [
+    "piment",
+    "poivron",
+    "cultures maraicheres",
+    "itineraire technique",
+    "pepiniere",
+    "togo"
+  ],
+  "titre_trouve": "228AgroConseil La culture du piment/poivron",
+  "titre": "Itinéraire technique de la culture du piment et du poivron au Togo",
+  "resume": "Guide pratique illustré détaillant la conduite de la culture du piment et du poivron en Afrique tropicale : choix du site, variétés, pépinière, repiquage, fertilisation, récolte et débouchés.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Support de vulgarisation et de conseil agricole complet, adapté aux producteurs maraîchers ouest-africains.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "228AgroConseil La culture du piment/poivron"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "228AgroConseil"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01010__itineraire-technique-de-la-culture-du-piment-et-du-poiv.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01010__itineraire-technique-de-la-culture-du-piment-et-du-poiv.pdf"
+}

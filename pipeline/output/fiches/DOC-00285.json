@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00285",
+  "sha256": "51e93c5d0d5c1597e3a22a270762b30ddd0d30795d3149e64344727ea0d293de",
+  "nom_original": "Chap 2 EcoForest.pdf",
+  "chemin_relatif_source": "OD_Docs/Chap 2 EcoForest.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2764236,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 8,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "ecologie forestiere",
+    "facteurs biotiques",
+    "competition intraspecifique",
+    "foret",
+    "ecosysteme"
+  ],
+  "titre_trouve": "Ecologie forestière Chapitre 2 Les facteurs biotiques",
+  "titre": "Écologie forestière : Chapitre 2, Les facteurs biotiques",
+  "resume": "Support de cours universitaire abordant les facteurs biotiques en écologie forestière : interactions homotypiques, hétérotypiques, compétition intraspécifique et impact des incendies.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un cours universitaire sans licence libre, archivé.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Ecologie forestière \nChapitre 2 Les facteurs biotiques"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00285__ecologie-forestiere-chapitre-2-les-facteurs-biotiques.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00285__ecologie-forestiere-chapitre-2-les-facteurs-biotiques.pdf"
+}

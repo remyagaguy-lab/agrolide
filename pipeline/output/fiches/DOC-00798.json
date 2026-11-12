@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00798",
+  "sha256": "d90c2935d5c1b0ed447a3ffcea5f88c27f9b31995ed7aba2d3bdedfe2be53843",
+  "nom_original": "archPP ‚pidemiologie mascaara (1).pptx",
+  "chemin_relatif_source": "OD_Docs/archPP ‚pidemiologie mascaara (1).pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 1110142,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "nb_pages": 41,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "Université de Mascara",
+  "source_organisation": "Université de Mascara",
+  "mots_cles": [
+    "epidemiologie vegetale",
+    "pathologie vegetale",
+    "prevision des risques",
+    "maladies des plantes",
+    "phytopathologie"
+  ],
+  "titre_trouve": "EPIDEMIOLOGIE VEGETALE ET PREVISION DES RISQUES",
+  "titre": "Épidémiologie végétale et prévision des risques phytosanitaires",
+  "resume": "Présentation pédagogique sur la dynamique des épidémies végétales, les interactions hôte-pathogène-climat et la quantification spatio-temporelle.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire au format diaporama non couvert par une licence libre, conservé pour l'archivage.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "EPIDEMIOLOGIE VEGETALE ET PREVISION DES RISQUES"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0052",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00798__epidemiologie-vegetale-et-prevision-des-risques-phytosa.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00798__epidemiologie-vegetale-et-prevision-des-risques-phytosa.pdf"
+}

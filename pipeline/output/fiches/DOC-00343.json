@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00343",
+  "sha256": "f178a209385b3b43956c832c5fe0d687080707953a39da0785eae1b6ffcadfaa",
+  "nom_original": "Dendrometrie_L3SVT_séance3_final_SD 07-05-18_250820_213446.pdf",
+  "chemin_relatif_source": "OD_Docs/Dendrometrie_L3SVT_séance3_final_SD 07-05-18_250820_213446.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3131688,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 39,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "foresterie",
+  "pays": null,
+  "annee": 2018,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "dendrometrie",
+    "inventaire forestier",
+    "cubage",
+    "mensurations des arbres",
+    "peuplements forestiers"
+  ],
+  "titre_trouve": "Dendrométrie",
+  "titre": "Cours de dendrométrie : mensurations forestières et relevés de végétation",
+  "resume": "Diaporama de cours universitaire de Licence 3 SVT présentant les méthodes de dendrométrie : mesure du diamètre, hauteur, volume de bois, dimension du houppier et réalisation de relevés de végétation forestière.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire sans licence de diffusion publique explicite, conservé pour les archives de formation forestière.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Dendrométrie 1"
+    },
+    {
+      "champ": "autre",
+      "page": 38,
+      "extrait": "Rendre le rapport après la date limite"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00343__cours-de-dendrometrie-mensurations-forestieres-et-relev.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00343__cours-de-dendrometrie-mensurations-forestieres-et-relev.pdf"
+}

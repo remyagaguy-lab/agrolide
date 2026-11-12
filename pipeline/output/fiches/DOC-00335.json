@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00335",
+  "sha256": "77017a7148010b07b711239d09a0e676659a4cfd44e209141b5545c610863ee4",
+  "nom_original": "Cultures maraîchères.pdf",
+  "chemin_relatif_source": "OD_Docs/Cultures maraîchères.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 697865,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 35,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "AISSAOUI Hichem",
+  "source_organisation": "Université Mohamed Khider Biskra",
+  "mots_cles": [
+    "cultures maraicheres",
+    "cours agronomie",
+    "abri serre",
+    "pepiniere",
+    "conservation legumes"
+  ],
+  "titre_trouve": "Cultures maraîchères I",
+  "titre": "Cours de cultures maraîchères I : Master 1 Production végétale",
+  "resume": "Support de cours universitaire abordant la classification des légumes, les conditions climatiques et édaphiques, les abris serres, la production de plants en pépinière, la plantation et l'entreposage frigorifique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire sans licence de diffusion publique explicite, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Intitulé de l’UEF ou Intitulé de la matière ou module : Cultures maraîchères I"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Université Mohamed Khider Biskra Faculté des Sciences Exactes et des Sciences de la Nature et de la Vie"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00335__cours-de-cultures-maraicheres-i-master-1-production-veg.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00335__cours-de-cultures-maraicheres-i-master-1-production-veg.pdf"
+}

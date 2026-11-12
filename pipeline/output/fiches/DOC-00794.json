@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00794",
+  "sha256": "9eba178165f0b57fda03180b8ea4bd2bfc0ef7d925e82d00ef29fcd2251c4d29",
+  "nom_original": "ananas06-08_comp (1).pdf",
+  "chemin_relatif_source": "OD_Docs/ananas06-08_comp (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1050903,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 13,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ananas",
+  "pays": null,
+  "annee": 2010,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "ananas",
+    "itineraire technique",
+    "fertilisation",
+    "cayenne lisse",
+    "queen",
+    "culture tropicale"
+  ],
+  "titre_trouve": "Informations techniques sur la culture de l’Ananas",
+  "titre": "Guide technique : Conduite et fertilisation de la culture de l'ananas",
+  "resume": "Fiche technique décrivant l'itinéraire cultural de l'ananas en milieu tropical : choix du sol, variétés (Queen, Cayenne lisse), billonnage et fertilisation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche technique pratique de qualité sur l'ananas mais sans source institutionnelle identifiée, à valider avant diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Informations techniques sur la culture de l’Ananas Conditions de culture favorables"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00794__guide-technique-conduite-et-fertilisation-de-la-culture.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00794__guide-technique-conduite-et-fertilisation-de-la-culture.pdf"
+}

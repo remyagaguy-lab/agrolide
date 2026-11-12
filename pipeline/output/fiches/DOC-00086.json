@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00086",
+  "sha256": "ddf7a5017d9f60afc5450b546ebc262fcb20b3f3bb8acdaed3ed3f2d45bfc56f",
+  "nom_original": "1471_full_text_smaller.pdf",
+  "chemin_relatif_source": "OD_Docs/1471_full_text_smaller.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 509012,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476177142-1471_full_text_smaller.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2009,
+  "auteurs": "CTA",
+  "source_organisation": "Centre technique de coopération agricole et rurale (CTA)",
+  "mots_cles": [
+    "compost enrichi",
+    "fertilisation organique",
+    "cta",
+    "matiere organique",
+    "guide pratique"
+  ],
+  "titre_trouve": "Comment faire du compost enrichi en 3-4 mois ?",
+  "titre": "Comment faire du compost enrichi en 3-4 mois ? (Guides pratiques du CTA No 7)",
+  "resume": "Guide pratique illustré expliquant étape par étape la fabrication rapide d'un compost enrichi de qualité à partir de résidus de récolte et de déjections animales en zone tropicale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel du CTA adapté aux petits exploitants agricoles africains pour la fertilité des sols, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "Comment faire du compost enrichi en 3-4 mois ?"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Centre technique de coopération agricole et rurale (ACP-UE) – CTA"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00086__comment-faire-du-compost-enrichi-en-3-4-mois-guides-pra.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00086__comment-faire-du-compost-enrichi-en-3-4-mois-guides-pra.pdf"
+}

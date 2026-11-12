@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00543",
+  "sha256": "a98d3938260f3a33298c875e73d46d042b25bfd3f57fea2e3ab8f752fafeb97e",
+  "nom_original": "La_pisciculture_dans_les_exploitations_familiales_agricoles_@CahiersJaunes.pdf",
+  "chemin_relatif_source": "OD_Docs/La_pisciculture_dans_les_exploitations_familiales_agricoles_@CahiersJaunes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4119390,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 85,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": "Cameroun",
+  "annee": 2004,
+  "auteurs": "Victor Pouomogne, Olivier Mikolasek, Minette Tomedi Eyango Tabi",
+  "source_organisation": "CIRAD / IRAD / Université de Dschang",
+  "mots_cles": [
+    "pisciculture",
+    "elevage de poissons",
+    "cameroun",
+    "exploitations familiales",
+    "tilapia",
+    "silure"
+  ],
+  "titre_trouve": "ANALYSE-DIAGNOSTIC DE L'INSERTION DE LA PISCICULTURE DANS LES EXPLOITATIONS FAMILIALES AGRICOLES DE LA MENOUA (OUEST-CAMEROUN)",
+  "titre": "Diagnostic de l'insertion de la pisciculture dans les exploitations familiales de la Menoua",
+  "resume": "Rapport scientifique de recherche-action de 85 pages analysant la faisabilité technique, les bilans financiers et l'intégration de la pisciculture d'étang (tilapias, silures) au Cameroun.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport de recherche institutionnelle complet en partenariat CIRAD/IRAD, diffusable aux membres pour appui au développement aquacole.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ANALYSE-DIAGNOSTIC DE L'INSERTION DE LA PISCICULTURE DANS LES EXPLOITATIONS FAMILIALES AGRICOLES DE LA MENOUA (OUEST-CAMEROUN)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Université de Dschang Institut de Recherche Agricole pour le Développement CIRAD"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Dr POUOMOGNE Victor, Dr MIKOLASEK Olivier, Dr TABI née TOMEDI EYANGO Minette"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00543__diagnostic-de-l-insertion-de-la-pisciculture-dans-les-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00543__diagnostic-de-l-insertion-de-la-pisciculture-dans-les-e.pdf"
+}

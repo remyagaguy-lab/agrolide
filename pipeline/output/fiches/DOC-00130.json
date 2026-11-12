@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00130",
+  "sha256": "694921a576ae0d73d5e3247f0f46df2e96ad71b65a393e97dc120639f585529d",
+  "nom_original": "60_fiches_technique_d_arbres_et_d_arbustes_méditerranéen@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/60_fiches_technique_d_arbres_et_d_arbustes_méditerranéen@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9276326,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 60,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "bois d'œuvre",
+  "pays": null,
+  "annee": 2011,
+  "auteurs": "Sarisoft",
+  "source_organisation": null,
+  "mots_cles": [
+    "arbres",
+    "arbustes",
+    "mediterranee",
+    "pin d'alep",
+    "fiches botaniques",
+    "dendrologie"
+  ],
+  "titre_trouve": "Fiches techniques 60",
+  "titre": "60 fiches techniques d'arbres et d'arbustes méditerranéens",
+  "resume": "Ensemble de soixante fiches botaniques décrivant les caractéristiques morphologiques, le feuillage, la floraison, les exigences de sol et les usages des arbres et arbustes du bassin méditerranéen.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Recueil de fiches issu de @EpubsFR sous droits d'auteur réservés et consacré aux essences méditerranéennes.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche n° 1 Nom commun : Pin d'Alep"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00130__60-fiches-techniques-d-arbres-et-d-arbustes-mediterrane.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00130__60-fiches-techniques-d-arbres-et-d-arbustes-mediterrane.pdf"
+}

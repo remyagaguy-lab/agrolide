@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00214",
+  "sha256": "6b17634c9c4467931f2c4b553d47b0b890b47f21cdcefaea1798ab333c1e6748",
+  "nom_original": "AlimentationAnimale_FREDON_2013_METHODE LOCALE(1) (1).pdf",
+  "chemin_relatif_source": "OD_Docs/AlimentationAnimale_FREDON_2013_METHODE LOCALE(1) (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6712621,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 28,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "FREDON Martinique",
+  "source_organisation": "FREDON Martinique / CIRAD",
+  "mots_cles": [
+    "alimentation animale",
+    "fourrages tropicaux",
+    "martinique",
+    "elevage tropical",
+    "digestibilite"
+  ],
+  "titre_trouve": "Martinique - Synthèse bibliographique 2013 : Alimentation animale",
+  "titre": "Alimentation animale en milieu tropical : Synthèse bibliographique (Martinique)",
+  "resume": "Synthèse technique et bibliographique élaborée par la FREDON Martinique sur les besoins nutritifs du bétail, la valeur alimentaire des fourrages tropicaux et la valorisation des sous-produits locaux.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport technique institutionnel complet sur l'alimentation animale en milieu tropical insulaire, réservé aux membres.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MARTINIQUE - FBIOll Synthèse bibliographique 2013"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00214__alimentation-animale-en-milieu-tropical-synthese-biblio.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00214__alimentation-animale-en-milieu-tropical-synthese-biblio.pdf"
+}

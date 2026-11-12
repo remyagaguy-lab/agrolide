@@ -1,0 +1,792 @@
+{
+  "batch_number": 46,
+  "results": [
+    {
+      "id": "DOC-00688",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "volaille",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "GENOT",
+      "source_organisation": "Troupeaux et Cultures des Tropiques",
+      "mots_cles": [
+        "aviculture",
+        "protection sanitaire",
+        "biosecurite",
+        "maladies aviaires",
+        "coccidiose",
+        "salmonellose",
+        "hygiene"
+      ],
+      "titre_trouve": "La protection sanitaire en élevage de volaille",
+      "titre": "La protection sanitaire et biosécurité en élevage avicole tropical",
+      "resume": "Dossier technique complet sur les mesures d'hygiène, de biosécurité et la prévention des principales maladies bactériennes, virales et coccidiennes en aviculture.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de biosécurité avicole tropicale issu d'une revue spécialisée, directement exploitable par les éleveurs et conseillers.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La protection sanitaire en élevage de volaille"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00689",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "volaille",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "coquelets",
+        "programme de prophylaxie",
+        "vaccination avicole",
+        "newcastle",
+        "gumboro",
+        "aviculture"
+      ],
+      "titre_trouve": "Protocole coquelets",
+      "titre": "Programme de prophylaxie et calendrier vaccinal pour l'élevage de coquelets",
+      "resume": "Fiche synthétique détaillant le protocole vaccinal et les traitements préventifs (anti-stress, antibiotiques, anticoccidiens) des coquelets de J1 à J90.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Protocole pratique très utile pour les éleveurs mais auteur et droits non identifiés, conservé en archivage interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Protocole coquelets"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00690",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "etude d'impact sur l'environnement",
+        "EIE",
+        "evaluation environnementale",
+        "cadre juridique",
+        "gestion de projet"
+      ],
+      "titre_trouve": "Etude d’impact sur l’environnement (EIE)",
+      "titre": "Guide et méthodologie de l'Étude d'Impact sur l'Environnement (EIE)",
+      "resume": "Présentation pédagogique de 35 diapositives présentant le cadre légal, les principes, les étapes et les méthodes d'évaluation d'une étude d'impact environnemental.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours informatif sur l'EIE mais sans affiliation institutionnelle ni statut de droits explicite, placé en archive.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Etude d’impact sur l’environnement (EIE)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00691",
+      "domaine_principal": "transversal",
+      "sous_domaine": "numerique_technologies",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Togo",
+      "annee": 2025,
+      "auteurs": "Ir. Tadagbé Valère Houansou",
+      "source_organisation": null,
+      "mots_cles": [
+        "nouvelles technologies",
+        "agriculture numerique",
+        "mecanisation",
+        "digitalisation",
+        "agritech",
+        "afrique"
+      ],
+      "titre_trouve": "Quelles sont les nouvelles technologies à utiliser pour répondre aux challenges de l'agriculture en Afrique?",
+      "titre": "Les nouvelles technologies face aux défis de l'agriculture en Afrique",
+      "resume": "Support de formation analysant les innovations technologiques, la digitalisation, la mécanisation et l'agro-industrie pour moderniser l'agriculture africaine.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Présentation de formation privée d'un consultant sans mention de licence libre, archivée en interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.5,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "Thème : Quelles sont les nouvelles technologies à utiliser pour répondre aux challenges de l'agriculture en Afrique?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00692",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Togo",
+      "annee": 2025,
+      "auteurs": "Ir. Tadagbé Valère Houansou",
+      "source_organisation": null,
+      "mots_cles": [
+        "ferme integree",
+        "investissement agricole",
+        "entrepreneuriat",
+        "diversification",
+        "agro-ecotourisme",
+        "afrique"
+      ],
+      "titre_trouve": "Dans quel type de ferme investir aujourd'hui en Afrique?",
+      "titre": "Investissement agricole en Afrique : concevoir et développer une ferme intégrée",
+      "resume": "Support de présentation orienté entrepreneuriat explorant les opportunités d'investissement agricole en Afrique à travers le modèle de la ferme intégrée.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama de formation privée à destination d'investisseurs sans licence de redistribution libre, conservé en archive.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.5,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Formation Dans quel type de ferme investir aujourd'hui en Afrique?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00694",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "conservation_post_recolte",
+      "domaines_secondaires": [
+        "transformation_cereales_tubercules"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "blé",
+      "pays": "Maroc",
+      "annee": 2014,
+      "auteurs": "Abdeslam Acharki",
+      "source_organisation": null,
+      "mots_cles": [
+        "ble",
+        "stockage des grains",
+        "minoterie",
+        "post-recolte",
+        "qualite sanitaire",
+        "nuisibles"
+      ],
+      "titre_trouve": "Préservation de la Qualité des Blés Durant le Stockage Casablanca : Juin 2014 M. Abdeslam ACHARKI",
+      "titre": "Préservation de la qualité des blés durant le stockage en minoterie",
+      "resume": "Présentation technique sur les bonnes pratiques de conservation post-récolte du blé en minoterie industrielle : contrôle réception, ventilation et gestion des nuisibles.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Présentation professionnelle sur le stockage du blé sans licence explicite de diffusion publique, archivée pour usage documentaire.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.5,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Préservation de la Qualité des Blés Durant le Stockage Casablanca : Juin 2014 M. Abdeslam ACHARKI"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00695",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "pedologie",
+        "science du sol",
+        "profil pedologique",
+        "fertilite du sol"
+      ],
+      "titre_trouve": null,
+      "titre": "Pédologie générale",
+      "resume": "Document pédagogique scanné de 20 pages sans couche texte traitant des fondements de la pédologie et de l'étude des sols.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier scanné sans texte nécessitant un traitement OCR pour identifier le contenu, l'auteur, la complétude et le statut de copyright.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pédologie générale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00696",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "semences_amelioration"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "papaye",
+      "pays": null,
+      "annee": 2016,
+      "auteurs": "Technisem",
+      "source_organisation": "Technisem",
+      "mots_cles": [
+        "papaye",
+        "carica papaya",
+        "semence",
+        "variete rana",
+        "prsv",
+        "arboriculture fruitiere",
+        "technisem"
+      ],
+      "titre_trouve": "Papaye RANA Une variété tolérante au PRSV Technisem",
+      "titre": "Fiche variétale de la papaye RANA tolérante au PRSV",
+      "resume": "Fiche variétale commerciale de Technisem présentant les caractéristiques agronomiques, le rendement et la tolérance au PRSV de la papaye RANA.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Fiche variétale commerciale librement diffusée par le semencier Technisem, apportant des données techniques utiles aux arboriculteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Papaye RANA Une variété tolérante au PRSV Technisem"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00697",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "riz",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "riz",
+        "oryza sativa",
+        "riziculture inondee",
+        "itineraire technique",
+        "pepiniere",
+        "fertilisation",
+        "cameroun"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU RIZ (Oryza sativa) GENERALITES I. LES EXIGENCES DE LA CULTURE",
+      "titre": "Technologie de production du riz : itinéraire technique et conduite de la culture",
+      "resume": "Guide technique de formation professionnelle décrivant les exigences agro-écologiques, l'installation de la pépinière et la conduite de la riziculture.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support de formation professionnelle camerounais complet et pédagogique sur la riziculture, directement exploitable par les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DU RIZ (Oryza sativa) GENERALITES I. LES EXIGENCES DE LA CULTURE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00698",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Dr Abdoulaye Tyano",
+      "source_organisation": null,
+      "mots_cles": [
+        "regeneration naturelle assistee",
+        "RNA",
+        "agroforesterie",
+        "sahel",
+        "reverdissement",
+        "vitellaria paradoxa",
+        "karite"
+      ],
+      "titre_trouve": "La Régénération Naturelle assistée (RNA): une stratégie adéquate de reverdissement du sahel? Dr Abdoulaye TYANO",
+      "titre": "La Régénération Naturelle Assistée (RNA) pour le reverdissement du Sahel",
+      "resume": "Présentation détaillée sur la régénération naturelle assistée (RNA) au Sahel : concepts d'agroforesterie, étapes de mise en œuvre et bénéfices écologiques.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support de formation de haute qualité sur l'agroforesterie sahélienne et la RNA, mis à disposition des membres de la communauté.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La Régénération Naturelle assistée (RNA): une stratégie adéquate de reverdissement du sahel? Dr Abdoulaye TYANO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00699",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "texte_officiel",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2023,
+      "auteurs": "Ville de Paris, Thomas Zenker",
+      "source_organisation": "Ville de Paris",
+      "mots_cles": [
+        "urbanisme",
+        "PLU bioclimatique",
+        "paris",
+        "amenagement urbain",
+        "code de l'urbanisme"
+      ],
+      "titre_trouve": "PLU DE PARIS - Justification des choix retenus pour établir le projet d'aménagement et de développement durables",
+      "titre": "PLU Bioclimatique de Paris : justification des choix d'aménagement",
+      "resume": "Rapport officiel de présentation du Plan Local d'Urbanisme bioclimatique de Paris justifiant les choix du PADD et les orientations d'aménagement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document d'urbanisme réglementaire de la ville de Paris, sans pertinence pour l'agriculture subsaharienne et hors périmètre éditorial.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PLU DE PARIS PROJET ARRÊTÉ – DÉLIBÉRATION DU CONSEIL DE PARIS 2023 DU 33 – 5-9 JUIN 2023 RAPPORT DE PRÉSENTATION 6e PARTIE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00700",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "amarante",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Armel C. G. Mensah, Rachidatou Sikirou, Françoise Assogba Komlan, B. Barthélémy Yarou, Soul-Kifouly Midingoyi, Judith Honfoga, Marie-Épiphane Dossoumou, Nathalie G. Kpera, Alice A. K. Djinadou",
+      "source_organisation": "INRAB / PADMAR / MAEP Bénin",
+      "mots_cles": [
+        "amarante",
+        "maraichage",
+        "legume feuille",
+        "referentiel technico-economique",
+        "itineraire technique",
+        "inrab",
+        "benin"
+      ],
+      "titre_trouve": "GUIDE PRATIQUE POUR LA CULTURE DE L’AMARANTE AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)",
+      "titre": "Guide pratique pour la culture de l'amarante au Bénin : référentiel technico-économique",
+      "resume": "Référentiel technico-économique officiel de l'INRAB détaillant l'itinéraire technique complet, la gestion des ravageurs et la rentabilité de l'amarante au Bénin.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Ouvrage de vulgarisation de référence produit par l'INRAB et le PADMAR, libre de diffusion institutionnelle et d'intérêt majeur pour le maraîchage.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "GUIDE PRATIQUE POUR LA CULTURE DE L’AMARANTE AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00701",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "oignon",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Armel C. Goudjo Mensah, Rachidatou Sikirou, Françoise Assogba Komlan, B. Barthélémy Yarou, Soul-Kifouly G. Midingoyi, Judith Honfoga, Marie Epiphane E. A. Dossoumou, Nathalie G. Kpera, Alice A. K. Djinadou",
+      "source_organisation": "INRAB / PADMAR / MAEP Bénin",
+      "mots_cles": [
+        "oignon",
+        "allium cepa",
+        "maraichage",
+        "referentiel technico-economique",
+        "inrab",
+        "padmar",
+        "benin"
+      ],
+      "titre_trouve": "MIEUX PRODUIRE L’OIGNON AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)",
+      "titre": "Mieux produire l'oignon au Bénin : référentiel technico-économique",
+      "resume": "Guide technique et économique de référence de l'INRAB détaillant les techniques culturales, la protection phytosanitaire et la rentabilité de l'oignon au Bénin.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Référentiel technico-économique institutionnel complet de l'INRAB pour la filière oignon, publiable en libre accès pour les producteurs et techniciens.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "MIEUX PRODUIRE L’OIGNON AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00702",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "genetique_reproduction"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "petits ruminants",
+      "pays": "Burkina Faso",
+      "annee": 2022,
+      "auteurs": "Christian Sidibé",
+      "source_organisation": null,
+      "mots_cles": [
+        "races ovines",
+        "mouton",
+        "petits ruminants",
+        "burkina faso",
+        "sahel",
+        "embouche ovine",
+        "mrah"
+      ],
+      "titre_trouve": "RACES OVINES au BF SIDIBE Christian Ingénieur en élevage",
+      "titre": "Les races ovines et petits ruminants au Burkina Faso : caractéristiques et valorisation",
+      "resume": "Support de présentation illustrant les principales races ovines et caprines sahéliennes et soudaniennes au Burkina Faso et leur valorisation en embouche.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Présentation technique très pertinente sur les races ovines sahéliennes, mais statut de droits d'auteur non documenté ; conservée en archive.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.5,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "RACES OVINES au BF SIDIBE Christian Ingénieur en élevage"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00703",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "cultures_de_rente",
+        "cultures_maraicheres"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "coton",
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Bekouanan Clovis Nabié",
+      "source_organisation": "Service de la surveillance phytosanitaire et des interventions (Burkina Faso)",
+      "mots_cles": [
+        "amrasca biguttula",
+        "jasside du coton",
+        "protection des cultures",
+        "ravageur invasif",
+        "coton",
+        "gombo",
+        "burkina faso"
+      ],
+      "titre_trouve": "Reconnaissance et Méthodes de lutte contre la nouvelle espèce de jassides (Amrasca biguttula) Par Bekouanan NABIE",
+      "titre": "Reconnaissance et méthodes de lutte contre le jasside invasif Amrasca biguttula",
+      "resume": "Présentation technique d'urgence phytosanitaire décrivant la bioécologie, les dégâts et les stratégies de lutte contre le nouveau jasside en Afrique de l'Ouest.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Présentation institutionnelle d'alerte et de formation phytosanitaire sur un ravageur invasif critique, mise à disposition des membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Reconnaissance et Méthodes de lutte contre la nouvelle espèce de jassides (Amrasca biguttula) Par Bekouanan NABIE"
+        }
+      ]
+    }
+  ]
+}

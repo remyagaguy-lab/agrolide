@@ -25,3 +25,12 @@ yarn-error.log*
 .open-next
 .vercel
 agrolide/.vercel
+
+# Document classification pipeline binaries & transient caches
+pipeline/input/
+pipeline/output/renommes/
+pipeline/output/textes/
+pipeline/output/meta_extract/
+pipeline/output/batches/
+pipeline/output/audit_batches/
+**/__pycache__/

@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00670",
+  "sha256": "e473a1c4d29a92552ad6922eca58ab02d98d0e56b3be947d94dbbfd54622d2d9",
+  "nom_original": "Plan-dAffaires-Ferme-Agricole-Mamoutou-DIARRA-corr.pdf",
+  "chemin_relatif_source": "OD_Docs/Plan-dAffaires-Ferme-Agricole-Mamoutou-DIARRA-corr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 348337,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles",
+    "confidentiel_interne"
+  ],
+  "nb_pages": 22,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "papaye",
+  "pays": "Mali",
+  "annee": 2019,
+  "auteurs": "Mamoutou Diarra",
+  "source_organisation": "Ferme Agricole Mamoutou Diarra",
+  "mots_cles": [
+    "business plan",
+    "plan d'affaires",
+    "papaye solo",
+    "mali",
+    "compte d'exploitation"
+  ],
+  "titre_trouve": "PLAN D’AFFAIRE POUR LA PRODUCTION DE LA PAPAYE SOLO N°8 A GOUANA",
+  "titre": "Plan d'affaires pour la production de papaye Solo n°8 au Mali (Ferme de Gouana)",
+  "resume": "Projet d'entreprise agricole détaillé pour la création d'une plantation de papayers Solo n°8 à Gouana au Mali : étude de marché, investissements, charges d'exploitation et rentabilité.",
+  "statut_droits": "donnees_personnelles_confidentiel",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document d'exploitation privé contenant des coordonnées personnelles et des données financières confidentielles, archivé en interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PLAN D’AFFAIRE POUR LA PRODUCTION DE LA PAPAYE SOLO N°8 A GOUANA"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Promoteur : Mamoutou DIARRA Tél. 76 73 40 05"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00670__plan-d-affaires-pour-la-production-de-papaye-solo-n8-au.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00670__plan-d-affaires-pour-la-production-de-papaye-solo-n8-au.pdf"
+}

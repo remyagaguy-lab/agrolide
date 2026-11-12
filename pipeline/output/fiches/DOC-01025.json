@@ -1,0 +1,72 @@
+{
+  "id": "DOC-01025",
+  "sha256": "f05762a656bebe0de70962b3c5e972f06efb9173c615612312b2dfb9c3511e38",
+  "nom_original": "pourquoi utiliser une serre.pdf",
+  "chemin_relatif_source": "OD_Docs/pourquoi utiliser une serre.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 600375,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "culture_sous_abri_hors_sol",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2014,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "serre",
+    "culture sous abri",
+    "serriculture",
+    "microclimat",
+    "hydroponie"
+  ],
+  "titre_trouve": "Pourquoi utiliser une serre ?",
+  "titre": "Principes et fonctionnement des serres et cultures sous abri",
+  "resume": "Brève note explicative sur les principes physiques, l'effet de serre, les microclimats contrôlés et les contraintes de la culture sous serre.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Note d'initiation informelle sans auteur ni mention de droits, de faible valeur technique pour les zones tropicales ; archivée.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.5,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Pourquoi utiliser une serre ? Nous avons tous, à un moment donné, d'une voiture de courses, d'un train ou encore d'une charrette, vu un tunnel recouvert de plastique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01025__principes-et-fonctionnement-des-serres-et-cultures-sous.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/culture_sous_abri_hors_sol/DOC-01025__principes-et-fonctionnement-des-serres-et-cultures-sous.pdf"
+}

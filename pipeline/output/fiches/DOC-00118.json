@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00118",
+  "sha256": "3e663fdf47ce5f2f452c9f7d9666a55ee61844c00f16f14cd8ce3ffb13ad20af",
+  "nom_original": "443477_Manuel_dinstruction.pdf",
+  "chemin_relatif_source": "OD_Docs/443477_Manuel_dinstruction.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2292022,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 20,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "volaille",
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Borotto",
+  "source_organisation": "Borotto",
+  "mots_cles": [
+    "incubateur",
+    "couveuse",
+    "incubation artificielle",
+    "eclosion",
+    "poussin"
+  ],
+  "titre_trouve": "Manuel d'instructions de l'incubation artificiel d’œufs Incubateurs de la série REAL",
+  "titre": "Manuel d'instructions pour l'incubation artificielle d'œufs : Gamme REAL",
+  "resume": "Manuel d'instructions techniques pour l'incubation artificielle des œufs : consignes de sécurité, gestion thermique et hygrométrique, retournement et surveillance de l'éclosion des poussins.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Notice d'utilisation commerciale d'un fabricant privé (couveuses Borotto REAL). Ce matériel propriétaire relève de droits_reserves_commercial avec drapeaux contenu_commercial et droits_reserves, interdisant la diffusion publique ; archivage non publié requis.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Manuel d'instructions de l'incubation artificiel d’œufs Incubateurs de la série REAL"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Notice d'utilisation commerciale d'un fabricant privé (couveuses Borotto REAL). Ce matériel propriétaire relève de droits_reserves_commercial avec drapeaux contenu_commercial et droits_reserves, interdisant la diffusion publique ; archivage non publié requis."
+  },
+  "nom_fichier_final": "DOC-00118__manuel-d-instructions-pour-l-incubation-artificielle-d.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00118__manuel-d-instructions-pour-l-incubation-artificielle-d.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00970",
+  "sha256": "f03b608e3a138deea09b22de4bcc0a8e78db90ee6136f360ffc5b766965dfd8d",
+  "nom_original": "la laitue.pdf",
+  "chemin_relatif_source": "OD_Docs/la laitue.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1326977,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "laitue",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "228AgroConseil",
+  "source_organisation": "228AgroConseil (Togo)",
+  "mots_cles": [
+    "laitue",
+    "lactuca sativa",
+    "cultures maraicheres",
+    "togo",
+    "repiquage",
+    "mildiou",
+    "fiche technique"
+  ],
+  "titre_trouve": "Culture de la laitue",
+  "titre": "Guide technique de culture de la laitue au Togo (228AgroConseil)",
+  "resume": "Support technique pratique de 228AgroConseil (Togo) pour la production maraîchère de la laitue : choix variétal résistant à la chaleur, semis, repiquage, désherbage, lutte contre le mildiou et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle de vulgarisation maraîchère togolaise, immédiatement exploitable par les producteurs d'Afrique tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "228AgroConseil Culture de la laitue"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "228AgroConseil"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00970__guide-technique-de-culture-de-la-laitue-au-togo-228agro.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00970__guide-technique-de-culture-de-la-laitue-au-togo-228agro.pdf"
+}

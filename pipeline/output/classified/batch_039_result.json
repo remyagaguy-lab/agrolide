@@ -1,0 +1,699 @@
+{
+  "batch_number": 39,
+  "results": [
+    {
+      "id": "DOC-00578",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_fruits_legumes",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "fruits",
+      "pays": "Cameroun",
+      "annee": 2018,
+      "auteurs": "Comité des ingénieurs d’EFATI",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "vinaigre",
+        "transformation des fruits",
+        "fermentation acetique",
+        "vinaigrerie artisanale",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "MANUEL DE FORMATION SUR LA PRODUCTION DU VINAIGRE",
+      "titre": "Manuel de formation sur la production artisanale de vinaigre de fruits",
+      "resume": "Guide pratique détaillant les étapes techniques et économiques de fabrication artisanale du vinaigre à partir de jus de fruits locaux : double fermentation, équipements et rentabilité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique de formation professionnelle camerounais pour la transformation agroalimentaire locale, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Rédigé par le comité des ingénieurs d’EFATI MANUEL DE FORMATION SUR LA PRODUCTION DU VINAIGRE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00579",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "aviculture",
+        "poulets de chair",
+        "poules pondeuses",
+        "elevage avicole",
+        "cameroun"
+      ],
+      "titre_trouve": "AVICULTURE ELEVAGE DES POULETS DE CHAIR ET DES PONDEUSES",
+      "titre": "Manuel d’aviculture : Élevage des poulets de chair et des pondeuses",
+      "resume": "Manuel complet de formation professionnelle sur l'aviculture tropicale : anatomie, logement, alimentation, prophylaxie et gestion technico-économique des poulets de chair et pondeuses.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel de formation professionnelle officiel d'un centre agréé camerounais, hautement pertinent pour les éleveurs d'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES AVICULTURE ELEVAGE DES POULETS DE CHAIR ET DES PONDEUSES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00581",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "carpe",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "pisciculture",
+        "carpe commune",
+        "etang",
+        "reproduction piscicole",
+        "alimentation poisson"
+      ],
+      "titre_trouve": "ELEVAGE DE LA CARPE COMMUNE",
+      "titre": "Manuel d’élevage de la carpe commune en étang",
+      "resume": "Manuel pratique de pisciculture consacré à la carpe commune : écologie, reproduction naturelle et artificielle, alimentation, gestion des étangs et conduite d'élevage.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel de pisciculture pratique pour la formation professionnelle en milieu tropical, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES SOMMAIRE 1. ELEVAGE DE LA CARPE COMMUNE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00583",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "lapin",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Solange TSIMEGNE, Équipe d’ingénieurs CREFNAC Africa Itnl",
+      "source_organisation": "CREFNAC Africa Itnl",
+      "mots_cles": [
+        "cuniculture",
+        "elevage des lapins",
+        "clapiers",
+        "reproduction lapin",
+        "sante animale"
+      ],
+      "titre_trouve": "MANUEL DE FORMATION EN ELEVAGE DES LAPINS",
+      "titre": "Manuel de formation en élevage des lapins (Cuniculture en milieu tropical)",
+      "resume": "Manuel pratique de cuniculture tropicale : choix des races, reproduction, alimentation, conception des clapiers et prophylaxie contre les maladies et parasites.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique complet de cuniculture tropicale destiné aux éleveurs et porteurs de projet en Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MANUEL DE FORMATION EN ELEVAGE DES LAPINS Rédigé par l’équipe d’ingénieurs crefnac Africa Itnl"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00584",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "pisciculture",
+        "silure",
+        "tilapia",
+        "etang piscicole",
+        "elevage de poissons"
+      ],
+      "titre_trouve": "MANUEL ELEVAGE DES SILURES ET TILAPIA",
+      "titre": "Manuel pratique d’élevage des silures et tilapias",
+      "resume": "Guide d'apprentissage de la pisciculture en Afrique tropicale : systèmes d'élevage extensif et intensif, alimentation, gestion des étangs et protection contre les prédateurs.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique officiel de pisciculture en zone tropicale pour producteurs et porteurs de projet.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES SOMMAIRE 1. GENERALITES 1.1. DEFINITION DE LA PISCICULTURE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00586",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_fruits_legumes",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "fruits",
+      "pays": "Cameroun",
+      "annee": 2018,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "jus de fruits",
+        "nectar",
+        "confiture",
+        "compote",
+        "transformation fruitiere"
+      ],
+      "titre_trouve": "SUPPORT DE FORMATION DE EFATI",
+      "titre": "Manuel de production artisanale de compotes, jus et confitures de fruits",
+      "resume": "Support de formation pratique détaillant les procédés de transformation des fruits en jus, nectars, compotes et confitures : formulations, cuisson, pasteurisation et mise en pots.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique de transformation fruitière destiné à l'artisanat et à la petite entreprise agroalimentaire en Afrique.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "SUPPORT DE FORMATION DE EFATI Variétés de jus de fruit"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00587",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "decideur_institution"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "desinfectant",
+        "gel hydroalcoolique",
+        "soins corporels",
+        "hygiene"
+      ],
+      "titre_trouve": "DESINFECTANTS POUR MAINS",
+      "titre": "Manuel de fabrication artisanale de désinfectant pour les mains",
+      "resume": "Fiche pratique décrivant le procédé de formulation artisanale de gel désinfectant pour les mains à base d'alcool, carbopol et peroxyde d'hydrogène pour l'hygiène sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Fabrication de désinfectant hydroalcoolique pour mains relevant de la chimie et de la santé humaine, hors du périmètre agronomique d'Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES DESINFECTANTS POUR MAINS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00588",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "caprins",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "elevage caprin",
+        "chevres",
+        "logement caprin",
+        "alimentation caprine",
+        "petits ruminants"
+      ],
+      "titre_trouve": "ELEVAGE DES CHEVRES",
+      "titre": "Manuel technique d’élevage des chèvres en milieu tropical",
+      "resume": "Manuel pratique complet sur l'élevage caprin en Afrique tropicale : systèmes d'élevage, conception des logements, conduite de l'alimentation, reproduction et santé animale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel de formation professionnelle officiel sur l'élevage caprin tropical, directement diffusable aux éleveurs et conseillers.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ELEVAGE DES CHEVRES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00589",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "maraîchage",
+      "pays": "Canada",
+      "annee": 2009,
+      "auteurs": "Anne Weill",
+      "source_organisation": "Équiterre",
+      "mots_cles": [
+        "gestion maraichere",
+        "planification des superficies",
+        "rendements legumes",
+        "ferme biologique",
+        "paniers asc"
+      ],
+      "titre_trouve": "Planification des superficies de légumes nécessaires",
+      "titre": "Planification des superficies de légumes nécessaires (Guide Équiterre)",
+      "resume": "Chapitre méthodologique du guide Équiterre guidant l'évaluation des rendements, l'espacement des rangs et le dimensionnement des parcelles pour la distribution en paniers bio.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un guide québécois sous droits réservés, inadapté au contexte tropical et fragmentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE 3 – CHAPITRE 3 Planification des superficies de légumes nécessaires"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00591",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maïs",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+      "source_organisation": "EFATI",
+      "mots_cles": [
+        "mais",
+        "culture du mais",
+        "semis",
+        "fertilisation",
+        "stockage en crib"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU MAIS (Zea mays)",
+      "titre": "Technologie de production et stockage du maïs (Zea mays)",
+      "resume": "Guide technique de formation sur la culture du maïs : exigences agroécologiques, préparation du terrain, semis, fertilisation, protection des plantes et stockage en crib.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique et pédagogique complète d'un institut camerounais agréé pour la production céréalière en zone tropicale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES TECHNOLOGIE DE PRODUCTION DU MAIS (Zea mays)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00592",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "melon",
+      "pays": "Algérie",
+      "annee": 2022,
+      "auteurs": "Institut Technique des Cultures Maraîchères et Industrielles (ITCMI)",
+      "source_organisation": "ITCMI",
+      "mots_cles": [
+        "melon",
+        "maraichage",
+        "cucurbitacees",
+        "conduite culturale",
+        "algerie"
+      ],
+      "titre_trouve": "La culture du MELON",
+      "titre": "Fiche technique sur la culture du melon (ITCMI)",
+      "resume": "Fiche technique officielle de l'ITCMI détaillant les étapes de la culture du melon : phénologie, semis, fertilisation, protection phytosanitaire et conduite sous abri ou plein champ.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de vulgarisation officielle de l'ITCMI algérien, directement diffusable aux producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "INSTITUT TECHNIQUE DES CULTURES MARAICHERES ET INDUSTRIELLES La culture du MELON ITCMI 2022"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00593",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "vulgarisation_conseil",
+      "domaines_secondaires": [
+        "agroalimentaire"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "oignon",
+      "pays": "Burkina Faso",
+      "annee": 2017,
+      "auteurs": "OUEDRAOGO Nomdo Jules",
+      "source_organisation": "Université Ouaga I Pr Joseph Ki-Zerbo",
+      "mots_cles": [
+        "oignon",
+        "conservation post-recolte",
+        "adoption d'innovations",
+        "sanmatenga",
+        "burkina faso"
+      ],
+      "titre_trouve": "TECHNIQUE DE CONSERVATION D’OIGNON ET FACTEURS D’ADOPTION : CAS DE LA TECHNIQUE TYPE UGPOS DANS LE SANMATENGA",
+      "titre": "Techniques de conservation de l'oignon et facteurs d'adoption au Burkina Faso",
+      "resume": "Mémoire de Master II analysant les déterminants socio-économiques et organisationnels de l'adoption des techniques améliorées de stockage et conservation de l'oignon au Sanmatenga.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire universitaire de Master non publié sous licence libre, archivé conformément aux règles patrimoniales d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MEMOIRE DE MASTER II TECHNIQUE DE CONSERVATION D’OIGNON ET FACTEURS D’ADOPTION : CAS DE LA TECHNIQUE TYPE UGPOS DANS LE SANMATENGA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00594",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2002,
+      "auteurs": "Dr D. Séguy",
+      "source_organisation": "Université de Lille 2",
+      "mots_cles": [
+        "metabolisme proteique",
+        "acides amines",
+        "proteolyse",
+        "nutrition clinique"
+      ],
+      "titre_trouve": "Métabolisme des protéines",
+      "titre": "Cours sur le métabolisme des protéines et la nutrition clinique humaine",
+      "resume": "Diaporama médical universitaire détaillant la digestion, l'absorption, la protéolyse et la synthèse des acides aminés dans le cadre de la nutrition humaine hospitalière.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Cours de nutrition clinique et médecine humaine hospitalière, hors du périmètre agronomique et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Métabolisme des protéines D Séguy Service de nutrition dseguy@univ-lille2.fr"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00595",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "qualite_securite_normes",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2013,
+      "auteurs": "TANTAOUI EL ARAKI Abdelmounaïm",
+      "source_organisation": "Institut Agronomique et Vétérinaire Hassan II",
+      "mots_cles": [
+        "microbiologie alimentaire",
+        "hygiene alimentaire",
+        "securite sanitaire",
+        "contamination fecale",
+        "qualite des aliments"
+      ],
+      "titre_trouve": "MICROBIOLOGIE ET HYGIENE ALIMENTAIRES",
+      "titre": "Cours théorique de microbiologie et hygiène alimentaires",
+      "resume": "Cours universitaire complet de 300 pages couvrant l'écologie microbienne des denrées alimentaires, les toxi-infections, les altérations et la maîtrise des normes d'hygiène en IAA.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire magistral non assorti d'une licence libre de diffusion, conservé en archive documentaire.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.88,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MICROBIOLOGIE ET HYGIENE ALIMENTAIRES Cours Théorique 2013-2014"
+        }
+      ]
+    }
+  ]
+}

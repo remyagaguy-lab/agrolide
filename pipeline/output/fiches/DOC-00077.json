@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00077",
+  "sha256": "7e9e4463bc8d5c1c42c966e71b0efff95bbd33dffe32ee892e4b210f8f63a916",
+  "nom_original": "1015054ar.pdf",
+  "chemin_relatif_source": "OD_Docs/1015054ar.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 231430,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "sorgho",
+  "pays": "Burkina Faso",
+  "annee": 2012,
+  "auteurs": "Philippe Bayen, Salifou Traoré, Fidèle Bognounou, Dorkas Kaiser, Adjima Thiombiano",
+  "source_organisation": "VertigO - Revue électronique en sciences de l'environnement",
+  "mots_cles": [
+    "sorgho",
+    "zai ameliore",
+    "sahel",
+    "burkina faso",
+    "restauration des sols"
+  ],
+  "titre_trouve": "Effet du zaï amélioré sur la productivité du sorgho en zone sahélienne",
+  "titre": "Effet du zaï amélioré sur la productivité du sorgho en zone sahélienne",
+  "resume": "Article scientifique évaluant l'impact de la technique du zaï amélioré (taille des poquets et amendements organiques) sur la germination, la croissance et le rendement du sorgho sur sols dégradés au Sahel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique issu d'une revue académique en accès libre, hautement pertinent pour la recherche et le conseil agricole au Sahel, réservé aux membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Effet du zaï amélioré sur la productivité du sorgho en zone sahélienne"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00077__effet-du-zai-ameliore-sur-la-productivite-du-sorgho-en.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00077__effet-du-zai-ameliore-sur-la-productivite-du-sorgho-en.pdf"
+}

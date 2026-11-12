@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00322",
+  "sha256": "4dbe15a56d5f76b380f820354e14be393c7652f14ae5fe41c24cb5f392c3381e",
+  "nom_original": "Cours-agronomie-II-production-vegetale-1 (2).pdf",
+  "chemin_relatif_source": "OD_Docs/Cours-agronomie-II-production-vegetale-1 (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 858051,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "CHADDA Douniazed",
+  "source_organisation": null,
+  "mots_cles": [
+    "semences",
+    "germination",
+    "cycle vegetatif",
+    "symbiose",
+    "rhizobium"
+  ],
+  "titre_trouve": "Cours-agronomie-II-production-vegetale",
+  "titre": "Cours d’agronomie : Semences, cycle de développement et symbioses végétales",
+  "resume": "Fascicule pédagogique abordant la morphologie et la physiologie des semences, les étapes du cycle végétatif des plantes cultivées et les symbioses racinaires (rhizobiums).",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait de cours académique partiel non libre, réservé pour archivage documentaire.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Mme CHADDA DOUNIAZED b. Les semences"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0023",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00322__cours-dagronomie-semences-cycle-de-developpement-et-sym.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00322__cours-dagronomie-semences-cycle-de-developpement-et-sym.pdf"
+}

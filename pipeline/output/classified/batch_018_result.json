@@ -1,0 +1,695 @@
+{
+  "batch_number": 18,
+  "results": [
+    {
+      "id": "DOC-00255",
+      "domaine_principal": "transversal",
+      "sous_domaine": "statistiques_biometrie",
+      "domaines_secondaires": ["methodologie_recherche"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Université de Djelfa",
+      "mots_cles": ["biostatistique", "statistiques", "agronomie", "analyse de donnees"],
+      "titre_trouve": null,
+      "titre": "Cours de biostatistique (Université de Djelfa)",
+      "resume": "Polycopié de cours de biostatistique scanné à l'Université de Djelfa, nécessitant un traitement de reconnaissance optique de caractères pour son exploitation.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible issu d'un cours universitaire ; nécessite OCR et validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.5,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Biostatistique.Djelfa.pdf"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "CamScanner 12-14-2020"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00256",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "blé dur",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["ble dur", "cereales", "itineraire technique", "culture"],
+      "titre_trouve": null,
+      "titre": "Fiche technique de conduite de la culture du blé dur",
+      "resume": "Document technique scanné de 5 pages traitant des pratiques culturales et de la conduite du blé dur, sans couche texte exploitable.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible, à valider après OCR pour déterminer son contenu et ses droits.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.5,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Blé dur.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00257",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "blé tendre",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["ble tendre", "cereales", "itineraire technique", "culture"],
+      "titre_trouve": null,
+      "titre": "Fiche technique de conduite de la culture du blé tendre",
+      "resume": "Document technique scanné de 5 pages présentant la conduite culturale du blé tendre, nécessitant un traitement OCR préalable.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche scannée sans couche texte exploitable ; décision suspendue à une vérification OCR et juridique.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.5,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Blé tendre.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00258",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["protection_des_cultures", "fertilisation_amendements"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maïs",
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Julika Stauber",
+      "source_organisation": "Access Agriculture",
+      "mots_cles": ["mais", "bonnes pratiques agricoles", "fertilisation", "semis", "post-recolte"],
+      "titre_trouve": "Maïs - Bonnes pratiques agricoles",
+      "titre": "Guide des bonnes pratiques agricoles pour la culture du maïs",
+      "resume": "Guide pas à pas de vulgarisation décrivant les étapes clés de la production de maïs : choix du terrain, semis, fertilisation, désherbage et stockage sécurisé.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de vulgarisation parfaitement ciblé pour les producteurs de maïs d'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Maïs - Bonnes pratiques agricoles"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Julika Stauber"
+        },
+        {
+          "champ": "resume",
+          "page": 6,
+          "extrait": "Avec des sémences et des intrants de qualité ainsi que les bonnes pratiques agricoles, nous avons récolté 3500 kg de maïs sur un hectare."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00259",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": ["climat_changement_climatique", "sol_fertilite"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "decideur_institution"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Sahel",
+      "annee": 2012,
+      "auteurs": "GIZ, BMZ",
+      "source_organisation": "GIZ",
+      "mots_cles": ["ces drs", "sahel", "conservation des eaux et sols", "demi-lunes", "zai", "resilience climatique"],
+      "titre_trouve": "Bonnes pratiques de CES/DRS. Contribution à l’adaptation au changement climatique et à la résilience des producteurs",
+      "titre": "Bonnes pratiques de CES/DRS au Sahel : adaptation au changement climatique",
+      "resume": "Manuel technique de référence de 60 pages détaillant les techniques d'aménagement et de conservation des eaux et sols au Sahel (demi-lunes, zaï, cordons pierreux, RNA).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de premier ordre publié par la GIZ, en libre accès pour la résilience agroécologique au Sahel.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Bonnes pratiques de CES/DRS. Contribution à l’adaptation au changement climatique et à la résilience des producteurs"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 60,
+          "extrait": "Ministère fédéral allemand de la Coopération économique et du Développement (BMZ)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00260",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "porcins",
+      "domaines_secondaires": ["batiments_equipements_elevage"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "porc",
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Knowledge Academy",
+      "source_organisation": "Knowledge Academy",
+      "mots_cles": ["porciculture", "elevage de porcs", "races porcines", "habitat porcin", "large white"],
+      "titre_trouve": "Brochure Technique d’Elevage des Porcs",
+      "titre": "Brochure technique d'élevage des porcs : bases et bonnes pratiques",
+      "resume": "Fiche de synthèse présentant les fondamentaux de l'élevage porcin : sélection des races (Large White, Landrace), normes de logement, hygiène et alimentation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique synthétique d'initiation complète et libre de droits, utile aux éleveurs débutants.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Brochure Technique d’Elevage des Porcs"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "CEO de Knowledge Academy"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00261",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": ["ressources_naturelles_environnement", "sol_fertilite"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2005,
+      "auteurs": "Fédération d’agriculture biologique du Québec (FABQ)",
+      "source_organisation": "FABQ / MAPAQ",
+      "mots_cles": ["fertilisation organique", "matiere organique", "compost", "agriculture biologique", "quebec"],
+      "titre_trouve": "La fertilisation organique des cultures : Les bases",
+      "titre": "La fertilisation organique des cultures : les bases agronomiques",
+      "resume": "Brochure technique détaillée de 52 pages expliquant les fondements de la gestion des matières organiques, du compostage et de la fertilité biologique des sols agricoles.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "membres",
+      "motif_decision": "Guide institutionnel de référence sur la matière organique, issu du Québec, réservé aux membres en raison de son contexte tempéré.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La fertilisation organique des cultures Les bases"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "La Fédération d’agriculture biologique du Québec (FABQ)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Programme de soutien au développement de l’agriculture biologique du Ministère de l’Agriculture des Pêcheries et de l’Alimentation du Québec"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00262",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": ["production_vegetale", "protection_des_cultures"],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["etudiant", "technicien_conseiller"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Côte d'Ivoire, Belgique",
+      "annee": 2013,
+      "auteurs": "Henri M. André, Julien K. N’Dri",
+      "source_organisation": "Abc Taxa / Musée royal de l’Afrique centrale",
+      "mots_cles": ["acariens", "taxonomie", "faune du sol", "biodiversite", "afrique tropicale"],
+      "titre_trouve": "Bréviaire de taxonomie des acariens",
+      "titre": "Bréviaire de taxonomie des acariens",
+      "resume": "Manuel taxonomique exhaustif de 200 pages pour l'identification, la morphologie et la classification des acariens tropicaux, bioindicateurs et ravageurs en milieu agricole.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (Abc Taxa)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Ouvrage scientifique spécialisé complet en Open Access (Abc Taxa), mis à disposition des membres pour la recherche et l'enseignement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Bréviaire de taxonomie des acariens"
+        },
+        {
+          "champ": "auteurs",
+          "page": 3,
+          "extrait": "Henri M. André et Julien K. N’Dri"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Instructions aux auteurs http://www.abctaxa.be ISSN 1784-1291"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00263",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": ["entrepreneuriat_agricole"],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2021,
+      "auteurs": "Jean-Marc Gandy",
+      "source_organisation": "Novasun",
+      "mots_cles": ["business plan", "creation d'entreprise", "modele-type", "etude de marche", "plan financier"],
+      "titre_trouve": "BUSINESS PLAN : MODÈLE-TYPE Bien préparer son plan d’affaire",
+      "titre": "Modèle-type de business plan pour création d'entreprise",
+      "resume": "Guide méthodologique et canevas structuré de 17 pages guidant le porteur de projet dans la rédaction des volets commercial, financier et organisationnel d'un business plan.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document sous copyright commercial d'un consultant privé (Novasun) ; reproduction et rediffusion interdites.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "BUSINESS PLAN : MODÈLE-TYPE Bien préparer son plan d’affaire"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "JM GANDY – www.novasun.fr - copyright © - version 01/01/21"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00264",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_de_rente",
+      "domaines_secondaires": ["agroalimentaire", "transformation_fruits_legumes"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "café",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": ["cafeier", "culture de rente", "pepiniere", "recolte", "sechage cafe", "cameroun"],
+      "titre_trouve": "TECHNOLOGIE DE CULTURE DU CAFEIER",
+      "titre": "Technologie de culture du caféier : conduite et post-récolte",
+      "resume": "Fiche technique complète de 10 pages détaillant les exigences pédoclimatiques, la gestion en pépinière, l'installation de la plantation et les méthodes de séchage du café.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle complète issue d'un institut de formation professionnelle agréé par le MINEFOP au Cameroun.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE CULTURE DU CAFEIER"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00265",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["sol_fertilite"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["reserve utile", "irrigation", "capacite au champ", "zone racinaire", "bilan hydrique"],
+      "titre_trouve": "réserve d'eau du sol disponible pour l'irrigation",
+      "titre": "Méthode de calcul de la réserve en eau du sol disponible pour l'irrigation",
+      "resume": "Fiche de calcul technique expliquant la méthode et les formules pour estimer le volume d'eau disponible dans la zone racinaire en fonction de la capacité au champ.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique bureautique non convertie, d'origine informelle sans droits de diffusion explicites.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "réserve d'eau du sol disponible pour l'irrigation"
+        },
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "Calcul de la réserve d'eau : R = 600 * 0,075 = 45 m3 Cela signifie qu'il y a 45 m³ d'eau disponible"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00266",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["aspersion", "irrigation", "calcul surface", "disposition triangulaire", "materiel d'irrigation"],
+      "titre_trouve": "CALCUL SURFACE OCCUPEE PAR LES ASPERSEURS ANGULAIRE",
+      "titre": "Calcul de la surface irriguée par des asperseurs en disposition triangulaire",
+      "resume": "Exercice pratique d'ingénierie d'irrigation expliquant le calcul de la superficie arrosée et du taux de recouvrement pour des asperseurs disposés en quinconce triangulaire.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Note de calcul bureautique interne sans mention d'auteur officiel ni statut légal de diffusion.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CALCUL SURFACE OCCUPEE PAR LES ASPERSEURS ANGULAIRE"
+        },
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "La surface totale irriguée par 9 asperseurs disposés en configuration triangulaire est d'environ 9078.72 m²."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00267",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_de_rente",
+      "domaines_secondaires": ["agroalimentaire", "huiles_sucre_corps_gras"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "canne à sucre",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": ["canne a sucre", "culture de rente", "itineraires techniques", "recolte", "cameroun"],
+      "titre_trouve": "TECHNOLOGIE DE CULTURE DE LA CANNE A SUCRE",
+      "titre": "Technologie de culture de la canne à sucre : itinéraire et récolte",
+      "resume": "Fiche technique de 8 pages exposant les exigences écologiques, la conduite de la plantation, la protection phytosanitaire et les modalités de récolte de la canne à sucre.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique officiel et complet émanant d'un institut agréé par le ministère en charge de la formation professionnelle au Cameroun.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE CULTURE DE LA CANNE A SUCRE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00268",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": ["cereales", "legumineuses_oleagineux"],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Association Cause Rurale",
+      "source_organisation": "Cause Rurale",
+      "mots_cles": ["semences ameliorees", "varietes", "niebe", "cereales", "burkina faso", "sahel"],
+      "titre_trouve": "CRITERES DE CHOIX DES SEMENCES DE VARIETES AGRICOLES",
+      "titre": "Guide illustré des semences et variétés agricoles adaptées au Sahel",
+      "resume": "Présentation technique complète de 65 diapositives détaillant les fiches variétales (rendement, cycle, isohyètes) des semences améliorées sahéliennes (niébé, maïs, mil, sorgho, sésame).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support de formation institutionnel exhaustif d'une association de développement rural au Burkina Faso, d'une grande valeur pratique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CRITERES DE CHOIX DES SEMENCES DE VARIETES AGRICOLES"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "CAUSE RURALE DENIS PRESENTATIONVF 2023"
+        },
+        {
+          "champ": "resume",
+          "page": 3,
+          "extrait": "ESPECES CONCERNEES • ARACHIDE • MIL • NIEBE • SOJA • RIZ • MAIS • SORGHO • SESAME"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00269",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["culture_sous_abri_hors_sol"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2022,
+      "auteurs": "Saggaï Mohamed Mounir",
+      "source_organisation": "Université",
+      "mots_cles": ["cultures maraicheres", "sahara", "plasticulture", "milieu aride", "systemes agraires"],
+      "titre_trouve": "CHAPITRE 4: LES CULTURES MARAICHÈRES",
+      "titre": "Les cultures maraîchères en milieu saharien (Chapitre 4)",
+      "resume": "Chapitre de cours universitaire sur le maraîchage saharien, abordant les potentialités du milieu désertique, les espèces cultivées et la plasticulture.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ensemble_partiel", "incomplet"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé extrait d'un cours universitaire avec diapositives terminales incomplètes ; archivage interne sans diffusion publique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.65
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CHAPITRE 4: LES CULTURES MARAICHÈRES"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "SAGGAÏ MOHAMED MOUNIR"
+        },
+        {
+          "champ": "drapeaux_ajoutes",
+          "page": 37,
+          "extrait": "TITRE ET DISPOSITION DE CONTENU AVEC GRAPHIQUE"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00676",
+  "sha256": "3307bc80ae04d78d91f337fcd6ca8ed354d5f671e9152a9d4dbd5612b9ea0a7a",
+  "nom_original": "Polycopie de cours Biostatistiques (2).pdf",
+  "chemin_relatif_source": "OD_Docs/Polycopie de cours Biostatistiques (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2248076,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 79,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "statistiques_biometrie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Abdelkader Benkhaled",
+  "source_organisation": "Université Mustapha Stambouli de Mascara",
+  "mots_cles": [
+    "biostatistiques",
+    "statistique descriptive",
+    "probabilites",
+    "agronomie",
+    "biometrie",
+    "algerie"
+  ],
+  "titre_trouve": "Polycopié de Cours Biostatistiques Cours et exercices",
+  "titre": "Polycopié de cours de biostatistiques - Cours et exercices",
+  "resume": "Polycopié universitaire complet de 79 pages de l'Université de Mascara couvrant le programme de biostatistiques pour les étudiants de L2 en agronomie et biologie : statistiques descriptives, probabilités et tests d'hypothèses.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non assorti d'une licence libre de diffusion, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Polycopié de Cours Biostatistiques Cours et exercices"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00676__polycopie-de-cours-de-biostatistiques-cours-et-exercice.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/statistiques_biometrie/DOC-00676__polycopie-de-cours-de-biostatistiques-cours-et-exercice.pdf"
+}

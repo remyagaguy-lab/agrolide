@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00797",
+  "sha256": "b0bf229d57cf68e052af4024ee6f14e3efffda4eead8ae579e3b0bc832948894",
+  "nom_original": "antibiotiques.pdf",
+  "chemin_relatif_source": "OD_Docs/antibiotiques.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 115297,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Amine",
+  "source_organisation": null,
+  "mots_cles": [
+    "antibiotiques",
+    "medecine veterinaire",
+    "aviculture",
+    "antibiotherapie",
+    "pfe"
+  ],
+  "titre_trouve": "Classification des antibiotiques utilisés en médecine vétérinaire avicole",
+  "titre": "Classification des antibiotiques en médecine vétérinaire avicole (Extrait PFE)",
+  "resume": "Extrait de projet de fin d'études présentant les familles d'antibiotiques, leurs mécanismes d'action et les règles d'association en aviculture.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait de travail académique de fin d'études (PFE), exclu de publication conformément aux règles métier.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "Voici un extrait de mon PFE, il parle de la Classification des antibiotiques"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00797__classification-des-antibiotiques-en-medecine-veterinair.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00797__classification-des-antibiotiques-en-medecine-veterinair.pdf"
+}

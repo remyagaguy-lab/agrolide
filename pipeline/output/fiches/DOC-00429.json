@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00429",
+  "sha256": "bdfbc8d90cf53cb2b8d53f75abfa30c1890d0b21b25acb54b3ee041056c6db99",
+  "nom_original": "Fiche technique Cantharides_DPVC_2023_VF.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche technique Cantharides_DPVC_2023_VF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 736113,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_phyto_a_verifier"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "mil",
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Direction de la Protection des Végétaux et du Conditionnement",
+  "source_organisation": "DPVC",
+  "mots_cles": [
+    "cantharides",
+    "protection des cultures",
+    "mil",
+    "psalydolytta fusca",
+    "ravageurs"
+  ],
+  "titre_trouve": "DPVC, 2023. Fiche technique de gestion des cantharides",
+  "titre": "Fiche technique de gestion des cantharides ravageurs du mil au Sahel",
+  "resume": "Guide d'identification et de lutte intégrée (biologique et chimique) contre les cantharides (Psalydolytta spp.), coléoptères ravageurs des épis de mil en zone sahélienne.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Le drapeau bloquant donnees_phyto_a_verifier interdit la publication directe en statut public. Le document doit être orienté vers a_valider_humain pour vérification des matières actives insecticides.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "DPVC, 2023. Fiche technique de gestion des cantharides"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Le drapeau bloquant donnees_phyto_a_verifier interdit la publication directe en statut public. Le document doit être orienté vers a_valider_humain pour vérification des matières actives insecticides."
+  },
+  "nom_fichier_final": "DOC-00429__fiche-technique-de-gestion-des-cantharides-ravageurs-du.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00429__fiche-technique-de-gestion-des-cantharides-ravageurs-du.pdf"
+}

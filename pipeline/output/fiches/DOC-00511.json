@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00511",
+  "sha256": "080880be0b7503223d696a71449bfa994bf95c38860320a27d7d5f21c9919efa",
+  "nom_original": "Informations sur les BPA.pdf",
+  "chemin_relatif_source": "OD_Docs/Informations sur les BPA.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 676852,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "multilingue",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maïs",
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Blackhouse Animation Studios - GIZ",
+  "source_organisation": "GIZ / Blackhouse Animation Studios",
+  "mots_cles": [
+    "mais",
+    "bonnes pratiques agricoles",
+    "bpa",
+    "afrique de l'ouest",
+    "fertilisation",
+    "semences"
+  ],
+  "titre_trouve": "Faire de bonnes affaires avec la culture du maïs : Apprendre sur les Bonnes Pratiques Agricoles (BPA)",
+  "titre": "Bonnes pratiques agricoles pour la culture du maïs en Afrique de l'Ouest",
+  "resume": "Guide illustré bilingue de 12 pages présentant les Bonnes Pratiques Agricoles (BPA) du maïs au Cameroun, Côte d'Ivoire, Ghana, Nigéria et Togo : calendrier, fertilisation, densités et stockage.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de vulgarisation agricole complet sur le maïs en Afrique de l'Ouest et Centrale, hautement opérationnel pour les producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Faire de bonnes affaires avec la culture du maïs Apprendre sur les Bonnes Pratiques Agricoles (BPA)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00511__bonnes-pratiques-agricoles-pour-la-culture-du-mais-en-a.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00511__bonnes-pratiques-agricoles-pour-la-culture-du-mais-en-a.pdf"
+}

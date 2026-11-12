@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00988",
+  "sha256": "4108510e3a0dccd9434017b653de2ba308da7765879a885479ce27be4398239a",
+  "nom_original": "mayonnaise emulsionnee.pdf",
+  "chemin_relatif_source": "OD_Docs/mayonnaise emulsionnee.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 26781,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479867532-mayonnaise_emulsionnee.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "equipements_technologie",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "transformation agroalimentaire",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "mayonnaise",
+    "emulsion",
+    "diagramme de fabrication",
+    "sauces",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité MAYONNAISE",
+  "titre": "Diagramme de procédé technologique de fabrication de la mayonnaise émulsionnée",
+  "resume": "Fiche schéma synoptique présentant le procédé de fabrication et les étapes unitaires de formulation et d'émulsion industrielle de la mayonnaise (ISAA-MF).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Schéma technologique synthétique et clair de fabrication agroalimentaire issu de la collection ISAA-MF, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité MAYONNAISE MAYONNAISE EMULSIONNEE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00988__diagramme-de-procede-technologique-de-fabrication-de-la.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/equipements_technologie/DOC-00988__diagramme-de-procede-technologique-de-fabrication-de-la.pdf"
+}

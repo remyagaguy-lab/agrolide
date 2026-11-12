@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00633",
+  "sha256": "1922acd13dea1aa5394b8a3c7a4ed7a73e6dcf1357fea5a28e556d2da80f86e4",
+  "nom_original": "Nutrition-de-vollaille.pdf",
+  "chemin_relatif_source": "OD_Docs/Nutrition-de-vollaille.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 367812,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "contexte_non_adapte",
+    "droits_reserves",
+    "incomplet"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Suisse",
+  "annee": 2013,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Aviforum / Formation professionnelle suisse",
+  "mots_cles": [
+    "aviculture",
+    "nutrition volaille",
+    "poules pondeuses",
+    "alimentation avicole",
+    "qualite de l'oeuf",
+    "suisse"
+  ],
+  "titre_trouve": "B7-II Nourrir les volailles",
+  "titre": "Nourrir les volailles : formation professionnelle de l'aviculteur (Module B7-II)",
+  "resume": "Support pédagogique officiel de formation professionnelle agricole suisse sur la conduite alimentaire des volailles : formulation selon les stades de ponte, distribution, estimation des consommations et qualité des œufs.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait partiel d'un manuel d'enseignement professionnel avicole suisse protégé par droits d'auteur.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "B7-II Nourrir les volailles Moyen d’enseignement pour la formation professionnelle de base de l’avicultrice, de l’aviculteur"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00633__nourrir-les-volailles-formation-professionnelle-de-l-av.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00633__nourrir-les-volailles-formation-professionnelle-de-l-av.pdf"
+}

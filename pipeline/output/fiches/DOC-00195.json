@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00195",
+  "sha256": "0d1912139b461904f88e8438f99254e14654a0708ff62c2d5f0353b7a9b1ba8e",
+  "nom_original": "Agrodok_31_Le_stockage_des_produits_agricoles_tropicaux@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_31_Le_stockage_des_produits_agricoles_tropicaux@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 881574,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 81,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "conservation_post_recolte",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cereales et legumineuses",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Jelle Hayma",
+  "source_organisation": "Fondation Agromisa",
+  "mots_cles": [
+    "stockage",
+    "post-recolte",
+    "greniers",
+    "silos",
+    "insectes des grains",
+    "conservation des recoltes"
+  ],
+  "titre_trouve": "Le stockage des produits agricoles tropicaux",
+  "titre": "Le stockage des produits agricoles tropicaux",
+  "resume": "Manuel pratique sur les techniques traditionnelles et améliorées de stockage et de conservation des récoltes (grains, tubercules) en climat tropical et lutte contre les ravageurs.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, archivé en non publié.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 31 - Le stockage des produits agricoles tropicaux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00195__le-stockage-des-produits-agricoles-tropicaux.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/conservation_post_recolte/DOC-00195__le-stockage-des-produits-agricoles-tropicaux.pdf"
+}

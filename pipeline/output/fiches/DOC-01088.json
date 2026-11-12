@@ -1,0 +1,78 @@
+{
+  "id": "DOC-01088",
+  "sha256": "6660057cdf55b3ff22aff699c5977d7a76236bebcf4d21d3005152ce170b5c93",
+  "nom_original": "tomate-ft-culture_SDRdag_v2016.pdf",
+  "chemin_relatif_source": "OD_traites/tomate-ft-culture_SDRdag_v2016.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 2066216,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480084164-tomate-ft-culture_SDRdag_v2016.pdf",
+  "nb_telechargements_existant": 2,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_phyto_a_verifier"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "tomate",
+  "pays": null,
+  "annee": 2016,
+  "auteurs": "Jérôme Lecerf",
+  "source_organisation": "Direction de l’agriculture de Polynésie française",
+  "mots_cles": [
+    "tomate",
+    "maraichage",
+    "climat tropical",
+    "protection phytosanitaire",
+    "itineraire technique"
+  ],
+  "titre_trouve": "La tomate (Solanum lycopersicum L.)",
+  "titre": "Fiche technique de culture de la tomate en climat tropical",
+  "resume": "Fiche technique complète sur la culture de la tomate en milieu tropical : exigences de température, choix variétal, conduite culturale et traitements phytosanitaires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Le drapeau bloquant donnees_phyto_a_verifier interdit la publication directe (public) ; le document doit être soumis à validation humaine.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La tomate (Solanum lycopersicum L.) est une espèce de plantes herbacées de la famille des Solanacées"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Direction de l’agriculture, Pape’ete – Tahiti - Polynésie française, www.service-public.pf/dag"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Le drapeau bloquant donnees_phyto_a_verifier interdit la publication directe (public) ; le document doit être soumis à validation humaine."
+  },
+  "nom_fichier_final": "DOC-01088__fiche-technique-de-culture-de-la-tomate-en-climat-tropi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01088__fiche-technique-de-culture-de-la-tomate-en-climat-tropi.pdf"
+}

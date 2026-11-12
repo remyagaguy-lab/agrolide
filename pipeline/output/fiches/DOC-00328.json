@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00328",
+  "sha256": "8c1962c6181da0a6360efb52b69b259adf51d48a036608a429fe41df77523b29",
+  "nom_original": "Créer un atelier de volaille biologique.pdf",
+  "chemin_relatif_source": "OD_Docs/Créer un atelier de volaille biologique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1021248,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "Jean-Jacques Garbay, CIVAM Bio 09",
+  "source_organisation": "CIVAM Bio 09",
+  "mots_cles": [
+    "aviculture biologique",
+    "poulet de chair",
+    "poule pondeuse",
+    "normes bio",
+    "batiments avicoles"
+  ],
+  "titre_trouve": "Créer un atelier de volaille biologique",
+  "titre": "Créer un atelier de volaille biologique (CIVAM Bio 09)",
+  "resume": "Fiche technique présentant les règles d'installation d'un atelier avicole biologique : choix des souches rustiques, aménagement des parcours et respect des normes de densité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "La diffusion (membres ou public) requiert une pertinence >= 2. Avec pertinence = 1 (contexte européen non adapté), le document doit être archivé (non_publie_archive).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique Rédigée par le CIVAM Bio 09 Créer un atelier de volaille biologique"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "La diffusion (membres ou public) requiert une pertinence >= 2. Avec pertinence = 1 (contexte européen non adapté), le document doit être archivé (non_publie_archive)."
+  },
+  "nom_fichier_final": "DOC-00328__creer-un-atelier-de-volaille-biologique-civam-bio-09.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00328__creer-un-atelier-de-volaille-biologique-civam-bio-09.pdf"
+}

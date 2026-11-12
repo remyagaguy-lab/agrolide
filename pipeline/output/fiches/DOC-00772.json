@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00772",
+  "sha256": "c406d045ea01ee72a7febdbe45b094120b5286df82078aad7ac62df1249c9526",
+  "nom_original": "Valorisation_de_l’eau_d’irrigation_dans_le_bassin_du_SASS.pdf",
+  "chemin_relatif_source": "OD_Docs/Valorisation_de_l’eau_d’irrigation_dans_le_bassin_du_SASS.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1658923,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 35,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie, Tunisie, Libye",
+  "annee": 2015,
+  "auteurs": "Hasan Quarrouch, Djamel Latrech, Khatim Kherraz, Maxime Thibon, Jihed Ghannem",
+  "source_organisation": "Observatoire du Sahara et du Sahel (OSS)",
+  "mots_cles": [
+    "irrigation",
+    "eau souterraine",
+    "sass",
+    "observatoire du sahara et du sahel",
+    "oasis",
+    "algerie",
+    "tunisie"
+  ],
+  "titre_trouve": "Pour une meilleure valorisation de l’eau d’irrigation dans le bassin du SASS Diagnostic et recommandations",
+  "titre": "Valorisation de l'eau d'irrigation dans le bassin du SASS (Diagnostic et recommandations)",
+  "resume": "Rapport de synthèse de l'Observatoire du Sahara et du Sahel (OSS) formulant des recommandations stratégiques pour l'efficience de l'eau d'irrigation oasienne.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport institutionnel de référence de l'Observatoire du Sahara et du Sahel sur la gestion de l'eau agricole, mis à disposition des membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SYSTÈME AQUIFÈRE DU SAHARA SEPTENTRIONAL Pour une meilleure valorisation de l’eau d’irrigation dans le bassin du SASS OBSERVATOIRE DU SAHARA ET DU SAHEL"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00772__valorisation-de-l-eau-d-irrigation-dans-le-bassin-du-sa.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00772__valorisation-de-l-eau-d-irrigation-dans-le-bassin-du-sa.pdf"
+}

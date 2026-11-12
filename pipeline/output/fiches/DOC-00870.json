@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00870",
+  "sha256": "08ec4ec8b43638d6576cf48f60ee02d838657f6a3828134e6aef75564eaa578f",
+  "nom_original": "dossier-presentation-projet-agricole.pdf",
+  "chemin_relatif_source": "OD_Docs/dossier-presentation-projet-agricole.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6885719,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 8,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "rapport",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "caprins",
+  "pays": "France",
+  "annee": 2021,
+  "auteurs": "Lila Vanschrick, Ianis N'Debi, Florian Saubiez, Kayline Tuaz",
+  "source_organisation": null,
+  "mots_cles": [
+    "projet agricole",
+    "ferme collective",
+    "elevage caprin",
+    "fromagerie",
+    "agritourisme",
+    "installation agricole"
+  ],
+  "titre_trouve": "FERME COLLECTIVE EN POLYCULTURE ET ÉLEVAGE - DOSSIER DE PRÉSENTATION",
+  "titre": "Projet de ferme collective en polyculture et élevage caprin (Dossier de présentation)",
+  "resume": "Dossier de présentation d'un projet privé d'installation agricole collective en élevage caprin fromager, maraîchage biologique et agritourisme en France.",
+  "statut_droits": "donnees_personnelles_confidentiel",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document privé de candidature contenant des données personnelles sensibles (numéros de téléphone et adresses électroniques individuelles).",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FERME COLLECTIVE EN POLYCULTURE ET ÉLEVAGE AVRIL 2021 DOSSIER DE PRÉSENTATION"
+    },
+    {
+      "champ": "autre",
+      "page": 8,
+      "extrait": "Ianis 06 95 29 90 70 Lila 06 32 19 56 89 projetcollectifagritourisme@gmail.com"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00870__projet-de-ferme-collective-en-polyculture-et-elevage-ca.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00870__projet-de-ferme-collective-en-polyculture-et-elevage-ca.pdf"
+}

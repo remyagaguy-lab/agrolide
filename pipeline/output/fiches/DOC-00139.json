@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00139",
+  "sha256": "4a59f5fde21f8fede3ccfe9908dde43cde3da115112de9b1179b2b0469032d18",
+  "nom_original": "96- Etude au vent RNV 99.pdf",
+  "chemin_relatif_source": "OD_Docs/96- Etude au vent RNV 99.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 449671,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 36,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "texte_officiel",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2008,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "genie civil",
+    "etude au vent",
+    "rnv99",
+    "reglementation",
+    "algerie"
+  ],
+  "titre_trouve": "Etude au vent selon le règlement algérien (RNV99)",
+  "titre": "Étude au vent selon le règlement technique algérien RNV 99",
+  "resume": "Document technique et réglementaire algérien relatif aux règles parasismiques et actions du vent (RNV 99) sur les constructions et bâtiments en génie civil.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de génie civil et de calcul des structures de bâtiment en Algérie, sans aucun rapport avec le périmètre agricole.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.8,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Etude au vent selon le règlement algérien (RNV99) Le présent document technique réglementaire (DTR) fournit les procédures et principes généraux pour la détermination des actions du vent"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00139__etude-au-vent-selon-le-reglement-technique-algerien-rnv.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00139__etude-au-vent-selon-le-reglement-technique-algerien-rnv.pdf"
+}

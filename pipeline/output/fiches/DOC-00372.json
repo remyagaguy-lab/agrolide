@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00372",
+  "sha256": "04849edd2fc40e47f79eeb44b2ac439fecbab5389b6d96ffabe9c853bef99a0f",
+  "nom_original": "EXERCICE APPORT EN IRRIGATION CLTURE MAIS.docx",
+  "chemin_relatif_source": "OD_Docs/EXERCICE APPORT EN IRRIGATION CLTURE MAIS.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 43432,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "maïs",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Pc 01",
+  "source_organisation": null,
+  "mots_cles": [
+    "mais",
+    "besoin en eau",
+    "irrigation",
+    "bilan hydrique",
+    "reserve facilement utilisable"
+  ],
+  "titre_trouve": "EXERCICE : Complétez le tableau suivant pour calculer les besoin en eau d’irrigation de la Culture mise en place (Mais)",
+  "titre": "Calcul des apports d'irrigation et bilan hydrique pour la culture du maïs",
+  "resume": "Exercice pratique avec tableur mensuel pour le calcul du bilan hydrique, de la réserve facilement utilisable (RFU) et des besoins d'irrigation du maïs.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche d'exercice pratique anonyme sans licence explicite, archivée en interne pour consultation.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "EXERCICE : Complétez le tableau suivant pour calculer les besoin en eau d’irrigation de la Culture mise en place (Mais)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00372__calcul-des-apports-d-irrigation-et-bilan-hydrique-pour.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00372__calcul-des-apports-d-irrigation-et-bilan-hydrique-pour.pdf"
+}

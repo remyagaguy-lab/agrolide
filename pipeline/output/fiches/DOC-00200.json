@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00200",
+  "sha256": "76988e4d495b692c9978be91f41b0a108c0a8f0ca4cdb99903ad199571a426d9",
+  "nom_original": "Agrodok_3_La_conservation_des_fruits_et_des_legumes@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_3_La_conservation_des_fruits_et_des_legumes@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 961357,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 94,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_fruits_legumes",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "fruits et légumes",
+  "pays": null,
+  "annee": 2003,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "conservation",
+    "fruits",
+    "legumes",
+    "sechage",
+    "transformation artisanale"
+  ],
+  "titre_trouve": null,
+  "titre": "La conservation des fruits et des légumes",
+  "resume": "Guide pratique Agrodok n°3 sur les techniques de conservation et de transformation artisanale des fruits et légumes en zone tropicale (séchage, confisage, saumure, mise en bocal).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Tag @EpubsFR imposant droits_reserves_commercial. Les droits réservés bloquent la diffusion indépendamment de l'OCR, archivage en non_publie_archive.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.55,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: Agrodok_3_La_conservation_des_fruits_et_des_legumes@EpubsFR.pdf"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Tag @EpubsFR imposant droits_reserves_commercial. Les droits réservés bloquent la diffusion indépendamment de l'OCR, archivage en non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00200__la-conservation-des-fruits-et-des-legumes.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_fruits_legumes/DOC-00200__la-conservation-des-fruits-et-des-legumes.pdf"
+}

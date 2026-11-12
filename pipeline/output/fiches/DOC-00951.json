@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00951",
+  "sha256": "fef702444f98b15af8e3594d9cf2433d55531ac7b35e5fddc3c7a436a22b45af",
+  "nom_original": "hcc hamps.pdf",
+  "chemin_relatif_source": "OD_Docs/hcc hamps.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 87702,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2025,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "capacite au champ",
+    "sol",
+    "retention d'eau",
+    "agronomie",
+    "calcul"
+  ],
+  "titre_trouve": null,
+  "titre": "Formules et exemple de calcul de la capacité au champ d'un sol",
+  "resume": "Fiche synthétique d'une page présentant les définitions et formules de calcul de la capacité au champ d'un sol en millimètres et en pourcentage.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Simple note d'exercice scolaire d'une seule page, d'intérêt documentaire limité : conservation en archive interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "La capacité au champ, ou capacité de rétention d'eau d'un sol, se mesure souvent en millimètres (mm) ou en pourcentage (%)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00951__formules-et-exemple-de-calcul-de-la-capacite-au-champ-d.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00951__formules-et-exemple-de-calcul-de-la-capacite-au-champ-d.pdf"
+}

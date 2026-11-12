@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00923",
+  "sha256": "444fc307f052761edc054e4cc64199dcdfe8055dedbaddb72c430a3898cc301c",
+  "nom_original": "gestion des sols.pdf",
+  "chemin_relatif_source": "OD_Docs/gestion des sols.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 575052,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 58,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2003,
+  "auteurs": "Conseil Scientifique de l'Environnement de Bretagne",
+  "source_organisation": "Conseil Régional de Bretagne",
+  "mots_cles": [
+    "gestion des sols",
+    "dechets organiques",
+    "bretagne",
+    "lisier",
+    "phosphore",
+    "azote",
+    "pollution des sols"
+  ],
+  "titre_trouve": "Gestion des sols et apports de déchets organiques en Bretagne",
+  "titre": "Gestion des sols et apports de déchets organiques en Bretagne (Rapport du CSE)",
+  "resume": "Rapport d'expertise environnementale du Conseil Scientifique de Bretagne sur les impacts agronomiques et écologiques des épandages massifs de lisiers et déchets organiques sur les sols tempérés armoricains.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Rapport institutionnel d'expertise centré sur la problématique agro-environnementale spécifique aux épandages de lisiers en Bretagne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Gestion des sols et apports de déchets organiques en Bretagne"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00923__gestion-des-sols-et-apports-de-dechets-organiques-en-br.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00923__gestion-des-sols-et-apports-de-dechets-organiques-en-br.pdf"
+}

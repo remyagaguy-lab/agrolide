@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00272",
+  "sha256": "02498b5c270ecd377e89380bdd07545306c02bc0e9574c83778401dea0e7cb4a",
+  "nom_original": "COMMENT ELEVER LES POULES.pdf",
+  "chemin_relatif_source": "OD_Docs/COMMENT ELEVER LES POULES.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5161110,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 123,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Cameroun",
+  "annee": 1968,
+  "auteurs": "Pascal de Pury",
+  "source_organisation": "Éditions CLÉ",
+  "mots_cles": [
+    "aviculture",
+    "elevage de poules",
+    "poules pondeuses",
+    "poulet de chair",
+    "alimentation volaille",
+    "Cameroun"
+  ],
+  "titre_trouve": "COMMENT ÉLEVER LES POULES guide d'aviculture africaine",
+  "titre": "Comment élever les poules : guide d'aviculture africaine",
+  "resume": "Manuel pratique exhaustif sur l'aviculture en Afrique équatoriale, abordant le logement, l'alimentation, la santé, la reproduction et la gestion économique de l'élevage avicole paysan.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial protégé par des droits d'auteur réservés (© Éditions CLÉ, Yaoundé), archivé sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "COMMENT ÉLEVER LES POULES guide d'aviculture africaine"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Tous droits de reproduction... réservés pour tous les pays. © by Editions CLE, Yaoundé"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00272__comment-elever-les-poules-guide-d-aviculture-africaine.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00272__comment-elever-les-poules-guide-d-aviculture-africaine.pdf"
+}

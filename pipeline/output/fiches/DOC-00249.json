@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00249",
+  "sha256": "a7b7741fd436fc89f45950228ed71aa0bd2ed68b5878022968a979cffb639764",
+  "nom_original": "Bilan hydrique en irrigation agricole.....docx",
+  "chemin_relatif_source": "OD_Docs/Bilan hydrique en irrigation agricole.....docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 12671,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "ENIGMA",
+  "source_organisation": null,
+  "mots_cles": [
+    "bilan hydrique",
+    "irrigation",
+    "coefficient de culture",
+    "dose d'irrigation",
+    "evapotranspiration"
+  ],
+  "titre_trouve": "Bilan hydrique en irrigation agricole",
+  "titre": "Exercices d'application : Calcul du bilan hydrique en irrigation agricole",
+  "resume": "Exercices pratiques résolus sur le calcul du bilan hydrique, du coefficient de culture (Kc) ainsi que de la dose et fréquence d'irrigation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Feuille d'exercices isolée et non finalisée, archivée sans publication.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Bilan hydrique en irrigation agricole Exercice 1 : Calcul du bilan hydrique simple"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00249__exercices-d-application-calcul-du-bilan-hydrique-en-irr.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00249__exercices-d-application-calcul-du-bilan-hydrique-en-irr.pdf"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00060",
+  "sha256": "b2ec3dc2c81d375573ddf6a83fc65dd4af03faff12c043c4c5fe7d0dbe51f334",
+  "nom_original": "Résumé6 Biologie Animale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/biologie animales/biologie animales/Résumé6 Biologie Animale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 3007062,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel"
+  ],
+  "nb_pages": 47,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2017,
+  "auteurs": "Mohamed El-Bichry, Mohamed El Bilaly, Boubakr El-Fakih",
+  "source_organisation": "Université Ibn Zohr Agadir",
+  "mots_cles": [
+    "biologie animale",
+    "invertebres",
+    "protozoaires",
+    "metazoaires",
+    "zoologie",
+    "qcm"
+  ],
+  "titre_trouve": "Biologie Animale « Invertébrés » : Résumé + QCM + Exercices + Glossaire",
+  "titre": "Biologie animale « Invertébrés » : Résumé, QCM et exercices",
+  "resume": "Polycopié d'exercices, résumés de cours et QCM de biologie animale sur les invertébrés (protozoaires et métazoaires) pour étudiants de L1 SV/STU.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié universitaire d'étudiants non publié sous licence libre, conservé à des fins d'archivage.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BIOLOGIE ANIMALE « Invertébrés » SV2-STU2 Université Ibn Zohr Faculté de science AGADIR"
+    }
+  ],
+  "ensemble_id": "ENS-0009",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00060__biologie-animale-invertebres-resume-qcm-et-exercices.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00060__biologie-animale-invertebres-resume-qcm-et-exercices.pdf"
+}

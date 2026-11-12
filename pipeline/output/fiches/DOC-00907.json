@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00907",
+  "sha256": "b1e240021643338676bed4f59add09d49d1e7faf0a7aea773f801fa8ae733f1b",
+  "nom_original": "fiche-fabriquer-une-c.pdf",
+  "chemin_relatif_source": "OD_Docs/fiche-fabriquer-une-c.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 329617,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "licence_nc"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2011,
+  "auteurs": "Ooreka (Fine Media)",
+  "source_organisation": "Fine Media",
+  "mots_cles": [
+    "couveuse",
+    "incubation",
+    "poussin",
+    "bricolage avicole",
+    "materiel d'elevage"
+  ],
+  "titre_trouve": "Fabriquer une couveuse",
+  "titre": "Fiche pratique : Fabriquer soi-même une couveuse à poussins",
+  "resume": "Fiche pratique détaillant la construction artisanale d'une couveuse pour œufs fécondés : matériel requis (ampoule, boîte, thermomètre), réglages d'incubation et consignes d'éclosion.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Contenu sous droits réservés de la société commerciale Fine Media (Ooreka), non diffusable sur la plateforme.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Réponses d'experts Fabriquer une couveuse"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00907__fiche-pratique-fabriquer-soi-meme-une-couveuse-a-poussi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00907__fiche-pratique-fabriquer-soi-meme-une-couveuse-a-poussi.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00354",
+  "sha256": "37966373a2ec0d4b80eb992ce4b986a02d1f392543ef09e60018f655b9528638",
+  "nom_original": "Document_N0969.pdf",
+  "chemin_relatif_source": "OD_Docs/Document_N0969.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 321787,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 42,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "texte_officiel",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "decideur_institution",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "agriculture biologique",
+  "pays": "Burkina Faso",
+  "annee": 2013,
+  "auteurs": "Conseil National de l’Agriculture Biologique (CNABio), Lazare Yombi",
+  "source_organisation": "CNABio / HELVETAS Swiss Intercooperation",
+  "mots_cles": [
+    "agriculture biologique",
+    "norme burkinabe",
+    "cnabio",
+    "certification bio",
+    "production ecologique",
+    "burkina faso"
+  ],
+  "titre_trouve": "NORME BURKINABE EN AGRICULTURE BIOLOGIQUE : NORMES DE PRODUCTION DES DENREES AGRICOLES",
+  "titre": "Norme burkinabè en agriculture biologique (NAB-BF 01-10 : 2013) : Normes de production des denrées agricoles",
+  "resume": "Document normatif officiel du CNABio établissant le cahier des charges et les exigences techniques pour la production, la transformation et la certification des denrées agricoles biologiques au Burkina Faso.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Norme nationale officielle burkinabè en agriculture biologique publiée par le CNABio, essentielle pour la filière et diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "NORME BURKINABE EN AGRICULTURE BIOLOGIQUE NORMES DE PRODUCTION DES DENREES AGRICOLES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "CONSEIL NATIONAL DE L’AGRICULTURE BIOLOGIQUE DU BURKINA FASO (CNABio)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00354__norme-burkinabe-en-agriculture-biologique-nab-bf-01-10.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00354__norme-burkinabe-en-agriculture-biologique-nab-bf-01-10.pdf"
+}

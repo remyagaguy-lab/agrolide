@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01011",
+  "sha256": "c35aa78f220074f1a02fc10343442eceb467349f74c8620cf1da3d860f39bb1f",
+  "nom_original": "pintades_elevage_songhai.pdf",
+  "chemin_relatif_source": "OD_Docs/pintades_elevage_songhai.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1280111,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00110",
+  "groupe_doublon_id": "GRP-0008",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00110 (Guide pratique de l'élevage de pintades au Centre Songhaï).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pintade",
+  "pays": "Bénin",
+  "annee": 2011,
+  "auteurs": "Centre Songhaï",
+  "source_organisation": "Centre Songhaï / African Development Foundation",
+  "mots_cles": [
+    "pintade",
+    "aviculture",
+    "centre songhai",
+    "prophylaxie",
+    "benin"
+  ],
+  "titre_trouve": "Elevage de pintades, Guide pratique",
+  "titre": "Guide pratique de l'élevage de pintades au Centre Songhaï",
+  "resume": "Guide pratique complet pour l'installation et la conduite d'un élevage de pintades en Afrique subsaharienne : logement, alimentation locale, reproduction et plan de prophylaxie sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Elevage de pintades, Guide pratique (Centre Songhai, 12 p.)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Rédigé et publié par le Centre Songhaï , en collaboration avec l'African Development Foundation."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01011__guide-pratique-de-l-elevage-de-pintades-au-centre-songh.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-01011__guide-pratique-de-l-elevage-de-pintades-au-centre-songh.pdf"
+}

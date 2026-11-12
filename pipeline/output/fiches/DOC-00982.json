@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00982",
+  "sha256": "3582ffa539d7b615fa582b08366a5db08548351a45724395a82b4a3e99e67fb7",
+  "nom_original": "macro-économie.pdf",
+  "chemin_relatif_source": "OD_Docs/macro-économie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1671126,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 110,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2013,
+  "auteurs": "Gregory N. Mankiw",
+  "source_organisation": "De Boeck Supérieur",
+  "mots_cles": [
+    "macroeconomie",
+    "de boeck",
+    "mankiw",
+    "economie generale",
+    "manuel universitaire"
+  ],
+  "titre_trouve": "Macroéconomie",
+  "titre": "Macroéconomie (Manuel universitaire De Boeck - 6e édition)",
+  "resume": "Manuel universitaire de référence en macroéconomie générale traitant des théories de la croissance, des cycles économiques, de la monnaie et des politiques budgétaires.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Manuel commercial de macroéconomie générale sous droits réservés (De Boeck), totalement hors du périmètre agricole.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.98,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Macroéconomie Gregory N. Mankiw Traduction de la 8e édition américaine par Jihad C. El Naboulsi"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00982__macroeconomie-manuel-universitaire-de-boeck-6e-edition.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00982__macroeconomie-manuel-universitaire-de-boeck-6e-edition.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01015",
+  "sha256": "f6eb3f58ba179e38de0987946b8a29fb6fdd77bec37d98f863d702c39876f6fb",
+  "nom_original": "poissons fumes batonnets surgeles.pdf",
+  "chemin_relatif_source": "OD_Docs/poissons fumes batonnets surgeles.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 48093,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479990379-poissons_fumes_batonnets_surgeles.pdf",
+  "nb_telechargements_existant": 1,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "poisson fume et charcuterie",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "poisson fume",
+    "batonnets panes",
+    "fumage",
+    "porc transforme",
+    "charcuterie",
+    "procede agroalimentaire"
+  ],
+  "titre_trouve": "POISSONS FUMES ET BATONNETS SURGELES",
+  "titre": "Diagrammes de procédés : Poissons fumés, bâtonnets panés surgelés et charcuterie porcine",
+  "resume": "Fiches techniques sous forme de schémas de fabrication détaillant les étapes industrielles de transformation du poisson (fumage traditionnel et ionisé, panure) et de la poitrine de porc (salage, étuvage, séchage).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle illustrant les procédés de transformation et de fumage des produits animaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "POISSONS FUMES ET BATONNETS SURGELES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01015__diagrammes-de-procedes-poissons-fumes-batonnets-panes-s.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-01015__diagrammes-de-procedes-poissons-fumes-batonnets-panes-s.pdf"
+}

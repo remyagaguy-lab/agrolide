@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00408",
+  "sha256": "ee316c4d7b25cb6ae9b6b9fdb0ec2340cfe1fd788304a327e669136c409f2636",
+  "nom_original": "FICHE_TECHNIQUE_2_ITINERAIRE_TECHNIQUE_DE_L’ARACHIDE_GROUNDNUT_TECHNICAL.pdf",
+  "chemin_relatif_source": "OD_Docs/FICHE_TECHNIQUE_2_ITINERAIRE_TECHNIQUE_DE_L’ARACHIDE_GROUNDNUT_TECHNICAL.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1117775,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00404",
+  "groupe_doublon_id": "GRP-0030",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00404 (Itinéraire technique de l'arachide (Fiche technique 2 Programme ACMA2)).",
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "arachide",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Programme ACMA2 / IFDC-Bénin",
+  "source_organisation": "IFDC / Programme ACMA2",
+  "mots_cles": [
+    "arachide",
+    "itineraire technique",
+    "acma2",
+    "ifdc",
+    "benin",
+    "bonnes pratiques agricoles"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE: ITINERAIRE TECHNIQUE DE L’ARACHIDE",
+  "titre": "Itinéraire technique de l'arachide (Fiche technique 2 Programme ACMA2)",
+  "resume": "Guide technique officiel du programme ACMA2 détaillant les bonnes pratiques agricoles pour la production d'arachide au Bénin : choix du terrain, semis, fertilisation, désherbage et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE: ITINERAIRE TECHNIQUE DE L’ARACHIDE"
+    },
+    {
+      "champ": "autre",
+      "page": 8,
+      "extrait": "Contacts Programme ACMA2 IFDC-BENIN : Cotonou, Bénin"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00408__itineraire-technique-de-l-arachide-fiche-technique-2-pr.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00408__itineraire-technique-de-l-arachide-fiche-technique-2-pr.pdf"
+}

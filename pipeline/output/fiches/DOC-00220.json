@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00220",
+  "sha256": "e93783c7440d966111051096ff70a4021b092e156c5ec35366a2ed156104097f",
+  "nom_original": "Analyse technico-économique des unités d_embouche.pdf",
+  "chemin_relatif_source": "OD_Docs/Analyse technico-économique des unités d_embouche.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 642350,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 15,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovins",
+  "pays": "Cameroun",
+  "annee": 2016,
+  "auteurs": "Yakouba Blama, Kadouamaï Souleymanou, Cyrille Rigolot",
+  "source_organisation": "Afrique Science / CIRAD / IRAD",
+  "mots_cles": [
+    "embouche bovine",
+    "rentabilite",
+    "cameroun",
+    "zone semi-aride",
+    "analyse economique"
+  ],
+  "titre_trouve": "Analyse technico-économique des unités d’embouche bovine en zone semi-aride du Cameroun",
+  "titre": "Analyse technico-économique des unités d'embouche bovine au Cameroun",
+  "resume": "Article scientifique évaluant les stratégies d'engraissement, la conduite zootechnique et la rentabilité financière des ateliers d'embouche bovine dans le Nord du Cameroun.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY 4.0",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique en libre accès sous licence CC BY 4.0 sur l'embouche bovine sahélienne, diffusable aux membres.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.99,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Distributed under a Creative Commons Attribution 4.0 International License"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00220__analyse-technico-economique-des-unites-d-embouche-bovin.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00220__analyse-technico-economique-des-unites-d-embouche-bovin.pdf"
+}

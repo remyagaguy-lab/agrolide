@@ -1,0 +1,84 @@
+{
+  "id": "DOC-00261",
+  "sha256": "ffc4e8e2d5c0a9af6dd28a1a3e9983f109afde52099540013533bf829744885b",
+  "nom_original": "Brochure fertilisation15nov.pdf",
+  "chemin_relatif_source": "OD_Docs/Brochure fertilisation15nov.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3042607,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479312011-Brochure_fertilisation15nov.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 52,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2005,
+  "auteurs": "Fédération d’agriculture biologique du Québec (FABQ)",
+  "source_organisation": "FABQ / MAPAQ",
+  "mots_cles": [
+    "fertilisation organique",
+    "matiere organique",
+    "compost",
+    "agriculture biologique",
+    "quebec"
+  ],
+  "titre_trouve": "La fertilisation organique des cultures : Les bases",
+  "titre": "La fertilisation organique des cultures : les bases agronomiques",
+  "resume": "Brochure technique détaillée de 52 pages expliquant les fondements de la gestion des matières organiques, du compostage et de la fertilité biologique des sols agricoles.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide institutionnel de référence sur la matière organique, issu du Québec, réservé aux membres en raison de son contexte tempéré.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La fertilisation organique des cultures Les bases"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "La Fédération d’agriculture biologique du Québec (FABQ)"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Programme de soutien au développement de l’agriculture biologique du Ministère de l’Agriculture des Pêcheries et de l’Alimentation du Québec"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00261__la-fertilisation-organique-des-cultures-les-bases-agron.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00261__la-fertilisation-organique-des-cultures-les-bases-agron.pdf"
+}

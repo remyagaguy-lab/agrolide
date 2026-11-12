@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00327",
+  "sha256": "6b7ec0fd801dfbf6310039f6562b801b9cadc6b6c75359c098d74ad6b5352ab8",
+  "nom_original": "Crises_sanitaires_en_agriculture_Les_espèces_invasives_sous_surveillance.pdf",
+  "chemin_relatif_source": "OD_Docs/Crises_sanitaires_en_agriculture_Les_espèces_invasives_sous_surveillance.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 12502854,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 406,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "ouvrage",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "decideur_institution",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2020,
+  "auteurs": "Christian Lannou, Jean-Yves Rasplus, Samuel Soubeyrand, Mathieu Gautier, Jean-Pierre Rossi",
+  "source_organisation": "INRAE / Éditions Quæ",
+  "mots_cles": [
+    "especes invasives",
+    "crises sanitaires",
+    "sante des plantes",
+    "surveillance du territoire",
+    "biosecurite"
+  ],
+  "titre_trouve": "Crises sanitaires en agriculture: Les espèces invasives sous surveillance",
+  "titre": "Crises sanitaires en agriculture : Les espèces invasives sous surveillance",
+  "resume": "Ouvrage scientifique de synthèse sur les invasions biologiques en agriculture, les mécanismes évolutifs des bioagresseurs émergents et les dispositifs d'anticipation et de surveillance.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage scientifique commercial soumis au droit d'auteur exclusif de l'éditeur, non diffusable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Crises sanitaires en agriculture: Les espèces invasives sous surveillance"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00327__crises-sanitaires-en-agriculture-les-especes-invasives.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00327__crises-sanitaires-en-agriculture-les-especes-invasives.pdf"
+}

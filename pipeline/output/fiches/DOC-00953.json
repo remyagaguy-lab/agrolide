@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00953",
+  "sha256": "e6484a0daf728cea6ac04646ef2272716789e7ddc83cf90826b9820acc144b34",
+  "nom_original": "huile margarine tourteaux furfural cires savon mucilages.pdf",
+  "chemin_relatif_source": "OD_Docs/huile margarine tourteaux furfural cires savon mucilages.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 34783,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479800826-huile_margarine_tourteaux_furfural_cires_savon_mucilages.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "huiles_sucre_corps_gras",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA",
+  "mots_cles": [
+    "raffinage des huiles",
+    "margarine",
+    "oleagineux",
+    "tourteaux",
+    "diagramme de process",
+    "genie industriel"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité HUILES – MARGARINES",
+  "titre": "Synoptique industriel de raffinage des huiles végétales et fabrication de margarine",
+  "resume": "Diagramme de procédé complet décrivant les étapes du pressage, extraction par solvant, démucilagination, désodorisation et hydrogénation des huiles et margarines.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Schéma d'ingénierie industrielle de référence sur le raffinage des corps gras, accessible aux membres pour l'appui technique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité HUILES – MARGARINES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00953__synoptique-industriel-de-raffinage-des-huiles-vegetales.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/huiles_sucre_corps_gras/DOC-00953__synoptique-industriel-de-raffinage-des-huiles-vegetales.pdf"
+}

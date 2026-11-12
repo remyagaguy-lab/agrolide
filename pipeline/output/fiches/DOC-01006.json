@@ -1,0 +1,71 @@
+{
+  "id": "DOC-01006",
+  "sha256": "d1dcd18511464eddd95b2f145bc4f3c5bc40918a92d29116bc3d8503dbefbca2",
+  "nom_original": "petits ruminunat 1 PDF.pdf",
+  "chemin_relatif_source": "OD_Docs/petits ruminunat 1 PDF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3289451,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 77,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "presentation",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ovins",
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Christian Sidibé",
+  "source_organisation": null,
+  "mots_cles": [
+    "embouche ovine",
+    "alimentation des moutons",
+    "tourteau de coton",
+    "engraissement",
+    "ruminants",
+    "sahel"
+  ],
+  "titre_trouve": "Formation technique en embouche ovine",
+  "titre": "Formation technique en embouche ovine : Conduite et formules alimentaires",
+  "resume": "Support de formation en diapositives détaillant les types d'embouche ovine en zone sahélienne, la conduite zootechnique, la prophylaxie et des formules de rationnement équilibrées à base de sous-produits locaux.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de formation technique indépendant sans mention de licence libre, archivé pour documentation interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Formation technique en embouche ovine Sidibé Christian Ingénieur en élevage"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01006__formation-technique-en-embouche-ovine-conduite-et-formu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-01006__formation-technique-en-embouche-ovine-conduite-et-formu.pdf"
+}

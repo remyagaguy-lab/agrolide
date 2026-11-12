@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00498",
+  "sha256": "db387efc7c23ebaeaea33295c76b7e48e5ec514e0bcc8d8b0d5f0a52d03814a8",
+  "nom_original": "ID341076.pdf",
+  "chemin_relatif_source": "OD_Docs/ID341076.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 29752050,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 81,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cultures maraîchères",
+  "pays": "Burkina Faso",
+  "annee": 1990,
+  "auteurs": "J. d'Arondel de Hayes, G. Traoré",
+  "source_organisation": "CIRAD / IRAT / INERA / CNRST",
+  "mots_cles": [
+    "cultures maraicheres",
+    "sahel",
+    "burkina faso",
+    "cirad",
+    "inera",
+    "fiches techniques",
+    "farako-ba"
+  ],
+  "titre_trouve": "CULTURES MARAÎCHÈRES EN ZONE SOUDANO-SAHÉLIENNE RECUEIL DE FICHES TECHNIQUES",
+  "titre": "Cultures maraîchères en zone soudano-sahélienne : Recueil de fiches techniques",
+  "resume": "Recueil de référence du CIRAD et de l'INERA synthétisant 25 ans d'expérimentations maraîchères à la station de Farako-Bâ : pépinières, fertilisation, irrigation et fiches techniques par espèce légumière pour le Sahel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Recueil technique majeur du CIRAD/INERA directement destiné aux producteurs sahéliens, autorisé en diffusion institutionnelle.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "CULTURES MARAÎCHÈRES EN ZONE SOUDANO-SAHÉLIENNE RECUEIL DE FICHES TECHNIQUES J. d'ARONDEL de HAYES, G. TRAORE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00498__cultures-maraicheres-en-zone-soudano-sahelienne-recueil.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00498__cultures-maraicheres-en-zone-soudano-sahelienne-recueil.pdf"
+}

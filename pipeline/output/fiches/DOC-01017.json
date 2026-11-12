@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01017",
+  "sha256": "b1e8f089633ded1eba1a38b1fc795b58b1d060fe90e5a49829fbe7b94fd097a0",
+  "nom_original": "poivron-ft-culture_SDRdag_v181212.pdf",
+  "chemin_relatif_source": "OD_Docs/poivron-ft-culture_SDRdag_v181212.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1878572,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "poivron",
+  "pays": "France",
+  "annee": 2016,
+  "auteurs": "Jérôme LECERF",
+  "source_organisation": "Service du Développement Rural (SDR)",
+  "mots_cles": [
+    "poivron",
+    "capsicum annuum",
+    "fiche technique",
+    "culture tropicale",
+    "solanacees",
+    "protection phytosanitaire"
+  ],
+  "titre_trouve": "Service du développement rural - 2016 Le poivron (Capsicum annuum L.)",
+  "titre": "Fiche technique de culture du poivron en milieu tropical (SDR)",
+  "resume": "Guide agronomique complet sur la culture du poivron en climat tropical, couvrant les exigences climatiques, l'itinéraire cultural de la pépinière à la récolte, et la protection phytosanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle officielle de haute qualité agronomique pour la culture tropicale du poivron.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Service du développement rural - 2016 Le poivron (Capsicum annuum L.)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Service du développement rural"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01017__fiche-technique-de-culture-du-poivron-en-milieu-tropica.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01017__fiche-technique-de-culture-du-poivron-en-milieu-tropica.pdf"
+}

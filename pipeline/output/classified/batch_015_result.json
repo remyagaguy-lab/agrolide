@@ -1,0 +1,605 @@
+{
+  "batch_number": 15,
+  "results": [
+    {
+      "id": "DOC-00208",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Aït Mechedal M.",
+      "source_organisation": null,
+      "mots_cles": ["pedologie", "science du sol", "agronomie", "eau du sol", "potentiel hydrique"],
+      "titre_trouve": "Deuxième année licence sciences agronomiques - Agronomie I",
+      "titre": "Agronomie I : Notions fondamentales de pédologie et physique du sol",
+      "resume": "Support de cours en diapositives pour la deuxième année de licence en sciences agronomiques, abordant les définitions du sol, les facteurs de pédogenèse et les dynamiques de l'eau dans le sol.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non libre de droits, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Deuxième année licence sciences agronomiques Agronomie I AIT MECHEDAL M."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00209",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": ["ruminants"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "bovins",
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["nutrition animale", "ruminants", "digestibilite", "fourrages", "aliments du betail"],
+      "titre_trouve": "2ème Année Agronomie - Agronomie II - Nutrition animale",
+      "titre": "Agronomie II : Cours de nutrition et alimentation des ruminants",
+      "resume": "Polycopié de cours universitaire d'agronomie détaillant la composition chimique des aliments, la dégradation ruminale, l'utilisation digestive et les besoins en minéraux des ruminants.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours d'enseignant sans mention de licence libre, réservé à l'archivage.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "2ème Année Agrornomie Agronomie II Nutrition animale 1. Utilisation et constitution des aliments"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00210",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": ["production_vegetale"],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["enseignant_chercheur", "decideur_institution"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Maroc",
+      "annee": 2009,
+      "auteurs": "Dr. Abdellah Aboudrare",
+      "source_organisation": "FAO / ORMVA Ouarzazate",
+      "mots_cles": ["agronomie durable", "developpement durable", "travail du sol", "conservation des sols", "fao", "maroc"],
+      "titre_trouve": "Rapport de Formation Continue : Agronomie Durable Principes et Pratiques",
+      "titre": "Agronomie durable : Principes et pratiques (Formation FAO / ORMVA)",
+      "resume": "Rapport de formation continue co-organisé par la FAO et l'ORMVA de Ouarzazate, exposant les concepts du développement durable, les principes d'agronomie durable et les techniques de conservation des sols.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport technique institutionnel de formation FAO complet et de bonne valeur pédagogique pour les membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Rapport de Formation Continue Agronomie Durable Principes et Pratiques Au profit des cadres et techniciens de l’ORMVA de Ouarzazate"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00211",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": "Suisse",
+      "annee": 2014,
+      "auteurs": "Moulin de Burgholz SA",
+      "source_organisation": "Moulin de Burgholz SA",
+      "mots_cles": ["poules pondeuses", "alimentation avicole", "poussins", "rationnement", "trofino"],
+      "titre_trouve": "Recommandations d‘alimentation - Aliment poules pondeuses",
+      "titre": "Recommandations d'alimentation pour poules pondeuses (Gamme Trofino)",
+      "resume": "Fiche commerciale et technique présentant les recommandations de rationnement et les caractéristiques nutritionnelles de la gamme d'aliments Trofino pour poussins, poulettes et pondeuses en Suisse.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contenu_commercial", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Dépliant commercial pour produits d'un fabricant suisse, inadapté au contexte local et protégé par des droits commerciaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Moulin de Burgholz SA ... Recommandations d‘alimentation ... Aliment poules pondeuses"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00212",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Togo",
+      "annee": 2016,
+      "auteurs": "Secaar",
+      "source_organisation": "Secaar",
+      "mots_cles": ["aviculture", "poules", "poussins", "alimentation locale", "formulation", "secaar", "togo"],
+      "titre_trouve": "L'Alimentation de la poule",
+      "titre": "L'alimentation de la poule : Formulations d'aliments locaux",
+      "resume": "Fiche pratique éditée par l'ONG Secaar à Lomé proposant des recettes de formulation équilibrées pour poules et poussins à base d'ingrédients locaux disponibles en Afrique de l'Ouest.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche pratique terrain complète et essentielle pour les petits éleveurs en Afrique tropicale, diffusée par une ONG régionale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Diffusé par Secaar 01 BP 3011 LOMÉ 01 TOGO ... l’ Alimentation de la poule"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00213",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["alimentation_animale", "agroecologie_agriculture_durable"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Célia Bordeaux, Antoine Roinsard, Hervé Juin, Mathilde Brachet, Léonie Dusart",
+      "source_organisation": "ITAB / ITAVI / INRA",
+      "mots_cles": ["aviculture biologique", "alimentation volailles", "volailles de chair", "poules pondeuses", "itab", "inra"],
+      "titre_trouve": "Alimentation des volailles en agriculture biologique - Cahier technique Juin 2015",
+      "titre": "Alimentation des volailles en agriculture biologique (Cahier technique)",
+      "resume": "Guide technique exhaustif de l'ITAB et de l'INRA sur la nutrition des volailles en agriculture biologique, traitant des besoins physiologiques, des matières premières et des équilibres alimentaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique institutionnel de référence complet, très instructif pour la formulation biologique et réservé aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Alimentation des volailles en agriculture biologique Cahier technique Juin 2015"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00214",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": ["elevage_general"],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "FREDON Martinique",
+      "source_organisation": "FREDON Martinique / CIRAD",
+      "mots_cles": ["alimentation animale", "fourrages tropicaux", "martinique", "elevage tropical", "digestibilite"],
+      "titre_trouve": "Martinique - Synthèse bibliographique 2013 : Alimentation animale",
+      "titre": "Alimentation animale en milieu tropical : Synthèse bibliographique (Martinique)",
+      "resume": "Synthèse technique et bibliographique élaborée par la FREDON Martinique sur les besoins nutritifs du bétail, la valeur alimentaire des fourrages tropicaux et la valorisation des sous-produits locaux.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport technique institutionnel complet sur l'alimentation animale en milieu tropical insulaire, réservé aux membres.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MARTINIQUE - FBIOll Synthèse bibliographique 2013"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00215",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["batiments_equipements_elevage"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2011,
+      "auteurs": "Eva Kok, Janna de Feyter, Adr Vink",
+      "source_organisation": "Agromisa / CTA",
+      "mots_cles": ["aviculture", "agrodok", "incubation", "poussins", "couveuse", "elevage de volailles"],
+      "titre_trouve": "Série Agrodok No. 34 : Amélioration de l’incubation et de l’élevage des poussins",
+      "titre": "Amélioration de l'incubation et de l'élevage des poussins (Agrodok 34)",
+      "resume": "Manuel pratique complet de la collection Agrodok détaillant les techniques d'incubation naturelle et artificielle, la gestion des couveuses et l'élevage des poussins en milieu tropical.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de vulgarisation Agrodok/CTA pour l'Afrique tropicale, autorisé à la diffusion publique.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Série Agrodok No. 34 Amélioration de l’incubation et de l’élevage des poussins"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00216",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": ["batiments_equipements_elevage", "gestion_exploitation"],
+      "type_doc": "presentation",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2015,
+      "auteurs": "Sawadogo Dramane",
+      "source_organisation": null,
+      "mots_cles": ["aviculture", "poulailler", "habitat volaille", "alimentation volaille", "burkina faso"],
+      "titre_trouve": "Comment faire de mon poulailler une unite de production economique ? Session 2015",
+      "titre": "Comment faire de mon poulailler une unité de production économique ?",
+      "resume": "Support de formation en diapositives sur la conduite d'un élevage avicole rentable au Burkina Faso : amélioration de l'habitat, alimentation, prophylaxie et gestion quotidienne.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de formation individuel sans licence libre explicite ni cadre institutionnel vérifiable, archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COMMENT FAIRE DE MON POULAILLER UNE UNITE DE PRODUCTION ECONOMIQUE ? SESSION 2015 AVICULTURE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00217",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": ["agronomie_generale"],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Kasmi Yacine",
+      "source_organisation": "Université Hamma Lakhdar - El Oued",
+      "mots_cles": ["amelioration des plantes", "selection varietale", "genetique vegetale", "master agronomie"],
+      "titre_trouve": "Amélioration des Plantes et Sélection Variétale",
+      "titre": "Amélioration des plantes et sélection variétale (Cours Master 1)",
+      "resume": "Polycopié de cours universitaire de Master 1 présentant les principes fondamentaux de l'amélioration génétique des plantes, les critères et les méthodes de sélection variétale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non libre de droits, archivé conformément aux règles métier.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Université Hamma Lakhdar- EL Oued ... Amélioration des Plantes et Sélection Variétale Chargé du module : KASMI Yacine"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00218",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["amelioration genetique", "selection varietale", "plantes", "agronomie"],
+      "titre_trouve": null,
+      "titre": "Amélioration génétique des plantes [Scan à traiter]",
+      "resume": "Document numérisé de 30 pages traitant de l'amélioration génétique des plantes, nécessitant un traitement OCR pour identifier le contenu détaillé et les métadonnées.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable", "titre_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier scanné sans texte extractible (OCR nécessaire) avec incertitude sur les droits et la source.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.3,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Titre déduit du nom de fichier original : Amélioration génétique des plantes.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00219",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": ["alimentation_animale", "gestion_exploitation"],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ovins",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "Sanon Hadja Oumou, Zorma Antoine, Simian Aziz, Obulbiga M. Ferdinand, Compaoré Emmanuel",
+      "source_organisation": "INERA / Université Nazi Boni",
+      "mots_cles": ["embouche ovine", "ovins", "burkina faso", "sahel", "alimentation animale", "inera"],
+      "titre_trouve": "Analyse des pratiques d’embouche ovine dans deux zones semi-arides du Burkina Faso",
+      "titre": "Analyse des pratiques d'embouche ovine dans deux zones semi-arides du Burkina Faso",
+      "resume": "Article de recherche scientifique analysant les pratiques des producteurs, la gestion de l'alimentation et les performances technico-économiques de l'embouche ovine en zone sahélienne au Burkina Faso.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique publié en libre accès dans le Journal of Applied Biosciences, complet et hautement pertinent pour la filière ovine.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Journal of Applied Biosciences 150: 15390 - 15402 ... Analyse des pratiques d’embouche ovine dans deux zones semi-arides du Burkina Faso"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00220",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": ["gestion_exploitation"],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovins",
+      "pays": "Cameroun",
+      "annee": 2016,
+      "auteurs": "Yakouba Blama, Kadouamaï Souleymanou, Cyrille Rigolot",
+      "source_organisation": "Afrique Science / CIRAD / IRAD",
+      "mots_cles": ["embouche bovine", "rentabilite", "cameroun", "zone semi-aride", "analyse economique"],
+      "titre_trouve": "Analyse technico-économique des unités d’embouche bovine en zone semi-aride du Cameroun",
+      "titre": "Analyse technico-économique des unités d'embouche bovine au Cameroun",
+      "resume": "Article scientifique évaluant les stratégies d'engraissement, la conduite zootechnique et la rentabilité financière des ateliers d'embouche bovine dans le Nord du Cameroun.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "CC BY 4.0",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique en libre accès sous licence CC BY 4.0 sur l'embouche bovine sahélienne, diffusable aux membres.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.99,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "licence_detectee",
+          "page": 1,
+          "extrait": "Distributed under a Creative Commons Attribution 4.0 International License"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00221",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "nutrition_alimentation",
+      "domaines_secondaires": ["transformation_fruits_legumes"],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": "papaye",
+      "pays": "Canada",
+      "annee": 2012,
+      "auteurs": "Lapointe Mélissa",
+      "source_organisation": "Cellule de veille OGM (Québec)",
+      "mots_cles": ["papaye", "ogm", "nutrition", "securite alimentaire", "biotechnologie"],
+      "titre_trouve": "Analyse nutritionnelle de la papaye transgénique, premier fruit GM commercialisé",
+      "titre": "Analyse nutritionnelle de la papaye transgénique Rainbow (Bulletin OGM)",
+      "resume": "Note de synthèse de veille technologique évaluant l'équivalence nutritionnelle et la composition de la papaye transgénique Rainbow par rapport aux variétés conventionnelles.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Note institutionnelle publique québécoise sur la nutrition et les OGM, mise à disposition des membres.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Analyse nutritionnelle de la papaye transgénique, premier fruit GM commercialisé ... Cellule de veille OGM – Bulletin #29 - 2012"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00222",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": ["ruminants"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["anatomie veterinaire", "dentition", "osteologie", "estimation de l'age", "bovins", "petits ruminants"],
+      "titre_trouve": "Dentition et ostéologie des animaux domestiques",
+      "titre": "Anatomie vétérinaire : Dentition et ostéologie des animaux domestiques",
+      "resume": "Présentation pédagogique illustrée sur l'anatomie vétérinaire, décrivant la dentition pour l'estimation de l'âge chez les ruminants et chevaux ainsi que les os du squelette.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours illustré non libre de droits, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 6,
+          "extrait": "Dentition Age du cheval ... Age du bovin ... Age des petits ruminants"
+        }
+      ]
+    }
+  ]
+}

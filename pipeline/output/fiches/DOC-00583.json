@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00583",
+  "sha256": "6fbaada99e9ca76da581e8c14133ea2f2d47ac612a2fedd684e964a6df51e2e7",
+  "nom_original": "MANUEL ELEVAGE DES LAPINS modifié OK.pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL ELEVAGE DES LAPINS modifié OK.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2767469,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 66,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "lapin",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Solange TSIMEGNE, Équipe d’ingénieurs CREFNAC Africa Itnl",
+  "source_organisation": "CREFNAC Africa Itnl",
+  "mots_cles": [
+    "cuniculture",
+    "elevage des lapins",
+    "clapiers",
+    "reproduction lapin",
+    "sante animale"
+  ],
+  "titre_trouve": "MANUEL DE FORMATION EN ELEVAGE DES LAPINS",
+  "titre": "Manuel de formation en élevage des lapins (Cuniculture en milieu tropical)",
+  "resume": "Manuel pratique de cuniculture tropicale : choix des races, reproduction, alimentation, conception des clapiers et prophylaxie contre les maladies et parasites.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel pratique complet de cuniculture tropicale destiné aux éleveurs et porteurs de projet en Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MANUEL DE FORMATION EN ELEVAGE DES LAPINS Rédigé par l’équipe d’ingénieurs crefnac Africa Itnl"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00583__manuel-de-formation-en-elevage-des-lapins-cuniculture-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00583__manuel-de-formation-en-elevage-des-lapins-cuniculture-e.pdf"
+}

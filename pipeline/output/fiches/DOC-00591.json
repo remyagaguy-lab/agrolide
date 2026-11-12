@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00591",
+  "sha256": "e346d2be768a1f3860cacb60f09510a524c22bd68f802ba1d7727669b9d92260",
+  "nom_original": "MAÏS.pdf",
+  "chemin_relatif_source": "OD_Docs/MAÏS.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1508780,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 13,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maïs",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+  "source_organisation": "EFATI",
+  "mots_cles": [
+    "mais",
+    "culture du mais",
+    "semis",
+    "fertilisation",
+    "stockage en crib"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU MAIS (Zea mays)",
+  "titre": "Technologie de production et stockage du maïs (Zea mays)",
+  "resume": "Guide technique de formation sur la culture du maïs : exigences agroécologiques, préparation du terrain, semis, fertilisation, protection des plantes et stockage en crib.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique et pédagogique complète d'un institut camerounais agréé pour la production céréalière en zone tropicale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES TECHNOLOGIE DE PRODUCTION DU MAIS (Zea mays)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00591__technologie-de-production-et-stockage-du-mais-zea-mays.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00591__technologie-de-production-et-stockage-du-mais-zea-mays.pdf"
+}

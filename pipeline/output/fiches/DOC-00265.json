@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00265",
+  "sha256": "cd30bb4f64dc2eb2e46ef9cb44e31220da8ee7197fc8d9f0372667b27ceb02cf",
+  "nom_original": "CALCUL RESERVE SOL.docx",
+  "chemin_relatif_source": "OD_Docs/CALCUL RESERVE SOL.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 12532,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "reserve utile",
+    "irrigation",
+    "capacite au champ",
+    "zone racinaire",
+    "bilan hydrique"
+  ],
+  "titre_trouve": "réserve d'eau du sol disponible pour l'irrigation",
+  "titre": "Méthode de calcul de la réserve en eau du sol disponible pour l'irrigation",
+  "resume": "Fiche de calcul technique expliquant la méthode et les formules pour estimer le volume d'eau disponible dans la zone racinaire en fonction de la capacité au champ.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique bureautique non convertie, d'origine informelle sans droits de diffusion explicites.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "réserve d'eau du sol disponible pour l'irrigation"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Calcul de la réserve d'eau : R = 600 * 0,075 = 45 m3 Cela signifie qu'il y a 45 m³ d'eau disponible"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00265__methode-de-calcul-de-la-reserve-en-eau-du-sol-disponibl.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00265__methode-de-calcul-de-la-reserve-en-eau-du-sol-disponibl.pdf"
+}

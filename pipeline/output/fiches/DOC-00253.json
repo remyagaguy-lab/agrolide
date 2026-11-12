@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00253",
+  "sha256": "0dc1c75aea78ba0361cdf2fb32ffc54daa7aa11c6b14099b602a77e681ddcf54",
+  "nom_original": "Biologie de spermatozoïde.pdf",
+  "chemin_relatif_source": "OD_Docs/Biologie de spermatozoïde.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2177203,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Yaici, Arab",
+  "source_organisation": null,
+  "mots_cles": [
+    "spermatozoide",
+    "embryologie humaine",
+    "fertilite masculine",
+    "medecine",
+    "spermatogenese"
+  ],
+  "titre_trouve": "Biologie du spermatozoïde - Embryologie humaine",
+  "titre": "Biologie du spermatozoïde : Embryologie et fertilité humaine",
+  "resume": "Chapitre de cours médical consacré à l'anatomie, la structure flagellaire et l'évaluation de la fertilité du spermatozoïde humain.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document médical traitant exclusivement d'embryologie et de fertilité humaine, hors périmètre agronomique et vétérinaire.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 8,
+      "extrait": "Embryologie humaine YAICI et ARAB"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00253__biologie-du-spermatozoide-embryologie-et-fertilite-huma.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00253__biologie-du-spermatozoide-embryologie-et-fertilite-huma.pdf"
+}

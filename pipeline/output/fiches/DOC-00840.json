@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00840",
+  "sha256": "c351b866a13bb806db4ec318d59843912514c429f71ce99d96957dd0dbfe6192",
+  "nom_original": "conserves surgeles de poisson.pdf",
+  "chemin_relatif_source": "OD_Docs/conserves surgeles de poisson.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 31873,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479406533-conserves_surgeles_de_poisson.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "poisson",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA",
+  "mots_cles": [
+    "poisson",
+    "conserves",
+    "fumage",
+    "surgelation",
+    "saumurage",
+    "sterilisation",
+    "procede industriel"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité CONSERVES DE POISSON",
+  "titre": "Schéma de procédé industriel : Conserves, surgelés et produits saurés de poisson",
+  "resume": "Synoptique des opérations unitaires de transformation du poisson : étêtage, éviscération, filetage, conserverie appertisée, surgélation et fumage.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Planche technique protégée (ISAA) sans licence libre, archivée en non publié conformément aux règles de droits.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité CONSERVES DE POISSON"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00840__schema-de-procede-industriel-conserves-surgeles-et-prod.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00840__schema-de-procede-industriel-conserves-surgeles-et-prod.pdf"
+}

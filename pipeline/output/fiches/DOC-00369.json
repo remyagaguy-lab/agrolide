@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00369",
+  "sha256": "90dad00afa670e3bfd8a6ca2ee581b9e5650debf8971dfbdede1c835e9b0c162",
+  "nom_original": "EXER VOLUME BASSIN REGULATION (2).docx",
+  "chemin_relatif_source": "OD_Docs/EXER VOLUME BASSIN REGULATION (2).docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 14708,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "ENIGMA",
+  "source_organisation": null,
+  "mots_cles": [
+    "bassin de stockage",
+    "irrigation",
+    "dimensionnement hydraulique",
+    "perimetre irrigue",
+    "volume tampon"
+  ],
+  "titre_trouve": "Calcul volume d’un bassin de stockage nécessaire pour l’irrigation d’un périmètre irrigué",
+  "titre": "Calcul du volume d'un bassin de stockage pour l'irrigation d'un grand périmètre",
+  "resume": "Exercice résolu de dimensionnement hydraulique du volume d'un bassin de stockage et de régulation selon les besoins en eau et le débit de pompage.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche d'exercice de dimensionnement sans source institutionnelle claire ni mention de droits libres, conservée en archive technique.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Calcul volume d’un bassin de stockage nécessaire pour l’irrigation d’un périmètre irrigué"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0027",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00369__calcul-du-volume-d-un-bassin-de-stockage-pour-l-irrigat.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00369__calcul-du-volume-d-un-bassin-de-stockage-pour-l-irrigat.pdf"
+}

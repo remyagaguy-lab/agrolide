@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00711",
+  "sha256": "eb8b52631677ef665da8a1d31f32b002dd6549fbd209865f67adf0f7ed84ba6a",
+  "nom_original": "Règles de base de l_utilisation du tracteur.pdf",
+  "chemin_relatif_source": "OD_Docs/Règles de base de l_utilisation du tracteur.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9848464,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 55,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "machinisme agricole",
+  "pays": "Nouvelle-Calédonie",
+  "annee": 2016,
+  "auteurs": "Bernard ANGONIN",
+  "source_organisation": "Chambre d'Agriculture de Nouvelle-Calédonie / Direction du Développement Rural province Sud",
+  "mots_cles": [
+    "tracteur agricole",
+    "machinisme",
+    "moteur",
+    "lestage",
+    "pneumatiques",
+    "relevage hydraulique",
+    "securite"
+  ],
+  "titre_trouve": "REGLES DE BASE DE L’UTILISATION DU TRACTEUR AGRICOLE",
+  "titre": "Règles de base de l'utilisation du tracteur agricole : Conduite, réglages et sécurité",
+  "resume": "Guide technique complet détaillant les règles fondamentales d'utilisation d'un tracteur agricole : régime moteur, étalonnage des vitesses, lestage, pression des pneumatiques et attelage des outils.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique institutionnel de référence sur le machinisme agricole et la maîtrise du tracteur, d'une grande valeur pratique pour les exploitations.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "REGLES DE BASE DE L’UTILISATION DU TRACTEUR AGRICOLE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Chambre d'Agriculture de Nouvelle Calédonie Plateforme Machinisme Agricole"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00711__regles-de-base-de-l-utilisation-du-tracteur-agricole-co.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00711__regles-de-base-de-l-utilisation-du-tracteur-agricole-co.pdf"
+}

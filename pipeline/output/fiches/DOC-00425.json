@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00425",
+  "sha256": "83c565f50f15e65d7d141b875f008d1ec948a2578b76cd6a4d2c8a8a3e848b24",
+  "nom_original": "Fertilisation des cultures.pdf",
+  "chemin_relatif_source": "OD_Docs/Fertilisation des cultures.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1133682,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 16,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "cultures maraîchères",
+  "pays": "Suisse",
+  "annee": 2017,
+  "auteurs": "Reto Neuweiler, Jürgen Krauss",
+  "source_organisation": "Agroscope",
+  "mots_cles": [
+    "fertilisation",
+    "cultures maraicheres",
+    "agroscope",
+    "prif",
+    "azote nmin",
+    "fumure",
+    "suisse"
+  ],
+  "titre_trouve": "10/ Fertilisation des cultures maraîchères - Principes de fertilisation des cultures agricoles en Suisse (PRIF)",
+  "titre": "Fertilisation des cultures maraîchères (PRIF 2017 - Suisse)",
+  "resume": "Guide officiel d'Agroscope établissant les normes suisses de fertilisation des cultures légumières : besoins minéraux, méthode Nmin et analyse de sève.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide institutionnel suisse officiel (Agroscope) calibré pour l'agriculture tempérée helvétique, non adapté au contexte tropical.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "10/ Fertilisation des cultures maraîchères Reto Neuweiler et Jürgen Krauss Agroscope, 8820 Wädenswil, Suisse"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00425__fertilisation-des-cultures-maraicheres-prif-2017-suisse.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00425__fertilisation-des-cultures-maraicheres-prif-2017-suisse.pdf"
+}

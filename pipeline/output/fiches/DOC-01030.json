@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01030",
+  "sha256": "9831e1b77d47a783a9dd60fa7b4201a544380428248150485737c46c727f036a",
+  "nom_original": "prophylaxie.pdf",
+  "chemin_relatif_source": "OD_Docs/prophylaxie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1758630,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "outil_modele",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "volaille",
+  "pays": "Côte d'Ivoire",
+  "annee": 2017,
+  "auteurs": "IVOGRAIN",
+  "source_organisation": "IVOGRAIN",
+  "mots_cles": [
+    "prophylaxie avicole",
+    "vaccination",
+    "poulettes pondeuses",
+    "pintade",
+    "ivograin",
+    "coted'ivoire",
+    "newcastle",
+    "gumboro"
+  ],
+  "titre_trouve": "PROGRAMME DE PROPHYLAXIE DES POULETTES FUTURES PONDEUSES Source : IVOGRAIN",
+  "titre": "Programmes de prophylaxie avicole : poulettes pondeuses et pintades (Ivograin)",
+  "resume": "Tableaux pratiques de prophylaxie établis par Ivograin détaillant le calendrier de vaccination, d'antibiothérapie et de déparasitage pour volailles.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document émanant d'une société commerciale privée (Ivograin) avec le drapeau bloquant 'contenu_commercial' ; les règles interdisent formellement 'public' ou 'membres' et 'diffusion_institutionnelle' ne s'applique pas aux entreprises commerciales.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PROGRAMME DE PROPHYLAXIE DES POULETTES FUTURES PONDEUSES Source : IVOGRAIN"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Document émanant d'une société commerciale privée (Ivograin) avec le drapeau bloquant 'contenu_commercial' ; les règles interdisent formellement 'public' ou 'membres' et 'diffusion_institutionnelle' ne s'applique pas aux entreprises commerciales."
+  },
+  "nom_fichier_final": "DOC-01030__programmes-de-prophylaxie-avicole-poulettes-pondeuses-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-01030__programmes-de-prophylaxie-avicole-poulettes-pondeuses-e.pdf"
+}

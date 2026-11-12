@@ -1,0 +1,938 @@
+[
+  {
+    "source": "OD_Root",
+    "file": "AgroBusiness Formation.jpg",
+    "ext": ".jpg",
+    "size": 86075
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Agroclimatologie.rar",
+    "ext": ".rar",
+    "size": 11437424
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Arachide_Bonnes_pratiques_agricoles_de_la_récolte_à_l_entreposage360P.mp4",
+    "ext": ".mp4",
+    "size": 13608054
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Biochimie Structurale L2.rar",
+    "ext": ".rar",
+    "size": 34095792
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/biologie animales.rar",
+    "ext": ".rar",
+    "size": 12174173
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/biologie cellulaire.rar",
+    "ext": ".rar",
+    "size": 15153736
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Biologie Végétale L1.rar",
+    "ext": ".rar",
+    "size": 9540925
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Botanique.rar",
+    "ext": ".rar",
+    "size": 21153215
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/carte du sol 01.zip",
+    "ext": ".zip",
+    "size": 9805112
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/carte du sol 02.zip",
+    "ext": ".zip",
+    "size": 24417510
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Cuniculture___Investir_dans_l_élevage.enc",
+    "ext": ".enc",
+    "size": 2596022
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/fertilisation ensa.zip",
+    "ext": ".zip",
+    "size": 5450258
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Gestion du sol.rar",
+    "ext": ".rar",
+    "size": 8311769
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Immunologie.rar",
+    "ext": ".rar",
+    "size": 34502239
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Microbiologie.rar",
+    "ext": ".rar",
+    "size": 7886561
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/norme des eaux d_irrigation.zip",
+    "ext": ".zip",
+    "size": 926141
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Physiologie Animale.rar",
+    "ext": ".rar",
+    "size": 8663556
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Physiologie végétale.rar",
+    "ext": ".rar",
+    "size": 6012490
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Système de culture.rar",
+    "ext": ".rar",
+    "size": 15354440
+  },
+  {
+    "source": "OD_Docs",
+    "file": "OD_Docs/Zoologie.rar",
+    "ext": ".rar",
+    "size": 42502673
+  },
+  {
+    "source": "OD_Agrobusiness",
+    "file": "OD_Agrobusiness/AgroBusiness Formation.jpg",
+    "ext": ".jpg",
+    "size": 86075
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdsaal.jpg",
+    "ext": ".jpg",
+    "size": 1090745
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdsam.jpg",
+    "ext": ".jpg",
+    "size": 1456686
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdsam_2.jpg",
+    "ext": ".jpg",
+    "size": 1456686
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdsam_2_1.jpg",
+    "ext": ".jpg",
+    "size": 1456686
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdsbk.jpg",
+    "ext": ".jpg",
+    "size": 1372328
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdscnt.jpg",
+    "ext": ".jpg",
+    "size": 130404
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdslnd.jpg",
+    "ext": ".jpg",
+    "size": 77141
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdslnd_2.jpg",
+    "ext": ".jpg",
+    "size": 514393
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdsor.jpg",
+    "ext": ".jpg",
+    "size": 1297521
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 01/afr_cdsor_2.jpg",
+    "ext": ".jpg",
+    "size": 1297521
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_cdsor_2.jpg",
+    "ext": ".jpg",
+    "size": 1297521
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_cdsov.jpg",
+    "ext": ".jpg",
+    "size": 866616
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_cdsov_2.jpg",
+    "ext": ".jpg",
+    "size": 866616
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_cdsts.jpg",
+    "ext": ".jpg",
+    "size": 1400499
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_cmpbss.jpg",
+    "ext": ".jpg",
+    "size": 2613991
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_cmpeo.jpg",
+    "ext": ".jpg",
+    "size": 3161467
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_crdsab.jpg",
+    "ext": ".jpg",
+    "size": 1619578
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_crdsam.jpg",
+    "ext": ".jpg",
+    "size": 1807299
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_crdsan.jpg",
+    "ext": ".jpg",
+    "size": 1143971
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_csapda.jpg",
+    "ext": ".jpg",
+    "size": 3047433
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_csapdc.jpg",
+    "ext": ".jpg",
+    "size": 3324520
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_csapdi.jpg",
+    "ext": ".jpg",
+    "size": 3143511
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/carte du sol 02/afr_rw4001_so.jpg",
+    "ext": ".jpg",
+    "size": 924287
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135469713_160634808797263_2640846756004116275_n.jpg",
+    "ext": ".jpg",
+    "size": 54238
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135486921_733663660598408_2451533349734954086_n.jpg",
+    "ext": ".jpg",
+    "size": 187864
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135787315_2726615057556393_7662483338035786890_n.jpg",
+    "ext": ".jpg",
+    "size": 57055
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135810996_1049298612204546_4387671392198422582_n.jpg",
+    "ext": ".jpg",
+    "size": 237906
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135838211_444922593204373_6572405776733098522_n.jpg",
+    "ext": ".jpg",
+    "size": 59567
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135841482_1108000592976622_2178171581549428033_n.jpg",
+    "ext": ".jpg",
+    "size": 57009
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135841482_220700736211736_1853379489624005222_n.jpg",
+    "ext": ".jpg",
+    "size": 246614
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135841482_400705304352738_7966687076038562227_n.jpg",
+    "ext": ".jpg",
+    "size": 53826
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135856939_1101876843591604_1938318327384651633_n.jpg",
+    "ext": ".jpg",
+    "size": 55329
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135856939_1119916108463622_6714659197693903339_n.jpg",
+    "ext": ".jpg",
+    "size": 211406
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135856940_835505500605116_8319291605224285264_n.jpg",
+    "ext": ".jpg",
+    "size": 251393
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135858959_232056658471959_7123515972286190693_n.jpg",
+    "ext": ".jpg",
+    "size": 58652
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135861043_3880374041982056_6912904571991712304_n.jpg",
+    "ext": ".jpg",
+    "size": 194832
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135866139_433259648116927_5994564087760664266_n.jpg",
+    "ext": ".jpg",
+    "size": 240389
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135866139_443616300009215_2540610235865244335_n.jpg",
+    "ext": ".jpg",
+    "size": 58842
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135868498_1833714736781132_6076591871782073517_n.jpg",
+    "ext": ".jpg",
+    "size": 223807
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135869008_1286321995080125_1692754999947363516_n.jpg",
+    "ext": ".jpg",
+    "size": 220946
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135872257_2205090386291271_2412000154393864711_n.jpg",
+    "ext": ".jpg",
+    "size": 244683
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135897731_414133913043041_7231768339041073698_n.jpg",
+    "ext": ".jpg",
+    "size": 224585
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135936316_339736586997930_6864866707897602208_n.jpg",
+    "ext": ".jpg",
+    "size": 49096
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/135948332_308561877260974_222648176452852395_n.jpg",
+    "ext": ".jpg",
+    "size": 219358
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136034502_747617092827399_1266241848811954917_n.jpg",
+    "ext": ".jpg",
+    "size": 55038
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136034504_408240030249136_3594942755434194194_n.jpg",
+    "ext": ".jpg",
+    "size": 234450
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136046843_536384737259342_89260440347363284_n.jpg",
+    "ext": ".jpg",
+    "size": 50921
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136061671_131223148734400_535916424701992459_n.jpg",
+    "ext": ".jpg",
+    "size": 55448
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136063525_402197861009948_4052956607315284785_n.jpg",
+    "ext": ".jpg",
+    "size": 52302
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136064937_1329587797408933_1840309262375398996_n.jpg",
+    "ext": ".jpg",
+    "size": 229683
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136067614_3317251351714299_4311611190141613972_n.jpg",
+    "ext": ".jpg",
+    "size": 60850
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136068456_245974800242357_279612338021581725_n.jpg",
+    "ext": ".jpg",
+    "size": 48204
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136076481_3473471682779116_7641667681968567209_n.jpg",
+    "ext": ".jpg",
+    "size": 258191
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136078695_3572785526170251_8923981738862091442_n.jpg",
+    "ext": ".jpg",
+    "size": 57785
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136083993_2964064480504660_895894133499726234_n.jpg",
+    "ext": ".jpg",
+    "size": 63652
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136116993_514140472872121_4787856303362770152_n.jpg",
+    "ext": ".jpg",
+    "size": 208482
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136118080_318452642777429_2219605005972009989_n.jpg",
+    "ext": ".jpg",
+    "size": 206543
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136127914_1148782358905740_9188918323599862160_n.jpg",
+    "ext": ".jpg",
+    "size": 240567
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136209342_824107461769443_3113126940172709248_n.jpg",
+    "ext": ".jpg",
+    "size": 225288
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136628691_759080991358714_6939037381866974086_n.jpg",
+    "ext": ".jpg",
+    "size": 198033
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136726770_1363462350656643_3996597657408779187_n.jpg",
+    "ext": ".jpg",
+    "size": 55986
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/fertilisation ensa/136800385_162411842330182_4723540575405805278_n.jpg",
+    "ext": ".jpg",
+    "size": 55597
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/02FTTege6SXH5PKP9B5CCYrK.jpg",
+    "ext": ".jpg",
+    "size": 607277
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/1Leh2CHYDVyE5gYD8Nf52PCC.jpg",
+    "ext": ".jpg",
+    "size": 624117
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/3WXF2ATLaKDf0VfPCXEaC8Hb.jpg",
+    "ext": ".jpg",
+    "size": 544003
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/4ABgMM7ef3LTyKPtfXRLTK6S.jpg",
+    "ext": ".jpg",
+    "size": 346210
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/9TNt5W89FdR7J8HPFTFJeMg8.jpg",
+    "ext": ".jpg",
+    "size": 703128
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/AeW6Mf08NUBRRhHJFCaX4Dd6.jpg",
+    "ext": ".jpg",
+    "size": 422642
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/aKEHaWyH6KA4VNeFgX7V1Jy9.jpg",
+    "ext": ".jpg",
+    "size": 637204
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/DK716Uf797APW04t4XT8DQD8.jpg",
+    "ext": ".jpg",
+    "size": 568257
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/dYPSHC2DXA44fCYtBabSdRQM.jpg",
+    "ext": ".jpg",
+    "size": 552738
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/EF5b94hE6h3YTMSBXC7MRaY0.jpg",
+    "ext": ".jpg",
+    "size": 530130
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/EtPS693PHYhV9b882NHLVAJa.jpg",
+    "ext": ".jpg",
+    "size": 700638
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/F2CDr67bAfFC5QXSrNUUbRdF.jpg",
+    "ext": ".jpg",
+    "size": 638560
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/FLfha3H2QbYUPXDWU2X7N94Y.jpg",
+    "ext": ".jpg",
+    "size": 577821
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/Hr15fQKHSTDfdMTd9YdtCY92.jpg",
+    "ext": ".jpg",
+    "size": 630375
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/LfKKaFHJfThVJ8etNPhXT591.jpg",
+    "ext": ".jpg",
+    "size": 845497
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/MCHAQ1yWDEh9RaRyNd76FdPa.jpg",
+    "ext": ".jpg",
+    "size": 424558
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/MKM5aH7BDt682tVNLTe682Xa.jpg",
+    "ext": ".jpg",
+    "size": 658597
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/NaF0N5bgTWaLR1ENyCygaS7e.jpg",
+    "ext": ".jpg",
+    "size": 462625
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/PY6EVSaXFBY8fQ2AdMF4QJ1B.jpg",
+    "ext": ".jpg",
+    "size": 629645
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/RJK2Kd5eRVtYW9U5H4TVV8TW.jpg",
+    "ext": ".jpg",
+    "size": 694218
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/RS9eye6MEXK7QXNXyCKK51dF.jpg",
+    "ext": ".jpg",
+    "size": 656550
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/RSKYy9NB8ad4DSbA8DAefyQQ.jpg",
+    "ext": ".jpg",
+    "size": 404224
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/ryDY5M2NSMEAhS5FH2dMQWD3.jpg",
+    "ext": ".jpg",
+    "size": 586053
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/SQaDQCLJ5R9NXYatLDbfd989.jpg",
+    "ext": ".jpg",
+    "size": 569016
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/tb8rT5aDVXDUSKDtKA3SQ39F.jpg",
+    "ext": ".jpg",
+    "size": 633430
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/tJ1JUB47V72L7V9W4fXJLVHa.jpg",
+    "ext": ".jpg",
+    "size": 504777
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Système de culture/Système de culture/XUbg59P2UCeaD2FSV1JM7AbQ.jpg",
+    "ext": ".jpg",
+    "size": 640927
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/02.PNG",
+    "ext": ".png",
+    "size": 221458
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/2.jpg",
+    "ext": ".jpg",
+    "size": 80500
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/50728548_363541250865247_445329426457034752_n.jpg",
+    "ext": ".jpg",
+    "size": 58774
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/norme des eaux d'irrigation..PNG",
+    "ext": ".png",
+    "size": 181427
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/sol.PNG",
+    "ext": ".png",
+    "size": 158099
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/sols.PNG",
+    "ext": ".png",
+    "size": 108291
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/تحاليل الماء.PNG",
+    "ext": ".png",
+    "size": 88081
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/norme des eaux d_irrigation/norme des eaux d'irrigation/ملوحة.jpg",
+    "ext": ".jpg",
+    "size": 76384
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/1bf0M7SEVNRHH4ggC6DWEV4E.jpg",
+    "ext": ".jpg",
+    "size": 519216
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/5KAXrKW5QV0TfLECYJ5SaEUA.jpg",
+    "ext": ".jpg",
+    "size": 373125
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/7dDdgBeN9T9XyUTJgQJyTBYM.jpg",
+    "ext": ".jpg",
+    "size": 545506
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/7LFURMJTSa562KCR1UM0522f.jpg",
+    "ext": ".jpg",
+    "size": 589800
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/8NSf9AtyQMXSSdV3rACV0RF6.jpg",
+    "ext": ".jpg",
+    "size": 448852
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/93fAhLHAP7ya19728Dg7Ude3.jpg",
+    "ext": ".jpg",
+    "size": 559205
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/aWCF6d1SAE1KRJ2XECKhD7YF.jpg",
+    "ext": ".jpg",
+    "size": 622695
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/CAMetEht16V3YadNPA87YRP8.jpg",
+    "ext": ".jpg",
+    "size": 405511
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/CrbNb1VrEJPYeLFT9K1h04DE.jpg",
+    "ext": ".jpg",
+    "size": 286403
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/dULfbVYYRhQRgCaE5gMK37PV.jpg",
+    "ext": ".jpg",
+    "size": 588165
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/Dy3S0LW2BX2WTCD7TDCQDaAX.jpg",
+    "ext": ".jpg",
+    "size": 488942
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/LRSJJe8f1bbXL2Th58DJKS5F.jpg",
+    "ext": ".jpg",
+    "size": 639788
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/QdSeff1T3Q33TJCQNHRL93eF.jpg",
+    "ext": ".jpg",
+    "size": 595447
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/S7Uea9LTB4M04R2bPVyyb22d.jpg",
+    "ext": ".jpg",
+    "size": 621253
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/TPFE6YBLQN7KUB2Ea72dH731.jpg",
+    "ext": ".jpg",
+    "size": 310075
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/VrSMCUEbeCCHSMSePSDrW9F8.jpg",
+    "ext": ".jpg",
+    "size": 577292
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Gestion du sol/Gestion du sol/ydPA9384Nb4Q5MF4C97UF4bH.jpg",
+    "ext": ".jpg",
+    "size": 481836
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/2WT3YTSJFtAQAt8HyR7PVJ42.jpg",
+    "ext": ".jpg",
+    "size": 683925
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/3BM18a0LMMELa42KTXL73ef1.jpg",
+    "ext": ".jpg",
+    "size": 653501
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/7SRMtLYLTJWQVKafAbXyXVY5.jpg",
+    "ext": ".jpg",
+    "size": 340510
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/9b0AMDye3NbMLVVatQaBHaME.jpg",
+    "ext": ".jpg",
+    "size": 428940
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/bJB7gFEdVg10Ft8g2fJaEK80.jpg",
+    "ext": ".jpg",
+    "size": 658313
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/CWF1CKhfJ8SeWaHF6LR38E5P.jpg",
+    "ext": ".jpg",
+    "size": 693583
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/E1YV4CaE0yNNr1SSy6MRTrHB.jpg",
+    "ext": ".jpg",
+    "size": 651015
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/efA2tEa3BKPPMb97rFCHQFgd.jpg",
+    "ext": ".jpg",
+    "size": 651622
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/FWJR4D1P54fFXXN6Sb6DVD7H.jpg",
+    "ext": ".jpg",
+    "size": 391522
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/h769YFdHVW568r7bLPMQ9ABa.jpg",
+    "ext": ".jpg",
+    "size": 674402
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/JN3255dQA3QaTd1r641e1TfK.jpg",
+    "ext": ".jpg",
+    "size": 629320
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/K368PNdKEheRC8FB4C5RD02R.jpg",
+    "ext": ".jpg",
+    "size": 742641
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/MA4Eg6BHVRb2Wy30BLTRHREC.jpg",
+    "ext": ".jpg",
+    "size": 640319
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/N0TM1UKTP5R6HY5UAKfW0M9T.jpg",
+    "ext": ".jpg",
+    "size": 359026
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/NBNDN3J6EMgT1gDyNT5fVR0P.jpg",
+    "ext": ".jpg",
+    "size": 683346
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/RSa5h0WQRY56FaSrM5NX1BR7.jpg",
+    "ext": ".jpg",
+    "size": 744315
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/StUEa50W23RFaESVSF5MAyXL.jpg",
+    "ext": ".jpg",
+    "size": 530041
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/t2FBEegeLJC7fbfrKM1W94MJ.jpg",
+    "ext": ".jpg",
+    "size": 630486
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/TL2tdPPU5FHYeAVBt1Ag56aN.jpg",
+    "ext": ".jpg",
+    "size": 470426
+  },
+  {
+    "source": "OD_ArchivesExtraites",
+    "file": "OD_ArchivesExtraites/Agroclimatologie/Agroclimatologie/Y89HVTD6fASTXgab1eP3fBaP.jpg",
+    "ext": ".jpg",
+    "size": 513687
+  },
+  {
+    "source": "WS_Bib",
+    "file": "WS_Bib/AgroBusiness Formation.jpg",
+    "ext": ".jpg",
+    "size": 86075
+  }
+]

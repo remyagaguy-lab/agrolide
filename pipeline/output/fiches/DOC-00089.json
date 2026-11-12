@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00089",
+  "sha256": "77398693a0b31c7141bc41d19da03b94e747a8c75a4c248e0cffc74bf48eca74",
+  "nom_original": "151. fiche tech arachide.pdf",
+  "chemin_relatif_source": "OD_Docs/151. fiche tech arachide.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1037456,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476200741-151._fiche_tech_arachide.pdf",
+  "nb_telechargements_existant": 2,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "arachide",
+  "pays": "Madagascar",
+  "annee": 2018,
+  "auteurs": "Louvain Coopération",
+  "source_organisation": "Louvain Coopération",
+  "mots_cles": [
+    "arachide",
+    "madagascar",
+    "menabe",
+    "itineraire technique",
+    "rendement"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE CULTURE D’ARACHIDE",
+  "titre": "Fiche technique : Culture d'arachide (Districts Belo sur Tsiribihina et Morondava)",
+  "resume": "Fiche technique opérationnelle guidant la culture pluviale et de contre-saison (baibo) de l'arachide à Madagascar : préparation du sol, semis, désherbage, récolte et rendements attendus.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle de vulgarisation agricole complète et claire, directement applicable aux producteurs d'arachide en zone tropicale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE CULTURE D’ARACHIDE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Projet d’appuis aux Organisations Professionnelles Agricoles des Districts Belo sur Tsiribihina et Morondava"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00089__fiche-technique-culture-d-arachide-districts-belo-sur-t.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00089__fiche-technique-culture-d-arachide-districts-belo-sur-t.pdf"
+}

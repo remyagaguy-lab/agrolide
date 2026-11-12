@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00696",
+  "sha256": "e5651495d7049f5702f551c74cde47618207482bf894a6307e58d63f9b88524e",
+  "nom_original": "RANA-CR-FR.pdf",
+  "chemin_relatif_source": "OD_Docs/RANA-CR-FR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1324385,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": null,
+  "annee": 2016,
+  "auteurs": "Technisem",
+  "source_organisation": "Technisem",
+  "mots_cles": [
+    "papaye",
+    "carica papaya",
+    "semence",
+    "variete rana",
+    "prsv",
+    "arboriculture fruitiere",
+    "technisem"
+  ],
+  "titre_trouve": "Papaye RANA Une variété tolérante au PRSV Technisem",
+  "titre": "Fiche variétale de la papaye RANA tolérante au PRSV",
+  "resume": "Fiche variétale commerciale de Technisem présentant les caractéristiques agronomiques, le rendement et la tolérance au PRSV de la papaye RANA.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche produit commerciale issue d'une entreprise privée semencière (Technisem) avec le drapeau bloquant 'contenu_commercial'. Les règles interdisent formellement la publication ('public' ou 'membres') pour les documents à contenu commercial ou sous droits réservés.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Papaye RANA Une variété tolérante au PRSV Technisem"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Fiche produit commerciale issue d'une entreprise privée semencière (Technisem) avec le drapeau bloquant 'contenu_commercial'. Les règles interdisent formellement la publication ('public' ou 'membres') pour les documents à contenu commercial ou sous droits réservés."
+  },
+  "nom_fichier_final": "DOC-00696__fiche-varietale-de-la-papaye-rana-tolerante-au-prsv.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00696__fiche-varietale-de-la-papaye-rana-tolerante-au-prsv.pdf"
+}

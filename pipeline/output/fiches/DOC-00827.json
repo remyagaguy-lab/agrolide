@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00827",
+  "sha256": "87bd242fe6edf45a168e08f7109eddad08f893988850d4ad567557e55eabb9c8",
+  "nom_original": "chapitre5-Biologie végétale.pdf",
+  "chemin_relatif_source": "OD_Docs/chapitre5-Biologie végétale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 996092,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 11,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Halmi Sihem",
+  "source_organisation": null,
+  "mots_cles": [
+    "biologie vegetale",
+    "angiospermes",
+    "reproduction sexuee",
+    "gametogenese",
+    "pollinisation",
+    "fecondation"
+  ],
+  "titre_trouve": "Chapitre 5 : La reproduction chez les angiospermes",
+  "titre": "Biologie végétale - Chapitre 5 : La reproduction chez les angiospermes",
+  "resume": "Support de cours universitaire traitant de la reproduction sexuée chez les angiospermes : gamétogenèse mâle et femelle, pollinisation et double fécondation.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un cours universitaire non libre et incomplet, archivé en non publié selon les règles métier.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre 5 : La reproduction chez les angiospermes"
+    }
+  ],
+  "ensemble_id": "ENS-0011",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00827__biologie-vegetale-chapitre-5-la-reproduction-chez-les-a.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00827__biologie-vegetale-chapitre-5-la-reproduction-chez-les-a.pdf"
+}

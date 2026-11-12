@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00807",
+  "sha256": "5bbaf8345fe77b6c4c167068d510f6ec201743d5be1486d766e7ad3d4385223c",
+  "nom_original": "biscuits patisseries pizzas.pdf",
+  "chemin_relatif_source": "OD_Docs/biscuits patisseries pizzas.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 39203,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479252081-biscuits_patisseries_pizzas.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "céréales",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "biscuiterie",
+    "patisserie",
+    "pizza",
+    "diagramme de flux",
+    "boulangerie",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "BISCUITS - PATISSERIES - PIZZAS - Technologie clé de compétitivité",
+  "titre": "Schéma technologique : Biscuits, pâtisseries et pizzas",
+  "resume": "Diagramme synoptique des flux et opérations unitaires de fabrication pour les biscuits, génoises, pâtes feuilletées et pizzas industrielles.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche synoptique technologique complète sur les étapes de transformation céréalière et pâtisserie, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BISCUITS - PATISSERIES - PIZZAS Technologie clé de compétitivité dans l’activité ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00807__schema-technologique-biscuits-patisseries-et-pizzas.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-00807__schema-technologique-biscuits-patisseries-et-pizzas.pdf"
+}

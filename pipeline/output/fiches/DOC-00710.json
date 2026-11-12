@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00710",
+  "sha256": "03ff7b75061691679695b8609d477a1aaf986b570f959445356136695f05f165",
+  "nom_original": "RÉSUMÉ DU CYTOLOGIE.pdf",
+  "chemin_relatif_source": "OD_Docs/RÉSUMÉ DU CYTOLOGIE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1049161,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "en",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "Benzineb Abdelwahab",
+  "source_organisation": null,
+  "mots_cles": [
+    "cytology",
+    "human medicine",
+    "cell biology",
+    "plasma membrane"
+  ],
+  "titre_trouve": "RÉSUMÉ DU CYTOLOGIE : Module cytologie première années médecine -S1-",
+  "titre": "Résumé de cytologie en anglais pour étudiants en première année de médecine",
+  "resume": "Fiche de synthèse en anglais couvrant le programme de cytologie de première année de médecine humaine : théorie cellulaire, organites, membranes plasmiques et jonctions cellulaires.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Support de cours de médecine humaine sans lien avec l'agronomie ou l'élevage, exclu du périmètre Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Module cytologie première années médecine -S1-"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "RÉSUMÉ DU CYTOLOGIE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00710__resume-de-cytologie-en-anglais-pour-etudiants-en-premie.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00710__resume-de-cytologie-en-anglais-pour-etudiants-en-premie.pdf"
+}

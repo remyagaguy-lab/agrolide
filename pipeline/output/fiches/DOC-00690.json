@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00690",
+  "sha256": "a1bc5a2d5fe3ed9f83a3ee2086c0c65c52f3e619b28f5efe3418441acb590336",
+  "nom_original": "Présentation EIE .pdf",
+  "chemin_relatif_source": "OD_Docs/Présentation EIE .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 941230,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 35,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "etude d'impact sur l'environnement",
+    "EIE",
+    "evaluation environnementale",
+    "cadre juridique",
+    "gestion de projet"
+  ],
+  "titre_trouve": "Etude d’impact sur l’environnement (EIE)",
+  "titre": "Guide et méthodologie de l'Étude d'Impact sur l'Environnement (EIE)",
+  "resume": "Présentation pédagogique de 35 diapositives présentant le cadre légal, les principes, les étapes et les méthodes d'évaluation d'une étude d'impact environnemental.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours informatif sur l'EIE mais sans affiliation institutionnelle ni statut de droits explicite, placé en archive.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Etude d’impact sur l’environnement (EIE)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00690__guide-et-methodologie-de-l-etude-d-impact-sur-l-environ.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00690__guide-et-methodologie-de-l-etude-d-impact-sur-l-environ.pdf"
+}

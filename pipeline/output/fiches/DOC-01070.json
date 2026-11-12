@@ -1,0 +1,79 @@
+{
+  "id": "DOC-01070",
+  "sha256": "53392517562110510a4600ef91cf1dbd4df185a08881742a1af8c0fde5125127",
+  "nom_original": "977-guide-agroecologie-agrisud-fr.pdf",
+  "chemin_relatif_source": "OD_traites/977-guide-agroecologie-agrisud-fr.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 5369197,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476075993-977-guide-agroecologie-agrisud-fr.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 40,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2015,
+  "auteurs": "Louis-Etienne Diouf, Ousseynou Dieng, Babacar Samb",
+  "source_organisation": "Agrisud International / JAPPOO Développement / AFD",
+  "mots_cles": [
+    "agroecologie",
+    "senegal",
+    "mbour",
+    "agriculture familiale",
+    "agrisud",
+    "jappoo",
+    "pratiques agroecologiques"
+  ],
+  "titre_trouve": "Guide des pratiques agroécologiques : Département de Mbour, Sénégal",
+  "titre": "Guide des pratiques agroécologiques au Sénégal (Agrisud / Jappoo)",
+  "resume": "Guide méthodologique et pratique de 40 pages détaillant les techniques agroécologiques adaptées aux exploitations familiales sahéliennes (gestion de la fertilité des sols, lutte biologique, compostage et agroforesterie) dans la région de Mbour.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique agroécologique de référence en Afrique de l'Ouest, produit par Agrisud et l'AFD, libre de diffusion institutionnelle et de pertinence maximale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide des pratiques agroécologiques Département de Mbour, Sénégal"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Agrisud International et l’association sénégalaise JAPPOO Développement... cofinancé par l’Agence Française de Développement"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01070__guide-des-pratiques-agroecologiques-au-senegal-agrisud.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-01070__guide-des-pratiques-agroecologiques-au-senegal-agrisud.pdf"
+}

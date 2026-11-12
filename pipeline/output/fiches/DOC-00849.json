@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00849",
+  "sha256": "3c2e9d9861c26f926ec71d29a11d93305cdd276a34f1ce84b74ee1290e0ebf8d",
+  "nom_original": "cours1 Ethologie.pdf",
+  "chemin_relatif_source": "OD_Docs/cours1 Ethologie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 88003,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "ethologie",
+    "protection animale",
+    "bien-etre des animaux",
+    "bioethique"
+  ],
+  "titre_trouve": "Ethologie et protection animale – Cours 1 : Bien-être, éthologie et protection des animaux",
+  "titre": "Éthologie et protection animale : notions de base",
+  "resume": "Fiche de cours synthétique abordant les motivations éthiques et biologiques du bien-être animal, les fondements de la bioéthique et l'historique des définitions scientifiques du bien-être des animaux d'élevage.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié d'enseignement non libre, archivé conformément aux règles métier.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Ethologie et protection animale – Cours 1 Bien-être, éthologie et protection des animaux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00849__ethologie-et-protection-animale-notions-de-base.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-00849__ethologie-et-protection-animale-notions-de-base.pdf"
+}

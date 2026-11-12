@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00427",
+  "sha256": "d567d8420788d0dc8090bb17c08057cc5417b82aa7abfa2d17e74b512dab6173",
+  "nom_original": "Feuillet3 (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Feuillet3 (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 401527,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2001,
+  "auteurs": "Centre de référence en agriculture et agroalimentaire du Québec (CRAAQ)",
+  "source_organisation": "CRAAQ",
+  "mots_cles": [
+    "matiere organique",
+    "fertilite des sols",
+    "conservation des sols",
+    "craaq",
+    "quebec",
+    "humus"
+  ],
+  "titre_trouve": "Guide des Pratiques de conservation en grandes cultures - Module 3 : Gestion de la matière organique",
+  "titre": "Gestion de la matière organique des sols (Guide CRAAQ Québec)",
+  "resume": "Guide technique du CRAAQ expliquant le rôle agronomique de la matière organique, son impact sur la structure et la fertilité des sols, et les méthodes d'apport.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique canadien calibré pour les sols et systèmes agricoles tempérés froids du Québec, archivé car non adapté aux sols tropicaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide des Pratiques de conservation en grandes cultures Gestion de la matière organique Module 3"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00427__gestion-de-la-matiere-organique-des-sols-guide-craaq-qu.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00427__gestion-de-la-matiere-organique-des-sols-guide-craaq-qu.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00612",
+  "sha256": "3ecbf1969510ae3907d38473e471cfca6b5117b0ceb7dff8851fcacff8462127",
+  "nom_original": "Module agriculture hors sol.pdf",
+  "chemin_relatif_source": "OD_Docs/Module agriculture hors sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1478692,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 18,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "culture_sous_abri_hors_sol",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Nethone Samba",
+  "source_organisation": null,
+  "mots_cles": [
+    "agriculture hors sol",
+    "hydroponie",
+    "maraichage hors sol",
+    "substrat"
+  ],
+  "titre_trouve": null,
+  "titre": "Module de formation en agriculture hors sol",
+  "resume": "Support de formation sur l'agriculture et le maraîchage hors sol, scanné sans couche texte et nécessitant un traitement OCR préalable.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible; OCR complet requis pour contrôle du contenu et des droits de diffusion.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.5,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Module agriculture hors sol.pdf (nom du fichier)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Nethone Samba (métadonnées PDF)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00612__module-de-formation-en-agriculture-hors-sol.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/culture_sous_abri_hors_sol/DOC-00612__module-de-formation-en-agriculture-hors-sol.pdf"
+}

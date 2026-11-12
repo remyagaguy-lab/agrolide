@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00932",
+  "sha256": "5dda4b071624fe32b2f9f844f6af32a001c760086bdfe5039d0e2c8f74964915",
+  "nom_original": "guide pratique elevage canards & oies_centre Songhai.pdf",
+  "chemin_relatif_source": "OD_Docs/guide pratique elevage canards & oies_centre Songhai.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 582663,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 30,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "canard",
+  "pays": "Bénin",
+  "annee": 2001,
+  "auteurs": "Centre Songhaï",
+  "source_organisation": "Centre Songhaï / Society for International Development",
+  "mots_cles": [
+    "canards",
+    "oies",
+    "palmipedes",
+    "centre songhai",
+    "benin",
+    "elevage fermier",
+    "guide pratique"
+  ],
+  "titre_trouve": "GUIDE PRATIQUE D'ELEVAGE OIES ET CANARDS",
+  "titre": "Guide pratique d'élevage : Oies et canards (Centre Songhaï)",
+  "resume": "Guide pratique illustré du Centre Songhaï décrivant la conduite agroécologique de l'élevage d'oies et de canards au Bénin : habitat en matériaux locaux, alimentation, reproduction, couvaison et soins sanitaires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de référence édité par le Centre Songhaï pour la promotion de l'élevage de palmipèdes en Afrique de l'Ouest.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE PRATIQUE D'ELEVAGE OIES ET CANARDS"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0077",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00932__guide-pratique-d-elevage-oies-et-canards-centre-songhai.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00932__guide-pratique-d-elevage-oies-et-canards-centre-songhai.pdf"
+}

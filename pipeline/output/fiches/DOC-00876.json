@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00876",
+  "sha256": "4995369baa25385d919333015e40aad81c0a78e5ae9bf3f652ed5c657c4f2b18",
+  "nom_original": "elevage de 250 pondeuse.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage de 250 pondeuse.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 848087,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 18,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2018,
+  "auteurs": "Sophie Crépin-Leblond",
+  "source_organisation": "Les Simples de Sophie",
+  "mots_cles": [
+    "poules pondeuses",
+    "atelier avicole",
+    "plein air",
+    "aviculture biologique",
+    "vente directe"
+  ],
+  "titre_trouve": "Formation Poules Pondeuses : créer son atelier de 250 pondeuses",
+  "titre": "Créer son atelier de 250 poules pondeuses de plein air",
+  "resume": "Support de formation présentant l'organisation matérielle, le travail quotidien et la gestion d'un atelier fermier de 250 poules pondeuses en plein air.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document privé issu d'une formation payante en France contenant des coordonnées téléphoniques directes, archivé.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Formation Poules Pondeuses : créer son atelier de 250 pondeuses"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00876__creer-son-atelier-de-250-poules-pondeuses-de-plein-air.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00876__creer-son-atelier-de-250-poules-pondeuses-de-plein-air.pdf"
+}

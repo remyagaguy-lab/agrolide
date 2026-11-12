@@ -1,0 +1,795 @@
+{
+  "batch_number": 10,
+  "results": [
+    {
+      "id": "DOC-00137",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "boissons",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": "gingembre",
+      "pays": "France",
+      "annee": 2017,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "sirop de gingembre",
+        "transformation agroalimentaire",
+        "boisson",
+        "fiche technique produit"
+      ],
+      "titre_trouve": "SIROP DE GINGEMBRE Sirop alimentaire FICHE TECHNIQUE",
+      "titre": "Fiche technique produit : Sirop de gingembre au sucre de canne",
+      "resume": "Fiche technique et de spécification produit pour un sirop de gingembre au sucre de canne de Guadeloupe, détaillant la composition, les ingrédients et le conditionnement.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche de spécification d'un produit commercial privé sans licence libre, archivée sans publication.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "SIROP DE GINGEMBRE Sirop alimentaire FICHE TECHNIQUE CARACTERES GENERAUX Sirop à base de sucre de canne de Guadeloupe"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00138",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "culture_sous_abri_hors_sol",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cultures maraîchères",
+      "pays": "Côte d'Ivoire",
+      "annee": 2014,
+      "auteurs": "COCOSOL",
+      "source_organisation": "COCOSOL",
+      "mots_cles": [
+        "agriculture hors-sol",
+        "hydroponie",
+        "fibre de coco",
+        "cultures maraicheres",
+        "cote d'ivoire"
+      ],
+      "titre_trouve": "L’ AGRICULTURE HORS SOL Pour une agriculture saine, rentable et respectueuse de l’environnement.",
+      "titre": "Guide de l'agriculture hors-sol sur substrat de fibre de coco en Côte d'Ivoire",
+      "resume": "Guide pratique et de promotion présentant les techniques d'agriculture hors-sol et d'hydroponie sur substrat de fibre de coco pour les cultures maraîchères en Côte d'Ivoire.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document promotionnel propriétaire élaboré par une entreprise privée sans licence ouverte, archivé sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’ AGRICULTURE HORS SOL Pour une agriculture saine, rentable et respectueuse de l’environnement."
+        },
+        {
+          "champ": "auteurs",
+          "page": 3,
+          "extrait": "COCOSOL est une entreprise privée basée en Côte D’ivoire qui développe et fait la promotion de l’agriculture hors sol (hydroponie) des cultures maraichères"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00139",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "texte_officiel",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2008,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "genie civil",
+        "etude au vent",
+        "rnv99",
+        "reglementation",
+        "algerie"
+      ],
+      "titre_trouve": "Etude au vent selon le règlement algérien (RNV99)",
+      "titre": "Étude au vent selon le règlement technique algérien RNV 99",
+      "resume": "Document technique et réglementaire algérien relatif aux règles parasismiques et actions du vent (RNV 99) sur les constructions et bâtiments en génie civil.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de génie civil et de calcul des structures de bâtiment en Algérie, sans aucun rapport avec le périmètre agricole.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.80,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Etude au vent selon le règlement algérien (RNV99) Le présent document technique réglementaire (DTR) fournit les procédures et principes généraux pour la détermination des actions du vent"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00140",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "aviculture",
+        "ruminants"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "petit élevage",
+      "pays": "France",
+      "annee": 2018,
+      "auteurs": "Cécile Brunet-Maisonnier, Jean-Claude Périquet, Alain Raveneau, Cécile Schmitt, Franck Schmitt, Michel Sinier",
+      "source_organisation": "Éditions Rustica",
+      "mots_cles": [
+        "petit elevage",
+        "poules",
+        "lapins",
+        "chevres",
+        "moutons",
+        "basse-cour"
+      ],
+      "titre_trouve": "DE L’ÉLEVAGE POUR DÉBUTANTS LE PETIT TRAITÉ",
+      "titre": "Le petit traité de l'élevage pour débutants (Extrait)",
+      "resume": "Extrait commercial d'un ouvrage des éditions Rustica offrant des conseils pratiques pour démarrer un petit élevage de poules, lapins, chèvres et moutons en milieu tempéré.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait d'ouvrage commercial sous copyright strict des Éditions Rustica, incomplet et ciblé sur un contexte tempéré.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "© 2018, Éditions Rustica, Paris Dépôt légal : janvier 2018 ISBN : 978-2-8153-1160-1"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00141",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "organisations_paysannes"
+      ],
+      "type_doc": "autre",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "gestion de l'eau",
+        "perimetre irrigue",
+        "acteurs",
+        "irrigation",
+        "comite de repartition"
+      ],
+      "titre_trouve": "Acteurs de la gestion de l’eau dans un périmètre irrigue",
+      "titre": "Acteurs de la gestion de l'eau dans un périmètre irrigué : Note de synthèse",
+      "resume": "Note de travail synthétisant en onze points clés le rôle et la concertation des acteurs dans la gestion et la répartition de l'eau sur un périmètre irrigué.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Brouillon très succinct de quelques lignes sans métadonnées ni contenu suffisamment élaboré pour une diffusion.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.70,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Acteurs de la gestion de l’eau dans un périmètre irrigue"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00142",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "qualite_securite_normes",
+      "domaines_secondaires": [
+        "nutrition_alimentation"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Togo",
+      "annee": null,
+      "auteurs": "Komlan Lokou",
+      "source_organisation": "ESTBA - Université de Lomé",
+      "mots_cles": [
+        "additifs alimentaires",
+        "etiquetage",
+        "conservateurs",
+        "agroalimentaire",
+        "qualite alimentaire"
+      ],
+      "titre_trouve": "LES Additifs ALIMENTAIRES",
+      "titre": "Les additifs alimentaires : Définitions, étiquetage et catégories",
+      "resume": "Support de présentation universitaire sur les additifs alimentaires, expliquant leur rôle technologique, leur codification européenne et leur identification sur l'étiquetage.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Présentation académique réalisée par un étudiant de l'ESTBA Lomé, archivée sans diffusion ouverte formelle.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "PRESENTATEUR : LOKOU Komlan, étudiant en Science des Aliments et Technologie Agro-alimentaire (SATA-ESTBA)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00143",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "decideur_institution",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "oignon",
+      "pays": "Sénégal",
+      "annee": 2015,
+      "auteurs": "Youssoupha Gueye",
+      "source_organisation": "CGER-Vallée",
+      "mots_cles": [
+        "oignon",
+        "senegal",
+        "vallee du fleuve senegal",
+        "analyse economique",
+        "marche de l'oignon",
+        "prix"
+      ],
+      "titre_trouve": "CGER- Vallée - Analyse Économique sur la filière Oignon au Sénégal",
+      "titre": "Analyse économique de la filière oignon au Sénégal",
+      "resume": "Étude économique sur la filière oignon au Sénégal réalisée par le CGER-Vallée, analysant la production, la régulation des importations, l'évolution des prix et les marges des producteurs.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport économique institutionnel complet du CGER-Vallée sur la filière oignon au Sénégal, éligible à la publication pour les membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CGER- Vallée - Analyse Économique sur la filière Oignon au Sénégal"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00144",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "cultures_maraicheres",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "Yasmine Evieux",
+      "source_organisation": "Association Française d'Agroforesterie (AFAF)",
+      "mots_cles": [
+        "agroforesterie",
+        "maraichage",
+        "arbres champetres",
+        "haies",
+        "agriculture durable",
+        "france"
+      ],
+      "titre_trouve": "AGROFORESTERIE ET MARAICHAGE produire et protéger",
+      "titre": "Agroforesterie et maraîchage : Produire et protéger",
+      "resume": "Fiche d'information de l'Association Française d'Agroforesterie présentant l'intérêt agronomique, écologique et économique d'associer arbres et cultures maraîchères.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'un canal de partage non officiel (@EpubsFR) et centré sur le contexte agroclimatique et réglementaire français.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "AGROFORESTERIE ET MARAICHAGE produire et protéger Qu’est-ce que l’agroforesterie ?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00145",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "politiques_strategies",
+      "domaines_secondaires": [
+        "climat_changement_climatique",
+        "gestion_projet_business_plan"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "Groupe des Nations Unies pour le développement, Banque mondiale, Union européenne",
+      "source_organisation": "FAO, PNUD, Banque Mondiale, Union Européenne",
+      "mots_cles": [
+        "pdna",
+        "evaluation post-catastrophe",
+        "politiques agricoles",
+        "gestion des risques",
+        "relevement agricole",
+        "fao"
+      ],
+      "titre_trouve": "Agriculture, élevage, pêche et sylviculture DIRECTIVES PDNA VOLUME B SECTEUR PRODUCTIF",
+      "titre": "Directives PDNA : Évaluation des besoins post-catastrophe dans l'agriculture, l'élevage et la pêche",
+      "resume": "Guide méthodologique international pour l'évaluation des dommages, des pertes économiques et des besoins de relèvement dans le secteur agricole suite à une catastrophe naturelle.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide institutionnel international de référence pour l'évaluation post-catastrophe dans le secteur agricole, publié pour les membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture, élevage, pêche et sylviculture DIRECTIVES PDNA VOLUME B SECTEUR PRODUCTIF"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00146",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "agriculture_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Mohamed Amine Feddal",
+      "source_organisation": "ENSA Alger",
+      "mots_cles": [
+        "agroequipement",
+        "machinisme agricole",
+        "tracteurs",
+        "moteur thermique",
+        "materiel agricole",
+        "ensa"
+      ],
+      "titre_trouve": "Cours d'Agroéquipement 2021",
+      "titre": "Cours d'agroéquipement et machinisme agricole",
+      "resume": "Support de cours complet d'agroéquipement dispensé à l'ENSA Alger, couvrant les moteurs thermiques, les tracteurs et les équipements mécaniques agricoles.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, archivé conformément aux règles de propriété intellectuelle académique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "auteurs",
+          "page": 169,
+          "extrait": "Cours d'Agroéquipement 2021 Dr.FEDDAL Mohamed Amine | Génie Rural - Machinisme Agricole"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00147",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "agrumes",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": [
+        "agrumes",
+        "oranger",
+        "citronnier",
+        "arboriculture fruitiere",
+        "cameroun",
+        "itineraire technique"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE CULTURE DES AGRUMES",
+      "titre": "Technologie de culture des agrumes au Cameroun",
+      "resume": "Manuel de formation pratique sur la culture des agrumes au Cameroun, abordant les exigences pédoclimatiques, la plantation, l'entretien du verger et la récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de conduite des agrumes en zone tropicale, issu d'un institut de formation agréé, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE CULTURE DES AGRUMES GENERALITES I. EXGENCES CULTURALES II. CONDUITE DE LA CULTURE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00148",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ail",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": [
+        "ail",
+        "cultures maraicheres",
+        "itineraire technique",
+        "fertilisation",
+        "cameroun",
+        "conservation"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’AIL",
+      "titre": "Fiche technique de production de l'ail au Cameroun",
+      "resume": "Fiche technique synthétique sur la production de l'ail en Afrique tropicale, détaillant les exigences de sol, la fertilisation, les soins culturaux et le séchage.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique pratique et complète sur la culture de l'ail en milieu tropical, d'un institut agréé, publiée en accès libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE L’AIL GENERALITES I. EXIGENCES CULTURALES II. CONDUITE DE LA CULTURE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00149",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Omar Sawadogo",
+      "source_organisation": "Ferme Z-Production",
+      "mots_cles": [
+        "aviculture",
+        "poulets de chair",
+        "alimentation des volailles",
+        "vaccination aviaire",
+        "burkina faso"
+      ],
+      "titre_trouve": "Aliments et vaccins",
+      "titre": "Guide pratique d'aviculture : Alimentation, formules et prophylaxie vaccinale",
+      "resume": "Document pratique rédigé par un aviculteur burkinabé, présentant des conseils d'élevage, des formules d'aliments et un protocole de vaccination des volailles.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "donnees_personnelles",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document commercial informel intégrant des données personnelles directes (numéro WhatsApp) et une promotion d'entreprise privée, archivé sans diffusion.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.85,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Je me nomme Sawadogo Omar Directeur de la ferme « Z-PRODUCTION » ... Tampouy a Ouagadougou (Burkina Faso)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00150",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Sénégal",
+      "annee": 2020,
+      "auteurs": "Simplice B. Ayssiwede",
+      "source_organisation": "EISMV Dakar",
+      "mots_cles": [
+        "alimentation des volailles",
+        "pintade",
+        "canard",
+        "dinde",
+        "eismv",
+        "nutrition animale"
+      ],
+      "titre_trouve": "ALIMENTATION D’AUTRES VOLAILLES: Pintade, Canard et Dinde",
+      "titre": "Alimentation des volailles non conventionnelles : Pintade, canard et dinde",
+      "resume": "Support de cours universitaire de l'EISMV Dakar détaillant les besoins nutritionnels, le comportement alimentaire et les rations pour la pintade, le canard et la dinde.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non publié sous licence libre par l'EISMV Dakar, archivé selon les règles sur le matériel pédagogique académique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "ALIMENTATION D’AUTRES VOLAILLES: Pintade, Canard et Dinde cours présenté par Prof. Simplice B. AYSSIWEDE Vétérinaire, Zootechnicien-Nutritionniste ... EISMV-Dakar"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00152",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "conservation_post_recolte"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ananas",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": [
+        "ananas",
+        "arboriculture fruitiere",
+        "cameroun",
+        "itineraire technique",
+        "recolte",
+        "ifati"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’ANANAS",
+      "titre": "Technologie de production de l'ananas au Cameroun",
+      "resume": "Guide pratique complet sur la conduite de la culture de l'ananas au Cameroun, couvrant les exigences pédoclimatiques, le choix des rejets, l'entretien et la récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de production d'ananas tropical issu d'un institut de formation agréé, éligible à une diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE L’ANANAS GENERALITES I. LES EXIGENCES DE LA CULTURE II. CONDUITE DE LA CULTURE"
+        }
+      ]
+    }
+  ]
+}

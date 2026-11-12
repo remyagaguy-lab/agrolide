@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00260",
+  "sha256": "6868d4202b63843d6b44e356f66dea1ec0b9780ac28c7f15d79f2a2f5c7c88d0",
+  "nom_original": "Brochure PORCICULTURE.pdf",
+  "chemin_relatif_source": "OD_Docs/Brochure PORCICULTURE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 175331,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "porcins",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "porc",
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Knowledge Academy",
+  "source_organisation": "Knowledge Academy",
+  "mots_cles": [
+    "porciculture",
+    "elevage de porcs",
+    "races porcines",
+    "habitat porcin",
+    "large white"
+  ],
+  "titre_trouve": "Brochure Technique d’Elevage des Porcs",
+  "titre": "Brochure technique d'élevage des porcs : bases et bonnes pratiques",
+  "resume": "Fiche de synthèse présentant les fondamentaux de l'élevage porcin : sélection des races (Large White, Landrace), normes de logement, hygiène et alimentation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document promotionnel issu d'une entité privée commerciale (Knowledge Academy), non institutionnel et protégé par des droits réservés ; archivage sans diffusion publique.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Brochure Technique d’Elevage des Porcs"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "CEO de Knowledge Academy"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Document promotionnel issu d'une entité privée commerciale (Knowledge Academy), non institutionnel et protégé par des droits réservés ; archivage sans diffusion publique."
+  },
+  "nom_fichier_final": "DOC-00260__brochure-technique-d-elevage-des-porcs-bases-et-bonnes.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/porcins/DOC-00260__brochure-technique-d-elevage-des-porcs-bases-et-bonnes.pdf"
+}

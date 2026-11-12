@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00704",
+  "sha256": "6ccb83c2cb6e313b50a76f7ac3fa794aa67047a0d09c66fa7c5509c5f8dcdbce",
+  "nom_original": "Rentabilite elevage pintade.pdf",
+  "chemin_relatif_source": "OD_Docs/Rentabilite elevage pintade.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 761964,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 52,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_exploitation",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pintade",
+  "pays": "Bénin",
+  "annee": 2010,
+  "auteurs": "DJOVONOU Tohouindo Roland Glorieux",
+  "source_organisation": "UATM GASA-FORMATION / Centre Songhaï",
+  "mots_cles": [
+    "pintade",
+    "rentabilite economique",
+    "aviculture",
+    "commercialisation",
+    "benin",
+    "centre songhai"
+  ],
+  "titre_trouve": "ETUDE DE LA RENTABILITE ECONOMIQUE DE L’ELEVAGE ET DE LA COMMERCIALISATION D’ŒUFS DE PINTADE ET DE PINTADE CHAIR",
+  "titre": "Rentabilité économique de l’élevage et de la commercialisation d’œufs et de chair de pintade au Bénin",
+  "resume": "Mémoire d'agronomie analysant les coûts, les marges et la rentabilité technico-économique de la production et de la vente d'œufs et de pintades de chair au Centre Songhaï de Parakou.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire académique d'agronomie non publié sous licence libre, archivé conformément aux règles de diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "LICENCE PROFESSIONNELLE EN AGRONOMIE OPTION : Agro-Economie"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ETUDE DE LA RENTABILITE ECONOMIQUE DE L’ELEVAGE ET DE LA COMMERCIALISATION D’ŒUFS DE PINTADE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00704__rentabilite-economique-de-lelevage-et-de-la-commerciali.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_exploitation/DOC-00704__rentabilite-economique-de-lelevage-et-de-la-commerciali.pdf"
+}

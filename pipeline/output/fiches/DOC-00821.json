@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00821",
+  "sha256": "455a914e6e4c26bef5608841e7061a75de2ab7780926026942f5ba05854de80f",
+  "nom_original": "cc0471fr.pdf",
+  "chemin_relatif_source": "OD_Docs/cc0471fr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 20403700,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 138,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "economie_filieres_marches",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "FAO",
+  "source_organisation": "FAO",
+  "mots_cles": [
+    "marches agricoles",
+    "commerce agricole",
+    "soco",
+    "fao",
+    "filieres agricoles",
+    "politiques commerciales"
+  ],
+  "titre_trouve": "La situation des marchés des produits agricoles 2022 - La géographie du commerce alimentaire et agricole",
+  "titre": "La situation des marchés des produits agricoles 2022 (SOCO)",
+  "resume": "Rapport institutionnel de référence de la FAO (SOCO 2022, 138 pages) analysant les flux commerciaux agricoles mondiaux et régionaux, les chaînes de valeur globales et les politiques commerciales durables.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport phare mondial de la FAO sur l'économie et les marchés des produits agricoles, publication de haut niveau pour les membres de la plateforme.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA SITUATION DES MARCHES DES PRODUITS AGRICOLES 2022"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "FAO. 2022. La situation des marchés des produits agricoles 2022. Rome, FAO."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00821__la-situation-des-marches-des-produits-agricoles-2022-so.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/economie_filieres_marches/DOC-00821__la-situation-des-marches-des-produits-agricoles-2022-so.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00940",
+  "sha256": "672abcfb8b46ca0b2af34be9b1580567375d4548b156bd715ae073f0719188da",
+  "nom_original": "guide_caille.pdf",
+  "chemin_relatif_source": "OD_Docs/guide_caille.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 858542,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2012,
+  "auteurs": "Institut Technique des Élevages (ITELV)",
+  "source_organisation": "ITELV Algérie",
+  "mots_cles": [
+    "caille",
+    "coturniculture",
+    "coturnix japonica",
+    "itelv",
+    "algerie",
+    "elevage avicole",
+    "oeufs de caille"
+  ],
+  "titre_trouve": "Guide d’élevage de la Caille",
+  "titre": "Guide d'élevage de la caille (ITELV Algérie)",
+  "resume": "Guide technique officiel de l'ITELV sur la coturniculture : choix de la souche (Coturnix japonica), logement en batterie ou au sol, reproduction et alimentation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet d'institut technique public d'élevage (ITELV), directement diffusable aux éleveurs et porteurs de projet.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Guide d’élevage de la Caille"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "MINISTERE DE L’AGRICULTURE ET DU DEVELOPPMENT RURAL INSTITUT TECHNIQUE DES ELEVAGES ITELV Alger"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00940__guide-d-elevage-de-la-caille-itelv-algerie.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00940__guide-d-elevage-de-la-caille-itelv-algerie.pdf"
+}

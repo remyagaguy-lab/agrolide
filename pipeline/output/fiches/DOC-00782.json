@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00782",
+  "sha256": "b780728c50edd9ab66ddbf9775d214ae9151c22cd5ee8bb33f5457053ff0c140",
+  "nom_original": "agronomie 1 cours et TD univ Blida .pdf",
+  "chemin_relatif_source": "OD_Docs/agronomie 1 cours et TD univ Blida .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5463760,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476226894-agronomie_1_cours_et_TD_univ_Blida_.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00781",
+  "groupe_doublon_id": "GRP-0050",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00781 (Cours d'agronomie I : science du sol et relations eau-sol).",
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "pays": "Algérie",
+  "annee": 2022,
+  "auteurs": "Dr. Brahimi",
+  "source_organisation": "Université de Blida",
+  "mots_cles": [
+    "cours d'agronomie",
+    "science du sol",
+    "pedogenese",
+    "texture",
+    "retention en eau",
+    "blida"
+  ],
+  "titre_trouve": "Cours d’Agronomie I",
+  "titre": "Cours d'agronomie I : science du sol et relations eau-sol",
+  "resume": "Polycopié complet de 40 pages de cours et travaux dirigés de l'Université de Blida couvrant les constituants du sol, la morphologie pédologique, la classification et le bilan hydrique.",
+  "statut_droits": "travail_academique_non_publie",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours d’Agronomie I UE : Unité Fondamentale 1"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Par: Dr. BRAHIMI"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "agronomie 1 cours et TD univ Blida"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00782__cours-d-agronomie-i-science-du-sol-et-relations-eau-sol.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00782__cours-d-agronomie-i-science-du-sol-et-relations-eau-sol.pdf"
+}

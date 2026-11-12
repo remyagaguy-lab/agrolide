@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00881",
+  "sha256": "7e8500fb150cb194eaa8274d8350d96e4917251bdd372d566c5786090c1b6eb3",
+  "nom_original": "elevage pintade.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage pintade.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 549019,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pintade",
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Joyce Clarence",
+  "source_organisation": null,
+  "mots_cles": [
+    "meleagriculture",
+    "pintade",
+    "elevage avicole",
+    "pintadeaux",
+    "burkina faso",
+    "itineraire technique"
+  ],
+  "titre_trouve": "ELEVAGE DE LA PINTADE (MELEAGRICULTURE)",
+  "titre": "Guide pratique d'élevage de la pintade en Afrique de l'Ouest",
+  "resume": "Manuel technique illustré de 14 pages sur la méléagriculture tropicale : gestion du troupeau, claustration, prévention des mortalités de pintadeaux et calendrier sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document tronqué en dernière page (phrase inachevée 'très favorab') et sans mention d'auteur ni d'organisme institutionnel émetteur : complet passé à false, droits requalifiés en inconnu, drapeaux incomplet et auteur_introuvable ajoutés, décision corrigée en non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ELEVAGE DE LA PINTADE \n(MELEAGRICULTURE) \n \nPINTADES:"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0076",
+  "canonique_id": null,
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "complet",
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Document tronqué en dernière page (phrase inachevée 'très favorab') et sans mention d'auteur ni d'organisme institutionnel émetteur : complet passé à false, droits requalifiés en inconnu, drapeaux incomplet et auteur_introuvable ajoutés, décision corrigée en non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00881__guide-pratique-d-elevage-de-la-pintade-en-afrique-de-l.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00881__guide-pratique-d-elevage-de-la-pintade-en-afrique-de-l.pdf"
+}

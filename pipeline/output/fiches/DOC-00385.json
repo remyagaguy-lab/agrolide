@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00385",
+  "sha256": "d09909d7ddba23074e0c4306f0bdbd28daab3cfb0222874e2645570842911dd3",
+  "nom_original": "Elevage tilapia 2015.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage tilapia 2015.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 10034210,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 109,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Centre de Formation et de Recherche en Aquaculture (CEFRA / Université de Liège)",
+  "mots_cles": [
+    "tilapia",
+    "aquaculture",
+    "pisciculture",
+    "oreochromis niloticus",
+    "alimentation des poissons",
+    "reproduction piscicole"
+  ],
+  "titre_trouve": "Biologie et élevage des tilapias",
+  "titre": "Biologie et élevage des tilapias : systématique, reproduction, alimentation et systèmes aquacoles",
+  "resume": "Support de cours sous forme de présentation diapositive de 109 pages couvrant la systématique, la biologie, les modes de reproduction, l'alimentation, le grossissement et la commercialisation des tilapias.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire en diapositives sans licence libre formelle, conservé en archive pour consultation interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Biologie et élevage des tilapias"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00385__biologie-et-elevage-des-tilapias-systematique-reproduct.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00385__biologie-et-elevage-des-tilapias-systematique-reproduct.pdf"
+}

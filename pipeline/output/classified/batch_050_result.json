@@ -1,0 +1,840 @@
+{
+  "batch_number": 50,
+  "results": [
+    {
+      "id": "DOC-00748",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "aviculture",
+        "phytotherapie veterinaire",
+        "coccidiose",
+        "maladie de newcastle",
+        "neem",
+        "cailcedrat",
+        "vernonia"
+      ],
+      "titre_trouve": "TRAITEMENT DE MALADIES VIRALES ET PROPHYLAXIE DE PREVENTION",
+      "titre": "Traitements traditionnels et prophylaxie des maladies aviaires",
+      "resume": "Fiche pratique récapitulant des traitements ethnovétérinaires et mesures de prophylaxie pour volailles à base de plantes locales (neem, caïlcédrat, moringa, vernonia) contre la coccidiose, le parasitisme et Newcastle.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable",
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fiche pratique d'ethnovétérinaire avicole à forte utilité terrain, nécessitant une validation par un vétérinaire avant diffusion.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.65,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MALADIES TRAITEMENTS PREVENTIONS COCCIDIOSE"
+        },
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "PESTE AVIAIRE OU NEWCASTLE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00749",
+      "domaine_principal": "transversal",
+      "sous_domaine": "statistiques_biometrie",
+      "domaines_secondaires": [],
+      "type_doc": "outil_modele",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2011,
+      "auteurs": "MBRULHAR",
+      "source_organisation": null,
+      "mots_cles": [
+        "statistiques",
+        "tables statistiques",
+        "loi binomiale",
+        "loi normale",
+        "test de fisher"
+      ],
+      "titre_trouve": "Tables statistiques usuelles",
+      "titre": "Tables statistiques usuelles : lois de probabilités (1ère année Bachelor)",
+      "resume": "Recueil de tables statistiques usuelles pour l'enseignement supérieur : loi binomiale, loi de Poisson, loi normale centrée réduite, loi de Student et loi de Fisher-Snedecor.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document académique d'appui aux travaux dirigés sans mention de droits ouverts, conservé en archive pédagogique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Tables statistiques usuelles Table 1: Loi Binomiale"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00750",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture / poulet de chair",
+      "pays": null,
+      "annee": 2009,
+      "auteurs": "Cobb-Vantress",
+      "source_organisation": "Cobb-Vantress",
+      "mots_cles": [
+        "cobb 500",
+        "poulet de chair",
+        "guide d'elevage",
+        "aviculture",
+        "ventilation",
+        "alimentation avicole",
+        "prophylaxie"
+      ],
+      "titre_trouve": "Guide d'élevage du poulet de chair Cobb",
+      "titre": "Guide d'élevage du poulet de chair Cobb",
+      "resume": "Guide technique exhaustif de 70 pages publié par Cobb-Vantress pour la conduite du poulet de chair : préparation du bâtiment, démarrage des poussins, ventilation, alimentation, abreuvement et biosécurité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique officiel de référence mondiale pour l'élevage du poulet de chair Cobb, diffusé librement par le sélectionneur pour ses éleveurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Le guide d'élevage poulet de chair cobb-vantress.com"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Guide d'élevage du poulet de chair Cobb L’engagement de Cobb"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00751",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "culture_sous_abri_hors_sol",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage hors-sol",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Mr Zouaoui",
+      "source_organisation": null,
+      "mots_cles": [
+        "culture hors sol",
+        "hydroponie",
+        "solution nutritive",
+        "substrat inerte",
+        "maraichage"
+      ],
+      "titre_trouve": "Technique en cultures hors sols",
+      "titre": "Techniques de cultures hors-sol et hydroponie",
+      "resume": "Document d'introduction aux principes de l'agriculture hors-sol et de l'hydroponie maraîchère : besoins des plantes, types de substrats inertes et gestion de la solution nutritive.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document pédagogique d'un formateur sans licence libre explicite, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technique en cultures hors sols Mr : Zouaoui"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00752",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "pilotage de l'irrigation",
+        "gestion de l'eau",
+        "arrosage"
+      ],
+      "titre_trouve": "Techniques et pilotage d'irrigation",
+      "titre": "Techniques et pilotage de l'irrigation",
+      "resume": "Document scanné présentant les différentes techniques d'irrigation et les méthodes de pilotage des apports d'eau aux cultures.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "incomplet"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible nécessitant une OCR et une validation humaine de son contenu et de ses droits.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Techniques et pilotage d_irrigation (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00753",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2018,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "calcul tensoriel",
+        "mathematiques",
+        "vecteurs",
+        "tenseur de ricci",
+        "physique theorique"
+      ],
+      "titre_trouve": "Cours de Calcul Tensoriel avec Exercices corrigés",
+      "titre": "Cours de Calcul Tensoriel avec Exercices corrigés",
+      "resume": "Cours universitaire de mathématiques supérieures et physique théorique consacré au calcul tensoriel, aux tenseurs de courbure et à la géométrie différentielle.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Manuel universitaire de physique mathématique et calcul tensoriel sans relation avec l'agriculture ou l'agroalimentaire.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours de Calcul Tensoriel avec Exercices corrigés"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00754",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "conservation_post_recolte",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "these",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "fruits / papaye",
+      "pays": "Côte d'Ivoire",
+      "annee": 2013,
+      "auteurs": "Yao N’zué Benjamin",
+      "source_organisation": "Université Nangui Abrogoua (Côte d'Ivoire)",
+      "mots_cles": [
+        "papaye",
+        "conservation post-recolte",
+        "carica papaya",
+        "biochimie alimentaire",
+        "cote d'ivoire",
+        "maturite"
+      ],
+      "titre_trouve": "Conservation du fruit du papayer (Carica papaya L. var solo 8) par le contrôle du stade de maturité à la récolte et quelques activités biochimiques",
+      "titre": "Conservation post-récolte du fruit du papayer (var. Solo 8) en Côte d'Ivoire",
+      "resume": "Thèse de doctorat soutenue à l'Université Nangui Abrogoua sur les mécanismes biochimiques de maturation et l'optimisation des méthodes de conservation post-récolte de la papaye Solo 8.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Thèse de doctorat universitaire archivée pour la recherche agronomique, non diffusable publiquement sans accord d'édition.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Conservation du fruit du papayer (Carica papaya L. var solo 8) par le contrôle du stade de maturité à la récolte"
+        },
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "THESE DE DOCTORAT de l’Université Nangui Abrogoua en Sciences et Technologie des Aliments"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00755",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2007,
+      "auteurs": "Lili Michaud",
+      "source_organisation": "Éditions MultiMondes",
+      "mots_cles": [
+        "compost",
+        "amendements organiques",
+        "matiere organique",
+        "fertilisation",
+        "guide pratique"
+      ],
+      "titre_trouve": "Tout sur le compost : le connaître, le faire, l’acheter et l’utiliser",
+      "titre": "Tout sur le compost : le connaître, le faire, l'acheter et l'utiliser",
+      "resume": "Ouvrage de référence sur la fabrication et l'utilisation du compost : matières compostables, processus biologique, gestion des andains, achat et épandage pour fertiliser les sols.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial publié sous droits réservés stricts (© Éditions MultiMondes, ISBN 978-2-89544-106-9), non publiable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Compost Tout sur le Le connaitre, le faire, l’acheter et l’utiliser"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 5,
+          "extrait": "© Éditions MultiMondes 2007 ISBN 978-2-89544-106-9"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00756",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": "flore méditerranéenne",
+      "pays": null,
+      "annee": 2000,
+      "auteurs": "Christopher Grey-Wilson, Marjorie Blamey",
+      "source_organisation": "Éditions Delachaux et Niestlé",
+      "mots_cles": [
+        "flore mediterraneenne",
+        "botanique",
+        "identification des plantes",
+        "arbres et arbustes",
+        "guide d'identification"
+      ],
+      "titre_trouve": "Toutes les fleurs de Méditerranée : les fleurs, les graminées, les arbres et arbustes",
+      "titre": "Toutes les fleurs de Méditerranée : fleurs, graminées, arbres et arbustes",
+      "resume": "Guide botanique complet identifiant la flore du bassin méditerranéen (Afrique du Nord et Europe du Sud) avec descriptions morphologiques et planches illustrées de plus de 100 familles végétales.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide commercial de référence protégé par le droit d'auteur (Éditions Delachaux et Niestlé, ISBN 2-603-01179-0), archivé sans diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "Toutes les fleurs de Méditerranée Planches en couleurs : Marjorie Blamey Textes et dessins : Christopher Grey-Wilson"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 5,
+          "extrait": "© Éditions Delachaux et Niestlé SA... ISBN : 2-60-301179-0"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00757",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Bénin",
+      "annee": 2015,
+      "auteurs": "Serge Egide Paulin MENSAH, André Boya ABOH, Delphin Olorounto KOUDANDE, Isidore GBEGO TOSSA, Guy Apollinaire MENSAH",
+      "source_organisation": "Institut National des Recherches Agricoles du Bénin (INRAB)",
+      "mots_cles": [
+        "inrab",
+        "benin",
+        "volaille",
+        "plantes medicinales",
+        "pharmacopee veterinaire",
+        "sante avicole",
+        "cames"
+      ],
+      "titre_trouve": "Traitement des maladies de la volaille à base de plantes médicinales",
+      "titre": "Traitement des maladies de la volaille à base de plantes médicinales (INRAB)",
+      "resume": "Fiche technique officielle de l'INRAB présentant les remèdes vétérinaires traditionnels scientifiquement validés à base de plantes médicinales béninoises pour soigner et prévenir les affections des volailles.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique officielle de recherche et de vulgarisation de l'INRAB, libre de diffusion institutionnelle et de très haute pertinence pour l'aviculture africaine.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE Traitement des maladies de la volaille à base de plantes médicinales"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Institut National des Recherches Agricoles du Bénin Centre de Recherches Agricoles à vocation Nationale"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00758",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2023,
+      "auteurs": "HAMMOUDI-SALEM Z.",
+      "source_organisation": "Université des Sciences et de la Technologie Houari Boumediene (USTHB)",
+      "mots_cles": [
+        "traitement des eaux usees",
+        "epuration",
+        "pollution aquatique",
+        "traitement biologique",
+        "usthb"
+      ],
+      "titre_trouve": "Traitement des eaux usées / GE / Master I",
+      "titre": "Cours de traitement des eaux usées : caractérisation et procédés biologiques (Master 1)",
+      "resume": "Support de cours de Master 1 en génie de l'environnement (USTHB) couvrant la caractérisation des pollutions d'eaux résiduaires, les normes de rejet, les traitements biologiques et l'aération des bassins.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire interne d'enseignant non publié sous licence libre, archivé pour référence académique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Traitement des eaux usées /GE/ Master I / FGMGP/USTHB/ Mme HAMMOUDI-SALEM. Z"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "USTHB"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00759",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "equipements_technologie",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2017,
+      "auteurs": "Dr DJEDIAI Houria",
+      "source_organisation": "Université des Sciences et de la Technologie d'Oran Mohamed-Boudiaf (USTO-MB)",
+      "mots_cles": [
+        "eaux de process",
+        "eau industrielle",
+        "chaudieres",
+        "refroidissement",
+        "traitement de l'eau"
+      ],
+      "titre_trouve": "TRAITEMENT ET CONDITIONNEMENT DES EAUX DE PROCESS",
+      "titre": "Traitement et conditionnement des eaux de process industriels (Master GPE)",
+      "resume": "Polycopié de cours de Master en génie des procédés traitant du conditionnement des eaux industrielles : traitement des eaux d'alimentation des chaudières à vapeur et des circuits de refroidissement.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, archivé pour l'ingénierie des utilités industrielles.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "TRAITEMENT ET CONDITIONNEMENT DES EAUX DE PROCESS Cours destinés aux étudiants de Master 2"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Université des Sciences et de la Technologie Mohamed Boudiaf-Oran"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00760",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 1991,
+      "auteurs": "François Berné, Jean Cordonnier",
+      "source_organisation": "Éditions Technip",
+      "mots_cles": [
+        "traitement des eaux",
+        "epuration",
+        "genie de l'eau",
+        "filtration",
+        "decantation",
+        "editions technip"
+      ],
+      "titre_trouve": "Traitement des eaux",
+      "titre": "Traitement des eaux : procédés et technologies",
+      "resume": "Ouvrage technique de référence de François Berné et Jean Cordonnier détaillant les procédés physico-chimiques et biologiques de traitement, d'épuration et de clarification des eaux.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "ocr_necessaire"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial des Éditions Technip protégé par copyright, conservé en archives documentaires sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Traitement des eaux (métadonnées titre)"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "By François Berné, Jean Cordonnier (métadonnées auteur)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00761",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agroalimentaire"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "S. ANKIK",
+      "source_organisation": null,
+      "mots_cles": [
+        "traitement des eaux",
+        "utilites industrielles",
+        "dessalement",
+        "osmose inverse",
+        "eaux residuaires",
+        "biogaz"
+      ],
+      "titre_trouve": "Traitement des eaux et utilités",
+      "titre": "Cours complet sur le traitement des eaux et les réseaux d'utilités industrielles",
+      "resume": "Support de cours approfondi de 487 diapositives couvrant la chimie des eaux, les eaux de process, le dessalement par osmose inverse, l'épuration des eaux résiduaires, la méthanisation des boues et les réseaux d'utilités.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire complet sans licence ouverte déclarée, archivé pour l'enseignement technique de l'eau.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Traitement des eaux et utilités S.ANKIK"
+        },
+        {
+          "champ": "sommaire",
+          "page": 2,
+          "extrait": "Chapitre I: Généralités sur l’eau Chapitre IV: Techniques de dessalement"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00762",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Henni Nassiba, Benzine Bornia Yasmine",
+      "source_organisation": "Université Frères Mentouri Constantine 1 / SAIDAL",
+      "mots_cles": [
+        "eau pharmaceutique",
+        "preparations injectables",
+        "controle qualite",
+        "saidal",
+        "memoire de master"
+      ],
+      "titre_trouve": "Traitement et contrôle qualité de deux types d’eau à usage pharmaceutique : eau purifiée et eau pour préparations injectables",
+      "titre": "Traitement et contrôle qualité de l'eau à usage pharmaceutique (Mémoire Master)",
+      "resume": "Mémoire de Master professionnel sur la qualification des systèmes de production (osmose inverse, distillation) et le contrôle qualité d'eaux à usage pharmaceutique au sein des laboratoires SAIDAL.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Mémoire portant sur la production d'eau purifiée à usage pharmaceutique humain (laboratoires SAIDAL), hors du périmètre agronomique et agroalimentaire.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Traitement et contrôle qualité de deux types d’eau à usage pharmaceutique : eau purifiée et eau pour préparations injectables"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Entreprise SAIDAL - Constantine"
+        }
+      ]
+    }
+  ]
+}

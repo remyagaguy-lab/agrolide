@@ -1,0 +1,765 @@
+{
+  "batch_number": 25,
+  "results": [
+    {
+      "id": "DOC-00365",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "ENIGMA",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "aspersion",
+        "pluviometrie",
+        "calcul de debit",
+        "dimensionnement"
+      ],
+      "titre_trouve": "L'indice pluviométrique (ou la pluviométrie)",
+      "titre": "Calcul de la pluviométrie horaire pour un système d'irrigation par aspersion",
+      "resume": "Fiche d'exercice et formule de calcul de l'indice pluviométrique d'un système d'irrigation par aspersion en fonction du débit et de la surface.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document technique utile mais source et droits non déterminés (créateur anonyme ENIGMA) ; archivé en attente de vérification des droits.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L'indice pluviométrique (ou la pluviométrie) Pour un système aspersion en irrigation est une mesure qui indique la quantité d'eau appliquée"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00366",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "ENIGMA",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "aspersion",
+        "pompage",
+        "hauteur manometrique totale",
+        "puissance pompe"
+      ],
+      "titre_trouve": "Calcul aspersion",
+      "titre": "Dimensionnement d'un réseau d'irrigation par aspersion et choix de la pompe",
+      "resume": "Exercice de calcul appliqué déterminant le débit total, la hauteur manométrique totale (HMT) et la puissance de pompage requise pour 100 asperseurs.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche d'exercice technique pratique sans droits ni éditeur identifié (créateur anonyme), archivée conformément aux règles de diffusion.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calcul aspersion Pour faire fonctionner 100 asperseurs avec un débit individuel de 1,8 m³/h"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00367",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "ENIGMA",
+      "source_organisation": null,
+      "mots_cles": [
+        "humidite du sol",
+        "methode gravimetrique",
+        "tensiometre",
+        "irrigation",
+        "analyse de sol"
+      ],
+      "titre_trouve": "Humidité d’un sol",
+      "titre": "Méthodes de détermination de l'humidité du sol pour l'irrigation",
+      "resume": "Présentation des méthodes de mesure de l'humidité du sol (gravimétrique, tensiomètre, sondes) avec formule de calcul et exemple d'application numérique.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique pédagogique utile mais sans mention de droits ni affiliation institutionnelle identifiable, archivée par précaution.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Humidité d’un sol Déterminer l'humidité d'un sol irrigué consiste à mesurer la quantité d'eau présente dans le sol par rapport à sa masse sèche."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00369",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "ENIGMA",
+      "source_organisation": null,
+      "mots_cles": [
+        "bassin de stockage",
+        "irrigation",
+        "dimensionnement hydraulique",
+        "perimetre irrigue",
+        "volume tampon"
+      ],
+      "titre_trouve": "Calcul volume d’un bassin de stockage nécessaire pour l’irrigation d’un périmètre irrigué",
+      "titre": "Calcul du volume d'un bassin de stockage pour l'irrigation d'un grand périmètre",
+      "resume": "Exercice résolu de dimensionnement hydraulique du volume d'un bassin de stockage et de régulation selon les besoins en eau et le débit de pompage.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche d'exercice de dimensionnement sans source institutionnelle claire ni mention de droits libres, conservée en archive technique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calcul volume d’un bassin de stockage nécessaire pour l’irrigation d’un périmètre irrigué"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00371",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "ENIGMA",
+      "source_organisation": null,
+      "mots_cles": [
+        "lessivage des sels",
+        "salinite du sol",
+        "fraction de lessivage",
+        "qualite de l'eau",
+        "irrigation"
+      ],
+      "titre_trouve": "Calcul de l’eau nécessaire pour le lessivage des sels dans un sol",
+      "titre": "Calcul du volume d'eau pour le lessivage des sols salins en agriculture irriguée",
+      "resume": "Exercices d'application avec formules pour calculer la dose d'eau de lessivage et la fraction de lessivage (FL) afin de réduire la salinité du sol.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Note technique d'exercice sans attribution officielle ni licence ouverte, archivée conformément aux directives de droits.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calcul de l’eau nécessaire pour le lessivage des sels dans un sol"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00372",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "maïs",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Pc 01",
+      "source_organisation": null,
+      "mots_cles": [
+        "mais",
+        "besoin en eau",
+        "irrigation",
+        "bilan hydrique",
+        "reserve facilement utilisable"
+      ],
+      "titre_trouve": "EXERCICE : Complétez le tableau suivant pour calculer les besoin en eau d’irrigation de la Culture mise en place (Mais)",
+      "titre": "Calcul des apports d'irrigation et bilan hydrique pour la culture du maïs",
+      "resume": "Exercice pratique avec tableur mensuel pour le calcul du bilan hydrique, de la réserve facilement utilisable (RFU) et des besoins d'irrigation du maïs.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche d'exercice pratique anonyme sans licence explicite, archivée en interne pour consultation.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "EXERCICE : Complétez le tableau suivant pour calculer les besoin en eau d’irrigation de la Culture mise en place (Mais)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00373",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "tomate",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Mon pc",
+      "source_organisation": null,
+      "mots_cles": [
+        "tomate",
+        "irrigation",
+        "apport d'eau",
+        "deficit agricole",
+        "bilan hydrique",
+        "maraichage"
+      ],
+      "titre_trouve": "Tableau : calcul apport par irrigation CULTURE : TOMATE",
+      "titre": "Calcul des apports d'irrigation et déficit agricole pour la culture de la tomate",
+      "resume": "Feuille de calcul et méthodologie pour déterminer les apports mensuels d'irrigation d'une culture de tomate de 10 ha à partir de l'ETP et de la RFU.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'exercice pratique informel avec auteur non identifié, classé en archive technique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Tableau : calcul apport par irrigation CULTURE : TOMATE SUPERFICIE : 10 ha Texture : argileuse"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00374",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "olivier",
+      "pays": null,
+      "annee": null,
+      "auteurs": "ENIGMA",
+      "source_organisation": null,
+      "mots_cles": [
+        "goutte-a-goutte",
+        "poste d'irrigation",
+        "olivier",
+        "arboriculture",
+        "dimensionnement hydraulique"
+      ],
+      "titre_trouve": "EXERCICE : Culture olivier, écartement 6m x 6m ,4 goutteurs / arbre",
+      "titre": "Calcul de la surface d'un poste d'irrigation au goutte-à-goutte pour un verger",
+      "resume": "Exercice court de dimensionnement hydraulique déterminant la superficie maximale d'un secteur d'irrigation au goutte-à-goutte selon le débit de la pompe.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Exercice technique de calcul sans informations sur les droits ni l'auteur institutionnel, archivé en non-publié.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "EXERCICE : Culture olivier, écartement 6m x 6m ,4 goutteurs / arbre, débit goutteur 4 l/h débit pompe 3.6 m3/h soit 1l/s Question : quelle est la taille du poste d’irrigation ?"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00376",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "tomate",
+      "pays": null,
+      "annee": null,
+      "auteurs": "ENIGMA",
+      "source_organisation": null,
+      "mots_cles": [
+        "tomate",
+        "besoins en eau",
+        "dose d'irrigation",
+        "frequence d'arrosage",
+        "bilan hydrique",
+        "maraichage"
+      ],
+      "titre_trouve": "EXERCICE On considère une culture de tomate sur une surface de 10 ha",
+      "titre": "Calcul des besoins en eau et du calendrier d'irrigation pour la culture de la tomate",
+      "resume": "Exercice complet résolu pour déterminer les besoins nets et bruts, la dose d'arrosage et l'intervalle entre irrigations pour une culture de tomate.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche d'exercice pratique sans statut de droits vérifié ni source institutionnelle officielle, maintenue en archivage.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "On considère une culture de tomate sur une surface de 10 ha. Les données sont les suivantes : Coefficient cultural (Kc) : 1.1"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00377",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2022,
+      "auteurs": "Sonia Martineau, Oriane Faure",
+      "source_organisation": "UrbaLyon",
+      "mots_cles": [
+        "urbanisme",
+        "PLU",
+        "bioclimatisme",
+        "energie renouvelable",
+        "metropole de lyon"
+      ],
+      "titre_trouve": "Intégrer les enjeux énergétiques et bioclimatiques dans le PLU Quelques pistes d’approfondissement pour le PLU-H de la Métropole de Lyon",
+      "titre": "Intégrer les enjeux énergétiques et bioclimatiques dans le PLU de la Métropole de Lyon",
+      "resume": "Rapport d'urbanisme analysant les leviers réglementaires du PLU-H de la Métropole de Lyon pour intégrer les énergies renouvelables et l'architecture bioclimatique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document d'urbanisme urbain français (PLU métropolitain) hors du périmètre agronomique et de développement rural d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Intégrer les enjeux énergétiques et bioclimatiques dans le PLU Quelques pistes d’approfondissement pour le PLU-H de la Métropole de Lyon"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00378",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "fruits",
+      "pays": "Canada",
+      "annee": 2014,
+      "auteurs": "Ministère de l'Agriculture et de l'Aquaculture du Nouveau-Brunswick",
+      "source_organisation": "Ministère de l'Agriculture et de l'Aquaculture (Nouveau-Brunswick)",
+      "mots_cles": [
+        "analyse foliaire",
+        "echantillonnage de tissus vegetaux",
+        "fertilisation",
+        "nutrition minerale",
+        "arboriculture"
+      ],
+      "titre_trouve": "Échantillonnage de tissus végétaux Les avantages de l’analyse foliaire pour l’agriculture",
+      "titre": "Guide d'échantillonnage de tissus végétaux et diagnostic par analyse foliaire",
+      "resume": "Fiche technique décrivant le protocole d'échantillonnage foliaire pour diagnostiquer l'équilibre nutritif des cultures fruitières et ajuster la fertilisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de bonne qualité sur l'échantillonnage foliaire, adaptable aux arboriculteurs et techniciens malgré un contexte tempéré d'origine.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Échantillonnage de tissus végétaux Les avantages de l’analyse foliaire pour l’agriculture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00379",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2010,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "electronique",
+        "genie electronique",
+        "analogique",
+        "terminale sti"
+      ],
+      "titre_trouve": "Electronique, terminale STI génie électronique 2, Analogique Livre",
+      "titre": "Électronique analogique - Terminale STI Génie électronique",
+      "resume": "Manuel scolaire de terminale STI traitant des circuits et systèmes électroniques analogiques, sans lien avec le secteur agricole.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "ocr_necessaire",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Manuel scolaire de génie électronique analogique totalement hors du périmètre agricole et soumis aux droits d'auteur commerciaux.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Electronique,_terminale_STI_génie_électronique_2,_Analogique_Livre.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00380",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poisson-chat",
+      "pays": null,
+      "annee": 2015,
+      "auteurs": "Tihange",
+      "source_organisation": "Centre de formation en aquaculture (Tihange)",
+      "mots_cles": [
+        "clarias gariepinus",
+        "poisson-chat africain",
+        "aquaculture",
+        "pisciculture",
+        "reproduction artificielle",
+        "alimentation des poissons"
+      ],
+      "titre_trouve": "Biologie et élevage du poisson-chat africain Clarias gariepinus",
+      "titre": "Biologie et élevage du poisson-chat africain (Clarias gariepinus)",
+      "resume": "Présentation détaillée de 107 diapositives couvrant la biologie, la reproduction, l'alimentation, le grossissement et les systèmes d'élevage du poisson-chat africain.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support de formation très complet sur une filière aquacole clé en Afrique subsaharienne, mis à disposition des membres de la plateforme.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Biologie et élevage du poisson-chat africain Clarias gariepinus"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00381",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "bovin",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "genisse",
+        "elevage bovin",
+        "ruminants",
+        "bovins lait",
+        "conduite d'elevage"
+      ],
+      "titre_trouve": null,
+      "titre": "Élevage de génisses",
+      "resume": "Document de 4 pages sous forme de scan sans texte extractible traitant de la conduite d'élevage des génisses bovines.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte numérique nécessitant un OCR pour évaluer son contenu, son auteur et ses droits de diffusion.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Elevage de Genisses.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00382",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Network for Smallholder Poultry Development",
+      "source_organisation": "Network for Smallholder Poultry Development / DANIDA",
+      "mots_cles": [
+        "aviculture villageoise",
+        "volaille",
+        "poulet local",
+        "habitat avicole",
+        "alimentation volaille",
+        "sante animale",
+        "danida"
+      ],
+      "titre_trouve": "Elevage de la Volaille Villageoise Un manuel technique sur la production avicole à petite échelle",
+      "titre": "Élevage de la volaille villageoise : manuel technique sur la production avicole à petite échelle",
+      "resume": "Manuel pratique complet et illustré abordant la conduite, le logement, l'alimentation, la santé, la rentabilité et la génétique de l'aviculture rurale familiale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel de référence sur l'aviculture villageoise tropicale, libre de diffusion institutionnelle (DANIDA) et de très forte valeur pour le terrain.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Elevage de la Volaille Villageoise Un manuel technique sur la production avicole à petite échelle"
+        }
+      ]
+    }
+  ]
+}

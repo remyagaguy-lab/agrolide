@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00531",
+  "sha256": "2ea16828613d4beb3e4f1496ada14a4cd70f9096f8128e52148e8ebe807d48e0",
+  "nom_original": "LES RACE animales.pdf",
+  "chemin_relatif_source": "OD_Docs/LES RACE animales.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2949451,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 35,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "enseignant_chercheur",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "Dr. Amadou Tamsir Diop",
+  "source_organisation": "ISRA / CIRAD",
+  "mots_cles": [
+    "systemes d'elevage",
+    "afrique de l'ouest",
+    "ressources zoo-genetiques",
+    "pastoralisme",
+    "bovins",
+    "changement climatique"
+  ],
+  "titre_trouve": "Les systèmes de productions d’élevage en Afrique de l’Ouest: éléments de caractérisation et tendances évolutives",
+  "titre": "Les systèmes de production d’élevage en Afrique de l’Ouest",
+  "resume": "Présentation de référence du Dr Amadou Tamsir Diop analysant la diversité zoo-génétique, le contexte climatique et les mutations de l'élevage en Afrique de l'Ouest.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Support de conférence scientifique institutionnel complet de haute valeur sur l'élevage ouest-africain, réservé aux membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les systèmes de productions d’élevage en Afrique de l’Ouest: éléments de caractérisation et tendances évolutives"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "M. Amadou Tamsir DIOP Dr ès Sciences Directeur de recherche"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00531__les-systemes-de-production-delevage-en-afrique-de-loues.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-00531__les-systemes-de-production-delevage-en-afrique-de-loues.pdf"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00949",
+  "sha256": "5d0e5483ca169127332a3dceb24a61091942e65846b04482090ae36786ef5557",
+  "nom_original": "haccp-boulangerie-patisserie.pdf",
+  "chemin_relatif_source": "OD_Docs/haccp-boulangerie-patisserie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 404123,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "qualite_securite_normes",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2019,
+  "auteurs": "Société Thouy",
+  "source_organisation": "Thouy SAS",
+  "mots_cles": [
+    "haccp",
+    "plan de nettoyage",
+    "boulangerie",
+    "patisserie",
+    "hygiene",
+    "desinfection"
+  ],
+  "titre_trouve": "Zone : Pâtisserie Plan de nettoyage et désinfection",
+  "titre": "Plan de nettoyage et désinfection HACCP en pâtisserie (Thouy)",
+  "resume": "Grille opérationnelle de plan de nettoyage et désinfection HACCP en laboratoire de pâtisserie, intégrant fréquences et préconisations de produits.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support commercial publicitaire d'un distributeur de produits d'hygiène, conservé pour archive interne.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "LE SPECIALISTE DE LA VAISSELLE JETABLE ET DES PRODUITS DE NETTOYAGE www.thouy.net Brioxol"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00949__plan-de-nettoyage-et-desinfection-haccp-en-patisserie-t.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/qualite_securite_normes/DOC-00949__plan-de-nettoyage-et-desinfection-haccp-en-patisserie-t.pdf"
+}

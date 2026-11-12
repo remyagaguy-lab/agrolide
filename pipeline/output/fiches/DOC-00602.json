@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00602",
+  "sha256": "e8a6773d52618df4f123b97dddfebafc571e593b6b62956287d9d6f0561aec5b",
+  "nom_original": "Manuel _Aubergine.pdf",
+  "chemin_relatif_source": "OD_Docs/Manuel _Aubergine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 803966,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "licence_nc"
+  ],
+  "nb_pages": 28,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cultures maraîchères",
+  "pays": "Niger",
+  "annee": 2020,
+  "auteurs": "Ministère de l'Agriculture du Niger",
+  "source_organisation": "Ministère de l'Agriculture du Niger / Coopération Allemande",
+  "mots_cles": [
+    "aubergine",
+    "cultures irriguees",
+    "petite irrigation",
+    "niger",
+    "maraichage",
+    "sahel"
+  ],
+  "titre_trouve": "Techniques de production des cultures irriguées (Aubergine)",
+  "titre": "Techniques de production des cultures irriguées : Aubergine au Niger",
+  "resume": "Manuel technique complet sur la conduite de la culture de l'aubergine sous irrigation au Niger : pépinière, repiquage, gestion de l'eau, fertilisation et défense des cultures.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Présence du drapeau bloquant licence_nc interdisant une diffusion 'public' directe sans validation juridique humaine préalable.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MINISTERE DE L’AGRICULTURE Techniques de production des cultures irriguées (Aubergine)"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Présence du drapeau bloquant licence_nc interdisant une diffusion 'public' directe sans validation juridique humaine préalable."
+  },
+  "nom_fichier_final": "DOC-00602__techniques-de-production-des-cultures-irriguees-aubergi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00602__techniques-de-production-des-cultures-irriguees-aubergi.pdf"
+}

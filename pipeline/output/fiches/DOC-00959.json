@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00959",
+  "sha256": "e3c288d9752100c4ee097122af48e1a287d2d82afe25b2fd6d762efbf2f0934d",
+  "nom_original": "influence-et-manipulation---robert-cialdini.pdf",
+  "chemin_relatif_source": "OD_Docs/influence-et-manipulation---robert-cialdini.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1895735,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 269,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "États-Unis",
+  "annee": 2004,
+  "auteurs": "Robert B. Cialdini",
+  "source_organisation": "Éditions First-Gründ",
+  "mots_cles": [
+    "psychologie sociale",
+    "persuasion",
+    "manipulation",
+    "reciprocite",
+    "marketing"
+  ],
+  "titre_trouve": "INFLUENCE & MANIPULATION",
+  "titre": "Influence et manipulation : la psychologie de la persuasion",
+  "resume": "Livre de vulgarisation en psychologie sociale et marketing décrivant les mécanismes psychologiques universels d'influence et de persuasion (réciprocité, engagement, preuve sociale, autorité, rareté).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Ouvrage de psychologie sociale et marketing commercial sous droits d'auteur, totalement hors du périmètre agricole d'Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "ROBERT CIALDINI INFLUENCE & MANIPULATION"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© Editions First-Gründ, 2004 pour l’édition française. ISBN 978-2-87691-874-0"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00959__influence-et-manipulation-la-psychologie-de-la-persuasi.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00959__influence-et-manipulation-la-psychologie-de-la-persuasi.pdf"
+}

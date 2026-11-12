@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00586",
+  "sha256": "8a634eebe82a61f96d5e379db74490b9efcfeddb62e69f3fb93f5f054eb21ff6",
+  "nom_original": "MANUEL PRODUCTION COMPOTE JUS ET CONFITURE.pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL PRODUCTION COMPOTE JUS ET CONFITURE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 684011,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 11,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_fruits_legumes",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "fruits",
+  "pays": "Cameroun",
+  "annee": 2018,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+  "source_organisation": "EFATI",
+  "mots_cles": [
+    "jus de fruits",
+    "nectar",
+    "confiture",
+    "compote",
+    "transformation fruitiere"
+  ],
+  "titre_trouve": "SUPPORT DE FORMATION DE EFATI",
+  "titre": "Manuel de production artisanale de compotes, jus et confitures de fruits",
+  "resume": "Support de formation pratique détaillant les procédés de transformation des fruits en jus, nectars, compotes et confitures : formulations, cuisson, pasteurisation et mise en pots.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique de transformation fruitière destiné à l'artisanat et à la petite entreprise agroalimentaire en Afrique.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "SUPPORT DE FORMATION DE EFATI Variétés de jus de fruit"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00586__manuel-de-production-artisanale-de-compotes-jus-et-conf.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_fruits_legumes/DOC-00586__manuel-de-production-artisanale-de-compotes-jus-et-conf.pdf"
+}

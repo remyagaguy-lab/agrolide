@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00489",
+  "sha256": "89cc297db5b1b6357bbd294978b890769ab243ea201d6f9ecb1a325c6c55a2ff",
+  "nom_original": "Guide_Mouton_121103.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide_Mouton_121103.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4708360,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 154,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "CEVA Santé Animale",
+  "source_organisation": "CEVA Santé Animale",
+  "mots_cles": [
+    "mouton",
+    "elevage ovin",
+    "afrique subsaharienne",
+    "mediterranee",
+    "sante animale",
+    "ceva"
+  ],
+  "titre_trouve": "GUIDE DE L’ÉLEVAGE DU MOUTON MÉDITERRANÉEN ET TROPICAL",
+  "titre": "Guide de l'élevage du mouton méditerranéen et tropical (CEVA)",
+  "resume": "Ouvrage complet de conduite d'élevage et de pathologie ovine en milieu tropical et méditerranéen : races, reproduction, alimentation et prévention sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage édité par un laboratoire pharmaceutique vétérinaire privé (CEVA Santé Animale). Ce matériel commercial relève de droits_reserves_commercial avec drapeaux contenu_commercial et droits_reserves, ce qui exclut la diffusion membres/public et impose un archivage non publié.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DE L’ÉLEVAGE DU MOUTON MÉDITERRANÉEN ET TROPICAL"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Témoignage de l'importance que lui accorde CEVA SANTE ANIMALE qui l’a érigée au rang d’espèce prioritaire"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Ouvrage édité par un laboratoire pharmaceutique vétérinaire privé (CEVA Santé Animale). Ce matériel commercial relève de droits_reserves_commercial avec drapeaux contenu_commercial et droits_reserves, ce qui exclut la diffusion membres/public et impose un archivage non publié."
+  },
+  "nom_fichier_final": "DOC-00489__guide-de-l-elevage-du-mouton-mediterraneen-et-tropical.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00489__guide-de-l-elevage-du-mouton-mediterraneen-et-tropical.pdf"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00752",
+  "sha256": "ca3e7ca7a833692acc6e6f870e7623ce3e62340e4eca6570861259217559221a",
+  "nom_original": "Techniques et pilotage d_irrigation.pdf",
+  "chemin_relatif_source": "OD_Docs/Techniques et pilotage d_irrigation.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9882081,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 11,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "pilotage de l'irrigation",
+    "gestion de l'eau",
+    "arrosage"
+  ],
+  "titre_trouve": "Techniques et pilotage d'irrigation",
+  "titre": "Techniques et pilotage de l'irrigation",
+  "resume": "Document scanné présentant les différentes techniques d'irrigation et les méthodes de pilotage des apports d'eau aux cultures.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible nécessitant une OCR et une validation humaine de son contenu et de ses droits.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Techniques et pilotage d_irrigation (nom du fichier)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00752__techniques-et-pilotage-de-l-irrigation.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00752__techniques-et-pilotage-de-l-irrigation.pdf"
+}

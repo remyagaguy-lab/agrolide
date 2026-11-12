@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00098",
+  "sha256": "a68d9fbe0121c3884cee99730f6aace5eb89cc04e00256e7852b384461479abf",
+  "nom_original": "1999_LR-Manuel-du-Facilitateur-Sesame.pdf",
+  "chemin_relatif_source": "OD_Docs/1999_LR-Manuel-du-Facilitateur-Sesame.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5362423,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 116,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "sésame",
+  "pays": "Burkina Faso",
+  "annee": 2012,
+  "auteurs": "Geneviève Audet-Bélanger, Peter Gildemacher, Darius Tiombiano, Amos Miningou",
+  "source_organisation": "HELVETAS / KIT / GIZ / INERA",
+  "mots_cles": [
+    "sesame",
+    "champ ecole paysan",
+    "manuel du facilitateur",
+    "burkina faso",
+    "agriculture biologique",
+    "itineraire technique"
+  ],
+  "titre_trouve": "Manuel du Facilitateur Sésame",
+  "titre": "Manuel du Facilitateur : Production et valorisation du sésame (Champ-École Paysan)",
+  "resume": "Manuel pédagogique complet destiné aux facilitateurs de Champs Écoles Paysans (CEP) pour la production, la conduite agroécologique, le contrôle qualité et la commercialisation du sésame au Burkina Faso.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide méthodologique et technique complet de référence pour la vulgarisation de la culture du sésame, édité par un consortium d'institutions de développement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Manuel du Facilitateur Sésame"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00098__manuel-du-facilitateur-production-et-valorisation-du-se.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00098__manuel-du-facilitateur-production-et-valorisation-du-se.pdf"
+}

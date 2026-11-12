@@ -1,0 +1,798 @@
+{
+  "batch_number": 67,
+  "results": [
+    {
+      "id": "DOC-01023",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "volaille",
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Marie-Theres Estermann",
+      "source_organisation": "Éditions Ulmer",
+      "mots_cles": [
+        "aviculture",
+        "poules",
+        "poulets",
+        "oies",
+        "canards",
+        "elevage amateur",
+        "basse-cour"
+      ],
+      "titre_trouve": "Marie-Theres Estermann Poules, Poulets, Oies, Canards GUIDE DE L'ÉLEVEUR AMATEUR ULMER",
+      "titre": "Poules, poulets, oies, canards : guide de l'éleveur amateur",
+      "resume": "Manuel pratique des Éditions Ulmer guidant l'installation et la conduite d'un élevage familial de volailles de basse-cour (poules, canards, oies).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage sous copyright commercial des Éditions Ulmer, reproduction non autorisée ; archivé en interne sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Marie-Theres Estermann Poules, Poulets, Oies, Canards GUIDE DE L'ÉLEVEUR AMATEUR ULMER"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01024",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poulet de chair",
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "poulet de chair",
+        "aviculture",
+        "demarrage poussins",
+        "alimentation volaille",
+        "prophylaxie",
+        "batiment avicole"
+      ],
+      "titre_trouve": "ELEVAGE DU POULET DE CHAIR",
+      "titre": "Manuel pratique d'élevage du poulet de chair",
+      "resume": "Guide technique complet structuré en 11 chapitres pour former les aviculteurs à la conduite, l'alimentation, la santé et l'abattage du poulet de chair.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Manuel technique pratique de grande valeur pour les éleveurs mais droits et source institutionnelle non confirmés, archivé par précaution.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "Ainsi, ce présent manuel est élaboré pour servir de support à la formation des aviculteurs de poulet de chair."
+        }
+      ]
+    },
+    {
+      "id": "DOC-01025",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "culture_sous_abri_hors_sol",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2014,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "serre",
+        "culture sous abri",
+        "serriculture",
+        "microclimat",
+        "hydroponie"
+      ],
+      "titre_trouve": "Pourquoi utiliser une serre ?",
+      "titre": "Principes et fonctionnement des serres et cultures sous abri",
+      "resume": "Brève note explicative sur les principes physiques, l'effet de serre, les microclimats contrôlés et les contraintes de la culture sous serre.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Note d'initiation informelle sans auteur ni mention de droits, de faible valeur technique pour les zones tropicales ; archivée.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.5,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pourquoi utiliser une serre ? Nous avons tous, à un moment donné, d'une voiture de courses, d'un train ou encore d'une charrette, vu un tunnel recouvert de plastique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01026",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Réseau Action Climat",
+      "source_organisation": "Réseau Action Climat France",
+      "mots_cles": [
+        "changement climatique",
+        "effet de serre",
+        "climat",
+        "emissions ges",
+        "cop21",
+        "transition ecologique"
+      ],
+      "titre_trouve": "les changements climatiques",
+      "titre": "Les changements climatiques : comprendre le système climatique et agir",
+      "resume": "Kit pédagogique complet de 57 diapositives expliquant le fonctionnement du système climatique terrestre, les impacts du dérèglement et les leviers d'action.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support pédagogique complet et visuel sur les fondements du dérèglement climatique, mis à disposition des membres de la communauté.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "les changements climatiques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01027",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "equipements_technologie",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Danemark",
+      "annee": 2014,
+      "auteurs": "Michel Jaffrin",
+      "source_organisation": "Bookboon.com",
+      "mots_cles": [
+        "filtration membranaire",
+        "ultrafiltration",
+        "microfiltration",
+        "genie des procedes",
+        "mecanique des fluides",
+        "osmose inverse"
+      ],
+      "titre_trouve": "Procédés de filtration membranaire 1ère édition © 2014 Michel Jaffrin & bookboon.com ISBN 978-87-403-0665-1",
+      "titre": "Procédés de filtration membranaire : principes, modélisation et applications industrielles",
+      "resume": "Manuel universitaire de génie des procédés traitant des principes, de la mécanique des fluides et du dimensionnement des systèmes de filtration membranaire.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous copyright Bookboon.com avec publicités intégrées, soumis à des droits de reproduction restreints ; archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Procédés de filtration membranaire 1ère édition © 2014 Michel Jaffrin & bookboon.com ISBN 978-87-403-0665-1"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01028",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "apiculture",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "apiculture",
+      "pays": "Algérie",
+      "annee": 1988,
+      "auteurs": "Institut Technique des Petits Élevages (ITPE)",
+      "source_organisation": "ITPE",
+      "mots_cles": [
+        "apiculture",
+        "production de miel",
+        "essaimage artificiel",
+        "ruche",
+        "colonies d'abeilles",
+        "elevage de reines"
+      ],
+      "titre_trouve": "PREMIERE PARTIE : PRODUCTION DE MIEL ... DEUXIEME PARTIE : PRODUCTION D'ESSAIMS",
+      "titre": "Production d'essaims et de miel : conduite du rucher et essaimage artificiel",
+      "resume": "Guide apicole pratique détaillant la sélection des colonies, le nourrissement, la prévention de l'essaimage et les techniques d'essaimage artificiel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Brochure technique institutionnelle complète et pédagogique sur la gestion du rucher et l'essaimage, diffusable aux apiculteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "PREMIERE PARTIE : PRODUCTION DE MIEL ... DEUXIEME PARTIE : PRODUCTION D'ESSAIMS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01029",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "volaille",
+      "pays": null,
+      "annee": 2012,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "termites",
+        "alimentation volaille",
+        "aviculture villageoise",
+        "piege a termites",
+        "proteines alternatives"
+      ],
+      "titre_trouve": null,
+      "titre": "Production de termites pour l'alimentation de la volaille villageoise",
+      "resume": "Fiche technique scannée de 7 pages sans texte numérique décrivant les techniques de récolte et de production de termites pour nourrir les volailles.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné d'un intérêt majeur pour l'aviculture villageoise, mais nécessitant un OCR pour valider le texte, l'auteur et les droits.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.45,
+        "completude": 0.55
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "produire des termites pour la volaille.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01030",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "volaille",
+      "pays": "Côte d'Ivoire",
+      "annee": 2017,
+      "auteurs": "IVOGRAIN",
+      "source_organisation": "IVOGRAIN",
+      "mots_cles": [
+        "prophylaxie avicole",
+        "vaccination",
+        "poulettes pondeuses",
+        "pintade",
+        "ivograin",
+        "coted'ivoire",
+        "newcastle",
+        "gumboro"
+      ],
+      "titre_trouve": "PROGRAMME DE PROPHYLAXIE DES POULETTES FUTURES PONDEUSES Source : IVOGRAIN",
+      "titre": "Programmes de prophylaxie avicole : poulettes pondeuses et pintades (Ivograin)",
+      "resume": "Tableaux pratiques de prophylaxie établis par Ivograin détaillant le calendrier de vaccination, d'antibiothérapie et de déparasitage pour volailles.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Calendrier de prophylaxie officiel Ivograin largement diffusé aux éleveurs en Côte d'Ivoire, de forte valeur pratique pour la gestion sanitaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PROGRAMME DE PROPHYLAXIE DES POULETTES FUTURES PONDEUSES Source : IVOGRAIN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01031",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "cereales",
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "article",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "maïs",
+      "pays": "Canada",
+      "annee": 2017,
+      "auteurs": "Pascal Larose",
+      "source_organisation": "Le Coopérateur (Sollio Groupe Coopératif)",
+      "mots_cles": [
+        "azote",
+        "fertilisation",
+        "mais",
+        "uree",
+        "volatilisation",
+        "lessivage",
+        "denitrification"
+      ],
+      "titre_trouve": "COOPERATEUR.COOP – AVRIL 2017 TEXTE DE PASCAL LAROSE, AGRONOME LA PÉRIODE D’APPLICATION DE L’AZOTE DANS LE MAÏS",
+      "titre": "Gestion et efficacité de la fertilisation azotée dans la culture du maïs",
+      "resume": "Article technique vulgarisant les processus de volatilisation, de lessivage et de dénitrification de l'azote dans le maïs et les moyens d'optimisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Article agronomique clair expliquant les mécanismes de pertes azotées, utile pour raisonner la fertilisation du maïs malgré un contexte nord-américain.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COOPERATEUR.COOP – AVRIL 2017 TEXTE DE PASCAL LAROSE, AGRONOME LA PÉRIODE D’APPLICATION DE L’AZOTE DANS LE MAÏS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01032",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": "équin",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "cheval",
+        "pur-sang arabe",
+        "cheval barbe",
+        "equides",
+        "hippotechnie",
+        "races equines"
+      ],
+      "titre_trouve": "Arabe en bref On ne présente plus le pur-sang arabe !",
+      "titre": "Les races équines Pur-Sang Arabe et Barbe : histoire et caractéristiques",
+      "resume": "Fiche descriptive retraçant l'origine historique, les caractéristiques morphologiques et les aptitudes sportives des chevaux Pur-sang arabe et Barbe.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document descriptif sur les races équines sans source identifiée et d'intérêt marginal pour l'agriculture subsaharienne, archivé.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Arabe en bref On ne présente plus le pur-sang arabe !"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01033",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "genetique_reproduction"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "ovins",
+      "pays": "Algérie",
+      "annee": 1986,
+      "auteurs": "Centre National Pédagogique Agricole (Algérie)",
+      "source_organisation": "Ministère de l'Agriculture et de la Pêche (Algérie) / CNPA",
+      "mots_cles": [
+        "races ovines",
+        "ouled djellal",
+        "d'man",
+        "targui",
+        "sidaou",
+        "mouton",
+        "zootechnie",
+        "algerie"
+      ],
+      "titre_trouve": "LES RACES OVINES ELEVEES EN ALGERIE MINISTERE DE L’AGRICULTURE ET DE LA PECHE CENTRE NATIONAL PEDAGOGIQUE AGRICOLE",
+      "titre": "Les races ovines élevées en Algérie : monographie zootechnique et géographique",
+      "resume": "Monographie zootechnique officielle du CNPA décrivant en détail l'origine, le berceau, les caractéristiques physiques et les aptitudes des races ovines en Algérie.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Monographie zootechnique historique de référence du ministère algérien, mise à disposition des membres pour l'étude des races ovines arides.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "LES RACES OVINES ELEVEES EN ALGERIE MINISTERE DE L’AGRICULTURE ET DE LA PECHE CENTRE NATIONAL PEDAGOGIQUE AGRICOLE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01034",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "aviculture",
+        "transversal"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "volaille",
+      "pays": "Madagascar",
+      "annee": 2015,
+      "auteurs": "Andriamparany Herizo Randrianaivo",
+      "source_organisation": "Université d'Antananarivo",
+      "mots_cles": [
+        "couveuse artisanale",
+        "incubation avicole",
+        "thermique",
+        "modelisation",
+        "memoire de master",
+        "madagascar"
+      ],
+      "titre_trouve": "MEMOIRE Pour l’obtention du diplôme de : MASTER EN PHYSIQUE ET APPLICATION ... MODELISATION D’UNE COUVEUSE ARTISANALE : ETUDE DE LA TEMPERATURE DE L’AIR INTERIEUR",
+      "titre": "Modélisation d'une couveuse artisanale : étude de la température de l'air intérieur",
+      "resume": "Mémoire de Master en énergétique modélisant les transferts thermiques d'une couveuse avicole artisanale pour optimiser la régulation de la température.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire universitaire non publié sous licence ouverte ; archivé dans le corpus académique conformément aux règles métier.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MEMOIRE Pour l’obtention du diplôme de : MASTER EN PHYSIQUE ET APPLICATION ... MODELISATION D’UNE COUVEUSE ARTISANALE : ETUDE DE LA TEMPERATURE DE L’AIR INTERIEUR"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01035",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "orge",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "dose nette",
+        "intervalle d'irrigation",
+        "duree d'irrigation",
+        "rfu",
+        "bilan hydrique"
+      ],
+      "titre_trouve": "revision calcul dose nette intervalle et durée d'irrigation Exercice N° 02 :",
+      "titre": "Calcul de la dose nette, de l'intervalle et de la durée d'irrigation",
+      "resume": "Exercice corrigé de calcul hydraulique et agronomique déterminant la dose nette, l'intervalle et la durée d'arrosage d'une culture sur 20 hectares.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche d'exercice technique pratique sans mention de droits d'auteur, conservée en base d'archivage documentaire.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "revision calcul dose nette intervalle et durée d'irrigation Exercice N° 02 :"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01036",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Alassane Zongo",
+      "source_organisation": "Institut International Ben Gourion",
+      "mots_cles": [
+        "rhizopodes",
+        "protozoaires",
+        "biologie animale",
+        "gymnamoebiens",
+        "thecamoebiens",
+        "foraminiferes"
+      ],
+      "titre_trouve": "EXPOSE DE BIOLOGIE ANIMALE SUJET : RHIZOPODES (GYMNAMŒBIENS, THECAMŒBIENS ET FORAMINIFERES)",
+      "titre": "Les rhizopodes : morphologie, écologie et reproduction des protozoaires",
+      "resume": "Exposé de biologie animale décrivant l'écologie, la nutrition, la locomotion et la reproduction des trois classes de protozoaires rhizopodes.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Travail académique d'étudiant portant sur la biologie générale des protozoaires, non libre de droits et de pertinence marginale.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.6,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "EXPOSE DE BIOLOGIE ANIMALE SUJET : RHIZOPODES (GYMNAMŒBIENS, THECAMŒBIENS ET FORAMINIFERES)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01037",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "fertilisation",
+        "amendements",
+        "td",
+        "exercices",
+        "chimie du sol",
+        "engrais"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé de cours et travaux dirigés : fertilisation et amendements",
+      "resume": "Document scanné de 20 pages sans texte extractible comportant un résumé de cours et des travaux dirigés sur la fertilisation et les amendements.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fascicule de TD scanné sans couche texte nécessitant un OCR pour identifier son auteur, sa complétude et son statut de diffusion.",
+      "confiance": {
+        "classification": 0.8,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé et td fertilisation et amendements .pdf"
+        }
+      ]
+    }
+  ]
+}

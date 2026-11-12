@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00450",
+  "sha256": "bf4056cf2a7c72d76b10819b0dd78665bbff832c7f1eafa5ccc977f419b1d2a5",
+  "nom_original": "Fiches technico-économiques des principaux  légumes.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiches technico-économiques des principaux  légumes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5028247,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00131",
+  "groupe_doublon_id": "GRP-0010",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00131 (Les cultures légumières en agriculture biologique : fiches technico-économiques).",
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "France",
+  "annee": 2005,
+  "auteurs": "Joseph Argouarc'h",
+  "source_organisation": "CFPPA Rennes Le Rheu / Educagri",
+  "mots_cles": [
+    "maraichage biologique",
+    "cultures legumieres",
+    "fiches technico-economiques",
+    "itineraire technique",
+    "marge brute"
+  ],
+  "titre_trouve": "Les cultures légumières en agriculture biologique : Fiches technico-économiques des principaux légumes",
+  "titre": "Les cultures légumières en agriculture biologique : fiches technico-économiques",
+  "resume": "Guide technico-économique détaillé pour les principales productions maraîchères biologiques de plein champ et sous abri : planification, temps de travaux, fertilisation et calcul des marges brutes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les cultures légumières en agriculture biologique Fiches technico-économiques des principaux légumes"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00450__les-cultures-legumieres-en-agriculture-biologique-fiche.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00450__les-cultures-legumieres-en-agriculture-biologique-fiche.pdf"
+}

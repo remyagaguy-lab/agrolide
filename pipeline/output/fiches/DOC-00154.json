@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00154",
+  "sha256": "2b602ea4178e5c73cf17acda34689f2626863cddcd72fe08f47d4b98680cb081",
+  "nom_original": "ANTIBIOTIQUES TSE II converti.pdf",
+  "chemin_relatif_source": "OD_Docs/ANTIBIOTIQUES TSE II converti.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 510922,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 86,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2012,
+  "auteurs": "Dr Nébié",
+  "source_organisation": null,
+  "mots_cles": [
+    "antibiotiques",
+    "sante animale",
+    "veterinaire",
+    "elevage",
+    "antibioresistance",
+    "posologie"
+  ],
+  "titre_trouve": "ANTIBIOTIQUES Généralités",
+  "titre": "Cours sur les antibiotiques en santé animale (TSE II)",
+  "resume": "Support de cours complet de pharmacologie vétérinaire détaillant les familles d'antibiotiques, modes d'action, indications chez les animaux d'élevage et risques de résistance.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours pédagogique spécialisé sans mention explicite de licence libre : conservation en archive interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ANTIBIOTIQUES Généralités"
+    },
+    {
+      "champ": "autre",
+      "page": 86,
+      "extrait": "dimétridazole : trichomonose (volaille, gibier), histomonose du pigeon, entérite hémorragique du porc"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00154__cours-sur-les-antibiotiques-en-sante-animale-tse-ii.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00154__cours-sur-les-antibiotiques-en-sante-animale-tse-ii.pdf"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00599",
+  "sha256": "af5dc0809b0ad3555cfa67a4f824a9c27b6dca79096900c556f68074eb485608",
+  "nom_original": "Ma-cytologie (Dr MAZOUZ ISHAK).pdf",
+  "chemin_relatif_source": "OD_Docs/Ma-cytologie (Dr MAZOUZ ISHAK).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4010649,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 16,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Ishak Mazouz",
+  "source_organisation": null,
+  "mots_cles": [
+    "cytologie",
+    "biologie cellulaire",
+    "residanat",
+    "medecine"
+  ],
+  "titre_trouve": "Ma cytologie",
+  "titre": "Préparation au Résidanat : Cours et fiches de cytologie",
+  "resume": "Fiches de synthèse pour la préparation du concours de résidanat en médecine humaine abordant l'organisation cellulaire, les membranes, les transports et les organites.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Support de révision pour le concours de résidanat en médecine humaine, hors du périmètre agricole d'Agrolide.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Préparation de Résidanat Ma cytologie Dr I. Mazouz"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00599__preparation-au-residanat-cours-et-fiches-de-cytologie.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00599__preparation-au-residanat-cours-et-fiches-de-cytologie.pdf"
+}

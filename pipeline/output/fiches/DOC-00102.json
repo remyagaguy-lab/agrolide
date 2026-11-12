@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00102",
+  "sha256": "173382875490dce65789ce32ce5c272f7963cad682bba0a14b468ad9c1f8b57d",
+  "nom_original": "2012_SPONG_Fiches techniques_Pratiques-GDT.pdf",
+  "chemin_relatif_source": "OD_Docs/2012_SPONG_Fiches techniques_Pratiques-GDT.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2653577,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 113,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2012,
+  "auteurs": "SPONG",
+  "source_organisation": "SPONG / Union Européenne",
+  "mots_cles": [
+    "gestion durable des terres",
+    "changement climatique",
+    "biodiversite",
+    "sahel",
+    "fiches techniques",
+    "burkina faso",
+    "agroecologie"
+  ],
+  "titre_trouve": "FICHES TECHNIQUES DES BONNES PRATIQUES EN MATIERE DE GESTION DURABLE DES TERRES, D’ADAPTATION AUX CHANGEMENTS CLIMATIQUES ET DE CONSERVATION DE LA DIVERSITE BIOLOGIQUE DANS LES REGIONS DU PLATEAU CENTRAL, DU CENTRE NORD, DU NORD ET DU SAHEL",
+  "titre": "Bonnes pratiques de gestion durable des terres et d'adaptation climatique au Burkina Faso",
+  "resume": "Recueil exhaustif de fiches techniques sur les pratiques de gestion durable des terres (GDT), l'adaptation au changement climatique et la préservation de la biodiversité dans les zones sahéliennes du Burkina Faso.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Recueil institutionnel complet de fiches techniques de référence pour la gestion durable des terres et la résilience climatique au Sahel.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHES TECHNIQUES DES BONNES PRATIQUES EN MATIERE DE GESTION DURABLE DES TERRES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00102__bonnes-pratiques-de-gestion-durable-des-terres-et-d-ada.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00102__bonnes-pratiques-de-gestion-durable-des-terres-et-d-ada.pdf"
+}

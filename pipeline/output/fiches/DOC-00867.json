@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00867",
+  "sha256": "2f250e37cf2d9ab258d861891b0ca26112e19b2f98ed90f8e79a6b21abedfc3f",
+  "nom_original": "document_548434.pdf",
+  "chemin_relatif_source": "OD_Docs/document_548434.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 527879,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "decideur_institution"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso, Éthiopie",
+  "annee": 2008,
+  "auteurs": "Danièle Clavel, Albert Barro, T. Belay, Rabah Lahmar, Florent Maraux",
+  "source_organisation": "CIRAD / INERA / VertigO",
+  "mots_cles": [
+    "zai mecanise",
+    "innovation agricole",
+    "Afrique sahelienne",
+    "Burkina Faso",
+    "restauration des sols",
+    "Opuntia",
+    "VertigO"
+  ],
+  "titre_trouve": "CHANGEMENTS TECHNIQUES ET DYNAMIQUE D’INNOVATION AGRICOLE EN AFRIQUE SAHELIENNE: le cas du Zaï mécanisé au Burkina Faso et de l’introduction d’une cactée en Ethiopie",
+  "titre": "Changements techniques et dynamique d'innovation agricole en Afrique sahélienne : le cas du Zaï mécanisé au Burkina Faso et d'une cactée...",
+  "resume": "Article de recherche analysant les dynamiques d'innovation paysanne et l'adoption de technologies agroécologiques au Sahel : zaï mécanisé à traction animale au Burkina Faso et cactée en Éthiopie.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Open Access (VertigO)",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article de recherche en libre accès (VertigO) sur l'innovation rurale sahélienne, mis à disposition des membres.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CHANGEMENTS TECHNIQUES ET DYNAMIQUE D’INNOVATION AGRICOLE EN AFRIQUE SAHELIENNE: le cas du Zaï mécanisé au Burkina Faso et de l’introduction d’une cactée en Ethiopie"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "D. Clavel, A. Barro, T. Belay, R. Lahmar, F. Maraux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00867__changements-techniques-et-dynamique-d-innovation-agrico.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00867__changements-techniques-et-dynamique-d-innovation-agrico.pdf"
+}

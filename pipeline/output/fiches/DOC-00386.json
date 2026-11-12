@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00386",
+  "sha256": "447c13e324232efaee26a18b979698ad087f35c2a0eaef58fd854f8760b6240b",
+  "nom_original": "Elevage-des-aulacodes.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage-des-aulacodes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6093301,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 28,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aulacodiculture",
+  "pays": "Cameroun",
+  "annee": 2012,
+  "auteurs": "E. Lionelle Ngo-Samnick",
+  "source_organisation": "CTA / ISF Cameroun",
+  "mots_cles": [
+    "aulacode",
+    "agouti",
+    "aulacodiculture",
+    "petit elevage",
+    "pro-agro",
+    "cta",
+    "cameroun",
+    "gibier d'elevage"
+  ],
+  "titre_trouve": "Elevage des aulacodes",
+  "titre": "Élevage des aulacodes (Guide pratique Pro-Agro)",
+  "resume": "Manuel technique de vulgarisation de la collection Pro-Agro (CTA / ISF Cameroun) détaillant les conditions de logement, les normes de reproduction, la conduite alimentaire et le suivi sanitaire de l'aulacode.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de référence terrain publié par le CTA et ISF Cameroun pour la promotion de l'aulacodiculture tropicale, diffusable en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Elevage des aulacodes PRO-AGRO"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "La collection Pro-Agro est une coédition d’Ingénieurs Sans Frontières Cameroun (ISF Cameroun) et du Centre technique de coopération agricole et rurale (CTA)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00386__elevage-des-aulacodes-guide-pratique-pro-agro.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00386__elevage-des-aulacodes-guide-pratique-pro-agro.pdf"
+}

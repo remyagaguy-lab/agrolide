@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00203",
+  "sha256": "1e52782cd5b33b715d9c9b6167b051fbe000cc1c97c11f56556d56eb689d9973",
+  "nom_original": "Agrodok_43_La_collecte_d_eau_de_pluie_a_usage_domestique@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_43_La_collecte_d_eau_de_pluie_a_usage_domestique@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 574796,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 86,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2006,
+  "auteurs": "Janette Worm, Tim van Hattum",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "eau de pluie",
+    "collecte d'eau",
+    "stockage d'eau",
+    "citernes",
+    "eau potable",
+    "zones semi-arides"
+  ],
+  "titre_trouve": "Agrodok 43 La collecte de l'eau de pluie à usage domestique",
+  "titre": "La collecte de l'eau de pluie à usage domestique",
+  "resume": "Manuel pratique expliquant comment capter, filtrer, stocker et purifier l'eau de pluie pour les besoins domestiques et d'hygiène des ménages ruraux en zone tropicale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Origine @EpubsFR avec copyright réservé : statut droits_reserves_commercial, non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 43 La collecte de l'eau de pluie à usage domestique"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Janette Worm Tim van Hattum"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Origine @EpubsFR avec copyright réservé : statut droits_reserves_commercial, non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00203__la-collecte-de-l-eau-de-pluie-a-usage-domestique.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00203__la-collecte-de-l-eau-de-pluie-a-usage-domestique.pdf"
+}

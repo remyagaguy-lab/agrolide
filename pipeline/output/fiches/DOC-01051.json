@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01051",
+  "sha256": "4836726d8e113433f5f67de3ffe22b7ef9441e41736fc28b34243a5da81b52d1",
+  "nom_original": "tecnique d embouche bovine.pdf",
+  "chemin_relatif_source": "OD_Docs/tecnique d embouche bovine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1844283,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 39,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovin",
+  "pays": "Burkina Faso",
+  "annee": 2013,
+  "auteurs": "Dr H. Kagoné, Dr Seydou Sidibé",
+  "source_organisation": "USAID-ATP / Zoofor Consult",
+  "mots_cles": [
+    "embouche bovine",
+    "bovins",
+    "alimentation du betail",
+    "burkina faso",
+    "usaid"
+  ],
+  "titre_trouve": "Guide de formation et d’animation en techniques d’embouche bovine",
+  "titre": "Guide de formation et d'animation en techniques d'embouche bovine au Sahel",
+  "resume": "Manuel pratique complet (USAID-ATP / Zoofor) pour la conduite de l'embouche bovine : sélection des animaux, santé préventive, rations à base de sous-produits locaux, habitat et rentabilité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet de formation financé par l'USAID-ATP pour la filière bétail-viande en Afrique de l'Ouest.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide de formation et d’animation en techniques d’embouche bovine"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "projet régional Agribusiness and Trade Promotion (ATP) de l’USAID"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01051__guide-de-formation-et-d-animation-en-techniques-d-embou.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-01051__guide-de-formation-et-d-animation-en-techniques-d-embou.pdf"
+}

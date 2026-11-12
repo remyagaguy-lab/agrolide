@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00802",
+  "sha256": "32d269d6230a1b5d04d028690155ba5566e5947cc363fd42a59f09f2cffac889",
+  "nom_original": "aubergine.pdf",
+  "chemin_relatif_source": "OD_Docs/aubergine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1284871,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aubergine",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "228AgroConseil",
+  "source_organisation": "228AgroConseil",
+  "mots_cles": [
+    "aubergine",
+    "maraichage",
+    "semis",
+    "repiquage",
+    "togo",
+    "solanum melongena"
+  ],
+  "titre_trouve": "La culture de l’aubergine",
+  "titre": "Itinéraire technique de la culture de l'aubergine (228AgroConseil)",
+  "resume": "Guide pratique illustré sur la production d'aubergine au Togo : choix variétal (Kalenda F1), préparation des pépinières, plantation et conservation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique ouest-africaine complète et directement accessible pour les producteurs maraîchers.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "228AgroConseil La culture de l’aubergine"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00802__itineraire-technique-de-la-culture-de-l-aubergine-228ag.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00802__itineraire-technique-de-la-culture-de-l-aubergine-228ag.pdf"
+}

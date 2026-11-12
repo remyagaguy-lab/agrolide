@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00043",
+  "sha256": "f8d52737736a7c1031756a74595c841f06407a0f2b6be21f4ce3614457ffe484",
+  "nom_original": "Résumé5 Microbiologie.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Microbiologie/Microbiologie/Résumé5 Microbiologie.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 2948369,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 28,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "agroalimentaire",
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Abdallah Laiche",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "microbiologie",
+    "cours",
+    "sciences de base",
+    "microorganismes"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 5 - Cours de microbiologie",
+  "resume": "Document numérisé de 28 pages regroupant des résumés de cours de microbiologie générale établis par Abdallah Laiche. Nécessite une reconnaissance optique de caractères.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document numérisé sans texte exploitable portant le nom d'un étudiant, nécessitant un OCR et une validation humaine de son contenu.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé5 Microbiologie.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0005",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00043__resume-5-cours-de-microbiologie.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00043__resume-5-cours-de-microbiologie.pdf"
+}

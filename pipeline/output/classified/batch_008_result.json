@@ -1,0 +1,790 @@
+{
+  "batch_number": 8,
+  "results": [
+    {
+      "id": "DOC-00106",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "cereales"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2023,
+      "auteurs": "Chambre d'Agriculture de Région Ile-de-France, AS77 AGC, CAERIF",
+      "source_organisation": "Chambre d'Agriculture de Région Ile-de-France",
+      "mots_cles": [
+        "assolement",
+        "itineraire technique",
+        "cout de production",
+        "gestion d'exploitation",
+        "commercialisation"
+      ],
+      "titre_trouve": "ASSOLEMENT & STRATÉGIE - Itinéraires techniques et seuils de commercialisation prévisionnels",
+      "titre": "Assolement & Stratégie 2023 : Itinéraires techniques et seuils de commercialisation prévisionnels",
+      "resume": "Guide technico-économique 2023 présentant les fiches par culture (blé, colza, maïs, sorgho, etc.), le calcul des seuils de commercialisation et l'impact de la réforme PAC en Île-de-France.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technico-économique complet publié par les Chambres d'agriculture. Contexte tempéré français (PAC), réservé aux membres pour l'intérêt méthodologique.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ASSOLEMENT & STRATÉGIE Itinéraires techniques et seuils de commercialisation prévisionnels"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "Chambre d’Agriculture de Région Ile-de-France"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00107",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "production_animale",
+        "alimentation_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "sorgho",
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Éliane Lemaitre",
+      "source_organisation": null,
+      "mots_cles": [
+        "sorgho",
+        "fourrage",
+        "ensilage",
+        "valeur nutritive",
+        "conduite de culture"
+      ],
+      "titre_trouve": "Fiche technique Sorgho",
+      "titre": "Fiche technique : Conduite et valorisation du sorgho fourrager",
+      "resume": "Fiche synthétique présentant les caractéristiques agronomiques, types variétaux (monocoupe, multicoupes), itinéraires de culture et modes de valorisation fourragère (ensilage, pâture) du sorgho.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique terrain synthétique et complète sur la culture du sorgho fourrager, d'intérêt pratique pour les éleveurs.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique Sorgho"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "LEMAITRE Eliane"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00108",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "horticulture_jardinage"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": "France",
+      "annee": 2016,
+      "auteurs": "Projet Bio Savane",
+      "source_organisation": "Bio Savane",
+      "mots_cles": [
+        "calendrier lunaire",
+        "agroecologie",
+        "biodynamie",
+        "jardinage",
+        "zone equatoriale"
+      ],
+      "titre_trouve": "LA LUNE ET SES INFLUENCES SUR L’AGRICULTURE",
+      "titre": "La Lune et ses influences sur l'agriculture en zone équatoriale",
+      "resume": "Fiche pratique détaillant l'influence des cycles et phases de la Lune sur la circulation de la sève, les semis, plantations et récoltes des cultures maraîchères et fruitières sous l'équateur.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique pratique d'agroécologie en zone équatoriale issue du projet Bio Savane, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA LUNE ET SES INFLUENCES SUR L’AGRICULTURE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "BIO SAVANE – CULTIVONS AUTREMENT : EXEMPLES LOCAUX DE TECHNIQUES AGRO-ÉCOLOGIQUES – 2016"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00109",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "decideur_institution",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ananas",
+      "pays": "Côte d'Ivoire",
+      "annee": 1987,
+      "auteurs": "Jean-Philippe Colin",
+      "source_organisation": "ORSTOM / CIRAD",
+      "mots_cles": [
+        "ananas",
+        "cote d'ivoire",
+        "petite production",
+        "filiere export",
+        "economie de plantation"
+      ],
+      "titre_trouve": "Contribution à l’analyse de la petite production d’ananas en basse Côte d’Ivoire",
+      "titre": "Contribution à l'analyse de la petite production d'ananas en basse Côte d'Ivoire",
+      "resume": "Étude socio-économique approfondie sur la dynamique des systèmes de petite production villageoise d'ananas (exportation et conserverie) et les coûts de revient dans le sud-est ivoirien.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article de recherche scientifique ORSTOM/CIRAD complet et pertinent pour l'agroéconomie des filières fruitières en Afrique de l'Ouest.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Contribution à l’analyse de la petite production d’ananas en basse Côte d’Ivoire."
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "J.Ph. COLIN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00110",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "production_animale",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pintade",
+      "pays": "Bénin",
+      "annee": 2011,
+      "auteurs": "Centre Songhaï",
+      "source_organisation": "Centre Songhaï / African Development Foundation",
+      "mots_cles": [
+        "pintade",
+        "aviculture",
+        "centre songhai",
+        "prophylaxie",
+        "benin"
+      ],
+      "titre_trouve": "Elevage de pintades, Guide pratique",
+      "titre": "Guide pratique de l'élevage de pintades au Centre Songhaï",
+      "resume": "Guide pratique complet pour l'installation et la conduite d'un élevage de pintades en Afrique subsaharienne : logement, alimentation locale, reproduction et plan de prophylaxie sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet produit par le Centre Songhaï pour les producteurs ouest-africains, libre de diffusion institutionnelle.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Elevage de pintades, Guide pratique (Centre Songhai, 12 p.)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Rédigé et publié par le Centre Songhaï , en collaboration avec l'African Development Foundation."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00111",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "héliciculture",
+      "pays": null,
+      "annee": 1990,
+      "auteurs": "C. Stiévenart, J. Hardouin",
+      "source_organisation": "CTA",
+      "mots_cles": [
+        "escargot geant",
+        "achatiniculture",
+        "elevage tropical",
+        "cta",
+        "petit elevage"
+      ],
+      "titre_trouve": "Manuel d’élevage des escargots géants africains sous les tropiques",
+      "titre": "Manuel d'élevage des escargots géants africains sous les tropiques",
+      "resume": "Manuel complet du CTA sur l'achatiniculture en milieu tropical : biologie de l'espèce, infrastructures d'élevage, alimentation, reproduction et gestion sanitaire du cheptel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence publié par le CTA sur l'élevage d'escargots géants tropicaux, complet et directement applicable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Manuel des escargots géants africains sous les tropiques"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "Centre technique de coopération agricole et rurale (CTA) 1990"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00112",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "embryologie humaine",
+        "medecine",
+        "nidation",
+        "blastocyste"
+      ],
+      "titre_trouve": "Deuxième semaine du développement embryonnaire",
+      "titre": "Cours d'embryologie humaine : Deuxième semaine du développement embryonnaire",
+      "resume": "Support de cours médical et QCM sur la deuxième semaine du développement embryonnaire humain, traitant de la nidation, de la pré-gastrulation et des annexes embryonnaires.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de médecine humaine (embryologie) hors du périmètre agricole d'Agrolide et incomplet.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Deuxième semaine du développement embryonnaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00113",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "horticulture_jardinage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2021,
+      "auteurs": "Piero San Giorgio",
+      "source_organisation": null,
+      "mots_cles": [
+        "autosuffisance alimentaire",
+        "resilience",
+        "potager",
+        "autonomie",
+        "petit elevage"
+      ],
+      "titre_trouve": "Les 3 fondements de votre autosuffisance alimentaire",
+      "titre": "Les 3 fondements de votre autosuffisance alimentaire",
+      "resume": "Livret présentant les principes de base pour développer une autonomie alimentaire familiale à travers le jardinage vivrier et le petit élevage domestique en contexte tempéré.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Publication commerciale privée sous droits réservés (@EpubsFR), non diffusable publiquement et contexte occidental tempéré.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Les 3 fondements de votre autosuffisance alimentaire Piero San Giorgio"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Piero San Giorgio"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00114",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Yaici, Arab",
+      "source_organisation": null,
+      "mots_cles": [
+        "embryologie humaine",
+        "gastrulation",
+        "medecine",
+        "notochorde"
+      ],
+      "titre_trouve": "Troisième semaine du développement embryonnaire",
+      "titre": "Cours d'embryologie humaine : Troisième semaine du développement embryonnaire",
+      "resume": "Chapitre de cours et QCM de médecine humaine détaillant la troisième semaine de développement embryonnaire, la gastrulation et la formation de la notochorde.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Cours médical d'embryologie humaine hors périmètre agronomique et extrait partiel d'un ouvrage.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Troisième semaine du développement embryonnaire"
+        },
+        {
+          "champ": "auteurs",
+          "page": 20,
+          "extrait": "Embryologie humaine YAICI et ARAB"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00115",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "production_animale",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "volaille",
+      "pays": null,
+      "annee": 2006,
+      "auteurs": "N. van Eekeren, A. Maas, H.W. Saatkamp, M. Verschuur",
+      "source_organisation": "Agromisa / CTA",
+      "mots_cles": [
+        "elevage de poules",
+        "aviculture",
+        "agrodok",
+        "cta",
+        "avicole"
+      ],
+      "titre_trouve": "L'élevage des poules à petite échelle",
+      "titre": "L'élevage des poules à petite échelle (Agrodok n°4)",
+      "resume": "Manuel pratique de référence décrivant toutes les étapes de l'aviculture villageoise sous les tropiques : poulailler, alimentation équilibrée, santé, prévention des maladies et rentabilité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique de vulgarisation Agrodok / CTA complet, essentiel pour les éleveurs en Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 4 - L’élevage des poules à petite échelle"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "© Fondation Agromisa et CTA, Wageningen, 2006."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00117",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement",
+        "eau_irrigation"
+      ],
+      "type_doc": "actes_conference",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 1994,
+      "auteurs": "Éric Roose, Vincent Kaboré, Claire Guenat",
+      "source_organisation": "ORSTOM / EPFL",
+      "mots_cles": [
+        "zai",
+        "conservation des sols",
+        "burkina faso",
+        "sahel",
+        "rehabilitation des terres"
+      ],
+      "titre_trouve": "Le \"zaï\", une technique traditionnelle africaine de réhabilitation des terres dégradées de la région soudano-sahélienne. (Burkina Faso)",
+      "titre": "Le zaï, une technique traditionnelle de réhabilitation des terres dégradées au Burkina Faso",
+      "resume": "Communication scientifique analysant l'impact agronomique et hydrologique du zaï, technique ancestrale de piégeage des eaux et sédiments pour réhabiliter les terres arides sahéliennes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Communication de congrès scientifique ORSTOM complète et de grande valeur agroécologique pour les zones sahéliennes.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Le \"zaï\", une technique traditionnelle africaine de réhabilitation des terres dégradées de la région soudano-sahélienne. (Burkina Faso)"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Eric ROOSE, Vincent KABORE et Claire GUENAT"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00118",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "production_animale",
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "volaille",
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "Borotto",
+      "source_organisation": "Borotto",
+      "mots_cles": [
+        "incubateur",
+        "couveuse",
+        "incubation artificielle",
+        "eclosion",
+        "poussin"
+      ],
+      "titre_trouve": "Manuel d'instructions de l'incubation artificiel d’œufs Incubateurs de la série REAL",
+      "titre": "Manuel d'instructions pour l'incubation artificielle d'œufs : Gamme REAL",
+      "resume": "Manuel d'instructions techniques pour l'incubation artificielle des œufs : consignes de sécurité, gestion thermique et hygrométrique, retournement et surveillance de l'éclosion des poussins.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel d'utilisation complet et opérationnel pour la conduite d'incubateurs artificiels en élevage avicole.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Manuel d'instructions de l'incubation artificiel d’œufs Incubateurs de la série REAL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00119",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "semences_amelioration"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "papaye",
+      "pays": null,
+      "annee": 1968,
+      "auteurs": "André Lassoudière",
+      "source_organisation": "IFAC / CIRAD",
+      "mots_cles": [
+        "papayer",
+        "genetique",
+        "carica papaya",
+        "arboriculture fruitiere",
+        "cirad"
+      ],
+      "titre_trouve": "LE PAPAYER (Deuxième partie) DESCRIPTION ET GÉNÉTIQUE",
+      "titre": "Le papayer (2e partie) : Description botanique et génétique",
+      "resume": "Article de recherche scientifique analysant la morphologie végétative, le déterminisme génétique du sexe, les chromosomes et les méthodes de sélection du papayer en milieu tropical.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique historique complet publié par l'IFAC/CIRAD dans la revue Fruits, réservé aux membres pour la recherche.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LE PAPA YEJ< (2• partie) DESCRIPTION ET GÉNÉTIQUE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "par A. LASSOUDIÈRE (l. l'. A. C.)."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00120",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "foncier_droit_agricole"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2024,
+      "auteurs": "Zelbié Bassole, Raogo Noël Gansaonre, Pawendkisgou Isidore Yanogo",
+      "source_organisation": "African Journal on Land Policy and Geospatial Sciences",
+      "mots_cles": [
+        "fertilite des sols",
+        "bas-fonds",
+        "burkina faso",
+        "gestion paysanne",
+        "restauration des terres"
+      ],
+      "titre_trouve": "Farmer management of soil fertility around lowlands in the commune of Reo, Burkina Faso",
+      "titre": "Gestion paysanne de la fertilité des sols autour des bas-fonds à Réo (Burkina Faso)",
+      "resume": "Article de recherche (2024) analysant les pratiques endogènes paysannes de fertilisation et de restauration des sols en périphérie des bas-fonds de la commune de Réo au Burkina Faso.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article de recherche universitaire récent (2024) en libre accès Open Access, réservé aux membres pour la veille scientifique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Farmer management of soil fertility around lowlands in the commune of Reo, Burkina Faso"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "BASSOLE Zelbié, GANSAONRE Raogo Noël, YANOGO Pawendkisgou Isidore"
+        }
+      ]
+    }
+  ]
+}

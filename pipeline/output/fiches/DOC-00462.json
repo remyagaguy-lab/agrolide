@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00462",
+  "sha256": "8e9244350aef3292d0fa0b88a8fcf76fff50be733df8009f3b0e2b649c8806fb",
+  "nom_original": "Formuls de l_irrigation.pdf",
+  "chemin_relatif_source": "OD_Docs/Formuls de l_irrigation.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2073408,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "incomplet"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "irrigation",
+    "formules",
+    "hydraulique agricole",
+    "gestion de l'eau"
+  ],
+  "titre_trouve": null,
+  "titre": "Formules de calcul pour l'irrigation",
+  "resume": "Recueil numérisé de 6 pages regroupant des formules techniques de calcul pour les systèmes d'irrigation agricole. Nécessite une reconnaissance optique de caractères (OCR).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document technique numérisé sans texte exploitable, nécessitant un traitement OCR et une vérification de la complétude et des droits.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Formuls de l_irrigation.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00462__formules-de-calcul-pour-l-irrigation.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00462__formules-de-calcul-pour-l-irrigation.pdf"
+}

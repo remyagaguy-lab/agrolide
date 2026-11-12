@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01019",
+  "sha256": "440c23a236a6ac9361b0b6015aee264c68845a8470c9cf04a7b40f5637404ed5",
+  "nom_original": "pomme de terre(1).pdf",
+  "chemin_relatif_source": "OD_Docs/pomme de terre(1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2018152,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 20,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pomme de terre",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "228AgroConseil",
+  "source_organisation": "228AgroConseil",
+  "mots_cles": [
+    "pomme de terre",
+    "tubercules",
+    "prégermination",
+    "semences",
+    "itineraire technique",
+    "togo"
+  ],
+  "titre_trouve": "228AgroConseil Culture de la pomme de terre",
+  "titre": "Itinéraire technique de culture de la pomme de terre en Afrique de l'Ouest",
+  "resume": "Guide pratique de formation détaillant la culture de la pomme de terre : prégermination des tubercules, choix variétal, préparation du sol, plantation, entretien et commercialisation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de vulgarisation agricole directement utilisable par les producteurs et techniciens en zone tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "228AgroConseil Culture de la pomme de terre"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "228AgroConseil"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01019__itineraire-technique-de-culture-de-la-pomme-de-terre-en.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-01019__itineraire-technique-de-culture-de-la-pomme-de-terre-en.pdf"
+}

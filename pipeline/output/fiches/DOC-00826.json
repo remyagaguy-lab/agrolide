@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00826",
+  "sha256": "df99f3c22d196c321248e6a376e5c86abc288464e6a088345183171d4b6533c7",
+  "nom_original": "chapitre2_papier.pdf",
+  "chemin_relatif_source": "OD_Docs/chapitre2_papier.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 431521,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 11,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Abdelaali Bencheikh",
+  "source_organisation": null,
+  "mots_cles": [
+    "relation sol plante",
+    "reserve utile",
+    "rfu",
+    "humidite au champ",
+    "point de fletrissement",
+    "eau du sol"
+  ],
+  "titre_trouve": "Relation sol plante - Chapitre 2 : Disponibilité de l'eau pour les plantes",
+  "titre": "Relation sol-plante : Disponibilité de l'eau pour les cultures (Chapitre 2)",
+  "resume": "Chapitre de cours universitaire de 11 pages par Abdelaali Bencheikh détaillant les constantes hydriques du sol (capacité au champ, point de flétrissement, RU et RFU) avec exercices d'application.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours partiel (chapitre 2 isolé) sans licence de réutilisation libre. Archivé en interne.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Relation sol plante BENCHEIKH Abdelaali 2019 Chapitre 2 : Disponibilité de l'eau pour les plantes"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00826__relation-sol-plante-disponibilite-de-l-eau-pour-les-cul.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00826__relation-sol-plante-disponibilite-de-l-eau-pour-les-cul.pdf"
+}

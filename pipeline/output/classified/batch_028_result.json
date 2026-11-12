@@ -1,0 +1,744 @@
+{
+  "batch_number": 28,
+  "results": [
+    {
+      "id": "DOC-00414",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bissap",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": [
+        "bissap",
+        "folere",
+        "hibiscus sabdariffa",
+        "plantes medicinales",
+        "itineraire technique",
+        "cameroun"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE CULTURE DU FOLERE/ OYORO/ BISAP (Hibiscus sabdariffa)",
+      "titre": "Technologie de culture du foléré ou bissap au Cameroun",
+      "resume": "Fiche technique synthétique sur la culture du foléré (bissap) au Cameroun, couvrant la préparation du sol, le semis, l'entretien, la récolte et le séchage des calices.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète sur une culture tropicale emblématique, émanant d'un institut agréé, publiée en libre accès.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE CULTURE DU FOLERE/ OYORO/ BISAP (Hibiscus sabdariffa)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00415",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2016,
+      "auteurs": "Bouselsal Boualem",
+      "source_organisation": "Université Kasdi Merbah-Ouargla",
+      "mots_cles": [
+        "forage d'eau",
+        "hydrogeologie",
+        "ouvrages de captage",
+        "piezometrie",
+        "algerie",
+        "cours universitaire"
+      ],
+      "titre_trouve": "FORAGE D’EAU Procédés et mesures",
+      "titre": "Forage d'eau : Procédés et mesures en hydrogéologie",
+      "resume": "Cours universitaire d'hydrogéologie de l'Université de Ouargla détaillant les techniques de forage d'eau, les ouvrages de captage, la piézométrie et les essais de débit.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire sans licence libre explicite, archivé pour respect des droits patrimoniaux académiques.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Auteur: Dr. Bouselsal Boualem Maître de Conférences ... Université de Kasdi Merbah-Ouargla"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00416",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "fruit de la passion",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP",
+      "mots_cles": [
+        "fruit de la passion",
+        "maracuja",
+        "arboriculture fruitiere",
+        "cameroun",
+        "conduite de culture",
+        "ifati"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU FRUIT DE LA PASSION",
+      "titre": "Technologie de production du fruit de la passion au Cameroun",
+      "resume": "Guide technique et pratique sur la culture du fruit de la passion au Cameroun, précisant les exigences agroclimatiques, la pépinière, le palissage et la récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique complet sur une culture fruitière tropicale rentable, issu d'un institut de formation agréé, publié en libre accès.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DU FRUIT DE LA PASSION GENERALITE I. LES EXIGENCES DE LA CULTURE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00417",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "concombre",
+      "pays": "Polynésie française",
+      "annee": 2018,
+      "auteurs": "Projet INTEGRE / Direction de l'Agriculture de Polynésie française",
+      "source_organisation": "Projet INTEGRE, CPS, Direction de l'Agriculture de Polynésie française",
+      "mots_cles": [
+        "concombre",
+        "agriculture biologique",
+        "maraichage",
+        "polynesie francaise",
+        "fiche technique",
+        "integre"
+      ],
+      "titre_trouve": "La culture du concombre en agriculture biologique en Polynésie française",
+      "titre": "La culture du concombre en agriculture biologique en Polynésie française",
+      "resume": "Fiche technique opérationnelle sur la culture biologique du concombre en climat tropical insulaire, couvrant le calendrier cultural, la fertilisation et la lutte préventive.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle complète en agriculture biologique tropicale (Projet INTEGRE / CPS), librement diffusable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La culture du concombre en agriculture biologique en Polynésie française Cette fiche technique a été réalisée dans le cadre du programme de réseau de fermes pilotes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00418",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aubergine",
+      "pays": "Niger",
+      "annee": 2015,
+      "auteurs": "Chambre Régionale d'Agriculture de Dosso",
+      "source_organisation": "CRA Dosso / RECA Niger",
+      "mots_cles": [
+        "aubergine",
+        "cultures maraicheres",
+        "dosso",
+        "niger",
+        "reca",
+        "fiche technique",
+        "maraichage sahelien"
+      ],
+      "titre_trouve": "Fiche technique pour la culture de l’aubergine",
+      "titre": "Fiche technique pour la culture de l'aubergine au Niger",
+      "resume": "Fiche technique de terrain de la CRA Dosso pour la culture de l'aubergine au Sahel, détaillant les variétés, la pépinière, la fertilisation et la lutte contre les ravageurs.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de vulgarisation agricole produite par une Chambre d'Agriculture publique sahélienne (CRA Dosso), libre de diffusion.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chambre Régionale d’Agriculture de Dosso Fiche technique pour la culture de l’aubergine Version (1) du 13 novembre 2015"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00419",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": null,
+      "auteurs": "Alassane Zongo",
+      "source_organisation": null,
+      "mots_cles": [
+        "engrais liquide",
+        "purin",
+        "fertilisation organique",
+        "compost",
+        "fumier",
+        "agroecologie"
+      ],
+      "titre_trouve": "La fabrication d’engrais liquide",
+      "titre": "Guide de fabrication artisanale d'engrais liquide organique",
+      "resume": "Guide pratique expliquant les étapes simples de fabrication artisanale d'un engrais liquide organique par macération de fumier, compost et déchets végétaux.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche pratique informelle rédigée par un auteur indépendant sans licence de diffusion explicite, conservée en archivage.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.75,
+        "completude": 0.90
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La fabrication d’engrais liquide est un processus simple que vous pouvez réaliser chez vous à partir de matériaux naturels et abordables."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00420",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Cameroun",
+      "annee": 2019,
+      "auteurs": "Abdoulicham Élevage",
+      "source_organisation": "Abdoulicham Élevage",
+      "mots_cles": [
+        "provende",
+        "alimentation animale",
+        "aviculture",
+        "poules pondeuses",
+        "poulets de chair",
+        "formulation alimentaire"
+      ],
+      "titre_trouve": "FabricationBiologiquedela Provende pour les Poules PondeusesetlesPouletsde Chairs [[ABDOULICHAMÉLEVAGE]]",
+      "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair",
+      "resume": "Guide technique complet sur la fabrication à la ferme de provende pour volailles, détaillant les besoins nutritionnels, les matières premières et les formules de ration.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Reprise personnalisée par une entité privée sans mention de licence libre, archivée sans publication ouverte.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.80,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FabricationBiologiquedela Provende pour les Poules PondeusesetlesPouletsde Chairs [[ABDOULICHAMÉLEVAGE]]"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00421",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Cameroun",
+      "annee": 2019,
+      "auteurs": "SAILD",
+      "source_organisation": "SAILD / CDDR",
+      "mots_cles": [
+        "provende",
+        "alimentation de la volaille",
+        "poules pondeuses",
+        "poulets de chair",
+        "formulation",
+        "saild"
+      ],
+      "titre_trouve": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR",
+      "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair",
+      "resume": "Synthèse technique du SAILD détaillant la formulation et la fabrication artisanale de provende équilibrée pour poulets de chair et poules pondeuses en zone tropicale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet d'une ONG de référence (SAILD) sur la fabrication locale d'aliment pour volailles, publiable en accès libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "source_organisation",
+          "page": 14,
+          "extrait": "SAILD Recueil de fiches techniques pour l’entrepreneur rural. Tome 1. Yaoundé : SAILD, 1998"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00422",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Yere",
+      "source_organisation": null,
+      "mots_cles": [
+        "provende",
+        "aviculture",
+        "alimentation des poules",
+        "formulation",
+        "burkina faso"
+      ],
+      "titre_trouve": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR",
+      "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair (Support formation)",
+      "resume": "Support de formation pratique sur la fabrication de la provende pour volailles, adapté par un technicien en santé animale avec formules de rationnement.",
+      "statut_droits": "donnees_personnelles_confidentiel",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_personnelles"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document comportant des données personnelles de contact (numéro WhatsApp privé) sur la page de garde, archivé sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "PRESENTE PAR Mr YERE TECHNICIEN EN SANTE ANIMALE WhatsApp +226 74044114"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00423",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": [
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "pomme de terre",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "fecule",
+        "pomme de terre",
+        "transformation industrielle",
+        "synoptique de procede",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité FECULE – ALBUMINE",
+      "titre": "Schéma de procédé industriel : Fécule de pomme de terre et pulpe d'albumine",
+      "resume": "Schéma synoptique industriel détaillant l'ensemble des opérations unitaires d'extraction de la fécule et de la pulpe d'albumine à partir de pommes de terre.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Schéma de procédé technique d'une seule page sans licence ouverte identifiable, archivé à titre documentaire.",
+      "confiance": {
+        "classification": 0.90,
+        "droits": 0.75,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité FECULE – ALBUMINE ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00424",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "organisations_paysannes",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2022,
+      "auteurs": "Maëla Naël",
+      "source_organisation": "Éditions France Agricole",
+      "mots_cles": [
+        "fermes collectives",
+        "installation agricole",
+        "gouvernance partagee",
+        "societariat agricole",
+        "france agricole"
+      ],
+      "titre_trouve": "Fermes collectives, le guide (très) pratique",
+      "titre": "Fermes collectives : Le guide (très) pratique",
+      "resume": "Ouvrage complet des Éditions France Agricole guidant l'installation collective en agriculture : gouvernance, choix juridiques, gestion humaine et organisation du travail.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial protégé par le droit d'auteur (Éditions France Agricole) et centré sur le cadre juridique français, archivé sans diffusion.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.99,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "© Éditions France Agricole, 2022 ISBN: 978-2-85557-813-2 Tous droits réservés pour tous pays."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00425",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "cultures_maraicheres",
+        "sol_fertilite"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "cultures maraîchères",
+      "pays": "Suisse",
+      "annee": 2017,
+      "auteurs": "Reto Neuweiler, Jürgen Krauss",
+      "source_organisation": "Agroscope",
+      "mots_cles": [
+        "fertilisation",
+        "cultures maraicheres",
+        "agroscope",
+        "prif",
+        "azote nmin",
+        "fumure",
+        "suisse"
+      ],
+      "titre_trouve": "10/ Fertilisation des cultures maraîchères - Principes de fertilisation des cultures agricoles en Suisse (PRIF)",
+      "titre": "Fertilisation des cultures maraîchères (PRIF 2017 - Suisse)",
+      "resume": "Guide officiel d'Agroscope établissant les normes suisses de fertilisation des cultures légumières : besoins minéraux, méthode Nmin et analyse de sève.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide institutionnel suisse officiel (Agroscope) calibré pour l'agriculture tempérée helvétique, non adapté au contexte tropical.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "10/ Fertilisation des cultures maraîchères Reto Neuweiler et Jürgen Krauss Agroscope, 8820 Wädenswil, Suisse"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00426",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": [
+        "cereales",
+        "sol_fertilite"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "céréales",
+      "pays": "Suisse",
+      "annee": 2017,
+      "auteurs": "Sokrat Sinaj, Raphaël Charles, Alice Baux, Brice Dupuis, Jürg Hiltbrunner, Lilia Levy, Didier Pellet, Guillaume Blanchet, Bernard Jeangros",
+      "source_organisation": "Agroscope",
+      "mots_cles": [
+        "fertilisation",
+        "grandes cultures",
+        "cereales",
+        "colza",
+        "agroscope",
+        "fumure",
+        "suisse"
+      ],
+      "titre_trouve": "8/ Fertilisation des grandes cultures - Principes de fertilisation des cultures agricoles en Suisse (PRIF)",
+      "titre": "Fertilisation des grandes cultures (PRIF 2017 - Suisse)",
+      "resume": "Référentiel officiel d'Agroscope détaillant les normes et recommandations de fertilisation pour les grandes cultures (céréales à paille, oléagineux, tubercules) en Suisse.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Référentiel institutionnel suisse de fertilisation conçu pour les climats et sols tempérés, archivé car non adapté aux agroécosystèmes tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "8/ Fertilisation des grandes cultures Sokrat Sinaj, Raphaël Charles... Agroscope, 1260 Nyon, Suisse"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00427",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "fertilisation_amendements",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2001,
+      "auteurs": "Centre de référence en agriculture et agroalimentaire du Québec (CRAAQ)",
+      "source_organisation": "CRAAQ",
+      "mots_cles": [
+        "matiere organique",
+        "fertilite des sols",
+        "conservation des sols",
+        "craaq",
+        "quebec",
+        "humus"
+      ],
+      "titre_trouve": "Guide des Pratiques de conservation en grandes cultures - Module 3 : Gestion de la matière organique",
+      "titre": "Gestion de la matière organique des sols (Guide CRAAQ Québec)",
+      "resume": "Guide technique du CRAAQ expliquant le rôle agronomique de la matière organique, son impact sur la structure et la fertilité des sols, et les méthodes d'apport.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique canadien calibré pour les sols et systèmes agricoles tempérés froids du Québec, archivé car non adapté aux sols tropicaux.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.90,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide des Pratiques de conservation en grandes cultures Gestion de la matière organique Module 3"
+        }
+      ]
+    }
+  ]
+}

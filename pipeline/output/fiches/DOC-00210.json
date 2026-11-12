@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00210",
+  "sha256": "ca617c9d23463b089ab83a74a5a811d0240f2130452a0ff8359dc42c436c43cd",
+  "nom_original": "Agronomie durable,  principes et pratiques.pdf",
+  "chemin_relatif_source": "OD_Docs/Agronomie durable,  principes et pratiques.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 547430,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 46,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2009,
+  "auteurs": "Dr. Abdellah Aboudrare",
+  "source_organisation": "FAO / ORMVA Ouarzazate",
+  "mots_cles": [
+    "agronomie durable",
+    "developpement durable",
+    "travail du sol",
+    "conservation des sols",
+    "fao",
+    "maroc"
+  ],
+  "titre_trouve": "Rapport de Formation Continue : Agronomie Durable Principes et Pratiques",
+  "titre": "Agronomie durable : Principes et pratiques (Formation FAO / ORMVA)",
+  "resume": "Rapport de formation continue co-organisé par la FAO et l'ORMVA de Ouarzazate, exposant les concepts du développement durable, les principes d'agronomie durable et les techniques de conservation des sols.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport technique institutionnel de formation FAO complet et de bonne valeur pédagogique pour les membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Rapport de Formation Continue Agronomie Durable Principes et Pratiques Au profit des cadres et techniciens de l’ORMVA de Ouarzazate"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00210__agronomie-durable-principes-et-pratiques-formation-fao.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00210__agronomie-durable-principes-et-pratiques-formation-fao.pdf"
+}

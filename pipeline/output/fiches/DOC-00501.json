@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00501",
+  "sha256": "bea3f055feb2d0806feca70f3a8c8a8e6132c9b330a3ca316d486e402983fadd",
+  "nom_original": "IDR-2013-ZON-ETU.pdf",
+  "chemin_relatif_source": "OD_Docs/IDR-2013-ZON-ETU.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2965030,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 72,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2013,
+  "auteurs": "Claude Bienvenu Zongo",
+  "source_organisation": "Université Polytechnique de Bobo-Dioulasso (IDR)",
+  "mots_cles": [
+    "compost",
+    "fertilite des sols",
+    "yatenga",
+    "burkina faso",
+    "vulgarisation agricole",
+    "memoire idr"
+  ],
+  "titre_trouve": "Etude diagnostique de la production du compost dans la province du Yatenga",
+  "titre": "Étude diagnostique de la production du compost dans la province du Yatenga (Burkina Faso)",
+  "resume": "Mémoire de fin de cycle d'ingénieur en vulgarisation agricole dressant le diagnostic des techniques de compostage paysan et de leur impact sur la régénération de la fertilité des sols dans le Yatenga.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire universitaire non libre de droits, archivé conformément à la règle stricte interdisant la publication directe des mémoires.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "MEMOIRE DE FIN DE CYCLE En vue de l'obtention du DIPLÔME D'INGENIEUR EN VULGARISATION AGRICOLE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00501__etude-diagnostique-de-la-production-du-compost-dans-la.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00501__etude-diagnostique-de-la-production-du-compost-dans-la.pdf"
+}

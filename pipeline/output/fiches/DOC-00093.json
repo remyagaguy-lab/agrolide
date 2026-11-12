@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00093",
+  "sha256": "23e83b74938bd41ed2f22eb3d7b64dc45b802b26eadd407b145cd1a326060769",
+  "nom_original": "17FGuide-de-formation-sur-larboriculture-fruitiere.pdf",
+  "chemin_relatif_source": "OD_Docs/17FGuide-de-formation-sur-larboriculture-fruitiere.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 498745,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476226224-17FGuide-de-formation-sur-larboriculture-fruitiere.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet"
+  ],
+  "nb_pages": 13,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "mangue",
+  "pays": "Niger",
+  "annee": 2008,
+  "auteurs": "Mahamadou Zangui",
+  "source_organisation": "EDOS / JIRCAS / JICA / Ministère du Développement Agricole du Niger",
+  "mots_cles": [
+    "arboriculture",
+    "manguier",
+    "greffage",
+    "taille",
+    "niger",
+    "oasis"
+  ],
+  "titre_trouve": "GUIDE DE FORMATION SUR L’ARBORICULTURE FRUITIERE",
+  "titre": "Guide de formation sur l'arboriculture fruitière au Niger",
+  "resume": "Guide de formation technique sur la taille et le greffage du manguier dans les oasis sahéliennes du Niger, élaboré pour le projet EDOS.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document institutionnel de formation sur l'arboriculture fruitière au Niger, mais incomplet et tronqué en fin de document.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DE FORMATION SUR L’ARBORICULTURE FRUITIERE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00093__guide-de-formation-sur-l-arboriculture-fruitiere-au-nig.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00093__guide-de-formation-sur-l-arboriculture-fruitiere-au-nig.pdf"
+}

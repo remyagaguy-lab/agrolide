@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00273",
+  "sha256": "3aff92a3986b5bceddb244963bd645609dfacd6cb8b50d92beffa3f62ad7eee1",
+  "nom_original": "COMMENT TAILLER VOS ARBRES (Pierre Michard).pdf",
+  "chemin_relatif_source": "OD_Docs/COMMENT TAILLER VOS ARBRES (Pierre Michard).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 22927323,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 74,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "arboriculture",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Pierre Michard",
+  "source_organisation": null,
+  "mots_cles": [
+    "taille des arbres",
+    "arboriculture fruitiere",
+    "elagage",
+    "arbres fruitiers",
+    "greffage"
+  ],
+  "titre_trouve": null,
+  "titre": "Comment tailler vos arbres",
+  "resume": "Guide pratique illustré sur les techniques de taille de formation, de fructification et d'entretien des arbres fruitiers et d'ornement en climat tempéré.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial scanné sans couche texte, sous droits réservés d'auteur et traitant d'espèces adaptées au climat tempéré.",
+  "confiance": {
+    "classification": 0.75,
+    "droits": 0.85,
+    "completude": 0.7
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: COMMENT TAILLER VOS ARBRES (Pierre Michard).pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00273__comment-tailler-vos-arbres.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00273__comment-tailler-vos-arbres.pdf"
+}

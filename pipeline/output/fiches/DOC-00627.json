@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00627",
+  "sha256": "7f06aa3090db496a25f884683b8ca2b1a97d94b223d4f4cc92b11910a8c8b768",
+  "nom_original": "NDOLE.pdf",
+  "chemin_relatif_source": "OD_Docs/NDOLE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1019018,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ndolé",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "ndole",
+    "vernonia",
+    "legume-feuille",
+    "cameroun",
+    "fiche technique",
+    "fertilisation",
+    "maraichage"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique de production du ndolé (Vernonia spp.) au Cameroun",
+  "resume": "Fiche technique pratique élaborée par l'IFATI pour la production du ndolé au Cameroun : préparation du terrain, repiquage, désherbage, fertilisation minérale et organique, traitements phytosanitaires et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle d'un institut de formation agricole camerounais sur un légume-feuille traditionnel majeur d'Afrique centrale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    },
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "GENERALITES I.2. LA PREPARATION DU CHAMP I.3. PLANTATION"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00627__fiche-technique-de-production-du-ndole-vernonia-spp-au.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00627__fiche-technique-de-production-du-ndole-vernonia-spp-au.pdf"
+}

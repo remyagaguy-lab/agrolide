@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00729",
+  "sha256": "d070999865ef2b96e3e2b98853bca6e484e6e1dc7ee07f19f5d06d331ae5d6de",
+  "nom_original": "Structure du sol.pdf",
+  "chemin_relatif_source": "OD_Docs/Structure du sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 962460,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "structure du sol",
+    "pedologie",
+    "porosite",
+    "agronomie",
+    "physique du sol"
+  ],
+  "titre_trouve": null,
+  "titre": "Structure du sol [Scan à traiter]",
+  "resume": "Document numérisé de 6 pages portant sur la structure du sol, la formation des agrégats et la porosité, nécessitant un traitement OCR pour exploitation et indexation complètes.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan sans texte extractible (OCR nécessaire) ; validation humaine requise après extraction du contenu.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.35,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Titre déduit du nom de fichier original : Structure du sol.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00729__structure-du-sol-scan-a-traiter.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00729__structure-du-sol-scan-a-traiter.pdf"
+}

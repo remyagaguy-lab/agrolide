@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00508",
+  "sha256": "e3296a8572937877d0ff04751694bd9c9b2c7a28cc4eaa1818b3d8d2d39b486b",
+  "nom_original": "Impacts_des_pesticides_utilisés_dans_la_plasticulture_sur_la_santé.pdf",
+  "chemin_relatif_source": "OD_Docs/Impacts_des_pesticides_utilisés_dans_la_plasticulture_sur_la_santé.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4570010,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 43,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "pesticides",
+    "plasticulture",
+    "toxicite",
+    "sante humaine",
+    "protection des cultures"
+  ],
+  "titre_trouve": "Chapitre 2 : Les différents types de pesticides",
+  "titre": "Impacts des pesticides en plasticulture sur la santé et l'environnement",
+  "resume": "Extrait d'un travail universitaire (chapitres 2 et 3) analysant les familles de pesticides employés en plasticulture maraîchère, leurs modes d'action, leur toxicité environnementale et leurs risques pour la santé humaine.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait partiel d'un mémoire universitaire (chapitres isolés sans page de garde officielle), non publiable en libre accès et archivé en interne.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre 2 : Les différents types de pesticides"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00508__impacts-des-pesticides-en-plasticulture-sur-la-sante-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00508__impacts-des-pesticides-en-plasticulture-sur-la-sante-et.pdf"
+}

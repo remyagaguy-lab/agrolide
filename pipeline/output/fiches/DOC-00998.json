@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00998",
+  "sha256": "acb6f9a26f79f89d78a41d90fbc8cfb162bec5f064e301975663b9e56f2a48e5",
+  "nom_original": "ovoproduits poudre d_oeufs.pdf",
+  "chemin_relatif_source": "OD_Docs/ovoproduits poudre d_oeufs.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 54443,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "œufs et ovoproduits",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "ovoproduits",
+    "poudre d'oeuf",
+    "pasteurisation",
+    "diagramme de fabrication",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité OVOPRODUITS",
+  "titre": "Diagramme de procédé technologique : Ovoproduits et poudres d'œufs",
+  "resume": "Schéma synoptique de procédé agroalimentaire exposant l'enchaînement des étapes de transformation des œufs : mirage, lavage, cassage, pasteurisation, ultrafiltration et atomisation en poudres.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique technique complet de procédé industriel agroalimentaire pour la valorisation des œufs, libre de diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité OVOPRODUITS ... ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00998__diagramme-de-procede-technologique-ovoproduits-et-poudr.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00998__diagramme-de-procede-technologique-ovoproduits-et-poudr.pdf"
+}

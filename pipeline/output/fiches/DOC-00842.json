@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00842",
+  "sha256": "b69a3ebf48793585759e8138267b6d1952cd0a5baa022068eff82666260ee3be",
+  "nom_original": "contraintes et reproduction PDF.pdf",
+  "chemin_relatif_source": "OD_Docs/contraintes et reproduction PDF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 791610,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 27,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "petits ruminants",
+  "pays": "Burkina Faso",
+  "annee": 2022,
+  "auteurs": "Christian Sidibé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "petits ruminants",
+    "elevage caprin",
+    "elevage ovin",
+    "alimentation du betail",
+    "reproduction",
+    "burkina faso"
+  ],
+  "titre_trouve": "Contraintes de l’élevage des Petits Ruminants",
+  "titre": "Contraintes de l'élevage des petits ruminants au Burkina Faso",
+  "resume": "Support de présentation analysant les contraintes alimentaires saisonnières, sanitaires et les paramètres de reproduction des petits ruminants (ovins et caprins de race Mossi) au Burkina Faso.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours diaporama non publié sous licence libre, archivé pour usage documentaire interne.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Contraintes de l’élevage des Petits Ruminants"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Le Burkina Faso tire la majeure partie de son revenu national des produits de l'élevage et de l'agriculture"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00842__contraintes-de-l-elevage-des-petits-ruminants-au-burkin.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00842__contraintes-de-l-elevage-des-petits-ruminants-au-burkin.pdf"
+}

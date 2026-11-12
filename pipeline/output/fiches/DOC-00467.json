@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00467",
+  "sha256": "34fd8f00e6c7d24e3874c0f48a26611bb8cd38d3e437f08018cc4bfb2a8a9397",
+  "nom_original": "GUIDE PRATIQUE DE DEFFENCE DES CULTURES.pdf",
+  "chemin_relatif_source": "OD_Docs/GUIDE PRATIQUE DE DEFFENCE DES CULTURES.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 134573085,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "ocr_necessaire"
+  ],
+  "nb_pages": 588,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2009,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "defense des cultures",
+    "protection phytosanitaire",
+    "ravageurs",
+    "maladies",
+    "agronomie"
+  ],
+  "titre_trouve": null,
+  "titre": "Guide pratique de défense des cultures",
+  "resume": "Ouvrage numérisé volumineux de 588 pages consacré à la protection des cultures et à la défense phytosanitaire. Nécessite un traitement OCR pour identifier l'éditeur et le contenu.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Ouvrage complet numérisé sans texte exploitable (scan brut de 588 pages), nécessitant un OCR et une vérification des droits d'auteur.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE PRATIQUE DE DEFFENCE DES CULTURES.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00467__guide-pratique-de-defense-des-cultures.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00467__guide-pratique-de-defense-des-cultures.pdf"
+}

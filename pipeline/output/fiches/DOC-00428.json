@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00428",
+  "sha256": "77662a1a75bb658877072f65bc595affeba8e55f96e2781dd85050a06cfebaa4",
+  "nom_original": "Fiche Technique des blés.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche Technique des blés.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 586551,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 9,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "blé",
+  "pays": "Maroc",
+  "annee": 2023,
+  "auteurs": "INRA Maroc",
+  "source_organisation": "INRA Maroc",
+  "mots_cles": [
+    "ble tendre",
+    "ble dur",
+    "itineraire technique",
+    "maroc",
+    "cereales"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE SUR LES BLÉS 2023",
+  "titre": "Fiche technique sur la culture des blés au Maroc (blé tendre et blé dur)",
+  "resume": "Fiche technique complète (2023) détaillant les exigences pédo-climatiques, le choix variétal, la fertilisation, la protection phytosanitaire et la conduite des blés au Maroc.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique agronomique complète éditée par l'INRA Maroc, directement exploitable pour la conduite des blés.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "FICHE TECHNIQUE SUR LES BLÉS 2023"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 3,
+      "extrait": "Au Maroc, les blés sont des cultures prédominantes dans les différents agroécosystèmes marocains"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00428__fiche-technique-sur-la-culture-des-bles-au-maroc-ble-te.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00428__fiche-technique-sur-la-culture-des-bles-au-maroc-ble-te.pdf"
+}

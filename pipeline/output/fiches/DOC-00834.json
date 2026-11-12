@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00834",
+  "sha256": "b05c4c86e185280f1ef224163654d7fa3bb858c7c63d47c8809f6f4cc515c19f",
+  "nom_original": "concentres flocons poudres fruits legumes.pdf",
+  "chemin_relatif_source": "OD_Docs/concentres flocons poudres fruits legumes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 37170,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479391780-concentres_flocons_poudres_fruits_legumes.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_fruits_legumes",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "fruits et légumes",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA",
+  "mots_cles": [
+    "transformation",
+    "fruits et legumes",
+    "concentres",
+    "poudres",
+    "flocons",
+    "atomisation",
+    "procede industriel"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité CONCENTRES DE FRUITS & LEGUMES",
+  "titre": "Schéma de procédé : Concentrés, poudres et flocons de fruits et légumes",
+  "resume": "Synoptique des étapes du procédé industriel de transformation des fruits et légumes en concentrés, poudres atomisées et flocons déshydratés.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Planche technique protégée (ISAA) sans licence libre, archivée en non publié conformément aux règles de droits.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité CONCENTRES DE FRUITS & LEGUMES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00834__schema-de-procede-concentres-poudres-et-flocons-de-frui.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_fruits_legumes/DOC-00834__schema-de-procede-concentres-poudres-et-flocons-de-frui.pdf"
+}

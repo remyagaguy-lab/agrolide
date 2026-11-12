@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00640",
+  "sha256": "3941d60a49f5920adbbd2d05df24a21a31188735ae28fcc0a2ffad85185389c7",
+  "nom_original": "Ovegence et follicugence.pdf",
+  "chemin_relatif_source": "OD_Docs/Ovegence et follicugence.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2650331,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 33,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "embryologie humaine",
+    "ovogenese",
+    "folliculogenese",
+    "medecine",
+    "qcm"
+  ],
+  "titre_trouve": "Ovogenèse et folliculogenèse",
+  "titre": "Ovogenèse et folliculogenèse (Embryologie humaine)",
+  "resume": "Support de cours médical et QCM sur l'ovogenèse et la folliculogenèse chez la femme au cours du développement embryonnaire et foetal humain.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document d'embryologie médicale humaine totalement hors du périmètre agricole et agroalimentaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Ovogenèse et folliculogenèse C’est la formation des gamètes femelles matures (ovocyte II bloqué en métaphase II) dans le sexe féminin."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00640__ovogenese-et-folliculogenese-embryologie-humaine.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00640__ovogenese-et-folliculogenese-embryologie-humaine.pdf"
+}

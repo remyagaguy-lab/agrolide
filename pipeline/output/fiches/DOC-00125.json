@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00125",
+  "sha256": "cca14250177f588160aa749e2f897b5d98c14a6ae87aa2b2e04bc000f8a1a82e",
+  "nom_original": "500 ptits trucs de jardinage (Meloche, Marc).pdf",
+  "chemin_relatif_source": "OD_Docs/500 ptits trucs de jardinage (Meloche, Marc).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3589335,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 164,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": null,
+  "auteurs": "Marc Meloche",
+  "source_organisation": "Collection Guides Pratiques",
+  "mots_cles": [
+    "jardinage",
+    "horticulture",
+    "compost",
+    "astuces",
+    "potager"
+  ],
+  "titre_trouve": "500 p'tits trucs JARDINAGE",
+  "titre": "500 p'tits trucs de jardinage",
+  "resume": "Guide pratique proposant 500 astuces et conseils horticoles pour la gestion potagère, florale et la protection contre les insectes nuisibles en contexte de jardinage tempéré nord-américain.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial protégé par le droit d'auteur et dédié au jardinage familial en climat tempéré québécois.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.95,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 5,
+      "extrait": "500 p'tits trucs JARDINAGE"
+    },
+    {
+      "champ": "autre",
+      "page": 163,
+      "extrait": "Meloche, Marc / HOD p'Tits trucs de jardinage. (Collection Guides Pratiques)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00125__500-p-tits-trucs-de-jardinage.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00125__500-p-tits-trucs-de-jardinage.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00883",
+  "sha256": "4b6ae4baa79c5d4d2a440c4fb22bec68fe31b7a4d849d87e899b6bdb94ca732d",
+  "nom_original": "elevage-des-porcs-en-zones-tropicales.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage-des-porcs-en-zones-tropicales.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1084691,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 110,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "porcins",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "porcins",
+  "pays": null,
+  "annee": 2011,
+  "auteurs": "Johan van 't Klooster, Arie Wingelaar",
+  "source_organisation": "Fondation Agromisa et CTA",
+  "mots_cles": [
+    "elevage porcin",
+    "porc",
+    "zones tropicales",
+    "agrodok",
+    "cta",
+    "zootechnie tropicale"
+  ],
+  "titre_trouve": "L’élevage des porcs dans les zones tropicales - Série Agrodok No. 1",
+  "titre": "L’élevage des porcs dans les zones tropicales (Agrodok n° 1)",
+  "resume": "Manuel pratique de référence sur la conduite de l'élevage porcin en milieu tropical : logement, alimentation, reproduction, soins de santé et gestion économique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "Diffusion institutionnelle CTA / Agrodok",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Manuel technique complet de la collection Agrodok (CTA/Agromisa), accessible à la communauté des membres de la plateforme.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Série Agrodok No. 1 \nL’élevage des porcs dans les zones tropicales"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00883__lelevage-des-porcs-dans-les-zones-tropicales-agrodok-n.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/porcins/DOC-00883__lelevage-des-porcs-dans-les-zones-tropicales-agrodok-n.pdf"
+}

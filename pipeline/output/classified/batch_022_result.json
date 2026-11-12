@@ -1,0 +1,525 @@
+{
+  "batch_number": 22,
+  "results": [
+    {
+      "id": "DOC-00317",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2023,
+      "auteurs": "TIR Chafia",
+      "source_organisation": "Université de M'Sila",
+      "mots_cles": ["agro-pedologie", "science du sol", "proprietes physico-chimiques", "eau dans le sol", "fertilite"],
+      "titre_trouve": "Cours d’Agro-pédologie",
+      "titre": "Cours d’agro-pédologie : Caractérisation et fertilité des sols",
+      "resume": "Support de cours universitaire présentant les notions fondamentales de la pédologie, le régime hydrique et les propriétés physico-chimiques des sols pour la gestion de leur fertilité.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non publié sous licence libre, conservé pour archivage documentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "3éme année PDV Cours d’Agro-pédologie 2023/204 par TIR Chafia"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00319",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["irrigation", "besoins en eau", "evapotranspiration", "coefficient cultural", "physique du sol"],
+      "titre_trouve": "Cours irrigation",
+      "titre": "Cours sur l’irrigation et les besoins en eau des cultures",
+      "resume": "Diaporama pédagogique abordant les principes de l'irrigation, l'évapotranspiration maximale (ETM), le coefficient cultural (Kc) et les facteurs pédoclimatiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama PowerPoint sans métadonnées d'auteur ni licence libre de diffusion.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.7,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours irrigation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00320",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": ["ressources_naturelles_environnement"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "tilapia",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["ichtyologie", "tilapia", "systematique des poissons", "ecosystemes aquatiques", "phytoplancton"],
+      "titre_trouve": "ANATOMIE ET RECONNAISSANCE DES ESPECES",
+      "titre": "Anatomie, reconnaissance des espèces de poissons et écologie aquatique",
+      "resume": "Support de cours illustré de 140 diapositives couvrant l'ichtyologie, l'anatomie et la reconnaissance des poissons d'eau douce africains (Oreochromis, Coptodon) et l'écologie aquatique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama académique sans identification précise de l'auteur ni licence ouverte.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.75,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ANATOMIE ET RECONNAISSANCE DES ESPECES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00321",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller", "enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": ["ravageurs des cultures", "aleurode", "mouche blanche", "lutte biologique", "nematodes"],
+      "titre_trouve": "Cours Ravageurs des Cultures 2ème Année Master",
+      "titre": "Cours sur les ravageurs des cultures et les méthodes de lutte biologique",
+      "resume": "Cours universitaire complet de Master 2 sur la bioécologie des insectes ravageurs (aleurodes, etc.) et nématodes, ainsi que les méthodes de lutte intégrée et biologique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non publié sous licence libre, conservé pour archivage.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours Ravageurs des Cultures 2ème Année Master Année 2022-2023"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00322",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "CHADDA Douniazed",
+      "source_organisation": null,
+      "mots_cles": ["semences", "germination", "cycle vegetatif", "symbiose", "rhizobium"],
+      "titre_trouve": "Cours-agronomie-II-production-vegetale",
+      "titre": "Cours d’agronomie : Semences, cycle de développement et symbioses végétales",
+      "resume": "Fascicule pédagogique abordant la morphologie et la physiologie des semences, les étapes du cycle végétatif des plantes cultivées et les symbioses racinaires (rhizobiums).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ensemble_partiel", "incomplet"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait de cours académique partiel non libre, réservé pour archivage documentaire.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Mme CHADDA DOUNIAZED b. Les semences"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00324",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "bovins",
+      "pays": "Algérie",
+      "annee": null,
+      "auteurs": "BOUMADDA Abdelbasset",
+      "source_organisation": "Université Kasdi Merbah Ouargla",
+      "mots_cles": ["elevage bovin", "bovins viande", "production laitiere", "reproduction bovine", "gestation"],
+      "titre_trouve": "Cours : Elevage Bovin",
+      "titre": "Cours d’élevage bovin : Conduite, reproduction et productions",
+      "resume": "Polycopié de cours universitaire présentant les systèmes d'élevage bovin en Algérie, la reproduction, le diagnostic de gestation et les productions de lait et de viande.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support universitaire au format document de travail non publié sous licence libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Université Kasdi Merbah Ouargla Département des sciences agronomiques Cours : Elevage Bovin"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00325",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "MOUTASSEM Djamel",
+      "source_organisation": null,
+      "mots_cles": ["epidemiologie vegetale", "prevention des risques", "pathologie vegetale", "protection des vegetaux", "maladies des plantes"],
+      "titre_trouve": "Epidémiologie et prévention des risques Master 1 Protection des végétaux",
+      "titre": "Cours d’épidémiologie végétale et de prévention des risques phytosanitaires",
+      "resume": "Support de cours de Master 1 sur l'épidémiologie végétale, analysant les facteurs de dissémination des bioagresseurs et les stratégies préventives de gestion du risque sanitaire.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de Master non publié sous licence libre, conservé pour archivage documentaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Epidémiologie et prévention des risques Master 1 Protection des végétaux Dr MOUTASSEM"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00326",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Nigéria",
+      "annee": 2021,
+      "auteurs": "L.O. Omoigui, A.Y. Kamara, J. Batieno, T. Iorlamen, Z. Kouyate, J. Yirzagla, S. Diallo, U. Garba",
+      "source_organisation": "IITA",
+      "mots_cles": ["niebe", "afrique de l'ouest", "itineraire technique", "semences ameliorees", "protection phytosanitaire"],
+      "titre_trouve": "Guide sur la production du niébé en Afrique de l’Ouest",
+      "titre": "Guide sur la production du niébé en Afrique de l'Ouest",
+      "resume": "Guide pratique complet de l'IITA détaillant l'itinéraire technique du niébé : choix du terrain, préparation du sol, variétés recommandées, densité, enrobage des semences et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel technique de référence publié par l'IITA pour l'Afrique de l'Ouest, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide sur la production du niébé en Afrique de l’Ouest"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00327",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": ["ressources_naturelles_environnement"],
+      "type_doc": "ouvrage",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["decideur_institution", "etudiant"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2020,
+      "auteurs": "Christian Lannou, Jean-Yves Rasplus, Samuel Soubeyrand, Mathieu Gautier, Jean-Pierre Rossi",
+      "source_organisation": "INRAE / Éditions Quæ",
+      "mots_cles": ["especes invasives", "crises sanitaires", "sante des plantes", "surveillance du territoire", "biosecurite"],
+      "titre_trouve": "Crises sanitaires en agriculture: Les espèces invasives sous surveillance",
+      "titre": "Crises sanitaires en agriculture : Les espèces invasives sous surveillance",
+      "resume": "Ouvrage scientifique de synthèse sur les invasions biologiques en agriculture, les mécanismes évolutifs des bioagresseurs émergents et les dispositifs d'anticipation et de surveillance.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage scientifique commercial soumis au droit d'auteur exclusif de l'éditeur, non diffusable.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Crises sanitaires en agriculture: Les espèces invasives sous surveillance"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00328",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": ["producteur", "technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2012,
+      "auteurs": "Jean-Jacques Garbay, CIVAM Bio 09",
+      "source_organisation": "CIVAM Bio 09",
+      "mots_cles": ["aviculture biologique", "poulet de chair", "poule pondeuse", "normes bio", "batiments avicoles"],
+      "titre_trouve": "Créer un atelier de volaille biologique",
+      "titre": "Créer un atelier de volaille biologique (CIVAM Bio 09)",
+      "resume": "Fiche technique présentant les règles d'installation d'un atelier avicole biologique : choix des souches rustiques, aménagement des parcours et respect des normes de densité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "membres",
+      "motif_decision": "Fiche technique d'un organisme bio français, utile méthodologiquement mais liée à la réglementation européenne, réservée aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique Rédigée par le CIVAM Bio 09 Créer un atelier de volaille biologique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00329",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["agroalimentaire"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["entrepreneur_porteur_projet", "technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maïs",
+      "pays": "Cameroun",
+      "annee": 2012,
+      "auteurs": "Maybelline Escalante-Ten Hoopen, Abdou Maïga",
+      "source_organisation": "CTA / ISF Cameroun",
+      "mots_cles": ["mais", "itineraire technique", "stockage", "transformation", "pro-agro"],
+      "titre_trouve": "Production et transformation du maïs",
+      "titre": "Production et transformation du maïs (Guide Pro-Agro)",
+      "resume": "Guide pratique de la collection Pro-Agro exposant l'itinéraire technique complet du maïs en Afrique subsaharienne, de la préparation du sol à la transformation post-récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence publié par le CTA et ISF pour la vulgarisation auprès des producteurs africains.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Production et transformation du maïs COLLECTION PRO-AGRO Maybelline Escalante-Ten Hoopen & Abdou Maïga"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00330",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "gombo",
+      "pays": "Côte d'Ivoire",
+      "annee": 2007,
+      "auteurs": "Djidji Andé Hortense, Kouamé Christophe, Aïdara Sékou, Hala N’Klo",
+      "source_organisation": "CNRA",
+      "mots_cles": ["gombo", "cote d'ivoire", "varietes koto tomi", "maraichage", "itineraire technique"],
+      "titre_trouve": "Bien cultiver le gombo en Côte d’Ivoire",
+      "titre": "Bien cultiver le gombo en Côte d'Ivoire",
+      "resume": "Fiche technique du CNRA décrivant les bonnes pratiques de culture du gombo en Côte d'Ivoire : variétés adaptées (Koto, Tomi), calendrier cultural, fertilisation et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique officielle de vulgarisation du CNRA Côte d'Ivoire, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Bien cultiver le gombo en Côte d’Ivoire CNRA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00331",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment",
+      "pays": "Côte d'Ivoire",
+      "annee": 2009,
+      "auteurs": "CNRA",
+      "source_organisation": "CNRA",
+      "mots_cles": ["piment", "cote d'ivoire", "pepiniere", "protection phytosanitaire", "maraichage"],
+      "titre_trouve": "Bien cultiver le piment en Côte d’Ivoire",
+      "titre": "Bien cultiver le piment en Côte d'Ivoire",
+      "resume": "Fiche technique du CNRA guidant les producteurs pour la culture du piment en Côte d'Ivoire : variétés sélectionnées, conduite de la pépinière, fertilisation et protection phytosanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle du CNRA destinée aux producteurs maraîchers, en accès libre.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Bien cultiver le piment en Côte d’Ivoire CENTRE NATIONAL DE RECHERCHE AGRONOMIQUE"
+        }
+      ]
+    }
+  ]
+}

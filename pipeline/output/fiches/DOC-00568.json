@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00568",
+  "sha256": "3b268cbaab04b0f7819824437baad35b8d4b936a4c5c85dc008951210fc07eae",
+  "nom_original": "Livret_production_compost.pdf",
+  "chemin_relatif_source": "OD_Docs/Livret_production_compost.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1156373,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 21,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2016,
+  "auteurs": "CILSS, CADDEL Consulting",
+  "source_organisation": "CILSS",
+  "mots_cles": [
+    "compost",
+    "compostiere",
+    "fertilisation organique",
+    "gestion durable des terres",
+    "sahel",
+    "agroecologie"
+  ],
+  "titre_trouve": "Livret technique de production du compost",
+  "titre": "Livret technique de production du compost (CILSS / PRGDT)",
+  "resume": "Manuel pratique illustré détaillant les étapes de fabrication du compost en milieu sahélien : aménagement de la fosse, empilement des matières, aération, suivi et dosage au champ.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique sahélien complet et opérationnel issu du CILSS, en accès libre pour les producteurs et conseillers.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PROGRAMME DE GESTION DURABLE DES TERRES ET D’ADAPTATION AUX CHANGEMENTS CLIMATIQUES AU SAHEL (PRGDT)\nLIVRET TECHNIQUE DE PRODUCTION DU COMPOST"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00568__livret-technique-de-production-du-compost-cilss-prgdt.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00568__livret-technique-de-production-du-compost-cilss-prgdt.pdf"
+}

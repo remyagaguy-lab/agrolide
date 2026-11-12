@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00986",
+  "sha256": "0e642ff8bca24ed96a9463af568c047f302c83617ddb54a04e565f662494130f",
+  "nom_original": "manuel_principaux_ravageurs_decultures_niayes.pdf",
+  "chemin_relatif_source": "OD_Docs/manuel_principaux_ravageurs_decultures_niayes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2637284,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 103,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cultures maraîchères",
+  "pays": "Sénégal",
+  "annee": 2014,
+  "auteurs": "Mbaye Ndiaye",
+  "source_organisation": "Direction de la Protection des Végétaux (DPV Sénégal) / PADEN",
+  "mots_cles": [
+    "protection des cultures",
+    "maraichage",
+    "niayes",
+    "dpv senegal",
+    "ravageurs",
+    "maladies vegetales"
+  ],
+  "titre_trouve": "MANUELSUR LES PRINCIPAUX RAVAGEURS ET MALADIES DES CULTURES MARAICHERESDANS LA ZONE DES NIAYES",
+  "titre": "Principaux ravageurs et maladies des cultures maraîchères dans la zone des Niayes (Sénégal)",
+  "resume": "Manuel de référence de 103 pages de la Direction de la Protection des Végétaux du Sénégal détaillant l'identification, la biologie et les méthodes de lutte contre les ennemis des légumes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel complet de référence de la Direction de la Protection des Végétaux du Sénégal pour la santé des cultures maraîchères, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MANUELSUR LES PRINCIPAUX RAVAGEURS ET MALADIES DES CULTURES MARAICHERESDANS LA ZONE DES NIAYES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "REPUBLIQUE DU SENEGAL Ministère Chargé de l'Agriculture Direction de la Protection des Végétaux"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00986__principaux-ravageurs-et-maladies-des-cultures-maraicher.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00986__principaux-ravageurs-et-maladies-des-cultures-maraicher.pdf"
+}

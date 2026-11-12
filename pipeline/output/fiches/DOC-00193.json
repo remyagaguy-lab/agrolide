@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00193",
+  "sha256": "ed8fbf299d810aeb6f3481f816327ffe5f2a1fa03b3e9835f4601a2c985eb4c3",
+  "nom_original": "Agrodok_28_Identification_des_degats_causes_aux_cultures@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_28_Identification_des_degats_causes_aux_cultures@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1287208,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 87,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Joep van Lidth de Jeude",
+  "source_organisation": "Fondation Agromisa",
+  "mots_cles": [
+    "symptomes",
+    "maladies des plantes",
+    "ravageurs",
+    "carences minerales",
+    "diagnostic phytosanitaire"
+  ],
+  "titre_trouve": "Identification des dégâts causés aux cultures par les maladies, les animaux nuisibles et les carences minérales",
+  "titre": "Identification des dégâts causés aux cultures",
+  "resume": "Guide de diagnostic au champ permettant d'identifier les causes des dégâts sur les cultures tropicales : symptômes de maladies, attaques de ravageurs et carences minérales.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, archivé en non publié.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 28 - Identification des dégâts causés aux cultures par les maladies, les animaux nuisibles et les carences minérales"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00193__identification-des-degats-causes-aux-cultures.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00193__identification-des-degats-causes-aux-cultures.pdf"
+}

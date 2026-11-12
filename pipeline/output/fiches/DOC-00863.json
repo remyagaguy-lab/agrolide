@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00863",
+  "sha256": "34131b3956cc23ebbd445d8c61c13f20510d21e422d5c8806e292c02bec5079a",
+  "nom_original": "devoir pisciculture ATE.docx",
+  "chemin_relatif_source": "OD_Docs/devoir pisciculture ATE.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 15037,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "pisciculture",
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "EMESA",
+  "mots_cles": [
+    "pisciculture",
+    "tilapia",
+    "silure",
+    "alevinage",
+    "devoir",
+    "Burkina Faso",
+    "EMESA"
+  ],
+  "titre_trouve": "DEVOIR DE PISCICULTURE ET PECHE",
+  "titre": "Sujet de devoir de pisciculture et pêche (Cycle Agents Techniques d'Élevage)",
+  "resume": "Épreuve d'évaluation d'un centre de formation technique comprenant des exercices de calcul sur la reproduction, l'incubation et le dimensionnement de bassins d'élevage de silures et tilapias.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "version_anterieure",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (version_anterieure) du document canonique DOC-00349.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.8,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "DEVOIR DE PISCICULTURE ET PECHE CYCLE ATE"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0072",
+  "canonique_id": "DOC-00349",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00863__sujet-de-devoir-de-pisciculture-et-peche-cycle-agents-t.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00863__sujet-de-devoir-de-pisciculture-et-peche-cycle-agents-t.pdf"
+}

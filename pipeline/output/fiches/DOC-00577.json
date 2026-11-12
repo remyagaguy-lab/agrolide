@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00577",
+  "sha256": "dc49e2e7d755a2320c8309f99fc4d6eb9ff2caa3ecce4d1a8e6f475dbff4e92f",
+  "nom_original": "MANUEL CULTURE DE LA PASTEQUE modifié OK.pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL CULTURE DE LA PASTEQUE modifié OK.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1226741,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 11,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pastèque",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Équipe d'ingénieurs CREFNAC Africa Itnl",
+  "source_organisation": "CREFNAC Africa Itnl",
+  "mots_cles": [
+    "pasteque",
+    "cultures maraicheres",
+    "itineraire technique",
+    "semis",
+    "fertilisation",
+    "afrique centrale"
+  ],
+  "titre_trouve": "MANUEL PROFESSIONNEL DE CULTURE DE LA PASTEQUE",
+  "titre": "Manuel professionnel de culture de la pastèque en Afrique tropicale",
+  "resume": "Guide pratique détaillant les étapes techniques de la culture de la pastèque : préparation du sol, choix des variétés adaptées, fertilisation, irrigation et protection phytosanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide maraîcher complet et adapté aux conditions tropicales africaines, diffusable publiquement pour les producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MANUEL PROFESSIONNEL DE CULTURE DE LA PASTEQUE ... Rédigé par l’équipe d’ingénieurs crefnac Africa Itnl"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00577__manuel-professionnel-de-culture-de-la-pasteque-en-afriq.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00577__manuel-professionnel-de-culture-de-la-pasteque-en-afriq.pdf"
+}

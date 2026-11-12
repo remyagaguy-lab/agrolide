@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00493",
+  "sha256": "9c635cdde3118ef4eebd5024a76ef73e115e962f8f39473c2f905cc83507efba",
+  "nom_original": "Guide_pratique_de_la_culture_de_la_pomme_de_terre_en_Afrique_de.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide_pratique_de_la_culture_de_la_pomme_de_terre_en_Afrique_de.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2077326,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 76,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pomme de terre",
+  "pays": null,
+  "annee": 2011,
+  "auteurs": "Bruno Vanderhofstadt, Bernard Jouan, Jordi Tio Rottlan",
+  "source_organisation": "CDE / CTA / Agro Sans Frontière",
+  "mots_cles": [
+    "pomme de terre",
+    "afrique de l'ouest",
+    "itineraire technique",
+    "plants de semence",
+    "cde",
+    "cta"
+  ],
+  "titre_trouve": "Guide pratique de la culture de la pomme de terre en Afrique de l’Ouest",
+  "titre": "Guide pratique de la culture de la pomme de terre en Afrique de l'Ouest",
+  "resume": "Manuel technique de référence co-édité par le CDE et le CTA couvrant la conduite de la pomme de terre en Afrique de l'Ouest : choix des variétés, production de plants, fertilisation, ravageurs et conservation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de référence régionale publié par le CDE et le CTA, libre et hautement utile aux producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide pratique de la culture de la pomme de terre en Afrique de l’Ouest"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00493__guide-pratique-de-la-culture-de-la-pomme-de-terre-en-af.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00493__guide-pratique-de-la-culture-de-la-pomme-de-terre-en-af.pdf"
+}

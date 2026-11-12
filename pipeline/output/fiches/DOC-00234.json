@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00234",
+  "sha256": "44ef17b41d03a524e97f888c506d294a037003964d93f27dc53d13da183d9b5a",
+  "nom_original": "BANANIER PLANTAIN (2).pdf",
+  "chemin_relatif_source": "OD_Docs/BANANIER PLANTAIN (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2170588,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479193484-BANANIER_PLANTAIN__2_.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 32,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "banane plantain",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI",
+  "mots_cles": [
+    "bananier plantain",
+    "technique pif",
+    "multiplication vegetative",
+    "rejets",
+    "cameroun",
+    "pepiniere"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DES REJETS DE BANANIER PLANTAIN PAR LA TECHNIQUE PIF (Plants Issus de Fragments de Tiges)",
+  "titre": "Production de rejets de bananier plantain par la technique PIF",
+  "resume": "Guide pratique complet de 32 pages détaillant la multiplication rapide de rejets sains de bananier plantain via la technique PIF (Plants Issus de Fragments de Tiges) : matériel, décortication, réactivation en pépinière, sevrage et conduite.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel complet (IFATI Cameroun) sur la technique PIF du bananier plantain, d'une grande valeur opérationnelle pour les producteurs ouest et centre-africains.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DES REJETS DE BANANIER PLANTAIN PAR LA TECHNIQUE PIF"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0018",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00234__production-de-rejets-de-bananier-plantain-par-la-techni.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00234__production-de-rejets-de-bananier-plantain-par-la-techni.pdf"
+}

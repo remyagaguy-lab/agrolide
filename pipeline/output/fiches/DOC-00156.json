@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00156",
+  "sha256": "5fb65ebec7fde4d5d014b6b55b67c6fbdab54abfea503a457a03cba850708ba4",
+  "nom_original": "ARTEMISIA ANNUA.pdf",
+  "chemin_relatif_source": "OD_Docs/ARTEMISIA ANNUA.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 185372,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479112601-ARTEMISIA_ANNUA.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "artemisia",
+  "pays": "Madagascar",
+  "annee": 2002,
+  "auteurs": "Christian Favre",
+  "source_organisation": null,
+  "mots_cles": [
+    "artemisia annua",
+    "paludisme",
+    "plante medicinale",
+    "fiche technique",
+    "madagascar",
+    "cameroun"
+  ],
+  "titre_trouve": "ARTEMISIA ANNUA FICHE TECHNIQUE DE CULTURE (Madagascar-Cameroun)",
+  "titre": "Fiche technique de culture d'Artemisia annua (Madagascar - Cameroun)",
+  "resume": "Fiche technique pratique sur la culture de l'armoise annuelle (Artemisia annua) pour la production d'artémisinine antipaludique : semis, entretien, récolte et séchage.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle sur une plante médicinale stratégique, adaptée au contexte tropical africain (Madagascar et Cameroun).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ARTEMISIA ANNUA FICHE TECHNIQUE DE CULTURE (Madagascar-Cameroun)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00156__fiche-technique-de-culture-d-artemisia-annua-madagascar.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00156__fiche-technique-de-culture-d-artemisia-annua-madagascar.pdf"
+}

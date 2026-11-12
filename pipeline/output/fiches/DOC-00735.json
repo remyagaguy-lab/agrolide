@@ -1,0 +1,66 @@
+{
+  "id": "DOC-00735",
+  "sha256": "a71ec47c543398065ca19f8c02652ffd54eb8fc5cc9acce786591887ba2d9873",
+  "nom_original": "Séance 8 PHY 1125.pdf",
+  "chemin_relatif_source": "OD_Docs/Séance 8 PHY 1125.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 279922,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Pachoukova",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "physique des materiaux",
+    "transformations allotropiques",
+    "diagramme hf-co",
+    "phy 1125"
+  ],
+  "titre_trouve": "SEANCE 8",
+  "titre": "Physique des matériaux : transformations allotropiques et diagramme Hf-Co (Séance 8 PHY 1125)",
+  "resume": "Support de travaux dirigés universitaires en métallurgie physique traitant des transformations allotropiques, des lois de Gibbs et du diagramme d'équilibre liquide-solide Hf-Co.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Travaux dirigés de physique et thermodynamique des matériaux sur les diagrammes d'équilibre liquide-solide (Hf-Co), hors sujet.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SEANCE 8 Objectifs : Savoir interpréter les diagrammes d’équilibre liquide-solide contenant les transformations allotropiques"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00735__physique-des-materiaux-transformations-allotropiques-et.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00735__physique-des-materiaux-transformations-allotropiques-et.pdf"
+}

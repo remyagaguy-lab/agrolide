@@ -1,0 +1,825 @@
+{
+  "batch_number": 54,
+  "results": [
+    {
+      "id": "DOC-00811",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "fertilisation_amendements"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "manioc",
+      "pays": "République démocratique du Congo",
+      "annee": 2011,
+      "auteurs": "INERA - REAFOR - FAO",
+      "source_organisation": "FAO TECA / INERA",
+      "mots_cles": [
+        "manioc",
+        "rdc",
+        "inera",
+        "congo",
+        "bouturage",
+        "itineraire technique",
+        "tubercules"
+      ],
+      "titre_trouve": "Technique culturale du manioc, Congo (RDC)",
+      "titre": "Technique culturale du manioc en République Démocratique du Congo",
+      "resume": "Fiche technique TECA (FAO/INERA) de 3 pages décrivant l'itinéraire technique du manioc en RDC : choix des boutures saines, préparation du terrain, fumure minérale et organique, et récolte des feuilles et tubercules.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique officielle FAO/INERA sur la culture du manioc en RDC, directement exploitable pour les producteurs et techniciens agricoles d'Afrique centrale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technique culturale du manioc, Congo (RDC)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "REAFOR/ Institut National pour l’Etude et la Recherche Agronomique (INERA)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00812",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "boissons",
+      "domaines_secondaires": [
+        "transformation_fruits_legumes"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "café",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "cafe",
+        "transformation agroalimentaire",
+        "voie humide",
+        "voie seche",
+        "torrefaction",
+        "lyophilisation"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité CAFES",
+      "titre": "Diagramme des procédés de transformation du café (voie sèche et voie humide)",
+      "resume": "Synoptique technique d'une page présentant le schéma complet de transformation post-récolte des cerises de caféier : voies sèche et humide, obtention du café vert, torréfaction, mouture et lyophilisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique clair et complet des filières de transformation du café (voies sèche et humide), libre d'accès pour les transformateurs et étudiants.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CAFES CAFE MOULU CAFE LYOPHILISE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00813",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "aviculture biologique",
+        "alimentation volaille",
+        "abreuvement",
+        "cout alimentaire",
+        "poulets de chair"
+      ],
+      "titre_trouve": "Acheter ou fabriquer son aliment ? (Cahier volaille - Chapitre 4)",
+      "titre": "Alimentation et abreuvement des volailles en agriculture biologique (Chapitre 4)",
+      "resume": "Chapitre 4 isolé de 8 pages d'un guide technique français sur l'aviculture biologique, abordant les stratégies alimentaires (fabrication à la ferme ou achat) et la qualité physico-chimique de l'eau d'abreuvement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé (chapitre 4) d'un guide technique français d'élevage avicole biologique. Document partiel et en contexte tempéré, archivé en interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Acheter ou fabriquer son aliment ? Voir le chapitre 8 consacré à la fabrication de l’aliment à la ferme"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00814",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "bulbe d'humidification",
+        "irrigation goutte a goutte",
+        "hydraulique agricole",
+        "exercices corriges",
+        "capacite de retention"
+      ],
+      "titre_trouve": "Calcul du bulbe d'humidification et du pourcentage d'humidification en irrigation goutte à goutte",
+      "titre": "Exercices corrigés sur le bulbe d'humidification en irrigation goutte-à-goutte",
+      "resume": "Fiche d'exercices d'application résolus sur le dimensionnement du bulbe d'humidification, le taux d'humidification du sol et l'eau disponible sous irrigation localisée au goutte-à-goutte.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche d'exercices universitaires non publiée au format Word, sans licence libre explicite. Archivée en interne.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calcul du bulbe d'humidification et du pourcentage d'humidification en irrigation goutte à goutte"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00815",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "pedologie",
+        "physique du sol",
+        "porosite",
+        "indice des vides",
+        "densite reelle",
+        "exercices"
+      ],
+      "titre_trouve": null,
+      "titre": "Calculs des paramètres physiques et pédologiques du sol",
+      "resume": "Fiche technique d'exercices de physique du sol détaillant les formules et calculs de la densité réelle, du volume des vides, de l'indice des vides et de la porosité d'un sol saturé.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Note d'exercices de travaux pratiques de pédologie non publiée au format Word (.docx), archivée en interne.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "Densité réelle (rhos) : 2.7 Poids humide (Wh) Indice des vides (e) Porosité (n)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00816",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "horticulture_jardinage"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "calendrier des semis",
+        "maraichage",
+        "potager",
+        "legumes",
+        "semis"
+      ],
+      "titre_trouve": "CALENDRIER ANNUEL DES SEMIS",
+      "titre": "Calendrier annuel des semis potagers et maraîchers",
+      "resume": "Tableau synthétique de 2 pages récapitulant les périodes de semis sous serre et en plein champ, durées de levée et de récolte pour les principaux légumes potagers en climat tempéré.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Calendrier de semis conçu pour le climat tempéré européen (référence aux gelées et serres chauffées), inadapté aux zones tropicales subsahariennes. Archivé.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.8,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CALENDRIER ANNUEL DES SEMIS aux 1ères gelées"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00818",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "aviculture",
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2015,
+      "auteurs": "Aladino Solar",
+      "source_organisation": "Aladino Solar",
+      "mots_cles": [
+        "incubateur solaire",
+        "couveuse solaire",
+        "aviculture villageoise",
+        "eclosion",
+        "energie solaire",
+        "poulets"
+      ],
+      "titre_trouve": "ALADINO INCUBATEUR DES OEUF SOLAIRE",
+      "titre": "Guide d'utilisation de l'incubateur avicole solaire Aladino (96 œufs)",
+      "resume": "Notice technique et guide d'utilisation de 8 pages d'une couveuse solaire de 96 œufs fonctionnant sur batterie et panneaux solaires : réglage des capteurs, humidité, mirage et éclosion en milieu rural.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide d'utilisation pratique d'une technologie solaire d'incubation très adaptée aux exploitations avicoles familiales en zone rurale non raccordée.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ALADINO INCUBATEUR DES OEUF SOLAIRE"
+        },
+        {
+          "champ": "resume",
+          "page": 2,
+          "extrait": "Cette machine incubateur peut incuber jusqu'à 96 oeuf il est très utile surtout dans les villages où l'électricité ne vient pas"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00819",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": [
+        "equipements_technologie",
+        "economie_filieres_marches"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Karim Houmy, Mayling Flores Rojas, Claude Side",
+      "source_organisation": "FAO",
+      "mots_cles": [
+        "agri-location",
+        "mecanisation agricole",
+        "afrique subsaharienne",
+        "modeles economiques",
+        "tracteurs",
+        "fao"
+      ],
+      "titre_trouve": "Agri-location en Afrique sub-saharienne - Modèles économiques pour investir dans la mécanisation durable",
+      "titre": "Agri-location en Afrique subsaharienne : modèles économiques pour la mécanisation durable",
+      "resume": "Rapport de référence de la FAO (78 pages) analysant les modèles économiques de location de machines agricoles en Afrique subsaharienne (études de cas en Côte d'Ivoire et Ouganda) pour guider les investissements durables.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Publication institutionnelle majeure de la FAO sur les modèles d'agri-location en Afrique subsaharienne, réservée aux membres de la plateforme.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "AGRI-LOCATION EN AFRIQUE SUB-SAHARIENNE MODÈLES ÉCONOMIQUES POUR INVESTIR DANS LA MÉCANISATION DURABLE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "Organisation des Nations Unies pour l'alimentation et l'agriculture Rome, 2021"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00820",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "qualite_securite_normes"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture et pêche",
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "FAO",
+      "source_organisation": "FAO",
+      "mots_cles": [
+        "aquaculture",
+        "peche",
+        "transformation bleue",
+        "fao",
+        "ressources halieutiques",
+        "sofia"
+      ],
+      "titre_trouve": "La Situation mondiale des pêches et de l’aquaculture 2022 - Vers une transformation bleue",
+      "titre": "La situation mondiale des pêches et de l'aquaculture 2022 : Vers une transformation bleue",
+      "resume": "Rapport mondial phare de la FAO (SOFIA 2022, 294 pages) présentant l'état global des pêches de capture et de l'aquaculture, les données de production, le commerce halieutique et la stratégie de transformation bleue.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport phare mondial de la FAO (SOFIA 2022) sur les pêches et l'aquaculture, document de référence complet destiné aux membres.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA SITUATION MONDIALE DES PECHES ET DE L’AQUACULTURE 2022 VERS UNE TRANSFORMATION BLEUE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "FAO. 2022. La Situation mondiale des pêches et de l’aquaculture 2022. Vers une transformation bleue. Rome, FAO."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00821",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": [
+        "politiques_strategies"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "FAO",
+      "source_organisation": "FAO",
+      "mots_cles": [
+        "marches agricoles",
+        "commerce agricole",
+        "soco",
+        "fao",
+        "filieres agricoles",
+        "politiques commerciales"
+      ],
+      "titre_trouve": "La situation des marchés des produits agricoles 2022 - La géographie du commerce alimentaire et agricole",
+      "titre": "La situation des marchés des produits agricoles 2022 (SOCO)",
+      "resume": "Rapport institutionnel de référence de la FAO (SOCO 2022, 138 pages) analysant les flux commerciaux agricoles mondiaux et régionaux, les chaînes de valeur globales et les politiques commerciales durables.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport phare mondial de la FAO sur l'économie et les marchés des produits agricoles, publication de haut niveau pour les membres de la plateforme.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA SITUATION DES MARCHES DES PRODUITS AGRICOLES 2022"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "FAO. 2022. La situation des marchés des produits agricoles 2022. Rome, FAO."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00822",
+      "domaine_principal": "transversal",
+      "sous_domaine": "numerique_technologies",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "agriculture_generale"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "FAO",
+      "source_organisation": "FAO",
+      "mots_cles": [
+        "sofa",
+        "automatisation",
+        "fao",
+        "technologies agricoles",
+        "mecanisation",
+        "systemes agroalimentaires"
+      ],
+      "titre_trouve": "Résumé de La Situation mondiale de l’alimentation et de l’agriculture 2022",
+      "titre": "Résumé de La situation mondiale de l'alimentation et de l'agriculture 2022 (SOFA)",
+      "resume": "Brochure de synthèse de 32 pages de la FAO (SOFA 2022) consacrée à l'automatisation de l'agriculture : motorisation, outils numériques, robotique et politiques d'inclusion des petits producteurs.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Synthèse officielle de 32 pages du rapport phare SOFA 2022 de la FAO sur l'automatisation agricole, destinée aux membres de la communauté.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA SITUATION MONDIALE DE L’ALIMENTATION ET DE L’AGRICULTURE RÉSUMÉ"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "FAO. 2022. Résumé de La Situation mondiale de l’alimentation et de l’agriculture 2022. Rome, FAO."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00823",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2013,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "circulation atmospherique",
+        "climatologie",
+        "meteorologie",
+        "pressions",
+        "cellules de hadley"
+      ],
+      "titre_trouve": "Chap. 12 LA CIRCULATION ATMOSPHERIQUE GENERALE",
+      "titre": "La circulation atmosphérique générale (Chapitre 12)",
+      "resume": "Support de cours de 10 pages correspondant au chapitre 12 d'un module de climatologie générale : mécanismes physiques, répartition zonale des pressions et dynamique des vents planétaires.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre 12 isolé d'un polycopié universitaire non publié, sans couverture officielle ni droits d'auteur identifiés. Archivé en interne.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chap. 12 LA CIRCULATION ATMOSPHERIQUE GENERALE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00824",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2021,
+      "auteurs": "Dr Cheikh Diop",
+      "source_organisation": "Université Cheikh Anta Diop de Dakar (UCAD)",
+      "mots_cles": [
+        "dynamique du climat",
+        "circulation atmospherique",
+        "ucad",
+        "senegal",
+        "climatologie"
+      ],
+      "titre_trouve": "GEO 352 : Dynamique du climat 1 - Chapitre 1 : Rappels",
+      "titre": "Dynamique du climat : Notions de base et circulation (Chapitre 1)",
+      "resume": "Support de cours de 7 diapositives (cours GEO 352, UCAD Dakar) par le Dr Cheikh Diop, présentant les notions de base de climatologie : repérage spatial, champ de pression et circulation atmosphérique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama de cours universitaire partiel (chapitre 1) sans licence libre explicite. Archivé en interne conformément aux règles.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GEO 352 2 Dynamique du climat 1: Circulation Chapitre 1 : Rappels Dr Cheikh DIOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00825",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2021,
+      "auteurs": "Dr Cheikh Diop",
+      "source_organisation": "Université Cheikh Anta Diop de Dakar (UCAD)",
+      "mots_cles": [
+        "climat tropical",
+        "aerologie",
+        "basses pressions intertropicales",
+        "hautes pressions",
+        "ucad",
+        "senegal"
+      ],
+      "titre_trouve": "GEO 352 : Dynamique du climat 1 - Chapitre 2 : Cadre aérologique tropical",
+      "titre": "Dynamique du climat : Cadre aérologique tropical (Chapitre 2)",
+      "resume": "Support de cours universitaire de 8 diapositives (UCAD Dakar) par le Dr Cheikh Diop, détaillant le cadre aérologique tropical, les cellules anticycloniques et les basses pressions intertropicales (BPIT).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama de cours universitaire partiel (chapitre 2) sans licence de diffusion ouverte. Archivé en interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GEO 352 2 Dynamique du climat 1: Circulation Chapitre 2 : Cadre aérologique tropical Dr Cheikh DIOP"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00826",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Abdelaali Bencheikh",
+      "source_organisation": null,
+      "mots_cles": [
+        "relation sol plante",
+        "reserve utile",
+        "rfu",
+        "humidite au champ",
+        "point de fletrissement",
+        "eau du sol"
+      ],
+      "titre_trouve": "Relation sol plante - Chapitre 2 : Disponibilité de l'eau pour les plantes",
+      "titre": "Relation sol-plante : Disponibilité de l'eau pour les cultures (Chapitre 2)",
+      "resume": "Chapitre de cours universitaire de 11 pages par Abdelaali Bencheikh détaillant les constantes hydriques du sol (capacité au champ, point de flétrissement, RU et RFU) avec exercices d'application.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours partiel (chapitre 2 isolé) sans licence de réutilisation libre. Archivé en interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Relation sol plante BENCHEIKH Abdelaali 2019 Chapitre 2 : Disponibilité de l'eau pour les plantes"
+        }
+      ]
+    }
+  ]
+}

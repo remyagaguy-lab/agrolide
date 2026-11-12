@@ -1,0 +1,778 @@
+{
+  "batch_number": 3,
+  "results": [
+    {
+      "id": "DOC-00029",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Abdallah Laiche",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "botanique",
+        "biologie vegetale",
+        "cours",
+        "sciences de base"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 5 - Cours de botanique",
+      "resume": "Document numérisé de 25 pages comportant des résumés de cours de botanique générale établis par Abdallah Laiche. Nécessite une reconnaissance optique de caractères (OCR).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte exploitable (filigrane nominatif uniquement), nécessitant un OCR et une validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé5 Botanique.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00030",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Dahbia Tabti",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "botanique",
+        "taxonomie",
+        "systematique",
+        "classification vegetale",
+        "reproduction asexuee"
+      ],
+      "titre_trouve": "Résumé du cours de botanique (L2 Sciences agronomiques et Ecologie et environnement) 2019/2020 (TABTI D.)",
+      "titre": "Résumé du cours de botanique - L2 Sciences agronomiques",
+      "resume": "Support de cours résumant les notions fondamentales de botanique pour les étudiants de L2 en agronomie et écologie : principes de classification, taxonomie, systématique végétale et modes de reproduction asexuée.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non assorti d'une licence libre de diffusion, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé du cours de botanique (L2 Sciences agronomiques et Ecologie et environnement) 2019/2020 (TABTI D.)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00031",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "botanique",
+        "licence agronomie",
+        "cours",
+        "sciences de base"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 1 - Botanique L2",
+      "resume": "Document numérisé de 7 pages constituant la première partie d'un résumé de cours de botanique pour étudiants de deuxième année de licence. Nécessite un OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé partiel sans texte exploitable, nécessitant un OCR pour évaluer le contenu et les droits de diffusion.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "resume 1 botanique l2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00032",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "botanique",
+        "licence agronomie",
+        "cours",
+        "sciences de base"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 2 - Botanique L2",
+      "resume": "Document numérisé de 16 pages constituant le deuxième volet de résumés de cours de botanique générale de niveau L2. Nécessite un OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fascicule numérisé sans texte exploitable faisant partie d'une série de cours, nécessitant OCR et validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "resume 2 botanique l2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00033",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "botanique",
+        "licence agronomie",
+        "cours",
+        "sciences de base"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 3 - Botanique L2",
+      "resume": "Document numérisé de 13 pages correspondant au troisième volet de résumés de cours de botanique de niveau L2. Nécessite un traitement OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fascicule numérisé de botanique L2 sans texte extractible, nécessitant un traitement OCR et une validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "resume 3 botanique l2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00034",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "immunologie",
+        "medecine",
+        "cours",
+        "sante"
+      ],
+      "titre_trouve": "résumé immuno",
+      "titre": "Résumé 1 - Immunologie médicale",
+      "resume": "Document numérisé de 35 pages issu de CamScanner comportant des notes de cours d'immunologie médicale humaine, hors du périmètre agricole et vétérinaire.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de cours d'immunologie médicale humaine, hors du périmètre thématique de la plateforme Agrolide.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé immuno"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00035",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Dr. Houssem Samari",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "immunologie",
+        "organes lymphoides",
+        "thymus",
+        "moelle osseuse",
+        "deficits immunitaires",
+        "sida"
+      ],
+      "titre_trouve": "Résumé des cours de l’immunologie :",
+      "titre": "Résumé des cours de l'immunologie",
+      "resume": "Synthèse de cours d'immunologie médicale de 10 pages décrivant les organes lymphoïdes primaires et les déficits immunitaires humains congénitaux et acquis (SIDA).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Support de cours d'immunologie médicale humaine dispensé par un médecin, hors du périmètre agricole d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé des cours de l’immunologie :"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00036",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "immunologie",
+        "medecine",
+        "cours",
+        "sante"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 2 - Immunologie médicale",
+      "resume": "Fascicule numérisé de 19 pages contenant le deuxième volet de résumés d'immunologie médicale humaine, hors champ agricole et vétérinaire.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Cours d'immunologie médicale humaine, hors du périmètre sectoriel de la plateforme.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 2 immunologie.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00037",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "immunologie",
+        "medecine",
+        "cours",
+        "sante"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 3 - Immunologie médicale",
+      "resume": "Fascicule numérisé de 15 pages contenant le troisième volet de résumés d'immunologie médicale humaine. Hors périmètre Agrolide.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document d'immunologie humaine ne relevant pas des domaines d'intervention d'Agrolide.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 3 immunologie.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00038",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "immunologie",
+        "medecine",
+        "cours",
+        "sante"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 4 - Immunologie médicale",
+      "resume": "Fascicule numérisé de 6 pages contenant le quatrième volet de résumés d'immunologie médicale humaine. Hors périmètre Agrolide.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document d'immunologie médicale humaine exclu du périmètre agricole et vétérinaire.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 4 immunologie.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00039",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "microbiologie",
+        "cours",
+        "sciences de base",
+        "microorganismes"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 1 - Cours de microbiologie",
+      "resume": "Document numérisé de 28 pages contenant la première partie d'un cours de microbiologie générale. Document nécessitant une reconnaissance optique de caractères (OCR).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé sans texte exploitable et faisant partie d'un ensemble de cours, nécessitant un OCR et une validation humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé1 Microbiologie.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00040",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "microbiologie",
+        "bacteries",
+        "mycetes",
+        "levures",
+        "virus",
+        "classification microbienne"
+      ],
+      "titre_trouve": "Chapitre1 : Le Monde Microbien",
+      "titre": "Résumé de microbiologie - Le monde microbien",
+      "resume": "Synthèse de cours de microbiologie générale de 8 pages abordant la classification et la diversité du monde microbien : mycètes (levures, moisissures), algues, protozoaires, bactéries et virus.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche de synthèse académique partielle non assortie d'une licence libre de diffusion, archivée pour usage interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chapitre1 : Le Monde Microbien"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00041",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "microbiologie",
+        "cours",
+        "sciences de base",
+        "microorganismes"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 3 - Cours de microbiologie",
+      "resume": "Document numérisé de 14 pages constituant le troisième volet de résumés de cours de microbiologie générale. Nécessite une reconnaissance optique de caractères (OCR).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé sans texte exploitable nécessitant un traitement OCR pour identifier le contenu exact et le statut de diffusion.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé3 Microbiologie.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00042",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "microbiologie",
+        "cours",
+        "sciences de base",
+        "microorganismes"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 4 - Cours de microbiologie",
+      "resume": "Document numérisé de 12 pages constituant le quatrième volet de résumés de cours de microbiologie générale. Nécessite une reconnaissance optique de caractères (OCR).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document partiel numérisé sans texte exploitable nécessitant un OCR et une vérification humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé4 Microbiologie.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00043",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Abdallah Laiche",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "microbiologie",
+        "cours",
+        "sciences de base",
+        "microorganismes"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 5 - Cours de microbiologie",
+      "resume": "Document numérisé de 28 pages regroupant des résumés de cours de microbiologie générale établis par Abdallah Laiche. Nécessite une reconnaissance optique de caractères.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé sans texte exploitable portant le nom d'un étudiant, nécessitant un OCR et une validation humaine de son contenu.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé5 Microbiologie.pdf"
+        }
+      ]
+    }
+  ]
+}

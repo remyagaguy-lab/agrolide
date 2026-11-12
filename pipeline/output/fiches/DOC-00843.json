@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00843",
+  "sha256": "e50a745bb6333d7c9e28d87d8b8996da616b4415cde3a7d1bf698f45c8ed8a4c",
+  "nom_original": "copy_201508__cs__management_guid.pdf",
+  "chemin_relatif_source": "OD_Docs/copy_201508__cs__management_guid.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1562686,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 39,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2018,
+  "auteurs": "Novogen",
+  "source_organisation": "Novogen",
+  "mots_cles": [
+    "pondeuses",
+    "novogen brown",
+    "aviculture commerciale",
+    "elevage avicole",
+    "poussiniere",
+    "conduite d'elevage"
+  ],
+  "titre_trouve": "Guide d’élevage des pondeuses commerciales – NOVOgen BROWN",
+  "titre": "Guide d'élevage des pondeuses commerciales - NOVOgen Brown",
+  "resume": "Guide technique complet de conduite d'élevage de la poule pondeuse commerciale NOVOgen Brown : normes de température, gestion de la poussinière, alimentation, litière et biosécurité.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique commercial d'entreprise privée sans licence de rediffusion libre, archivé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Guide d’élevage des pondeuses commerciales – NOVOgen BROWN"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "WWW.NOVOGEN-LAYERS.COM"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00843__guide-d-elevage-des-pondeuses-commerciales-novogen-brow.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00843__guide-d-elevage-des-pondeuses-commerciales-novogen-brow.pdf"
+}

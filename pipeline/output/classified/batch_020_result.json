@@ -1,0 +1,794 @@
+{
+  "batch_number": 20,
+  "results": [
+    {
+      "id": "DOC-00285",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "ecologie forestiere",
+        "facteurs biotiques",
+        "competition intraspecifique",
+        "foret",
+        "ecosysteme"
+      ],
+      "titre_trouve": "Ecologie forestière Chapitre 2 Les facteurs biotiques",
+      "titre": "Écologie forestière : Chapitre 2, Les facteurs biotiques",
+      "resume": "Support de cours universitaire abordant les facteurs biotiques en écologie forestière : interactions homotypiques, hétérotypiques, compétition intraspécifique et impact des incendies.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un cours universitaire sans licence libre, archivé.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Ecologie forestière \nChapitre 2 Les facteurs biotiques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00286",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "wissem",
+      "source_organisation": null,
+      "mots_cles": [
+        "floristique",
+        "ecologie forestiere",
+        "repartition des especes",
+        "botanique forestiere",
+        "aire de dispersion"
+      ],
+      "titre_trouve": "Ecologie forestière Chapitre 3 Floristique",
+      "titre": "Écologie forestière : Chapitre 3, Floristique",
+      "resume": "Support de cours universitaire sur la floristique, étudiant l'aire de répartition des espèces ligneuses et herbacées et les facteurs d'adaptation écologique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un polycopié universitaire non libre, archivé.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Ecologie forestière \nChapitre 3 Floristique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00287",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Dalila Beddal",
+      "source_organisation": "Université Mohammed Boudiaf - M'sila",
+      "mots_cles": [
+        "bioclimatologie",
+        "sciences du sol",
+        "agronomie",
+        "climat",
+        "interactions climat vegetal"
+      ],
+      "titre_trouve": "Matière : Bioclimatologie - Chapitre I : Généralités sur la Bioclimatologie",
+      "titre": "Généralités sur la bioclimatologie (Master 1 Science du Sol)",
+      "resume": "Support de cours d'agronomie présentant les concepts généraux de la bioclimatologie et les relations d'équilibre entre climat, sol et organismes vivants.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Premier chapitre isolé d'un cours universitaire algérien, non libre de droits.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.92
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Université Mohammed Boudiaf-M’sila ... Master I : Science du Sol (SS) ... Matière : Bioclimatologie ... Chapitre I : Généralités sur la Bioclimatologie"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00288",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Dalila Beddal",
+      "source_organisation": "Université Mohammed Boudiaf - M'sila",
+      "mots_cles": [
+        "bioclimatologie",
+        "elements climatiques",
+        "temperature",
+        "precipitations",
+        "stations meteorologiques"
+      ],
+      "titre_trouve": "Matière : Bioclimatologie (UET) - Chapitre II : Eléments climatiques",
+      "titre": "Éléments climatiques en bioclimatologie (Master 1 Science du Sol)",
+      "resume": "Chapitre de cours universitaire examinant les grandeurs physiques mesurables du climat (température, vent, humidité, précipitations) et leur rôle écologique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un polycopié universitaire sans licence libre, archivé.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Université Mohammed Boudiaf-M’sila ... Master I : Science du sol (SS) ... Chapitre II : Eléments climatiques"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00289",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2010,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "matiere organique",
+        "eaux naturelles",
+        "qualite de l'eau",
+        "substances humiques",
+        "chimie de l'eau"
+      ],
+      "titre_trouve": "Chapitre I : Classification de la matière Organique des eaux naturelles",
+      "titre": "Classification de la matière organique des eaux naturelles",
+      "resume": "Revue bibliographique universitaire sur la caractérisation, l'origine et les classes de matières organiques dissoutes dans les eaux naturelles de surface.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre bibliographique extrait d'un travail académique non publié, incomplet et archivé.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.88,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chapitre I : Classification de la matière Organique des eaux naturelles"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00290",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Imane Abdellaoui",
+      "source_organisation": null,
+      "mots_cles": [
+        "developpement durable",
+        "environnement",
+        "ressources naturelles",
+        "croissance demographique",
+        "equite sociale"
+      ],
+      "titre_trouve": "Cours environnement et Développement Durable - Chapitre 2 : Le développement durable",
+      "titre": "Cours environnement et développement durable : Chapitre 2, Le développement durable",
+      "resume": "Support didactique universitaire abordant l'historique, les principes d'équité et les objectifs du développement durable face aux défis écologiques globaux.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre d'un cours universitaire non publié sous licence libre, archivé.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours environnement et Développement Durable ... Chapitre 2 : Le développement durable"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00291",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "enzymologie",
+        "biochimie",
+        "nomenclature EC",
+        "enzymes",
+        "travaux diriges"
+      ],
+      "titre_trouve": "Chapitre 5 enzymologie TD",
+      "titre": "Travaux dirigés d'enzymologie : Chapitre 5, Nomenclature et classification EC",
+      "resume": "Support de TD présentant le système de nomenclature et de classification enzymatique EC établi par l'IUBMB pour les étudiants en biochimie.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama de TD incomplet au format PPT, sans licence de réutilisation.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.8,
+        "completude": 0.75
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chapitre 5  enzymologie  TD"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00292",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "Dr. Loucif",
+      "source_organisation": "Université Chadli Bendjedid - El Tarf",
+      "mots_cles": [
+        "cytophysiologie",
+        "medecine veterinaire",
+        "neurotransmission",
+        "neurone",
+        "potentiel d'action"
+      ],
+      "titre_trouve": "Première année vétérinaire, Cours de cytophysiologie - Chapitre IX : La neurotransmission",
+      "titre": "Cours de cytophysiologie vétérinaire : Chapitre IX, La neurotransmission",
+      "resume": "Polycopié de cours pour étudiants vétérinaires décrivant l'organisation anatomique du neurone, la genèse du potentiel d'action et la transmission synaptique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un polycopié universitaire vétérinaire algérien sans licence libre.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.88,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Université Chadli Bendjedid- El Tarf ... Première année vétérinaire, Cours de cytophysiologie ... Chapitre IX : La neurotransmission"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00293",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cuniculture",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "François Lebas",
+      "source_organisation": "Cuniculture",
+      "mots_cles": [
+        "cuniculture",
+        "lapin",
+        "pathologie cunicole",
+        "elevage tropical",
+        "hygiene",
+        "prophylaxie"
+      ],
+      "titre_trouve": "Élevage du lapin en milieu tropical – Chapitre 4 – Assurer la bonne santé de l'animal (maladies, santé, hygiène)",
+      "titre": "Élevage du lapin en milieu tropical : Chapitre 4, Assurer la bonne santé de l'élevage",
+      "resume": "Chapitre spécialisé sur la santé et la prophylaxie de l'élevage cunicole en zone tropicale, détaillant les pathologies digestives, respiratoires, virales et la gestion sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel (chapitre 4 uniquement) d'un guide technique cunicole de référence, archivé car incomplet.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Élevage du lapin en milieu tropical – Chapitre 4 – Assurer la bonne santé de l'animal (maladies, santé, hygiène)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00294",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "Jean-Yves Massenet",
+      "source_organisation": "Lycée de Mesnières",
+      "mots_cles": [
+        "pedologie",
+        "chimie du sol",
+        "complexe adsorbant",
+        "capacite d'echange cationique",
+        "acidite"
+      ],
+      "titre_trouve": "CHAPITRE V : CHIMIE DU SOL",
+      "titre": "Chimie du sol : complexe adsorbant, acidité et fertilité (BTS Gestion Forestière)",
+      "resume": "Cours complet de chimie du sol pour étudiants forestiers, traitant en détail du complexe adsorbant argilo-humique, de l'acidité et de la dynamique des nutriments.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre d'un polycopié forestier tempéré non libre, archivé conformément aux directives.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.88
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "5ème version ( mars 2013 )\nCHAPITRE V :\nCHIMIE DU SOL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00295",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "coefficient d'uniformite",
+        "goutte-a-goutte",
+        "debit",
+        "emetteurs"
+      ],
+      "titre_trouve": "Coefficient d’uniformité",
+      "titre": "Calcul du coefficient d'uniformité de distribution en irrigation",
+      "resume": "Fiche de calcul très succincte présentant les seuils d'uniformité et le principe d'échantillonnage des débits d'émetteurs d'un réseau d'irrigation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document fragmentaire (simple note de quelques lignes incomplète), non diffusable.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.7,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Coefficient d’uniformité\nPour vérifier l’uniformité de distribution il faut calculer"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00296",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "politiques_strategies",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2021,
+      "auteurs": "Awa Y. Yade",
+      "source_organisation": "Université Cheikh Anta Diop de Dakar",
+      "mots_cles": [
+        "histoire agraire",
+        "colonisation agricole",
+        "afrique de l'ouest",
+        "cultures commerciales",
+        "senegal"
+      ],
+      "titre_trouve": "La colonisation agricole en Afrique occidentale: du maraîchage aux cultures commerciales de 1880 à l’entre deux-guerres",
+      "titre": "La colonisation agricole en Afrique occidentale : du maraîchage aux cultures commerciales (1880-1939)",
+      "resume": "Mémoire universitaire analysant les transformations structurelles de l'agriculture ouest-africaine durant la période coloniale, du maraîchage local aux grandes filières d'exportation.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire universitaire non publié sous licence ouverte, archivé conformément à la règle stricte sur les mémoires.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.92
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La colonisation agricole en Afrique occidentale: du maraîchage aux cultures commerciales de 1880 à l’entre deux-guerres"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00297",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "colza",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "colza",
+        "oleagineux",
+        "culture",
+        "production vegetale",
+        "scan"
+      ],
+      "titre_trouve": null,
+      "titre": "Guide technique sur la culture du colza (Document scanné)",
+      "resume": "Fichier PDF scanné sans couche texte exploitable portant sur la culture du colza, à soumettre à l'OCR pour analyse de contenu et des droits.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "auteur_introuvable",
+        "titre_introuvable",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible, droits et complétude à vérifier après OCR.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Colza.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00298",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Didier Création",
+      "source_organisation": null,
+      "mots_cles": [
+        "incubateur",
+        "couveuse artisanale",
+        "aviculture",
+        "rotation automatique",
+        "oeufs"
+      ],
+      "titre_trouve": "Comment fabriquer l'incubateur le plus automatique avec la rotation automatique des œufs",
+      "titre": "Comment fabriquer un incubateur à rotation automatique pour œufs de volailles",
+      "resume": "Guide pas-à-pas illustré détaillant la conception, le dimensionnement, l'assemblage et la régulation d'un incubateur artisanal automatisé pour élevages avicoles.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide pratique à forte valeur ajoutée locale mais issu d'une source web sans licence explicite, statut de diffusion à valider.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Comment fabriquer l'incubateur le plus automatique avec la rotation automatique des œufs"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00299",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2018,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "poules pondeuses",
+        "alimentation avicole",
+        "ponte",
+        "nutrition animale",
+        "aviculture"
+      ],
+      "titre_trouve": "Comment nourrir des poules pondeuses",
+      "titre": "Comment bien nourrir des poules pondeuses",
+      "resume": "Fiche pratique détaillant la gestion de l'alimentation, les besoins nutritionnels spécifiques et l'hygiène du poulailler pour optimiser la ponte des poules.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide pratique très utile pour les aviculteurs mais dont la licence et la source originelle doivent être validées avant mise en ligne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.5,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Comment nourrir des poules pondeuses"
+        }
+      ]
+    }
+  ]
+}

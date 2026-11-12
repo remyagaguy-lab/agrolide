@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00901",
+  "sha256": "09e174da12f60b2b388338693645b691232913d8e21a5c1e1331b1f8d0413ada",
+  "nom_original": "farine_poisson_graisses_animales_huile_suif_saindoux_cretons_2.pdf",
+  "chemin_relatif_source": "OD_Docs/farine_poisson_graisses_animales_huile_suif_saindoux_cretons_2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 36186,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "produits animaux",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "farine de poisson",
+    "graisses animales",
+    "suif",
+    "equarrissage",
+    "dechets d'abattoir",
+    "coproduits"
+  ],
+  "titre_trouve": "FARINES ET GRAISSES ANIMALES",
+  "titre": "Synoptique de procédé : Fabrication de farines et graisses animales",
+  "resume": "Schéma technique de procédé décrivant les étapes industrielles de transformation des coproduits de pêche et d'abattoir en farines de poisson, suifs et graisses animales.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Schéma technologique de valorisation des coproduits animaux issu d'un bureau d'études sans licence explicite ; validation humaine requise.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FARINES ET GRAISSES ANIMALES ISAA-MF 2004"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0058",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00901__synoptique-de-procede-fabrication-de-farines-et-graisse.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-00901__synoptique-de-procede-fabrication-de-farines-et-graisse.pdf"
+}

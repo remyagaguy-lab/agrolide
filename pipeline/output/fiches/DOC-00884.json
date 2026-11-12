@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00884",
+  "sha256": "f43c932797126741c035db3cad1c42df1753a50d426c9e31ab1074461cdffd2a",
+  "nom_original": "elevage.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 482205,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 17,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Sénégal, Bénin, Tchad",
+  "annee": 2013,
+  "auteurs": "S.B. Ayssiwede, A. Dieng, M.R.B. Houinato, C.A.A.M. Chrysostome, Y. Issa, J.-L. Hornick, A. Missohou",
+  "source_organisation": "EISMV Dakar / Annales de Médecine Vétérinaire",
+  "mots_cles": [
+    "aviculture traditionnelle",
+    "poulet local",
+    "senegal",
+    "afrique subsaharienne",
+    "eismv",
+    "zootechnie"
+  ],
+  "titre_trouve": "Elevage des poulets traditionnels ou indigènes au Sénégal et en Afrique Subsaharienne : état des lieux et contraintes",
+  "titre": "Élevage des poulets traditionnels au Sénégal et en Afrique subsaharienne",
+  "resume": "Article de synthèse scientifique analysant la situation, les performances zootechniques et les contraintes sanitaires et nutritionnelles de l'aviculture traditionnelle en Afrique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "Open Access académique (Ann. Méd. Vét.)",
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique complet publié en libre accès sur l'aviculture subsaharienne, mis à disposition des membres et chercheurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Elevage des poulets traditionnels ou indigènes au Sénégal et en Afrique Subsaharienne : état des lieux et contraintes"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0055",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00884__elevage-des-poulets-traditionnels-au-senegal-et-en-afri.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00884__elevage-des-poulets-traditionnels-au-senegal-et-en-afri.pdf"
+}

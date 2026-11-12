@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00816",
+  "sha256": "27b86bc2a0a4453a91966ebea0f609b4a4858b09be4ae6a2c3e2c6a2458579a8",
+  "nom_original": "calendrier-annuel-des-semis.pdf",
+  "chemin_relatif_source": "OD_Docs/calendrier-annuel-des-semis.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 221778,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "outil_modele",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "calendrier des semis",
+    "maraichage",
+    "potager",
+    "legumes",
+    "semis"
+  ],
+  "titre_trouve": "CALENDRIER ANNUEL DES SEMIS",
+  "titre": "Calendrier annuel des semis potagers et maraîchers",
+  "resume": "Tableau synthétique de 2 pages récapitulant les périodes de semis sous serre et en plein champ, durées de levée et de récolte pour les principaux légumes potagers en climat tempéré.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Calendrier de semis conçu pour le climat tempéré européen (référence aux gelées et serres chauffées), inadapté aux zones tropicales subsahariennes. Archivé.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.8,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CALENDRIER ANNUEL DES SEMIS aux 1ères gelées"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00816__calendrier-annuel-des-semis-potagers-et-maraichers.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00816__calendrier-annuel-des-semis-potagers-et-maraichers.pdf"
+}

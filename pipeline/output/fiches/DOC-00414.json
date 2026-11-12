@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00414",
+  "sha256": "64cf1ddd0916ff4d523b83dd2d924dc3b9fd92f68eb636ff56c30ebbd2d959fa",
+  "nom_original": "FOLERE.pdf",
+  "chemin_relatif_source": "OD_Docs/FOLERE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1003920,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bissap",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "bissap",
+    "folere",
+    "hibiscus sabdariffa",
+    "plantes medicinales",
+    "itineraire technique",
+    "cameroun"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE CULTURE DU FOLERE/ OYORO/ BISAP (Hibiscus sabdariffa)",
+  "titre": "Technologie de culture du foléré ou bissap au Cameroun",
+  "resume": "Fiche technique synthétique sur la culture du foléré (bissap) au Cameroun, couvrant la préparation du sol, le semis, l'entretien, la récolte et le séchage des calices.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique complète sur une culture tropicale emblématique, émanant d'un institut agréé, publiée en libre accès.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE CULTURE DU FOLERE/ OYORO/ BISAP (Hibiscus sabdariffa)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00414__technologie-de-culture-du-folere-ou-bissap-au-cameroun.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00414__technologie-de-culture-du-folere-ou-bissap-au-cameroun.pdf"
+}

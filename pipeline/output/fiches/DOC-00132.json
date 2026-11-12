@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00132",
+  "sha256": "8b4328db5aca0a3bcaa78b24d4969895d18740c15d1184b2b3a168747ffff675",
+  "nom_original": "688215a1d07ef3bcbad13c769ca368e2bea7e1a3.pdf",
+  "chemin_relatif_source": "OD_Docs/688215a1d07ef3bcbad13c769ca368e2bea7e1a3.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 10526971,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 69,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Niger",
+  "annee": 2021,
+  "auteurs": "Patrick Delmas, Simbo Keita",
+  "source_organisation": "Réseau National des Chambres d'Agriculture du Niger (RECA)",
+  "mots_cles": [
+    "recuperation des terres",
+    "ces/drs",
+    "zai",
+    "demi-lunes",
+    "niger",
+    "matiere organique",
+    "reca"
+  ],
+  "titre_trouve": "Formation des techniciens ONG sur les actions de récupération des terres",
+  "titre": "Formation sur les actions de récupération des terres dégradées au Niger (Zaï, demi-lunes, matière organique)",
+  "resume": "Support de formation pratique du RECA Niger pour techniciens d'ONG sur la restauration des terres sahéliennes dégradées : conception des ouvrages (zaï, demi-lunes), semis et gestion de la matière organique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Support de formation institutionnel et pratique du RECA Niger, au cœur des priorités sahéliennes de restauration des terres dégradées.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Formation des techniciens ONG sur les actions de récupération des terres"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Patrick Delmas / Réseau National des Chambres d’Agriculture du Niger"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00132__formation-sur-les-actions-de-recuperation-des-terres-de.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00132__formation-sur-les-actions-de-recuperation-des-terres-de.pdf"
+}

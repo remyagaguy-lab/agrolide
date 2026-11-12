@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00601",
+  "sha256": "2f002043a8ad0f7db3acb68c2eeb4cd36a5a9c9ac774808d48861bd770df2c1d",
+  "nom_original": "Maladie de la coccidiose.pdf",
+  "chemin_relatif_source": "OD_Docs/Maladie de la coccidiose.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 202175,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable",
+    "donnees_phyto_a_verifier"
+  ],
+  "nb_pages": 7,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "coccidiose",
+    "aviculture",
+    "sante animale",
+    "phytotherapie veterinaire",
+    "cailcedrat",
+    "burkina faso"
+  ],
+  "titre_trouve": "Maladie de la coccidiose",
+  "titre": "Prévention et traitement traditionnel de la coccidiose aviaire",
+  "resume": "Guide pratique de sensibilisation sur la coccidiose chez les volailles en Afrique de l'Ouest, décrivant les symptômes, l'hygiène et les traitements naturels (charbon, caïlcedrat).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide pratique d'aviculture biologique sans auteur formel ; validation humaine requise sur les droits et les recettes thérapeutiques.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.6,
+    "completude": 0.88
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Maladie de la coccidiose 1. DÉFINITION DE LA COCCIDIOSE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00601__prevention-et-traitement-traditionnel-de-la-coccidiose.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00601__prevention-et-traitement-traditionnel-de-la-coccidiose.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-01078",
+  "sha256": "ccebaab093167980d0f8fd1a997256b16ecde6dc39d0b9d6f8702deafe1ef47a",
+  "nom_original": "Perfectionnement 2 SM 2 - Besoins de la plante et gestion du sol.pdf",
+  "chemin_relatif_source": "OD_traites/Perfectionnement 2 SM 2 - Besoins de la plante et gestion du sol.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 7533476,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479939805-Perfectionnement_2_SM_2_-_Besoins_de_la_plante_et_gestion_du_sol.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 64,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Nouvelle-Calédonie",
+  "annee": 2016,
+  "auteurs": "Frédérique Ablain-Barrière",
+  "source_organisation": "Direction du Développement Rural de la province Sud (Nouvelle-Calédonie)",
+  "mots_cles": [
+    "fertilisation",
+    "nutrition des plantes",
+    "fertilite du sol",
+    "plan de fumure",
+    "cultures perennes",
+    "nouvelle-caledonie"
+  ],
+  "titre_trouve": "BESOINS DE LA PLANTE ET GESTION DU SOL - CULTURES PERENNES",
+  "titre": "Besoins de la plante et gestion de la fertilité du sol en cultures pérennes",
+  "resume": "Support de formation professionnelle de la DDR Nouvelle-Calédonie expliquant la nutrition minérale, la fertilité des sols et l'élaboration d'un plan de fumure.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Support de formation institutionnel complet de la Direction du Développement Rural de Nouvelle-Calédonie, mis à disposition des membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Direction du Développement Rural de la province Sud BESOINS DE LA PLANTE ET GESTION DU SOL Formateurs: Frédérique ABLAIN-BARRIERE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01078__besoins-de-la-plante-et-gestion-de-la-fertilite-du-sol.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-01078__besoins-de-la-plante-et-gestion-de-la-fertilite-du-sol.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00315",
+  "sha256": "da8dd39ce8b237263856e7f5d3576e400d4f0256e3374a258a7d754d931b4ce2",
+  "nom_original": "Cours de DRS 2021-2022 Partie 2.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours de DRS 2021-2022 Partie 2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4240108,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "droits_reserves",
+    "incomplet"
+  ],
+  "nb_pages": 39,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Abdelghani Zedam",
+  "source_organisation": "Université Mohamed Boudiaf de M'sila",
+  "mots_cles": [
+    "drs",
+    "erosion eolienne",
+    "lutte antierosive",
+    "brise-vent",
+    "conservation des eaux et sols"
+  ],
+  "titre_trouve": "La Défense et la Restauration des Sols (D R S) – Partie 2",
+  "titre": "Défense et restauration des sols (DRS) : lutte anti-érosive et érosion éolienne (Partie 2)",
+  "resume": "Deuxième volet du cours de DRS traitant des stratégies de lutte anti-érosive hydrique (aménagements, amélioration structurale) et des processus d'érosion éolienne.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Partie 2 d'un cycle de cours universitaire de sciences du sol, non couverte par une licence libre de diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La Défense et la Restauration des Sols (D R S) – Partie 2"
+    }
+  ],
+  "ensemble_id": "ENS-0012",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00315__defense-et-restauration-des-sols-drs-lutte-anti-erosive.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00315__defense-et-restauration-des-sols-drs-lutte-anti-erosive.pdf"
+}

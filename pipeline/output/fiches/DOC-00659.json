@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00659",
+  "sha256": "da6b775f0ef23d847d2d3e702d93cd2164a57398ec40d138614bba762af977f4",
+  "nom_original": "Pasteurization .pdf",
+  "chemin_relatif_source": "OD_Docs/Pasteurization .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3195329,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "conservation_post_recolte",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "en",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Gaurav Sharma",
+  "source_organisation": null,
+  "mots_cles": [
+    "pasteurization",
+    "food preservation",
+    "dairy technology",
+    "microorganisms",
+    "food safety"
+  ],
+  "titre_trouve": "PASTEURIZATION - The Science of Safe and Fresh",
+  "titre": "Pasteurization : The Science of Safe and Fresh Food Processing",
+  "resume": "Présentation pédagogique en anglais expliquant les principes, l'histoire, les barèmes thermiques et les applications industrielles de la pasteurisation (lait, jus, conserves).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Support didactique complet de technologie agroalimentaire en anglais, réservé aux membres pour la formation technique.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PASTEURIZATION Prepared By - Gaurav Sharma Food Technologist/Academic Writer \"The Science of Safe and Fresh\""
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00659__pasteurization-the-science-of-safe-and-fresh-food-proce.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/conservation_post_recolte/DOC-00659__pasteurization-the-science-of-safe-and-fresh-food-proce.pdf"
+}

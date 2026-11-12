@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00396",
+  "sha256": "fc035fec5a99fb17903fa31f4121ee6362f7047114a16539599de9b314bcb8c9",
+  "nom_original": "Exercice efficience irr.pdf",
+  "chemin_relatif_source": "OD_Docs/Exercice efficience irr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 94387,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "pastèque",
+  "pays": null,
+  "annee": 2025,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "efficience d'irrigation",
+    "goutte-a-goutte",
+    "pasteque",
+    "volume pompe",
+    "pertes d'eau"
+  ],
+  "titre_trouve": "Exercice : efficience",
+  "titre": "Exercice résolu : calcul de l'efficience d'un système d'irrigation au goutte-à-goutte (culture de pastèque)",
+  "resume": "Fiche de calcul résolu déterminant l'efficience hydraulique d'un réseau goutte-à-goutte sur une parcelle de pastèque de 10 hectares en comparant le volume consommé au volume pompé.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document d'exercice informel sans licence libre, archivé pour consultation pédagogique interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Exercice : efficience Efficience (%) ="
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00396__exercice-resolu-calcul-de-l-efficience-d-un-systeme-d-i.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00396__exercice-resolu-calcul-de-l-efficience-d-un-systeme-d-i.pdf"
+}

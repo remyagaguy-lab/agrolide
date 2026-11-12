@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00319",
+  "sha256": "b158f24e1948b974a42b3f166a99fd2c6a5301b28e34efbccd600da10cfa59dd",
+  "nom_original": "Cours irrigation.ppt",
+  "chemin_relatif_source": "OD_Docs/Cours irrigation.ppt",
+  "indice_ancien_dossier": null,
+  "format_source": "ppt",
+  "taille_octets": 1171456,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "besoins en eau",
+    "evapotranspiration",
+    "coefficient cultural",
+    "physique du sol"
+  ],
+  "titre_trouve": "Cours irrigation",
+  "titre": "Cours sur l’irrigation et les besoins en eau des cultures",
+  "resume": "Diaporama pédagogique abordant les principes de l'irrigation, l'évapotranspiration maximale (ETM), le coefficient cultural (Kc) et les facteurs pédoclimatiques.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Diaporama PowerPoint sans métadonnées d'auteur ni licence libre de diffusion.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.7,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours irrigation"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00319__cours-sur-lirrigation-et-les-besoins-en-eau-des-culture.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00319__cours-sur-lirrigation-et-les-besoins-en-eau-des-culture.pdf"
+}

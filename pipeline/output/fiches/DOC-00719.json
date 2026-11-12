@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00719",
+  "sha256": "748c5a58f93578a129fec99890b76d0f10e2c539569c728862b6b8f88f06d8d3",
+  "nom_original": "SM05_profruit.pdf",
+  "chemin_relatif_source": "OD_Docs/SM05_profruit.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 451478,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 146,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale",
+    "agroeconomie"
+  ],
+  "sous_domaine": "statistiques_biometrie",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "arboriculture fruitière",
+  "pays": "Mali",
+  "annee": 2001,
+  "auteurs": "AFRISTAT, IER Mali, DNSI Mali",
+  "source_organisation": "AFRISTAT / IER Mali",
+  "mots_cles": [
+    "statistiques agricoles",
+    "production fruitiere",
+    "afristat",
+    "mali",
+    "echantillonnage",
+    "vergers"
+  ],
+  "titre_trouve": "ENQUETE TEST SUR L’ESTIMATION DE LA PRODUCTION FRUITIERE - RAPPORT FINAL",
+  "titre": "Enquête test sur l'estimation de la production fruitière au Mali (AFRISTAT)",
+  "resume": "Rapport méthodologique officiel d'AFRISTAT et de l'IER définissant un protocole statistique d'enquête pour l'estimation objective des rendements et de la production fruitière (mangues, agrumes, papayes) au Mali.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport institutionnel d'AFRISTAT apportant une méthodologie statistique rigoureuse, réservé aux membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "AFRISTAT ... ENQUETE TEST SUR L’ESTIMATION DE LA PRODUCTION FRUITIERE RAPPORT FINAL Série Méthodes n°5 mai 2001"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00719__enquete-test-sur-l-estimation-de-la-production-fruitier.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/statistiques_biometrie/DOC-00719__enquete-test-sur-l-estimation-de-la-production-fruitier.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00243",
+  "sha256": "d673dbc0079a478dc8f7d9e7c11e99fbfdea9507cb19bd13aa257e49fc67181a",
+  "nom_original": "Basse-cour_Document_complet_13_02_2013.pdf",
+  "chemin_relatif_source": "OD_Docs/Basse-cour_Document_complet_13_02_2013.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7008814,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 35,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "aviculture",
+  "pays": "Canada",
+  "annee": 2013,
+  "auteurs": "Éleveurs de volailles du Québec, Dre Manon Racicot",
+  "source_organisation": "Éleveurs de volailles du Québec",
+  "mots_cles": [
+    "aviculture",
+    "basse-cour",
+    "volailles",
+    "poules pondeuses",
+    "quebec",
+    "guide d'elevage"
+  ],
+  "titre_trouve": "GUIDE D’ÉLEVAGE DE VOLAILLES DE BASSE-COUR",
+  "titre": "Guide d'élevage de volailles de basse-cour",
+  "resume": "Guide pratique complet sur la conduite d'un petit élevage avicole familial au Québec : logement, biosécurité, alimentation et réglementation locale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide québécois destiné à un élevage en climat froid et sous cadre réglementaire canadien, archivé pour référence.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "GUIDE D’ÉLEVAGE DE VOLAILLES DE BASSE-COUR"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 2,
+      "extrait": "Éleveurs de volailles du Québec"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00243__guide-d-elevage-de-volailles-de-basse-cour.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00243__guide-d-elevage-de-volailles-de-basse-cour.pdf"
+}

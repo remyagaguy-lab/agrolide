@@ -1,0 +1,71 @@
+{
+  "id": "DOC-01072",
+  "sha256": "f14a699b57f045f278040c92572076e85bd655fb541c599181582b7acecee05b",
+  "nom_original": "CEFCNSTECPV_.02.pdf",
+  "chemin_relatif_source": "OD_traites/CEFCNSTECPV_.02.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 143598,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479374912-CEFCNSTECPV_.02.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "tomate",
+  "pays": "Sénégal",
+  "annee": 2008,
+  "auteurs": "Jean-Paul Courchinoux",
+  "source_organisation": null,
+  "mots_cles": [
+    "tomate",
+    "cultures maraicheres",
+    "afrique tropicale",
+    "technisem",
+    "protection des cultures",
+    "saison seche"
+  ],
+  "titre_trouve": "La culture de la tomate - Fiche technique Tomate",
+  "titre": "Fiche technique : La culture de la tomate en Afrique tropicale",
+  "resume": "Fiche technique pratique pour la culture de la tomate en milieu tropical africain, détaillant le choix variétal adapté, la pépinière et la lutte contre les ravageurs.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique rédigée par un auteur indépendant sans cadre institutionnel ni licence ouverte explicite, archivée à titre documentaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.78,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique Tomate – JP Courchinoux Décembre 2008 La culture de la tomate 1. Généralités"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01072__fiche-technique-la-culture-de-la-tomate-en-afrique-trop.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01072__fiche-technique-la-culture-de-la-tomate-en-afrique-trop.pdf"
+}

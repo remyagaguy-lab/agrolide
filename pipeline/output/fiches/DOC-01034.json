@@ -1,0 +1,73 @@
+{
+  "id": "DOC-01034",
+  "sha256": "4b197ca9bc712ed7a344dae161627ff997deb6d8b2c2f5aeff117c756148a35b",
+  "nom_original": "randrianaivoAndriamparanyH_PH_M1_15.pdf",
+  "chemin_relatif_source": "OD_Docs/randrianaivoAndriamparanyH_PH_M1_15.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2231847,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 61,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "volaille",
+  "pays": "Madagascar",
+  "annee": 2015,
+  "auteurs": "Andriamparany Herizo Randrianaivo",
+  "source_organisation": "Université d'Antananarivo",
+  "mots_cles": [
+    "couveuse artisanale",
+    "incubation avicole",
+    "thermique",
+    "modelisation",
+    "memoire de master",
+    "madagascar"
+  ],
+  "titre_trouve": "MEMOIRE Pour l’obtention du diplôme de : MASTER EN PHYSIQUE ET APPLICATION ... MODELISATION D’UNE COUVEUSE ARTISANALE : ETUDE DE LA TEMPERATURE DE L’AIR INTERIEUR",
+  "titre": "Modélisation d'une couveuse artisanale : étude de la température de l'air intérieur",
+  "resume": "Mémoire de Master en énergétique modélisant les transferts thermiques d'une couveuse avicole artisanale pour optimiser la régulation de la température.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire universitaire non publié sous licence ouverte ; archivé dans le corpus académique conformément aux règles métier.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MEMOIRE Pour l’obtention du diplôme de : MASTER EN PHYSIQUE ET APPLICATION ... MODELISATION D’UNE COUVEUSE ARTISANALE : ETUDE DE LA TEMPERATURE DE L’AIR INTERIEUR"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01034__modelisation-d-une-couveuse-artisanale-etude-de-la-temp.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-01034__modelisation-d-une-couveuse-artisanale-etude-de-la-temp.pdf"
+}

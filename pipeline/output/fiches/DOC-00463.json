@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00463",
+  "sha256": "c23d91f69b375a18021ef12233403019590e48c81497182c51f19f0f933623a7",
+  "nom_original": "Fécondation (1).pptx",
+  "chemin_relatif_source": "OD_Docs/Fécondation (1).pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 9975232,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "nb_pages": 34,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "genetique_reproduction",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "fecondation",
+    "reproduction animale",
+    "embryologie",
+    "ruminants",
+    "suides",
+    "gynecologie veterinaire"
+  ],
+  "titre_trouve": "FECONDATION",
+  "titre": "Cours de physiologie de la reproduction animale - La fécondation",
+  "resume": "Diaporama universitaire de 34 diapositives détaillant les étapes cellulaires de la fécondation animale (capacitation, réaction acrosomiale, nidation) et la gynécologie comparée.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours académique non libre de droits, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 34,
+      "extrait": "équidés, les suidés et les ruminants"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00463__cours-de-physiologie-de-la-reproduction-animale-la-feco.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/genetique_reproduction/DOC-00463__cours-de-physiologie-de-la-reproduction-animale-la-feco.pdf"
+}

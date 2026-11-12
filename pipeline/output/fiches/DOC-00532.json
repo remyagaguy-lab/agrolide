@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00532",
+  "sha256": "475925e946e93449c4692244e3a23d117775c609ade7b23b791add4f91c0cd32",
+  "nom_original": "LESBASESDELIRRIGATION.pdf",
+  "chemin_relatif_source": "OD_Docs/LESBASESDELIRRIGATION.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9199564,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 106,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Ahmed Skhiri",
+  "source_organisation": "ResearchGate",
+  "mots_cles": [
+    "irrigation",
+    "besoins en eau",
+    "agronomie",
+    "calcul hydraulique"
+  ],
+  "titre_trouve": "LES BASES DE L'IRRIGATION: Calcul des besoins en eau",
+  "titre": "Les bases de l'irrigation : calcul des besoins en eau",
+  "resume": "Ouvrage de synthèse de 106 pages exposant les principes agronomiques et les méthodes de calcul des besoins en eau des cultures pour le pilotage de l'irrigation.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Open Access (ResearchGate)",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Ouvrage méthodologique mis en libre accès par son auteur sur ResearchGate, accessible aux membres de la plateforme.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LES BASES DE L'IRRIGATION: Calcul des besoins en eau Book · April 2019"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Ahmed Skhiri Ministry of Agriculture, Saudi Arabia"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "All content following this page was uploaded by Ahmed Skhiri on 06 July 2019"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00532__les-bases-de-l-irrigation-calcul-des-besoins-en-eau.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00532__les-bases-de-l-irrigation-calcul-des-besoins-en-eau.pdf"
+}

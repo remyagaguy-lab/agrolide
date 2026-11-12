@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00625",
+  "sha256": "bc8b4495fd60d13320209f16c6212c40bf7f96e580c2ca6ae0b40fd153e78fca",
+  "nom_original": "Métabolisme des glucides (1).pptx",
+  "chemin_relatif_source": "OD_Docs/Métabolisme des glucides (1).pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 5568626,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "nb_pages": 95,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2023,
+  "auteurs": "Dr F. Hefied",
+  "source_organisation": "Université algérienne (Département Sciences Agronomiques et Vétérinaires)",
+  "mots_cles": [
+    "biochimie",
+    "metabolisme des glucides",
+    "glycolyse",
+    "cycle de krebs",
+    "sciences veterinaires",
+    "algerie"
+  ],
+  "titre_trouve": "Biochimie Métabolisme : Métabolisme des glucides",
+  "titre": "Biochimie métabolique : Métabolisme des glucides (1ère année Sciences Vétérinaires)",
+  "resume": "Support de cours universitaire complet de biochimie vétérinaire détaillant la digestion, la glycolyse, le cycle de Krebs et la néoglucogenèse.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours magistral universitaire sous format bureautique, sans licence de rediffusion libre : archivage interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "1 ère année sciences vétérinaires Biochimie Métabolisme Réalisée par : Dr HEFIED F. Département des Sciences Agronomiques et Vétérinaires"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00625__biochimie-metabolique-metabolisme-des-glucides-1ere-ann.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00625__biochimie-metabolique-metabolisme-des-glucides-1ere-ann.pdf"
+}

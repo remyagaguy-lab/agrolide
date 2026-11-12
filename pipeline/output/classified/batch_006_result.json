@@ -1,0 +1,640 @@
+{
+  "batch_number": 6,
+  "results": [
+    {
+      "id": "DOC-00075",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["ressources_naturelles_environnement"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "blé dur",
+      "pays": "France",
+      "annee": 2023,
+      "auteurs": "Réseau Bio de PACA",
+      "source_organisation": "Réseau Bio de PACA",
+      "mots_cles": ["ble dur bio", "rotation", "legumineuses", "paca", "fertilisation azotee"],
+      "titre_trouve": "Fiche technique blé dur bio BIODUR PACA 2023",
+      "titre": "Fiche technique blé dur bio : place dans la rotation et fertilisation azotée (PACA)",
+      "resume": "Fiche technique présentant la conduite du blé dur biologique en région Provence-Alpes-Côte d'Azur, notamment la place dans la rotation après légumineuses pluriannuelles et la gestion de l'azote.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document institutionnel de région tempérée (PACA, France), non adapté aux conditions agro-climatiques d'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique blé dur bio BIODUR PACA 2023"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "structuration de filière de blé dur bio en région Sud-PACA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00076",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "jardinage",
+      "pays": "Canada",
+      "annee": 1989,
+      "auteurs": "Paul Pouliot",
+      "source_organisation": "Club Québec Loisirs / Éditions La Presse",
+      "mots_cles": ["jardinage", "plantes d'appartement", "potager", "horticulture", "quebec"],
+      "titre_trouve": "1001 questions de jardinage",
+      "titre": "1001 questions de jardinage : culture et entretien",
+      "resume": "Guide pratique sous forme de questions-réponses couvrant les techniques horticoles de base (semis, plantation, arrosage, fertilisation) pour le jardinage et potager en contexte tempéré québécois.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial sous droits d'auteur exclusifs (Club Québec Loisirs / La Presse) et contexte tempéré québécois.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "droits",
+          "page": 4,
+          "extrait": "ÉDITION DU CLUB QUÉBEC LOISIRS INC. © Avec l’autorisation des Éditions La Presse. ISBN-2-89043-209-2"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00077",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["ressources_naturelles_environnement"],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "sorgho",
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "Philippe Bayen, Salifou Traoré, Fidèle Bognounou, Dorkas Kaiser, Adjima Thiombiano",
+      "source_organisation": "VertigO - Revue électronique en sciences de l'environnement",
+      "mots_cles": ["sorgho", "zai ameliore", "sahel", "burkina faso", "restauration des sols"],
+      "titre_trouve": "Effet du zaï amélioré sur la productivité du sorgho en zone sahélienne",
+      "titre": "Effet du zaï amélioré sur la productivité du sorgho en zone sahélienne",
+      "resume": "Article scientifique évaluant l'impact de la technique du zaï amélioré (taille des poquets et amendements organiques) sur la germination, la croissance et le rendement du sorgho sur sols dégradés au Sahel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique issu d'une revue académique en accès libre, hautement pertinent pour la recherche et le conseil agricole au Sahel, réservé aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Effet du zaï amélioré sur la productivité du sorgho en zone sahélienne"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00078",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["culture_sous_abri_hors_sol"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": "Suisse",
+      "annee": 2001,
+      "auteurs": "FiBL, Agridea",
+      "source_organisation": "FiBL / Agridea",
+      "mots_cles": ["plants maraichers", "agriculture biologique", "terreau", "semis", "legumes"],
+      "titre_trouve": "Production et utilisation des plants maraîchers biologiques",
+      "titre": "Production et utilisation des plants maraîchers biologiques",
+      "resume": "Fiche technique pratique détaillant les étapes de production de plants maraîchers bio : substrats, fertilisation, systèmes de culture en mottes, gestion thermique et protection phytosanitaire préventive.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète de référence en maraîchage biologique éditée par un institut public de recherche, adaptable aux pépinières maraîchères tropicales.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Production et utilisation des plants maraîchers biologiques"
+        },
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "Cette fiche technique facilite le démarrage d’une production"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00080",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "culture_sous_abri_hors_sol",
+      "domaines_secondaires": ["cultures_maraicheres"],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "maraîchage",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "EpubsFR",
+      "mots_cles": ["culture sous verre", "legumes hors saison", "chassis vitres", "maraichage", "forçage"],
+      "titre_trouve": "10. Moyens permettant la végétation des légumes hors saison",
+      "titre": "Moyens permettant la végétation des légumes hors saison : cultures sous verre et forçage",
+      "resume": "Extrait d'ouvrage traitant de la production de légumes hors saison sous abris vitrés et serres, axé sur les pratiques horticoles tempérées du début du XXe siècle.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "ensemble_partiel", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel d'ouvrage commercial issu d'une diffusion non libre (@EpubsFR), contextes tempérés obsolètes et droits réservés.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "10. MOYENS PERMETTANT LA VEGETATION DES LEGUMES HORS SAISON"
+        },
+        {
+          "champ": "complet",
+          "page": 1,
+          "extrait": "— 112 —"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00081",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": ["agroalimentaire"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tomate",
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Shankara Naika, Joep van Lidt de Jeude, Marja de Goffau, Martin Hilmi, Barbara van Dam",
+      "source_organisation": "CTA / Fondation Agromisa",
+      "mots_cles": ["tomate", "culture maraichere", "agrodok", "protection phytosanitaire", "transformation"],
+      "titre_trouve": "Agrodok 17 - La culture des tomates : production, transformation et commercialisation",
+      "titre": "La culture des tomates : production, transformation et commercialisation (Agrodok 17)",
+      "resume": "Guide pratique complet de la collection Agrodok couvrant la pépinière, la plantation, la lutte antiparasitaire, la récolte, la transformation artisanale et la vente de tomates en milieu tropical.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique Agrodok complet coédité par le CTA et Agromisa pour le développement agricole tropical, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 17 - La culture des tomates : production, transformation et commercialisation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00082",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["fertilisation_amendements"],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "maïs",
+      "pays": null,
+      "annee": 2012,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["mais", "azote", "fertilisation", "ammoniac anhydre", "stabilisateurs"],
+      "titre_trouve": "Satisfaire les besoins en azote du maïs",
+      "titre": "Satisfaire les besoins en azote du maïs : stratégies d'application et stabilisateurs",
+      "resume": "Fiche technique de 2 pages présentant le fractionnement des apports azotés sur maïs et l'utilisation de stabilisateurs d'azote en grandes cultures intensives d'Amérique du Nord.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte", "auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document technique anonyme sur l'ammoniac anhydre et les additifs chimiques en climat tempéré, droits indéterminés et non adapté à l'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Satisfaire les besoins en azote du maïs"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00083",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2010,
+      "auteurs": "B. Boulanger",
+      "source_organisation": "Université de Sherbrooke",
+      "mots_cles": ["genie civil", "beton arme", "moment ultime", "calcul de poutre", "sherbrooke"],
+      "titre_trouve": "Mathcad - ED_03 Question #1.xmcd",
+      "titre": "Calcul de béton armé : ED3 problème 1 (Génie civil GCI 220)",
+      "resume": "Corrigé d'exercice de calcul de structure en béton armé (détermination du moment ultime et vérification d'armatures) pour le département de génie civil de l'Université de Sherbrooke.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de génie civil universitaire portant sur le dimensionnement du béton armé, sans aucun rapport avec l'agriculture.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Faculté de génie Département de génie civil Sherbrooke (QC) Cours:GCI 220"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00084",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2012,
+      "auteurs": "ADEUS",
+      "source_organisation": "Agence de développement et d'urbanisme de l'agglomération strasbourgeoise (ADEUS)",
+      "mots_cles": ["changement climatique", "urbanisme", "scot", "adaptation", "alsace"],
+      "titre_trouve": "DE L’ADEUS ENVIRONNEMENT 71 SEPTEMBRE 2012",
+      "titre": "Changement climatique et adaptation des territoires urbains en Alsace (Note 71 ADEUS)",
+      "resume": "Note d'analyse de l'agence d'urbanisme de Strasbourg sur l'intégration de l'atténuation et de l'adaptation au changement climatique dans les documents de planification urbaine (SCoT, PLU) en Alsace.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'urbanisme et d'aménagement territorial spécifique à l'Alsace (France), non pertinent pour l'agriculture subsaharienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "DE L’ADEUS ENVIRONNEMENT 71 SEPTEMBRE 2012"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "En Alsace, le changement climatique est susceptible de modifier les aléas naturels"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00085",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Eira Carballo, Assiah van Eer, Ton van Schie, Aldin Hilbrands",
+      "source_organisation": "CTA / Fondation Agromisa",
+      "mots_cles": ["pisciculture", "etang piscicole", "eau douce", "agrodok", "elevage de poissons"],
+      "titre_trouve": "Agrodok 15 - La pisciculture à petite échelle en eau douce",
+      "titre": "La pisciculture à petite échelle en eau douce (Agrodok 15)",
+      "resume": "Manuel pratique de la série Agrodok guidant la création et la gestion d'une exploitation piscicole familiale en eau douce : choix du site, construction d'étangs, alimentation et récolte en zone tropicale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence Agrodok (CTA/Agromisa) sur la pisciculture en milieu tropical, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 15 - La pisciculture à petite échelle en eau douce"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00086",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": ["ressources_naturelles_environnement"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2009,
+      "auteurs": "CTA",
+      "source_organisation": "Centre technique de coopération agricole et rurale (CTA)",
+      "mots_cles": ["compost enrichi", "fertilisation organique", "cta", "matiere organique", "guide pratique"],
+      "titre_trouve": "Comment faire du compost enrichi en 3-4 mois ?",
+      "titre": "Comment faire du compost enrichi en 3-4 mois ? (Guides pratiques du CTA No 7)",
+      "resume": "Guide pratique illustré expliquant étape par étape la fabrication rapide d'un compost enrichi de qualité à partir de résidus de récolte et de déjections animales en zone tropicale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel du CTA adapté aux petits exploitants agricoles africains pour la fertilité des sols, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Comment faire du compost enrichi en 3-4 mois ?"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Centre technique de coopération agricole et rurale (ACP-UE) – CTA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00087",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": ["ressources_naturelles_environnement"],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": ["technicien_conseiller", "etudiant"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "sorgho",
+      "pays": "Niger",
+      "annee": 2021,
+      "auteurs": "Maman Nassirou Ado, Mahamadou Sani Moussa, Harouna Karimou Ambouta",
+      "source_organisation": "European Scientific Journal (ESJ)",
+      "mots_cles": ["sorgho", "demi-lunes", "niger", "ces/drs", "rendement", "tahoua"],
+      "titre_trouve": "Effets des Demi-Lunes Multifonctionnelles sur la Production du Sorgho en Afrique de l’Ouest: Cas de la Région de Tahoua au Niger",
+      "titre": "Effets des Demi-Lunes Multifonctionnelles sur la Production du Sorgho à Tahoua au Niger",
+      "resume": "Article scientifique étudiant l'efficacité des demi-lunes multifonctionnelles sur la restauration des sols dégradés, l'humidité et les rendements en sorgho dans la région sahélienne de Tahoua au Niger.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "CC-BY-NC-ND-4.0",
+      "complet": true,
+      "drapeaux_ajoutes": ["licence_nc"],
+      "decision_publication": "membres",
+      "motif_decision": "Article de recherche scientifique sous licence ouverte Creative Commons BY-NC-ND 4.0, hautement pertinent pour la gestion de l'eau et des cultures au Sahel.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "licence_detectee",
+          "page": 1,
+          "extrait": "Under Creative Commons BY-NC-ND 4.0 OPEN ACCESS"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Effets des Demi-Lunes Multifonctionnelles sur la Production du Sorgho en Afrique de l’Ouest: Cas de la Région de Tahoua au Niger"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00088",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2011,
+      "auteurs": "Patrice Souetre",
+      "source_organisation": "coursdemedecine.blogspot.com",
+      "mots_cles": ["biochimie", "qcm", "medecine", "paces", "metabolisme"],
+      "titre_trouve": "Biochimie métabolique.",
+      "titre": "150 QCM de biochimie métabolique (Études médicales)",
+      "resume": "Recueil de 150 questions à choix multiples corrigées de biochimie métabolique humaine destiné aux étudiants de premier cycle des facultés de médecine.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves"],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document d'entraînement pédagogique pour études médicales humaines, totalement en dehors du champ agro-pastoral.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "coursdemedecine.blogspot.com www.biblio-scientifique.net"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00089",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "arachide",
+      "pays": "Madagascar",
+      "annee": 2018,
+      "auteurs": "Louvain Coopération",
+      "source_organisation": "Louvain Coopération",
+      "mots_cles": ["arachide", "madagascar", "menabe", "itineraire technique", "rendement"],
+      "titre_trouve": "FICHE TECHNIQUE CULTURE D’ARACHIDE",
+      "titre": "Fiche technique : Culture d'arachide (Districts Belo sur Tsiribihina et Morondava)",
+      "resume": "Fiche technique opérationnelle guidant la culture pluviale et de contre-saison (baibo) de l'arachide à Madagascar : préparation du sol, semis, désherbage, récolte et rendements attendus.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de vulgarisation agricole complète et claire, directement applicable aux producteurs d'arachide en zone tropicale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE CULTURE D’ARACHIDE"
+        },
+        {
+          "champ": "pays",
+          "page": 1,
+          "extrait": "Projet d’appuis aux Organisations Professionnelles Agricoles des Districts Belo sur Tsiribihina et Morondava"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00090",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["scan", "ocr necessaire", "document non identifie"],
+      "titre_trouve": null,
+      "titre": "Document numérisé non identifié (1607_PDF)",
+      "resume": "Fichier PDF de 8 pages issu d'un copieur multifonction sans flux textuel extrait. Nécessite un traitement OCR et une revue humaine pour catégorisation précise.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "titre_introuvable", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte numérique exploitable rendant l'identification thématique et juridique impossible sans validation humaine préalable.",
+      "confiance": {
+        "classification": 0.3,
+        "droits": 0.2,
+        "completude": 0.3
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ColorCopierRepro-20170802123755"
+        }
+      ]
+    }
+  ]
+}

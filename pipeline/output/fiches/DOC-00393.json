@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00393",
+  "sha256": "b9596f878ab2931cb5ccbfe48f590b6c2d38e84cf84aa447bd7a3b923349ecd1",
+  "nom_original": "Etude générale hydraulique.pdf",
+  "chemin_relatif_source": "OD_Docs/Etude générale hydraulique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 313163797,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "ocr_necessaire",
+    "scan_illisible",
+    "titre_introuvable",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 244,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "hydraulique",
+    "eau",
+    "ecoulement",
+    "etude technique",
+    "amenagement"
+  ],
+  "titre_trouve": null,
+  "titre": "Étude générale hydraulique",
+  "resume": "Volume technique de 244 pages constitué d'un document scanné sans texte extractible portant sur l'hydraulique, nécessitant un traitement OCR pour exploitation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fichier volumineux scanné sans couche texte exploitable, nécessitant un traitement OCR et une vérification humaine du périmètre exact et des droits.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Etude générale hydraulique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00393__etude-generale-hydraulique.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00393__etude-generale-hydraulique.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00311",
+  "sha256": "23bbe69a4b7e9461591912c74d6e4c9ac5c6b73bc0a909d77136f117128a5c4d",
+  "nom_original": "Cours Production de plants et de semences Laghouat (2).pdf",
+  "chemin_relatif_source": "OD_Docs/Cours Production de plants et de semences Laghouat (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2773073,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 61,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2019,
+  "auteurs": "Hamida Mallem",
+  "source_organisation": "Université Amar Telidji de Laghouat",
+  "mots_cles": [
+    "semences",
+    "plants",
+    "pepiniere",
+    "amelioration des plantes",
+    "germination",
+    "multiplication vegetative"
+  ],
+  "titre_trouve": "Production de plants et de semences",
+  "titre": "Polycopié de cours : Production de plants et de semences",
+  "resume": "Cours universitaire complet détaillant l'amélioration génétique, la biologie des graines, les techniques de pépinière et la production de semences et plants certifiés.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire sous droits réservés de l'auteur et de l'université sans licence libre.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Polycopie de cours Production de plants et de semences"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0022",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00311__polycopie-de-cours-production-de-plants-et-de-semences.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-00311__polycopie-de-cours-production-de-plants-et-de-semences.pdf"
+}

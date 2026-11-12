@@ -1,0 +1,74 @@
+{
+  "id": "DOC-01087",
+  "sha256": "e0a8207d9a70a1907a7b4bbfc6e09037430fb8c61a38de22ae1d2da773062772",
+  "nom_original": "module-gestion-de-projet.pdf",
+  "chemin_relatif_source": "OD_traites/module-gestion-de-projet.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 448444,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479873690-module-gestion-de-projet.pdf",
+  "nb_telechargements_existant": 1,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 20,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2019,
+  "auteurs": "Babacar Sall",
+  "source_organisation": "Goethe-Institut",
+  "mots_cles": [
+    "gestion de projet",
+    "projet culturel",
+    "planification",
+    "ressources",
+    "formation"
+  ],
+  "titre_trouve": "MODULE 1 GESTION DE PROJETS",
+  "titre": "Gestion de projets : Module 1",
+  "resume": "Support de formation présentant les fondamentaux de la gestion de projet, ses définitions normatives, ses contraintes et ses spécificités appliquées aux projets culturels.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours non libre axé sur la gestion de projets culturels, archivé en raison de son statut et de sa pertinence marginale.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.88,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE 1 GESTION DE PROJETS"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Monsieur BABACAR SALL Goethe Institut"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01087__gestion-de-projets-module-1.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-01087__gestion-de-projets-module-1.pdf"
+}

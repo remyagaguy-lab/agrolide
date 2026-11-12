@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00587",
+  "sha256": "1ce635da66518d431a5f4cdcc59bfb404a338b269f381a5ce1faed1325449f3f",
+  "nom_original": "MANUEL PRODUCTION DESINFECTANT POUR MAINS.pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL PRODUCTION DESINFECTANT POUR MAINS.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1543444,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "decideur_institution"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+  "source_organisation": "EFATI",
+  "mots_cles": [
+    "desinfectant",
+    "gel hydroalcoolique",
+    "soins corporels",
+    "hygiene"
+  ],
+  "titre_trouve": "DESINFECTANTS POUR MAINS",
+  "titre": "Manuel de fabrication artisanale de désinfectant pour les mains",
+  "resume": "Fiche pratique décrivant le procédé de formulation artisanale de gel désinfectant pour les mains à base d'alcool, carbopol et peroxyde d'hydrogène pour l'hygiène sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Fabrication de désinfectant hydroalcoolique pour mains relevant de la chimie et de la santé humaine, hors du périmètre agronomique d'Agrolide.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES DESINFECTANTS POUR MAINS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00587__manuel-de-fabrication-artisanale-de-desinfectant-pour-l.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00587__manuel-de-fabrication-artisanale-de-desinfectant-pour-l.pdf"
+}

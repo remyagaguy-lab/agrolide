@@ -1,0 +1,58 @@
+{
+  "id": "DOC-00693",
+  "sha256": "7bebb35408bbc2e7014d6ecbbd4eb9acd4e2378fb10eabaea9e0ad6a850b2e72",
+  "nom_original": "Présentation du PSE TOGO 2020-2030_113834.pptx",
+  "chemin_relatif_source": "OD_Docs/Présentation du PSE TOGO 2020-2030_113834.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 542262,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "corrompu"
+  ],
+  "erreur_technique": "pptx read error: Bad CRC-32 for file 'ppt/media/image5.png'",
+  "domaine_principal": "hors_perimetre",
+  "sous_domaine": "aucun",
+  "type_doc": "autre",
+  "public_principal": "producteur",
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "auteurs": "Auteur non précisé",
+  "titre": "Présentation du PSE TOGO 2020-2030_113834.pptx",
+  "resume": "Fichier techniquement illisible, corrompu ou protégé par mot de passe lors de l'extraction automatique.",
+  "statut_droits": "inconnu",
+  "complet": "indetermine",
+  "decision_publication": "exclu_illisible",
+  "motif_decision": "Exclu automatiquement : pptx read error: Bad CRC-32 for file 'ppt/media/image5.png'.",
+  "confiance": {
+    "classification": 0.0,
+    "droits": 0.0,
+    "completude": 0.0
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": null,
+      "extrait": "pptx read error: Bad CRC-32 for file 'ppt/media/image5.png'"
+    }
+  ],
+  "domaines_secondaires": [],
+  "publics_secondaires": [],
+  "role_doublon": "unique",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_illisible",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00693__presentation-du-pse-togo-2020-2030-113834-pptx.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00693__presentation-du-pse-togo-2020-2030-113834-pptx.pdf"
+}

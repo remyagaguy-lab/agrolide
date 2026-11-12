@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00894",
+  "sha256": "cb219d4b81673f4c5947f49b4df34a4caa0a56181e2f3d4351463fdfb3e16f59",
+  "nom_original": "embouche ovine.pdf",
+  "chemin_relatif_source": "OD_Docs/embouche ovine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1139805,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 23,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ruminants",
+  "pays": "Burkina Faso",
+  "annee": 2016,
+  "auteurs": "DEZLY Consulting",
+  "source_organisation": "DEZLY Consulting",
+  "mots_cles": [
+    "embouche ovine",
+    "embouche bovine",
+    "burkina faso",
+    "alimentation du betail",
+    "elevage",
+    "sahel"
+  ],
+  "titre_trouve": "MODULE DE FORMATION DES ELEVEURS SUR LES TECHNIQUES D’EMBOUCHE",
+  "titre": "Module de formation des éleveurs sur les techniques d'embouche ovine et bovine",
+  "resume": "Guide de formation pratique conçu pour les éleveurs sahéliens abordant le choix des animaux, la conduite de l'alimentation, le suivi sanitaire et la rentabilité d'une unité d'embouche.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Module technique de formation d'un cabinet privé de conseil très pertinent pour l'élevage sahélien ; validation des droits requise.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.65,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE DE FORMATION DES ELEVEURS SUR LES TECHNIQUES D’EMBOUCHE Conception : DEZLY Consulting"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00894__module-de-formation-des-eleveurs-sur-les-techniques-d-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00894__module-de-formation-des-eleveurs-sur-les-techniques-d-e.pdf"
+}

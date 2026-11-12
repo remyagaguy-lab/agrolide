@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00646",
+  "sha256": "6255aad1b4e04899acbe396d47a3a975a70c79e3f9d78e26916f4a6dc6d703fa",
+  "nom_original": "PATATE.pdf",
+  "chemin_relatif_source": "OD_Docs/PATATE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1809976,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 22,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "patate douce",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "patate douce",
+    "tubercule",
+    "itineraire technique",
+    "varietes",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE LA PATATE DOUCE",
+  "titre": "Guide technique : Technologie de production de la patate douce",
+  "resume": "Guide pratique complet de l'IFATI sur la culture de la patate douce en zone tropicale : choix variétal, exigences écologiques, multiplication végétative, bouturage, protection sanitaire et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique complet de l'IFATI (Cameroun) pour la production et la protection phytosanitaire de la patate douce.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DE LA PATATE DOUCE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00646__guide-technique-technologie-de-production-de-la-patate.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00646__guide-technique-technologie-de-production-de-la-patate.pdf"
+}

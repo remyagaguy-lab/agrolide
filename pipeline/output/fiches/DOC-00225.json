@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00225",
+  "sha256": "604d12367c25489a339545c2ea82621d55434c92d9530503e6b6eff1d6792d50",
+  "nom_original": "Appareil génital femelle.ppt",
+  "chemin_relatif_source": "OD_Docs/Appareil génital femelle.ppt",
+  "indice_ancien_dossier": null,
+  "format_source": "ppt",
+  "taille_octets": 9053184,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet"
+  ],
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Richard Blouin",
+  "source_organisation": "Université de Sherbrooke",
+  "mots_cles": [
+    "histologie humaine",
+    "appareil genital femelle",
+    "medecine humaine",
+    "ovaire"
+  ],
+  "titre_trouve": null,
+  "titre": "Histologie de l'appareil génital femelle humain",
+  "resume": "Présentation de diapositives consacrée à l'histologie et l'anatomie microscopique de l'appareil génital féminin humain (Université de Sherbrooke). Contenu médical hors du champ agronomique et vétérinaire.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Support de présentation PowerPoint consacré à l'histologie de l'appareil génital féminin humain (Université de Sherbrooke), hors du périmètre agronomique et vétérinaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "rblouin/_vti_bin/shtml.exe/histo/genfem/ova/ova.htm"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00225__histologie-de-l-appareil-genital-femelle-humain.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00225__histologie-de-l-appareil-genital-femelle-humain.pdf"
+}

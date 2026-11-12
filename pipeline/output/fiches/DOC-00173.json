@@ -1,0 +1,56 @@
+{
+  "id": "DOC-00173",
+  "sha256": "1cd7dc8e9cdf3dcd8049c3bebf54d396097002298221a79ecc47f848437a5c72",
+  "nom_original": "AgroI-Chapitre IV_.pdf",
+  "chemin_relatif_source": "OD_Docs/AgroI-Chapitre IV_.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 242352,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "protege"
+  ],
+  "erreur_technique": "protege par mot de passe",
+  "domaine_principal": "hors_perimetre",
+  "sous_domaine": "aucun",
+  "type_doc": "autre",
+  "public_principal": "producteur",
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "auteurs": "Auteur non précisé",
+  "titre": "AgroI-Chapitre IV_.pdf",
+  "resume": "Fichier techniquement illisible, corrompu ou protégé par mot de passe lors de l'extraction automatique.",
+  "statut_droits": "inconnu",
+  "complet": "indetermine",
+  "decision_publication": "exclu_illisible",
+  "motif_decision": "Exclu automatiquement : protege par mot de passe.",
+  "confiance": {
+    "classification": 0.0,
+    "droits": 0.0,
+    "completude": 0.0
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": null,
+      "extrait": "protege par mot de passe"
+    }
+  ],
+  "domaines_secondaires": [],
+  "publics_secondaires": [],
+  "role_doublon": "unique",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_illisible",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00173__agroi-chapitre-iv-pdf.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00173__agroi-chapitre-iv-pdf.pdf"
+}

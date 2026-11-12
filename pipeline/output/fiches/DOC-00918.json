@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00918",
+  "sha256": "df7d449da404b84fe20008bd54ceefd412486466ca8fc935159c55843c78321e",
+  "nom_original": "formation 6_250911_195403.pdf",
+  "chemin_relatif_source": "OD_Docs/formation 6_250911_195403.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2280444,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 24,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "production_vegetale",
+    "agroeconomie"
+  ],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "riz et poisson",
+  "pays": "Madagascar",
+  "annee": 1991,
+  "auteurs": "FAO, PNUD, Ministère de la Production Animale de Madagascar",
+  "source_organisation": "FAO / PNUD",
+  "mots_cles": [
+    "rizipisciculture",
+    "rizieres",
+    "poisson en riziere",
+    "madagascar",
+    "fao"
+  ],
+  "titre_trouve": "3. RIZIPISCICULTURE",
+  "titre": "Manuel de rizipisciculture : Conduite combinée du riz et du poisson",
+  "resume": "Fascicule pratique sur la rizipisciculture à Madagascar : choix des parcelles rizicoles, calendrier d'élevage avec le riz, gestion hydraulique et valorisation économique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre 3 isolé d'un manuel de formation rizipiscicole FAO/PNUD, archivé comme ensemble partiel.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "3. RIZIPISCICULTURE 3.1. CHOIX DES RIZIERES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00918__manuel-de-rizipisciculture-conduite-combinee-du-riz-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00918__manuel-de-rizipisciculture-conduite-combinee-du-riz-et.pdf"
+}

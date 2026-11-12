@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00209",
+  "sha256": "6a4f9eb0a21df30842c4bdd2aba31f0a853d3f7c89433ee1abdb04eb91317056",
+  "nom_original": "Agronomie II - Animal- .pdf",
+  "chemin_relatif_source": "OD_Docs/Agronomie II - Animal- .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 503929,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "bovins",
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "nutrition animale",
+    "ruminants",
+    "digestibilite",
+    "fourrages",
+    "aliments du betail"
+  ],
+  "titre_trouve": "2ème Année Agronomie - Agronomie II - Nutrition animale",
+  "titre": "Agronomie II : Cours de nutrition et alimentation des ruminants",
+  "resume": "Polycopié de cours universitaire d'agronomie détaillant la composition chimique des aliments, la dégradation ruminale, l'utilisation digestive et les besoins en minéraux des ruminants.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours d'enseignant sans mention de licence libre, réservé à l'archivage.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "2ème Année Agrornomie Agronomie II Nutrition animale 1. Utilisation et constitution des aliments"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00209__agronomie-ii-cours-de-nutrition-et-alimentation-des-rum.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00209__agronomie-ii-cours-de-nutrition-et-alimentation-des-rum.pdf"
+}

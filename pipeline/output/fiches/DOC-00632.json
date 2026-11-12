@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00632",
+  "sha256": "cf07042d18cedb566fde56acaa66fb04a9d91049c66ca1cb3f329d084cc09fa1",
+  "nom_original": "Niveau-ECHANTILLONNAGE-Dendro_SD 13juin 2019_250820_213254.pdf",
+  "chemin_relatif_source": "OD_Docs/Niveau-ECHANTILLONNAGE-Dendro_SD 13juin 2019_250820_213254.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5784460,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 69,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2019,
+  "auteurs": "Dr Sékouna Diatta",
+  "source_organisation": "Université Cheikh Anta Diop de Dakar (UCAD)",
+  "mots_cles": [
+    "ecologie vegetale",
+    "ucad",
+    "dendrometrie",
+    "echantillonnage",
+    "regeneration",
+    "biodiversite",
+    "senegal"
+  ],
+  "titre_trouve": "TRAVAUX PRATIQUES & DIRIGES D’ECOLOGIE VEGETALE",
+  "titre": "Travaux pratiques et dirigés d'écologie végétale (L3 SVT - UCAD)",
+  "resume": "Support de travaux pratiques et dirigés en écologie végétale de l'UCAD détaillant les niveaux d'organisation du vivant, les méthodes d'échantillonnage de la flore sahélienne et le calcul des taux et indices de régénération arborée.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de travaux pratiques universitaire non libre (UCAD), archivé pour consultation académique interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "TRAVAUX PRATIQUES & DIRIGES D’ECOLOGIE VEGETALE TP Ecologie Végétale L3SVT Dr Sékouna DIATTA Département de Biologie Végétale, FST-UCAD"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00632__travaux-pratiques-et-diriges-d-ecologie-vegetale-l3-svt.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00632__travaux-pratiques-et-diriges-d-ecologie-vegetale-l3-svt.pdf"
+}

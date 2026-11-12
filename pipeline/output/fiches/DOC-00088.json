@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00088",
+  "sha256": "932e931452d6385329207351f4cdfa884574fc78e6db47bfc3c2d7e9c11fb8e7",
+  "nom_original": "150 QCM Métabolique.pdf",
+  "chemin_relatif_source": "OD_Docs/150 QCM Métabolique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3952172,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 91,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2011,
+  "auteurs": "Patrice Souetre",
+  "source_organisation": "coursdemedecine.blogspot.com",
+  "mots_cles": [
+    "biochimie",
+    "qcm",
+    "medecine",
+    "paces",
+    "metabolisme"
+  ],
+  "titre_trouve": "Biochimie métabolique.",
+  "titre": "150 QCM de biochimie métabolique (Études médicales)",
+  "resume": "Recueil de 150 questions à choix multiples corrigées de biochimie métabolique humaine destiné aux étudiants de premier cycle des facultés de médecine.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document d'entraînement pédagogique pour études médicales humaines, totalement en dehors du champ agro-pastoral.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "coursdemedecine.blogspot.com www.biblio-scientifique.net"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00088__150-qcm-de-biochimie-metabolique-etudes-medicales.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00088__150-qcm-de-biochimie-metabolique-etudes-medicales.pdf"
+}

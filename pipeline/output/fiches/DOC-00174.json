@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00174",
+  "sha256": "3025ec192fe2de2dcbb881da3d209d0548cc99e4174978a05906d3e208400dad",
+  "nom_original": "Agrodok - 14 - L_elevage des vaches laitieres@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok - 14 - L_elevage des vaches laitieres@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 482666,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 87,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovins",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Puck Bonnier, Arno Maas, Jolianne Rijks",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "vache laitiere",
+    "elevage bovin",
+    "production laitiere",
+    "alimentation animale",
+    "agrodok"
+  ],
+  "titre_trouve": "Agrodok 14 L'élevage des vaches laitières",
+  "titre": "L'élevage des vaches laitières (Agrodok 14)",
+  "resume": "Guide pratique sur la conduite d'un élevage bovin laitier à petite échelle en zone tropicale : logement, alimentation, reproduction, santé et traite.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fichier issu d'une release warez @EpubsFR avec copyright réservé et ISBN commercial d'Agromisa, archivé selon la règle métier 4.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 14 L'élevage des vaches laitières"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Puck Bonnier Arno Maas Jolianne Rijks"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "© Fondation Agromisa, Wageningen, 2004. Tous droits réservés. ISBN : 90-77073-76-0"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00174__l-elevage-des-vaches-laitieres-agrodok-14.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00174__l-elevage-des-vaches-laitieres-agrodok-14.pdf"
+}

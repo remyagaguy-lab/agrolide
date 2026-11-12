@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00851",
+  "sha256": "0e031c5b9114a47bf4e96aba38810d96db375ca2e9d69d95962329f781eac9d1",
+  "nom_original": "cours_hydraulique_generale_BTS_1ère_année_Institut_Ben_Gourion.docx",
+  "chemin_relatif_source": "OD_Docs/cours_hydraulique_generale_BTS_1ère_année_Institut_Ben_Gourion.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 16070660,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": null,
+  "auteurs": "Nombré",
+  "source_organisation": "Institut Ben Gourion",
+  "mots_cles": [
+    "hydraulique agricole",
+    "irrigation",
+    "boulis",
+    "pompage",
+    "mesure des debits",
+    "burkina faso"
+  ],
+  "titre_trouve": "COURS HYDRAULIQUE GENERALE BTS 1ère année",
+  "titre": "Cours d'hydraulique générale (BTS 1ère année)",
+  "resume": "Polycopié de cours de BTS abordant l'hydrostatique, la dynamique des fluides, la mesure des débits, les ouvrages de captage et de stockage sahéliens (boulis, retenues, forages), ainsi que les systèmes de pompage et d'irrigation.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de formation technique BTS interne sans licence de rediffusion publique, archivé.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "COURS HYDRAULIQUE GENERALE BTS 1ère année"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Institut Ben Gourion"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00851__cours-d-hydraulique-generale-bts-1ere-annee.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00851__cours-d-hydraulique-generale-bts-1ere-annee.pdf"
+}

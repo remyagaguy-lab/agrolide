@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00476",
+  "sha256": "d5ad1404f7e6bd2485b7b584739661ba726c2fa6760562fd622b26eddfc33175",
+  "nom_original": "Guide Production de Sésame.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide Production de Sésame.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5458010,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 71,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "sésame",
+  "pays": "Burkina Faso",
+  "annee": 2021,
+  "auteurs": "Ministère de l'Agriculture du Burkina Faso, JICA",
+  "source_organisation": "DGPV Burkina Faso / PRPS-BF / JICA",
+  "mots_cles": [
+    "sesame",
+    "production de sesame",
+    "itineraire technique",
+    "vulgarisation",
+    "burkina faso",
+    "jica"
+  ],
+  "titre_trouve": "Manuel de vulgarisation de la production de sésame : Approche PRPS-BF",
+  "titre": "Manuel de vulgarisation de la production de sésame au Burkina Faso",
+  "resume": "Manuel technique complet de vulgarisation pour la culture du sésame au Burkina Faso, élaboré par la DGPV et la JICA, couvrant le semis, l'entretien, la récolte et la post-récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel officiel de vulgarisation agricole (Ministère de l'Agriculture du Burkina Faso / JICA), complet et libre de diffusion pour les producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Manuel de vulgarisation de la production de sésame : Approche PRPS-BF"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "MINISTERE DE L’AGRICULTURE, DES AMENAGEMENTS HYDRO-AGRICOLES ET DE LA MECANISATION - DIRECTION GENERALE DES PRODUCTIONS VEGETALES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00476__manuel-de-vulgarisation-de-la-production-de-sesame-au-b.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00476__manuel-de-vulgarisation-de-la-production-de-sesame-au-b.pdf"
+}

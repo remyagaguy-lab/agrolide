@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00674",
+  "sha256": "2cbf7a111bc99dd77b74c1a112ac92f0c577cd449d97745eea3712b22aa8e5e4",
+  "nom_original": "Pois chiche.pdf",
+  "chemin_relatif_source": "OD_Docs/Pois chiche.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8903683,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "incomplet"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "pois chiche",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "pois chiche",
+    "legumineuse",
+    "culture vivriere",
+    "itineraire technique"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique sur la culture du pois chiche",
+  "resume": "Document numérisé de 6 pages portant sur la conduite culturale du pois chiche. Nécessite une reconnaissance optique de caractères (OCR) pour en exploiter le contenu.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte exploitable nécessitant un traitement OCR pour déterminer son contenu exact et ses droits de diffusion.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Pois chiche.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00674__fiche-technique-sur-la-culture-du-pois-chiche.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00674__fiche-technique-sur-la-culture-du-pois-chiche.pdf"
+}

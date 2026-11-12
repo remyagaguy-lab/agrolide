@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00483",
+  "sha256": "6bafb28a55f36abbff4e75598d915d03fc8a53943345819ba51d878785eee67a",
+  "nom_original": "Guide des Cultures.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide des Cultures.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2469496,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 104,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2014,
+  "auteurs": "Jennifer Llewellyn",
+  "source_organisation": "Ministère de l'Agriculture de l'Ontario (MAAARO)",
+  "mots_cles": [
+    "pepiniere",
+    "plantes d'ornement",
+    "lutte integree",
+    "degres-jours",
+    "ontario"
+  ],
+  "titre_trouve": "GUIDE DES PLANTES DE PÉPINIÈRE ET D’ORNEMENT, CULTURE ET LUTTE INTÉGRÉE",
+  "titre": "Guide des plantes de pépinière et d'ornement : culture et lutte intégrée",
+  "resume": "Guide technique du ministère de l'Ontario sur la production en pépinière, la fertilité des substrats et la gestion intégrée des ravageurs des plantes ornementales.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide officiel canadien consacré à l'horticulture ornementale tempérée et aux espèces boréales, inadapté au contexte tropical d'Agrolide.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "GUIDE DES PLANTES DE PÉPINIÈRE ET D’ORNEMENT, CULTURE ET LUTTE INTÉGRÉE"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 4,
+      "extrait": "Cherchez-vous sur Internet de l’information sur les plantes de pépinière et d’ornement? Consultez le site www.ontario.ca/cultures"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00483__guide-des-plantes-de-pepiniere-et-d-ornement-culture-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00483__guide-des-plantes-de-pepiniere-et-d-ornement-culture-et.pdf"
+}

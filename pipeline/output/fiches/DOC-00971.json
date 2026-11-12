@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00971",
+  "sha256": "fadd45262404e3b7a984c54c675af119904a30bff40ade62070ec1c6cea56e97",
+  "nom_original": "la tomate.pdf",
+  "chemin_relatif_source": "OD_Docs/la tomate.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1913157,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479817671-la_tomate.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 19,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "tomate",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "228AgroConseil",
+  "source_organisation": "228AgroConseil (Togo)",
+  "mots_cles": [
+    "tomate",
+    "solanum lycopersicum",
+    "maraichage",
+    "togo",
+    "tuteurage",
+    "irrigation",
+    "pepiniere",
+    "commercialisation"
+  ],
+  "titre_trouve": "La culture de la tomate",
+  "titre": "Guide technique de culture de la tomate au Togo (228AgroConseil)",
+  "resume": "Guide technique de vulgarisation maraîchère détaillant la conduite de la tomate en Afrique de l'Ouest : choix du site, pépinière, mise en place de l'irrigation, repiquage, tuteurage, fertilisation NPK et commercialisation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique clair et opérationnel de vulgarisation agricole togolaise sur la culture maraîchère de la tomate, diffusable en accès public.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "228AgroConseil La culture de la tomate"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "228AgroConseil"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00971__guide-technique-de-culture-de-la-tomate-au-togo-228agro.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00971__guide-technique-de-culture-de-la-tomate-au-togo-228agro.pdf"
+}

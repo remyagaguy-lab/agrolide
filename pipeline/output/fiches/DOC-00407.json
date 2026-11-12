@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00407",
+  "sha256": "553bd8e72502aeea5677f09dc0c16054b6eabac4aca502424852a0d619e3b63a",
+  "nom_original": "FICHE_TECHNIQUE_1_ITINERAIRE_TECHNIQUE_DU_MAÏS_MAIZE_TECHNICAL.pdf",
+  "chemin_relatif_source": "OD_Docs/FICHE_TECHNIQUE_1_ITINERAIRE_TECHNIQUE_DU_MAÏS_MAIZE_TECHNICAL.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5988571,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "incomplet"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maïs",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Programme ACMA2 / IFDC-Bénin",
+  "source_organisation": "IFDC / Programme ACMA2",
+  "mots_cles": [
+    "mais",
+    "itineraire technique",
+    "acma2",
+    "ifdc",
+    "benin",
+    "ocr necessaire"
+  ],
+  "titre_trouve": null,
+  "titre": "Itinéraire technique du maïs (Fiche technique 1 Programme ACMA2)",
+  "resume": "Fiche technique du programme ACMA2 sur l'itinéraire cultural du maïs au Bénin (semis, fertilisation, entretien, récolte). Document scanné nécessitant un traitement OCR.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche technique institutionnelle ACMA2 sur le maïs, mais le fichier ne contient aucun texte extractible (OCR nécessaire avant publication).",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.8,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE_TECHNIQUE_1_ITINERAIRE_TECHNIQUE_DU_MAÏS_MAIZE_TECHNICAL"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00407__itineraire-technique-du-mais-fiche-technique-1-programm.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00407__itineraire-technique-du-mais-fiche-technique-1-programm.pdf"
+}

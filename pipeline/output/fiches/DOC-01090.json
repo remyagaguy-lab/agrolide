@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01090",
+  "sha256": "c4bda08c95ccc32ed1c665ca7918ea4c992453e262b69239286d811db53be53c",
+  "nom_original": "wcms_854023.pdf",
+  "chemin_relatif_source": "OD_traites/wcms_854023.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 2960862,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480116888-wcms_854023.pdf",
+  "nb_telechargements_existant": 3,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 55,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "guide_pratique",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Organisation internationale du Travail",
+  "source_organisation": "Organisation internationale du Travail (OIT)",
+  "mots_cles": [
+    "economie verte",
+    "emplois verts",
+    "transition ecologique",
+    "insertion professionnelle",
+    "oit"
+  ],
+  "titre_trouve": "Comment travailler dans l’économie verte ? Guide destiné aux jeunes, aux chercheurs d’emploi et à ceux qui les accompagnent",
+  "titre": "Comment travailler dans l'économie verte ?",
+  "resume": "Guide pratique de l'OIT orientant les jeunes et chercheurs d'emploi vers les métiers et opportunités de l'économie verte et de la transition écologique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de l'OIT sur l'emploi vert et durable, complet et diffusable auprès des jeunes et porteurs de projet.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Comment travailler dans l’économie verte ? Guide destiné aux jeunes, aux chercheurs d’emploi et à ceux qui les accompagnent"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Copyright © Organisation internationale du Travail 2022"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01090__comment-travailler-dans-l-economie-verte.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-01090__comment-travailler-dans-l-economie-verte.pdf"
+}

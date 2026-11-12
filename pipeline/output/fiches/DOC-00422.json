@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00422",
+  "sha256": "139a2ea8201db69a75b73255cb442302511d58a1f28bd275810205750f9599c8",
+  "nom_original": "Fabrication_de_la_provende_pour_.pdf",
+  "chemin_relatif_source": "OD_Docs/Fabrication_de_la_provende_pour_.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 803338,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Yere",
+  "source_organisation": null,
+  "mots_cles": [
+    "provende",
+    "aviculture",
+    "alimentation des poules",
+    "formulation",
+    "burkina faso"
+  ],
+  "titre_trouve": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR",
+  "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair (Support formation)",
+  "resume": "Support de formation pratique sur la fabrication de la provende pour volailles, adapté par un technicien en santé animale avec formules de rationnement.",
+  "statut_droits": "donnees_personnelles_confidentiel",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document comportant des données personnelles de contact (numéro WhatsApp privé) sur la page de garde, archivé sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "PRESENTE PAR Mr YERE TECHNICIEN EN SANTE ANIMALE WhatsApp +226 74044114"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0073",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00422__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00422__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01052",
+  "sha256": "793483e4ddd2d49876a7d56815e27a18bd9be1e82075ff28b4516e00740c6abd",
+  "nom_original": "tg_264_2_proj_9.pdf",
+  "chemin_relatif_source": "OD_Docs/tg_264_2_proj_9.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1073461,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 36,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "texte_officiel",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "decideur_institution"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "papaye",
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "UPOV",
+  "source_organisation": "Union Internationale pour la Protection des Obtentions Végétales",
+  "mots_cles": [
+    "upov",
+    "papayer",
+    "carica papaya",
+    "examen dhs",
+    "obtentions vegetales"
+  ],
+  "titre_trouve": "PRINCIPES DIRECTEURS POUR LA CONDUITE DE L’EXAMEN DE LA DISTINCTION, DE L’HOMOGÉNÉITÉ ET DE LA STABILITÉ PAPAYER",
+  "titre": "Principes directeurs d'examen DHS pour le papayer (Carica papaya L.) - UPOV",
+  "resume": "Document normatif officiel de l'UPOV fixant le protocole technique et le descripteur variétal complet pour l'examen de distinction, homogénéité et stabilité du papayer (Carica papaya).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Protocole technique officiel complet de l'UPOV pour la caractérisation variétale du papayer, réservé aux membres pour l'expertise semencière.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PRINCIPES DIRECTEURS POUR LA CONDUITE DE L’EXAMEN DE LA DISTINCTION, DE L’HOMOGÉNÉITÉ ET DE LA STABILITÉ PAPAYER code UPOV: CARIC_PAP"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "UNION INTERNATIONALE POUR LA PROTECTION DES OBTENTIONS VÉGÉTALES Genève"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01052__principes-directeurs-d-examen-dhs-pour-le-papayer-caric.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-01052__principes-directeurs-d-examen-dhs-pour-le-papayer-caric.pdf"
+}

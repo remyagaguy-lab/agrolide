@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00662",
+  "sha256": "53a2c61ed199f26ef78b212c11599fd40158093122696dd1f73dcdcf2f5918aa",
+  "nom_original": "Permaculture-au-balcon-_Aurélie-Drif.pdf",
+  "chemin_relatif_source": "OD_Docs/Permaculture-au-balcon-_Aurélie-Drif.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 12564741,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 121,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2020,
+  "auteurs": "Aurélie Drif",
+  "source_organisation": "Éditions Rustica",
+  "mots_cles": [
+    "permaculture",
+    "balcon",
+    "potager urbain",
+    "jardinage",
+    "editions rustica"
+  ],
+  "titre_trouve": "Permaculture au balcon",
+  "titre": "Permaculture au balcon : Démarrer et réussir son permapotager urbain",
+  "resume": "Ouvrage illustré guidant l'aménagement d'un potager permacole sur balcon en ville : choix des contenants, semis en pots, associations végétales, arrosage et recettes culinaires.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial publié sous copyright exclusif par les Éditions Rustica (ISBN 978-2-8153-1885-3), non diffusable publiquement.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "Permaculture au balcon"
+    },
+    {
+      "champ": "autre",
+      "page": 121,
+      "extrait": "ISBN papier : 978-2-8153-1885-3 © 2020, Éditions Rustica, Paris."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00662__permaculture-au-balcon-demarrer-et-reussir-son-permapot.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00662__permaculture-au-balcon-demarrer-et-reussir-son-permapot.pdf"
+}

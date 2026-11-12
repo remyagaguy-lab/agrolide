@@ -1,0 +1,761 @@
+{
+  "batch_number": 12,
+  "results": [
+    {
+      "id": "DOC-00168",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2021,
+      "auteurs": "Bernard Le Buanec",
+      "source_organisation": "Fondation pour l'innovation politique",
+      "mots_cles": [
+        "agriculture biologique",
+        "environnement",
+        "gaz a effet de serre",
+        "sol",
+        "biodiversite"
+      ],
+      "titre_trouve": "L’AGRICULTURE BIO ET L’ENVIRONNEMENT",
+      "titre": "L'agriculture bio et l'environnement",
+      "resume": "Étude publiée par la Fondation pour l'innovation politique analysant les impacts environnementaux de l'agriculture biologique sur les sols, l'air, le climat et les rendements agricoles.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document commercial payant (5 €) avec ISBN sous droits réservés, axé sur un contexte tempéré européen.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’AGRICULTURE BIO ET L’ENVIRONNEMENT"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Bernard LE BUANEC"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 4,
+          "extrait": "I S B N : 9 7 8 - 2 - 3 6 4 0 8 - 2 5 3 - 3 5 €"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00169",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2015,
+      "auteurs": "Ulrich Schreier",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "biodynamie",
+        "rudolf steiner",
+        "agriculture durable",
+        "preparations",
+        "rythmes lunaires"
+      ],
+      "titre_trouve": "La Biodynamie un chemin prometteur vers l’agriculture durable de demain",
+      "titre": "La Biodynamie : un chemin prometteur vers l'agriculture durable de demain",
+      "resume": "Ouvrage présentant les principes de l'agriculture biodynamique inspirés de Rudolf Steiner, abordant la fertilisation, les rythmes lunaires et les préparations spécifiques.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une release warez @EpubsFR sans licence libre, pertinence marginale pour l'agriculture tropicale.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.92,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La Biodynamie un chemin prometteur vers l’agriculture durable de demain"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Ulrich Schreier"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00170",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "decideur_institution",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cultures_maraicheres",
+      "pays": "Sénégal",
+      "annee": 2018,
+      "auteurs": "Abou Ba, Nicola Luca Cantoreggi",
+      "source_organisation": "Université de Genève",
+      "mots_cles": [
+        "agriculture urbaine",
+        "dakar",
+        "senegal",
+        "maraichage",
+        "economie des menages"
+      ],
+      "titre_trouve": "Agriculture urbaine et périurbaine (AUP) et économie des ménages agri-urbains à Dakar (Sénégal)",
+      "titre": "Agriculture urbaine et périurbaine (AUP) et économie des ménages agri-urbains à Dakar (Sénégal)",
+      "resume": "Article scientifique étudiant la dimension commerciale et l'impact économique du maraîchage urbain et périurbain sur les revenus des ménages dans la région de Dakar.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique en libre accès portant sur l'Afrique de l'Ouest, complet et destiné à la communauté académique et aux décideurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agriculture urbaine et périurbaine (AUP) et économie des ménages agri-urbains à Dakar (Sénégal)"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "BA, Abou, CANTOREGGI, Nicola Luca"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00171",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "article",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2009,
+      "auteurs": "Olivier Barbié",
+      "source_organisation": "Institut Technique d'Agriculture Naturelle (ITAN)",
+      "mots_cles": [
+        "agroforesterie",
+        "causse",
+        "lot",
+        "elevage ovin",
+        "agriculture naturelle"
+      ],
+      "titre_trouve": "L'agroforesterie de Fernand Barbié",
+      "titre": "L'agroforesterie de Fernand Barbié",
+      "resume": "Retour d'expérience sur la méthode pionnière d'agroforesterie développée par Fernand Barbié sur le causse du Lot combinant élevage de brebis et arboriculture.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'une diffusion @EpubsFR sous droits réservés, relatif à un système agropastoral tempéré non transposable.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L'agroforesterie de Fernand Barbié"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Olivier Barbié"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00174",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovins",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Puck Bonnier, Arno Maas, Jolianne Rijks",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "vache laitiere",
+        "elevage bovin",
+        "production laitiere",
+        "alimentation animale",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 14 L'élevage des vaches laitières",
+      "titre": "L'élevage des vaches laitières (Agrodok 14)",
+      "resume": "Guide pratique sur la conduite d'un élevage bovin laitier à petite échelle en zone tropicale : logement, alimentation, reproduction, santé et traite.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fichier issu d'une release warez @EpubsFR avec copyright réservé et ISBN commercial d'Agromisa, archivé selon la règle métier 4.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 14 L'élevage des vaches laitières"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Puck Bonnier Arno Maas Jolianne Rijks"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "© Fondation Agromisa, Wageningen, 2004. Tous droits réservés. ISBN : 90-77073-76-0"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00175",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "fertilisation_amendements"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 1998,
+      "auteurs": "Laura van Schöll",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "fertilite du sol",
+        "engrais vert",
+        "matiere organique",
+        "amendement",
+        "agrodok"
+      ],
+      "titre_trouve": "AGRODOK 2 GERER LA FERTILITÉ DU SOL",
+      "titre": "Gérer la fertilité du sol (Agrodok 2)",
+      "resume": "Guide pratique pour maintenir et améliorer la fertilité des sols tropicaux : gestion de la matière organique, engrais verts, compost et diagnostic de terrain.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document provenant d'un partage non autorisé @EpubsFR sans licence libre explicite, archivé conformément à la règle 4.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "AGRODOK 2 GERER LA FERTILITÉ DU SOL"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Laura van Schöll"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00176",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "culture_sous_abri_hors_sol",
+      "domaines_secondaires": [
+        "horticulture_jardinage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cultures_maraicheres",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Ernst van Heurn, Kees van der Post",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "serre",
+        "culture sous abri",
+        "tunnel plastique",
+        "climat tropical",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 23 - Agriculture sous abri Structure, conditions requises et usage des serres sous différents climats",
+      "titre": "Agriculture sous abri (Agrodok 23)",
+      "resume": "Manuel technique détaillant la conception, la construction et la gestion des serres et abris pour protéger les cultures horticoles sous divers climats.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fichier numérisé sous label @EpubsFR avec droits réservés de l'éditeur (Agromisa ISBN 90-77073-37-X), archivé selon la règle 4.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 23 - Agriculture sous abri Structure, conditions requises et usage des serres sous différents climats"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Ernst van Heurn Kees van der Post" },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "© Fondation Agromisa, Wageningen, 2004. Tous droits réservés. ISBN Agromisa: 90-77073-37-X"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00177",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "Jeroen Boland, Irene Koomen, Joep van Lidth de Jeude, Jan Oudejans",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "pesticides",
+        "protection des cultures",
+        "toxicite",
+        "pulverisation",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 29 - Les pesticides : composition, utilisation et risques",
+      "titre": "Les pesticides : composition, utilisation et risques (Agrodok 29)",
+      "resume": "Guide sur les produits phytosanitaires : typologie, modes d'action, techniques d'application sécurisées, risques pour la santé et l'environnement.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'un canal @EpubsFR avec copyright réservé et données phytosanitaires anciennes nécessitant vérification.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 29 - Les pesticides : composition, utilisation et risques"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Jeroen Boland Irene Koomen Joep van Lidth de Jeude Jan Oudejans"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00178",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "petit_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "S.J. van der Meulen, G. den Dikken",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "canards",
+        "aviculture",
+        "elevage avicole",
+        "oeufs",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 33 - L’élevage de canards",
+      "titre": "L'élevage de canards (Agrodok 33)",
+      "resume": "Manuel pratique d'aviculture sur la conduite d'un élevage familial de canards en milieu tropical : logement, alimentation, couvaison et soins.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fichier taggé @EpubsFR sans licence libre, soumis aux droits réservés d'Agromisa (ISBN 90-77073-86-8), archivé selon la règle 4.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 33 - L’élevage de canards"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "S.J. van der Meulen G. den Dikken"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00179",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "ruminants"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Luurt Oudman",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "traction animale",
+        "anes",
+        "labour",
+        "attelage",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 35 Utilisation des ânes pour la traction et le labour",
+      "titre": "Utilisation des ânes pour la traction et le labour (Agrodok 35)",
+      "resume": "Guide sur le travail et l'attelage des ânes pour la traction animale en Afrique : harnachement, entretien des animaux, labour et transport agricole.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document issu d'un canal non autorisé @EpubsFR avec droits d'auteur réservés, archivé conformément à la règle 4.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 35 Utilisation des ânes pour la traction et le labour"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Luurt Oudman"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00180",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "qualite_securite_normes"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "produits laitiers",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "Karin Rutgers, Pauline Ebing, Rogier Muller, Matty Weijenberg",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "laitages",
+        "fromage",
+        "yaourt",
+        "transformation du lait",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 36 La préparation de laitages",
+      "titre": "La préparation de laitages (Agrodok 36)",
+      "resume": "Guide pratique pour la transformation artisanale du lait à petite échelle dans les pays du Sud : fabrication de fromage, yaourt, beurre et règles d'hygiène.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document diffusé via la release @EpubsFR sans licence libre explicite, archivé selon la règle métier 4.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 36 La préparation de laitages"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Karin Rutgers Pauline Ebing Rogier Muller Matty Weijenberg"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00181",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "agroalimentaire"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "soja",
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Rienke Nieuwenhuis, Joke Nieuwelink",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "soja",
+        "legumineuses",
+        "itineraire technique",
+        "alimentation",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 10 - La culture du soja et d’autres légumineuses",
+      "titre": "La culture du soja et d'autres légumineuses (Agrodok 10)",
+      "resume": "Guide complet sur la culture du soja et d'autres légumineuses en zone tropicale : préparation du sol, semis, protection, récolte et usages alimentaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique officiel CTA/Agromisa issu du fonds institutionnel propre, complet et directement utilisable par les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 10 - La culture du soja et d’autres légumineuses"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Rienke Nieuwenhuis Joke Nieuwelink"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00182",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "fertilisation_amendements"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 2005,
+      "auteurs": "Madeleine Inckel, Peter de Smet, Tim Tersmette, Tom Veldkamp",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "compost",
+        "compostage",
+        "matiere organique",
+        "fertilisation",
+        "agrodok"
+      ],
+      "titre_trouve": "Agrodok 8 - La fabrication et l’utilisation du compost",
+      "titre": "La fabrication et l'utilisation du compost (Agrodok 8)",
+      "resume": "Manuel pratique détaillant la préparation et l'utilisation du compost : sélection des matières, conduite du tas, décomposition et application agricole.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence CTA/Agromisa en diffusion institutionnelle sans marque warez, complet et d'utilité immédiate pour les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 8 - La fabrication et l’utilisation du compost"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Madeleine Inckel Peter de Smet Tim Tersmette Tom Veldkamp"
+        }
+      ]
+    }
+  ]
+}

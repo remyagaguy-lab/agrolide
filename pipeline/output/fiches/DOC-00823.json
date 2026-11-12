@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00823",
+  "sha256": "102b9071c94868f76b0508af88ca47f88466b4a5bb2b4b302d3dbb6ae84ea96a",
+  "nom_original": "chap-12-circulation-atmospherique-generale.pdf",
+  "chemin_relatif_source": "OD_Docs/chap-12-circulation-atmospherique-generale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 363041,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "climat_changement_climatique",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2013,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "circulation atmospherique",
+    "climatologie",
+    "meteorologie",
+    "pressions",
+    "cellules de hadley"
+  ],
+  "titre_trouve": "Chap. 12 LA CIRCULATION ATMOSPHERIQUE GENERALE",
+  "titre": "La circulation atmosphérique générale (Chapitre 12)",
+  "resume": "Support de cours de 10 pages correspondant au chapitre 12 d'un module de climatologie générale : mécanismes physiques, répartition zonale des pressions et dynamique des vents planétaires.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre 12 isolé d'un polycopié universitaire non publié, sans couverture officielle ni droits d'auteur identifiés. Archivé en interne.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chap. 12 LA CIRCULATION ATMOSPHERIQUE GENERALE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00823__la-circulation-atmospherique-generale-chapitre-12.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/climat_changement_climatique/DOC-00823__la-circulation-atmospherique-generale-chapitre-12.pdf"
+}

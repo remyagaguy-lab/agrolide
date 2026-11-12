@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00682",
+  "sha256": "dfc40bc222ff6c69cfc50cf19992fbd80a3e54bd4f49e2223373459bbdb05bba",
+  "nom_original": "Pour calculer inf et RU.docx",
+  "chemin_relatif_source": "OD_Docs/Pour calculer inf et RU.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 12773,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "infiltration",
+    "reserve utile",
+    "sol",
+    "capacite de retention",
+    "point de fletrissement",
+    "irrigation"
+  ],
+  "titre_trouve": "Infiltration et la réserve utile d'un sol",
+  "titre": "Calcul de l'infiltration et de la réserve utile d'un sol",
+  "resume": "Fiche pratique détaillant les formules et exemples de calcul du taux d'infiltration et de la réserve utile (RU) en eau du sol selon la texture (argileuse, limoneuse, sableuse).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche de calcul technique informelle sans mention de source ni licence de diffusion, archivée en l'état.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Infiltration et la réserve utile d'un sol"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00682__calcul-de-l-infiltration-et-de-la-reserve-utile-d-un-so.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00682__calcul-de-l-infiltration-et-de-la-reserve-utile-d-un-so.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00968",
+  "sha256": "81c9215ec415ec722108974a773560fc60116426c363f0cd1f25bcd14c58ad2f",
+  "nom_original": "l_eau dans le sol 1.pdf",
+  "chemin_relatif_source": "OD_Docs/l_eau dans le sol 1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 18558140,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "ensemble_partiel",
+    "titre_introuvable",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "physique du sol",
+    "eau dans le sol",
+    "humidite",
+    "reserve utile",
+    "potentiel hydrique"
+  ],
+  "titre_trouve": null,
+  "titre": "Cours de pédologie : l'eau dans le sol (Partie 1)",
+  "resume": "Support de cours scanné de 14 pages sans texte extractible abordant les états et transferts de l'eau dans le sol (rétention capillaire, réserve utile, potentiel hydrique), nécessitant un OCR.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan partiel sans OCR exploitable nécessitant un traitement optique et une vérification humaine de la complétude et des droits.",
+  "confiance": {
+    "classification": 0.58,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "l_eau dans le sol 1.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00968__cours-de-pedologie-l-eau-dans-le-sol-partie-1.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00968__cours-de-pedologie-l-eau-dans-le-sol-partie-1.pdf"
+}

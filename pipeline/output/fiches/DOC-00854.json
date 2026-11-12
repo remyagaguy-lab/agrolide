@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00854",
+  "sha256": "7b9affd9022f53ce040b40e916de863e1fafe4922e96d66885a5c218ef54cd79",
+  "nom_original": "couveuse.docx",
+  "chemin_relatif_source": "OD_Docs/couveuse.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 1769918,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "couveuse",
+    "fabrication couveuse",
+    "thermostat xh-w3001",
+    "stc-1000",
+    "incubation des oeufs",
+    "aviculture"
+  ],
+  "titre_trouve": "SUPPORT DE FORMATION SUR LA FABRICATION DES COUVEUSES",
+  "titre": "Fabrication et régulation des couveuses artisanales",
+  "resume": "Support pratique de formation expliquant les principes de l'incubation artificielle, la régulation thermique et hygrométrique, ainsi que le montage et câblage de couveuses avec les régulateurs XH-W3001 et STC-1000.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de formation non officiel sans licence libre, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.8,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SUPPORT DE FORMATION SUR LA FABRICATION DES COUVEUSES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00854__fabrication-et-regulation-des-couveuses-artisanales.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00854__fabrication-et-regulation-des-couveuses-artisanales.pdf"
+}

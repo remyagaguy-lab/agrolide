@@ -1,0 +1,70 @@
+{
+  "id": "DOC-01001",
+  "sha256": "1490929c78a6a88185b222cd7e3d6e9ac8fc46cf5d17e1d9cc51b7ece1387d6c",
+  "nom_original": "pasteque-melon-ft-culture_A4-12P_BAT-DAG_20190320.pdf",
+  "chemin_relatif_source": "OD_Docs/pasteque-melon-ft-culture_A4-12P_BAT-DAG_20190320.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2009855,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "cucurbitacées",
+  "pays": "France",
+  "annee": 2019,
+  "auteurs": "Jérôme Lecerf",
+  "source_organisation": "Direction de l'Agriculture de Polynésie française",
+  "mots_cles": [
+    "pasteque",
+    "melon",
+    "cucurbitacees",
+    "fiche technique",
+    "polynesie francaise",
+    "itineraire technique"
+  ],
+  "titre_trouve": "Fiche technique de culture : Pastèque et melon",
+  "titre": "Fiche technique de culture : La pastèque et le melon en milieu tropical",
+  "resume": "Fiche technique de culture maraîchère de la Direction de l'agriculture de Polynésie française détaillant l'itinéraire agronomique de la pastèque et du melon : semis, fertilisation, pollinisation et traitements phytosanitaires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle complète pour la culture tropicale des cucurbitacées, diffusable au public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Direction de l’agriculture ... Pape’ete – Tahiti - Polynésie française ... La pastèque (Citrullus lanatus) et le melon (Cucumis melo)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01001__fiche-technique-de-culture-la-pasteque-et-le-melon-en-m.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01001__fiche-technique-de-culture-la-pasteque-et-le-melon-en-m.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01038",
+  "sha256": "4326f0cd2705d2a6de6cf0bb0971a7722c2f14730910480a3ce55b9c0bff7660",
+  "nom_original": "résumé métabolisme des glucides-H.L-2020-2021.pdf",
+  "chemin_relatif_source": "OD_Docs/résumé métabolisme des glucides-H.L-2020-2021.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1226573,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "titre_introuvable",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "H.L.",
+  "source_organisation": null,
+  "mots_cles": [
+    "metabolisme des glucides",
+    "biochimie",
+    "glycolyse",
+    "sciences de base",
+    "ocr necessaire"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé sur le métabolisme des glucides (document numérisé à océriser)",
+  "resume": "Fiche de synthèse scannée de 6 pages sur le métabolisme des glucides en biochimie, dépourvue de texte extractible et nécessitant un traitement OCR.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document numérisé de 6 pages sans couche texte exploitable, droits et complétude indéterminables, validation humaine requise après OCR.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "résumé métabolisme des glucides-H.L-2020-2021.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01038__resume-sur-le-metabolisme-des-glucides-document-numeris.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-01038__resume-sur-le-metabolisme-des-glucides-document-numeris.pdf"
+}

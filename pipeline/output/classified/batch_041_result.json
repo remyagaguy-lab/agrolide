@@ -1,0 +1,825 @@
+{
+  "batch_number": 41,
+  "results": [
+    {
+      "id": "DOC-00611",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "genetique_reproduction"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Bénin",
+      "annee": 2018,
+      "auteurs": "Dr Teddy Kossougbeto",
+      "source_organisation": "GIZ / MAEP Bénin (Projet EFTPA-CAADP)",
+      "mots_cles": [
+        "aviculture",
+        "poulets locaux ameliores",
+        "benin",
+        "giz",
+        "maep",
+        "guide d'elevage"
+      ],
+      "titre_trouve": "GUIDE D’ELEVAGE DE POULETS DE RACES LOCALES AMELIOREES Généralités Module 1",
+      "titre": "Guide d'élevage de poulets de races locales améliorées : Généralités (Module 1)",
+      "resume": "Premier module du guide technique officiel de la GIZ et du MAEP Bénin sur l'élevage professionnel de poulets locaux améliorés, les races et la filière avicole.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide officiel d'appui technique et de formation professionnelle édité par la GIZ et le MAEP Bénin, libre de diffusion pour les producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE D’ELEVAGE DE POULETS DE RACES LOCALES AMELIOREES Généralités Module 1"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Publié par la GIZ GmbH Projet EFTPA-CAADP et MINISTERE DE L’AGRICULTURE DE L’ELEVAGE ET DE LA PECHE BENIN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00612",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "culture_sous_abri_hors_sol",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Nethone Samba",
+      "source_organisation": null,
+      "mots_cles": [
+        "agriculture hors sol",
+        "hydroponie",
+        "maraichage hors sol",
+        "substrat"
+      ],
+      "titre_trouve": null,
+      "titre": "Module de formation en agriculture hors sol",
+      "resume": "Support de formation sur l'agriculture et le maraîchage hors sol, scanné sans couche texte et nécessitant un traitement OCR préalable.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible; OCR complet requis pour contrôle du contenu et des droits de diffusion.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.5,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Module agriculture hors sol.pdf (nom du fichier)"
+        },
+        {
+          "champ": "auteur",
+          "page": 1,
+          "extrait": "Nethone Samba (métadonnées PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00613",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "sol_fertilite",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2024,
+      "auteurs": "Abdul-Charif Cissé",
+      "source_organisation": "École Nationale de Formation Agricole de Matourkou (ENFAM)",
+      "mots_cles": [
+        "agronomie generale",
+        "cours",
+        "matourkou",
+        "burkina faso",
+        "technicien superieur",
+        "fertilite du sol"
+      ],
+      "titre_trouve": "MODULE D’AGRICULTURE GENERALE Cycle des Techniciens supérieurs en agriculture",
+      "titre": "Module d'agriculture générale : Cycle des techniciens supérieurs (ENFA Matourkou)",
+      "resume": "Support de cours complet d'agronomie tropicale générale dispensé à l'ENFA de Matourkou (Burkina Faso) : biologie végétale, climat, fertilité des sols et gestion culturale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de formation académique de l'ENFA Matourkou sans mention de licence libre : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE D’AGRICULTURE GENERALE Cycle des Techniciens supérieurs en agriculture"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ECOLE NATIONALE DE FORMATION AGRICOLE DE MATOURKOU BURKINA FASO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00614",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "petits ruminants",
+      "pays": "Mali",
+      "annee": 2021,
+      "auteurs": "M. Almoustapha Koné",
+      "source_organisation": null,
+      "mots_cles": [
+        "embouche ovine",
+        "petits ruminants",
+        "bourgou",
+        "fane de niebe",
+        "sahel",
+        "mali",
+        "rations"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE THEME : EMBOUCHE OVINE-CAPRINE EN MILIEU PAYSAN",
+      "titre": "Fiche technique d'embouche ovine et caprine en milieu paysan sahélien",
+      "resume": "Fiche technique synthétique présentant la conduite de l'embouche ovine et caprine en milieu paysan au Sahel : rations locales (bourgou, niébé), calendrier et prophylaxie.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique pratique et complète sur l'embouche de petits ruminants, parfaitement adaptée aux éleveurs sahéliens.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE THEME : EMBOUCHE OVINE-CAPRINE EN MILIEU PAYSAN"
+        },
+        {
+          "champ": "rations",
+          "page": 6,
+          "extrait": "RATION 2 : 0,6 kg de foin de bourgou + 0,45 kg de fane de Niébé + 0,4 kg d’aliment ACHCAR"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00615",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2016,
+      "auteurs": "DEZLY Consulting",
+      "source_organisation": "DEZLY Consulting (Burkina Faso)",
+      "mots_cles": [
+        "aviculture traditionnelle amelioree",
+        "poules locales",
+        "habitat avicole",
+        "prophylaxie",
+        "burkina faso"
+      ],
+      "titre_trouve": "MODULE DE FORMATION SUR L’AVICULTURE TRADITIONNELLE AMELIOREE",
+      "titre": "Module de formation sur l'aviculture traditionnelle améliorée au Burkina Faso",
+      "resume": "Module de formation pratique pour les éleveurs ruraux sur l'aviculture traditionnelle améliorée : construction de l'habitat, biosécurité, alimentation locale et reproduction.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Module de formation pratique complet conçu pour les éleveurs burkinabè, diffusable publiquement pour le développement rural.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE DE FORMATION SUR L’AVICULTURE TRADITIONNELLE AMELIOREE Conception : DEZLY Consulting"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "CABINET D’EXPERTISE -Etudes-Formation-Appui Conseil- SIEGE DEDOUGOU (226) Burkina Faso"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00616",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Mali",
+      "annee": 2008,
+      "auteurs": "Projet PROSEL",
+      "source_organisation": "PROSEL (Sévaré, Mali)",
+      "mots_cles": [
+        "aviculture villageoise",
+        "eleveurs relais",
+        "maladie de newcastle",
+        "poulailler",
+        "mali",
+        "prosel"
+      ],
+      "titre_trouve": "MODULE DE FORMATION DES ELEVEURS RELAIS EN AVICULTURE VILLAGEOISE",
+      "titre": "Module de formation des éleveurs relais en aviculture villageoise (PROSEL Mali)",
+      "resume": "Support pédagogique illustré pour les éleveurs relais villageois au Mali, abordant l'identification des pathologies aviaires (Newcastle, grippe), l'hygiène et l'habitat.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support de vulgarisation institutionnel PROSEL dédié aux éleveurs villageois sahéliens, complet et diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE DE FORMATION DES ELEVEURS RELAIS EN AVICULTURE VILLAGEOISE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "PROSEL Gestion concertée des Ressources Pastorales et Sécurisation du Petit Elevage Sevaré – Mali"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00618",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "Dominique Boutherin, Gilbert Bron",
+      "source_organisation": "Éditions Lavoisier Tec & Doc",
+      "mots_cles": [
+        "multiplication vegetale",
+        "horticulture",
+        "bouturage",
+        "greffage",
+        "semis",
+        "lavoisier"
+      ],
+      "titre_trouve": "Multiplication des plantes horticoles",
+      "titre": "Multiplication des plantes horticoles (Éditions Lavoisier)",
+      "resume": "Extrait de l'ouvrage technique de référence des Éditions Lavoisier présentant les techniques de multiplication des végétaux horticoles (semis, bouturage, greffage).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "incomplet",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait promotionnel d'un ouvrage commercial sous copyright exclusif Lavoisier Tec & Doc : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Dominique Boutherin Gilbert Bron 3e édition Multiplication des plantes horticoles"
+        },
+        {
+          "champ": "droits",
+          "page": 3,
+          "extrait": "www.editions.lavoisier.fr 978-2-7430-1530-5"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00619",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "ruminants"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "anatomie veterinaire",
+        "myologie",
+        "muscles masticateurs",
+        "masseter",
+        "machoire"
+      ],
+      "titre_trouve": "2. Les muscles masticateurs",
+      "titre": "Anatomie vétérinaire : Les muscles masticateurs",
+      "resume": "Présentation de cours d'anatomie vétérinaire détaillant l'ostéologie, les insertions, la fonction et l'innervation des muscles masticateurs chez les animaux domestiques.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire spécialisé en format bureautique sans mention de licence : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "2. Les muscles masticateurs Développés chez toutes les espèces animales"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00620",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "myologie",
+        "anatomie veterinaire",
+        "muscles stries",
+        "contractilite",
+        "tendons"
+      ],
+      "titre_trouve": "La myologie",
+      "titre": "Anatomie vétérinaire : Généralités sur la myologie",
+      "resume": "Diaporama pédagogique d'introduction à la myologie vétérinaire présentant la structure, les propriétés physiologiques et la classification des tissus musculaires.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Diaporama académique d'anatomie animale non publié sous licence ouverte : archivage interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La myologie La myologie est l’étude des muscles et de leurs annexes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00621",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "ruminants",
+        "alimentation_animale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zootechnie",
+        "memento",
+        "elevage",
+        "nutrition animale",
+        "production animale"
+      ],
+      "titre_trouve": "Mémento de zootechnie",
+      "titre": "Mémento de zootechnie",
+      "resume": "Ouvrage de référence de 281 pages sur les principes de la zootechnie et des productions animales, scanné sans texte exploitable (OCR requis).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Ouvrage volumineux scanné sans couche texte extractible; traitement OCR et vérification des droits requis.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.4,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Mémento de zootechnie (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00622",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "ruminants",
+        "alimentation_animale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zootechnie",
+        "memento",
+        "elevage",
+        "nutrition animale",
+        "production animale"
+      ],
+      "titre_trouve": "Mémento de zootechnie",
+      "titre": "Mémento de zootechnie",
+      "resume": "Ouvrage de référence de 281 pages sur les principes de la zootechnie et des productions animales, scanné sans texte exploitable (OCR requis).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Ouvrage complet scanné sans couche texte numérique; OCR indispensable avant qualification juridique et éditoriale.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.4,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Mémento de zootechnie pdf.pdf (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00623",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "cultures_maraicheres"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "oignon",
+      "pays": "Burkina Faso",
+      "annee": 2013,
+      "auteurs": "Diane Larissa Nongabamba Yili",
+      "source_organisation": "Université de Ouagadougou / Programme AGRINOVIA",
+      "mots_cles": [
+        "oignon",
+        "oignon hivernal",
+        "poles d'entreprises agricoles",
+        "burkina faso",
+        "filiere maraichere",
+        "memoire"
+      ],
+      "titre_trouve": "LA PRODUCTION DE L’OIGNON HIVERNAL : QUELLES OPPORTUNITES POUR LES POLES D’ENTREPRISES AGRICOLES DU BURKINA FASO",
+      "titre": "La production de l'oignon hivernal : opportunités pour les pôles d'entreprises agricoles au Burkina Faso",
+      "resume": "Mémoire de Master analysant les opportunités économiques et techniques de la production d'oignon en saison hivernale pour les pôles d'entreprises agricoles burkinabè.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire universitaire non publié sous licence ouverte : archivage interne obligatoire selon la politique éditoriale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LA PRODUCTION DE L’OIGNON HIVERNAL : QUELLES OPPORTUNITES POUR LES POLES D’ENTREPRISES AGRICOLES DU BURKINA FASO"
+        },
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "MEMOIRE Présenté par YILI Diane Larissa Nongabamba Pour l’obtention du diplôme de Master Professionnel"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00624",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "metabolisme des lipides",
+        "acides gras",
+        "cours"
+      ],
+      "titre_trouve": "Métabolisme des Lipides",
+      "titre": "Biochimie métabolique : Métabolisme des lipides",
+      "resume": "Fascicule manuscrit ou scanné de biochimie portant sur le métabolisme des lipides, sans couche texte exploitable (OCR requis).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan CamScanner sans couche texte; nécessite une reconnaissance OCR et un contrôle de conformité.",
+      "confiance": {
+        "classification": 0.7,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Métabolisme des Lipides (métadonnées PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00625",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2023,
+      "auteurs": "Dr F. Hefied",
+      "source_organisation": "Université algérienne (Département Sciences Agronomiques et Vétérinaires)",
+      "mots_cles": [
+        "biochimie",
+        "metabolisme des glucides",
+        "glycolyse",
+        "cycle de krebs",
+        "sciences veterinaires",
+        "algerie"
+      ],
+      "titre_trouve": "Biochimie Métabolisme : Métabolisme des glucides",
+      "titre": "Biochimie métabolique : Métabolisme des glucides (1ère année Sciences Vétérinaires)",
+      "resume": "Support de cours universitaire complet de biochimie vétérinaire détaillant la digestion, la glycolyse, le cycle de Krebs et la néoglucogenèse.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours magistral universitaire sous format bureautique, sans licence de rediffusion libre : archivage interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "1 ère année sciences vétérinaires Biochimie Métabolisme Réalisée par : Dr HEFIED F. Département des Sciences Agronomiques et Vétérinaires"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00626",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2012,
+      "auteurs": "Nicola Barbisan, Hugo De Sevin, François Gabarrot, Thibaut Le Gac, Quentin Rysak, Coralie Ullmann",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "milieu aride",
+        "goutte a goutte",
+        "aspersion",
+        "gestion de l'eau",
+        "economie d'eau"
+      ],
+      "titre_trouve": "Méthodes d’irrigation en milieu aride",
+      "titre": "Méthodes d'irrigation en milieu aride",
+      "resume": "Rapport d'étude d'ingénierie agronomique dressant un panorama technique des systèmes d'irrigation (gravitaire, aspersion, goutte-à-goutte) en milieu aride.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Projet d'étudiants ingénieurs non publié sous licence libre : conservation pour consultation interne et archivage.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Méthodes d’irrigation en milieu aride Barbisan nicola De sevin hugo Gabarrot françois 2012"
+        }
+      ]
+    }
+  ]
+}

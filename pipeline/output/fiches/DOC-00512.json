@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00512",
+  "sha256": "e6cbbf903b9a566e2df73882b4d78a9f4d634d6bc89c74b302e417a1f18dd465",
+  "nom_original": "Initiation_à_l_irrigation_Techniques_d_irrigation_AGRO3_2023_2024.ppt",
+  "chemin_relatif_source": "OD_Docs/Initiation_à_l_irrigation_Techniques_d_irrigation_AGRO3_2023_2024.ppt",
+  "indice_ancien_dossier": null,
+  "format_source": "ppt",
+  "taille_octets": 1698304,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "cours agro3",
+    "techniques d'irrigation",
+    "gestion de l'eau",
+    "agronomie"
+  ],
+  "titre_trouve": "Initiation à l'irrigation : Techniques d'irrigation (AGRO3 2023-2024)",
+  "titre": "Initiation à l'irrigation et techniques d'arrosage (Cours AGRO3)",
+  "resume": "Diaporama universitaire de cours (niveau 3e année agronomie) introduisant les principes d'hydraulique agricole, les différents modes et matériels d'irrigation ainsi que la gestion de l'eau à la parcelle.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de présentation universitaire (.ppt) non publié, sans licence libre et sans identification formelle de l'auteur. Archivé en interne.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.85,
+    "completude": 0.75
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Initiation à l'irrigation Techniques d'irrigation AGRO3 2023 2024"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00512__initiation-a-l-irrigation-et-techniques-d-arrosage-cour.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00512__initiation-a-l-irrigation-et-techniques-d-arrosage-cour.pdf"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00570",
+  "sha256": "6aed7c1580e064a0536f2aa30e0abdcabc03851648f92ee9776dbe378e9c7c23",
+  "nom_original": "Luzerne.pdf",
+  "chemin_relatif_source": "OD_Docs/Luzerne.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7854438,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "autre",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "luzerne",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "luzerne",
+    "fourrage",
+    "legumineuse",
+    "alimentation animale",
+    "culture fourragere"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique sur la culture de la luzerne (Document scanné)",
+  "resume": "Document technique scanné sans texte extractible consacré à la culture de la luzerne, nécessitant un traitement OCR préalable.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans couche texte, nécessitant une reconnaissance optique de caractères (OCR) et une vérification des droits.",
+  "confiance": {
+    "classification": 0.6,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Luzerne.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00570__fiche-technique-sur-la-culture-de-la-luzerne-document-s.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00570__fiche-technique-sur-la-culture-de-la-luzerne-document-s.pdf"
+}

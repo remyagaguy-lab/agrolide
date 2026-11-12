@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00520",
+  "sha256": "2fc65d15a3483c6abbc5f8b2b191957834f4395b16de02d31c466dad27700ca4",
+  "nom_original": "L12PACA18_IrrigationFertiMelonAbris.pdf",
+  "chemin_relatif_source": "OD_Docs/L12PACA18_IrrigationFertiMelonAbris.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 413501,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "culture_sous_abri_hors_sol",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "melon",
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "Catherine Mazollier, Abderraouf Sassi, Laurent Urban",
+  "source_organisation": "GRAB",
+  "mots_cles": [
+    "melon",
+    "agriculture biologique",
+    "culture sous abri",
+    "irrigation",
+    "fertilisation azotee",
+    "tensiometrie",
+    "paca"
+  ],
+  "titre_trouve": "Melon sous abri en agriculture biologique : Optimisation de l’irrigation et de la fertilisation azotée",
+  "titre": "Melon sous abri en AB : Optimisation de l’irrigation et de la fertilisation",
+  "resume": "Compte-rendu d'essai du GRAB en région PACA sur le pilotage tensiométrique de l'irrigation et la fertilisation azotée du melon biologique sous tunnel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Compte-rendu d'expérimentation conduit en France (GRAB PACA), contexte pédoclimatique tempéré non prioritaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Melon sous abri en agriculture biologique : Optimisation de l’irrigation et de la fertilisation azotée"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00520__melon-sous-abri-en-ab-optimisation-de-lirrigation-et-de.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/culture_sous_abri_hors_sol/DOC-00520__melon-sous-abri-en-ab-optimisation-de-lirrigation-et-de.pdf"
+}

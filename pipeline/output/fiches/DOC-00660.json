@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00660",
+  "sha256": "34d574b63fef37f9859a36ff59cc31efa1ab55cf306e78bec20b7c4c2b3d9298",
+  "nom_original": "Pedologie générale Drouet.pdf",
+  "chemin_relatif_source": "OD_Docs/Pedologie générale Drouet.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6666423,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 81,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Belgique",
+  "annee": 2010,
+  "auteurs": "Thomas Drouet",
+  "source_organisation": "Université Libre de Bruxelles",
+  "mots_cles": [
+    "pedologie",
+    "sol fertilite",
+    "fraction minerale",
+    "matiere organique",
+    "complexe argilo-humique"
+  ],
+  "titre_trouve": "Pédologie BING-F-302 (version 2010)",
+  "titre": "Cours de pédologie générale : Constituants et propriétés du sol (BING-F-302)",
+  "resume": "Syllabus universitaire complet de pédologie approfondie (ULB) : fractions minérale et organique, altération, processus d'humification, complexe argilo-humique et cycles biogéochimiques.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Syllabus universitaire d'enseignant (ULB) sans licence libre explicite, archivé sous droits réservés.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Pédologie BING-F-302 (version 2010)"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Th. DROUET http://www.ulb.ac.be/sciences/lagev"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00660__cours-de-pedologie-generale-constituants-et-proprietes.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00660__cours-de-pedologie-generale-constituants-et-proprietes.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00941",
+  "sha256": "8f0c8aece0ddb365af8767bfe7c46177658f1ea8fcded97de21c4db68faac6da",
+  "nom_original": "guide_deculture_fraise.pdf",
+  "chemin_relatif_source": "OD_Docs/guide_deculture_fraise.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 355747,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 36,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2000,
+  "auteurs": "Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec (MAPAQ)",
+  "source_organisation": "MAPAQ Québec",
+  "mots_cles": [
+    "fraise",
+    "culture sous serre",
+    "fraisier",
+    "quebec",
+    "mapaq",
+    "horticulture"
+  ],
+  "titre_trouve": "La culture des fraises en serre Guide de production",
+  "titre": "La culture des fraises en serre : Guide de production (MAPAQ Québec)",
+  "resume": "Guide de production du ministère québécois détaillant la physiologie, la conduite climatique et la fertilisation des fraises cultivées sous abri en climat froid.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique conçu pour la serriculture sous climat froid québécois, inadapté au contexte tropical africain.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La culture des fraises en serre Guide de production"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "Gouvernement du Québec Ministère de l'Agriculture, des Pêcheries et de l'Alimentation"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00941__la-culture-des-fraises-en-serre-guide-de-production-map.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00941__la-culture-des-fraises-en-serre-guide-de-production-map.pdf"
+}

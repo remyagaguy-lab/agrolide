@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00254",
+  "sha256": "ae8ba96720b52191d8b8da346ab17691abe53095e9ff908c438e359852bebafe",
+  "nom_original": "Biologie végétale - chapitre 4.pdf",
+  "chemin_relatif_source": "OD_Docs/Biologie végétale - chapitre 4.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3491326,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479229489-Biologie_v_g_tale_-_chapitre_4.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 46,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "biologie vegetale",
+    "morphologie",
+    "racine",
+    "tige",
+    "graine",
+    "botanique"
+  ],
+  "titre_trouve": "Chapitre IV : Morphologie des végétaux supérieurs et adaptation",
+  "titre": "Morphologie des végétaux supérieurs et adaptation (Biologie végétale, chap. 4)",
+  "resume": "Chapitre de cours universitaire détaillé sur la morphologie et les adaptations des organes des végétaux supérieurs (racines, tiges, feuilles, graines).",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre 4 extrait d'un polycopié universitaire non libre, archivé pour référence.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chapitre IV Morphologie des végétaux supérieurs et adaptation"
+    }
+  ],
+  "ensemble_id": "ENS-0011",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00254__morphologie-des-vegetaux-superieurs-et-adaptation-biolo.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00254__morphologie-des-vegetaux-superieurs-et-adaptation-biolo.pdf"
+}

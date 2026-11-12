@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00237",
+  "sha256": "23bcd7c8e60407aac96fc41f9dbbc3e6976880d19ed0fad364648c2871d30728",
+  "nom_original": "BIOECOLOGIE L3PTV partie1.pdf",
+  "chemin_relatif_source": "OD_Docs/BIOECOLOGIE L3PTV partie1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2536679,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479220468-BIOECOLOGIE_L3PTV_partie1.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 11,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Khadra Boussaad",
+  "source_organisation": "Université de Batna-1",
+  "mots_cles": [
+    "bioecologie",
+    "bioagresseurs",
+    "protection des vegetaux",
+    "agroecosysteme",
+    "reseaux trophiques"
+  ],
+  "titre_trouve": "MODULE BIOECOLOGIE DES BIOAGRESSEURS (PARTIE 1)",
+  "titre": "Bioécologie des bioagresseurs : Introduction à l'agro-écosystème (Partie 1)",
+  "resume": "Polycopié de cours universitaire (L3 Protection des végétaux, Université de Batna-1) portant sur l'agro-écosystème, les chaînes trophiques et les pyramides écologiques en protection des cultures.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié universitaire non publié (sans licence libre explicite) et partiel (partie 1 isolée). Archivé en interne conformément aux règles de diffusion.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE BIOECOLOGIE DES BIOAGRESSEURS (PARTIE 1) Responsable de la matière : Mme BOUSSAAD Khadra"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "UNIVERSITE DE BATNA-1 INSTITUT DES SCIENCES VETERINAIRES ET DES SCIENCES AGRONOMIQUES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00237__bioecologie-des-bioagresseurs-introduction-a-l-agro-eco.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00237__bioecologie-des-bioagresseurs-introduction-a-l-agro-eco.pdf"
+}

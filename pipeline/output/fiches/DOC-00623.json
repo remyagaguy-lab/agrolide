@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00623",
+  "sha256": "b7e17e5a8f1a82926e5b72a6f398124c539649298dc7bcc4c58a503950749ed7",
+  "nom_original": "Mémoire-YILI-Diane-Larissa.pdf",
+  "chemin_relatif_source": "OD_Docs/Mémoire-YILI-Diane-Larissa.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2311448,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 76,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "economie_filieres_marches",
+  "type_doc": "memoire",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "oignon",
+  "pays": "Burkina Faso",
+  "annee": 2013,
+  "auteurs": "Diane Larissa Nongabamba Yili",
+  "source_organisation": "Université de Ouagadougou / Programme AGRINOVIA",
+  "mots_cles": [
+    "oignon",
+    "oignon hivernal",
+    "poles d'entreprises agricoles",
+    "burkina faso",
+    "filiere maraichere",
+    "memoire"
+  ],
+  "titre_trouve": "LA PRODUCTION DE L’OIGNON HIVERNAL : QUELLES OPPORTUNITES POUR LES POLES D’ENTREPRISES AGRICOLES DU BURKINA FASO",
+  "titre": "La production de l'oignon hivernal : opportunités pour les pôles d'entreprises agricoles au Burkina Faso",
+  "resume": "Mémoire de Master analysant les opportunités économiques et techniques de la production d'oignon en saison hivernale pour les pôles d'entreprises agricoles burkinabè.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire universitaire non publié sous licence ouverte : archivage interne obligatoire selon la politique éditoriale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA PRODUCTION DE L’OIGNON HIVERNAL : QUELLES OPPORTUNITES POUR LES POLES D’ENTREPRISES AGRICOLES DU BURKINA FASO"
+    },
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "MEMOIRE Présenté par YILI Diane Larissa Nongabamba Pour l’obtention du diplôme de Master Professionnel"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00623__la-production-de-l-oignon-hivernal-opportunites-pour-le.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/economie_filieres_marches/DOC-00623__la-production-de-l-oignon-hivernal-opportunites-pour-le.pdf"
+}

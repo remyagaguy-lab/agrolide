@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00611",
+  "sha256": "a3e2d5b785484a9f7936acfd577758799e541abcce56c8e543db128c38476e10",
+  "nom_original": "Module 1_ Poulet (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Module 1_ Poulet (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1713372,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 18,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Bénin",
+  "annee": 2018,
+  "auteurs": "Dr Teddy Kossougbeto",
+  "source_organisation": "GIZ / MAEP Bénin (Projet EFTPA-CAADP)",
+  "mots_cles": [
+    "aviculture",
+    "poulets locaux ameliores",
+    "benin",
+    "giz",
+    "maep",
+    "guide d'elevage"
+  ],
+  "titre_trouve": "GUIDE D’ELEVAGE DE POULETS DE RACES LOCALES AMELIOREES Généralités Module 1",
+  "titre": "Guide d'élevage de poulets de races locales améliorées : Généralités (Module 1)",
+  "resume": "Premier module du guide technique officiel de la GIZ et du MAEP Bénin sur l'élevage professionnel de poulets locaux améliorés, les races et la filière avicole.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide officiel d'appui technique et de formation professionnelle édité par la GIZ et le MAEP Bénin, libre de diffusion pour les producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE D’ELEVAGE DE POULETS DE RACES LOCALES AMELIOREES Généralités Module 1"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Publié par la GIZ GmbH Projet EFTPA-CAADP et MINISTERE DE L’AGRICULTURE DE L’ELEVAGE ET DE LA PECHE BENIN"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00611__guide-d-elevage-de-poulets-de-races-locales-ameliorees.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00611__guide-d-elevage-de-poulets-de-races-locales-ameliorees.pdf"
+}

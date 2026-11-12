@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00820",
+  "sha256": "9d252957edca7f4ea47ad193cd2a309e83f26c8a74498e279091aadfeacc5d00",
+  "nom_original": "cc0461fr.pdf",
+  "chemin_relatif_source": "OD_Docs/cc0461fr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 27852078,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 294,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture et pêche",
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "FAO",
+  "source_organisation": "FAO",
+  "mots_cles": [
+    "aquaculture",
+    "peche",
+    "transformation bleue",
+    "fao",
+    "ressources halieutiques",
+    "sofia"
+  ],
+  "titre_trouve": "La Situation mondiale des pêches et de l’aquaculture 2022 - Vers une transformation bleue",
+  "titre": "La situation mondiale des pêches et de l'aquaculture 2022 : Vers une transformation bleue",
+  "resume": "Rapport mondial phare de la FAO (SOFIA 2022, 294 pages) présentant l'état global des pêches de capture et de l'aquaculture, les données de production, le commerce halieutique et la stratégie de transformation bleue.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport phare mondial de la FAO (SOFIA 2022) sur les pêches et l'aquaculture, document de référence complet destiné aux membres.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA SITUATION MONDIALE DES PECHES ET DE L’AQUACULTURE 2022 VERS UNE TRANSFORMATION BLEUE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "FAO. 2022. La Situation mondiale des pêches et de l’aquaculture 2022. Vers une transformation bleue. Rome, FAO."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00820__la-situation-mondiale-des-peches-et-de-l-aquaculture-20.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00820__la-situation-mondiale-des-peches-et-de-l-aquaculture-20.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00479",
+  "sha256": "01ae9413246cb5f17a8c8769fbe2a78528505a265b39df4749d1c5839a6b3702",
+  "nom_original": "Guide complet de cuniculture.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide complet de cuniculture.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2851686,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00478",
+  "groupe_doublon_id": "GRP-0033",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00478 (Guide pratique de l'éleveur de lapins en Afrique de l'Ouest).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cuniculture",
+  "pays": "Bénin",
+  "annee": 2007,
+  "auteurs": "Yaou Djago, Marc Kpodékon, François Lebas",
+  "source_organisation": "Association Cuniculture / Université d'Abomey-Calavi",
+  "mots_cles": [
+    "cuniculture",
+    "lapin",
+    "elevage tropical",
+    "afrique de l'ouest",
+    "benin",
+    "alimentation cunicole"
+  ],
+  "titre_trouve": "LE GUIDE PRATIQUE DE L’ÉLEVEUR DE LAPINS EN AFRIQUE DE L’OUEST",
+  "titre": "Guide pratique de l'éleveur de lapins en Afrique de l'Ouest",
+  "resume": "Manuel de référence sur la cuniculture en milieu tropical ouest-africain : biologie, reproduction, alimentation à base de ressources locales, logement et santé du lapin.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Document en libre accès sur le Web (cuniculture.info)",
+  "complet": true,
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE GUIDE PRATIQUE DE L’ÉLEVEUR DE LAPINS EN AFRIQUE DE L’OUEST"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Document en libre accès sur le Web à : http://www.cuniculture.info/ Docs/Elevage/Tropic-01.htm"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00479__guide-pratique-de-l-eleveur-de-lapins-en-afrique-de-l-o.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00479__guide-pratique-de-l-eleveur-de-lapins-en-afrique-de-l-o.pdf"
+}

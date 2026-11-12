@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00394",
+  "sha256": "75599dca29a128d7d7e654b5a281fa540d2ca7ec91c7b50bc14a932ab5b760e3",
+  "nom_original": "Example CALCUL EFFICIENCE.docx",
+  "chemin_relatif_source": "OD_Docs/Example CALCUL EFFICIENCE.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 12032,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "efficience d'application",
+    "dose d'irrigation",
+    "calcul hydraulique",
+    "pertes en eau"
+  ],
+  "titre_trouve": "Calcul Efficience d’Irrigation",
+  "titre": "Exemple d'exercice résolu : calcul de l'efficience d'irrigation à la parcelle",
+  "resume": "Exercice pratique résolu présentant la formule de calcul de l'efficience d'application de l'eau d'irrigation sur 1 hectare et l'évaluation des pertes par ruissellement et infiltration.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Note d'exercice pédagogique informelle non publiée sous licence ouverte, archivée pour usage interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Calcul Efficience d’Irrigation Exercise:"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00394__exemple-d-exercice-resolu-calcul-de-l-efficience-d-irri.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00394__exemple-d-exercice-resolu-calcul-de-l-efficience-d-irri.pdf"
+}

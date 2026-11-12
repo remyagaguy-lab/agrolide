@@ -1,0 +1,595 @@
+{
+  "batch_number": 36,
+  "results": [
+    {
+      "id": "DOC-00532",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": ["production_vegetale", "agronomie_generale"],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "Ahmed Skhiri",
+      "source_organisation": "ResearchGate",
+      "mots_cles": ["irrigation", "besoins en eau", "agronomie", "calcul hydraulique"],
+      "titre_trouve": "LES BASES DE L'IRRIGATION: Calcul des besoins en eau",
+      "titre": "Les bases de l'irrigation : calcul des besoins en eau",
+      "resume": "Ouvrage de synthèse de 106 pages exposant les principes agronomiques et les méthodes de calcul des besoins en eau des cultures pour le pilotage de l'irrigation.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (ResearchGate)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Ouvrage méthodologique mis en libre accès par son auteur sur ResearchGate, accessible aux membres de la plateforme.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LES BASES DE L'IRRIGATION: Calcul des besoins en eau Book · April 2019"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Ahmed Skhiri Ministry of Agriculture, Saudi Arabia"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "All content following this page was uploaded by Ahmed Skhiri on 06 July 2019"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00533",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "apiculture",
+      "domaines_secondaires": ["agroeconomie"],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": ["technicien_conseiller", "entrepreneur_porteur_projet"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "apiculture",
+      "pays": "Burkina Faso",
+      "annee": 2006,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["apiculture moderne", "burkina faso", "ruches", "miel", "abeille africaine"],
+      "titre_trouve": "L’APICULTURE MODERNE DANS TOUTES CES COMPOSANTES",
+      "titre": "L'apiculture moderne dans toutes ses composantes : guide pratique",
+      "resume": "Guide technique d'initiation à l'apiculture tropicale au Burkina Faso : biologie de l'abeille africaine, types de ruches, conduite du rucher et récolte du miel.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document bureautique personnel non converti sans mention d'éditeur ni licence formelle ; archivage interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.75,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’APICULTURE MODERNE DANS TOUTES CES COMPOSANTES"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "Histoire de l’apiculture moderne au Burkina-Faso"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00534",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [],
+      "type_doc": "periodique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2025,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "L'Ami des Jardins",
+      "mots_cles": ["jardinage", "horticulture", "plantes d'ornement", "magazine"],
+      "titre_trouve": null,
+      "titre": "L'Ami des Jardins (Octobre 2025)",
+      "resume": "Numéro du magazine grand public français consacré au jardinage amateur, aux plantes ornementales et au potager en climat tempéré.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "contexte_non_adapte", "ocr_necessaire", "auteur_introuvable"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Périodique commercial grand public protégé par le droit d'auteur et inadapté aux contextes tropicaux.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.95,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L_Ami des Jardins - Octobre 2025.PDF"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00535",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "fertilisation_amendements",
+      "domaines_secondaires": ["ressources_naturelles_environnement", "sol_fertilite"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 1998,
+      "auteurs": "Union des Industries de la Fertilisation (UNIFA)",
+      "source_organisation": "UNIFA",
+      "mots_cles": ["fertilisation", "nutrition minerale", "fumure", "azote", "phosphore", "potasse"],
+      "titre_trouve": "La Fertilisation",
+      "titre": "La Fertilisation : principes agronomiques et plan de fumure",
+      "resume": "Manuel technique de référence de 78 pages détaillant les lois de la nutrition végétale, la dynamique des éléments majeurs (N, P, K) et l'élaboration d'un plan de fumure.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["contexte_non_adapte"],
+      "decision_publication": "membres",
+      "motif_decision": "Brochure pédagogique de référence de l'UNIFA, accessible aux membres mais marquée par son cadre réglementaire tempéré.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La Fertilisation 7e édition Union des Industries de la Fertilisation"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Union des Industries de la Fertilisation (UNIFA)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00536",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["physiologie humaine", "ventilation pulmonaire", "anesthesie", "hematose"],
+      "titre_trouve": "La Fonction Respiratoire",
+      "titre": "Cours de physiologie médicale : la fonction respiratoire humaine",
+      "resume": "Diaporama de cours de physiologie humaine traitant de la ventilation pulmonaire, de l'hématose et de l'intubation en anesthésie médicale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["auteur_introuvable"],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de physiologie et anesthésie médicale humaine, sans rapport avec le secteur agro-pastoral.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La Fonction Respiratoire I -Introduction"
+        },
+        {
+          "champ": "resume",
+          "page": 2,
+          "extrait": "on procède donc à une intubation trachéale pour éviter toute pénétration d’aliments dans les voies respiratoires lors d’éventuels vomissements"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00537",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": ["transversal", "sciences_de_base"],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur", "technicien_conseiller"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 1967,
+      "auteurs": "Georges Aubert, Jean Boulaine",
+      "source_organisation": "Presses Universitaires de France (PUF)",
+      "mots_cles": ["pedologie", "science du sol", "pedogenese", "classification des sols", "vertisols"],
+      "titre_trouve": "LA PÉDOLOGIE",
+      "titre": "La Pédologie (Collection Que sais-je ?)",
+      "resume": "Synthèse classique de 131 pages rédigée par deux éminents pédologues français exposant les facteurs de genèse, la morphologie et la classification générale des sols.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial sous droits réservés stricts de l'éditeur (Presses Universitaires de France, coll. Que Sais-Je ?).",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 5,
+          "extrait": "« QUE SAIS-JE? » LE POINT DES CONNAISSANCES ACTUELLES N° 352 LA PÉDOLOGIE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 5,
+          "extrait": "Georges AUBERT et Jean BOULAINE"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 5,
+          "extrait": "PRESSES UNIVERSITAIRES DE FRANCE 108, BOULEVARD SAINT-GERMAIN, PARIS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00538",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": ["ressources_naturelles_environnement", "sol_fertilite"],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["producteur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": ["vergers", "entretien du sol", "enherbement", "arboriculture", "travail du sol"],
+      "titre_trouve": null,
+      "titre": "La conduite des sols des vergers",
+      "resume": "Guide technique scanné de 64 pages traitant des techniques d'entretien et de gestion des sols en arboriculture fruitière, nécessitant un traitement OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ocr_necessaire", "scan_illisible", "auteur_introuvable"],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan vFlat sans couche texte extractible ; traitement OCR et validation humaine des droits requis.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.5,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La conduite des sols des vergers.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00539",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": ["production_animale", "sante_animale"],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "Dr. Karim Loucif",
+      "source_organisation": "Université Chadli Bendjedid El Tarf",
+      "mots_cles": ["respiration cellulaire", "chaine respiratoire", "mitochondrie", "atp", "sciences veterinaires"],
+      "titre_trouve": "Chapitre VII: La respiration cellulaire et la chaîne respiratoire",
+      "titre": "La respiration cellulaire et la chaîne respiratoire (Chapitre VII)",
+      "resume": "Support de cours universitaire de première année vétérinaire expliquant la biochimie de la respiration mitochondriale, le cycle de Krebs et la production d'ATP.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": ["ensemble_partiel", "incomplet"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre VII isolé extrait d'un cours universitaire vétérinaire, non publiable conformément à la règle sur les ensembles partiels.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.7
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chapitre VII: La respiration cellulaire et la chaîne respiratoire"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Dr. LOUCIF Karim Département des sciences vétérinaires"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00541",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": ["transversal", "sciences_de_base"],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": ["technicien_conseiller"],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2015,
+      "auteurs": "Jacques Fortin, François Fortin, Serge D’Amico",
+      "source_organisation": "Éditions Québec Amérique",
+      "mots_cles": ["meteorologie", "climat", "atmosphere", "environnement", "phenomenes atmospheriques"],
+      "titre_trouve": "La Météo : Comprendre le climat et l’environnement",
+      "titre": "La Météo : comprendre le climat et l'environnement",
+      "resume": "Guide encyclopédique illustré de 130 pages expliquant le fonctionnement de l'atmosphère terrestre, les régimes de vents, la prévision météorologique et les grands types de climats.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial", "contexte_non_adapte"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial canadien sous copyright strict des Éditions Québec Amérique ; archivage sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La Météo QUÉBEC AMÉRIQUE GUIDES DE LA CONNAISSANCE Comprendre le climat et l’environnement"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "Éditeur Jacques Fortin Éditions Québec Amérique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00543",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": ["agroeconomie", "gestion_exploitation"],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["enseignant_chercheur", "entrepreneur_porteur_projet"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": "Cameroun",
+      "annee": 2004,
+      "auteurs": "Victor Pouomogne, Olivier Mikolasek, Minette Tomedi Eyango Tabi",
+      "source_organisation": "CIRAD / IRAD / Université de Dschang",
+      "mots_cles": ["pisciculture", "elevage de poissons", "cameroun", "exploitations familiales", "tilapia", "silure"],
+      "titre_trouve": "ANALYSE-DIAGNOSTIC DE L'INSERTION DE LA PISCICULTURE DANS LES EXPLOITATIONS FAMILIALES AGRICOLES DE LA MENOUA (OUEST-CAMEROUN)",
+      "titre": "Diagnostic de l'insertion de la pisciculture dans les exploitations familiales de la Menoua",
+      "resume": "Rapport scientifique de recherche-action de 85 pages analysant la faisabilité technique, les bilans financiers et l'intégration de la pisciculture d'étang (tilapias, silures) au Cameroun.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport de recherche institutionnelle complet en partenariat CIRAD/IRAD, diffusable aux membres pour appui au développement aquacole.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ANALYSE-DIAGNOSTIC DE L'INSERTION DE LA PISCICULTURE DANS LES EXPLOITATIONS FAMILIALES AGRICOLES DE LA MENOUA (OUEST-CAMEROUN)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Université de Dschang Institut de Recherche Agricole pour le Développement CIRAD"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Dr POUOMOGNE Victor, Dr MIKOLASEK Olivier, Dr TABI née TOMEDI EYANGO Minette"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00544",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": ["production_vegetale", "production_animale"],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["etudiant", "enseignant_chercheur"],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "Éditions Larousse (compilé par Assim Bouafia)",
+      "source_organisation": "Éditions Larousse",
+      "mots_cles": ["dictionnaire agricole", "larousse agricole", "encyclopedie agronomie", "elevage", "agriculture"],
+      "titre_trouve": "Larousse agricole",
+      "titre": "Larousse agricole : dictionnaire encyclopédique de l'agriculture",
+      "resume": "Dictionnaire encyclopédique de référence de 755 pages couvrant l'ensemble du vocabulaire, des techniques agronomiques, zootechniques et agroalimentaires.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage de référence commercial protégé par le droit d'auteur des Éditions Larousse ; reproduction interdite.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Larousse-agricole.pdf"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "Réalisé par : L’ing. BOUAFIA Assim"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00545",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2002,
+      "auteurs": "M. Poupard",
+      "source_organisation": "Éditions Elsevier SAS",
+      "mots_cles": ["chirurgie humaine", "anesthesie", "medecine generale", "soins hospitaliers"],
+      "titre_trouve": "Le Manuel Du Généraliste - Chirurgie Et Anestesie",
+      "titre": "Le Manuel du généraliste : chirurgie et anesthésie humaine",
+      "resume": "Manuel médical de 83 pages traitant de la prise en charge clinique, préopératoire et anesthésique des patients en médecine humaine.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Ouvrage médical de chirurgie humaine sous copyright Elsevier, totalement hors du champ d'application de la plateforme Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Le Manuel Du Généraliste - Chirurgie Et Anestesie.pdf"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "© 2002 Editions Scientifiques et Médicales Elsevier SAS. Tous droits réservés."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00546",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": ["protection_des_cultures", "agronomie_generale"],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": ["enseignant_chercheur", "producteur"],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "banane",
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "André Lassoudière",
+      "source_organisation": "Éditions Quæ / CIRAD",
+      "mots_cles": ["bananier", "culture de la banane", "arboriculture tropicale", "cirad", "musa"],
+      "titre_trouve": "Le bananier et sa culture",
+      "titre": "Le bananier et sa culture",
+      "resume": "Monographie de référence exhaustive de 447 pages couvrant la botanique, la physiologie, la conduite agronomique, la protection sanitaire et la récolte des bananiers.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": ["droits_reserves", "contenu_commercial"],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial majeur sous copyright strict des Éditions Quæ avec eISBN ; reproduction interdite sans accord de l'éditeur.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Le bananier et sa culture - Andre Lassoudiere.pdf"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "© Éditions Quæ, 2007 eISBN 9782759200467 Le code de la propriété intellectuelle interdit la photocopie"
+        }
+      ]
+    }
+  ]
+}

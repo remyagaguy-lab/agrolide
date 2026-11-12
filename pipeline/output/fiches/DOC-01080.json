@@ -1,0 +1,73 @@
+{
+  "id": "DOC-01080",
+  "sha256": "ae02665d89c82990fa8804831107c55d1b8851262e130b3afed8273e33c3f389",
+  "nom_original": "RTE-Tomate-definitif-4.pdf",
+  "chemin_relatif_source": "OD_traites/RTE-Tomate-definitif-4.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 21310236,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480035135-RTE-Tomate-definitif-4.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 56,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "tomate",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Armel C. G. Mensah, Rachidatou Sikirou, Françoise Assogba Komlan, B. Barthélémy Yarou, Soul-Kifouly Midingoyi, Judith Honfoga, Marie-Épiphane Dossoumou, Nathalie G. Kpéra, Alice A. K. Djinadou",
+  "source_organisation": "INRAB / PADMAR / MAEP Bénin",
+  "mots_cles": [
+    "tomate",
+    "maraichage",
+    "inrab",
+    "benin",
+    "padmar",
+    "referentiel technico-economique",
+    "itineraire technique"
+  ],
+  "titre_trouve": "MIEUX PRODUIRE LA TOMATE EN TOUTE PÉRIODE AU BÉNIN",
+  "titre": "Mieux produire la tomate en toute période au Bénin : Référentiel technico-économique",
+  "resume": "Référentiel technico-économique de référence de l'INRAB et du PADMAR pour la production de tomate au Bénin : itinéraires techniques, rentabilité et calendrier.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Référentiel technico-économique institutionnel complet de l'INRAB pour la filière maraîchère, publié en accès libre pour les producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "MIEUX PRODUIRE LA TOMATE EN TOUTE PÉRIODE AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB) Projet d’Appui au Développement du Maraîchage (PADMAR)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01080__mieux-produire-la-tomate-en-toute-periode-au-benin-refe.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01080__mieux-produire-la-tomate-en-toute-periode-au-benin-refe.pdf"
+}

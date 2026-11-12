@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00595",
+  "sha256": "df11c196dc6e28607027238893b6947c22490e35cd0b34eba1ab15eeeae0309a",
+  "nom_original": "MICROBIOLOGIE ET HYGIENE ALIMENTAIRES.pdf",
+  "chemin_relatif_source": "OD_Docs/MICROBIOLOGIE ET HYGIENE ALIMENTAIRES.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4406026,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 300,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "qualite_securite_normes",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2013,
+  "auteurs": "TANTAOUI EL ARAKI Abdelmounaïm",
+  "source_organisation": "Institut Agronomique et Vétérinaire Hassan II",
+  "mots_cles": [
+    "microbiologie alimentaire",
+    "hygiene alimentaire",
+    "securite sanitaire",
+    "contamination fecale",
+    "qualite des aliments"
+  ],
+  "titre_trouve": "MICROBIOLOGIE ET HYGIENE ALIMENTAIRES",
+  "titre": "Cours théorique de microbiologie et hygiène alimentaires",
+  "resume": "Cours universitaire complet de 300 pages couvrant l'écologie microbienne des denrées alimentaires, les toxi-infections, les altérations et la maîtrise des normes d'hygiène en IAA.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire magistral non assorti d'une licence libre de diffusion, conservé en archive documentaire.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.88,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MICROBIOLOGIE ET HYGIENE ALIMENTAIRES Cours Théorique 2013-2014"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00595__cours-theorique-de-microbiologie-et-hygiene-alimentaire.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/qualite_securite_normes/DOC-00595__cours-theorique-de-microbiologie-et-hygiene-alimentaire.pdf"
+}

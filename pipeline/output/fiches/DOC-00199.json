@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00199",
+  "sha256": "d19d2217af49460432794cfd3882f4eefad85fba3d80af324c822cd5d3a54b0a",
+  "nom_original": "Agrodok_39_Les_produits_forestiers_autres_que_le_bois_d_oeuvre_La.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_39_Les_produits_forestiers_autres_que_le_bois_d_oeuvre_La.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 921486,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 82,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "produits forestiers non ligneux",
+  "pays": null,
+  "annee": 2006,
+  "auteurs": "Tinde van Andel",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "produits forestiers non ligneux",
+    "pfnl",
+    "plantes sauvages",
+    "cueillette",
+    "foret tropicale"
+  ],
+  "titre_trouve": "Agrodok 39 - Les produits forestiers autres que le bois d’œuvre la valeur des plantes sauvages",
+  "titre": "Les produits forestiers autres que le bois d’œuvre : la valeur des plantes sauvages",
+  "resume": "Manuel pratique sur l'identification, la récolte durable, la valorisation économique et la commercialisation des produits forestiers non ligneux (fruits, miel, résines, plantes médicinales) en milieu tropical.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet de la collection Agrodok (CTA/Agromisa) sur la valorisation durable des ressources forestières.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 39 - Les produits forestiers autres que le bois d’œuvre la valeur des plantes sauvages"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Tinde van Andel"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00199__les-produits-forestiers-autres-que-le-bois-duvre-la-val.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00199__les-produits-forestiers-autres-que-le-bois-duvre-la-val.pdf"
+}

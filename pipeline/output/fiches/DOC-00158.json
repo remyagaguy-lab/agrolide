@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00158",
+  "sha256": "e421df9681dac717a52037e803eadf79c8a203449e63abc5600ea33476c24b15",
+  "nom_original": "Agri-Mag-167-SIAM-AVril-2025.pdf",
+  "chemin_relatif_source": "OD_Docs/Agri-Mag-167-SIAM-AVril-2025.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 164278839,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive"
+  ],
+  "nb_pages": 100,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale",
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "periodique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2025,
+  "auteurs": "Société d'Édition Agricole",
+  "source_organisation": "Agriculture du Maghreb",
+  "mots_cles": [
+    "agriculture du maghreb",
+    "revue",
+    "siam",
+    "irrigation",
+    "protection des cultures",
+    "maroc"
+  ],
+  "titre_trouve": "Agriculture du Maghreb N° 167 - Avril 2025",
+  "titre": "Agriculture du Maghreb N° 167 - Spécial SIAM (Avril 2025)",
+  "resume": "Numéro spécial SIAM 2025 de la revue Agriculture du Maghreb abordant la gestion de l'irrigation goutte-à-goutte, la culture du pistachier et la protection phytosanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "Tous droits de reproduction autorisés avec mention impérative et complète du journal",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Le drapeau bloquant 'taille_excessive' interdit la publication directe en 'membres'. Le document doit être orienté vers 'a_valider_humain' pour compression ou validation technique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agriculture du Maghreb N° 167 - Avril 2025"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Tous droits de reproduction autorisés avec mention impérative et complète du journal."
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Le drapeau bloquant 'taille_excessive' interdit la publication directe en 'membres'. Le document doit être orienté vers 'a_valider_humain' pour compression ou validation technique."
+  },
+  "nom_fichier_final": "DOC-00158__agriculture-du-maghreb-n-167-special-siam-avril-2025.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00158__agriculture-du-maghreb-n-167-special-siam-avril-2025.pdf"
+}

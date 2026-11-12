@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00092",
+  "sha256": "a846bdb7ac83b8a0e7d40429cf53b998b6c04ff1345c2bb1f776c58c5d4beda8",
+  "nom_original": "1674_PDF.pdf",
+  "chemin_relatif_source": "OD_Docs/1674_PDF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1276382,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 85,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": 2011,
+  "auteurs": "Eva Kok, Janna de Feyter, Adr Vink",
+  "source_organisation": "Agromisa / CTA",
+  "mots_cles": [
+    "aviculture",
+    "incubation",
+    "elevage de poussins",
+    "volaille",
+    "agrodok"
+  ],
+  "titre_trouve": "Amélioration de l'incubation et de l'élevage des poussins",
+  "titre": "Amélioration de l'incubation et de l'élevage des poussins (Agrodok 34)",
+  "resume": "Guide pratique de référence sur les techniques d'incubation naturelle et artificielle des œufs, ainsi que le démarrage et la conduite d'élevage des poussins en aviculture villageoise et semi-intensive.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet de la collection Agrodok (Agromisa/CTA) destiné au renforcement des capacités des éleveurs en zone tropicale.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Série Agrodok No. 34 Amélioration de l’incubation et de l’élevage des poussins"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0066",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00092__amelioration-de-l-incubation-et-de-l-elevage-des-poussi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00092__amelioration-de-l-incubation-et-de-l-elevage-des-poussi.pdf"
+}

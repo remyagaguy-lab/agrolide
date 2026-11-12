@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00712",
+  "sha256": "286db1b458b19057369ef56a609488dac18e6971fec0ea2dd1dfb5ff47e999af",
+  "nom_original": "Rédaction.pdf",
+  "chemin_relatif_source": "OD_Docs/Rédaction.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 972585,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "persil",
+  "pays": "Burkina Faso",
+  "annee": 2023,
+  "auteurs": "Agribusiness Planning",
+  "source_organisation": "Agribusiness Planning",
+  "mots_cles": [
+    "persil",
+    "plante aromatique",
+    "maraichage",
+    "fiche culture",
+    "semis",
+    "burkina faso"
+  ],
+  "titre_trouve": "Persil : sa fiche culture",
+  "titre": "Fiche culture du persil : Guide pratique de production maraîchère",
+  "resume": "Fiche pratique détaillant l'itinéraire technique de culture du persil : semis, entretien, arrosage, variétés, protection contre les maladies et récolte en climat soudano-sahélien.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'un canal Telegram/WhatsApp privé (Agribusiness Planning) sans cadre institutionnel ni licence libre explicite. Le statut diffusion_institutionnelle est erroné et la diffusion publique non autorisée ; le document doit être archivé en non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Persil : sa fiche culture"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 3,
+      "extrait": "Contact WhatsApp : +226 55 88 48 58"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Document issu d'un canal Telegram/WhatsApp privé (Agribusiness Planning) sans cadre institutionnel ni licence libre explicite. Le statut diffusion_institutionnelle est erroné et la diffusion publique non autorisée ; le document doit être archivé en non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00712__fiche-culture-du-persil-guide-pratique-de-production-ma.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-00712__fiche-culture-du-persil-guide-pratique-de-production-ma.pdf"
+}

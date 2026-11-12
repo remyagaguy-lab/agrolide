@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00874",
+  "sha256": "16789febd3f8eaeff3aa5fb329298b535f67de6d100a5f0f04631b7e582d333a",
+  "nom_original": "ecologie_khenchla.pdf",
+  "chemin_relatif_source": "OD_Docs/ecologie_khenchla.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2285172,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 66,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "École Nationale Supérieure des Forêts de Khenchela",
+  "source_organisation": "ENSF Khenchela",
+  "mots_cles": [
+    "ecologie generale",
+    "foresterie",
+    "ecosysteme",
+    "facteurs ecologiques",
+    "pedologie",
+    "algerie"
+  ],
+  "titre_trouve": "Ecologie générale - 2ème Année Tronc Commun - Ecole nationale superieure des Forets – Khenchela",
+  "titre": "Cours d'écologie générale (École Nationale Supérieure des Forêts de Khenchela)",
+  "resume": "Cours complet d'écologie générale pour étudiants forestiers abordant les concepts d'écosystèmes, de facteurs biotiques et abiotiques et les propriétés édaphiques des sols.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours d'une grande école forestière algérienne sans licence de réutilisation publique, archivé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "« Ecologie générale » \n2ème Année Tronc Commun ... Ecole nationale superieure des Forets – Khenchela-"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00874__cours-d-ecologie-generale-ecole-nationale-superieure-de.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00874__cours-d-ecologie-generale-ecole-nationale-superieure-de.pdf"
+}

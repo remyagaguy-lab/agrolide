@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00284",
+  "sha256": "a62c18b018ef01f70fce20db8e9c13f07cdec6b5db9f50ebaaec5012bcfe0911",
+  "nom_original": "Chap 1.1.6._Vaccins_2008.pdf",
+  "chemin_relatif_source": "OD_Docs/Chap 1.1.6._Vaccins_2008.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 208678,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "texte_officiel",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Organisation Mondiale de la Santé Animale (OIE)",
+  "source_organisation": "OIE",
+  "mots_cles": [
+    "vaccins veterinaires",
+    "production de vaccins",
+    "normes zoosanitaires",
+    "sante animale",
+    "qualite",
+    "innocuite"
+  ],
+  "titre_trouve": "PRINCIPES DE PRODUCTION DES VACCINS VÉTÉRINAIRES",
+  "titre": "Principes de production des vaccins vétérinaires (Manuel terrestre de l'OIE 2008)",
+  "resume": "Normes techniques internationales de l'OIE fixant les règles de bonnes pratiques de fabrication, de contrôle de la qualité, de pureté, d'innocuité et d'efficacité des vaccins vétérinaires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé extrait du Manuel terrestre 2008 de l'OIE, conservé en archive pour référence technique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PRINCIPES DE PRODUCTION DES VACCINS VÉTÉRINAIRES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Manuel terrestre de l’OIE 2008"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00284__principes-de-production-des-vaccins-veterinaires-manuel.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00284__principes-de-production-des-vaccins-veterinaires-manuel.pdf"
+}

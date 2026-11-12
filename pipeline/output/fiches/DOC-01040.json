@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01040",
+  "sha256": "f59fc4b2cd78bd899556ab49f68a711efc1335597e91c57cd79bf4610e2603d6",
+  "nom_original": "semoules de ble et mais.pdf",
+  "chemin_relatif_source": "OD_Docs/semoules de ble et mais.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 35451,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "maïs",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "semoulerie",
+    "transformation cereales",
+    "mais",
+    "ble dur",
+    "diagramme de fabrication"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité SEMOULES",
+  "titre": "Diagramme de procédé industriel : Fabrication de semoules de blé dur et de maïs",
+  "resume": "Synoptique technique détaillant les opérations unitaires (nettoyage, broyage, blutage, sassage) et les flux de coproduits de la semoulerie industrielle de blé et maïs.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Schéma de process industriel complet et directement exploitable pour la conduite d'unités de transformation meunière.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité SEMOULES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01040__diagramme-de-procede-industriel-fabrication-de-semoules.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-01040__diagramme-de-procede-industriel-fabrication-de-semoules.pdf"
+}

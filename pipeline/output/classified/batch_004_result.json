@@ -1,0 +1,818 @@
+{
+  "batch_number": 4,
+  "results": [
+    {
+      "id": "DOC-00044",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physiologie animale",
+        "cours",
+        "biologie animale",
+        "sciences de base",
+        "resume"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 1 de physiologie animale",
+      "resume": "Document numérisé contenant un résumé de cours de physiologie animale (partie 1). Les fonctions physiologiques et biologiques animales y sont abordées pour les étudiants en sciences agronomiques et biologiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé sans couche texte exploitable, nécessitant un OCR pour identifier le contenu exact et vérifier les droits d'auteur avant décision.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé1 Physiologie Animale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00045",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physiologie animale",
+        "cours",
+        "biologie animale",
+        "sciences de base",
+        "resume"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 2 de physiologie animale",
+      "resume": "Fascicule numérisé constituant la deuxième partie d'un résumé de cours de physiologie animale destiné aux étudiants de premier cycle en biologie et agronomie.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte extractible (OCR nécessaire) avec statut de droits et complétude indéterminés sans traitement OCR approfondi.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé2 Physiologie Animale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00046",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physiologie animale",
+        "cours",
+        "biologie animale",
+        "sciences de base",
+        "resume"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 3 de physiologie animale",
+      "resume": "Troisième volet numérisé d'une synthèse de cours de physiologie animale pour étudiants en agronomie et sciences vétérinaires ou biologiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé sans texte extractible nécessitant une reconnaissance optique de caractères (OCR) et une validation humaine des droits.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé3 Physiologie Animale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00047",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physiologie vegetale",
+        "nutrition hydrique",
+        "photosynthese",
+        "plantes c3 c4 cam",
+        "croissance vegetale"
+      ],
+      "titre_trouve": "Résumé de Physiologie végétale",
+      "titre": "Résumé de physiologie végétale : nutrition hydrique et photosynthèse",
+      "resume": "Synthèse de cours de physiologie végétale traitant de la nutrition hydrique, de l'absorption et du transit de l'eau, des mécanismes de photosynthèse chez les plantes C3, C4 et CAM, ainsi que des facteurs régulant la croissance végétale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document pédagogique interne non publié (support Word sans licence libre explicite) et partiel (partie 1 d'une série). Archivé en interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé de Physiologie végétale"
+        },
+        {
+          "champ": "resume",
+          "page": 1,
+          "extrait": "La nutrition hydrique 1- Rôles d’eau chez les végétaux"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00048",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physiologie vegetale",
+        "cours",
+        "biologie vegetale",
+        "sciences de base",
+        "resume"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 2 de physiologie végétale",
+      "resume": "Fascicule numérisé constituant la deuxième partie d'un résumé de cours universitaire de physiologie végétale pour étudiants en agronomie et sciences naturelles.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier numérisé sans couche texte exploitable (OCR requis) et sans éléments probants sur les droits de diffusion.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé2 Physiologie végétale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00049",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physiologie vegetale",
+        "cours",
+        "biologie vegetale",
+        "sciences de base",
+        "resume"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 3 de physiologie végétale",
+      "resume": "Troisième fascicule d'un résumé de cours de physiologie végétale, destiné à l'apprentissage et aux révisions en sciences agronomiques et biologiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte indexable nécessitant un OCR préalable et une vérification humaine du statut éditorial.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé3 Physiologie végétale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00050",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zoologie",
+        "cours l2",
+        "biologie animale",
+        "sciences de base",
+        "classification animale"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 1 de zoologie - Licence 2",
+      "resume": "Fascicule numérisé de synthèse de cours de zoologie de niveau Licence 2 (L2), abordant la morphologie, l'anatomie et la classification des règnes animaux.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte extractible (OCR nécessaire) d'un résumé de cours L2 ; statut de droits et complétude à valider manuellement.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 1 Zoologie  L2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00051",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zoologie",
+        "cours l2",
+        "biologie animale",
+        "sciences de base",
+        "classification animale"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 2 de zoologie - Licence 2",
+      "resume": "Deuxième partie d'un cours universitaire synthétique de zoologie de niveau L2, traitant de la systématique et de l'organisation biologique animale.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans texte extractible nécessitant OCR et vérification humaine de la source et des droits.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 2 Zoologie  L2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00052",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zoologie",
+        "cours l2",
+        "biologie animale",
+        "sciences de base",
+        "classification animale"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 3 de zoologie - Licence 2",
+      "resume": "Troisième fascicule de révision en zoologie de niveau Licence 2, couvrant des embranchements spécifiques du monde animal pour étudiants en biologie.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans couche texte nécessitant un OCR pour analyser le contenu et clarifier les droits de propriété intellectuelle.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 3 Zoologie  L2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00053",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zoologie",
+        "cours l2",
+        "biologie animale",
+        "sciences de base",
+        "classification animale"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 4 de zoologie - Licence 2",
+      "resume": "Court fascicule numérisé (partie 4) de résumé de zoologie pour étudiants de deuxième année de licence en sciences agronomiques et biologiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé court sans texte extractible, nécessitant un OCR et une confirmation humaine avant toute valorisation.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 4 Zoologie  L2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00054",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zoologie",
+        "cours l2",
+        "biologie animale",
+        "sciences de base",
+        "classification animale"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 5 de zoologie - Licence 2",
+      "resume": "Cinquième volet d'un cours de révision en zoologie pour étudiants de Licence 2, traitant de la diversité zoologique et de l'anatomie comparée.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte exploitable (OCR nécessaire) ; droits d'auteur et complétude incertains.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 5 Zoologie  L2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00055",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zoologie",
+        "cours l2",
+        "biologie animale",
+        "sciences de base",
+        "classification animale"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 6 de zoologie - Licence 2",
+      "resume": "Sixième partie d'un ensemble de résumés de cours de zoologie générale et appliquée pour les étudiants de niveau Licence 2 en sciences du vivant.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé sans couche texte, requérant un OCR et une revue humaine pour statuer sur les droits.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé 6 Zoologie  L2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00056",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biologie animale",
+        "cours",
+        "zoologie",
+        "sciences de base",
+        "embryologie animale"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 1 de biologie animale",
+      "resume": "Document numérisé de 48 pages contenant un cours résumé de biologie animale (partie 1), couvrant les bases cellulaires, tissulaires et fonctionnelles animales pour étudiants universitaires.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier volumineux scanné sans texte extractible (OCR nécessaire) ; doutes sur la source et les droits de reproduction.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé1 Biologie Animale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00057",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biologie animale",
+        "cours",
+        "zoologie",
+        "sciences de base",
+        "organogenese"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 2 de biologie animale",
+      "resume": "Deuxième volet d'un cours synthétique de biologie animale de 40 pages, détaillant l'anatomie, les grandes fonctions et les tissus animaux pour les filières biologiques et agronomiques.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan sans texte exploitable nécessitant OCR et validation éditoriale humaine.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé2 Biologie Animale.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00058",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2022,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biologie animale",
+        "cours",
+        "zoologie",
+        "sciences de base",
+        "resume"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé 4 de biologie animale",
+      "resume": "Fascicule numérisé de synthèse en biologie animale (partie 4), destiné aux révisions d'examens universitaires en sciences du vivant.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "ensemble_partiel"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé sans couche texte exploitable (OCR nécessaire) et incomplet (partie 4 isolée) ; à valider par un opérateur.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.35,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé4 Biologie Animale.pdf"
+        }
+      ]
+    }
+  ]
+}

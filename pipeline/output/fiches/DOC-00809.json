@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00809",
+  "sha256": "ca037153726a5f3c4c20cc219f5a3e7f2ba4ea94389891a7dba8e267f7b8699e",
+  "nom_original": "btta_198.pdf",
+  "chemin_relatif_source": "OD_Docs/btta_198.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 398993,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "economie_filieres_marches",
+  "type_doc": "periodique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "piment / paprika",
+  "pays": "Maroc",
+  "annee": 2013,
+  "auteurs": "Institut Agronomique et Vétérinaire Hassan II (IAV Hassan II)",
+  "source_organisation": "IAV Hassan II (BTTA)",
+  "mots_cles": [
+    "niora",
+    "paprika",
+    "piment doux",
+    "tadla-azilal",
+    "filiere agricole",
+    "maroc",
+    "btta"
+  ],
+  "titre_trouve": "Diagnostic de la filière de Niora au niveau de la Région Tadla-Azilal",
+  "titre": "Diagnostic de la filière du piment à paprika (Niora) au Maroc",
+  "resume": "Bulletin technique de l'IAV Hassan II analysant la filière du piment paprika (Niora) dans le Tadla : conduite culturale, séchage, transformation et marché.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Bulletin de transfert de technologie de l'IAV Hassan II libre de droit institutionnel, utile pour la filière piment/épices.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 6,
+      "extrait": "diagnostic détaillé de l’état actuel de la filière de Niora au niveau de la Région Tadla-Azilal"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00809__diagnostic-de-la-filiere-du-piment-a-paprika-niora-au-m.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/economie_filieres_marches/DOC-00809__diagnostic-de-la-filiere-du-piment-a-paprika-niora-au-m.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00114",
+  "sha256": "70181574b624bf7c5ca0e4f3c75cdf2701602424c39be6aaf92a47c0bf352b8a",
+  "nom_original": "3eme sem dev emb.pdf",
+  "chemin_relatif_source": "OD_Docs/3eme sem dev emb.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1683547,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 21,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Yaici, Arab",
+  "source_organisation": null,
+  "mots_cles": [
+    "embryologie humaine",
+    "gastrulation",
+    "medecine",
+    "notochorde"
+  ],
+  "titre_trouve": "Troisième semaine du développement embryonnaire",
+  "titre": "Cours d'embryologie humaine : Troisième semaine du développement embryonnaire",
+  "resume": "Chapitre de cours et QCM de médecine humaine détaillant la troisième semaine de développement embryonnaire, la gastrulation et la formation de la notochorde.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Cours médical d'embryologie humaine hors périmètre agronomique et extrait partiel d'un ouvrage.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Troisième semaine du développement embryonnaire"
+    },
+    {
+      "champ": "auteurs",
+      "page": 20,
+      "extrait": "Embryologie humaine YAICI et ARAB"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00114__cours-d-embryologie-humaine-troisieme-semaine-du-develo.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00114__cours-d-embryologie-humaine-troisieme-semaine-du-develo.pdf"
+}

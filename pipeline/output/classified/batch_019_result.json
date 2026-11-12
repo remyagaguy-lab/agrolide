@@ -1,0 +1,849 @@
+{
+  "batch_number": 19,
+  "results": [
+    {
+      "id": "DOC-00270",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "chou",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI",
+      "mots_cles": [
+        "chou",
+        "culture maraichere",
+        "pepiniere",
+        "repiquage",
+        "itineraire technique",
+        "Cameroun"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE CULTURE DU CHOU",
+      "titre": "Technologie de culture du chou",
+      "resume": "Fiche technique opérationnelle détaillant l'itinéraire technique complet de la culture du chou en Afrique tropicale : exigences pédoclimatiques, conduite de la pépinière, repiquage, entretien et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet et directement applicable pour les maraîchers en zone tropicale, publié par un institut de formation agréé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE CULTURE DU CHOU"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00271",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "climat_changement_climatique",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2013,
+      "auteurs": "Jean-Baptiste Ndong",
+      "source_organisation": "Université Cheikh Anta Diop de Dakar (UCAD)",
+      "mots_cles": [
+        "climatologie",
+        "meteorologie",
+        "precipitation",
+        "pression atmospherique",
+        "temperature",
+        "Senegal"
+      ],
+      "titre_trouve": "LES ELEMENTS DE LA CLIMATOLOGIE",
+      "titre": "Les éléments de la climatologie (Licence 2 Géographie)",
+      "resume": "Support de cours universitaire présentant les bases de la climatologie générale : pression atmosphérique, températures, humidité, nébulosité, précipitations, vents et indices climatiques.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, archivé pour consultation interne conformément aux règles métier.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LES ELEMENTS DE LA CLIMATOLOGIE"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Dr Jean-Baptiste NDONG"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00272",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Cameroun",
+      "annee": 1968,
+      "auteurs": "Pascal de Pury",
+      "source_organisation": "Éditions CLÉ",
+      "mots_cles": [
+        "aviculture",
+        "elevage de poules",
+        "poules pondeuses",
+        "poulet de chair",
+        "alimentation volaille",
+        "Cameroun"
+      ],
+      "titre_trouve": "COMMENT ÉLEVER LES POULES guide d'aviculture africaine",
+      "titre": "Comment élever les poules : guide d'aviculture africaine",
+      "resume": "Manuel pratique exhaustif sur l'aviculture en Afrique équatoriale, abordant le logement, l'alimentation, la santé, la reproduction et la gestion économique de l'élevage avicole paysan.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial protégé par des droits d'auteur réservés (© Éditions CLÉ, Yaoundé), archivé sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "COMMENT ÉLEVER LES POULES guide d'aviculture africaine"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "Tous droits de reproduction... réservés pour tous les pays. © by Editions CLE, Yaoundé"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00273",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "horticulture_jardinage"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "arboriculture",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Pierre Michard",
+      "source_organisation": null,
+      "mots_cles": [
+        "taille des arbres",
+        "arboriculture fruitiere",
+        "elagage",
+        "arbres fruitiers",
+        "greffage"
+      ],
+      "titre_trouve": null,
+      "titre": "Comment tailler vos arbres",
+      "resume": "Guide pratique illustré sur les techniques de taille de formation, de fructification et d'entretien des arbres fruitiers et d'ornement en climat tempéré.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial scanné sans couche texte, sous droits réservés d'auteur et traitant d'espèces adaptées au climat tempéré.",
+      "confiance": {
+        "classification": 0.75,
+        "droits": 0.85,
+        "completude": 0.7
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier: COMMENT TAILLER VOS ARBRES (Pierre Michard).pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00274",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "République du Congo",
+      "annee": 2021,
+      "auteurs": "Prince Mboungou Batantou",
+      "source_organisation": null,
+      "mots_cles": [
+        "developpement personnel",
+        "motivation",
+        "objectifs",
+        "gestion financiere",
+        "finances personnelles"
+      ],
+      "titre_trouve": "COMMENT BIEN DEMARRER UNE NOUVELLE ANNEE ?",
+      "titre": "Comment bien démarrer une nouvelle année ? Comment débuter l'année comme un champion",
+      "resume": "Livret de développement personnel, motivation et conseils pratiques de gestion financière personnelle pour la planification des objectifs annuels.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de développement personnel et de coaching généraliste, totalement en dehors du périmètre agricole et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.8,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "COMMENT BIEN DEMARRER UNE NOUVELLE ANNEE ? Comment débuter l’année comme un Champion ?"
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "Prince MBOUNGOU BATANTOU"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00275",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2016,
+      "auteurs": "Célestin Rayaisse",
+      "source_organisation": "Institut Polytechnique Africain / Centre de Formation des Métiers (IPA/CFM)",
+      "mots_cles": [
+        "conservation des eaux et sols",
+        "defense et restauration des sols",
+        "CES DRS",
+        "Burkina Faso",
+        "cordons pierreux",
+        "zai"
+      ],
+      "titre_trouve": "COURS DE CONSERVATION DES EAUX ET SOLS/ DEFENSE ET RESTAURATION DES SOLS",
+      "titre": "Cours de conservation des eaux et sols / Défense et restauration des sols (CES/DRS)",
+      "resume": "Cours technique complet destiné aux agents d'agriculture sur les techniques sahéliennes de conservation des eaux et des sols : cordons pierreux, zaï, demi-lunes et fumure organique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support pédagogique institutionnel non publié sous licence ouverte, archivé pour exploitation interne selon les règles métier.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COURS DE CONSERVATION DES EAUX ET SOLS/ DEFENSE ET RESTAURATION DES SOLS"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Chargé du cours: Célestin RAYAISSE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00276",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "tour d'eau",
+        "lame d'eau",
+        "debit d'irrigation",
+        "calcul hydraulique",
+        "besoin en eau"
+      ],
+      "titre_trouve": "Calcul des tours d’eau en irrigation",
+      "titre": "Calcul des tours d'eau en irrigation : exercices d'application résolus",
+      "resume": "Fiche pratique d'exercices résolus présentant les formules de calcul du volume d'eau par tour, de la fréquence d'irrigation et du débit requis par parcelle.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'exercices pratiques sans mention d'auteur ni statut de droits explicite, conservé pour valorisation interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calcul des tours d’eau en irrigation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00277",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "autre",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "document scanne",
+        "camscanner",
+        "ocr necessaire"
+      ],
+      "titre_trouve": null,
+      "titre": "Document numérisé CamScanner non identifié",
+      "resume": "Document numérisé de 125 pages sans texte numérique extractible, nécessitant un traitement OCR pour identifier le contenu et les auteurs.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan complet sans aucun texte extractible et métadonnées insuffisantes ; nécessite OCR et validation humaine.",
+      "confiance": {
+        "classification": 0.3,
+        "droits": 0.3,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier: CamScanner ٠١-٢٤-٢٠٢٣ ١٠.٤٥ (1).pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00278",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovins",
+      "pays": "Burkina Faso",
+      "annee": 2014,
+      "auteurs": "Hadja Oumou Sanon, Aminata Drabo, Mamadou Sangare, Timbilfou Kiendrebeogo, Alain Gomgnibou",
+      "source_organisation": "INERA / CIRDES",
+      "mots_cles": [
+        "embouche bovine",
+        "bovins",
+        "Burkina Faso",
+        "INERA",
+        "CIRDES",
+        "alimentation animale",
+        "elevage pastoral"
+      ],
+      "titre_trouve": "Caractérisation des pratiques d’embouche bovine dans l’Ouest du Burkina Faso",
+      "titre": "Caractérisation des pratiques d'embouche bovine dans l'Ouest du Burkina Faso",
+      "resume": "Article scientifique analysant les caractéristiques des exploitations d'embouche bovine, les rations alimentaires utilisées, la rentabilité financière et les contraintes dans l'Ouest du Burkina Faso.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (IJBCS / AJOL)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article de recherche scientifique en libre accès (IJBCS), hautement pertinent pour les agronomes et chercheurs de la plateforme.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Caractérisation des pratiques d’embouche bovine dans l’Ouest du Burkina Faso"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Hadja Oumou SANON, Aminata DRABO, Mamadou SANGARE, Timbilfou KIENDREBEOGO et Alain GOMGNIBOU"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00279",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "vulgarisation_conseil"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "Pierre Rebuffel",
+      "source_organisation": "CIRAD",
+      "mots_cles": [
+        "carnet de gestion",
+        "gestion d'exploitation",
+        "conseil de gestion",
+        "charges d'exploitation",
+        "comptabilite agricole"
+      ],
+      "titre_trouve": "CARNET DE GESTION DES EXPLOITATIONS AGRICOLES",
+      "titre": "Carnet de gestion des exploitations agricoles (version révisée 2012)",
+      "resume": "Outil pratique et standardisé de suivi technico-économique des exploitations agricoles familiales : structure de l'exploitation, main d'œuvre, intrants, inventaire du cheptel et calcul des résultats.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Outil opérationnel complet d'aide à la gestion des exploitations agricoles paysannes, diffusable auprès des techniciens et producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CARNET DE GESTION DES EXPLOITATIONS AGRICOLES"
+        },
+        {
+          "champ": "annee",
+          "page": 1,
+          "extrait": "Carnet de gestion des exploitations agricoles révisé en janvier 2012"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00280",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Manoé Réné Sanou",
+      "source_organisation": "Direction Générale de la Protection des Végétaux (DGPV / MARAH Burkina Faso)",
+      "mots_cles": [
+        "pesticides",
+        "protection des cultures",
+        "bonnes pratiques phytosanitaires",
+        "securite sanitaire",
+        "DGPV",
+        "Burkina Faso"
+      ],
+      "titre_trouve": "USAGE SECURISE DES PESTICIDES",
+      "titre": "Usage sécurisé des pesticides : connaissances générales, risques et bonnes pratiques",
+      "resume": "Support de formation institutionnel sur la gestion raisonnée et sécurisée des produits phytopharmaceutiques : typologie des pesticides, risques sanitaires et environnementaux, et mesures de protection.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support de sensibilisation officiel du Ministère de l'Agriculture du Burkina Faso, présentant un intérêt public majeur pour la santé et l'agriculture.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "USAGE SECURISE DES PESTICIDES"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Manoé Réné SANOU... Chef de service des Pesticides (DGPV/MARAH)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00281",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "etudiant",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Niger",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Centre Régional d'Enseignement Spécialisé en Agriculture (CRESA)",
+      "mots_cles": [
+        "fertilite des sols",
+        "Niger",
+        "CRESA",
+        "Tahoua",
+        "Maradi",
+        "matiere organique"
+      ],
+      "titre_trouve": "Changements de la fertilité des sols",
+      "titre": "Changements de la fertilité des sols (Régions de Tahoua et Maradi, Niger)",
+      "resume": "Étude agronomique sur les variations de la fertilité des sols et les pratiques d'amendements organiques dans les zones agricoles de Tahoua et Maradi au Niger.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire académique du CRESA incomplet et non libre de droits, archivé conformément aux règles métier.",
+      "confiance": {
+        "classification": 0.75,
+        "droits": 0.8,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "CENTRE REGIONAL D ENSEIGNEMENT SPECIALISE EN AGRICULTURE"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Nom de fichier: Changements_de_la_fertilit_des_sols-1.doc"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00282",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "biodiversite_ecologie"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": "foresterie",
+      "pays": "Algérie",
+      "annee": 2023,
+      "auteurs": "École Nationale Supérieure des Forêts (ENSF)",
+      "source_organisation": "ENSF",
+      "mots_cles": [
+        "ecologie forestiere",
+        "ecologie factorielle",
+        "foret mediterraneenne",
+        "cedre de l'Atlas",
+        "Algerie"
+      ],
+      "titre_trouve": "UEF 1 Ecologie forestière - Chapitre 1 Ecologie factorielle",
+      "titre": "Écologie forestière : Chapitre 1 - Écologie factorielle",
+      "resume": "Premier chapitre d'un cours universitaire d'écologie forestière traitant des notions de base de l'habitat écologique et des facteurs climatiques affectant les espèces forestières nord-africaines.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "incomplet"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un cours universitaire algérien, non libre de droits et incomplet.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "UEF 1 Ecologie forestière ... Chapitre 1 Ecologie factorielle"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ENSF Pédagogie (Métadonnées créateur)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00283",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "qualite_securite_normes"
+      ],
+      "type_doc": "texte_officiel",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Organisation Mondiale de la Santé Animale (OIE)",
+      "source_organisation": "OIE",
+      "mots_cles": [
+        "banque de vaccins",
+        "vaccination d'urgence",
+        "normes zoosanitaires",
+        "sante animale",
+        "OIE",
+        "epizootie"
+      ],
+      "titre_trouve": "LIGNES DIRECTRICES POUR LES NORMES INTERNATIONALES APPLICABLES AUX BANQUES DE VACCINS",
+      "titre": "Normes internationales applicables aux banques de vaccins (Manuel terrestre de l'OIE 2008)",
+      "resume": "Recommandations et normes internationales de l'OIE régissant la gestion stratégique, le stockage antigénique et le déploiement des banques de vaccins vétérinaires en situation d'urgence épizootique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé extrait du Manuel terrestre 2008 de l'OIE, archivé pour documentation normative de référence.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LIGNES DIRECTRICES POUR LES NORMES INTERNATIONALES APPLICABLES AUX BANQUES DE VACCINS"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Manuel terrestre de l’OIE 2008"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00284",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "qualite_securite_normes"
+      ],
+      "type_doc": "texte_officiel",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "decideur_institution",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Organisation Mondiale de la Santé Animale (OIE)",
+      "source_organisation": "OIE",
+      "mots_cles": [
+        "vaccins veterinaires",
+        "production de vaccins",
+        "normes zoosanitaires",
+        "sante animale",
+        "qualite",
+        "innocuite"
+      ],
+      "titre_trouve": "PRINCIPES DE PRODUCTION DES VACCINS VÉTÉRINAIRES",
+      "titre": "Principes de production des vaccins vétérinaires (Manuel terrestre de l'OIE 2008)",
+      "resume": "Normes techniques internationales de l'OIE fixant les règles de bonnes pratiques de fabrication, de contrôle de la qualité, de pureté, d'innocuité et d'efficacité des vaccins vétérinaires.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé extrait du Manuel terrestre 2008 de l'OIE, conservé en archive pour référence technique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PRINCIPES DE PRODUCTION DES VACCINS VÉTÉRINAIRES"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Manuel terrestre de l’OIE 2008"
+        }
+      ]
+    }
+  ]
+}

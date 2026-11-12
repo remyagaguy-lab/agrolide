@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00513",
+  "sha256": "a36394464a7357be7e5cd86b156b023ce27f0926fe78fc06a93c63678a6ec15d",
+  "nom_original": "Intinéraire_technique_du_blé_tendre_hiver_en_Picardie.pdf",
+  "chemin_relatif_source": "OD_Docs/Intinéraire_technique_du_blé_tendre_hiver_en_Picardie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1405726,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 28,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "blé",
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "Chambres d’Agriculture de Picardie, Agro-Transfert Ressources et Territoires",
+  "source_organisation": "Chambres d’Agriculture de Picardie",
+  "mots_cles": [
+    "ble tendre",
+    "picardie",
+    "itineraire technique",
+    "protection integree",
+    "adventices"
+  ],
+  "titre_trouve": "ITINÉRAIRES TECHNIQUES INTÉGRÉS DU blé tendre d’hiver EN PICARDIE - GUIDE PRATIQUE",
+  "titre": "Itinéraires techniques intégrés du blé tendre d'hiver en Picardie",
+  "resume": "Guide pratique de 28 pages conçu par les Chambres d'Agriculture de Picardie pour la gestion intégrée du blé tendre d'hiver : désherbage mécanique, leviers agronomiques et protection phytosanitaire ciblée.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique institutionnel de qualité mais spécifique au blé d'hiver en climat tempéré froid de Picardie, de pertinence marginale pour l'Afrique tropicale. Archivé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ITINéRAIRES TECHNIQUES INTéGRéS DU blé tendre d’hiver EN PICARDIE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00513__itineraires-techniques-integres-du-ble-tendre-d-hiver-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00513__itineraires-techniques-integres-du-ble-tendre-d-hiver-e.pdf"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00743",
+  "sha256": "ce139a13eef18b47582a5d0f1e91499fa5c6ae1ebc4cf381c6e94635936a7963",
+  "nom_original": "TD. Agronomie.pdf",
+  "chemin_relatif_source": "OD_Docs/TD. Agronomie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1715874,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 33,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Département des Sciences Agronomiques",
+  "mots_cles": [
+    "agronomie",
+    "chimie du sol",
+    "cec",
+    "salinite",
+    "cations echangeables",
+    "exercices l2"
+  ],
+  "titre_trouve": "AGRONOMIE 1 (INTERROGATION)",
+  "titre": "Exercices et interrogations d'agronomie et chimie du sol (L2 Sciences Agronomiques)",
+  "resume": "Fascicule d'exercices d'application et d'évaluations corrigées d'agronomie de niveau Licence 2 : calculs de CEC, taux de saturation, salinité du sol (CE, ESP) et bilans ioniques.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Recueil d'exercices d'agronomie universitaire non publié sous licence ouverte, archivé pour la banque d'exercices.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.75,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L2 sciences agronomiques 2023 AGRONOMIE 1 (INTERROGATION)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00743__exercices-et-interrogations-d-agronomie-et-chimie-du-so.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00743__exercices-et-interrogations-d-agronomie-et-chimie-du-so.pdf"
+}

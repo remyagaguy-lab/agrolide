@@ -1,0 +1,794 @@
+{
+  "batch_number": 59,
+  "results": [
+    {
+      "id": "DOC-00886",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": [
+        "aviculture",
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Burkina Faso",
+      "annee": 2014,
+      "auteurs": "Inter-réseaux Développement rural",
+      "source_organisation": "Inter-réseaux Développement rural / Ferme Kouna",
+      "mots_cles": [
+        "aviculture",
+        "burkina faso",
+        "ferme kouna",
+        "oeufs",
+        "filiere avicole",
+        "entrepreneuriat"
+      ],
+      "titre_trouve": "Stratégie de valorisation de la filière avicole L’expérience de la Ferme Kouna à Banfora",
+      "titre": "Valorisation de la filière avicole : L'expérience de la Ferme Kouna (Burkina Faso)",
+      "resume": "Fiche d'expérience d'Inter-réseaux analysant le modèle technico-économique de la Ferme Kouna à Banfora pour le développement durable de l'aviculture au Burkina Faso.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche d'expérience institutionnelle complète financée par l'AFD, documentant une réussite entrepreneuriale avicole diffusable en accès public.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Stratégie de valorisation de la filière avicole L’expérience de la Ferme Kouna à Banfora"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00887",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Cameroun",
+      "annee": 2016,
+      "auteurs": "Ricarda Mondry",
+      "source_organisation": "CTA / ISF Cameroun",
+      "mots_cles": [
+        "cailles",
+        "coturniculture",
+        "elevage tropical",
+        "incubation",
+        "cameroun",
+        "pro-agro"
+      ],
+      "titre_trouve": "L’élevage des cailles en zone tropicale",
+      "titre": "L'élevage des cailles en zone tropicale (Guide Pro-Agro)",
+      "resume": "Guide pratique de la collection Pro-Agro (CTA / ISF Cameroun) détaillant la conduite technique de l'élevage de cailles en milieu tropical : logement, incubation, alimentation et santé.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de la collection institutionnelle Pro-Agro (CTA/ISF), libre de diffusion et ciblant l'aviculture tropicale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COLLECTION PRO-AGRO L’élevage des cailles en zone tropicale"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00888",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "batiments_equipements_elevage",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "autre",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2014,
+      "auteurs": "Big Dutchman",
+      "source_organisation": "Big Dutchman International GmbH",
+      "mots_cles": [
+        "poules pondeuses",
+        "elevage en batterie",
+        "cages",
+        "climat tropical",
+        "materiel avicole"
+      ],
+      "titre_trouve": "SuperDoubleDeck & SuperTripleDeck les systèmes cage évolutifs pour poules pondeuses",
+      "titre": "Brochure commerciale Big Dutchman : Systèmes cages SuperDoubleDeck et SuperTripleDeck",
+      "resume": "Plaquette commerciale présentant les spécifications techniques des cages en batterie SuperDoubleDeck et SuperTripleDeck de Big Dutchman adaptées aux climats tropicaux.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Brochure promotionnelle d'entreprise commerciale protégée par le droit d'auteur, archivée sans publication ouverte.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "SuperDoubleDeck & SuperTripleDeck les systèmes cage évolutifs pour poules pondeuses"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00890",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "petit élevage",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "lapin",
+        "cuniculture",
+        "milieu rural",
+        "clapiers",
+        "alimentation",
+        "reproduction"
+      ],
+      "titre_trouve": "L'élevage familial du lapin en milieu rural africain",
+      "titre": "L'élevage familial du lapin en milieu rural africain",
+      "resume": "Guide pratique illustré détaillant la cuniculture villageoise en Afrique : choix des reproducteurs, construction de clapiers en matériaux locaux, rationnement et santé du cheptel.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide technique complet et hautement pertinent pour le milieu rural africain ; validation humaine requise sur l'organisme émetteur et les droits.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.65,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L'élevage familial du lapin en milieu rural africain"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00891",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "petit_elevage",
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "S.J. van der Meulen, G. den Dikken",
+      "source_organisation": "Fondation Agromisa / CTA",
+      "mots_cles": [
+        "canards",
+        "aviculture",
+        "agrodok",
+        "incubation",
+        "canetons",
+        "alimentation"
+      ],
+      "titre_trouve": "L'élevage de canards",
+      "titre": "L'élevage de canards (Agrodok 33)",
+      "resume": "Manuel pratique complet de la collection Agrodok (Agromisa/CTA) couvrant toutes les étapes de l'élevage des canards en milieu tropical : races, logement, alimentation, reproduction et santé.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence Agrodok/CTA pour l'aviculture tropicale familiale et semi-commerciale, diffusable auprès des producteurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Agrodok 33 - L’élevage de canards"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00892",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2009,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "cailles d'ornement",
+        "colin de virginie",
+        "voliere",
+        "aviculture d'agrement"
+      ],
+      "titre_trouve": "Élever des cailles pour l’ornement",
+      "titre": "Élever des cailles pour l'ornement (Extrait d'ouvrage)",
+      "resume": "Extrait d'un ouvrage spécialisé consacré à l'élevage amateur et d'agrément des cailles et colins en volière d'ornement (sélection des mutations et races colorées).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel",
+        "droits_reserves",
+        "contexte_non_adapte",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre isolé d'un livre d'élevage ornemental sous droits réservés et sans utilité directe pour la production agricole africaine.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.8
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Élever des cailles pour l’ornement"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00893",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "porcins",
+        "aviculture",
+        "entrepreneuriat_agricole"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "porcins",
+      "pays": "Burkina Faso",
+      "annee": 1995,
+      "auteurs": "Oumarou Koutou Zoromé, Abdoul Malick Zoundi Ilboudo",
+      "source_organisation": "Université de Ouagadougou",
+      "mots_cles": [
+        "porcins",
+        "oeufs",
+        "burkina faso",
+        "business plan",
+        "creation d'entreprise",
+        "commercialisation"
+      ],
+      "titre_trouve": "Projet de Création d'une Société d'Elevage et de Commercialisation des Porcs et Oeufs \"SELCOPO\"",
+      "titre": "Projet de création d'une société d'élevage et de commercialisation de porcs et œufs (SELCOPO)",
+      "resume": "Mémoire de DUT présentant l'étude de faisabilité technique, commerciale et financière pour la création d'une entreprise d'élevage porcin et avicole au Burkina Faso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire de fin d'études universitaire, obligatoirement archivé sans publication conformément aux règles sur les travaux académiques.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Projet de Création d'une Société d'Elevage et de Commercialisation des Porcs et Oeufs \"SELCOPO\""
+        }
+      ]
+    },
+    {
+      "id": "DOC-00894",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "gestion_exploitation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "ruminants",
+      "pays": "Burkina Faso",
+      "annee": 2016,
+      "auteurs": "DEZLY Consulting",
+      "source_organisation": "DEZLY Consulting",
+      "mots_cles": [
+        "embouche ovine",
+        "embouche bovine",
+        "burkina faso",
+        "alimentation du betail",
+        "elevage",
+        "sahel"
+      ],
+      "titre_trouve": "MODULE DE FORMATION DES ELEVEURS SUR LES TECHNIQUES D’EMBOUCHE",
+      "titre": "Module de formation des éleveurs sur les techniques d'embouche ovine et bovine",
+      "resume": "Guide de formation pratique conçu pour les éleveurs sahéliens abordant le choix des animaux, la conduite de l'alimentation, le suivi sanitaire et la rentabilité d'une unité d'embouche.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Module technique de formation d'un cabinet privé de conseil très pertinent pour l'élevage sahélien ; validation des droits requise.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.65,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MODULE DE FORMATION DES ELEVEURS SUR LES TECHNIQUES D’EMBOUCHE Conception : DEZLY Consulting"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00895",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": null,
+      "auteurs": "T. Lacheb",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "enzymes",
+        "cinetique enzymatique",
+        "inhibition"
+      ],
+      "titre_trouve": "Les enzymes",
+      "titre": "Cours de biochimie générale : Cinétique et inhibition enzymatiques",
+      "resume": "Support de cours didactique en 16 diapositives sur les bases de l'enzymologie : mécanismes catalytiques, cinétique, unités de mesure et allostérie.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire de biochimie fondamentale non libre de droits et de pertinence marginale pour l'agriculture pratique.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les enzymes par LACHEB T"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00896",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "equipements_technologie",
+      "domaines_secondaires": [
+        "plantes_aromatiques_medicinales"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "plantes aromatiques",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "epices",
+        "aromates",
+        "huiles essentielles",
+        "oleoresines",
+        "antioxydants",
+        "extraction"
+      ],
+      "titre_trouve": "EXTRAITS D’EPICES ET D’AROMATES, ANTIOXYDANTS NATURELS",
+      "titre": "Synoptique technologique : Procédés d'extraction d'extraits d'épices, aromates et oléorésines",
+      "resume": "Diagramme de flux industriel d'une page détaillant les différentes filières technologiques d'extraction, distillation et raffinage des épices, huiles essentielles et oléorésines.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Schéma technique de procédé industriel sans mention formelle de licence ; validation humaine des droits de rediffusion requise.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "EXTRAITS D’EPICES ET D’AROMATES, ANTIOXYDANTS NATURELS ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00897",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "BNEDER",
+      "mots_cles": [
+        "pedologie",
+        "cec",
+        "capacite d'echange cationique",
+        "saturation du sol",
+        "exercices"
+      ],
+      "titre_trouve": null,
+      "titre": "Exercices corrigés sur la CEC et la saturation des sols",
+      "resume": "Fragment de document bureautique contenant des notes de calculs et solutions succinctes d'exercices sur la capacité d'échange cationique (CEC) et l'alcalinité du sol.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "titre_introuvable",
+        "auteur_introuvable",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document de brouillon incomplet de quelques lignes, sans titre ni métadonnées formelles ; archivé sans diffusion.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.8,
+        "completude": 0.4
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Solution :exo03 CEC=la somme des cations=Ca+Mg+Na+K+H+Al=20.5meq/100g"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00899",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "provende",
+        "aliments composes",
+        "poules pondeuses",
+        "poulets de chair",
+        "formulation alimentaire",
+        "aviculture"
+      ],
+      "titre_trouve": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR",
+      "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair",
+      "resume": "Guide pratique complet de 35 pages sur la formulation et la fabrication artisanale d'aliments composés avicoles : besoins nutritionnels, matières premières locales et formules alimentaires.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide technique très pertinent pour l'alimentation avicole locale sans mention d'auteur ni d'organisme officiel ; validation des droits requise.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.6,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00901",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "produits animaux",
+      "pays": null,
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "farine de poisson",
+        "graisses animales",
+        "suif",
+        "equarrissage",
+        "dechets d'abattoir",
+        "coproduits"
+      ],
+      "titre_trouve": "FARINES ET GRAISSES ANIMALES",
+      "titre": "Synoptique de procédé : Fabrication de farines et graisses animales",
+      "resume": "Schéma technique de procédé décrivant les étapes industrielles de transformation des coproduits de pêche et d'abattoir en farines de poisson, suifs et graisses animales.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Schéma technologique de valorisation des coproduits animaux issu d'un bureau d'études sans licence explicite ; validation humaine requise.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FARINES ET GRAISSES ANIMALES ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00903",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": [
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "blé",
+      "pays": null,
+      "annee": 2007,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "farine de ble",
+        "meunerie",
+        "minoterie",
+        "plansichter",
+        "broyage",
+        "sons"
+      ],
+      "titre_trouve": "FARINES DE BLE",
+      "titre": "Synoptique industriel : Diagramme de meunerie et mouture des farines de blé",
+      "resume": "Diagramme de fabrication de minoterie décrivant les opérations unitaires de nettoyage, broyage, blutage et convertissage du blé en farines et coproduits (sons, remoulages).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Synoptique technique de minoterie issu d'une étude d'ingénierie sans mention explicite de droits ; validation humaine requise.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.6,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FARINES DE BLE Réception du blé en grains"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00904",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": [
+        "politiques_strategies",
+        "numerique_technologies",
+        "gestion_exploitation"
+      ],
+      "type_doc": "periodique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "decideur_institution",
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2019,
+      "auteurs": "Ministère de l'Agriculture et des Aménagements Hydro-agricoles du Burkina Faso",
+      "source_organisation": "Ministère de l'Agriculture et des Aménagements Hydro-agricoles du Burkina Faso",
+      "mots_cles": [
+        "agri entrepreneur",
+        "burkina faso",
+        "drones agricoles",
+        "jeunesse",
+        "politique agricole",
+        "resilience"
+      ],
+      "titre_trouve": "AGRI ENTREPRENEUR LE MAGAZINE DE L'ENTREPRENEUR AGRICOLE",
+      "titre": "Agri Entrepreneur N°1 : Le magazine de l'entrepreneur agricole au Burkina Faso",
+      "resume": "Premier numéro du magazine officiel du Ministère de l'Agriculture du Burkina Faso mettant en lumière l'entrepreneuriat des jeunes, l'usage des drones agricoles et les modèles d'exploitations résilientes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Publication périodique institutionnelle officielle du Ministère de l'Agriculture du Burkina Faso, librement accessible pour encourager l'entrepreneuriat.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "AGRI ENTREPRENEUR LE MAGAZINE DE L'ENTREPRENEUR AGRICOLE FASO DRONE"
+        }
+      ]
+    }
+  ]
+}

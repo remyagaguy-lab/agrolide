@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00270",
+  "sha256": "772275e80e09cefc6759be37849b88f9431083c000644d2ea6700cfd1b4e9be3",
+  "nom_original": "CHOU.pdf",
+  "chemin_relatif_source": "OD_Docs/CHOU.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1118003,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "chou",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI",
+  "mots_cles": [
+    "chou",
+    "culture maraichere",
+    "pepiniere",
+    "repiquage",
+    "itineraire technique",
+    "Cameroun"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE CULTURE DU CHOU",
+  "titre": "Technologie de culture du chou",
+  "resume": "Fiche technique opérationnelle détaillant l'itinéraire technique complet de la culture du chou en Afrique tropicale : exigences pédoclimatiques, conduite de la pépinière, repiquage, entretien et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet et directement applicable pour les maraîchers en zone tropicale, publié par un institut de formation agréé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE CULTURE DU CHOU"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0020",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00270__technologie-de-culture-du-chou.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00270__technologie-de-culture-du-chou.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00811",
+  "sha256": "63b8cc777e635a443604d76addf7c2491b7a577843b184374939030b1d1d4efe",
+  "nom_original": "ca3402fr.pdf",
+  "chemin_relatif_source": "OD_Docs/ca3402fr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 594097,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "manioc",
+  "pays": "République démocratique du Congo",
+  "annee": 2011,
+  "auteurs": "INERA - REAFOR - FAO",
+  "source_organisation": "FAO TECA / INERA",
+  "mots_cles": [
+    "manioc",
+    "rdc",
+    "inera",
+    "congo",
+    "bouturage",
+    "itineraire technique",
+    "tubercules"
+  ],
+  "titre_trouve": "Technique culturale du manioc, Congo (RDC)",
+  "titre": "Technique culturale du manioc en République Démocratique du Congo",
+  "resume": "Fiche technique TECA (FAO/INERA) de 3 pages décrivant l'itinéraire technique du manioc en RDC : choix des boutures saines, préparation du terrain, fumure minérale et organique, et récolte des feuilles et tubercules.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique officielle FAO/INERA sur la culture du manioc en RDC, directement exploitable pour les producteurs et techniciens agricoles d'Afrique centrale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technique culturale du manioc, Congo (RDC)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "REAFOR/ Institut National pour l’Etude et la Recherche Agronomique (INERA)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00811__technique-culturale-du-manioc-en-republique-democratiqu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00811__technique-culturale-du-manioc-en-republique-democratiqu.pdf"
+}

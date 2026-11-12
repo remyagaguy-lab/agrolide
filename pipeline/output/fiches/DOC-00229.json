@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00229",
+  "sha256": "3bb49a7d3cf8199852514d055cd186d775b98b7f7254dea126f902b0dee8f578",
+  "nom_original": "Atlas de biologie animale - Tome 2. Les grandes fonctions.pdf",
+  "chemin_relatif_source": "OD_Docs/Atlas de biologie animale - Tome 2. Les grandes fonctions.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 40808662,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479119115-Atlas_de_biologie_animale_-_Tome_2._Les_grandes_fonctions.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 219,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Sandrine Heusser, Henri-Gabriel Dupuy",
+  "source_organisation": "Dunod",
+  "mots_cles": [
+    "biologie animale",
+    "atlas",
+    "grandes fonctions",
+    "nutrition animale",
+    "anatomie comparee"
+  ],
+  "titre_trouve": "ATLAS BIOLOGIE ANIMALE 2. Les grandes fonctions 2e édition",
+  "titre": "Atlas de biologie animale : Tome 2, Les grandes fonctions",
+  "resume": "Ouvrage universitaire illustré de référence (collection Sciences Sup, Dunod) présentant l'anatomie comparée et les grandes fonctions biologiques animales (nutrition, respiration, excrétion, relation, reproduction).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Manuel universitaire commercial édité par Dunod (ISBN 978-2-10-053797-6) protégé par le droit d'auteur. Non publiable en accès libre, archivé en interne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ATLAS BIOLOGIE ANIMALE 2. Les grandes fonctions 2e édition"
+    },
+    {
+      "champ": "autre",
+      "page": 4,
+      "extrait": "© Dunod, Paris, 2000, 2008 ISBN 978-2-10-053797-6"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00229__atlas-de-biologie-animale-tome-2-les-grandes-fonctions.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00229__atlas-de-biologie-animale-tome-2-les-grandes-fonctions.pdf"
+}

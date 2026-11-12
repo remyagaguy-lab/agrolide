@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00226",
+  "sha256": "56768d8bce77110910e053d77a68dc598c1fe20ba754abca143fbb55a73d0d78",
+  "nom_original": "Appareil génital male.pptx",
+  "chemin_relatif_source": "OD_Docs/Appareil génital male.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 4190202,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 18,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "anatomie humaine",
+    "appareil genital male",
+    "medecine humaine",
+    "embryologie"
+  ],
+  "titre_trouve": "Appareil génital mâle",
+  "titre": "Anatomie de l'appareil génital mâle et glande mammaire",
+  "resume": "Diaporama pédagogique de 18 diapositives sur l'appareil génital mâle humain et l'embryologie de la glande mammaire, destiné aux études médicales humaines et hors périmètre agricole.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Diaporama d'anatomie et embryologie médicale humaine, hors du périmètre agronomique et vétérinaire de la plateforme Agrolide.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Appareil génital mâle ... L’organe copulateur (le pénis , la verge)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00226__anatomie-de-l-appareil-genital-male-et-glande-mammaire.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00226__anatomie-de-l-appareil-genital-male-et-glande-mammaire.pdf"
+}

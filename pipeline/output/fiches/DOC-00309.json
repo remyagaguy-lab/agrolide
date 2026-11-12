@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00309",
+  "sha256": "0d2b50f32cd2ac67e2365497cad646407f51a21219069307998bee747740a3e3",
+  "nom_original": "Cours Aviculture.pptx",
+  "chemin_relatif_source": "OD_Docs/Cours Aviculture.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 4036969,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "droits_reserves"
+  ],
+  "nb_pages": 127,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Algérie",
+  "annee": 2015,
+  "auteurs": "D. Boudouma",
+  "source_organisation": "École Nationale Supérieure Agronomique d'Alger",
+  "mots_cles": [
+    "aviculture",
+    "poulet de chair",
+    "batiments avicoles",
+    "alimentation",
+    "pathologies",
+    "stress thermique"
+  ],
+  "titre_trouve": "FORMATION EN AVICULTURE DES CADRES DUMINISTERE DE L’AGRICULTURE ET DU DEVELOPPEMENT RURAL",
+  "titre": "Formation approfondie en aviculture : filière, conduite d'élevage et stress thermique",
+  "resume": "Support pédagogique complet de 127 diapositives couvrant la filière avicole, la génétique, le logement, la nutrition, les pathologies et la gestion du stress thermique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support complet de formation ministérielle et universitaire sans licence de rediffusion publique libre ; archivé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FORMATION EN AVICULTURE DES CADRES DUMINISTERE DE L’AGRICULTURE ET DU DEVELOPPEMENT RURAL"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00309__formation-approfondie-en-aviculture-filiere-conduite-d.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00309__formation-approfondie-en-aviculture-filiere-conduite-d.pdf"
+}

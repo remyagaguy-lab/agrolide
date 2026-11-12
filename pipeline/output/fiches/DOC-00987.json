@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00987",
+  "sha256": "29c4f6c48623459489d1ca8fe5012a520b44e6b88863fdf52040fee5c76a3d8e",
+  "nom_original": "matière organique.pdf",
+  "chemin_relatif_source": "OD_Docs/matière organique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3486581,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 219,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "these",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Congo",
+  "annee": 1998,
+  "auteurs": "Ernest Kouakoua",
+  "source_organisation": "ORSTOM (IRD) / Université Henri Poincaré",
+  "mots_cles": [
+    "sols ferrallitiques",
+    "matiere organique",
+    "stabilite structurale",
+    "congo",
+    "orstom",
+    "these"
+  ],
+  "titre_trouve": "LA MATIERE ORGANIQUE ET LA STABILITE STRUCTURALE D'HORIZONS DE SURFACE DE SOLS FERRALLITIQUES ARGILEUX. EFFET DU MODE DE GESTION DES TERRES",
+  "titre": "La matière organique et la stabilité structurale des sols ferrallitiques argileux (Thèse ORSTOM)",
+  "resume": "Thèse de doctorat ORSTOM de 219 pages analysant la dynamique de la matière organique et la stabilité structurale des sols ferrallitiques sous différents modes de gestion au Congo et au Brésil.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Thèse de doctorat en sciences du sol (ORSTOM/Université de Nancy), systématiquement archivée sans publication directe selon la règle métier.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA MATIERE ORGANIQUE ET LA STABILITE STRUCTURALE D'HORIZONS DE SURFACE DE SOLS FERRALLITIQUES ARGILEUX."
+    },
+    {
+      "champ": "type_doc",
+      "page": 3,
+      "extrait": "pour l'obtention du doctorat de l'université Henri Poincaré, Nancy I, spécialité Sciences du sol"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00987__la-matiere-organique-et-la-stabilite-structurale-des-so.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00987__la-matiere-organique-et-la-stabilite-structurale-des-so.pdf"
+}

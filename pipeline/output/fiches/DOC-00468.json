@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00468",
+  "sha256": "2b33baa0bcb1d47306572ee38245aa8febaa7ea767d18e6845a27faee91164bc",
+  "nom_original": "Geo AGRAIRE.pdf",
+  "chemin_relatif_source": "OD_Docs/Geo AGRAIRE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 181446,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 27,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Sénégal",
+  "annee": 2016,
+  "auteurs": "Université Cheikh Anta Diop de Dakar (UCAD)",
+  "source_organisation": "UCAD",
+  "mots_cles": [
+    "geographie agraire",
+    "systemes agraires",
+    "terroirs",
+    "senegal",
+    "ucad"
+  ],
+  "titre_trouve": "H 124 GEOGRAPHIE AGRAIRE",
+  "titre": "Cours de géographie agraire - UCAD Dakar",
+  "resume": "Polycopié de cours universitaire de 27 pages de l'UCAD (Dakar) consacré à la géographie agraire : évolution des paysages ruraux, organisation spatiale des terroirs et systèmes agraires africains.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours académique de l'UCAD non assorti d'une licence libre de diffusion, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "UCAD DE DAKAR FLSH DEPARTEMENT D’HISTOIRE H 124 GEOGRAPHIE AGRAIRE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00468__cours-de-geographie-agraire-ucad-dakar.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00468__cours-de-geographie-agraire-ucad-dakar.pdf"
+}

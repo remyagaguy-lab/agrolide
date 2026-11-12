@@ -1,0 +1,85 @@
+{
+  "id": "DOC-00168",
+  "sha256": "208cf94d4b0494d8448126b77ecf2047982ebe1520c351c0e2d7ad3bc886bd72",
+  "nom_original": "Agriculture-bio-et-lenvironnement-.pdf",
+  "chemin_relatif_source": "OD_Docs/Agriculture-bio-et-lenvironnement-.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2049231,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 52,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2021,
+  "auteurs": "Bernard Le Buanec",
+  "source_organisation": "Fondation pour l'innovation politique",
+  "mots_cles": [
+    "agriculture biologique",
+    "environnement",
+    "gaz a effet de serre",
+    "sol",
+    "biodiversite"
+  ],
+  "titre_trouve": "L’AGRICULTURE BIO ET L’ENVIRONNEMENT",
+  "titre": "L'agriculture bio et l'environnement",
+  "resume": "Étude publiée par la Fondation pour l'innovation politique analysant les impacts environnementaux de l'agriculture biologique sur les sols, l'air, le climat et les rendements agricoles.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document commercial payant (5 €) avec ISBN sous droits réservés, axé sur un contexte tempéré européen.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L’AGRICULTURE BIO ET L’ENVIRONNEMENT"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Bernard LE BUANEC"
+    },
+    {
+      "champ": "autre",
+      "page": 4,
+      "extrait": "I S B N : 9 7 8 - 2 - 3 6 4 0 8 - 2 5 3 - 3 5 €"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00168__l-agriculture-bio-et-l-environnement.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00168__l-agriculture-bio-et-l-environnement.pdf"
+}

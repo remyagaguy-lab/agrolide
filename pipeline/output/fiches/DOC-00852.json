@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00852",
+  "sha256": "ebbd639318860a7ffdd5e4b13517b30f1fabef65d9d4ee22dc1e3085fd88d73f",
+  "nom_original": "cours_statistiques.pdf",
+  "chemin_relatif_source": "OD_Docs/cours_statistiques.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 226335,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2016,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "statistiques descriptives",
+    "quartiles",
+    "mediane",
+    "frequences",
+    "seconde"
+  ],
+  "titre_trouve": "Seconde Cours : statistiques descriptives",
+  "titre": "Statistiques descriptives (classe de Seconde)",
+  "resume": "Fiche de cours de lycée d'enseignement général introduisant le vocabulaire des statistiques descriptives : population, échantillon, caractère quantitatif/qualitatif, fréquences, médiane et quartiles.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Cours scolaire généraliste de lycée hors contexte agricole tropical, non libre de droits.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Seconde Cours : statistiques descriptives"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00852__statistiques-descriptives-classe-de-seconde.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00852__statistiques-descriptives-classe-de-seconde.pdf"
+}

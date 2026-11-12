@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00241",
+  "sha256": "5cc307be892b66b3015217a8d9ab8b92b82241d48692df9d2338a67d36cf62a7",
+  "nom_original": "BRSA_boissons_gazeuses_eau.pdf",
+  "chemin_relatif_source": "OD_Docs/BRSA_boissons_gazeuses_eau.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 30040,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479325233-BRSA_boissons_gazeuses_eau.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "boissons",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2005,
+  "auteurs": "Foucault",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "brsa",
+    "boissons gazeuses",
+    "eau de table",
+    "diagramme de fabrication",
+    "gazeification",
+    "embouteillage"
+  ],
+  "titre_trouve": "BRSA, BOISSONS GAZEUSES, EAU DE TABLE",
+  "titre": "Schéma technologique : Boissons gazeuses, BRSA et eau de table",
+  "resume": "Diagramme de procédé industriel détaillant les étapes de production des boissons rafraîchissantes sans alcool (BRSA), gazeuses et de table.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche synoptique technologique complète sur le procédé de fabrication des boissons gazeuses et BRSA, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BRSA, BOISSONS GAZEUSES, EAU DE TABLE Technologie clé de compétitivité dans l’activité"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00241__schema-technologique-boissons-gazeuses-brsa-et-eau-de-t.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/boissons/DOC-00241__schema-technologique-boissons-gazeuses-brsa-et-eau-de-t.pdf"
+}

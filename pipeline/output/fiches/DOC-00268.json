@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00268",
+  "sha256": "4f8c09678b4f373d6c599467b320cdccf16bacaf3d68a906e6df3f7ec7197beb",
+  "nom_original": "CAUSE RURALE DENIS PRESENTATIONVF 2023 1.2.d.pdf",
+  "chemin_relatif_source": "OD_Docs/CAUSE RURALE DENIS PRESENTATIONVF 2023 1.2.d.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1915714,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 65,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "niébé",
+  "pays": "Burkina Faso",
+  "annee": 2023,
+  "auteurs": "Association Cause Rurale",
+  "source_organisation": "Cause Rurale",
+  "mots_cles": [
+    "semences ameliorees",
+    "varietes",
+    "niebe",
+    "cereales",
+    "burkina faso",
+    "sahel"
+  ],
+  "titre_trouve": "CRITERES DE CHOIX DES SEMENCES DE VARIETES AGRICOLES",
+  "titre": "Guide illustré des semences et variétés agricoles adaptées au Sahel",
+  "resume": "Présentation technique complète de 65 diapositives détaillant les fiches variétales (rendement, cycle, isohyètes) des semences améliorées sahéliennes (niébé, maïs, mil, sorgho, sésame).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Support de formation institutionnel exhaustif d'une association de développement rural au Burkina Faso, d'une grande valeur pratique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CRITERES DE CHOIX DES SEMENCES DE VARIETES AGRICOLES"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "CAUSE RURALE DENIS PRESENTATIONVF 2023"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "ESPECES CONCERNEES • ARACHIDE • MIL • NIEBE • SOJA • RIZ • MAIS • SORGHO • SESAME"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00268__guide-illustre-des-semences-et-varietes-agricoles-adapt.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-00268__guide-illustre-des-semences-et-varietes-agricoles-adapt.pdf"
+}

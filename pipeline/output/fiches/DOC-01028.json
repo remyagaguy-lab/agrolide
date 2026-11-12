@@ -1,0 +1,71 @@
+{
+  "id": "DOC-01028",
+  "sha256": "e56f642def99b244d9b6c1fcd2c96be5622188170de0103f94bbc46818509519",
+  "nom_original": "production d_essaims et de miel-itpe1988.pdf",
+  "chemin_relatif_source": "OD_Docs/production d_essaims et de miel-itpe1988.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3771013,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 20,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "apiculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "apiculture",
+  "pays": "Algérie",
+  "annee": 1988,
+  "auteurs": "Institut Technique des Petits Élevages (ITPE)",
+  "source_organisation": "ITPE",
+  "mots_cles": [
+    "apiculture",
+    "production de miel",
+    "essaimage artificiel",
+    "ruche",
+    "colonies d'abeilles",
+    "elevage de reines"
+  ],
+  "titre_trouve": "PREMIERE PARTIE : PRODUCTION DE MIEL ... DEUXIEME PARTIE : PRODUCTION D'ESSAIMS",
+  "titre": "Production d'essaims et de miel : conduite du rucher et essaimage artificiel",
+  "resume": "Guide apicole pratique détaillant la sélection des colonies, le nourrissement, la prévention de l'essaimage et les techniques d'essaimage artificiel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Brochure technique institutionnelle complète et pédagogique sur la gestion du rucher et l'essaimage, diffusable aux apiculteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "PREMIERE PARTIE : PRODUCTION DE MIEL ... DEUXIEME PARTIE : PRODUCTION D'ESSAIMS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01028__production-d-essaims-et-de-miel-conduite-du-rucher-et-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/apiculture/DOC-01028__production-d-essaims-et-de-miel-conduite-du-rucher-et-e.pdf"
+}

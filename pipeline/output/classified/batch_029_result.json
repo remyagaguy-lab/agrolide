@@ -1,0 +1,787 @@
+{
+  "batch_number": 29,
+  "results": [
+    {
+      "id": "DOC-00428",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "blé",
+      "pays": "Maroc",
+      "annee": 2023,
+      "auteurs": "INRA Maroc",
+      "source_organisation": "INRA Maroc",
+      "mots_cles": [
+        "ble tendre",
+        "ble dur",
+        "itineraire technique",
+        "maroc",
+        "cereales"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE SUR LES BLÉS 2023",
+      "titre": "Fiche technique sur la culture des blés au Maroc (blé tendre et blé dur)",
+      "resume": "Fiche technique complète (2023) détaillant les exigences pédo-climatiques, le choix variétal, la fertilisation, la protection phytosanitaire et la conduite des blés au Maroc.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique agronomique complète éditée par l'INRA Maroc, directement exploitable pour la conduite des blés.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "FICHE TECHNIQUE SUR LES BLÉS 2023"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 3,
+          "extrait": "Au Maroc, les blés sont des cultures prédominantes dans les différents agroécosystèmes marocains"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00429",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "cereales"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "mil",
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Direction de la Protection des Végétaux et du Conditionnement",
+      "source_organisation": "DPVC",
+      "mots_cles": [
+        "cantharides",
+        "protection des cultures",
+        "mil",
+        "psalydolytta fusca",
+        "ravageurs"
+      ],
+      "titre_trouve": "DPVC, 2023. Fiche technique de gestion des cantharides",
+      "titre": "Fiche technique de gestion des cantharides ravageurs du mil au Sahel",
+      "resume": "Guide d'identification et de lutte intégrée (biologique et chimique) contre les cantharides (Psalydolytta spp.), coléoptères ravageurs des épis de mil en zone sahélienne.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique officielle de la DPVC sur un ravageur sahélien majeur du mil, complète et d'intérêt prioritaire.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "DPVC, 2023. Fiche technique de gestion des cantharides"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00430",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "production_animale",
+        "alimentation_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "sorgho",
+      "pays": "Belgique",
+      "annee": 2023,
+      "auteurs": "Florence Desmet, Liliane Doyen",
+      "source_organisation": "SPW-DGARNE",
+      "mots_cles": [
+        "sorgho",
+        "ensilage",
+        "fourrage",
+        "itineraire technique",
+        "alimentation animale"
+      ],
+      "titre_trouve": "Fiche technique: Sorgho",
+      "titre": "Fiche technique : Conduite et valorisation du sorgho ensilage et multi-coupes",
+      "resume": "Fiche synthétique comparant le sorgho au maïs en alimentation bovine : itinéraire cultural, densité de semis, désherbage, fertilisation azotée et techniques de récolte en ensilage.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Fiche technique synthétique institutionnelle belge, réservée aux membres pour comparaison technique en contexte tempéré.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique: Sorgho"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Par Desmet Florence et Doyen Liliane, SPW-DGARNE- Direction de la Recherche et du Développement de Huy"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00431",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "horticulture_jardinage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "carotte",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "228AgroConseil",
+      "source_organisation": "228AgroConseil",
+      "mots_cles": [
+        "carotte",
+        "maraichage",
+        "itineraire technique",
+        "togo",
+        "legumes"
+      ],
+      "titre_trouve": "Culture de la carotte",
+      "titre": "Guide pratique : Itinéraire technique de la culture de la carotte au Togo",
+      "resume": "Guide pratique illustré détaillant les étapes de la culture de la carotte en zone tropicale : choix du site, préparation du sol, variétés adaptées, semis, entretien et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de formation maraîchère produit par 228AgroConseil pour les producteurs togolais.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Culture de la carotte"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "228AgroConseil"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00432",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aubergine",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "La Cause Rurale",
+      "source_organisation": "La Cause Rurale",
+      "mots_cles": [
+        "aubergine",
+        "cultures maraicheres",
+        "burkina faso",
+        "fiche technique",
+        "repiquage"
+      ],
+      "titre_trouve": "Fiche technique : L’aubergine européenne (Solanum melongena)",
+      "titre": "Fiche technique : Culture de l'aubergine européenne au Burkina Faso",
+      "resume": "Fiche technique synthétique décrivant l'itinéraire de culture de l'aubergine au Burkina Faso : pépinière, repiquage, variétés hybrides tolérantes, rendements et conservation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle et complète pour la culture maraîchère de l'aubergine au Burkina Faso.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique : L’aubergine européenne (Solanum melongena)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "BURKINA FASO Facebook : La cause rurale www.lacauserurale.com"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00433",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aubergine",
+      "pays": "Burkina Faso",
+      "annee": 2010,
+      "auteurs": "J. Bélem",
+      "source_organisation": null,
+      "mots_cles": [
+        "aubergine",
+        "maraichage",
+        "burkina faso",
+        "varietes",
+        "repiquage"
+      ],
+      "titre_trouve": "Fiche technique de l'aubergine",
+      "titre": "Fiche technique : Conduite maraîchère de l'aubergine au Burkina Faso",
+      "resume": "Fiche technique pratique détaillant les variétés hybrides, les densités de plantation, le calendrier de pépinière et les rendements de l'aubergine au Burkina Faso.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Scan d'un extrait de polycopié de cours d'enseignant (J. Bélem), classé en travail académique non libre.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L'aubergine (Solanum melongenu) est une espèce maraîchère dont la culture est étalée sur toute I'antrée au Burkina F-aso."
+        },
+        {
+          "champ": "auteurs",
+          "page": 2,
+          "extrait": "J.BELEM : Phytotechnie cultures maraîchères"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00434",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "production_animale",
+        "aviculture"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "volaille",
+      "pays": "France",
+      "annee": 2013,
+      "auteurs": "APABA",
+      "source_organisation": "APABA",
+      "mots_cles": [
+        "prophylaxie",
+        "aviculture biologique",
+        "sante animale",
+        "phytotherapie",
+        "prevention"
+      ],
+      "titre_trouve": "Fiche prophylaxie volailles - Une obligation de moyens en bio !",
+      "titre": "Guide de prophylaxie et santé en élevage avicole biologique",
+      "resume": "Guide technique présentant les mesures préventives et sanitaires en aviculture bio : biosécurité des bâtiments, gestion des parcours, médecines naturelles et gestion des parasites.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique complet de prophylaxie aviaire en bio édité par l'APABA, réservé aux membres car axé sur la réglementation européenne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Une obligation de moyens en bio !"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 9,
+          "extrait": "Formation prophylaxie organisée par l’APABA, 2012"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00435",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "porcins",
+      "domaines_secondaires": [
+        "production_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "porcin",
+      "pays": "Burkina Faso",
+      "annee": 2014,
+      "auteurs": "Isabelle Jardon",
+      "source_organisation": "Thamani",
+      "mots_cles": [
+        "elevage de porcs",
+        "porcherie",
+        "batiment d'elevage",
+        "afrique tropicale",
+        "climat chaud"
+      ],
+      "titre_trouve": "Fiche technique n° 1 : le logement – construction des boxes",
+      "titre": "Fiche technique : Le logement et la construction des porcheries en Afrique",
+      "resume": "Guide pratique illustré pour la conception et la construction de porcheries adaptées au climat tropical africain : ventilation, ombrage, hygiène, plans et schémas de boxes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète de l'ONG Thamani conçue spécifiquement pour la construction de porcheries en Afrique tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche technique n° 1 : le logement – construction des boxes."
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Elevage de porcs – Fiches techniques n° 1 : le logement www.thamani.be"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00436",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "blé",
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "Anne Perrein",
+      "source_organisation": "Les Bios du Gers",
+      "mots_cles": [
+        "ble tendre",
+        "agriculture biologique",
+        "rotation",
+        "itineraire technique",
+        "desherbage mecanique"
+      ],
+      "titre_trouve": "Fiche-technique-Ble-tendre",
+      "titre": "Fiche technique : Conduite du blé tendre en agriculture biologique",
+      "resume": "Fiche technique détaillée sur la culture du blé tendre bio : place dans la rotation, préparation du sol, gestion des adventices sans chimie, fertilisation et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Fiche technique institutionnelle complète des Bios du Gers, réservée aux membres pour sa méthodologie en grandes cultures biologiques.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "source_organisation",
+          "page": 9,
+          "extrait": "Fiche « Préserver ses stocks de céréales des charançons » - Les Bios du Gers"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Anne PERREIN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00437",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "semences_amelioration"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Cameroun",
+      "annee": 2024,
+      "auteurs": "Projet de développement rural Région du Nord Cameroun",
+      "source_organisation": "Projet Région du Nord Cameroun",
+      "mots_cles": [
+        "niebe",
+        "semences",
+        "multiplication semenciere",
+        "cameroun",
+        "legumineuses"
+      ],
+      "titre_trouve": "LES SEMENCES ET LES TECHNIQUES DE MULTIPLICATION",
+      "titre": "Fiche technique : Multiplication des semences de niébé au Nord-Cameroun",
+      "resume": "Guide pratique (2024) détaillant les normes, acteurs et techniques de multiplication semencière du niébé dans la région du Nord-Cameroun : sélection variétale, conduite et certification.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète issue d'un projet de développement agricole au Nord-Cameroun, axée sur la production semencière de niébé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "LES SEMENCES ET LES TECHNIQUES DE MULTIPLICATION"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 6,
+          "extrait": "dans la Région du Nord au Cameroun"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00438",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "gestion_exploitation"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "sorgho",
+      "pays": "Burundi",
+      "annee": 2011,
+      "auteurs": "Niels Hanssens",
+      "source_organisation": "ISABU / Projet Amasaka",
+      "mots_cles": [
+        "sorgho",
+        "gambella",
+        "burundi",
+        "isabu",
+        "compte d'exploitation"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE SORGHO PROJET AMASAKA",
+      "titre": "Fiche technique : Culture du sorgho (variété Gambella) au Burundi",
+      "resume": "Fiche technico-économique sur la variété de sorgho Gambella au Burundi : choix du terrain, calendrier de semis, fertilisation, rendements et compte d'exploitation prévisionnel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technico-économique complète du projet Amasaka et de l'ISABU au Burundi, directement opérationnelle pour les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE SORGHO PROJET AMASAKA"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISABU, Projet Amasaka"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00439",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "cereales"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "maïs",
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "neem",
+        "chenille legionnaire",
+        "spodoptera frugiperda",
+        "biopesticide",
+        "protection des cultures"
+      ],
+      "titre_trouve": "Itinéraire de préparation d’extrait de la poudre de neem pour gérer les Chenilles Légionnaires d’Automne",
+      "titre": "Fiche technique : Préparation de poudre de neem contre la chenille légionnaire d'automne",
+      "resume": "Guide pratique de préparation et d'application d'un extrait aqueux de graines de neem (Azadirachta indica) pour lutter de façon biologique contre la chenille légionnaire (Spodoptera frugiperda).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche pratique de bioprotection contre la chenille légionnaire d'automne en Afrique, complète et diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Figure 3 : Itinéraire de préparation d’extrait de la poudre de neem pour gérer les Chenilles Légionnaires d’Automne"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00440",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "production_animale",
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "volaille",
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Réseau GAB / FRAB",
+      "source_organisation": "Réseau GAB / FRAB",
+      "mots_cles": [
+        "alimentation avicole",
+        "acides amines",
+        "nutrition volaille",
+        "aviculture biologique",
+        "energie proteine"
+      ],
+      "titre_trouve": "Alimentation des volailles : équilibrer l’énergie et les protéines de sa ration",
+      "titre": "Fiche technique : Équilibrer l'énergie et les protéines dans l'alimentation des volailles",
+      "resume": "Fiche technique synthétique expliquant l'importance du profil en acides aminés (lysine, méthionine) et le rationnement énergétique chez les volailles pour optimiser croissance et santé.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Fiche technique institutionnelle du réseau GAB/FRAB complète, réservée aux membres pour sa valeur didactique en formulation alimentaire.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Alimentation des volailles : équilibrer l’énergie et les protéines de sa ration"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Les fiches Techniques du réseau GAB/FRAB"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00441",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "horticulture_jardinage"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poivron",
+      "pays": "Cameroun",
+      "annee": 2018,
+      "auteurs": "Agriculture au Cameroun",
+      "source_organisation": "Agriculture au Cameroun",
+      "mots_cles": [
+        "poivron",
+        "cultures maraicheres",
+        "cameroun",
+        "pepiniere",
+        "agriculture biologique"
+      ],
+      "titre_trouve": "Fiche Technique : Culture du Poivron ( Capsicum annun ) Biologique",
+      "titre": "Fiche technique : Culture biologique du poivron au Cameroun",
+      "resume": "Guide pratique pour la production agroécologique de poivron au Cameroun : installation de la pépinière ombragée, fertilisation organique, repiquage et récolte des fruits.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique maraîchère complète de la plateforme Agriculture au Cameroun, directement applicable sur le terrain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche Technique : Culture du Poivron ( Capsicum annun ) Biologique"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "By Agriculture au Cameroun 8 février 2018"
+        }
+      ]
+    }
+  ]
+}

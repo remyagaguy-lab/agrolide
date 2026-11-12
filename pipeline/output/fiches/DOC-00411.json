@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00411",
+  "sha256": "bcb378ec3c5ec3c066366e304a707f03bb166de9088f71bbb031ac09c1e2cbd1",
+  "nom_original": "FICHE_TECHNIQUE_SYNTHÉTIQUE_POUR_LA_PRODUCTION_DU_CONCOMBRE_Cucumis.pdf",
+  "chemin_relatif_source": "OD_Docs/FICHE_TECHNIQUE_SYNTHÉTIQUE_POUR_LA_PRODUCTION_DU_CONCOMBRE_Cucumis.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 186385,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "concombre",
+  "pays": "Bénin",
+  "annee": null,
+  "auteurs": "GBioS / Université d'Abomey-Calavi (UAC)",
+  "source_organisation": "GBioS - Université d'Abomey-Calavi",
+  "mots_cles": [
+    "concombre",
+    "cucumis sativus",
+    "maraichage urbain",
+    "gbios",
+    "benin",
+    "agroecologie"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE SYNTHÉTIQUE POUR LA PRODUCTION DU CONCOMBRE (Cucumis Sativus L.)",
+  "titre": "Fiche technique synthétique pour la production du concombre (GBioS / UAC)",
+  "resume": "Guide pratique synthétique pour la production agroécologique de concombre en zone tropicale : choix variétal, fertilisation équilibrée, récolte soignée et rendements.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle de vulgarisation maraîchère du laboratoire GBioS (Bénin), diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE SYNTHÉTIQUE POUR LA PRODUCTION DU CONCOMBRE (Cucumis Sativus L.) Source : GBioS UACs"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00411__fiche-technique-synthetique-pour-la-production-du-conco.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00411__fiche-technique-synthetique-pour-la-production-du-conco.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01061",
+  "sha256": "fc5ad8a12f4d15c158c969c9b4c297692d184f97bd73b0130c224af0e186d87f",
+  "nom_original": "yaourt yoghourt.pdf",
+  "chemin_relatif_source": "OD_Docs/yaourt yoghourt.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 44670,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "lait / yaourt",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "yaourt",
+    "transformation laitiere",
+    "yaourt ferme",
+    "yaourt brasse",
+    "ferments lactiques",
+    "diagramme de fabrication"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité YAOURTS (Yoghourts)",
+  "titre": "Synoptique de fabrication des yaourts fermes et brassés",
+  "resume": "Schéma de procédé industriel présentant les étapes clés et paramètres thermiques de fabrication des yaourts fermes et brassés : standardisation, pasteurisation, ensemencement, étuvage et refroidissement.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique technique synthétique de haute valeur pratique pour la création d'unités de transformation laitière, libre de diffusion institutionnelle.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité YAOURTS (Yoghourts)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01061__synoptique-de-fabrication-des-yaourts-fermes-et-brasses.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-01061__synoptique-de-fabrication-des-yaourts-fermes-et-brasses.pdf"
+}

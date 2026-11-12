@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00679",
+  "sha256": "c20f9afc00486e7bfb7033d25bf39339495ba346b7e845f3b0684340900cb3c0",
+  "nom_original": "Porc2-Dossier-Quelques-clA-s-p(0).pdf",
+  "chemin_relatif_source": "OD_Docs/Porc2-Dossier-Quelques-clA-s-p(0).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 563253,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 16,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "porcins",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "porc",
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Fédération Régionale des Agriculteurs Biologiques de Midi-Pyrénées (FRAB)",
+  "source_organisation": "FRAB Midi-Pyrénées",
+  "mots_cles": [
+    "elevage porcin",
+    "porc bio",
+    "agriculture biologique",
+    "alimentation animale",
+    "france"
+  ],
+  "titre_trouve": "Quelques clés pour réussir son élevage porcin en AB",
+  "titre": "Quelques clés pour réussir son élevage porcin en agriculture biologique",
+  "resume": "Dossier technique de 16 pages de la FRAB Midi-Pyrénées sur l'élevage porcin biologique : normes européennes de conversion, aménagement des bâtiments, parcours et formulation des rations alimentaires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique porcin calqué sur le cahier des charges européen et le contexte tempéré français, de pertinence marginale pour l'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Quelques clés pour réussir son élevage porcin en AB"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00679__quelques-cles-pour-reussir-son-elevage-porcin-en-agricu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/porcins/DOC-00679__quelques-cles-pour-reussir-son-elevage-porcin-en-agricu.pdf"
+}

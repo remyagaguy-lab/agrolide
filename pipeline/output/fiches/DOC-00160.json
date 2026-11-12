@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00160",
+  "sha256": "10b05b4f24110fecb6feec2b92bdc2f9bb9770c19fadc2eeebcc36652fb8c9bc",
+  "nom_original": "AgriMag-165-Fevrier-2025.pdf",
+  "chemin_relatif_source": "OD_Docs/AgriMag-165-Fevrier-2025.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 50664389,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive"
+  ],
+  "nb_pages": 56,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "periodique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2025,
+  "auteurs": "Société d'Édition Agricole",
+  "source_organisation": "Agriculture du Maghreb",
+  "mots_cles": [
+    "agriculture du maghreb",
+    "revue",
+    "adventices",
+    "stress hydrique",
+    "climat",
+    "maroc"
+  ],
+  "titre_trouve": "Agriculture du Maghreb N° 165 - Février 2025",
+  "titre": "Agriculture du Maghreb N° 165 (Février 2025)",
+  "resume": "Édition de février 2025 de la revue Agriculture du Maghreb axée sur la gestion de l'eau en milieu aride, la rotation culturale et le contrôle intégré des mauvaises herbes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Le drapeau bloquant 'taille_excessive' interdit la publication directe en 'membres'. Le document doit être orienté vers 'a_valider_humain' pour compression ou optimisation.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agriculture du Maghreb N° 165 - Février 2025"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Le drapeau bloquant 'taille_excessive' interdit la publication directe en 'membres'. Le document doit être orienté vers 'a_valider_humain' pour compression ou optimisation."
+  },
+  "nom_fichier_final": "DOC-00160__agriculture-du-maghreb-n-165-fevrier-2025.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00160__agriculture-du-maghreb-n-165-fevrier-2025.pdf"
+}

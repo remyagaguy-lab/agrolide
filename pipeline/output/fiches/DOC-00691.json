@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00691",
+  "sha256": "753ac53f47cff92a7520f87228d40b798691189c27dcfc4c8e323ca77c32b585",
+  "nom_original": "Présentation TOGO 1.pptx",
+  "chemin_relatif_source": "OD_Docs/Présentation TOGO 1.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 10349927,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "nb_pages": 20,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "numerique_technologies",
+  "type_doc": "presentation",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Togo",
+  "annee": 2025,
+  "auteurs": "Ir. Tadagbé Valère Houansou",
+  "source_organisation": null,
+  "mots_cles": [
+    "nouvelles technologies",
+    "agriculture numerique",
+    "mecanisation",
+    "digitalisation",
+    "agritech",
+    "afrique"
+  ],
+  "titre_trouve": "Quelles sont les nouvelles technologies à utiliser pour répondre aux challenges de l'agriculture en Afrique?",
+  "titre": "Les nouvelles technologies face aux défis de l'agriculture en Afrique",
+  "resume": "Support de formation analysant les innovations technologiques, la digitalisation, la mécanisation et l'agro-industrie pour moderniser l'agriculture africaine.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Présentation de formation privée d'un consultant sans mention de licence libre, archivée en interne.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.5,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "Thème : Quelles sont les nouvelles technologies à utiliser pour répondre aux challenges de l'agriculture en Afrique?"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00691__les-nouvelles-technologies-face-aux-defis-de-l-agricult.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/numerique_technologies/DOC-00691__les-nouvelles-technologies-face-aux-defis-de-l-agricult.pdf"
+}

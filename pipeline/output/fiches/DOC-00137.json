@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00137",
+  "sha256": "0cf909c09d695da2711c533bb56f40e510acf192aed32077114e8d06cded2613",
+  "nom_original": "8551--1-fiche-technique-gingembre (2).pdf",
+  "chemin_relatif_source": "OD_Docs/8551--1-fiche-technique-gingembre (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 169423,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "droits_reserves"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "boissons",
+  "type_doc": "fiche_technique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": "gingembre",
+  "pays": "France",
+  "annee": 2017,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "sirop de gingembre",
+    "transformation agroalimentaire",
+    "boisson",
+    "fiche technique produit"
+  ],
+  "titre_trouve": "SIROP DE GINGEMBRE Sirop alimentaire FICHE TECHNIQUE",
+  "titre": "Fiche technique produit : Sirop de gingembre au sucre de canne",
+  "resume": "Fiche technique et de spécification produit pour un sirop de gingembre au sucre de canne de Guadeloupe, détaillant la composition, les ingrédients et le conditionnement.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche de spécification d'un produit commercial privé sans licence libre, archivée sans publication.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SIROP DE GINGEMBRE Sirop alimentaire FICHE TECHNIQUE CARACTERES GENERAUX Sirop à base de sucre de canne de Guadeloupe"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00137__fiche-technique-produit-sirop-de-gingembre-au-sucre-de.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/boissons/DOC-00137__fiche-technique-produit-sirop-de-gingembre-au-sucre-de.pdf"
+}

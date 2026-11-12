@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00897",
+  "sha256": "ea50905c9e4b9f98b72fa205cf0e566eb935c632fc7e9ea2e1e751f67332c2e9",
+  "nom_original": "exo et Solution.docx",
+  "chemin_relatif_source": "OD_Docs/exo et Solution.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 899279,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "titre_introuvable",
+    "auteur_introuvable",
+    "droits_reserves"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "BNEDER",
+  "mots_cles": [
+    "pedologie",
+    "cec",
+    "capacite d'echange cationique",
+    "saturation du sol",
+    "exercices"
+  ],
+  "titre_trouve": null,
+  "titre": "Exercices corrigés sur la CEC et la saturation des sols",
+  "resume": "Fragment de document bureautique contenant des notes de calculs et solutions succinctes d'exercices sur la capacité d'échange cationique (CEC) et l'alcalinité du sol.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document de brouillon incomplet de quelques lignes, sans titre ni métadonnées formelles ; archivé sans diffusion.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.8,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Solution :exo03 CEC=la somme des cations=Ca+Mg+Na+K+H+Al=20.5meq/100g"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00897__exercices-corriges-sur-la-cec-et-la-saturation-des-sols.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00897__exercices-corriges-sur-la-cec-et-la-saturation-des-sols.pdf"
+}

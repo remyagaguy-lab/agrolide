@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00306",
+  "sha256": "341c65acbc4c1f2f23dd0da203539e1ca9175203adfd8a256e962054e3ced728",
+  "nom_original": "Copy of QCM Les Glucides (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Copy of QCM Les Glucides (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 610451,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "outil_modele",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2017,
+  "auteurs": "Abdel Illah Senhadji",
+  "source_organisation": null,
+  "mots_cles": [
+    "biochimie",
+    "glucides",
+    "qcm",
+    "oses",
+    "evaluation"
+  ],
+  "titre_trouve": "Cours :01 Les glucides",
+  "titre": "QCM d'évaluation sur les glucides et oses en biochimie",
+  "resume": "Série de questions à choix multiples (QCM) avec corrigé portant sur la structure, les fonctions et la classification des glucides en biochimie générale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support académique d'évaluation (QCM) non doté d'une licence libre et de faible pertinence directe pour la plateforme.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours :01 Les glucides"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00306__qcm-d-evaluation-sur-les-glucides-et-oses-en-biochimie.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00306__qcm-d-evaluation-sur-les-glucides-et-oses-en-biochimie.pdf"
+}

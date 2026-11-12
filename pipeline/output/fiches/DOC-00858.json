@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00858",
+  "sha256": "04532a02979b828388509b6c8228e818654efe18151cac034bf66e601fe030df",
+  "nom_original": "cta_manioc.pdf",
+  "chemin_relatif_source": "OD_Docs/cta_manioc.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2175058,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 40,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "manioc",
+  "pays": "Cameroun",
+  "annee": 2015,
+  "auteurs": "Justin Kouakou, Samuel Nanga Nanga, Catherine Plagne-Ismail, Aman Mazalo Pali, Kukom Edoh Ognakossan",
+  "source_organisation": "CTA / ISF Cameroun",
+  "mots_cles": [
+    "manioc",
+    "tubercules",
+    "PRO-AGRO",
+    "CTA",
+    "transformation du manioc",
+    "gari",
+    "attieke",
+    "itineraire technique"
+  ],
+  "titre_trouve": "Production et transformation du manioc",
+  "titre": "Production et transformation du manioc (Guide PRO-AGRO)",
+  "resume": "Guide pratique illustré détaillant la conduite technique de la culture du manioc (choix du terrain, bouturage, entretien, récolte) et ses principaux procédés artisanaux de transformation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide de référence de la collection PRO-AGRO (CTA / ISF Cameroun), libre et directement applicable pour les producteurs et transformateurs tropicaux.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Production et transformation du manioc"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "La collection Pro-Agro est une coédition d’Ingénieurs Sans Frontières Cameroun (ISF Cameroun) et du Centre technique de coopération agricole et rurale (CTA)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00858__production-et-transformation-du-manioc-guide-pro-agro.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00858__production-et-transformation-du-manioc-guide-pro-agro.pdf"
+}

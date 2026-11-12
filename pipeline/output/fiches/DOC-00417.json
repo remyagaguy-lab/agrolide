@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00417",
+  "sha256": "f255377035c375a94c711018e055072b9250e9daf84ed55f730c429d158cd681",
+  "nom_original": "FTC-Concombre-PF.pdf",
+  "chemin_relatif_source": "OD_Docs/FTC-Concombre-PF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 702057,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "concombre",
+  "pays": "Polynésie française",
+  "annee": 2018,
+  "auteurs": "Projet INTEGRE / Direction de l'Agriculture de Polynésie française",
+  "source_organisation": "Projet INTEGRE, CPS, Direction de l'Agriculture de Polynésie française",
+  "mots_cles": [
+    "concombre",
+    "agriculture biologique",
+    "maraichage",
+    "polynesie francaise",
+    "fiche technique",
+    "integre"
+  ],
+  "titre_trouve": "La culture du concombre en agriculture biologique en Polynésie française",
+  "titre": "La culture du concombre en agriculture biologique en Polynésie française",
+  "resume": "Fiche technique opérationnelle sur la culture biologique du concombre en climat tropical insulaire, couvrant le calendrier cultural, la fertilisation et la lutte préventive.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle complète en agriculture biologique tropicale (Projet INTEGRE / CPS), librement diffusable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La culture du concombre en agriculture biologique en Polynésie française Cette fiche technique a été réalisée dans le cadre du programme de réseau de fermes pilotes"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00417__la-culture-du-concombre-en-agriculture-biologique-en-po.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00417__la-culture-du-concombre-en-agriculture-biologique-en-po.pdf"
+}

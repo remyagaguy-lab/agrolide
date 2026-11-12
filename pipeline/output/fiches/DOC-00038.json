@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00038",
+  "sha256": "9b1e13e099d05dc8f42f5c1bee63d34ca3be95da139ba9fb45dd17d3f4dd04fa",
+  "nom_original": "résumé 4 immunologie.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Immunologie/Immunologie/résumé 4 immunologie.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 2989338,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "immunologie",
+    "medecine",
+    "cours",
+    "sante"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 4 - Immunologie médicale",
+  "resume": "Fascicule numérisé de 6 pages contenant le quatrième volet de résumés d'immunologie médicale humaine. Hors périmètre Agrolide.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document d'immunologie médicale humaine exclu du périmètre agricole et vétérinaire.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "résumé 4 immunologie.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0004",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00038__resume-4-immunologie-medicale.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00038__resume-4-immunologie-medicale.pdf"
+}

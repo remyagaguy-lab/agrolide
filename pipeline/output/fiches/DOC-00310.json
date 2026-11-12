@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00310",
+  "sha256": "60e69a472b208a39664b855ce5b25eb45ba5c569af70d3fa0b76a9d4d26c60c7",
+  "nom_original": "Cours Germination des semences_250820_213626.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours Germination des semences_250820_213626.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 351961,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable",
+    "droits_reserves"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "germination",
+    "semences",
+    "graine",
+    "physiologie vegetale",
+    "pouvoir germinatif"
+  ],
+  "titre_trouve": "Germination des semences",
+  "titre": "Cours sur la germination et la biologie des semences",
+  "resume": "Diaporama d'initiation sur la biologie des graines, les étapes de la germination, les états de vie latente et les facteurs conditionnant le pouvoir germinatif.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support d'initiation pédagogique sans auteur formel ni licence libre de rediffusion ; archivé.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Germination des semences"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00310__cours-sur-la-germination-et-la-biologie-des-semences.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-00310__cours-sur-la-germination-et-la-biologie-des-semences.pdf"
+}

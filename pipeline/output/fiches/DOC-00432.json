@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00432",
+  "sha256": "17f2dc1aace592e3bbcf9c68354d53e1b49ecbbea918ecc1e667b0cf7b0d711e",
+  "nom_original": "Fiche technique de l_aubergine européenne.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche technique de l_aubergine européenne.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 435265,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aubergine",
+  "pays": "Burkina Faso",
+  "annee": 2020,
+  "auteurs": "La Cause Rurale",
+  "source_organisation": "La Cause Rurale",
+  "mots_cles": [
+    "aubergine",
+    "cultures maraicheres",
+    "burkina faso",
+    "fiche technique",
+    "repiquage"
+  ],
+  "titre_trouve": "Fiche technique : L’aubergine européenne (Solanum melongena)",
+  "titre": "Fiche technique : Culture de l'aubergine européenne au Burkina Faso",
+  "resume": "Fiche technique synthétique décrivant l'itinéraire de culture de l'aubergine au Burkina Faso : pépinière, repiquage, variétés hybrides tolérantes, rendements et conservation.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle et complète pour la culture maraîchère de l'aubergine au Burkina Faso.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique : L’aubergine européenne (Solanum melongena)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "BURKINA FASO Facebook : La cause rurale www.lacauserurale.com"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00432__fiche-technique-culture-de-l-aubergine-europeenne-au-bu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00432__fiche-technique-culture-de-l-aubergine-europeenne-au-bu.pdf"
+}

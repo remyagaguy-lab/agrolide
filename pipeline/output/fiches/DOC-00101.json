@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00101",
+  "sha256": "895cc31f6ded349dae688a43a493e6e88c6d43484adaf2ca8b470d54e5dc91cc",
+  "nom_original": "2-Résumé Yaici et Arab 2019-2020 (6).pdf",
+  "chemin_relatif_source": "OD_Docs/2-Résumé Yaici et Arab 2019-2020 (6).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1799786,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 16,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2019,
+  "auteurs": "Yaici et Arab",
+  "source_organisation": "Faculté de Médecine",
+  "mots_cles": [
+    "appareil branchial",
+    "embryologie humaine",
+    "medecine",
+    "arcs branchiaux",
+    "qcm"
+  ],
+  "titre_trouve": "Appareil branchial",
+  "titre": "Embryologie humaine : L'appareil branchial",
+  "resume": "Polycopié de cours et questions à choix multiples de médecine humaine traitant du développement embryonnaire de l'appareil branchial et pharyngé.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document médical d'embryologie humaine sans rapport avec l'agriculture, l'élevage tropical ou l'agroalimentaire.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Appareil branchial"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00101__embryologie-humaine-l-appareil-branchial.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00101__embryologie-humaine-l-appareil-branchial.pdf"
+}

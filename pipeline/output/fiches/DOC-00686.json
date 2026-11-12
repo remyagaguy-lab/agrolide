@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00686",
+  "sha256": "01e777c279dc16d6a299903dfdfe19d85bffdaa55c0a4b0262fa35f366aa2b69",
+  "nom_original": "Programme de bande pondeuse.xlsx",
+  "chemin_relatif_source": "OD_Docs/Programme de bande pondeuse.xlsx",
+  "indice_ancien_dossier": null,
+  "format_source": "xlsx",
+  "taille_octets": 47477,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "gestion_exploitation",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": null,
+  "auteurs": "Tasséré Ouédraogo",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "pondeuses",
+    "aviculture",
+    "business plan",
+    "gestion d'exploitation",
+    "burkina faso",
+    "rentabilite"
+  ],
+  "titre_trouve": null,
+  "titre": "Modèle de simulation technico-économique - Bande de pondeuses",
+  "resume": "Outil tableur de gestion technico-économique pour élevage de poules pondeuses au Burkina Faso : dimensionnement financier (1000 et 650 poussins), coûts alimentaires, seuil de ponte et trésorerie.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Tableur modèle technico-économique pertinent mais sans licence de diffusion explicite, à valider avant mise à disposition.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.6,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Prix moyen/poule prete à la ponte"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00686__modele-de-simulation-technico-economique-bande-de-ponde.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_exploitation/DOC-00686__modele-de-simulation-technico-economique-bande-de-ponde.pdf"
+}

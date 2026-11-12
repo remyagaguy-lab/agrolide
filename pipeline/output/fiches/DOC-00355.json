@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00355",
+  "sha256": "3d25f7304ae3015f12447eaad64b91a994207f73c385e06a1f00f65933e740bc",
+  "nom_original": "Donnees-arboriculture-fruitiere-SE.pdf",
+  "chemin_relatif_source": "OD_Docs/Donnees-arboriculture-fruitiere-SE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2694501,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 29,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "arboriculture fruitiere",
+  "pays": "France",
+  "annee": 2018,
+  "auteurs": "Chantal Roblin, Fabien Bouvard",
+  "source_organisation": "Chambres d’Agriculture Provence-Alpes-Côte d’Azur",
+  "mots_cles": [
+    "arboriculture fruitiere",
+    "agriculture biologique",
+    "couts de production",
+    "marge",
+    "france",
+    "paca"
+  ],
+  "titre_trouve": "L’arboriculture Fruitière en agriculture biologique Région Sud Provence Alpes Côte d’Azur",
+  "titre": "L’arboriculture fruitière en agriculture biologique : Références technico-économiques en région PACA",
+  "resume": "Guide technico-économique détaillant les temps de travaux, charges et coûts de production à l'hectare pour diverses productions fruitières biologiques en région Provence-Alpes-Côte d'Azur.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technico-économique de référence pour la région tempérée méditerranéenne française, peu adapté au contexte tropical subsaharien, conservé en archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "Région Sud Provence Alpes Côte d’Azur"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L’arboriculture Fruitière en agriculture biologique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00355__larboriculture-fruitiere-en-agriculture-biologique-refe.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00355__larboriculture-fruitiere-en-agriculture-biologique-refe.pdf"
+}

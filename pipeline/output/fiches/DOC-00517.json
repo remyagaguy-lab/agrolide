@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00517",
+  "sha256": "d1eb9b4d1496a1a8a383e2401a0c979431f51b2c436061173b3dc5e44226729c",
+  "nom_original": "Itineraire technique de production du riz.docx",
+  "chemin_relatif_source": "OD_Docs/Itineraire technique de production du riz.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 4229000,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "riz",
+  "pays": "Burkina Faso",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "riz",
+    "burkina faso",
+    "nerica",
+    "riz irrigue",
+    "itineraire technique",
+    "ravageurs du riz"
+  ],
+  "titre_trouve": "ITINERAIRE TECHNIQUE OPTIMAL POUR LA PRODUCTION DU RIZ IRRIGUE",
+  "titre": "Itinéraire technique optimal de production du riz au Burkina Faso",
+  "resume": "Guide technique opérationnel détaillant la conduite de la riziculture irriguée et pluviale au Burkina Faso : choix des variétés NERICA, pépinière, fertilisation et identification des insectes ravageurs.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document technique au format Word (.docx) très pertinent pour la riziculture sahélienne mais sans mention d'auteur institutionnel ou de licence libre. Archivé en interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.88
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Quelques variétés de riz produites au BF ... ITINERAIRE TECHNIQUE OPTIMAL POUR LA PRODUCTION DU RIZ IRRIGUE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00517__itineraire-technique-optimal-de-production-du-riz-au-bu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00517__itineraire-technique-optimal-de-production-du-riz-au-bu.pdf"
+}

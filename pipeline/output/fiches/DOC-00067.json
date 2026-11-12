@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00067",
+  "sha256": "81cfd1c1f2b38dffc9be97e5934da12298884e3a3337af32ed0077637cec7f2c",
+  "nom_original": "(VOT) Infrastrutures et équipements d_embouche.pdf",
+  "chemin_relatif_source": "OD_Docs/(VOT) Infrastrutures et équipements d_embouche.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 461021,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 7,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovins",
+  "pays": "Burkina Faso",
+  "annee": 2024,
+  "auteurs": "Chérif",
+  "source_organisation": "Velmarr Online Training",
+  "mots_cles": [
+    "embouche",
+    "bergerie",
+    "logement d'elevage",
+    "equipements d'elevage",
+    "mangeoires"
+  ],
+  "titre_trouve": "INFRASTRUCTURES ET EQUIPEMENTS D’EMBOUCHE",
+  "titre": "Infrastructures et équipements pour l'embouche ovine et bovine",
+  "resume": "Guide pratique détaillant la conception de la bergerie, les critères d'implantation et les équipements nécessaires pour la conduite d'un atelier d'embouche.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support pédagogique issu d'un module de formation privé commercial sans licence libre, réservé à l'archivage.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Velmarr Online Training (VOT): embouche INFRASTRUCTURES ET EQUIPEMENTS D’EMBOUCHE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00067__infrastructures-et-equipements-pour-l-embouche-ovine-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00067__infrastructures-et-equipements-pour-l-embouche-ovine-et.pdf"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00904",
+  "sha256": "3d04ede0e17af0e35b670bb83fe925070d42fa24ca192a8cf51eb5f8c67b4e63",
+  "nom_original": "faso_entrepreneur_n1 (2).pdf",
+  "chemin_relatif_source": "OD_Docs/faso_entrepreneur_n1 (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1351547,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 28,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "periodique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "decideur_institution",
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2019,
+  "auteurs": "Ministère de l'Agriculture et des Aménagements Hydro-agricoles du Burkina Faso",
+  "source_organisation": "Ministère de l'Agriculture et des Aménagements Hydro-agricoles du Burkina Faso",
+  "mots_cles": [
+    "agri entrepreneur",
+    "burkina faso",
+    "drones agricoles",
+    "jeunesse",
+    "politique agricole",
+    "resilience"
+  ],
+  "titre_trouve": "AGRI ENTREPRENEUR LE MAGAZINE DE L'ENTREPRENEUR AGRICOLE",
+  "titre": "Agri Entrepreneur N°1 : Le magazine de l'entrepreneur agricole au Burkina Faso",
+  "resume": "Premier numéro du magazine officiel du Ministère de l'Agriculture du Burkina Faso mettant en lumière l'entrepreneuriat des jeunes, l'usage des drones agricoles et les modèles d'exploitations résilientes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Publication périodique institutionnelle officielle du Ministère de l'Agriculture du Burkina Faso, librement accessible pour encourager l'entrepreneuriat.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "AGRI ENTREPRENEUR LE MAGAZINE DE L'ENTREPRENEUR AGRICOLE FASO DRONE"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0059",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00904__agri-entrepreneur-n1-le-magazine-de-l-entrepreneur-agri.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00904__agri-entrepreneur-n1-le-magazine-de-l-entrepreneur-agri.pdf"
+}

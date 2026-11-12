@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00603",
+  "sha256": "63a14274b28dcc2dc59215996796492c5fc25890bc667b95620198ce6480408f",
+  "nom_original": "Manuel _Chou.pdf",
+  "chemin_relatif_source": "OD_Docs/Manuel _Chou.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 876479,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "licence_nc"
+  ],
+  "nb_pages": 30,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cultures maraîchères",
+  "pays": "Niger",
+  "annee": 2020,
+  "auteurs": "Ministère de l'Agriculture du Niger",
+  "source_organisation": "Ministère de l'Agriculture du Niger / Coopération Allemande",
+  "mots_cles": [
+    "chou",
+    "cultures irriguees",
+    "petite irrigation",
+    "niger",
+    "maraichage",
+    "sahel"
+  ],
+  "titre_trouve": "Techniques de production des cultures irriguées (chou)",
+  "titre": "Techniques de production des cultures irriguées : Chou au Niger",
+  "resume": "Guide technique détaillé pour la production de chou irrigué en milieu sahélien nigérien : exigences pédo-climatiques, semis, irrigation, fumure et lutte contre les ravageurs.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Présence du drapeau bloquant licence_nc interdisant une diffusion 'public' directe sans validation juridique humaine préalable.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MINISTERE DE L’AGRICULTURE Techniques de production des cultures irriguées (chou)"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Présence du drapeau bloquant licence_nc interdisant une diffusion 'public' directe sans validation juridique humaine préalable."
+  },
+  "nom_fichier_final": "DOC-00603__techniques-de-production-des-cultures-irriguees-chou-au.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00603__techniques-de-production-des-cultures-irriguees-chou-au.pdf"
+}

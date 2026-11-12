@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00143",
+  "sha256": "d032e5ee809273304d9977f4424dfa2315c32dc1cbd0d096c6fd45ffcb662fdf",
+  "nom_original": "AE_Production_Oignon.pdf",
+  "chemin_relatif_source": "OD_Docs/AE_Production_Oignon.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2825036,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 13,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "economie_filieres_marches",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "decideur_institution",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "oignon",
+  "pays": "Sénégal",
+  "annee": 2015,
+  "auteurs": "Youssoupha Gueye",
+  "source_organisation": "CGER-Vallée",
+  "mots_cles": [
+    "oignon",
+    "senegal",
+    "vallee du fleuve senegal",
+    "analyse economique",
+    "marche de l'oignon",
+    "prix"
+  ],
+  "titre_trouve": "CGER- Vallée - Analyse Économique sur la filière Oignon au Sénégal",
+  "titre": "Analyse économique de la filière oignon au Sénégal",
+  "resume": "Étude économique sur la filière oignon au Sénégal réalisée par le CGER-Vallée, analysant la production, la régulation des importations, l'évolution des prix et les marges des producteurs.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport économique institutionnel complet du CGER-Vallée sur la filière oignon au Sénégal, éligible à la publication pour les membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CGER- Vallée - Analyse Économique sur la filière Oignon au Sénégal"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00143__analyse-economique-de-la-filiere-oignon-au-senegal.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/economie_filieres_marches/DOC-00143__analyse-economique-de-la-filiere-oignon-au-senegal.pdf"
+}

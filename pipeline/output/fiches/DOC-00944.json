@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00944",
+  "sha256": "abdbba312d7a16c2a558e86d68870f6c38327fcdb7c27d8a0498427e27c92b86",
+  "nom_original": "guide_elevage_poulet-de-chair_Songhai-1.pdf",
+  "chemin_relatif_source": "OD_Docs/guide_elevage_poulet-de-chair_Songhai-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 906887,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 21,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Bénin",
+  "annee": 2015,
+  "auteurs": "Centre Songhaï",
+  "source_organisation": "Centre Songhaï (Porto-Novo, Bénin)",
+  "mots_cles": [
+    "centre songhai",
+    "poulet de chair",
+    "aviculture tropicale",
+    "benin",
+    "elevage avicole",
+    "agroecologie"
+  ],
+  "titre_trouve": null,
+  "titre": "Guide d'élevage du poulet de chair (Centre Songhaï)",
+  "resume": "Manuel pratique du Centre Songhaï (Bénin) sur la conduite intégrée et écologique de l'élevage de poulets de chair en milieu tropical (OCR nécessaire).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide technique de référence du Centre Songhaï scanné sans couche texte extractible; OCR et validation humaine préalables requis.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.55,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "guide_elevage_poulet-de-chair_Songhai-1.pdf (nom du fichier)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00944__guide-d-elevage-du-poulet-de-chair-centre-songhai.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00944__guide-d-elevage-du-poulet-de-chair-centre-songhai.pdf"
+}

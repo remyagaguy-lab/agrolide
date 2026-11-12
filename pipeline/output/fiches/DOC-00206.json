@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00206",
+  "sha256": "52200002615bef3b439650455b12149a14eadb33e9a1cad5286660404a5f695d",
+  "nom_original": "Agrodok_5_La_culture_fruitiere_sous_les_tropiques@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_5_La_culture_fruitiere_sous_les_tropiques@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 316715,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 92,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "arboriculture fruitière",
+  "pays": null,
+  "annee": 1999,
+  "auteurs": "Simone van Ee",
+  "source_organisation": "Fondation Agromisa",
+  "mots_cles": [
+    "arboriculture",
+    "arbres fruitiers",
+    "verger tropical",
+    "greffage",
+    "pepiniere",
+    "zone tropicale"
+  ],
+  "titre_trouve": "AGRODOK 5 LA CULTURE FRUITIÈRE SOUS LES TROPIQUES",
+  "titre": "La culture fruitière sous les tropiques",
+  "resume": "Guide pratique sur l'installation et la conduite d'un verger fruitier en zone tropicale : choix du site, multiplication des arbres, plantation, entretien, fertilisation et récolte des fruits.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Marque @EpubsFR dans le nom de fichier : requalifié en droits_reserves_commercial, archivage en non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "AGRODOK 5 LA CULTURE FRUITIÈRE SOUS LES TROPIQUES"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Simone van Ee"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Marque @EpubsFR dans le nom de fichier : requalifié en droits_reserves_commercial, archivage en non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00206__la-culture-fruitiere-sous-les-tropiques.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00206__la-culture-fruitiere-sous-les-tropiques.pdf"
+}

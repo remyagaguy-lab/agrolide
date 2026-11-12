@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00808",
+  "sha256": "8bc5fee5fe23fd60a219f27851a27510148f61ea85795c9eb5a906f00228fa01",
+  "nom_original": "ble precuit a cuisiner.pdf",
+  "chemin_relatif_source": "OD_Docs/ble precuit a cuisiner.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 15123,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479261750-ble_precuit_a_cuisiner.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "blé dur",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "ble precuit",
+    "transformation du ble",
+    "ebly",
+    "decorticage",
+    "precuisson",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "BLE PRECUIT A CUISINER - Technologie clé de compétitivité dans l’activité",
+  "titre": "Schéma technologique : Procédé de fabrication du blé précuit à cuisiner",
+  "resume": "Diagramme de procédé industriel illustrant le nettoyage, la pré-cuisson, le séchage et la porisation du blé dur précuit.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique synoptique industrielle claire sur la valorisation et la pré-cuisson du blé dur, publiable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BLE PRECUIT A CUISINER Technologie clé de compétitivité dans l’activité ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00808__schema-technologique-procede-de-fabrication-du-ble-prec.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-00808__schema-technologique-procede-de-fabrication-du-ble-prec.pdf"
+}

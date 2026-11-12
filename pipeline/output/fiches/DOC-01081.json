@@ -1,0 +1,74 @@
+{
+  "id": "DOC-01081",
+  "sha256": "b160947ac1406c8ba5f9767eca5ef22f4c84f8db8d2836d1eb7828c1ff518ba5",
+  "nom_original": "alteragri_51_2002_p12-13.pdf",
+  "chemin_relatif_source": "OD_traites/alteragri_51_2002_p12-13.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 383608,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476274551-alteragri_51_2002_p12-13.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "article",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "tomate",
+  "pays": "France",
+  "annee": 2002,
+  "auteurs": "Alter Agri / ABioDoc",
+  "source_organisation": "ITAB / ABioDoc",
+  "mots_cles": [
+    "tomate",
+    "maladies",
+    "ravageurs",
+    "mildiou",
+    "agriculture biologique",
+    "alter agri",
+    "protection des cultures"
+  ],
+  "titre_trouve": "Maladies et ravageurs de la tomate - Alter Agri n°51",
+  "titre": "Maladies et ravageurs de la tomate en agriculture biologique (Alter Agri)",
+  "resume": "Fiche technique issue de la revue Alter Agri décrivant les symptômes et méthodes de prophylaxie contre le mildiou et les pucerons de la tomate en agriculture biologique.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Article extrait d'une revue technique sous droits réservés, axé sur la protection biologique de la tomate en zone tempérée.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Alter Agri • janvier/février 2002 • n°51 Maladies et ravageurs de la tomate"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01081__maladies-et-ravageurs-de-la-tomate-en-agriculture-biolo.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-01081__maladies-et-ravageurs-de-la-tomate-en-agriculture-biolo.pdf"
+}

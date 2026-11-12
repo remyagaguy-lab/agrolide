@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00642",
+  "sha256": "00201c465167dbfbe57b72a9b8b4dedd9d0f7c849677cf09d8cc4b9ba2723e78",
+  "nom_original": "PAPAYER (3).pdf",
+  "chemin_relatif_source": "OD_Docs/PAPAYER (3).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1347361,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 11,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "papayer",
+    "carica papaya",
+    "arboriculture fruitiere",
+    "cameroun",
+    "pepiniere",
+    "rendement",
+    "recolte"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU PAPAYER",
+  "titre": "Technologie de production du papayer au Cameroun",
+  "resume": "Fiche technique opérationnelle de l'IFATI pour la culture commerciale du papayer en Afrique centrale : choix des variétés, conduite de la pépinière, plantation, entretien, fertilisation, protection phytosanitaire et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle pratique et complète sur l'arboriculture de la papaye, diffusable librement en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DU PAPAYER"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0047",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00642__technologie-de-production-du-papayer-au-cameroun.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00642__technologie-de-production-du-papayer-au-cameroun.pdf"
+}

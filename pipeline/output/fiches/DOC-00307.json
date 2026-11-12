@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00307",
+  "sha256": "b3d7f7fcac022087d89ed6c44ff3db4360cb5518c667d80febe6f7da49556699",
+  "nom_original": "Cours Agro-pédologie et fertilisation 2020.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours Agro-pédologie et fertilisation 2020.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2343749,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 36,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Smail Mehda",
+  "source_organisation": "Université Echahid Hamma Lakhdar El-Oued",
+  "mots_cles": [
+    "pedologie",
+    "sol",
+    "fertilisation",
+    "texture",
+    "structure du sol",
+    "elements nutritifs"
+  ],
+  "titre_trouve": "Cours Agro-pédologie et fertilisation",
+  "titre": "Cours d'agro-pédologie et fertilisation des sols",
+  "resume": "Support de cours universitaire abordant les fondamentaux de la pédologie : genèse, horizons, texture, structure, dynamique de l'eau et éléments nutritifs du sol.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire sans licence libre de rediffusion publique ; archivé pour usage pédagogique interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours Agro-pédologie et fertilisation 2021/2022"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00307__cours-d-agro-pedologie-et-fertilisation-des-sols.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00307__cours-d-agro-pedologie-et-fertilisation-des-sols.pdf"
+}

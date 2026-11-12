@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00083",
+  "sha256": "6cd0a8249c711ea85a31e977efc53c51cf77be030487d2e6276b3c12cdfd95f7",
+  "nom_original": "12_sol1.pdf",
+  "chemin_relatif_source": "OD_Docs/12_sol1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1401273,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2010,
+  "auteurs": "B. Boulanger",
+  "source_organisation": "Université de Sherbrooke",
+  "mots_cles": [
+    "genie civil",
+    "beton arme",
+    "moment ultime",
+    "calcul de poutre",
+    "sherbrooke"
+  ],
+  "titre_trouve": "Mathcad - ED_03 Question #1.xmcd",
+  "titre": "Calcul de béton armé : ED3 problème 1 (Génie civil GCI 220)",
+  "resume": "Corrigé d'exercice de calcul de structure en béton armé (détermination du moment ultime et vérification d'armatures) pour le département de génie civil de l'Université de Sherbrooke.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document de génie civil universitaire portant sur le dimensionnement du béton armé, sans aucun rapport avec l'agriculture.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Faculté de génie Département de génie civil Sherbrooke (QC) Cours:GCI 220"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00083__calcul-de-beton-arme-ed3-probleme-1-genie-civil-gci-220.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00083__calcul-de-beton-arme-ed3-probleme-1-genie-civil-gci-220.pdf"
+}

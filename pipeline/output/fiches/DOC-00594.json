@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00594",
+  "sha256": "211008fa1fc574ba4639763d56c24134d10288ab4849010fda29b1601eb0f47f",
+  "nom_original": "METABOLISME_DES_PROTEINES_ (2).pdf",
+  "chemin_relatif_source": "OD_Docs/METABOLISME_DES_PROTEINES_ (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1929596,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 67,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2002,
+  "auteurs": "Dr D. Séguy",
+  "source_organisation": "Université de Lille 2",
+  "mots_cles": [
+    "metabolisme proteique",
+    "acides amines",
+    "proteolyse",
+    "nutrition clinique"
+  ],
+  "titre_trouve": "Métabolisme des protéines",
+  "titre": "Cours sur le métabolisme des protéines et la nutrition clinique humaine",
+  "resume": "Diaporama médical universitaire détaillant la digestion, l'absorption, la protéolyse et la synthèse des acides aminés dans le cadre de la nutrition humaine hospitalière.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Cours de nutrition clinique et médecine humaine hospitalière, hors du périmètre agronomique et agroalimentaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Métabolisme des protéines D Séguy Service de nutrition dseguy@univ-lille2.fr"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00594__cours-sur-le-metabolisme-des-proteines-et-la-nutrition.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00594__cours-sur-le-metabolisme-des-proteines-et-la-nutrition.pdf"
+}

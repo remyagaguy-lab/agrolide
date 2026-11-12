@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00096",
+  "sha256": "3b1cb1e85a3af612b408be8bc30195f9fdd28b7ab207d804ffa9ef2b7228ab61",
+  "nom_original": "19-536-550 (1).pdf",
+  "chemin_relatif_source": "OD_Docs/19-536-550 (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1273822,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 16,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 1999,
+  "auteurs": "Robert Zougmoré, Z. Zida, F.N. Kambou",
+  "source_organisation": "INERA Burkina Faso",
+  "mots_cles": [
+    "rehabilitation des sols",
+    "zai",
+    "demi-lune",
+    "amendements",
+    "sahel",
+    "burkina faso",
+    "zipelle"
+  ],
+  "titre_trouve": "REHABILITATION DES SOLS DEGRADES : ROLES DES AMENDEMENTS DANS LE SUCCES DES TECHNIQUES DE DEMI-LUNE ET DE ZMAU SAHEL",
+  "titre": "Réhabilitation des sols dégradés : rôles des amendements dans le succès des techniques de demi-lune et de zaï au Sahel",
+  "resume": "Article scientifique évaluant l'impact agronomique de l'association de techniques de conservation des eaux et du sol (demi-lunes, zaï) et d'amendements organiques et minéraux sur sols dégradés (zipellé) au Sahel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique complet issu de la recherche agronomique burkinabè (INERA), pertinent pour les spécialistes de la restauration des sols sahéliens.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "REHABILITATION DES SOLS DEGRADES : ROLES DES AMENDEMENTS DANS LE SUCCES DES TECHNIQUES DE DEMI-LUNE ET DE ZMAU SAHEL"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0007",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00096__rehabilitation-des-sols-degrades-roles-des-amendements.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00096__rehabilitation-des-sols-degrades-roles-des-amendements.pdf"
+}

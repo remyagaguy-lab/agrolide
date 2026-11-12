@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01016",
+  "sha256": "1d3e4a19875a671c6b3a249d7b72870209c34ec0d37b6e8b2d2941505f038c13",
+  "nom_original": "poivre.pdf",
+  "chemin_relatif_source": "OD_Docs/poivre.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 301215,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 13,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "plantes_aromatiques_medicinales",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "poivre",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Fulliquet J.",
+  "source_organisation": null,
+  "mots_cles": [
+    "poivre",
+    "piper nigrum",
+    "epice",
+    "poivre noir",
+    "poivre blanc",
+    "sarawak",
+    "culture tropicale"
+  ],
+  "titre_trouve": "LE POIVRE",
+  "titre": "Monographie sur le poivre (Piper nigrum) : Botanique, origines, transformation et qualités",
+  "resume": "Document complet présentant la culture du poivrier (Piper nigrum), les origines géographiques, les procédés de transformation des baies (poivre noir, blanc, vert) et les normes de calibrage commercial.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Validation humaine requise (confiance={'classification': 0.95, 'droits': 0.8, 'completude': 0.95}, accord_audit=True).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE POIVRE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Les grains de poivre sont les grains des baies du Piper nigrum"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01016__monographie-sur-le-poivre-piper-nigrum-botanique-origin.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/plantes_aromatiques_medicinales/DOC-01016__monographie-sur-le-poivre-piper-nigrum-botanique-origin.pdf"
+}

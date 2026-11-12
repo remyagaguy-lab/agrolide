@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00663",
+  "sha256": "ba9e0f7b3a6604abbd4a8d3e154d525409a2da8e9a001ba11e11b0f226559920",
+  "nom_original": "Permaculture_créer_un_mode_de_vie_durable_Gildas_Véret_@lechat.pdf",
+  "chemin_relatif_source": "OD_Docs/Permaculture_créer_un_mode_de_vie_durable_Gildas_Véret_@lechat.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2103058,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 103,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2017,
+  "auteurs": "Gildas Véret",
+  "source_organisation": "Éditions Rustica",
+  "mots_cles": [
+    "permaculture",
+    "design permacole",
+    "agroecologie",
+    "durabilite",
+    "editions rustica"
+  ],
+  "titre_trouve": "Permaculture, créer un mode de vie durable",
+  "titre": "Permaculture : Créer un mode de vie durable - Comprendre les enjeux et concevoir des solutions",
+  "resume": "Ouvrage de référence exposant la philosophie et le design permacole : principes éthiques de Mollison et Holmgren, conception d'écosystèmes productifs et résilience écologique.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial sous droits réservés des Éditions Rustica (ISBN 978-2-8153-1044-4), archivé sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Gildas Véret Comprendre les enjeux et concevoir des solutions PRÉFACE DE FRANCIS HALLÉ"
+    },
+    {
+      "champ": "autre",
+      "page": 103,
+      "extrait": "ISBN : 978-2-8153-1044-4 www.rustica.fr"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00663__permaculture-creer-un-mode-de-vie-durable-comprendre-le.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00663__permaculture-creer-un-mode-de-vie-durable-comprendre-le.pdf"
+}

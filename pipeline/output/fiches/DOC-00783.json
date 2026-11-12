@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00783",
+  "sha256": "a3548efac23c5892ab999118b8594bb98a710b819b05176ece15da19e96db5d9",
+  "nom_original": "agronomie.pdf",
+  "chemin_relatif_source": "OD_Docs/agronomie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1110450,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476249942-agronomie.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 37,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "Damien Joubert",
+  "source_organisation": "Lycée du Parc",
+  "mots_cles": [
+    "agronomie",
+    "metier d'agronome",
+    "orientation",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "« Pourquoi être agronome ? »",
+  "titre": "Pourquoi être agronome ? Découverte du métier et des enjeux agronomiques",
+  "resume": "Diaporama d'orientation professionnelle de 37 diapositives présenté par un ancien élève ingénieur agronome, introduisant les enjeux globaux de l'agriculture et de l'alimentation.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support personnel d'orientation en lycée français non publié sous licence libre, non adapté au contexte opérationnel africain.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "« Pourquoi être agronome ? » Lycée du Parc, 7 Septembre 2012"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Damien Joubert, ancien du Lycée du Parc"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00783__pourquoi-etre-agronome-decouverte-du-metier-et-des-enje.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00783__pourquoi-etre-agronome-decouverte-du-metier-et-des-enje.pdf"
+}

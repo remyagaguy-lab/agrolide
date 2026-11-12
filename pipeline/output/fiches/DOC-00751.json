@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00751",
+  "sha256": "8bd79352f36162acf0bf37b7bb995402b47b4ad14bbe8757299f5a3f75b5ef03",
+  "nom_original": "Technique-en-cultures-hors-sols.docx",
+  "chemin_relatif_source": "OD_Docs/Technique-en-cultures-hors-sols.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 28520,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "culture_sous_abri_hors_sol",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage hors-sol",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Mr Zouaoui",
+  "source_organisation": null,
+  "mots_cles": [
+    "culture hors sol",
+    "hydroponie",
+    "solution nutritive",
+    "substrat inerte",
+    "maraichage"
+  ],
+  "titre_trouve": "Technique en cultures hors sols",
+  "titre": "Techniques de cultures hors-sol et hydroponie",
+  "resume": "Document d'introduction aux principes de l'agriculture hors-sol et de l'hydroponie maraîchère : besoins des plantes, types de substrats inertes et gestion de la solution nutritive.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document pédagogique d'un formateur sans licence libre explicite, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technique en cultures hors sols Mr : Zouaoui"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00751__techniques-de-cultures-hors-sol-et-hydroponie.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/culture_sous_abri_hors_sol/DOC-00751__techniques-de-cultures-hors-sol-et-hydroponie.pdf"
+}

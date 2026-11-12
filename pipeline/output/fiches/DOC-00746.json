@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00746",
+  "sha256": "da177294b8157843f24f513f3fd21100f97fe46149703cbf88246e1bcfeedb21",
+  "nom_original": "TP Botanique new vrai_250820_212453.pdf",
+  "chemin_relatif_source": "OD_Docs/TP Botanique new vrai_250820_212453.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 11349792,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "titre_introuvable",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 25,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "botanique",
+    "travaux pratiques",
+    "morphologie vegetale",
+    "ocr necessaire"
+  ],
+  "titre_trouve": null,
+  "titre": "Travaux pratiques de botanique générale (Scan TP)",
+  "resume": "Fascicule de travaux pratiques de botanique de 25 pages scanné depuis un smartphone, sans texte numérique extractible. Traitement OCR et revue humaine requis.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan de cahier de travaux pratiques de botanique sans texte numérique exploitable, validation humaine requise.",
+  "confiance": {
+    "classification": 0.65,
+    "droits": 0.3,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "TP Botanique new vrai"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00746__travaux-pratiques-de-botanique-generale-scan-tp.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00746__travaux-pratiques-de-botanique-generale-scan-tp.pdf"
+}

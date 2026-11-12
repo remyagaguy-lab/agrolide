@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00346",
+  "sha256": "777594917c09623f70603bf5fac2b53fa711711c4de2720faaeb39f2ea5c5083",
+  "nom_original": "Devis de 04 bacs en bache.pdf",
+  "chemin_relatif_source": "OD_Docs/Devis de 04 bacs en bache.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 242439,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture / silure (Clarias)",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Ingénieur Zanga Zolo",
+  "source_organisation": null,
+  "mots_cles": [
+    "aquaculture",
+    "pisciculture",
+    "clarias",
+    "bacs en bache",
+    "fastank",
+    "devis",
+    "compte d'exploitation"
+  ],
+  "titre_trouve": "PROJET DE CONSTRUCTION DE 04 BACS EN BACHE (FASTANK) D'ELEVAGES DE Clarias",
+  "titre": "Projet d'élevage de Clarias en 4 bacs en bâche : devis et compte d'exploitation",
+  "resume": "Dossier technico-économique chiffré en FCFA pour la construction et l'exploitation de 4 bacs hors-sol en bâche (Fastank) de pisciculture de silures : coûts d'installation, alevins, aliment et prévisions de rentabilité.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document technico-économique concret rédigé par un professionnel indépendant sans licence libre explicite, conservé en archive pour modèle d'activité.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.75,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PROJETDECONSTRUCTIONDE04:BACSENBACHE(FASTANK)D'ELEVAGESDEClarias Devisetcompted'exploitation"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "FaitparIngZangaZolo(Aquaculture)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00346__projet-d-elevage-de-clarias-en-4-bacs-en-bache-devis-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00346__projet-d-elevage-de-clarias-en-4-bacs-en-bache-devis-et.pdf"
+}

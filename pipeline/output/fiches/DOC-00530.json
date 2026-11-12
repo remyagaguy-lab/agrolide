@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00530",
+  "sha256": "779aaf9a7c8d8bcb4510d3c572f074f293dd6bd63bc03a3ae5d55fe41ad24375",
+  "nom_original": "LES ANTI- BIOTIQUES.docx",
+  "chemin_relatif_source": "OD_Docs/LES ANTI- BIOTIQUES.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 976698,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Contributeurs Wikipédia",
+  "source_organisation": "Wikipédia",
+  "mots_cles": [
+    "zootechnie",
+    "elevage",
+    "zoonoses",
+    "wikipedia",
+    "productions animales"
+  ],
+  "titre_trouve": "Zootechnie Un article de Wikipédia, l'encyclopédie libre",
+  "titre": "Compilation documentaire Wikipédia : Zootechnie, animal et zoonoses",
+  "resume": "Compilation d'articles encyclopédiques Wikipédia portant sur les définitions de base de la zootechnie, de l'élevage et des zoonoses.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-SA",
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Copier-coller brut d'articles Wikipédia sans valeur ajoutée pédagogique ni mise en page structurée, archivé.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.9,
+    "completude": 0.7
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Zootechnie Un article de Wikipédia, l'encyclopédie libre."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00530__compilation-documentaire-wikipedia-zootechnie-animal-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-00530__compilation-documentaire-wikipedia-zootechnie-animal-et.pdf"
+}

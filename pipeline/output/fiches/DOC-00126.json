@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00126",
+  "sha256": "e41223541a57d9b5b7745ffb38ef9328c7c6b531e44f054b97422b8f6d062058",
+  "nom_original": "5_Fondements de la sylviculture.pdf",
+  "chemin_relatif_source": "OD_Docs/5_Fondements de la sylviculture.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5062843,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 74,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "bois d'œuvre",
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "Dr K. GARAH",
+  "source_organisation": "École Nationale Supérieure des Forêts (Algérie)",
+  "mots_cles": [
+    "sylviculture",
+    "foresterie",
+    "peuplement forestier",
+    "operations sylvicoles",
+    "taillis"
+  ],
+  "titre_trouve": "Cours de Fondements de la sylviculture",
+  "titre": "Cours de fondements de la sylviculture : principes, orientations et opérations sylvicoles",
+  "resume": "Support de cours sous forme de présentation abordant les objectifs sylvicoles, l'intégration socio-économique des forêts, les cycles sylvigénétiques et les premières opérations sylvicoles.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non libre constituant un chapitre isolé (Chapitre 4), archivé sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours de Fondements de la sylviculture Année universitaire 2023 / 2024 Cours présenté par Dr K. GARAH"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Chapitre 4 : Fondements de la sylviculture"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00126__cours-de-fondements-de-la-sylviculture-principes-orient.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00126__cours-de-fondements-de-la-sylviculture-principes-orient.pdf"
+}

@@ -1,0 +1,77 @@
+{
+  "batch_number": 56,
+  "audits": [
+    {
+      "id": "DOC-01084",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01085",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01086",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01087",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "non_publie_archive",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01088",
+      "accord": false,
+      "champs_en_desaccord": [
+        "decision"
+      ],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {
+        "decision": "a_valider_humain"
+      },
+      "arbitrage": "Le drapeau bloquant donnees_phyto_a_verifier interdit la publication directe (public) ; le document doit être soumis à validation humaine."
+    },
+    {
+      "id": "DOC-01089",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01090",
+      "accord": true,
+      "champs_en_desaccord": [],
+      "decision_auditeur": "public",
+      "corrections": {},
+      "arbitrage": null
+    },
+    {
+      "id": "DOC-01091",
+      "accord": false,
+      "champs_en_desaccord": [
+        "decision"
+      ],
+      "decision_auditeur": "a_valider_humain",
+      "corrections": {
+        "decision": "a_valider_humain"
+      },
+      "arbitrage": "Document non-PDF avec conversion_requise, interdisant le statut de publication immédiate (membres) tant qu'il n'a pas été converti et validé."
+    }
+  ]
+}

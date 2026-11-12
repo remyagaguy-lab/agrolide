@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00535",
+  "sha256": "977f8c547d87f800a6eeb141eb91465a5753c849dccf3e01c2bf483f277ca739",
+  "nom_original": "La Fertilisation  (1).pdf",
+  "chemin_relatif_source": "OD_Docs/La Fertilisation  (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1719835,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 78,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 1998,
+  "auteurs": "Union des Industries de la Fertilisation (UNIFA)",
+  "source_organisation": "UNIFA",
+  "mots_cles": [
+    "fertilisation",
+    "nutrition minerale",
+    "fumure",
+    "azote",
+    "phosphore",
+    "potasse"
+  ],
+  "titre_trouve": "La Fertilisation",
+  "titre": "La Fertilisation : principes agronomiques et plan de fumure",
+  "resume": "Manuel technique de référence de 78 pages détaillant les lois de la nutrition végétale, la dynamique des éléments majeurs (N, P, K) et l'élaboration d'un plan de fumure.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Brochure pédagogique de référence de l'UNIFA, accessible aux membres mais marquée par son cadre réglementaire tempéré.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La Fertilisation 7e édition Union des Industries de la Fertilisation"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Union des Industries de la Fertilisation (UNIFA)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00535__la-fertilisation-principes-agronomiques-et-plan-de-fumu.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00535__la-fertilisation-principes-agronomiques-et-plan-de-fumu.pdf"
+}

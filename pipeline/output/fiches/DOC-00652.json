@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00652",
+  "sha256": "7ed884b638cfe4015d5463c459efe370cc52d61d38437e7445fe972e1f28f3b2",
+  "nom_original": "POMME DE TERRE.pdf",
+  "chemin_relatif_source": "OD_Docs/POMME DE TERRE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2173319,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 16,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pomme de terre",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "pomme de terre",
+    "tubercule",
+    "itineraire technique",
+    "semences",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE LA POMME DE TERRE",
+  "titre": "Fiche technique : Technologie de production de la pomme de terre",
+  "resume": "Guide pratique de l'IFATI sur la production de pomme de terre en zone tropicale : exigences écologiques, préparation des sols, entretien, maladies, calibrage et prégermination des semences.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique complet de l'IFATI (Cameroun) pour la culture et la gestion des semences de pomme de terre.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DE LA POMME DE TERRE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00652__fiche-technique-technologie-de-production-de-la-pomme-d.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00652__fiche-technique-technologie-de-production-de-la-pomme-d.pdf"
+}

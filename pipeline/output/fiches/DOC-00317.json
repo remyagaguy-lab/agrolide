@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00317",
+  "sha256": "948d75fd5c43592aef598130922d90b1b7812cbf78270077914c9c291fad6119",
+  "nom_original": "Cours d’Agro-pédologie Msila.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours d’Agro-pédologie Msila.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3511098,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 55,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2023,
+  "auteurs": "TIR Chafia",
+  "source_organisation": "Université de M'Sila",
+  "mots_cles": [
+    "agro-pedologie",
+    "science du sol",
+    "proprietes physico-chimiques",
+    "eau dans le sol",
+    "fertilite"
+  ],
+  "titre_trouve": "Cours d’Agro-pédologie",
+  "titre": "Cours d’agro-pédologie : Caractérisation et fertilité des sols",
+  "resume": "Support de cours universitaire présentant les notions fondamentales de la pédologie, le régime hydrique et les propriétés physico-chimiques des sols pour la gestion de leur fertilité.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non publié sous licence libre, conservé pour archivage documentaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "3éme année PDV Cours d’Agro-pédologie 2023/204 par TIR Chafia"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00317__cours-dagro-pedologie-caracterisation-et-fertilite-des.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00317__cours-dagro-pedologie-caracterisation-et-fertilite-des.pdf"
+}

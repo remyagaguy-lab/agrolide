@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00615",
+  "sha256": "84a60046e1695de47869380cf684a5113fef569ddda9d3960ef6917cb8f37f97",
+  "nom_original": "Module_de_formation_sur_aviculture.pdf",
+  "chemin_relatif_source": "OD_Docs/Module_de_formation_sur_aviculture.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 928633,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 15,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Burkina Faso",
+  "annee": 2016,
+  "auteurs": "DEZLY Consulting",
+  "source_organisation": "DEZLY Consulting (Burkina Faso)",
+  "mots_cles": [
+    "aviculture traditionnelle amelioree",
+    "poules locales",
+    "habitat avicole",
+    "prophylaxie",
+    "burkina faso"
+  ],
+  "titre_trouve": "MODULE DE FORMATION SUR L’AVICULTURE TRADITIONNELLE AMELIOREE",
+  "titre": "Module de formation sur l'aviculture traditionnelle améliorée au Burkina Faso",
+  "resume": "Module de formation pratique pour les éleveurs ruraux sur l'aviculture traditionnelle améliorée : construction de l'habitat, biosécurité, alimentation locale et reproduction.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document conçu et signé par un cabinet privé de conseil et d'expertise (DEZLY Consulting) sans mention d'institution commanditaire ni de licence libre. Il relève de droits réservés commerciaux et ne peut être diffusé en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE DE FORMATION SUR L’AVICULTURE TRADITIONNELLE AMELIOREE Conception : DEZLY Consulting"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "CABINET D’EXPERTISE -Etudes-Formation-Appui Conseil- SIEGE DEDOUGOU (226) Burkina Faso"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Document conçu et signé par un cabinet privé de conseil et d'expertise (DEZLY Consulting) sans mention d'institution commanditaire ni de licence libre. Il relève de droits réservés commerciaux et ne peut être diffusé en accès public."
+  },
+  "nom_fichier_final": "DOC-00615__module-de-formation-sur-l-aviculture-traditionnelle-ame.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00615__module-de-formation-sur-l-aviculture-traditionnelle-ame.pdf"
+}

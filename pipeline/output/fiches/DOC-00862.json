@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00862",
+  "sha256": "344189fb06da7433f89298b2ab75e94158e91e0f47d0f8b26e1210fd8cf6e86d",
+  "nom_original": "developpement_de_l_aviculture_villageoise_en_afrique_de_l_ouest.pdf",
+  "chemin_relatif_source": "OD_Docs/developpement_de_l_aviculture_villageoise_en_afrique_de_l_ouest.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2939636,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 126,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "aviculture",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution",
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Togo, Mali, Sénégal",
+  "annee": 2011,
+  "auteurs": "René Billaz, Valentin Beauval",
+  "source_organisation": "Agronomes et Vétérinaires Sans Frontières (AVSF) / RURALTER",
+  "mots_cles": [
+    "aviculture villageoise",
+    "volaille traditionnelle",
+    "AVSF",
+    "Afrique de l'Ouest",
+    "Togo",
+    "Mali",
+    "Senegal",
+    "vaccination aviaire"
+  ],
+  "titre_trouve": "Développement de l’aviculture villageoise en Afrique de l’Ouest. Vingt ans d’expérience au Togo, au Mali et au Sénégal : bilan et perspectives",
+  "titre": "Développement de l'aviculture villageoise en Afrique de l'Ouest : 20 ans d'expérience au Togo, au Mali et au Sénégal",
+  "resume": "Rapport de capitalisation d'AVSF analysant 20 ans de projets avicoles au Togo, Mali et Sénégal : amélioration de l'habitat, alimentation, santé animale et organisation des filières.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport de capitalisation institutionnel complet d'AVSF sur l'aviculture ouest-africaine, mis à disposition des membres.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Développement de l’aviculture villageoise en Afrique de l’Ouest. Vingt ans d’expérience au Togo, au Mali et au Sénégal : bilan et perspectives"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Synthèse animée et rédigée par René Billaz et Valentin Beauval. ©AVSF - 2011"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00862__developpement-de-l-aviculture-villageoise-en-afrique-de.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00862__developpement-de-l-aviculture-villageoise-en-afrique-de.pdf"
+}

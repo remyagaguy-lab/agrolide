@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00573",
+  "sha256": "e5feb3b3f4652bcd5b6ca41ec2257ba9e4acb5679bb8bd89e7f5a9e034b3aea9",
+  "nom_original": "L’élevage_de_lapins_(oryctolagus_cuniculus )_2.doc",
+  "chemin_relatif_source": "OD_Docs/L’élevage_de_lapins_(oryctolagus_cuniculus )_2.doc",
+  "indice_ancien_dossier": null,
+  "format_source": "doc",
+  "taille_octets": 214016,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "corrompu",
+    "auteur_introuvable",
+    "titre_introuvable",
+    "incomplet"
+  ],
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "cuniculture",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "lapin",
+    "cuniculture",
+    "elevage",
+    "oryctolagus cuniculus"
+  ],
+  "titre_trouve": null,
+  "titre": "L’élevage de lapins (Oryctolagus cuniculus) [Fichier DOC non extrait]",
+  "resume": "Fichier au format DOC sur l'élevage cunicole dont le corps de texte n'a pas pu être extrait automatiquement, nécessitant une révision technique.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fichier binaire Word sans texte exploitable dans l'extraction brute, à vérifier manuellement.",
+  "confiance": {
+    "classification": 0.5,
+    "droits": 0.4,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L’élevage_de_lapins_(oryctolagus_cuniculus )_2.doc"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00573__lelevage-de-lapins-oryctolagus-cuniculus-fichier-doc-no.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00573__lelevage-de-lapins-oryctolagus-cuniculus-fichier-doc-no.pdf"
+}

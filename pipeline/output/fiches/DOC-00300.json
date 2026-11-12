@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00300",
+  "sha256": "8b13c1f338a2d5e2f14d026b286256c73aa67a6050ea7f06e53c1289c1065d4e",
+  "nom_original": "Comment produir-Asticot.pdf",
+  "chemin_relatif_source": "OD_Docs/Comment produir-Asticot.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1664726,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 11,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Élevage Bio Traoré",
+  "source_organisation": "Élevage Bio Traoré",
+  "mots_cles": [
+    "asticots",
+    "alimentation avicole",
+    "larves de mouches",
+    "proteines alternatives",
+    "volaille"
+  ],
+  "titre_trouve": "Comment produire les asticots pour les volailles ?",
+  "titre": "Comment produire les asticots pour les volailles ?",
+  "resume": "Guide pratique détaillant les techniques simples de production d'asticots à partir de résidus organiques locaux pour enrichir l'alimentation protéique des volailles en élevage fermier.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide pratique très pertinent pour l'aviculture tropicale issu d'un blog privé sans licence explicite ; validation des droits requise.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.65,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Comment produire les asticots pour les volailles ?"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0071",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00300__comment-produire-les-asticots-pour-les-volailles.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00300__comment-produire-les-asticots-pour-les-volailles.pdf"
+}

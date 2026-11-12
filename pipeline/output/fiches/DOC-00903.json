@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00903",
+  "sha256": "118ca7ae427589e5b3032b2c181166b14d9914b50d0e85c06eb480796600f518",
+  "nom_original": "farines de ble remoulages sons issues.pdf",
+  "chemin_relatif_source": "OD_Docs/farines de ble remoulages sons issues.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 32197,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "blé",
+  "pays": null,
+  "annee": 2007,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "farine de ble",
+    "meunerie",
+    "minoterie",
+    "plansichter",
+    "broyage",
+    "sons"
+  ],
+  "titre_trouve": "FARINES DE BLE",
+  "titre": "Synoptique industriel : Diagramme de meunerie et mouture des farines de blé",
+  "resume": "Diagramme de fabrication de minoterie décrivant les opérations unitaires de nettoyage, broyage, blutage et convertissage du blé en farines et coproduits (sons, remoulages).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Synoptique technique de minoterie issu d'une étude d'ingénierie sans mention explicite de droits ; validation humaine requise.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FARINES DE BLE Réception du blé en grains"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00903__synoptique-industriel-diagramme-de-meunerie-et-mouture.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-00903__synoptique-industriel-diagramme-de-meunerie-et-mouture.pdf"
+}

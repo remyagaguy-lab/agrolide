@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00152",
+  "sha256": "00b55a77d4349030efa66ab5dea64feb49fc0fbe65c3d73bb2bf9dddbdbf0d25",
+  "nom_original": "ANANAS.pdf",
+  "chemin_relatif_source": "OD_Docs/ANANAS.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2400496,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479073307-ANANAS.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 26,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ananas",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "ananas",
+    "arboriculture fruitiere",
+    "cameroun",
+    "itineraire technique",
+    "recolte",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’ANANAS",
+  "titre": "Technologie de production de l'ananas au Cameroun",
+  "resume": "Guide pratique complet sur la conduite de la culture de l'ananas au Cameroun, couvrant les exigences pédoclimatiques, le choix des rejets, l'entretien et la récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet de production d'ananas tropical issu d'un institut de formation agréé, éligible à une diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DE L’ANANAS GENERALITES I. LES EXIGENCES DE LA CULTURE II. CONDUITE DE LA CULTURE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00152__technologie-de-production-de-l-ananas-au-cameroun.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00152__technologie-de-production-de-l-ananas-au-cameroun.pdf"
+}

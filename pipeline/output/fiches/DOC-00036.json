@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00036",
+  "sha256": "67b161e4d31713dc836beeb489f60b7ee844c9297193037527aff5fc1fb6f37a",
+  "nom_original": "résumé 2 immunologie.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Immunologie/Immunologie/résumé 2 immunologie.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 4800138,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 19,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "immunologie",
+    "medecine",
+    "cours",
+    "sante"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 2 - Immunologie médicale",
+  "resume": "Fascicule numérisé de 19 pages contenant le deuxième volet de résumés d'immunologie médicale humaine, hors champ agricole et vétérinaire.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Cours d'immunologie médicale humaine, hors du périmètre sectoriel de la plateforme.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "résumé 2 immunologie.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0004",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00036__resume-2-immunologie-medicale.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00036__resume-2-immunologie-medicale.pdf"
+}

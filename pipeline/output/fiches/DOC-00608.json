@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00608",
+  "sha256": "11d9450c9e08bf3beb819ab4924c5a6340b8fcbd8bfb072c5e02e8d82fb4535d",
+  "nom_original": "Mini_manuel_de_biologie_animale.pdf",
+  "chemin_relatif_source": "OD_Docs/Mini_manuel_de_biologie_animale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 16466461,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 224,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2015,
+  "auteurs": "Anne-Marie Bautz, Alain Bautz, Dominique Chardard",
+  "source_organisation": "Dunod",
+  "mots_cles": [
+    "biologie animale",
+    "zoologie",
+    "qcm",
+    "embryologie",
+    "classification animale",
+    "dunod"
+  ],
+  "titre_trouve": "Biologie animale Cours + QCM/QROC",
+  "titre": "Mini Manuel de Biologie animale : Cours + QCM/QROC (Dunod)",
+  "resume": "Manuel universitaire des éditions Dunod présentant les fondamentaux de la biologie animale : organisation structurale, reproduction, développement et classification des grands phylums.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Manuel universitaire commercial sous copyright strict des éditions Dunod ; archivé obligatoirement pour des raisons de droits d'auteur.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Biologie animale Cours + QCM/QROC 3e édition DUNOD"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00608__mini-manuel-de-biologie-animale-cours-qcm-qroc-dunod.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00608__mini-manuel-de-biologie-animale-cours-qcm-qroc-dunod.pdf"
+}

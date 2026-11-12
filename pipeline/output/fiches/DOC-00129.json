@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00129",
+  "sha256": "b2feb8a45012f17029e7cc6c8c0b7e802de717aee9012b770933a61d974fff5b",
+  "nom_original": "6- Etude au vent.pdf",
+  "chemin_relatif_source": "OD_Docs/6- Etude au vent.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 522780,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 45,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "genie civil",
+    "calcul de structures",
+    "nv 65",
+    "action du vent",
+    "pression dynamique"
+  ],
+  "titre_trouve": "Etude au vent selon NV 65",
+  "titre": "Calcul et étude de l'action du vent sur les constructions selon les règles NV 65",
+  "resume": "Chapitre technique de calcul de génie civil détaillant les formules et coefficients d'application des règles NV 65 pour estimer les charges dynamiques exercées par le vent sur les bâtiments.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document technique de génie civil et calcul de structure bâtiment (norme NV 65), hors périmètre agricole.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.8,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CH. I : Etude au vent selon NV 65"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00129__calcul-et-etude-de-l-action-du-vent-sur-les-constructio.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00129__calcul-et-etude-de-l-action-du-vent-sur-les-constructio.pdf"
+}

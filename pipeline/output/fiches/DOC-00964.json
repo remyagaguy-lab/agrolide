@@ -1,0 +1,82 @@
+{
+  "id": "DOC-00964",
+  "sha256": "2b2372306c80b1829cea5d82dff4514efff348cbff3e2c0f6d81648601605d51",
+  "nom_original": "jgrc_guide_technique_de_l_elevage_2001 (2).pdf",
+  "chemin_relatif_source": "OD_Docs/jgrc_guide_technique_de_l_elevage_2001 (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3406985,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 38,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "ruminants",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "élevage pastoral",
+  "pays": null,
+  "annee": 2001,
+  "auteurs": "Société Japonaise des Ressources Vertes (JGRC)",
+  "source_organisation": "Japan Green Resources Corporation (JGRC)",
+  "mots_cles": [
+    "elevage pastoral",
+    "sahel",
+    "jgrc",
+    "fourrage",
+    "ressources fourrageres",
+    "bovins",
+    "ovins",
+    "lutte contre la desertification"
+  ],
+  "titre_trouve": "Guide technique de l’élevage : Le développement pastoral efficace passe par la production d'herbe",
+  "titre": "Guide technique de l'élevage sahélien : pastoralisme et valorisation fourragère (JGRC Vol. 7)",
+  "resume": "Guide technique de coopération internationale japonaise (JGRC) pour le Sahel exposant les méthodes d'élevage semi-intensif durable : gestion des pâturages, calcul de la capacité de charge à l'hectare et stockage de résidus de mil.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de terrain de la JGRC axé sur la gestion des ressources fourragères au Sahel, diffusable en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Société Japonaise des Ressources Vertes Documentation technique de la JGRC Vol. 7 Guide technique de l’élevage Le développement pastoral efficace passe par la production d'herbe"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "Générer l'abondance dans le Sahel par la lutte contre la désertification"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0062",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00964__guide-technique-de-l-elevage-sahelien-pastoralisme-et-v.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00964__guide-technique-de-l-elevage-sahelien-pastoralisme-et-v.pdf"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00298",
+  "sha256": "e3e92da752f55d35da9f686ca29cce68acdf85109f4fe5a183f46f7e7cd9f139",
+  "nom_original": "Comment fabriqu.pdf",
+  "chemin_relatif_source": "OD_Docs/Comment fabriqu.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6444644,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 36,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Didier Création",
+  "source_organisation": null,
+  "mots_cles": [
+    "incubateur",
+    "couveuse artisanale",
+    "aviculture",
+    "rotation automatique",
+    "oeufs"
+  ],
+  "titre_trouve": "Comment fabriquer l'incubateur le plus automatique avec la rotation automatique des œufs",
+  "titre": "Comment fabriquer un incubateur à rotation automatique pour œufs de volailles",
+  "resume": "Guide pas-à-pas illustré détaillant la conception, le dimensionnement, l'assemblage et la régulation d'un incubateur artisanal automatisé pour élevages avicoles.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Guide pratique à forte valeur ajoutée locale mais issu d'une source web sans licence explicite, statut de diffusion à valider.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Comment fabriquer l'incubateur le plus automatique avec la rotation automatique des œufs"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00298__comment-fabriquer-un-incubateur-a-rotation-automatique.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00298__comment-fabriquer-un-incubateur-a-rotation-automatique.pdf"
+}

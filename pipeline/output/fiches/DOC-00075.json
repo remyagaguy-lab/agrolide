@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00075",
+  "sha256": "643fb6b5ad4c18292285f97cce34a8f6eb7e9c3b619228e561ac07f5e3011c3d",
+  "nom_original": "1._Fiche_technique_ble_dur_bio_BIODUR_PACA_2023.pdf",
+  "chemin_relatif_source": "OD_Docs/1._Fiche_technique_ble_dur_bio_BIODUR_PACA_2023.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1388029,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476121095-1._Fiche_technique_ble_dur_bio_BIODUR_PACA_2023.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "blé dur",
+  "pays": "France",
+  "annee": 2023,
+  "auteurs": "Réseau Bio de PACA",
+  "source_organisation": "Réseau Bio de PACA",
+  "mots_cles": [
+    "ble dur bio",
+    "rotation",
+    "legumineuses",
+    "paca",
+    "fertilisation azotee"
+  ],
+  "titre_trouve": "Fiche technique blé dur bio BIODUR PACA 2023",
+  "titre": "Fiche technique blé dur bio : place dans la rotation et fertilisation azotée (PACA)",
+  "resume": "Fiche technique présentant la conduite du blé dur biologique en région Provence-Alpes-Côte d'Azur, notamment la place dans la rotation après légumineuses pluriannuelles et la gestion de l'azote.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document institutionnel de région tempérée (PACA, France), non adapté aux conditions agro-climatiques d'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique blé dur bio BIODUR PACA 2023"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "structuration de filière de blé dur bio en région Sud-PACA"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00075__fiche-technique-ble-dur-bio-place-dans-la-rotation-et-f.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00075__fiche-technique-ble-dur-bio-place-dans-la-rotation-et-f.pdf"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00666",
+  "sha256": "959dd6c0496fd8373308431974fb772652ab18a38a2ffc16c4c57975c934e407",
+  "nom_original": "Physiologie Végétale L2 PI_250820_212411.pdf",
+  "chemin_relatif_source": "OD_Docs/Physiologie Végétale L2 PI_250820_212411.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2007741,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel",
+    "droits_reserves"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2020,
+  "auteurs": "Stéphane Ravanel",
+  "source_organisation": "Université Grenoble Alpes",
+  "mots_cles": [
+    "physiologie vegetale",
+    "photosynthese",
+    "cycle de calvin",
+    "autotrophie",
+    "metabolisme cam"
+  ],
+  "titre_trouve": "Bio242 - Physiologie Végétale 1ère partie Nutrition et autotrophie",
+  "titre": "Cours de physiologie végétale L2 : Nutrition carbonée et photosynthèse",
+  "resume": "Diapositives de cours universitaire (L2) sur la nutrition carbonée végétale : structure foliaire, réactions photochimiques de la photosynthèse, cycle de Calvin et voies C3, C4 et CAM.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait partiel de cours universitaire (10 diapositives seulement) sans droits de rediffusion libre.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Bio242 - Physiologie Végétale 1ère partie Nutrition et autotrophie"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "6 cours – Stéphane Ravanel"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00666__cours-de-physiologie-vegetale-l2-nutrition-carbonee-et.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00666__cours-de-physiologie-vegetale-l2-nutrition-carbonee-et.pdf"
+}

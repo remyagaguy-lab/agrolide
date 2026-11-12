@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00519",
+  "sha256": "7141153d5f858c49c0c6197cbaa432ea65747a643a5cef94a85f098aa6490c4f",
+  "nom_original": "L-epuration-biologique-des-eaux.pdf",
+  "chemin_relatif_source": "OD_Docs/L-epuration-biologique-des-eaux.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1455309,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 153,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "energie_dechets_valorisation",
+  "type_doc": "ouvrage",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 1997,
+  "auteurs": "F. Edeline",
+  "source_organisation": "CEBEDOC / Lavoisier",
+  "mots_cles": [
+    "epuration biologique",
+    "traitement des eaux",
+    "reacteurs biologiques",
+    "boues activees",
+    "methanisation"
+  ],
+  "titre_trouve": "L’épuration biologique des eaux : THEORIE & TECHNOLOGIE DES REACTEURS",
+  "titre": "L’épuration biologique des eaux : Théorie et technologie des réacteurs",
+  "resume": "Ouvrage de référence sur les processus biochimiques de dépollution des eaux et le dimensionnement des réacteurs (boues activées, lits bactériens, méthanisation).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre technique sous droits commerciaux réservés (CEBEDOC / Éditions Lavoisier), non diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "F. Edeline L’épuration biologique des eaux THEORIE & TECHNOLOGIE DES REACTEURS CEBEDOC EDITEUR"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00519__lepuration-biologique-des-eaux-theorie-et-technologie-d.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/energie_dechets_valorisation/DOC-00519__lepuration-biologique-des-eaux-theorie-et-technologie-d.pdf"
+}

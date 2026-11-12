@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00136",
+  "sha256": "111548e0f26903cdd5f6302419b5356d933f4ce531dda699506b659e74793945",
+  "nom_original": "8550eda3-f217-4a05-b635-5ecc4acdbb76.pdf",
+  "chemin_relatif_source": "OD_Docs/8550eda3-f217-4a05-b635-5ecc4acdbb76.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 627871,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 13,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_animale",
+    "agroalimentaire"
+  ],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "decideur_institution",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Mali",
+  "annee": 2014,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "complexe avicole",
+    "abattoir volaille",
+    "projet d'investissement",
+    "business plan",
+    "mali",
+    "koulikoro",
+    "poulet de chair"
+  ],
+  "titre_trouve": "Profil du projet d’investissement : Complexe avicole (ferme avicole couplée à un abattoir volaille)",
+  "titre": "Profil d'investissement : complexe avicole intégré et abattoir de volaille à Koulikoro (Mali)",
+  "resume": "Profil de projet d'investissement complet pour l'implantation d'un complexe avicole industriel intégrant élevage (chair et ponte) et abattoir de volailles dans la région de Koulikoro au Mali.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Modèle de projet d'investissement avicole sahélien comprenant l'ensemble des données dimensionnantes et financières, très utile pour les porteurs de projet.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Profil du projet d’investissement Titre du projet: Complexe avicole (ferme avicole couplée à un abattoir volaille)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Site / emplacement: Région de Koulikoro"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00136__profil-d-investissement-complexe-avicole-integre-et-aba.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00136__profil-d-investissement-complexe-avicole-integre-et-aba.pdf"
+}

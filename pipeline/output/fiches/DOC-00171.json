@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00171",
+  "sha256": "bbe9358715c5f5ce0e6334d6fc0c06667e2207f6804385a174c9a0f2897e4434",
+  "nom_original": "AgroForesterie@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/AgroForesterie@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3705100,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 11,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "article",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2009,
+  "auteurs": "Olivier Barbié",
+  "source_organisation": "Institut Technique d'Agriculture Naturelle (ITAN)",
+  "mots_cles": [
+    "agroforesterie",
+    "causse",
+    "lot",
+    "elevage ovin",
+    "agriculture naturelle"
+  ],
+  "titre_trouve": "L'agroforesterie de Fernand Barbié",
+  "titre": "L'agroforesterie de Fernand Barbié",
+  "resume": "Retour d'expérience sur la méthode pionnière d'agroforesterie développée par Fernand Barbié sur le causse du Lot combinant élevage de brebis et arboriculture.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'une diffusion @EpubsFR sous droits réservés, relatif à un système agropastoral tempéré non transposable.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L'agroforesterie de Fernand Barbié"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Olivier Barbié"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00171__l-agroforesterie-de-fernand-barbie.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00171__l-agroforesterie-de-fernand-barbie.pdf"
+}

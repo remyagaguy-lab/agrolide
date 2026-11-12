@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00553",
+  "sha256": "fd61bbaf30e1cd5968210593eed0e7e2867660560e32e779789a1bdaaa5900dc",
+  "nom_original": "Lentille.pdf",
+  "chemin_relatif_source": "OD_Docs/Lentille.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8359730,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "titre_introuvable"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "lentille",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "lentille",
+    "Lens culinaris",
+    "legumineuse a graines",
+    "fiche technique",
+    "itineraire technique"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique sur la culture de la lentille",
+  "resume": "Document technique de 6 pages numérisé sous forme d'images sur la conduite de la lentille, nécessitant un traitement OCR pour identifier le texte et les auteurs.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible ; nécessite une passe d'OCR et une vérification humaine pour confirmer les métadonnées et droits.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.55
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: Lentille.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00553__fiche-technique-sur-la-culture-de-la-lentille.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00553__fiche-technique-sur-la-culture-de-la-lentille.pdf"
+}

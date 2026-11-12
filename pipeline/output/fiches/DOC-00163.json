@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00163",
+  "sha256": "d6c2100560180ad47b797402a835bab9556db02680202a3dcddad289cae0cf00",
+  "nom_original": "Agriculture Contractuelle (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Agriculture Contractuelle (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 17140132,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire"
+  ],
+  "nb_pages": 132,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "agriculture_contractuelle",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "agriculture contractuelle",
+    "contrats agricoles",
+    "filiere",
+    "commercialisation"
+  ],
+  "titre_trouve": null,
+  "titre": "Agriculture contractuelle : Manuel et guide pratique",
+  "resume": "Document scanné volumineux (132 pages) consacré à l'agriculture contractuelle, nécessitant un traitement OCR complet et une vérification des droits.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné avec ACE Scanner sans couche texte extractible; OCR complet et vérification des droits requis.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.4,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agriculture Contractuelle (1).pdf (nom du fichier)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ACE Scanner"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00163__agriculture-contractuelle-manuel-et-guide-pratique.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/agriculture_contractuelle/DOC-00163__agriculture-contractuelle-manuel-et-guide-pratique.pdf"
+}

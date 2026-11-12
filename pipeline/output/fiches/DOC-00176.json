@@ -1,0 +1,84 @@
+{
+  "id": "DOC-00176",
+  "sha256": "6500a2ed795692d968ef079a1bcbf2eba825e7b7a240669e42208ed325119c42",
+  "nom_original": "Agrodok - 23 - Agriculture sous abris@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok - 23 - Agriculture sous abris@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1439456,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 87,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "culture_sous_abri_hors_sol",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cultures_maraicheres",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Ernst van Heurn, Kees van der Post",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "serre",
+    "culture sous abri",
+    "tunnel plastique",
+    "climat tropical",
+    "agrodok"
+  ],
+  "titre_trouve": "Agrodok 23 - Agriculture sous abri Structure, conditions requises et usage des serres sous différents climats",
+  "titre": "Agriculture sous abri (Agrodok 23)",
+  "resume": "Manuel technique détaillant la conception, la construction et la gestion des serres et abris pour protéger les cultures horticoles sous divers climats.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00166.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 23 - Agriculture sous abri Structure, conditions requises et usage des serres sous différents climats"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Ernst van Heurn Kees van der Post"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© Fondation Agromisa, Wageningen, 2004. Tous droits réservés. ISBN Agromisa: 90-77073-37-X"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0014",
+  "canonique_id": "DOC-00166",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00176__agriculture-sous-abri-agrodok-23.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/culture_sous_abri_hors_sol/DOC-00176__agriculture-sous-abri-agrodok-23.pdf"
+}

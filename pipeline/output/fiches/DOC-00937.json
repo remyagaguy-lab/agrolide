@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00937",
+  "sha256": "74f58209f64437e020bf598ece9ecca580c5012e8fe445502e17656cd9d404cd",
+  "nom_original": "guide-pratique-compostage.pdf",
+  "chemin_relatif_source": "OD_Docs/guide-pratique-compostage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 11641123,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2021,
+  "auteurs": "La CoVe",
+  "source_organisation": "Communauté d'agglomération Ventoux Comtat Venaissin (CoVe)",
+  "mots_cles": [
+    "compostage",
+    "dechets verts",
+    "jardinage",
+    "composteur",
+    "vaucluse",
+    "cove",
+    "paillage"
+  ],
+  "titre_trouve": "Guide pratique LE COMPOSTAGE",
+  "titre": "Guide pratique : Le compostage domestique (La CoVe)",
+  "resume": "Guide pratique de sensibilisation au compostage domestique et au paillage édité par une collectivité territoriale française (La CoVe) pour la valorisation des déchets verts de jardin.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide pratique institutionnel français de compostage individuel de jardin, de pertinence marginale face aux besoins agricoles subsahariens.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide pratique LE COMPOSTAGE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00937__guide-pratique-le-compostage-domestique-la-cove.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00937__guide-pratique-le-compostage-domestique-la-cove.pdf"
+}

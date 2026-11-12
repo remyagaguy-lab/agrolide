@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00362",
+  "sha256": "a9b873501264e18612b86931e1f4b00709adbebf446ecf36fd009abdd11ff465",
+  "nom_original": "EX CALCUL DEBIT RESEAU IRRIGATION EFONCT PRESSION.docx",
+  "chemin_relatif_source": "OD_Docs/EX CALCUL DEBIT RESEAU IRRIGATION EFONCT PRESSION.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 13532,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "hydraulique",
+    "irrigation en charge",
+    "bernoulli",
+    "pertes de charge",
+    "debit",
+    "pression",
+    "exercices"
+  ],
+  "titre_trouve": "Calcul du débit d'eau dans un réseau d'irrigation en charge",
+  "titre": "Exercices corrigés d'hydraulique : Débit et pression dans un réseau d'irrigation en charge",
+  "resume": "Série de deux exercices d'hydraulique résolus détaillant le calcul du débit et de la vitesse d'écoulement sous pression et avec pertes de charge dans une conduite d'irrigation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fiche pédagogique non signée d'origine indéterminée, nécessite une validation humaine des droits avant diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Calcul du débit d'eau dans un réseau d'irrigation en charge"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Une conduite d'irrigation de diamètre 100 mm est alimentée par une pompe"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00362__exercices-corriges-d-hydraulique-debit-et-pression-dans.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00362__exercices-corriges-d-hydraulique-debit-et-pression-dans.pdf"
+}

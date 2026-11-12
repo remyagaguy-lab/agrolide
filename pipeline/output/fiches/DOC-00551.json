@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00551",
+  "sha256": "af3a314df5dff58c25b22b327dfcbde344cd0462c8b5f18d7e8a89304605f49a",
+  "nom_original": "Le-silure.pdf",
+  "chemin_relatif_source": "OD_Docs/Le-silure.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1180364,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "pêche",
+  "pays": "France",
+  "annee": 2016,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "silure",
+    "Silurus glanis",
+    "peche en eau douce",
+    "poisson carnassier",
+    "faune piscicole",
+    "France"
+  ],
+  "titre_trouve": "LE SILURE",
+  "titre": "Le Silure (Silurus glanis) : origine, biologie et techniques de pêche",
+  "resume": "Fiche descriptive sur l'écologie, l'expansion géographique et les techniques de capture du silure glane (Silurus glanis) dans les cours d'eau français.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche sur la pêche récréative d'une espèce européenne en France, sans droits établis et non adaptée à l'Afrique tropicale.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "LE SILURE / ORIGINE / Le Silure (Silurus glanis) est un poisson d’eau douce natif du continent européen."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00551__le-silure-silurus-glanis-origine-biologie-et-techniques.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00551__le-silure-silurus-glanis-origine-biologie-et-techniques.pdf"
+}

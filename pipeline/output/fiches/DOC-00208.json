@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00208",
+  "sha256": "8ad28bea703263b4dc399455382a4134d2a58423e7ae4342b8c86d68ea2a8f9b",
+  "nom_original": "Agronomie I  (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Agronomie I  (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1712016,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476238352-Agronomie_I___1_.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 56,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Aït Mechedal M.",
+  "source_organisation": null,
+  "mots_cles": [
+    "pedologie",
+    "science du sol",
+    "agronomie",
+    "eau du sol",
+    "potentiel hydrique"
+  ],
+  "titre_trouve": "Deuxième année licence sciences agronomiques - Agronomie I",
+  "titre": "Agronomie I : Notions fondamentales de pédologie et physique du sol",
+  "resume": "Support de cours en diapositives pour la deuxième année de licence en sciences agronomiques, abordant les définitions du sol, les facteurs de pédogenèse et les dynamiques de l'eau dans le sol.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non libre de droits, archivé pour consultation interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Deuxième année licence sciences agronomiques Agronomie I AIT MECHEDAL M."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00208__agronomie-i-notions-fondamentales-de-pedologie-et-physi.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00208__agronomie-i-notions-fondamentales-de-pedologie-et-physi.pdf"
+}

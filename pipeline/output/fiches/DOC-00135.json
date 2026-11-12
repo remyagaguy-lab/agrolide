@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00135",
+  "sha256": "e961e1375698dd22b78d818391b309a2b6a1a815f3fa55974255636a79dd0de6",
+  "nom_original": "8.Akanza.pdf",
+  "chemin_relatif_source": "OD_Docs/8.Akanza.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 737954,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "niébé",
+  "pays": "Côte d'Ivoire",
+  "annee": 2020,
+  "auteurs": "Akanza Kouadjo Paul, N’Da Hugues Annicet, Gbakatchetche Henri Cousin",
+  "source_organisation": "Centre National de Recherche Agronomique (CNRA) / Journal of Applied Biosciences",
+  "mots_cles": [
+    "niebe",
+    "mais",
+    "rotation culturale",
+    "fertilite des sols",
+    "cote d'ivoire",
+    "cnra",
+    "adventices"
+  ],
+  "titre_trouve": "La culture du niébé : bon précédent cultural du maïs en Côte d’Ivoire",
+  "titre": "La culture du niébé : bon précédent cultural du maïs en Côte d'Ivoire",
+  "resume": "Fiche technique du CNRA démontrant l'intérêt agronomique du niébé en rotation culturale avant le maïs en Côte d'Ivoire pour améliorer la fertilité du sol et réduire la pression des adventices et ravageurs.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique opérationnelle en accès libre du CNRA démontrant les gains de fertilité et de rendement de la rotation niébé-maïs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE La culture du niébé : bon précédent cultural du maïs en Côte d’Ivoire"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00135__la-culture-du-niebe-bon-precedent-cultural-du-mais-en-c.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00135__la-culture-du-niebe-bon-precedent-cultural-du-mais-en-c.pdf"
+}

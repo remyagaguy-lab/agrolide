@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00424",
+  "sha256": "0662b723c6e8365c573464bda88195d8ea95131e64b0259052e83a76b365450d",
+  "nom_original": "Fermes collectives le guide (très) pratique (Maëla Naël).pdf",
+  "chemin_relatif_source": "OD_Docs/Fermes collectives le guide (très) pratique (Maëla Naël).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 36522969,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 278,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "organisations_paysannes",
+  "type_doc": "ouvrage",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2022,
+  "auteurs": "Maëla Naël",
+  "source_organisation": "Éditions France Agricole",
+  "mots_cles": [
+    "fermes collectives",
+    "installation agricole",
+    "gouvernance partagee",
+    "societariat agricole",
+    "france agricole"
+  ],
+  "titre_trouve": "Fermes collectives, le guide (très) pratique",
+  "titre": "Fermes collectives : Le guide (très) pratique",
+  "resume": "Ouvrage complet des Éditions France Agricole guidant l'installation collective en agriculture : gouvernance, choix juridiques, gestion humaine et organisation du travail.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial protégé par le droit d'auteur (Éditions France Agricole) et centré sur le cadre juridique français, archivé sans diffusion.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.99,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© Éditions France Agricole, 2022 ISBN: 978-2-85557-813-2 Tous droits réservés pour tous pays."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00424__fermes-collectives-le-guide-tres-pratique.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/organisations_paysannes/DOC-00424__fermes-collectives-le-guide-tres-pratique.pdf"
+}

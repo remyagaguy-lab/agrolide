@@ -1,0 +1,738 @@
+{
+  "batch_number": 43,
+  "results": [
+    {
+      "id": "DOC-00644",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pastèque",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "pasteque",
+        "itineraire technique",
+        "maraichage",
+        "cameroun",
+        "ifati",
+        "cucurbitacees"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE PASTEQUE",
+      "titre": "Fiche technique : Technologie de production de la pastèque",
+      "resume": "Guide technique de l'IFATI décrivant la conduite de la culture de la pastèque au Cameroun : exigences pédoclimatiques, préparation du sol, variétés, semis, protection phytosanitaire et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de formation professionnelle complète de l'IFATI (agréé MINEFOP Cameroun) destinée aux producteurs de pastèque.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE PASTEQUE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00646",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "patate douce",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "patate douce",
+        "tubercule",
+        "itineraire technique",
+        "varietes",
+        "cameroun",
+        "ifati"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE LA PATATE DOUCE",
+      "titre": "Guide technique : Technologie de production de la patate douce",
+      "resume": "Guide pratique complet de l'IFATI sur la culture de la patate douce en zone tropicale : choix variétal, exigences écologiques, multiplication végétative, bouturage, protection sanitaire et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique complet de l'IFATI (Cameroun) pour la production et la protection phytosanitaire de la patate douce.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE LA PATATE DOUCE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00647",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "piment",
+        "itineraire technique",
+        "maraichage",
+        "cameroun",
+        "ifati",
+        "capsicum"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU PIMENT",
+      "titre": "Fiche technique : Technologie de production du piment",
+      "resume": "Fiche technique de formation professionnelle sur la culture du piment au Cameroun : installation de la pépinière, repiquage, fertilisation, irrigation, protection fongique et insecticide, récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de formation de l'IFATI (Cameroun) sur l'itinéraire technique et la rentabilité du piment en zone tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DU PIMENT"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00648",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pistache africaine",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "pistache africaine",
+        "cucumeropsis mannii",
+        "egusi",
+        "oleagineux",
+        "cameroun",
+        "ifati"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTON DU PISTACHE(Cucumeropsis manii)",
+      "titre": "Fiche technique : Technologie de production du pistache (Cucumeropsis mannii)",
+      "resume": "Fiche technique de l'IFATI détaillant la production du pistache africain (courge à graines oléagineuses Cucumeropsis mannii) : préparation du sol, semis, entretien, traitements et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique institutionnelle de formation professionnelle sur une culture locale d'oléagineux très valorisée en Afrique centrale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTON DU PISTACHE(Cucumeropsis manii)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00649",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "fertilisation_amendements"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pois cajan",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "pois cajan",
+        "cajanus cajan",
+        "legumineuse",
+        "pois d'angole",
+        "cameroun",
+        "ifati"
+      ],
+      "titre_trouve": "TEHNOLOGIE DE PRODUCTION DU POIS CAJAN",
+      "titre": "Fiche technique : Technologie de production du pois cajan (Cajanus cajan)",
+      "resume": "Fiche technique de l'IFATI sur la culture du pois cajan en Afrique subsaharienne : exigences pédoclimatiques, semis, fertilisation, entretien, battage et conservation des grains.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique complète de l'IFATI pour la production d'une légumineuse vivrière et fertilisante essentielle pour l'Afrique tropicale.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TEHNOLOGIE DE PRODUCTION DU POIS CAJAN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00650",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poivron",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "poivron",
+        "capsicum annuum",
+        "maraichage",
+        "itineraire technique",
+        "cameroun",
+        "ifati"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU POIVRON(Capsicum annum)",
+      "titre": "Fiche technique : Technologie de production du poivron",
+      "resume": "Fiche technique pratique de l'IFATI sur l'itinéraire technique du poivron au Cameroun : pépinière, repiquage, gestion de l'eau, apports minéraux, ravageurs et récolte.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique professionnelle complète de l'IFATI (Cameroun) pour la conduite maraîchère du poivron.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DU POIVRON(Capsicum annum)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00651",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2019,
+      "auteurs": "Assia Bekkouche",
+      "source_organisation": "Centre Universitaire Salhi Ahmed Naâma",
+      "mots_cles": [
+        "ecologie",
+        "protection de l'environnement",
+        "agropastoralisme",
+        "algerie",
+        "cours agronomie"
+      ],
+      "titre_trouve": "Écologie et protection de l’environnement",
+      "titre": "Cours d'écologie et protection de l'environnement (Master Agropastoralisme)",
+      "resume": "Polycopié de cours universitaire destiné aux étudiants de Master 1 en sciences agronomiques (agropastoralisme), couvrant les principes d'écologie générale, les écosystèmes et la protection de l'environnement.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, archivé conformément aux règles relatives aux travaux académiques.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Écologie et protection de l’environnement"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00652",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "tubercules_racines",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "semences_amelioration"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pomme de terre",
+      "pays": "Cameroun",
+      "annee": 2020,
+      "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+      "source_organisation": "IFATI / MINEFOP Cameroun",
+      "mots_cles": [
+        "pomme de terre",
+        "tubercule",
+        "itineraire technique",
+        "semences",
+        "cameroun",
+        "ifati"
+      ],
+      "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE LA POMME DE TERRE",
+      "titre": "Fiche technique : Technologie de production de la pomme de terre",
+      "resume": "Guide pratique de l'IFATI sur la production de pomme de terre en zone tropicale : exigences écologiques, préparation des sols, entretien, maladies, calibrage et prégermination des semences.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique complet de l'IFATI (Cameroun) pour la culture et la gestion des semences de pomme de terre.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "TECHNOLOGIE DE PRODUCTION DE LA POMME DE TERRE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00653",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "entrepreneuriat_agricole",
+      "domaines_secondaires": [
+        "gestion_projet_business_plan"
+      ],
+      "type_doc": "cours",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2021,
+      "auteurs": "Théodore Benin",
+      "source_organisation": "Centre de Formation Professionnelle",
+      "mots_cles": [
+        "entrepreneuriat",
+        "creation d'entreprise",
+        "formation professionnelle",
+        "burkina faso",
+        "kadiogo"
+      ],
+      "titre_trouve": "COURS DE FORMATION EN ENTREPRENEURIAT",
+      "titre": "Cours de formation en entrepreneuriat agricole au Burkina Faso",
+      "resume": "Support de cours de formation professionnelle dispensé au Burkina Faso introduisant les notions fondamentales de l'entrepreneuriat, les compétences managériales et la posture entrepreneuriale.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document de cours interne au format traitement de texte non publié sous licence libre, archivé pour usage pédagogique interne.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COURS DE FORMATION EN ENTREPRENEURIAT"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00654",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "agronomie_generale",
+      "domaines_secondaires": [
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2022,
+      "auteurs": "Khalissa Abed-Cheniti",
+      "source_organisation": "Université Ferhat Abbas Sétif 1",
+      "mots_cles": [
+        "morphogenese vegetale",
+        "regulation hormonale",
+        "physiologie vegetale",
+        "auxine",
+        "agronomie",
+        "setif"
+      ],
+      "titre_trouve": "MORPHOGENESE VEGETALE ET REGULATION HORMONALE",
+      "titre": "Cours de morphogenèse végétale et régulation hormonale (Master Agronomie)",
+      "resume": "Polycopié de cours universitaire approfondi de Master en sciences agronomiques détaillant les processus cellulaires et physiologiques de la morphogenèse végétale et de la régulation par les phytohormones.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire d'enseignant sans licence de diffusion publique ouverte, conservé en archive.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MORPHOGENESE VEGETALE ET REGULATION HORMONALE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00655",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "aviculture",
+        "entrepreneuriat_agricole"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poule pondeuse",
+      "pays": "Togo",
+      "annee": 2012,
+      "auteurs": "LUPAJOTE-TOGO",
+      "source_organisation": "LUPAJOTE-TOGO",
+      "mots_cles": [
+        "business plan avicole",
+        "poules pondeuses",
+        "projet d'elevage",
+        "togo",
+        "compte d'exploitation",
+        "aviculture"
+      ],
+      "titre_trouve": "Projet d’élevage de deux bandes de 500 poules pondeuses dans le village d’Avéta au Togo dans la préfecture du Golfe",
+      "titre": "Modèle de projet d'élevage de 1 000 poules pondeuses au Togo (Avéta)",
+      "resume": "Dossier de projet d'entreprise et étude de faisabilité technico-financière pour l'installation d'un élevage avicole de deux bandes de 500 poules pondeuses au Togo (bâtiment, budget, marges et seuil de rentabilité).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "confidentiel_interne"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document de projet associatif interne élaboré pour une levée de fonds locale, archivé pour consultation méthodologique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Projet d’élevage de deux bandes de 500 poules pondeuses dans le village d’Avéta au Togo"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00656",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poulet",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Auteur non précisé",
+      "mots_cles": [
+        "prophylaxie avicole",
+        "coquelets",
+        "vaccination",
+        "sante animale",
+        "gumboro",
+        "pseudo-peste",
+        "antibiotiques"
+      ],
+      "titre_trouve": "PROPHYLAXIE DES COQUELETS / BLEU HOLAND",
+      "titre": "Programme de prophylaxie sanitaire et médicale des coquelets",
+      "resume": "Calendrier pratique de prophylaxie médicale et sanitaire pour l'élevage de coquelets : vaccinations (Newcastle, Gumboro, variole), déparasitage et antibioprévention du 1er au 120e jour.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable",
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche pratique informelle sans auteur ni cadre institutionnel, comportant des posologies vétérinaires à vérifier avant toute diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.7,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PROPHYLAXIE DES COQUELETS / BLEU HOLAND"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00657",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "melon",
+      "pays": "France",
+      "annee": 2009,
+      "auteurs": "Chambre Régionale d'Agriculture PACA / Bio de Provence",
+      "source_organisation": "Chambre Régionale d'Agriculture PACA",
+      "mots_cles": [
+        "maraichage biologique",
+        "paca",
+        "melon",
+        "varietes bio",
+        "france",
+        "agriculture biologique"
+      ],
+      "titre_trouve": "Dispositif régional Bio de Provence –Chambre régionale d’agriculture PACA",
+      "titre": "Choix variétal en maraîchage biologique en région PACA (2009)",
+      "resume": "Guide régional de préconisations variétales pour le maraîchage biologique (notamment le melon sous abri et en plein champ) édité par la Chambre d'Agriculture de Provence-Alpes-Côte d'Azur.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte",
+        "obsolete"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document technique institutionnel français de 2009 portant sur des variétés maraîchères adaptées au climat méditerranéen européen, non pertinent pour l'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Dispositif régional Bio de Provence –Chambre régionale d’agriculture PACA"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00658",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "ananas",
+      "pays": "Polynésie française",
+      "annee": 2018,
+      "auteurs": "Marie Pascaline Sturma",
+      "source_organisation": "ISTOM",
+      "mots_cles": [
+        "ananas",
+        "agriculture biologique",
+        "polynesie francaise",
+        "memoire",
+        "istom",
+        "production semi-intensive"
+      ],
+      "titre_trouve": "Étude de la faisabilité de la production d’ananas semi-intensive en agriculture biologique dans le contexte polynésien",
+      "titre": "Mémoire : Faisabilité de la production d'ananas semi-intensive en agriculture biologique (Polynésie)",
+      "resume": "Mémoire d'ingénieur ISTOM évaluant la faisabilité agronomique et technico-économique de la culture biologique de l'ananas à Moorea (Polynésie française) dans le cadre du programme INTEGRE.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire de fin d'études d'ingénieur (ISTOM), archivé conformément à la règle stricte régissant les travaux académiques non publiés.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Étude de la faisabilité de la production d’ananas semi-intensive en agriculture biologique dans le contexte polynésien"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00697",
+  "sha256": "56e240254705430c494ad5363c49097e4cfe718e5a5cf7e2206be9211a75b3cd",
+  "nom_original": "RIZ.pdf",
+  "chemin_relatif_source": "OD_Docs/RIZ.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1347873,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "riz",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "riz",
+    "oryza sativa",
+    "riziculture inondee",
+    "itineraire technique",
+    "pepiniere",
+    "fertilisation",
+    "cameroun"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU RIZ (Oryza sativa) GENERALITES I. LES EXIGENCES DE LA CULTURE",
+  "titre": "Technologie de production du riz : itinéraire technique et conduite de la culture",
+  "resume": "Guide technique de formation professionnelle décrivant les exigences agro-écologiques, l'installation de la pépinière et la conduite de la riziculture.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Support de formation professionnelle camerounais complet et pédagogique sur la riziculture, directement exploitable par les producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DU RIZ (Oryza sativa) GENERALITES I. LES EXIGENCES DE LA CULTURE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00697__technologie-de-production-du-riz-itineraire-technique-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00697__technologie-de-production-du-riz-itineraire-technique-e.pdf"
+}

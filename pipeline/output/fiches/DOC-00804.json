@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00804",
+  "sha256": "b055d4692b4f4516f2662fe397a088f234fbcbc598e72a5799a3adfc4457a3eb",
+  "nom_original": "aviculture bio-converti.pdf",
+  "chemin_relatif_source": "OD_Docs/aviculture bio-converti.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1387875,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 54,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Noé Atannidje Doheto",
+  "source_organisation": null,
+  "mots_cles": [
+    "aviculture biologique",
+    "poulet goliath",
+    "soins traditionnels",
+    "benin",
+    "uemoa"
+  ],
+  "titre_trouve": "AVICULTURE BIOLOGIQUE",
+  "titre": "Guide d'aviculture biologique et alimentation locale en Afrique de l'Ouest",
+  "resume": "Guide pratique d'aviculture familiale et biologique au Bénin : prophylaxie par les plantes, conduite des poussins et engraissement.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00803.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 54,
+      "extrait": "Nous mettons également à votre disposition des poussin Nous livrons dans les 8 pays de l’espace UEMOA WhatsApp :+229 97834667"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0075",
+  "canonique_id": "DOC-00803",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00804__guide-d-aviculture-biologique-et-alimentation-locale-en.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00804__guide-d-aviculture-biologique-et-alimentation-locale-en.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00922",
+  "sha256": "2a31b538d12f13d0533e1fdc8f30f8ca86023f6d670afbdc0f448f1ec95b04dd",
+  "nom_original": "ft_n_04_dagb_nonbakin_et_al_compost.pdf",
+  "chemin_relatif_source": "OD_Docs/ft_n_04_dagb_nonbakin_et_al_compost.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 354729,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Bénin",
+  "annee": 2013,
+  "auteurs": "Gustave D. Dagbénonbakin, André Jonas Djènontin, Nestor Ahoyo Adjovi, Mouinou Attanda Igué, Guy Apollinaire Mensah",
+  "source_organisation": "INRAB Bénin",
+  "mots_cles": [
+    "compost",
+    "residus de recolte",
+    "fertilisation organique",
+    "inrab",
+    "benin",
+    "fertilité des sols"
+  ],
+  "titre_trouve": "Fiche technique Production et Utilisation de Compost et Gestion des Résidus de Récolte",
+  "titre": "Fiche technique : Production et utilisation de compost et gestion des résidus de récolte",
+  "resume": "Fiche technique de référence de l'INRAB (Bénin) détaillant le processus de compostage en tas et en fosse, les matières organiques utilisables, le suivi de maturation et les doses d'apport au champ.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle officielle de l'INRAB (Bénin) pour la valorisation des résidus et la fabrication du compost.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique Production et Utilisation de Compost et Gestion des Résidus de Récolte"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00922__fiche-technique-production-et-utilisation-de-compost-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00922__fiche-technique-production-et-utilisation-de-compost-et.pdf"
+}

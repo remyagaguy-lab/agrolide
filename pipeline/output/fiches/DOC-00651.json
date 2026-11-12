@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00651",
+  "sha256": "8299e66cb9bac783dc5357dadfc807af5a662a356c88694d48db85f9891444cf",
+  "nom_original": "POLYCOPIE BEKKOUCHE.pdf",
+  "chemin_relatif_source": "OD_Docs/POLYCOPIE BEKKOUCHE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1881618,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 75,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2019,
+  "auteurs": "Assia Bekkouche",
+  "source_organisation": "Centre Universitaire Salhi Ahmed Naâma",
+  "mots_cles": [
+    "ecologie",
+    "protection de l'environnement",
+    "agropastoralisme",
+    "algerie",
+    "cours agronomie"
+  ],
+  "titre_trouve": "Écologie et protection de l’environnement",
+  "titre": "Cours d'écologie et protection de l'environnement (Master Agropastoralisme)",
+  "resume": "Polycopié de cours universitaire destiné aux étudiants de Master 1 en sciences agronomiques (agropastoralisme), couvrant les principes d'écologie générale, les écosystèmes et la protection de l'environnement.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, archivé conformément aux règles relatives aux travaux académiques.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "Écologie et protection de l’environnement"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00651__cours-d-ecologie-et-protection-de-l-environnement-maste.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00651__cours-d-ecologie-et-protection-de-l-environnement-maste.pdf"
+}

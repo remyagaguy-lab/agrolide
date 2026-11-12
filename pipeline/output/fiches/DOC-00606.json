@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00606",
+  "sha256": "e657e7d7e20170814f94662c82a0699bcbf681a27be5d782bfb5b711d9f3d8e8",
+  "nom_original": "Manuel_pratique_de_Jardinage_contenant_la_manière_de_cultiver_soi.pdf",
+  "chemin_relatif_source": "OD_Docs/Manuel_pratique_de_Jardinage_contenant_la_manière_de_cultiver_soi.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2757725,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte",
+    "obsolete"
+  ],
+  "nb_pages": 395,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "Courtois-Gérard",
+  "source_organisation": "Project Gutenberg",
+  "mots_cles": [
+    "jardinage",
+    "potager",
+    "climat tempere",
+    "histoire horticole",
+    "france"
+  ],
+  "titre_trouve": "Manuel pratique de Jardinage / contenant la manière de cultiver soi-même un jardin ou d'en diriger la culture",
+  "titre": "Manuel pratique de jardinage (Édition historique Project Gutenberg)",
+  "resume": "Traité classique d'horticulture du XIXe siècle réédité par le Projet Gutenberg, décrivant l'aménagement d'un potager et le calendrier des travaux légumiers en climat tempéré métropolitain.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Domaine Public / Licence Project Gutenberg",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage historique du domaine public portant sur le jardinage en climat tempéré français, non adapté aux réalités agro-écologiques tropicales.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Title: Manuel pratique de Jardinage contenant la manière de cultiver soi-même un jardin"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00606__manuel-pratique-de-jardinage-edition-historique-project.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00606__manuel-pratique-de-jardinage-edition-historique-project.pdf"
+}

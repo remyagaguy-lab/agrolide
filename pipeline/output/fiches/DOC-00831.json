@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00831",
+  "sha256": "e4b171eba2e8adbe67a5a80a6910b7ee1d20532123ef6ad32f4fb4464a242978",
+  "nom_original": "classe sol.pdf",
+  "chemin_relatif_source": "OD_Docs/classe sol.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4031405,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 216,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "rapport",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "FAO - Groupe de travail WRB",
+  "source_organisation": "FAO",
+  "mots_cles": [
+    "pedologie",
+    "classification des sols",
+    "WRB",
+    "ressources en sols",
+    "cartographie des sols",
+    "FAO"
+  ],
+  "titre_trouve": "Base de référence mondiale pour les ressources en sols 2014, Mise à jour 2015 : Système international de classification des sols",
+  "titre": "Base de référence mondiale pour les ressources en sols (WRB 2014, MàJ 2015)",
+  "resume": "Ouvrage de référence de la FAO définissant le système international de classification des sols (WRB) pour caractériser les sols et établir des légendes cartographiques pédologiques.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Rapport de référence complet de la FAO, issu d'une diffusion institutionnelle, mis à disposition des membres de la plateforme.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Base de référence mondiale pour les ressources en sols 2014 Mise à jour 2015 RAPPORT SUR LES RESSOURCES EN SOLS DU MONDE 106 FAO"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00831__base-de-reference-mondiale-pour-les-ressources-en-sols.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00831__base-de-reference-mondiale-pour-les-ressources-en-sols.pdf"
+}

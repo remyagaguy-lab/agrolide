@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00981",
+  "sha256": "1f1c305812cbc14701635b5f87d4e120eba7a6f919103267e690b52f940b2a66",
+  "nom_original": "livret poule A5.pdf",
+  "chemin_relatif_source": "OD_Docs/livret poule A5.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 744190,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 72,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "poulet local",
+  "pays": "Burkina Faso",
+  "annee": 2009,
+  "auteurs": "Inades-Formation Burkina",
+  "source_organisation": "Inades-Formation / CTA",
+  "mots_cles": [
+    "elevage familial",
+    "poules locales",
+    "inades-formation",
+    "cta",
+    "burkina faso",
+    "aviculture villageoise"
+  ],
+  "titre_trouve": "PRODUIRE MIEUX L’élevage familial des poules",
+  "titre": "L'élevage familial des poules (Collection Produire Mieux - Inades-Formation / CTA)",
+  "resume": "Manuel pratique complet de 72 pages guidant pas à pas l'aviculture villageoise au Burkina Faso : habitat, alimentation équilibrée, soins de santé et gestion économique du troupeau.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel de vulgarisation avicole paysanne d'Inades-Formation et du CTA, hautement pertinent et diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PRODUIRE MIEUX L’élevage familial des poules INADES FORMATION BURKINA"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Ce document a été réalisé avec l’assistance financière du Centre Technique de Coopération Agricole et Rurale (CTA)."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00981__l-elevage-familial-des-poules-collection-produire-mieux.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00981__l-elevage-familial-des-poules-collection-produire-mieux.pdf"
+}

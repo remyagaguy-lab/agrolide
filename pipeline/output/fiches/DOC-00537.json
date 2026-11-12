@@ -1,0 +1,85 @@
+{
+  "id": "DOC-00537",
+  "sha256": "0420489d44110380c3bc2c88d59e3176dcd642b02f9a38d530fcf93daf12795a",
+  "nom_original": "La Pédologie.pdf",
+  "chemin_relatif_source": "OD_Docs/La Pédologie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1968016,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 131,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 1967,
+  "auteurs": "Georges Aubert, Jean Boulaine",
+  "source_organisation": "Presses Universitaires de France (PUF)",
+  "mots_cles": [
+    "pedologie",
+    "science du sol",
+    "pedogenese",
+    "classification des sols",
+    "vertisols"
+  ],
+  "titre_trouve": "LA PÉDOLOGIE",
+  "titre": "La Pédologie (Collection Que sais-je ?)",
+  "resume": "Synthèse classique de 131 pages rédigée par deux éminents pédologues français exposant les facteurs de genèse, la morphologie et la classification générale des sols.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial sous droits réservés stricts de l'éditeur (Presses Universitaires de France, coll. Que Sais-Je ?).",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 5,
+      "extrait": "« QUE SAIS-JE? » LE POINT DES CONNAISSANCES ACTUELLES N° 352 LA PÉDOLOGIE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 5,
+      "extrait": "Georges AUBERT et Jean BOULAINE"
+    },
+    {
+      "champ": "autre",
+      "page": 5,
+      "extrait": "PRESSES UNIVERSITAIRES DE FRANCE 108, BOULEVARD SAINT-GERMAIN, PARIS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00537__la-pedologie-collection-que-sais-je.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00537__la-pedologie-collection-que-sais-je.pdf"
+}

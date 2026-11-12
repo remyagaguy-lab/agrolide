@@ -1,0 +1,82 @@
+{
+  "id": "DOC-00087",
+  "sha256": "d45d5b2e457bfa418f953a85fa795e036eb7b95a9b69b1b743db4f45a1f763b7",
+  "nom_original": "14722-Article Text-42810-2-10-20210930.pdf",
+  "chemin_relatif_source": "OD_Docs/14722-Article Text-42810-2-10-20210930.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 277461,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "licence_nc"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "sorgho",
+  "pays": "Niger",
+  "annee": 2021,
+  "auteurs": "Maman Nassirou Ado, Mahamadou Sani Moussa, Harouna Karimou Ambouta",
+  "source_organisation": "European Scientific Journal (ESJ)",
+  "mots_cles": [
+    "sorgho",
+    "demi-lunes",
+    "niger",
+    "ces/drs",
+    "rendement",
+    "tahoua"
+  ],
+  "titre_trouve": "Effets des Demi-Lunes Multifonctionnelles sur la Production du Sorgho en Afrique de l’Ouest: Cas de la Région de Tahoua au Niger",
+  "titre": "Effets des Demi-Lunes Multifonctionnelles sur la Production du Sorgho à Tahoua au Niger",
+  "resume": "Article scientifique étudiant l'efficacité des demi-lunes multifonctionnelles sur la restauration des sols dégradés, l'humidité et les rendements en sorgho dans la région sahélienne de Tahoua au Niger.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC-BY-NC-ND-4.0",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Le drapeau bloquant licence_nc interdit la décision public ou membres selon les règles d'audit; orientation vers a_valider_humain.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Under Creative Commons BY-NC-ND 4.0 OPEN ACCESS"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Effets des Demi-Lunes Multifonctionnelles sur la Production du Sorgho en Afrique de l’Ouest: Cas de la Région de Tahoua au Niger"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Le drapeau bloquant licence_nc interdit la décision public ou membres selon les règles d'audit; orientation vers a_valider_humain."
+  },
+  "nom_fichier_final": "DOC-00087__effets-des-demi-lunes-multifonctionnelles-sur-la-produc.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00087__effets-des-demi-lunes-multifonctionnelles-sur-la-produc.pdf"
+}

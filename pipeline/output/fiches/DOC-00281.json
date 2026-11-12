@@ -1,0 +1,82 @@
+{
+  "id": "DOC-00281",
+  "sha256": "001d4d8380a683495dce942ab342f2edf92ce7cfcd2c6004045e4c002555bf20",
+  "nom_original": "Changements_de_la_fertilit_des_sols-1.doc",
+  "chemin_relatif_source": "OD_Docs/Changements_de_la_fertilit_des_sols-1.doc",
+  "indice_ancien_dossier": null,
+  "format_source": "doc",
+  "taille_octets": 1050624,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "memoire",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Niger",
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Centre Régional d'Enseignement Spécialisé en Agriculture (CRESA)",
+  "mots_cles": [
+    "fertilite des sols",
+    "Niger",
+    "CRESA",
+    "Tahoua",
+    "Maradi",
+    "matiere organique"
+  ],
+  "titre_trouve": "Changements de la fertilité des sols",
+  "titre": "Changements de la fertilité des sols (Régions de Tahoua et Maradi, Niger)",
+  "resume": "Étude agronomique sur les variations de la fertilité des sols et les pratiques d'amendements organiques dans les zones agricoles de Tahoua et Maradi au Niger.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire académique du CRESA incomplet et non libre de droits, archivé conformément aux règles métier.",
+  "confiance": {
+    "classification": 0.75,
+    "droits": 0.8,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "CENTRE REGIONAL D ENSEIGNEMENT SPECIALISE EN AGRICULTURE"
+    },
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: Changements_de_la_fertilit_des_sols-1.doc"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00281__changements-de-la-fertilite-des-sols-regions-de-tahoua.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00281__changements-de-la-fertilite-des-sols-regions-de-tahoua.pdf"
+}

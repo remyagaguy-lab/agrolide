@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01089",
+  "sha256": "6c26ba5afdb52c06d76be44ae2001fc40fce5080e7185f2bba3165c5614cd735",
+  "nom_original": "tomate.pdf",
+  "chemin_relatif_source": "OD_traites/tomate.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 1220571,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480093394-tomate.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "tomate",
+  "pays": "Maroc",
+  "annee": 2023,
+  "auteurs": "Ahmed Wifaya, Rachid Bouharroud, Fatima Belghazi, Redouan Qessaoui",
+  "source_organisation": "Institut National de la Recherche Agronomique (INRA Maroc)",
+  "mots_cles": [
+    "tomate",
+    "maroc",
+    "exigences pedoclimatiques",
+    "nematodes",
+    "maraichage"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE SUR LA TOMATE",
+  "titre": "Fiche technique sur la culture de la tomate",
+  "resume": "Fiche technique agronomique de l'INRA Maroc détaillant les exigences pédoclimatiques, le choix variétal, la gestion du sol et les stratégies de protection phytosanitaire de la tomate.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique agronomique récente de l'INRA Maroc en diffusion institutionnelle, complète et adaptable pour le maraîchage.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "FICHE TECHNIQUE SUR LA TOMATE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Wifaya Ahmed, Bouharroud Rachid, Belghazi Fatima et Qessaoui Redouan"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01089__fiche-technique-sur-la-culture-de-la-tomate.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01089__fiche-technique-sur-la-culture-de-la-tomate.pdf"
+}

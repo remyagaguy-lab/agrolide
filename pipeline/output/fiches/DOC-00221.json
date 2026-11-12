@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00221",
+  "sha256": "edd64f5fbdb64e5162819e04324526b48b3b72c3e7e4e6ec6f3f8d15fdd1215e",
+  "nom_original": "Analyse_nutritionnelle_papaye_GM_2012.pdf",
+  "chemin_relatif_source": "OD_Docs/Analyse_nutritionnelle_papaye_GM_2012.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 122357,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479063365-Analyse_nutritionnelle_papaye_GM_2012.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "nutrition_alimentation",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": "papaye",
+  "pays": "Canada",
+  "annee": 2012,
+  "auteurs": "Lapointe Mélissa",
+  "source_organisation": "Cellule de veille OGM (Québec)",
+  "mots_cles": [
+    "papaye",
+    "ogm",
+    "nutrition",
+    "securite alimentaire",
+    "biotechnologie"
+  ],
+  "titre_trouve": "Analyse nutritionnelle de la papaye transgénique, premier fruit GM commercialisé",
+  "titre": "Analyse nutritionnelle de la papaye transgénique Rainbow (Bulletin OGM)",
+  "resume": "Note de synthèse de veille technologique évaluant l'équivalence nutritionnelle et la composition de la papaye transgénique Rainbow par rapport aux variétés conventionnelles.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "La pertinence est fixée à 1 (note de veille d'une page à intérêt marginal), ce qui interdit formellement la publication (public ou membres, qui exige pertinence >= 2). Le document doit être archivé (non_publie_archive).",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Analyse nutritionnelle de la papaye transgénique, premier fruit GM commercialisé ... Cellule de veille OGM – Bulletin #29 - 2012"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "La pertinence est fixée à 1 (note de veille d'une page à intérêt marginal), ce qui interdit formellement la publication (public ou membres, qui exige pertinence >= 2). Le document doit être archivé (non_publie_archive)."
+  },
+  "nom_fichier_final": "DOC-00221__analyse-nutritionnelle-de-la-papaye-transgenique-rainbo.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/nutrition_alimentation/DOC-00221__analyse-nutritionnelle-de-la-papaye-transgenique-rainbo.pdf"
+}

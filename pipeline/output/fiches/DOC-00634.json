@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00634",
+  "sha256": "cd5f5174e9ab35df17600967d7d9585f993fdaacf4eabe38ef0a2fef840f8474",
+  "nom_original": "OIGNON (2).pdf",
+  "chemin_relatif_source": "OD_Docs/OIGNON (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 952798,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "oignon",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "oignon",
+    "allium cepa",
+    "cultures maraicheres",
+    "pepiniere",
+    "irrigation",
+    "thrips",
+    "cameroun"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’OIGNON (Allium cepa)",
+  "titre": "Technologie de production de l'oignon (Allium cepa) au Cameroun",
+  "resume": "Fiche technique opérationnelle de l'IFATI pour la conduite de l'oignon en Afrique tropicale : exigences pédoclimatiques, semis en pépinière, repiquage, entretien du sol, irrigation, fertilisation et lutte contre les thrips.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique institutionnelle claire et complète pour la culture maraîchère de l'oignon au Cameroun, diffusable en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DE L’OIGNON (Allium cepa)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0046",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00634__technologie-de-production-de-l-oignon-allium-cepa-au-ca.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00634__technologie-de-production-de-l-oignon-allium-cepa-au-ca.pdf"
+}

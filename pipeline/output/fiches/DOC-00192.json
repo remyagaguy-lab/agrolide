@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00192",
+  "sha256": "f3b97c26f6e783e89402c5be286f9c7090007ef7ad283cef26e7fe5e52e2bdde",
+  "nom_original": "Agrodok_27_Creer_et_gerer_un_point_d_eau_pour_les_troupeaux_de_son.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_27_Creer_et_gerer_un_point_d_eau_pour_les_troupeaux_de_son.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 597069,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 73,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_animale",
+    "agroeconomie"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pastoralisme",
+  "pays": "Cameroun",
+  "annee": 2004,
+  "auteurs": "André Teyssier",
+  "source_organisation": "Fondation Agromisa",
+  "mots_cles": [
+    "hydraulique pastorale",
+    "point d'eau",
+    "troupeaux",
+    "zone sahelo-soudanienne",
+    "gestion communautaire",
+    "abreuvement"
+  ],
+  "titre_trouve": "Créer et gérer un point d’eau pour les troupeaux de son village : Guide à l’usage des agents de développement rural en zone sahélo-soudanienne",
+  "titre": "Créer et gérer un point d’eau pour les troupeaux de son village",
+  "resume": "Guide méthodologique pour concevoir, aménager et gérer durablement des points d'eau pastoraux villageois en zone sahélo-soudanienne avec les communautés locales.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet Agrodok issu d'une diffusion institutionnelle (Agromisa), hautement pertinent pour l'hydraulique pastorale sahélienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 27 - Créer et gérer un point d’eau pour les troupeaux de son village Guide à l’usage des agents de développement rural en zone sahélo-soudanienne"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00192__creer-et-gerer-un-point-deau-pour-les-troupeaux-de-son.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00192__creer-et-gerer-un-point-deau-pour-les-troupeaux-de-son.pdf"
+}

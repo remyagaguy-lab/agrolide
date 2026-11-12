@@ -1,0 +1,738 @@
+{
+  "batch_number": 7,
+  "results": [
+    {
+      "id": "DOC-00091",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment",
+      "pays": "Côte d'Ivoire",
+      "annee": 2022,
+      "auteurs": "Phytotop",
+      "source_organisation": "Phytotop",
+      "mots_cles": [
+        "piment",
+        "fiche technique",
+        "itineraire technique",
+        "protection phytosanitaire",
+        "cote d'ivoire"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE : PIMENT",
+      "titre": "Fiche technique : Culture du piment en Côte d'Ivoire",
+      "resume": "Fiche technique pratique détaillant l'itinéraire technique de la culture du piment en Côte d'Ivoire : préparation de la pépinière, fertilisation, protection phytosanitaire et prévisions de rendement.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "donnees_phyto_a_verifier",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique commerciale émise par une entreprise privée d'intrants comportant des préconisations de produits propriétaires.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE : PIMENT"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00092",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2011,
+      "auteurs": "Eva Kok, Janna de Feyter, Adr Vink",
+      "source_organisation": "Agromisa / CTA",
+      "mots_cles": [
+        "aviculture",
+        "incubation",
+        "elevage de poussins",
+        "volaille",
+        "agrodok"
+      ],
+      "titre_trouve": "Amélioration de l'incubation et de l'élevage des poussins",
+      "titre": "Amélioration de l'incubation et de l'élevage des poussins (Agrodok 34)",
+      "resume": "Guide pratique de référence sur les techniques d'incubation naturelle et artificielle des œufs, ainsi que le démarrage et la conduite d'élevage des poussins en aviculture villageoise et semi-intensive.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de la collection Agrodok (Agromisa/CTA) destiné au renforcement des capacités des éleveurs en zone tropicale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Série Agrodok No. 34 Amélioration de l’incubation et de l’élevage des poussins"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00093",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "mangue",
+      "pays": "Niger",
+      "annee": 2008,
+      "auteurs": "Mahamadou Zangui",
+      "source_organisation": "EDOS / JIRCAS / JICA / Ministère du Développement Agricole du Niger",
+      "mots_cles": [
+        "arboriculture",
+        "manguier",
+        "greffage",
+        "taille",
+        "niger",
+        "oasis"
+      ],
+      "titre_trouve": "GUIDE DE FORMATION SUR L’ARBORICULTURE FRUITIERE",
+      "titre": "Guide de formation sur l'arboriculture fruitière au Niger",
+      "resume": "Guide de formation technique sur la taille et le greffage du manguier dans les oasis sahéliennes du Niger, élaboré pour le projet EDOS.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document institutionnel de formation sur l'arboriculture fruitière au Niger, mais incomplet et tronqué en fin de document.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.88,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DE FORMATION SUR L’ARBORICULTURE FRUITIERE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00094",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "petit_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "oie",
+      "pays": "Cameroun",
+      "annee": 2014,
+      "auteurs": "Irénée Modeste Bidima",
+      "source_organisation": "ISF Cameroun / CTA",
+      "mots_cles": [
+        "elevage des oies",
+        "oies",
+        "palmipedes",
+        "aviculture",
+        "pro-agro",
+        "cameroun"
+      ],
+      "titre_trouve": "élevage des oies",
+      "titre": "Élevage des oies (Collection Pro-Agro)",
+      "resume": "Guide pratique complet de la collection Pro-Agro présentant les techniques d'élevage villageois et semi-intensif des oies en Afrique centrale et de l'Ouest : logement, alimentation, reproduction, santé et valorisation commerciale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet et de qualité de la collection Pro-Agro (CTA / ISF Cameroun) destiné aux producteurs d'Afrique subsaharienne.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "élevage des oies Irénée Modeste Bidima COLLECTION PRO-AGRO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00095",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "arboriculture",
+      "pays": "Niger",
+      "annee": 2008,
+      "auteurs": "Mahamadou Zangui",
+      "source_organisation": "EDOS / JIRCAS / JICA / Ministère du Développement Agricole du Niger",
+      "mots_cles": [
+        "arboriculture fruitiere",
+        "oasis",
+        "pepiniere",
+        "irrigation",
+        "niger",
+        "sahel"
+      ],
+      "titre_trouve": "SUPPORT DE FORMATION SUR L’ARBORICULTURE FRUITIERE",
+      "titre": "Support de formation sur l'arboriculture fruitière au Niger",
+      "resume": "Support pédagogique de formation sur la pépinière, la production de plants et la conduite des arbres fruitiers dans les oasis sahéliennes du Niger.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support technique institutionnel intéressant mais incomplet, le texte étant tronqué en fin de document à la page 15.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "SUPPORT DE FORMATION SUR L’ARBORICULTURE FRUITIERE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00096",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 1999,
+      "auteurs": "Robert Zougmoré, Z. Zida, F.N. Kambou",
+      "source_organisation": "INERA Burkina Faso",
+      "mots_cles": [
+        "rehabilitation des sols",
+        "zai",
+        "demi-lune",
+        "amendements",
+        "sahel",
+        "burkina faso",
+        "zipelle"
+      ],
+      "titre_trouve": "REHABILITATION DES SOLS DEGRADES : ROLES DES AMENDEMENTS DANS LE SUCCES DES TECHNIQUES DE DEMI-LUNE ET DE ZMAU SAHEL",
+      "titre": "Réhabilitation des sols dégradés : rôles des amendements dans le succès des techniques de demi-lune et de zaï au Sahel",
+      "resume": "Article scientifique évaluant l'impact agronomique de l'association de techniques de conservation des eaux et du sol (demi-lunes, zaï) et d'amendements organiques et minéraux sur sols dégradés (zipellé) au Sahel.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article scientifique complet issu de la recherche agronomique burkinabè (INERA), pertinent pour les spécialistes de la restauration des sols sahéliens.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "REHABILITATION DES SOLS DEGRADES : ROLES DES AMENDEMENTS DANS LE SUCCES DES TECHNIQUES DE DEMI-LUNE ET DE ZMAU SAHEL"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00098",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "organisations_paysannes"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "sésame",
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "Geneviève Audet-Bélanger, Peter Gildemacher, Darius Tiombiano, Amos Miningou",
+      "source_organisation": "HELVETAS / KIT / GIZ / INERA",
+      "mots_cles": [
+        "sesame",
+        "champ ecole paysan",
+        "manuel du facilitateur",
+        "burkina faso",
+        "agriculture biologique",
+        "itineraire technique"
+      ],
+      "titre_trouve": "Manuel du Facilitateur Sésame",
+      "titre": "Manuel du Facilitateur : Production et valorisation du sésame (Champ-École Paysan)",
+      "resume": "Manuel pédagogique complet destiné aux facilitateurs de Champs Écoles Paysans (CEP) pour la production, la conduite agroécologique, le contrôle qualité et la commercialisation du sésame au Burkina Faso.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide méthodologique et technique complet de référence pour la vulgarisation de la culture du sésame, édité par un consortium d'institutions de développement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Manuel du Facilitateur Sésame"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00099",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "entrepreneuriat_agricole"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "producteur",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "clarias",
+      "pays": "Côte d'Ivoire",
+      "annee": 2023,
+      "auteurs": "Konan Koffi Bertin",
+      "source_organisation": "Auteur indépendant",
+      "mots_cles": [
+        "clarias",
+        "pisciculture hors-sol",
+        "poisson-chat",
+        "cote d'ivoire",
+        "bac hors-sol",
+        "elevage de poisson"
+      ],
+      "titre_trouve": "LE CLARIAS : UNE ESPÈCE IDÉALE POUR LA PISCICULTURE EN BAC HORS-SOL (BHS)",
+      "titre": "Guide de la pisciculture du Clarias en bacs hors-sol",
+      "resume": "Guide pratique sur l'élevage du poisson-chat (Clarias gariepinus) en bacs hors-sol : conception des bacs, gestion de l'eau, alimentation, prophylaxie et rentabilité économique.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage pratique à vocation commerciale payante (2000 FCFA) vendu sous droits réservés par l'auteur sans licence de diffusion libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "LE CLARIAS : UNE ESPÈCE IDÉALE POUR LA PISCICULTURE EN BAC HORS-SOL (BHS)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00100",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2019,
+      "auteurs": "Yaici et Arab",
+      "source_organisation": "Faculté de Médecine",
+      "mots_cles": [
+        "embryologie humaine",
+        "medecine",
+        "fecondation",
+        "blastocyste",
+        "qcm"
+      ],
+      "titre_trouve": "Première semaine du développement embryonnaire",
+      "titre": "Embryologie humaine : Première semaine du développement embryonnaire",
+      "resume": "Cours et QCM de première année de médecine portant sur la première semaine du développement embryonnaire humain (fécondation, segmentation, nidation).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de médecine humaine (embryologie générale et QCM) totalement hors du périmètre agronomique, agricole et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Première semaine du développement embryonnaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00101",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2019,
+      "auteurs": "Yaici et Arab",
+      "source_organisation": "Faculté de Médecine",
+      "mots_cles": [
+        "appareil branchial",
+        "embryologie humaine",
+        "medecine",
+        "arcs branchiaux",
+        "qcm"
+      ],
+      "titre_trouve": "Appareil branchial",
+      "titre": "Embryologie humaine : L'appareil branchial",
+      "resume": "Polycopié de cours et questions à choix multiples de médecine humaine traitant du développement embryonnaire de l'appareil branchial et pharyngé.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document médical d'embryologie humaine sans rapport avec l'agriculture, l'élevage tropical ou l'agroalimentaire.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Appareil branchial"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00102",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "sol_fertilite",
+        "climat_changement_climatique"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "SPONG",
+      "source_organisation": "SPONG / Union Européenne",
+      "mots_cles": [
+        "gestion durable des terres",
+        "changement climatique",
+        "biodiversite",
+        "sahel",
+        "fiches techniques",
+        "burkina faso",
+        "agroecologie"
+      ],
+      "titre_trouve": "FICHES TECHNIQUES DES BONNES PRATIQUES EN MATIERE DE GESTION DURABLE DES TERRES, D’ADAPTATION AUX CHANGEMENTS CLIMATIQUES ET DE CONSERVATION DE LA DIVERSITE BIOLOGIQUE DANS LES REGIONS DU PLATEAU CENTRAL, DU CENTRE NORD, DU NORD ET DU SAHEL",
+      "titre": "Bonnes pratiques de gestion durable des terres et d'adaptation climatique au Burkina Faso",
+      "resume": "Recueil exhaustif de fiches techniques sur les pratiques de gestion durable des terres (GDT), l'adaptation au changement climatique et la préservation de la biodiversité dans les zones sahéliennes du Burkina Faso.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Recueil institutionnel complet de fiches techniques de référence pour la gestion durable des terres et la résilience climatique au Sahel.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHES TECHNIQUES DES BONNES PRATIQUES EN MATIERE DE GESTION DURABLE DES TERRES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00103",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "poulet de chair",
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "Hubbard",
+      "source_organisation": "Hubbard",
+      "mots_cles": [
+        "poulet de chair",
+        "aviculture",
+        "hubbard",
+        "conduite d'elevage",
+        "alimentation avicole",
+        "demarrage poussin"
+      ],
+      "titre_trouve": "Poulet de Chair : Manuel d’Élevage Croissance Rapide",
+      "titre": "Manuel d'élevage du poulet de chair à croissance rapide (Hubbard)",
+      "resume": "Guide technique de conduite d'élevage de poulets de chair conventionnels édité par le sélectionneur Hubbard : paramètres d'ambiance, démarrage, abreuvement, programmes d'éclairage et recommandations nutritionnelles.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Manuel technique d'entreprise commerciale privée (Hubbard) sous droits réservés, orienté vers la conduite de souches propriétaires.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Poulet de Chair Manuel d’Élevage Croissance Rapide"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00104",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2022,
+      "auteurs": "Noémie Viovi",
+      "source_organisation": "Université de Tours (Polytech Tours)",
+      "mots_cles": [
+        "urbanisme",
+        "climat",
+        "ilots de chaleur",
+        "marseille",
+        "amenagement urbain",
+        "logement"
+      ],
+      "titre_trouve": "Prendre en compte le climat dans l’urbanisme et le logement : les mesures d’adaptation",
+      "titre": "Prendre en compte le climat dans l'urbanisme et le logement : les mesures d'adaptation",
+      "resume": "Mémoire de fin d'études en aménagement et génie urbain étudiant la prise en compte du climat et la lutte contre les îlots de chaleur urbains dans le logement à Marseille.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Projet de fin d'études universitaire portant sur l'urbanisme et le logement en milieu tempéré (Marseille), totalement hors du périmètre agricole d'Agrolide.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Prendre en compte le climat dans l’urbanisme et le logement : les mesures d’adaptation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00105",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "economie_filieres_marches",
+      "domaines_secondaires": [
+        "cereales"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "blé",
+      "pays": "France",
+      "annee": 2022,
+      "auteurs": "Christian Couturier, Sylvain Doublet",
+      "source_organisation": "Solagro",
+      "mots_cles": [
+        "ble",
+        "importations",
+        "marche cereales",
+        "securite alimentaire",
+        "solagro",
+        "geopolitique agricole"
+      ],
+      "titre_trouve": "Le blé : Limiter la dépendance aux importations",
+      "titre": "Le blé : Limiter la dépendance aux importations (Note d'information Solagro)",
+      "resume": "Note d'information analysant les dynamiques du marché mondial du blé, l'impact de la guerre russo-ukrainienne sur la sécurité d'approvisionnement et les leviers agroécologiques pour réduire la dépendance aux intrants et aux importations.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Note d'analyse institutionnelle complète de l'association Solagro sur les filières et marchés céréaliers mondiaux, diffusable aux membres.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Le blé : Limiter la dépendance aux importations"
+        }
+      ]
+    }
+  ]
+}

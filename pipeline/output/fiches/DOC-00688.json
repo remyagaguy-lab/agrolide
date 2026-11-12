@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00688",
+  "sha256": "5910a43f7d0456fa90bf28d262322a6ea5710c25820eb07b29d4496d1808a16b",
+  "nom_original": "Protection Sanitaire en elevage de volailles.pdf",
+  "chemin_relatif_source": "OD_Docs/Protection Sanitaire en elevage de volailles.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7989431,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 27,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "volaille",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "GENOT",
+  "source_organisation": "Troupeaux et Cultures des Tropiques",
+  "mots_cles": [
+    "aviculture",
+    "protection sanitaire",
+    "biosecurite",
+    "maladies aviaires",
+    "coccidiose",
+    "salmonellose",
+    "hygiene"
+  ],
+  "titre_trouve": "La protection sanitaire en élevage de volaille",
+  "titre": "La protection sanitaire et biosécurité en élevage avicole tropical",
+  "resume": "Dossier technique complet sur les mesures d'hygiène, de biosécurité et la prévention des principales maladies bactériennes, virales et coccidiennes en aviculture.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet de biosécurité avicole tropicale issu d'une revue spécialisée, directement exploitable par les éleveurs et conseillers.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La protection sanitaire en élevage de volaille"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00688__la-protection-sanitaire-et-biosecurite-en-elevage-avico.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00688__la-protection-sanitaire-et-biosecurite-en-elevage-avico.pdf"
+}

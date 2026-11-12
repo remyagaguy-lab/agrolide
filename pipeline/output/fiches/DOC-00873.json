@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00873",
+  "sha256": "c0ee5882f7d79f317ecae8a9d604e25d518738fec98d7707371f3b6bc960ee92",
+  "nom_original": "eaux_de_vie_anthocyanes_huiles_essentielles_engrais_organiques.pdf",
+  "chemin_relatif_source": "OD_Docs/eaux_de_vie_anthocyanes_huiles_essentielles_engrais_organiques.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 41578,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479426017-eaux_de_vie_anthocyanes_huiles_essentielles_engrais_organiques.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "contexte_non_adapte",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "boissons",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "distillerie",
+    "eaux de vie",
+    "vinasses",
+    "engrais organiques",
+    "valorisation des sous-produits"
+  ],
+  "titre_trouve": "eaux de vie anthocyanes huiles essentielles engrais organiques",
+  "titre": "Schéma technologique de valorisation des eaux-de-vie et sous-produits de vin",
+  "resume": "Synoptique industriel illustrant les étapes de distillation, séparation et valorisation des sous-produits viticoles en alcools, tartrates et engrais.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Schéma de procédé isolé sans texte explicatif, contextualisé en viticulture tempérée, archivé.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.7,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004\nTechnologie clé de compétitivité dans l’activité\nEAU DE VIE ET SOUS-PRODUITS DE VIN"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00873__schema-technologique-de-valorisation-des-eaux-de-vie-et.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/boissons/DOC-00873__schema-technologique-de-valorisation-des-eaux-de-vie-et.pdf"
+}

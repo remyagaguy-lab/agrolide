@@ -1,0 +1,84 @@
+{
+  "id": "DOC-00789",
+  "sha256": "70a0e2801ec80dcbc2116b3278c1dcd82d3af4484904cfa139ad3d5c6401d008",
+  "nom_original": "alimentation poules pondeuses.pdf",
+  "chemin_relatif_source": "OD_Docs/alimentation poules pondeuses.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 152570,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "actes_conference",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2015,
+  "auteurs": "Marie Bourin, Isabelle Bouvarel",
+  "source_organisation": "ITAVI / INRA",
+  "mots_cles": [
+    "poules pondeuses",
+    "aviculture biologique",
+    "alimentation 100% bio",
+    "feverole",
+    "itavi"
+  ],
+  "titre_trouve": "ALIMENTATION 100% BIO POUR LES POULES PONDEUSES : Résultat d’essais conduits en station expérimentale",
+  "titre": "Alimentation 100% biologique pour les poules pondeuses",
+  "resume": "Compte rendu d'essais expérimentaux de 9 pages conduit par l'ITAVI évaluant l'effet de rations 100% biologiques (incorporation de féverole) sur les performances de ponte et la qualité des œufs.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00133.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ALIMENTATION 100% BIO POUR LES POULES PONDEUSES : Résultat d’essais conduits en station expérimentale"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Marie BOURIN, Isabelle BOUVAREL Institut Technique de l’Aviculture"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ITAB/CRAPDL/IBB/ITAVI/INRA"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0011",
+  "canonique_id": "DOC-00133",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00789__alimentation-100-biologique-pour-les-poules-pondeuses.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00789__alimentation-100-biologique-pour-les-poules-pondeuses.pdf"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00767",
+  "sha256": "755ca1a7fccefc06171743a88f724fca2c3bfc6fdeb0463a14ae7cf5ecd8799c",
+  "nom_original": "VD2_MAMBRINI_THOMAS_16122014.pdf",
+  "chemin_relatif_source": "OD_Docs/VD2_MAMBRINI_THOMAS_16122014.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 18314781,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 194,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "these",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Thomas Mambrini",
+  "source_organisation": "Université Paris-Sud",
+  "mots_cles": [
+    "photovoltaique",
+    "spectre solaire",
+    "cellules solaires",
+    "physique",
+    "genie electrique"
+  ],
+  "titre_trouve": "Caractérisation de panneaux solaires photovoltaïques en conditions réelles d’implantation et en fonction des différentes technologies",
+  "titre": "Caractérisation de panneaux solaires photovoltaïques en conditions réelles",
+  "resume": "Thèse de doctorat en physique appliquée portant sur la modélisation spectrale et la caractérisation extérieure de différentes technologies de panneaux solaires photovoltaïques.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Thèse de physique et génie électrique consacrée aux cellules solaires photovoltaïques, hors du périmètre agronomique et agricole d'Agrolide.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "UNIVERSITE PARIS-SUD DISCIPLINE PHYSIQUE THÈSE DE DOCTORAT Caractérisation de panneaux solaires photovoltaïques en conditions réelles d'implantation"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00767__caracterisation-de-panneaux-solaires-photovoltaiques-en.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00767__caracterisation-de-panneaux-solaires-photovoltaiques-en.pdf"
+}

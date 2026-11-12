@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00725",
+  "sha256": "b73ccc84e8a63a53d538c43d7d414a8b5af5ad4475828c19495aeb7c97ecb9d7",
+  "nom_original": "Son_chat_300_conseils_pour_en_prendre_soin_Virginie_Poussin_Cédric.pdf",
+  "chemin_relatif_source": "OD_Docs/Son_chat_300_conseils_pour_en_prendre_soin_Virginie_Poussin_Cédric.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4109352,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 121,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2015,
+  "auteurs": "Virginie Poussin, Cédric Hernandez",
+  "source_organisation": null,
+  "mots_cles": [
+    "chat",
+    "animal de compagnie",
+    "soins aux felins",
+    "veterinaire canin"
+  ],
+  "titre_trouve": "Son chat : 300 conseils pour en prendre soin",
+  "titre": "Son chat : 300 conseils pour en prendre soin",
+  "resume": "Livre grand public de conseils pratiques pour l'adoption, l'éducation, l'alimentation, le comportement et les soins quotidiens du chat de compagnie.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Guide commercial sur les chats de compagnie, exclu du périmètre agricole et d'élevage productif d'Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Son chat : 300 conseils pour en prendre soin ... Choisir son compagnon ... Vivre avec son chat"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00725__son-chat-300-conseils-pour-en-prendre-soin.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00725__son-chat-300-conseils-pour-en-prendre-soin.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00692",
+  "sha256": "b16007f1741fef5b3e66b1208974aff401e3a0a0889cb6c8fa72ce6df4ff31dd",
+  "nom_original": "Présentation TOGO 2.pptx",
+  "chemin_relatif_source": "OD_Docs/Présentation TOGO 2.pptx",
+  "indice_ancien_dossier": null,
+  "format_source": "pptx",
+  "taille_octets": 6694531,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "nb_pages": 29,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "presentation",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Togo",
+  "annee": 2025,
+  "auteurs": "Ir. Tadagbé Valère Houansou",
+  "source_organisation": null,
+  "mots_cles": [
+    "ferme integree",
+    "investissement agricole",
+    "entrepreneuriat",
+    "diversification",
+    "agro-ecotourisme",
+    "afrique"
+  ],
+  "titre_trouve": "Dans quel type de ferme investir aujourd'hui en Afrique?",
+  "titre": "Investissement agricole en Afrique : concevoir et développer une ferme intégrée",
+  "resume": "Support de présentation orienté entrepreneuriat explorant les opportunités d'investissement agricole en Afrique à travers le modèle de la ferme intégrée.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Diaporama de formation privée à destination d'investisseurs sans licence de redistribution libre, conservé en archive.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.5,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "Formation Dans quel type de ferme investir aujourd'hui en Afrique?"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00692__investissement-agricole-en-afrique-concevoir-et-develop.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00692__investissement-agricole-en-afrique-concevoir-et-develop.pdf"
+}

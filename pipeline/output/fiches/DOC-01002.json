@@ -1,0 +1,70 @@
+{
+  "id": "DOC-01002",
+  "sha256": "69674900889f1b4c7386199d84c3a9d5bf4a8c934d0533925f966a473360744c",
+  "nom_original": "pastèque.pdf",
+  "chemin_relatif_source": "OD_Docs/pastèque.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2282947,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 22,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "presentation",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pastèque",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "228AgroConseil",
+  "source_organisation": "228AgroConseil",
+  "mots_cles": [
+    "pasteque",
+    "culture de la pasteque",
+    "togo",
+    "228agroconseil",
+    "maraichage",
+    "semis"
+  ],
+  "titre_trouve": "228AgroConseil : Culture de la pastèque",
+  "titre": "Guide pratique en diaporama : Culture de la pastèque (228AgroConseil Togo)",
+  "resume": "Support de conseil en diapositives réalisé par 228AgroConseil au Togo présentant les bases de la production de pastèque : choix du site, sélection des variétés, entretien, récolte et commercialisation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de conseil privé sans mention de licence libre de redistribution, conservé en archive documentaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "228AgroConseil Culture de la pastèque Sommaire 1-Généralités"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01002__guide-pratique-en-diaporama-culture-de-la-pasteque-228a.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01002__guide-pratique-en-diaporama-culture-de-la-pasteque-228a.pdf"
+}

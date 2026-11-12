@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00287",
+  "sha256": "e1684f69e5579cc1961e8172cf18c2fdb208241d55fb53e72950e7d9a01589e2",
+  "nom_original": "Chap I Généralités (1).pdf",
+  "chemin_relatif_source": "OD_Docs/Chap I Généralités (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 405838,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "climat_changement_climatique",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Dalila Beddal",
+  "source_organisation": "Université Mohammed Boudiaf - M'sila",
+  "mots_cles": [
+    "bioclimatologie",
+    "sciences du sol",
+    "agronomie",
+    "climat",
+    "interactions climat vegetal"
+  ],
+  "titre_trouve": "Matière : Bioclimatologie - Chapitre I : Généralités sur la Bioclimatologie",
+  "titre": "Généralités sur la bioclimatologie (Master 1 Science du Sol)",
+  "resume": "Support de cours d'agronomie présentant les concepts généraux de la bioclimatologie et les relations d'équilibre entre climat, sol et organismes vivants.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Premier chapitre isolé d'un cours universitaire algérien, non libre de droits.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.92
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Université Mohammed Boudiaf-M’sila ... Master I : Science du Sol (SS) ... Matière : Bioclimatologie ... Chapitre I : Généralités sur la Bioclimatologie"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00287__generalites-sur-la-bioclimatologie-master-1-science-du.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/climat_changement_climatique/DOC-00287__generalites-sur-la-bioclimatologie-master-1-science-du.pdf"
+}

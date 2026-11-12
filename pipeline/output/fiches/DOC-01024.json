@@ -1,0 +1,73 @@
+{
+  "id": "DOC-01024",
+  "sha256": "f0d902cb755d8eeb51e3312b2e8eb93744cef51c005bd112569fde9fa34466fb",
+  "nom_original": "poulet chair.pdf",
+  "chemin_relatif_source": "OD_Docs/poulet chair.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 372860,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 24,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "poulet de chair",
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "poulet de chair",
+    "aviculture",
+    "demarrage poussins",
+    "alimentation volaille",
+    "prophylaxie",
+    "batiment avicole"
+  ],
+  "titre_trouve": "ELEVAGE DU POULET DE CHAIR",
+  "titre": "Manuel pratique d'élevage du poulet de chair",
+  "resume": "Guide technique complet structuré en 11 chapitres pour former les aviculteurs à la conduite, l'alimentation, la santé et l'abattage du poulet de chair.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Manuel technique pratique de grande valeur pour les éleveurs mais droits et source institutionnelle non confirmés, archivé par précaution.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.5,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "Ainsi, ce présent manuel est élaboré pour servir de support à la formation des aviculteurs de poulet de chair."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01024__manuel-pratique-d-elevage-du-poulet-de-chair.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-01024__manuel-pratique-d-elevage-du-poulet-de-chair.pdf"
+}

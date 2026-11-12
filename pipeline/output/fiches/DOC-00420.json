@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00420",
+  "sha256": "16bf1c604d165e4fad0d1e435f2123b93e0371cdbbe08ee05274bc7fdc800d7e",
+  "nom_original": "Fabrication_de_la_provende_alimentpour_poules_.pdf",
+  "chemin_relatif_source": "OD_Docs/Fabrication_de_la_provende_alimentpour_poules_.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1590544,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial"
+  ],
+  "nb_pages": 14,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Cameroun",
+  "annee": 2019,
+  "auteurs": "Abdoulicham Élevage",
+  "source_organisation": "Abdoulicham Élevage",
+  "mots_cles": [
+    "provende",
+    "alimentation animale",
+    "aviculture",
+    "poules pondeuses",
+    "poulets de chair",
+    "formulation alimentaire"
+  ],
+  "titre_trouve": "FabricationBiologiquedela Provende pour les Poules PondeusesetlesPouletsde Chairs [[ABDOULICHAMÉLEVAGE]]",
+  "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair",
+  "resume": "Guide technique complet sur la fabrication à la ferme de provende pour volailles, détaillant les besoins nutritionnels, les matières premières et les formules de ration.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Reprise personnalisée par une entité privée sans mention de licence libre, archivée sans publication ouverte.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FabricationBiologiquedela Provende pour les Poules PondeusesetlesPouletsde Chairs [[ABDOULICHAMÉLEVAGE]]"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00420__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00420__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf"
+}

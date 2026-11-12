@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00247",
+  "sha256": "e4fbd3a67e6e93d92deb3be6626cb5c9364c7b5584ee1d6119e15462fe65d4f9",
+  "nom_original": "Betterave_sucriere.pdf",
+  "chemin_relatif_source": "OD_Docs/Betterave_sucriere.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1887099,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479201995-Betterave_sucriere.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 28,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_de_rente",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "autre",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": "betterave sucrière",
+  "pays": "Maroc",
+  "annee": 2006,
+  "auteurs": "Dr. Said B. Rzozi",
+  "source_organisation": "Institut Agronomique et Vétérinaire Hassan II (IAV Hassan II)",
+  "mots_cles": [
+    "betterave sucriere",
+    "maroc",
+    "iav hassan ii",
+    "itineraire technique",
+    "desherbage"
+  ],
+  "titre_trouve": "تقنيات إنتاج زراعة الشمندر السكري",
+  "titre": "Techniques de production de la betterave sucrière au Maroc",
+  "resume": "Guide technique en arabe sur la conduite de la culture de betterave sucrière au Maroc : préparation du sol, variétés, fertilisation et désherbage.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide technique marocain en langue arabe sur la betterave sucrière, filière tempérée/méditerranéenne non prioritaire en Afrique tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Institut Agronomique et Vétérinaire Hassan II 2006"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "betterave sucriere"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00247__techniques-de-production-de-la-betterave-sucriere-au-ma.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_de_rente/DOC-00247__techniques-de-production-de-la-betterave-sucriere-au-ma.pdf"
+}

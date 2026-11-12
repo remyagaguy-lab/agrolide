@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00560",
+  "sha256": "c604769a6e5d1c0eea28a81f72a7f6f63ecbc4d5d9ea39b4344c7b23a5b6d130",
+  "nom_original": "Les bases de l_immunologie fondamentale et clinique.pdf",
+  "chemin_relatif_source": "OD_Docs/Les bases de l_immunologie fondamentale et clinique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 50622662,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 244,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2009,
+  "auteurs": "Abul K. Abbas, Andrew H. Lichtman",
+  "source_organisation": "Elsevier Masson",
+  "mots_cles": [
+    "immunologie humaine",
+    "medecine",
+    "anticorps",
+    "systeme immunitaire",
+    "pathologie humaine"
+  ],
+  "titre_trouve": "Les bases de l’immunologie fondamentale et clinique",
+  "titre": "Les bases de l'immunologie fondamentale et clinique (3e édition)",
+  "resume": "Traité d'immunologie fondamentale et clinique centré sur la médecine humaine et les pathologies infectieuses humaines (VIH, hépatites).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Ouvrage de médecine humaine clinique, totalement hors du périmètre agronomique et vétérinaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Les bases de l’immunologie fondamentale et clinique"
+    },
+    {
+      "champ": "auteurs",
+      "page": 3,
+      "extrait": "Abul K. Abbas, Andrew H. Lichtman"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00560__les-bases-de-l-immunologie-fondamentale-et-clinique-3e.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00560__les-bases-de-l-immunologie-fondamentale-et-clinique-3e.pdf"
+}

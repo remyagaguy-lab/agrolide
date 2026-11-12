@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00027",
+  "sha256": "e36ff74a58c908fcf7360c6415d597bfed4e02a2ceb2be6074c3726dc3485bb7",
+  "nom_original": "Résumé4 Biologie Végétale SVI2 STU2.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Biologie Végétale L1/Biologie Végétale L1/Résumé4 Biologie Végétale SVI2 STU2.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 2696720,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 21,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Université (filières SVI/STU)",
+  "mots_cles": [
+    "biologie vegetale",
+    "cours",
+    "svi",
+    "stu",
+    "licence 1"
+  ],
+  "titre_trouve": null,
+  "titre": "Biologie végétale SVI2 STU2 : Résumé de cours 4",
+  "resume": "Fascicule de révision scanné de biologie végétale (volume 4) destiné aux étudiants de première année universitaire, nécessitant une conversion OCR.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Fascicule scanné sans texte extractible; OCR et contrôle humain préalables requis.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé4 Biologie Végétale SVI2 STU2 (nom du fichier)"
+    }
+  ],
+  "ensemble_id": "ENS-0002",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00027__biologie-vegetale-svi2-stu2-resume-de-cours-4.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00027__biologie-vegetale-svi2-stu2-resume-de-cours-4.pdf"
+}

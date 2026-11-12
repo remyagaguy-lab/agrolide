@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00791",
+  "sha256": "aea17db5b9dcc68406041578496786bb2eaa4763414665c366277da66cb5bd6e",
+  "nom_original": "alliance_soleil_manuel_a_l_usage_des_formateurs_systemes_solaires.pdf",
+  "chemin_relatif_source": "OD_Docs/alliance_soleil_manuel_a_l_usage_des_formateurs_systemes_solaires.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 6750006,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 228,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "energie_dechets_valorisation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2006,
+  "auteurs": "Jean-Paul Louineau",
+  "source_organisation": "Alliance Soleil Sarl / ETC Energy",
+  "mots_cles": [
+    "electricite solaire",
+    "systemes solaires domestiques",
+    "formation photovoltaique",
+    "electrification rurale"
+  ],
+  "titre_trouve": "MANUEL DU FORMATEUR Un outil pour l’enseignement de l’électricité solaire appliquée aux systèmes solaires domestiques",
+  "titre": "Manuel du formateur en électricité solaire appliquée aux systèmes domestiques",
+  "resume": "Manuel pédagogique de 228 pages structuré en 12 modules pour former des techniciens aux systèmes solaires photovoltaïques autonomes en zone rurale (modules, batteries, régulateurs, maintenance).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Manuel portant une clause stricte de réserve de droits interdisant toute reproduction sans autorisation préalable de l'éditeur.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MANUEL DU FORMATEUR Un outil pour l’enseignement de l’électricité solaire appliquée aux systèmes solaires domestiques"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Écrit par Jean-Paul Louineau, Alliance Soleil Sarl"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Tous droits réservés. Aucune partie de cette publication ne peut être reproduite sous aucune forme sans permission antérieure de ETC TTP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00791__manuel-du-formateur-en-electricite-solaire-appliquee-au.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/energie_dechets_valorisation/DOC-00791__manuel-du-formateur-en-electricite-solaire-appliquee-au.pdf"
+}

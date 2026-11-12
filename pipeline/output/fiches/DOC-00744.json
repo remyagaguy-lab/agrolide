@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00744",
+  "sha256": "db4a518e396e20f379655431b54862d4f00c6a4e3a0457f4224dcf7796d61dd9",
+  "nom_original": "TFE M2 SGE PED 2019-2020 LUCAS MYRIAM.pdf",
+  "chemin_relatif_source": "OD_Docs/TFE M2 SGE PED 2019-2020 LUCAS MYRIAM.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5306077,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 109,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "memoire",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "ananas",
+  "pays": "Bénin",
+  "annee": 2020,
+  "auteurs": "Myriam Lucas",
+  "source_organisation": "Université de Liège (ULiège) / MatheO",
+  "mots_cles": [
+    "ananas",
+    "allada",
+    "benin",
+    "itineraire technique",
+    "gestion durable des terres",
+    "memoire"
+  ],
+  "titre_trouve": "La culture d’ananas dans la commune d’Allada (République du Bénin) : causes et conséquences du non-respect de l’itinéraire technique",
+  "titre": "La culture d'ananas dans la commune d'Allada au Bénin : analyse de l'itinéraire technique (TFE)",
+  "resume": "Mémoire de fin d'études analysant les pratiques des producteurs d'ananas à Allada (Bénin), les contraintes d'intrants et de main-d'œuvre, et les impacts agronomiques du non-respect de l'itinéraire.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Mémoire universitaire de fin d'études (Master 2 ULiège), systématiquement archivé sans publication directe selon la règle métier.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La culture d'ananas dans la commune d'Allada (République du Bénin) : causes et conséquences du non-respect de l'itinéraire technique"
+    },
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "Diplôme : Master en sciences et gestion de l'environnement, à finalité spécialisée pays en développement"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00744__la-culture-d-ananas-dans-la-commune-d-allada-au-benin-a.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00744__la-culture-d-ananas-dans-la-commune-d-allada-au-benin-a.pdf"
+}

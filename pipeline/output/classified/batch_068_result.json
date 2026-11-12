@@ -1,0 +1,851 @@
+{
+  "batch_number": 68,
+  "results": [
+    {
+      "id": "DOC-01038",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2021,
+      "auteurs": "H.L.",
+      "source_organisation": null,
+      "mots_cles": [
+        "metabolisme des glucides",
+        "biochimie",
+        "glycolyse",
+        "sciences de base",
+        "ocr necessaire"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé sur le métabolisme des glucides (document numérisé à océriser)",
+      "resume": "Fiche de synthèse scannée de 6 pages sur le métabolisme des glucides en biochimie, dépourvue de texte extractible et nécessitant un traitement OCR.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé de 6 pages sans couche texte exploitable, droits et complétude indéterminables, validation humaine requise après OCR.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé métabolisme des glucides-H.L-2020-2021.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01039",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "traitement de l'eau",
+        "eau potable",
+        "filtration",
+        "potabilisation",
+        "ocr necessaire"
+      ],
+      "titre_trouve": null,
+      "titre": "Résumé sur le traitement de l'eau potable (document numérisé à océriser)",
+      "resume": "Support de cours numérisé de 13 pages sur les procédés de traitement et de potabilisation de l'eau, dépourvu de couche texte et à océriser.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Scan de 13 pages sans couche texte, droits indéterminables et contenu non vérifié, validation humaine requise après OCR.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "résumé traitement d_eau potable (1).pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01040",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_cereales_tubercules",
+      "domaines_secondaires": [
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "maïs",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "semoulerie",
+        "transformation cereales",
+        "mais",
+        "ble dur",
+        "diagramme de fabrication"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité SEMOULES",
+      "titre": "Diagramme de procédé industriel : Fabrication de semoules de blé dur et de maïs",
+      "resume": "Synoptique technique détaillant les opérations unitaires (nettoyage, broyage, blutage, sassage) et les flux de coproduits de la semoulerie industrielle de blé et maïs.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Schéma de process industriel complet et directement exploitable pour la conduite d'unités de transformation meunière.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité SEMOULES"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01041",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "production_animale",
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "volaille",
+      "pays": "Burkina Faso",
+      "annee": 2020,
+      "auteurs": "Zi'Grazio Ouédraogo",
+      "source_organisation": "Élevage Bio En Moi",
+      "mots_cles": [
+        "sante aviaire",
+        "phytotherapie",
+        "maladies des volailles",
+        "aviculture bio",
+        "burkina faso"
+      ],
+      "titre_trouve": "Tableau de maladies-signes-traitement bio",
+      "titre": "Tableau des maladies aviaires, symptômes et traitements biologiques en Afrique",
+      "resume": "Guide pratique sous forme de tableau synoptique associant les pathologies avicoles courantes (variole, coryza, Marek, Newcastle, coccidiose) à des traitements naturels à base de plantes locales.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche pratique terrain complète sur les traitements naturels des maladies avicoles, d'intérêt prioritaire pour les éleveurs ouest-africains.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Tableau de maladies-signes-traitement bio"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Ce livret vous est proposé par OUEDRAOGO Zi’Grazio dans le but de faciliter l’apprentissage."
+        }
+      ]
+    },
+    {
+      "id": "DOC-01042",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "production_animale",
+        "genetique_reproduction"
+      ],
+      "type_doc": "texte_officiel",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "cuniculture",
+      "pays": "Algérie",
+      "annee": 2014,
+      "auteurs": "IANOR / ITELV",
+      "source_organisation": "Institut Algérien de Normalisation",
+      "mots_cles": [
+        "cuniculture",
+        "lapin",
+        "norme algerienne",
+        "ianor",
+        "souche synthetique"
+      ],
+      "titre_trouve": "STANDARD DE LA SOUCHE SYNTHETIQUE DE LAPIN",
+      "titre": "Norme algérienne NA 19403 : Standard zootechnique de la souche synthétique de lapin",
+      "resume": "Norme technique nationale officielle (IANOR/ITELV) fixant les critères phénotypiques, les paramètres de reproduction et les performances de croissance de la souche synthétique de lapin.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Norme officielle de l'IANOR portant la mention expresse 'Reproduction interdite', archivée sous droits réservés.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "STANDARD DE LA SOUCHE SYNTHETIQUE DE LAPIN NORME ALGERIENNE"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "Reproduction interdite AVANT PROPOS La présente norme a été adoptée comme Norme Algérienne"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01043",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "huiles_sucre_corps_gras",
+      "domaines_secondaires": [
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "canne à sucre",
+      "pays": "France",
+      "annee": 2005,
+      "auteurs": "Foucault",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "sucre roux",
+        "canne a sucre",
+        "sucrerie",
+        "diagramme de fabrication",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité SUCRE BRUT & SUCRE ROUX",
+      "titre": "Diagramme de fabrication industrielle : Sucre brut de betterave et sucre roux de canne",
+      "resume": "Schéma technique des opérations unitaires de fabrication du sucre roux de canne et de betterave : extraction par diffusion, épuration, évaporation, cuisson sous vide et cristallisation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique industriel complet décrivant la fabrication du sucre roux de canne, directement exploitable pour l'agro-industrie sucrière.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité SUCRE BRUT & SUCRE ROUX"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA - MF 2005"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01044",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "huiles_sucre_corps_gras",
+      "domaines_secondaires": [
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "canne à sucre",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "sucre raffine",
+        "sucre glace",
+        "raffinage",
+        "diagramme de fabrication",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité SUCRE RAFFINE",
+      "titre": "Diagramme de fabrication industrielle du sucre raffiné et du sucre glace",
+      "resume": "Synoptique des opérations unitaires de raffinage sucrier : refonte du sucre brut, décoloration, microfiltration, cristallisations fractionnées et conditionnement des sucres.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique technique clair et complet sur le raffinage du sucre, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité SUCRE RAFFINE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01045",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": null,
+      "annee": 1990,
+      "auteurs": "C. Brouwer, K. Prins, M. Kay, M. Heibloem",
+      "source_organisation": "FAO",
+      "mots_cles": [
+        "irrigation",
+        "gestion de l'eau",
+        "fao",
+        "aspersion",
+        "goutte-a-goutte"
+      ],
+      "titre_trouve": "GESTION DES EAUX EN IRRIGATION - Manuel de formation n° 5 : Méthodes d'irrigation",
+      "titre": "Méthodes d'irrigation (Manuel de formation n° 5 de la FAO)",
+      "resume": "Manuel de référence de la FAO détaillant le choix, la conception et la mise en œuvre des méthodes d'irrigation : irrigation gravitaire de surface, aspersion et micro-irrigation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Manuel pratique de formation FAO complet et fondamental pour la maîtrise de l'irrigation agricole dans les pays en développement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "GESTION DES EAUX EN IRRIGATION Manuel de formation n° 5 Méthodes d'irrigation"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Division de la mise en valeur des terres et des eaux, FAO"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01046",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "politiques_strategies"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "algerie",
+        "grands perimetres irrigues",
+        "onid",
+        "hydraulique agricole"
+      ],
+      "titre_trouve": "Chapitre II. Les Systèmes D’irrigation En Algérie",
+      "titre": "Aperçu des systèmes d'irrigation en Algérie (Chapitre II)",
+      "resume": "Document de synthèse présentant les statistiques et la structuration des périmètres d'irrigation en Algérie (grands périmètres étatiques et petite hydraulique paysanne).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Chapitre II isolé de 3 pages extrait d'un travail académique sans droits libres déclarés.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Chapitre II. Les Systèmes D’irrigation En Algérie"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01047",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2022,
+      "auteurs": "Ramdane Benniou",
+      "source_organisation": "Université Mohamed Boudiaf de M'Sila",
+      "mots_cles": [
+        "systeme de culture",
+        "systeme de production",
+        "agronomie systemique",
+        "typologie d'exploitation",
+        "prise de decision"
+      ],
+      "titre_trouve": "SYSTEMES DE PRODUCTION ET SYSTEMES DE CULTURES",
+      "titre": "Cours d'agronomie systémique : Systèmes de production et systèmes de culture",
+      "resume": "Polycopié de cours approfondi traitant de l'analyse systémique des exploitations agricoles : concepts, typologies de fonctionnement, dynamiques d'évolution et décisions techniques des producteurs.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours d'enseignant universitaire algérien non assorti d'une licence libre de rediffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "SYSTEMES DE PRODUCTION ET SYSTEMES DE CULTURES DIERVSITE ET DECISIONS TECHNIQUES"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Dr Ramdane BENNIOU Professeur Agronome, Université Mohamed Boudiaf de M'Sila"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01048",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Badioula Coulibaly",
+      "source_organisation": null,
+      "mots_cles": [
+        "pisciculture",
+        "peche",
+        "systemes aquacoles",
+        "acadjas",
+        "afrique de l'ouest"
+      ],
+      "titre_trouve": "PISCICULTURE ET PECHE - SYSTÈMES DE PRODUCTION",
+      "titre": "Cours de pisciculture et pêche en Afrique de l'Ouest : Systèmes de production aquacoles",
+      "resume": "Support de cours illustré (91 diapositives) détaillant les systèmes piscicoles africains : systèmes extensifs traditionnels (acadjas, whedos), semi-intensifs en étangs et intensifs en enclos.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire d'enseignant ouest-africain sans mention de droits libres ouverts.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PISCICULTURE ET PECHE Dr COULIBALY BADIOULA"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 5,
+          "extrait": "Acadjas Trous à poissons Whedos Enclos piscicoles"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01049",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_fruits_legumes",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "huiles_sucre_corps_gras",
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "cacao",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "cacao",
+        "chocolat",
+        "beurre de cacao",
+        "diagramme de fabrication",
+        "agroalimentaire"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité CACAO – CHOCOLAT",
+      "titre": "Diagramme de fabrication industrielle : Fèves de cacao, beurre et tablettes de chocolat",
+      "resume": "Schéma complet des flux et opérations unitaires de la chocolaterie : écabossage, fermentation, torréfaction, pressage du beurre de cacao, conchage et moulage des tablettes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique industriel complet directement applicable pour la valorisation locale et la transformation du cacao.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité CACAO – CHOCOLAT"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01050",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "conservation_post_recolte",
+      "domaines_secondaires": [
+        "agroalimentaire",
+        "transformation_fruits_legumes"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "piment",
+      "pays": "Bénin",
+      "annee": 2019,
+      "auteurs": "Programme ACMA 2 / IFDC-Bénin",
+      "source_organisation": "IFDC-Bénin",
+      "mots_cles": [
+        "piment seche",
+        "sechage solaire",
+        "benin",
+        "ifdc",
+        "conservation post-recolte"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE: TECHNOLOGIE DE PRODUCTION DU PIMENT SECHE",
+      "titre": "Fiche technique : Technologie de production et de séchage solaire du piment au Bénin",
+      "resume": "Guide pratique illustré (Programme ACMA 2 / IFDC) décrivant les 7 étapes de séchage hygiénique du piment rouge : triage, lavage, blanchiment à l'huile rouge, égouttage et séchoir solaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique terrain complète issue d'un programme de développement agricole au Bénin, diffusable publiquement.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE: TECHNOLOGIE DE PRODUCTION DU PIMENT SECHE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 5,
+          "extrait": "Contacts : Programme ACMA 2 IFDC-BENIN"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01051",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "production_animale",
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "bovin",
+      "pays": "Burkina Faso",
+      "annee": 2013,
+      "auteurs": "Dr H. Kagoné, Dr Seydou Sidibé",
+      "source_organisation": "USAID-ATP / Zoofor Consult",
+      "mots_cles": [
+        "embouche bovine",
+        "bovins",
+        "alimentation du betail",
+        "burkina faso",
+        "usaid"
+      ],
+      "titre_trouve": "Guide de formation et d’animation en techniques d’embouche bovine",
+      "titre": "Guide de formation et d'animation en techniques d'embouche bovine au Sahel",
+      "resume": "Manuel pratique complet (USAID-ATP / Zoofor) pour la conduite de l'embouche bovine : sélection des animaux, santé préventive, rations à base de sous-produits locaux, habitat et rentabilité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet de formation financé par l'USAID-ATP pour la filière bétail-viande en Afrique de l'Ouest.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide de formation et d’animation en techniques d’embouche bovine"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "projet régional Agribusiness and Trade Promotion (ATP) de l’USAID"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01052",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "semences_amelioration",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "texte_officiel",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "papaye",
+      "pays": null,
+      "annee": 2017,
+      "auteurs": "UPOV",
+      "source_organisation": "Union Internationale pour la Protection des Obtentions Végétales",
+      "mots_cles": [
+        "upov",
+        "papayer",
+        "carica papaya",
+        "examen dhs",
+        "obtentions vegetales"
+      ],
+      "titre_trouve": "PRINCIPES DIRECTEURS POUR LA CONDUITE DE L’EXAMEN DE LA DISTINCTION, DE L’HOMOGÉNÉITÉ ET DE LA STABILITÉ PAPAYER",
+      "titre": "Principes directeurs d'examen DHS pour le papayer (Carica papaya L.) - UPOV",
+      "resume": "Document normatif officiel de l'UPOV fixant le protocole technique et le descripteur variétal complet pour l'examen de distinction, homogénéité et stabilité du papayer (Carica papaya).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Protocole technique officiel complet de l'UPOV pour la caractérisation variétale du papayer, réservé aux membres pour l'expertise semencière.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.92,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PRINCIPES DIRECTEURS POUR LA CONDUITE DE L’EXAMEN DE LA DISTINCTION, DE L’HOMOGÉNÉITÉ ET DE LA STABILITÉ PAPAYER code UPOV: CARIC_PAP"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "UNION INTERNATIONALE POUR LA PROTECTION DES OBTENTIONS VÉGÉTALES Genève"
+        }
+      ]
+    }
+  ]
+}

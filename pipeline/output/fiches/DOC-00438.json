@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00438",
+  "sha256": "97caa5a8136de26b54e93c95aeb4e4625375602db43b537244d640c2899bb31b",
+  "nom_original": "Fiche-technique-sur-la-culture-de-Gambella.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche-technique-sur-la-culture-de-Gambella.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 127323,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "sorgho",
+  "pays": "Burundi",
+  "annee": 2011,
+  "auteurs": "Niels Hanssens",
+  "source_organisation": "ISABU / Projet Amasaka",
+  "mots_cles": [
+    "sorgho",
+    "gambella",
+    "burundi",
+    "isabu",
+    "compte d'exploitation"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE SORGHO PROJET AMASAKA",
+  "titre": "Fiche technique : Culture du sorgho (variété Gambella) au Burundi",
+  "resume": "Fiche technico-économique sur la variété de sorgho Gambella au Burundi : choix du terrain, calendrier de semis, fertilisation, rendements et compte d'exploitation prévisionnel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technico-économique complète du projet Amasaka et de l'ISABU au Burundi, directement opérationnelle pour les producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE SORGHO PROJET AMASAKA"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISABU, Projet Amasaka"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00438__fiche-technique-culture-du-sorgho-variete-gambella-au-b.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00438__fiche-technique-culture-du-sorgho-variete-gambella-au-b.pdf"
+}

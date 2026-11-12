@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00014",
+  "sha256": "4aa21da68e4f1c02354d71022b080a6c698c98a9d63f01fab8fd18cb4d6753f6",
+  "nom_original": "bussiness_plan.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/bussiness_plan.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 799337,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479333773-bussiness_plan.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 40,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2017,
+  "auteurs": "Dar Al Moukawil",
+  "source_organisation": "Dar Al Moukawil",
+  "mots_cles": [
+    "business plan",
+    "creation d'entreprise",
+    "gestion financiere",
+    "etude de marche",
+    "entrepreneuriat"
+  ],
+  "titre_trouve": "GUIDE DAR AL MOUKAWIL 2 BUSINESS PLAN",
+  "titre": "Guide Dar Al Moukawil : Comment élaborer son business plan",
+  "resume": "Guide méthodologique et pratique expliquant étape par étape comment concevoir, structurer et chiffrer un business plan pour convaincre investisseurs et banquiers.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide méthodologique complet d'initiative institutionnelle (Dar Al Moukawil), libre d'accès pour les porteurs de projets.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DAR AL MOUKAWIL 2 BUSINESS PLAN"
+    },
+    {
+      "champ": "autre",
+      "page": 40,
+      "extrait": "Le contenu de ce guide est certifié par Mazars, cabinet d'audit, de conseil et de services comptables"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00014__guide-dar-al-moukawil-comment-elaborer-son-business-pla.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00014__guide-dar-al-moukawil-comment-elaborer-son-business-pla.pdf"
+}

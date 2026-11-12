@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00579",
+  "sha256": "bfec377cc9e8663441cbecddd899d38598b1891c070920360f3a1e03f7125d3f",
+  "nom_original": "MANUEL D_AVICULTURE (2).pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL D_AVICULTURE (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2366427,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 68,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (EFATI)",
+  "source_organisation": "EFATI",
+  "mots_cles": [
+    "aviculture",
+    "poulets de chair",
+    "poules pondeuses",
+    "elevage avicole",
+    "cameroun"
+  ],
+  "titre_trouve": "AVICULTURE ELEVAGE DES POULETS DE CHAIR ET DES PONDEUSES",
+  "titre": "Manuel d’aviculture : Élevage des poulets de chair et des pondeuses",
+  "resume": "Manuel complet de formation professionnelle sur l'aviculture tropicale : anatomie, logement, alimentation, prophylaxie et gestion technico-économique des poulets de chair et pondeuses.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel de formation professionnelle officiel d'un centre agréé camerounais, hautement pertinent pour les éleveurs d'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES AVICULTURE ELEVAGE DES POULETS DE CHAIR ET DES PONDEUSES"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0040",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00579__manuel-daviculture-elevage-des-poulets-de-chair-et-des.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00579__manuel-daviculture-elevage-des-poulets-de-chair-et-des.pdf"
+}

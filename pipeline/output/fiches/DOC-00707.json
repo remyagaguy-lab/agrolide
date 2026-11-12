@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00707",
+  "sha256": "6bb612c319b0e397cb4739b4fd05740de3ffeef5286abd5a2e15263191c153c5",
+  "nom_original": "Resumé gest - prot PI.pdf",
+  "chemin_relatif_source": "OD_Docs/Resumé gest - prot PI.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 525111,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 22,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2025,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "perimetre irrigue",
+    "gestion de l eau",
+    "hydraulique agricole",
+    "bilan hydrique",
+    "reseau d irrigation"
+  ],
+  "titre_trouve": "Module : Gestion protection des périmètres irrigues",
+  "titre": "Gestion et protection des périmètres irrigués : Concepts, organisation et bilan hydrique",
+  "resume": "Support de cours approfondi sur l'aménagement et la gestion des périmètres irrigués, détaillant les typologies de superficies, l'organisation des usagers et le calcul du bilan hydrique parcellaire.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire/technique non publié sous licence libre, archivé pour référence pédagogique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Module : Gestion protection des périmètres irrigues"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Ensemble des surfaces occupées ou non par les cultures, peuvent être arrosées par l’eau d’irrigation"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00707__gestion-et-protection-des-perimetres-irrigues-concepts.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00707__gestion-et-protection-des-perimetres-irrigues-concepts.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00496",
+  "sha256": "53b29dea047a1df16d4059b89e9d45fa9b51c83dc85bbb3b527d81b88388755e",
+  "nom_original": "HEVEA.pdf",
+  "chemin_relatif_source": "OD_Docs/HEVEA.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1260381,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 9,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_de_rente",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "hévéa",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "hevea",
+    "latex",
+    "saignee",
+    "caoutchouc",
+    "culture de rente",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE CULTURE DE L’HEVEA",
+  "titre": "Technologie de culture de l'hévéa (Guide de formation)",
+  "resume": "Guide technique de l'IFATI Cameroun détaillant la conduite d'une plantation d'hévéa : écologie, mise en place de la pépinière, plantation, techniques de saignée de l'écorce et conditionnement du latex.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique complète de formation professionnelle sur l'hévéaculture en zone tropicale humide, libre de diffusion.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ... TECHNOLOGIE DE CULTURE DE L’HEVEA"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00496__technologie-de-culture-de-l-hevea-guide-de-formation.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_de_rente/DOC-00496__technologie-de-culture-de-l-hevea-guide-de-formation.pdf"
+}

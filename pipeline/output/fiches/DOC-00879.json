@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00879",
+  "sha256": "f0ec5e1263d3ea70b1311d558f9a66708b7eadde623e0e8d6dbacbda4e563715",
+  "nom_original": "elevage extensif canard de barbarie.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage extensif canard de barbarie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 748578,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 11,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "canard",
+  "pays": null,
+  "annee": 1990,
+  "auteurs": "Isabella Romboli",
+  "source_organisation": "CIHEAM",
+  "mots_cles": [
+    "canard de barbarie",
+    "cairina moschata",
+    "elevage extensif",
+    "aviculture",
+    "croissance",
+    "palmipedes"
+  ],
+  "titre_trouve": "Quelques données sur l’élevage extensif du Canard de Barbarie",
+  "titre": "Quelques données sur l’élevage extensif du canard de Barbarie",
+  "resume": "Article scientifique du CIHEAM synthétisant les données zootechniques sur l'élevage extensif du canard de Barbarie : caractéristiques de la race, rationnement et courbes de croissance.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "Open Access CIHEAM",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Publication scientifique complète issue du CIHEAM sur les palmipèdes, diffusable auprès des membres de la communauté.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Quelques données sur l’élevage extensif du \nCanard de Barbarie \nIsabella ROMBOLI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00879__quelques-donnees-sur-lelevage-extensif-du-canard-de-bar.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00879__quelques-donnees-sur-lelevage-extensif-du-canard-de-bar.pdf"
+}

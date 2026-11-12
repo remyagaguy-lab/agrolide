@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00927",
+  "sha256": "91edc8b8f6f5b320e11cd2e44d57eaa914afe5f2731bcbefd1dae264ef1fe334",
+  "nom_original": "guide avicole.pdf",
+  "chemin_relatif_source": "OD_Docs/guide avicole.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 848682,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte",
+    "obsolete",
+    "contenu_commercial"
+  ],
+  "nb_pages": 53,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "poulet",
+  "pays": "France",
+  "annee": 2003,
+  "auteurs": "G. Deleuse, CIVAM Bio Gard",
+  "source_organisation": "CIVAM Bio Gard",
+  "mots_cles": [
+    "aviculture biologique",
+    "poulet bio",
+    "poules pondeuses",
+    "civam bio gard",
+    "france",
+    "elevage fermier"
+  ],
+  "titre_trouve": "Créer un atelier de volailles en Bio",
+  "titre": "Créer un atelier de volailles en bio : Poulets de chair et poules pondeuses (CIVAM Gard)",
+  "resume": "Guide pratique français du CIVAM Bio Gard présentant la création et la gestion d'un atelier avicole biologique (réglementation européenne, bâtiments, parcours, alimentation et rentabilité).",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide commercial payant de 2003 basé sur les normes réglementaires européennes de l'agriculture biologique, inadapté au contexte ouest-africain.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Créer un atelier de volailles en Bio Poulets de chair et/ou poules pondeuses"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00927__creer-un-atelier-de-volailles-en-bio-poulets-de-chair-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00927__creer-un-atelier-de-volailles-en-bio-poulets-de-chair-e.pdf"
+}

@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00685",
+  "sha256": "5d504859175400d9b25e1d7e2598891210f0468a889936ed22a4e73da6c199d4",
+  "nom_original": "Programme Chèvre de ma mère.pdf",
+  "chemin_relatif_source": "OD_Docs/Programme Chèvre de ma mère.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 710967,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "autre",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Ricardo Kaniama",
+  "source_organisation": "Vision La Chèvre",
+  "mots_cles": [
+    "developpement personnel",
+    "finances personnelles",
+    "coaching",
+    "motivation"
+  ],
+  "titre_trouve": "PROJET VISION LA CHEVRE…",
+  "titre": "Programme Vision La Chèvre - Éradication de la pauvreté mentale",
+  "resume": "Plaquette promotionnelle de 10 pages d'un programme de coaching financier et de développement personnel fondé par Ricardo Kaniama, sans rapport avec l'élevage caprin.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document promotionnel sous copyright privé ('Copyright © Vision La Chèvre 2020') et non une publication d'un organisme public ; le statut de droits est 'droits_reserves_commercial'.",
+  "confiance": {
+    "classification": 0.99,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Le Programme Mondial D’Éradication de La Pauvreté Mentale dit Vision La Chèvre est initié par une personne extraordinaire"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits"
+    ],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": "Document promotionnel sous copyright privé ('Copyright © Vision La Chèvre 2020') et non une publication d'un organisme public ; le statut de droits est 'droits_reserves_commercial'."
+  },
+  "nom_fichier_final": "DOC-00685__programme-vision-la-chevre-eradication-de-la-pauvrete-m.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00685__programme-vision-la-chevre-eradication-de-la-pauvrete-m.pdf"
+}

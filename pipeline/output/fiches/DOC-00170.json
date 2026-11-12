@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00170",
+  "sha256": "fee8583bfd3a29e210aee079af8f3dfbd91d59692aae4ae093887d9db1c83aa8",
+  "nom_original": "AgricultureurbaineetpriurbaineAUPetconomiedesmnages.pdf",
+  "chemin_relatif_source": "OD_Docs/AgricultureurbaineetpriurbaineAUPetconomiedesmnages.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1817012,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 14,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "economie_filieres_marches",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "decideur_institution",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cultures_maraicheres",
+  "pays": "Sénégal",
+  "annee": 2018,
+  "auteurs": "Abou Ba, Nicola Luca Cantoreggi",
+  "source_organisation": "Université de Genève",
+  "mots_cles": [
+    "agriculture urbaine",
+    "dakar",
+    "senegal",
+    "maraichage",
+    "economie des menages"
+  ],
+  "titre_trouve": "Agriculture urbaine et périurbaine (AUP) et économie des ménages agri-urbains à Dakar (Sénégal)",
+  "titre": "Agriculture urbaine et périurbaine (AUP) et économie des ménages agri-urbains à Dakar (Sénégal)",
+  "resume": "Article scientifique étudiant la dimension commerciale et l'impact économique du maraîchage urbain et périurbain sur les revenus des ménages dans la région de Dakar.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique en libre accès portant sur l'Afrique de l'Ouest, complet et destiné à la communauté académique et aux décideurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agriculture urbaine et périurbaine (AUP) et économie des ménages agri-urbains à Dakar (Sénégal)"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "BA, Abou, CANTOREGGI, Nicola Luca"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00170__agriculture-urbaine-et-periurbaine-aup-et-economie-des.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/economie_filieres_marches/DOC-00170__agriculture-urbaine-et-periurbaine-aup-et-economie-des.pdf"
+}

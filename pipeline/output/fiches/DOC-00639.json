@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00639",
+  "sha256": "167ee139855276d105a1314781673e5491d234b63400eb09ba79698f5fbf4948",
+  "nom_original": "Ouvrages_et_Systèmre_dirrigation_Cours_L3_Sol_et_Eau.pdf",
+  "chemin_relatif_source": "OD_Docs/Ouvrages_et_Systèmre_dirrigation_Cours_L3_Sol_et_Eau.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2908844,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 125,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "barrages",
+    "ouvrages d'irrigation",
+    "hydraulique agricole",
+    "deversoir",
+    "cours l3",
+    "eau et sol"
+  ],
+  "titre_trouve": "Cours : Ouvrage des systèmes d’irrigation",
+  "titre": "Cours d'ouvrages des systèmes d'irrigation (L3 Sol et Eau) : barrages, prises d'eau et déversoirs",
+  "resume": "Cours universitaire de 125 diapositives pour la filière Sol et Eau couvrant la conception et le dimensionnement des ouvrages de retenue et d'amenée d'eau pour l'irrigation agricole (barrages, déversoirs, pertuis).",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non libre, archivé pour référence académique sans diffusion publique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours Ouvrage des systèmes d’irrigation"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00639__cours-d-ouvrages-des-systemes-d-irrigation-l3-sol-et-ea.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00639__cours-d-ouvrages-des-systemes-d-irrigation-l3-sol-et-ea.pdf"
+}

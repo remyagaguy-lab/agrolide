@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00460",
+  "sha256": "41fd26032d76c52e1aedb9644660ce9d3ad19028e35be50e4c9bf37ad6477ab0",
+  "nom_original": "Formation engrais liquide.docx",
+  "chemin_relatif_source": "OD_Docs/Formation engrais liquide.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 17355,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "fertilisation_amendements",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Bernard Sié Kansié",
+  "source_organisation": "ECHO West Africa",
+  "mots_cles": [
+    "engrais liquide",
+    "biofertilisant",
+    "matiere organique",
+    "agroecologie",
+    "afrique de l'ouest"
+  ],
+  "titre_trouve": "La préparation de l’engrais liquide bio",
+  "titre": "La préparation de l'engrais liquide bio",
+  "resume": "Fiche technique d'ECHO Afrique de l'Ouest décrivant la méthode de fabrication d'un engrais liquide biologique en 14 jours à base de matières organiques locales pour les petits exploitants.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document au format docx avec drapeau conversion_requise interdisant la publication directe (public) ; à orienter vers a_valider_humain pour conversion en PDF.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La préparation de l’engrais liquide bio"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Document au format docx avec drapeau conversion_requise interdisant la publication directe (public) ; à orienter vers a_valider_humain pour conversion en PDF."
+  },
+  "nom_fichier_final": "DOC-00460__la-preparation-de-l-engrais-liquide-bio.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/fertilisation_amendements/DOC-00460__la-preparation-de-l-engrais-liquide-bio.pdf"
+}

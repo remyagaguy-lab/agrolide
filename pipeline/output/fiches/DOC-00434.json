@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00434",
+  "sha256": "498823a5fd19a10e80f8cc65261ac25f27354c79cc6303c48fe12c72cc9e935c",
+  "nom_original": "Fiche-prophylaxie-volailles.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche-prophylaxie-volailles.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1998079,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 9,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "volaille",
+  "pays": "France",
+  "annee": 2013,
+  "auteurs": "APABA",
+  "source_organisation": "APABA",
+  "mots_cles": [
+    "prophylaxie",
+    "aviculture biologique",
+    "sante animale",
+    "phytotherapie",
+    "prevention"
+  ],
+  "titre_trouve": "Fiche prophylaxie volailles - Une obligation de moyens en bio !",
+  "titre": "Guide de prophylaxie et santé en élevage avicole biologique",
+  "resume": "Guide technique présentant les mesures préventives et sanitaires en aviculture bio : biosécurité des bâtiments, gestion des parcours, médecines naturelles et gestion des parasites.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide technique complet de prophylaxie aviaire en bio édité par l'APABA, réservé aux membres car axé sur la réglementation européenne.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Une obligation de moyens en bio !"
+    },
+    {
+      "champ": "autre",
+      "page": 9,
+      "extrait": "Formation prophylaxie organisée par l’APABA, 2012"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00434__guide-de-prophylaxie-et-sante-en-elevage-avicole-biolog.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00434__guide-de-prophylaxie-et-sante-en-elevage-avicole-biolog.pdf"
+}

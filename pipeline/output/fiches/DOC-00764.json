@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00764",
+  "sha256": "bf5b1ba0d7d53b6e5a11ea9f2e6b392ad578efc584227aeb6acaaf4d4223382b",
+  "nom_original": "Un voyage au coeur du jardinage ... (Nessmann, Pierre).pdf",
+  "chemin_relatif_source": "OD_Docs/Un voyage au coeur du jardinage ... (Nessmann, Pierre).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 40818816,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 332,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Suisse",
+  "annee": 1999,
+  "auteurs": "Pierre Nessmann",
+  "source_organisation": "Éditions OPEASI",
+  "mots_cles": [
+    "jardinage",
+    "horticulture",
+    "plantes ornementales",
+    "potager",
+    "suisse",
+    "amenagement de jardin"
+  ],
+  "titre_trouve": "UN VOYAGE AU CŒUR DU JARDINAGE...",
+  "titre": "Un voyage au cœur du jardinage",
+  "resume": "Ouvrage encyclopédique illustré sur l'aménagement de jardins et l'horticulture en milieu tempéré, couvrant la connaissance des sols, des végétaux et la multiplication des plantes.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial protégé par copyright (Éditions OPEASI) et centré sur le jardinage en climat tempéré, archivé sans publication.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 332,
+      "extrait": "© OPEASI CH-LUZERN ISBN 3 907 498 70-4"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00764__un-voyage-au-cur-du-jardinage.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00764__un-voyage-au-cur-du-jardinage.pdf"
+}

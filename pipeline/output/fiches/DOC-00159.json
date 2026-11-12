@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00159",
+  "sha256": "92b6d0403408619e7f3bdca7fdb5ebdbd35e9a14fb45955d924f1d03352b78a4",
+  "nom_original": "AgriMag-164-Decembre-2024.pdf",
+  "chemin_relatif_source": "OD_Docs/AgriMag-164-Decembre-2024.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 39913136,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 68,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "agriculture_generale",
+  "type_doc": "periodique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Maroc",
+  "annee": 2024,
+  "auteurs": "Société d'Édition Agricole",
+  "source_organisation": "Agriculture du Maghreb",
+  "mots_cles": [
+    "agriculture du maghreb",
+    "revue",
+    "secheresse",
+    "acacia",
+    "agroforesterie",
+    "maroc"
+  ],
+  "titre_trouve": "Agriculture du Maghreb N° 164 - Décembre 2024",
+  "titre": "Agriculture du Maghreb N° 164 (Décembre 2024)",
+  "resume": "Numéro 164 de la revue Agriculture du Maghreb consacré aux stratégies d'adaptation à la sécheresse, aux espèces agroforestières résilientes et aux techniques de culture.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Numéro complet de revue professionnelle agricole accessible aux membres d'Agrolide pour l'enrichissement technique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agriculture du Maghreb N° 164 - Décembre 2024"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00159__agriculture-du-maghreb-n-164-decembre-2024.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/agriculture_generale/DOC-00159__agriculture-du-maghreb-n-164-decembre-2024.pdf"
+}

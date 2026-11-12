@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00700",
+  "sha256": "f1dad5198f98c2a048a69ef06d22489417e3f8f6fc81f85bbb55b7eef02b9db5",
+  "nom_original": "RTE-Amarante-definitif.pdf",
+  "chemin_relatif_source": "OD_Docs/RTE-Amarante-definitif.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 11401665,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 52,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "amarante",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Armel C. G. Mensah, Rachidatou Sikirou, Françoise Assogba Komlan, B. Barthélémy Yarou, Soul-Kifouly Midingoyi, Judith Honfoga, Marie-Épiphane Dossoumou, Nathalie G. Kpera, Alice A. K. Djinadou",
+  "source_organisation": "INRAB / PADMAR / MAEP Bénin",
+  "mots_cles": [
+    "amarante",
+    "maraichage",
+    "legume feuille",
+    "referentiel technico-economique",
+    "itineraire technique",
+    "inrab",
+    "benin"
+  ],
+  "titre_trouve": "GUIDE PRATIQUE POUR LA CULTURE DE L’AMARANTE AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)",
+  "titre": "Guide pratique pour la culture de l'amarante au Bénin : référentiel technico-économique",
+  "resume": "Référentiel technico-économique officiel de l'INRAB détaillant l'itinéraire technique complet, la gestion des ravageurs et la rentabilité de l'amarante au Bénin.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Ouvrage de vulgarisation de référence produit par l'INRAB et le PADMAR, libre de diffusion institutionnelle et d'intérêt majeur pour le maraîchage.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "GUIDE PRATIQUE POUR LA CULTURE DE L’AMARANTE AU BÉNIN Institut National des Recherches Agricoles du Bénin (INRAB)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00700__guide-pratique-pour-la-culture-de-l-amarante-au-benin-r.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00700__guide-pratique-pour-la-culture-de-l-amarante-au-benin-r.pdf"
+}

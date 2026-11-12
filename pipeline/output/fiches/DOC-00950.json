@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00950",
+  "sha256": "38c98b3246ca3c37754bdb27588587a34143490a53684c166fc59900c6f1b888",
+  "nom_original": "hal-00884716.pdf",
+  "chemin_relatif_source": "OD_Docs/hal-00884716.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1342120,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "papaye",
+  "pays": "Guadeloupe",
+  "annee": 1985,
+  "auteurs": "Philippe Prior, Michel Beramis, Marie-Thérèse Rousseau",
+  "source_organisation": "INRA / HAL",
+  "mots_cles": [
+    "papaye",
+    "deperissement bacterien",
+    "erwinia",
+    "pathologie vegetale",
+    "antilles",
+    "inra"
+  ],
+  "titre_trouve": "Le dépérissement bactérien du papayer aux Antilles françaises",
+  "titre": "Le dépérissement bactérien du papayer aux Antilles françaises (INRA)",
+  "resume": "Article scientifique publié dans Agronomie (INRA) analysant l'étiologie, les symptômes et le développement épidémiologique du dépérissement bactérien du papayer.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Open Access (dépôt légal archive ouverte HAL hal-00884716)",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article de recherche scientifique en libre accès (Open Access HAL / INRA), mis à disposition des membres pour l'expertise phytosanitaire.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Le dépérissement bactérien du papayer aux Antilles françaises Philippe Prior, Michel Beramis, Marie-Thérèse Rousseau"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "HAL Id: hal-00884716 HAL is a multi-disciplinary open access archive"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00950__le-deperissement-bacterien-du-papayer-aux-antilles-fran.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00950__le-deperissement-bacterien-du-papayer-aux-antilles-fran.pdf"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "DOC-00716",
+  "sha256": "7b363a3c83c26c454d9315e27da6a85625d367cfc35bfe700350b0256889399f",
+  "nom_original": "Réussir l_Elevage de Poulets Locaux (Extrait).pdf",
+  "chemin_relatif_source": "OD_Docs/Réussir l_Elevage de Poulets Locaux (Extrait).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 804314,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel",
+    "contenu_commercial"
+  ],
+  "nb_pages": 8,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "poulet local",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "Benjamin VOEDZI",
+  "source_organisation": "KNOWLEDGE ACADEMY",
+  "mots_cles": [
+    "poulet local",
+    "aviculture traditionnelle",
+    "poulailler",
+    "togo",
+    "elevage avicole",
+    "extrait"
+  ],
+  "titre_trouve": "Manuel Pratique de l'Éleveur de Poulets Locaux Série N° 09",
+  "titre": "Manuel pratique de l'éleveur de poulets locaux (Extrait de guide technique)",
+  "resume": "Extrait d'un guide pratique togolais consacré à la conduite d'un élevage avicole de poulets locaux, présentant les principes de base de l'habitat, des poulaillers et de la reproduction.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Extrait promotionnel partiel d'un manuel commercial privé, non diffusable en accès complet et archivé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Réussir l_Elevage de Poulets Locaux (Extrait).pdf"
+    },
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Manuel Pratique de l'Éleveur de Poulets Locaux Série N° 09 Benjamin VOEDZI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00716__manuel-pratique-de-l-eleveur-de-poulets-locaux-extrait.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00716__manuel-pratique-de-l-eleveur-de-poulets-locaux-extrait.pdf"
+}

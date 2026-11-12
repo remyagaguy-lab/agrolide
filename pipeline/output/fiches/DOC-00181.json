@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00181",
+  "sha256": "8237114bed582960f4019d680319244ef2b39a01ac657ae42b46994e0120be04",
+  "nom_original": "Agrodok 10 - La ulture du Soja et autres legumineuses.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok 10 - La ulture du Soja et autres legumineuses.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2723529,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476154779-Agrodok_10_-_La_ulture_du_Soja_et_autres_legumineuses.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 76,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "soja",
+  "pays": null,
+  "annee": 2005,
+  "auteurs": "Rienke Nieuwenhuis, Joke Nieuwelink",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "soja",
+    "legumineuses",
+    "itineraire technique",
+    "alimentation",
+    "agrodok"
+  ],
+  "titre_trouve": "Agrodok 10 - La culture du soja et d’autres légumineuses",
+  "titre": "La culture du soja et d'autres légumineuses (Agrodok 10)",
+  "resume": "Guide complet sur la culture du soja et d'autres légumineuses en zone tropicale : préparation du sol, semis, protection, récolte et usages alimentaires.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique officiel CTA/Agromisa issu du fonds institutionnel propre, complet et directement utilisable par les producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 10 - La culture du soja et d’autres légumineuses"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Rienke Nieuwenhuis Joke Nieuwelink"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00181__la-culture-du-soja-et-d-autres-legumineuses-agrodok-10.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00181__la-culture-du-soja-et-d-autres-legumineuses-agrodok-10.pdf"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00177",
+  "sha256": "ce2f1eda2fa65d355ad0a57b90827a422f78cfac6ec1b3ac5e0a1f9c09c11744",
+  "nom_original": "Agrodok - 29 - Pesticides@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok - 29 - Pesticides@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1191990,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "donnees_phyto_a_verifier"
+  ],
+  "nb_pages": 125,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2007,
+  "auteurs": "Jeroen Boland, Irene Koomen, Joep van Lidth de Jeude, Jan Oudejans",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "pesticides",
+    "protection des cultures",
+    "toxicite",
+    "pulverisation",
+    "agrodok"
+  ],
+  "titre_trouve": "Agrodok 29 - Les pesticides : composition, utilisation et risques",
+  "titre": "Les pesticides : composition, utilisation et risques (Agrodok 29)",
+  "resume": "Guide sur les produits phytosanitaires : typologie, modes d'action, techniques d'application sécurisées, risques pour la santé et l'environnement.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'un canal @EpubsFR avec copyright réservé et données phytosanitaires anciennes nécessitant vérification.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 29 - Les pesticides : composition, utilisation et risques"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Jeroen Boland Irene Koomen Joep van Lidth de Jeude Jan Oudejans"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00177__les-pesticides-composition-utilisation-et-risques-agrod.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00177__les-pesticides-composition-utilisation-et-risques-agrod.pdf"
+}

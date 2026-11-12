@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00963",
+  "sha256": "8480bfff4bd24650a0dedf619d202a7d61099730364c9da940554c0bc098c8a4",
+  "nom_original": "jardinage-fr-le-poireau-prefere-les-fraises_112Pages.pdf",
+  "chemin_relatif_source": "OD_Docs/jardinage-fr-le-poireau-prefere-les-fraises_112Pages.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 38532059,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "droits_reserves",
+    "contexte_non_adapte",
+    "contenu_commercial"
+  ],
+  "nb_pages": 112,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": null,
+  "auteurs": "Hans Wagner",
+  "source_organisation": "Éditions Terre Vivante",
+  "mots_cles": [
+    "compagnonnage vegetal",
+    "jardinage biologique",
+    "poireau",
+    "fraises",
+    "potager",
+    "associations de cultures"
+  ],
+  "titre_trouve": null,
+  "titre": "Le poireau préfère les fraises : les meilleures associations de plantes au potager",
+  "resume": "Livre de jardinage biologique scanné de 112 pages sans couche de texte exploitable, détaillant les principes et les tableaux d'associations bénéfiques entre légumes et petits fruits pour limiter les ravageurs.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial protégé par le droit d'auteur (Éditions Terre Vivante) scanné sans OCR, archivé sans diffusion publique (Règle Métier 4).",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.95,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "jardinage-fr-le-poireau-prefere-les-fraises_112Pages.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00963__le-poireau-prefere-les-fraises-les-meilleures-associati.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00963__le-poireau-prefere-les-fraises-les-meilleures-associati.pdf"
+}

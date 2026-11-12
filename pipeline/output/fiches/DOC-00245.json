@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00245",
+  "sha256": "08e12994455cf3a5e208eccfc53c6a00310861e1116d8aac2b26c27bbecf7a3b",
+  "nom_original": "Bersin ou trèfle d_Alexandrie.pdf",
+  "chemin_relatif_source": "OD_Docs/Bersin ou trèfle d_Alexandrie.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 8172312,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "titre_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 6,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "trèfle d'Alexandrie",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "bersim",
+    "trefle d'alexandrie",
+    "fourrage",
+    "legumineuse fourragere",
+    "alimentation animale"
+  ],
+  "titre_trouve": null,
+  "titre": "Le Bersim ou trèfle d'Alexandrie",
+  "resume": "Fiche technique scannée portant sur la culture fourragère du bersim (trèfle d'Alexandrie), nécessitant un traitement OCR.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible portant sur le bersim, nécessitant un traitement OCR pour validation humaine.",
+  "confiance": {
+    "classification": 0.6,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: Bersin ou trèfle d_Alexandrie.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00245__le-bersim-ou-trefle-d-alexandrie.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00245__le-bersim-ou-trefle-d-alexandrie.pdf"
+}

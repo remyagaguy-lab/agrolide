@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00207",
+  "sha256": "f4063a3b168d6291f11fd8a866ecc56ddaa36d663f965a9981b486d17080ba51",
+  "nom_original": "Agrodok_9_Le_jardin_potager_dans_les_zones_tropicales@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_9_Le_jardin_potager_dans_les_zones_tropicales@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1251790,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 100,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maraîchage",
+  "pays": null,
+  "annee": 2008,
+  "auteurs": "Ed Verheij, Henk Waaijenberg",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "jardin potager",
+    "maraichage",
+    "legumes",
+    "permaculture tropicale",
+    "securite alimentaire",
+    "arrosage"
+  ],
+  "titre_trouve": "Agrodok 9 Le jardin potager dans les zones tropicales",
+  "titre": "Le jardin potager dans les zones tropicales",
+  "resume": "Guide pratique de référence sur la conception et la conduite d'un potager en milieu tropical pour assurer une production continue de légumes frais toute l'année, même en saison sèche.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fichier issu du canal pirate @EpubsFR avec copyright réservé : requalifié en droits_reserves_commercial, décision non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 9 Le jardin potager dans les zones tropicales"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Ed Verheij Henk Waaijenberg"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Fichier issu du canal pirate @EpubsFR avec copyright réservé : requalifié en droits_reserves_commercial, décision non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00207__le-jardin-potager-dans-les-zones-tropicales.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00207__le-jardin-potager-dans-les-zones-tropicales.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00578",
+  "sha256": "2614d79dee1f58ca670b9d2615df74a804cb48da63ec577ba7f4975a1ca357fb",
+  "nom_original": "MANUEL DE FORMATION SUR LA PRODUCTION DU VINAIGRE.pdf",
+  "chemin_relatif_source": "OD_Docs/MANUEL DE FORMATION SUR LA PRODUCTION DU VINAIGRE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 679510,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "transformation_fruits_legumes",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "fruits",
+  "pays": "Cameroun",
+  "annee": 2018,
+  "auteurs": "Comité des ingénieurs d’EFATI",
+  "source_organisation": "EFATI",
+  "mots_cles": [
+    "vinaigre",
+    "transformation des fruits",
+    "fermentation acetique",
+    "vinaigrerie artisanale",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "MANUEL DE FORMATION SUR LA PRODUCTION DU VINAIGRE",
+  "titre": "Manuel de formation sur la production artisanale de vinaigre de fruits",
+  "resume": "Guide pratique détaillant les étapes techniques et économiques de fabrication artisanale du vinaigre à partir de jus de fruits locaux : double fermentation, équipements et rentabilité.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Manuel pratique de formation professionnelle camerounais pour la transformation agroalimentaire locale, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Rédigé par le comité des ingénieurs d’EFATI MANUEL DE FORMATION SUR LA PRODUCTION DU VINAIGRE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00578__manuel-de-formation-sur-la-production-artisanale-de-vin.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_fruits_legumes/DOC-00578__manuel-de-formation-sur-la-production-artisanale-de-vin.pdf"
+}

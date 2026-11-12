@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00256",
+  "sha256": "23e4f5b9e9465ee928a43b5d84f3c335a428f330ee372d400ee9da45ec8f4441",
+  "nom_original": "Blé dur.pdf",
+  "chemin_relatif_source": "OD_Docs/Blé dur.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9230902,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "blé dur",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "ble dur",
+    "cereales",
+    "itineraire technique",
+    "culture"
+  ],
+  "titre_trouve": null,
+  "titre": "Fiche technique de conduite de la culture du blé dur",
+  "resume": "Document technique scanné de 5 pages traitant des pratiques culturales et de la conduite du blé dur, sans couche texte exploitable.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible, à valider après OCR pour déterminer son contenu et ses droits.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.5,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Blé dur.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00256__fiche-technique-de-conduite-de-la-culture-du-ble-dur.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00256__fiche-technique-de-conduite-de-la-culture-du-ble-dur.pdf"
+}

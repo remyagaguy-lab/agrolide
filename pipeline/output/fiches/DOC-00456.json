@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00456",
+  "sha256": "d7b0c027eaa20568a51bcad670ef3e23ce0d2d10601b8876fc3bd1b23c27e43b",
+  "nom_original": "Formation 2_250911_195110.pdf",
+  "chemin_relatif_source": "OD_Docs/Formation 2_250911_195110.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2830806,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 38,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": null,
+  "annee": 2025,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "pisciculture",
+    "gestion de l'eau",
+    "etang piscicole",
+    "qualite de l'eau",
+    "reproduction",
+    "aquaculture"
+  ],
+  "titre_trouve": "1. PISCICULTURE GENERALE (suite.) 1.3. GESTION D'EAU",
+  "titre": "Formation en pisciculture générale : Partie 2 - Gestion de l'eau et reproduction",
+  "resume": "Deuxième partie du cours de formation en pisciculture générale traitant de la gestion quantitative et qualitative de l'eau (besoins, oxygène dissous) et des bases de la reproduction des poissons d'étang.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Deuxième volet d'un cours de pisciculture découpé, sans identification claire des auteurs ni des droits de diffusion.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.75,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "1. PISCICULTURE GENERALE (suite.) 1.3. GESTION D'EAU"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00456__formation-en-pisciculture-generale-partie-2-gestion-de.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00456__formation-en-pisciculture-generale-partie-2-gestion-de.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00084",
+  "sha256": "155ecfd5e50f100e7e901e4970e59619f525f2e2f2bf7d7a50f79da7d04d65a0",
+  "nom_original": "13176_file_note-71_environnement_adaptation-climat_web-1.pdf",
+  "chemin_relatif_source": "OD_Docs/13176_file_note-71_environnement_adaptation-climat_web-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3042617,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 8,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "climat_changement_climatique",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2012,
+  "auteurs": "ADEUS",
+  "source_organisation": "Agence de développement et d'urbanisme de l'agglomération strasbourgeoise (ADEUS)",
+  "mots_cles": [
+    "changement climatique",
+    "urbanisme",
+    "scot",
+    "adaptation",
+    "alsace"
+  ],
+  "titre_trouve": "DE L’ADEUS ENVIRONNEMENT 71 SEPTEMBRE 2012",
+  "titre": "Changement climatique et adaptation des territoires urbains en Alsace (Note 71 ADEUS)",
+  "resume": "Note d'analyse de l'agence d'urbanisme de Strasbourg sur l'intégration de l'atténuation et de l'adaptation au changement climatique dans les documents de planification urbaine (SCoT, PLU) en Alsace.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document d'urbanisme et d'aménagement territorial spécifique à l'Alsace (France), non pertinent pour l'agriculture subsaharienne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "DE L’ADEUS ENVIRONNEMENT 71 SEPTEMBRE 2012"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 1,
+      "extrait": "En Alsace, le changement climatique est susceptible de modifier les aléas naturels"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00084__changement-climatique-et-adaptation-des-territoires-urb.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/climat_changement_climatique/DOC-00084__changement-climatique-et-adaptation-des-territoires-urb.pdf"
+}

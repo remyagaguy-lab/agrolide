@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00956",
+  "sha256": "53bfab403701fd87d9755de30d3d681724f7bdb5f9271304bf8de53f16c30e8c",
+  "nom_original": "i6874fr.pdf",
+  "chemin_relatif_source": "OD_Docs/i6874fr.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1315041,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 27,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "texte_officiel",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "FAO",
+  "source_organisation": "Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO)",
+  "mots_cles": [
+    "gestion durable des sols",
+    "fao",
+    "directives volontaires",
+    "fertilite des sols",
+    "erosion",
+    "services ecosystemiques"
+  ],
+  "titre_trouve": "Directives volontaires pour une gestion durable des sols",
+  "titre": "Directives volontaires pour une gestion durable des sols (FAO)",
+  "resume": "Document cadre de référence de la FAO établissant les principes techniques et d'action politique pour stopper l'érosion, maintenir la matière organique et assurer la fertilité durable des sols mondiaux.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Document officiel international de la FAO sur la gestion durable des sols, librement diffusable en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Directives volontaires pour une gestion durable des sols"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "ORGANISATION DES NATIONS UNIES POUR L’ALIMENTATION ET L’AGRICULTURE Rome, 2017"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00956__directives-volontaires-pour-une-gestion-durable-des-sol.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00956__directives-volontaires-pour-une-gestion-durable-des-sol.pdf"
+}

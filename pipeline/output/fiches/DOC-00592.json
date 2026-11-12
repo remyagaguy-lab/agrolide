@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00592",
+  "sha256": "80723481931655c09866a83180da373a46acc1964da6ae5194e3f653069c470f",
+  "nom_original": "MELON.pdf",
+  "chemin_relatif_source": "OD_Docs/MELON.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 641968,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "melon",
+  "pays": "Algérie",
+  "annee": 2022,
+  "auteurs": "Institut Technique des Cultures Maraîchères et Industrielles (ITCMI)",
+  "source_organisation": "ITCMI",
+  "mots_cles": [
+    "melon",
+    "maraichage",
+    "cucurbitacees",
+    "conduite culturale",
+    "algerie"
+  ],
+  "titre_trouve": "La culture du MELON",
+  "titre": "Fiche technique sur la culture du melon (ITCMI)",
+  "resume": "Fiche technique officielle de l'ITCMI détaillant les étapes de la culture du melon : phénologie, semis, fertilisation, protection phytosanitaire et conduite sous abri ou plein champ.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique de vulgarisation officielle de l'ITCMI algérien, directement diffusable aux producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "INSTITUT TECHNIQUE DES CULTURES MARAICHERES ET INDUSTRIELLES La culture du MELON ITCMI 2022"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00592__fiche-technique-sur-la-culture-du-melon-itcmi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00592__fiche-technique-sur-la-culture-du-melon-itcmi.pdf"
+}

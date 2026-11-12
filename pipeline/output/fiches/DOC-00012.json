@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00012",
+  "sha256": "bee13d21701394a5f9f03384d9d09888f01775611d214be4073078ae7f466ff9",
+  "nom_original": "POULET_MIRA_COURS_ENTREPRENEURIAT_DISPENSE_LE_16_08_2021_GROUPE (2).docx",
+  "chemin_relatif_source": "OD_Agrobusiness/POULET_MIRA_COURS_ENTREPRENEURIAT_DISPENSE_LE_16_08_2021_GROUPE (2).docx",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "docx",
+  "taille_octets": 106639,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2021,
+  "auteurs": "Bénin Théodore Tse",
+  "source_organisation": "Centre de Formation Professionnelle (Kadiogo)",
+  "mots_cles": [
+    "cours entrepreneuriat",
+    "burkina faso",
+    "formation professionnelle",
+    "creation d'activite",
+    "kadiogo"
+  ],
+  "titre_trouve": "COURS DE FORMATION EN ENTREPRENEURIAT",
+  "titre": "Cours de formation en entrepreneuriat agricole et professionnel",
+  "resume": "Support de cours professionnel dispensé au Kadiogo présentant les concepts clés de l'esprit d'entreprise, les qualités d'un bon entrepreneur et les étapes de création d'une activité.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00653.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "COURS DE FORMATION EN ENTREPRENEURIAT"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Chargé du cours : BENIN Théodore TSE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Province du Kadiogo Centre de Formation Professionnelle"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0065",
+  "canonique_id": "DOC-00653",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00012__cours-de-formation-en-entrepreneuriat-agricole-et-profe.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00012__cours-de-formation-en-entrepreneuriat-agricole-et-profe.pdf"
+}

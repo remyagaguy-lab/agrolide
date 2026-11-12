@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00198",
+  "sha256": "81944952513e92e5f8bef4d0780069be15eeeb3c966382037776bece1694d341",
+  "nom_original": "Agrodok_37_Production_de_semences_a_petite_echelle@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_37_Production_de_semences_a_petite_echelle@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 786179,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 106,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "semences",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "Harry van den Burg",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "semences",
+    "selection varietale",
+    "cereales",
+    "legumineuses",
+    "multiplication de semences"
+  ],
+  "titre_trouve": "Agrodok 37 Production de semences à petite échelle avec l'ámélioration des variétés de céréales et de légumineuses à graines",
+  "titre": "Production de semences à petite échelle",
+  "resume": "Guide pratique complet sur la production, la sélection massale, le conditionnement et la conservation des semences artisanales de céréales et légumineuses adaptées aux petites exploitations tropicales.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fichier tagué @EpubsFR et droits de reproduction réservés : requalification obligatoire en droits_reserves_commercial et non_publie_archive.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 37 Production de semences à petite échelle avec l'ámélioration des variétés de céréales et de légumineuses à graines"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Harry van den Burg"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Fichier tagué @EpubsFR et droits de reproduction réservés : requalification obligatoire en droits_reserves_commercial et non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00198__production-de-semences-a-petite-echelle.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-00198__production-de-semences-a-petite-echelle.pdf"
+}

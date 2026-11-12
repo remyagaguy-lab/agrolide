@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00788",
+  "sha256": "2b68381d6255d46b581deddc0da7465e615ddf0c1b3ce6a8deeb419c40d9b3b8",
+  "nom_original": "alimentation des volailles .master  production animale.pdf",
+  "chemin_relatif_source": "OD_Docs/alimentation des volailles .master  production animale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7422162,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 48,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "alimentation des volailles",
+    "master production animale",
+    "nutrition avicole",
+    "cours"
+  ],
+  "titre_trouve": "alimentation des volailles .master production animale",
+  "titre": "Alimentation des volailles (Master production animale)",
+  "resume": "Support de cours universitaire de Master en production animale de 48 pages scanné sans couche texte, consacré à la nutrition et l'alimentation des volailles.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan de cours universitaire sans texte extractible (CamScanner), validation requise après extraction OCR.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.5,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "alimentation des volailles .master production animale"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Scanned by CamScanner"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00788__alimentation-des-volailles-master-production-animale.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00788__alimentation-des-volailles-master-production-animale.pdf"
+}

@@ -1,0 +1,786 @@
+{
+  "batch_number": 47,
+  "results": [
+    {
+      "id": "DOC-00704",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "memoire",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pintade",
+      "pays": "Bénin",
+      "annee": 2010,
+      "auteurs": "DJOVONOU Tohouindo Roland Glorieux",
+      "source_organisation": "UATM GASA-FORMATION / Centre Songhaï",
+      "mots_cles": [
+        "pintade",
+        "rentabilite economique",
+        "aviculture",
+        "commercialisation",
+        "benin",
+        "centre songhai"
+      ],
+      "titre_trouve": "ETUDE DE LA RENTABILITE ECONOMIQUE DE L’ELEVAGE ET DE LA COMMERCIALISATION D’ŒUFS DE PINTADE ET DE PINTADE CHAIR",
+      "titre": "Rentabilité économique de l’élevage et de la commercialisation d’œufs et de chair de pintade au Bénin",
+      "resume": "Mémoire d'agronomie analysant les coûts, les marges et la rentabilité technico-économique de la production et de la vente d'œufs et de pintades de chair au Centre Songhaï de Parakou.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Mémoire académique d'agronomie non publié sous licence libre, archivé conformément aux règles de diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "type_doc",
+          "page": 1,
+          "extrait": "LICENCE PROFESSIONNELLE EN AGRONOMIE OPTION : Agro-Economie"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ETUDE DE LA RENTABILITE ECONOMIQUE DE L’ELEVAGE ET DE LA COMMERCIALISATION D’ŒUFS DE PINTADE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00705",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "TAMSAOUETE Mustapha",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "efficience",
+        "eau sol plante",
+        "aspersion",
+        "goutte a goutte",
+        "cours"
+      ],
+      "titre_trouve": "RESUME MODULE IRRIGATION - Introduction générale à l’irrigation",
+      "titre": "Résumé de cours : Module d'initiation à l'irrigation agricole",
+      "resume": "Synthèse de cours abordant l'histoire de l'irrigation, les relations eau-sol-plante (ETP, ETM, réserve utile) et les taux d'efficience des systèmes d'arrosage.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours individuel non publié sous licence ouverte, classé en archive pédagogique interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "RESUME MODULE IRRIGATION Introduction générale à l’irrigation"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Système / Méthode | Efficience (%) Surface | 40 - 50 Aspersion | 75 – 85 Goutte a goutte | 80 - 95"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00706",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "sante_animale",
+        "ruminants",
+        "aviculture"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "ethologie",
+        "bien-etre animal",
+        "stress",
+        "cinq libertes",
+        "elevage",
+        "revision examen"
+      ],
+      "titre_trouve": "Résumé et Révision pour l’Examen : Éthologie et Bien-être Animal",
+      "titre": "Fiche de révision : Éthologie et bien-être animal en élevage",
+      "resume": "Guide synthétique de révision d'examen abordant les principes fondamentaux du bien-être animal, les cinq libertés et les indicateurs physiologiques et comportementaux de stress chez les animaux d'élevage.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche de révision étudiante pour examen non publiée sous licence libre, conservée en archive.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé et Révision pour l’Examen : Éthologie et Bien-être Animal"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "évaluation du bien-être animal dans différents contextes. Il explore les réponses au stress chez les ovins, les volailles, les bovins"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00707",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "gestion_exploitation"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2025,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "perimetre irrigue",
+        "gestion de l eau",
+        "hydraulique agricole",
+        "bilan hydrique",
+        "reseau d irrigation"
+      ],
+      "titre_trouve": "Module : Gestion protection des périmètres irrigues",
+      "titre": "Gestion et protection des périmètres irrigués : Concepts, organisation et bilan hydrique",
+      "resume": "Support de cours approfondi sur l'aménagement et la gestion des périmètres irrigués, détaillant les typologies de superficies, l'organisation des usagers et le calcul du bilan hydrique parcellaire.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire/technique non publié sous licence libre, archivé pour référence pédagogique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Module : Gestion protection des périmètres irrigues"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Ensemble des surfaces occupées ou non par les cultures, peuvent être arrosées par l’eau d’irrigation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00708",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [],
+      "type_doc": "periodique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "jardinage",
+      "pays": "France",
+      "annee": 2025,
+      "auteurs": "Rédaction Rustica",
+      "source_organisation": "Rustica Éditions",
+      "mots_cles": [
+        "jardinage",
+        "rustica",
+        "potager tempere",
+        "arbres fruitiers",
+        "revue commerciale"
+      ],
+      "titre_trouve": "Rustica : Le magazine n°1 du jardinage au naturel (N° 2909)",
+      "titre": "Rustica - Hebdomadaire de jardinage au naturel (Numéro 2909 - Septembre 2025)",
+      "resume": "Numéro hebdomadaire du magazine commercial français Rustica dédié au jardinage familial tempéré, aux travaux d'automne du verger et du potager, et aux plantes ornementales.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Publication commerciale payante sous droits d'auteur réservés et adaptée au climat tempéré européen, non diffusable publiquement.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.99,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "L 11850 - 2909 S - F: 2,90 € - RD Du 26 sept. au 2 oct. 2025"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Le magazine n°1 du jardinage au naturel"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00709",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "NOURINE MAMMAR Abdellah",
+      "source_organisation": "Faculté de Médecine d'Alger",
+      "mots_cles": [
+        "cytologie",
+        "medecine humaine",
+        "biologie cellulaire",
+        "faculte de medecine d alger"
+      ],
+      "titre_trouve": "livre de cytologie, conçu spécialement pour les étudiants de première année de médecine",
+      "titre": "Manuel de cytologie pour étudiants en première année de médecine humaine",
+      "resume": "Support de cours et synthèse de cytologie humaine destiné aux étudiants de première année de médecine de la Faculté d'Alger, traitant de la structure et du fonctionnement cellulaire.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de médecine humaine générale sans application vétérinaire ou agronomique, exclu du périmètre de la plateforme.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Faculté de médecine d’Alger ... spécialement pour les étudiants de première année de médecine"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "livre de cytologie, conçu spécialement pour les étudiants de première année de médecine"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00710",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "en",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "Benzineb Abdelwahab",
+      "source_organisation": null,
+      "mots_cles": [
+        "cytology",
+        "human medicine",
+        "cell biology",
+        "plasma membrane"
+      ],
+      "titre_trouve": "RÉSUMÉ DU CYTOLOGIE : Module cytologie première années médecine -S1-",
+      "titre": "Résumé de cytologie en anglais pour étudiants en première année de médecine",
+      "resume": "Fiche de synthèse en anglais couvrant le programme de cytologie de première année de médecine humaine : théorie cellulaire, organites, membranes plasmiques et jonctions cellulaires.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Support de cours de médecine humaine sans lien avec l'agronomie ou l'élevage, exclu du périmètre Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Module cytologie première années médecine -S1-"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "RÉSUMÉ DU CYTOLOGIE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00711",
+      "domaine_principal": "transversal",
+      "sous_domaine": "agriculture_generale",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "machinisme agricole",
+      "pays": "Nouvelle-Calédonie",
+      "annee": 2016,
+      "auteurs": "Bernard ANGONIN",
+      "source_organisation": "Chambre d'Agriculture de Nouvelle-Calédonie / Direction du Développement Rural province Sud",
+      "mots_cles": [
+        "tracteur agricole",
+        "machinisme",
+        "moteur",
+        "lestage",
+        "pneumatiques",
+        "relevage hydraulique",
+        "securite"
+      ],
+      "titre_trouve": "REGLES DE BASE DE L’UTILISATION DU TRACTEUR AGRICOLE",
+      "titre": "Règles de base de l'utilisation du tracteur agricole : Conduite, réglages et sécurité",
+      "resume": "Guide technique complet détaillant les règles fondamentales d'utilisation d'un tracteur agricole : régime moteur, étalonnage des vitesses, lestage, pression des pneumatiques et attelage des outils.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique institutionnel de référence sur le machinisme agricole et la maîtrise du tracteur, d'une grande valeur pratique pour les exploitations.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "REGLES DE BASE DE L’UTILISATION DU TRACTEUR AGRICOLE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Chambre d'Agriculture de Nouvelle Calédonie Plateforme Machinisme Agricole"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00712",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "persil",
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Agribusiness Planning",
+      "source_organisation": "Agribusiness Planning",
+      "mots_cles": [
+        "persil",
+        "plante aromatique",
+        "maraichage",
+        "fiche culture",
+        "semis",
+        "burkina faso"
+      ],
+      "titre_trouve": "Persil : sa fiche culture",
+      "titre": "Fiche culture du persil : Guide pratique de production maraîchère",
+      "resume": "Fiche pratique détaillant l'itinéraire technique de culture du persil : semis, entretien, arrosage, variétés, protection contre les maladies et récolte en climat soudano-sahélien.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique de vulgarisation claire et immédiatement exploitable par les producteurs maraîchers en Afrique de l'Ouest.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Persil : sa fiche culture"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 3,
+          "extrait": "Contact WhatsApp : +226 55 88 48 58"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00713",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "biodiversite_ecologie",
+      "domaines_secondaires": [
+        "climat_changement_climatique"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2019,
+      "auteurs": "B-Yacine",
+      "source_organisation": null,
+      "mots_cles": [
+        "pollution",
+        "environnement",
+        "ecosysteme",
+        "biotope",
+        "biocenose",
+        "smog",
+        "ecologie"
+      ],
+      "titre_trouve": "Résumé de module Pollution Quelques généralités et définitions",
+      "titre": "Résumé de cours : Module pollution de l'environnement et écologie générale",
+      "resume": "Synthèse de cours abordant les définitions clés de l'écologie (biotope, biocénose, écosystèmes), les différentes composantes de la biosphère et les mécanismes de la pollution atmosphérique.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de révision académique non diffusé sous licence ouverte, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Résumé de module Pollution Quelques généralités et définitions"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Un écosystème est composé de 2 éléments : Biotope + Biocénose = écosystème"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00714",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "YAICI et ARAB",
+      "source_organisation": null,
+      "mots_cles": [
+        "embryologie humaine",
+        "ovulation",
+        "gametogenese",
+        "spermatozoide",
+        "ovocyte"
+      ],
+      "titre_trouve": "Embryologie humaine YAICI et ARAB",
+      "titre": "Embryologie humaine : Mécanismes de l'ovulation et morphologie des gamètes humains",
+      "resume": "Extrait de cours d'embryologie humaine décrivant la chronologie de l'ovulation, les régulations hormonales et la comparaison morphologique entre spermatozoïde et ovocyte humains.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document portant sur l'embryologie humaine médicale, hors périmètre agricole et agronomique Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 8,
+          "extrait": "Spermatozoide humain (× 1250) ... Ovocyte II humain (× 200) ... Embryologie humaine YAICI et ARAB"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Ovulation I. Définition"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00715",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "YAICI et ARAB",
+      "source_organisation": null,
+      "mots_cles": [
+        "mitose",
+        "meiose",
+        "cycle cellulaire",
+        "embryologie humaine",
+        "faculte de medecine"
+      ],
+      "titre_trouve": "Cycle cellulaire et mitose",
+      "titre": "Biologie cellulaire et embryologie humaine : Cycle cellulaire, mitose et méiose",
+      "resume": "Support de cours médical détaillant les étapes du cycle cellulaire, de la mitose et de la méiose, assorti de questions à choix multiples pour étudiants en médecine.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Fascicule de cours d'embryologie et biologie médicale humaine, exclu du périmètre Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.9,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "domaine_principal",
+          "page": 31,
+          "extrait": "Embryologie humaine YAICI et ARAB"
+        },
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cycle cellulaire et mitose"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00716",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "poulet local",
+      "pays": "Togo",
+      "annee": 2024,
+      "auteurs": "Benjamin VOEDZI",
+      "source_organisation": "KNOWLEDGE ACADEMY",
+      "mots_cles": [
+        "poulet local",
+        "aviculture traditionnelle",
+        "poulailler",
+        "togo",
+        "elevage avicole",
+        "extrait"
+      ],
+      "titre_trouve": "Manuel Pratique de l'Éleveur de Poulets Locaux Série N° 09",
+      "titre": "Manuel pratique de l'éleveur de poulets locaux (Extrait de guide technique)",
+      "resume": "Extrait d'un guide pratique togolais consacré à la conduite d'un élevage avicole de poulets locaux, présentant les principes de base de l'habitat, des poulaillers et de la reproduction.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait promotionnel partiel d'un manuel commercial privé, non diffusable en accès complet et archivé.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "complet",
+          "page": 1,
+          "extrait": "Réussir l_Elevage de Poulets Locaux (Extrait).pdf"
+        },
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Manuel Pratique de l'Éleveur de Poulets Locaux Série N° 09 Benjamin VOEDZI"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00717",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2007,
+      "auteurs": "Merial, Vincent Hélye",
+      "source_organisation": "Merial",
+      "mots_cles": [
+        "vaccination avicole",
+        "vaccins inactives",
+        "chaine du froid",
+        "hygiene",
+        "seringue",
+        "volaille"
+      ],
+      "titre_trouve": "Réussir l’injection des vaccins inactivés",
+      "titre": "Guide technique : Réussir l’injection des vaccins inactivés en aviculture",
+      "resume": "Affiche technique illustrée récapitulant les bonnes pratiques (à faire et à ne pas faire) avant, pendant et après l'injection de vaccins inactivés chez les volailles pour garantir l'efficacité vaccinale.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support visuel pratique et très didactique de biosécurité et vaccination aviaire directement utilisable par les techniciens et éleveurs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Réussir l’injection des vaccins inactivés"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 1,
+          "extrait": "Ne pas dépasser 1000 poulettes/heure/vaccinateur"
+        }
+      ]
+    }
+  ]
+}

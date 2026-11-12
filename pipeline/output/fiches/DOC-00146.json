@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00146",
+  "sha256": "28028fc4900035b153cef1eea588b9adef0a47838c77483034abd695be49893c",
+  "nom_original": "AGROEQUIPEMENT Ch 1 - 5 ENSA.pdf",
+  "chemin_relatif_source": "OD_Docs/AGROEQUIPEMENT Ch 1 - 5 ENSA.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 13339395,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 170,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Mohamed Amine Feddal",
+  "source_organisation": "ENSA Alger",
+  "mots_cles": [
+    "agroequipement",
+    "machinisme agricole",
+    "tracteurs",
+    "moteur thermique",
+    "materiel agricole",
+    "ensa"
+  ],
+  "titre_trouve": "Cours d'Agroéquipement 2021",
+  "titre": "Cours d'agroéquipement et machinisme agricole",
+  "resume": "Support de cours complet d'agroéquipement dispensé à l'ENSA Alger, couvrant les moteurs thermiques, les tracteurs et les équipements mécaniques agricoles.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire non publié sous licence libre, archivé conformément aux règles de propriété intellectuelle académique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "auteurs",
+      "page": 169,
+      "extrait": "Cours d'Agroéquipement 2021 Dr.FEDDAL Mohamed Amine | Génie Rural - Machinisme Agricole"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00146__cours-d-agroequipement-et-machinisme-agricole.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00146__cours-d-agroequipement-et-machinisme-agricole.pdf"
+}

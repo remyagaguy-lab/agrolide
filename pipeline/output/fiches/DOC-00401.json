@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00401",
+  "sha256": "510919fca5845085266a05a2db801df536e15bcfacbc232b3fd7085fb6bac6b8",
+  "nom_original": "Expertise agronomique.pdf",
+  "chemin_relatif_source": "OD_Docs/Expertise agronomique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4978845,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 58,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Pierre-Marie Cogné",
+  "source_organisation": "Cyathea",
+  "mots_cles": [
+    "diagnostic agronomique",
+    "analyse de sol",
+    "fertilisation organique",
+    "paniandy",
+    "la reunion"
+  ],
+  "titre_trouve": "Expertise agronomique : Diagnostic du site de Paniandy (Bras Panon)",
+  "titre": "Expertise agronomique et écologique : Diagnostic du site de Paniandy (Bras Panon)",
+  "resume": "Rapport d'expertise agronomique et écologique réalisant le diagnostic physique, pédologique et agronomique des parcelles du site de Paniandy à La Réunion, avec analyses de sol.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Rapport d'expertise commandité pour un site local spécifique à La Réunion (bureau d'études privé), sans licence de diffusion publique.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Expertise agronomique Diagnostic du site de Paniandy (Bras Panon)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00401__expertise-agronomique-et-ecologique-diagnostic-du-site.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00401__expertise-agronomique-et-ecologique-diagnostic-du-site.pdf"
+}

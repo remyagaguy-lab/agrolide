@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00488",
+  "sha256": "8ad655b4a812ecb8d1240774cea7fffe01534e4a61dc41c34e2e1712d0d751d2",
+  "nom_original": "Guide-Pratique-Poulailler-Familial.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide-Pratique-Poulailler-Familial.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2054982,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00487",
+  "groupe_doublon_id": "GRP-0035",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00487 (Guide pratique du poulailler familial en matériaux locaux).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "annee": 2016,
+  "auteurs": "GAFPAM",
+  "source_organisation": "GAFPAM / ADM",
+  "mots_cles": [
+    "poulailler familial",
+    "aviculture villageoise",
+    "poules locales",
+    "bambou",
+    "elevage avicole"
+  ],
+  "titre_trouve": "GUIDE PRATIQUE DU POULAILLER FAMILIAL",
+  "titre": "Guide pratique du poulailler familial en matériaux locaux",
+  "resume": "Guide pratique d'aviculture familiale expliquant la construction d'un poulailler amélioré en matériaux locaux (bambous, nattes), l'alimentation et la santé des poules.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE PRATIQUE DU POULAILLER FAMILIAL Formation GAFPAM"
+    },
+    {
+      "champ": "autre",
+      "page": 4,
+      "extrait": "Matériels de construction du poulailler type GAFPAM : Fournitures végétales : 20 Bambous de Chine, 15 Nattes"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00488__guide-pratique-du-poulailler-familial-en-materiaux-loca.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00488__guide-pratique-du-poulailler-familial-en-materiaux-loca.pdf"
+}

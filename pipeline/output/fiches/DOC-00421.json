@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00421",
+  "sha256": "d8e5b8ce989cd540c24e80e11be0798b84859ddcd92efe7aec11f78ac6130875",
+  "nom_original": "Fabrication_de_la_provende_pour_ (2).pdf",
+  "chemin_relatif_source": "OD_Docs/Fabrication_de_la_provende_pour_ (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 372393,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 15,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Cameroun",
+  "annee": 2019,
+  "auteurs": "SAILD",
+  "source_organisation": "SAILD / CDDR",
+  "mots_cles": [
+    "provende",
+    "alimentation de la volaille",
+    "poules pondeuses",
+    "poulets de chair",
+    "formulation",
+    "saild"
+  ],
+  "titre_trouve": "FABRICATION DE LA PROVENDE POUR POULES PONDEUSES ET POULETS DE CHAIR",
+  "titre": "Fabrication de la provende pour poules pondeuses et poulets de chair",
+  "resume": "Synthèse technique du SAILD détaillant la formulation et la fabrication artisanale de provende équilibrée pour poulets de chair et poules pondeuses en zone tropicale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "copie_quasi_identique",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Doublon (copie_quasi_identique) du document canonique DOC-00422.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 14,
+      "extrait": "SAILD Recueil de fiches techniques pour l’entrepreneur rural. Tome 1. Yaoundé : SAILD, 1998"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0073",
+  "canonique_id": "DOC-00422",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00421__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-00421__fabrication-de-la-provende-pour-poules-pondeuses-et-pou.pdf"
+}

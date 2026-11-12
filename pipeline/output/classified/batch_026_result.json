@@ -1,0 +1,845 @@
+{
+  "batch_number": 26,
+  "results": [
+    {
+      "id": "DOC-00383",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "sante_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "lapin",
+      "pays": "Canada",
+      "annee": 2017,
+      "auteurs": "Julie Dufour",
+      "source_organisation": "Centre Hospitalier Universitaire Vétérinaire (CHUV) de Montréal",
+      "mots_cles": [
+        "lapin",
+        "animal de compagnie",
+        "lagomorphe",
+        "alimentation lapin",
+        "reproduction lapin"
+      ],
+      "titre_trouve": "LE LAPIN",
+      "titre": "Fiche conseil sur le lapin de compagnie (caractéristiques, diète et santé)",
+      "resume": "Fiche de vulgarisation vétérinaire du CHUV de Montréal présentant les caractéristiques biologiques, les principales races de compagnie, la longévité, la diète et la reproduction chez le lapin domestique.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte",
+        "licence_nc"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'information pour propriétaires d'animaux de compagnie au Canada, sans lien avec la cuniculture de rente tropicale et assorti d'une clause restrictive.",
+      "confiance": {
+        "classification": 0.88,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "LE LAPIN Hôpital des animaux de compagnie Centre hospitalier universitaire vétérinaire"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 2,
+          "extrait": "Ce document ne peut en aucun cas être utilisé dans un cadre commercial sans autorisation expresse de l'auteur."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00384",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "sante_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Sénégal",
+      "annee": 1997,
+      "auteurs": "Jean François Dayon, Brigitte Arbelot",
+      "source_organisation": "Institut Sénégalais de Recherches Agricoles (ISRA) / CIRAD-EMVT",
+      "mots_cles": [
+        "aviculture",
+        "poules",
+        "senegal",
+        "batiment d'elevage",
+        "sante avicole",
+        "guide d'elevage",
+        "isra",
+        "cirad"
+      ],
+      "titre_trouve": "GUIDE D'ELEVAGE DES VOLAILLES AU SENEGAL",
+      "titre": "Guide d'élevage des volailles au Sénégal",
+      "resume": "Guide pratique complet de 113 pages élaboré conjointement par l'ISRA et le CIRAD sur l'aviculture au Sénégal : conception des bâtiments d'élevage, conditions d'ambiance, biosécurité, désinfection et prophylaxie.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de référence ISRA/CIRAD conçu pour le développement de l'aviculture en Afrique de l'Ouest, diffusable gratuitement en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE D'ELEVAGE DES VOLAILLES AU SENEGAL"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Institut Sénégalais de Recherches Agricoles ISRA LNERV Dakar Sénégal CIRAD EMVT"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00385",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aquaculture_peche",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "genetique_reproduction"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "pisciculture",
+      "pays": null,
+      "annee": 2015,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "Centre de Formation et de Recherche en Aquaculture (CEFRA / Université de Liège)",
+      "mots_cles": [
+        "tilapia",
+        "aquaculture",
+        "pisciculture",
+        "oreochromis niloticus",
+        "alimentation des poissons",
+        "reproduction piscicole"
+      ],
+      "titre_trouve": "Biologie et élevage des tilapias",
+      "titre": "Biologie et élevage des tilapias : systématique, reproduction, alimentation et systèmes aquacoles",
+      "resume": "Support de cours sous forme de présentation diapositive de 109 pages couvrant la systématique, la biologie, les modes de reproduction, l'alimentation, le grossissement et la commercialisation des tilapias.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire en diapositives sans licence libre formelle, conservé en archive pour consultation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Biologie et élevage des tilapias"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00386",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aulacodiculture",
+      "pays": "Cameroun",
+      "annee": 2012,
+      "auteurs": "E. Lionelle Ngo-Samnick",
+      "source_organisation": "CTA / ISF Cameroun",
+      "mots_cles": [
+        "aulacode",
+        "agouti",
+        "aulacodiculture",
+        "petit elevage",
+        "pro-agro",
+        "cta",
+        "cameroun",
+        "gibier d'elevage"
+      ],
+      "titre_trouve": "Elevage des aulacodes",
+      "titre": "Élevage des aulacodes (Guide pratique Pro-Agro)",
+      "resume": "Manuel technique de vulgarisation de la collection Pro-Agro (CTA / ISF Cameroun) détaillant les conditions de logement, les normes de reproduction, la conduite alimentaire et le suivi sanitaire de l'aulacode.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence terrain publié par le CTA et ISF Cameroun pour la promotion de l'aulacodiculture tropicale, diffusable en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Elevage des aulacodes PRO-AGRO"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "La collection Pro-Agro est une coédition d’Ingénieurs Sans Frontières Cameroun (ISF Cameroun) et du Centre technique de coopération agricole et rurale (CTA)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00387",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "sante_animale",
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Bénin",
+      "annee": 2024,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "poulet goliath",
+        "aviculture",
+        "benin",
+        "volaille rustique",
+        "alimentation volaille",
+        "couvaison artificielle",
+        "rentabilite"
+      ],
+      "titre_trouve": null,
+      "titre": "Guide pratique d'élevage des poulets Goliath au Bénin",
+      "resume": "Guide technique pratique décrivant la conduite de la race de poulet rustique améliorée « Goliath » au Bénin : normes d'habitat, formulation alimentaire, gestion des pathologies, incubation artificielle et gestion économique.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide pratique pertinent sur le poulet Goliath au Bénin mais sans mention d'auteur ni d'organisme source explicite, nécessitant une validation humaine des droits avant diffusion.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.5,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Les poulets baptisés « Goliath » sont une race rustique originaire du Bénin"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00388",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "sante_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": null,
+      "annee": 2006,
+      "auteurs": "N. van Eekeren, A. Maas, H.W. Saatkamp, M. Verschuur",
+      "source_organisation": "Agromisa / CTA",
+      "mots_cles": [
+        "aviculture",
+        "agrodok",
+        "elevage familial",
+        "poules",
+        "cta",
+        "agromisa",
+        "sante avicole",
+        "alimentation volaille"
+      ],
+      "titre_trouve": "Agrodok 4 : L'élevage des poules à petite échelle",
+      "titre": "L'élevage des poules à petite échelle (Agrodok 4)",
+      "resume": "Guide de vulgarisation de la collection Agrodok (Fondation Agromisa et CTA) présentant les méthodes pratiques pour réussir l'élevage avicole à petite échelle en milieu tropical : logement, incubation, nutrition et protection sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de référence internationale Agrodok (Agromisa/CTA) dédié à la vulgarisation auprès des éleveurs des pays du Sud, diffusable en accès public.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Agrodok 4 L'élevage des poules à petite échelle"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 3,
+          "extrait": "© Fondation Agromisa et CTA, Wageningen, 2006."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00389",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Maroc",
+      "annee": 2009,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "poules pondeuses",
+        "aviculture",
+        "oeufs de consommation",
+        "conduite d'elevage",
+        "leghorn",
+        "rhode island red"
+      ],
+      "titre_trouve": "TECHNIQUES DE CONDUITE DES ELEVAGES DE POULES PONDEUSES D’œufs DE CONSOMMATON",
+      "titre": "Techniques de conduite des élevages de poules pondeuses d'œufs de consommation",
+      "resume": "Support technique détaillant les bases génétiques (Leghorn, Rhode Island Red) et la conduite d'élevage des poules pondeuses : régimes alimentaires, abreuvement et préparation du bâtiment de ponte.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours non libre et incomplet (texte interrompu à la page 30), conservé à des fins d'archivage interne sans publication.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.7
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "TECHNIQUES DE CONDUITE DES ELEVAGES DE POULES PONDEUSES D’œufs DE CONSOMMATON"
+        },
+        {
+          "champ": "complet",
+          "page": 30,
+          "extrait": "b- Bâtiment comme pour le"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00390",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "alimentation_animale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "Maroc",
+      "annee": 2009,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "poulet de chair",
+        "aviculture",
+        "maroc",
+        "cout de revient",
+        "alimentation avicole",
+        "viande blanche"
+      ],
+      "titre_trouve": "Elevage de poulet de chair",
+      "titre": "L'élevage de poulet de chair au Maroc : conduite technique et analyse technico-économique",
+      "resume": "Support de cours décrivant la filière du poulet de chair au Maroc, les dynamiques de production de viande blanche et la décomposition détaillée des charges du coût de revient.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document de formation non libre et incomplet (texte interrompu à la page 17), archivé sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.75
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Elevage de poulet de chair"
+        },
+        {
+          "champ": "pays",
+          "page": 1,
+          "extrait": "Le nombre des élevages de poulet de chair au Maroc est de plus de 5000 unités"
+        },
+        {
+          "champ": "complet",
+          "page": 17,
+          "extrait": "Sur le plan économique, l’éleveur a intérêt à réaliser un prix de revient le plus faible possibl"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00391",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "alimentation_animale",
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "petits ruminants",
+      "pays": "Bénin",
+      "annee": 2018,
+      "auteurs": "Janvier Hounguevou",
+      "source_organisation": "Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) / MAEP Bénin",
+      "mots_cles": [
+        "embouche ovine",
+        "tabaski",
+        "moutons",
+        "benin",
+        "giz",
+        "maep",
+        "alimentation ovine",
+        "ruminants"
+      ],
+      "titre_trouve": "GUIDE D’ELEVAGE SUR L’EMBOUCHE OVINE POUR LA TABASKI Généralités",
+      "titre": "Guide d'élevage sur l'embouche ovine pour la Tabaski au Bénin",
+      "resume": "Guide de formation technique et professionnelle agricole (GIZ / MAEP Bénin) sur l'embouche ovine pour la fête de la Tabaski : critères de sélection des béliers, conduite nutritionnelle et suivi sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique institutionnel de formation (GIZ / Ministère de l'Agriculture du Bénin) d'un intérêt direct pour les éleveurs de petits ruminants en Afrique tropicale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE D’ELEVAGE SUR L’EMBOUCHE OVINE POUR LA TABASKI Généralités"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Publié par la Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH Projet Education et Formation Technique Professionnelle Agricole (EFTPA-CAADP)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00392",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Brigitte Bulard-Cordeau",
+      "source_organisation": null,
+      "mots_cles": [
+        "chat",
+        "animal de compagnie",
+        "felin",
+        "encyclopedie"
+      ],
+      "titre_trouve": null,
+      "titre": "Encyclopédie pratique du chat",
+      "resume": "Ouvrage encyclopédique consacré aux chats de compagnie (races félines, comportement, alimentation et soins de santé pour animaux domestiques de compagnie).",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "droits_reserves"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Ouvrage sur les chats domestiques (animaux de compagnie), totalement hors périmètre agricole et sous droits d'auteur commerciaux.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Encyclopédie pratique du chat (Bulard-Cordeau B. et al.)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00393",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "decideur_institution",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "hydraulique",
+        "eau",
+        "ecoulement",
+        "etude technique",
+        "amenagement"
+      ],
+      "titre_trouve": null,
+      "titre": "Étude générale hydraulique",
+      "resume": "Volume technique de 244 pages constitué d'un document scanné sans texte extractible portant sur l'hydraulique, nécessitant un traitement OCR pour exploitation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fichier volumineux scanné sans couche texte exploitable, nécessitant un traitement OCR et une vérification humaine du périmètre exact et des droits.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Etude générale hydraulique"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00394",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "irrigation",
+        "efficience d'application",
+        "dose d'irrigation",
+        "calcul hydraulique",
+        "pertes en eau"
+      ],
+      "titre_trouve": "Calcul Efficience d’Irrigation",
+      "titre": "Exemple d'exercice résolu : calcul de l'efficience d'irrigation à la parcelle",
+      "resume": "Exercice pratique résolu présentant la formule de calcul de l'efficience d'application de l'eau d'irrigation sur 1 hectare et l'évaluation des pertes par ruissellement et infiltration.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Note d'exercice pédagogique informelle non publiée sous licence ouverte, archivée pour usage interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Calcul Efficience d’Irrigation Exercise:"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00395",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "tomate",
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "besoins en eau",
+        "irrigation",
+        "etp",
+        "kc",
+        "tomate",
+        "evapotranspiration"
+      ],
+      "titre_trouve": "BESOINS EN EAU D’IRRIGATION DES CULTURES",
+      "titre": "Exercice résolu : calcul des besoins en eau d'irrigation d'une culture de tomate",
+      "resume": "Fiche d'exercice résolu démontrant le calcul des besoins en eau d'une parcelle maraîchère de tomate en floraison à partir de l'ETP mensuelle et du coefficient cultural Kc.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Exercice d'application agricole informel sans licence libre explicite, conservé pour référence interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "BESOINS EN EAU D’IRRIGATION DES CULTURES Exercice :"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00396",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "pastèque",
+      "pays": null,
+      "annee": 2025,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "efficience d'irrigation",
+        "goutte-a-goutte",
+        "pasteque",
+        "volume pompe",
+        "pertes d'eau"
+      ],
+      "titre_trouve": "Exercice : efficience",
+      "titre": "Exercice résolu : calcul de l'efficience d'un système d'irrigation au goutte-à-goutte (culture de pastèque)",
+      "resume": "Fiche de calcul résolu déterminant l'efficience hydraulique d'un réseau goutte-à-goutte sur une parcelle de pastèque de 10 hectares en comparant le volume consommé au volume pompé.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'exercice informel sans licence libre, archivé pour consultation pédagogique interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Exercice : efficience Efficience (%) ="
+        }
+      ]
+    },
+    {
+      "id": "DOC-00397",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Moustapha",
+      "source_organisation": null,
+      "mots_cles": [
+        "aspersion",
+        "irrigation par aspersion",
+        "dimensionnement",
+        "pluviometrie",
+        "rampes d'arrosage",
+        "ecartement"
+      ],
+      "titre_trouve": "Positionnement des asperseur cas pour un module de 1ha",
+      "titre": "Note de calcul : positionnement et dimensionnement d'un réseau d'aspersion sur un module de 1 ha",
+      "resume": "Fiche technique de calcul hydraulique définissant le nombre d'asperseurs, de rampes, les débits et la pluviométrie horaire pour la couverture intégrale par aspersion d'un module d'un hectare.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Note de calcul de dimensionnement hydraulique sans licence libre, archivée pour usage interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Positionnement des asperseur cas pour un module de 1ha (216 m x 48m)"
+        }
+      ]
+    }
+  ]
+}

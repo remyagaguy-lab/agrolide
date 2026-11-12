@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00954",
+  "sha256": "d2a0ce45ba3bac55e4e0baa4177c09ea7d3d466d991615f1da23e5e057f00d7f",
+  "nom_original": "hydraulique statique appliquée.pdf",
+  "chemin_relatif_source": "OD_Docs/hydraulique statique appliquée.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2543467,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 63,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "Aziz Hebal",
+  "source_organisation": "Université du 20 août 1955 de Skikda",
+  "mots_cles": [
+    "hydraulique",
+    "hydrologie statistique",
+    "amenagement hydro-agricole",
+    "master",
+    "skikda",
+    "algerie"
+  ],
+  "titre_trouve": "Université de Skikda : Spécialité Aménagement hydro-Agricole Master II",
+  "titre": "Hydrologie statistique appliquée aux aménagements hydro-agricoles (Master 2)",
+  "resume": "Support de cours universitaire de Master 2 présentant le traitement et l'homogénéisation des séries de données hydrologiques pour le dimensionnement hydro-agricole.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours magistral universitaire de Master 2 sans licence ouverte explicite : conservation en archive interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Université du 20 août 1955 de Skikda Département des sciences agronomique Spécialité : Aménagement hydro-Agricole Niveau : Master II"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Préparé par Mr. Hebal Aziz (MCA) Année universitaire 2020/2021"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00954__hydrologie-statistique-appliquee-aux-amenagements-hydro.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00954__hydrologie-statistique-appliquee-aux-amenagements-hydro.pdf"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00398",
+  "sha256": "d72ee683410230eaf6d7acb0212f3730a0baf92a2b94b81f8645b16474888cee",
+  "nom_original": "Exercice_sur_le_calcul_des_pertes_de_charge_dans_les_rampes_et_portes.docx",
+  "chemin_relatif_source": "OD_Docs/Exercice_sur_le_calcul_des_pertes_de_charge_dans_les_rampes_et_portes.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 13552,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "auteur_introuvable"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "irrigation goutte a goutte",
+    "pertes de charge",
+    "hydraulique agricole",
+    "rampe",
+    "darcy-weisbach"
+  ],
+  "titre_trouve": "Exercice sur le calcul des pertes de charge dans les rampes et portes rampes d'un réseau d'irrigation goutte à goutte.",
+  "titre": "Exercice corrigé : Calcul des pertes de charge en irrigation goutte-à-goutte",
+  "resume": "Exercice d'application et son corrigé détaillé sur le dimensionnement hydraulique et le calcul des pertes de charge dans les rampes d'un réseau d'irrigation au goutte-à-goutte.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support d'exercice pédagogique non publié officiellement, archivé pour formation interne.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.75,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Exercice sur le calcul des pertes de charge dans les rampes et portes rampes d'un réseau d'irrigation goutte à goutte."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00398__exercice-corrige-calcul-des-pertes-de-charge-en-irrigat.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00398__exercice-corrige-calcul-des-pertes-de-charge-en-irrigat.pdf"
+}

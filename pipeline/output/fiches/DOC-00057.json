@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00057",
+  "sha256": "bb771c518a00ba37c7f0f3cb4adb19002c080c30b5148695ee598ddfda0332ba",
+  "nom_original": "Résumé2 Biologie Animale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/biologie animales/biologie animales/Résumé2 Biologie Animale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 4855853,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 40,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_animale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "biologie animale",
+    "cours",
+    "zoologie",
+    "sciences de base",
+    "organogenese"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 2 de biologie animale",
+  "resume": "Deuxième volet d'un cours synthétique de biologie animale de 40 pages, détaillant l'anatomie, les grandes fonctions et les tissus animaux pour les filières biologiques et agronomiques.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan sans texte exploitable nécessitant OCR et validation éditoriale humaine.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.35,
+    "completude": 0.4
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé2 Biologie Animale.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0009",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00057__resume-2-de-biologie-animale.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00057__resume-2-de-biologie-animale.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00458",
+  "sha256": "0d4904c29fb7ec3340b18566737ae9207b670440bb8d560bae8dd36887c979e8",
+  "nom_original": "Formation Pisciculture 1.pdf",
+  "chemin_relatif_source": "OD_Docs/Formation Pisciculture 1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 486666,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Génération D'Impact",
+  "source_organisation": "Génération D'Impact",
+  "mots_cles": [
+    "tilapia",
+    "clarias",
+    "pisciculture",
+    "biologie du poisson",
+    "sexage",
+    "aquaculture"
+  ],
+  "titre_trouve": "Biologie du Tilapia et du clarias",
+  "titre": "Biologie et sexage du Tilapia et du Clarias en pisciculture",
+  "resume": "Fiche technique illustrée sur la biologie comparée, l'anatomie externe et les méthodes pratiques de sexage du tilapia et du poisson-chat africain (clarias).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche pratique d'initiation au sexage et à l'anatomie du tilapia et du clarias, utile pour les pisciculteurs débutants.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Biologie du Tilapia et du clarias"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00458__biologie-et-sexage-du-tilapia-et-du-clarias-en-piscicul.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00458__biologie-et-sexage-du-tilapia-et-du-clarias-en-piscicul.pdf"
+}

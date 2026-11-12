@@ -1,0 +1,764 @@
+{
+  "batch_number": 9,
+  "results": [
+    {
+      "id": "DOC-00121",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "École Supérieure d'Agronomie de Mostaganem",
+      "source_organisation": "École Supérieure d'Agronomie de Mostaganem",
+      "mots_cles": [
+        "pedologie",
+        "science du sol",
+        "proprietes physico-chimiques",
+        "agronomie",
+        "formation du sol"
+      ],
+      "titre_trouve": "Pédologie",
+      "titre": "Cours de Pédologie : formation, constituants et propriétés physico-chimiques du sol",
+      "resume": "Support de cours complet de pédologie pour étudiants en agronomie, couvrant les processus de formation des sols, leurs constituants minéraux et organiques, ainsi que leurs propriétés physico-chimiques et leurs fonctions écologiques.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non publié sous licence libre, archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Il s’agit de la « Pédologie », dont l’objectif est de mettre à la disposition des étudiants un document de première nécessité"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00123",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "YAICI et ARAB",
+      "source_organisation": null,
+      "mots_cles": [
+        "embryologie humaine",
+        "medecine",
+        "developpement embryonnaire"
+      ],
+      "titre_trouve": "Quatrième semaine du développement embryonnaire",
+      "titre": "Quatrième semaine du développement embryonnaire (Embryologie humaine)",
+      "resume": "Support de cours et série de questions à choix multiples d'embryologie humaine abordant la morphogenèse, la délimitation de l'embryon et la neurulation au cours de la quatrième semaine de développement.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document médical portant sur l'embryologie humaine, strictement hors du périmètre agricole et agroalimentaire d'Agrolide.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Quatrième semaine du développement embryonnaire"
+        },
+        {
+          "champ": "domaine_principal",
+          "page": 24,
+          "extrait": "Embryologie humaine YAICI et ARAB"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00124",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "article",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "papaye",
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "Karim Nébié, Inoussa Sanané, Boureima Tassembédo, Alizèta Sawadogo",
+      "source_organisation": "Journal of Applied Biosciences / INERA",
+      "mots_cles": [
+        "papaye",
+        "cochenille farineuse",
+        "paracoccus marginatus",
+        "burkina faso",
+        "protection des cultures",
+        "ravageurs"
+      ],
+      "titre_trouve": "Connaissance et pratiques de gestion de la cochenille farineuse du papayer Paracoccus marginatus (Hemiptera : Pseudococcidae) chez les producteurs de papaye dans la zone soudanienne du Burkina Faso",
+      "titre": "Pratiques de gestion de la cochenille farineuse du papayer au Burkina Faso",
+      "resume": "Article scientifique évaluant les connaissances paysannes et les méthodes de gestion de la cochenille farineuse du papayer (Paracoccus marginatus) dans la zone soudanienne du Burkina Faso.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "CC BY",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Article de recherche en accès libre présentant des données de terrain directement applicables à la protection phytosanitaire du papayer en Afrique de l'Ouest.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Connaissance et pratiques de gestion de la cochenille farineuse du papayer Paracoccus marginatus"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00125",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [
+        "cultures_maraicheres"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": null,
+      "auteurs": "Marc Meloche",
+      "source_organisation": "Collection Guides Pratiques",
+      "mots_cles": [
+        "jardinage",
+        "horticulture",
+        "compost",
+        "astuces",
+        "potager"
+      ],
+      "titre_trouve": "500 p'tits trucs JARDINAGE",
+      "titre": "500 p'tits trucs de jardinage",
+      "resume": "Guide pratique proposant 500 astuces et conseils horticoles pour la gestion potagère, florale et la protection contre les insectes nuisibles en contexte de jardinage tempéré nord-américain.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Ouvrage commercial protégé par le droit d'auteur et dédié au jardinage familial en climat tempéré québécois.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.95,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 5,
+          "extrait": "500 p'tits trucs JARDINAGE"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 163,
+          "extrait": "Meloche, Marc / HOD p'Tits trucs de jardinage. (Collection Guides Pratiques)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00126",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "transversal"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "bois d'œuvre",
+      "pays": "Algérie",
+      "annee": 2024,
+      "auteurs": "Dr K. GARAH",
+      "source_organisation": "École Nationale Supérieure des Forêts (Algérie)",
+      "mots_cles": [
+        "sylviculture",
+        "foresterie",
+        "peuplement forestier",
+        "operations sylvicoles",
+        "taillis"
+      ],
+      "titre_trouve": "Cours de Fondements de la sylviculture",
+      "titre": "Cours de fondements de la sylviculture : principes, orientations et opérations sylvicoles",
+      "resume": "Support de cours sous forme de présentation abordant les objectifs sylvicoles, l'intégration socio-économique des forêts, les cycles sylvigénétiques et les premières opérations sylvicoles.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non libre constituant un chapitre isolé (Chapitre 4), archivé sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours de Fondements de la sylviculture Année universitaire 2023 / 2024 Cours présenté par Dr K. GARAH"
+        },
+        {
+          "champ": "complet",
+          "page": 2,
+          "extrait": "Chapitre 4 : Fondements de la sylviculture"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00128",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "plantes_aromatiques_medicinales",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "Apprendre Préparer Survivre",
+      "source_organisation": "Apprendre Préparer Survivre",
+      "mots_cles": [
+        "plantes sauvages",
+        "cueillette",
+        "survie",
+        "plantes comestibles",
+        "ortie",
+        "pissenlit"
+      ],
+      "titre_trouve": "Les 5 plantes sauvages comestibles indispensables en survie",
+      "titre": "Les 5 plantes sauvages comestibles indispensables en survie",
+      "resume": "Fascicule pratique présentant cinq plantes sauvages comestibles de la flore tempérée européenne (ortie, plantain, pissenlit, ail des ours, nombril de Vénus) et les consignes pour une cueillette sécurisée.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document commercial issu de @EpubsFR sous droits réservés et portant sur la flore sauvage tempérée.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Les 5 plantes sauvages comestibles indispensables en survie"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 3,
+          "extrait": "DÉCOUVRIR LE GUIDE DE PRÉPARATION À LA SURVIE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00129",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "genie civil",
+        "calcul de structures",
+        "nv 65",
+        "action du vent",
+        "pression dynamique"
+      ],
+      "titre_trouve": "Etude au vent selon NV 65",
+      "titre": "Calcul et étude de l'action du vent sur les constructions selon les règles NV 65",
+      "resume": "Chapitre technique de calcul de génie civil détaillant les formules et coefficients d'application des règles NV 65 pour estimer les charges dynamiques exercées par le vent sur les bâtiments.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document technique de génie civil et calcul de structure bâtiment (norme NV 65), hors périmètre agricole.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.8,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CH. I : Etude au vent selon NV 65"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00130",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "production_vegetale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "bois d'œuvre",
+      "pays": null,
+      "annee": 2011,
+      "auteurs": "Sarisoft",
+      "source_organisation": null,
+      "mots_cles": [
+        "arbres",
+        "arbustes",
+        "mediterranee",
+        "pin d'alep",
+        "fiches botaniques",
+        "dendrologie"
+      ],
+      "titre_trouve": "Fiches techniques 60",
+      "titre": "60 fiches techniques d'arbres et d'arbustes méditerranéens",
+      "resume": "Ensemble de soixante fiches botaniques décrivant les caractéristiques morphologiques, le feuillage, la floraison, les exigences de sol et les usages des arbres et arbustes du bassin méditerranéen.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Recueil de fiches issu de @EpubsFR sous droits d'auteur réservés et consacré aux essences méditerranéennes.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Fiche n° 1 Nom commun : Pin d'Alep"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00131",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "maraîchage",
+      "pays": "France",
+      "annee": 2005,
+      "auteurs": "Joseph Argouarc'h",
+      "source_organisation": "CFPPA Rennes Le Rheu / Educagri",
+      "mots_cles": [
+        "maraichage biologique",
+        "cultures legumieres",
+        "fiches technico-economiques",
+        "itineraire technique",
+        "marge brute"
+      ],
+      "titre_trouve": "Les cultures légumières en agriculture biologique : Fiches technico-économiques des principaux légumes",
+      "titre": "Les cultures légumières en agriculture biologique : fiches technico-économiques",
+      "resume": "Guide technico-économique détaillé pour les principales productions maraîchères biologiques de plein champ et sous abri : planification, temps de travaux, fertilisation et calcul des marges brutes.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "public",
+      "motif_decision": "Guide technique institutionnel d'un centre de formation agricole public (CFPPA/Educagri), diffusable en accès public pour son intérêt méthodologique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les cultures légumières en agriculture biologique Fiches technico-économiques des principaux légumes"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00132",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable",
+        "production_vegetale"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Niger",
+      "annee": 2021,
+      "auteurs": "Patrick Delmas, Simbo Keita",
+      "source_organisation": "Réseau National des Chambres d'Agriculture du Niger (RECA)",
+      "mots_cles": [
+        "recuperation des terres",
+        "ces/drs",
+        "zai",
+        "demi-lunes",
+        "niger",
+        "matiere organique",
+        "reca"
+      ],
+      "titre_trouve": "Formation des techniciens ONG sur les actions de récupération des terres",
+      "titre": "Formation sur les actions de récupération des terres dégradées au Niger (Zaï, demi-lunes, matière organique)",
+      "resume": "Support de formation pratique du RECA Niger pour techniciens d'ONG sur la restauration des terres sahéliennes dégradées : conception des ouvrages (zaï, demi-lunes), semis et gestion de la matière organique.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Support de formation institutionnel et pratique du RECA Niger, au cœur des priorités sahéliennes de restauration des terres dégradées.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Formation des techniciens ONG sur les actions de récupération des terres"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Patrick Delmas / Réseau National des Chambres d’Agriculture du Niger"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00133",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "aviculture"
+      ],
+      "type_doc": "actes_conference",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2015,
+      "auteurs": "Marie Bourin, Isabelle Bouvarel",
+      "source_organisation": "Institut Technique de l'Aviculture (ITAVI) / ITAB / INRA",
+      "mots_cles": [
+        "aviculture biologique",
+        "poules pondeuses",
+        "alimentation animale",
+        "feverole",
+        "nutrition avicole"
+      ],
+      "titre_trouve": "ALIMENTATION 100% BIO POUR LES POULES PONDEUSES : Résultat d’essais conduits en station expérimentale",
+      "titre": "Alimentation 100% bio pour les poules pondeuses : résultats d'essais en station",
+      "resume": "Synthèse technique d'essais expérimentaux de l'ITAVI évaluant la formulation d'aliments 100% biologiques à base de maïs et féverole pour poules pondeuses et leurs effets sur la ponte et la qualité des œufs.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "membres",
+      "motif_decision": "Restitution d'essais techniques institutionnels (ITAVI/INRA) à forte valeur méthodologique, mise à disposition des membres du réseau.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ALIMENTATION 100% BIO POUR LES POULES PONDEUSES : Résultat d’essais conduits en station expérimentale"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00134",
+      "domaine_principal": "hors_perimetre",
+      "sous_domaine": "aucun",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 0,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2008,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "genie civil",
+        "charge de neige",
+        "reglementation n84",
+        "toitures",
+        "structures"
+      ],
+      "titre_trouve": "Action de la neige selon N 84",
+      "titre": "Action de la neige sur les constructions selon le règlement N 84 en Algérie",
+      "resume": "Extrait technique de cours de génie civil définissant les règles de calcul de la charge statique de neige sur les toitures selon la norme algérienne N 84 selon les zones géographiques et altitudes.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ensemble_partiel"
+      ],
+      "decision_publication": "exclu_hors_perimetre",
+      "motif_decision": "Document de calcul de génie civil sur les charges de neige sur les toitures, totalement hors périmètre agricole et agroalimentaire.",
+      "confiance": {
+        "classification": 0.99,
+        "droits": 0.8,
+        "completude": 0.85
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "CH. II : Etude à la neige selon (N 84) Action de la neige selon N 84"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00135",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "legumineuses_oleagineux",
+      "domaines_secondaires": [
+        "cereales",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "niébé",
+      "pays": "Côte d'Ivoire",
+      "annee": 2020,
+      "auteurs": "Akanza Kouadjo Paul, N’Da Hugues Annicet, Gbakatchetche Henri Cousin",
+      "source_organisation": "Centre National de Recherche Agronomique (CNRA) / Journal of Applied Biosciences",
+      "mots_cles": [
+        "niebe",
+        "mais",
+        "rotation culturale",
+        "fertilite des sols",
+        "cote d'ivoire",
+        "cnra",
+        "adventices"
+      ],
+      "titre_trouve": "La culture du niébé : bon précédent cultural du maïs en Côte d’Ivoire",
+      "titre": "La culture du niébé : bon précédent cultural du maïs en Côte d'Ivoire",
+      "resume": "Fiche technique du CNRA démontrant l'intérêt agronomique du niébé en rotation culturale avant le maïs en Côte d'Ivoire pour améliorer la fertilité du sol et réduire la pression des adventices et ravageurs.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "CC BY",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique opérationnelle en accès libre du CNRA démontrant les gains de fertilité et de rendement de la rotation niébé-maïs.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE La culture du niébé : bon précédent cultural du maïs en Côte d’Ivoire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00136",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "production_animale",
+        "agroalimentaire"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "decideur_institution",
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Mali",
+      "annee": 2014,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "complexe avicole",
+        "abattoir volaille",
+        "projet d'investissement",
+        "business plan",
+        "mali",
+        "koulikoro",
+        "poulet de chair"
+      ],
+      "titre_trouve": "Profil du projet d’investissement : Complexe avicole (ferme avicole couplée à un abattoir volaille)",
+      "titre": "Profil d'investissement : complexe avicole intégré et abattoir de volaille à Koulikoro (Mali)",
+      "resume": "Profil de projet d'investissement complet pour l'implantation d'un complexe avicole industriel intégrant élevage (chair et ponte) et abattoir de volailles dans la région de Koulikoro au Mali.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Modèle de projet d'investissement avicole sahélien comprenant l'ensemble des données dimensionnantes et financières, très utile pour les porteurs de projet.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Profil du projet d’investissement Titre du projet: Complexe avicole (ferme avicole couplée à un abattoir volaille)"
+        },
+        {
+          "champ": "pays",
+          "page": 1,
+          "extrait": "Site / emplacement: Région de Koulikoro"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00423",
+  "sha256": "5be1f2bbf1493267fd9b00bd0754d646b5993f1738185c4c3b4cccb49fe11686",
+  "nom_original": "Fecule de pomme de terre pulpe d_albumine.pdf",
+  "chemin_relatif_source": "OD_Docs/Fecule de pomme de terre pulpe d_albumine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 28082,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479448898-Fecule_de_pomme_de_terre_pulpe_d_albumine.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_cereales_tubercules",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "pomme de terre",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "fecule",
+    "pomme de terre",
+    "transformation industrielle",
+    "synoptique de procede",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité FECULE – ALBUMINE",
+  "titre": "Schéma de procédé industriel : Fécule de pomme de terre et pulpe d'albumine",
+  "resume": "Schéma synoptique industriel détaillant l'ensemble des opérations unitaires d'extraction de la fécule et de la pulpe d'albumine à partir de pommes de terre.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Schéma de procédé technique d'une seule page sans licence ouverte identifiable, archivé à titre documentaire.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.75,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité FECULE – ALBUMINE ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00423__schema-de-procede-industriel-fecule-de-pomme-de-terre-e.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_cereales_tubercules/DOC-00423__schema-de-procede-industriel-fecule-de-pomme-de-terre-e.pdf"
+}

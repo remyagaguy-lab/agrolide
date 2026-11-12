@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00165",
+  "sha256": "36f2fdf0c908134e3fe30d10d1c501e9c79445e8295b7a787e5899d6d3a49f8d",
+  "nom_original": "Agriculture durable Chapitre et 2.pdf",
+  "chemin_relatif_source": "OD_Docs/Agriculture durable Chapitre et 2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1168601,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476088799-Agriculture_durable_Chapitre_et_2.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00164",
+  "groupe_doublon_id": "GRP-0013",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00164 (Cours d'agriculture durable : Chapitres 1 et 2 (Master 1 PV)).",
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "R. Belmess",
+  "source_organisation": "Université d'El Oued (SNV)",
+  "mots_cles": [
+    "agriculture durable",
+    "cours",
+    "agriculture conventionnelle",
+    "itineraires techniques",
+    "master"
+  ],
+  "titre_trouve": "SNV El Oued. Cours. Agriculture durable. Ch.I M1.P.V 2021",
+  "titre": "Cours d'agriculture durable : Chapitres 1 et 2 (Master 1 PV)",
+  "resume": "Support de cours universitaire (Master 1) présentant les bases théoriques et techniques de l'agriculture conventionnelle et les principes de la transition agroécologique durable.",
+  "statut_droits": "travail_academique_non_publie",
+  "complet": false,
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SNV El Oued. Cours. Agriculture durable. Ch.I M1.P.V 2021 BEL MESS.R"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Chapitre I Les bases théoriques et pratiques de l'agriculture conventionnelle."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00165__cours-d-agriculture-durable-chapitres-1-et-2-master-1-p.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00165__cours-d-agriculture-durable-chapitres-1-et-2-master-1-p.pdf"
+}

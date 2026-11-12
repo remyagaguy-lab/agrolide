@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00381",
+  "sha256": "60e0d8f5380af7acb4020e7e80b098a2ac42a5366beaffa6d38a29b915160483",
+  "nom_original": "Elevage de Genisses.pdf",
+  "chemin_relatif_source": "OD_Docs/Elevage de Genisses.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2629901,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "bovin",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "genisse",
+    "elevage bovin",
+    "ruminants",
+    "bovins lait",
+    "conduite d'elevage"
+  ],
+  "titre_trouve": null,
+  "titre": "Élevage de génisses",
+  "resume": "Document de 4 pages sous forme de scan sans texte extractible traitant de la conduite d'élevage des génisses bovines.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte numérique nécessitant un OCR pour évaluer son contenu, son auteur et ses droits de diffusion.",
+  "confiance": {
+    "classification": 0.7,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Elevage de Genisses.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00381__elevage-de-genisses.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00381__elevage-de-genisses.pdf"
+}

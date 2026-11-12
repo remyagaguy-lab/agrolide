@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00094",
+  "sha256": "98c32641463d8642ab87713102e7e8a5e1a3813875b90f0bf8b6db9892938f9a",
+  "nom_original": "1805_PDF.pdf",
+  "chemin_relatif_source": "OD_Docs/1805_PDF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1813311,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 28,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "oie",
+  "pays": "Cameroun",
+  "annee": 2014,
+  "auteurs": "Irénée Modeste Bidima",
+  "source_organisation": "ISF Cameroun / CTA",
+  "mots_cles": [
+    "elevage des oies",
+    "oies",
+    "palmipedes",
+    "aviculture",
+    "pro-agro",
+    "cameroun"
+  ],
+  "titre_trouve": "élevage des oies",
+  "titre": "Élevage des oies (Collection Pro-Agro)",
+  "resume": "Guide pratique complet de la collection Pro-Agro présentant les techniques d'élevage villageois et semi-intensif des oies en Afrique centrale et de l'Ouest : logement, alimentation, reproduction, santé et valorisation commerciale.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet et de qualité de la collection Pro-Agro (CTA / ISF Cameroun) destiné aux producteurs d'Afrique subsaharienne.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "élevage des oies Irénée Modeste Bidima COLLECTION PRO-AGRO"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00094__elevage-des-oies-collection-pro-agro.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00094__elevage-des-oies-collection-pro-agro.pdf"
+}

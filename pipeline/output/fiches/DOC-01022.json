@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01022",
+  "sha256": "946f04843248df0e6fccb0206157d8e278f6dde81389cb8ff5f010e08480c18a",
+  "nom_original": "poudre de lait.pdf",
+  "chemin_relatif_source": "OD_Docs/poudre de lait.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 50336,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480008940-poudre_de_lait.pdf",
+  "nb_telechargements_existant": 2,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_produits_animaux",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "lait et produits laitiers",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "poudre de lait",
+    "tour d atomisation",
+    "laiterie",
+    "agroalimentaire",
+    "transformation laitiere",
+    "alimentation animale"
+  ],
+  "titre_trouve": "POUDRES DE LAIT",
+  "titre": "Diagramme de procédé industriel : Fabrication des poudres de lait (Atomisation et rouleaux)",
+  "resume": "Schéma technologique synthétique décrivant les étapes industrielles de fabrication des poudres de lait pour alimentation humaine et animale : écrémage, évaporation, atomisation et conditionnement.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique claire sur les technologies de concentration et séchage du lait, utile pour les professionnels de l'agroalimentaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "POUDRES DE LAIT"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01022__diagramme-de-procede-industriel-fabrication-des-poudres.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_produits_animaux/DOC-01022__diagramme-de-procede-industriel-fabrication-des-poudres.pdf"
+}

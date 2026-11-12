@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00217",
+  "sha256": "4e8a04bc23d663438ab03ac8a8fbe9da7d7abcd3e7b2ca0782d287ce26445618",
+  "nom_original": "Amélioration des plantes et sélection variétale.pdf",
+  "chemin_relatif_source": "OD_Docs/Amélioration des plantes et sélection variétale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 642919,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "semences_amelioration",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Kasmi Yacine",
+  "source_organisation": "Université Hamma Lakhdar - El Oued",
+  "mots_cles": [
+    "amelioration des plantes",
+    "selection varietale",
+    "genetique vegetale",
+    "master agronomie"
+  ],
+  "titre_trouve": "Amélioration des Plantes et Sélection Variétale",
+  "titre": "Amélioration des plantes et sélection variétale (Cours Master 1)",
+  "resume": "Polycopié de cours universitaire de Master 1 présentant les principes fondamentaux de l'amélioration génétique des plantes, les critères et les méthodes de sélection variétale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire non libre de droits, archivé conformément aux règles métier.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Université Hamma Lakhdar- EL Oued ... Amélioration des Plantes et Sélection Variétale Chargé du module : KASMI Yacine"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00217__amelioration-des-plantes-et-selection-varietale-cours-m.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/semences_amelioration/DOC-00217__amelioration-des-plantes-et-selection-varietale-cours-m.pdf"
+}

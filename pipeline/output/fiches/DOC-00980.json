@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00980",
+  "sha256": "8007079fb9786f4bff13bd99ccf3ea97fbb9aebfcfcda93e97117fd3c366155a",
+  "nom_original": "levure boulangere.pdf",
+  "chemin_relatif_source": "OD_Docs/levure boulangere.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 31116,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479847259-levure_boulangere.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "equipements_technologie",
+  "type_doc": "outil_modele",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "boulangerie",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "levure boulangere",
+    "melasse",
+    "diagramme de fabrication",
+    "fermentation",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité LEVURE BOULANGERE",
+  "titre": "Diagramme de procédé technologique de fabrication de la levure boulangère",
+  "resume": "Fiche schéma synoptique détaillant le diagramme de flux technologique et les bilans matières de la fabrication industrielle de levure boulangère fraîche et sèche à base de mélasse.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Schéma technologique synthétique et clair de fabrication agroalimentaire issu de la collection ISAA-MF, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité LEVURE BOULANGERE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00980__diagramme-de-procede-technologique-de-fabrication-de-la.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/equipements_technologie/DOC-00980__diagramme-de-procede-technologique-de-fabrication-de-la.pdf"
+}

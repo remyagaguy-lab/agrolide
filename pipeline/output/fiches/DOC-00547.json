@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00547",
+  "sha256": "0d23ce1b312839efb8c70214a092b848bdf263287d1f67a672a1d3404ba2f701",
+  "nom_original": "Le choix du bétail à soumettre à l_embouche.pdf",
+  "chemin_relatif_source": "OD_Docs/Le choix du bétail à soumettre à l_embouche.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 181853,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "article",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovins",
+  "pays": null,
+  "annee": null,
+  "auteurs": "Henri Calvet",
+  "source_organisation": "Revue d'élevage et de médecine vétérinaire des pays tropicaux (CIRAD)",
+  "mots_cles": [
+    "embouche bovine",
+    "engraissement",
+    "selection du betail",
+    "bovins",
+    "elevage tropical",
+    "CIRAD"
+  ],
+  "titre_trouve": "LE CHOIX DU BETAIL A SOUMETTRE A L'EMBOUCHE",
+  "titre": "Le choix du bétail à soumettre à l'embouche",
+  "resume": "Article zootechnique du CIRAD analysant les critères de sélection des bovins destinés à l'embouche en zone tropicale selon l'âge, le sexe, la race et l'état corporel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": "Open Access",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Article de référence de la REMVT/CIRAD en libre accès, directement opérationnel pour l'embouche bovine en Afrique tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE CHOIX DU BETAIL A SOUMETTRE A L'EMBOUCHE"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "H. CALVET"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00547__le-choix-du-betail-a-soumettre-a-l-embouche.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00547__le-choix-du-betail-a-soumettre-a-l-embouche.pdf"
+}

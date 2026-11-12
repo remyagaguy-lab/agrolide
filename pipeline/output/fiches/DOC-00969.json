@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00969",
+  "sha256": "868ecc6606fcea839e362747bc7a929830de63dad1730ad98254d8f48d237d37",
+  "nom_original": "la conception des réseaux de drainage.pdf",
+  "chemin_relatif_source": "OD_Docs/la conception des réseaux de drainage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7031323,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "titre_introuvable",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 55,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "transversal"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "drainage agricole",
+    "reseaux de drainage",
+    "assainissement agricole",
+    "hydraulique",
+    "gestion de l'eau"
+  ],
+  "titre_trouve": null,
+  "titre": "La conception des réseaux de drainage agricole",
+  "resume": "Document technique de 55 pages scanné sans couche texte portant sur le dimensionnement hydraulique, les critères pédologiques et l'aménagement des réseaux de drainage agricole, nécessitant un OCR.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte exploitable nécessitant une reconnaissance optique et une validation humaine de son périmètre et de ses droits.",
+  "confiance": {
+    "classification": 0.58,
+    "droits": 0.4,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "la conception des réseaux de drainage.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00969__la-conception-des-reseaux-de-drainage-agricole.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00969__la-conception-des-reseaux-de-drainage-agricole.pdf"
+}

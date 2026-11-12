@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00868",
+  "sha256": "3fa896d055cf9846c12d2e6b7e961babd0f94769bb0398f4dcfea6e07a4ee3de",
+  "nom_original": "document_569901.pdf",
+  "chemin_relatif_source": "OD_Docs/document_569901.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 11777357,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 102,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "agrumes, mangue",
+  "pays": null,
+  "annee": 2012,
+  "auteurs": "Henri Vannière",
+  "source_organisation": "CIRAD (UR HortSys)",
+  "mots_cles": [
+    "arboriculture fruitiere",
+    "agrumes",
+    "manguier",
+    "systemes de culture",
+    "verger tropical",
+    "CIRAD",
+    "maladies fruitieres"
+  ],
+  "titre_trouve": "Concept systèmes de culture fruitiers tropicaux et subtropicaux pérennes: cas des agrumes et du manguier",
+  "titre": "Systèmes de culture fruitiers tropicaux et subtropicaux pérennes : agrumes et manguier",
+  "resume": "Support de formation de haut niveau (102 diapositives) du CIRAD sur la conception agroécologique de vergers tropicaux pérennes, la physiologie de floraison et la gestion des maladies d'agrumes et manguiers.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Support de formation institutionnel approfondi du CIRAD sur l'arboriculture fruitière tropicale, destiné aux membres et techniciens.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Concept systèmes de culture fruitiers tropicaux et subtropicaux pérennes: cas des agrumes et du manguier"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "H. VANNIERE UR HortSys CIRAD"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00868__systemes-de-culture-fruitiers-tropicaux-et-subtropicaux.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00868__systemes-de-culture-fruitiers-tropicaux-et-subtropicaux.pdf"
+}

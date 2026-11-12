@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00575",
+  "sha256": "1616c72727c6851a3af4e892064178b655884e9fac576bce4dee032c1edd9927",
+  "nom_original": "MANIOC.pdf",
+  "chemin_relatif_source": "OD_Docs/MANIOC.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2112157,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 18,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "manioc",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI",
+  "mots_cles": [
+    "manioc",
+    "tubercules",
+    "itineraire technique",
+    "recolte",
+    "cameroun",
+    "agriculture tropicale"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU MANIOC",
+  "titre": "Technologie de production du manioc (Guide de formation IFATI)",
+  "resume": "Manuel de formation pratique détaillant l'itinéraire technique complet de la culture du manioc : exigences agro-écologiques, bouturage, entretien, fertilisation et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique professionnel complet sur le manioc en zone tropicale humide, directement exploitable par les producteurs.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ... TECHNOLOGIE DE PRODUCTION DU MANIOC"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00575__technologie-de-production-du-manioc-guide-de-formation.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00575__technologie-de-production-du-manioc-guide-de-formation.pdf"
+}

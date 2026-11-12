@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00741",
+  "sha256": "572bc06e549f36dc601b6e94d651ea43625bf717ef279d680a7db0bd0b9471f2",
+  "nom_original": "TD Technique de détection et de localisation des composes.pdf",
+  "chemin_relatif_source": "OD_Docs/TD Technique de détection et de localisation des composes.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1456799,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 18,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2024,
+  "auteurs": "Dr Loucif Karim",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "biologie cellulaire",
+    "isolement des organites",
+    "histochimie",
+    "cytochimie",
+    "presentation td"
+  ],
+  "titre_trouve": "Technique de détection et de localisation des composes cellulaires Techniques d’isolement des organites TD 03",
+  "titre": "Techniques de détection et d'isolement des composés cellulaires (TD 03 Diaporama)",
+  "resume": "Diaporama de cours de physiologie cellulaire présentant les méthodes d'isolement des organites cellulaires, de fractionnement et de caractérisation histochimique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Diaporama de travaux dirigés universitaires sans licence libre explicite, archivé pour le fonds pédagogique.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technique de détection et de localisation des composes cellulaires Techniques d’isolement des organites TD 03 Dr. LOUCIF Karim"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00741__techniques-de-detection-et-d-isolement-des-composes-cel.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00741__techniques-de-detection-et-d-isolement-des-composes-cel.pdf"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00106",
+  "sha256": "b81f9e7395b14fe56729a933ca4c986c55b5072019b773f58e08d3dae0f32a82",
+  "nom_original": "2025_Assolement_Strategie2023.pdf",
+  "chemin_relatif_source": "OD_Docs/2025_Assolement_Strategie2023.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7720412,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 48,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "gestion_exploitation",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2023,
+  "auteurs": "Chambre d'Agriculture de Région Ile-de-France, AS77 AGC, CAERIF",
+  "source_organisation": "Chambre d'Agriculture de Région Ile-de-France",
+  "mots_cles": [
+    "assolement",
+    "itineraire technique",
+    "cout de production",
+    "gestion d'exploitation",
+    "commercialisation"
+  ],
+  "titre_trouve": "ASSOLEMENT & STRATÉGIE - Itinéraires techniques et seuils de commercialisation prévisionnels",
+  "titre": "Assolement & Stratégie 2023 : Itinéraires techniques et seuils de commercialisation prévisionnels",
+  "resume": "Guide technico-économique 2023 présentant les fiches par culture (blé, colza, maïs, sorgho, etc.), le calcul des seuils de commercialisation et l'impact de la réforme PAC en Île-de-France.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Pertinence de 1 et contexte tempéré non adapté (Île-de-France/PAC) : selon les règles, la diffusion membres requiert une pertinence >= 2. Le document doit être classé en non_publie_archive.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ASSOLEMENT & STRATÉGIE Itinéraires techniques et seuils de commercialisation prévisionnels"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Chambre d’Agriculture de Région Ile-de-France"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Pertinence de 1 et contexte tempéré non adapté (Île-de-France/PAC) : selon les règles, la diffusion membres requiert une pertinence >= 2. Le document doit être classé en non_publie_archive."
+  },
+  "nom_fichier_final": "DOC-00106__assolement-strategie-2023-itineraires-techniques-et-seu.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_exploitation/DOC-00106__assolement-strategie-2023-itineraires-techniques-et-seu.pdf"
+}

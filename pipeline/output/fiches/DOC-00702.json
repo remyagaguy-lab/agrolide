@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00702",
+  "sha256": "3d465c65021e206e9412ddb12171d82cb64b0cc9cade994118f907ab21da6a32",
+  "nom_original": "Races ovines PDF.pdf",
+  "chemin_relatif_source": "OD_Docs/Races ovines PDF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4445682,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 29,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "petits ruminants",
+  "pays": "Burkina Faso",
+  "annee": 2022,
+  "auteurs": "Christian Sidibé",
+  "source_organisation": null,
+  "mots_cles": [
+    "races ovines",
+    "mouton",
+    "petits ruminants",
+    "burkina faso",
+    "sahel",
+    "embouche ovine",
+    "mrah"
+  ],
+  "titre_trouve": "RACES OVINES au BF SIDIBE Christian Ingénieur en élevage",
+  "titre": "Les races ovines et petits ruminants au Burkina Faso : caractéristiques et valorisation",
+  "resume": "Support de présentation illustrant les principales races ovines et caprines sahéliennes et soudaniennes au Burkina Faso et leur valorisation en embouche.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Présentation technique très pertinente sur les races ovines sahéliennes, mais statut de droits d'auteur non documenté ; conservée en archive.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.5,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "RACES OVINES au BF SIDIBE Christian Ingénieur en élevage"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00702__les-races-ovines-et-petits-ruminants-au-burkina-faso-ca.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00702__les-races-ovines-et-petits-ruminants-au-burkina-faso-ca.pdf"
+}

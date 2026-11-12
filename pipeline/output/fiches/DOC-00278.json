@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00278",
+  "sha256": "872c16e57f631844baf598bd462b3110005c3bc181111c20cda086dabcb1d344",
+  "nom_original": "Caractérisation des pratiques d_embouche.pdf",
+  "chemin_relatif_source": "OD_Docs/Caractérisation des pratiques d_embouche.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 453890,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 15,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "bovins",
+  "pays": "Burkina Faso",
+  "annee": 2014,
+  "auteurs": "Hadja Oumou Sanon, Aminata Drabo, Mamadou Sangare, Timbilfou Kiendrebeogo, Alain Gomgnibou",
+  "source_organisation": "INERA / CIRDES",
+  "mots_cles": [
+    "embouche bovine",
+    "bovins",
+    "Burkina Faso",
+    "INERA",
+    "CIRDES",
+    "alimentation animale",
+    "elevage pastoral"
+  ],
+  "titre_trouve": "Caractérisation des pratiques d’embouche bovine dans l’Ouest du Burkina Faso",
+  "titre": "Caractérisation des pratiques d'embouche bovine dans l'Ouest du Burkina Faso",
+  "resume": "Article scientifique analysant les caractéristiques des exploitations d'embouche bovine, les rations alimentaires utilisées, la rentabilité financière et les contraintes dans l'Ouest du Burkina Faso.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Open Access (IJBCS / AJOL)",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article de recherche scientifique en libre accès (IJBCS), hautement pertinent pour les agronomes et chercheurs de la plateforme.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Caractérisation des pratiques d’embouche bovine dans l’Ouest du Burkina Faso"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Hadja Oumou SANON, Aminata DRABO, Mamadou SANGARE, Timbilfou KIENDREBEOGO et Alain GOMGNIBOU"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00278__caracterisation-des-pratiques-d-embouche-bovine-dans-l.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00278__caracterisation-des-pratiques-d-embouche-bovine-dans-l.pdf"
+}

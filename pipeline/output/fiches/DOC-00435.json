@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00435",
+  "sha256": "26021e573ecb2b1dd83cc430aabdd3699bf8cd9dc88984d3c6466c936820fa3a",
+  "nom_original": "Fiche-technique-1-logement-AFRIQUE-BF.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche-technique-1-logement-AFRIQUE-BF.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 312949,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "porcins",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "porcin",
+  "pays": "Burkina Faso",
+  "annee": 2014,
+  "auteurs": "Isabelle Jardon",
+  "source_organisation": "Thamani",
+  "mots_cles": [
+    "elevage de porcs",
+    "porcherie",
+    "batiment d'elevage",
+    "afrique tropicale",
+    "climat chaud"
+  ],
+  "titre_trouve": "Fiche technique n° 1 : le logement – construction des boxes",
+  "titre": "Fiche technique : Le logement et la construction des porcheries en Afrique",
+  "resume": "Guide pratique illustré pour la conception et la construction de porcheries adaptées au climat tropical africain : ventilation, ombrage, hygiène, plans et schémas de boxes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique complète de l'ONG Thamani conçue spécifiquement pour la construction de porcheries en Afrique tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique n° 1 : le logement – construction des boxes."
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Elevage de porcs – Fiches techniques n° 1 : le logement www.thamani.be"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00435__fiche-technique-le-logement-et-la-construction-des-porc.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/porcins/DOC-00435__fiche-technique-le-logement-et-la-construction-des-porc.pdf"
+}

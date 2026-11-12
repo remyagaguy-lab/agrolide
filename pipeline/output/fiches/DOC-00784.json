@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00784",
+  "sha256": "085feee62e6edd5d13c1400f7ac55409c528f630151d7381ee52026c9699163c",
+  "nom_original": "agrume_ft_itineraire_culture_maladies_ravageurs_polynesieFrancaise.pdf",
+  "chemin_relatif_source": "OD_Docs/agrume_ft_itineraire_culture_maladies_ravageurs_polynesieFrancaise.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3285442,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476260343-agrume_ft_itineraire_culture_maladies_ravageurs_polynesieFrancaise.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 20,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "agrumes",
+  "pays": "Polynésie française",
+  "annee": 2018,
+  "auteurs": "Direction de l’agriculture de Polynésie française, CIRAD",
+  "source_organisation": "Direction de l’agriculture de Polynésie française",
+  "mots_cles": [
+    "agrumes",
+    "citrus",
+    "itineraire technique",
+    "maladies agrumes",
+    "ravageurs",
+    "arboriculture tropicale"
+  ],
+  "titre_trouve": "LA CULTURE DES AGRUMES EN POLYNESIE FRANÇAISE",
+  "titre": "La culture des agrumes : itinéraire technique, maladies et ravageurs",
+  "resume": "Fiche technique officielle de 20 pages détaillant la conduite culturale des agrumes en milieu tropical insulaire : sélection parcellaire, préparation du sol, greffage, taille et protection phytosanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique officielle complète éditée par un service public d'agriculture en libre diffusion pour les arboriculteurs tropicaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE – REEDITION 2018 LA CULTURE DES AGRUMES EN POLYNESIE FRANÇAISE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Direction de l’agriculture B.P.100, 98 713 Pape’ete – Tahiti - Polynésie française"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00784__la-culture-des-agrumes-itineraire-technique-maladies-et.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00784__la-culture-des-agrumes-itineraire-technique-maladies-et.pdf"
+}

@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00202",
+  "sha256": "71d7e848c1c8250c48084dc6e733b7df5c87225a6f954e5ee964ce546e0d7bd5",
+  "nom_original": "Agrodok_41_La_culture_des_champignons_a_petite_echelle_2@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_41_La_culture_des_champignons_a_petite_echelle_2@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1278356,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 91,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "champignons",
+  "pays": null,
+  "annee": 2007,
+  "auteurs": "Bram van Nieuwenhuijzen",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "champignons",
+    "volvariella",
+    "volvaire",
+    "agaricus",
+    "champignon de couche",
+    "compostage"
+  ],
+  "titre_trouve": "Agrodok 41 - La culture des champignons à petite échelle - 2 Agaricus et Volvariella",
+  "titre": "La culture des champignons à petite échelle - 2 : Agaricus et Volvariella",
+  "resume": "Guide pratique détaillant la production de champignons de couche (Agaricus) et de volvaires (Volvariella) à petite échelle, incluant la préparation du compost et la conduite des récoltes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fichier tagué @EpubsFR avec droits d'auteur réservés : requalification en droits_reserves_commercial, non publiable (non_publie_archive).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 41 - La culture des champignons à petite échelle - 2 Agaricus et Volvariella"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Bram van Nieuwenhuijzen"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0016",
+  "canonique_id": null,
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "droits",
+      "flags",
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Fichier tagué @EpubsFR avec droits d'auteur réservés : requalification en droits_reserves_commercial, non publiable (non_publie_archive)."
+  },
+  "nom_fichier_final": "DOC-00202__la-culture-des-champignons-a-petite-echelle-2-agaricus.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00202__la-culture-des-champignons-a-petite-echelle-2-agaricus.pdf"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00850",
+  "sha256": "9a2166fe232159009cede18d013f50de931a5462b1fee3be339a4337b5415a95",
+  "nom_original": "cours_amenagement_steppique_univ Batna.pdf",
+  "chemin_relatif_source": "OD_Docs/cours_amenagement_steppique_univ Batna.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 9362386,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 64,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "pastoralisme",
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Imène Benzina",
+  "source_organisation": "Université Batna 2",
+  "mots_cles": [
+    "amenagement steppique",
+    "pastoralisme",
+    "alfa",
+    "parcours pastoraux",
+    "zones arides",
+    "algerie"
+  ],
+  "titre_trouve": "Aménagement steppique",
+  "titre": "Aménagement steppique et pastoral en zone aride",
+  "resume": "Présentation de cours de niveau Master 2 détaillant les techniques d'aménagement agro-pastoral, la dynamique des nappes alfatières, la gestion des parcours (rotation, mise en défens, charge animale) et la réhabilitation des zones arides.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire diaporama non libre de droits, archivé.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Aménagement steppique"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "Chargée du cours Dr. Imène BENZINA Master 2 Ecologie des zones arides et semi arides"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00850__amenagement-steppique-et-pastoral-en-zone-aride.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00850__amenagement-steppique-et-pastoral-en-zone-aride.pdf"
+}

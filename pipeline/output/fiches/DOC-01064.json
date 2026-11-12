@@ -1,0 +1,72 @@
+{
+  "id": "DOC-01064",
+  "sha256": "86dc7b0b677a3855aa80cf788c7fe549b1762e466d8dc445b8bbe6edd54809d5",
+  "nom_original": "ÉLEVAGE BIO Programme .pdf",
+  "chemin_relatif_source": "OD_Docs/ÉLEVAGE BIO Programme .pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 817402,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "elevage_general",
+  "type_doc": "autre",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "elevage biologique",
+    "programme de formation",
+    "zootechnie bio"
+  ],
+  "titre_trouve": "ÉLEVAGE BIO Programme",
+  "titre": "Programme de formation sur l'élevage biologique",
+  "resume": "Document scanné présentant le programme modulaire d'une session de formation professionnelle consacrée aux principes et pratiques de l'élevage biologique.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans couche texte nécessitant une OCR et une validation humaine de son contenu et de son statut.",
+  "confiance": {
+    "classification": 0.65,
+    "droits": 0.4,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "ÉLEVAGE BIO Programme (nom du fichier)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01064__programme-de-formation-sur-l-elevage-biologique.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/elevage_general/DOC-01064__programme-de-formation-sur-l-elevage-biologique.pdf"
+}

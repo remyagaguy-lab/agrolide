@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00286",
+  "sha256": "8fd4efe5c49f5b640cc63e65ff4f2ee6f87409b1c1ada4ecb37534a3ff742520",
+  "nom_original": "Chap 3 Floristique.pdf",
+  "chemin_relatif_source": "OD_Docs/Chap 3 Floristique.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1598975,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2023,
+  "auteurs": "wissem",
+  "source_organisation": null,
+  "mots_cles": [
+    "floristique",
+    "ecologie forestiere",
+    "repartition des especes",
+    "botanique forestiere",
+    "aire de dispersion"
+  ],
+  "titre_trouve": "Ecologie forestière Chapitre 3 Floristique",
+  "titre": "Écologie forestière : Chapitre 3, Floristique",
+  "resume": "Support de cours universitaire sur la floristique, étudiant l'aire de répartition des espèces ligneuses et herbacées et les facteurs d'adaptation écologique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé d'un polycopié universitaire non libre, archivé.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Ecologie forestière \nChapitre 3 Floristique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00286__ecologie-forestiere-chapitre-3-floristique.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00286__ecologie-forestiere-chapitre-3-floristique.pdf"
+}

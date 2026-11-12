@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00864",
+  "sha256": "7be7575bc6ce0136104443bd29adc95e8be1d00bd27c56ca7c4655a34702d9b1",
+  "nom_original": "dindo.pdf",
+  "chemin_relatif_source": "OD_Docs/dindo.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1551642,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 34,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Bénin",
+  "annee": 2011,
+  "auteurs": "Centre Songhaï, African Development Foundation (ADF)",
+  "source_organisation": "Centre Songhaï",
+  "mots_cles": [
+    "dindon",
+    "elevage de dindons",
+    "Centre Songhai",
+    "aviculture",
+    "Benin",
+    "guide pratique",
+    "alimentation volaille"
+  ],
+  "titre_trouve": "Elevage de dindons, Guide pratique (Centre Songhai, 12 p.)",
+  "titre": "Élevage de dindons : guide pratique",
+  "resume": "Guide pratique du Centre Songhaï détaillant la conduite de l'élevage de dindons au Bénin : démarrage des dindonneaux, alimentation à base de ressources locales, logement et santé.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique terrain du Centre Songhaï dédié à l'aviculture tropicale, complet et hautement adapté aux éleveurs ouest-africains.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Elevage de dindons, Guide pratique (Centre Songhai, 12 p.)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Rédigé et publié par le Centre Songhaï , en collaboration avec l'African Development Foundation"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00864__elevage-de-dindons-guide-pratique.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00864__elevage-de-dindons-guide-pratique.pdf"
+}

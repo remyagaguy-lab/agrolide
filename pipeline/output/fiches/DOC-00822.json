@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00822",
+  "sha256": "6ce02f24fabcd350d71c3746d4d5180035a20a1ab9e2af2013aee8e086c5fce2",
+  "nom_original": "cc2459fr (1).pdf",
+  "chemin_relatif_source": "OD_Docs/cc2459fr (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1878418,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 32,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "agroeconomie"
+  ],
+  "sous_domaine": "numerique_technologies",
+  "type_doc": "rapport",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "FAO",
+  "source_organisation": "FAO",
+  "mots_cles": [
+    "sofa",
+    "automatisation",
+    "fao",
+    "technologies agricoles",
+    "mecanisation",
+    "systemes agroalimentaires"
+  ],
+  "titre_trouve": "Résumé de La Situation mondiale de l’alimentation et de l’agriculture 2022",
+  "titre": "Résumé de La situation mondiale de l'alimentation et de l'agriculture 2022 (SOFA)",
+  "resume": "Brochure de synthèse de 32 pages de la FAO (SOFA 2022) consacrée à l'automatisation de l'agriculture : motorisation, outils numériques, robotique et politiques d'inclusion des petits producteurs.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Synthèse officielle de 32 pages du rapport phare SOFA 2022 de la FAO sur l'automatisation agricole, destinée aux membres de la communauté.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA SITUATION MONDIALE DE L’ALIMENTATION ET DE L’AGRICULTURE RÉSUMÉ"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "FAO. 2022. Résumé de La Situation mondiale de l’alimentation et de l’agriculture 2022. Rome, FAO."
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00822__resume-de-la-situation-mondiale-de-l-alimentation-et-de.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/numerique_technologies/DOC-00822__resume-de-la-situation-mondiale-de-l-alimentation-et-de.pdf"
+}

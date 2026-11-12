@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00961",
+  "sha256": "914260dbe75bae837a486a1a29984c86c5318a98214177ba46a690e648778b74",
+  "nom_original": "irda-travailsolregieagricole-articlesvulgarises-2007.pdf",
+  "chemin_relatif_source": "OD_Docs/irda-travailsolregieagricole-articlesvulgarises-2007.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 485705,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "article",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "fourrages",
+  "pays": "Canada",
+  "annee": 2007,
+  "auteurs": "Sonia Boucher",
+  "source_organisation": "IRDA / Le Producteur de Lait Québécois",
+  "mots_cles": [
+    "travail du sol",
+    "semis direct",
+    "matiere organique",
+    "activite biologique",
+    "productivite des sols",
+    "irda",
+    "quebec"
+  ],
+  "titre_trouve": null,
+  "titre": "Travail du sol et régie agricole : impacts sur la productivité et la biologie des sols",
+  "resume": "Article technique de vulgarisation de l'IRDA évaluant l'impact des pratiques de travail du sol (labour conventionnel vs semis direct) et des apports organiques sur l'activité microbienne et la fertilité physique des sols.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article de vulgarisation agronomique institutionnelle de l'IRDA, pertinent et réservé aux membres de la plateforme.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE PRODUCTEUR DE LAIT QUÉBÉCOIS OCTOBRE 2007 CULTURE LA PRODUCTIVITÉ DES SOLS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00961__travail-du-sol-et-regie-agricole-impacts-sur-la-product.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00961__travail-du-sol-et-regie-agricole-impacts-sur-la-product.pdf"
+}

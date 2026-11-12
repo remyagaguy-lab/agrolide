@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00145",
+  "sha256": "87687cf750f2a1db15686ca8803f06b97b95ab493185ffae795a76ef846c73fe",
+  "nom_original": "AGRICULTURE.pdf",
+  "chemin_relatif_source": "OD_Docs/AGRICULTURE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 798789,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 52,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "politiques_strategies",
+  "type_doc": "guide_pratique",
+  "public_principal": "decideur_institution",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2017,
+  "auteurs": "Groupe des Nations Unies pour le développement, Banque mondiale, Union européenne",
+  "source_organisation": "FAO, PNUD, Banque Mondiale, Union Européenne",
+  "mots_cles": [
+    "pdna",
+    "evaluation post-catastrophe",
+    "politiques agricoles",
+    "gestion des risques",
+    "relevement agricole",
+    "fao"
+  ],
+  "titre_trouve": "Agriculture, élevage, pêche et sylviculture DIRECTIVES PDNA VOLUME B SECTEUR PRODUCTIF",
+  "titre": "Directives PDNA : Évaluation des besoins post-catastrophe dans l'agriculture, l'élevage et la pêche",
+  "resume": "Guide méthodologique international pour l'évaluation des dommages, des pertes économiques et des besoins de relèvement dans le secteur agricole suite à une catastrophe naturelle.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide institutionnel international de référence pour l'évaluation post-catastrophe dans le secteur agricole, publié pour les membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agriculture, élevage, pêche et sylviculture DIRECTIVES PDNA VOLUME B SECTEUR PRODUCTIF"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00145__directives-pdna-evaluation-des-besoins-post-catastrophe.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/politiques_strategies/DOC-00145__directives-pdna-evaluation-des-besoins-post-catastrophe.pdf"
+}

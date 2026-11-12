@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00960",
+  "sha256": "2a4738f3257282ff9450ed4cb6206a0997039f33bedae555e8d773a0e4f65a9c",
+  "nom_original": "ingénieur d_état en agronomie 07000.pdf",
+  "chemin_relatif_source": "OD_Docs/ingénieur d_état en agronomie 07000.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 43411041,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive"
+  ],
+  "nb_pages": 177,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "agronomie_generale",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2012,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Instituts Techniques Agricoles d'Algérie (ITDAS / ITGC Biskra)",
+  "mots_cles": [
+    "calendrier cultural",
+    "algerie",
+    "biskra",
+    "operations culturales",
+    "protection phytosanitaire",
+    "itdas",
+    "agronomie"
+  ],
+  "titre_trouve": "Calendrier des Opérations Culturales 2012",
+  "titre": "Calendrier des opérations culturales et de surveillance phytosanitaire (Biskra, Algérie)",
+  "resume": "Guide pratique exhaustif de 177 pages structuré mois par mois détaillant la planification des semis, de l'irrigation, de la fertilisation et des traitements phytosanitaires pour les cultures des zones arides algériennes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Le drapeau bloquant taille_excessive (177 pages) interdit la publication directe en public selon la règle 5. Le document doit être orienté vers a_valider_humain.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Calendrier des Opérations Culturales 2012"
+    },
+    {
+      "champ": "autre",
+      "page": 4,
+      "extrait": "Calendrier de surveillance et dʼintervention phytosanitaire Adresses des Instituts Techniques"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": "Le drapeau bloquant taille_excessive (177 pages) interdit la publication directe en public selon la règle 5. Le document doit être orienté vers a_valider_humain."
+  },
+  "nom_fichier_final": "DOC-00960__calendrier-des-operations-culturales-et-de-surveillance.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/agronomie_generale/DOC-00960__calendrier-des-operations-culturales-et-de-surveillance.pdf"
+}

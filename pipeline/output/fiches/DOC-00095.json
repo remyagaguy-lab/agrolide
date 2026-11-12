@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00095",
+  "sha256": "53bf9d3952ddb17c7fc7125c927826c773e61092d26c2ef1630a172e434224b3",
+  "nom_original": "18FSupport-de-formation-sur-larboriculture-fruitiere (2).pdf",
+  "chemin_relatif_source": "OD_Docs/18FSupport-de-formation-sur-larboriculture-fruitiere (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 620853,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782476235728-18FSupport-de-formation-sur-larboriculture-fruitiere__2_.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet"
+  ],
+  "nb_pages": 15,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "cours",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "arboriculture",
+  "pays": "Niger",
+  "annee": 2008,
+  "auteurs": "Mahamadou Zangui",
+  "source_organisation": "EDOS / JIRCAS / JICA / Ministère du Développement Agricole du Niger",
+  "mots_cles": [
+    "arboriculture fruitiere",
+    "oasis",
+    "pepiniere",
+    "irrigation",
+    "niger",
+    "sahel"
+  ],
+  "titre_trouve": "SUPPORT DE FORMATION SUR L’ARBORICULTURE FRUITIERE",
+  "titre": "Support de formation sur l'arboriculture fruitière au Niger",
+  "resume": "Support pédagogique de formation sur la pépinière, la production de plants et la conduite des arbres fruitiers dans les oasis sahéliennes du Niger.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support technique institutionnel intéressant mais incomplet, le texte étant tronqué en fin de document à la page 15.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SUPPORT DE FORMATION SUR L’ARBORICULTURE FRUITIERE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00095__support-de-formation-sur-l-arboriculture-fruitiere-au-n.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00095__support-de-formation-sur-l-arboriculture-fruitiere-au-n.pdf"
+}

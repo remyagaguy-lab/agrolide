@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00459",
+  "sha256": "68c0b2f150cc0f29e4e1f8b538f60cb527eaea95f789dcc8f61a85009731ab39",
+  "nom_original": "Formation Pisciculture 2.pdf",
+  "chemin_relatif_source": "OD_Docs/Formation Pisciculture 2.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 758998,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Génération D'Impact",
+  "source_organisation": "Génération D'Impact",
+  "mots_cles": [
+    "pisciculture",
+    "clarias",
+    "tilapia",
+    "etang",
+    "bassin",
+    "cage flottante"
+  ],
+  "titre_trouve": null,
+  "titre": "Formation en pisciculture - Comparatif des systèmes d'élevage",
+  "resume": "Fiche technique comparant les différents systèmes d'élevage piscicole (étang, bassin hors-sol, cages flottantes et cages fixes) : avantages, inconvénients et espèces recommandées (clarias et tilapia).",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique pratique et directement exploitable sur les structures d'élevage piscicole en milieu tropical, issue d'une organisation de formation.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Espèce adaptée *clarias *tilapia"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00459__formation-en-pisciculture-comparatif-des-systemes-d-ele.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00459__formation-en-pisciculture-comparatif-des-systemes-d-ele.pdf"
+}

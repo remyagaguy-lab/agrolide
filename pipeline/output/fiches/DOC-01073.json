@@ -1,0 +1,72 @@
+{
+  "id": "DOC-01073",
+  "sha256": "8cd2020845c3ad0abdbe5aa91276758818b278f060c358a3a9a899849f00dcef",
+  "nom_original": "GUIDE_REDAC_PLAN_FR_2019_WEB.pdf",
+  "chemin_relatif_source": "OD_traites/GUIDE_REDAC_PLAN_FR_2019_WEB.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 1166099,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479780183-GUIDE_REDAC_PLAN_FR_2019_WEB.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 17,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "Canada",
+  "annee": 2019,
+  "auteurs": "Commission de développement économique des Premières Nations du Québec et du Labrador (CDEPNQL)",
+  "source_organisation": "CDEPNQL",
+  "mots_cles": [
+    "plan d'affaires",
+    "business plan",
+    "entrepreneuriat",
+    "gestion de projet",
+    "quebec",
+    "cdepnql"
+  ],
+  "titre_trouve": "GUIDE DE RÉDACTION DE PLAN D’AFFAIRES PREMIÈRE ÉDITION",
+  "titre": "Guide de rédaction de plan d'affaires (CDEPNQL Québec)",
+  "resume": "Guide pratique méthodologique pour la structuration et la rédaction d'un plan d'affaires d'entreprise : description du projet, étude de marché et prévisions.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Guide méthodologique généraliste québécois d'affaires sans spécificité agricole tropicale, archivé à titre de modèle documentaire.",
+  "confiance": {
+    "classification": 0.88,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DE RÉDACTION DE PLAN D’AFFAIRES PREMIÈRE ÉDITION"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01073__guide-de-redaction-de-plan-d-affaires-cdepnql-quebec.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-01073__guide-de-redaction-de-plan-d-affaires-cdepnql-quebec.pdf"
+}

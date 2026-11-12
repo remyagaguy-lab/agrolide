@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00365",
+  "sha256": "7901f31519f0459c7740cac90a324c9b4f3334ae753bacd580ec1ac60d0e989d",
+  "nom_original": "EXER  PLUVIOMETRIE HORAIRE ASPERSSEUR.docx",
+  "chemin_relatif_source": "OD_Docs/EXER  PLUVIOMETRIE HORAIRE ASPERSSEUR.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 12448,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "ENIGMA",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation",
+    "aspersion",
+    "pluviometrie",
+    "calcul de debit",
+    "dimensionnement"
+  ],
+  "titre_trouve": "L'indice pluviométrique (ou la pluviométrie)",
+  "titre": "Calcul de la pluviométrie horaire pour un système d'irrigation par aspersion",
+  "resume": "Fiche d'exercice et formule de calcul de l'indice pluviométrique d'un système d'irrigation par aspersion en fonction du débit et de la surface.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document technique utile mais source et droits non déterminés (créateur anonyme ENIGMA) ; archivé en attente de vérification des droits.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L'indice pluviométrique (ou la pluviométrie) Pour un système aspersion en irrigation est une mesure qui indique la quantité d'eau appliquée"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00365__calcul-de-la-pluviometrie-horaire-pour-un-systeme-d-irr.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00365__calcul-de-la-pluviometrie-horaire-pour-un-systeme-d-irr.pdf"
+}

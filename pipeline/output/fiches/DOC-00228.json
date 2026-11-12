@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00228",
+  "sha256": "45d301b6ef2a576d7be83b9a3686dbfa2f1d51d6dde8321e35695ac1e8791d2e",
+  "nom_original": "Assainissement_collectif_Conception_et_r.pdf",
+  "chemin_relatif_source": "OD_Docs/Assainissement_collectif_Conception_et_r.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5916438,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 142,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "Cimbéton, FIB, CERIB",
+  "source_organisation": "Cimbéton",
+  "mots_cles": [
+    "assainissement collectif",
+    "genie civil",
+    "beton",
+    "reseaux d'egouts",
+    "btp"
+  ],
+  "titre_trouve": "Assainissement collectif : Conception et réalisation - OUVRAGES D’ASSAINISSEMENT EN BÉTON",
+  "titre": "Assainissement collectif : conception et réalisation des ouvrages en béton",
+  "resume": "Guide technique professionnel sur la conception et la pose des réseaux d'assainissement collectif urbain en béton selon la réglementation française. Document de génie civil et BTP hors du périmètre agricole.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Guide de génie civil et BTP urbain (réseaux d'assainissement collectif en béton selon les normes françaises CCTG), hors du périmètre agricole d'Agrolide.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Assainissement collectif Conception et réalisation OUVRAGES D’ASSAINISSEMENT EN BÉTON"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00228__assainissement-collectif-conception-et-realisation-des.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00228__assainissement-collectif-conception-et-realisation-des.pdf"
+}

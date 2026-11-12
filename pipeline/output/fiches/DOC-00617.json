@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00617",
+  "sha256": "ddf282d90320f4b268023d755f6b9eb76815efab900962c56a22e97ee21b6324",
+  "nom_original": "Modules de Formation des Eleveurs Relais Volailles.pdf",
+  "chemin_relatif_source": "OD_Docs/Modules de Formation des Eleveurs Relais Volailles.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 508870,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00616",
+  "groupe_doublon_id": "GRP-0045",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00616 (Module de formation des éleveurs relais en aviculture villageoise (PROSEL Mali)).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Mali",
+  "annee": 2008,
+  "auteurs": "Projet PROSEL",
+  "source_organisation": "PROSEL (Sévaré, Mali)",
+  "mots_cles": [
+    "aviculture villageoise",
+    "eleveurs relais",
+    "maladie de newcastle",
+    "poulailler",
+    "mali",
+    "prosel"
+  ],
+  "titre_trouve": "MODULE DE FORMATION DES ELEVEURS RELAIS EN AVICULTURE VILLAGEOISE",
+  "titre": "Module de formation des éleveurs relais en aviculture villageoise (PROSEL Mali)",
+  "resume": "Support pédagogique illustré pour les éleveurs relais villageois au Mali, abordant l'identification des pathologies aviaires (Newcastle, grippe), l'hygiène et l'habitat.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MODULE DE FORMATION DES ELEVEURS RELAIS EN AVICULTURE VILLAGEOISE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "PROSEL Gestion concertée des Ressources Pastorales et Sécurisation du Petit Elevage Sevaré – Mali"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00617__module-de-formation-des-eleveurs-relais-en-aviculture-v.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00617__module-de-formation-des-eleveurs-relais-en-aviculture-v.pdf"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00574",
+  "sha256": "fad6a67f93ea7848a453feceb059eb57d53f85eb16cde6379e476e94e99f4d92",
+  "nom_original": "M2-eau-et-agro-equipement-notes-de-cours-ouvrages-part1.pdf",
+  "chemin_relatif_source": "OD_Docs/M2-eau-et-agro-equipement-notes-de-cours-ouvrages-part1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2014269,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "nb_pages": 38,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2021,
+  "auteurs": "Nordine Benzerga",
+  "source_organisation": null,
+  "mots_cles": [
+    "ouvrages hydrauliques",
+    "irrigation",
+    "canaux d'irrigation",
+    "agro-equipement",
+    "hydraulique agricole"
+  ],
+  "titre_trouve": "Ouvrages Hydrauliques des systèmes d’irrigation",
+  "titre": "Ouvrages hydrauliques des systèmes d’irrigation (Cours Master 2 - Partie 1)",
+  "resume": "Support de cours de Master 2 traitant de la conception, du dimensionnement et du fonctionnement des réseaux de canaux et ouvrages hydrauliques d'irrigation.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Notes de cours universitaires de Master (partie 1) sans licence libre, archivées.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Ouvrages Hydrauliques des systèmes d’irrigation \nI. CONSIDERATIONS GENERALES SUR LES SYSTEMES D'IRRIGATION"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00574__ouvrages-hydrauliques-des-systemes-dirrigation-cours-ma.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00574__ouvrages-hydrauliques-des-systemes-dirrigation-cours-ma.pdf"
+}

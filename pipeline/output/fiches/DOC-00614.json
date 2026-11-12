@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00614",
+  "sha256": "b727f9c91197b1ea8bed7e41c8c92d1f6ee4379465073fb41c0d46e2561cf84c",
+  "nom_original": "Module-formation-embouche_ovine.pdf",
+  "chemin_relatif_source": "OD_Docs/Module-formation-embouche_ovine.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 265493,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "ruminants",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "petits ruminants",
+  "pays": "Mali",
+  "annee": 2021,
+  "auteurs": "M. Almoustapha Koné",
+  "source_organisation": null,
+  "mots_cles": [
+    "embouche ovine",
+    "petits ruminants",
+    "bourgou",
+    "fane de niebe",
+    "sahel",
+    "mali",
+    "rations"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE THEME : EMBOUCHE OVINE-CAPRINE EN MILIEU PAYSAN",
+  "titre": "Fiche technique d'embouche ovine et caprine en milieu paysan sahélien",
+  "resume": "Fiche technique synthétique présentant la conduite de l'embouche ovine et caprine en milieu paysan au Sahel : rations locales (bourgou, niébé), calendrier et prophylaxie.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique pratique et complète sur l'embouche de petits ruminants, parfaitement adaptée aux éleveurs sahéliens.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE THEME : EMBOUCHE OVINE-CAPRINE EN MILIEU PAYSAN"
+    },
+    {
+      "champ": "autre",
+      "page": 6,
+      "extrait": "RATION 2 : 0,6 kg de foin de bourgou + 0,45 kg de fane de Niébé + 0,4 kg d’aliment ACHCAR"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00614__fiche-technique-d-embouche-ovine-et-caprine-en-milieu-p.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/ruminants/DOC-00614__fiche-technique-d-embouche-ovine-et-caprine-en-milieu-p.pdf"
+}

@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00896",
+  "sha256": "ed16851b18d3ba7edcf2f458ed44163ff4414ac60cb352b3355753152987e531",
+  "nom_original": "epices aromates antioxydants naturels oleoresines.pdf",
+  "chemin_relatif_source": "OD_Docs/epices aromates antioxydants naturels oleoresines.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 50390,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479438580-epices_aromates_antioxydants_naturels_oleoresines.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "equipements_technologie",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "plantes aromatiques",
+  "pays": null,
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "epices",
+    "aromates",
+    "huiles essentielles",
+    "oleoresines",
+    "antioxydants",
+    "extraction"
+  ],
+  "titre_trouve": "EXTRAITS D’EPICES ET D’AROMATES, ANTIOXYDANTS NATURELS",
+  "titre": "Synoptique technologique : Procédés d'extraction d'extraits d'épices, aromates et oléorésines",
+  "resume": "Diagramme de flux industriel d'une page détaillant les différentes filières technologiques d'extraction, distillation et raffinage des épices, huiles essentielles et oléorésines.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Schéma technique de procédé industriel sans mention formelle de licence ; validation humaine des droits de rediffusion requise.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.6,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "EXTRAITS D’EPICES ET D’AROMATES, ANTIOXYDANTS NATURELS ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00896__synoptique-technologique-procedes-d-extraction-d-extrai.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/equipements_technologie/DOC-00896__synoptique-technologique-procedes-d-extraction-d-extrai.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00410",
+  "sha256": "d74e972c259586d6766472d7c8cdddb49c09dab5f7eb1eb17b185f7778062818",
+  "nom_original": "FICHE_TECHNIQUE_SYNTHETIQUE_POUR_LA_PRODUCTION_DE_L’AUBERGINE_Solanum.pdf",
+  "chemin_relatif_source": "OD_Docs/FICHE_TECHNIQUE_SYNTHETIQUE_POUR_LA_PRODUCTION_DE_L’AUBERGINE_Solanum.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1341025,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aubergine",
+  "pays": "Bénin",
+  "annee": 2018,
+  "auteurs": "Lys A. Aglinglo, Olafèmi R. Adjinda, Eric C. Legba, Rachidi Francisco, Nicodème V. Fassinou Hotègni, Enoch G. Achigan-Dako",
+  "source_organisation": "Laboratoire de Génétique, Horticulture et Sciences Semencières (GBioS) / Université d'Abomey-Calavi (UAC)",
+  "mots_cles": [
+    "aubergine",
+    "solanum melongena",
+    "gbios",
+    "uac",
+    "maraichage",
+    "benin"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE SYNTHETIQUE POUR LA PRODUCTION DE L’AUBERGINE (Solanum melongena L.)",
+  "titre": "Fiche technique synthétique pour la production de l'aubergine (GBioS / UAC)",
+  "resume": "Fiche technique du laboratoire GBioS (UAC) détaillant la conduite de l'aubergine au Bénin : pépinière, repiquage, buttage, désherbage, taille/tuteurage et protection sanitaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique de vulgarisation maraîchère de l'Université d'Abomey-Calavi (GBioS) validée pour le Bénin, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE SYNTHETIQUE POUR LA PRODUCTION DE L’AUBERGINE (Solanum melongena L.)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "© Laboratory of Genetics Horticulture and Seed Science (GBioS) 2018"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00410__fiche-technique-synthetique-pour-la-production-de-l-aub.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00410__fiche-technique-synthetique-pour-la-production-de-l-aub.pdf"
+}

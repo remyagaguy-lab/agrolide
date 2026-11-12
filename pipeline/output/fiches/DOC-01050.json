@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01050",
+  "sha256": "551a28a256602910092067c0cb066e3acbcc8d85fa9a1988a0bc74d913ba873d",
+  "nom_original": "technique de séchage du piment.pdf",
+  "chemin_relatif_source": "OD_Docs/technique de séchage du piment.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 342627,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "conservation_post_recolte",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "piment",
+  "pays": "Bénin",
+  "annee": 2019,
+  "auteurs": "Programme ACMA 2 / IFDC-Bénin",
+  "source_organisation": "IFDC-Bénin",
+  "mots_cles": [
+    "piment seche",
+    "sechage solaire",
+    "benin",
+    "ifdc",
+    "conservation post-recolte"
+  ],
+  "titre_trouve": "FICHE TECHNIQUE: TECHNOLOGIE DE PRODUCTION DU PIMENT SECHE",
+  "titre": "Fiche technique : Technologie de production et de séchage solaire du piment au Bénin",
+  "resume": "Guide pratique illustré (Programme ACMA 2 / IFDC) décrivant les 7 étapes de séchage hygiénique du piment rouge : triage, lavage, blanchiment à l'huile rouge, égouttage et séchoir solaire.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique terrain complète issue d'un programme de développement agricole au Bénin, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FICHE TECHNIQUE: TECHNOLOGIE DE PRODUCTION DU PIMENT SECHE"
+    },
+    {
+      "champ": "autre",
+      "page": 5,
+      "extrait": "Contacts : Programme ACMA 2 IFDC-BENIN"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01050__fiche-technique-technologie-de-production-et-de-sechage.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/conservation_post_recolte/DOC-01050__fiche-technique-technologie-de-production-et-de-sechage.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01049",
+  "sha256": "49b13a34240880597612e405651cdf381056ac8da54598ea0b04651a87bfe6ed",
+  "nom_original": "tablettes chocolat beurre cacao.pdf",
+  "chemin_relatif_source": "OD_Docs/tablettes chocolat beurre cacao.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 35889,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782480079577-tablettes_chocolat_beurre_cacao.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "transformation_fruits_legumes",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "etudiant"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "cacao",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "ISAA-MF",
+  "source_organisation": "ISAA-MF",
+  "mots_cles": [
+    "cacao",
+    "chocolat",
+    "beurre de cacao",
+    "diagramme de fabrication",
+    "agroalimentaire"
+  ],
+  "titre_trouve": "Technologie clé de compétitivité dans l’activité CACAO – CHOCOLAT",
+  "titre": "Diagramme de fabrication industrielle : Fèves de cacao, beurre et tablettes de chocolat",
+  "resume": "Schéma complet des flux et opérations unitaires de la chocolaterie : écabossage, fermentation, torréfaction, pressage du beurre de cacao, conchage et moulage des tablettes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Synoptique industriel complet directement applicable pour la valorisation locale et la transformation du cacao.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Technologie clé de compétitivité dans l’activité CACAO – CHOCOLAT"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "ISAA-MF 2004"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01049__diagramme-de-fabrication-industrielle-feves-de-cacao-be.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/transformation_fruits_legumes/DOC-01049__diagramme-de-fabrication-industrielle-feves-de-cacao-be.pdf"
+}

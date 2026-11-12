@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00079",
+  "sha256": "522c60204945fcbc6c3d29d83120a71f4f68a9238c9fcc81e8bfe58ec30cfa8b",
+  "nom_original": "1072-plant-maraichers-production.pdf",
+  "chemin_relatif_source": "OD_Docs/1072-plant-maraichers-production.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1811309,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00078",
+  "groupe_doublon_id": "GRP-0005",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00078 (Production et utilisation des plants maraîchers biologiques).",
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "maraîchage",
+  "pays": "Suisse",
+  "annee": 2001,
+  "auteurs": "FiBL, Agridea",
+  "source_organisation": "FiBL / Agridea",
+  "mots_cles": [
+    "plants maraichers",
+    "agriculture biologique",
+    "terreau",
+    "semis",
+    "legumes"
+  ],
+  "titre_trouve": "Production et utilisation des plants maraîchers biologiques",
+  "titre": "Production et utilisation des plants maraîchers biologiques",
+  "resume": "Fiche technique pratique détaillant les étapes de production de plants maraîchers bio : substrats, fertilisation, systèmes de culture en mottes, gestion thermique et protection phytosanitaire préventive.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Production et utilisation des plants maraîchers biologiques"
+    },
+    {
+      "champ": "type_doc",
+      "page": 1,
+      "extrait": "Cette fiche technique facilite le démarrage d’une production"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00079__production-et-utilisation-des-plants-maraichers-biologi.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00079__production-et-utilisation-des-plants-maraichers-biologi.pdf"
+}

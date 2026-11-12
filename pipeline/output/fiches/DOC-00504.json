@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00504",
+  "sha256": "a71e4e5c0fc228cb49ecf93b7449938866c624b1e5de797a222be886b32fff2c",
+  "nom_original": "IGNAME.pdf",
+  "chemin_relatif_source": "OD_Docs/IGNAME.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1763493,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 18,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "tubercules_racines",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "igname",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI",
+  "mots_cles": [
+    "igname",
+    "dioscorea",
+    "minisetts",
+    "tubercules",
+    "cameroun",
+    "itineraire technique"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’IGNAME",
+  "titre": "Technologie de production de l'igname",
+  "resume": "Guide technique et pédagogique complet de 18 pages sur la culture de l'igname : biologie de la plante, préparation du sol, multiplication par minisetts, entretien, gestion des maladies et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet d'un institut de formation professionnel agréé (IFATI Cameroun) sur l'igname, directement exploitable pour les producteurs tropicaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DE L’IGNAME"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00504__technologie-de-production-de-l-igname.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/tubercules_racines/DOC-00504__technologie-de-production-de-l-igname.pdf"
+}

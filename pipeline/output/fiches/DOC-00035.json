@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00035",
+  "sha256": "f537cc745186539bacff2f4f5b0e10db386389f46f020aeb5c76d0093ebaff7c",
+  "nom_original": "Résumé5 Immunologie.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Immunologie/Immunologie/Résumé5 Immunologie.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 735332,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel"
+  ],
+  "nb_pages": 10,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Dr. Houssem Samari",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "immunologie",
+    "organes lymphoides",
+    "thymus",
+    "moelle osseuse",
+    "deficits immunitaires",
+    "sida"
+  ],
+  "titre_trouve": "Résumé des cours de l’immunologie :",
+  "titre": "Résumé des cours de l'immunologie",
+  "resume": "Synthèse de cours d'immunologie médicale de 10 pages décrivant les organes lymphoïdes primaires et les déficits immunitaires humains congénitaux et acquis (SIDA).",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Support de cours d'immunologie médicale humaine dispensé par un médecin, hors du périmètre agricole d'Agrolide.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Résumé des cours de l’immunologie :"
+    }
+  ],
+  "ensemble_id": "ENS-0004",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00035__resume-des-cours-de-l-immunologie.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00035__resume-des-cours-de-l-immunologie.pdf"
+}

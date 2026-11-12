@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00321",
+  "sha256": "c99b2141e6bc609ef32fbdec6d78f37966126b897cd1d65d76f76123ec73ae0c",
+  "nom_original": "Cours-Ravageurs-des-cultures-2022-2023.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours-Ravageurs-des-cultures-2022-2023.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1191310,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 76,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "ravageurs des cultures",
+    "aleurode",
+    "mouche blanche",
+    "lutte biologique",
+    "nematodes"
+  ],
+  "titre_trouve": "Cours Ravageurs des Cultures 2ème Année Master",
+  "titre": "Cours sur les ravageurs des cultures et les méthodes de lutte biologique",
+  "resume": "Cours universitaire complet de Master 2 sur la bioécologie des insectes ravageurs (aleurodes, etc.) et nématodes, ainsi que les méthodes de lutte intégrée et biologique.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non publié sous licence libre, conservé pour archivage.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cours Ravageurs des Cultures 2ème Année Master Année 2022-2023"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00321__cours-sur-les-ravageurs-des-cultures-et-les-methodes-de.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00321__cours-sur-les-ravageurs-des-cultures-et-les-methodes-de.pdf"
+}

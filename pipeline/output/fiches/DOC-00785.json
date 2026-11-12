@@ -1,0 +1,81 @@
+{
+  "id": "DOC-00785",
+  "sha256": "36cea60823706c57c0e21c3be417d4fc5bcd53e3f4655b7bcba73c5bf456c3b9",
+  "nom_original": "ajol_file_journals_314_articles_164753_submission_proof_164753_3745.pdf",
+  "chemin_relatif_source": "OD_Docs/ajol_file_journals_314_articles_164753_submission_proof_164753_3745.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1594912,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 19,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "article",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": "Mali, Niger",
+  "annee": 2017,
+  "auteurs": "Abdoulaye Sidibé, Maman Sani Ladan Harouna, Bakary Mamourou Traoré, Moussa Abdoulaye, Ousmane Niangaly",
+  "source_organisation": "IPR/IFRA de Katibougou / IJBCS",
+  "mots_cles": [
+    "micropropagation",
+    "papayer",
+    "carica papaya",
+    "mali",
+    "culture in vitro",
+    "katibougou"
+  ],
+  "titre_trouve": "Micropropagation de deux variétés de papayer (Carica papaya L.) à l’IPR/ IFRA de Katibougou, Mali",
+  "titre": "Micropropagation in vitro de deux variétés de papayer au Mali",
+  "resume": "Article de recherche scientifique de 19 pages évaluant les protocoles de désinfection, d'initiation, de prolifération et d'enracinement in vitro des variétés de papayer Solo n°8 et Bluestem au Mali.",
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Open Access (AJOL / IJBCS)",
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "membres",
+  "motif_decision": "Article scientifique de recherche agronomique africaine en Open Access (AJOL), mis à disposition des membres de la communauté.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Micropropagation de deux variétés de papayer (Carica papaya L.) à l’IPR/ IFRA de Katibougou, Mali"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "IPR/ IFRA de Katibougou, Laboratoire d’Agro-Physio-Génétique et de Biotechnologies Végétales, Mali"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Int. J. Biol. Chem. Sci. Available online at http://www.ifgdg.org http://ajol.info/index.php/ijbcs"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00785__micropropagation-in-vitro-de-deux-varietes-de-papayer-a.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00785__micropropagation-in-vitro-de-deux-varietes-de-papayer-a.pdf"
+}

@@ -1,0 +1,751 @@
+{
+  "batch_number": 44,
+  "results": [
+    {
+      "id": "DOC-00659",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "conservation_post_recolte",
+      "domaines_secondaires": [
+        "qualite_securite_normes",
+        "transformation_produits_animaux"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "en",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": 2023,
+      "auteurs": "Gaurav Sharma",
+      "source_organisation": null,
+      "mots_cles": [
+        "pasteurization",
+        "food preservation",
+        "dairy technology",
+        "microorganisms",
+        "food safety"
+      ],
+      "titre_trouve": "PASTEURIZATION - The Science of Safe and Fresh",
+      "titre": "Pasteurization : The Science of Safe and Fresh Food Processing",
+      "resume": "Présentation pédagogique en anglais expliquant les principes, l'histoire, les barèmes thermiques et les applications industrielles de la pasteurisation (lait, jus, conserves).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support didactique complet de technologie agroalimentaire en anglais, réservé aux membres pour la formation technique.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PASTEURIZATION Prepared By - Gaurav Sharma Food Technologist/Academic Writer \"The Science of Safe and Fresh\""
+        }
+      ]
+    },
+    {
+      "id": "DOC-00660",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "transversal",
+        "sciences_de_base"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Belgique",
+      "annee": 2010,
+      "auteurs": "Thomas Drouet",
+      "source_organisation": "Université Libre de Bruxelles",
+      "mots_cles": [
+        "pedologie",
+        "sol fertilite",
+        "fraction minerale",
+        "matiere organique",
+        "complexe argilo-humique"
+      ],
+      "titre_trouve": "Pédologie BING-F-302 (version 2010)",
+      "titre": "Cours de pédologie générale : Constituants et propriétés du sol (BING-F-302)",
+      "resume": "Syllabus universitaire complet de pédologie approfondie (ULB) : fractions minérale et organique, altération, processus d'humification, complexe argilo-humique et cycles biogéochimiques.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Syllabus universitaire d'enseignant (ULB) sans licence libre explicite, archivé sous droits réservés.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pédologie BING-F-302 (version 2010)"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Th. DROUET http://www.ulb.ac.be/sciences/lagev"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00661",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "qualite_securite_normes"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Nouvelle-Calédonie",
+      "annee": 2016,
+      "auteurs": "Georges Tieya",
+      "source_organisation": "Direction du Développement Rural de la province Sud",
+      "mots_cles": [
+        "agriculture biologique",
+        "agroecologie",
+        "certification bio",
+        "norme biologique",
+        "nouvelle-caledonie"
+      ],
+      "titre_trouve": "Les principes de l'agriculture biologique Perfectionnement niveau 1",
+      "titre": "Formation aux principes de l'agriculture biologique et certification (Province Sud)",
+      "resume": "Support de formation professionnelle sur les fondements de l'agriculture biologique tropicale : gestion agronomique de la fertilité, protection des cultures, traçabilité et étiquetage certifié.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support de formation institutionnelle complet émanant de la Province Sud, réservé aux membres pour l'ingénierie de certification bio.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Les principes de l'agriculture biologique Le 12 octobre 2016 Formateur: Georges TIEYA"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Direction du Développement Rural de la province Sud"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00662",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "horticulture_jardinage",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2020,
+      "auteurs": "Aurélie Drif",
+      "source_organisation": "Éditions Rustica",
+      "mots_cles": [
+        "permaculture",
+        "balcon",
+        "potager urbain",
+        "jardinage",
+        "editions rustica"
+      ],
+      "titre_trouve": "Permaculture au balcon",
+      "titre": "Permaculture au balcon : Démarrer et réussir son permapotager urbain",
+      "resume": "Ouvrage illustré guidant l'aménagement d'un potager permacole sur balcon en ville : choix des contenants, semis en pots, associations végétales, arrosage et recettes culinaires.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial publié sous copyright exclusif par les Éditions Rustica (ISBN 978-2-8153-1885-3), non diffusable publiquement.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 4,
+          "extrait": "Permaculture au balcon"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 121,
+          "extrait": "ISBN papier : 978-2-8153-1885-3 © 2020, Éditions Rustica, Paris."
+        }
+      ]
+    },
+    {
+      "id": "DOC-00663",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "transversal",
+        "agriculture_generale"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2017,
+      "auteurs": "Gildas Véret",
+      "source_organisation": "Éditions Rustica",
+      "mots_cles": [
+        "permaculture",
+        "design permacole",
+        "agroecologie",
+        "durabilite",
+        "editions rustica"
+      ],
+      "titre_trouve": "Permaculture, créer un mode de vie durable",
+      "titre": "Permaculture : Créer un mode de vie durable - Comprendre les enjeux et concevoir des solutions",
+      "resume": "Ouvrage de référence exposant la philosophie et le design permacole : principes éthiques de Mollison et Holmgren, conception d'écosystèmes productifs et résilience écologique.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial sous droits réservés des Éditions Rustica (ISBN 978-2-8153-1044-4), archivé sans diffusion publique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Gildas Véret Comprendre les enjeux et concevoir des solutions PRÉFACE DE FRANCIS HALLÉ"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 103,
+          "extrait": "ISBN : 978-2-8153-1044-4 www.rustica.fr"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00664",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "fertilisation_amendements"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Bénin",
+      "annee": 2021,
+      "auteurs": "K. Marcel Assanse",
+      "source_organisation": "Marko's Corporation",
+      "mots_cles": [
+        "biopesticides",
+        "engrais bio",
+        "benin",
+        "fabrication artisanale",
+        "protection des cultures"
+      ],
+      "titre_trouve": "Production Artisanale d’Engrais, Pesticides, Herbicides et Insecticides Bio",
+      "titre": "Guide pratique : Production artisanale d'engrais, pesticides, herbicides et insecticides bio au Bénin",
+      "resume": "Manuel pratique de formation décrivant les procédés artisanaux de fabrication de biofertilisants foliaires, insectifuges et biopesticides à base de plantes locales (Cassia alata, neem) au Bénin.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique de formation locale sur la fabrication d'intrants biologiques au Bénin, complet et opérationnel.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Production Artisanale d’Engrais, Pesticides, Herbicides et Insecticides Bio"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "MARKO’S CORPORATION FORMATION REDACTION K. Marcel ASSANSE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00665",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "sante_animale",
+      "domaines_secondaires": [
+        "production_animale",
+        "elevage_general"
+      ],
+      "type_doc": "cours",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2012,
+      "auteurs": "Nébié",
+      "source_organisation": null,
+      "mots_cles": [
+        "pharmacologie veterinaire",
+        "technicien superieur d'elevage",
+        "sante animale",
+        "medicaments veterinaires",
+        "burkina faso"
+      ],
+      "titre_trouve": "Pharmacie TSE 2",
+      "titre": "Cours de pharmacie vétérinaire pour Techniciens Supérieurs d'Élevage (TSE 2)",
+      "resume": "Support de cours professionnel de pharmacologie vétérinaire destiné aux techniciens d'élevage : classification des médicaments, pharmacocinétique, posologie et facteurs de variation.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours enseignant incomplet (première partie seule) pour techniciens d'élevage, non assorti de droits libres.",
+      "confiance": {
+        "classification": 0.92,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Pharmacie TSE 2"
+        },
+        {
+          "champ": "complet",
+          "page": 3,
+          "extrait": "INTRODUCTION A LA PHARMACIE Première partie"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00666",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2020,
+      "auteurs": "Stéphane Ravanel",
+      "source_organisation": "Université Grenoble Alpes",
+      "mots_cles": [
+        "physiologie vegetale",
+        "photosynthese",
+        "cycle de calvin",
+        "autotrophie",
+        "metabolisme cam"
+      ],
+      "titre_trouve": "Bio242 - Physiologie Végétale 1ère partie Nutrition et autotrophie",
+      "titre": "Cours de physiologie végétale L2 : Nutrition carbonée et photosynthèse",
+      "resume": "Diapositives de cours universitaire (L2) sur la nutrition carbonée végétale : structure foliaire, réactions photochimiques de la photosynthèse, cycle de Calvin et voies C3, C4 et CAM.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "incomplet",
+        "ensemble_partiel",
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Extrait partiel de cours universitaire (10 diapositives seulement) sans droits de rediffusion libre.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Bio242 - Physiologie Végétale 1ère partie Nutrition et autotrophie"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "6 cours – Stéphane Ravanel"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00667",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2021,
+      "auteurs": "Yamina Mouas",
+      "source_organisation": "Université Blida 1",
+      "mots_cles": [
+        "physiologie vegetale",
+        "nutrition hydrique",
+        "nutrition minerale",
+        "photosynthese",
+        "germination"
+      ],
+      "titre_trouve": "Cours de PHYSIOLOGIE VEGETALE",
+      "titre": "Cours de physiologie végétale pour étudiants en sciences agronomiques (L2)",
+      "resume": "Polycopié de cours universitaire structuré (Université de Blida 1) couvrant la nutrition hydrique, l'absorption minérale, le métabolisme photosynthétique et la germination des semences.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours d'enseignant universitaire algérien non assorti d'une licence libre explicite.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.88,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Cours de PHYSIOLOGIE VEGETALE Destiné aux étudiants de deuxième année tronc commun (L2)"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Dr MOUAS Yamina Université Blida1 Faculté des Sciences de la Nature et de la Vie"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00668",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "physique du sol",
+        "pedologie",
+        "sol",
+        "proprietes physiques",
+        "ocr necessaire"
+      ],
+      "titre_trouve": null,
+      "titre": "Physique du sol (document numérisé à océriser)",
+      "resume": "Document numérisé de 20 pages sur la physique du sol, ne contenant aucun texte extractible et nécessitant un traitement OCR pour exploitation.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "scan_illisible",
+        "titre_introuvable",
+        "auteur_introuvable"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document numérisé de 20 pages sans texte exploitable, droits et complétude indéterminables, validation humaine requise après OCR.",
+      "confiance": {
+        "classification": 0.55,
+        "droits": 0.4,
+        "completude": 0.5
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Physique du sol.pdf"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00669",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "production_animale",
+        "sante_animale"
+      ],
+      "type_doc": "presentation",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "pintade",
+      "pays": "France",
+      "annee": 2007,
+      "auteurs": "Jean-Luc Guérin",
+      "source_organisation": "ENVT (École Nationale Vétérinaire de Toulouse)",
+      "mots_cles": [
+        "pintade",
+        "aviculture",
+        "zootechnie",
+        "pathologie aviaire",
+        "envt"
+      ],
+      "titre_trouve": "L’élevage de la pintade de chair",
+      "titre": "L'élevage de la pintade de chair : Zootechnie, conduite et pathologie aviaire",
+      "resume": "Support de formation vétérinaire (ENVT) sur la pintade de chair : caractéristiques de l'espèce, courbes de croissance, densités, itinéraire technique et inventaire des pathologies.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Support de formation vétérinaire universitaire complet émanant de l'ENVT, consultable par les membres pour la filière pintade.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’élevage de la pintade de chair"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "J.L. GUERIN © ENVT, clinique aviaire"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00670",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_projet_business_plan",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "papaye",
+      "pays": "Mali",
+      "annee": 2019,
+      "auteurs": "Mamoutou Diarra",
+      "source_organisation": "Ferme Agricole Mamoutou Diarra",
+      "mots_cles": [
+        "business plan",
+        "plan d'affaires",
+        "papaye solo",
+        "mali",
+        "compte d'exploitation"
+      ],
+      "titre_trouve": "PLAN D’AFFAIRE POUR LA PRODUCTION DE LA PAPAYE SOLO N°8 A GOUANA",
+      "titre": "Plan d'affaires pour la production de papaye Solo n°8 au Mali (Ferme de Gouana)",
+      "resume": "Projet d'entreprise agricole détaillé pour la création d'une plantation de papayers Solo n°8 à Gouana au Mali : étude de marché, investissements, charges d'exploitation et rentabilité.",
+      "statut_droits": "donnees_personnelles_confidentiel",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "donnees_personnelles",
+        "confidentiel_interne"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Document d'exploitation privé contenant des coordonnées personnelles et des données financières confidentielles, archivé en interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "PLAN D’AFFAIRE POUR LA PRODUCTION DE LA PAPAYE SOLO N°8 A GOUANA"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "Promoteur : Mamoutou DIARRA Tél. 76 73 40 05"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00671",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "gestion_exploitation",
+      "domaines_secondaires": [
+        "agroeconomie",
+        "gestion_projet_business_plan"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Burkina Faso",
+      "annee": 2023,
+      "auteurs": "La Cause Rurale",
+      "source_organisation": "La Cause Rurale",
+      "mots_cles": [
+        "plan de campagne",
+        "gestion d'exploitation",
+        "planification agricole",
+        "burkina faso",
+        "rentabilite"
+      ],
+      "titre_trouve": "COMMENT REUSSIR SA CAMPAGNE AGRICOLE?",
+      "titre": "Guide pratique : Comment élaborer son plan de campagne agricole au Burkina Faso",
+      "resume": "Guide méthodologique de gestion d'exploitation présentant les étapes clés pour planifier sa campagne agricole : bilan d'activité, calendrier prévisionnel, budget et suivi des cultures.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique et méthodologique complet de planification agricole édité par La Cause Rurale, diffusable publiquement pour les producteurs.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "COMMENT REUSSIR SA CAMPAGNE AGRICOLE?"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "BURKINA FASO TEL/WHATSAPP: 00226 61058787 Facebook: La cause rurale"
+        }
+      ]
+    }
+  ]
+}

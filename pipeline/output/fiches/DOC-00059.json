@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00059",
+  "sha256": "783ebc62d1c92bae44b68d6bf7c1b605d6b8a00052519ea0b8f15e1be118601e",
+  "nom_original": "Résumé5 Biologie Animale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/biologie animales/biologie animales/Résumé5 Biologie Animale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 2527753,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "auteur_introuvable",
+    "titre_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 26,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2022,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "biologie animale",
+    "cours",
+    "zoologie",
+    "sciences biologiques"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé de biologie animale (Fascicule 5)",
+  "resume": "Document de synthèse ou cours scanné portant sur la biologie animale universitaire, nécessitant un traitement OCR pour exploitation.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans texte extractible nécessitant une reconnaissance optique (OCR) pour déterminer son contenu et ses droits.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nom de fichier: Résumé5 Biologie Animale.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0009",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00059__resume-de-biologie-animale-fascicule-5.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00059__resume-de-biologie-animale-fascicule-5.pdf"
+}

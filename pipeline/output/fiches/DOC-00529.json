@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00529",
+  "sha256": "57156ee72b1b19bc2ea3c4665a98d341ab79ae6b8eecd899fbb08a50041a5d88",
+  "nom_original": "LEGUMES FEUILLES-1.pdf",
+  "chemin_relatif_source": "OD_Docs/LEGUMES FEUILLES-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1270697,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 10,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "légumes-feuilles",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "legumes feuilles",
+    "amarante",
+    "morelle noire",
+    "corete potagere",
+    "cameroun",
+    "maraichage tropical"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE CULTURE DE QUELQUES LEGUMES FEUILLES",
+  "titre": "Technologie de culture de quelques légumes-feuilles au Cameroun",
+  "resume": "Guide pratique de l'IFATI détaillant la conduite culturale, l'irrigation et les récoltes successives des légumes-feuilles traditionnels au Cameroun.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique terrain complet et directement applicable pour les maraîchers en zone tropicale, libre de diffusion institutionnelle.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE CULTURE DE QUELQUES LEGUMES FEUILLES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00529__technologie-de-culture-de-quelques-legumes-feuilles-au.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00529__technologie-de-culture-de-quelques-legumes-feuilles-au.pdf"
+}

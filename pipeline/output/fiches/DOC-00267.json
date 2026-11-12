@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00267",
+  "sha256": "552f1ad42e741699de032cfeb02077798fbca1e042bdfde2c7f466d58d4db07a",
+  "nom_original": "CANNE A SUCRE.pdf",
+  "chemin_relatif_source": "OD_Docs/CANNE A SUCRE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1240864,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479367927-CANNE_A_SUCRE.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "cultures_de_rente",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "canne à sucre",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "canne a sucre",
+    "culture de rente",
+    "itineraires techniques",
+    "recolte",
+    "cameroun"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE CULTURE DE LA CANNE A SUCRE",
+  "titre": "Technologie de culture de la canne à sucre : itinéraire et récolte",
+  "resume": "Fiche technique de 8 pages exposant les exigences écologiques, la conduite de la plantation, la protection phytosanitaire et les modalités de récolte de la canne à sucre.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique officiel et complet émanant d'un institut agréé par le ministère en charge de la formation professionnelle au Cameroun.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE CULTURE DE LA CANNE A SUCRE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00267__technologie-de-culture-de-la-canne-a-sucre-itineraire-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_de_rente/DOC-00267__technologie-de-culture-de-la-canne-a-sucre-itineraire-e.pdf"
+}

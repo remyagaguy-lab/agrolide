@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00558",
+  "sha256": "a1e9017b8e7c154c07d1175954484ec99abd5923dc0fc1a1b11ca462ccbb62f3",
+  "nom_original": "Les arbres 10 éléments essentiels à savoir (Carolyn Fry).pdf",
+  "chemin_relatif_source": "OD_Docs/Les arbres 10 éléments essentiels à savoir (Carolyn Fry).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4254493,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 105,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "foresterie_agroforesterie",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "foresterie",
+  "pays": "Canada",
+  "annee": 2021,
+  "auteurs": "Becky Smethurst, Carolyn Fry",
+  "source_organisation": "Éditions Hurtubise",
+  "mots_cles": [
+    "arbres",
+    "foret",
+    "botanique",
+    "dendrologie",
+    "ecosysteme forestier",
+    "vulgarisation scientifique"
+  ],
+  "titre_trouve": "Les arbres : 10 éléments essentiels à savoir",
+  "titre": "Les arbres : 10 éléments essentiels à savoir",
+  "resume": "Livre de vulgarisation scientifique explorant la biologie des arbres, leur histoire évolutive, leurs interactions écosystémiques et leur contribution à l'équilibre planétaire.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial des Éditions Hurtubise protégé par le droit d'auteur, archivé sans mise à disposition publique.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Les arbres / 10 éléments essentiels à savoir / BECKY SMETHURST"
+    },
+    {
+      "champ": "autre",
+      "page": 104,
+      "extrait": "Éditions Hurtubise"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00558__les-arbres-10-elements-essentiels-a-savoir.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/foresterie_agroforesterie/DOC-00558__les-arbres-10-elements-essentiels-a-savoir.pdf"
+}

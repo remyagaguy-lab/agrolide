@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00991",
+  "sha256": "9fe2184444f21b603b14ac9b4c634625dc4318139f244a26ac1c9615416ee064",
+  "nom_original": "merkblatt_amarant_2022_fr_1.pdf",
+  "chemin_relatif_source": "OD_Docs/merkblatt_amarant_2022_fr_1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 386159,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 2,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "amarante",
+  "pays": "Suisse",
+  "annee": 2021,
+  "auteurs": "Jasmin Beer, Hansueli Brassel",
+  "source_organisation": "Biofarm Genossenschaft",
+  "mots_cles": [
+    "amarante",
+    "pseudo-cereale",
+    "agriculture biologique",
+    "biofarm",
+    "plante c4",
+    "fiche technique"
+  ],
+  "titre_trouve": "Fiche technique pour la culture d’amarante à grains en agriculture biologique",
+  "titre": "Fiche technique pour la culture d'amarante à grains en agriculture biologique",
+  "resume": "Fiche technique de la coopérative Biofarm sur la conduite de l'amarante à grains bio : exigences pédo-climatiques en plante C4, semis, désherbage mécanique et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique agronomique claire sur une pseudo-céréale rustique (plante C4), utile et adaptable, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technique pour la culture d’amarante à grains en agriculture biologique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00991__fiche-technique-pour-la-culture-d-amarante-a-grains-en.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00991__fiche-technique-pour-la-culture-d-amarante-a-grains-en.pdf"
+}

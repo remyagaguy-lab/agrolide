@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00775",
+  "sha256": "535ba7a2f711524ffffe9f33207d8588160c2afc70838e7ae0b2f6b4c31455c5",
+  "nom_original": "_Pisciculture_tilapia_(2) (1).pdf",
+  "chemin_relatif_source": "OD_Docs/_Pisciculture_tilapia_(2) (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2049379,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contenu_commercial",
+    "droits_reserves"
+  ],
+  "nb_pages": 12,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aquaculture",
+  "pays": "France",
+  "annee": 2017,
+  "auteurs": "BioMar SAS",
+  "source_organisation": "BioMar SAS",
+  "mots_cles": [
+    "aquaculture",
+    "tilapia",
+    "poisson-chat africain",
+    "alimentation aquacole",
+    "granules extrudes",
+    "biomar"
+  ],
+  "titre_trouve": "GAMMES D’ALIMENTS POUR TILAPIAS ET POISSONS-CHATS AFRICAINS",
+  "titre": "Gammes d'aliments et rationnement pour tilapias et poissons-chats africains",
+  "resume": "Brochure technique de BioMar présentant les programmes nutritionnels, calibres d'aliment et tables de rationnement pour le tilapia et le poisson-chat africain.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Brochure commerciale éditée par un fabricant d'aliments industriels (BioMar), archivée sans diffusion ouverte.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GAMMES D’ALIMENTS POUR TILAPIAS ET POISSONS-CHATS AFRICAINS LET’S INNOVATE AQUACULTURE www.biomar.fr"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00775__gammes-d-aliments-et-rationnement-pour-tilapias-et-pois.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-00775__gammes-d-aliments-et-rationnement-pour-tilapias-et-pois.pdf"
+}

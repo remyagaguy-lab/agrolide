@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00650",
+  "sha256": "6c3a6a00b8f63714f5e8a401dfc64c1ff6660312ba5b614a0a0e5db15de4dea7",
+  "nom_original": "POIVRON.pdf",
+  "chemin_relatif_source": "OD_Docs/POIVRON.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 982169,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "poivron",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "poivron",
+    "capsicum annuum",
+    "maraichage",
+    "itineraire technique",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU POIVRON(Capsicum annum)",
+  "titre": "Fiche technique : Technologie de production du poivron",
+  "resume": "Fiche technique pratique de l'IFATI sur l'itinéraire technique du poivron au Cameroun : pépinière, repiquage, gestion de l'eau, apports minéraux, ravageurs et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique professionnelle complète de l'IFATI (Cameroun) pour la conduite maraîchère du poivron.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DU POIVRON(Capsicum annum)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00650__fiche-technique-technologie-de-production-du-poivron.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00650__fiche-technique-technologie-de-production-du-poivron.pdf"
+}

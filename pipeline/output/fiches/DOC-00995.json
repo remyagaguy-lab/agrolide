@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00995",
+  "sha256": "5d1b162e1b9f453a67bb4b2018664d3d08a4447e831671555c8fb465b2b8bb7f",
+  "nom_original": "note_phyto_papayer_version_revu_2024.pdf",
+  "chemin_relatif_source": "OD_Docs/note_phyto_papayer_version_revu_2024.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 715180,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "papaye",
+  "pays": "Niger",
+  "annee": 2024,
+  "auteurs": "Bibata Ali Outani, Haougui Adamou, Patrick Delmas, Aïssa Kimba, Mariama Iboune",
+  "source_organisation": "RECA Niger / INRAN / CRA Niamey",
+  "mots_cles": [
+    "papayer",
+    "ravageurs",
+    "cochenille du papayer",
+    "reca niger",
+    "inran",
+    "savon noir",
+    "agroecologie"
+  ],
+  "titre_trouve": "Les principaux ravageurs du papayer au Niger",
+  "titre": "Les principaux ravageurs du papayer au Niger (Note phytosanitaire RECA / INRAN)",
+  "resume": "Note technique phytosanitaire de référence du RECA Niger et de l'INRAN décrivant la biologie, les dégâts et les traitements biologiques (savon noir) contre la cochenille et les virus du papayer.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Note phytosanitaire institutionnelle récente (2024) diffusée par le RECA Niger et l'INRAN, libre et essentielle pour les producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Réseau National des Chambres d’Agriculture du Niger ... Les principaux ravageurs du papayer au Niger Juillet 2024"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00995__les-principaux-ravageurs-du-papayer-au-niger-note-phyto.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00995__les-principaux-ravageurs-du-papayer-au-niger-note-phyto.pdf"
+}

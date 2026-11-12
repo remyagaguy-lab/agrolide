@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00367",
+  "sha256": "f7bfcd97212001bf0a9b40e96867aafc80962a6801e271bcd16fffe5be90e702",
+  "nom_original": "EXER Déterminer humidite sol (2).docx",
+  "chemin_relatif_source": "OD_Docs/EXER Déterminer humidite sol (2).docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 13685,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "ENIGMA",
+  "source_organisation": null,
+  "mots_cles": [
+    "humidite du sol",
+    "methode gravimetrique",
+    "tensiometre",
+    "irrigation",
+    "analyse de sol"
+  ],
+  "titre_trouve": "Humidité d’un sol",
+  "titre": "Méthodes de détermination de l'humidité du sol pour l'irrigation",
+  "resume": "Présentation des méthodes de mesure de l'humidité du sol (gravimétrique, tensiomètre, sondes) avec formule de calcul et exemple d'application numérique.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique pédagogique utile mais sans mention de droits ni affiliation institutionnelle identifiable, archivée par précaution.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.5,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Humidité d’un sol Déterminer l'humidité d'un sol irrigué consiste à mesurer la quantité d'eau présente dans le sol par rapport à sa masse sèche."
+    }
+  ],
+  "groupe_doublon_id": "GRP-0026",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00367__methodes-de-determination-de-l-humidite-du-sol-pour-l-i.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00367__methodes-de-determination-de-l-humidite-du-sol-pour-l-i.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00607",
+  "sha256": "65da39f4d25b9c5e6e8aa467b47112a9821ab53da91c6a7fca9be29d1e3c2291",
+  "nom_original": "Melon_juin2021.pdf",
+  "chemin_relatif_source": "OD_Docs/Melon_juin2021.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2993041,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "cultures maraîchères",
+  "pays": "France",
+  "annee": 2021,
+  "auteurs": "Alexis Naullet, Aurore Paradis-Hiault",
+  "source_organisation": "Chambre d'Agriculture de la Gironde",
+  "mots_cles": [
+    "melon",
+    "france",
+    "maraichage",
+    "chambre d'agriculture",
+    "conduite de culture"
+  ],
+  "titre_trouve": "LE MELON",
+  "titre": "Fiche technique : La conduite du melon en France",
+  "resume": "Fiche technique de 3 pages de la Chambre d'Agriculture de la Gironde synthétisant la filière du melon en France, le choix des variétés charentaises, le travail du sol et l'itinéraire technique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche technique institutionnelle française calibrée pour le climat et le marché métropolitains, archivée en raison du contexte non tropical.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE MELON Chambre d'Agriculture de la Gironde - Melon"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00607__fiche-technique-la-conduite-du-melon-en-france.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00607__fiche-technique-la-conduite-du-melon-en-france.pdf"
+}

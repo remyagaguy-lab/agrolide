@@ -1,0 +1,83 @@
+{
+  "id": "DOC-00009",
+  "sha256": "6caf7a77a8561148bb730ce3ee4a0366a94318f6f4aadb5a944fac5c80e5358a",
+  "nom_original": "Guide technique d’une exploitation agricole-burkina-faso.pdf",
+  "chemin_relatif_source": "OD_Agrobusiness/Guide technique d’une exploitation agricole-burkina-faso.pdf",
+  "indice_ancien_dossier": "Agrobusiness",
+  "format_source": "pdf",
+  "taille_octets": 4580571,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 44,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "gestion_exploitation",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso, Togo, Bénin",
+  "annee": 2020,
+  "auteurs": "Partenariat National de l’Eau du Burkina Faso, GWP-AO, SIE",
+  "source_organisation": "Partenariat Régional de l’Eau de l’Afrique de l’Ouest (GWP-AO)",
+  "mots_cles": [
+    "exploitation agricole",
+    "burkina faso",
+    "togo",
+    "benin",
+    "changement climatique",
+    "gestion de l'eau"
+  ],
+  "titre_trouve": "Guide technique d’une exploitation agricole BURKINA FASO ƴ TOGO ƴ BÉNIN",
+  "titre": "Guide technique d'une exploitation agricole : Burkina Faso, Togo, Bénin",
+  "resume": "Guide technique opérationnel pour optimiser la conduite agroécologique et la gestion des flux de matières et d'eau au sein des exploitations agricoles en Afrique de l'Ouest.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel complet de référence pour l'Afrique de l'Ouest, produit dans le cadre du projet TonFuturTonClimat.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Guide technique d’une exploitation agricole BURKINA FASO ƴ TOGO ƴ BÉNIN"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Secrétariat international de l’eau et le Partenariat Régional de l’eau de l’Afrique de l’Ouest"
+    },
+    {
+      "champ": "auteurs",
+      "page": 2,
+      "extrait": "Partenariat National de l’Eau du Burkina Faso, en collaboration avec le Partenariat Régional de l’Eau de l’Afrique de l’Ouest (GWP-AO)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00009__guide-technique-d-une-exploitation-agricole-burkina-fas.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_exploitation/DOC-00009__guide-technique-d-une-exploitation-agricole-burkina-fas.pdf"
+}

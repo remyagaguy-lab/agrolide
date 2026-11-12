@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00464",
+  "sha256": "1f2fdb30952d7ff045529a6805dedc74377664f763a881dd4112cb60ad5d69f0",
+  "nom_original": "GBPP_PATATE_DOUCE_low.pdf",
+  "chemin_relatif_source": "OD_Docs/GBPP_PATATE_DOUCE_low.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 726911,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 56,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "patate douce",
+  "pays": null,
+  "annee": 2011,
+  "auteurs": "Georges Thewys",
+  "source_organisation": "COLEACP / PIP",
+  "mots_cles": [
+    "patate douce",
+    "bonnes pratiques phytosanitaires",
+    "protection des cultures",
+    "maladies",
+    "ravageurs",
+    "pays acp"
+  ],
+  "titre_trouve": "GUIDE DE BONNES PRATIQUES PHYTOSANITAIRES POUR LA PATATE DOUCE (IPOMEA BATATAS) EN PAYS ACP",
+  "titre": "Guide de bonnes pratiques phytosanitaires pour la patate douce en pays ACP",
+  "resume": "Guide technique de référence du COLEACP/PIP détaillant les ravageurs, maladies et méthodes de lutte intégrée pour la culture de la patate douce dans les pays d'Afrique, Caraïbes et Pacifique.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide officiel de référence du COLEACP pour les pays ACP, essentiel pour la protection phytosanitaire de la patate douce.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE DE BONNES PRATIQUES PHYTOSANITAIRES POUR LA PATATE DOUCE (IPOMEA BATATAS) EN PAYS ACP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00464__guide-de-bonnes-pratiques-phytosanitaires-pour-la-patat.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00464__guide-de-bonnes-pratiques-phytosanitaires-pour-la-patat.pdf"
+}

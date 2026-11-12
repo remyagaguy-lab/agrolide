@@ -1,0 +1,79 @@
+{
+  "id": "DOC-00339",
+  "sha256": "cf695cd11d5037ecc8535efb799d6eee58ca90fbcd0506ba33bc04b563c8e1db",
+  "nom_original": "De la taille et de la culture du mûrier (Gaillard).pdf",
+  "chemin_relatif_source": "OD_Docs/De la taille et de la culture du mûrier (Gaillard).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 585914,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "obsolete",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 48,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "ouvrage",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "mûrier / sériciculture",
+  "pays": "France",
+  "annee": 1838,
+  "auteurs": "Gaillard",
+  "source_organisation": "BnF-Partenariats / Veuve Huzard",
+  "mots_cles": [
+    "murier",
+    "taille des arbres",
+    "sericiculture",
+    "arboriculture",
+    "ouvrage historique"
+  ],
+  "titre_trouve": "De la taille et de la culture du mûrier",
+  "titre": "De la taille et de la culture du mûrier",
+  "resume": "Traité d'arboriculture historique de 1838 détaillant la biologie de la sève, la plantation, la taille et les soins culturaux du mûrier destiné à l'élevage du ver à soie en France.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Édition numérique commerciale protégée par copyright (BnF-Partenariats, Collection XIX, EAN 9782346142798) et contenu historique tempéré obsolète.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "Gaillard De la taille et de la culture du mûrier"
+    },
+    {
+      "champ": "autre",
+      "page": 48,
+      "extrait": "Collection XIX est une marque déposée de BnF-Partenariats... EAN : 9782346142798"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00339__de-la-taille-et-de-la-culture-du-murier.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00339__de-la-taille-et-de-la-culture-du-murier.pdf"
+}

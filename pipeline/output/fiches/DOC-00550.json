@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00550",
+  "sha256": "829818b96252b2530d1c54cdcfa2280fb7a9b54cead152681ced03cdc52356a7",
+  "nom_original": "Le potager du bon jardinier-Collectif.pdf",
+  "chemin_relatif_source": "OD_Docs/Le potager du bon jardinier-Collectif.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2283091,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 237,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "ouvrage",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "maraîchage",
+  "pays": "France",
+  "annee": 2020,
+  "auteurs": "Collectif (présenté par Alain Baraton)",
+  "source_organisation": "Flammarion",
+  "mots_cles": [
+    "potager",
+    "maraichage",
+    "legumes",
+    "calendrier potager",
+    "cultures potageres",
+    "climat tempere"
+  ],
+  "titre_trouve": "Le Potager du bon jardinier",
+  "titre": "Le Potager du bon jardinier",
+  "resume": "Manuel horticole présentant mois par mois les travaux à mener au potager et l'itinéraire cultural des différentes familles de légumes en climat tempéré européen.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial des Éditions Flammarion sous droits réservés, traitant du potager en climat tempéré métropolitain.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 4,
+      "extrait": "Collectif / Le Potager du bon jardinier / Flammarion"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00550__le-potager-du-bon-jardinier.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00550__le-potager-du-bon-jardinier.pdf"
+}

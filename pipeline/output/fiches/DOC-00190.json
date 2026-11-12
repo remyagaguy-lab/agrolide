@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00190",
+  "sha256": "b62ecc77b0ec2f975ed73e5b00bbd73e0eb6b97ba52954f24c38d3e296705e90",
+  "nom_original": "Agrodok_22_La_production_artisanale_d_aliments_complets@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_22_La_production_artisanale_d_aliments_complets@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 796737,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 73,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [],
+  "sous_domaine": "nutrition_alimentation",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2005,
+  "auteurs": "Saskia van Gastel, Annoek van den Wijngaart",
+  "source_organisation": "Fondation Agromisa",
+  "mots_cles": [
+    "aliments de complement",
+    "sevrage",
+    "malnutrition",
+    "farines infantiles",
+    "nutrition communautaire"
+  ],
+  "titre_trouve": "La production artisanale d’aliments de complément",
+  "titre": "La production artisanale d’aliments de complément",
+  "resume": "Guide pratique sur la fabrication artisanale d'aliments de complément et de sevrage pour enfants à base de produits locaux afin de lutter contre la malnutrition infantile.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 22 - La production artisanale d’aliments de complément"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00190__la-production-artisanale-daliments-de-complement.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/nutrition_alimentation/DOC-00190__la-production-artisanale-daliments-de-complement.pdf"
+}

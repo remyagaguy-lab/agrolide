@@ -1,0 +1,68 @@
+{
+  "id": "DOC-00889",
+  "sha256": "ef95c8f3cb20da4796208fbc2d0df4f38278df219f33da5cc081799e7964f2ec",
+  "nom_original": "elevage_depoules_pondeuses_elevage_en_batterie_SuperDoubleDeck_SuperTripleDeck.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage_depoules_pondeuses_elevage_en_batterie_SuperDoubleDeck_SuperTripleDeck.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3530458,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00888",
+  "groupe_doublon_id": "GRP-0056",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00888 (Brochure commerciale Big Dutchman : Systèmes cages SuperDoubleDeck et SuperTripl).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "batiments_equipements_elevage",
+  "type_doc": "autre",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "annee": 2014,
+  "auteurs": "Big Dutchman",
+  "source_organisation": "Big Dutchman International GmbH",
+  "mots_cles": [
+    "poules pondeuses",
+    "elevage en batterie",
+    "cages",
+    "climat tropical",
+    "materiel avicole"
+  ],
+  "titre_trouve": "SuperDoubleDeck & SuperTripleDeck les systèmes cage évolutifs pour poules pondeuses",
+  "titre": "Brochure commerciale Big Dutchman : Systèmes cages SuperDoubleDeck et SuperTripleDeck",
+  "resume": "Plaquette commerciale présentant les spécifications techniques des cages en batterie SuperDoubleDeck et SuperTripleDeck de Big Dutchman adaptées aux climats tropicaux.",
+  "statut_droits": "droits_reserves_commercial",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "SuperDoubleDeck & SuperTripleDeck les systèmes cage évolutifs pour poules pondeuses"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00889__brochure-commerciale-big-dutchman-systemes-cages-superd.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/batiments_equipements_elevage/DOC-00889__brochure-commerciale-big-dutchman-systemes-cages-superd.pdf"
+}

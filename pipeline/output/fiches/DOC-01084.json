@@ -1,0 +1,73 @@
+{
+  "id": "DOC-01084",
+  "sha256": "66435aa9840772a5ec5bd46ab5a8e59ca23863fb4c324ffd0697208ea96542b6",
+  "nom_original": "fiche_technico-economique_tomate_cra_agadez_mars2020.pdf",
+  "chemin_relatif_source": "OD_traites/fiche_technico-economique_tomate_cra_agadez_mars2020.pdf",
+  "indice_ancien_dossier": "traites",
+  "format_source": "pdf",
+  "taille_octets": 304122,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479497364-fiche_technico-economique_tomate_cra_agadez_mars2020.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "tomate",
+  "pays": "Niger",
+  "annee": 2020,
+  "auteurs": "Kaou Mamadou, Djibo M. Issiakou, Madou A. Ali, Sidi I. Ouattara, Boubacar Dan Marafa, Zakey Yayé",
+  "source_organisation": "CRA Agadez / RECA Niger",
+  "mots_cles": [
+    "tomate",
+    "cultures maraicheres",
+    "agadez",
+    "air",
+    "niger",
+    "reca",
+    "fiche technico-economique",
+    "compte d'exploitation"
+  ],
+  "titre_trouve": "Fiche technico-économique pour la culture de la tomate Région d’Agadez",
+  "titre": "Fiche technico-économique de la culture de la tomate à Agadez",
+  "resume": "Fiche technico-économique de la CRA d'Agadez fournissant l'itinéraire technique oasien, le calendrier cultural et le compte d'exploitation prévisionnel de la tomate.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technico-économique sahélienne de terrain complète et chiffrée, éditée par la CRA d'Agadez et le RECA, diffusée librement aux producteurs.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Chambre Régionale d’Agriculture d’Agadez Fiche technico-économique pour la culture de la tomate Région d’Agadez"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01084__fiche-technico-economique-de-la-culture-de-la-tomate-a.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-01084__fiche-technico-economique-de-la-culture-de-la-tomate-a.pdf"
+}

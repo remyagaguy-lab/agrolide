@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00942",
+  "sha256": "d6743253856d19a1acb020866da3d2486c6ccace5843a41ab19d0eec4889dfdf",
+  "nom_original": "guide_elevage_avi_fermiere (2).pdf",
+  "chemin_relatif_source": "OD_Docs/guide_elevage_avi_fermiere (2).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2414659,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 31,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 2,
+  "filiere": "aviculture",
+  "pays": "France",
+  "annee": 2014,
+  "auteurs": "Nadine Durochat",
+  "source_organisation": "Chambres d'Agriculture (France)",
+  "mots_cles": [
+    "aviculture fermiere",
+    "circuits courts",
+    "paquet hygiene",
+    "abattage a la ferme",
+    "tracabilite"
+  ],
+  "titre_trouve": "GUIDE D'ELEVAGE AVICULTURE FERMIERE",
+  "titre": "Guide d'élevage : Aviculture fermière en circuits courts",
+  "resume": "Guide technique à l'usage des éleveurs avicoles fermiers détaillant l'organisation de la production, la traçabilité, la biosécurité et les normes d'hygiène.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "membres",
+  "motif_decision": "Guide technique professionnel complet sur la filière avicole fermière et l'hygiène sanitaire, mis à disposition des membres.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE D'ELEVAGE AVICULTURE FERMIERE Quelques repères pour les éleveurs professionnels"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0061",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "membres",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00942__guide-d-elevage-aviculture-fermiere-en-circuits-courts.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00942__guide-d-elevage-aviculture-fermiere-en-circuits-courts.pdf"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00745",
+  "sha256": "f257df102a2e6117d393f25c643429adfbf6c5845489830a7d1444d281c2ba36",
+  "nom_original": "TOMATE.pdf",
+  "chemin_relatif_source": "OD_Docs/TOMATE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1212682,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 9,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "tomate",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "tomate",
+    "lycopersicon esculentum",
+    "maraichage",
+    "itineraire technique",
+    "cameroun",
+    "ifati"
+  ],
+  "titre_trouve": "LA TECHNOLOGIE DE CULTURE DE LA TOMATE(Lycopersicon esculentum)",
+  "titre": "Technologie de culture de la tomate (Lycopersicon esculentum) - IFATI Cameroun",
+  "resume": "Guide pratique d'apprentissage professionnel présentant l'itinéraire complet de la tomate au Cameroun : choix variétal, pépinière, fertilisation, tuteurage, récolte et rendements.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique professionnel officiel agréé par le MINEFOP (Cameroun) pour la production maraîchère de tomate, diffusable publiquement.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "LA TECHNOLOGIE DE CULTURE DE LA TOMATE(Lycopersicon esculentum)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00745__technologie-de-culture-de-la-tomate-lycopersicon-escule.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00745__technologie-de-culture-de-la-tomate-lycopersicon-escule.pdf"
+}

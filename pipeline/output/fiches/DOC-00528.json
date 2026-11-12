@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00528",
+  "sha256": "5e1fd2b929aa565eaa6cb66d30663916c6ffce81e56bd263c6780d2a1f4f7446",
+  "nom_original": "LE CYCLE TRICARBOXYLIQUE (1).pdf",
+  "chemin_relatif_source": "OD_Docs/LE CYCLE TRICARBOXYLIQUE (1).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 346352,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 5,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2024,
+  "auteurs": "Unicornis",
+  "source_organisation": null,
+  "mots_cles": [
+    "cycle de krebs",
+    "cycle tricarboxylique",
+    "acide citrique",
+    "biochimie",
+    "respiration cellulaire"
+  ],
+  "titre_trouve": "LE CYCLE TRICARBOXYLIQUE (CYCLE DE KREBS OU CYCLE DU CITRATE)",
+  "titre": "Le cycle tricarboxylique : Cycle de Krebs et respiration cellulaire",
+  "resume": "Fiche synthétique de cours de biochimie présentant les réactions enzymatiques, le bilan énergétique et le rôle métabolique du cycle de Krebs.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire non publié sous licence libre, archivé pour référence académique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LE CYCLE TRICARBOXYLIQUE (CYCLE DE KREBS OU CYCLE DU CITRATE)"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00528__le-cycle-tricarboxylique-cycle-de-krebs-et-respiration.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00528__le-cycle-tricarboxylique-cycle-de-krebs-et-respiration.pdf"
+}

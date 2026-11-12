@@ -1,0 +1,868 @@
+{
+  "batch_number": 69,
+  "results": [
+    {
+      "id": "DOC-01053",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "apiculture",
+      "domaines_secondaires": [],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "apiculture / miel",
+      "pays": "France",
+      "annee": 2000,
+      "auteurs": "M. Biri, Jacques Gout",
+      "source_organisation": "Éditions De Vecchi",
+      "mots_cles": [
+        "apiculture",
+        "abeilles",
+        "ruche",
+        "miel",
+        "guide apicole",
+        "editions de vecchi"
+      ],
+      "titre_trouve": "Tout savoir sur les abeilles et l'apiculture",
+      "titre": "Tout savoir sur les abeilles et l'apiculture (7e édition)",
+      "resume": "Ouvrage complet des Éditions De Vecchi présentant la biologie des abeilles, l'aménagement du rucher, la conduite des colonies, la récolte du miel et les soins sanitaires.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial protégé par le droit d'auteur (Éditions De Vecchi), archivé pour consultation documentaire interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Tout savoir sur les abeilles et l'apiculture M. Biri 7e édition"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "De Vecchi"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01054",
+      "domaine_principal": "transversal",
+      "sous_domaine": "sciences_de_base",
+      "domaines_secondaires": [],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "biochimie",
+        "enzymologie",
+        "glycolyse",
+        "hexokinase",
+        "glucokinase",
+        "exercice"
+      ],
+      "titre_trouve": "travail personnel en biochimie S2 Enzymologie Noté sur 3 points",
+      "titre": "Travail personnel en biochimie S2 : enzymologie et phosphorylation du glucose",
+      "resume": "Fiche d'exercice universitaire d'évaluation en biochimie (Semestre 2) portant sur les différences structurales, cinétiques et régulatrices entre l'hexokinase et la glucokinase.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche d'évaluation universitaire d'enzymologie non publiée, conservée en archives pédagogiques.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "travail personnel en biochimie S2 Enzymologie Noté sur 3 points"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01055",
+      "domaine_principal": "agroeconomie",
+      "sous_domaine": "politiques_strategies",
+      "domaines_secondaires": [
+        "ressources_naturelles_environnement"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "decideur_institution",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Tunisie",
+      "annee": 2014,
+      "auteurs": "RACHID NAFTI",
+      "source_organisation": "Banque Africaine de Développement (BAD) / Ministère de l'Agriculture (Tunisie)",
+      "mots_cles": [
+        "bad",
+        "pdai",
+        "tunisie",
+        "developpement agricole integre",
+        "pges",
+        "zaghouan",
+        "gestion environnementale"
+      ],
+      "titre_trouve": "Projet de développement agricole intégré (PDAI) de Zaghouan : Résumé du plan de gestion environnementale et sociale",
+      "titre": "Projet de développement agricole intégré de Zaghouan : Plan de gestion environnementale et sociale",
+      "resume": "Résumé du plan de gestion environnementale et sociale (PGES) établi pour le Projet de développement agricole intégré (PDAI) de Zaghouan en Tunisie sous l'égide de la Banque Africaine de Développement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Rapport institutionnel complet de la Banque Africaine de Développement (BAD) sur la gestion environnementale d'un projet de développement agricole, diffusable aux membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Titre du projet: Projet de développement agricole intégré (PDAI) de Zaghouan"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "Département: OSAN Division: OSAN I Numéro de projet: P-TN-AA0-009 Pays: TUNISIE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01057",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture / dindon",
+      "pays": "Algérie",
+      "annee": null,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": "ency-education.com",
+      "mots_cles": [
+        "aviculture",
+        "dindon",
+        "elevage avicole",
+        "cours veterinaire",
+        "densite d'elevage"
+      ],
+      "titre_trouve": "L'ELEVAGE DU DINDON",
+      "titre": "L'élevage du dindon : conduite zootechnique et normes d'élevage",
+      "resume": "Support de cours vétérinaire sur la zootechnie du dindon : caractéristiques éthologiques de l'espèce, gestion de la couvaison, alimentation et normes de densité par stade de croissance.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire de médecine vétérinaire sans licence libre explicite, archivé pour l'enseignement avicole.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.9
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L'ELEVAGE DU DINDON C'est un oiseau bruyant et volumineux"
+        },
+        {
+          "champ": "auteurs",
+          "page": 1,
+          "extrait": "ency-education.com (métadonnées)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01058",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "qualite_securite_normes"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "viande / abattoir",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "abattoir",
+        "viande de boucherie",
+        "diagramme de flux",
+        "decoupe",
+        "coproduits",
+        "farines animales"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité VIANDES DE BOUCHERIE",
+      "titre": "Synoptique de l'abattage et de la valorisation des viandes de boucherie",
+      "resume": "Diagramme de flux technique présentant les étapes d'abattage, de découpe et de ressuage des carcasses bovines, ovines et porcines, ainsi que les voies de valorisation de tous les coproduits d'abattoir.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique technique synthétique de haute valeur pour la filière viande et les projets d'abattoirs, libre de diffusion institutionnelle.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité VIANDES DE BOUCHERIE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01059",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "alimentation_animale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture / volailles",
+      "pays": null,
+      "annee": 2008,
+      "auteurs": "CTA",
+      "source_organisation": "Centre technique de coopération agricole et rurale (CTA)",
+      "mots_cles": [
+        "cta",
+        "aviculture villageoise",
+        "volailles",
+        "elevage des poussins",
+        "couveuse artisanale",
+        "guide pratique"
+      ],
+      "titre_trouve": "Collection Guides pratiques du CTA, No 4",
+      "titre": "L'élevage des volailles : Guide pratique du CTA (No 4)",
+      "resume": "Guide pratique de référence du CTA détaillant les bonnes pratiques d'élevage des volailles en Afrique : couvaison, chauffage des poussins, alimentation, abreuvement et prévention des maladies.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Libre reproduction sous réserve de mention de la source (CTA)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique du CTA libre de droits sous mention de source, de pertinence maximale (3) pour les petits producteurs avicoles africains.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Collection Guides pratiques du CTA, No 4"
+        },
+        {
+          "champ": "statut_droits",
+          "page": 1,
+          "extrait": "L’information contenue dans ce guide peut être librement reproduite à condition de mentionner la source."
+        }
+      ]
+    },
+    {
+      "id": "DOC-01060",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "petit_elevage",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "ouvrage",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture / basse-cour",
+      "pays": "France",
+      "annee": 2010,
+      "auteurs": "Jérôme Chaïb",
+      "source_organisation": "Éditions Terre Vivante",
+      "mots_cles": [
+        "basse-cour",
+        "aviculture biologique",
+        "poules",
+        "canards",
+        "elevage ecologique",
+        "terre vivante"
+      ],
+      "titre_trouve": "Votre basse-cour écologique",
+      "titre": "Votre basse-cour écologique : guide pratique d'élevage naturel",
+      "resume": "Ouvrage de référence des Éditions Terre Vivante consacré à la conduite écologique d'une basse-cour : choix des races, poulailler, alimentation biologique, reproduction et soins naturels.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "droits_reserves",
+        "contenu_commercial",
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livre commercial publié sous droits réservés stricts (Éditions Terre Vivante), archivé pour consultation interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 3,
+          "extrait": "Votre basse-cour écologique JEROME CHAIB"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "terre vivante dzvet.net"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01061",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "qualite_securite_normes"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 3,
+      "filiere": "lait / yaourt",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA-MF",
+      "mots_cles": [
+        "yaourt",
+        "transformation laitiere",
+        "yaourt ferme",
+        "yaourt brasse",
+        "ferments lactiques",
+        "diagramme de fabrication"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité YAOURTS (Yoghourts)",
+      "titre": "Synoptique de fabrication des yaourts fermes et brassés",
+      "resume": "Schéma de procédé industriel présentant les étapes clés et paramètres thermiques de fabrication des yaourts fermes et brassés : standardisation, pasteurisation, ensemencement, étuvage et refroidissement.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Synoptique technique synthétique de haute valeur pratique pour la création d'unités de transformation laitière, libre de diffusion institutionnelle.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité YAOURTS (Yoghourts)"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "ISAA-MF 2004"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01062",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "alimentation_animale",
+      "domaines_secondaires": [
+        "ruminants"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "élevage / ruminants",
+      "pays": "Algérie",
+      "annee": 2018,
+      "auteurs": "Dr DEGHNOUCHE K.",
+      "source_organisation": "Université de Biskra",
+      "mots_cles": [
+        "zootechnie generale",
+        "alimentation des ruminants",
+        "fourrages",
+        "valeur nutritive",
+        "lactation",
+        "cours universitaire"
+      ],
+      "titre_trouve": "Zootechnie générale",
+      "titre": "Cours de zootechnie générale : nutrition et alimentation des ruminants",
+      "resume": "Support de cours universitaire de l'Université de Biskra détaillant les constituants biochimiques des aliments des ruminants, leur digestion, la valeur alimentaire des fourrages et les facteurs de variation de la production laitière.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours universitaire sans licence de diffusion publique ouverte, conservé en archives pédagogiques.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Zootechnie générale Département des Sciences Agronomiques. Université de Biskra Dr. DEGHNOUCHE K"
+        },
+        {
+          "champ": "sous_domaine",
+          "page": 1,
+          "extrait": "I- ETUDE DES CONSTITUANTS DES ALIMENTS DES RUMINANTS"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01063",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "ruminants",
+        "petit_elevage"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "bovins / cuniculture",
+      "pays": "Algérie",
+      "annee": 2018,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "zootechnie speciale",
+        "elevage bovin",
+        "cuniculture",
+        "lapin",
+        "conduite d'elevage",
+        "algerie"
+      ],
+      "titre_trouve": "Zootechnie spéciale : L’élevage bovin et cuniculture",
+      "titre": "Cours de zootechnie spéciale : élevage bovin et cuniculture",
+      "resume": "Support de cours universitaire abordant les filières animales spécifiques : conduite technique de l'élevage bovin (rationnement, ambiance du bâtiment) et de la cuniculture (fumier, viande, peau et poil).",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "auteur_introuvable"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support de cours universitaire non publié sous licence libre, conservé en archives pédagogiques pour les filières animales.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "L’ELEVAGE BOVIN I. Situation de l’élevage bovin en Algérie"
+        },
+        {
+          "champ": "sous_domaine",
+          "page": 54,
+          "extrait": "La peau... On utilise surtout celui du lapin Angora"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01064",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "elevage_general",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "autre",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2020,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "elevage biologique",
+        "programme de formation",
+        "zootechnie bio"
+      ],
+      "titre_trouve": "ÉLEVAGE BIO Programme",
+      "titre": "Programme de formation sur l'élevage biologique",
+      "resume": "Document scanné présentant le programme modulaire d'une session de formation professionnelle consacrée aux principes et pratiques de l'élevage biologique.",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": false,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire",
+        "auteur_introuvable",
+        "incomplet"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Document scanné sans couche texte nécessitant une OCR et une validation humaine de son contenu et de son statut.",
+      "confiance": {
+        "classification": 0.65,
+        "droits": 0.4,
+        "completude": 0.45
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ÉLEVAGE BIO Programme (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01065",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "batiments_equipements_elevage",
+        "alimentation_animale"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture / poule pondeuse",
+      "pays": "Algérie",
+      "annee": null,
+      "auteurs": "ITPE",
+      "source_organisation": "Institut Technique des Petits Élevages (ITPE)",
+      "mots_cles": [
+        "poule pondeuse",
+        "aviculture",
+        "elevage en cage",
+        "taux de ponte",
+        "rationnement",
+        "itpe"
+      ],
+      "titre_trouve": "ELEVAGE DE LA POULE PONDEUSE EN CAGE",
+      "titre": "Élevage de la poule pondeuse en cage : normes de conduite et de ponte (ITPE)",
+      "resume": "Fiche technique officielle de l'ITPE synthétisant les paramètres clés de l'élevage des pondeuses en cage : conception du bâtiment, tables de rationnement alimentaire et prévisions du taux de ponte de 18 à 74 semaines.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Fiche technique officielle d'un institut public d'élevage (ITPE), de haute utilité pour les éleveurs de pondeuses, libre de diffusion.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "MINISTERE D E L ' A G R I C U L T U R E INSTITUT TECHNIQUE DES PETITS ELEVAGES ELEVAGE DE LA POULE PONDEUSE EN CAGE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "I T P E"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01068",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "huiles_sucre_corps_gras",
+      "domaines_secondaires": [
+        "agroeconomie"
+      ],
+      "type_doc": "rapport",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "decideur_institution"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "oléiculture / huile d'olive",
+      "pays": "Tunisie",
+      "annee": 2016,
+      "auteurs": "M.B.A",
+      "source_organisation": "République Tunisienne (APIA / Ministère de l'Agriculture)",
+      "mots_cles": [
+        "huile d'olive biologique",
+        "transformation",
+        "conditionnement",
+        "etude de faisabilite",
+        "tunisie",
+        "rentabilite",
+        "normes coi"
+      ],
+      "titre_trouve": "Transformation et conditionnement de l’huile d’olive biologique",
+      "titre": "Étude de projet : Transformation et conditionnement de l'huile d'olive biologique en Tunisie",
+      "resume": "Dossier technico-économique complet de 50 pages sur la création d'une unité de trituration et de mise en bouteille d'huile d'olive bio : technologie, normes de qualité COI, analyse de marché et modèle financier de rentabilité.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Étude technico-économique institutionnelle complète de valorisation oléicole, réservée aux membres porteurs de projets et conseillers.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Transformation et conditionnement de l’huile d’olive biologique Janvier 2016"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "REPUBLIQUE TUNISIENNE (métadonnées titre)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01069",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cultures_maraicheres",
+      "domaines_secondaires": [
+        "protection_des_cultures"
+      ],
+      "type_doc": "fiche_technique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "tomate",
+      "pays": "Côte d'Ivoire",
+      "annee": 2022,
+      "auteurs": "Phytotop",
+      "source_organisation": "Phytotop",
+      "mots_cles": [
+        "tomate",
+        "cote d'ivoire",
+        "itineraire technique",
+        "protection phytosanitaire",
+        "pepiniere",
+        "phytotop"
+      ],
+      "titre_trouve": "FICHE TECHNIQUE : TOMATE",
+      "titre": "Fiche technique de la culture de tomate en Côte d'Ivoire (Phytotop)",
+      "resume": "Fiche technique d'itinéraire cultural de la tomate en Côte d'Ivoire : préparation du sol, pépinière, repiquage, plan de fertilisation et calendrier de traitements phytosanitaires.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial",
+        "donnees_phyto_a_verifier"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Fiche technique commerciale d'un distributeur privé d'intrants promouvant des spécialités phytopharmaceutiques, archivée pour usage interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "FICHE TECHNIQUE : TOMATE Le Top de la protection phytosanitaire"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "COCODY RIVIERA PALMERAIE ROND POINT ADO ABIDJAN www.phytotop.net"
+        }
+      ]
+    },
+    {
+      "id": "DOC-01070",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "agroecologie_agriculture_durable",
+      "domaines_secondaires": [
+        "production_vegetale",
+        "sol_fertilite"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "enseignant_chercheur"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": null,
+      "pays": "Sénégal",
+      "annee": 2015,
+      "auteurs": "Louis-Etienne Diouf, Ousseynou Dieng, Babacar Samb",
+      "source_organisation": "Agrisud International / JAPPOO Développement / AFD",
+      "mots_cles": [
+        "agroecologie",
+        "senegal",
+        "mbour",
+        "agriculture familiale",
+        "agrisud",
+        "jappoo",
+        "pratiques agroecologiques"
+      ],
+      "titre_trouve": "Guide des pratiques agroécologiques : Département de Mbour, Sénégal",
+      "titre": "Guide des pratiques agroécologiques au Sénégal (Agrisud / Jappoo)",
+      "resume": "Guide méthodologique et pratique de 40 pages détaillant les techniques agroécologiques adaptées aux exploitations familiales sahéliennes (gestion de la fertilité des sols, lutte biologique, compostage et agroforesterie) dans la région de Mbour.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique agroécologique de référence en Afrique de l'Ouest, produit par Agrisud et l'AFD, libre de diffusion institutionnelle et de pertinence maximale.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide des pratiques agroécologiques Département de Mbour, Sénégal"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Agrisud International et l’association sénégalaise JAPPOO Développement... cofinancé par l’Agence Française de Développement"
+        }
+      ]
+    }
+  ]
+}

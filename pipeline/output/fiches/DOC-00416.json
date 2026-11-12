@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00416",
+  "sha256": "0318ed78510588d7efe345a66a8f1cc8e3d80038f8aeef4ee66f16f629adf1d0",
+  "nom_original": "FRUIT DE LA PASSION.pdf",
+  "chemin_relatif_source": "OD_Docs/FRUIT DE LA PASSION.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1175208,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 12,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "fruit de la passion",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP",
+  "mots_cles": [
+    "fruit de la passion",
+    "maracuja",
+    "arboriculture fruitiere",
+    "cameroun",
+    "conduite de culture",
+    "ifati"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DU FRUIT DE LA PASSION",
+  "titre": "Technologie de production du fruit de la passion au Cameroun",
+  "resume": "Guide technique et pratique sur la culture du fruit de la passion au Cameroun, précisant les exigences agroclimatiques, la pépinière, le palissage et la récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique complet sur une culture fruitière tropicale rentable, issu d'un institut de formation agréé, publié en libre accès.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DU FRUIT DE LA PASSION GENERALITE I. LES EXIGENCES DE LA CULTURE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00416__technologie-de-production-du-fruit-de-la-passion-au-cam.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00416__technologie-de-production-du-fruit-de-la-passion-au-cam.pdf"
+}

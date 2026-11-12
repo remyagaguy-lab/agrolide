@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00223",
+  "sha256": "970f5ea87e296964f25e084166731825a2eec387f7acb284bc843d1c34bee30b",
+  "nom_original": "Annex embryonnaire.pdf",
+  "chemin_relatif_source": "OD_Docs/Annex embryonnaire.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5340247,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "droits_reserves",
+    "incomplet"
+  ],
+  "nb_pages": 37,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "YAICI et ARAB",
+  "source_organisation": null,
+  "mots_cles": [
+    "embryologie humaine",
+    "placenta",
+    "annexes embryonnaires",
+    "medecine humaine",
+    "foetus"
+  ],
+  "titre_trouve": "Annexes embryonnaires",
+  "titre": "Annexes embryonnaires - Cours d'embryologie humaine",
+  "resume": "Chapitre de cours universitaire consacré aux annexes embryonnaires humaines (amnios, allantoïde, placenta humain). Document relevant de la médecine humaine hors du périmètre agronomique et vétérinaire.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document d'embryologie et médecine humaine (pages 303-304 d'un manuel médical), hors du périmètre agricole, vétérinaire et agroalimentaire d'Agrolide.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Embryologie humaine YAICI et ARAB"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00223__annexes-embryonnaires-cours-d-embryologie-humaine.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00223__annexes-embryonnaires-cours-d-embryologie-humaine.pdf"
+}

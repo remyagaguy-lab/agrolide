@@ -1,0 +1,75 @@
+{
+  "id": "DOC-01027",
+  "sha256": "f0dac9ba280afbe0a0f930839e242d2337a390a7384c9a00239661ad2d0ca62c",
+  "nom_original": "procedes-de-filtration-membranaire-1.pdf",
+  "chemin_relatif_source": "OD_Docs/procedes-de-filtration-membranaire-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 5296814,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 75,
+  "domaine_principal": "agroalimentaire",
+  "domaines_secondaires": [
+    "ressources_naturelles_environnement"
+  ],
+  "sous_domaine": "equipements_technologie",
+  "type_doc": "ouvrage",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "technicien_conseiller"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Danemark",
+  "annee": 2014,
+  "auteurs": "Michel Jaffrin",
+  "source_organisation": "Bookboon.com",
+  "mots_cles": [
+    "filtration membranaire",
+    "ultrafiltration",
+    "microfiltration",
+    "genie des procedes",
+    "mecanique des fluides",
+    "osmose inverse"
+  ],
+  "titre_trouve": "Procédés de filtration membranaire 1ère édition © 2014 Michel Jaffrin & bookboon.com ISBN 978-87-403-0665-1",
+  "titre": "Procédés de filtration membranaire : principes, modélisation et applications industrielles",
+  "resume": "Manuel universitaire de génie des procédés traitant des principes, de la mécanique des fluides et du dimensionnement des systèmes de filtration membranaire.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Ouvrage commercial sous copyright Bookboon.com avec publicités intégrées, soumis à des droits de reproduction restreints ; archivé.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "Procédés de filtration membranaire 1ère édition © 2014 Michel Jaffrin & bookboon.com ISBN 978-87-403-0665-1"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01027__procedes-de-filtration-membranaire-principes-modelisati.pdf",
+  "cle_r2_proposee": "bibliotheque/agroalimentaire/equipements_technologie/DOC-01027__procedes-de-filtration-membranaire-principes-modelisati.pdf"
+}

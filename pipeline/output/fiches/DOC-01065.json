@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01065",
+  "sha256": "8e37c1350e8e9abbaa42f12574d5fcb74f2559ca1a8e078e980a8e7fb3ebaf4a",
+  "nom_original": "élevage de la poule pondeuse en cage.pdf",
+  "chemin_relatif_source": "OD_Docs/élevage de la poule pondeuse en cage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 362061,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture / poule pondeuse",
+  "pays": "Algérie",
+  "annee": null,
+  "auteurs": "ITPE",
+  "source_organisation": "Institut Technique des Petits Élevages (ITPE)",
+  "mots_cles": [
+    "poule pondeuse",
+    "aviculture",
+    "elevage en cage",
+    "taux de ponte",
+    "rationnement",
+    "itpe"
+  ],
+  "titre_trouve": "ELEVAGE DE LA POULE PONDEUSE EN CAGE",
+  "titre": "Élevage de la poule pondeuse en cage : normes de conduite et de ponte (ITPE)",
+  "resume": "Fiche technique officielle de l'ITPE synthétisant les paramètres clés de l'élevage des pondeuses en cage : conception du bâtiment, tables de rationnement alimentaire et prévisions du taux de ponte de 18 à 74 semaines.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique officielle d'un institut public d'élevage (ITPE), de haute utilité pour les éleveurs de pondeuses, libre de diffusion.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "MINISTERE D E L ' A G R I C U L T U R E INSTITUT TECHNIQUE DES PETITS ELEVAGES ELEVAGE DE LA POULE PONDEUSE EN CAGE"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "I T P E"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01065__elevage-de-la-poule-pondeuse-en-cage-normes-de-conduite.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-01065__elevage-de-la-poule-pondeuse-en-cage-normes-de-conduite.pdf"
+}

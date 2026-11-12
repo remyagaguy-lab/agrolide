@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00031",
+  "sha256": "df1200c494b2133bed3346f1111337a6d809f24fa6c35a37fc1021537559034c",
+  "nom_original": "resume 1 botanique l2.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Botanique/Botanique/resume 1 botanique l2.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 1958769,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 7,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": 2021,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "botanique",
+    "licence agronomie",
+    "cours",
+    "sciences de base"
+  ],
+  "titre_trouve": null,
+  "titre": "Résumé 1 - Botanique L2",
+  "resume": "Document numérisé de 7 pages constituant la première partie d'un résumé de cours de botanique pour étudiants de deuxième année de licence. Nécessite un OCR.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document numérisé partiel sans texte exploitable, nécessitant un OCR pour évaluer le contenu et les droits de diffusion.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.45
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "resume 1 botanique l2.pdf"
+    }
+  ],
+  "ensemble_id": "ENS-0003",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00031__resume-1-botanique-l2.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00031__resume-1-botanique-l2.pdf"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00474",
+  "sha256": "34b11296f9f03337fafbb347f36472731f7f8cdc0fd8e915f63b26d677b6e7d9",
+  "nom_original": "Guide D_élevage Des Pintades.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide D_élevage Des Pintades.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 501493,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "incomplet",
+    "pages_manquantes"
+  ],
+  "nb_pages": 5,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Togo",
+  "annee": 2024,
+  "auteurs": "Benjamin Voedzi",
+  "source_organisation": "Knowledge Academy",
+  "mots_cles": [
+    "pintade",
+    "aviculture",
+    "elevage avicole",
+    "togo",
+    "volailles locales"
+  ],
+  "titre_trouve": "Guide D_élevage Des Pintades",
+  "titre": "Guide d'élevage des pintades (Togo)",
+  "resume": "Extrait d'un guide pratique d'aviculture sur l'élevage des pintades au Togo, abordant l'origine de l'espèce, les races et les modes d'élevage (document incomplet).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document incomplet (5 pages présentes sur au moins 13 selon le sommaire) : conservation en archive interne.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.8,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "CONCLUSION 13 (le document ne compte que 5 pages)"
+    },
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "Benjamin VOEDZI KNOWLEDGE ACADEMY +22896103382 Les pintades : des gardiennes silencieuses de la biodiversité"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00474__guide-d-elevage-des-pintades-togo.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00474__guide-d-elevage-des-pintades-togo.pdf"
+}

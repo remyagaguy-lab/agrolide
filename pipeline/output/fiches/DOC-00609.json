@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00609",
+  "sha256": "d5200eac8889ba2acdf780ca3336284932553c839319597dffa07f06e2d8e1e8",
+  "nom_original": "Mise en valeur.pdf",
+  "chemin_relatif_source": "OD_Docs/Mise en valeur.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 7219067,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "titre_introuvable",
+    "auteur_introuvable",
+    "incomplet"
+  ],
+  "nb_pages": 19,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "sol_fertilite",
+  "type_doc": "rapport",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "mise en valeur",
+    "terres agricoles",
+    "amenagement",
+    "sol",
+    "document numerise"
+  ],
+  "titre_trouve": null,
+  "titre": "Mise en valeur des terres agricoles",
+  "resume": "Document scanné de 19 pages sans couche texte extractible portant sur la mise en valeur agricole ou foncière, nécessitant un traitement OCR pour exploitation complète.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document scanné sans couche texte exploitable nécessitant un OCR pour analyser son contenu exact, son origine et ses droits de diffusion.",
+  "confiance": {
+    "classification": 0.5,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Mise en valeur.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00609__mise-en-valeur-des-terres-agricoles.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/sol_fertilite/DOC-00609__mise-en-valeur-des-terres-agricoles.pdf"
+}

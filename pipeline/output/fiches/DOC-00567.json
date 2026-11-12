@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00567",
+  "sha256": "53cfad7211e30837d4093595ec6b0b8cb55747ce0cc21927f10a91fd9bf4bbbc",
+  "nom_original": "Liste_Globale_Pesticides_autorisés_CSP_Version_Mai_2019_1_1.pdf",
+  "chemin_relatif_source": "OD_Docs/Liste_Globale_Pesticides_autorisés_CSP_Version_Mai_2019_1_1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 16717527,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "scan_illisible",
+    "donnees_phyto_a_verifier"
+  ],
+  "nb_pages": 44,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "texte_officiel",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "decideur_institution"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": null,
+  "annee": 2019,
+  "auteurs": "Comité Sahélien des Pesticides",
+  "source_organisation": "CILSS / CSP",
+  "mots_cles": [
+    "pesticides",
+    "homologation",
+    "comite sahelien des pesticides",
+    "protection des cultures",
+    "sahel"
+  ],
+  "titre_trouve": null,
+  "titre": "Liste globale des pesticides autorisés par le Comité Sahélien des Pesticides (Mai 2019)",
+  "resume": "Catalogue officiel listant l'ensemble des produits phytosanitaires homologués par le Comité Sahélien des Pesticides (CILSS) pour la région sahélienne en mai 2019.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Document officiel sahélien scanné nécessitant un traitement OCR et une validation humaine de lisibilité des formulations phytosanitaires.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.8,
+    "completude": 0.6
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Liste_Globale_Pesticides_autorisés_CSP_Version_Mai_2019_1_1.pdf"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00567__liste-globale-des-pesticides-autorises-par-le-comite-sa.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00567__liste-globale-des-pesticides-autorises-par-le-comite-sa.pdf"
+}

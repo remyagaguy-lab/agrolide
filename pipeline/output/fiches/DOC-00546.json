@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00546",
+  "sha256": "7a2b18decd75dbc7b33f31b58a90850f83e33b2eca0f162c3c267e69faed39e4",
+  "nom_original": "Le bananier et sa culture - Andre Lassoudiere.pdf",
+  "chemin_relatif_source": "OD_Docs/Le bananier et sa culture - Andre Lassoudiere.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 14483188,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves",
+    "contenu_commercial"
+  ],
+  "nb_pages": 447,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "arboriculture_fruitiere",
+  "type_doc": "ouvrage",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "banane",
+  "pays": null,
+  "annee": 2007,
+  "auteurs": "André Lassoudière",
+  "source_organisation": "Éditions Quæ / CIRAD",
+  "mots_cles": [
+    "bananier",
+    "culture de la banane",
+    "arboriculture tropicale",
+    "cirad",
+    "musa"
+  ],
+  "titre_trouve": "Le bananier et sa culture",
+  "titre": "Le bananier et sa culture",
+  "resume": "Monographie de référence exhaustive de 447 pages couvrant la botanique, la physiologie, la conduite agronomique, la protection sanitaire et la récolte des bananiers.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Livre commercial majeur sous copyright strict des Éditions Quæ avec eISBN ; reproduction interdite sans accord de l'éditeur.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.98,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Le bananier et sa culture - Andre Lassoudiere.pdf"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "© Éditions Quæ, 2007 eISBN 9782759200467 Le code de la propriété intellectuelle interdit la photocopie"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00546__le-bananier-et-sa-culture.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/arboriculture_fruitiere/DOC-00546__le-bananier-et-sa-culture.pdf"
+}

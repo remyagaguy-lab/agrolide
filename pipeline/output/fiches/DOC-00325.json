@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00325",
+  "sha256": "6e80452af50955eb55f654c7c3cffb549ae0a83cb4abbfc0b20d05284f1c47d2",
+  "nom_original": "Cours_Epidémiologie_et_prévention_des_risques_Moutassem_D.pdf",
+  "chemin_relatif_source": "OD_Docs/Cours_Epidémiologie_et_prévention_des_risques_Moutassem_D.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 530527,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 19,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2020,
+  "auteurs": "MOUTASSEM Djamel",
+  "source_organisation": null,
+  "mots_cles": [
+    "epidemiologie vegetale",
+    "prevention des risques",
+    "pathologie vegetale",
+    "protection des vegetaux",
+    "maladies des plantes"
+  ],
+  "titre_trouve": "Epidémiologie et prévention des risques Master 1 Protection des végétaux",
+  "titre": "Cours d’épidémiologie végétale et de prévention des risques phytosanitaires",
+  "resume": "Support de cours de Master 1 sur l'épidémiologie végétale, analysant les facteurs de dissémination des bioagresseurs et les stratégies préventives de gestion du risque sanitaire.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de Master non publié sous licence libre, conservé pour archivage documentaire.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.85,
+    "completude": 0.9
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Epidémiologie et prévention des risques Master 1 Protection des végétaux Dr MOUTASSEM"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00325__cours-depidemiologie-vegetale-et-de-prevention-des-risq.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00325__cours-depidemiologie-vegetale-et-de-prevention-des-risq.pdf"
+}

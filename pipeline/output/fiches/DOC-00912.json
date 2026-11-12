@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00912",
+  "sha256": "5c30a4b0ce7004e3ce9c23b03ffa7f9af17d66653d0db74409512b4c381d6f97",
+  "nom_original": "fiche_pintades-1.pdf",
+  "chemin_relatif_source": "OD_Docs/fiche_pintades-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4076968,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "contexte_non_adapte"
+  ],
+  "nb_pages": 4,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "pintade",
+  "pays": "France",
+  "annee": 2004,
+  "auteurs": "Synalaf, PMAF",
+  "source_organisation": "Synalaf",
+  "mots_cles": [
+    "pintade",
+    "label rouge",
+    "aviculture biologique",
+    "plein air",
+    "bien-etre animal"
+  ],
+  "titre_trouve": "La pintade fermière élevée en plein air Label Rouge et la pintade biologique",
+  "titre": "Fiche technique : Élevage de pintades fermières en plein air et bio",
+  "resume": "Fiche comparative du Synalaf et de la PMAF précisant les normes d'élevage de pintades en plein air (Label Rouge et Bio) : densités, parcours herbeux et bien-être animal.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Pertinence de 1 avec drapeau contexte_non_adapte (cahiers des charges avicoles européens Label Rouge / bio) : ne respecte pas le seuil 'pertinence >= 2' requis pour l'accès membres ; archivé sans diffusion (non_publie_archive).",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "La pintade fermière élevée en plein air Label Rouge et la pintade biologique Synalaf"
+    }
+  ],
+  "audit": {
+    "accord": false,
+    "champs_en_desaccord": [
+      "decision"
+    ],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": "Pertinence de 1 avec drapeau contexte_non_adapte (cahiers des charges avicoles européens Label Rouge / bio) : ne respecte pas le seuil 'pertinence >= 2' requis pour l'accès membres ; archivé sans diffusion (non_publie_archive)."
+  },
+  "nom_fichier_final": "DOC-00912__fiche-technique-elevage-de-pintades-fermieres-en-plein.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00912__fiche-technique-elevage-de-pintades-fermieres-en-plein.pdf"
+}

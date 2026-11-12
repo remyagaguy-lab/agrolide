@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00534",
+  "sha256": "a1d2b5ad8b29cad84dea5ee73b0ee5bdc04df61fe83fcfefc1386435d42e8e65",
+  "nom_original": "L_Ami des Jardins - Octobre 2025.PDF",
+  "chemin_relatif_source": "OD_Docs/L_Ami des Jardins - Octobre 2025.PDF",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 92234570,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "ocr_necessaire",
+    "droits_reserves",
+    "contenu_commercial",
+    "contexte_non_adapte",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 116,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "horticulture_jardinage",
+  "type_doc": "periodique",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2025,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "L'Ami des Jardins",
+  "mots_cles": [
+    "jardinage",
+    "horticulture",
+    "plantes d'ornement",
+    "magazine"
+  ],
+  "titre_trouve": null,
+  "titre": "L'Ami des Jardins (Octobre 2025)",
+  "resume": "Numéro du magazine grand public français consacré au jardinage amateur, aux plantes ornementales et au potager en climat tempéré.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Périodique commercial grand public protégé par le droit d'auteur et inadapté aux contextes tropicaux.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.95,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "L_Ami des Jardins - Octobre 2025.PDF"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00534__l-ami-des-jardins-octobre-2025.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/horticulture_jardinage/DOC-00534__l-ami-des-jardins-octobre-2025.pdf"
+}

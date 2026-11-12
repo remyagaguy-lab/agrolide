@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00721",
+  "sha256": "8f5da90bce9b4d55a12d75891a72ec206d00244a58e2b5f2ee68938ae5708d99",
+  "nom_original": "SUPPORT DE FORMATION ECOLOGIQUE.pdf",
+  "chemin_relatif_source": "OD_Docs/SUPPORT DE FORMATION ECOLOGIQUE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 438230,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "donnees_personnelles"
+  ],
+  "nb_pages": 25,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "energie_dechets_valorisation",
+  "type_doc": "cours",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Bénin",
+  "annee": 2021,
+  "auteurs": "Moukadassou Mama Boukari",
+  "source_organisation": null,
+  "mots_cles": [
+    "charbon ecologique",
+    "biogaz",
+    "pave ecologique",
+    "valorisation des dechets",
+    "benin"
+  ],
+  "titre_trouve": "FORMATION ECOLOGIQUE SUR LA FABRICATION DU BIOGAZ, PAVE ECOLOGIQUE ET CHARBON",
+  "titre": "Fabrication de charbon écologique, pavés écologiques et biogaz (Support de formation)",
+  "resume": "Support de formation pratique élaboré au Bénin détaillant les étapes de valorisation des déchets ménagers : fabrication de charbon vert par carbonisation, pavés plastiques et digesteur de biogaz.",
+  "statut_droits": "donnees_personnelles_confidentiel",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de formation privé comportant des coordonnées personnelles (WhatsApp, email) et sans droits de redistribution.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "FORMATION ECOLOGIQUE SUR LA FABRICATION DU BIOGAZ, PAVE ECOLOGIQUE ET CHARBON M. MAMA BOUKARI"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00721__fabrication-de-charbon-ecologique-paves-ecologiques-et.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/energie_dechets_valorisation/DOC-00721__fabrication-de-charbon-ecologique-paves-ecologiques-et.pdf"
+}

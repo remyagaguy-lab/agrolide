@@ -1,0 +1,76 @@
+{
+  "id": "DOC-01062",
+  "sha256": "d8833601af9c227015aba4ba3742205213887a14227fb6d4cc40e9da5e82b06f",
+  "nom_original": "zootechnie générale.pdf",
+  "chemin_relatif_source": "OD_Docs/zootechnie générale.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 596624,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 68,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "alimentation_animale",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": "élevage / ruminants",
+  "pays": "Algérie",
+  "annee": 2018,
+  "auteurs": "Dr DEGHNOUCHE K.",
+  "source_organisation": "Université de Biskra",
+  "mots_cles": [
+    "zootechnie generale",
+    "alimentation des ruminants",
+    "fourrages",
+    "valeur nutritive",
+    "lactation",
+    "cours universitaire"
+  ],
+  "titre_trouve": "Zootechnie générale",
+  "titre": "Cours de zootechnie générale : nutrition et alimentation des ruminants",
+  "resume": "Support de cours universitaire de l'Université de Biskra détaillant les constituants biochimiques des aliments des ruminants, leur digestion, la valeur alimentaire des fourrages et les facteurs de variation de la production laitière.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Polycopié de cours universitaire sans licence de diffusion publique ouverte, conservé en archives pédagogiques.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Zootechnie générale Département des Sciences Agronomiques. Université de Biskra Dr. DEGHNOUCHE K"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "I- ETUDE DES CONSTITUANTS DES ALIMENTS DES RUMINANTS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01062__cours-de-zootechnie-generale-nutrition-et-alimentation.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/alimentation_animale/DOC-01062__cours-de-zootechnie-generale-nutrition-et-alimentation.pdf"
+}

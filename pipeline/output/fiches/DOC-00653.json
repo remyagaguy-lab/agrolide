@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00653",
+  "sha256": "0c06b68b4c41688313ffc24a46d293ed75b62c2baed838b9ec2e30e17a613a7e",
+  "nom_original": "POULET_MIRA_COURS_ENTREPRENEURIAT_DISPENSE_LE_16_08_2021_GROUPE.docx",
+  "chemin_relatif_source": "OD_Docs/POULET_MIRA_COURS_ENTREPRENEURIAT_DISPENSE_LE_16_08_2021_GROUPE.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 98288,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise"
+  ],
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "entrepreneuriat_agricole",
+  "type_doc": "cours",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": null,
+  "pays": "Burkina Faso",
+  "annee": 2021,
+  "auteurs": "Théodore Benin",
+  "source_organisation": "Centre de Formation Professionnelle",
+  "mots_cles": [
+    "entrepreneuriat",
+    "creation d'entreprise",
+    "formation professionnelle",
+    "burkina faso",
+    "kadiogo"
+  ],
+  "titre_trouve": "COURS DE FORMATION EN ENTREPRENEURIAT",
+  "titre": "Cours de formation en entrepreneuriat agricole au Burkina Faso",
+  "resume": "Support de cours de formation professionnelle dispensé au Burkina Faso introduisant les notions fondamentales de l'entrepreneuriat, les compétences managériales et la posture entrepreneuriale.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "canonique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document de cours interne au format traitement de texte non publié sous licence libre, archivé pour usage pédagogique interne.",
+  "confiance": {
+    "classification": 0.92,
+    "droits": 0.85,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "COURS DE FORMATION EN ENTREPRENEURIAT"
+    }
+  ],
+  "groupe_doublon_id": "GRP-0065",
+  "canonique_id": null,
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00653__cours-de-formation-en-entrepreneuriat-agricole-au-burki.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/entrepreneuriat_agricole/DOC-00653__cours-de-formation-en-entrepreneuriat-agricole-au-burki.pdf"
+}

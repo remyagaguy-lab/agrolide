@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00477",
+  "sha256": "cd725c775eff08651e58d04a181459148b9469504141d4216e1da307d7e91d16",
+  "nom_original": "Guide Technique Fruits et Légumes Burundi (3).pdf",
+  "chemin_relatif_source": "OD_Docs/Guide Technique Fruits et Légumes Burundi (3).pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 37139544,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 90,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maraîchage",
+  "pays": "Burundi",
+  "annee": 2019,
+  "auteurs": "Ministère de l'Agriculture du Burundi",
+  "source_organisation": "Projet d'appui aux filières horticoles / Burundi",
+  "mots_cles": [
+    "cultures fruitieres",
+    "cultures maraicheres",
+    "guide de bonnes pratiques",
+    "burundi",
+    "horticulture"
+  ],
+  "titre_trouve": "GUIDE DE BONNES PRATIQUES DE PRODUCTION DES FRUITS ET LEGUMES",
+  "titre": "Guide technique de production des cultures fruitières et maraîchères au Burundi",
+  "resume": "Guide technique exhaustif de bonnes pratiques de production horticole au Burundi, détaillant la conduite agronomique, la fertilisation et la protection intégrée des fruits et légumes.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique institutionnel de référence pour la production fruitière et maraîchère en Afrique tropicale, complet et publiable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 3,
+      "extrait": "GUIDE DE BONNES PRATIQUES DE PRODUCTION DES FRUITS ET LEGUMES"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Guide technique de production des cultures fruitières et maraîchères"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00477__guide-technique-de-production-des-cultures-fruitieres-e.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00477__guide-technique-de-production-des-cultures-fruitieres-e.pdf"
+}

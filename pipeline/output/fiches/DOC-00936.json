@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00936",
+  "sha256": "020071fe99525d5d7ff6a7910fef2421e30be8b7bf8ff99c5523849019b49baf",
+  "nom_original": "guide-pour-bien-prendre-soin-de-ses-poules.pdf",
+  "chemin_relatif_source": "OD_Docs/guide-pour-bien-prendre-soin-de-ses-poules.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1016629,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00935",
+  "groupe_doublon_id": "GRP-0060",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00935 (Guide pratique : Bien prendre soin de ses poules (Bordeaux Métropole)).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "tempere_non_adapte",
+  "pertinence_plateforme": 1,
+  "filiere": "poules pondeuses",
+  "pays": "France",
+  "annee": 2015,
+  "auteurs": "Bordeaux Métropole",
+  "source_organisation": "Bordeaux Métropole",
+  "mots_cles": [
+    "poules de jardin",
+    "bordeaux metropole",
+    "dechets menagers",
+    "aviculture urbaine",
+    "poules pondeuses"
+  ],
+  "titre_trouve": "POUR BIEN PRENDRE SOIN DE SES POULES",
+  "titre": "Guide pratique : Bien prendre soin de ses poules (Bordeaux Métropole)",
+  "resume": "Dépliant de sensibilisation de Bordeaux Métropole destiné aux citadins pour l'adoption de poules pondeuses de jardin afin de recycler les déchets organiques ménagers.",
+  "statut_droits": "diffusion_institutionnelle",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "POUR BIEN PRENDRE SOIN DE SES POULES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00936__guide-pratique-bien-prendre-soin-de-ses-poules-bordeaux.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00936__guide-pratique-bien-prendre-soin-de-ses-poules-bordeaux.pdf"
+}

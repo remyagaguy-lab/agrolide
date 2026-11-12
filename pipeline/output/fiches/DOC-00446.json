@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00446",
+  "sha256": "c958439f87758dc01be6b11faa2c845908ffd9e4da5d116f04c6582c41844ecd",
+  "nom_original": "Fiche_technico-economique_niebe_CRA_Zinder_V1_Decembre_2016.pdf",
+  "chemin_relatif_source": "OD_Docs/Fiche_technico-economique_niebe_CRA_Zinder_V1_Decembre_2016.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 564191,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 3,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "niébé",
+  "pays": "Niger",
+  "annee": 2016,
+  "auteurs": "Aimée Tchokanaka, Salissou El Ousmane, Cheik Amadou Bello, Mama Lawan Ibrah, Bachir Issoufou",
+  "source_organisation": "CRA Zinder / RECA Niger",
+  "mots_cles": [
+    "niebe",
+    "fiche technico-economique",
+    "zinder",
+    "niger",
+    "legumineuse",
+    "rentabilite agricole"
+  ],
+  "titre_trouve": "Fiche technico-économique pour la culture du niébé - Région de Zinder",
+  "titre": "Fiche technico-économique : Culture du niébé à Zinder",
+  "resume": "Fiche technico-économique de la CRA de Zinder analysant l'itinéraire technique de production du niébé sur 1 hectare au Niger, les coûts d'exploitation, les rendements et la rentabilité financière.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technico-économique institutionnelle de référence de la Chambre Régionale d'Agriculture de Zinder, libre de diffusion.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Fiche technico-économique pour la culture du niébé"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00446__fiche-technico-economique-culture-du-niebe-a-zinder.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00446__fiche-technico-economique-culture-du-niebe-a-zinder.pdf"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00526",
+  "sha256": "480669428c42d9869f5092d6601294bad49f7537937f26a5a06b7748e2409364",
+  "nom_original": "LA GLYCOLYSE (1).doc",
+  "chemin_relatif_source": "OD_Docs/LA GLYCOLYSE (1).doc",
+  "indice_ancien_dossier": null,
+  "format_source": "doc",
+  "taille_octets": 67584,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "corrompu"
+  ],
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "MXP Taibeche",
+  "source_organisation": null,
+  "mots_cles": [
+    "glycolyse",
+    "biochimie",
+    "embden-meyerhof",
+    "glucose",
+    "metabolisme"
+  ],
+  "titre_trouve": "LA GLYCOLYSE : VOIE D EMBDEN-MEYEROFF-PARNAS",
+  "titre": "Biochimie métabolique : La glycolyse (Voie d'Embden-Meyerhof-Parnas)",
+  "resume": "Support de cours de biochimie métabolique décrivant les étapes enzymatiques et le bilan énergétique de la dégradation anaérobie du glucose.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fichier Word non converti avec métadonnées dégradées, conservé pour archivage.",
+  "confiance": {
+    "classification": 0.85,
+    "droits": 0.8,
+    "completude": 0.7
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LA GLYCOLYSE : VOIE D EMBDEN-MEYEROFF-PARNAS"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00526__biochimie-metabolique-la-glycolyse-voie-d-embden-meyerh.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00526__biochimie-metabolique-la-glycolyse-voie-d-embden-meyerh.pdf"
+}

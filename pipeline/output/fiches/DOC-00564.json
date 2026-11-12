@@ -1,0 +1,67 @@
+{
+  "id": "DOC-00564",
+  "sha256": "b198b1a3a6989ae503600fbfee2b02f0ed494979ee36c494a78dd383b7e31635",
+  "nom_original": "Les-animaux-1.pdf",
+  "chemin_relatif_source": "OD_Docs/Les-animaux-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 459455,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 1,
+  "domaine_principal": "hors_perimetre",
+  "domaines_secondaires": [],
+  "sous_domaine": "aucun",
+  "type_doc": "autre",
+  "public_principal": "etudiant",
+  "publics_secondaires": [],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 0,
+  "filiere": null,
+  "pays": null,
+  "annee": 2015,
+  "auteurs": "Véronique",
+  "source_organisation": null,
+  "mots_cles": [
+    "animaux",
+    "vocabulaire",
+    "pedagogie",
+    "ecole primaire",
+    "abecedaire"
+  ],
+  "titre_trouve": "Les animaux - 1",
+  "titre": "Fiche de vocabulaire illustrée : Les animaux (Enseignement primaire)",
+  "resume": "Fiche pédagogique élémentaire destinée à l'apprentissage du vocabulaire des animaux pour de jeunes élèves d'école primaire.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "exclu_hors_perimetre",
+  "motif_decision": "Document pédagogique d'école élémentaire sans lien avec l'agriculture ou l'élevage professionnel, exclu car hors périmètre.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.7,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Les animaux - 1 \n \nUne abeille \nabeille \nUn âne \nâne"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_hors_perimetre",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00564__fiche-de-vocabulaire-illustree-les-animaux-enseignement.pdf",
+  "cle_r2_proposee": "bibliotheque/hors_perimetre/aucun/DOC-00564__fiche-de-vocabulaire-illustree-les-animaux-enseignement.pdf"
+}

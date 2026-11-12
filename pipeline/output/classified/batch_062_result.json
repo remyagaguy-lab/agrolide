@@ -1,0 +1,832 @@
+{
+  "batch_number": 62,
+  "results": [
+    {
+      "id": "DOC-00938",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "energie_dechets_valorisation"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "SICTOM de la zone de Dole",
+      "source_organisation": "SICTOM Dole",
+      "mots_cles": [
+        "poules",
+        "aviculture domestique",
+        "reduction des dechets",
+        "compostage",
+        "dechets menagers"
+      ],
+      "titre_trouve": "Opération « Des poules pour réduire mes déchets » Guide des bonnes pratiques",
+      "titre": "Guide des bonnes pratiques : Des poules pour réduire mes déchets (SICTOM Dole)",
+      "resume": "Guide pratique d'initiation à l'accueil et aux soins des poules pondeuses au jardin familial pour la valorisation des restes de cuisine et la réduction des déchets.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Livret de collectivité française sur les poules de jardin pour réduire les ordures ménagères, de pertinence marginale pour la plateforme.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Opération « Des poules pour réduire mes déchets » Guide des bonnes pratiques"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 8,
+          "extrait": "Plus d’infos sur la réduction des déchets www.sictomdole.fr"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00939",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "agronomie_generale",
+        "protection_des_cultures"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": "blé dur",
+      "pays": "France",
+      "annee": 2021,
+      "auteurs": "ARVALIS - Institut du végétal",
+      "source_organisation": "ARVALIS - Institut du végétal",
+      "mots_cles": [
+        "ble dur",
+        "cereales",
+        "arvalis",
+        "region centre",
+        "itineraire technique",
+        "fertilisation"
+      ],
+      "titre_trouve": "GUIDE DU BLE DUR EN REGION CENTRE ET ILE DE FRANCE",
+      "titre": "Guide de culture du blé dur en région Centre et Île-de-France (ARVALIS)",
+      "resume": "Guide agronomique complet d'ARVALIS sur l'itinéraire technique du blé dur en France : choix variétal, fertilisation azotée, régulation et protection sanitaire.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique ARVALIS spécifique à la céréaliculture tempérée en France métropolitaine, inadapté au contexte tropical d'Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE DU BLE DUR EN REGION CENTRE ET ILE DE FRANCE"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 2,
+          "extrait": "Guide de culture du blé dur en région Centre et Ile de France © ARVALIS - Institut du végétal - Mars 2021"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00940",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "petit_elevage",
+      "domaines_secondaires": [
+        "aviculture",
+        "batiments_equipements_elevage"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2012,
+      "auteurs": "Institut Technique des Élevages (ITELV)",
+      "source_organisation": "ITELV Algérie",
+      "mots_cles": [
+        "caille",
+        "coturniculture",
+        "coturnix japonica",
+        "itelv",
+        "algerie",
+        "elevage avicole",
+        "oeufs de caille"
+      ],
+      "titre_trouve": "Guide d’élevage de la Caille",
+      "titre": "Guide d'élevage de la caille (ITELV Algérie)",
+      "resume": "Guide technique officiel de l'ITELV sur la coturniculture : choix de la souche (Coturnix japonica), logement en batterie ou au sol, reproduction et alimentation.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide pratique complet d'institut technique public d'élevage (ITELV), directement diffusable aux éleveurs et porteurs de projet.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 2,
+          "extrait": "Guide d’élevage de la Caille"
+        },
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "MINISTERE DE L’AGRICULTURE ET DU DEVELOPPMENT RURAL INSTITUT TECHNIQUE DES ELEVAGES ITELV Alger"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00941",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "arboriculture_fruitiere",
+      "domaines_secondaires": [
+        "culture_sous_abri_hors_sol"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "Canada",
+      "annee": 2000,
+      "auteurs": "Ministère de l'Agriculture, des Pêcheries et de l'Alimentation du Québec (MAPAQ)",
+      "source_organisation": "MAPAQ Québec",
+      "mots_cles": [
+        "fraise",
+        "culture sous serre",
+        "fraisier",
+        "quebec",
+        "mapaq",
+        "horticulture"
+      ],
+      "titre_trouve": "La culture des fraises en serre Guide de production",
+      "titre": "La culture des fraises en serre : Guide de production (MAPAQ Québec)",
+      "resume": "Guide de production du ministère québécois détaillant la physiologie, la conduite climatique et la fertilisation des fraises cultivées sous abri en climat froid.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contexte_non_adapte"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Guide technique conçu pour la serriculture sous climat froid québécois, inadapté au contexte tropical africain.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "La culture des fraises en serre Guide de production"
+        },
+        {
+          "champ": "contexte_geo",
+          "page": 1,
+          "extrait": "Gouvernement du Québec Ministère de l'Agriculture, des Pêcheries et de l'Alimentation"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00942",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "qualite_securite_normes"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "tempere_non_adapte",
+      "pertinence_plateforme": 2,
+      "filiere": "aviculture",
+      "pays": "France",
+      "annee": 2014,
+      "auteurs": "Nadine Durochat",
+      "source_organisation": "Chambres d'Agriculture (France)",
+      "mots_cles": [
+        "aviculture fermiere",
+        "circuits courts",
+        "paquet hygiene",
+        "abattage a la ferme",
+        "tracabilite"
+      ],
+      "titre_trouve": "GUIDE D'ELEVAGE AVICULTURE FERMIERE",
+      "titre": "Guide d'élevage : Aviculture fermière en circuits courts",
+      "resume": "Guide technique à l'usage des éleveurs avicoles fermiers détaillant l'organisation de la production, la traçabilité, la biosécurité et les normes d'hygiène.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Guide technique professionnel complet sur la filière avicole fermière et l'hygiène sanitaire, mis à disposition des membres.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "GUIDE D'ELEVAGE AVICULTURE FERMIERE Quelques repères pour les éleveurs professionnels"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00944",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "aviculture",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "aviculture",
+      "pays": "Bénin",
+      "annee": 2015,
+      "auteurs": "Centre Songhaï",
+      "source_organisation": "Centre Songhaï (Porto-Novo, Bénin)",
+      "mots_cles": [
+        "centre songhai",
+        "poulet de chair",
+        "aviculture tropicale",
+        "benin",
+        "elevage avicole",
+        "agroecologie"
+      ],
+      "titre_trouve": null,
+      "titre": "Guide d'élevage du poulet de chair (Centre Songhaï)",
+      "resume": "Manuel pratique du Centre Songhaï (Bénin) sur la conduite intégrée et écologique de l'élevage de poulets de chair en milieu tropical (OCR nécessaire).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide technique de référence du Centre Songhaï scanné sans couche texte extractible; OCR et validation humaine préalables requis.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.55,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "guide_elevage_poulet-de-chair_Songhai-1.pdf (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00946",
+      "domaine_principal": "production_animale",
+      "sous_domaine": "ruminants",
+      "domaines_secondaires": [
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 3,
+      "filiere": "petits ruminants",
+      "pays": "Bénin",
+      "annee": 2015,
+      "auteurs": "Centre Songhaï",
+      "source_organisation": "Centre Songhaï (Porto-Novo, Bénin)",
+      "mots_cles": [
+        "centre songhai",
+        "ovins",
+        "caprins",
+        "elevage ovin",
+        "benin",
+        "petits ruminants"
+      ],
+      "titre_trouve": null,
+      "titre": "Guide d'élevage ovin et caprin (Centre Songhaï)",
+      "resume": "Fascicule pratique du Centre Songhaï détaillant les méthodes agroécologiques de conduite des ovins et des caprins en milieu tropical (OCR nécessaire).",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Fascicule d'élevage du Centre Songhaï scanné sans texte exploitable; nécessite un traitement OCR et une validation humaine.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.55,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "guide_ovin_et_caprin_Songhai-2.pdf (nom du fichier)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00947",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "foresterie_agroforesterie",
+      "domaines_secondaires": [
+        "cultures_maraicheres",
+        "arboriculture_fruitiere",
+        "agroecologie_agriculture_durable"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "producteur",
+        "entrepreneur_porteur_projet"
+      ],
+      "niveau": "intermediaire",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2017,
+      "auteurs": "GRAB (Groupe de Recherche en Agriculture Biologique)",
+      "source_organisation": "GRAB / Projet SMART",
+      "mots_cles": [
+        "agroforesterie",
+        "verger-maraicher",
+        "arbres fruitiers",
+        "maraichage",
+        "agroecologie",
+        "grab"
+      ],
+      "titre_trouve": "ASSOCIER LÉGUMES ET ARBRES FRUITIERS EN AGROFORESTERIE",
+      "titre": "Associer légumes et arbres fruitiers en agroforesterie : Le verger-maraîcher (GRAB)",
+      "resume": "Guide méthodologique de référence du GRAB sur la conception et la conduite d'un verger-maraîcher associant maraîchage biologique et arbres fruitiers.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (archivé sur Organic Eprints orgprints.org/32135)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "public",
+      "motif_decision": "Guide agroforestier de haute valeur technique, diffusé en libre accès sur l'archive internationale Organic Eprints.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.95,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "ASSOCIER LÉGUMES ET ARBRES FRUITIERS EN AGROFORESTERIE" },
+        {
+          "champ": "licence_detectee",
+          "page": 1,
+          "extrait": "Archived at http://orgprints.org/32135"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00948",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "cereales",
+      "domaines_secondaires": [
+        "protection_des_cultures",
+        "agronomie_generale"
+      ],
+      "type_doc": "guide_pratique",
+      "public_principal": "producteur",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "intermediaire",
+      "langue": "multilingue",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": "céréales",
+      "pays": null,
+      "annee": 2014,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "orge",
+        "ble",
+        "cereales",
+        "guide technique",
+        "maghreb",
+        "arabe-francais"
+      ],
+      "titre_trouve": "Guide Blés Orge AR et FR",
+      "titre": "Guide technique de culture des blés et de l'orge",
+      "resume": "Guide technique bilingue (français et arabe) consacré à la conduite agronomique du blé et de l'orge, scanné sans couche texte exploitable (OCR requis).",
+      "statut_droits": "inconnu",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "ocr_necessaire"
+      ],
+      "decision_publication": "a_valider_humain",
+      "motif_decision": "Guide technique bilingue scanné sans texte numérique exploitable; traitement OCR et vérification des droits requis.",
+      "confiance": {
+        "classification": 0.8,
+        "droits": 0.45,
+        "completude": 0.6
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Guide Blés Orge AR et FR (sommaire PDF)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00949",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "qualite_securite_normes",
+      "domaines_secondaires": [
+        "transformation_cereales_tubercules"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "entrepreneur_porteur_projet",
+      "publics_secondaires": [],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2019,
+      "auteurs": "Société Thouy",
+      "source_organisation": "Thouy SAS",
+      "mots_cles": [
+        "haccp",
+        "plan de nettoyage",
+        "boulangerie",
+        "patisserie",
+        "hygiene",
+        "desinfection"
+      ],
+      "titre_trouve": "Zone : Pâtisserie Plan de nettoyage et désinfection",
+      "titre": "Plan de nettoyage et désinfection HACCP en pâtisserie (Thouy)",
+      "resume": "Grille opérationnelle de plan de nettoyage et désinfection HACCP en laboratoire de pâtisserie, intégrant fréquences et préconisations de produits.",
+      "statut_droits": "droits_reserves_commercial",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [
+        "contenu_commercial"
+      ],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Support commercial publicitaire d'un distributeur de produits d'hygiène, conservé pour archive interne.",
+      "confiance": {
+        "classification": 0.85,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "source_organisation",
+          "page": 1,
+          "extrait": "LE SPECIALISTE DE LA VAISSELLE JETABLE ET DES PRODUITS DE NETTOYAGE www.thouy.net Brioxol"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00950",
+      "domaine_principal": "production_vegetale",
+      "sous_domaine": "protection_des_cultures",
+      "domaines_secondaires": [
+        "arboriculture_fruitiere"
+      ],
+      "type_doc": "article",
+      "public_principal": "enseignant_chercheur",
+      "publics_secondaires": [
+        "technicien_conseiller",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_tropicale",
+      "pertinence_plateforme": 2,
+      "filiere": "papaye",
+      "pays": "Guadeloupe",
+      "annee": 1985,
+      "auteurs": "Philippe Prior, Michel Beramis, Marie-Thérèse Rousseau",
+      "source_organisation": "INRA / HAL",
+      "mots_cles": [
+        "papaye",
+        "deperissement bacterien",
+        "erwinia",
+        "pathologie vegetale",
+        "antilles",
+        "inra"
+      ],
+      "titre_trouve": "Le dépérissement bactérien du papayer aux Antilles françaises",
+      "titre": "Le dépérissement bactérien du papayer aux Antilles françaises (INRA)",
+      "resume": "Article scientifique publié dans Agronomie (INRA) analysant l'étiologie, les symptômes et le développement épidémiologique du dépérissement bactérien du papayer.",
+      "statut_droits": "libre_licence_ouverte",
+      "licence_detectee": "Open Access (dépôt légal archive ouverte HAL hal-00884716)",
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Article de recherche scientifique en libre accès (Open Access HAL / INRA), mis à disposition des membres pour l'expertise phytosanitaire.",
+      "confiance": {
+        "classification": 0.98,
+        "droits": 0.98,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Le dépérissement bactérien du papayer aux Antilles françaises Philippe Prior, Michel Beramis, Marie-Thérèse Rousseau"
+        },
+        {
+          "champ": "licence_detectee",
+          "page": 1,
+          "extrait": "HAL Id: hal-00884716 HAL is a multi-disciplinary open access archive"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00951",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "sol_fertilite",
+      "domaines_secondaires": [
+        "eau_irrigation"
+      ],
+      "type_doc": "autre",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "technicien_conseiller"
+      ],
+      "niveau": "initiation",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 1,
+      "filiere": null,
+      "pays": null,
+      "annee": 2025,
+      "auteurs": "Auteur non précisé",
+      "source_organisation": null,
+      "mots_cles": [
+        "capacite au champ",
+        "sol",
+        "retention d'eau",
+        "agronomie",
+        "calcul"
+      ],
+      "titre_trouve": null,
+      "titre": "Formules et exemple de calcul de la capacité au champ d'un sol",
+      "resume": "Fiche synthétique d'une page présentant les définitions et formules de calcul de la capacité au champ d'un sol en millimètres et en pourcentage.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Simple note d'exercice scolaire d'une seule page, d'intérêt documentaire limité : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.9,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "sujet",
+          "page": 1,
+          "extrait": "La capacité au champ, ou capacité de rétention d'eau d'un sol, se mesure souvent en millimètres (mm) ou en pourcentage (%)"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00952",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "transformation_produits_animaux",
+      "domaines_secondaires": [
+        "equipements_technologie",
+        "qualite_securite_normes"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": "lait",
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA",
+      "mots_cles": [
+        "huile de beurre",
+        "mgla",
+        "matiere grasse laitiere",
+        "babeurre",
+        "diagramme de flux",
+        "industrie laitiere"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité HUILES DE BEURRE",
+      "titre": "Synoptique industriel de fabrication des huiles de beurre et MGLA",
+      "resume": "Schéma fonctionnel et diagramme de procédé technologique pour la fabrication de l'huile de beurre, de la matière grasse laitière anhydre (MGLA) et du babeurre.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Synoptique de génie des procédés laitiers précis et complet, utile pour les ingénieurs et transformateurs membres d'Agrolide.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité HUILES DE BEURRE"
+        },
+        {
+          "champ": "filiere",
+          "page": 1,
+          "extrait": "Matière grasse laitière anhydre (MGLA 99,8%) HUILE de BEURRE"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00953",
+      "domaine_principal": "agroalimentaire",
+      "sous_domaine": "huiles_sucre_corps_gras",
+      "domaines_secondaires": [
+        "equipements_technologie"
+      ],
+      "type_doc": "outil_modele",
+      "public_principal": "technicien_conseiller",
+      "publics_secondaires": [
+        "entrepreneur_porteur_projet",
+        "etudiant"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "international_general",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "France",
+      "annee": 2004,
+      "auteurs": "ISAA-MF",
+      "source_organisation": "ISAA",
+      "mots_cles": [
+        "raffinage des huiles",
+        "margarine",
+        "oleagineux",
+        "tourteaux",
+        "diagramme de process",
+        "genie industriel"
+      ],
+      "titre_trouve": "Technologie clé de compétitivité dans l’activité HUILES – MARGARINES",
+      "titre": "Synoptique industriel de raffinage des huiles végétales et fabrication de margarine",
+      "resume": "Diagramme de procédé complet décrivant les étapes du pressage, extraction par solvant, démucilagination, désodorisation et hydrogénation des huiles et margarines.",
+      "statut_droits": "diffusion_institutionnelle",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "membres",
+      "motif_decision": "Schéma d'ingénierie industrielle de référence sur le raffinage des corps gras, accessible aux membres pour l'appui technique.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.85,
+        "completude": 0.95
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Technologie clé de compétitivité dans l’activité HUILES – MARGARINES"
+        }
+      ]
+    },
+    {
+      "id": "DOC-00954",
+      "domaine_principal": "ressources_naturelles_environnement",
+      "sous_domaine": "eau_irrigation",
+      "domaines_secondaires": [
+        "agronomie_generale"
+      ],
+      "type_doc": "cours",
+      "public_principal": "etudiant",
+      "publics_secondaires": [
+        "enseignant_chercheur",
+        "technicien_conseiller"
+      ],
+      "niveau": "expert",
+      "langue": "fr",
+      "contexte_geo": "afrique_autre",
+      "pertinence_plateforme": 2,
+      "filiere": null,
+      "pays": "Algérie",
+      "annee": 2020,
+      "auteurs": "Aziz Hebal",
+      "source_organisation": "Université du 20 août 1955 de Skikda",
+      "mots_cles": [
+        "hydraulique",
+        "hydrologie statistique",
+        "amenagement hydro-agricole",
+        "master",
+        "skikda",
+        "algerie"
+      ],
+      "titre_trouve": "Université de Skikda : Spécialité Aménagement hydro-Agricole Master II",
+      "titre": "Hydrologie statistique appliquée aux aménagements hydro-agricoles (Master 2)",
+      "resume": "Support de cours universitaire de Master 2 présentant le traitement et l'homogénéisation des séries de données hydrologiques pour le dimensionnement hydro-agricole.",
+      "statut_droits": "travail_academique_non_publie",
+      "licence_detectee": null,
+      "complet": true,
+      "drapeaux_ajoutes": [],
+      "decision_publication": "non_publie_archive",
+      "motif_decision": "Polycopié de cours magistral universitaire de Master 2 sans licence ouverte explicite : conservation en archive interne.",
+      "confiance": {
+        "classification": 0.95,
+        "droits": 0.9,
+        "completude": 0.98
+      },
+      "preuves": [
+        {
+          "champ": "titre",
+          "page": 1,
+          "extrait": "Université du 20 août 1955 de Skikda Département des sciences agronomique Spécialité : Aménagement hydro-Agricole Niveau : Master II"
+        },
+        {
+          "champ": "auteur",
+          "page": 1,
+          "extrait": "Préparé par Mr. Hebal Aziz (MCA) Année universitaire 2020/2021"
+        }
+      ]
+    }
+  ]
+}

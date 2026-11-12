@@ -1,0 +1,72 @@
+{
+  "id": "DOC-00631",
+  "sha256": "f4d6c6a74c9edabb45672a15305b7bd7d13cdb3b7b9b899e974e3d14d789a069",
+  "nom_original": "Nesidiocoris tenuis_.pdf",
+  "chemin_relatif_source": "OD_Docs/Nesidiocoris tenuis_.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 4171737,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 33,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "presentation",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "enseignant_chercheur",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maraîchage",
+  "pays": "Burkina Faso",
+  "annee": 2023,
+  "auteurs": "Dr Wendnéyidé Mathieu Sawadogo",
+  "source_organisation": null,
+  "mots_cles": [
+    "nesidiocoris tenuis",
+    "lutte biologique",
+    "maraichage",
+    "tuta absoluta",
+    "aleurodes",
+    "burkina faso",
+    "protection des cultures"
+  ],
+  "titre_trouve": "Nesidiocoris tenuis, prédateur, alternative à la lutte chimique en maraichage?",
+  "titre": "Nesidiocoris tenuis, prédateur naturel : alternative à la lutte chimique en maraîchage",
+  "resume": "Présentation technique et scientifique sur le potentiel de la punaise miride Nesidiocoris tenuis comme auxiliaire de lutte biologique contre les ravageurs majeurs en maraîchage (Tuta absoluta, aleurodes, thrips) en Afrique de l'Ouest.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Présentation académique d'un chercheur burkinabè sans licence libre déclarée, conservée en archive pour son intérêt agroécologique.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Nesidiocoris tenuis, prédateur, alternative à la lutte chimique en maraichage? Dr SAWADOGO Wendnéyidé Mathieu"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00631__nesidiocoris-tenuis-predateur-naturel-alternative-a-la.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00631__nesidiocoris-tenuis-predateur-naturel-alternative-a-la.pdf"
+}

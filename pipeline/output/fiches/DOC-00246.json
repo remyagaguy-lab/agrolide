@@ -1,0 +1,74 @@
+{
+  "id": "DOC-00246",
+  "sha256": "054c8f874478c911dbf65914becd7ce1207e1bf382eacdd33e31ac6331545b5c",
+  "nom_original": "Besoins en eau d.docx",
+  "chemin_relatif_source": "OD_Docs/Besoins en eau d.docx",
+  "indice_ancien_dossier": null,
+  "format_source": "docx",
+  "taille_octets": 12416,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "format_non_pdf",
+    "conversion_requise",
+    "incomplet",
+    "ensemble_partiel"
+  ],
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "eau_irrigation",
+  "type_doc": "outil_modele",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "etudiant",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "tomate",
+  "pays": null,
+  "annee": null,
+  "auteurs": "ENIGMA",
+  "source_organisation": null,
+  "mots_cles": [
+    "irrigation goutte-a-goutte",
+    "tomate industrielle",
+    "besoins en eau",
+    "dimensionnement",
+    "calcul hydrique"
+  ],
+  "titre_trouve": "Besoins en eau d'une culture de tomate industrielle",
+  "titre": "Calcul des besoins en eau et dimensionnement goutte-à-goutte : Tomate",
+  "resume": "Exercice d'application et méthode de calcul pratique pour la densité de plantation, les besoins journaliers en eau et le débit d'irrigation goutte-à-goutte en tomate.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Fiche d'exercice pratique de calcul d'irrigation isolée, incomplète pour publication autonome.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.7,
+    "completude": 0.8
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Besoins en eau d'une culture de tomate industrielle 1. Calculer le nombre de plants par hectare"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00246__calcul-des-besoins-en-eau-et-dimensionnement-goutte-a-g.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/eau_irrigation/DOC-00246__calcul-des-besoins-en-eau-et-dimensionnement-goutte-a-g.pdf"
+}

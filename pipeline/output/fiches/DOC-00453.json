@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00453",
+  "sha256": "1bea9b6291bc24d4956984a0cb319ccf4123a340d2f8e7839b49845d2c1a60ba",
+  "nom_original": "Flore du Sahara.pdf",
+  "chemin_relatif_source": "OD_Docs/Flore du Sahara.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 224868276,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "taille_excessive",
+    "ocr_necessaire",
+    "scan_illisible",
+    "auteur_introuvable"
+  ],
+  "nb_pages": 247,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [],
+  "sous_domaine": "biodiversite_ecologie",
+  "type_doc": "ouvrage",
+  "public_principal": "enseignant_chercheur",
+  "publics_secondaires": [
+    "etudiant"
+  ],
+  "niveau": "expert",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "flore du sahara",
+    "botanique",
+    "sahara",
+    "biodiversite",
+    "especes vegetales",
+    "desert"
+  ],
+  "titre_trouve": null,
+  "titre": "Flore du Sahara",
+  "resume": "Ouvrage botanique d'identification et de systématique floristique des espèces végétales du Sahara (document numérisé nécessitant une reconnaissance optique de caractères OCR).",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan intégral volumineux (247 pages, 214 Mo) sans couche texte exploitable, nécessitant un traitement OCR et une vérification juridique avant publication.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.5,
+    "completude": 0.55
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Flore du Sahara"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00453__flore-du-sahara.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/biodiversite_ecologie/DOC-00453__flore-du-sahara.pdf"
+}

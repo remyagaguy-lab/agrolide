@@ -1,0 +1,77 @@
+{
+  "id": "DOC-01048",
+  "sha256": "89b47d52cb7b4c66c6323ba4a0cc3c3eca45a9c94a30f7cfece1824ff7843f29",
+  "nom_original": "systèmes de production.pdf",
+  "chemin_relatif_source": "OD_Docs/systèmes de production.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 11920744,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 91,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aquaculture_peche",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "pisciculture",
+  "pays": null,
+  "annee": 2020,
+  "auteurs": "Badioula Coulibaly",
+  "source_organisation": null,
+  "mots_cles": [
+    "pisciculture",
+    "peche",
+    "systemes aquacoles",
+    "acadjas",
+    "afrique de l'ouest"
+  ],
+  "titre_trouve": "PISCICULTURE ET PECHE - SYSTÈMES DE PRODUCTION",
+  "titre": "Cours de pisciculture et pêche en Afrique de l'Ouest : Systèmes de production aquacoles",
+  "resume": "Support de cours illustré (91 diapositives) détaillant les systèmes piscicoles africains : systèmes extensifs traditionnels (acadjas, whedos), semi-intensifs en étangs et intensifs en enclos.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Support de cours universitaire d'enseignant ouest-africain sans mention de droits libres ouverts.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.88,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "PISCICULTURE ET PECHE Dr COULIBALY BADIOULA"
+    },
+    {
+      "champ": "contexte_geo",
+      "page": 5,
+      "extrait": "Acadjas Trous à poissons Whedos Enclos piscicoles"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-01048__cours-de-pisciculture-et-peche-en-afrique-de-l-ouest-sy.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aquaculture_peche/DOC-01048__cours-de-pisciculture-et-peche-en-afrique-de-l-ouest-sy.pdf"
+}

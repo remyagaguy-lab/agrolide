@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00351",
+  "sha256": "6cdd013164d4ebfbeebbec6749fffb103fda78dc24652b860bab491ade08d96d",
+  "nom_original": "Document sans titre.pdf",
+  "chemin_relatif_source": "OD_Docs/Document sans titre.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 188294,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "auteur_introuvable"
+  ],
+  "nb_pages": 2,
+  "domaine_principal": "agroeconomie",
+  "domaines_secondaires": [],
+  "sous_domaine": "gestion_projet_business_plan",
+  "type_doc": "guide_pratique",
+  "public_principal": "entrepreneur_porteur_projet",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "decideur_institution"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": null,
+  "mots_cles": [
+    "suivi evaluation",
+    "gestion de projet",
+    "indicateurs smart",
+    "collecte de donnees",
+    "impact"
+  ],
+  "titre_trouve": "Pourquoi certains projets échouent à bien évaluer leur impact?",
+  "titre": "Pourquoi certains projets échouent à bien évaluer leur impact ? Défis et solutions en suivi-évaluation",
+  "resume": "Note synthétique analysant trois obstacles majeurs en suivi-évaluation de projets (indicateurs mal définis, manque de données fiables, mauvaise utilisation des résultats) et proposant des pistes d'amélioration.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Note anonyme sans source ni mention de licence claire, nécessite une validation humaine des droits avant diffusion.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.5,
+    "completude": 0.85
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Pourquoi certains projets échouent à bien évaluer leur impact?"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "Le suivi-évaluation (S&E) est essentiel pour mesurer l'efficacité d'un projet"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00351__pourquoi-certains-projets-echouent-a-bien-evaluer-leur.pdf",
+  "cle_r2_proposee": "bibliotheque/agroeconomie/gestion_projet_business_plan/DOC-00351__pourquoi-certains-projets-echouent-a-bien-evaluer-leur.pdf"
+}

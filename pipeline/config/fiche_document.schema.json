@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "agrolide/fiche_document.schema.json",
+  "title": "Fiche d'un document de la bibliothèque Agrolide",
+  "description": "Une fiche = un document. Les valeurs énumérées viennent de taxonomie.json. Une fiche en cours de traitement n'a besoin que des champs d'identité ; une fiche de statut_traitement = 'termine' doit être complète et respecter toutes les règles de cohérence (bloc allOf).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "sha256", "nom_original", "chemin_relatif_source", "format_source", "taille_octets", "origine", "statut_traitement", "version_regles"],
+
+  "properties": {
+    "id": { "type": "string", "pattern": "^DOC-[0-9]{5}$", "description": "Identifiant stable, attribué une fois à l'inventaire (ordre alphabétique du chemin normalisé NFC) et jamais réattribué." },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "nom_original": { "type": "string", "minLength": 1 },
+    "chemin_relatif_source": { "type": "string", "minLength": 1 },
+    "indice_ancien_dossier": { "type": ["string", "null"], "description": "Ancien sous-dossier de tri manuel (traites, erreurs, doublons...). Simple indice, jamais une preuve." },
+    "format_source": { "type": "string", "description": "Extension en minuscules sans point : pdf, pptx, ppt, docx, jpg..." },
+    "taille_octets": { "type": "integer", "minimum": 0 },
+    "nb_pages": { "type": ["integer", "null"], "minimum": 0 },
+    "origine": { "enum": ["corpus", "import_existant_r2"], "description": "import_existant_r2 : fichier déjà publié sur le site, récupéré depuis la sauvegarde." },
+    "cle_r2_existante": { "type": ["string", "null"] },
+    "nb_telechargements_existant": { "type": ["integer", "null"], "minimum": 0 },
+
+    "statut_traitement": { "enum": ["inventorie", "extrait", "classifie", "audite", "dedoublonne", "decide", "nomme", "termine", "erreur_technique"] },
+    "version_regles": { "type": "string" },
+    "erreur_technique": { "type": ["string", "null"] },
+
+    "domaine_principal": { "enum": ["production_vegetale", "production_animale", "agroeconomie", "agroalimentaire", "ressources_naturelles_environnement", "transversal", "hors_perimetre"] },
+    "domaines_secondaires": { "type": "array", "uniqueItems": true, "items": { "enum": ["production_vegetale", "production_animale", "agroeconomie", "agroalimentaire", "ressources_naturelles_environnement", "transversal"] } },
+    "sous_domaine": { "type": "string", "description": "Code issu de taxonomie.json et cohérent avec domaine_principal (contrôlé par le validateur)." },
+    "type_doc": { "enum": ["fiche_technique", "guide_pratique", "cours", "ouvrage", "these", "memoire", "article", "rapport", "presentation", "texte_officiel", "outil_modele", "periodique", "actes_conference", "autre"] },
+    "public_principal": { "enum": ["producteur", "technicien_conseiller", "etudiant", "enseignant_chercheur", "entrepreneur_porteur_projet", "decideur_institution"] },
+    "publics_secondaires": { "type": "array", "uniqueItems": true, "items": { "enum": ["producteur", "technicien_conseiller", "etudiant", "enseignant_chercheur", "entrepreneur_porteur_projet", "decideur_institution"] } },
+    "niveau": { "enum": ["initiation", "intermediaire", "expert"] },
+    "langue": { "enum": ["fr", "en", "autre", "multilingue"] },
+    "contexte_geo": { "enum": ["afrique_tropicale", "afrique_autre", "international_general", "tempere_non_adapte"] },
+    "pertinence_plateforme": { "type": "integer", "minimum": 0, "maximum": 3 },
+    "filiere": { "type": ["string", "null"], "description": "Culture, espèce ou procédé précis (tomate, volaille, manioc...). Alimente la colonne documents.filiere." },
+    "pays": { "type": ["string", "null"], "description": "Pays concerné ou d'origine, en français, ou null. Ne jamais deviner." },
+    "annee": { "type": ["integer", "null"], "minimum": 1800, "maximum": 2100, "description": "Année de publication lue dans le document, sinon null. Ne jamais deviner." },
+    "auteurs": { "type": "string", "minLength": 1, "description": "Auteurs ou organisation lus dans le document. Si introuvable : « Auteur non précisé » (+ drapeau auteur_introuvable)." },
+    "source_organisation": { "type": ["string", "null"] },
+    "mots_cles": { "type": "array", "minItems": 3, "maxItems": 8, "items": { "type": "string", "minLength": 2, "maxLength": 40 } },
+
+    "titre_trouve": { "type": ["string", "null"], "description": "Titre tel qu'écrit dans le document." },
+    "titre": { "type": "string", "minLength": 5, "maxLength": 140, "description": "Titre d'affichage final (voir 04-nommage-metadonnees.md)." },
+    "resume": { "type": "string", "minLength": 80, "maxLength": 500 },
+
+    "statut_droits": { "enum": ["libre_licence_ouverte", "diffusion_institutionnelle", "droits_reserves_commercial", "travail_academique_non_publie", "donnees_personnelles_confidentiel", "inconnu"] },
+    "licence_detectee": { "type": ["string", "null"] },
+
+    "complet": { "enum": [true, false, "indetermine"] },
+    "drapeaux": {
+      "type": "array", "uniqueItems": true,
+      "items": { "enum": ["incomplet", "pages_manquantes", "ensemble_partiel", "scan_illisible", "ocr_necessaire", "protege", "corrompu", "obsolete", "donnees_phyto_a_verifier", "droits_reserves", "licence_nc", "donnees_personnelles", "confidentiel_interne", "contenu_commercial", "format_non_pdf", "conversion_requise", "taille_excessive", "titre_introuvable", "auteur_introuvable", "langue_peu_exploitable", "contexte_non_adapte"] }
+    },
+    "role_doublon": { "enum": ["unique", "canonique", "copie_exacte", "copie_quasi_identique", "version_anterieure", "fragment", "traduction", "extrait"] },
+    "groupe_doublon_id": { "type": ["string", "null"], "pattern": "^GRP-[0-9]{4}$" },
+    "canonique_id": { "type": ["string", "null"], "pattern": "^DOC-[0-9]{5}$" },
+    "ensemble_id": { "type": ["string", "null"], "pattern": "^ENS-[0-9]{4}$", "description": "Regroupe les parties d'un même ouvrage découpé (partie 1, partie 2...)." },
+
+    "decision_publication": { "enum": ["public", "membres", "non_publie_archive", "a_valider_humain", "exclu_hors_perimetre", "exclu_doublon", "exclu_illisible"] },
+    "motif_decision": { "type": "string", "minLength": 10, "maxLength": 300, "description": "Une ou deux phrases en français, lisibles par un non-spécialiste." },
+    "confiance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["classification", "droits", "completude"],
+      "properties": {
+        "classification": { "type": "number", "minimum": 0, "maximum": 1 },
+        "droits": { "type": "number", "minimum": 0, "maximum": 1 },
+        "completude": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+
+    "nom_fichier_final": { "type": "string", "pattern": "^DOC-[0-9]{5}__[a-z0-9]+(-[a-z0-9]+)*\\.pdf$" },
+    "cle_r2_proposee": { "type": "string", "pattern": "^bibliotheque/[a-z_]+/[a-z_]+/DOC-[0-9]{5}__[a-z0-9]+(-[a-z0-9]+)*\\.pdf$" },
+
+    "preuves": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["champ", "page", "extrait"],
+        "properties": {
+          "champ": { "enum": ["domaine", "type_doc", "titre", "auteurs", "annee", "droits", "licence", "completude", "langue", "contexte_geo", "doublon", "decision", "autre"] },
+          "page": { "type": ["integer", "null"], "minimum": 1 },
+          "extrait": { "type": "string", "maxLength": 200, "description": "Citation courte et exacte tirée du document (200 caractères max)." }
+        }
+      }
+    },
+
+    "audit": {
+      "type": "object", "additionalProperties": false,
+      "required": ["accord"],
+      "properties": {
+        "accord": { "type": "boolean" },
+        "champs_en_desaccord": { "type": "array", "items": { "type": "string" } },
+        "decision_auditeur": { "type": ["string", "null"] },
+        "arbitrage": { "type": ["string", "null"] }
+      }
+    },
+
+    "revue_humaine": {
+      "type": "object", "additionalProperties": false,
+      "properties": {
+        "decision_humaine": { "type": ["string", "null"] },
+        "commentaire": { "type": ["string", "null"] },
+        "date": { "type": ["string", "null"] }
+      }
+    }
+  },
+
+  "allOf": [
+    {
+      "if": { "properties": { "statut_traitement": { "const": "termine" } }, "required": ["statut_traitement"] },
+      "then": {
+        "required": ["domaine_principal", "sous_domaine", "type_doc", "public_principal", "niveau", "langue", "contexte_geo", "pertinence_plateforme", "auteurs", "titre", "resume", "statut_droits", "complet", "drapeaux", "role_doublon", "decision_publication", "motif_decision", "confiance", "preuves", "audit"]
+      }
+    },
+    {
+      "description": "R1. Pour être publié (public ou membres), il faut des droits explicitement publiables.",
+      "if": { "properties": { "decision_publication": { "enum": ["public", "membres"] } }, "required": ["decision_publication"] },
+      "then": {
+        "required": ["statut_droits"],
+        "properties": { "statut_droits": { "enum": ["libre_licence_ouverte", "diffusion_institutionnelle"] } }
+      }
+    },
+    {
+      "description": "R2. Jamais de mémoire ni de thèse en publication, ni de document déclaré incomplet.",
+      "if": { "properties": { "decision_publication": { "enum": ["public", "membres"] } }, "required": ["decision_publication"] },
+      "then": {
+        "properties": {
+          "type_doc": { "not": { "enum": ["memoire", "these"] } },
+          "complet": { "const": true },
+          "domaine_principal": { "not": { "const": "hors_perimetre" } },
+          "role_doublon": { "enum": ["unique", "canonique", "traduction"] },
+          "pertinence_plateforme": { "minimum": 2 },
+          "confiance": { "properties": { "classification": { "minimum": 0.8 }, "droits": { "minimum": 0.85 }, "completude": { "minimum": 0.8 } } },
+          "audit": { "properties": { "accord": { "const": true } } },
+          "drapeaux": {
+            "not": { "contains": { "enum": ["incomplet", "pages_manquantes", "ensemble_partiel", "scan_illisible", "protege", "corrompu", "droits_reserves", "licence_nc", "donnees_personnelles", "confidentiel_interne", "contenu_commercial", "conversion_requise", "taille_excessive", "donnees_phyto_a_verifier", "obsolete", "titre_introuvable"] } }
+          }
+        }
+      }
+    },
+    {
+      "description": "R3. Les exclusions et le statut doublon doivent être cohérents entre eux.",
+      "if": { "properties": { "decision_publication": { "const": "exclu_doublon" } }, "required": ["decision_publication"] },
+      "then": {
+        "required": ["canonique_id", "groupe_doublon_id"],
+        "properties": { "role_doublon": { "enum": ["copie_exacte", "copie_quasi_identique", "version_anterieure", "fragment", "extrait"] }, "canonique_id": { "type": "string" } }
+      }
+    },
+    {
+      "description": "R4. Hors périmètre : sous-domaine 'aucun', jamais publié.",
+      "if": { "properties": { "domaine_principal": { "const": "hors_perimetre" } }, "required": ["domaine_principal"] },
+      "then": {
+        "properties": { "sous_domaine": { "const": "aucun" }, "decision_publication": { "enum": ["exclu_hors_perimetre", "exclu_illisible", "a_valider_humain"] } }
+      }
+    },
+    {
+      "description": "R5. Un mémoire ou une thèse n'est jamais en publication, quel que soit le reste.",
+      "if": { "properties": { "type_doc": { "enum": ["memoire", "these"] } }, "required": ["type_doc"] },
+      "then": { "properties": { "decision_publication": { "not": { "enum": ["public", "membres"] } } } }
+    },
+    {
+      "description": "R6. Une décision de publication à valider par un humain ne peut pas être prise automatiquement quand les agents sont en désaccord.",
+      "if": { "properties": { "audit": { "properties": { "accord": { "const": false } }, "required": ["accord"] } }, "required": ["audit"] },
+      "then": { "properties": { "decision_publication": { "enum": ["a_valider_humain", "non_publie_archive", "exclu_hors_perimetre", "exclu_doublon", "exclu_illisible"] } } }
+    },
+    {
+      "description": "R7. Le drapeau conversion_requise n'a de sens que pour un fichier source non PDF. Il est retiré une fois le PDF dérivé produit (R2 interdit de publier tant qu'il est présent).",
+      "if": { "properties": { "format_source": { "const": "pdf" } }, "required": ["format_source"] },
+      "then": { "properties": { "drapeaux": { "not": { "contains": { "const": "conversion_requise" } } } } }
+    }
+  ]
+}

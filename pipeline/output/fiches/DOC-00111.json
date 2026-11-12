@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00111",
+  "sha256": "a08885c9115a98467da0eba3e43615f9ff325218ebaaad5c543f74ccc2b73911",
+  "nom_original": "277_Manuel_d_elevage_des_escargot_geants_africains.pdf",
+  "chemin_relatif_source": "OD_Docs/277_Manuel_d_elevage_des_escargot_geants_africains.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1565722,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 40,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "petit_elevage",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "héliciculture",
+  "pays": null,
+  "annee": 1990,
+  "auteurs": "C. Stiévenart, J. Hardouin",
+  "source_organisation": "CTA",
+  "mots_cles": [
+    "escargot geant",
+    "achatiniculture",
+    "elevage tropical",
+    "cta",
+    "petit elevage"
+  ],
+  "titre_trouve": "Manuel d’élevage des escargots géants africains sous les tropiques",
+  "titre": "Manuel d'élevage des escargots géants africains sous les tropiques",
+  "resume": "Manuel complet du CTA sur l'achatiniculture en milieu tropical : biologie de l'espèce, infrastructures d'élevage, alimentation, reproduction et gestion sanitaire du cheptel.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique de référence publié par le CTA sur l'élevage d'escargots géants tropicaux, complet et directement applicable.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Manuel des escargots géants africains sous les tropiques"
+    },
+    {
+      "champ": "autre",
+      "page": 3,
+      "extrait": "Centre technique de coopération agricole et rurale (CTA) 1990"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00111__manuel-d-elevage-des-escargots-geants-africains-sous-le.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/petit_elevage/DOC-00111__manuel-d-elevage-des-escargots-geants-africains-sous-le.pdf"
+}

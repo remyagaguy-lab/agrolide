@@ -1,0 +1,75 @@
+{
+  "id": "DOC-00196",
+  "sha256": "6f9380b61381a48a35e1d3992449a4989bdb937d37df2eb4d32de086a334a7a0",
+  "nom_original": "Agrodok_32_L_apiculture_dans_les_zones_tropicales@EpubsFR.pdf",
+  "chemin_relatif_source": "OD_Docs/Agrodok_32_L_apiculture_dans_les_zones_tropicales@EpubsFR.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 728371,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "droits_reserves"
+  ],
+  "nb_pages": 94,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [
+    "agroalimentaire"
+  ],
+  "sous_domaine": "apiculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "entrepreneur_porteur_projet"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "miel et cire",
+  "pays": null,
+  "annee": 2005,
+  "auteurs": "Leen van 't Leven, Willem-Jan Boot, Marieke Mutsaers, Piet Segeren, Hayo Velthuis",
+  "source_organisation": "Fondation Agromisa / CTA",
+  "mots_cles": [
+    "apiculture",
+    "abeilles",
+    "ruches",
+    "miel",
+    "cire",
+    "zones tropicales"
+  ],
+  "titre_trouve": "L'apiculture dans les zones tropicales",
+  "titre": "L'apiculture dans les zones tropicales",
+  "resume": "Guide complet sur la conduite d'un rucher en zone tropicale : biologie des abeilles, modèles de ruches adaptées, récolte et valorisation du miel et de la cire.",
+  "statut_droits": "droits_reserves_commercial",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Document issu d'une diffusion @EpubsFR avec droits réservés sans licence libre, classé en archive non publiée.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Agrodok 32 L'apiculture dans les zones tropicales"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00196__l-apiculture-dans-les-zones-tropicales.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/apiculture/DOC-00196__l-apiculture-dans-les-zones-tropicales.pdf"
+}

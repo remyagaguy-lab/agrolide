@@ -1,0 +1,69 @@
+{
+  "id": "DOC-00975",
+  "sha256": "b6363885a3e0f6e516d18ef971d3de9c149b7769777a282b5f7ec777a6613925",
+  "nom_original": "les coccidioses ovines.pdf",
+  "chemin_relatif_source": "OD_Docs/les coccidioses ovines.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 176507,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "role_doublon": "copie_exacte",
+  "canonique_id": "DOC-00974",
+  "groupe_doublon_id": "GRP-0063",
+  "decision_publication": "exclu_doublon",
+  "motif_decision": "Copie SHA-256 exacte du document canonique DOC-00974 (Les coccidioses ovines : symptômes, diagnostic et traitements vétérinaires).",
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "sante_animale",
+  "type_doc": "fiche_technique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": "petits ruminants",
+  "annee": 2010,
+  "auteurs": "Auteur non précisé",
+  "source_organisation": "Auteur non précisé",
+  "mots_cles": [
+    "coccidiose ovine",
+    "agneaux",
+    "sante animale",
+    "parasitisme",
+    "diclazuril",
+    "traitement veterinaire"
+  ],
+  "titre_trouve": "LES COCCIDIOSES OVINES",
+  "titre": "Les coccidioses ovines : symptômes, diagnostic et traitements vétérinaires",
+  "resume": "Fiche technique vétérinaire synthétisant les symptômes cliniques, les méthodes de diagnostic et les protocoles de traitement médicamenteux des coccidioses chez les agneaux.",
+  "statut_droits": "inconnu",
+  "complet": true,
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.6,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "LES COCCIDIOSES OVINES SYMPTÔMES"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "exclu_doublon",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00975__les-coccidioses-ovines-symptomes-diagnostic-et-traiteme.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/sante_animale/DOC-00975__les-coccidioses-ovines-symptomes-diagnostic-et-traiteme.pdf"
+}

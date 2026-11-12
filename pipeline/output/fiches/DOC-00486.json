@@ -1,0 +1,78 @@
+{
+  "id": "DOC-00486",
+  "sha256": "64a623ef1fa2248a0097c8fb0f4dc2288329cd46df9a633a6c08148c4504f974",
+  "nom_original": "Guide technique sur les nuisibles de la banane plantain-1.pdf",
+  "chemin_relatif_source": "OD_Docs/Guide technique sur les nuisibles de la banane plantain-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 2064972,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 89,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "protection_des_cultures",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "banane plantain",
+  "pays": "Cameroun",
+  "annee": 2015,
+  "auteurs": "M. Tindo, A. Tagne, J. M. Mpe, M. Ayodele, A. Ndikontar",
+  "source_organisation": "FAO / Ministère de l'Agriculture du Cameroun / IITA",
+  "mots_cles": [
+    "banane plantain",
+    "mais",
+    "manioc",
+    "tomate",
+    "nuisibles",
+    "protection des cultures",
+    "fao",
+    "cameroun"
+  ],
+  "titre_trouve": "GUIDE TECHNIQUE SUR LES NUISIBLES DE LA BANANE PLANTAIN, LE MAÏS, LE MANIOC ET LA TOMATE",
+  "titre": "Guide technique sur les nuisibles de la banane plantain, du maïs, du manioc et de la tomate",
+  "resume": "Manuel complet de la FAO et du Ministère de l'Agriculture du Cameroun sur l'identification et la gestion intégrée des ravageurs et maladies des cultures vivrières majeures.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide technique FAO / Cameroun complet et de haute valeur agronomique pour le diagnostic et la protection des cultures vivrières tropicales.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "GUIDE TECHNIQUE SUR LES NUISIBLES DE LA BANANE PLANTAIN, LE MAÏS, LE MANIOC ET LA TOMATE"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Gouvernement du Camerounais et la FAO qui ont permis la réalisation de ce projet"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00486__guide-technique-sur-les-nuisibles-de-la-banane-plantain.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/protection_des_cultures/DOC-00486__guide-technique-sur-les-nuisibles-de-la-banane-plantain.pdf"
+}

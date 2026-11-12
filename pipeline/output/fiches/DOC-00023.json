@@ -1,0 +1,73 @@
+{
+  "id": "DOC-00023",
+  "sha256": "b82bbf5ac7d5088e7ab0311b2e68df570afeb4c437063bf13b959c48bc0cf7ff",
+  "nom_original": "Résumé6 Biochimie Structurale.pdf",
+  "chemin_relatif_source": "OD_ArchivesExtraites/Biochimie Structurale L2/Biochimie Structurale L2/Résumé6 Biochimie Structurale.pdf",
+  "indice_ancien_dossier": "archive_interne",
+  "format_source": "pdf",
+  "taille_octets": 7428873,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ocr_necessaire",
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 19,
+  "domaine_principal": "transversal",
+  "domaines_secondaires": [],
+  "sous_domaine": "sciences_de_base",
+  "type_doc": "cours",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 1,
+  "filiere": null,
+  "pays": null,
+  "annee": null,
+  "auteurs": "Feriel",
+  "source_organisation": null,
+  "mots_cles": [
+    "biochimie",
+    "cours",
+    "licence 2",
+    "biologie"
+  ],
+  "titre_trouve": "résumé biochimie - by feriel",
+  "titre": "Biochimie structurale L2 : Résumé 6",
+  "resume": "Fascicule de révision scanné par application mobile (CamScanner) portant sur la biochimie structurale de L2, nécessitant une reconnaissance optique.",
+  "statut_droits": "inconnu",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "a_valider_humain",
+  "motif_decision": "Scan CamScanner sans texte exploitable; OCR et vérification humaine nécessaires.",
+  "confiance": {
+    "classification": 0.55,
+    "droits": 0.4,
+    "completude": 0.5
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "résumé biochimie - by feriel (métadonnée PDF)"
+    }
+  ],
+  "ensemble_id": "ENS-0001",
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "a_valider_humain",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00023__biochimie-structurale-l2-resume-6.pdf",
+  "cle_r2_proposee": "bibliotheque/transversal/sciences_de_base/DOC-00023__biochimie-structurale-l2-resume-6.pdf"
+}

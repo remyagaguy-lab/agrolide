@@ -1,0 +1,82 @@
+{
+  "id": "DOC-00269",
+  "sha256": "417360a38d015b979ef983cab96699522bed2d3785d4ca7e6b232ba04eb289e1",
+  "nom_original": "CHAPITRE 4 LES CULTURES MARAICHÈRES.pdf",
+  "chemin_relatif_source": "OD_Docs/CHAPITRE 4 LES CULTURES MARAICHÈRES.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 518881,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [
+    "ensemble_partiel",
+    "incomplet"
+  ],
+  "nb_pages": 38,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cultures_maraicheres",
+  "type_doc": "presentation",
+  "public_principal": "etudiant",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "afrique_autre",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "Algérie",
+  "annee": 2022,
+  "auteurs": "Saggaï Mohamed Mounir",
+  "source_organisation": "Université",
+  "mots_cles": [
+    "cultures maraicheres",
+    "sahara",
+    "plasticulture",
+    "milieu aride",
+    "systemes agraires"
+  ],
+  "titre_trouve": "CHAPITRE 4: LES CULTURES MARAICHÈRES",
+  "titre": "Les cultures maraîchères en milieu saharien (Chapitre 4)",
+  "resume": "Chapitre de cours universitaire sur le maraîchage saharien, abordant les potentialités du milieu désertique, les espèces cultivées et la plasticulture.",
+  "statut_droits": "travail_academique_non_publie",
+  "licence_detectee": null,
+  "complet": false,
+  "role_doublon": "unique",
+  "decision_publication": "non_publie_archive",
+  "motif_decision": "Chapitre isolé extrait d'un cours universitaire avec diapositives terminales incomplètes ; archivage interne sans diffusion publique.",
+  "confiance": {
+    "classification": 0.9,
+    "droits": 0.85,
+    "completude": 0.65
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "CHAPITRE 4: LES CULTURES MARAICHÈRES"
+    },
+    {
+      "champ": "auteurs",
+      "page": 1,
+      "extrait": "SAGGAÏ MOHAMED MOUNIR"
+    },
+    {
+      "champ": "autre",
+      "page": 37,
+      "extrait": "TITRE ET DISPOSITION DE CONTENU AVEC GRAPHIQUE"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "non_publie_archive",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00269__les-cultures-maraicheres-en-milieu-saharien-chapitre-4.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cultures_maraicheres/DOC-00269__les-cultures-maraicheres-en-milieu-saharien-chapitre-4.pdf"
+}

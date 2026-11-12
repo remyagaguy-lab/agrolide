@@ -1,0 +1,70 @@
+{
+  "id": "DOC-00600",
+  "sha256": "696615d697f2161fb2e6af918dfe4d564004c692ea07cb18687ba437ba6ec568",
+  "nom_original": "Mais-1.pdf",
+  "chemin_relatif_source": "OD_Docs/Mais-1.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1149928,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 23,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "cereales",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "maïs",
+  "pays": "Togo",
+  "annee": 2008,
+  "auteurs": "Akihila Didjeira, Bontiébite Badjare",
+  "source_organisation": "Institut Togolais de Recherche Agronomique",
+  "mots_cles": [
+    "mais",
+    "itineraire technique",
+    "togo",
+    "conservation",
+    "stockage",
+    "protection des vegetaux"
+  ],
+  "titre_trouve": "BIEN CULTIVER ET CONSERVER LE MAÏS",
+  "titre": "Bien cultiver et conserver le maïs au Togo",
+  "resume": "Brochure technique de vulgarisation présentant l'itinéraire complet de la culture du maïs au Togo, le choix variétal, la fertilisation, la protection sanitaire et les méthodes de conservation post-récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Brochure technique officielle de l'ITRA Togo sur la culture et conservation du maïs, libre de diffusion institutionnelle.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.92,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "BIEN CULTIVER ET CONSERVER LE MAÏS Collection Brochures et Fiches Techniques"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00600__bien-cultiver-et-conserver-le-mais-au-togo.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/cereales/DOC-00600__bien-cultiver-et-conserver-le-mais-au-togo.pdf"
+}

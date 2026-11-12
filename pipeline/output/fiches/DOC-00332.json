@@ -1,0 +1,77 @@
+{
+  "id": "DOC-00332",
+  "sha256": "cbf905e70463da8b6b03bf4242d45b1c6b5b23f57a2ea6bf0c25cd902071aad0",
+  "nom_original": "CultivonsAutrementExemplesLocauxDeTechni_fichier_ressource_livret.pdf",
+  "chemin_relatif_source": "OD_Docs/CultivonsAutrementExemplesLocauxDeTechni_fichier_ressource_livret.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 21405886,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 56,
+  "domaine_principal": "ressources_naturelles_environnement",
+  "domaines_secondaires": [
+    "production_vegetale"
+  ],
+  "sous_domaine": "agroecologie_agriculture_durable",
+  "type_doc": "guide_pratique",
+  "public_principal": "technicien_conseiller",
+  "publics_secondaires": [
+    "producteur",
+    "enseignant_chercheur"
+  ],
+  "niveau": "intermediaire",
+  "langue": "fr",
+  "contexte_geo": "international_general",
+  "pertinence_plateforme": 2,
+  "filiere": null,
+  "pays": "France",
+  "annee": 2016,
+  "auteurs": "BIO SAVANE / REAGI",
+  "source_organisation": "Réseau d'Echanges en Agroécologie Intertropicale (REAGI) / Ecophyto",
+  "mots_cles": [
+    "agroecologie",
+    "zone intertropicale",
+    "fertilite du sol",
+    "lutte biologique",
+    "guyane"
+  ],
+  "titre_trouve": "Cultivons autrement : exemples locaux de techniques agro-écologiques",
+  "titre": "Cultivons autrement : exemples locaux de techniques agro-écologiques",
+  "resume": "Guide pratique issu du réseau REAGI présentant des techniques agroécologiques adaptées aux zones tropicales humides : gestion biologique des sols, couverture végétale et alternatives aux produits phytopharmaceutiques.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique complet financé par des fonds publics (Ecophyto/Maaf) portant la mention explicite de gratuité, très pertinent pour l'agroécologie tropicale.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Cultivons autrement : exemples locaux de techniques agro-écologiques"
+    },
+    {
+      "champ": "autre",
+      "page": 2,
+      "extrait": "Le plan Ecophyto est piloté par le Ministère chargé de l’agriculture... Prix : Ne peut être vendu"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00332__cultivons-autrement-exemples-locaux-de-techniques-agro.pdf",
+  "cle_r2_proposee": "bibliotheque/ressources_naturelles_environnement/agroecologie_agriculture_durable/DOC-00332__cultivons-autrement-exemples-locaux-de-techniques-agro.pdf"
+}

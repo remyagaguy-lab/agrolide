@@ -1,0 +1,71 @@
+{
+  "id": "DOC-00885",
+  "sha256": "786526f00a96d3dfc664ffb6b5e35dda12a3c0e8fec95a547654051f4bd475b4",
+  "nom_original": "elevage_-_poules_pondeuses_-_phase_de_demarrage.pdf",
+  "chemin_relatif_source": "OD_Docs/elevage_-_poules_pondeuses_-_phase_de_demarrage.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 3508644,
+  "origine": "corpus",
+  "cle_r2_existante": null,
+  "nb_telechargements_existant": null,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 8,
+  "domaine_principal": "production_animale",
+  "domaines_secondaires": [],
+  "sous_domaine": "aviculture",
+  "type_doc": "guide_pratique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "entrepreneur_porteur_projet",
+    "technicien_conseiller"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "aviculture",
+  "pays": "Gabon",
+  "annee": 2014,
+  "auteurs": "Institut Gabonais d’Appui au Développement (IGAD)",
+  "source_organisation": "IGAD Gabon",
+  "mots_cles": [
+    "poules pondeuses",
+    "poussiniere",
+    "phase de demarrage",
+    "aviculture",
+    "gabon",
+    "equipements avicoles"
+  ],
+  "titre_trouve": "Élevage de poules pondeuses : LA CONDUITE DE LA PHASE DE DÉMARRAGE - Guide pratique",
+  "titre": "Élevage de poules pondeuses : conduite de la phase de démarrage (IGAD Gabon)",
+  "resume": "Guide pratique illustré détaillant la préparation de la poussinière, la gestion du chauffage, l'alimentation et le budget d'équipement en FCFA pour le démarrage des poussins.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Guide pratique institutionnel gabonais complet et directement opérationnel pour les éleveurs de volailles, en accès public.",
+  "confiance": {
+    "classification": 0.98,
+    "droits": 0.95,
+    "completude": 0.98
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 1,
+      "extrait": "Institut Gabonais d’Appui au Développement ... Élevage de poules pondeuses \nLA CONDUITE DE LA \nPHASE DE DÉMARRAGE \nGuide pratique"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00885__elevage-de-poules-pondeuses-conduite-de-la-phase-de-dem.pdf",
+  "cle_r2_proposee": "bibliotheque/production_animale/aviculture/DOC-00885__elevage-de-poules-pondeuses-conduite-de-la-phase-de-dem.pdf"
+}

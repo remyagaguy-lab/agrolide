@@ -1,0 +1,76 @@
+{
+  "id": "DOC-00155",
+  "sha256": "3738106bc3ed35ac935a2c4d3fc6f66d061f0382893f9af5ba3fcf8c8bd9df26",
+  "nom_original": "ARACHIDE.pdf",
+  "chemin_relatif_source": "OD_Docs/ARACHIDE.pdf",
+  "indice_ancien_dossier": null,
+  "format_source": "pdf",
+  "taille_octets": 1279028,
+  "origine": "import_existant_r2",
+  "cle_r2_existante": "1782479103408-ARACHIDE.pdf",
+  "nb_telechargements_existant": 0,
+  "statut_traitement": "termine",
+  "version_regles": "v1-depart",
+  "drapeaux": [],
+  "nb_pages": 7,
+  "domaine_principal": "production_vegetale",
+  "domaines_secondaires": [],
+  "sous_domaine": "legumineuses_oleagineux",
+  "type_doc": "fiche_technique",
+  "public_principal": "producteur",
+  "publics_secondaires": [
+    "technicien_conseiller",
+    "etudiant"
+  ],
+  "niveau": "initiation",
+  "langue": "fr",
+  "contexte_geo": "afrique_tropicale",
+  "pertinence_plateforme": 3,
+  "filiere": "arachide",
+  "pays": "Cameroun",
+  "annee": 2020,
+  "auteurs": "Institut de Formation en Agriculture et Technologies Innovantes (IFATI)",
+  "source_organisation": "IFATI / MINEFOP Cameroun",
+  "mots_cles": [
+    "arachide",
+    "arachis hypogaea",
+    "itineraire technique",
+    "fertilisation",
+    "cameroun",
+    "rendement"
+  ],
+  "titre_trouve": "TECHNOLOGIE DE PRODUCTION DE L’ARACHIDE (Arachis hypogaea)",
+  "titre": "Technologie de production de l'arachide (Arachis hypogaea)",
+  "resume": "Fiche technique opérationnelle présentant l'itinéraire de culture de l'arachide en Afrique centrale : variétés, exigences agro-écologiques, conduite culturale et récolte.",
+  "statut_droits": "diffusion_institutionnelle",
+  "licence_detectee": null,
+  "complet": true,
+  "role_doublon": "unique",
+  "decision_publication": "public",
+  "motif_decision": "Fiche technique complète de formation professionnelle agricole (IFATI/MINEFOP), directement exploitable par les producteurs tropicaux.",
+  "confiance": {
+    "classification": 0.95,
+    "droits": 0.9,
+    "completude": 0.95
+  },
+  "preuves": [
+    {
+      "champ": "titre",
+      "page": 2,
+      "extrait": "TECHNOLOGIE DE PRODUCTION DE L’ARACHIDE (Arachis hypogaea)"
+    },
+    {
+      "champ": "autre",
+      "page": 1,
+      "extrait": "INSTITUT DE FORMATION EN AGRICULTURE ET TECHNOLOGIES INNOVANTES ARRETE MINISTERIEL Nº 086 / MINEFOP"
+    }
+  ],
+  "audit": {
+    "accord": true,
+    "champs_en_desaccord": [],
+    "decision_auditeur": "public",
+    "arbitrage": null
+  },
+  "nom_fichier_final": "DOC-00155__technologie-de-production-de-l-arachide-arachis-hypogae.pdf",
+  "cle_r2_proposee": "bibliotheque/production_vegetale/legumineuses_oleagineux/DOC-00155__technologie-de-production-de-l-arachide-arachis-hypogae.pdf"
+}
