@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
-import { messages, users, notifications, user_connections } from '@/db/schema'
+import { messages, users, notifications, user_connections, user_blocks } from '@/db/schema'
 import { eq, or, and } from 'drizzle-orm'
 
 export async function POST(request: NextRequest) {
@@ -18,6 +18,21 @@ export async function POST(request: NextRequest) {
     const { userId } = await auth();
     if (!userId) {
       return NextResponse.json({ error: "Non autorisé." }, { status: 401 })
+    }
+
+    // Blocage (dans un sens ou dans l'autre) : même réponse que l'absence de relation, on ne révèle pas le blocage.
+    const [blocage] = await db
+      .select({ id: user_blocks.id })
+      .from(user_blocks)
+      .where(
+        or(
+          and(eq(user_blocks.blocker_id, userId), eq(user_blocks.blocked_id, destinataire_id)),
+          and(eq(user_blocks.blocker_id, destinataire_id), eq(user_blocks.blocked_id, userId)),
+        ),
+      )
+      .limit(1)
+    if (blocage) {
+      return NextResponse.json({ error: "Vous devez être connecté(e) avec ce membre pour lui envoyer un message." }, { status: 403 })
     }
 
     // Vérifier si une connexion "accepted" existe entre les deux membres

@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
-import { messages, users } from '@/db/schema'
+import { messages, users, user_blocks } from '@/db/schema'
 import { desc, eq, inArray, or } from 'drizzle-orm'
 
 /** Fenêtre de lecture : borne la mémoire ; au-delà, les plus anciens messages ne comptent plus dans « non lus ». */
@@ -30,7 +30,14 @@ export async function GET() {
       parCorrespondant.set(autre, conv)
     }
 
-    const ids = [...parCorrespondant.keys()].slice(0, MAX_CORRESPONDANTS)
+    // Blocage (dans un sens ou dans l'autre) : la conversation n'est plus proposée. L'historique reste en base.
+    const blocages = await db
+      .select({ a: user_blocks.blocker_id, b: user_blocks.blocked_id })
+      .from(user_blocks)
+      .where(or(eq(user_blocks.blocker_id, userId), eq(user_blocks.blocked_id, userId)))
+    const bloques = new Set(blocages.map((x) => (x.a === userId ? x.b : x.a)))
+
+    const ids = [...parCorrespondant.keys()].filter((id) => !bloques.has(id)).slice(0, MAX_CORRESPONDANTS)
     const profils = ids.length
       ? await db
           .select({ id: users.id, prenom: users.prenom, nom: users.nom, photo_url: users.photo_url })
