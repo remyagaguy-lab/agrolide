@@ -16,6 +16,15 @@ const TERRE = `M${X0} ${Y_BAS}V${Y_HAUT}A${G.r} ${G.r} 0 0 1 ${V[0]} ${V[1]}A${D
 const MARGE = 28
 const VB_CIEL = `${X0} ${Y_HAUT - MARGE} ${X1 - X0} ${Y_BAS - Y_HAUT + MARGE}`
 const CIEL = `M${X0} ${Y_HAUT - MARGE}V${Y_HAUT}A${G.r} ${G.r} 0 0 1 ${V[0]} ${V[1]}A${D.r} ${D.r} 0 0 1 ${X1} ${Y_CRETE_D}V${Y_HAUT - MARGE}Z`
+/**
+ * Masque CSS de la TERRE dans le cadre `ciel` (même cadre, même creux) : à appliquer à une photo pour la découper selon
+ * l'horizon. Contrairement à `<Horizon partie="ciel">`, qui peint un aplat par-dessus la photo, le masque laisse voir
+ * le fond de la section au-dessus de la ligne : un motif ou une texture continue alors sans rupture jusqu'à l'horizon.
+ * Usage : `maskImage: \`${HORIZON_MASQUE_TERRE}, linear-gradient(black, black)\``, tailles `100% h` et `100% calc(100% - h + 1px)`.
+ */
+export const HORIZON_MASQUE_TERRE = `url("data:image/svg+xml,${encodeURIComponent(
+  `<svg xmlns='http://www.w3.org/2000/svg' viewBox='${VB_CIEL}' preserveAspectRatio='none'><path d='${TERRE}' fill='black'/></svg>`,
+)}")`
 /** Position du creux en V dans le cadre `ciel`, en % (pour y poser le sceau). */
 export const HORIZON_CREUX = { x: ((V[0] - X0) / (X1 - X0)) * 100, y: ((V[1] - (Y_HAUT - MARGE)) / (Y_BAS - Y_HAUT + MARGE)) * 100 }
 
