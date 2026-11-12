@@ -9,6 +9,7 @@ import { Card } from '@/components/ui/Card'
 import { categorieLabel, displayName, safeExternalUrl } from '@/lib/reseau/profil'
 import type { Fiche } from '@/lib/reseau/fiche'
 import { ConnectionActions } from './ConnectionActions'
+import { MembreActionsMenu } from './MembreActionsMenu'
 import { MemberCard } from './MemberCard'
 
 const categoryVariant = (c: string | null): BadgeVariant => {
@@ -83,13 +84,18 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
                 Modifier mon profil
               </Button>
             ) : (
-              <ConnectionActions
-                memberId={membre.id}
-                name={name}
-                state={state}
-                connectionId={fiche.connectionId}
-                ouvertContact={membre.ouvert_contact}
-              />
+              <div className="flex items-start gap-2">
+                <div className="min-w-0 flex-1">
+                  <ConnectionActions
+                    memberId={membre.id}
+                    name={name}
+                    state={state}
+                    connectionId={fiche.connectionId}
+                    ouvertContact={membre.ouvert_contact}
+                  />
+                </div>
+                <MembreActionsMenu memberId={membre.id} name={name} />
+              </div>
             )}
           </div>
         </div>

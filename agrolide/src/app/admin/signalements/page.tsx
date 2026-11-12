@@ -6,6 +6,7 @@ import { EmptyState } from '@/components/ui/EmptyState'
 import { buttonVariants } from '@/components/ui/Button'
 import { cn } from '@/lib/utils/formatters'
 import { STATUTS_SIGNALEMENT, compterSignalements, estStatutSignalement, fetchSignalements, type StatutSignalement } from '@/lib/reseau/signalements'
+import { motifLabel } from '@/lib/reseau/blocage'
 import { SignalementActions } from './SignalementActions'
 
 export const dynamic = 'force-dynamic'
@@ -66,7 +67,7 @@ export default async function SignalementsPage({ searchParams }: { searchParams:
                   <h2 className="text-title-md text-on-surface">
                     <Link href={`/annuaire/${l.signaleId}`} className="rounded-tag underline-offset-2 hover:underline">{l.signaleNom}</Link>
                   </h2>
-                  <Badge variant="warning">{l.motif}</Badge>
+                  <Badge variant="warning">{motifLabel(l.motif)}</Badge>
                 </div>
                 <dl className="grid gap-1 text-body-sm text-on-surface-variant sm:grid-cols-[auto_1fr] sm:gap-x-4">
                   <dt className="text-on-surface-muted">Signalé par</dt>

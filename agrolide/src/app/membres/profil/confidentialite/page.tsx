@@ -7,6 +7,8 @@ import { db } from "@/db"
 import { users } from "@/db/schema"
 import { parseList, type MemberSummary } from "@/lib/reseau/profil"
 import { carteDepuis } from "@/lib/reseau/carte-publique"
+import { fetchMembresBloques } from "@/lib/reseau/blocage.server"
+import { MembresBloquesListe } from "@/components/modules/reseau/MembresBloquesListe"
 import { buttonVariants } from "@/components/ui/Button"
 import { ConfidentialiteForm } from "./ConfidentialiteForm"
 
@@ -36,6 +38,7 @@ export default async function ConfidentialitePage() {
     .where(eq(users.id, userId))
     .limit(1)
   if (!row) redirect("/login")
+  const bloques = await fetchMembresBloques(userId).catch(() => [])
 
   // Carte telle que les autres membres la voient : mêmes champs que dans l'annuaire, jamais d'e-mail ni de téléphone.
   const apercu: MemberSummary = {
@@ -72,6 +75,8 @@ export default async function ConfidentialitePage() {
         apercu={apercu}
         carte={carteDepuis(row)}
       />
+
+      <MembresBloquesListe initial={bloques} />
     </div>
   )
 }

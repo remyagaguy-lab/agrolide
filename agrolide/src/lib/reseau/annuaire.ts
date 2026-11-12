@@ -5,6 +5,7 @@ import { user_connections, users } from '@/db/schema'
 import { PAYS, PAYS_AUTRE, parseList, type ConnectionState, type MemberSummary } from './profil'
 import type { AnnuaireFilters } from './filtres'
 import { motifGlob, normaliser } from './texte'
+import { sansBloques } from './blocage.server'
 import { classerSuggestions, profilDepuisLigne, type CandidatPourScore, type ProfilPourScore } from './suggestions'
 
 export const PAGE_SIZE = 12
@@ -27,6 +28,8 @@ function buildWhere(viewerId: string, f: AnnuaireFilters) {
     or(eq(users.annuaire_visible, true), isNull(users.annuaire_visible)),
     sql`${users.id} <> ${viewerId}`,
     sql`trim(coalesce(${users.prenom}, '') || ' ' || coalesce(${users.nom}, '')) <> ''`,
+    // Blocage (dans un sens ou dans l'autre) : invisible dans l'annuaire et les suggestions.
+    sansBloques(viewerId, users.id),
   ]
   // Chaque mot saisi doit se retrouver (ET) ; 5 mots au plus.
   for (const mot of normaliser(f.q).split(' ').filter(Boolean).slice(0, 5)) conditions.push(contient(meules, mot))

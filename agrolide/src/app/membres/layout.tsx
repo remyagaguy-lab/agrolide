@@ -8,6 +8,7 @@ import { LogoutButton } from "@/components/ui/LogoutButton"
 import { MembresLayout } from "@/components/layout/MembresLayout"
 import { AlertCircle } from "lucide-react"
 import { user_connections, messages } from "@/db/schema"
+import { sansBloques } from "@/lib/reseau/blocage.server"
 
 export default async function MembresRootLayout({
   children,
@@ -90,7 +91,9 @@ export default async function MembresRootLayout({
         .from(messages)
         .where(and(
           eq(messages.destinataire_id, userId),
-          or(eq(messages.lu, false), isNull(messages.lu))
+          or(eq(messages.lu, false), isNull(messages.lu)),
+          // Les messages d'un membre bloqué ne comptent plus comme « non lus ».
+          sansBloques(userId, messages.expediteur_id)
         ))
       unreadMessagesCount = Number(row?.total ?? 0)
     } catch (e) {

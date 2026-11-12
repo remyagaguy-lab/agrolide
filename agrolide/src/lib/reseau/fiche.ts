@@ -4,6 +4,7 @@ import { db } from '@/db'
 import { documents, user_connections, users } from '@/db/schema'
 import { parseList, type ConnectionState, type MemberSummary } from './profil'
 import { carte, fetchMonProfil, SELECT_CARTE, type LigneCarte } from './annuaire'
+import { existeBlocage, sansBloques } from './blocage.server'
 import { aDesPointsCommuns, pointsCommuns, type PointsCommuns } from './en-commun'
 import { classerSuggestions, profilDepuisLigne, profilSuffisant, type CandidatPourScore, type ProfilPourScore } from './suggestions'
 
@@ -109,6 +110,8 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
   const estMoi = viewerId === id
   // Un membre qui a quitté l'annuaire n'est consultable que par lui-même.
   if (row.annuaire_visible === false && !estMoi) return null
+  // Blocage dans un sens ou dans l'autre : 404, comme un profil masqué (on ne révèle pas qu'on est bloqué).
+  if (!estMoi && (await existeBlocage(viewerId, id))) return null
 
   const membre: FicheMembre = {
     id: row.id,
@@ -209,6 +212,7 @@ async function profilsProches(viewerId: string, cibleId: string, profil: ProfilP
         or(eq(users.annuaire_visible, true), isNull(users.annuaire_visible)),
         sql`${users.id} <> ${viewerId}`,
         sql`${users.id} <> ${cibleId}`,
+        sansBloques(viewerId, users.id),
         sql`trim(coalesce(${users.prenom}, '') || ' ' || coalesce(${users.nom}, '')) <> ''`,
       ),
     )

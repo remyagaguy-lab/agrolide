@@ -8,6 +8,7 @@ import { format } from 'date-fns'
 import { Avatar } from '@/components/ui/Avatar'
 import { Button } from '@/components/ui/Button'
 import { IconButton } from '@/components/ui/IconButton'
+import { MembreActionsMenu } from '@/components/modules/reseau/MembreActionsMenu'
 import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { cn } from '@/lib/utils/formatters'
@@ -271,6 +272,19 @@ export default function MessagesClient({ contact, refus }: MessagesClientProps) 
                 {activeCorrespondant?.specialite && (
                   <p className="truncate text-body-sm text-on-surface-variant">{activeCorrespondant.specialite}</p>
                 )}
+              </div>
+              <div className="ml-auto shrink-0">
+                <MembreActionsMenu
+                  memberId={activeConvId}
+                  name={activeName}
+                  apresBlocage={() => {
+                    // Le lien est supprimé : la conversation se ferme et quitte la liste affichée.
+                    setConversations((prev) => prev.filter((c) => c.correspondant.id !== activeConvId))
+                    setActiveConvId(null)
+                    router.replace('/membres/messages')
+                    router.refresh()
+                  }}
+                />
               </div>
             </div>
 

@@ -5,6 +5,7 @@ import { notifications, user_connections } from '@/db/schema';
 import { auth } from '@/lib/auth/server';
 import { and, count, eq, inArray } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
+import { existeBlocage } from '@/lib/reseau/blocage.server';
 
 /** Invitations envoyées en attente au plus (freine le démarchage en masse). */
 const MAX_INVITATIONS_EN_ATTENTE = 20;
@@ -55,6 +56,9 @@ export async function sendConnectionRequest(receiverId: string) {
   if (!receiver || receiver.annuaire_visible === false) return { error: "Ce membre est introuvable." };
   // Décision D2 : seul un refus explicite ferme les invitations (valeur vide = ouvert).
   if (receiver.ouvert_contact === false) return { error: "Ce membre ne reçoit pas d’invitations." };
+
+  // Blocage dans un sens ou dans l'autre : même réponse que « introuvable », on ne révèle pas qu'on est bloqué.
+  if (await existeBlocage(userId, receiverId)) return { error: "Ce membre est introuvable." };
 
   const existing = await db.query.user_connections.findFirst({
     where: (c, { eq, and, or }) =>
