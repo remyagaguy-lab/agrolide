@@ -1,0 +1,199 @@
+{
+ "DOC-00077": {
+  "decision_publication": "a_valider_humain"
+ },
+ "DOC-00081": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00085": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00092": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00094": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00098": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00115": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00166": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00167": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00181": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00182": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00183": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00185": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00192": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00199": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00278": {
+  "decision_publication": "a_valider_humain"
+ },
+ "DOC-00326": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00329": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00332": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00386": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00388": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00410": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00482": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00498": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00527": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-NC-SA 3.0 IGO",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-00604": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00672": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00700": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-NC-SA 2.0",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-00701": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-NC-SA 2.0",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-00772": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00785": {
+  "decision_publication": "a_valider_humain"
+ },
+ "DOC-00810": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Usage non commercial autorisé (mention du détenteur des droits)",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-00819": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-NC-SA 3.0 IGO",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-00820": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-NC-SA 3.0 IGO",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-00821": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-NC-SA 3.0 IGO",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-00831": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00858": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-00883": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-00887": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ },
+ "DOC-01014": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "Usage non commercial autorisé (mention du détenteur des droits)",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-01045": {
+  "decision_publication": "non_publie_archive",
+  "statut_droits": "droits_reserves_commercial",
+  "ajouter_drapeau": "droits_reserves"
+ },
+ "DOC-01080": {
+  "statut_droits": "libre_licence_ouverte",
+  "licence_detectee": "CC BY-NC-SA 2.0",
+  "note": "NC : valable tant que la bibliothèque est gratuite ; afficher source et licence"
+ },
+ "DOC-01090": {
+  "decision_publication": "a_valider_humain",
+  "statut_droits": "inconnu"
+ }
+}

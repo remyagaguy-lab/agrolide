@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
 import { Upload, FileText, AlertCircle, Loader2 } from 'lucide-react'
 import { useAuth } from '@/lib/auth/client'
+import { DOMAINES, TYPES_DOCUMENT } from '@/lib/bibliotheque/taxonomie'
 
 const formSchema = z.object({
   titre: z.string().min(3, 'Le titre est requis'),
@@ -258,12 +259,9 @@ export default function DeposerDocumentPage() {
               <label className="block text-sm font-medium text-on-surface-variant mb-1">Type de document *</label>
               <select {...register('type')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-surface-container-lowest">
                 <option value="">Sélectionner</option>
-                <option value="Thèse">Thèse</option>
-                <option value="Mémoire">Mémoire</option>
-                <option value="Fiche technique">Fiche technique</option>
-                <option value="Guide">Guide</option>
-                <option value="Article">Article</option>
-                <option value="Rapport">Rapport</option>
+                {TYPES_DOCUMENT.map((t) => (
+                  <option key={t.code} value={t.code}>{t.label}</option>
+                ))}
               </select>
               {errors.type && <p className="text-error text-xs mt-1">{errors.type.message}</p>}
             </div>
@@ -271,10 +269,9 @@ export default function DeposerDocumentPage() {
               <label className="block text-sm font-medium text-on-surface-variant mb-1">Thématique *</label>
               <select {...register('thematique')} className="w-full p-2.5 border border-outline rounded-lg focus:ring-success focus:border-success bg-surface-container-lowest">
                 <option value="">Sélectionner</option>
-                <option value="Agroécologie">Agroécologie</option>
-                <option value="Élevage">Élevage</option>
-                <option value="Maraîchage">Maraîchage</option>
-                <option value="Gestion de projet">Gestion de projet</option>
+                {DOMAINES.map((d) => (
+                  <option key={d.code} value={d.label}>{d.label}</option>
+                ))}
               </select>
               {errors.thematique && <p className="text-error text-xs mt-1">{errors.thematique.message}</p>}
             </div>

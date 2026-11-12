@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { FileText, Eye, Calendar, MapPin } from 'lucide-react'
+import { FileText, Eye, Calendar, MapPin, Lock } from 'lucide-react'
+import { labelType, labelDomaine, couleurType } from '@/lib/bibliotheque/taxonomie'
 
 export interface DocumentType {
   id: string
@@ -11,6 +12,9 @@ export interface DocumentType {
   nb_telechargements: number
   statut?: string
   created_at?: string
+  acces?: string
+  domaine?: string | null
+  sous_domaine?: string | null
 }
 
 interface DocumentCardProps {
@@ -19,44 +23,28 @@ interface DocumentCardProps {
 }
 
 export function DocumentCard({ document, publicView = false }: DocumentCardProps) {
-  // Couleur par type de document
-  const formatType = (type_doc: string) => {
-    if (!type_doc) return 'Inconnu';
-    switch (type_doc.toLowerCase()) {
-      case 'these': return 'Thèse';
-      case 'memoire': return 'Mémoire';
-      case 'fiche_technique': return 'Fiche technique';
-      case 'guide_pratique': return 'Guide pratique';
-      case 'article': return 'Article';
-      case 'rapport': return 'Rapport';
-      default: return type_doc;
-    }
-  }
-
-  const getBadgeColor = (type_doc: string) => {
-    if (!type_doc) return 'bg-surface-container text-on-surface';
-    switch (type_doc.toLowerCase()) {
-      case 'these': return 'bg-info-container text-on-info-container'
-      case 'memoire': return 'bg-info-container text-on-info-container'
-      case 'fiche_technique': return 'bg-success-container text-on-success-container'
-      case 'guide_pratique': return 'bg-warning-container text-on-warning-container'
-      case 'article': return 'bg-error-container text-on-error-container'
-      case 'rapport': return 'bg-surface-container text-on-surface'
-      default: return 'bg-surface-container text-on-surface'
-    }
-  }
-
   // Le visiteur reste sur le site public ; un membre reste dans son espace.
   const href = publicView ? `/bibliotheque/${document.id}` : `/membres/bibliotheque/${document.id}`
+  const reserveAuxMembres = document.acces && document.acces !== 'public'
 
   return (
     <Link href={href} className={`group flex flex-col h-full bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all overflow-hidden`}>
       {/* En-tête miniature */}
       <div className="h-32 bg-surface-container-low flex items-center justify-center border-b border-outline-variant relative group-hover:bg-surface-container transition-colors">
         <FileText className="w-12 h-12 text-on-surface-muted" strokeWidth={1.5} />
-        <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full ${getBadgeColor(document.type_doc)}`}>
-          {formatType(document.type_doc)}
+        <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full ${couleurType(document.type_doc)}`}>
+          {labelType(document.type_doc)}
         </span>
+        {document.domaine && (
+          <span className="absolute bottom-3 left-3 max-w-[70%] truncate text-xs font-medium text-on-surface-muted">
+            {labelDomaine(document.domaine)}
+          </span>
+        )}
+        {reserveAuxMembres && (
+          <span className="absolute top-3 left-3 inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-surface-container text-on-surface-variant" title="Lecture réservée aux membres inscrits">
+            <Lock className="w-3 h-3" /> Inscrits
+          </span>
+        )}
       </div>
 
       {/* Contenu */}

@@ -6,6 +6,24 @@ import { Search, Filter, X } from 'lucide-react'
 import { DocumentCard, DocumentType } from './DocumentCard'
 import { SkeletonGrid } from '@/components/ui/Skeleton'
 import { buttonVariants } from '@/components/ui/Button'
+import { DOMAINES, TYPES_DOCUMENT, PUBLICS_CIBLES, NIVEAUX, sousDomainesDe, type Option } from '@/lib/bibliotheque/taxonomie'
+
+const CLASSE_SELECT = 'w-full p-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all'
+const CLASSE_LABEL = 'text-label-sm font-bold uppercase tracking-wider text-on-surface-muted mb-2 block'
+
+function Select({ label, value, onChange, options, tous }: { label: string; value: string; onChange: (v: string) => void; options: Option[]; tous: string }) {
+  return (
+    <div>
+      <label className={CLASSE_LABEL}>{label}</label>
+      <select value={value} onChange={(e) => onChange(e.target.value)} className={CLASSE_SELECT}>
+        <option value="">{tous}</option>
+        {options.map((o) => (
+          <option key={o.code} value={o.code}>{o.label}</option>
+        ))}
+      </select>
+    </div>
+  )
+}
 
 export function BibliothequeClient({ initialData, publicView = false }: any) {
   const router = useRouter()
@@ -21,7 +39,18 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
   // Filtres state (local state synced with URL)
   const [search, setSearch] = useState(searchParams.get('search') || '')
   const [type, setType] = useState(searchParams.get('type') || '')
-  const [thematique, setThematique] = useState(searchParams.get('thematique') || '')
+  const [domaine, setDomaine] = useState(searchParams.get('domaine') || '')
+  const [sousDomaine, setSousDomaine] = useState(searchParams.get('sous_domaine') || '')
+  const [publicCible, setPublicCible] = useState(searchParams.get('public') || '')
+  const [niveau, setNiveau] = useState(searchParams.get('niveau') || '')
+
+  const filtresActifs = Boolean(search || type || domaine || sousDomaine || publicCible || niveau)
+  const sousDomaines = sousDomainesDe(domaine)
+
+  const changerDomaine = (v: string) => {
+    setDomaine(v)
+    setSousDomaine('') // un sous-domaine n'a de sens que dans son domaine
+  }
 
   // Debounce search
   useEffect(() => {
@@ -29,7 +58,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
       updateUrlAndFetch(true)
     }, 500)
     return () => clearTimeout(timer)
-  }, [search, type, thematique]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [search, type, domaine, sousDomaine, publicCible, niveau]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const createQueryString = useCallback(
     (paramsToUpdate: Record<string, string | null>) => {
@@ -46,23 +75,29 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
     [searchParams]
   )
 
+  const filtres = { search, type, domaine, sous_domaine: sousDomaine, public_cible: publicCible, niveau }
+
   const updateUrlAndFetch = async (resetCursor = false) => {
     const queryString = createQueryString({
       search: search || null,
       type: type || null,
-      thematique: thematique || null,
+      domaine: domaine || null,
+      sous_domaine: sousDomaine || null,
+      public: publicCible || null,
+      niveau: niveau || null,
+      thematique: null, // ancien paramètre, remplacé par « domaine »
     })
-    
+
     // Update URL without refresh
-    router.replace(`${pathname}?${queryString}`, { scroll: false })
-    
+    router.replace(queryString ? `${pathname}?${queryString}` : pathname, { scroll: false })
+
     // Fetch new data
     setLoading(true)
     setError(null)
     try {
       const { fetchDocuments } = await import('@/app/actions/bibliotheque')
-      const result = await fetchDocuments({ search, type, thematique })
-      
+      const result = await fetchDocuments(filtres)
+
       setDocuments(result.data as DocumentType[])
       setNextCursor(result.nextCursor)
     } catch (err) {
@@ -75,12 +110,12 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
 
   const loadMore = async () => {
     if (!nextCursor || loadingMore) return
-    
+
     setLoadingMore(true)
     try {
       const { fetchDocuments } = await import('@/app/actions/bibliotheque')
-      const result = await fetchDocuments({ search, type, thematique, cursor: nextCursor })
-      
+      const result = await fetchDocuments({ ...filtres, cursor: nextCursor })
+
       setDocuments(prev => [...prev, ...(result.data as DocumentType[])])
       setNextCursor(result.nextCursor)
     } finally {
@@ -91,7 +126,10 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
   const resetFilters = () => {
     setSearch('')
     setType('')
-    setThematique('')
+    setDomaine('')
+    setSousDomaine('')
+    setPublicCible('')
+    setNiveau('')
     router.replace(pathname)
   }
 
@@ -104,62 +142,36 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             <h3 className="font-bold text-on-surface flex items-center gap-2">
               <Filter className="w-4 h-4 text-on-surface-muted" /> Filtres
             </h3>
-            {(search || type || thematique) && (
+            {filtresActifs && (
               <button onClick={resetFilters} className="text-xs text-error hover:text-on-error-container flex items-center gap-1 font-bold">
                 <X className="w-3 h-3" /> Réinitialiser
               </button>
             )}
           </div>
-          
+
           <div className="space-y-4">
             {/* Recherche textuelle */}
             <div>
-              <label className="text-label-sm font-bold uppercase tracking-wider text-on-surface-muted mb-2 block">Recherche</label>
+              <label className={CLASSE_LABEL}>Recherche</label>
               <div className="relative">
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  placeholder="Titre, mots-clés..."
+                  placeholder="Titre, auteur, culture, mot-clé..."
                   className="w-full pl-8 pr-3 py-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all"
                 />
                 <Search className="w-4 h-4 text-on-surface-muted absolute left-2.5 top-3" />
               </div>
             </div>
 
-            {/* Type */}
-            <div>
-              <label className="text-label-sm font-bold uppercase tracking-wider text-on-surface-muted mb-2 block">Type de document</label>
-              <select 
-                value={type}
-                onChange={(e) => setType(e.target.value)}
-                className="w-full p-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all"
-              >
-                <option value="">Tous les types</option>
-                <option value="these">Thèse</option>
-                <option value="memoire">Mémoire</option>
-                <option value="fiche_technique">Fiche technique</option>
-                <option value="guide_pratique">Guide pratique</option>
-                <option value="article">Article</option>
-                <option value="rapport">Rapport</option>
-              </select>
-            </div>
-            
-            {/* Thématique */}
-            <div>
-              <label className="text-label-sm font-bold uppercase tracking-wider text-on-surface-muted mb-2 block">Thématique</label>
-              <select 
-                value={thematique}
-                onChange={(e) => setThematique(e.target.value)}
-                className="w-full p-2.5 border border-outline-variant rounded-2xl text-sm focus:ring-2 focus:ring-accent-leaf/30 focus:border-accent-leaf bg-surface-container-low/50 outline-none transition-all"
-              >
-                <option value="">Toutes</option>
-                <option value="Agroécologie">Agroécologie</option>
-                <option value="Élevage">Élevage</option>
-                <option value="Maraîchage">Maraîchage</option>
-                <option value="Gestion de projet">Gestion de projet</option>
-              </select>
-            </div>
+            <Select label="Domaine" value={domaine} onChange={changerDomaine} options={DOMAINES} tous="Tous les domaines" />
+            {sousDomaines.length > 0 && (
+              <Select label="Sujet" value={sousDomaine} onChange={setSousDomaine} options={sousDomaines} tous="Tous les sujets" />
+            )}
+            <Select label="Type de document" value={type} onChange={setType} options={TYPES_DOCUMENT} tous="Tous les types" />
+            <Select label="Pour qui ?" value={publicCible} onChange={setPublicCible} options={PUBLICS_CIBLES} tous="Tous les publics" />
+            <Select label="Niveau" value={niveau} onChange={setNiveau} options={NIVEAUX} tous="Tous les niveaux" />
           </div>
         </div>
       </div>
@@ -181,7 +193,7 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
             </div>
             {nextCursor && (
               <div className="mt-8 text-center">
-                <button 
+                <button
                   onClick={loadMore}
                   disabled={loadingMore}
                   className={buttonVariants({ variant: 'outline', className: 'disabled:opacity-50' })}

@@ -133,7 +133,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         <div className="w-16 h-16 bg-warning-container text-warning rounded-full flex items-center justify-center mb-6">
           <AlertCircle className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-bold text-on-surface mb-3">Vous avez lu vos 3 documents gratuits 🎉</h3>
+        <h3 className="text-2xl font-bold text-on-surface mb-3">Vous avez lu vos 5 documents gratuits 🎉</h3>
         <p className="text-on-surface-variant mb-8 max-w-md">
           Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte Agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
         </p>

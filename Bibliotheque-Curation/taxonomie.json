@@ -1,0 +1,219 @@
+{
+  "version": "v1-depart",
+  "note": "Source unique des valeurs autorisées. Aucune valeur hors de cette liste n'est acceptée par le validateur. Les sous-domaines sont une liste de DÉPART : elle est figée au Gate 1 (fin du pilote). Toute proposition d'ajout va dans propositions_taxonomie.md, jamais directement ici.",
+
+  "domaines": [
+    {
+      "code": "production_vegetale",
+      "label": "Production végétale",
+      "definition": "Tout ce qui concerne la culture des plantes : cultures, techniques culturales, semences, protection des cultures, fertilisation.",
+      "sous_domaines": [
+        { "code": "cereales", "label": "Céréales", "exemples": "maïs, riz, sorgho, mil, blé, avoine, orge" },
+        { "code": "legumineuses_oleagineux", "label": "Légumineuses et oléagineux", "exemples": "arachide, soja, niébé, sésame, tournesol" },
+        { "code": "tubercules_racines", "label": "Tubercules et racines", "exemples": "manioc, igname, patate douce, pomme de terre" },
+        { "code": "cultures_maraicheres", "label": "Cultures maraîchères", "exemples": "tomate, piment, oignon, chou, aubergine, laitue" },
+        { "code": "arboriculture_fruitiere", "label": "Arboriculture fruitière", "exemples": "manguier, agrumes, ananas, papaye, banane" },
+        { "code": "cultures_de_rente", "label": "Cultures de rente et industrielles", "exemples": "café, cacao, coton, canne à sucre, palmier à huile, hévéa, anacarde" },
+        { "code": "plantes_aromatiques_medicinales", "label": "Plantes aromatiques et médicinales", "exemples": "artemisia, moringa, plantes à parfum" },
+        { "code": "horticulture_jardinage", "label": "Horticulture et jardinage", "exemples": "jardin potager, plantes ornementales, pépinière" },
+        { "code": "agronomie_generale", "label": "Agronomie générale et techniques culturales", "exemples": "assolement, travail du sol, semis, rotations, physiologie végétale" },
+        { "code": "protection_des_cultures", "label": "Protection des cultures", "exemples": "ravageurs, maladies, adventices, pesticides, lutte biologique" },
+        { "code": "semences_amelioration", "label": "Semences et amélioration variétale", "exemples": "production de semences, sélection, génétique des plantes" },
+        { "code": "fertilisation_amendements", "label": "Fertilisation et amendements", "exemples": "compost, engrais, fumure" },
+        { "code": "culture_sous_abri_hors_sol", "label": "Culture sous abri et hors sol", "exemples": "serre, hydroponie, substrat" }
+      ]
+    },
+    {
+      "code": "production_animale",
+      "label": "Production animale",
+      "definition": "Élevage de toutes espèces, pêche et aquaculture, alimentation et santé des animaux.",
+      "sous_domaines": [
+        { "code": "aviculture", "label": "Aviculture", "exemples": "poules, pintades, canards, dindes, poulets de chair" },
+        { "code": "ruminants", "label": "Bovins, ovins, caprins", "exemples": "vaches, moutons, chèvres, embouche, lait" },
+        { "code": "porcins", "label": "Porcins", "exemples": "porc, truie, porcherie" },
+        { "code": "petit_elevage", "label": "Petit élevage", "exemples": "lapins, cobayes, aulacodes, escargots" },
+        { "code": "apiculture", "label": "Apiculture", "exemples": "abeilles, miel, ruches" },
+        { "code": "aquaculture_peche", "label": "Aquaculture et pêche", "exemples": "pisciculture, tilapia, clarias, pêche artisanale" },
+        { "code": "alimentation_animale", "label": "Alimentation animale", "exemples": "rations, fourrages, aliments composés" },
+        { "code": "sante_animale", "label": "Santé animale", "exemples": "maladies, vaccination, vétérinaire, parasites" },
+        { "code": "genetique_reproduction", "label": "Génétique et reproduction animale", "exemples": "races, insémination, sélection" },
+        { "code": "batiments_equipements_elevage", "label": "Bâtiments et équipements d'élevage", "exemples": "poulailler, étable, abreuvoirs" },
+        { "code": "elevage_general", "label": "Élevage général", "exemples": "manuels couvrant plusieurs espèces, zootechnie générale" }
+      ]
+    },
+    {
+      "code": "agroeconomie",
+      "label": "Agroéconomie",
+      "definition": "Économie, gestion, entrepreneuriat, financement, marchés, politiques et organisation du monde agricole.",
+      "sous_domaines": [
+        { "code": "gestion_projet_business_plan", "label": "Gestion de projet et business plan", "exemples": "montage de projet, plan d'affaires, cadre logique" },
+        { "code": "entrepreneuriat_agricole", "label": "Entrepreneuriat agricole", "exemples": "création d'entreprise agricole, agripreneuriat, jeunes" },
+        { "code": "financement_credit_assurance", "label": "Financement, crédit et assurance", "exemples": "microfinance, subventions, assurance agricole" },
+        { "code": "economie_filieres_marches", "label": "Économie des filières et marchés", "exemples": "chaîne de valeur, prix, commerce, exportation" },
+        { "code": "agriculture_contractuelle", "label": "Agriculture contractuelle et commercialisation", "exemples": "contrats, circuits courts, vente" },
+        { "code": "politiques_strategies", "label": "Politiques et stratégies agricoles", "exemples": "plans nationaux, stratégies sectorielles, PSE" },
+        { "code": "organisations_paysannes", "label": "Coopératives et organisations paysannes", "exemples": "coopérative, GIE, association de producteurs" },
+        { "code": "vulgarisation_conseil", "label": "Vulgarisation, conseil et formation agricole", "exemples": "conseil agricole, champ-école, pédagogie pour adultes" },
+        { "code": "gestion_exploitation", "label": "Gestion et comptabilité d'exploitation", "exemples": "marges, coûts de production, comptabilité simplifiée" },
+        { "code": "foncier_droit_agricole", "label": "Foncier et droit agricole", "exemples": "accès à la terre, réglementation, contrats fonciers" }
+      ]
+    },
+    {
+      "code": "agroalimentaire",
+      "label": "Agroalimentaire",
+      "definition": "Transformation, conservation, qualité et technologie des produits alimentaires, nutrition.",
+      "sous_domaines": [
+        { "code": "transformation_cereales_tubercules", "label": "Transformation des céréales et tubercules", "exemples": "farine, gari, amidon, pain, fécule" },
+        { "code": "transformation_fruits_legumes", "label": "Transformation des fruits et légumes", "exemples": "jus, confiture, séchage, conserves" },
+        { "code": "transformation_produits_animaux", "label": "Transformation des produits animaux", "exemples": "viande, lait, fromage, œufs, poisson fumé" },
+        { "code": "huiles_sucre_corps_gras", "label": "Huiles, corps gras et sucre", "exemples": "huile de palme, beurre de karité, sucre" },
+        { "code": "boissons", "label": "Boissons", "exemples": "boissons gazeuses, jus, bière, eau" },
+        { "code": "conservation_post_recolte", "label": "Conservation, stockage et post-récolte", "exemples": "séchage, silos, chaîne du froid, pertes" },
+        { "code": "qualite_securite_normes", "label": "Qualité, sécurité sanitaire et normes", "exemples": "HACCP, BPH, normes, étiquetage" },
+        { "code": "nutrition_alimentation", "label": "Nutrition et alimentation humaine", "exemples": "valeur nutritive, régimes, sécurité alimentaire" },
+        { "code": "equipements_technologie", "label": "Équipements et technologie alimentaire", "exemples": "machines de transformation, procédés, emballage" },
+        { "code": "entreprise_agroalimentaire", "label": "Entreprise agroalimentaire", "exemples": "création d'unité de transformation, étude de faisabilité" }
+      ]
+    },
+    {
+      "code": "ressources_naturelles_environnement",
+      "label": "Ressources naturelles et environnement",
+      "definition": "PROPOSITION À VALIDER. Sol, eau, forêts, climat, biodiversité, agroécologie : ce qui concerne la ressource et l'environnement plus que la culture ou l'élevage lui-même.",
+      "sous_domaines": [
+        { "code": "sol_fertilite", "label": "Sol et fertilité", "exemples": "pédologie, érosion, conservation des sols, CES/DRS" },
+        { "code": "eau_irrigation", "label": "Eau et irrigation", "exemples": "irrigation goutte à goutte, gestion de l'eau, bas-fonds" },
+        { "code": "foresterie_agroforesterie", "label": "Foresterie et agroforesterie", "exemples": "sylviculture, arbres champêtres, reboisement" },
+        { "code": "climat_changement_climatique", "label": "Climat et changement climatique", "exemples": "adaptation, météo agricole, résilience" },
+        { "code": "biodiversite_ecologie", "label": "Biodiversité et écologie", "exemples": "écosystèmes, conservation, pollinisateurs" },
+        { "code": "agroecologie_agriculture_durable", "label": "Agroécologie et agriculture durable", "exemples": "principes agroécologiques, agriculture biologique, permaculture" },
+        { "code": "energie_dechets_valorisation", "label": "Énergie, déchets et valorisation", "exemples": "biogaz, compostage collectif, valorisation des sous-produits" }
+      ]
+    },
+    {
+      "code": "transversal",
+      "label": "Transversal",
+      "definition": "PROPOSITION À VALIDER. Documents utiles à plusieurs domaines ou à la formation scientifique en général.",
+      "sous_domaines": [
+        { "code": "agriculture_generale", "label": "Agriculture générale", "exemples": "manuels et panoramas couvrant plusieurs domaines à la fois" },
+        { "code": "methodologie_recherche", "label": "Méthodologie de recherche et rédaction", "exemples": "élaborer un projet de recherche, rédiger un mémoire" },
+        { "code": "sciences_de_base", "label": "Sciences de base", "exemples": "biologie, chimie, écologie générale, atlas" },
+        { "code": "statistiques_biometrie", "label": "Statistiques et biométrie", "exemples": "analyse de données, plans d'expérience" },
+        { "code": "numerique_technologies", "label": "Numérique et technologies agricoles", "exemples": "SIG, télédétection, applications, drones" }
+      ]
+    },
+    {
+      "code": "hors_perimetre",
+      "label": "Hors périmètre",
+      "definition": "Document sans rapport avec l'agriculture, l'élevage, l'agroalimentaire ou l'agroéconomie (CV, carte de visite, certificat, offre d'emploi, document administratif, etc.). Jamais publié.",
+      "sous_domaines": [
+        { "code": "aucun", "label": "Aucun", "exemples": "" }
+      ]
+    }
+  ],
+
+  "types_document": [
+    { "code": "fiche_technique", "label": "Fiche technique", "criteres": "Court (en général 1 à 12 pages), prescriptif, décrit l'itinéraire technique d'une culture, d'un élevage ou d'un procédé. Écrit pour un praticien." },
+    { "code": "guide_pratique", "label": "Guide pratique", "criteres": "Plus long qu'une fiche, pas-à-pas ou bonnes pratiques, destiné à être appliqué sur le terrain (ex. collection Agrodok, manuels de formation de producteurs)." },
+    { "code": "cours", "label": "Cours / support pédagogique", "criteres": "Support de cours, polycopié, chapitre de cours, TD/TP, manuel universitaire structuré par objectifs pédagogiques ou par chapitres numérotés." },
+    { "code": "ouvrage", "label": "Ouvrage / livre", "criteres": "Livre, traité, atlas, encyclopédie, avec éditeur, ISBN ou page de titre éditoriale." },
+    { "code": "these", "label": "Thèse", "criteres": "Thèse de doctorat (mention « thèse », « soutenue », jury, école doctorale)." },
+    { "code": "memoire", "label": "Mémoire", "criteres": "Mémoire de fin d'études (licence, master, ingénieur, DEA, DUT/BTS) : page de garde avec étudiant, encadreur, établissement, « présenté en vue de l'obtention »." },
+    { "code": "article", "label": "Article scientifique ou technique", "criteres": "Article de revue ou de communication, avec résumé/abstract, références, quelques pages à quelques dizaines de pages." },
+    { "code": "rapport", "label": "Rapport / étude", "criteres": "Rapport d'activités, d'étude, d'évaluation, de diagnostic, d'enquête, note de synthèse." },
+    { "code": "presentation", "label": "Présentation (diaporama)", "criteres": "Diaporama (PowerPoint ou équivalent), même converti en PDF." },
+    { "code": "texte_officiel", "label": "Texte officiel / réglementaire", "criteres": "Loi, décret, arrêté, norme, stratégie nationale, politique publique, cahier des charges officiel." },
+    { "code": "outil_modele", "label": "Outil / modèle", "criteres": "Gabarit, formulaire, grille, modèle de business plan, tableur, check-list à réutiliser." },
+    { "code": "periodique", "label": "Périodique / bulletin", "criteres": "Numéro de magazine, bulletin, lettre d'information, revue périodique." },
+    { "code": "actes_conference", "label": "Actes de conférence", "criteres": "Actes, comptes rendus de colloque, atelier ou séminaire." },
+    { "code": "autre", "label": "Autre", "criteres": "N'entre dans aucun type ci-dessus. À utiliser en dernier recours et justifier." }
+  ],
+
+  "publics": [
+    { "code": "producteur", "label": "Producteur (agriculteur, éleveur, transformateur artisanal)" },
+    { "code": "technicien_conseiller", "label": "Technicien, conseiller, vulgarisateur" },
+    { "code": "etudiant", "label": "Étudiant" },
+    { "code": "enseignant_chercheur", "label": "Enseignant, chercheur" },
+    { "code": "entrepreneur_porteur_projet", "label": "Entrepreneur, porteur de projet" },
+    { "code": "decideur_institution", "label": "Décideur, institution, ONG" }
+  ],
+
+  "niveaux": [
+    { "code": "initiation", "label": "Initiation" },
+    { "code": "intermediaire", "label": "Intermédiaire" },
+    { "code": "expert", "label": "Expert / spécialisé" }
+  ],
+
+  "langues": ["fr", "en", "autre", "multilingue"],
+
+  "contextes_geo": [
+    { "code": "afrique_tropicale", "label": "Afrique tropicale (dont Afrique de l'Ouest)" },
+    { "code": "afrique_autre", "label": "Autre Afrique (Maghreb, Afrique australe)" },
+    { "code": "international_general", "label": "Général / applicable partout" },
+    { "code": "tempere_non_adapte", "label": "Contexte tempéré (Europe, Amérique du Nord), peu adapté à l'Afrique" }
+  ],
+
+  "pertinence_plateforme": {
+    "3": "Cœur de cible : agriculture africaine, surtout subsaharienne francophone",
+    "2": "Utile et adaptable aux réalités africaines",
+    "1": "Marginal : peu de lien avec le public d'Agrolide",
+    "0": "Hors cible"
+  },
+
+  "statuts_droits": [
+    { "code": "libre_licence_ouverte", "label": "Libre (licence ouverte explicite, domaine public, Open Access)", "publiable": true },
+    { "code": "diffusion_institutionnelle", "label": "Diffusion institutionnelle (organisation dont la mission est de diffuser gratuitement, sans mention restrictive)", "publiable": true },
+    { "code": "droits_reserves_commercial", "label": "Droits réservés (livre commercial, ©, ISBN d'éditeur, reproduction interdite)", "publiable": false },
+    { "code": "travail_academique_non_publie", "label": "Travail académique non publié (mémoire, thèse, polycopié signé d'un enseignant)", "publiable": false },
+    { "code": "donnees_personnelles_confidentiel", "label": "Données personnelles ou confidentiel", "publiable": false },
+    { "code": "inconnu", "label": "Droits indéterminables", "publiable": false }
+  ],
+
+  "decisions_publication": [
+    { "code": "public", "label": "Publier en accès public", "definition": "Contenu à valeur d'appel, droits clairement OK, complet, utile au grand public (typiquement fiches et guides pour producteurs)." },
+    { "code": "membres", "label": "Publier réservé aux membres connectés", "definition": "Droits clairement OK, complet, mais mieux placé derrière l'inscription (cours libres, ouvrages libres, rapports longs, supports pour étudiants et professionnels)." },
+    { "code": "non_publie_archive", "label": "Ne pas publier (conservé en archive privée)", "definition": "Document valable mais non diffusable : droits, mémoire/thèse, incomplet, trop ancien, etc." },
+    { "code": "a_valider_humain", "label": "À valider par un humain", "definition": "Doute réel, désaccord entre agents, confiance trop faible, cas listé comme sensible." },
+    { "code": "exclu_hors_perimetre", "label": "Exclu : hors périmètre", "definition": "Sans rapport avec la bibliothèque, ou donnée personnelle." },
+    { "code": "exclu_doublon", "label": "Exclu : doublon ou fragment d'un autre document", "definition": "Une meilleure version (canonique) existe dans le corpus." },
+    { "code": "exclu_illisible", "label": "Exclu : illisible ou inutilisable", "definition": "Corrompu, protégé, scan inexploitable, même après OCR." }
+  ],
+
+  "drapeaux": [
+    { "code": "incomplet", "definition": "Document coupé : début ou fin manquant, pages manquantes, tome ou partie seule." },
+    { "code": "pages_manquantes", "definition": "Numérotation ou table des matières montrent des pages absentes." },
+    { "code": "ensemble_partiel", "definition": "Ce fichier est une partie d'un ensemble reconstituable (partie 1/2, chapitre isolé)." },
+    { "code": "scan_illisible", "definition": "Scan de qualité insuffisante pour lire ou OCRiser." },
+    { "code": "ocr_necessaire", "definition": "Pas de couche texte : OCR requis pour analyser." },
+    { "code": "protege", "definition": "Protégé par mot de passe ou chiffré." },
+    { "code": "corrompu", "definition": "Le fichier ne s'ouvre pas." },
+    { "code": "obsolete", "definition": "Contenu manifestement daté (réglementation, prix, produits retirés)." },
+    { "code": "donnees_phyto_a_verifier", "definition": "Contient des doses, produits phytosanitaires ou vétérinaires dont l'exactitude et la légalité actuelle doivent être vérifiées par un humain." },
+    { "code": "droits_reserves", "definition": "Mention explicite de droits réservés / reproduction interdite." },
+    { "code": "licence_nc", "definition": "Licence « pas d'usage commercial » (CC BY-NC...) : problématique si Agrolide vend des formations ; passer en validation humaine." },
+    { "code": "donnees_personnelles", "definition": "Contient des données personnelles (CV, contacts, pièces d'identité)." },
+    { "code": "confidentiel_interne", "definition": "Document interne ou confidentiel d'une organisation." },
+    { "code": "contenu_commercial", "definition": "Catalogue ou publicité d'entreprise plus que contenu de fond." },
+    { "code": "format_non_pdf", "definition": "Fichier source non PDF (ppt, doc, image...). Le site ne sert que des PDF." },
+    { "code": "conversion_requise", "definition": "Doit être converti en PDF avant import." },
+    { "code": "taille_excessive", "definition": "Plus de 40 Mo : le site lit le fichier entier en mémoire et le dépôt plafonne à 50 Mo." },
+    { "code": "titre_introuvable", "definition": "Aucun titre fiable identifié dans le document." },
+    { "code": "auteur_introuvable", "definition": "Aucun auteur ni organisation identifiable." },
+    { "code": "langue_peu_exploitable", "definition": "Langue ni française ni anglaise." },
+    { "code": "contexte_non_adapte", "definition": "Contenu pensé pour un climat ou un contexte très différent (Europe, Québec) et d'usage limité pour l'Afrique." }
+  ],
+
+  "roles_doublon": [
+    { "code": "unique", "definition": "Aucun équivalent dans le corpus." },
+    { "code": "canonique", "definition": "Meilleure version retenue d'un groupe de documents liés." },
+    { "code": "copie_exacte", "definition": "Même SHA-256 qu'un autre fichier." },
+    { "code": "copie_quasi_identique", "definition": "Même contenu, fichier différent (recompression, autre mise en page, métadonnées)." },
+    { "code": "version_anterieure", "definition": "Édition plus ancienne d'un document dont une version plus récente existe." },
+    { "code": "fragment", "definition": "Extrait ou partie d'un document dont la version complète existe dans le corpus." },
+    { "code": "traduction", "definition": "Traduction d'un autre document du corpus. Les deux peuvent être conservés, reliés par groupe." },
+    { "code": "extrait", "definition": "Série de diapositives ou résumé tiré d'un document plus complet du corpus." }
+  ],
+
+  "statuts_traitement": [
+    "inventorie", "extrait", "classifie", "audite", "dedoublonne", "decide", "nomme", "termine", "erreur_technique"
+  ]
+}

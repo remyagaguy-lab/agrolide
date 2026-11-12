@@ -4,6 +4,7 @@ import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, and, count } from 'drizzle-orm'
+import { conditionsBibliotheque, TAILLE_PAGE, type FiltresBibliotheque } from '@/lib/bibliotheque/filtres'
 
 export async function checkTrocEligibility() {
   const { userId } = await auth();
@@ -46,31 +47,17 @@ export async function getDocumentUrl(documentId: string) {
   return { error: 'Document non trouvé' }
 }
 
-export async function fetchDocuments({
-  search = '',
-  type = '',
-  thematique = '',
-  cursor = null
-}: {
-  search?: string
-  type?: string
-  thematique?: string
-  cursor?: string | null
-}) {
+export async function fetchDocuments(filtres: FiltresBibliotheque) {
   try {
-    const { like, inArray, and, desc, lt } = await import('drizzle-orm')
-    const conditions = [eq(documents.statut, 'publie')]
-    
-    if (search) conditions.push(like(documents.titre, `%${search}%`))
-    if (type) conditions.push(inArray(documents.type_doc, type.split(',')))
-    if (thematique) conditions.push(inArray(documents.thematique, thematique.split(',')))
-    if (cursor) conditions.push(lt(documents.created_at, cursor))
+    const { desc } = await import('drizzle-orm')
+    const data = await db.select().from(documents)
+      .where(conditionsBibliotheque(filtres))
+      .orderBy(desc(documents.created_at))
+      .limit(TAILLE_PAGE)
 
-    const data = await db.select().from(documents).where(and(...conditions)).orderBy(desc(documents.created_at)).limit(20)
-    
     return {
       data: data as any[],
-      nextCursor: data.length === 20 ? data[19].created_at : null
+      nextCursor: data.length === TAILLE_PAGE ? data[TAILLE_PAGE - 1].created_at : null
     }
   } catch (error) {
     console.error("Erreur lors du fetch des documents:", error)

@@ -78,7 +78,7 @@ export function DownloadButton({ documentId, mode = 'public' }: { documentId: st
         </button>
         {isAuthenticated === false && (
           <p className="text-center text-xs text-on-surface-muted font-medium px-2">
-            3 documents à lire en entier, sans compte
+            5 documents à lire en entier, sans compte
           </p>
         )}
       </div>

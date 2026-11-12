@@ -5,6 +5,7 @@ import { Check, X, Eye, FileText, Loader2, AlertCircle, Trash2, Plus } from 'luc
 import { validateDocument, rejectDocument, deleteDocumentAdmin, getAdminDocuments } from '@/app/actions/admin-documents'
 import { DocumentDetailsModal } from '@/components/modules/admin/DocumentDetailsModal'
 import SubmitDocumentModal from '@/components/modules/admin/SubmitDocumentModal'
+import { labelType } from '@/lib/bibliotheque/taxonomie'
 
 export const dynamic = 'force-dynamic';
 
@@ -175,7 +176,7 @@ export default function AdminDocumentsPage() {
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span className="text-sm text-on-surface">{doc.type_doc}</span>
+                      <span className="text-sm text-on-surface">{labelType(doc.type_doc)}</span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-on-surface-muted">
                       {doc.created_at ? new Date(doc.created_at).toLocaleDateString('fr-FR') : '-'}

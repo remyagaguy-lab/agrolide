@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { X, CheckCircle, Loader2, Upload } from 'lucide-react'
+import { DOMAINES, TYPES_DOCUMENT } from '@/lib/bibliotheque/taxonomie'
 
 interface SubmitDocumentModalProps {
   isOpen: boolean
@@ -20,7 +21,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
     titre: '',
     auteur: '',
     type: 'guide_pratique',
-    thematique: 'agrobusiness',
+    thematique: 'Agroéconomie',
     resume: '',
     pays: '',
     filiere: '',
@@ -98,7 +99,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
         onClose()
         setSuccess(false)
         setFile(null)
-        setFormData({ titre: '', auteur: '', type: 'guide_pratique', thematique: 'agrobusiness', resume: '', pays: '', filiere: '', langue: 'fr', annee: '' })
+        setFormData({ titre: '', auteur: '', type: 'guide_pratique', thematique: 'Agroéconomie', resume: '', pays: '', filiere: '', langue: 'fr', annee: '' })
       }, 2000)
 
     } catch (err: any) {
@@ -161,11 +162,9 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                   <div className="space-y-1">
                     <label className="text-sm font-medium text-on-surface-variant">Type *</label>
                     <select required name="type" value={formData.type} onChange={handleChange} className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary">
-                      <option value="guide_pratique">Guide Pratique</option>
-                      <option value="rapport">Rapport</option>
-                      <option value="article">Article</option>
-                      <option value="livre">Livre</option>
-                      <option value="fiche_technique">Fiche Technique</option>
+                      {TYPES_DOCUMENT.map((t) => (
+                        <option key={t.code} value={t.code}>{t.label}</option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -173,11 +172,9 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                 <div className="space-y-1">
                   <label className="text-sm font-medium text-on-surface-variant">Thématique *</label>
                   <select required name="thematique" value={formData.thematique} onChange={handleChange} className="w-full px-3 py-2 border border-outline rounded-lg focus:ring-2 focus:ring-primary">
-                    <option value="agrobusiness">Agrobusiness</option>
-                    <option value="innovation">Innovation</option>
-                    <option value="changement_climatique">Changement climatique</option>
-                    <option value="economie">Économie</option>
-                    <option value="politique">Politique</option>
+                    {DOMAINES.map((d) => (
+                      <option key={d.code} value={d.label}>{d.label}</option>
+                    ))}
                   </select>
                 </div>
 

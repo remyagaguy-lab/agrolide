@@ -8,6 +8,7 @@ import { db } from '@/db'
 import { documents, users } from '@/db/schema'
 import { auth } from '@/lib/auth/server'
 import { eq, and, ne } from 'drizzle-orm'
+import { labelType, labelDomaine, labelSousDomaine, labelPublic, labelNiveau } from '@/lib/bibliotheque/taxonomie'
 
 type Espace = 'membre' | 'public'
 
@@ -35,22 +36,26 @@ export async function DocumentDetailView({ id, mode }: { id: string; mode: Espac
     if (!userId || (document.depose_par !== userId && !admin)) notFound()
   }
 
-  // Fetch similar documents (same thématique, excluding current)
+  // Documents similaires : même sujet si on le connaît, sinon même domaine, sinon même thématique
   let similarDocs: DocumentType[] = []
-  if (document.thematique) {
+  const memeSujet = document.sous_domaine
+    ? eq(documents.sous_domaine, document.sous_domaine)
+    : document.domaine
+      ? eq(documents.domaine, document.domaine)
+      : document.thematique
+        ? eq(documents.thematique, document.thematique)
+        : null
+  if (memeSujet) {
     const data = await db.query.documents.findMany({
-      where: and(
-        eq(documents.statut, 'publie'),
-        eq(documents.thematique, document.thematique),
-        ne(documents.id, document.id)
-      ),
+      where: and(eq(documents.statut, 'publie'), memeSujet, ne(documents.id, document.id)),
       limit: 3
     })
       
     if (data) similarDocs = data as DocumentType[]
   }
 
-  const tags = [document.filiere, document.langue].filter(Boolean) as string[]
+  const tags = Array.from(new Set([...(document.mots_cles ?? []), document.filiere].filter(Boolean))) as string[]
+  const sujet = document.sous_domaine ? labelSousDomaine(document.sous_domaine) : ''
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -62,11 +67,16 @@ export async function DocumentDetailView({ id, mode }: { id: string; mode: Espac
           <div className="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface">
-                {document.type_doc}
+                {labelType(document.type_doc)}
               </span>
-              {document.thematique && (
+              {(document.domaine || document.thematique) && (
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-success-container text-success">
-                  {document.thematique}
+                  {document.domaine ? labelDomaine(document.domaine) : document.thematique}
+                </span>
+              )}
+              {sujet && (
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-surface-container-low text-on-surface-variant">
+                  {sujet}
                 </span>
               )}
             </div>
@@ -132,6 +142,18 @@ export async function DocumentDetailView({ id, mode }: { id: string; mode: Espac
             </div>
             
             <div className="space-y-4 mb-6">
+              {document.public_cible && (
+                <div className="flex justify-between items-center gap-4 text-sm">
+                  <span className="text-on-surface-muted">Pour qui ?</span>
+                  <span className="font-medium text-on-surface text-right">{labelPublic(document.public_cible)}</span>
+                </div>
+              )}
+              {document.niveau && (
+                <div className="flex justify-between items-center gap-4 text-sm">
+                  <span className="text-on-surface-muted">Niveau</span>
+                  <span className="font-medium text-on-surface">{labelNiveau(document.niveau)}</span>
+                </div>
+              )}
               <div className="flex justify-between items-center text-sm">
                 <span className="text-on-surface-muted">Format</span>
                 <span className="font-medium text-on-surface">PDF</span>
@@ -150,6 +172,13 @@ export async function DocumentDetailView({ id, mode }: { id: string; mode: Espac
             </div>
             
             <DownloadButton documentId={document.id} mode={mode} />
+
+            {(document.source_organisation || document.licence) && (
+              <div className="mt-4 pt-4 border-t border-outline-variant text-xs text-on-surface-muted space-y-1">
+                {document.source_organisation && <p>Source : <span className="text-on-surface-variant">{document.source_organisation}</span></p>}
+                {document.licence && <p>Licence : <span className="text-on-surface-variant">{document.licence}</span></p>}
+              </div>
+            )}
             
             <p className="mt-4 text-xs text-center text-on-surface-muted">
               En consultant ce document, vous acceptez nos conditions d'utilisation de la bibliothèque.

@@ -9,20 +9,27 @@ import { AussiAimerColonne } from '@/components/modules/bibliotheque/AussiAimerC
 export async function LectureDocumentView({ id, mode }: { id: string; mode: 'membre' | 'public' }) {
   const racine = mode === 'membre' ? '/membres/bibliotheque' : '/bibliotheque'
   const current = await db.query.documents.findFirst({
-    columns: { thematique: true },
+    columns: { thematique: true, domaine: true, sous_domaine: true },
     where: eq(documents.id, id),
   })
-  // Suggestions : même thématique d'abord, sinon les plus récents
-  let suggestions = current?.thematique
+  // Suggestions : même sujet, sinon même domaine, d'abord ; sinon les plus récents
+  const memeSujet = current?.sous_domaine
+    ? eq(documents.sous_domaine, current.sous_domaine)
+    : current?.domaine
+      ? eq(documents.domaine, current.domaine)
+      : current?.thematique
+        ? eq(documents.thematique, current.thematique)
+        : null
+  let suggestions = memeSujet
     ? await db.query.documents.findMany({
-        columns: { id: true, titre: true, type_doc: true, thematique: true },
-        where: and(eq(documents.statut, 'publie'), eq(documents.thematique, current.thematique), ne(documents.id, id)),
+        columns: { id: true, titre: true, type_doc: true, thematique: true, domaine: true },
+        where: and(eq(documents.statut, 'publie'), memeSujet, ne(documents.id, id)),
         limit: 5,
       })
     : []
   if (suggestions.length < 3) {
     const more = await db.query.documents.findMany({
-      columns: { id: true, titre: true, type_doc: true, thematique: true },
+      columns: { id: true, titre: true, type_doc: true, thematique: true, domaine: true },
       where: and(eq(documents.statut, 'publie'), ne(documents.id, id)),
       orderBy: (d, { desc }) => [desc(d.published_at)],
       limit: 5,

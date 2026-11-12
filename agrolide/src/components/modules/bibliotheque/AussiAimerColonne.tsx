@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { FileText } from 'lucide-react'
+import { labelType, labelDomaine } from '@/lib/bibliotheque/taxonomie'
 
-export type DocSuggere = { id: string; titre: string; type_doc: string; thematique: string }
+export type DocSuggere = { id: string; titre: string; type_doc: string; thematique: string; domaine?: string | null }
 
 /** « Vous aimerez peut-être aussi » : colonne à droite sur ordinateur, bande défilante sous le lecteur sur téléphone. */
 export function AussiAimerColonne({ docs, mode = 'public' }: { docs: DocSuggere[]; mode?: 'membre' | 'public' }) {
@@ -21,7 +22,7 @@ export function AussiAimerColonne({ docs, mode = 'public' }: { docs: DocSuggere[
               </span>
               <span className="min-w-0">
                 <span className="block text-sm font-semibold text-on-surface line-clamp-2">{d.titre}</span>
-                <span className="mt-1 block text-xs text-on-surface-muted">{d.type_doc} · {d.thematique}</span>
+                <span className="mt-1 block text-xs text-on-surface-muted">{labelType(d.type_doc)} · {d.domaine ? labelDomaine(d.domaine) : d.thematique}</span>
               </span>
             </Link>
           </li>

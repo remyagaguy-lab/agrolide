@@ -3,6 +3,7 @@
 import React from 'react'
 import { X, FileText, Download } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { labelType } from '@/lib/bibliotheque/taxonomie'
 
 interface DocumentAdmin {
   id: string
@@ -78,7 +79,7 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
               </div>
               <div>
                 <h3 className="text-sm font-medium text-on-surface-muted uppercase tracking-wider mb-1">Type</h3>
-                <p className="text-on-surface capitalize">{document.type_doc?.replace('_', ' ')}</p>
+                <p className="text-on-surface capitalize">{labelType(document.type_doc)}</p>
               </div>
               {document.thematique && (
                 <div>

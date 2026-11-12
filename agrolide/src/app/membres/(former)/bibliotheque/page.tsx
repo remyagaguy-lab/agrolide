@@ -1,7 +1,9 @@
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
 import { db } from '@/db'
 import { documents } from '@/db/schema'
-import { eq, like, inArray, and, desc } from 'drizzle-orm'
+import { desc } from 'drizzle-orm'
+import { conditionsBibliotheque, TAILLE_PAGE } from '@/lib/bibliotheque/filtres'
+
 export const metadata = {
   title: "Bibliothèque",
   description: 'Bibliothèque de documents pour les membres Agrolide',
@@ -10,22 +12,23 @@ export const metadata = {
 export default async function MembresBibliothequePage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
   // Next 15+ needs await on searchParams
   const params = await searchParams
-  
-  const search = typeof params.search === 'string' ? params.search : ''
-  const type = typeof params.type === 'string' ? params.type : ''
-  const thematique = typeof params.thematique === 'string' ? params.thematique : ''
-  
-  // Drizzle query
-  const conditions = [eq(documents.statut, 'publie')]
-  if (search) conditions.push(like(documents.titre, `%${search}%`))
-  if (type) conditions.push(inArray(documents.type_doc, type.split(',')))
-  if (thematique) conditions.push(inArray(documents.thematique, thematique.split(',')))
+  const lire = (cle: string) => (typeof params[cle] === 'string' ? (params[cle] as string) : '')
 
-  const data = await db.select().from(documents).where(and(...conditions)).orderBy(desc(documents.created_at)).limit(20)
-  
+  const data = await db.select().from(documents)
+    .where(conditionsBibliotheque({
+      search: lire('search'),
+      type: lire('type'),
+      domaine: lire('domaine'),
+      sous_domaine: lire('sous_domaine'),
+      public_cible: lire('public'),
+      niveau: lire('niveau'),
+    }))
+    .orderBy(desc(documents.created_at))
+    .limit(TAILLE_PAGE)
+
   const initialData = {
     data: data || [],
-    nextCursor: data && data.length === 20 ? data[data.length - 1].created_at : null
+    nextCursor: data && data.length === TAILLE_PAGE ? data[data.length - 1].created_at : null
   }
 
   return (
@@ -34,9 +37,9 @@ export default async function MembresBibliothequePage({ searchParams }: { search
         <h1 className="text-headline-lg font-extrabold tracking-tight text-on-surface">Bibliothèque</h1>
         <p className="mt-2 text-on-surface-muted text-sm">Recherchez et consultez nos ressources documentaires.</p>
       </div>
-      
-      <BibliothequeClient 
-        initialData={initialData} 
+
+      <BibliothequeClient
+        initialData={initialData}
       />
     </div>
   )

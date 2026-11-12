@@ -6,7 +6,7 @@ import { db } from '@/db'
 import { lectures_anonymes } from '@/db/schema'
 
 /** Nombre de documents lisibles en entier sans compte. */
-export const FREE_READS = 3
+export const FREE_READS = 5
 /**
  * Filet de sécurité : même sans cookie (effacé, navigation privée), un même appareil/réseau
  * ne peut pas dépasser ce nombre de documents distincts sur 30 jours. Volontairement plus haut

@@ -150,8 +150,19 @@ export const documents = sqliteTable("documents", {
   titre: text("titre").notNull(),
   type_doc: text("type_doc").notNull(),
   valide_par: text("valide_par"),
+  // Classement de la bibliothèque (voir src/lib/bibliotheque/taxonomie.ts pour les valeurs)
+  domaine: text("domaine"),
+  sous_domaine: text("sous_domaine"),
+  public_cible: text("public_cible"),
+  niveau: text("niveau"),
+  licence: text("licence"),
+  source_organisation: text("source_organisation"),
+  mots_cles: text("mots_cles", { mode: "json" }).$type<string[]>(),
+  reference: text("reference"), // identifiant stable de la fiche de curation (DOC-00001)
 }, (t) => [
   index("idx_documents_statut_published_at").on(t.statut, t.published_at),
+  index("idx_documents_domaine").on(t.statut, t.domaine, t.sous_domaine),
+  uniqueIndex("uq_documents_reference").on(t.reference),
 ]);
 
 export const evenements = sqliteTable("evenements", {
