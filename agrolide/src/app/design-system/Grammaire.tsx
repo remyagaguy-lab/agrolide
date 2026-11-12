@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Image from 'next/image'
 import { BookOpen, Search } from 'lucide-react'
-import { Anneau, Arche, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
+import { Anneau, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
 
 const R = GEOMETRIE.rayons
 const pct = (v: number) => `×${v.toFixed(2).replace('.', ',')}`
@@ -32,9 +32,9 @@ const LIGNES: Ligne[] = [
     forme: 'Soleil (plan + échos)',
     composant: '<PlanSoleil>',
     origine: `Quatre cercles concentriques : soleil clair, soleil ${pct(RAPPORTS_ECHOS[0])}, blanc ${pct(RAPPORTS_ECHOS[1])}, anneau ${pct(RAPPORTS_ECHOS[2])}.`,
-    role: 'LE PLAN : la grande forme de la vue, aplat plein qui porte le titre (héros, en-tête intérieur, 404, bandeau d’appel), avec au plus 3 échos.',
+    role: 'LE PLAN : la grande forme de la vue, aplat plein qui porte le titre (héros, en-tête intérieur, 404, bandeau d’appel), avec au plus 3 échos. En petit : la carte « titre dans le soleil » (quart de soleil clair dans le coin bas gauche d’une photo).',
     tailles: 'Rayon de 9 rem à 800 px ; échos aux rapports de l’emblème, ou pas constant de 40 à 56 px pour un plan de plus de 400 px.',
-    couleurs: 'Vert profond (titre blanc), jaune (titre vert, 1 écho orange sur fond vert), vert pâle (états vides).',
+    couleurs: 'Vert profond (titre blanc), jaune (titre vert, 1 écho orange sur fond vert), vert pâle (états vides), clair (carte sur photo : échos translucides en thème clair, aucun écho en sombre).',
     interdit: 'Un plan flottant au milieu, un second grand plan dans la vue, un contour, un écho sur un visage.',
     demo: (
       <div className="relative h-16 w-24 overflow-hidden rounded-tag bg-surface">
@@ -46,10 +46,10 @@ const LIGNES: Ligne[] = [
     forme: 'Arche (le dôme)',
     composant: '<Arche variant="plein">, <ArcheBadge>',
     origine: 'La silhouette de l’emblème au-dessus de sa 1re ligne blanche (anneau, ciel, collines), IoU 0,991. Le sillon autrefois accolé dessous est retiré (12/11/2026).',
-    role: 'PORTEUR à taille moyenne : carte « titre dans l’arche », badge de pictogramme, date d’événement.',
-    tailles: 'Badge 40 à 112 px, contenu au centre optique du dôme (axe de symétrie, mi-hauteur de la corde verticale). Carte : dôme de 130 % de la largeur, COLLÉ au bord bas (calotte de 58 % de la largeur au plus, 62 % au maximum géométrique) : son bord bas courbe ne se voit jamais, aucun vide de photo dessous.',
+    role: 'PORTEUR à taille moyenne : badge de pictogramme, date d’événement, numéro d’étape.',
+    tailles: 'Badge 40 à 112 px, contenu au centre optique du dôme (axe de symétrie, mi-hauteur de la corde verticale).',
     couleurs: 'Jaune soleil + pictogramme vert ; vert + pictogramme blanc ; blanc sur photo (carte).',
-    interdit: 'Lui recoller un sillon, laisser voir la photo sous son bord bas, le poser seul en onglet sur un bord, l’utiliser comme cadre photo au trait, le centrer sous un titre, empiler plusieurs dômes.',
+    interdit: 'Lui recoller un sillon, le poser sur une photo pour porter un titre (c’est le rôle du soleil), le poser seul en onglet sur un bord, l’utiliser comme cadre photo au trait, le centrer sous un titre, empiler plusieurs dômes.',
     demo: <ArcheBadge className="w-14"><BookOpen /></ArcheBadge>,
   },
   {
@@ -257,19 +257,17 @@ export function Grammaire() {
       <div className="mt-4 grid items-center gap-4 md:grid-cols-3">
         <article className="@container relative aspect-[4/5] overflow-hidden rounded-card bg-surface-container shadow-elev-1">
           <Image src="/images/formations/ext-fao-1.webp" alt="Parcelle irriguée au goutte-à-goutte, panneaux solaires et agricultrice" fill sizes="(min-width: 768px) 30vw, 100vw" className="object-cover" />
-          <div aria-hidden="true" className="absolute bottom-0 left-[-15%] h-[58cqw] w-[130%] overflow-hidden">
-            <Arche variant="plein" className="absolute inset-x-0 top-0 w-full text-surface-container-lowest" />
-          </div>
-          <div className="absolute inset-x-0 bottom-[9cqw] px-8 text-center">
+          <PlanSoleil ton="clair" x="-4cqw" y="calc(100% + 4cqw)" rayon="80cqw" pas={14} />
+          <div className="absolute bottom-[8cqw] left-[7cqw] max-w-[56cqw]">
             <p className="text-label-sm uppercase tracking-[0.1em] text-primary">Formation · 6 semaines</p>
-            <h4 className="mx-auto mt-1.5 max-w-[15rem] text-title-lg text-on-surface">Irrigation goutte-à-goutte sur petite parcelle</h4>
+            <h4 className="mt-1.5 text-title-lg text-on-surface">Irrigation goutte-à-goutte sur petite parcelle</h4>
           </div>
         </article>
         <p className="text-body-sm text-on-surface-variant md:col-span-2">
-          Carte « titre dans l’arche » (formations à la une, pas les listes denses) : le dôme, à 130 % de la largeur de la carte, est collé au bord bas.
-          Seule sa calotte se voit (58 % de la largeur) ; son bord bas courbe reste sous la carte, si bien qu’aucun morceau de photo n’apparaît
-          sous le dôme. La catégorie et le titre (2 à 3 lignes) se posent dedans. Le soleil + échos a été écarté pour ce rôle : ses échos voilent la
-          photo, et parfois le visage, puis l’assombrissent en mode sombre.
+          Carte « titre dans le soleil » (formations à la une, pas les listes denses) : un quart de soleil clair part du coin bas gauche
+          (<code>PlanSoleil ton=&quot;clair&quot;</code>, centre 4 cqw hors du coin, rayon 80 % de la largeur), la catégorie et le titre (2 à 3 lignes)
+          s’y alignent à gauche. En thème clair, 3 échos translucides au pas de 14 px ; en thème sombre, aucun écho : un voile sombre éteindrait
+          la photo. Choisir une photo dont le sujet est à droite : ni le soleil ni ses échos ne passent sur un visage.
         </p>
       </div>
       <p className="mt-4 max-w-3xl text-body-sm text-on-surface-muted">

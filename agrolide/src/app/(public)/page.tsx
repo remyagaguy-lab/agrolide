@@ -1,3 +1,4 @@
+import * as React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Metadata } from "next"
@@ -6,10 +7,9 @@ import { articles } from "@/db/schema"
 import { eq, desc } from "drizzle-orm"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
-import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
-import { Users, BookOpen, TrendingUp } from "lucide-react"
-import { ArchPhoto, Motif } from "@/components/brand"
+import { Users, BookOpen, TrendingUp, MessageSquare, Library } from "lucide-react"
+import { ArcheBadge, Emblem, Feuille, Horizon, HORIZON_CREUX, Sillons } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +20,14 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 3600;
+
+const ROLES = ["Étudiants en agronomie", "Ingénieurs agronomes", "Chercheurs", "Entreprises agricoles", "Investisseurs"]
+const CHIFFRES = [
+  { valeur: "500", suffixe: "+", label: "Membres actifs" },
+  { valeur: "5", suffixe: " pays", label: "Pays africains" },
+  { valeur: "700", suffixe: "+", label: "Ressources techniques" },
+  { valeur: "100", suffixe: " %", label: "Dédiés à l’Afrique" },
+]
 
 // --- Icônes SVG inline ---
 
@@ -177,93 +185,79 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      {/* ── HERO ─────────────────────────────────── */}
-      <section className="bg-surface-brand relative overflow-hidden pt-0 md:pt-0">
-        {/* Motif Background for texture (placed behind the image) */}
-        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
-
-        <div className="relative z-20 mx-auto flex max-w-[1040px] flex-col items-center px-6 pt-8 text-center md:pt-14">
-          <div className="flex w-full flex-col items-center">
-
-            <h1 className="font-heading font-[800] text-[30px] sm:text-[40px] md:text-[46px] lg:text-[54px] text-on-surface-brand leading-[1.1] tracking-[-0.03em] mb-6">
-              Fédérer la chaîne agricole, pour conquérir{" "}
-              <span className="text-accent-sun">la souveraineté alimentaire</span>
-            </h1>
-            <p className="font-sans text-[16px] text-on-surface-brand max-w-[640px] leading-[1.8] mb-8">
-              Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.{" "}
-              <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Étudiants en agronomie</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Ingénieurs Agronomes</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Chercheurs</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Entreprises Agricoles</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Link
-                href="/rejoindre"
-                className="bg-on-surface-brand text-surface-brand font-heading font-[700] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-primary-container transition-colors"
-              >
-                Rejoindre le réseau
-              </Link>
-              <Link
-                href="#actions"
-                className="border border-on-surface-brand/30 text-on-surface-brand font-heading font-[600] px-[28px] py-[13px] text-[14px] rounded-md hover:bg-white/10 transition-colors"
-              >
-                Nos actions
-              </Link>
-            </div>
+      {/* ── HERO (H2) : le titre dans le ciel vert, la photo est la terre ; l'emblème blanc au creux de l'horizon ── */}
+      <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
+        <div className="container relative z-10 pb-8 pt-12 text-center md:pt-16">
+          <h1 className="mx-auto max-w-[46rem] text-display-md text-balance">
+            Fédérer la chaîne agricole, pour conquérir <span className="text-accent-sun">la souveraineté alimentaire</span>
+          </h1>
+          <p className="mx-auto mt-5 max-w-[40rem] text-body-lg text-on-surface-brand/90">
+            Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.{" "}
+            {ROLES.map((r, i) => (
+              <React.Fragment key={r}>
+                <strong className="font-bold text-accent-sun">{r}</strong>
+                {i < ROLES.length - 1 ? ", " : " "}
+              </React.Fragment>
+            ))}
+            : construisons ensemble l&apos;agriculture africaine que nous voulons.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Button variant="primary" href="/rejoindre">Rejoindre le réseau</Button>
+            <Button variant="ghost-dark" href="#actions">Nos actions</Button>
           </div>
-          {/* Photo vue à travers l'arche : le dôme se lève du bord bas du héros (soleil levant). Le bas de l'arche est volontairement coupé. */}
-          <div className="mt-10 aspect-[1954/900] w-[620px] max-w-full overflow-hidden md:mt-12">
-            <ArchPhoto
-              src="/hero-background.webp"
-              alt="Une agricultrice souriante tient une caisse de laitues fraîchement récoltées dans une serre"
-              className="text-on-surface-brand"
-            />
+        </div>
+        <div className="relative h-[340px] md:h-[440px]">
+          <Image
+            src="/hero-background.webp"
+            alt="Une agricultrice souriante tient une caisse de laitues fraîchement récoltées dans une serre"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[100%_50%] md:object-[50%_12%]"
+          />
+          <Horizon partie="ciel" className="absolute inset-x-0 top-0 h-16 text-surface-brand sm:h-24 lg:h-36" />
+          <div className="absolute top-0 h-16 w-full sm:h-24 lg:h-36">
+            <span
+              className="absolute flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-surface-brand md:size-20"
+              style={{ left: `${HORIZON_CREUX.x}%`, top: `${HORIZON_CREUX.y}%` }}
+            >
+              <Emblem variant="blanc" title="agrolide" className="w-[66%]" />
+            </span>
           </div>
-
         </div>
       </section>
 
-      {/* ── SECTION STATS ── */}
-      <section className="bg-blanc border-b border-outline-variant py-[16px] md:!py-[28px]">
-        <div className="container px-2 md:px-6">
-          <div className="grid grid-cols-4 divide-x divide-outline-variant">
-            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
-                500<span className="font-[400] text-[12px] md:text-[18px] text-primary">+</span>
+      {/* ── CHIFFRES : sur vert, sillons dans le coin haut droit ── */}
+      <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
+        <Sillons coin="haut-droite" opacite={0.08} className="w-[30%] md:w-[18rem]" />
+        {/* les chiffres laissent le coin aux sillons : sous eux sur mobile, à gauche du coin sur bureau */}
+        <div className="container relative z-10 pb-10 pt-24 md:py-14">
+          <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:max-w-[52rem] md:grid-cols-4">
+            {CHIFFRES.map((c) => (
+              <div key={c.label} className="text-center md:text-left">
+                <dt className="sr-only">{c.label}</dt>
+                <dd className="text-display-md tabular-nums text-accent-sun">
+                  {c.valeur}<span className="text-headline-sm">{c.suffixe}</span>
+                </dd>
+                <dd aria-hidden="true" className="mt-1 text-label-md uppercase tracking-[0.08em] text-on-surface-brand/85">{c.label}</dd>
               </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Membres actifs</div>
-            </div>
-            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
-                5<span className="font-[400] text-[12px] md:text-[18px] text-primary"> pays</span>
-              </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Pays africains</div>
-            </div>
-            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
-                700<span className="font-[400] text-[12px] md:text-[18px] text-primary">+</span>
-              </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Ressources techniques</div>
-            </div>
-            <div className="px-1 sm:px-2 md:px-0 text-center flex flex-col justify-start md:justify-center">
-              <div className="font-heading font-[900] text-[18px] sm:text-[24px] md:text-[36px] text-primary leading-none mb-1">
-                100<span className="font-[400] text-[12px] md:text-[18px] text-primary">%</span>
-              </div>
-              <div className="font-heading font-[600] text-[8px] sm:text-[9px] md:text-[11px] text-on-surface-muted uppercase tracking-[0.02em] md:tracking-[0.07em] leading-tight">Dédiés à l'Afrique</div>
-            </div>
-          </div>
+            ))}
+          </dl>
         </div>
       </section>
 
       {/* ── LEAD MAGNET (CRO) ── */}
       <section className="bg-tertiary-container py-12 border-b border-tertiary/30">
         <div className="container">
-          <div className="bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col items-center justify-between gap-8 rounded-panel border border-outline-variant bg-surface-container-lowest p-8 shadow-elev-2 md:flex-row md:p-12">
             <div className="md:w-1/2">
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+              <div className="mb-4 inline-flex items-center gap-2 rounded-tag bg-tertiary-container px-3 py-1 text-label-sm uppercase tracking-[0.1em] text-on-tertiary-container">
                 <BookOpen className="w-4 h-4" /> Guide Gratuit
               </div>
-              <h2 className="text-3xl font-bold text-on-surface mb-4 font-heading">
+              <h2 className="mb-4 text-headline-md text-on-surface">
                 Le Manuel de l'Agroécologie en Afrique de l'Ouest
               </h2>
-              <p className="text-on-surface-variant mb-6 text-lg">
+              <p className="mb-6 text-body-lg text-on-surface-variant">
                 Découvrez les 10 pratiques essentielles pour adapter vos cultures aux changements climatiques et augmenter vos rendements sans intrants chimiques.
               </p>
               <form className="flex flex-col sm:flex-row gap-3">
@@ -271,23 +265,18 @@ export default async function HomePage() {
                   type="email" 
                   placeholder="Votre adresse e-mail..."
                   aria-label="Votre adresse e-mail"
-                  className="flex-1 px-4 py-3 rounded-lg border border-outline focus:outline-none focus:ring-2 focus:ring-tertiary focus:border-tertiary"
+                  className="flex-1 rounded-control border border-outline bg-surface-container-lowest px-4 py-3 text-body-md text-on-surface focus:border-tertiary focus:outline-none focus:ring-2 focus:ring-tertiary"
                   required
                 />
-                <button 
-                  type="submit" 
-                  className="px-6 py-3 bg-tertiary text-on-tertiary font-bold rounded-lg hover:bg-tertiary-hover transition-colors shadow-md"
-                >
-                  Recevoir le PDF
-                </button>
+                <Button type="submit" variant="primary">Recevoir le PDF</Button>
               </form>
             </div>
             <div className="md:w-1/3 flex justify-center relative">
-              <div className="w-48 h-64 bg-surface-container-high rounded-lg shadow-2xl relative rotate-3 transform hover:rotate-0 transition-transform duration-300 overflow-hidden border-4 border-surface-container-lowest">
+              <div className="relative h-64 w-48 rotate-3 overflow-hidden rounded-card border-4 border-surface-container-lowest bg-surface-container-high shadow-elev-3 transition-transform duration-300 hover:rotate-0">
                 <Image src="/hero-background.webp" alt="Couverture du guide" fill sizes="250px" className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/80 flex flex-col justify-end p-4">
-                  <div className="text-white font-heading font-bold text-lg leading-tight mb-1">MANUEL PRATIQUE</div>
-                  <div className="text-accent-sun text-sm font-medium">Agroécologie</div>
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-b from-surface-brand/10 to-surface-brand/90 p-4">
+                  <div className="mb-1 text-title-md uppercase text-on-surface-brand">Manuel pratique</div>
+                  <div className="text-label-md text-accent-sun">Agroécologie</div>
                 </div>
               </div>
             </div>
@@ -343,36 +332,36 @@ export default async function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">01</div>
+              <div className="mb-3 text-label-sm tracking-[0.1em] text-primary">01</div>
               <h3 className="text-title-lg text-on-surface mb-2">Isolement professionnel</h3>
-              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
+              <p className="text-body-md text-on-surface-variant">
                 Peu de réseaux solides permettent aux agronomes d'échanger et de collaborer efficacement sur le continent africain.
               </p>
             </Card>
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">02</div>
+              <div className="mb-3 text-label-sm tracking-[0.1em] text-primary">02</div>
               <h3 className="text-title-lg text-on-surface mb-2">Documentation inadaptée</h3>
-              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
+              <p className="text-body-md text-on-surface-variant">
                 La quasi-totalité des ressources techniques ignore les réalités climatiques et pédologiques propres à l'Afrique.
               </p>
             </Card>
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">03</div>
+              <div className="mb-3 text-label-sm tracking-[0.1em] text-primary">03</div>
               <h3 className="text-title-lg text-on-surface mb-2">Déficit d'accompagnement</h3>
-              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
+              <p className="text-body-md text-on-surface-variant">
                 Trop d'agripreneurs avancent sans mentorat, sans accès aux marchés et sans financement structuré.
               </p>
             </Card>
             <Card>
-              <div className="font-heading font-[700] text-[11px] text-primary uppercase tracking-[0.1em] mb-3">04</div>
+              <div className="mb-3 text-label-sm tracking-[0.1em] text-primary">04</div>
               <h3 className="text-title-lg text-on-surface mb-2">Recherche sous-valorisée</h3>
-              <p className="text-[14px] text-on-surface-variant leading-[1.65]">
+              <p className="text-body-md text-on-surface-variant">
                 Des milliers de thèses africaines restent inaccessibles et non appliquées sur le terrain.
               </p>
             </Card>
           </div>
 
-          <p className="text-center font-heading font-[700] text-[17px] text-on-surface mt-8">
+          <p className="mx-auto mt-8 max-w-[44rem] text-balance text-center text-title-md text-on-surface">
             agrolide a été fondé pour briser ces quatre barrières simultanément et débloquer le potentiel de notre continent.
           </p>
         </div>
@@ -390,12 +379,10 @@ export default async function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
             <Link href="/annuaire" className="block group">
-              <Card variant="feature" className="h-full flex flex-col group-hover:border-outline-variant group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
-                <div className="mb-4 flex size-11 items-center justify-center rounded-[10px] bg-primary-container">
-                  <Users size={20} strokeWidth={1.5} className="text-primary" />
-                </div>
+              <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
+                <ArcheBadge className="mb-4 w-16"><Users /></ArcheBadge>
                 <h3 className="text-title-lg text-on-surface mb-2">Mobilisation & Réseautage</h3>
-                <p className="text-[14px] text-on-surface-variant leading-[1.65] mb-6">
+                <p className="mb-6 text-body-md text-on-surface-variant">
                   Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.
                 </p>
                 <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
@@ -403,12 +390,10 @@ export default async function HomePage() {
             </Link>
 
             <Link href="/formations" className="block group">
-              <Card variant="feature" className="h-full flex flex-col group-hover:border-outline-variant group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
-                <div className="mb-4 flex size-11 items-center justify-center rounded-[10px] bg-primary-container">
-                  <BookOpen size={20} strokeWidth={1.5} className="text-primary" />
-                </div>
+              <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
+                <ArcheBadge className="mb-4 w-16"><BookOpen /></ArcheBadge>
                 <h3 className="text-title-lg text-on-surface mb-2">Formation & Insertion</h3>
-                <p className="text-[14px] text-on-surface-variant leading-[1.65] mb-6">
+                <p className="mb-6 text-body-md text-on-surface-variant">
                   Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.
                 </p>
                 <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
@@ -416,12 +401,10 @@ export default async function HomePage() {
             </Link>
 
             <Link href="/agrobusiness" className="block group">
-              <Card variant="feature" className="h-full flex flex-col group-hover:border-outline-variant group-hover:shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all">
-                <div className="mb-4 flex size-11 items-center justify-center rounded-[10px] bg-primary-container">
-                  <TrendingUp size={20} strokeWidth={1.5} className="text-primary" />
-                </div>
+              <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
+                <ArcheBadge className="mb-4 w-16"><TrendingUp /></ArcheBadge>
                 <h3 className="text-title-lg text-on-surface mb-2">Agrobusiness & Consulting</h3>
-                <p className="text-[14px] text-on-surface-variant leading-[1.65] mb-6">
+                <p className="mb-6 text-body-md text-on-surface-variant">
                   Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.
                 </p>
                 <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
@@ -431,10 +414,7 @@ export default async function HomePage() {
         </div>
       </section>
       {/* ── SECTION PLATEFORME (BENTO GRID) ── */}
-      <section className="bg-surface-container-low py-24 relative overflow-hidden">
-        {/* Cercles décoratifs (Glassmorphism / Glow) */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-leaf/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-tertiary/5 rounded-full blur-[120px] pointer-events-none translate-y-1/3 -translate-x-1/3" />
+      <section className="bg-surface-container-low">
 
         <div className="container relative z-10">
           {/* Header */}
@@ -442,7 +422,7 @@ export default async function HomePage() {
             <h2 className="text-headline-md text-on-surface mb-4">
               L'écosystème <span className="text-primary">complet</span>
             </h2>
-            <p className="text-on-surface-variant text-[16px] leading-[1.6]">
+            <p className="text-body-lg text-on-surface-variant">
               Une plateforme innovante au service de la mutualisation des ressources entre les acteurs de la chaîne de valeur agricole africaine.
             </p>
           </div>
@@ -450,37 +430,33 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
             {/* Bloc 1 : Espace d'échange (Pleine largeur sur grand écran) */}
-            <div className="lg:col-span-12 group bg-primary-container rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-[0_12px_40px_rgba(80,168,83,0.15)] transition-all duration-500">
+            <div className="lg:col-span-12 group bg-primary-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2">
               <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
                 <div className="p-10 md:p-16 flex flex-col justify-center">
-                  <div className="w-14 h-14 bg-primary-container text-primary rounded-[16px] flex items-center justify-center mb-6">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                  </div>
-                  <h3 className="text-[32px] font-heading font-[800] text-on-surface mb-4 leading-tight">Espace d'échange agricole</h3>
-                  <p className="text-[16px] text-on-surface-variant leading-[1.7] mb-8 max-w-[400px]">
+                  <ArcheBadge ton="marque" className="mb-6 w-16"><MessageSquare /></ArcheBadge>
+                  <h3 className="mb-4 text-headline-md text-on-surface">Espace d'échange agricole</h3>
+                  <p className="mb-8 max-w-[400px] text-body-lg text-on-surface-variant">
                     Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités et découvrez de nouvelles opportunités.
                   </p>
-                  <Link href="/rejoindre" className="inline-flex items-center gap-2 font-heading font-[700] text-primary hover:text-primary transition-colors w-fit">
+                  <Link href="/rejoindre" className="inline-flex w-fit items-center gap-2 text-label-lg text-primary underline decoration-transparent transition-colors hover:decoration-primary">
                     Rejoindre les discussions <IconArrowRight />
                   </Link>
                 </div>
                 <div className="relative min-h-[300px] lg:min-h-[400px] bg-surface-container-lowest/40 overflow-hidden">
-                  <Image src="/plateforme-forum-ui.webp" alt="Espace d'échange" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-left-top lg:rounded-tl-[24px] lg:border-l lg:border-t border-outline-variant shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
+                  <Image src="/plateforme-forum-ui.webp" alt="Espace d'échange" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-left-top lg:rounded-tl-panel lg:border-l lg:border-t border-outline-variant shadow-sm transform group-hover:-translate-y-2 group-hover:-translate-x-2 transition-transform duration-700" />
                 </div>
               </div>
             </div>
 
             {/* Bloc 2 : Annuaire (Moitié gauche) */}
-            <div className="lg:col-span-6 group bg-tertiary-container rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-[0_12px_40px_rgba(249,158,29,0.15)] transition-all duration-500 flex flex-col">
+            <div className="lg:col-span-6 group bg-tertiary-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2 flex flex-col">
               <div className="p-10 flex-1">
-                <div className="w-14 h-14 bg-surface-container-lowest text-on-tertiary-container rounded-[16px] flex items-center justify-center mb-6">
-                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <h3 className="text-[26px] font-heading font-[800] text-on-surface mb-4 leading-tight">Annuaire Panafricain</h3>
-                <p className="text-[15px] text-on-surface-variant leading-[1.7] mb-8">
+                <ArcheBadge ton="marque" className="mb-6 w-16"><Users /></ArcheBadge>
+                <h3 className="mb-4 text-headline-sm text-on-surface">Annuaire Panafricain</h3>
+                <p className="mb-8 text-body-md text-on-surface-variant">
                   Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent.
                 </p>
-                <Link href="/annuaire" className="inline-flex items-center gap-2 font-heading font-[700] text-on-tertiary-container hover:text-on-tertiary-container/80 transition-colors">
+                <Link href="/annuaire" className="inline-flex items-center gap-2 text-label-lg text-on-tertiary-container underline decoration-transparent transition-colors hover:decoration-on-tertiary-container">
                   Explorer le réseau <IconArrowRight />
                 </Link>
               </div>
@@ -490,16 +466,14 @@ export default async function HomePage() {
             </div>
 
             {/* Bloc 3 : Bibliothèque (Moitié droite) */}
-            <div className="lg:col-span-6 group bg-surface-container rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-[0_12px_40px_rgba(135,142,44,0.12)] transition-all duration-500 flex flex-col">
+            <div className="lg:col-span-6 group bg-surface-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2 flex flex-col">
               <div className="p-10 flex-1">
-                <div className="w-14 h-14 bg-primary-container text-primary rounded-[16px] flex items-center justify-center mb-6">
-                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M2 7h20"/><path d="M4 7v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7"/></svg>
-                </div>
-                <h3 className="text-[26px] font-heading font-[800] text-on-surface mb-4 leading-tight">Bibliothèque de Ressources</h3>
-                <p className="text-[15px] text-on-surface-variant leading-[1.7] mb-8">
+                <ArcheBadge ton="marque" className="mb-6 w-16"><Library /></ArcheBadge>
+                <h3 className="mb-4 text-headline-sm text-on-surface">Bibliothèque de Ressources</h3>
+                <p className="mb-8 text-body-md text-on-surface-variant">
                   Accédez à des centaines de documents techniques, thèses et guides pratiques spécifiquement adaptés aux sols africains.
                 </p>
-                <Link href="/bibliotheque" className="inline-flex items-center gap-2 font-heading font-[700] text-primary hover:text-primary transition-colors">
+                <Link href="/bibliotheque" className="inline-flex items-center gap-2 text-label-lg text-primary underline decoration-transparent transition-colors hover:decoration-primary">
                   Consulter les guides <IconArrowRight />
                 </Link>
               </div>
@@ -517,7 +491,7 @@ export default async function HomePage() {
       {/* ── TÉMOIGNAGES ── */}
       <section className="bg-surface-container-low">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="mb-12 text-center">
             <SectionLabel className="mx-auto flex justify-center text-center">Témoignages</SectionLabel>
             <h2 className="text-headline-md text-on-surface">
               La voix du réseau
@@ -534,17 +508,17 @@ export default async function HomePage() {
                 quote: "L'accompagnement d'Agrolide m'a aidé à passer de l'idée au marché en moins de six mois. Le réseau de mentors est exceptionnel." },
             ].map((t) => (
               <Card key={t.initials} className="flex flex-col h-full">
-                <div className="font-baskerville text-[48px] text-primary-container leading-[0.8] mt-2">"</div>
-                <p className="font-baskerville italic text-[14px] text-on-surface-variant leading-[1.85] flex-1 mt-4">
+                <Feuille className="mt-1 w-6 text-accent-leaf" />
+                <p className="mt-4 flex-1 font-baskerville text-body-md italic text-on-surface-variant">
                   {t.quote}
                 </p>
                 <div className="border-t border-outline-variant mt-4 pt-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary font-heading font-[700] text-[13px] flex-shrink-0">
+                  <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary-container text-label-md text-on-primary-container">
                     {t.initials}
                   </div>
                   <div className="flex flex-col">
-                    <div className="font-heading font-[600] text-[13px] text-on-surface leading-tight">{t.name}</div>
-                    <div className="font-sans text-[12px] text-on-surface-muted mt-0.5">{t.role} · {t.country}</div>
+                    <div className="text-title-sm text-on-surface">{t.name}</div>
+                    <div className="mt-0.5 text-body-sm text-on-surface-muted">{t.role} · {t.country}</div>
                   </div>
                 </div>
               </Card>
@@ -554,7 +528,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── SECTION BLOG ── */}
-      <section className="bg-blanc">
+      <section className="bg-surface-container-lowest">
         <div className="container">
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
@@ -589,16 +563,16 @@ export default async function HomePage() {
                         className="object-cover transition-transform duration-700 group-hover:scale-105" 
                       />
                     )}
-                    <div className="absolute top-4 left-4 z-10">
-                      <Badge variant="category" className="bg-primary-container text-primary shadow-sm">{item.categorie || "Article"}</Badge>
-                    </div>
                   </div>
-                  <div className="flex flex-col flex-1 p-6">
-                    <h3 className="font-heading font-[700] text-[15px] text-on-surface leading-[1.4] mb-2 group-hover:text-primary transition-colors">{item.titre}</h3>
-                    <p className="font-sans text-[13px] text-on-surface-variant line-clamp-2 mb-4 flex-1">
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="mb-2 flex items-center gap-1.5 text-label-sm uppercase tracking-[0.08em] text-primary">
+                      <Feuille className="w-3 text-accent-leaf" />{item.categorie || "Article"}
+                    </p>
+                    <h3 className="mb-2 text-title-md text-on-surface transition-colors group-hover:text-primary">{item.titre}</h3>
+                    <p className="mb-4 line-clamp-2 flex-1 text-body-sm text-on-surface-variant">
                       {item.extrait}
                     </p>
-                    <div className="font-sans text-[12px] text-on-surface-variant mt-auto pt-4 border-t border-outline-variant flex justify-between items-center">
+                    <div className="mt-auto flex items-center justify-between border-t border-outline-variant pt-4 text-body-sm text-on-surface-variant">
                       <span className="font-medium">{articleDate} · 5 min</span>
                       <span className="font-medium text-on-surface-variant truncate max-w-[120px]">Par {auteurName}</span>
                     </div>

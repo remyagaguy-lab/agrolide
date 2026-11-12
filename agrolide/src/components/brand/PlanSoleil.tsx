@@ -9,7 +9,7 @@ const R = GEOMETRIE.rayons
  */
 export const RAPPORTS_ECHOS = [R.soleil / R["soleil-clair"], R["anneau-int"] / R["soleil-clair"], R["anneau-ext"] / R["soleil-clair"]] as const
 
-export type PlanSoleilTon = "marque" | "soleil" | "pale"
+export type PlanSoleilTon = "marque" | "soleil" | "pale" | "clair"
 export type PlanSoleilFond = "surface" | "surface-container-low" | "surface-container-lowest" | "surface-brand" | "primary-container" | "photo"
 
 export interface PlanSoleilProps {
@@ -23,7 +23,11 @@ export interface PlanSoleilProps {
    * l'anneau orange du soleil de l'emblème ; sur fond vert ou sombre, s'en tenir à ce seul écho.
    */
   echos?: 0 | 1 | 2 | 3
-  /** Couleur du plan : vert profond (défaut), jaune soleil, ou vert pâle. */
+  /**
+   * Couleur du plan : vert profond (défaut), jaune soleil, vert pâle, ou `clair` (la surface des cartes, blanc en thème clair) :
+   * le soleil blanc posé sur une photo, qui porte un titre. En `clair`, les échos sont des voiles translucides du plan
+   * (la photo reste lisible dessous) et ils DISPARAISSENT en thème sombre (un voile sombre éteindrait la photo).
+   */
   ton?: PlanSoleilTon
   /**
    * Fond vers lequel les échos s'éclaircissent : le rôle de la surface du parent. `photo` : les échos passent
@@ -42,7 +46,10 @@ const TON: Record<PlanSoleilTon, string> = {
   marque: "var(--color-surface-brand)",
   soleil: "var(--color-accent-sun)",
   pale: "var(--color-primary-container)",
+  clair: "var(--color-surface-container-lowest)",
 }
+/** Opacité des échos translucides (ton `clair`), du plus proche au plus lointain. */
+const VOILE = [0.42, 0.24, 0.12]
 /** Part de la couleur du plan dans chaque écho, du plus proche au plus lointain. */
 const MELANGE = [0.34, 0.17, 0.07]
 
@@ -59,16 +66,21 @@ export function PlanSoleil({ x, y, rayon, echos = 3, ton = "marque", fond = "sur
     const k = echos - i // du plus grand au plus petit
     const r = pas === "embleme" ? `calc(${rayon} * ${RAPPORTS_ECHOS[k - 1].toFixed(4)})` : `calc(${rayon} + ${k * pas}px)`
     // ton soleil : le premier écho est l'anneau orange du soleil de l'emblème (soleil clair -> soleil)
-    const bg = ton === "soleil" && k === 1 ? "var(--ag-ref-orange-70)" : `color-mix(in oklab, ${plan} ${Math.round(MELANGE[k - 1] * 100)}%, ${fondVar})`
-    return { r, bg }
+    const bg =
+      ton === "soleil" && k === 1
+        ? "var(--ag-ref-orange-70)"
+        : ton === "clair"
+          ? `color-mix(in oklab, ${plan} ${Math.round(VOILE[k - 1] * 100)}%, transparent)`
+          : `color-mix(in oklab, ${plan} ${Math.round(MELANGE[k - 1] * 100)}%, ${fondVar})`
+    return { r, bg, echo: true }
   })
-  cercles.push({ r: rayon, bg: plan })
+  cercles.push({ r: rayon, bg: plan, echo: false })
   return (
     <div aria-hidden="true" className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)}>
       {cercles.map((c, i) => (
         <span
           key={i}
-          className="absolute rounded-full"
+          className={cn("absolute rounded-full", ton === "clair" && c.echo && "dark:hidden")}
           style={{ left: x, top: y, width: `calc(${c.r} * 2)`, height: `calc(${c.r} * 2)`, translate: "-50% -50%", background: c.bg }}
         />
       ))}
