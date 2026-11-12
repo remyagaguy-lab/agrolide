@@ -3,53 +3,39 @@ import { cn } from "@/lib/utils/formatters"
 import { GEOMETRIE } from "./geometrie"
 
 /**
- * Les six bords de la famille droite de l'emblème, du plus extérieur au plus intérieur :
- * colline de droite, sillon 1 (haut, bas), sillon 2 (haut, bas), haut de la feuille.
- * Ce sont des cercles emboîtés, de centres légèrement décalés : d'où les bandes qui s'affinent.
+ * Les trois sillons de l'emblème, MESURÉS sur le favicon : trois traits de même épaisseur (61,8 à 62,7 px, comme
+ * l'anneau), d'axes circulaires aux centres décalés sous la feuille (d'où les bandes blanches qui s'affinent de 68 à 45 px).
+ * Cadre = coin bas-droit de l'emblème : à droite, le bord intérieur de l'anneau ; en bas, la pointe de la feuille.
+ * Bouts ronds : celui du grand sillon est celui de l'emblème ; le premier trait s'arrête à l'aplomb du creux des collines.
  */
-const S = GEOMETRIE.sillons
-
-/** Cadre carré de 900 unités dont le coin bas-droit est le foyer des arcs (sous la feuille). */
-const COIN = { x: 1360, y: 1800 }
-const COTE = 900
-const VB = `${COIN.x - COTE} ${COIN.y - COTE} ${COTE} ${COTE}`
-
-const cercle = (i: number) => {
-  const { c, r } = S[i]
-  return `M${c[0] - r} ${c[1]}a${r} ${r} 0 1 0 ${2 * r} 0a${r} ${r} 0 1 0 ${-2 * r} 0Z`
-}
+const T = GEOMETRIE.traits
+const [vx, vy, vw, vh] = T.viewBox
 
 export type SillonsCoin = "bas-droite" | "bas-gauche" | "haut-droite" | "haut-gauche"
 
 export interface SillonsProps {
   /** Coin d'où partent les sillons : la forme y est coupée par deux bords. */
   coin?: SillonsCoin
-  /**
-   * traits  : les trois sillons de l'emblème (bandes pleines, le fond passe entre elles) ;
-   * paliers : trois aplats emboîtés, de plus en plus soutenus vers le coin (effet d'onde).
-   */
-  variante?: "traits" | "paliers"
   /** Opacité globale (la couleur est celle du texte, `currentColor`). */
   opacite?: number
-  /** Taille : classes de largeur (`w-[38rem]`, `w-1/2`…) ; le cadre reste carré. */
+  /** Taille : classes de largeur (`w-72`, `w-[30%]`…) ; la hauteur suit les proportions de l'emblème (726 × 490). */
   className?: string
 }
 
 /**
- * Sillons : les arcs des collines de l'emblème, mesurés sur le favicon, qui rayonnent depuis un coin.
- * Rôle : mouvement et texture de bord (pied de page, bandeau d'appel, section « plateforme », coin de carte large).
- * Toujours ancrés dans un coin et coupés par deux bords ; jamais au milieu, jamais derrière un paragraphe.
+ * Sillons : rôle MOUVEMENT DE COIN (bandeau de chiffres, en-tête vert, coin d'un bandeau large).
+ * Toujours ancrés dans un coin et coupés par deux bords ; jamais au milieu, jamais derrière un texte ou un chiffre.
  * Calque décoratif : parent `relative overflow-hidden`, contenu au-dessus (`relative z-10`).
  */
-export function Sillons({ coin = "bas-droite", variante = "traits", opacite = 1, className }: SillonsProps) {
+export function Sillons({ coin = "bas-droite", opacite = 1, className }: SillonsProps) {
   const [v, h] = coin.split("-") as ["bas" | "haut", "droite" | "gauche"]
   return (
     <svg
-      viewBox={VB}
+      viewBox={`${vx} ${vy} ${vw} ${vh}`}
       aria-hidden="true"
       focusable="false"
       className={cn(
-        "pointer-events-none absolute block aspect-square",
+        "pointer-events-none absolute block h-auto",
         v === "bas" ? "bottom-0" : "top-0",
         h === "droite" ? "right-0" : "left-0",
         h === "gauche" && v === "bas" && "-scale-x-100",
@@ -59,15 +45,9 @@ export function Sillons({ coin = "bas-droite", variante = "traits", opacite = 1,
       )}
       style={{ opacity: opacite }}
     >
-      {variante === "traits" ? (
-        <path d={[0, 1, 2, 3, 4, 5].map(cercle).join("")} fill="currentColor" fillRule="evenodd" />
-      ) : (
-        <>
-          <path d={cercle(0)} fill="currentColor" opacity={0.35} />
-          <path d={cercle(2)} fill="currentColor" opacity={0.55} />
-          <path d={cercle(4)} fill="currentColor" />
-        </>
-      )}
+      {T.liste.map((t, i) => (
+        <path key={i} d={t.d} fill="none" stroke="currentColor" strokeWidth={t.epaisseur} strokeLinecap={t.boutRond ? "round" : "butt"} />
+      ))}
     </svg>
   )
 }

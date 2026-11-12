@@ -61,10 +61,14 @@ L'emblème se décompose en cercles ; le script le **mesure** (aucun point posé
 - **horizon** : arcs des deux collines (bas du ciel = croissant blanc + soleil) et leur creux en V ;
 - **sillons** : bords des deux bandes blanches de droite (arcs de centres décalés sous la feuille) ;
 - **feuille** : lentille, intersection de deux disques ajustés sur l'intérieur de la feuille.
+- **traits** (sillons) : axes des trois traits verts (milieux des bords sous-pixel appariés), épaisseur = distance des bords
+  (61,8 à 62,7 px, comme l'anneau : l'emblème est tracé d'un seul trait) ; bout rond du grand sillon suivi sur les pixels ;
+- **arche déduite** : dôme = silhouette au-dessus de la 1re ligne blanche (bande gauche + sillon 1), bande = grand sillon ;
+  **fenêtre** = le ciel (disque intérieur de l'anneau au-dessus des collines) ; centre optique du dôme pour les badges.
 
 ```bash
 python scripts/forme/primitives.py --src "<chemin>/Branding/Identité"
 ```
 Sorties : `src/components/brand/geometrie.ts` (consommé par `PlanSoleil`, `Sillons`, `Horizon`, `Feuille`, `Anneau`),
-`public/design-assets/{soleil,anneau,horizon,sillons,feuille}.svg`, `scripts/forme/primitives.json` (mesures, résidus, IoU).
+`public/design-assets/{soleil,anneau,horizon,sillons,feuille,arche-embleme-plein,arche-embleme-creux,fenetre-embleme}.svg`, `scripts/forme/primitives.json` (mesures, résidus, IoU).
 Résidus moyens 0,2 à 0,9 px ; IoU de contrôle 0,95 à 0,99. Règles d'usage : page `/design-system#grammaire`.
