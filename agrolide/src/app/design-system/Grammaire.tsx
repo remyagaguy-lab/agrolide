@@ -263,12 +263,32 @@ export function Grammaire() {
             <h4 className="mt-1.5 text-title-lg text-on-surface">Irrigation goutte-à-goutte sur petite parcelle</h4>
           </div>
         </article>
-        <p className="text-body-sm text-on-surface-variant md:col-span-2">
-          Carte « titre dans le soleil » (formations à la une, pas les listes denses) : un quart de soleil clair part du coin bas gauche
-          (<code>PlanSoleil ton=&quot;clair&quot;</code>, centre 4 cqw hors du coin, rayon 80 % de la largeur), la catégorie et le titre (2 à 3 lignes)
-          s’y alignent à gauche. En thème clair, 3 échos translucides au pas de 14 px ; en thème sombre, aucun écho : un voile sombre éteindrait
-          la photo. Choisir une photo dont le sujet est à droite : ni le soleil ni ses échos ne passent sur un visage.
-        </p>
+        <article className="@container relative aspect-[4/5] overflow-hidden rounded-card bg-surface-container shadow-elev-1">
+          <Image src="/images/formations/ext-fao-1.webp" alt="Parcelle irriguée au goutte-à-goutte, panneaux solaires et agricultrice" fill sizes="(min-width: 768px) 30vw, 100vw" className="object-cover" />
+          <PlanSoleil ton="clair" x="50%" y="calc(100% + 7cqw)" rayon="65cqw" pas={14} />
+          <div className="absolute inset-x-0 bottom-[9cqw] px-8 text-center">
+            <p className="text-label-sm uppercase tracking-[0.1em] text-primary">Formation · 6 semaines</p>
+            <h4 className="mx-auto mt-1.5 max-w-[15rem] text-title-lg text-on-surface">Irrigation goutte-à-goutte sur petite parcelle</h4>
+          </div>
+        </article>
+        <div className="space-y-3 text-body-sm text-on-surface-variant">
+          <p>
+            Carte « titre dans le soleil » (formations à la une, pas les listes denses), soleil clair (<code>PlanSoleil ton=&quot;clair&quot;</code>)
+            en deux placements :
+          </p>
+          <p>
+            <strong className="text-on-surface">Dans le coin bas gauche</strong> : un quart de soleil (centre 4 cqw hors du coin, rayon 80 % de la
+            largeur), catégorie et titre alignés à gauche. Pour une photo dont le sujet est à droite.
+          </p>
+          <p>
+            <strong className="text-on-surface">Centré en bas</strong> : le soleil monte du bord bas (centre 7 cqw sous le bord, rayon 65 % de la
+            largeur), texte centré. Pour une photo dont le sujet est en haut.
+          </p>
+          <p>
+            Dans les deux cas : 3 échos translucides au pas de 14 px en thème clair, aucun écho en thème sombre (un voile sombre éteindrait la
+            photo) ; titre de 2 à 3 lignes ; ni le soleil ni ses échos sur un visage.
+          </p>
+        </div>
       </div>
       <p className="mt-4 max-w-3xl text-body-sm text-on-surface-muted">
         <code>HorizonDivider</code> (courbes approchées) reste disponible pour les pages existantes ; <code>Horizon</code> le remplacera page par page.{' '}

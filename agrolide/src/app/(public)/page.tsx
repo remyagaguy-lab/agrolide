@@ -9,7 +9,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp, MessageSquare, Library } from "lucide-react"
-import { ArcheBadge, Emblem, Feuille, Horizon, HORIZON_CREUX, Sillons } from "@/components/brand"
+import { ArcheBadge, Emblem, Feuille, Horizon, HORIZON_CREUX, Motif, Sillons } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: {
@@ -187,11 +187,14 @@ export default async function HomePage() {
 
       {/* ── HERO (H2) : le titre dans le ciel vert, la photo est la terre ; l'emblème blanc au creux de l'horizon ── */}
       <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
-        <div className="container relative z-10 pb-8 pt-12 text-center md:pt-16">
-          <h1 className="mx-auto max-w-[46rem] text-display-md text-balance">
+        {/* texture du motif sur le ciel vert (la photo, posée au-dessus, le recouvre) */}
+        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
+        {/* zone de texte plus large que le conteneur : titre et sous-titre sur 2 lignes sur bureau, le haut de la photo reste visible */}
+        <div className="relative z-10 mx-auto max-w-[78rem] px-4 pb-8 pt-8 text-center sm:px-6 md:px-10 md:pt-14">
+          <h1 className="mx-auto max-w-[74rem] text-display-md text-balance">
             Fédérer la chaîne agricole, pour conquérir <span className="text-accent-sun">la souveraineté alimentaire</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-[40rem] text-body-lg text-on-surface-brand/90">
+          <p className="mx-auto mt-4 max-w-[72rem] text-body-lg text-balance text-on-surface-brand/90">
             Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.{" "}
             {ROLES.map((r, i) => (
               <React.Fragment key={r}>
