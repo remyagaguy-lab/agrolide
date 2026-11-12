@@ -24,14 +24,14 @@ export function EventWidget({ event }: EventWidgetProps) {
       <div className="shrink-0 rounded-card bg-surface-brand p-5 text-on-surface-brand">
         <div className="mb-2 flex items-center gap-2">
           <CalendarIcon className="size-4" aria-hidden="true" />
-          <h2 className="text-label-sm uppercase tracking-wider">Événements à venir</h2>
+          <h2 className="text-label-sm uppercase tracking-wider">Mon prochain événement</h2>
         </div>
-        <p className="mb-1 text-title-md">Aucun événement planifié</p>
+        <p className="mb-1 text-title-md">Aucune inscription à venir</p>
         <p className="mb-4 text-body-sm text-on-surface-brand/85">
-          Restez connecté pour être informé des prochaines assemblées générales, webinaires techniques et ateliers du réseau.
+          Ateliers, webinaires techniques et rencontres du réseau : inscrivez-vous, l'événement apparaîtra ici.
         </p>
         <Button href="/membres/evenements" variant="ghost-dark" size="sm" fullWidth>
-          Consulter le calendrier
+          Voir les événements
           <ArrowRight className="size-3.5" aria-hidden="true" />
         </Button>
       </div>
@@ -55,7 +55,7 @@ export function EventWidget({ event }: EventWidgetProps) {
       <div className="mb-3.5 flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <CalendarIcon className="size-4" aria-hidden="true" />
-          <h2 className="text-label-sm uppercase tracking-wider">Prochain événement</h2>
+          <h2 className="text-label-sm uppercase tracking-wider">Mon prochain événement</h2>
         </div>
         <span className="inline-flex items-center gap-1.5 rounded-full bg-on-surface-brand/15 px-2.5 py-0.5 text-label-sm uppercase tracking-wider">
           <span
@@ -91,7 +91,7 @@ export function EventWidget({ event }: EventWidgetProps) {
       </div>
 
       <Button href={`/membres/evenements/${event.id}`} variant="tonal" size="sm" fullWidth>
-        Participer / voir les détails
+        Voir les détails
         <ArrowRight className="size-3.5" aria-hidden="true" />
       </Button>
     </div>

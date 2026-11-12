@@ -1,29 +1,28 @@
 import { redirect } from "next/navigation"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
-import { users, notifications, evenements, articles, documents, opportunites, cotisations, formations } from "@/db/schema"
-import { and, eq, desc, gte, notInArray } from "drizzle-orm"
-import { TYPES_HORS_CLOCHE } from "@/lib/notifications"
-import {
-  Library,
-  Users,
-  Briefcase,
-  Calendar
-} from "lucide-react"
+import { users, evenements, inscriptions_evenement, documents, opportunites, cotisations } from "@/db/schema"
+import { and, asc, eq, desc, gte } from "drizzle-orm"
+import { suiviFormations } from "@/lib/formations/suivi.server"
+import { compterInvitations, compterMessagesNonLus } from "@/lib/membres/compteurs.server"
 
 import {
   DashboardHeader,
-  StatCard,
   OpportunitiesWidget,
   EventWidget,
-  ActivityTimeline,
   ResourcesWidget,
   ProfileSummaryWidget,
-  FormationsWidget
+  ReprendreFormationWidget,
+  ReseauWidget,
 } from "@/components/modules/dashboard"
 
 export const metadata = { title: "Tableau de bord | Agrolide" }
 
+/**
+ * Tableau de bord recentré sur « moi » : où j'en suis dans ma formation, mon prochain événement,
+ * ce qui attend une réponse dans mon réseau, l'état de ma cotisation et les dernières offres.
+ * (Les chiffres généraux — nombre de membres, de documents… — étaient des doublons de la barre latérale.)
+ */
 export default async function DashboardPage() {
   const { userId } = await auth()
   if (!userId) redirect("/login")
@@ -35,17 +34,12 @@ export default async function DashboardPage() {
   const [
     userRows,
     userCotisation,
-    evtsData,
-    upcomingEventsRows,
+    prochainesInscriptions,
     oppsData,
-    opportunitesRows,
-    formationsData,
-    publishedDocsRows,
-    publishedArticlesRows,
+    suivis,
     recentDocsData,
-    artsData,
-    notifsData,
-    directoryMembers,
+    invitations,
+    messagesNonLus,
   ] = await Promise.all([
     db.select({
       id: users.id,
@@ -57,7 +51,14 @@ export default async function DashboardPage() {
       organisation: users.organisation,
       ville: users.ville,
       pays: users.pays,
-      annuaire_visible: users.annuaire_visible
+      annuaire_visible: users.annuaire_visible,
+      // Champs lus par l'indicateur « profil complété ».
+      biographie: users.biographie,
+      secteurs_expertise: users.secteurs_expertise,
+      langues: users.langues,
+      niveau_etudes: users.niveau_etudes,
+      linkedin_url: users.linkedin_url,
+      site_web_url: users.site_web_url,
     })
     .from(users)
     .where(eq(users.id, userId))
@@ -68,47 +69,42 @@ export default async function DashboardPage() {
       orderBy: [desc(cotisations.created_at)]
     }),
 
-    db.query.evenements.findMany({
-      where: gte(evenements.date_debut, nowIso),
-      orderBy: (evts, { asc }) => [asc(evts.date_debut)],
-      limit: 1
-    }),
-
-    db.select({ id: evenements.id }).from(evenements).where(gte(evenements.date_debut, nowIso)).limit(100),
+    // Mon prochain événement : le premier à venir parmi ceux auxquels je suis inscrit.
+    db.select({
+      id: evenements.id,
+      titre: evenements.titre,
+      date_debut: evenements.date_debut,
+      date_fin: evenements.date_fin,
+      lieu: evenements.lieu,
+      type_evt: evenements.type_evt,
+    })
+    .from(inscriptions_evenement)
+    .innerJoin(evenements, eq(evenements.id, inscriptions_evenement.evenement_id))
+    .where(and(
+      eq(inscriptions_evenement.membre_id, userId),
+      eq(evenements.publie, true),
+      gte(evenements.date_debut, nowIso),
+    ))
+    .orderBy(asc(evenements.date_debut))
+    .limit(1),
 
     db.query.opportunites.findMany({
+      where: eq(opportunites.statut, "publie"),
       orderBy: [desc(opportunites.created_at)],
       limit: 5
     }),
 
-    db.select({ id: opportunites.id }).from(opportunites).limit(100),
-
-    db.query.formations.findMany({
-      orderBy: [desc(formations.created_at)],
-      limit: 5
-    }),
-
-    db.select({ id: documents.id }).from(documents).where(eq(documents.statut, "publie")),
-    db.select({ id: articles.id }).from(articles).where(eq(articles.statut, "publie")),
+    // Progression réelle (inscriptions_formation + progression_lecons), pas les dernières formations du catalogue.
+    suiviFormations(userId),
 
     db.query.documents.findMany({
       where: eq(documents.statut, "publie"),
       orderBy: [desc(documents.created_at)],
       limit: 4
     }),
-    db.query.articles.findMany({
-      where: eq(articles.statut, "publie"),
-      orderBy: [desc(articles.published_at)],
-      limit: 4
-    }),
 
-    db.query.notifications.findMany({
-      where: and(eq(notifications.user_id, userId), notInArray(notifications.type, TYPES_HORS_CLOCHE)),
-      orderBy: [desc(notifications.created_at)],
-      limit: 5
-    }),
-
-    db.select({ id: users.id }).from(users).limit(500),
+    compterInvitations(userId),
+    compterMessagesNonLus(userId),
   ])
 
   const profile = userRows[0] || null
@@ -122,30 +118,33 @@ export default async function DashboardPage() {
     : 0
   const isAdhesionActive = !!dateFinCotisation && joursRestants > 0
 
-  const prochainEvt = evtsData[0] || null
-  const upcomingEventsCount = upcomingEventsRows.length
-  const opportunitesCount = opportunitesRows.length
-  const membersCount = directoryMembers.length
-  const totalResourcesCount = (publishedDocsRows.length || 0) + (publishedArticlesRows.length || 0)
+  const prochainEvt = prochainesInscriptions[0] || null
 
-  const resourcesForWidget = recentDocsData.length > 0
-    ? recentDocsData.map(doc => ({
-        id: doc.id,
-        titre: doc.titre,
-        categorie: doc.thematique || doc.type_doc || "Guide Technique",
-        slug: doc.id,
-        published_at: doc.created_at
-      }))
-    : artsData.map(art => ({
-        id: art.id,
-        titre: art.titre,
-        categorie: art.categorie || "Article",
-        slug: art.slug || art.id,
-        published_at: art.published_at
-      }))
+  // Formation à reprendre : la plus récemment suivie parmi celles qui ne sont pas terminées ni annulées.
+  const enCours = suivis
+    .filter((s) => !s.terminee && s.statut !== "annule" && (s.total > 0 || s.lienExterne))
+    .sort((a, b) => (b.derniereActivite ?? "").localeCompare(a.derniereActivite ?? ""))[0]
+  const formationEnCours = enCours
+    ? {
+        formationId: enCours.formationId,
+        titre: enCours.titre,
+        faites: enCours.faites,
+        total: enCours.total,
+        pourcent: enCours.pourcent,
+        prochaineLeconId: enCours.prochaineLeconId,
+      }
+    : null
+
+  const resourcesForWidget = recentDocsData.map(doc => ({
+    id: doc.id,
+    titre: doc.titre,
+    categorie: doc.thematique || doc.type_doc || "Guide Technique",
+    slug: doc.id,
+    published_at: doc.created_at
+  }))
 
   return (
-    <div className="h-full flex flex-col space-y-5">
+    <div className="flex flex-col space-y-5">
       {/* ================= 1. EN-TÊTE ================= */}
       <DashboardHeader
         prenom={profile.prenom}
@@ -157,83 +156,33 @@ export default async function DashboardPage() {
         ville={profile.ville}
       />
 
-      {/* ================= 2. CHIFFRES CLÉS (valeurs réelles) ================= */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 shrink-0">
-        <StatCard
-          variant="default"
-          label="Bibliothèque"
-          icon={Library}
-          tone="brand"
-          value={totalResourcesCount}
-          subtext="Fiches & Guides techniques"
-          action={{ href: "/membres/bibliotheque", label: "Consulter les fiches" }}
-        />
-
-        <StatCard
-          variant="default"
-          label="Réseau"
-          icon={Users}
-          tone="leaf"
-          value={membersCount}
-          subtext={membersCount > 1 ? "Membres inscrits" : "Membre inscrit"}
-          action={{ href: "/membres/annuaire", label: "Explorer l'annuaire" }}
-        />
-
-        <StatCard
-          variant="default"
-          label="Opportunités"
-          icon={Briefcase}
-          tone="info"
-          value={opportunitesCount}
-          subtext="Offres & Appels à projets"
-          action={{ href: "/membres/opportunites", label: "Voir les offres" }}
-        />
-
-        <StatCard
-          variant="default"
-          label="Événements"
-          icon={Calendar}
-          tone="warning"
-          value={upcomingEventsCount}
-          subtext={upcomingEventsCount > 1 ? "Événements à venir" : "Événement à venir"}
-          action={{ href: "/membres/evenements", label: "Voir le calendrier" }}
-        />
+      {/* ================= 2. CE QUI ME CONCERNE : formation, événement, réseau ================= */}
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <ReprendreFormationWidget formation={formationEnCours} />
+        <EventWidget event={prochainEvt} />
+        <ReseauWidget invitations={invitations} messages={messagesNonLus} />
       </div>
 
       {/* ================= 3. GRILLE PRINCIPALE (8/12 - 4/12) ================= */}
-      <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 flex-1 min-h-0 items-start">
+      <div className="grid grid-cols-1 items-start gap-5 xl:grid-cols-12">
 
         {/* ----- COLONNE PRINCIPALE ----- */}
-        <div className="xl:col-span-8 flex flex-col gap-5 min-h-0">
+        <div className="flex flex-col gap-5 xl:col-span-8">
           <OpportunitiesWidget
             opportunities={oppsData}
-            title="Opportunités & Appels à Projets"
+            title="Dernières opportunités"
             viewAllHref="/membres/opportunites"
-          />
-
-          <FormationsWidget
-            formations={formationsData}
-            title="Formations & Cours"
-            viewAllHref="/membres/formations/catalogue"
           />
 
           <ResourcesWidget
             resources={resourcesForWidget}
-            title="Fiches Techniques & Bibliothèque"
+            title="Nouveautés de la bibliothèque"
             viewAllHref="/membres/bibliotheque"
           />
         </div>
 
-        {/* ----- COLONNE LATÉRALE ----- */}
-        <div className="xl:col-span-4 flex flex-col gap-5 min-h-0">
-          <EventWidget event={prochainEvt} />
-
-          <ActivityTimeline
-            notifications={notifsData}
-            title="Activités & Notifications"
-            viewAllHref="/membres/notifications"
-          />
-
+        {/* ----- COLONNE LATÉRALE : mon profil et ma cotisation ----- */}
+        <div className="flex flex-col gap-5 xl:col-span-4">
           <ProfileSummaryWidget
             prenom={profile.prenom}
             nom={profile.nom}

@@ -3,12 +3,11 @@ import Link from "next/link"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
-import { eq, and, or, isNull, count } from "drizzle-orm"
+import { eq } from "drizzle-orm"
 import { LogoutButton } from "@/components/ui/LogoutButton"
 import { MembresLayout } from "@/components/layout/MembresLayout"
 import { AlertCircle } from "lucide-react"
-import { user_connections, messages } from "@/db/schema"
-import { sansBloques } from "@/lib/reseau/blocage.server"
+import { compterInvitations, compterMessagesNonLus } from "@/lib/membres/compteurs.server"
 import { paiementOuvert } from "@/lib/adhesion"
 
 export default async function MembresRootLayout({
@@ -66,40 +65,17 @@ export default async function MembresRootLayout({
     // 4. Gestion des statuts d'adhésion (RG-007, RG-008)
     const statut = profile?.statut_adhesion || "gratuit"
 
-    // 5. Récupération des demandes de connexion en attente
-    let pendingRequestsCount = 0;
-    try {
-      const pendingRows = await db.select({ id: user_connections.id })
-        .from(user_connections)
-        .innerJoin(users, eq(users.id, user_connections.requester_id))
-        .where(and(
-          eq(user_connections.receiver_id, userId),
-          eq(user_connections.status, 'pending'),
-          // Comme dans « Mon réseau » : un invitant qui a masqué son profil n'est pas compté.
-          or(eq(users.annuaire_visible, true), isNull(users.annuaire_visible))
-        ));
-      pendingRequestsCount = pendingRows.length;
-    } catch (e) {
-      console.error("[membres] Erreur recup pending requests:", e);
-    }
-
-    // 6. Messages non lus : un seul comptage, sur l'index (destinataire_id, lu).
-    // Une valeur vide de `lu` compte comme non lue, comme dans l'API des conversations.
-    let unreadMessagesCount = 0
-    try {
-      const [row] = await db
-        .select({ total: count() })
-        .from(messages)
-        .where(and(
-          eq(messages.destinataire_id, userId),
-          or(eq(messages.lu, false), isNull(messages.lu)),
-          // Les messages d'un membre bloqué ne comptent plus comme « non lus ».
-          sansBloques(userId, messages.expediteur_id)
-        ))
-      unreadMessagesCount = Number(row?.total ?? 0)
-    } catch (e) {
-      console.error("[membres] Erreur comptage messages non lus:", e)
-    }
+    // 5-6. Pastilles de la barre latérale : invitations en attente et messages non lus (deux COUNT en parallèle).
+    const [pendingRequestsCount, unreadMessagesCount] = await Promise.all([
+      compterInvitations(userId).catch((e) => {
+        console.error("[membres] Erreur comptage invitations:", e)
+        return 0
+      }),
+      compterMessagesNonLus(userId).catch((e) => {
+        console.error("[membres] Erreur comptage messages non lus:", e)
+        return 0
+      }),
+    ])
 
     return (
       <div className="min-h-screen bg-surface-container-low flex flex-col">
