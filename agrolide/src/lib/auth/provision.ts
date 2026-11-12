@@ -62,6 +62,9 @@ export async function provisionProfile(authUser: User) {
     role_plateforme: 'membre',
     statut_adhesion: 'gratuit',
     annuaire_visible: true,
+    // Ouvert aux invitations par défaut (le code traite déjà une valeur vide comme « ouvert ») ; carte publique désactivée par défaut.
+    ouvert_contact: true,
+    profil_public: false,
     newsletter_brevo: true,
     created_at: now,
     updated_at: now,
