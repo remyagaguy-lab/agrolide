@@ -9,7 +9,7 @@ import { eq } from "drizzle-orm"
 import { 
   LayoutDashboard, Users, FileText, FolderOpen, BookOpen, Calendar, 
   CreditCard, ExternalLink, Globe, Star, Handshake, Sprout, MessageSquare,
-  ChevronDown
+  ChevronDown, ShieldAlert
 } from "lucide-react"
 import { ClearCacheButton } from "./ClearCacheButton"
 
@@ -78,6 +78,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Membres</p>
           </div>
           {navLink("/admin/membres", "Gestion membres", Users)}
+          {navLink("/admin/signalements", "Signalements", ShieldAlert)}
           {navLink("/admin/paiements", "Paiements", CreditCard)}
 
           <div className="pt-4 pb-1 px-3">
