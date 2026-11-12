@@ -4,7 +4,7 @@
 Usage (depuis agrolide/) :
     python scripts/forme/verify.py [--src <Branding/Identité>] [--out <dossier de sortie>]
 
-Pour chaque SVG de public/design-assets/ (emblem-*, arche-*), le script
+Pour l'emblème couleur (public/design-assets/emblem-couleur.svg), le script
   1. rastérise le SVG à l'échelle exacte de l'image source (2000 px pour l'emblème) avec resvg ;
   2. mesure le recouvrement (IoU) avec le masque de la source et, quand ils existent, avec les PNG
      dérivés du dossier Branding (favicon-forme-*, favicon-contour-*) ;
@@ -201,49 +201,8 @@ def main():
     ink = ink_field_emblem(src)
     ink_pts = contour_points(ink)
     sil_ref = ink > 0.5
-    plein_ref_src = fill_holes(ink)
-    png_forme = read_mask_png(src / "favicon-forme-noir.png")
-    png_contour = read_mask_png(src / "favicon-contour-noir.png")
-
-    r = render_in_source_frame("emblem-plein", bg=None)
-    cov = r[..., 3].astype(np.float32) / 255
-    rings = rings_abs("emblem-plein")
-    outer_ref = np.vstack([bt.resample_closed(x, 0.1) for x in bt.trace_rings(plein_ref_src, 0.5, 4)])
-    report["emblem-plein"] = {
-        "IoU_source_50%": iou(cov, plein_ref_src),
-        "IoU_favicon-forme-noir.png": iou(cov, png_forme),
-        "edge_vs_source": edge_stats(rings, outer_ref),
-        "nodes": sum(len(s) for s in rings),
-    }
-    Image.fromarray(diff_image(cov, plein_ref_src)).save(out / "diff-emblem-plein.png")
-    Image.fromarray(diff_image(cov, png_forme)).save(out / "diff-emblem-plein-vs-png.png")
-    # biais du PNG dérivé : son contour par rapport au 50 % de la source
-    png_pts = np.vstack([bt.resample_closed(x, 0.1) for x in bt.trace_rings(cv2.GaussianBlur(png_forme, (0, 0), 0.8), 0.5, 4)])
-    report["emblem-plein"]["edge_vs_png"] = edge_stats(rings, png_pts)
-    report["emblem-plein"]["png_bias_vs_source"] = {
-        "mean_px": float(cKDTree(outer_ref).query(png_pts)[0].mean()),
-        "area_diff_px": float(png_forme.sum() - plein_ref_src.sum()),
-    }
-
-    r = render_in_source_frame("emblem-creux", bg=None)
-    cov = r[..., 3].astype(np.float32) / 255
-    rings = rings_abs("emblem-creux")
-    # référence : contour à 3 px de largeur du masque de la source (comme process.py, au seuil 50 %)
-    ref_mask = (cv2.GaussianBlur(sil_ref.astype(np.float32), (0, 0), 0.01) > 0.5).astype(np.uint8)
-    k = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (13, 13))
-    big = cv2.resize(ref_mask * 255, None, fx=4, fy=4, interpolation=cv2.INTER_CUBIC)
-    big = (big > 127).astype(np.uint8) * 255
-    grad = cv2.subtract(cv2.dilate(big, k), cv2.erode(big, k))
-    ref_stroke = cv2.resize(grad, (ref_mask.shape[1], ref_mask.shape[0]), interpolation=cv2.INTER_AREA).astype(np.float32) / 255
-    report["emblem-creux"] = {
-        "IoU_trait_ref_source_50%": iou(cov, ref_stroke),
-        "IoU_favicon-contour-noir.png": iou(cov, png_contour),
-        "edge_vs_source": edge_stats(rings, ink_pts),
-        "stroke_width_px": META["emblem-creux"]["stroke"],
-        "nodes": sum(len(s) for s in rings),
-    }
-    Image.fromarray(diff_image(cov, ref_stroke)).save(out / "diff-emblem-creux.png")
-    Image.fromarray(diff_image(cov, png_contour)).save(out / "diff-emblem-creux-vs-png.png")
+    # (les contrôles de l'emblème « plein » et de l'arche-marqueur sont retirés avec ces formes : les formes dérivées
+    #  sont contrôlées par primitives.py, IoU dans primitives.json)
 
     # couleur : comparaison pixel à pixel au Favicon
     r = render_in_source_frame("emblem-couleur", bg="#ffffff")
@@ -268,27 +227,8 @@ def main():
     Image.fromarray(255 - heat).save(out / "diff-emblem-couleur.png")
     Image.fromarray(r[..., :3]).save(out / "rendu-emblem-couleur-2000.png")
 
-    # ---------------- arches
-    mk = src / "Marqueurs"
-    for name, fname in (("arche-creux", "Forme agrolide.png"), ("arche-plein", "forme plein agrolide.png")):
-        field = ink_field_marker(mk / fname)
-        H, W = field.shape
-        m = META[name]
-        r = render_in_source_frame(name, bg=None)
-        cov = r[..., 3].astype(np.float32) / 255
-        rings = rings_abs(name)
-        pts = contour_points(field)
-        report[name] = {
-            "size_source": [W, H],
-            "IoU_source_50%": iou(cov, field),
-            "edge_vs_source": edge_stats(rings, pts),
-            "nodes": sum(len(s) for s in rings),
-        }
-        Image.fromarray(diff_image(cov, field)).save(out / f"diff-{name}.png")
-
     # ---------------- planches de lisibilité
-    for name in ("emblem-couleur", "emblem-plein", "emblem-creux", "arche-plein", "arche-creux"):
-        sheet(name, out, name != "emblem-couleur")
+    sheet("emblem-couleur", out, False)
 
     (out / "rapport.json").write_text(json.dumps(report, indent=1, ensure_ascii=False), encoding="utf-8")
     for k, v in report.items():

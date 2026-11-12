@@ -8,10 +8,8 @@ puis contrôle quantitatif et visuel. Les sorties alimentent `public/design-asse
 | Source | Produit | Style |
 |---|---|---|
 | `Favicon agrolide.png` (2000 px) | `emblem-couleur.svg` | emblème couleur (5 aplats) |
-| idem | `emblem-plein.svg` | silhouette pleine (équivaut à `favicon-forme-*`) |
-| idem | `emblem-creux.svg` | contour, trait de 3 px (équivaut à `favicon-contour-*`) |
-| `Marqueurs/Forme agrolide.png` (2752 px) | `arche-creux.svg` | arche épaisse + bande en contour |
-| `Marqueurs/forme plein agrolide.png` (895 px) | `arche-plein.svg` | dôme + bande pleins |
+| idem (`primitives.py`) | `emblem-noir.svg`, `emblem-blanc.svg`, `emblem-contour.svg` | même dessin en une couleur, soleil détaché des collines par un filet d'un demi-trait ; contour |
+| idem (`primitives.py`) | `arche.svg`, `fenetre.svg`, `emblem-eclate.svg` | le dôme, son ciel, l'emblème éclaté (pièces détachées) |
 
 ## Utilisation
 ```bash
@@ -63,12 +61,19 @@ L'emblème se décompose en cercles ; le script le **mesure** (aucun point posé
 - **feuille** : lentille, intersection de deux disques ajustés sur l'intérieur de la feuille.
 - **traits** (sillons) : axes des trois traits verts (milieux des bords sous-pixel appariés), épaisseur = distance des bords
   (61,8 à 62,7 px, comme l'anneau : l'emblème est tracé d'un seul trait) ; bout rond du grand sillon suivi sur les pixels ;
-- **arche déduite** : dôme = silhouette au-dessus de la 1re ligne blanche (bande gauche + sillon 1), bande = grand sillon ;
+- **arche** : le dôme = silhouette au-dessus de la 1re ligne blanche (bande gauche + sillon 1) ;
+- **éclaté** : le dôme + colline, grand sillon et feuille détachés (chaque pièce = aplat intérieur + un demi-trait, coins arrondis) ;
+- **emblème en une couleur** : réseau vert d'origine + soleil détaché des collines par un filet d'un demi-trait (31 px) ;
   **fenêtre** = le ciel (disque intérieur de l'anneau au-dessus des collines) ; centre optique du dôme pour les badges.
 
 ```bash
 python scripts/forme/primitives.py --src "<chemin>/Branding/Identité"
 ```
 Sorties : `src/components/brand/geometrie.ts` (consommé par `PlanSoleil`, `Sillons`, `Horizon`, `Feuille`, `Anneau`),
-`public/design-assets/{soleil,anneau,horizon,sillons,feuille,arche-embleme-plein,arche-embleme-creux,fenetre-embleme}.svg`, `scripts/forme/primitives.json` (mesures, résidus, IoU).
+`public/design-assets/{soleil,anneau,horizon,sillons,feuille,arche,fenetre,emblem-eclate,emblem-noir,emblem-blanc,emblem-contour}.svg`, `scripts/forme/primitives.json` (mesures, résidus, IoU).
 Résidus moyens 0,2 à 0,9 px ; IoU de contrôle 0,95 à 0,99. Règles d'usage : page `/design-system#grammaire`.
+
+## Formes retirées (12/11/2026)
+L'emblème « plein » (silhouette, le « cercle à sillons ») et l'arche des marqueurs (dôme + sillon accolé) sont retirés du design
+system : la silhouette pleine se confondait avec l'identité d'une autre marque et le marqueur ne coïncidait qu'à 85 % avec l'emblème.
+Les marqueurs restent dans `Branding/Identité/Marqueurs` mais ne sont plus tracés.

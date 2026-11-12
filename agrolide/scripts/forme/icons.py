@@ -7,7 +7,7 @@ Sorties dans public/design-assets/icons/ :
   apple-icon-180.png        180 px, fond blanc, marge de 12 % (src/app/apple-icon.png)
   icon-192.png, icon-512.png            « any » : emblème sur fond blanc, marge 8 %
   icon-maskable-512.png     zone de sécurité Android (emblème dans le disque central de 66 %) sur fond blanc
-  icon-monochrome.svg       silhouette pleine pour les icônes monochromes (currentColor)
+  icon-monochrome.svg       emblème en une couleur (soleil détaché), pour les icônes monochromes
 """
 from __future__ import annotations
 
@@ -45,7 +45,7 @@ def png(size: int, margin: float, bg: str, name: str):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(ASSETS / "emblem-couleur.svg", OUT / "icon.svg")
-    shutil.copyfile(ASSETS / "emblem-plein.svg", OUT / "icon-monochrome.svg")
+    shutil.copyfile(ASSETS / "emblem-noir.svg", OUT / "icon-monochrome.svg")
     png(180, 0.12, "#ffffff", "apple-icon-180.png")
     png(192, 0.08, "#ffffff", "icon-192.png")
     png(512, 0.08, "#ffffff", "icon-512.png")

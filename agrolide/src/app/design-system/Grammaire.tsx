@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { BookOpen, Search } from 'lucide-react'
-import { Anneau, ArcheBadge, ArchPhoto, Emblem, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
+import { Anneau, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
 
 const R = GEOMETRIE.rayons
 const pct = (v: number) => `×${v.toFixed(2).replace('.', ',')}`
@@ -20,22 +20,12 @@ const LIGNES: Ligne[] = [
   {
     forme: 'Emblème',
     composant: '<Emblem>',
-    origine: 'Le favicon entier.',
-    role: 'Signature en couleur : logo, favicon, icône d’application. Une seule fois par page, dans le logo.',
+    origine: 'Le favicon entier. En une couleur, le soleil est détaché des collines par un filet blanc d’un demi-trait (31 px).',
+    role: 'SIGNATURE : logo, favicon, icône d’application, pied de page, filigrane de certificat, avatar par défaut. Couleur, noir, blanc ou contour ; jamais de silhouette pleine.',
     tailles: '16 à 96 px ; jamais en décor de fond.',
-    couleurs: 'Couleur d’origine sur clair ; plein blanc sur vert et en sombre.',
+    couleurs: 'Couleur sur clair ; blanc sur vert profond, sur photo et en sombre ; noir pour l’impression ; contour à partir de 48 px.',
     interdit: 'Recolorer la version couleur, le couper, le déformer, en faire un motif.',
     demo: <Emblem variant="couleur" className="w-14" />,
-  },
-  {
-    forme: 'Sceau (emblème plein)',
-    composant: '<Emblem variant="plein">',
-    origine: 'La silhouette de l’emblème : le cercle entaillé par ses sillons blancs (favicon-forme).',
-    role: 'SCEAU monochrome : pastille « Certifiée agrolide » sur une photo, filigrane de certificat, avatar par défaut, signature au creux de l’horizon (en-tête, pied de page).',
-    tailles: '16 à 96 px ; filigrane jusqu’à 256 px à 6 % d’opacité.',
-    couleurs: 'Blanc sur vert profond ; vert sur clair.',
-    interdit: 'Comme décor répété, en couleur (c’est le rôle de l’emblème), plus d’un sceau par vue.',
-    demo: <Emblem variant="plein" className="w-12 text-primary" />,
   },
   {
     forme: 'Soleil (plan + échos)',
@@ -52,24 +42,34 @@ const LIGNES: Ligne[] = [
     ),
   },
   {
-    forme: 'Arche',
+    forme: 'Arche (le dôme)',
     composant: '<Arche variant="plein">, <ArcheBadge>',
-    origine: 'Reconstruite avec les cercles de l’emblème : la silhouette au-dessus de la 1re ligne blanche (dôme) et le grand sillon (épaisseur constante, bout rond d’origine). IoU 0,991 et 0,977. Le marqueur dessiné à part ne coïncide qu’à 85 %.',
+    origine: 'La silhouette de l’emblème au-dessus de sa 1re ligne blanche (anneau, ciel, collines), IoU 0,991. Le sillon autrefois accolé dessous est retiré (12/11/2026).',
     role: 'PORTEUR à taille moyenne : carte « titre dans l’arche », badge de pictogramme, date d’événement, onglet-signature du héros.',
     tailles: 'Badge 40 à 112 px, contenu au centre optique du dôme (axe de symétrie, mi-hauteur de la corde verticale) ; carte : 125 % de la largeur ; onglet 150 à 184 px.',
     couleurs: 'Jaune soleil + pictogramme vert ; vert + pictogramme blanc ; blanc sur photo (carte).',
-    interdit: 'L’arche creuse comme cadre photo, l’arche centrée sous un titre, plusieurs arches qui s’empilent.',
+    interdit: 'Lui recoller un sillon, l’utiliser comme cadre photo au trait, la centrer sous un titre, empiler plusieurs dômes.',
     demo: <ArcheBadge className="w-14"><BookOpen /></ArcheBadge>,
   },
   {
     forme: 'Fenêtre',
-    composant: '<ArchPhoto framed={false}>',
+    composant: '<ArchPhoto>',
     origine: 'Le ciel de l’emblème : disque intérieur de l’anneau au-dessus des deux collines (IoU 0,985). Son point le plus bas est le creux en V.',
     role: 'PHOTO de terrain ou de groupe, grande (50 à 60 % de la largeur), sujet tourné vers le texte ; une capture d’écran peut en sortir.',
     tailles: '320 px de large au minimum.',
     couleurs: 'Échos pâles de la fenêtre (même ouverture, agrandie) sur fond clair.',
     interdit: 'Portraits d’équipe (visages trop petits), cadre au trait, deux fenêtres côte à côte.',
-    demo: <ArchPhoto src="/hero-background.webp" alt="" framed={false} source="embleme" className="w-24" />,
+    demo: <ArchPhoto src="/hero-background.webp" alt="" className="w-24" />,
+  },
+  {
+    forme: 'Emblème éclaté',
+    composant: '<EmblemEclate>',
+    origine: 'Le dôme et les trois pièces du bas (colline, grand sillon, feuille), détachées de l’anneau. Chaque pièce = son aplat intérieur + un demi-trait autour ; coins arrondis du même demi-trait, comme le bout du grand sillon.',
+    role: 'ILLUSTRATION DE GRAND FORMAT : page 404, en-tête d’accueil, écran d’erreur ; le ciel peut porter le soleil ou une photo.',
+    tailles: '240 px et plus ; jamais en badge ni en icône (trop chargé en petit).',
+    couleurs: 'Vert profond ou blanc ; soleil jaune dans le ciel (variante soleil).',
+    interdit: 'En petit, à côté de l’emblème ou du logo dans la même vue, avec un plan soleil.',
+    demo: <EmblemEclate className="w-14 text-primary" />,
   },
   {
     forme: 'Sillons',
@@ -156,9 +156,9 @@ export function Grammaire() {
           <li><strong className="text-on-surface">Horizon</strong> : deux collines, creux en V à 56 % de la largeur.</li>
           <li><strong className="text-on-surface">Sillons</strong> : trois traits d’épaisseur constante, foyers sous la feuille.</li>
           <li><strong className="text-on-surface">Feuille</strong> : lentille entre le disque et le dernier sillon.</li>
-          <li><strong className="text-on-surface">Arche</strong> : silhouette au-dessus de la 1re ligne blanche + grand sillon.</li>
+          <li><strong className="text-on-surface">Arche</strong> : le dôme, silhouette au-dessus de la 1re ligne blanche.</li>
           <li><strong className="text-on-surface">Fenêtre</strong> : le ciel (disque intérieur au-dessus des collines).</li>
-          <li><strong className="text-on-surface">Sceau</strong> : la silhouette pleine, entaillée par les sillons.</li>
+          <li><strong className="text-on-surface">Éclaté</strong> : le dôme + colline, grand sillon et feuille détachés.</li>
         </ol>
       </div>
 
@@ -255,8 +255,7 @@ export function Grammaire() {
       </div>
       <p className="mt-4 max-w-3xl text-body-sm text-on-surface-muted">
         <code>HorizonDivider</code> (courbes approchées) reste disponible pour les pages existantes ; <code>Horizon</code> le remplacera page par page.{' '}
-        <code>Arche</code> et <code>ArchPhoto</code> gardent le tracé du marqueur par défaut tant que le passage à <code>source=&quot;embleme&quot;</code> n’est pas validé ;{' '}
-        <code>ArcheBadge</code> utilise déjà le tracé déduit. L’arche creuse n’est plus recommandée comme cadre photo : utiliser la fenêtre sans cadre.
+        Les marqueurs dessinés à part (arche avec sillon, emblème plein) sont retirés : toutes les formes sont désormais déduites de l’emblème.
       </p>
     </>
   )

@@ -266,27 +266,6 @@ def build_outputs(src_dir: Path, only: str | None):
     ASSETS.mkdir(parents=True, exist_ok=True)
     meta, ts = {}, {}
 
-    if only in (None, "arche"):
-        mk = src_dir / "Marqueurs"
-        for key, fname in (("arche-creux", "Forme agrolide.png"), ("arche-plein", "forme plein agrolide.png")):
-            t = trace_marker(mk / fname, key)
-            bb = bbox_of(t["rings"])
-            x0, y0, x1, y1 = bb
-            frame = (x0, y0, x1 - x0, y1 - y0)
-            d = d_of(t["rings"], x0, y0)
-            body = f'<path fill="currentColor" fill-rule="evenodd" d="{d}"/>'
-            (ASSETS / f"{key}.svg").write_text(svg_doc(frame, body), encoding="utf-8")
-            ts[key] = {"viewBox": [0, 0, round(frame[2], 2), round(frame[3], 2)], "d": d}
-            if key == "arche-creux":
-                # « soleil » = l'ouverture de l'arche (plus grand trou), même cadre : fenêtre exacte pour ArchPhoto
-                depth = ring_depths(t["rings"])
-                holes = [r for r, dp in zip(t["rings"], depth) if dp == 1]
-                hole = max(holes, key=lambda r: abs(r["area"]))
-                ts["arche-soleil"] = {"viewBox": ts[key]["viewBox"], "d": d_of([hole], x0, y0)}
-            meta[key] = {"src": f"Marqueurs/{fname}", "frame": list(frame), "nodes": node_count(t["rings"]),
-                         "size": list(t["size"])}
-            print(f"{key}: {node_count(t['rings'])} noeuds, cadre {frame[2]:.2f} x {frame[3]:.2f}")
-
     if only in (None, "emblem"):
         e = trace_emblem(src_dir)
         # cadre carré calé sur la silhouette (+ demi-trait pour la version creuse)
@@ -294,18 +273,8 @@ def build_outputs(src_dir: Path, only: str | None):
         stroke = 3.0
         side_frame = square_frame(bb)
         x0, y0, s, _ = side_frame
-        # plein
-        d_out = d_of(e["outer"], x0, y0)
-        body = f'<path fill="currentColor" fill-rule="evenodd" d="{d_out}"/>'
-        (ASSETS / "emblem-plein.svg").write_text(svg_doc(side_frame, body), encoding="utf-8")
-        # creux : contour de tous les anneaux, trait de 3 px de l'image source (comme favicon-contour-*)
-        bb_c = bbox_of(e["sil_rings"], pad=stroke / 2)
-        frame_c = square_frame(bb_c)
-        cx0, cy0, cs, _ = frame_c
-        d_all = d_of(e["sil_rings"], cx0, cy0)
-        body_c = (f'<path fill="none" stroke="currentColor" stroke-width="{bt.fmt(stroke)}" '
-                  f'stroke-linejoin="round" d="{d_all}"/>')
-        (ASSETS / "emblem-creux.svg").write_text(svg_doc(frame_c, body_c), encoding="utf-8")
+        # (les anciennes sorties « plein » et « creux » de la silhouette sont abandonnées : l'emblème en une couleur et son
+        #  contour sont construits par primitives.py, avec le soleil détaché des collines)
         # couleur
         c = e["E"]
         def hx(v): return "#%02x%02x%02x" % tuple(int(round(t)) for t in v)
@@ -319,20 +288,13 @@ def build_outputs(src_dir: Path, only: str | None):
             parts.append(f'<path id="{k}" fill="{col[k]}" fill-rule="evenodd" d="{dd}"/>')
         body_col = "<g>" + "".join(parts) + "</g>"
         (ASSETS / "emblem-couleur.svg").write_text(svg_doc(side_frame, body_col), encoding="utf-8")
-        ts["emblem-plein"] = {"viewBox": [0, 0, round(s, 2), round(s, 2)], "d": d_out}
-        ts["emblem-creux"] = {"viewBox": [0, 0, round(cs, 2), round(cs, 2)], "d": d_all, "stroke": stroke}
         ts["emblem-couleur"] = {"viewBox": [0, 0, round(s, 2), round(s, 2)],
                                 "layers": [{"id": k, "fill": col[k], "d": d_of(e["layers"][k], x0, y0)}
                                            for k in ("soleil", "soleil-clair", "feuille-claire", "feuille", "vert")]}
-        meta["emblem-plein"] = {"src": "Favicon agrolide.png", "frame": list(side_frame),
-                                "nodes": node_count(e["outer"])}
-        meta["emblem-creux"] = {"src": "Favicon agrolide.png", "frame": list(frame_c), "stroke": stroke,
-                                "nodes": node_count(e["sil_rings"])}
         meta["emblem-couleur"] = {"src": "Favicon agrolide.png", "frame": list(side_frame), "colors": col,
                                   "measured": e["E"],
                                   "nodes": sum(node_count(v) for v in e["layers"].values())}
-        print("emblem plein", node_count(e["outer"]), "creux", node_count(e["sil_rings"]),
-              "couleur", {k: node_count(v) for k, v in e["layers"].items()}, "cadre", [round(v, 2) for v in side_frame])
+        print("emblem couleur", {k: node_count(v) for k, v in e["layers"].items()}, "cadre", [round(v, 2) for v in side_frame])
 
     prev = {}
     if META_OUT.exists():
@@ -365,7 +327,7 @@ def write_ts(ts, only):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src")
-    ap.add_argument("--only", choices=["emblem", "arche"])
+    ap.add_argument("--only", choices=["emblem"])
     a = ap.parse_args()
     build_outputs(find_src(a.src), a.only)
 

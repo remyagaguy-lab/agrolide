@@ -41,6 +41,10 @@ APP = HERE.parents[1]
 ASSETS = APP / "public" / "design-assets"
 TS_OUT = APP / "src" / "components" / "brand" / "geometrie.ts"
 JSON_OUT = HERE / "primitives.json"
+TS_OUT_PATHS = APP / "src" / "components" / "brand" / "forme-paths.ts"
+META_OUT_PATH = HERE / "meta.json"
+# filet blanc entre le soleil et les collines, dans l'emblème en une couleur (px du favicon) : voir le rapport
+FILET = 31.0
 
 
 # ----------------------------------------------------------------------------- mesures
@@ -177,7 +181,9 @@ def measure(src: Path):
     top, botm = column_edges(mg, Wf, int(st[gauche][0]) + 6, int(st[gauche][0] + st[gauche][2]) - 6)
     keep = lambda p: p[np.hypot(p[:, 0] - cx, p[:, 1] - cy) < r_in - 18]  # noqa: E731
     arcs["bande-gauche-haut"] = fit_circle(keep(top))
-    arcs["bande-gauche-bas"] = fit_circle(keep(botm))
+    # le bord bas s'enroule dans la pointe droite de la bande : on l'écarte (25 % droits de la portée)
+    xb0, xb1 = botm[:, 0].min(), botm[:, 0].max()
+    arcs["bande-gauche-bas"] = fit_circle(keep(botm[botm[:, 0] < xb0 + 0.75 * (xb1 - xb0)]))
 
     # TRAITS : les trois sillons verts. Axe = milieux des bords sous-pixel appariés ; épaisseur = distance des bords.
     from scipy.spatial import cKDTree
@@ -211,6 +217,22 @@ def measure(src: Path):
             out["trait2_pointe_deg"] = round(float(a_deg + 0.02), 3)
             out["trait2_pointe"] = [round(px, 1), round(py, 1)]
             break
+
+    # intérieur de la COLLINE (aplat vert clair de gauche) : trois bords, chacun rattaché au modèle le plus proche
+    gid = min((i for i in range(1, n2) if st2[i][4] > 2000), key=lambda i: cen2[i][0])
+    cs_g, _ = cv2.findContours((lc == gid).astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    Pg = max(cs_g, key=len)[:, 0, :].astype(float) + 0.5
+    lbb_c, lbb_r = arcs["bande-gauche-bas"][0][:2], arcs["bande-gauche-bas"][0][2]
+    s1_c, s1_r = arcs["sillon-1-haut"][0][:2], arcs["sillon-1-haut"][0][2]
+    # chaque bord est parallèle au trait voisin (épaisseur constante) : centre imposé, seul le rayon est ajusté
+    centres = {"colline-int-haut": (lbb_c, lbb_r - 62), "colline-int-droite": (s1_c, s1_r + 62), "colline-int-anneau": ((cx, cy), r_in)}
+    E_ = np.stack([np.abs(np.hypot(Pg[:, 0] - c_[0], Pg[:, 1] - c_[1]) - r0) for c_, r0 in centres.values()], 1)
+    lab_ = E_.argmin(1)
+    for j, (k, (c_, _)) in enumerate(centres.items()):
+        q = Pg[(lab_ == j) & (E_.min(1) < 14)]
+        d_ = np.hypot(q[:, 0] - c_[0], q[:, 1] - c_[1])
+        r_ = float(np.median(d_))
+        arcs[k] = ((float(c_[0]), float(c_[1]), r_), float(np.mean(np.abs(d_ - r_))), float(np.max(np.abs(d_ - r_))))
 
     out["arcs"] = {k: {"c": [round(v[0][0], 2), round(v[0][1], 2)], "r": round(v[0][2], 2),
                        "residu_moyen": round(v[1], 2), "residu_max": round(v[2], 2)} for k, v in arcs.items()}
@@ -320,6 +342,16 @@ def build(m: dict):
                     "pointes": [[round(p[0], 2), round(p[1], 2)] for p in tips]},
     }
     geo.update(derivees(m, geo))
+    soleil_detache = geo.pop("_soleil_detache")
+    # réseau vert de l'emblème couleur (couche « vert », repère du cadre de l'emblème) + soleil détaché par un filet blanc
+    txt = TS_OUT_PATHS.read_text(encoding="utf-8")
+    paths = json.loads(txt[txt.index("= ") + 2 : txt.rindex(";")])
+    vert = next(l["d"] for l in paths["emblem-couleur"]["layers"] if l["id"] == "vert")
+    off = json.loads(META_OUT_PATH.read_text(encoding="utf-8"))["emblem-couleur"]["frame"]
+    geo["emblemeMono"] = {"reseau": vert, "soleil": soleil_detache(off, FILET), "filet": FILET,
+                          "viewBox": paths["emblem-couleur"]["viewBox"]}
+    geo["_soleil_detache"] = soleil_detache
+    geo["_off"] = off
     return geo
 
 
@@ -339,6 +371,12 @@ def arc(c, r, a0, a1, sens):
     d = (a1 - a0) % 360 if sens > 0 else (a0 - a1) % 360
     x, y = pt(c, r, a1)
     return f"A{f2(r)} {f2(r)} 0 {1 if d > 180 else 0} {1 if sens > 0 else 0} {f2(x)} {f2(y)}"
+
+
+def arc_court(c, r, p0, p1):
+    """Arc mineur de p0 à p1 sur le cercle (c, r)."""
+    a0, a1 = ang(c, p0), ang(c, p1)
+    return arc(c, r, a0, a1, +1 if (a1 - a0) % 360 <= 180 else -1)
 
 
 def inter(c0, r0, c1, r1, cle):
@@ -419,10 +457,74 @@ def derivees(m: dict, geo: dict):
         traits.append({"d": f"M{f2(p0[0])} {f2(p0[1])}" + arc(c_, r_, a_deb, a_fin, +1), "epaisseur": t["epaisseur"], "boutRond": cap})
     ytop = min(t["c"][1] - math.sqrt(t["r"] ** 2 - (xr - t["c"][0]) ** 2) - t["epaisseur"] / 2 - 4 for t in tr)
     xl = pt(c2, r2, m["trait2_pointe_deg"])[0] - 4
+    # ARCHE = le dôme seul (décision du 12/11/2026 : le sillon accolé est retiré)
+    PD = np.array(pts_dome)
+    dome_vb = [round(PD[:, 0].min(), 2), round(PD[:, 1].min(), 2), round(np.ptp(PD[:, 0]), 2), round(np.ptp(PD[:, 1]), 2)]
+
+    # ÉCLATÉ : le dôme + les trois pièces du bas détachées. Règle : chaque pièce = son aplat intérieur + un DEMI-TRAIT
+    # autour (le trait vert coupé en son milieu), coins arrondis du même demi-trait (comme le bout du grand sillon).
+    demi = np.mean([T[k]["epaisseur"] for k in T]) / 2
+
+    def piece(bords, sommets_approx):
+        """bords : [(centre, rayon, dedans)] dans l'ordre horaire ; sommet i entre le bord i et le bord i+1."""
+        n_ = len(bords)
+        som = []
+        for k in range(n_):
+            (c0, r0, _), (c1, r1, _) = bords[k], bords[(k + 1) % n_]
+            som.append(inter(c0, r0, c1, r1, lambda p, q=sommets_approx[k]: math.hypot(p[0] - q[0], p[1] - q[1])))
+
+        def normale(k, V):
+            c_, _, dedans = bords[k]
+            u = ((V[0] - c_[0]), (V[1] - c_[1])); L = math.hypot(*u); u = (u[0] / L, u[1] / L)
+            return u if dedans else (-u[0], -u[1])
+
+        A_ = [None] * n_; B_ = [None] * n_
+        for k in range(n_):
+            V = som[k]
+            n0, n1 = normale(k, V), normale((k + 1) % n_, V)
+            A_[k] = (V[0] + demi * n0[0], V[1] + demi * n0[1])
+            B_[k] = (V[0] + demi * n1[0], V[1] + demi * n1[1])
+        d = f"M{f2(B_[-1][0])} {f2(B_[-1][1])}"
+        pts = []
+        for k in range(n_):
+            c_, r_, dedans = bords[k]
+            d += arc_court(c_, r_ + demi if dedans else r_ - demi, B_[k - 1], A_[k])
+            d += arc_court(som[k], demi, A_[k], B_[k])
+            pts += [A_[k], B_[k]]
+        return d + "Z", som
+
+    cg = {k: (A[k]["c"], A[k]["r"]) for k in ("colline-int-haut", "colline-int-droite", "colline-int-anneau", "feuille-haut", "feuille-bas")}
+    colline_d, colline_som = piece([(*cg["colline-int-anneau"], True), (*cg["colline-int-haut"], True), (*cg["colline-int-droite"], False)],
+                                   [(560, 1070), (820, 1120), (630, 1290)])
+    tips = geo["feuille"]["pointes"]
+    feuille_d, _ = piece([(*cg["feuille-haut"], True), (*cg["feuille-bas"], True)], [tips[1], tips[0]])
+    # grand sillon : trait entier, bout rond d'origine à gauche ; à droite il s'arrête sur l'axe de l'anneau, bout rond
+    rm = (R + Rin) / 2
+    q_ = inter(C, rm, c2, r2, lambda p: -p[0])
+    a_fin2 = ang(c2, q_)
+    cap_d = pt(c2, r2, a_fin2)
+    od, idd = pt(c2, ro, a_fin2), pt(c2, ri, a_fin2)
+    sillon_d = (f"M{f2(oc[0])} {f2(oc[1])}" + arc(c2, ro, a_cap, a_fin2, +1) + arc(cap_d, e2 / 2, ang(cap_d, od), ang(cap_d, idd), +1)
+                + arc(c2, ri, a_fin2, a_cap, -1) + arc(cap_c, e2 / 2, ang(cap_c, ic), ang(cap_c, oc), +1) + "Z")
+    eclate = {"colline": colline_d, "sillon": sillon_d, "feuille": feuille_d, "demiTrait": round(demi, 2)}
+    eclate_vb = [round(C[0] - R - 2, 2), round(C[1] - R - 2, 2), round(2 * R + 4, 2), round(2 * R + 4, 2)]
+
+    # EMBLÈME EN UNE COULEUR : le réseau vert d'origine + le soleil détaché des collines par un filet blanc
+    def soleil_detache(off, g):
+        Cs = (C[0] - off[0], C[1] - off[1]); Rs = geo["rayons"]["soleil"]
+        hg2 = ((hg["c"][0] - off[0], hg["c"][1] - off[1]), hg["r"] + g)
+        hd2 = ((hd["c"][0] - off[0], hd["c"][1] - off[1]), hd["r"] + g)
+        sl = inter(Cs, Rs, *hg2, lambda p: p[0]); sr = inter(Cs, Rs, *hd2, lambda p: -p[0])
+        vg = inter(*hg2, *hd2, lambda p: math.hypot(p[0] - (v[0] - off[0]), p[1] - (v[1] - off[1])))
+        return (f"M{f2(sl[0])} {f2(sl[1])}" + arc(Cs, Rs, ang(Cs, sl), ang(Cs, sr), +1)
+                + arc_court(hd2[0], hd2[1], sr, vg) + arc_court(hg2[0], hg2[1], vg, sl) + "Z")
+
     return {
-        "arche": {"dome": dome, "bande": bande, "ciel": ciel, "viewBox": [round(x0, 2), round(y0, 2), round(x1 - x0, 2), round(y1 - y0, 2)],
+        "arche": {"dome": dome, "ciel": ciel, "viewBox": dome_vb,
                   "cielInscrit": {"c": ins["c"], "r": ins["r"]}, "domeInscrit": dome_ins, "domeCentre": dome_centre, "cielViewBox": [float(x) for x in ciel_vb]},
+        "eclate": {**eclate, "viewBox": eclate_vb},
         "traits": {"liste": traits, "viewBox": [round(xl, 2), round(ytop, 2), round(xr - xl, 2), round(yb - ytop, 2)]},
+        "_soleil_detache": soleil_detache,
     }
 
 
@@ -460,12 +562,20 @@ def write(geo: dict, m: dict):
     ts = geo["traits"]
     body = "".join(f'<path d="{t["d"]}" fill="none" stroke="#1b5e38" stroke-width="{t["epaisseur"]}" stroke-linecap="{"round" if t["boutRond"] else "butt"}"/>' for t in ts["liste"])
     (ASSETS / "sillons.svg").write_text(svg(" ".join(f2(x) for x in ts["viewBox"]), body), encoding="utf-8")
-    # arche déduite (pleine et creuse) et fenêtre (ciel)
+    # arche (le dôme seul), fenêtre (ciel), emblème éclaté, emblème en une couleur et en contour
     ar = geo["arche"]
     vba = " ".join(f2(x) for x in ar["viewBox"])
-    (ASSETS / "arche-embleme-plein.svg").write_text(svg(vba, f'<path d="{ar["dome"]}{ar["bande"]}" fill="#1b5e38"/>'), encoding="utf-8")
-    (ASSETS / "arche-embleme-creux.svg").write_text(svg(vba, f'<path d="{ar["dome"]}{ar["ciel"]}{ar["bande"]}" fill="#1b5e38" fill-rule="evenodd"/>'), encoding="utf-8")
-    (ASSETS / "fenetre-embleme.svg").write_text(svg(vba, f'<path d="{ar["ciel"]}" fill="#fcb726"/>'), encoding="utf-8")
+    (ASSETS / "arche.svg").write_text(svg(vba, f'<path d="{ar["dome"]}" fill="#1b5e38"/>'), encoding="utf-8")
+    (ASSETS / "fenetre.svg").write_text(svg(" ".join(f2(x) for x in ar["cielViewBox"]), f'<path d="{ar["ciel"]}" fill="#fcb726"/>'), encoding="utf-8")
+    ec = geo["eclate"]
+    p_ = ec
+    (ASSETS / "emblem-eclate.svg").write_text(svg(" ".join(f2(x) for x in ec["viewBox"]),
+        f'<path d="{ar["dome"]}{p_["colline"]}{p_["sillon"]}{p_["feuille"]}" fill="#1b5e38"/>'), encoding="utf-8")
+    em = geo["emblemeMono"]
+    vbe = " ".join(f2(x) for x in em["viewBox"])
+    for nom, coul in (("emblem-noir", "#000000"), ("emblem-blanc", "#ffffff")):
+        (ASSETS / f"{nom}.svg").write_text(svg(vbe, f'<path d="{em["reseau"]}{em["soleil"]}" fill="{coul}" fill-rule="evenodd"/>'), encoding="utf-8")
+    (ASSETS / "emblem-contour.svg").write_text(svg(vbe, f'<path d="{em["reseau"]}{em["soleil"]}" fill="none" stroke="#000000" stroke-width="4" stroke-linejoin="round"/>'), encoding="utf-8")
     # feuille : lentille
     fl = geo["feuille"]
     (t0, t1) = fl["pointes"]
@@ -500,7 +610,9 @@ def write(geo: dict, m: dict):
         "  rayons: { 'soleil-clair': number; soleil: number; 'anneau-int': number; 'anneau-ext': number };\n"
         "  anneauOuverture: [number, number];\n"
         "  horizon: { gauche: Cercle; droite: Cercle; creux: [number, number] };\n"
-        "  arche: { dome: string; bande: string; ciel: string; viewBox: [number, number, number, number]; cielInscrit: Cercle; domeInscrit: Cercle; domeCentre: [number, number]; cielViewBox: [number, number, number, number] };\n"
+        "  arche: { dome: string; ciel: string; viewBox: [number, number, number, number]; cielInscrit: Cercle; domeInscrit: Cercle; domeCentre: [number, number]; cielViewBox: [number, number, number, number] };\n"
+        "  eclate: { colline: string; sillon: string; feuille: string; demiTrait: number; viewBox: [number, number, number, number] };\n"
+        "  emblemeMono: { reseau: string; soleil: string; filet: number; viewBox: [number, number, number, number] };\n"
         "  traits: { liste: { d: string; epaisseur: number; boutRond: boolean }[]; viewBox: [number, number, number, number] };\n"
         "  feuille: { haut: Cercle; bas: Cercle; pointes: [number, number][] };\n"
         "  feuilleD: string;\n  feuilleVB: [number, number, number, number];\n  anneauD: { d: string; epaisseur: number; rayon: number };\n}\n\n"
@@ -509,12 +621,39 @@ def write(geo: dict, m: dict):
     TS_OUT.write_text(head + json.dumps(geo, indent=1, ensure_ascii=False) + ";\n", encoding="utf-8")
 
 
+def apercu_filets(geo, soleil_detache, off, out):
+    import resvg_py
+    em = geo["emblemeMono"]
+    vb = " ".join(f2(x) for x in em["viewBox"])
+    cases = []
+    for g in (0, 16, 24, 31, 45, 61):
+        for taille in (240, 48, 24):
+            png = resvg_py.svg_to_bytes(svg_string=svg(vb, f'<path d="{em["reseau"]}{soleil_detache(off, g)}" fill="#101510" fill-rule="evenodd"/>').replace("<svg ", f'<svg width="{taille}" height="{taille}" ', 1))
+            cases.append((g, taille, cv2.imdecode(np.frombuffer(bytes(png), np.uint8), cv2.IMREAD_UNCHANGED)))
+    W, H = 6 * 260, 340
+    sheet = np.full((H, W, 3), 255, np.uint8)
+    for i, (g, t, im) in enumerate(cases):
+        col = i // 3
+        a_ = im[..., 3:4].astype(np.float32) / 255
+        rgb = (im[..., :3].astype(np.float32) * a_ + 255 * (1 - a_)).astype(np.uint8)
+        y = {240: 10, 48: 262, 24: 274}[t]
+        x = col * 260 + 10 + {240: 0, 48: 40, 24: 140}[t]
+        sheet[y:y + t, x:x + t] = rgb
+        if t == 240:
+            cv2.putText(sheet, f"filet {g} px", (col * 260 + 10, 330), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 1, cv2.LINE_AA)
+    cv2.imwrite(out, sheet)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--src")
+    ap.add_argument("--apercu-filets", help="PNG : planche des largeurs de filet soleil/collines (emblème en une couleur)")
     a = ap.parse_args()
     m = measure(vz.find_src(a.src))
     geo = build(m)
+    soleil_detache, off = geo.pop("_soleil_detache"), geo.pop("_off")
+    if a.apercu_filets:
+        apercu_filets(geo, soleil_detache, off, a.apercu_filets)
     m["geometrie"] = geo
     write(geo, m)
     JSON_OUT.write_text(json.dumps(m, indent=1, ensure_ascii=False), encoding="utf-8")

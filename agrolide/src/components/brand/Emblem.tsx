@@ -1,17 +1,22 @@
 import * as React from "react"
 import { cn } from "@/lib/utils/formatters"
 import { FORME_PATHS } from "./forme-paths"
+import { GEOMETRIE } from "./geometrie"
 
-export type EmblemVariant = "couleur" | "plein" | "creux"
+/**
+ * couleur : l'emblème du favicon, aplats de marque (vert, soleil, feuilles) ;
+ * noir    : le même dessin en une couleur, noir ;
+ * blanc   : le même dessin en une couleur, blanc (sur vert profond, sur photo, en mode sombre) ;
+ * mono    : le même dessin à la couleur du texte (`currentColor`), pour un ton de marque ;
+ * creux   : le contour de ce dessin (`currentColor`), trait constant à l'écran.
+ * En une couleur, le soleil est détaché des collines par un filet blanc d'un demi-trait (31 px du favicon) :
+ * sans lui, le dessin se refermerait en silhouette pleine. L'emblème « plein » (silhouette) n'existe plus.
+ */
+export type EmblemVariant = "couleur" | "noir" | "blanc" | "mono" | "creux"
 
 export interface EmblemProps extends Omit<React.SVGAttributes<SVGSVGElement>, "viewBox"> {
-  /**
-   * couleur : l'emblème du favicon, aplats de marque (vert, soleil, feuilles) ;
-   * plein   : silhouette monochrome (`currentColor`) ;
-   * creux   : contour monochrome (`currentColor`), trait de 3 unités sur 1044 comme `favicon-contour-*`.
-   */
   variant?: EmblemVariant
-  /** Épaisseur du trait de la variante `creux`, en unités du dessin (1044 de large). Défaut : 3 (tracé d'origine). */
+  /** Épaisseur du contour de la variante `creux`, en pixels d'écran (défaut 1,5). */
   strokeWidth?: number
   /** Alternative textuelle. Sans elle, l'emblème est décoratif. */
   title?: string
@@ -24,12 +29,21 @@ const LAYER_FILL: Record<string, string | undefined> = {
   "soleil-clair": "var(--ag-ref-sun-60)",
 }
 
+const MONO = GEOMETRIE.emblemeMono
+const MONO_D = MONO.reseau + MONO.soleil
+const MONO_FILL: Record<"noir" | "blanc" | "mono", string> = {
+  noir: "var(--ag-ref-neutral-0)",
+  blanc: "var(--ag-ref-neutral-100)",
+  mono: "currentColor",
+}
+
 /**
  * Emblème rond du logo (soleil, collines, feuille) en vecteur exact, tracé depuis `Favicon agrolide.png`
- * par `scripts/forme/vectorize.py`. Ne pas recolorer la version `couleur`.
+ * (`scripts/forme/vectorize.py` pour la couleur, `scripts/forme/primitives.py` pour le soleil détaché).
+ * Ne pas recolorer la version `couleur`.
  */
-export function Emblem({ variant = "couleur", strokeWidth, title, className, ...props }: EmblemProps) {
-  const geo = variant === "couleur" ? FORME_PATHS["emblem-couleur"] : variant === "plein" ? FORME_PATHS["emblem-plein"] : FORME_PATHS["emblem-creux"]
+export function Emblem({ variant = "couleur", strokeWidth = 1.5, title, className, ...props }: EmblemProps) {
+  const geo = FORME_PATHS["emblem-couleur"]
   const [, , w, h] = geo.viewBox
   return (
     <svg
@@ -42,12 +56,10 @@ export function Emblem({ variant = "couleur", strokeWidth, title, className, ...
       {...props}
     >
       {variant === "couleur" &&
-        geo.layers?.map((l) => (
-          <path key={l.id} d={l.d} fillRule="evenodd" style={{ fill: LAYER_FILL[l.id] ?? l.fill }} />
-        ))}
-      {variant === "plein" && <path d={geo.d} fill="currentColor" fillRule="evenodd" />}
+        geo.layers?.map((l) => <path key={l.id} d={l.d} fillRule="evenodd" style={{ fill: LAYER_FILL[l.id] ?? l.fill }} />)}
+      {(variant === "noir" || variant === "blanc" || variant === "mono") && <path d={MONO_D} fillRule="evenodd" style={{ fill: MONO_FILL[variant] }} />}
       {variant === "creux" && (
-        <path d={geo.d} fill="none" stroke="currentColor" strokeWidth={strokeWidth ?? geo.stroke ?? 3} strokeLinejoin="round" />
+        <path d={MONO_D} fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
       )}
     </svg>
   )
