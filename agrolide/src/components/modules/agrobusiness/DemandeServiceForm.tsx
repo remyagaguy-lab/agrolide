@@ -7,14 +7,23 @@ import { Textarea } from "@/components/ui/Textarea"
 import { Turnstile, turnstileEnabled } from "@/components/ui/Turnstile"
 import { Loader2 } from "lucide-react"
 
-export default function DemandeServiceForm() {
+/** Coordonnées préremplies quand le formulaire est ouvert par un membre connecté. */
+export interface CoordonneesInitiales {
+  prenom?: string
+  nom?: string
+  email?: string
+  pays?: string
+  organisation?: string
+}
+
+export default function DemandeServiceForm({ initial }: { initial?: CoordonneesInitiales } = {}) {
   const [formData, setFormData] = useState({
-    prenom: '',
-    nom: '',
-    email: '',
+    prenom: initial?.prenom ?? '',
+    nom: initial?.nom ?? '',
+    email: initial?.email ?? '',
     telephone: '',
-    pays: '',
-    organisation: '',
+    pays: initial?.pays ?? '',
+    organisation: initial?.organisation ?? '',
     type_service: '',
     description: '',
   })

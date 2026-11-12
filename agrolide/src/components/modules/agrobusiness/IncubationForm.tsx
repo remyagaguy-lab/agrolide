@@ -7,13 +7,22 @@ import { Textarea } from "@/components/ui/Textarea"
 import { Turnstile, turnstileEnabled } from "@/components/ui/Turnstile"
 import { Loader2 } from "lucide-react"
 
-export default function IncubationForm() {
+/** Coordonnées préremplies quand le formulaire est ouvert par un membre connecté. */
+export interface CoordonneesInitiales {
+  prenom?: string
+  nom?: string
+  email?: string
+  pays?: string
+  organisation?: string
+}
+
+export default function IncubationForm({ initial }: { initial?: CoordonneesInitiales } = {}) {
   const [formData, setFormData] = useState({
-    prenom: '',
-    nom: '',
-    email: '',
+    prenom: initial?.prenom ?? '',
+    nom: initial?.nom ?? '',
+    email: initial?.email ?? '',
     telephone: '',
-    pays: '',
+    pays: initial?.pays ?? '',
     titre_projet: '',
     stade_avancement: '',
     description_projet: '',

@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { ChevronDown, ExternalLink, LogOut, User } from "lucide-react"
+import { Bell, ChevronDown, CreditCard, ExternalLink, LogOut, ShieldCheck, User } from "lucide-react"
 import { useClerk } from "@/lib/auth/client"
 import { Avatar } from "@/components/ui/Avatar"
 import { ThemeMenuItems } from "@/components/ui/ThemeToggle"
@@ -59,6 +59,16 @@ export function MembresUserMenu({ profile, compact = false }: MembresUserMenuPro
         <DropdownMenuItem asChild>
           <Link href="/membres/profil"><User className="size-4 text-on-surface-muted" aria-hidden="true" /> Mon profil</Link>
         </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/membres/profil/confidentialite"><ShieldCheck className="size-4 text-on-surface-muted" aria-hidden="true" /> Confidentialité</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/membres/cotisation"><CreditCard className="size-4 text-on-surface-muted" aria-hidden="true" /> Cotisation</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/membres/notifications"><Bell className="size-4 text-on-surface-muted" aria-hidden="true" /> Notifications</Link>
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link href="/"><ExternalLink className="size-4 text-on-surface-muted" aria-hidden="true" /> Retour au site</Link>
         </DropdownMenuItem>
