@@ -7,7 +7,7 @@ import { checkTrocEligibility, getDocumentUrl } from '@/app/actions/bibliotheque
 import Link from 'next/link'
 import { useAuth } from '@/lib/auth/client'
 
-export function DownloadButton({ documentId }: { documentId: string }) {
+export function DownloadButton({ documentId, mode = 'public' }: { documentId: string; mode?: 'membre' | 'public' }) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -23,7 +23,7 @@ export function DownloadButton({ documentId }: { documentId: string }) {
 
   // Le quota de lectures gratuites est géré par le serveur (cookie signé) : on ouvre simplement le lecteur.
   const handleRead = () => {
-    router.push(`/bibliotheque/${documentId}/lire`)
+    router.push(`${mode === 'membre' ? '/membres' : ''}/bibliotheque/${documentId}/lire`)
   }
 
   const handleDownload = async () => {

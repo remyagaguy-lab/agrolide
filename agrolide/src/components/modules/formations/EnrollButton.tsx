@@ -11,7 +11,8 @@ export function EnrollButton({
   isLoggedIn,
   isExternal = false,
   lienExterne = "",
-  className = ""
+  className = "",
+  mode = "public"
 }: { 
   formationId: string; 
   firstLeconId?: string;
@@ -20,13 +21,16 @@ export function EnrollButton({
   isExternal?: boolean;
   lienExterne?: string;
   className?: string;
+  /** « membre » : le lecteur s'ouvre dans l'espace membre ; « public » : le visiteur doit d'abord se connecter. */
+  mode?: "membre" | "public";
 }) {
   const router = useRouter();
+  const lecteur = (leconId: string) => `/membres/formations/${formationId}/suivre/${leconId}`;
   const [loading, setLoading] = useState(false);
 
   const handleEnroll = async () => {
     if (!isLoggedIn) {
-      router.push(`/login?callbackUrl=/formations/${formationId}`);
+      router.push(`/login?next=${encodeURIComponent(`/formations/${formationId}`)}`);
       return;
     }
 
@@ -34,7 +38,7 @@ export function EnrollButton({
       if (isExternal && lienExterne) {
         window.open(lienExterne, "_blank");
       } else if (firstLeconId) {
-        router.push(`/learn/${formationId}/${firstLeconId}`);
+        router.push(lecteur(firstLeconId));
       }
       return;
     }
@@ -49,7 +53,7 @@ export function EnrollButton({
           window.open(lienExterne, "_blank");
           router.refresh();
         } else if (firstLeconId) {
-          router.push(`/learn/${formationId}/${firstLeconId}`);
+          router.push(lecteur(firstLeconId));
           router.refresh();
         }
       }

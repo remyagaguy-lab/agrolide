@@ -4,7 +4,7 @@ import { FileText } from 'lucide-react'
 export type DocSuggere = { id: string; titre: string; type_doc: string; thematique: string }
 
 /** « Vous aimerez peut-être aussi » : colonne à droite sur ordinateur, bande défilante sous le lecteur sur téléphone. */
-export function AussiAimerColonne({ docs }: { docs: DocSuggere[] }) {
+export function AussiAimerColonne({ docs, mode = 'public' }: { docs: DocSuggere[]; mode?: 'membre' | 'public' }) {
   if (docs.length === 0) return null
   return (
     <section aria-label="Vous aimerez peut-être aussi">
@@ -13,7 +13,7 @@ export function AussiAimerColonne({ docs }: { docs: DocSuggere[] }) {
         {docs.map((d) => (
           <li key={d.id} className="snap-start shrink-0 w-[70%] sm:w-[45%] lg:w-auto">
             <Link
-              href={`/bibliotheque/${d.id}`}
+              href={`${mode === 'membre' ? '/membres' : ''}/bibliotheque/${d.id}`}
               className="flex h-full items-start gap-3 rounded-xl border border-outline-variant bg-surface-container-lowest p-3 hover:border-success/30 hover:shadow-sm transition"
             >
               <span className="mt-0.5 flex h-10 w-8 shrink-0 items-center justify-center rounded bg-success-container text-success">

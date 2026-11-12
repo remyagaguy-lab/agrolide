@@ -360,7 +360,7 @@ export default function MessagesClient({ contact, refus }: MessagesClientProps) 
                 refus.raison === 'introuvable' ? (
                   <Button variant="secondary" href="/membres/annuaire">Découvrir des membres</Button>
                 ) : (
-                  <Button variant="secondary" href={`/annuaire/${refus.id}`}>Voir sa fiche</Button>
+                  <Button variant="secondary" href={`/membres/annuaire/${refus.id}`}>Voir sa fiche</Button>
                 )
               }
             />

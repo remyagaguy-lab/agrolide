@@ -10,7 +10,7 @@
     "lint": "eslint",
     "ds:tokens": "node scripts/ds-tokens.mjs",
     "ds:check": "node scripts/ds-check.mjs",
-    "test:unit": "tsx --test src/lib/reseau/*.test.ts"
+    "test:unit": "tsx --test src/lib/reseau/*.test.ts src/lib/*.test.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1075.0",

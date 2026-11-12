@@ -47,7 +47,7 @@ export function RelationCard({ member }: { member: MemberSummary }) {
         <Avatar src={member.photo_url} name={name} size="lg" />
         <div className="min-w-0 flex-1">
           <h3 className="text-title-md text-on-surface">
-            <Link href={`/annuaire/${member.id}`} className="inline-flex min-h-11 items-center rounded-tag">
+            <Link href={`/membres/annuaire/${member.id}`} className="inline-flex min-h-11 items-center rounded-tag">
               {name}
             </Link>
           </h3>

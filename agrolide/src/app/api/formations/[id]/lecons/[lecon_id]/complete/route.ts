@@ -55,7 +55,7 @@ export async function POST(
           await notifier(userId, {
             type: "formation",
             contenu: `Bravo ! Vous avez terminé la formation « ${formation?.titre ?? "Formation"} ».`,
-            lien: "/membres/formations",
+            lien: "/membres/formations/mes-certificats",
           });
         }
       }

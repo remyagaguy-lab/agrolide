@@ -42,7 +42,7 @@ export async function validateDocument(documentId: string) {
     await notifier(doc.depose_par, {
       type: 'document',
       contenu: `Votre document « ${doc.titre} » a été publié dans la bibliothèque.`,
-      lien: `/membres/bibliotheque?search=${encodeURIComponent(doc.titre)}`,
+      lien: `/membres/bibliotheque/${documentId}`,
     })
   }
 

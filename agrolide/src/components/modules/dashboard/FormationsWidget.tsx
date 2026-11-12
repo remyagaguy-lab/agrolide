@@ -26,7 +26,7 @@ export interface FormationsWidgetProps {
 export function FormationsWidget({
   formations,
   title = "Formations & cours",
-  viewAllHref = "/formations",
+  viewAllHref = "/membres/formations/catalogue",
   className,
 }: FormationsWidgetProps) {
   return (
@@ -48,7 +48,7 @@ export function FormationsWidget({
             {formations.map((form) => (
               <TableRow key={form.id} className="group">
                 <TableCell className="px-5">
-                  <Link href={`/formations/${form.id}`} className="block rounded-tag">
+                  <Link href={`/membres/formations/${form.id}`} className="block rounded-tag">
                     <p className="line-clamp-1 text-title-sm text-on-surface group-hover:text-primary">{form.titre}</p>
                     <p className="mt-0.5 text-body-sm text-on-surface-muted">Source : {form.source_externe || "agrolide"}</p>
                   </Link>

@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
       await notifier(membre_id, {
         type: 'evenement',
         contenu: `Votre inscription à « ${event.titre} » est confirmée.`,
-        lien: `/evenements/${evenement_id}`,
+        lien: `/membres/evenements/${evenement_id}`,
       })
     }
 

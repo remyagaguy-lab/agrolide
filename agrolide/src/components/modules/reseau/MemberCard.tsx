@@ -51,7 +51,7 @@ export function MemberCard({
         <div className="min-w-0 flex-1">
           <h3 className="text-title-md text-on-surface">
             <Link
-              href={`/annuaire/${member.id}`}
+              href={`/membres/annuaire/${member.id}`}
               className="rounded-tag after:absolute after:inset-0 after:rounded-card focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-primary"
             >
               {name}

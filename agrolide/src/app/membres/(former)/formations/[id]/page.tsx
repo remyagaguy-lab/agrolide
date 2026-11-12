@@ -1,49 +1,15 @@
-import { notFound } from 'next/navigation'
-import { db } from '@/db'
-import { formations, sessions_formation, avis_formation, users } from '@/db/schema'
-import { eq } from 'drizzle-orm'
-import { FormationDetailClient } from '@/components/modules/formations/FormationDetailClient'
+import { db } from "@/db";
+import { formations } from "@/db/schema";
+import { eq } from "drizzle-orm";
+import { FormationDetailView } from "@/components/modules/formations/FormationDetailView";
 
-export default async function FormationDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-  
-  const formation = await db.query.formations.findFirst({
-    where: eq(formations.id, id)
-  })
-    
-  if (!formation) {
-    notFound()
-  }
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const f = await db.query.formations.findFirst({ columns: { titre: true }, where: eq(formations.id, id) });
+  return { title: f?.titre ?? "Formation" };
+}
 
-  // Fetch relations manually since Drizzle schema might not have all nested relations configured correctly
-  const sessions = await db.query.sessions_formation.findMany({
-    where: eq(sessions_formation.formation_id, id)
-  })
-
-  const avisList = await db.query.avis_formation.findMany({
-    where: eq(avis_formation.formation_id, id)
-  })
-
-  const avisWithProfiles = await Promise.all(avisList.map(async (avis) => {
-    const profile = await db.query.users.findFirst({
-      where: eq(users.id, avis.membre_id),
-      columns: { prenom: true, nom: true, photo_url: true }
-    })
-    return { ...avis, profiles: profile }
-  }))
-
-  const formationData = {
-    ...formation,
-    sessions_formation: sessions,
-    intervenants: [], // no intervenants table in schema
-    avis_formation: avisWithProfiles
-  }
-
-  return (
-    <div className="bg-surface-container-low min-h-screen py-8">
-      <FormationDetailClient 
-        initialFormation={formationData as any} 
-      />
-    </div>
-  )
+export default async function FormationMembrePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return <FormationDetailView id={id} mode="membre" />;
 }

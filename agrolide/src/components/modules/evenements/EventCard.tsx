@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, MapPin, Globe, Users, Clock, FileText, Download } from 'lucide-react'
+import { Calendar, MapPin, Globe, Users, Clock, FileText, Download, CheckCircle } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { ArcheBadge } from '@/components/brand'
@@ -27,9 +27,14 @@ interface EventCardProps {
   event: Evenement
   onInscrireClick: (event: Evenement) => void
   onDetailsClick?: (event: Evenement) => void
+  /** « membre » : les liens restent dans l'espace membre ; « public » (défaut) : fiches du site public. */
+  mode?: 'membre' | 'public'
+  /** Le membre connecté est déjà inscrit à cet événement. */
+  inscrit?: boolean
 }
 
-export default function EventCard({ event, onInscrireClick, onDetailsClick }: EventCardProps) {
+export default function EventCard({ event, onInscrireClick, onDetailsClick, mode = 'public', inscrit = false }: EventCardProps) {
+  const lienFiche = `${mode === 'membre' ? '/membres' : ''}/evenements/${event.id}`
   
   // Formatage des dates
   const dateDebut = new Date(event.date_debut)
@@ -53,7 +58,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
     <div className={`group bg-surface-container-lowest rounded-2xl border border-outline-variant overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full ${isPast ? 'opacity-90' : ''}`}>
       {event.image_url && (
         <Link 
-          href={`/evenements/${event.id}`}
+          href={lienFiche}
           className="w-full h-40 bg-surface-container relative cursor-pointer block"
         >
           <Image 
@@ -98,7 +103,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
           </div>
         </div>
         
-        <Link href={`/evenements/${event.id}`}>
+        <Link href={lienFiche}>
           <h3 className="text-xl font-bold text-on-surface mb-2 line-clamp-2 hover:text-primary transition-colors">
             {event.titre}
           </h3>
@@ -154,7 +159,11 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick }: Ev
             )}
           </div>
         ) : (
-          event.lien_inscription ? (
+          inscrit ? (
+            <p className="w-full py-2.5 bg-success-container text-on-success-container border border-success/30 font-medium rounded-xl text-sm flex items-center justify-center gap-2">
+              <CheckCircle className="w-4 h-4" aria-hidden="true" /> Vous êtes inscrit(e)
+            </p>
+          ) : event.lien_inscription ? (
             <a 
               href={event.lien_inscription} 
               target="_blank" 

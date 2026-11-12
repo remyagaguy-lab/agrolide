@@ -214,7 +214,7 @@ export default async function DashboardPage() {
           <FormationsWidget
             formations={formationsData}
             title="Formations & Cours"
-            viewAllHref="/formations"
+            viewAllHref="/membres/formations/catalogue"
           />
 
           <ResourcesWidget

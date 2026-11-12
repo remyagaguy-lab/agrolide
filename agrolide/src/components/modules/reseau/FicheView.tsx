@@ -168,7 +168,7 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
                 {fiche.documents.map((doc) => (
                   <li key={doc.id}>
                     <Link
-                      href={`/bibliotheque/${doc.id}`}
+                      href={`/membres/bibliotheque/${doc.id}`}
                       className="ag-state flex min-h-12 items-start gap-3 rounded-control border border-outline-variant p-3 transition-colors duration-150 ease-standard hover:bg-surface-container-low"
                     >
                       <FileText className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden />

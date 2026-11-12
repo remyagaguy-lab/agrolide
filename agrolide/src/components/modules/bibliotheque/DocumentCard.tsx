@@ -46,7 +46,8 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
     }
   }
 
-  const href = `/bibliotheque/${document.id}`
+  // Le visiteur reste sur le site public ; un membre reste dans son espace.
+  const href = publicView ? `/bibliotheque/${document.id}` : `/membres/bibliotheque/${document.id}`
 
   return (
     <Link href={href} className={`group flex flex-col h-full bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all overflow-hidden`}>
