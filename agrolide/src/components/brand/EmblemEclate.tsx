@@ -20,7 +20,9 @@ export interface EmblemEclateProps {
 /**
  * L'emblème ÉCLATÉ : le dôme et les trois pièces du bas (la colline, le grand sillon, la feuille), détachées de l'anneau.
  * Chaque pièce du bas = son aplat intérieur + un demi-trait autour (le trait vert coupé en son milieu), coins arrondis du même
- * demi-trait comme le bout du grand sillon. Tout est construit avec les cercles mesurés du favicon.
+ * demi-trait comme le bout du grand sillon. Les quatre pièces s'inscrivent dans le cercle extérieur de l'emblème (anneau ext.) :
+ * les aplats bordés par l'anneau s'arrêtent sur son axe (le trait coupé en son milieu), les bouts du grand sillon sont tangents au
+ * cercle. Tout est construit avec les cercles mesurés du favicon.
  * Rôle : ILLUSTRATION DE GRAND FORMAT (page 404, en-tête, page d'erreur, écran d'accueil d'application), 240 px et plus.
  */
 export function EmblemEclate({ variante = "plein", photo, className }: EmblemEclateProps) {

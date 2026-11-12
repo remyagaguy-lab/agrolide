@@ -1,6 +1,7 @@
 import * as React from 'react'
+import Image from 'next/image'
 import { BookOpen, Search } from 'lucide-react'
-import { Anneau, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
+import { Anneau, Arche, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
 
 const R = GEOMETRIE.rayons
 const pct = (v: number) => `×${v.toFixed(2).replace('.', ',')}`
@@ -45,10 +46,10 @@ const LIGNES: Ligne[] = [
     forme: 'Arche (le dôme)',
     composant: '<Arche variant="plein">, <ArcheBadge>',
     origine: 'La silhouette de l’emblème au-dessus de sa 1re ligne blanche (anneau, ciel, collines), IoU 0,991. Le sillon autrefois accolé dessous est retiré (12/11/2026).',
-    role: 'PORTEUR à taille moyenne : carte « titre dans l’arche », badge de pictogramme, date d’événement, onglet-signature du héros.',
-    tailles: 'Badge 40 à 112 px, contenu au centre optique du dôme (axe de symétrie, mi-hauteur de la corde verticale) ; carte : 125 % de la largeur ; onglet 150 à 184 px.',
+    role: 'PORTEUR à taille moyenne : carte « titre dans l’arche », badge de pictogramme, date d’événement.',
+    tailles: 'Badge 40 à 112 px, contenu au centre optique du dôme (axe de symétrie, mi-hauteur de la corde verticale). Carte : dôme de 130 % de la largeur, COLLÉ au bord bas (calotte de 58 % de la largeur au plus, 62 % au maximum géométrique) : son bord bas courbe ne se voit jamais, aucun vide de photo dessous.',
     couleurs: 'Jaune soleil + pictogramme vert ; vert + pictogramme blanc ; blanc sur photo (carte).',
-    interdit: 'Lui recoller un sillon, l’utiliser comme cadre photo au trait, la centrer sous un titre, empiler plusieurs dômes.',
+    interdit: 'Lui recoller un sillon, laisser voir la photo sous son bord bas, le poser seul en onglet sur un bord, l’utiliser comme cadre photo au trait, le centrer sous un titre, empiler plusieurs dômes.',
     demo: <ArcheBadge className="w-14"><BookOpen /></ArcheBadge>,
   },
   {
@@ -64,7 +65,7 @@ const LIGNES: Ligne[] = [
   {
     forme: 'Emblème éclaté',
     composant: '<EmblemEclate>',
-    origine: 'Le dôme et les trois pièces du bas (colline, grand sillon, feuille), détachées de l’anneau. Chaque pièce = son aplat intérieur + un demi-trait autour ; coins arrondis du même demi-trait, comme le bout du grand sillon.',
+    origine: 'Le dôme et les trois pièces du bas (colline, grand sillon, feuille), détachées de l’anneau. Chaque pièce = son aplat intérieur + un demi-trait autour ; coins arrondis du même demi-trait, comme le bout du grand sillon. Toutes s’inscrivent dans le cercle extérieur de l’emblème (écart < 0,2 px) : les aplats bordés par l’anneau s’arrêtent sur son axe, les bouts du grand sillon sont tangents au cercle.',
     role: 'ILLUSTRATION DE GRAND FORMAT : page 404, en-tête d’accueil, écran d’erreur ; le ciel peut porter le soleil ou une photo.',
     tailles: '240 px et plus ; jamais en badge ni en icône (trop chargé en petit).',
     couleurs: 'Vert profond ou blanc ; soleil jaune dans le ciel (variante soleil).',
@@ -195,7 +196,7 @@ export function Grammaire() {
       <h3 className="mb-3 mt-10 text-title-md">Six règles de composition</h3>
       <ol className="grid gap-3 md:grid-cols-2">
         {[
-          ['Une seule grande forme par vue.', 'Plan soleil, fenêtre ou sillons : un seul par écran. Les petites formes (badge, feuille, anneau, onglet) ont un rôle et une place fixes.'],
+          ['Une seule grande forme par vue.', 'Plan soleil, fenêtre ou sillons : un seul par écran. Les petites formes (badge, feuille, anneau) ont un rôle et une place fixes.'],
           ['La forme est coupée par un bord.', 'Le plan et les sillons partent d’un bord ou d’un coin de la vue ; jamais flottants au centre.'],
           ['Jamais de trait sur un grand plan.', 'Les grands aplats sont pleins, les échos aussi. Seul l’anneau (petit) est un trait.'],
           ['Le texte se pose DANS le plan.', 'Titre de 2 à 3 lignes, jamais un long paragraphe ; contraste vérifié (blanc sur vert, vert sur jaune).'],
@@ -252,6 +253,24 @@ export function Grammaire() {
             <li key={t} className="flex gap-2.5"><Puce />{t}</li>
           ))}
         </ul>
+      </div>
+      <div className="mt-4 grid items-center gap-4 md:grid-cols-3">
+        <article className="@container relative aspect-[4/5] overflow-hidden rounded-card bg-surface-container shadow-elev-1">
+          <Image src="/images/formations/ext-fao-1.webp" alt="Parcelle irriguée au goutte-à-goutte, panneaux solaires et agricultrice" fill sizes="(min-width: 768px) 30vw, 100vw" className="object-cover" />
+          <div aria-hidden="true" className="absolute bottom-0 left-[-15%] h-[58cqw] w-[130%] overflow-hidden">
+            <Arche variant="plein" className="absolute inset-x-0 top-0 w-full text-surface-container-lowest" />
+          </div>
+          <div className="absolute inset-x-0 bottom-[9cqw] px-8 text-center">
+            <p className="text-label-sm uppercase tracking-[0.1em] text-primary">Formation · 6 semaines</p>
+            <h4 className="mx-auto mt-1.5 max-w-[15rem] text-title-lg text-on-surface">Irrigation goutte-à-goutte sur petite parcelle</h4>
+          </div>
+        </article>
+        <p className="text-body-sm text-on-surface-variant md:col-span-2">
+          Carte « titre dans l’arche » (formations à la une, pas les listes denses) : le dôme, à 130 % de la largeur de la carte, est collé au bord bas.
+          Seule sa calotte se voit (58 % de la largeur) ; son bord bas courbe reste sous la carte, si bien qu’aucun morceau de photo n’apparaît
+          sous le dôme. La catégorie et le titre (2 à 3 lignes) se posent dedans. Le soleil + échos a été écarté pour ce rôle : ses échos voilent la
+          photo, et parfois le visage, puis l’assombrissent en mode sombre.
+        </p>
       </div>
       <p className="mt-4 max-w-3xl text-body-sm text-on-surface-muted">
         <code>HorizonDivider</code> (courbes approchées) reste disponible pour les pages existantes ; <code>Horizon</code> le remplacera page par page.{' '}

@@ -307,7 +307,8 @@ export default function DesignSystemPage() {
             <p className="mb-4 max-w-3xl text-body-md text-on-surface-variant">
               L’<strong>arche</strong> est le dôme de l’emblème : sa silhouette au-dessus de la première ligne blanche. La <strong>fenêtre</strong> est son ciel.
               L’<strong>éclaté</strong> pose sous le dôme les trois pièces du bas (la colline, le grand sillon, la feuille), détachées de l’anneau : chaque pièce
-              est son aplat intérieur entouré d’un demi-trait. Il est réservé aux grands formats (404, en-tête).
+              est son aplat intérieur entouré d’un demi-trait, et toutes s’inscrivent dans le même cercle que l’emblème (le cercle extérieur de l’anneau) :
+              les aplats que bordait l’anneau s’arrêtent sur son axe, les deux bouts du grand sillon sont tangents au cercle. Il est réservé aux grands formats (404, en-tête).
             </p>
             <div className="grid gap-4 md:grid-cols-4">
               <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="plein" className="w-40 text-primary" /><code className="text-label-sm text-on-surface-muted">Arche variant=&quot;plein&quot;</code></div>

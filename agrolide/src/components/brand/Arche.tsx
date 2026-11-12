@@ -26,7 +26,7 @@ export type ArcheVariant = "creux" | "plein" | "soleil" | "frame" | "solid" | "s
 
 export interface ArcheProps extends Omit<React.SVGAttributes<SVGSVGElement>, "viewBox"> {
   /**
-   * plein  : le dôme plein (badge, onglet, filigrane) ;
+   * plein  : le dôme plein (badge, carte, filigrane) ;
    * creux  : le dôme évidé de son ciel (l'anneau et les collines), avec le soleil jaune dans l'ouverture (`sun`) ;
    * soleil : le ciel seul, en jaune de marque.
    */

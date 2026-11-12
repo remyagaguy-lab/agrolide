@@ -493,19 +493,28 @@ def derivees(m: dict, geo: dict):
             pts += [A_[k], B_[k]]
         return d + "Z", som
 
-    cg = {k: (A[k]["c"], A[k]["r"]) for k in ("colline-int-haut", "colline-int-droite", "colline-int-anneau", "feuille-haut", "feuille-bas")}
-    colline_d, colline_som = piece([(*cg["colline-int-anneau"], True), (*cg["colline-int-haut"], True), (*cg["colline-int-droite"], False)],
+    # CERCLE ENVELOPPE (décision du 12/11/2026) : toutes les pièces s'inscrivent dans le cercle extérieur de l'emblème
+    # (C, R = anneau ext.), comme le dôme. Les bords qui longeaient l'anneau (colline à gauche, feuille en bas) ne suivent
+    # plus leur bord mesuré (459,2 / 465,2, d'où un retrait de 25 et 17 px) : leur aplat s'arrête sur l'AXE de l'anneau
+    # (R - demi-trait = 484,4 ≈ rayon médian 485,0) — l'anneau est le trait qui les borde, coupé en son milieu comme les
+    # autres — et le demi-trait ajouté les amène exactement sur R. Les bords entre pièces (donc les écarts) sont inchangés.
+    env = (C, R - demi, True)
+    cg = {k: (A[k]["c"], A[k]["r"]) for k in ("colline-int-haut", "colline-int-droite", "feuille-haut")}
+    colline_d, colline_som = piece([env, (*cg["colline-int-haut"], True), (*cg["colline-int-droite"], False)],
                                    [(560, 1070), (820, 1120), (630, 1290)])
     tips = geo["feuille"]["pointes"]
-    feuille_d, _ = piece([(*cg["feuille-haut"], True), (*cg["feuille-bas"], True)], [tips[1], tips[0]])
-    # grand sillon : trait entier, bout rond d'origine à gauche ; à droite il s'arrête sur l'axe de l'anneau, bout rond
-    rm = (R + Rin) / 2
-    q_ = inter(C, rm, c2, r2, lambda p: -p[0])
-    a_fin2 = ang(c2, q_)
-    cap_d = pt(c2, r2, a_fin2)
+    feuille_d, _ = piece([(*cg["feuille-haut"], True), env], [tips[1], tips[0]])
+    # grand sillon : trait entier d'épaisseur constante ; ses deux bouts ronds sont TANGENTS au cercle enveloppe
+    # (centre du bout rond sur le cercle C, R - e/2). À gauche, le bout d'origine dépassait de 9,6 px par l'ouverture de l'anneau.
+    ra = R - e2 / 2
+    q_ = inter(C, ra, c2, r2, lambda p: -p[0])
+    q0 = inter(C, ra, c2, r2, lambda p: math.hypot(p[0] - cap_c[0], p[1] - cap_c[1]))
+    a_fin2, a_deb2 = ang(c2, q_), ang(c2, q0)
+    cap_d, cap_g = pt(c2, r2, a_fin2), pt(c2, r2, a_deb2)
     od, idd = pt(c2, ro, a_fin2), pt(c2, ri, a_fin2)
-    sillon_d = (f"M{f2(oc[0])} {f2(oc[1])}" + arc(c2, ro, a_cap, a_fin2, +1) + arc(cap_d, e2 / 2, ang(cap_d, od), ang(cap_d, idd), +1)
-                + arc(c2, ri, a_fin2, a_cap, -1) + arc(cap_c, e2 / 2, ang(cap_c, ic), ang(cap_c, oc), +1) + "Z")
+    og, ig = pt(c2, ro, a_deb2), pt(c2, ri, a_deb2)
+    sillon_d = (f"M{f2(og[0])} {f2(og[1])}" + arc(c2, ro, a_deb2, a_fin2, +1) + arc(cap_d, e2 / 2, ang(cap_d, od), ang(cap_d, idd), +1)
+                + arc(c2, ri, a_fin2, a_deb2, -1) + arc(cap_g, e2 / 2, ang(cap_g, ig), ang(cap_g, og), +1) + "Z")
     eclate = {"colline": colline_d, "sillon": sillon_d, "feuille": feuille_d, "demiTrait": round(demi, 2)}
     eclate_vb = [round(C[0] - R - 2, 2), round(C[1] - R - 2, 2), round(2 * R + 4, 2), round(2 * R + 4, 2)]
 
