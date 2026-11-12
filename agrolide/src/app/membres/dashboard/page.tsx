@@ -3,6 +3,8 @@ import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users, evenements, inscriptions_evenement, documents, opportunites, cotisations } from "@/db/schema"
 import { and, asc, eq, desc, gte } from "drizzle-orm"
+import { completionProfil } from "@/lib/reseau/profil-schema"
+import { parseList } from "@/lib/reseau/profil"
 import { suiviFormations } from "@/lib/formations/suivi.server"
 import { compterInvitations, compterMessagesNonLus } from "@/lib/membres/compteurs.server"
 
@@ -195,6 +197,7 @@ export default async function DashboardPage() {
             isAdhesionActive={isAdhesionActive}
             joursRestants={joursRestants}
             annuaireVisible={profile.annuaire_visible}
+            completion={completionProfil({ ...profile, thematiques: parseList(profile.secteurs_expertise) }).pourcentage}
           />
         </div>
 
