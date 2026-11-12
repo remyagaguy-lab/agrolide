@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
+import { useRouter } from 'next/navigation'
 import { useUser } from '@/lib/auth/client'
 import { ArrowLeft, Send, MessageCircle, Users } from 'lucide-react'
 import { format } from 'date-fns'
@@ -31,6 +32,7 @@ const nomComplet = (c?: { prenom?: string | null; nom?: string | null } | null) 
 
 export default function MessagesClient({ contact, refus }: MessagesClientProps) {
   const { user, isLoaded } = useUser()
+  const router = useRouter()
   const [conversations, setConversations] = useState<any[]>([])
   const [activeConvId, setActiveConvId] = useState<string | null>(contact?.id ?? null)
   const [messages, setMessages] = useState<any[]>([])
@@ -74,6 +76,8 @@ export default function MessagesClient({ contact, refus }: MessagesClientProps) 
         const data = await res.json()
         if (Array.isArray(data)) {
           setMessages(data)
+          // Le chargement a marqué les messages comme lus : le compteur de la navigation se recalcule.
+          router.refresh()
         } else {
           setError('Impossible de charger les messages. Réessayez dans un instant.')
         }

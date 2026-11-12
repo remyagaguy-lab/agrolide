@@ -3,11 +3,11 @@ import Link from "next/link"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
-import { eq, and, or, isNull } from "drizzle-orm"
+import { eq, and, or, isNull, count } from "drizzle-orm"
 import { LogoutButton } from "@/components/ui/LogoutButton"
 import { MembresLayout } from "@/components/layout/MembresLayout"
 import { AlertCircle } from "lucide-react"
-import { user_connections } from "@/db/schema"
+import { user_connections, messages } from "@/db/schema"
 
 export default async function MembresRootLayout({
   children,
@@ -81,6 +81,22 @@ export default async function MembresRootLayout({
       console.error("[membres] Erreur recup pending requests:", e);
     }
 
+    // 6. Messages non lus : un seul comptage, sur l'index (destinataire_id, lu).
+    // Une valeur vide de `lu` compte comme non lue, comme dans l'API des conversations.
+    let unreadMessagesCount = 0
+    try {
+      const [row] = await db
+        .select({ total: count() })
+        .from(messages)
+        .where(and(
+          eq(messages.destinataire_id, userId),
+          or(eq(messages.lu, false), isNull(messages.lu))
+        ))
+      unreadMessagesCount = Number(row?.total ?? 0)
+    } catch (e) {
+      console.error("[membres] Erreur comptage messages non lus:", e)
+    }
+
     return (
       <div className="min-h-screen bg-surface-container-low flex flex-col">
         {/* Header moved to MembresLayout for client-side routing state */}
@@ -113,7 +129,7 @@ export default async function MembresRootLayout({
 
         {/* Si le compte est suspendu, on n'affiche pas le layout complet */}
         {statut !== "suspendu" && (
-          <MembresLayout profile={profile} pendingRequestsCount={pendingRequestsCount}>
+          <MembresLayout profile={profile} pendingRequestsCount={pendingRequestsCount} unreadMessagesCount={unreadMessagesCount}>
             <div className="container mx-auto px-4 py-8">
               {children}
             </div>

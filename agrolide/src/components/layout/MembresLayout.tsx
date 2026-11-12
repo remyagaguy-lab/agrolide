@@ -26,11 +26,16 @@ interface MembresLayoutProps {
   children: React.ReactNode
   profile: any
   pendingRequestsCount?: number
+  unreadMessagesCount?: number
 }
 
-type NavItem = { name: string; href: string; icon: React.ComponentType<{ className?: string; strokeWidth?: number; "aria-hidden"?: boolean }>; badge?: number }
+type NavItem = { name: string; href: string; icon: React.ComponentType<{ className?: string; strokeWidth?: number; "aria-hidden"?: boolean }>; badge?: number; badgeLabel?: (n: number) => string }
 
-export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: MembresLayoutProps) {
+const labelInvitations = (n: number) => `${n} ${n > 1 ? "demandes en attente" : "demande en attente"}`
+const labelMessages = (n: number) => `${n} ${n > 1 ? "messages non lus" : "message non lu"}`
+const afficherNombre = (n: number) => (n > 99 ? "99+" : String(n))
+
+export function MembresLayout({ children, profile, pendingRequestsCount = 0, unreadMessagesCount = 0 }: MembresLayoutProps) {
   const pathname = usePathname()
   const { signOut } = useClerk()
   const [moreOpen, setMoreOpen] = React.useState(false)
@@ -51,8 +56,8 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
   ]
 
   const navPersonal: NavItem[] = [
-    { name: "Mon réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
-    { name: "Messages", href: "/membres/messages", icon: Mail },
+    { name: "Mon réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount, badgeLabel: labelInvitations },
+    { name: "Messages", href: "/membres/messages", icon: Mail, badge: unreadMessagesCount, badgeLabel: labelMessages },
     { name: "Mes Formations", href: "/membres/formations", icon: BookOpen },
     { name: "Mon Profil", href: "/membres/profil", icon: User },
   ]
@@ -61,13 +66,13 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
   const mobileNavItems: NavItem[] = [
     { name: "Accueil", href: "/membres/dashboard", icon: LayoutDashboard },
     { name: "Annuaire", href: "/membres/annuaire", icon: Users },
-    { name: "Mon réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount },
+    { name: "Mon réseau", href: "/membres/reseau", icon: Users, badge: pendingRequestsCount, badgeLabel: labelInvitations },
     { name: "Formations", href: "/membres/formations", icon: BookOpen },
   ]
   const moreItems: NavItem[] = [
     { name: "Mon profil", href: "/membres/profil", icon: User },
     { name: "Bibliothèque", href: "/membres/bibliotheque", icon: Library },
-    { name: "Messages", href: "/membres/messages", icon: Mail },
+    { name: "Messages", href: "/membres/messages", icon: Mail, badge: unreadMessagesCount, badgeLabel: labelMessages },
     { name: "Événements", href: "/membres/evenements", icon: Calendar },
     { name: "Opportunités", href: "/membres/opportunites", icon: Briefcase },
     { name: "Catalogue des formations", href: "/formations", icon: BookOpen },
@@ -94,8 +99,8 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
         <span>{item.name}</span>
         {item.badge ? (
           <span className="ml-auto rounded-full bg-error px-2 py-0.5 text-label-sm text-on-error">
-            <span className="sr-only">Demandes en attente : </span>
-            {item.badge}
+            <span className="sr-only">{item.badgeLabel?.(item.badge)} — </span>
+            <span aria-hidden>{afficherNombre(item.badge)}</span>
           </span>
         ) : null}
       </Link>
@@ -196,7 +201,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
                   <item.icon className="size-[22px]" strokeWidth={isActive ? 2.5 : 2} aria-hidden />
                   {item.badge ? (
                     <span className="absolute -right-1.5 -top-1 size-2.5 rounded-full border-2 border-surface-container-lowest bg-error">
-                      <span className="sr-only">{item.badge} demandes en attente</span>
+                      <span className="sr-only">{item.badgeLabel?.(item.badge)}</span>
                     </span>
                   ) : null}
                 </span>
@@ -207,7 +212,14 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
 
           <Modal open={moreOpen} onOpenChange={setMoreOpen}>
             <ModalTrigger className="relative flex h-16 min-w-16 flex-1 flex-col items-center justify-center gap-1 rounded-card text-label-sm font-medium text-on-surface-variant">
-              <Menu className="size-[22px]" aria-hidden />
+              <span className="relative">
+                <Menu className="size-[22px]" aria-hidden />
+                {unreadMessagesCount > 0 ? (
+                  <span className="absolute -right-1.5 -top-1 size-2.5 rounded-full border-2 border-surface-container-lowest bg-error">
+                    <span className="sr-only">{labelMessages(unreadMessagesCount)}</span>
+                  </span>
+                ) : null}
+              </span>
               <span>Plus</span>
             </ModalTrigger>
             <ModalContent className="gap-2">
@@ -223,6 +235,12 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0 }: M
                   >
                     <item.icon className="size-5 text-on-surface-muted" aria-hidden />
                     {item.name}
+                    {item.badge ? (
+                      <span className="ml-auto rounded-full bg-error px-2 py-0.5 text-label-sm text-on-error">
+                        <span className="sr-only">{item.badgeLabel?.(item.badge)} — </span>
+                        <span aria-hidden>{afficherNombre(item.badge)}</span>
+                      </span>
+                    ) : null}
                   </Link>
                 ))}
                 <button
