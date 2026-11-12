@@ -9,7 +9,7 @@ import { Card } from "@/components/ui/Card"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp } from "lucide-react"
-import { Motif } from "@/components/brand"
+import { ArchPhoto, Motif } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: {
@@ -182,30 +182,15 @@ export default async function HomePage() {
         {/* Motif Background for texture (placed behind the image) */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
 
-        {/* Image de fond avec mask pour fondu fluide */}
-        <div className="absolute top-0 right-0 w-full md:w-[55%] h-full pointer-events-none z-[1]">
-          <Image
-            src="/hero-background.webp"
-            alt="Agriculture africaine"
-            fill
-            priority
-            fetchPriority="high"
-            sizes="(max-width: 768px) 100vw, 55vw"
-            className="object-cover object-[center_80%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_60%)] md:[mask-image:linear-gradient(to_right,transparent_0%,black_40%)]"
-          />
-          {/* Calque d'assombrissement uniquement sur mobile pour le contraste */}
-          <div className="absolute inset-0 bg-surface-brand/60 md:hidden" />
-        </div>
+        <div className="max-w-[1100px] mx-auto px-6 pt-[32px] pb-0 md:pt-[48px] relative z-20 grid items-end gap-x-8 gap-y-6 md:grid-cols-[1fr_1.1fr]">
+          <div className="pb-8 md:pb-14 md:self-center">
 
-        <div className="max-w-[1100px] mx-auto px-6 pt-[32px] pb-0 md:pt-[48px] relative z-20">
-          <div className="max-w-[900px]">
-
-            <h1 className="font-heading font-[800] text-[40px] md:text-[64px] text-on-surface-brand leading-[1.08] tracking-[-0.03em] mb-8 drop-shadow-xl md:drop-shadow-none">
+            <h1 className="font-heading font-[800] text-[40px] md:text-[48px] lg:text-[56px] text-on-surface-brand leading-[1.08] tracking-[-0.03em] mb-8">
               Fédérer la chaîne<br />
               agricole, pour conquérir<br />
-              <span className="text-accent-sun drop-shadow-md md:drop-shadow-none">la souveraineté alimentaire</span>
+              <span className="text-accent-sun">la souveraineté alimentaire</span>
             </h1>
-            <p className="font-sans text-[16px] text-on-surface-brand max-w-[600px] leading-[1.8] mb-10 drop-shadow-lg md:drop-shadow-none font-medium md:font-normal">
+            <p className="font-sans text-[16px] text-on-surface-brand max-w-[600px] leading-[1.8] mb-10">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l'agriculture africaine.{" "}
               <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Étudiants en agronomie</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Ingénieurs Agronomes</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Chercheurs</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Entreprises Agricoles</strong>, <strong className="text-accent-sun font-[800] drop-shadow-sm md:drop-shadow-none">Investisseurs</strong> construisons... ensemble l'agriculture africaine que nous voulons.
             </p>
@@ -224,6 +209,12 @@ export default async function HomePage() {
               </Link>
             </div>
           </div>
+          {/* Photo vue à travers l'arche de la marque : un seul visuel fort, en bas du héros. */}
+          <ArchPhoto
+            src="/hero-background.webp"
+            alt="Une agricultrice souriante tient une caisse de laitues fraîchement récoltées dans une serre"
+            className="mx-auto w-full max-w-[560px] text-on-surface-brand md:-mr-[7%] md:w-[114%] md:max-w-none md:translate-y-px"
+          />
 
         </div>
       </section>
