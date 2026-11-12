@@ -6,6 +6,7 @@ import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { parseList, type MemberSummary } from "@/lib/reseau/profil"
+import { carteDepuis } from "@/lib/reseau/carte-publique"
 import { buttonVariants } from "@/components/ui/Button"
 import { ConfidentialiteForm } from "./ConfidentialiteForm"
 
@@ -29,6 +30,7 @@ export default async function ConfidentialitePage() {
       secteurs_expertise: users.secteurs_expertise,
       annuaire_visible: users.annuaire_visible,
       ouvert_contact: users.ouvert_contact,
+      profil_public: users.profil_public,
     })
     .from(users)
     .where(eq(users.id, userId))
@@ -66,8 +68,9 @@ export default async function ConfidentialitePage() {
       </header>
 
       <ConfidentialiteForm
-        initial={{ annuaireVisible: row.annuaire_visible !== false, ouvertContact: row.ouvert_contact !== false }}
+        initial={{ annuaireVisible: row.annuaire_visible !== false, ouvertContact: row.ouvert_contact !== false, profilPublic: row.profil_public === true }}
         apercu={apercu}
+        carte={carteDepuis(row)}
       />
     </div>
   )

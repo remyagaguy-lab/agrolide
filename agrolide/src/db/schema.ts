@@ -1,4 +1,4 @@
-import { text, integer, sqliteTable, primaryKey, real, index } from "drizzle-orm/sqlite-core";
+import { text, integer, sqliteTable, primaryKey, real, index, uniqueIndex } from "drizzle-orm/sqlite-core";
 
 export const agripreneurs = sqliteTable("agripreneurs", {
   created_at: text("created_at"),
@@ -461,6 +461,10 @@ export const users = sqliteTable("user", {
   created_at: text("created_at"),
   updated_at: text("updated_at"),
   ville: text("ville"),
+  // Lot 5 du réseau (migration drizzle/0006_reseau_lot5.sql, appliquée) : carte publique opt-in, centres d'intérêt et recherche (JSON, listes fermées).
+  profil_public: integer("profil_public", { mode: "boolean" }).default(false),
+  centres_interet: text("centres_interet"),
+  recherche: text("recherche"),
 }, (t) => [
   index("idx_users_role_plateforme").on(t.role_plateforme),
   index("idx_users_statut_adhesion").on(t.statut_adhesion),
@@ -514,11 +518,39 @@ export const user_connections = sqliteTable("user_connections", {
   requester_id: text("requester_id").notNull().references(() => users.id, { onDelete: "cascade" }),
   receiver_id: text("receiver_id").notNull().references(() => users.id, { onDelete: "cascade" }),
   status: text("status").notNull(), // 'pending', 'accepted', 'rejected'
+  message: text("message"), // note facultative d'invitation (≤ 300 caractères, contrôlée côté serveur)
   created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
   updated_at: text("updated_at").$defaultFn(() => new Date().toISOString()),
 }, (t) => [
   index("idx_user_connections_requester_id").on(t.requester_id),
   index("idx_user_connections_receiver_id").on(t.receiver_id),
+  index("idx_user_connections_receiver_status").on(t.receiver_id, t.status),
+  // L'index unique de la paire de membres (uq_user_connections_pair, expression min()/max()) n'existe que dans le SQL
+  // de la migration : drizzle-kit ne sait pas le décrire. Ne pas le supprimer si `generate` le propose.
+]);
+
+/** Blocage : `blocker_id` a bloqué `blocked_id`. */
+export const user_blocks = sqliteTable("user_blocks", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  blocker_id: text("blocker_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  blocked_id: text("blocked_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  created_at: text("created_at").notNull().$defaultFn(() => new Date().toISOString()),
+}, (t) => [
+  uniqueIndex("uq_user_blocks_pair").on(t.blocker_id, t.blocked_id),
+  index("idx_user_blocks_blocked_id").on(t.blocked_id),
+]);
+
+/** Signalement d'un membre : motif choisi dans une liste fermée, statut 'nouveau' à la création. */
+export const signalements = sqliteTable("signalements", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  signaleur_id: text("signaleur_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  signale_id: text("signale_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  motif: text("motif").notNull(),
+  statut: text("statut").notNull().default("nouveau"),
+  created_at: text("created_at").notNull().$defaultFn(() => new Date().toISOString()),
+}, (t) => [
+  index("idx_signalements_statut").on(t.statut, t.created_at),
+  index("idx_signalements_signale_id").on(t.signale_id),
 ]);
 
 

@@ -76,7 +76,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   return { success: true }
 }
 
-const confidentialiteSchema = z.object({ annuaire_visible: z.boolean(), ouvert_contact: z.boolean() })
+const confidentialiteSchema = z.object({ annuaire_visible: z.boolean(), ouvert_contact: z.boolean(), profil_public: z.boolean() })
 
 /** Réglages de confidentialité : présence dans l'annuaire et les suggestions, ouverture aux invitations. */
 export async function updateConfidentialite(payload: unknown): Promise<ResultatProfil> {
@@ -90,6 +90,8 @@ export async function updateConfidentialite(payload: unknown): Promise<ResultatP
     .set({
       annuaire_visible: parsed.data.annuaire_visible,
       ouvert_contact: parsed.data.ouvert_contact,
+      // Masquer son profil de l'annuaire coupe aussi la carte publique : jamais de carte sans présence dans l'annuaire.
+      profil_public: parsed.data.annuaire_visible ? parsed.data.profil_public : false,
       updated_at: new Date().toISOString(),
     })
     .where(eq(users.id, userId))

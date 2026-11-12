@@ -7,12 +7,15 @@ import { useToast } from "@/components/ui/Toast"
 import { Button } from "@/components/ui/Button"
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from "@/components/ui/Modal"
 import { MemberCard } from "@/components/modules/reseau/MemberCard"
+import { CartePubliqueView } from "@/components/modules/reseau/CartePubliqueView"
+import type { CartePublique } from "@/lib/reseau/carte-publique"
 import { updateConfidentialite } from "@/app/actions/profil"
 import type { MemberSummary } from "@/lib/reseau/profil"
 
 interface Props {
-  initial: { annuaireVisible: boolean; ouvertContact: boolean }
+  initial: { annuaireVisible: boolean; ouvertContact: boolean; profilPublic: boolean }
   apercu: MemberSummary
+  carte: CartePublique
 }
 
 function Reglage({ id, titre, description, checked, onChange }: { id: string; titre: string; description: string; checked: boolean; onChange: (v: boolean) => void }) {
@@ -37,33 +40,40 @@ function Reglage({ id, titre, description, checked, onChange }: { id: string; ti
   )
 }
 
-export function ConfidentialiteForm({ initial, apercu }: Props) {
+export function ConfidentialiteForm({ initial, apercu, carte }: Props) {
   const [visible, setVisible] = React.useState(initial.annuaireVisible)
   const [contact, setContact] = React.useState(initial.ouvertContact)
+  const [publicCard, setPublicCard] = React.useState(initial.profilPublic)
   const [saved, setSaved] = React.useState(initial)
   const [message, setMessage] = React.useState<{ type: "success" | "error"; text: string } | null>(null)
   const [pending, startTransition] = React.useTransition()
   const { toast } = useToast()
 
-  const modifie = visible !== saved.annuaireVisible || contact !== saved.ouvertContact
+  // Sans présence dans l'annuaire, il n'y a pas de carte publique (le serveur applique la même règle).
+  const carteActive = visible && publicCard
+  const modifie = visible !== saved.annuaireVisible || contact !== saved.ouvertContact || carteActive !== saved.profilPublic
 
   const [confirmer, setConfirmer] = React.useState(false)
+  const [confirmerPublic, setConfirmerPublic] = React.useState(false)
 
   const soumettre = (e: React.FormEvent) => {
     e.preventDefault()
     // Masquer son profil a des conséquences : on les explique et on demande confirmation avant d'enregistrer.
     if (saved.annuaireVisible && !visible) setConfirmer(true)
+    // Rendre sa carte visible sans compte est un choix qu'on confirme en connaissance de cause.
+    else if (!saved.profilPublic && carteActive) setConfirmerPublic(true)
     else enregistrer()
   }
 
   const enregistrer = () => {
     setConfirmer(false)
+    setConfirmerPublic(false)
     setMessage(null)
     startTransition(async () => {
       try {
-        const res = await updateConfidentialite({ annuaire_visible: visible, ouvert_contact: contact })
+        const res = await updateConfidentialite({ annuaire_visible: visible, ouvert_contact: contact, profil_public: carteActive })
         if (res.success) {
-          setSaved({ annuaireVisible: visible, ouvertContact: contact })
+          setSaved({ annuaireVisible: visible, ouvertContact: contact, profilPublic: carteActive })
           toast({ title: "Vos choix sont enregistrés", variant: "success" })
         } else {
           setMessage({ type: "error", text: res.error })
@@ -91,6 +101,13 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
             description="Si vous le désactivez, votre carte indique que vous ne recevez pas d’invitations et le bouton pour vous inviter disparaît."
             checked={contact}
             onChange={(v) => { setContact(v); setMessage(null) }}
+          />
+          <Reglage
+            id="reglage-public"
+            titre="Carte publique visible sans compte"
+            description="Si vous l’activez, une personne sans compte qui a le lien de votre fiche voit votre prénom, l’initiale de votre nom, votre photo, votre spécialité, votre pays et 3 thématiques au plus. Cette page n’est pas proposée aux moteurs de recherche. Désactivée par défaut."
+            checked={carteActive}
+            onChange={(v) => { setPublicCard(v); setMessage(null) }}
           />
         </ul>
 
@@ -122,6 +139,40 @@ export function ConfidentialiteForm({ initial, apercu }: Props) {
           <Alert variant="info">Vous n’apparaissez pas dans l’annuaire : aucun membre ne voit cette carte.</Alert>
         )}
       </div>
+      <div role="group" aria-labelledby="apercu-visiteur-titre" className="space-y-3">
+        <h2 id="apercu-visiteur-titre" className="flex items-center gap-2 text-title-md text-on-surface">
+          <Eye className="size-5" aria-hidden />
+          Voir comme un visiteur
+        </h2>
+        <p className="text-body-sm text-on-surface-variant">
+          Voici ce que voit une personne sans compte qui ouvre votre fiche, selon les choix ci-dessus (avant enregistrement).
+        </p>
+        {carteActive ? (
+          <div className="max-w-md" inert>
+            <CartePubliqueView carte={carte} titre="h3" />
+          </div>
+        ) : (
+          <Alert variant="info">Votre carte n’est pas publique : un visiteur voit seulement « Ce profil est réservé aux membres », comme pour un profil inexistant.</Alert>
+        )}
+      </div>
+      <Modal open={confirmerPublic} onOpenChange={setConfirmerPublic}>
+        <ModalContent>
+          <ModalHeader>
+            <ModalTitle>Rendre votre carte publique ?</ModalTitle>
+            <ModalDescription>Toute personne qui a le lien de votre fiche pourra voir, sans compte :</ModalDescription>
+          </ModalHeader>
+          <ul className="list-disc space-y-1.5 pl-5 text-body-md text-on-surface">
+            <li>votre prénom et l’initiale de votre nom ;</li>
+            <li>votre photo, votre spécialité et votre pays ;</li>
+            <li>3 thématiques au plus.</li>
+          </ul>
+          <p className="text-body-sm text-on-surface-variant">Votre e-mail, votre téléphone, votre nom complet et le reste de votre fiche restent réservés aux membres. Vous pouvez désactiver la carte à tout moment dans cette page.</p>
+          <ModalFooter>
+            <Button variant="outline" onClick={() => setConfirmerPublic(false)}>Annuler</Button>
+            <Button variant="secondary" onClick={enregistrer} loading={pending}>Rendre ma carte publique</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
       <Modal open={confirmer} onOpenChange={setConfirmer}>
         <ModalContent>
           <ModalHeader>
