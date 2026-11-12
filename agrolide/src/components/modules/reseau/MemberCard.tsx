@@ -24,7 +24,19 @@ const categoryVariant = (c: string | null): BadgeVariant => {
  * et un seul geste (Se connecter / Invitation envoyée / Accepter / Message).
  * Un seul lien principal (le nom) couvre toute la carte ; les boutons restent des cibles distinctes.
  */
-export function MemberCard({ member, onIgnore, libelleEnAttente }: { member: MemberSummary; /** Fourni pour une suggestion : ajoute le bouton « Ignorer ». */ onIgnore?: () => void; libelleEnAttente?: string }) {
+export function MemberCard({
+  member,
+  onIgnore,
+  libelleEnAttente,
+  titreRaisons = 'Pourquoi cette suggestion',
+}: {
+  member: MemberSummary
+  /** Fourni pour une suggestion : ajoute le bouton « Ignorer ». */
+  onIgnore?: () => void
+  libelleEnAttente?: string
+  /** Titre de la liste de raisons (par défaut celui d'une suggestion). */
+  titreRaisons?: string
+}) {
   const name = displayName(member)
   const category = categorieLabel(member.categorie)
   const place = [member.ville, member.pays].filter(Boolean).join(', ')
@@ -81,7 +93,7 @@ export function MemberCard({ member, onIgnore, libelleEnAttente }: { member: Mem
 
       {member.raisons && member.raisons.length > 0 && (
         <div>
-          <p className="text-label-md text-on-surface-variant">Pourquoi cette suggestion</p>
+          <p className="text-label-md text-on-surface-variant">{titreRaisons}</p>
           <ul className="mt-1 space-y-1">
             {member.raisons.map((r) => (
               <li key={r} className="flex items-start gap-1.5 text-body-sm text-on-surface">

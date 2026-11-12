@@ -1,27 +1,45 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import Image from 'next/image'
 import { useUser } from '@/lib/auth/client'
-import { useSearchParams } from 'next/navigation'
-import { Send, Loader2, MessageCircle, User } from 'lucide-react'
+import { ArrowLeft, Send, MessageCircle, Users } from 'lucide-react'
 import { format } from 'date-fns'
-import { fr } from 'date-fns/locale'
+import { Avatar } from '@/components/ui/Avatar'
+import { Button } from '@/components/ui/Button'
+import { IconButton } from '@/components/ui/IconButton'
+import { Spinner } from '@/components/ui/Spinner'
+import { EmptyState } from '@/components/ui/EmptyState'
+import { cn } from '@/lib/utils/formatters'
 
-export default function MessagesClient() {
-  const searchParams = useSearchParams()
-  const initialConvId = searchParams.get('conv') || searchParams.get('nouveau') || searchParams.get('user')
+/** Ce que la page serveur sait du contact ouvert : nom, photo et spécialité (jamais d'e-mail ni de téléphone). */
+export interface ContactMessagerie {
+  id: string
+  prenom: string | null
+  nom: string | null
+  photo_url: string | null
+  specialite: string | null
+}
 
+export interface MessagesClientProps {
+  /** Contact demandé par l'adresse (`?user=`), vérifié côté serveur comme relation acceptée. */
+  contact: ContactMessagerie | null
+  /** Pourquoi le contact demandé n'est pas utilisable ; `null` si tout va bien ou si aucun contact n'est demandé. */
+  refus: { raison: 'introuvable' | 'pas-de-relation'; id: string } | null
+}
+
+const nomComplet = (c?: { prenom?: string | null; nom?: string | null } | null) => `${c?.prenom ?? ''} ${c?.nom ?? ''}`.trim()
+
+export default function MessagesClient({ contact, refus }: MessagesClientProps) {
   const { user, isLoaded } = useUser()
   const [conversations, setConversations] = useState<any[]>([])
-  const [activeConvId, setActiveConvId] = useState<string | null>(initialConvId)
+  const [activeConvId, setActiveConvId] = useState<string | null>(contact?.id ?? null)
   const [messages, setMessages] = useState<any[]>([])
   const [currentUser, setCurrentUser] = useState<any>(null)
-  
+
   const [loadingConvs, setLoadingConvs] = useState(true)
   const [loadingMessages, setLoadingMessages] = useState(false)
   const [sending, setSending] = useState(false)
-  
+
   const [newMessage, setNewMessage] = useState('')
   const [error, setError] = useState('')
 
@@ -49,15 +67,19 @@ export default function MessagesClient() {
 
   const fetchMessages = async (correspondantId: string) => {
     setLoadingMessages(true)
+    setError('')
     if (user) {
       try {
         const res = await fetch(`/api/messages/${correspondantId}`)
         const data = await res.json()
         if (Array.isArray(data)) {
           setMessages(data)
+        } else {
+          setError('Impossible de charger les messages. Réessayez dans un instant.')
         }
       } catch (err) {
         console.error(err)
+        setError('Impossible de charger les messages. Réessayez dans un instant.')
       }
     }
     setLoadingMessages(false)
@@ -67,9 +89,9 @@ export default function MessagesClient() {
   useEffect(() => {
     if (activeConvId) {
       fetchMessages(activeConvId)
-      
-      // Update non-lus localement
-      setConversations(prev => prev.map(c => 
+
+      // Le chargement des messages les marque comme lus côté serveur : on met à jour la liste localement.
+      setConversations(prev => prev.map(c =>
         c.correspondant.id === activeConvId ? { ...c, non_lus: 0 } : c
       ))
     }
@@ -87,13 +109,10 @@ export default function MessagesClient() {
         const messageData = JSON.parse(event.data);
         if (messageData.type === 'NEW_MESSAGE') {
           const newMsg = messageData.message;
-          
-          // Si c'est un message pour la conversation active
+
           if (activeConvId && newMsg.expediteur_id === activeConvId) {
+            // Message de la conversation ouverte : il est affiché ; il sera marqué lu au prochain chargement.
             setMessages(prev => [...prev, newMsg]);
-            
-            // Marquer comme lu via API
-            fetch(`/api/messages/${newMsg.id}/read`, { method: 'POST' }).catch(console.error);
             scrollToBottom();
           } else {
             // Sinon, on met à jour la liste des conversations
@@ -112,22 +131,22 @@ export default function MessagesClient() {
 
   const scrollToBottom = () => {
     setTimeout(() => {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
     }, 100)
   }
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!newMessage.trim() || !activeConvId) return
-    
+
     setSending(true)
     setError('')
-    
+
     if (user) {
       try {
         const res = await fetch('/api/messages', {
           method: 'POST',
-          headers: { 
+          headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
@@ -139,11 +158,9 @@ export default function MessagesClient() {
         if (data.error) {
           setError(data.error)
         } else if (data.success) {
-          // Message sent
           setMessages(prev => [...prev, data.message])
           setNewMessage('')
           scrollToBottom()
-          // Update conversation list
           fetchConversations()
         }
       } catch (err: any) {
@@ -153,117 +170,132 @@ export default function MessagesClient() {
     setSending(false)
   }
 
-  const activeCorrespondant = conversations.find(c => c.correspondant.id === activeConvId)?.correspondant || 
-    (initialConvId && !conversations.find(c => c.correspondant.id === initialConvId) ? { id: initialConvId, prenom: 'Nouveau', nom: 'Contact' } : null)
+  // Le contact connu du serveur (nom, photo, spécialité) prime sur la liste, qui n'a pas la spécialité.
+  const fromList = conversations.find(c => c.correspondant.id === activeConvId)?.correspondant
+  const activeCorrespondant = activeConvId
+    ? {
+        id: activeConvId,
+        prenom: contact?.id === activeConvId ? contact.prenom : fromList?.prenom,
+        nom: contact?.id === activeConvId ? contact.nom : fromList?.nom,
+        photo_url: contact?.id === activeConvId ? contact.photo_url : fromList?.photo_url,
+        specialite: contact?.id === activeConvId ? contact.specialite : null,
+      }
+    : null
+  const activeName = nomComplet(activeCorrespondant) || 'ce membre'
 
   return (
-    <div className="flex h-full bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
-      
-      {/* Sidebar - Liste des conversations */}
-      <div className={`w-full md:w-80 border-r border-outline-variant flex flex-col bg-surface-container-low/30 ${activeConvId ? 'hidden md:flex' : 'flex'}`}>
-        <div className="p-4 border-b border-outline-variant flex items-center justify-between">
-          <h2 className="font-heading font-bold text-on-surface text-lg">Messages</h2>
-          <div className="w-6 h-6 rounded-md bg-surface-container flex items-center justify-center">
-             <MessageCircle size={14} className="text-on-surface-muted" />
-          </div>
+    <div className="relative flex h-[calc(100dvh-14rem)] min-h-[28rem] overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest lg:h-[calc(100dvh-9rem)]">
+
+      {/* Liste des conversations */}
+      <div
+        role="region"
+        aria-labelledby="messages-liste"
+        className={cn('w-full flex-col border-r border-outline-variant bg-surface-container-low md:w-80', activeConvId ? 'hidden md:flex' : 'flex')}
+      >
+        <div className="flex items-center justify-between border-b border-outline-variant p-4">
+          <h2 id="messages-liste" className="text-title-lg text-on-surface">Messages</h2>
         </div>
-        
-        <div className="flex-1 overflow-y-auto custom-scrollbar">
+
+        <div className="custom-scrollbar min-h-0 flex-1 overflow-y-auto">
           {loadingConvs ? (
-            <div className="p-8 text-center text-on-surface-muted"><Loader2 className="w-6 h-6 animate-spin mx-auto" /></div>
+            <div className="flex justify-center p-8 text-on-surface-muted" role="status" aria-label="Chargement des conversations"><Spinner /></div>
           ) : conversations.length === 0 ? (
-            <div className="p-8 text-center text-on-surface-muted flex flex-col items-center gap-3 mt-10">
-              <div className="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center">
-                 <MessageCircle className="w-8 h-8 text-outline" strokeWidth={1.5} />
-              </div>
-              <p className="text-sm font-medium">Aucune conversation</p>
+            <div className="flex flex-col items-center gap-3 p-6 text-center">
+              <p className="text-body-sm text-on-surface-variant">Aucune conversation pour le moment. Vous pouvez écrire à vos relations.</p>
+              <Button variant="outline" href="/membres/reseau?onglet=relations">
+                <Users className="size-5" aria-hidden />
+                Voir mes relations
+              </Button>
             </div>
           ) : (
-            <div className="divide-y divide-outline-variant p-2 space-y-1">
-              {conversations.map(conv => (
-                <button
-                  key={conv.correspondant.id}
-                  onClick={() => setActiveConvId(conv.correspondant.id)}
-                  className={`w-full text-left p-2.5 rounded-xl transition-all flex items-center gap-3 ${activeConvId === conv.correspondant.id ? 'bg-primary-container border border-outline-variant shadow-sm' : 'hover:bg-surface-container-low border border-transparent'}`}
-                >
-                  <div className="relative">
-                    <div className="w-10 h-10 rounded-full bg-primary-container text-primary flex items-center justify-center font-bold overflow-hidden shrink-0 shadow-sm border border-outline-variant">
-                      {conv.correspondant.avatar_url ? (
-                        <Image src={conv.correspondant.avatar_url} alt="avatar" fill sizes="40px" className="object-cover" />
-                      ) : (
-                        conv.correspondant.prenom?.charAt(0) || <User className="w-4 h-4" />
+            <ul className="space-y-1 p-2">
+              {conversations.map(conv => {
+                const name = nomComplet(conv.correspondant)
+                const actif = activeConvId === conv.correspondant.id
+                return (
+                  <li key={conv.correspondant.id}>
+                    <button
+                      type="button"
+                      onClick={() => setActiveConvId(conv.correspondant.id)}
+                      aria-current={actif ? 'true' : undefined}
+                      className={cn(
+                        'ag-state flex min-h-14 w-full items-center gap-3 rounded-control border p-2.5 text-left transition-colors duration-150 ease-standard',
+                        actif ? 'border-outline-variant bg-primary-container' : 'border-transparent hover:bg-surface-container',
                       )}
-                    </div>
-                    {conv.non_lus > 0 && (
-                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-tertiary text-on-tertiary text-[9px] font-bold rounded-full flex items-center justify-center border-2 border-surface shadow-sm">
-                        {conv.non_lus}
+                    >
+                      <span className="relative shrink-0">
+                        <Avatar src={conv.correspondant.photo_url} name={name} size="md" />
+                        {conv.non_lus > 0 && (
+                          <span className="absolute -right-1 -top-1 inline-flex min-w-5 items-center justify-center rounded-full border-2 border-surface-container-low bg-tertiary px-1 text-label-sm text-on-tertiary">
+                            <span aria-hidden>{conv.non_lus}</span>
+                            <span className="sr-only">{conv.non_lus} {conv.non_lus > 1 ? 'messages non lus' : 'message non lu'}</span>
+                          </span>
+                        )}
                       </span>
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex justify-between items-baseline mb-0.5">
-                      <div className="font-bold text-xs text-on-surface truncate">
-                        {conv.correspondant.prenom} {conv.correspondant.nom?.charAt(0)}.
-                      </div>
-                      <div className="text-[9px] font-bold text-on-surface-muted shrink-0 uppercase tracking-wider">
-                        {format(new Date(conv.dernier_message.created_at), "dd/MM")}
-                      </div>
-                    </div>
-                    <div className={`text-[11px] truncate ${conv.non_lus > 0 ? 'font-bold text-on-surface' : 'text-on-surface-muted'}`}>
-                      {conv.dernier_message.expediteur_id === currentUser?.id ? 'Vous: ' : ''}
-                      {conv.dernier_message.contenu}
-                    </div>
-                  </div>
-                </button>
-              ))}
-            </div>
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-baseline justify-between gap-2">
+                          <span className="truncate text-label-lg text-on-surface">{name || 'Membre agrolide'}</span>
+                          <span className="shrink-0 text-label-sm text-on-surface-muted">
+                            {format(new Date(conv.dernier_message.created_at), 'dd/MM')}
+                          </span>
+                        </span>
+                        <span className={cn('block truncate text-body-sm', conv.non_lus > 0 ? 'font-semibold text-on-surface' : 'text-on-surface-variant')}>
+                          {conv.dernier_message.expediteur_id === currentUser?.id ? 'Vous : ' : ''}
+                          {conv.dernier_message.contenu}
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                )
+              })}
+            </ul>
           )}
         </div>
       </div>
 
-      {/* Main Chat Area */}
-      <div className={`flex-1 flex flex-col bg-transparent ${!activeConvId ? 'hidden md:flex' : 'flex'}`}>
+      {/* Conversation */}
+      <div className={cn('min-w-0 flex-1 flex-col', !activeConvId ? 'hidden md:flex' : 'flex')}>
         {activeConvId ? (
           <>
-            {/* Chat Header */}
-            <div className="p-3 md:px-5 border-b border-outline-variant bg-surface-container-lowest flex items-center justify-between shrink-0">
-              <div className="flex items-center gap-3">
-                <button 
-                  onClick={() => setActiveConvId(null)}
-                  className="md:hidden p-1.5 text-on-surface-muted hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors"
-                >
-                  &larr; Retour
-                </button>
-                <div className="w-8 h-8 rounded-full bg-primary-container text-primary flex items-center justify-center font-bold overflow-hidden shadow-sm border border-outline-variant">
-                  {activeCorrespondant?.avatar_url ? (
-                    <Image src={activeCorrespondant.avatar_url} alt="avatar" fill sizes="32px" className="object-cover" />
-                  ) : (
-                    activeCorrespondant?.prenom?.charAt(0) || <User className="w-4 h-4" />
-                  )}
-                </div>
-                <div>
-                  <h3 className="font-bold text-on-surface text-sm">{activeCorrespondant?.prenom} {activeCorrespondant?.nom}</h3>
-                  <p className="text-[10px] text-primary font-bold uppercase tracking-wider">En ligne</p>
-                </div>
+            <div className="flex shrink-0 items-center gap-2 border-b border-outline-variant bg-surface-container-lowest p-3 md:px-5">
+              <IconButton label="Retour à la liste des conversations" className="md:hidden" onClick={() => setActiveConvId(null)}>
+                <ArrowLeft className="size-5" aria-hidden />
+              </IconButton>
+              <Avatar src={activeCorrespondant?.photo_url} name={activeName} size="md" />
+              <div className="min-w-0">
+                <h3 className="truncate text-title-sm text-on-surface">{activeName}</h3>
+                {activeCorrespondant?.specialite && (
+                  <p className="truncate text-body-sm text-on-surface-variant">{activeCorrespondant.specialite}</p>
+                )}
               </div>
             </div>
 
-            {/* Chat Messages */}
-            <div className="flex-1 overflow-y-auto p-4 bg-surface-container-low flex flex-col gap-4 custom-scrollbar">
+            <div
+              role="log"
+              aria-live="polite"
+              aria-label={`Conversation avec ${activeName}`}
+              className="custom-scrollbar flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto bg-surface-container-low p-4"
+            >
               {loadingMessages ? (
-                <div className="text-center text-on-surface-muted py-10"><Loader2 className="w-6 h-6 animate-spin mx-auto" /></div>
+                <div className="flex justify-center py-10 text-on-surface-muted" role="status" aria-label="Chargement des messages"><Spinner /></div>
               ) : messages.length === 0 ? (
-                <div className="text-center text-on-surface-muted py-10 text-xs bg-surface-container-lowest rounded-xl mx-auto px-4 py-2 border border-outline-variant max-w-sm">Début de la conversation sécurisée avec {activeCorrespondant?.prenom}.</div>
+                <p className="mx-auto max-w-sm rounded-control border border-outline-variant bg-surface-container-lowest px-4 py-3 text-center text-body-sm text-on-surface-variant">
+                  Aucun message pour le moment. Écrivez le premier à {activeCorrespondant?.prenom || activeName}.
+                </p>
               ) : (
-                messages.map((msg, idx) => {
+                messages.map((msg) => {
                   const isMe = msg.expediteur_id === currentUser?.id
                   return (
-                    <div key={msg.id} className={`flex flex-col max-w-[80%] md:max-w-[70%] ${isMe ? 'self-end items-end' : 'self-start items-start'}`}>
-                      <div className={`px-4 py-2.5 rounded-xl shadow-sm text-xs leading-relaxed ${isMe ? 'bg-primary text-on-primary rounded-br-sm' : 'bg-surface-container-lowest border border-outline-variant text-on-surface rounded-bl-sm'}`}>
+                    <div key={msg.id} className={cn('flex max-w-[85%] flex-col md:max-w-[70%]', isMe ? 'items-end self-end' : 'items-start self-start')}>
+                      <p className={cn(
+                        'whitespace-pre-wrap break-words rounded-card px-4 py-2.5 text-body-sm',
+                        isMe ? 'rounded-br-sm bg-primary text-on-primary' : 'rounded-bl-sm border border-outline-variant bg-surface-container-lowest text-on-surface',
+                      )}>
+                        <span className="sr-only">{isMe ? 'Vous' : activeName} : </span>
                         {msg.contenu}
-                      </div>
-                      <span className="text-[9px] font-bold text-on-surface-muted mt-1 px-1 uppercase tracking-wider">
-                        {format(new Date(msg.created_at), "HH:mm")}
+                      </p>
+                      <span className="mt-1 px-1 text-label-sm text-on-surface-muted">
+                        {format(new Date(msg.created_at), 'HH:mm')}
                       </span>
                     </div>
                   )
@@ -272,42 +304,56 @@ export default function MessagesClient() {
               <div ref={messagesEndRef} />
             </div>
 
-            {/* Chat Input */}
-            <div className="p-3 md:p-4 bg-surface-container-lowest border-t border-outline-variant shrink-0">
-              {error && <div className="mb-2 text-[10px] text-error bg-error-container px-3 py-1.5 rounded-lg font-bold uppercase tracking-wider">{error}</div>}
-              <form onSubmit={handleSend} className="flex gap-2 items-end max-w-4xl mx-auto">
-                <div className="flex-1 relative">
-                  <textarea 
-                    value={newMessage}
-                    onChange={e => setNewMessage(e.target.value)}
-                    placeholder="Écrivez votre message..."
-                    className="w-full bg-surface-container-low border border-outline-variant rounded-xl pl-4 pr-10 py-2.5 outline-none focus:ring-1 focus:ring-primary focus:border-primary resize-none max-h-24 min-h-[40px] text-xs transition-all custom-scrollbar"
-                    rows={1}
-                    onKeyDown={e => {
-                      if(e.key === 'Enter' && !e.shiftKey) {
-                        e.preventDefault();
-                        handleSend(e);
-                      }
-                    }}
-                  />
-                </div>
-                <button 
-                  type="submit"
-                  disabled={sending || !newMessage.trim()}
-                  className="w-10 h-10 bg-primary hover:bg-primary/90 text-on-primary rounded-xl flex items-center justify-center shrink-0 disabled:opacity-50 transition-all shadow-sm"
-                >
-                  {sending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
-                </button>
+            <div className="shrink-0 border-t border-outline-variant bg-surface-container-lowest p-3 md:p-4">
+              {error && <p role="alert" className="mb-2 rounded-control bg-error-container px-3 py-2 text-body-sm text-on-error-container">{error}</p>}
+              <form onSubmit={handleSend} className="flex items-end gap-2">
+                <textarea
+                  value={newMessage}
+                  onChange={e => setNewMessage(e.target.value)}
+                  aria-label={`Votre message à ${activeName}`}
+                  placeholder="Écrivez votre message…"
+                  maxLength={2000}
+                  rows={1}
+                  className="custom-scrollbar max-h-28 min-h-12 w-full flex-1 resize-none rounded-control border border-outline bg-surface-container-lowest px-4 py-3 text-body-sm text-on-surface placeholder:text-on-surface-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault()
+                      handleSend(e)
+                    }
+                  }}
+                />
+                <Button type="submit" variant="secondary" className="size-12 !min-h-12 !px-0" disabled={sending || !newMessage.trim()} loading={sending} aria-label="Envoyer le message">
+                  <Send className="size-5" aria-hidden />
+                </Button>
               </form>
             </div>
           </>
+        ) : refus ? (
+          <div className="flex flex-1 items-center justify-center p-4">
+            <EmptyState
+              icon={<MessageCircle />}
+              title={refus.raison === 'introuvable' ? 'Ce membre est introuvable' : 'Vous n’êtes pas connecté(e) à ce membre'}
+              description={
+                refus.raison === 'introuvable'
+                  ? 'Le lien ouvert ne correspond à aucun membre de l’annuaire.'
+                  : 'Vous pouvez échanger par message avec vos relations. Envoyez une invitation depuis sa fiche.'
+              }
+              action={
+                refus.raison === 'introuvable' ? (
+                  <Button variant="secondary" href="/membres/annuaire">Découvrir des membres</Button>
+                ) : (
+                  <Button variant="secondary" href={`/annuaire/${refus.id}`}>Voir sa fiche</Button>
+                )
+              }
+            />
+          </div>
         ) : (
-          <div className="flex-1 flex flex-col items-center justify-center text-on-surface-muted bg-transparent">
-            <div className="w-24 h-24 rounded-full bg-surface-container-low flex items-center justify-center mb-6 shadow-sm border border-on-surface-brand">
-               <MessageCircle className="w-10 h-10 text-outline" strokeWidth={1.5} />
-            </div>
-            <h3 className="font-heading font-bold text-xl text-on-surface mb-2">Vos Messages</h3>
-            <p className="text-on-surface-muted font-medium">Sélectionnez une conversation pour discuter.</p>
+          <div className="flex flex-1 flex-col items-center justify-center p-6 text-center">
+            <span aria-hidden className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-surface-container text-on-surface-muted">
+              <MessageCircle className="size-8" strokeWidth={1.5} />
+            </span>
+            <h3 className="text-title-lg text-on-surface">Vos messages</h3>
+            <p className="mt-1 text-body-md text-on-surface-variant">Sélectionnez une conversation pour écrire.</p>
           </div>
         )}
       </div>
