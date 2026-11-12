@@ -3,6 +3,7 @@ import { Calendar as CalendarIcon, UserCheck, ArrowUpRight } from "lucide-react"
 import { Badge, type BadgeVariant } from "@/components/ui/Badge"
 import { buttonVariants } from "@/components/ui/Button"
 import Link from "next/link"
+import { Arche, Motif } from "@/components/brand"
 
 interface DashboardHeaderProps {
   prenom?: string | null
@@ -39,26 +40,32 @@ export function DashboardHeader({ prenom, nom, categorie, specialite, organisati
   const metaItems = [specialite, organisation, ville && pays ? `${ville}, ${pays}` : pays || ville].filter(Boolean)
 
   return (
-    <div className="shrink-0 rounded-card border border-outline-variant bg-surface-container-lowest p-5 shadow-elev-1 md:p-6">
-      <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
+    <section
+      aria-label="Bienvenue"
+      className="relative shrink-0 overflow-hidden rounded-card bg-surface-brand p-5 text-on-surface-brand md:p-6"
+    >
+      {/* Décor de marque : motif discret et soleil levant en filigrane (décoratifs). */}
+      <Motif size={600} opacity={0.05} className="text-on-surface-brand" />
+      <Arche variant="plein" className="pointer-events-none absolute -bottom-10 right-4 z-0 hidden w-60 text-on-surface-brand/[0.07] lg:block" />
+      <div className="relative z-10 flex flex-col justify-between gap-4 lg:flex-row lg:items-center">
         <div className="min-w-0 space-y-2">
           <div className="flex flex-wrap items-center gap-2.5">
-            <h1 className="text-headline-sm text-on-surface" style={{ textWrap: "balance" }}>
+            <h1 className="text-headline-sm" style={{ textWrap: "balance" }}>
               Bonjour, {displayName}
             </h1>
             {badge && (
-              <Badge variant={badge.variant} className="rounded-full px-3 uppercase tracking-wider">
+              <Badge variant={badge.variant} className="rounded-full border border-on-surface-brand/40 px-3 uppercase tracking-wider">
                 <UserCheck className="size-3" aria-hidden="true" />
                 {badge.label}
               </Badge>
             )}
           </div>
 
-          <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-body-sm text-on-surface-variant">
+          <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-body-sm text-on-surface-brand/85">
             {metaItems.length > 0 ? (
               metaItems.map((item, idx) => (
                 <React.Fragment key={idx}>
-                  {idx > 0 && <span aria-hidden="true" className="text-outline">•</span>}
+                  {idx > 0 && <span aria-hidden="true" className="text-on-surface-brand/50">•</span>}
                   <span className="truncate">{item}</span>
                 </React.Fragment>
               ))
@@ -68,17 +75,17 @@ export function DashboardHeader({ prenom, nom, categorie, specialite, organisati
           </p>
         </div>
 
-        <div className="flex shrink-0 flex-wrap items-center gap-2.5 border-t border-outline-variant pt-3 lg:border-t-0 lg:pt-0">
-          <span className="inline-flex min-h-10 items-center gap-2 rounded-control bg-surface-container px-3.5 text-label-md tabular-nums text-on-surface-variant">
-            <CalendarIcon className="size-4 text-primary" aria-hidden="true" />
+        <div className="flex shrink-0 flex-wrap items-center gap-2.5 border-t border-on-surface-brand/20 pt-3 lg:border-t-0 lg:pt-0">
+          <span className="inline-flex min-h-10 items-center gap-2 rounded-control bg-on-surface-brand/10 px-3.5 text-label-md tabular-nums text-on-surface-brand">
+            <CalendarIcon className="size-4 text-accent-sun" aria-hidden="true" />
             {capitalizedDate}
           </span>
-          <Link href="/membres/annuaire" className={buttonVariants({ variant: "tonal", size: "sm" })}>
+          <Link href="/membres/annuaire" className={buttonVariants({ variant: "ghost-dark", size: "sm" })}>
             Annuaire des pairs
             <ArrowUpRight className="size-3.5" aria-hidden="true" />
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

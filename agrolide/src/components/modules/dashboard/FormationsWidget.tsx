@@ -70,7 +70,7 @@ export function FormationsWidget({
           </TableBody>
         </Table>
       ) : (
-        <EmptyState
+        <EmptyState arche
           className="m-4 flex-1 border-0 bg-transparent"
           icon={<BookOpen />}
           title="Aucune formation disponible"

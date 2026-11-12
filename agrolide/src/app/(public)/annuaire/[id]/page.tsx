@@ -23,7 +23,7 @@ export default async function FicheProfilPage({ params }: { params: Promise<{ id
   if (!userId) {
     return (
       <div className="container max-w-2xl py-16 md:py-24">
-        <EmptyState
+        <EmptyState arche
           icon={<Lock />}
           title="Ce profil est réservé aux membres"
           description="Connectez-vous pour consulter les profils du réseau agrolide, vous connecter aux autres membres et échanger avec eux."

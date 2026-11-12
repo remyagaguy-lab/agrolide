@@ -95,7 +95,7 @@ async function Suggestions({ viewerId }: { viewerId: string }) {
   const moi: ProfilPourScore | null = await fetchMonProfil(viewerId)
   if (!moi || !profilSuffisant(moi)) {
     return (
-      <EmptyState
+      <EmptyState arche
         icon={<Sparkles />}
         title="Complétez votre profil pour recevoir des suggestions"
         description="Sans spécialité, thématiques, langues ou pays, rien ne permet de vous comparer aux autres membres."
@@ -107,7 +107,7 @@ async function Suggestions({ viewerId }: { viewerId: string }) {
   const suggeres = result.members.filter((m) => m.suggere)
   if (suggeres.length === 0) {
     return (
-      <EmptyState
+      <EmptyState arche
         icon={<Sparkles />}
         title="Aucune suggestion pour le moment"
         description="Les membres déjà en relation avec vous ou invités ne sont pas proposés ici. Parcourez l’annuaire pour en trouver d’autres."
@@ -131,7 +131,7 @@ function Invitations({ recues, envoyees }: { recues: Awaited<ReturnType<typeof f
       <div role="region" aria-labelledby="titre-recues" className="space-y-4">
         <h2 id="titre-recues" className="text-title-lg text-on-surface">Reçues</h2>
         {recues.length === 0 ? (
-          <EmptyState icon={<UsersRound />} title="Aucune invitation en attente." description="Quand un membre vous invitera, vous pourrez l’accepter ou l’ignorer ici." />
+          <EmptyState arche icon={<UsersRound />} title="Aucune invitation en attente." description="Quand un membre vous invitera, vous pourrez l’accepter ou l’ignorer ici." />
         ) : (
           <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {recues.map((m) => (
@@ -146,7 +146,7 @@ function Invitations({ recues, envoyees }: { recues: Awaited<ReturnType<typeof f
       <div role="region" aria-labelledby="titre-envoyees" className="space-y-4">
         <h2 id="titre-envoyees" className="text-title-lg text-on-surface">Envoyées</h2>
         {envoyees.length === 0 ? (
-          <EmptyState icon={<Send />} title="Vous n’avez envoyé aucune invitation." action={DECOUVRIR} />
+          <EmptyState arche icon={<Send />} title="Vous n’avez envoyé aucune invitation." action={DECOUVRIR} />
         ) : (
           <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {envoyees.map((m) => (
@@ -165,7 +165,7 @@ async function Relations({ viewerId, q, tri }: { viewerId: string; q: string; tr
   const { relations, total } = await fetchRelations(viewerId, q, tri)
 
   if (total === 0) {
-    return <EmptyState icon={<UsersRound />} title="Vous n’avez pas encore de relations." description="Invitez des membres : une fois l’invitation acceptée, ils apparaissent ici." action={DECOUVRIR} />
+    return <EmptyState arche icon={<UsersRound />} title="Vous n’avez pas encore de relations." description="Invitez des membres : une fois l’invitation acceptée, ils apparaissent ici." action={DECOUVRIR} />
   }
 
   return (
@@ -192,7 +192,7 @@ async function Relations({ viewerId, q, tri }: { viewerId: string; q: string; tr
       </p>
 
       {relations.length === 0 ? (
-        <EmptyState
+        <EmptyState arche
           icon={<Search />}
           title="Aucune relation ne correspond à votre recherche"
           description="Essayez avec moins de mots, ou une autre orthographe."

@@ -94,14 +94,14 @@ async function Results({ viewerId, filters, moi, profilSuffisant }: { viewerId: 
 
   if (result.total === 0) {
     return hasFilters ? (
-      <EmptyState
+      <EmptyState arche
         icon={<Search />}
         title="Aucun membre ne correspond à votre recherche"
         description="Essayez avec moins de critères, ou une autre orthographe."
         action={<Button variant="secondary" href={BASE}>Effacer les filtres</Button>}
       />
     ) : (
-      <EmptyState
+      <EmptyState arche
         icon={<UserRound />}
         title="Aucun autre membre n’est visible pour le moment"
         description="Complétez votre profil : les autres membres pourront mieux vous reconnaître quand ils apparaîtront ici."

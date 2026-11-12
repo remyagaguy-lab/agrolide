@@ -91,7 +91,7 @@ export function OpportunitiesWidget({
           </TableBody>
         </Table>
       ) : (
-        <EmptyState
+        <EmptyState arche
           className="m-4 flex-1 border-0 bg-transparent"
           icon={<FolderOpen />}
           title="Aucune opportunité récente"

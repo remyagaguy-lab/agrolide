@@ -330,7 +330,7 @@ export default function MessagesClient({ contact, refus }: MessagesClientProps) 
           </>
         ) : refus ? (
           <div className="flex flex-1 items-center justify-center p-4">
-            <EmptyState
+            <EmptyState arche
               icon={<MessageCircle />}
               title={refus.raison === 'introuvable' ? 'Ce membre est introuvable' : 'Vous n’êtes pas connecté(e) à ce membre'}
               description={

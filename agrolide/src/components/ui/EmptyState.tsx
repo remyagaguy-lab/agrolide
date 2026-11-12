@@ -24,8 +24,8 @@ export function EmptyState({ icon, arche, title, description, action, className,
       )}
       {...props}
     >
-      {arche && <Arche variant="creux" className="mb-5 w-28 text-primary/70" />}
-      {icon && (
+      {arche ? <Arche variant="creux" className="mb-5 w-28 text-primary/70" /> : null}
+      {!arche && icon && (
         <span aria-hidden="true" className="mb-4 inline-flex size-14 items-center justify-center rounded-full bg-primary-container text-on-primary-container [&>svg]:size-6">
           {icon}
         </span>
