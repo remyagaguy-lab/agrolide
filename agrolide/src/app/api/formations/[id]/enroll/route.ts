@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { db } from "@/db";
-import { inscriptions_formation } from "@/db/schema";
+import { formations, inscriptions_formation } from "@/db/schema";
 import { auth } from "@/lib/auth/server";
+import { notifier } from "@/lib/notifications.server";
 import { and, eq } from "drizzle-orm";
 
 export async function POST(
@@ -31,6 +32,16 @@ export async function POST(
         membre_id: userId,
         formation_id: formationId,
         statut: "en_cours",
+      });
+
+      const formation = await db.query.formations.findFirst({
+        columns: { titre: true },
+        where: eq(formations.id, formationId),
+      });
+      await notifier(userId, {
+        type: "formation",
+        contenu: `Vous êtes inscrit(e) à la formation « ${formation?.titre ?? "Formation"} ».`,
+        lien: `/membres/formations/${formationId}`,
       });
     }
 

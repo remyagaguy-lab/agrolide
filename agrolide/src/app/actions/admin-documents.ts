@@ -5,6 +5,7 @@ import { db } from '@/db'
 import { documents, users } from '@/db/schema'
 import { eq, desc } from 'drizzle-orm'
 import { Resend } from 'resend'
+import { notifier } from '@/lib/notifications.server'
 import { revalidatePath } from 'next/cache'
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
@@ -23,12 +24,27 @@ export async function validateDocument(documentId: string) {
     throw new Error("Privilèges insuffisants")
   }
 
+  const doc = await db.select({ titre: documents.titre, depose_par: documents.depose_par })
+    .from(documents)
+    .where(eq(documents.id, documentId))
+    .limit(1)
+    .then(r => r[0])
+
   // Update status to 'publie'
   await db.update(documents).set({
     statut: 'publie',
     valide_par: currentUserId,
     published_at: new Date().toISOString()
   }).where(eq(documents.id, documentId))
+
+  // Le déposant apprend que son document est en ligne.
+  if (doc?.depose_par && doc.depose_par !== currentUserId) {
+    await notifier(doc.depose_par, {
+      type: 'document',
+      contenu: `Votre document « ${doc.titre} » a été publié dans la bibliothèque.`,
+      lien: `/membres/bibliotheque?search=${encodeURIComponent(doc.titre)}`,
+    })
+  }
 
   revalidatePath('/admin/contenus/documents')
   revalidatePath('/membres/bibliotheque')
@@ -79,6 +95,14 @@ export async function rejectDocument(documentId: string, reason: string) {
     statut: 'rejete',
     valide_par: currentUserId
   }).where(eq(documents.id, documentId))
+
+  if (doc.depose_par && doc.depose_par !== currentUserId) {
+    await notifier(doc.depose_par, {
+      type: 'document',
+      contenu: `Votre document « ${doc.titre} » n'a pas été retenu pour publication. Le motif vous a été envoyé par e-mail.`,
+      lien: '/membres/bibliotheque/deposer',
+    })
+  }
 
   // Send email if Resend is configured and author has an email
   if (resend && authorProfile?.email) {

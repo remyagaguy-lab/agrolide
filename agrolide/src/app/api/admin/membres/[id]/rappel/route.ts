@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 import { NextRequest } from "next/server"
 import { requireAdmin } from "@/lib/auth/admin"
 import { Resend } from "resend"
+import { notifier } from "@/lib/notifications.server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
@@ -47,6 +48,12 @@ export async function POST(
           </p>
         </div>
       `,
+    })
+    const { id } = await params
+    await notifier(id, {
+      type: "cotisation",
+      contenu: "Votre adhésion expire dans moins de 30 jours. Pensez à renouveler votre cotisation.",
+      lien: "/membres/cotisation",
     })
     return NextResponse.json({ success: true })
   } catch (error: any) {

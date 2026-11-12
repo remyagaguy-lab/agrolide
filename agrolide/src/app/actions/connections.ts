@@ -1,8 +1,9 @@
 'use server';
 
 import { db } from '@/db';
-import { notifications, user_connections } from '@/db/schema';
+import { user_connections } from '@/db/schema';
 import { auth } from '@/lib/auth/server';
+import { notifier as notifierMembre } from '@/lib/notifications.server';
 import { and, count, eq, inArray } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 import { existeBlocage } from '@/lib/reseau/blocage.server';
@@ -20,21 +21,9 @@ async function nomDe(id: string) {
   return `${u?.prenom ?? ''} ${u?.nom ?? ''}`.trim() || 'Un membre';
 }
 
-/** Une notification ne doit jamais faire échouer l'action qui la provoque. */
-async function notifier(userId: string, contenu: string, lien: string) {
-  try {
-    await db.insert(notifications).values({
-      user_id: userId,
-      type: 'connexion',
-      contenu,
-      lien,
-      lu: false,
-      created_at: new Date().toISOString(),
-    });
-  } catch (e) {
-    console.error('[connexions] notification non enregistrée :', e);
-  }
-}
+/** Une notification de réseau (ne fait jamais échouer l'action qui la provoque). */
+const notifier = (userId: string, contenu: string, lien: string) =>
+  notifierMembre(userId, { type: 'connexion', contenu, lien });
 
 /**
  * `badge` : le nombre d'invitations de la barre de navigation change (accepter, ignorer) → on rafraîchit tout l'espace membre.

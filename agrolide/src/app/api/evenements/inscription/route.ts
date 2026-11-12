@@ -4,6 +4,7 @@ import { db } from '@/db'
 import { evenements, inscriptions_evenement, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { Resend } from 'resend'
+import { notifier } from '@/lib/notifications.server'
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
@@ -64,6 +65,15 @@ export async function POST(request: NextRequest) {
       }
       console.error("Erreur d'insertion:", insertError)
       return NextResponse.json({ error: "Erreur lors de l'inscription." }, { status: 500 })
+    }
+
+    // Un membre connecté garde une trace de son inscription dans ses notifications.
+    if (membre_id) {
+      await notifier(membre_id, {
+        type: 'evenement',
+        contenu: `Votre inscription à « ${event.titre} » est confirmée.`,
+        lien: `/evenements/${evenement_id}`,
+      })
     }
 
     if (resend && emailDestinataire) {

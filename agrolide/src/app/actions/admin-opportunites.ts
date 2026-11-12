@@ -5,6 +5,7 @@ import { db } from '@/db'
 import { opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
+import { notifier } from '@/lib/notifications.server'
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();
@@ -26,7 +27,18 @@ async function checkAdmin() {
 export async function validateOpportunity(id: string) {
   await checkAdmin()
 
+  const opp = await db.query.opportunites.findFirst({
+    columns: { titre: true, poste_par: true },
+    where: eq(opportunites.id, id),
+  })
+
   await db.update(opportunites).set({ statut: 'publie' }).where(eq(opportunites.id, id))
+
+  await notifier(opp?.poste_par, {
+    type: 'opportunite',
+    contenu: `Votre opportunité « ${opp?.titre} » est publiée.`,
+    lien: '/membres/opportunites',
+  })
 
   revalidatePath('/admin/contenus/opportunites')
   revalidatePath('/opportunites')
@@ -37,7 +49,18 @@ export async function validateOpportunity(id: string) {
 export async function rejectOpportunity(id: string) {
   await checkAdmin()
 
+  const opp = await db.query.opportunites.findFirst({
+    columns: { titre: true, poste_par: true },
+    where: eq(opportunites.id, id),
+  })
+
   await db.update(opportunites).set({ statut: 'rejete' }).where(eq(opportunites.id, id))
+
+  await notifier(opp?.poste_par, {
+    type: 'opportunite',
+    contenu: `Votre opportunité « ${opp?.titre} » n'a pas été retenue pour publication.`,
+    lien: '/membres/opportunites',
+  })
 
   revalidatePath('/admin/contenus/opportunites')
   

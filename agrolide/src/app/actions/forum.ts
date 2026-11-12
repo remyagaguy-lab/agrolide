@@ -4,6 +4,7 @@ import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { forum_categories, forum_fils, forum_messages, users } from '@/db/schema'
 import { eq, desc, asc, and, count } from 'drizzle-orm'
+import { notifier } from '@/lib/notifications.server'
 
 export async function getForumCategories() {
   return await db.query.forum_categories.findMany({
@@ -92,6 +93,20 @@ export async function addReplyToThread(filId: string, contenu: string) {
     last_activity_at: new Date().toISOString(),
     nb_reponses: (fil.nb_reponses || 0) + 1
   }).where(eq(forum_fils.id, filId))
+
+  // L'auteur du fil est prévenu d'une réponse (pas de notification pour ses propres messages).
+  if (fil.auteur_id !== user.id) {
+    const repondant = await db.query.users.findFirst({
+      columns: { prenom: true, nom: true },
+      where: eq(users.id, user.id)
+    })
+    const nom = `${repondant?.prenom ?? ''} ${repondant?.nom ?? ''}`.trim() || 'Un membre'
+    await notifier(fil.auteur_id, {
+      type: 'forum',
+      contenu: `${nom} a répondu à votre fil « ${fil.titre} ».`,
+      lien: `/membres/forum/fil/${filId}`,
+    })
+  }
 
   return { success: true }
 }
