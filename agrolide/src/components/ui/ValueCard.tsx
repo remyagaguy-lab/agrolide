@@ -1,26 +1,31 @@
-import * as React from "react"
-import { cn } from "@/lib/utils/formatters"
-import { LucideIcon } from "lucide-react"
+import * as React from 'react'
+import type { LucideIcon } from 'lucide-react'
+import { Card } from './Card'
+import { cn } from '@/lib/utils/formatters'
 
 export interface ValueCardProps {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  className?: string;
+  /** Icône lucide-react (décorative). */
+  icon: LucideIcon
+  title: string
+  description: string
+  className?: string
 }
 
+/**
+ * Carte « une valeur » : version centrée de `FeatureCard`, pour une rangée de 3 à 5 principes (valeurs, engagements).
+ * La pastille passe au vert plein au survol de la carte.
+ */
 export function ValueCard({ icon: Icon, title, description, className }: ValueCardProps) {
   return (
-    <div className={cn("bg-surface-container-lowest p-6 rounded-xl shadow-md border border-outline-variant flex flex-col items-center text-center transition-transform hover:-translate-y-1", className)}>
-      <div className="w-16 h-16 rounded-full bg-primary-container text-primary flex items-center justify-center mb-4">
-        <Icon size={32} />
-      </div>
-      <h3 className="text-xl font-heading font-bold text-primary mb-3">
-        {title}
-      </h3>
-      <p className="text-on-surface-variant leading-relaxed">
-        {description}
-      </p>
-    </div>
+    <Card className={cn('group h-full text-center hover:border-primary', className)}>
+      <span
+        aria-hidden="true"
+        className="mx-auto mb-4 inline-flex size-12 items-center justify-center rounded-control bg-primary-container text-on-primary-container transition-colors duration-150 ease-standard group-hover:bg-primary group-hover:text-on-primary"
+      >
+        <Icon className="size-6" />
+      </span>
+      <h3 className="text-title-lg text-on-surface">{title}</h3>
+      <p className="mt-2 text-body-sm text-on-surface-variant">{description}</p>
+    </Card>
   )
 }

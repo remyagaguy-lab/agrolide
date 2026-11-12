@@ -3,12 +3,13 @@ import { HorizonDivider, Motif } from '@/components/brand'
 import { cn } from '@/lib/utils/formatters'
 
 /** Fond de la section qui suit le héros : la courbe d'horizon prend cette couleur. */
-export type PageHeroNextTone = 'surface' | 'low' | 'lowest'
+export type PageHeroNextTone = 'surface' | 'low' | 'lowest' | 'container'
 
 const nextTones: Record<PageHeroNextTone, string> = {
   surface: 'text-surface',
   low: 'text-surface-container-low',
   lowest: 'text-surface-container-lowest',
+  container: 'text-primary-container',
 }
 
 export interface PageHeroProps {

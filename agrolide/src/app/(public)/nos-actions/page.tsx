@@ -1,9 +1,12 @@
 import Link from "next/link"
 import { Metadata } from "next"
+import type { LucideIcon } from "lucide-react"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
-import { Button, buttonVariants } from "@/components/ui/Button"
-import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight } from "lucide-react"
+import { PageHero } from "@/components/ui/PageHero"
+import { buttonVariants, type ButtonVariant } from "@/components/ui/Button"
+import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight, Check } from "lucide-react"
+import { ArchPhoto } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: "Nos actions",
@@ -11,194 +14,160 @@ export const metadata: Metadata = {
   alternates: { canonical: '/nos-actions' }
 }
 
+interface Pilier {
+  id: string
+  tone: "lowest" | "low"
+  icon: LucideIcon
+  label: string
+  titre: string
+  intro: string
+  points: string[]
+  cartes: { icon: LucideIcon; titre: string; texte: string }[]
+  actions: { href: string; texte: string; variant: ButtonVariant }[]
+  photo: { src: string; alt: string }
+}
+
+const piliers: Pilier[] = [
+  {
+    id: "reseauter",
+    tone: "lowest",
+    icon: Users,
+    label: "Mobilisation des ressources et réseautage",
+    titre: "1. Réseauter",
+    intro: "L'isolement professionnel est le premier frein au développement. Nous avons conçu un environnement collaboratif pour :",
+    points: ["Fédérer les agronomes, chercheurs et investisseurs", "Faciliter les synergies et le partage d'opportunités"],
+    cartes: [
+      { icon: Users, titre: "Annuaire", texte: "Cartographie des acteurs par pays et spécialité pour faciliter la mise en relation." },
+      { icon: Calendar, titre: "Événements", texte: "Meetups, webinaires et opportunités pour animer notre communauté dynamique." },
+    ],
+    actions: [{ href: "/annuaire", texte: "Découvrir l'Annuaire", variant: "secondary" }],
+    photo: { src: "/plateforme-annuaire.webp", alt: "Une agricultrice consulte sur sa tablette la carte du réseau, au milieu de ses cultures" },
+  },
+  {
+    id: "se-former",
+    tone: "low",
+    icon: BookOpen,
+    label: "Formation et insertion professionnelle",
+    titre: "2. Se former",
+    intro: "Pour faire face au manque de documentation adaptée et aux défis de l'insertion, nous avons mis en place :",
+    points: ["Une centralisation de la connaissance agronomique africaine", "Des parcours de montée en compétences et de certification"],
+    cartes: [
+      { icon: BookMarked, titre: "Bibliothèque", texte: "Le répertoire de thèses, mémoires et fiches techniques adaptées à l'Afrique." },
+      { icon: BookOpen, titre: "Formations", texte: "Catalogue de montées en compétences techniques et webinaires exclusifs." },
+    ],
+    actions: [
+      { href: "/bibliotheque", texte: "Bibliothèque", variant: "secondary" },
+      { href: "/formations", texte: "Voir nos formations", variant: "outline" },
+    ],
+    photo: { src: "/plateforme-bibliotheque.webp", alt: "Un technicien agricole étudie un ouvrage et des graphiques dans une bibliothèque de ressources" },
+  },
+  {
+    id: "entreprendre",
+    tone: "lowest",
+    icon: TrendingUp,
+    label: "Agrobusiness : consulting et incubation",
+    titre: "3. Entreprendre",
+    intro: "Grâce à une expertise sectorielle pointue, nous soutenons le développement de projets pérennes :",
+    points: ["Transformation des idées novatrices en entreprises viables", "Accompagnement opérationnel pour la croissance des structures existantes"],
+    cartes: [
+      { icon: Briefcase, titre: "Consulting", texte: "Études de faisabilité, business plans et accompagnement technique sur mesure." },
+      { icon: TrendingUp, titre: "Incubation", texte: "Un programme complet pour propulser les agripreneurs vers le succès commercial." },
+    ],
+    actions: [{ href: "/agrobusiness", texte: "Découvrir nos services", variant: "primary" }],
+    photo: { src: "/images/formations/cover_bp_agricole.webp", alt: "Un entrepreneur agricole en costume travaille sur son dossier, des cultures en arrière-plan" },
+  },
+]
+
 export default function NosActionsPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      
-      {/* ── HERO ─────────────────────────────────── */}
-      <section className="bg-surface-container-low border-b border-outline-variant !pt-[60px] !pb-[60px] md:!pt-[96px] md:!pb-[80px]">
-        <div className="container">
-          <div className="max-w-[800px] mx-auto text-center">
-            <SectionLabel className="mx-auto flex justify-center text-center">Notre approche</SectionLabel>
-            <h1 className="font-heading font-[800] text-[40px] md:text-[56px] text-on-surface leading-[1.1] tracking-[-0.02em] mb-6">
-              Un écosystème intégré en <span className="text-primary">3 piliers d'action</span>
-            </h1>
-            <p className="font-sans text-[17px] text-on-surface-variant leading-[1.7] max-w-[650px] mx-auto">
-              Le réseau Agrolide déploie une stratégie d'accompagnement complète pour :
-            </p>
-            <ul className="font-sans text-[17px] text-on-surface-variant leading-[1.7] max-w-[650px] mx-auto text-left list-disc list-inside space-y-2 mt-4 px-4 sm:px-12 md:px-24">
-              <li>Briser l'isolement des professionnels de l'agriculture</li>
-              <li>Renforcer les compétences techniques et managériales</li>
-              <li>Catalyser la réussite des projets agricoles africains</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        nextTone="lowest"
+        label="Notre approche"
+        title={<>Un écosystème intégré en <span className="text-accent-sun">3 piliers d'action</span></>}
+        description="Le réseau Agrolide déploie une stratégie d'accompagnement complète pour :"
+      >
+        <ul className="mt-4 max-w-2xl space-y-2 text-body-lg text-on-surface-brand/85">
+          {["Briser l'isolement des professionnels de l'agriculture", "Renforcer les compétences techniques et managériales", "Catalyser la réussite des projets agricoles africains"].map((t) => (
+            <li key={t} className="flex items-start gap-3">
+              <Check aria-hidden="true" className="mt-1.5 size-4 shrink-0 text-accent-sun" />
+              {t}
+            </li>
+          ))}
+        </ul>
+      </PageHero>
 
-      {/* ── PILIER 1 : MOBILISATION ─────────────────────────────────── */}
-      <section id="reseauter" className="scroll-mt-20 bg-surface-container-lowest">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
-            <div className="order-2 md:order-1">
-              <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
-                <Users size={32} strokeWidth={1.5} className="text-primary" />
-              </div>
-              <SectionLabel>Mobilisation des ressources et réseautage</SectionLabel>
-              <h2 className="text-headline-md text-on-surface mb-4">
-                1. Réseauter
-              </h2>
-              <div className="text-body-lg mb-6 space-y-3">
-                <p>L'isolement professionnel est le premier frein au développement. Nous avons conçu un environnement collaboratif pour :</p>
-                <ul className="list-disc list-outside pl-5 space-y-2 text-[15px] text-on-surface-variant">
-                  <li>Fédérer les agronomes, chercheurs et investisseurs</li>
-                  <li>Faciliter les synergies et le partage d'opportunités</li>
-                </ul>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <Card className="!p-5 bg-surface-container-low border-none shadow-none hover:shadow-none hover:border-transparent">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Users size={20} className="text-primary" />
-                    <h3 className="font-heading font-[700] text-[16px]">Annuaire</h3>
-                  </div>
-                  <p className="text-[14px] text-on-surface-variant">Cartographie des acteurs par pays et spécialité pour faciliter la mise en relation.</p>
-                </Card>
-                <Card className="!p-5 bg-surface-container-low border-none shadow-none hover:shadow-none hover:border-transparent">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Calendar size={20} className="text-primary" />
-                    <h3 className="font-heading font-[700] text-[16px]">Événements</h3>
-                  </div>
-                  <p className="text-[14px] text-on-surface-variant">Meetups, webinaires et opportunités pour animer notre communauté dynamique.</p>
-                </Card>
-              </div>
+      {piliers.map((p, i) => {
+        const Icon = p.icon
+        const photoFirst = i % 2 === 1
+        return (
+          <section
+            key={p.id}
+            id={p.id}
+            aria-labelledby={`${p.id}-titre`}
+            className={`scroll-mt-20 py-14 md:py-20 ${p.tone === "low" ? "bg-surface-container-low" : "bg-surface-container-lowest"}`}
+          >
+            <div className="container">
+              <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
+                <div className={photoFirst ? "md:order-2" : ""}>
+                  <span aria-hidden="true" className="mb-6 flex size-16 items-center justify-center rounded-card bg-primary-container text-on-primary-container">
+                    <Icon className="size-8" strokeWidth={1.5} />
+                  </span>
+                  <SectionLabel>{p.label}</SectionLabel>
+                  <h2 id={`${p.id}-titre`} className="mb-4 text-headline-md text-on-surface">{p.titre}</h2>
+                  <p className="mb-3 text-body-lg text-on-surface-variant">{p.intro}</p>
+                  <ul className="mb-6 list-disc space-y-2 pl-5 text-body-md text-on-surface-variant">
+                    {p.points.map((pt) => <li key={pt}>{pt}</li>)}
+                  </ul>
 
-              <Link href="/annuaire" className={buttonVariants({ variant: 'secondary' })}>
-                Découvrir l'Annuaire
-              </Link>
-            </div>
-            <div className="order-1 md:order-2 bg-surface-container-low rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant">
-                <Users size={120} strokeWidth={0.5} className="text-primary/20 relative z-10" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PILIER 2 : FORMATION ─────────────────────────────────── */}
-      <section id="se-former" className="scroll-mt-20 bg-surface-container-low border-y border-outline-variant">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
-            <div className="bg-surface-container-lowest rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant shadow-sm">
-                <BookOpen size={120} strokeWidth={0.5} className="text-primary/20 relative z-10" />
-            </div>
-            <div>
-              <div className="w-[64px] h-[64px] rounded-[16px] bg-primary-container flex items-center justify-center mb-6">
-                <BookOpen size={32} strokeWidth={1.5} className="text-primary" />
-              </div>
-              <SectionLabel>Formation et insertion professionnelle</SectionLabel>
-              <h2 className="text-headline-md text-on-surface mb-4">
-                2. Se former
-              </h2>
-              <div className="text-body-lg mb-6 space-y-3">
-                <p>Pour faire face au manque de documentation adaptée et aux défis de l'insertion, nous avons mis en place :</p>
-                <ul className="list-disc list-outside pl-5 space-y-2 text-[15px] text-on-surface-variant">
-                  <li>Une centralisation de la connaissance agronomique africaine</li>
-                  <li>Des parcours de montée en compétences et de certification</li>
-                </ul>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <Card className="!p-5 bg-surface-container-lowest border-outline-variant shadow-sm">
-                  <div className="flex items-center gap-3 mb-3">
-                    <BookMarked size={20} className="text-primary" />
-                    <h3 className="font-heading font-[700] text-[16px]">Bibliothèque</h3>
+                  <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    {p.cartes.map((c) => {
+                      const CIcon = c.icon
+                      return (
+                        <Card key={c.titre} variant="filled" className="p-5">
+                          <div className="mb-2 flex items-center gap-3">
+                            <CIcon aria-hidden="true" className="size-5 text-primary" />
+                            <h3 className="text-title-md text-on-surface">{c.titre}</h3>
+                          </div>
+                          <p className="text-body-sm text-on-surface-variant">{c.texte}</p>
+                        </Card>
+                      )
+                    })}
                   </div>
-                  <p className="text-[14px] text-on-surface-variant">Le répertoire de thèses, mémoires et fiches techniques adaptées à l'Afrique.</p>
-                </Card>
-                <Card className="!p-5 bg-surface-container-lowest border-outline-variant shadow-sm">
-                  <div className="flex items-center gap-3 mb-3">
-                    <BookOpen size={20} className="text-primary" />
-                    <h3 className="font-heading font-[700] text-[16px]">Formations</h3>
-                  </div>
-                  <p className="text-[14px] text-on-surface-variant">Catalogue de montées en compétences techniques et webinaires exclusifs.</p>
-                </Card>
-              </div>
 
-              <div className="flex flex-wrap gap-4">
-                <Link href="/bibliotheque" className={buttonVariants({ variant: 'secondary' })}>
-                  Bibliothèque
-                </Link>
-                <Link href="/formations" className={buttonVariants({ variant: 'outline' })}>
-                  Voir nos formations
-                </Link>
+                  <div className="flex flex-wrap gap-4">
+                    {p.actions.map((a) => (
+                      <Link key={a.href} href={a.href} className={buttonVariants({ variant: a.variant })}>
+                        {a.texte}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Une seule photo en arche par écran : une par pilier */}
+                <div className={photoFirst ? "md:order-1" : ""}>
+                  <ArchPhoto src={p.photo.src} alt={p.photo.alt} className="mx-auto max-w-[520px] text-primary md:max-w-none" />
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PILIER 3 : AGROBUSINESS ─────────────────────────────────── */}
-      <section id="entreprendre" className="scroll-mt-20 bg-surface-container-lowest">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
-            <div className="order-2 md:order-1">
-              <div className="w-[64px] h-[64px] rounded-[16px] bg-tertiary-container flex items-center justify-center mb-6">
-                <TrendingUp size={32} strokeWidth={1.5} className="text-on-tertiary-container" />
-              </div>
-              <SectionLabel>Agrobusiness : consulting et incubation</SectionLabel>
-              <h2 className="text-headline-md text-on-surface mb-4">
-                3. Entreprendre
-              </h2>
-              <div className="text-body-lg mb-6 space-y-3">
-                <p>Grâce à une expertise sectorielle pointue, nous soutenons le développement de projets pérennes :</p>
-                <ul className="list-disc list-outside pl-5 space-y-2 text-[15px] text-on-surface-variant">
-                  <li>Transformation des idées novatrices en entreprises viables</li>
-                  <li>Accompagnement opérationnel pour la croissance des structures existantes</li>
-                </ul>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <Card className="!p-5 bg-surface-container-low border-none shadow-none hover:shadow-none hover:border-transparent">
-                  <div className="flex items-center gap-3 mb-3">
-                    <Briefcase size={20} className="text-on-tertiary-container" />
-                    <h3 className="font-heading font-[700] text-[16px]">Consulting</h3>
-                  </div>
-                  <p className="text-[14px] text-on-surface-variant">Études de faisabilité, business plans et accompagnement technique sur mesure.</p>
-                </Card>
-                <Card className="!p-5 bg-surface-container-low border-none shadow-none hover:shadow-none hover:border-transparent">
-                  <div className="flex items-center gap-3 mb-3">
-                    <TrendingUp size={20} className="text-on-tertiary-container" />
-                    <h3 className="font-heading font-[700] text-[16px]">Incubation</h3>
-                  </div>
-                  <p className="text-[14px] text-on-surface-variant">Un programme complet pour propulser les agripreneurs vers le succès commercial.</p>
-                </Card>
-              </div>
-
-              <Link href="/agrobusiness" className={buttonVariants({ variant: 'primary' })}>
-                Découvrir nos services
-              </Link>
-            </div>
-            <div className="order-1 md:order-2 bg-tertiary-container rounded-[24px] aspect-square md:aspect-[4/3] flex items-center justify-center relative overflow-hidden border border-outline-variant">
-                <TrendingUp size={120} strokeWidth={0.5} className="text-on-tertiary-container/20 relative z-10" />
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        )
+      })}
 
       {/* ── CTA FINAL ────────────────────────────── */}
-      <section className="bg-primary-container py-[96px] text-center">
+      <section className="bg-primary-container py-20 text-center md:py-24">
         <div className="container flex flex-col items-center">
-          <h2 className="font-heading font-[900] text-[clamp(24px,4vw,36px)] text-primary leading-[1.2] max-w-[700px] mx-auto mb-4">
+          <h2 className="mx-auto mb-4 max-w-2xl text-headline-md text-primary">
             Prêt à bénéficier de tout notre écosystème&nbsp;?
           </h2>
-          <p className="font-sans font-[400] text-[14px] text-on-surface-variant mb-[28px]">
+          <p className="mb-7 text-body-md text-on-surface-variant">
             Rejoignez des centaines de professionnels engagés pour la souveraineté alimentaire africaine.
           </p>
           <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>
-            Rejoindre le réseau <ArrowRight className="w-4 h-4 ml-2" />
+            Rejoindre le réseau <ArrowRight aria-hidden="true" className="ml-2 size-4" />
           </Link>
         </div>
       </section>
-
     </div>
   )
 }

@@ -34,4 +34,6 @@ export {
 } from './Table'
 export { Tabs, TabsContent, TabsList, TabsTrigger } from './Tabs'
 export { Textarea, type TextareaProps } from './Textarea'
+export { ValueCard, type ValueCardProps } from './ValueCard'
 export { ToastProvider, useToast, type ToastOptions, type ToastVariant } from './Toast'
+export { DetailHero, type DetailHeroProps } from './DetailHero'

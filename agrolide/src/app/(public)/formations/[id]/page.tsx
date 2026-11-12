@@ -3,9 +3,9 @@ import { formations } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
+import { DetailHero } from "@/components/ui/DetailHero";
 import { CheckCircle2, Clock, BookOpen, GraduationCap, ExternalLink, Plus, Minus, Share2 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { auth } from "@/lib/auth/server";
@@ -83,53 +83,16 @@ export default async function FormationPublicPage({
   }
 
   return (
-    <div className="min-h-screen bg-surface-container-lowest relative">
-      {/* Banner Background */}
-      <div className="absolute top-0 left-0 right-0 h-[180px] md:h-[260px] bg-surface-brand z-0" />
-      
-      <div className="container relative z-10 pt-8 md:pt-16 pb-24">
-        
-        {/* Header Top Row (Image & Title side-by-side on Desktop) */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-start md:items-end mb-10 md:mb-16">
-          
-          {/* Cover Image Wrapper */}
-          <div className="w-full md:w-[420px] lg:w-[480px] flex-shrink-0">
-            {formation.cover_image_url ? (
-              <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-surface-container-lowest border border-outline-variant p-1.5 md:p-2 aspect-[4/3] w-full">
-                {formation.cover_image_url.startsWith("/") ? (
-                  <div className="relative w-full h-full">
-                    <Image
-                      src={formation.cover_image_url}
-                      alt={formation.titre}
-                      fill
-                      sizes="(min-width: 1024px) 480px, (min-width: 768px) 420px, 100vw"
-                      className="object-cover rounded-[6px]"
-                      priority
-                    />
-                  </div>
-                ) : (
-                  <img
-                    src={formation.cover_image_url}
-                    alt={formation.titre}
-                    className="w-full h-full object-cover rounded-[6px]"
-                    loading="lazy"
-                  />
-                )}
-              </div>
-            ) : (
-              <div className="rounded-[10px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] bg-inverse-surface border border-primary aspect-[4/3] w-full flex items-center justify-center p-6">
-                 <span className="font-heading font-semibold text-on-surface-brand/50 text-center text-lg">{formation.source_externe || "AGROLIDE FORMATION"}</span>
-              </div>
-            )}
-          </div>
-          
-          {/* Title */}
-          <div className="flex-1 md:pb-4">
-            <h1 className="font-heading font-[900] text-[clamp(28px,4vw,44px)] leading-[1.15] text-on-surface md:text-on-surface-brand tracking-[-0.02em]">
-              {formation.titre}
-            </h1>
-          </div>
-        </div>
+    <div className="min-h-screen bg-surface-container-lowest">
+      <DetailHero
+        label={isExternal ? `Formation externe${formation.source_externe ? ` · ${formation.source_externe}` : ""}` : "Formation"}
+        title={formation.titre}
+        image={formation.cover_image_url ? { src: formation.cover_image_url, alt: `Couverture de la formation « ${formation.titre} »` } : null}
+        breadcrumb={[{ label: "Formations", href: "/formations" }, { label: formation.titre }]}
+      />
+
+      <div className="container pt-10 pb-24 md:pt-14">
+
 
         {/* Content & Sidebar Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12 lg:gap-16">
