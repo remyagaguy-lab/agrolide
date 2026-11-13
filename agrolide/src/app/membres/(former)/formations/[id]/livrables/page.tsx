@@ -17,7 +17,7 @@ const MODULES = [
   "Module 3 · Plan de production et choix juridique",
   "Module 4 · Stratégie commerciale et plan de prospection",
   "Module 5 · Modèle financier (canevas Excel rempli)",
-  "Module 6 · Dossier complet : résumé exécutif, risques, pitch",
+  "Module 6 · Business plan complet, de A à Z (résumé exécutif, risques, pitch) : requis pour le certificat de réussite",
 ];
 const STATUTS: Record<string, string> = { soumis: "Remis, en attente de correction", valide: "Validé", a_revoir: "À revoir" };
 
@@ -37,8 +37,9 @@ export default async function LivrablesPage({ params }: { params: Promise<{ id: 
       </Link>
       <h1 className="mb-3 font-urbanist text-headline-md text-on-surface">Livrables par module</h1>
       <p className="mb-8 text-on-surface-variant">
-        Un livrable par module, appuyé sur le canevas Word et le modèle Excel de la formation. Facultatifs pour l’instant : ils ne conditionnent pas le certificat.
-        Une nouvelle remise remplace la précédente et repasse en attente de correction.
+        Un livrable par module, appuyé sur le canevas Word et le modèle Excel de la formation. Seul le livrable du module 6, votre business plan complet rédigé de A à Z,
+        est requis pour le certificat « Réussite » (avec l’examen final) ; les cinq autres sont facultatifs, mais utiles pour avancer et recevoir des retours.
+        Pour un fichier (Word, Excel), déposez-le sur Drive ou OneDrive et collez le lien. Une nouvelle remise remplace la précédente et repasse en attente de correction.
       </p>
       <div className="space-y-8">
         {MODULES.map((titre, i) => {

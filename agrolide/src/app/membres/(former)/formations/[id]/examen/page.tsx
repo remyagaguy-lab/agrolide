@@ -24,7 +24,7 @@ export default async function ExamenPage({ params }: { params: Promise<{ id: str
       <h1 className="mb-3 font-urbanist text-headline-md text-on-surface">Examen final</h1>
       <p className="mb-6 text-on-surface-variant">
         {NB_QUESTIONS_EXAMEN} questions tirées au hasard dans une banque de 150, dont des calculs (5 par module). Seuil de réussite : {etat.seuil} %.
-        Réussir l’examen donne le certificat « Réussite » ; le certificat « Participation » s’obtient dès que toutes les leçons sont validées.
+        Le certificat « Participation » s’obtient dès que toutes les leçons sont validées. Le certificat « Réussite » demande deux choses : réussir cet examen et faire valider votre business plan complet (livrable du module 6).
         Le nombre de tentatives est illimité ; après {ECHECS_AVANT_ATTENTE} échecs d’affilée, une attente de {DELAI_ATTENTE_H} h est demandée pour relire le cours.
       </p>
       {etat.tentatives > 0 && (
@@ -39,7 +39,7 @@ export default async function ExamenPage({ params }: { params: Promise<{ id: str
       ) : (
         <ExamenClient formationId={id} seuil={etat.seuil} />
       )}
-      <p className="mt-10 text-sm"><Link className="text-primary" href={`/membres/formations/${id}/livrables`}>Remettre mes livrables (facultatif)</Link></p>
+      <p className="mt-10 text-sm"><Link className="text-primary" href={`/membres/formations/${id}/livrables`}>Remettre mon business plan complet et mes livrables</Link></p>
     </div>
   );
 }

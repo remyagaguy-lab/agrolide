@@ -42,7 +42,7 @@ export default async function LivrablesAdminPage({ searchParams }: { searchParam
         <h1 className="text-headline-md text-on-surface">Livrables à corriger</h1>
         <p className="text-body-md text-on-surface-variant">
           Un livrable par module et par membre. Notez sur 20, puis validez ou demandez une révision : le membre est prévenu par notification.
-          Barème conseillé : 12/20 pour valider. Les livrables ne conditionnent pas encore le certificat « Réussite ».
+          Barème conseillé : 12/20 pour valider. Seul le module 6 (business plan complet) conditionne le certificat « Réussite », avec l’examen : sa validation délivre le certificat si l’examen est réussi.
         </p>
       </header>
       <nav className="flex gap-2">

@@ -21,8 +21,8 @@ export const NB_QUESTIONS_EXAMEN = 30
 /** Après ce nombre d'échecs d'affilée, il faut attendre DELAI_ATTENTE_H heures. */
 export const ECHECS_AVANT_ATTENTE = 3
 export const DELAI_ATTENTE_H = 24
-/** Nombre de livrables validés exigés pour le niveau « Réussite » (0 = l'examen seul suffit). Décision produit : à relever quand la correction des livrables est organisée. */
-export const LIVRABLES_REQUIS_REUSSITE = 0
+/** Niveau « Réussite » = examen réussi + livrable final validé (le business plan complet, module 6). Décision du propriétaire, 13/11/2026. Les livrables des modules 1 à 5 restent facultatifs. */
+export const LIVRABLE_FINAL_MODULE = 6
 export const NB_MODULES_LIVRABLES = 6
 
 export function formationAUnExamen(formationId: string) {
@@ -212,22 +212,26 @@ export async function delivrerCertificat(userId: string, formationId: string, ni
   return null
 }
 
-export async function livrablesValides(userId: string, formationId: string): Promise<number> {
-  const rows = await db
-    .select({ id: livrables_formation.id })
-    .from(livrables_formation)
-    .where(and(eq(livrables_formation.membre_id, userId), eq(livrables_formation.formation_id, formationId), eq(livrables_formation.statut, 'valide')))
-  return rows.length
+export async function livrableFinalValide(userId: string, formationId: string): Promise<boolean> {
+  const l = await db.query.livrables_formation.findFirst({
+    where: and(
+      eq(livrables_formation.membre_id, userId),
+      eq(livrables_formation.formation_id, formationId),
+      eq(livrables_formation.module_ordre, LIVRABLE_FINAL_MODULE),
+      eq(livrables_formation.statut, 'valide'),
+    ),
+  })
+  return !!l
 }
 
-/** Délivre « Réussite » si l'examen est réussi, le parcours complet et le nombre de livrables exigé atteint. */
+/** Délivre « Réussite » si le parcours est complet, l'examen réussi et le business plan complet (livrable 6) validé. */
 export async function accorderReussite(userId: string, formationId: string) {
   if (!(await parcoursComplet(userId, formationId))) return null
   const reussie = await db.query.tentatives_examen.findFirst({
     where: and(eq(tentatives_examen.membre_id, userId), eq(tentatives_examen.formation_id, formationId), eq(tentatives_examen.reussi, true)),
   })
   if (!reussie) return null
-  if (LIVRABLES_REQUIS_REUSSITE > 0 && (await livrablesValides(userId, formationId)) < LIVRABLES_REQUIS_REUSSITE) return null
+  if (!(await livrableFinalValide(userId, formationId))) return null
   const deja = await db.query.certificats_formation.findFirst({
     where: and(eq(certificats_formation.membre_id, userId), eq(certificats_formation.formation_id, formationId), eq(certificats_formation.niveau, 'reussite')),
   })

@@ -65,7 +65,13 @@ export function ExamenClient({ formationId, seuil }: { formationId: string; seui
           <h2 className="font-urbanist text-2xl font-bold">{resultat.reussi ? "Examen réussi" : "Seuil non atteint"}</h2>
           <p>Votre score : <strong>{resultat.bonnes} / {resultat.total}</strong> ({resultat.pourcent} %). Seuil : {resultat.seuil} %.</p>
           {resultat.reussi ? (
-            <p className="font-bold text-primary">Votre certificat de réussite est disponible dans « Mon parcours ». {resultat.certificat ? `N° ${resultat.certificat}` : ""}</p>
+            resultat.certificat ? (
+              <p className="font-bold text-primary">Votre certificat de réussite est disponible dans « Mon parcours ». N° {resultat.certificat}</p>
+            ) : (
+              <p className="font-bold text-primary">
+                Examen réussi. Pour obtenir le certificat de réussite, il reste à faire valider votre business plan complet (livrable du module 6) : remettez-le dans « Livrables ». Le certificat vous sera délivré dès sa validation.
+              </p>
+            )
           ) : (
             <p className="text-on-surface-variant">Relisez les corrections ci-dessous : une nouvelle tentative tire de nouvelles questions.</p>
           )}

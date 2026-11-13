@@ -3,7 +3,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@/db";
 import { livrables_formation } from "@/db/schema";
 import { requireAdmin } from "@/lib/auth/admin";
-import { accorderReussite, LIVRABLES_REQUIS_REUSSITE } from "@/lib/formations/examen.server";
+import { accorderReussite, LIVRABLE_FINAL_MODULE } from "@/lib/formations/examen.server";
 import { notifier } from "@/lib/notifications.server";
 
 /** Correction d'un livrable. Corps : { decision: "valide" | "a_revoir", note (0-20), commentaire }. */
@@ -35,8 +35,8 @@ export async function PUT(req: Request, ctx: { params: Promise<{ id: string }> }
         : `Votre livrable du module ${livrable.module_ordre} est à revoir : ${commentaire}`,
       lien: `/membres/formations/${livrable.formation_id}/livrables`,
     });
-    // Si les livrables deviennent exigés pour « Réussite », ce validé peut compléter les conditions.
-    if (decision === "valide" && LIVRABLES_REQUIS_REUSSITE > 0) await accorderReussite(livrable.membre_id, livrable.formation_id);
+    // Business plan complet validé : si l'examen est déjà réussi, le certificat « Réussite » est délivré (sinon il le sera à la réussite de l'examen).
+    if (decision === "valide" && livrable.module_ordre === LIVRABLE_FINAL_MODULE) await accorderReussite(livrable.membre_id, livrable.formation_id);
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("Erreur correction livrable:", error);

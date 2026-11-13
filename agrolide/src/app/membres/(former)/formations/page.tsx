@@ -175,7 +175,7 @@ export default async function MonParcoursPage() {
                         <DownloadCertificatButton nom={profil.nom} prenom={profil.prenom} formationTitre={s.titre} dateDebut={date} inscriptionId={s.inscriptionId} numero={numeroDe(s.formationId, 'reussite')} niveau="reussite" />
                       ) : formationAUnExamen(s.formationId) ? (
                         <Link href={`/membres/formations/${s.formationId}/examen`} className="text-sm font-bold text-primary underline-offset-2 hover:underline">
-                          Passer l’examen final pour le certificat de réussite
+                          Examen final et business plan complet : certificat de réussite
                         </Link>
                       ) : null}
                     </div>
