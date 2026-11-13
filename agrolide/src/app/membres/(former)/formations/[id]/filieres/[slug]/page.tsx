@@ -5,6 +5,8 @@ import remarkGfm from "remark-gfm";
 import { peutSuivre } from "@/lib/formations/acces.server";
 import { trouverFiliere } from "@/content/filieres";
 import { ArrowLeft } from "@/components/ui/icons";
+import { QUIZ_FILIERES } from "@/content/filieres/quiz_banque";
+import { QuizFiliere } from "./QuizFiliere";
 
 const PROSE =
   "prose prose-slate prose-lg max-w-none overflow-x-auto prose-headings:font-urbanist prose-headings:text-on-surface prose-p:font-baskerville prose-p:text-on-surface-variant prose-li:font-baskerville prose-li:text-on-surface-variant prose-a:text-primary prose-strong:font-bold prose-strong:text-on-surface";
@@ -53,6 +55,7 @@ export default async function FilierePage({ params }: { params: Promise<{ id: st
           <div className={PROSE}>
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{l.contenu}</ReactMarkdown>
           </div>
+          {(QUIZ_FILIERES[l.id]?.length ?? 0) > 0 && <QuizFiliere formationId={id} slug={filiere.slug} leconId={l.id} />}
         </section>
       ))}
     </div>
