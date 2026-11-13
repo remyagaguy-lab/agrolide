@@ -13,7 +13,6 @@
  * et leur cache est vidé à la déconnexion (voir src/lib/bibliotheque/hors-ligne.ts).
  * Mise à jour : ce fichier change → le nouveau worker s'installe, prend la main tout de suite et supprime les anciens caches.
  */
-/* TEST-TEMPORAIRE */ let SIM=false; const BLOQUES=[]; const reseau=(r)=>SIM?Promise.reject(new TypeError('simule')):fetch(r); self.addEventListener('message',(e)=>{if(e.data&&e.data.sim!==undefined)SIM=!!e.data.sim; if(e.data&&e.data.dump&&e.source){e.source.postMessage({bloques:BLOQUES.slice(-60)});return} if(e.source)e.source.postMessage({sim:SIM})});
 const VERSION = 'v1'
 const PAGES = `ag-pages-${VERSION}`
 const STATIQUE = 'ag-static' // fichiers à empreinte : jamais obsolètes, conservés d'une version à l'autre
@@ -56,7 +55,7 @@ async function garderFichiers(html) {
         try {
           let r = await cache.match(u)
           if (!r) {
-            const net = await reseau(u)
+            const net = await fetch(u)
             if (!net.ok) return
             await cache.put(u, net.clone())
             r = net
@@ -83,7 +82,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     (async () => {
       try {
-        const r = await reseau(OFFLINE, { credentials: 'same-origin' })
+        const r = await fetch(OFFLINE, { credentials: 'same-origin' })
         if (r.ok) await garderPage(new URL(OFFLINE, self.location.origin), r)
       } catch {}
     })(),
@@ -105,13 +104,12 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   const req = event.request
-  if (SIM && req.method==='GET' && new URL(req.url).origin===self.location.origin && !req.url.includes('/sw.js')) { /* laisse la suite décider */ }
   if (req.method !== 'GET') return
   const url = new URL(req.url)
   if (url.origin !== self.location.origin) return
   const p = url.pathname
   // Jamais de cache pour les API, l'authentification, l'administration : le navigateur et le réseau décident seuls.
-  if (p.startsWith('/api/') || p.startsWith('/auth/') || p.startsWith('/admin') || p === '/login' || p === '/logout') { if (SIM) { BLOQUES.push('API '+p); event.respondWith(Response.error()) } return }
+  if (p.startsWith('/api/') || p.startsWith('/auth/') || p.startsWith('/admin') || p === '/login' || p === '/logout') return
 
   if (req.mode === 'navigate') {
     event.respondWith(navigation(event, req, url))
@@ -134,13 +132,12 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(navigation(event, req, url))
     return
   }
-  if (SIM) { BLOQUES.push(req.destination+' '+p); event.respondWith(Response.error()) }
 })
 
 async function navigation(event, req, url) {
   const chemin = url.pathname.replace(/(.)\/$/, '$1')
   try {
-    const r = await reseau(req)
+    const r = await fetch(req)
     if (r.ok && !r.redirected && r.type === 'basic' && estGardee(chemin) && (r.headers.get('content-type') || '').includes('text/html')) {
       event.waitUntil(garderPage(url, r.clone()).catch(() => {}))
     }
@@ -160,7 +157,7 @@ async function cacheDAbord(req) {
   const cache = await caches.open(STATIQUE)
   const deja = await cache.match(req, { ignoreSearch: true })
   if (deja) return deja
-  const r = await reseau(req)
+  const r = await fetch(req)
   if (r.ok) await cache.put(new URL(req.url).origin + new URL(req.url).pathname, r.clone())
   return r
 }
@@ -168,7 +165,7 @@ async function cacheDAbord(req) {
 async function revalider(event, req, nom) {
   const cache = await caches.open(nom)
   const deja = await cache.match(req)
-  const enLigne = reseau(req).then((r) => {
+  const enLigne = fetch(req).then((r) => {
     if (r.ok) cache.put(req, r.clone()).then(() => elaguer(nom, nom === IMAGES ? 80 : MAX_STATIQUE))
     return r
   })
