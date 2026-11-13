@@ -126,6 +126,7 @@ const ROUTES_IMMERSIVES = [
   /^\/membres\/formations\/[^/]+\/suivre(\/|$)/, // lecteur de cours et ses leçons
   /^\/membres\/bibliotheque\/[^/]+\/lire(\/|$)/, // lecteur de documents
   /^\/membres\/messages(\/|$)/, // messagerie
+  /^\/membres\/forum(\/|$)/, // forum (masqué pour l'instant, prêt à sa réactivation)
 ]
 export const estPageImmersive = (pathname: string | null | undefined) =>
   !!pathname && ROUTES_IMMERSIVES.some((re) => re.test(pathname))
