@@ -9,9 +9,9 @@ import { cn } from '@/lib/utils/formatters'
 import { EncartInscription } from './EncartInscription'
 import { useAuth } from '@/lib/auth/client'
 import { obtenirPdf } from './pdf-precharge'
-import { enregistrerHorsLigne, supprimerHorsLigne } from '@/lib/bibliotheque/hors-ligne'
+import { AnneauProgression, useTelechargementHorsLigne } from './useTelechargementHorsLigne'
 
-import { AlertTriangle, Check, ChevronLeft, ChevronRight, FileStack, FileText, Info, Loader2, Maximize, Save, X, ZoomIn, ZoomOut } from '@/components/ui/icons'
+import { AlertTriangle, Check, ChevronLeft, ChevronRight, FileStack, FileText, Info, Download, Loader2, Maximize, X, ZoomIn, ZoomOut } from '@/components/ui/icons'
 
 // Worker de pdf.js servi par le site (mouchard + fiabilité) ; en .js pour que le service worker le garde en cache (lecture hors ligne)
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js'
@@ -124,7 +124,7 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
   const racineRef = useRef<HTMLDivElement>(null)
   // Lecture hors ligne : le fichier reçu est gardé en mémoire pour pouvoir être rangé dans le stockage de l'appareil.
   const fichierRef = useRef<Blob | null>(null)
-  const [horsLigne, setHorsLigne] = useState<'non' | 'oui' | 'enCours' | 'echec'>('non')
+  const hl = useTelechargementHorsLigne({ documentId, titre, membreId: userId, fichier: () => fichierRef.current })
   const defilRef = useRef<HTMLDivElement>(null)
 
   const [quotaReached, setQuotaReached] = useState(false)
@@ -172,7 +172,6 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
         if (src.source === 'local') {
           // Copie gardée sur l'appareil : aucune requête, ouverture immédiate (même sans connexion).
           blob = src.fichier
-          setHorsLigne('oui')
         } else {
           const res = src.reponse
           if (res.status === 402) {
@@ -331,24 +330,6 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
 
   const changerZoom = (delta: number) => setScale((s) => Math.round(Math.min(Math.max(ZOOM_MIN, s + delta), ZOOM_MAX) * 10) / 10)
 
-  const basculerHorsLigne = async () => {
-    if (!userId || !titre || horsLigne === 'enCours') return
-    if (horsLigne === 'oui') {
-      await supprimerHorsLigne(documentId)
-      setHorsLigne('non')
-      return
-    }
-    if (!fichierRef.current) return
-    setHorsLigne('enCours')
-    const ok = await enregistrerHorsLigne({ id: documentId, titre, membreId: userId, fichier: fichierRef.current })
-    setHorsLigne(ok ? 'oui' : 'echec')
-    if (ok) {
-      // Les pages nécessaires pour rouvrir le document sans connexion passent par le cache de l'application.
-      void fetch('/membres/bibliotheque/hors-ligne', { credentials: 'same-origin' }).catch(() => {})
-      void fetch(`/membres/bibliotheque/${documentId}/lire`, { credentials: 'same-origin' }).catch(() => {})
-    }
-  }
-
   const dpr = useMemo(() => (typeof window === 'undefined' ? 1 : Math.min(2, window.devicePixelRatio || 1)), [])
 
   if (loading) {
@@ -463,17 +444,25 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
         </div>
 
         <div className="flex items-center">
-          {userId && titre ? (
+          {userId && titre && hl.etat !== 'inconnu' ? (
             <button
               type="button"
-              onClick={basculerHorsLigne}
-              disabled={horsLigne === 'enCours'}
-              aria-pressed={horsLigne === 'oui'}
-              title={horsLigne === 'oui' ? 'Gardé sur cet appareil : cliquer pour le retirer' : 'Garder ce document pour le lire sans connexion'}
-              className="ag-state inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-control px-2.5 text-label-md font-medium text-on-surface-variant transition-colors hover:bg-surface-container disabled:opacity-60"
+              onClick={hl.etat === 'fait' ? hl.retirer : hl.telecharger}
+              disabled={hl.etat === 'progression'}
+              aria-pressed={hl.etat === 'fait'}
+              title={hl.etat === 'fait' ? 'Disponible hors ligne : cliquer pour le retirer de cet appareil' : "Télécharger : enregistre le document dans l'application pour le relire sans connexion"}
+              className="ag-state inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-control px-2.5 text-label-md font-medium text-on-surface-variant transition-colors hover:bg-surface-container disabled:opacity-80"
             >
-              {horsLigne === 'enCours' ? <Loader2 className="size-5 animate-spin" aria-hidden /> : horsLigne === 'oui' ? <Check className="size-5 text-success" aria-hidden /> : <Save className="size-5" aria-hidden />}
-              <span className="max-sm:sr-only">{horsLigne === 'oui' ? 'Gardé hors ligne' : horsLigne === 'echec' ? 'Échec : réessayer' : 'Garder hors ligne'}</span>
+              {hl.etat === 'progression' ? (
+                <AnneauProgression valeur={hl.progression} className="size-5" />
+              ) : hl.etat === 'fait' ? (
+                <Check className="size-5 text-success" aria-hidden />
+              ) : (
+                <Download className="size-5" aria-hidden />
+              )}
+              <span className="max-sm:sr-only">
+                {hl.etat === 'progression' ? (hl.progression === null ? 'Téléchargement…' : `${Math.round(hl.progression)} %`) : hl.etat === 'fait' ? 'Disponible hors ligne' : hl.etat === 'echec' ? 'Échec : réessayer' : 'Télécharger'}
+              </span>
             </button>
           ) : null}
           <Outil libelle={viewMode === 'single' ? 'Passer en défilement continu' : 'Passer en page par page'} onClick={changerMode}>

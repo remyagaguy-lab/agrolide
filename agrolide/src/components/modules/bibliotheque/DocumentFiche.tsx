@@ -166,7 +166,7 @@ export function DocumentFiche({
             </dl>
 
             <div className="space-y-3">
-              <DownloadButton documentId={document.id} mode={mode} />
+              <DownloadButton documentId={document.id} titre={document.titre} mode={mode} />
               {peutMettreEnFavori && (
                 <FavoriButton documentId={document.id} initial={favori} className="w-full [&>button]:w-full [&>button]:justify-center" />
               )}
