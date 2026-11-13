@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import crypto from 'crypto'
+import { envoyerApresLaReponse } from '@/lib/email/apres-la-reponse'
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
 
@@ -98,28 +99,30 @@ export async function POST(request: NextRequest) {
       cv_r2_key: objectKey
     }).returning()
 
-    // 2. Envoi Emails (Resend)
-    // Accusé de réception
-    await resend.emails.send({
-      from: 'agrolide <contact@agrolide.org>',
-      to: data.email,
-      subject: 'Accusé de réception - Candidature Incubation',
-      html: `<p>Bonjour ${data.prenom},</p><p>Votre candidature pour le programme d'incubation agrolide avec le projet "${data.titre_projet}" a bien été enregistrée.</p><p>L'équipe agrolide</p>`
-    })
-
-    // Alerte équipe
-    await resend.emails.send({
-      from: 'agrolide System <system@agrolide.org>',
-      to: 'equipe@agrolide.org',
-      subject: `Nouvelle Candidature Incubation : ${data.titre_projet}`,
-      html: `<p>Une nouvelle candidature a été soumise.</p>
-             <ul>
-               <li><strong>Candidat :</strong> ${data.prenom} ${data.nom} (${data.email})</li>
-               <li><strong>Projet :</strong> ${data.titre_projet}</li>
-               <li><strong>Secteur :</strong> ${data.secteur}</li>
-             </ul>
-             <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/agrobusiness">Voir la candidature dans l'admin</a></p>`
-    })
+    // 2. Envoi des e-mails (Resend) après la réponse : le candidat n'attend pas les deux envois.
+    envoyerApresLaReponse(
+      'candidature incubation',
+      // Accusé de réception
+      () => resend.emails.send({
+        from: 'agrolide <contact@agrolide.org>',
+        to: data.email,
+        subject: 'Accusé de réception - Candidature Incubation',
+        html: `<p>Bonjour ${data.prenom},</p><p>Votre candidature pour le programme d'incubation agrolide avec le projet "${data.titre_projet}" a bien été enregistrée.</p><p>L'équipe agrolide</p>`
+      }),
+      // Alerte équipe
+      () => resend.emails.send({
+        from: 'agrolide System <system@agrolide.org>',
+        to: 'equipe@agrolide.org',
+        subject: `Nouvelle Candidature Incubation : ${data.titre_projet}`,
+        html: `<p>Une nouvelle candidature a été soumise.</p>
+               <ul>
+                 <li><strong>Candidat :</strong> ${data.prenom} ${data.nom} (${data.email})</li>
+                 <li><strong>Projet :</strong> ${data.titre_projet}</li>
+                 <li><strong>Secteur :</strong> ${data.secteur}</li>
+               </ul>
+               <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/agrobusiness">Voir la candidature dans l'admin</a></p>`
+      }),
+    )
 
     return NextResponse.json({ 
       success: true, 

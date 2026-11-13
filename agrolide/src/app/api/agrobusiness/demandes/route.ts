@@ -6,6 +6,7 @@ import { z } from 'zod'
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import crypto from 'crypto'
+import { envoyerApresLaReponse } from '@/lib/email/apres-la-reponse'
 
 const resend = new Resend(process.env.RESEND_API_KEY || 're_dummy')
 
@@ -73,29 +74,31 @@ export async function POST(request: NextRequest) {
       prenom, nom, email, telephone, organisation, pays, type_service, description, fichier_r2_key: objectKey
     }).returning()
 
-    // 2. Envoi Emails (Resend)
-    // Accusé de réception
-    await resend.emails.send({
-      from: 'agrolide <contact@agrolide.org>',
-      to: email,
-      subject: 'Accusé de réception - Votre demande de service agrolide',
-      html: `<p>Bonjour ${prenom},</p><p>Nous avons bien reçu votre demande concernant "${type_service}". Notre équipe l'étudie et vous recontactera sous peu.</p><p>L'équipe agrolide</p>`
-    })
-
-    // Alerte équipe
-    await resend.emails.send({
-      from: 'agrolide System <system@agrolide.org>',
-      to: 'equipe@agrolide.org', // Email de l'équipe
-      subject: `Nouvelle demande de service : ${type_service} par ${prenom} ${nom}`,
-      html: `<p>Une nouvelle demande de service a été soumise.</p>
-             <ul>
-               <li><strong>Demandeur :</strong> ${prenom} ${nom} (${email})</li>
-               <li><strong>Pays :</strong> ${pays}</li>
-               <li><strong>Service :</strong> ${type_service}</li>
-               <li><strong>Description :</strong> ${description}</li>
-             </ul>
-             <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/agrobusiness">Voir la demande dans l'admin</a></p>`
-    })
+    // 2. Envoi des e-mails (Resend) après la réponse : le visiteur n'attend pas les deux envois.
+    envoyerApresLaReponse(
+      'demande de service',
+      // Accusé de réception
+      () => resend.emails.send({
+        from: 'agrolide <contact@agrolide.org>',
+        to: email,
+        subject: 'Accusé de réception - Votre demande de service agrolide',
+        html: `<p>Bonjour ${prenom},</p><p>Nous avons bien reçu votre demande concernant "${type_service}". Notre équipe l'étudie et vous recontactera sous peu.</p><p>L'équipe agrolide</p>`
+      }),
+      // Alerte équipe
+      () => resend.emails.send({
+        from: 'agrolide System <system@agrolide.org>',
+        to: 'equipe@agrolide.org', // Email de l'équipe
+        subject: `Nouvelle demande de service : ${type_service} par ${prenom} ${nom}`,
+        html: `<p>Une nouvelle demande de service a été soumise.</p>
+               <ul>
+                 <li><strong>Demandeur :</strong> ${prenom} ${nom} (${email})</li>
+                 <li><strong>Pays :</strong> ${pays}</li>
+                 <li><strong>Service :</strong> ${type_service}</li>
+                 <li><strong>Description :</strong> ${description}</li>
+               </ul>
+               <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/admin/agrobusiness">Voir la demande dans l'admin</a></p>`
+      }),
+    )
 
     return NextResponse.json({ 
       success: true, 

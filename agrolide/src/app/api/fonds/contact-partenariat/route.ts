@@ -3,6 +3,7 @@ import { rateLimit } from '@/lib/security/rate-limit'
 import { verifyTurnstile } from '@/lib/security/turnstile'
 import { Resend } from 'resend'
 import { z } from 'zod'
+import { envoyerApresLaReponse } from '@/lib/email/apres-la-reponse'
 
 const resend = new Resend(process.env.RESEND_API_KEY || 're_dummy')
 
@@ -46,31 +47,34 @@ export async function POST(request: NextRequest) {
       })
       .returning()
 
-    // Accusé de réception
-    await resend.emails.send({
-      from: 'agrolide Partenariats <partenaires@agrolide.org>',
-      to: data.email,
-      subject: 'Accusé de réception - Demande de partenariat agrolide',
-      html: `<p>Bonjour,</p><p>Nous avons bien reçu votre demande de partenariat pour ${data.raison_sociale}.</p><p>Notre équipe en charge des relations institutionnelles prendra contact avec vous dans les plus brefs délais.</p><p>L'équipe agrolide</p>`
-    })
-
-    // Alerte interne
-    await resend.emails.send({
-      from: 'agrolide System <system@agrolide.org>',
-      to: 'partenaires@agrolide.org',
-      subject: `Nouveau Contact Partenariat : ${data.raison_sociale}`,
-      html: `
-        <p>Nouvelle demande de partenariat reçue :</p>
-        <ul>
-          <li><strong>Organisation :</strong> ${data.raison_sociale}</li>
-          <li><strong>Secteur :</strong> ${data.secteur}</li>
-          <li><strong>Nature :</strong> ${data.nature_collaboration}</li>
-          <li><strong>Email :</strong> ${data.email}</li>
-          <li><strong>Budget :</strong> ${data.budget || 'Non spécifié'}</li>
-        </ul>
-        <p><strong>Message :</strong><br/>${data.message}</p>
-      `
-    })
+    // E-mails (Resend) après la réponse : le visiteur n'attend pas les deux envois.
+    envoyerApresLaReponse(
+      'demande de partenariat',
+      // Accusé de réception
+      () => resend.emails.send({
+        from: 'agrolide Partenariats <partenaires@agrolide.org>',
+        to: data.email,
+        subject: 'Accusé de réception - Demande de partenariat agrolide',
+        html: `<p>Bonjour,</p><p>Nous avons bien reçu votre demande de partenariat pour ${data.raison_sociale}.</p><p>Notre équipe en charge des relations institutionnelles prendra contact avec vous dans les plus brefs délais.</p><p>L'équipe agrolide</p>`
+      }),
+      // Alerte interne
+      () => resend.emails.send({
+        from: 'agrolide System <system@agrolide.org>',
+        to: 'partenaires@agrolide.org',
+        subject: `Nouveau Contact Partenariat : ${data.raison_sociale}`,
+        html: `
+          <p>Nouvelle demande de partenariat reçue :</p>
+          <ul>
+            <li><strong>Organisation :</strong> ${data.raison_sociale}</li>
+            <li><strong>Secteur :</strong> ${data.secteur}</li>
+            <li><strong>Nature :</strong> ${data.nature_collaboration}</li>
+            <li><strong>Email :</strong> ${data.email}</li>
+            <li><strong>Budget :</strong> ${data.budget || 'Non spécifié'}</li>
+          </ul>
+          <p><strong>Message :</strong><br/>${data.message}</p>
+        `
+      }),
+    )
 
     return NextResponse.json({ success: true, contact })
 
