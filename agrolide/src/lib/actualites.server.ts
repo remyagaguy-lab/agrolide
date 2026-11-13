@@ -20,7 +20,8 @@ export async function chargerActualites(types: TypeActualites = 'tout') {
       : db.query.opportunites.findMany({ where: eq(opportunites.statut, 'publie') }),
   ])
 
-  const events = eventsData.map((e) => ({ ...e, _itemType: 'evenement' as const }))
+  // Le replay est réservé aux membres : il ne quitte jamais cette fonction (pages publiques et action « réessayer »).
+  const events = eventsData.map(({ lien_replay: _replay, ...e }) => ({ ...e, _itemType: 'evenement' as const }))
   const opps = oppsData.map((o) => ({ ...o, _itemType: 'opportunite' as const }))
 
   const combined: Array<(typeof events)[number] | (typeof opps)[number]> = [...events, ...opps]

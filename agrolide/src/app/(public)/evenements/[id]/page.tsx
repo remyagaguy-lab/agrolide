@@ -150,9 +150,18 @@ export default async function EventPage({ params }: EventPageProps) {
 
         <div className="flex justify-center border-t border-outline-variant pt-8">
           {isPast ? (
-            <Button variant="tonal" disabled>
-              Cet événement est terminé
-            </Button>
+            event.lien_replay ? (
+              <div className="flex flex-col items-center gap-3 text-center">
+                <p className="text-body-md text-on-surface-variant">Le replay est réservé aux membres : l'inscription au site est gratuite.</p>
+                <Link href="/inscription" className={buttonVariants({ variant: 'primary' })}>
+                  S'inscrire pour revoir le replay
+                </Link>
+              </div>
+            ) : (
+              <Button variant="tonal" disabled>
+                Cet événement est terminé
+              </Button>
+            )
           ) : event.lien_inscription ? (
             <a
               href={event.lien_inscription}

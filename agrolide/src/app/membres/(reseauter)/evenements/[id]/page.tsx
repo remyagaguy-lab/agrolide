@@ -13,7 +13,8 @@ import { Card } from '@/components/ui/Card'
 import { buttonVariants } from '@/components/ui/Button'
 import { InscriptionEvenementBouton } from '@/components/modules/evenements/InscriptionEvenementBouton'
 
-import { CalendarDays, Clock, Download, FileText, Globe, MapPin, CheckCircle2 } from "@/components/ui/icons"
+import Link from 'next/link'
+import { CalendarDays, Clock, Download, FileText, Globe, MapPin, CheckCircle2, Video } from "@/components/ui/icons"
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const event = await db.query.evenements.findFirst({ columns: { titre: true }, where: eq(evenements.id, id) })
@@ -107,6 +108,16 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
       <div className="border-t border-outline-variant pt-6">
         {passe ? (
           <div className="flex flex-col gap-3 sm:flex-row">
+            {event.lien_replay && (
+              <a href={event.lien_replay} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'secondary' })}>
+                <Video className="size-4" aria-hidden="true" /> Revoir le replay
+              </a>
+            )}
+            {event.document_id && (
+              <Link href={`/bibliotheque/${event.document_id}`} className={buttonVariants({ variant: 'tonal' })}>
+                <FileText className="size-4" aria-hidden="true" /> Document du webinaire
+              </Link>
+            )}
             {event.presentation_url && (
               <a href={proxyR2(event.presentation_url)} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'tonal' })}>
                 <FileText className="size-4" aria-hidden="true" /> Voir la présentation
@@ -117,7 +128,7 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
                 <Download className="size-4" aria-hidden="true" /> Accéder aux ressources
               </a>
             )}
-            {!event.presentation_url && !event.ressources_url && (
+            {!event.presentation_url && !event.ressources_url && !event.lien_replay && !event.document_id && (
               <p className="text-body-md text-on-surface-variant">Cet événement est terminé.</p>
             )}
           </div>

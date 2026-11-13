@@ -174,6 +174,10 @@ export const evenements = sqliteTable("evenements", {
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   image_url: text("image_url"),
   lien_inscription: text("lien_inscription"),
+  /** Replay d'une séance passée : réservé aux inscrits (migration 0016) ; jamais envoyé aux pages publiques. */
+  lien_replay: text("lien_replay"),
+  /** Document de la bibliothèque rattaché (diaporama du webinaire). */
+  document_id: text("document_id"),
   lieu: text("lieu"),
   pays: text("pays"),
   places_max: integer("places_max"),

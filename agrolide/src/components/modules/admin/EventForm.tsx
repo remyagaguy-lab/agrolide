@@ -27,7 +27,9 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     publie: initialData?.publie ?? false,
     image_url: initialData?.image_url || '',
     presentation_url: initialData?.presentation_url || '',
-    ressources_url: initialData?.ressources_url || ''
+    ressources_url: initialData?.ressources_url || '',
+    lien_replay: initialData?.lien_replay || '',
+    document_id: initialData?.document_id || ''
   })
   
   const [uploadingField, setUploadingField] = useState<string | null>(null)
@@ -181,6 +183,17 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
           <label className="text-sm font-medium text-on-surface-variant">Lien d'inscription externe (Optionnel, ex: Zoom, Eventbrite)</label>
           <input type="url" name="lien_inscription" value={formData.lien_inscription} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none" placeholder="https://" />
           <p className="text-xs text-on-surface-muted">Si vide, l'inscription se fera en interne sur Agrolide.</p>
+        </div>
+
+        <div className="space-y-2 md:col-span-2">
+          <label className="text-sm font-medium text-on-surface-variant">Lien du replay (réservé aux membres inscrits)</label>
+          <input type="url" name="lien_replay" value={formData.lien_replay} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none" placeholder="https://" />
+          <p className="text-xs text-on-surface-muted">Visible seulement dans l'espace membre, jamais sur la page publique.</p>
+        </div>
+
+        <div className="space-y-2 md:col-span-2">
+          <label className="text-sm font-medium text-on-surface-variant">Identifiant du document de la bibliothèque (diaporama)</label>
+          <input type="text" name="document_id" value={formData.document_id} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none" />
         </div>
 
         {/* Fichiers & Ressources */}

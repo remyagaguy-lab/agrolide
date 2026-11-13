@@ -7,6 +7,7 @@ import { notifier as notifierMembre } from '@/lib/notifications.server';
 import { and, count, eq, inArray } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 import { existeBlocage } from '@/lib/reseau/blocage.server';
+import { decideInvitation } from '@/lib/reseau/invitation';
 
 /** Invitations envoyées en attente au plus (freine le démarchage en masse). */
 const MAX_INVITATIONS_EN_ATTENTE = 20;
@@ -63,14 +64,12 @@ export async function sendConnectionRequest(receiverId: string, note?: string) {
         and(eq(c.requester_id, receiverId), eq(c.receiver_id, userId))
       ),
   });
-  if (existing) {
-    // J'ai refusé son invitation plus tôt : je peux à mon tour l'inviter (l'ancienne ligne est remplacée).
-    if (existing.status === 'rejected' && existing.receiver_id === userId) {
-      await db.delete(user_connections).where(eq(user_connections.id, existing.id));
-    } else {
-      return { error: "Une connexion ou une invitation existe déjà avec ce membre." };
-    }
-  }
+  const decision = decideInvitation(existing, userId);
+  if (decision.action === 'refuser') return { error: decision.message };
+  // Double clic ou page périmée : l'invitation est déjà partie, ce n'est pas une erreur.
+  if (decision.action === 'deja_envoyee') return { success: true as const, connectionId: decision.id };
+  // Invitation que j'avais ignorée, ou ligne ancienne au statut inconnu : l'ancienne ligne est remplacée.
+  if (decision.action === 'remplacer') await db.delete(user_connections).where(eq(user_connections.id, decision.id));
 
   const [{ enAttente }] = await db
     .select({ enAttente: count() })

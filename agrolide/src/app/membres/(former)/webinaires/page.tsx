@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { and, asc, desc, eq, gte, isNotNull, lt } from 'drizzle-orm'
+import { and, asc, desc, eq, gte, isNotNull, lt, ne } from 'drizzle-orm'
 import { db } from '@/db'
 import { evenements, webinaires } from '@/db/schema'
 import { PageEntete } from '@/components/layout/PageEntete'
@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/Badge'
 import { buttonVariants } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 
-import { CalendarDays, Clock, ExternalLink, Lock, Unlock, UserRound, Video } from "@/components/ui/icons"
+import { CalendarDays, Clock, ExternalLink, FileText, Lock, Unlock, UserRound, Video } from "@/components/ui/icons"
 export const metadata = { title: "Webinaires" }
 
 /** Une séance à venir, qu'elle vienne de la table des webinaires ou du calendrier des événements. */
@@ -31,9 +31,10 @@ export default async function WebinairesPage() {
 
   let aVenir: SeanceAVenir[] = []
   let replays: (typeof webinaires.$inferSelect)[] = []
+  let replaysEvenements: (typeof evenements.$inferSelect)[] = []
 
   try {
-    const [prochains, replaysRows, evenementsWebinaires] = await Promise.all([
+    const [prochains, replaysRows, evenementsWebinaires, evenementsReplays] = await Promise.all([
       db.select().from(webinaires).where(gte(webinaires.date_heure, maintenant)).orderBy(asc(webinaires.date_heure)),
       // Replays : séances passées dont l'enregistrement est en ligne.
       db.select().from(webinaires)
@@ -43,9 +44,14 @@ export default async function WebinairesPage() {
       db.select().from(evenements)
         .where(and(eq(evenements.type_evt, 'webinaire'), eq(evenements.publie, true), gte(evenements.date_debut, maintenant)))
         .orderBy(asc(evenements.date_debut)),
+      // Séances passées du calendrier dont le replay est en ligne (réservé aux membres : cette page l'est).
+      db.select().from(evenements)
+        .where(and(eq(evenements.type_evt, 'webinaire'), eq(evenements.publie, true), lt(evenements.date_debut, maintenant), isNotNull(evenements.lien_replay), ne(evenements.lien_replay, '')))
+        .orderBy(desc(evenements.date_debut)),
     ])
 
     replays = replaysRows
+    replaysEvenements = evenementsReplays
 
     aVenir = [
       ...prochains.map((w): SeanceAVenir => ({
@@ -158,8 +164,25 @@ export default async function WebinairesPage() {
           <h2 id="webinaires-replays" className="text-lg font-bold text-on-surface font-heading">Replays récents</h2>
         </div>
 
-        {replays.length > 0 ? (
+        {replays.length + replaysEvenements.length > 0 ? (
           <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {replaysEvenements.map((e) => (
+              <li key={`e-${e.id}`} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5 flex flex-col">
+                <h3 className="text-sm font-bold text-on-surface mb-1.5">{e.titre}</h3>
+                {e.description && <p className="text-xs text-on-surface-muted mb-3 flex-1 line-clamp-3 leading-relaxed">{e.description}</p>}
+                <p className="pt-3 mt-auto border-t border-outline-variant text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
+                  Diffusé le {new Date(e.date_debut).toLocaleDateString('fr-FR')}
+                </p>
+                <a href={e.lien_replay!} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'secondary', size: 'sm', fullWidth: true, className: 'mt-4' })}>
+                  Revoir le replay <ExternalLink size={16} aria-hidden="true" />
+                </a>
+                {e.document_id && (
+                  <Link href={`/bibliotheque/${e.document_id}`} className={buttonVariants({ variant: 'tonal', size: 'sm', fullWidth: true, className: 'mt-2' })}>
+                    <FileText size={16} aria-hidden="true" /> Document du webinaire
+                  </Link>
+                )}
+              </li>
+            ))}
             {replays.map((w) => (
               <li key={w.id} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden flex flex-col">
                 <div className="relative w-full aspect-video bg-inverse-surface border-b border-outline-variant">

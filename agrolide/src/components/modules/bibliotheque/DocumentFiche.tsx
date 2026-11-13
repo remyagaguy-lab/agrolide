@@ -53,12 +53,15 @@ export function DocumentFiche({
   mode,
   peutMettreEnFavori,
   favori,
+  webinaire = null,
 }: {
   document: DocumentFicheData
   similarDocs: DocumentType[]
   mode: Espace
   peutMettreEnFavori: boolean
   favori: boolean
+  /** Webinaire dont ce document est le diaporama. */
+  webinaire?: { id: string; titre: string } | null
 }) {
   const racine = mode === 'membre' ? '/membres/bibliotheque' : '/bibliotheque'
   const { Icone, fond } = (document.domaine && DOMAINES_VISUELS[document.domaine]) || DOMAINE_PAR_DEFAUT
@@ -153,6 +156,15 @@ export function DocumentFiche({
             </section>
           )}
         </div>
+
+        {webinaire && (
+          <p className="text-body-md text-on-surface-variant lg:col-span-full">
+            Diaporama du webinaire :{' '}
+            <Link href={`${mode === 'membre' ? '/membres' : ''}/evenements/${webinaire.id}`} className="font-semibold text-primary underline">
+              {webinaire.titre}
+            </Link>
+          </p>
+        )}
 
         {/* Encart : repères et gestes (reste visible en défilant) */}
         <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">

@@ -3,7 +3,7 @@ import type { DocumentType } from '@/components/modules/bibliotheque/DocumentCar
 import { DocumentFiche } from '@/components/modules/bibliotheque/DocumentFiche'
 import { estFavori } from '@/lib/bibliotheque/parcours.server'
 import { db } from '@/db'
-import { documents, users } from '@/db/schema'
+import { documents, evenements, users } from '@/db/schema'
 import { auth } from '@/lib/auth/server'
 import { eq, and, ne } from 'drizzle-orm'
 
@@ -53,5 +53,11 @@ export async function DocumentDetailView({ id, mode }: { id: string; mode: Espac
   const membreId = mode === 'membre' ? (await auth()).userId : null
   const favori = membreId ? await estFavori(membreId, document.id) : false
 
-  return <DocumentFiche document={document} similarDocs={similarDocs} mode={mode} peutMettreEnFavori={Boolean(membreId)} favori={favori} />
+  // Webinaire auquel ce document est rattaché (diaporama) : lien vers sa page.
+  const webinaire = await db.query.evenements.findFirst({
+    columns: { id: true, titre: true },
+    where: and(eq(evenements.document_id, document.id), eq(evenements.publie, true)),
+  })
+
+  return <DocumentFiche document={document} similarDocs={similarDocs} mode={mode} peutMettreEnFavori={Boolean(membreId)} favori={favori} webinaire={webinaire ?? null} />
 }
