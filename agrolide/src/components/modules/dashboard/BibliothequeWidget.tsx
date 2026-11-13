@@ -15,7 +15,7 @@ export interface DocumentRecent {
 export function BibliothequeWidget({ total, documents }: { total: number; documents: DocumentRecent[] }) {
   return (
     <Widget>
-      <WidgetHeader title="Bibliothèque" sousTitre={`${total.toLocaleString("fr-FR")} documents en ligne`} icon={<BookOpen />} href="/membres/bibliotheque" linkLabel="Tout voir" />
+      <WidgetHeader title="Explorer la bibliothèque"sousTitre={`${total.toLocaleString("fr-FR")} documents en ligne`} icon={<BookOpen />} href="/membres/bibliotheque" linkLabel="Tout voir" />
 
       <div className="flex flex-col gap-4 p-5 pt-3">
         <form action="/membres/bibliotheque" method="get" role="search" className="flex gap-2">

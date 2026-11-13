@@ -14,7 +14,6 @@ import { categorieSansCotisation, gratuiteEnCours } from "@/lib/adhesion"
 import {
   DashboardHeader,
   ATraiter,
-  PremiersPas,
   BibliothequeWidget,
   FormationsWidget,
   EventWidget,
@@ -24,6 +23,9 @@ import {
 } from "@/components/modules/dashboard"
 
 export const metadata = { title: "Tableau de bord | Agrolide" }
+
+/** En dessous de ce pourcentage, « Compléter mon profil » apparaît dans la bande « À traiter ». */
+const SEUIL_PROFIL_COMPLET = 80
 
 /**
  * Tableau de bord : d'abord ce qui attend une réponse (bande conditionnelle), puis la bibliothèque, mon compte,
@@ -187,12 +189,8 @@ export default async function DashboardPage() {
 
   // Membre neuf : rien de commencé (ni formation, ni inscription à un événement à venir).
   const nouveau = !formationEnCours && suivis.length === 0 && prochainesInscriptions.length === 0
-  const etapes = [
-    { libelle: "Compléter mon profil", href: "/membres/profil", faite: completion >= 80 },
-    { libelle: "Explorer la bibliothèque", href: "/membres/bibliotheque", faite: false },
-    { libelle: "Choisir une formation", href: "/membres/formations/catalogue", faite: suivis.length > 0 },
-    { libelle: "M'inscrire à un événement", href: "/membres/evenements", faite: prochainesInscriptions.length > 0 },
-  ]
+  // Le profil passe dans « À traiter » tant qu'il n'est pas assez rempli ; il en disparaît dès qu'il l'est.
+  const profilATraiter = completion < SEUIL_PROFIL_COMPLET
 
   return (
     <div className="flex flex-col space-y-5">
@@ -211,9 +209,12 @@ export default async function DashboardPage() {
       />
 
       {/* Bande conditionnelle : invitations, messages, cotisation. Rien n'est rendu si tout est à zéro. */}
-      <ATraiter invitations={invitations} messages={messagesNonLus} cotisationARegler={cotisationARegler} />
-
-      {nouveau && <PremiersPas etapes={etapes} />}
+      <ATraiter
+        invitations={invitations}
+        messages={messagesNonLus}
+        cotisationARegler={cotisationARegler}
+        profilACompleter={profilATraiter ? completion : null}
+      />
 
       {/* La bibliothèque en tête, mon compte à côté */}
       <div className="grid grid-cols-1 items-start gap-5 xl:grid-cols-12">

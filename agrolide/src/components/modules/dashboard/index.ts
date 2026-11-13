@@ -1,6 +1,5 @@
 export { DashboardHeader } from "./DashboardHeader"
 export { ATraiter } from "./ATraiter"
-export { PremiersPas, type EtapePremiersPas } from "./PremiersPas"
 export { BibliothequeWidget, type DocumentRecent } from "./BibliothequeWidget"
 export { FormationsWidget, type FormationEnCours, type FormationCatalogue } from "./FormationsWidget"
 export { EventWidget, type EventData } from "./EventWidget"
