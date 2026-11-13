@@ -5,7 +5,9 @@ import { useRouter } from "next/navigation"
 import { Alert } from "@/components/ui/Alert"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
-import { ChoiceChip } from "@/components/ui/ChoiceChip"
+import { FormField } from "@/components/ui/FormField"
+import { NativeSelect } from "@/components/ui/Select"
+import { ChevronDown } from "@/components/ui/icons"
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from "@/components/ui/Modal"
 import { useToast } from "@/components/ui/Toast"
 import { annulerDemandeCategorie, changerCategorie } from "@/app/actions/profil"
@@ -68,6 +70,7 @@ export function CategorieSection({
   const categorieActuelle = estCategorie(actuelle) ? actuelle : null
   const [choix, setChoix] = React.useState<CategorieAdhesion | null>(categorieActuelle)
   const [ouvert, setOuvert] = React.useState(false)
+  const [deplie, setDeplie] = React.useState(false)
   const [erreur, setErreur] = React.useState("")
   const [pending, startTransition] = React.useTransition()
 
@@ -104,21 +107,23 @@ export function CategorieSection({
     })
   }
 
+  const tarifChoix = choix ? tarifAnnuel(choix) : null
+
   return (
-    <section aria-labelledby="categorie-titre" className="rounded-card border border-outline-variant bg-surface-container-lowest p-5 md:p-6">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 id="categorie-titre" className="text-title-md text-on-surface">Ma catégorie d'adhésion</h2>
-        {categorieActuelle && <Badge variant="category">{libelleCategorie(categorieActuelle)}</Badge>}
+    <section aria-labelledby="categorie-titre" className="rounded-card border border-outline-variant bg-surface-container-lowest">
+      <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 px-4 py-2 md:px-5">
+        <div className="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1">
+          <h2 id="categorie-titre" className="text-label-lg text-on-surface">Catégorie d’adhésion</h2>
+          {categorieActuelle ? <Badge variant="category">{libelleCategorie(categorieActuelle)}</Badge> : <span className="text-body-sm text-on-surface-muted">Non choisie</span>}
+        </div>
+        <Button type="button" variant="text" size="sm" aria-expanded={deplie} aria-controls="categorie-contenu" onClick={() => setDeplie((d) => !d)}>
+          {deplie ? "Fermer" : "Changer de catégorie"}
+          <ChevronDown className={`size-4 transition-transform ${deplie ? "rotate-180" : ""}`} aria-hidden />
+        </Button>
       </div>
-      <p className="mt-1 text-body-sm text-on-surface-variant">
-        Vous vous êtes trompé(e) de profil, ou votre situation a changé ? Choisissez la catégorie qui vous correspond.
-        {gratuiteEnCours()
-          ? ` Votre adhésion est gratuite jusqu'au ${DATE_FIN_GRATUITE_LISIBLE} : le changement est libre, sauf pour Partenaire et Sénior, validés par un administrateur.`
-          : " Une montée de catégorie s'applique tout de suite avec régularisation du montant ; une baisse s'applique à la prochaine échéance."}
-      </p>
 
       {demandeOuverte && (
-        <Alert variant="info" className="mt-4">
+        <Alert variant="info" className="mx-4 mb-3 md:mx-5">
           <p>
             {demandeOuverte.statut === "en_attente"
               ? `Votre demande de passage en « ${libelleCategorie(demandeOuverte.categorie)} » attend la validation d'un administrateur.`
@@ -130,43 +135,37 @@ export function CategorieSection({
         </Alert>
       )}
 
-      <fieldset className="mt-4 space-y-2">
-        <legend className="sr-only">Catégorie souhaitée</legend>
-        <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          {CATEGORIES_ADHESION.map((c) => {
-            const tarif = tarifAnnuel(c)
-            return (
-              <li key={c}>
-                <ChoiceChip
-                  type="radio"
-                  name="categorie-souhaitee"
-                  value={c}
-                  checked={choix === c}
-                  onChange={() => setChoix(c)}
-                  className="h-full"
-                >
-                  <span className="flex flex-col items-center gap-0.5">
-                    <span>{libelleCategorie(c)}{c === categorieActuelle ? " (actuelle)" : ""}</span>
-                    <span className="text-body-sm font-normal text-on-surface-muted">{DESCRIPTIONS[c]}</span>
-                    <span className="text-body-sm font-normal text-on-surface-muted">
-                      {tarif ? `Tarif indicatif après la gratuité : ${formaterFcfa(tarif)} par an` : "Toujours gratuit"}
-                      {demandeValidation(c) ? " · sur validation" : ""}
-                    </span>
-                  </span>
-                </ChoiceChip>
-              </li>
-            )
-          })}
-        </ul>
-      </fieldset>
-
-      {erreur && !ouvert && <Alert variant="error" className="mt-3">{erreur}</Alert>}
-
-      <div className="mt-4 flex justify-end">
-        <Button type="button" variant="secondary" disabled={!peutChanger} onClick={() => { setErreur(""); setOuvert(true) }}>
-          Changer de catégorie
-        </Button>
-      </div>
+      {deplie && (
+        <div id="categorie-contenu" className="space-y-3 border-t border-outline-variant px-4 py-4 md:px-5">
+          <p className="text-body-sm text-on-surface-variant">
+            {gratuiteEnCours()
+              ? `Adhésion gratuite jusqu'au ${DATE_FIN_GRATUITE_LISIBLE} : le changement est libre, sauf pour Partenaire et Sénior, validés par un administrateur.`
+              : "Une montée de catégorie s'applique tout de suite avec régularisation du montant ; une baisse s'applique à la prochaine échéance."}
+          </p>
+          <div className="grid gap-3 sm:grid-cols-[minmax(0,16rem)_1fr] sm:items-end">
+            <FormField label="Catégorie souhaitée">
+              <NativeSelect value={choix ?? ""} onChange={(e) => setChoix(e.target.value as CategorieAdhesion)}>
+                {!categorieActuelle && <option value="" disabled>Choisir…</option>}
+                {CATEGORIES_ADHESION.map((c) => (
+                  <option key={c} value={c}>{libelleCategorie(c)}{c === categorieActuelle ? " (actuelle)" : ""}</option>
+                ))}
+              </NativeSelect>
+            </FormField>
+            {choix && (
+              <p className="text-body-sm text-on-surface-muted" aria-live="polite">
+                {DESCRIPTIONS[choix]} {tarifChoix ? `Tarif indicatif après la gratuité : ${formaterFcfa(tarifChoix)} par an.` : "Toujours gratuit."}
+                {demandeValidation(choix) ? " Sur validation." : ""}
+              </p>
+            )}
+          </div>
+          {erreur && !ouvert && <Alert variant="error">{erreur}</Alert>}
+          <div className="flex justify-end">
+            <Button type="button" variant="outline" disabled={!peutChanger} onClick={() => { setErreur(""); setOuvert(true) }}>
+              Valider ce changement
+            </Button>
+          </div>
+        </div>
+      )}
 
       <Modal open={ouvert} onOpenChange={(o) => !pending && setOuvert(o)}>
         <ModalContent>

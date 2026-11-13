@@ -2,7 +2,7 @@ import 'server-only'
 import { and, desc, eq, inArray, isNull, or, sql } from 'drizzle-orm'
 import { db } from '@/db'
 import { documents, user_connections, users } from '@/db/schema'
-import { parseList, type ConnectionState, type MemberSummary } from './profil'
+import { lireLangues, parseList, type ConnectionState, type MemberSummary } from './profil'
 import { carte, fetchMonProfil, SELECT_CARTE, type LigneCarte } from './annuaire'
 import { existeBlocage, sansBloques } from './blocage.server'
 import { aDesPointsCommuns, pointsCommuns, type PointsCommuns } from './en-commun'
@@ -29,7 +29,9 @@ export interface FicheMembre {
   biographie: string | null
   thematiques: string[]
   centres_interet: string[]
+  /** Toutes les langues parlées, la maternelle comprise (pour comparer deux membres). */
   langues: string[]
+  langue_maternelle: string
   linkedin_url: string | null
   site_web_url: string | null
   ouvert_contact: boolean | null
@@ -130,7 +132,8 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
     biographie: row.biographie,
     thematiques: parseList(row.secteurs_expertise),
     centres_interet: parseList(row.centres_interet),
-    langues: parseList(row.langues),
+    langues: lireLangues(row.langues).toutes,
+    langue_maternelle: lireLangues(row.langues).maternelle,
     linkedin_url: row.linkedin_url,
     site_web_url: row.site_web_url,
     ouvert_contact: row.ouvert_contact,
@@ -228,7 +231,7 @@ async function profilsProches(viewerId: string, cibleId: string, profil: ProfilP
 
   const candidats = rows.map((r) => ({
     ...profilDepuisLigne(r),
-    langues: parseList(r.langues),
+    langues: lireLangues(r.langues).toutes,
     id: r.id,
     profilRenseigne: Boolean(r.profilRenseigne),
     created_at: r.created_at,

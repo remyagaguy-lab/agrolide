@@ -56,7 +56,7 @@ export async function LectureDocumentView({ id, mode }: { id: string; mode: 'mem
         </p>
       </header>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start lg:gap-8">
         <SecurePDFViewerWrapper documentId={id} />
         <AussiAimerColonne docs={suggestions} mode={mode} />
       </div>

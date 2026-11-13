@@ -4,7 +4,7 @@ import { and, desc, eq, inArray } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { demandes_categorie, users } from "@/db/schema"
-import { parseList } from "@/lib/reseau/profil"
+import { lireLangues, parseList } from "@/lib/reseau/profil"
 import { buttonVariants } from "@/components/ui/Button"
 import { finCotisationPayee } from "@/lib/categorie.server"
 import { CategorieSection, type DemandeOuverte } from "./CategorieSection"
@@ -97,7 +97,8 @@ export default async function ProfilModifierPage() {
             biographie: row.biographie ?? "",
             thematiques: parseList(row.secteurs_expertise),
             centres_interet: parseList(row.centres_interet),
-            langues: parseList(row.langues),
+            langue_maternelle: lireLangues(row.langues).maternelle,
+            langues: lireLangues(row.langues).autres,
             linkedin_url: row.linkedin_url ?? "",
             site_web_url: row.site_web_url ?? "",
             photo_url: row.photo_url ?? "",

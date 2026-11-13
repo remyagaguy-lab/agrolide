@@ -98,6 +98,35 @@ export function safeExternalUrl(raw: string | null | undefined): string | null {
 /** Langues proposées à la saisie du profil (liste fermée ; les valeurs déjà saisies ailleurs restent conservées). */
 export const LANGUES = [
   'Français', 'Anglais', 'Arabe', 'Portugais', 'Espagnol', 'Swahili', 'Wolof', 'Lingala', 'Bambara', 'Malgache',
+  'Haoussa', 'Peul', 'Yoruba', 'Mooré', 'Fon', 'Kinyarwanda', 'Amharique', 'Berbère',
+] as const
+
+/** Marque de la langue maternelle dans la colonne `langues` (pas de colonne à ajouter : elle reste la première de la liste). */
+const MARQUE_MATERNELLE = 'Maternelle : '
+
+/** Sépare la langue maternelle des autres langues parlées. `toutes` = toutes les langues, sans marque (pour comparer deux membres). */
+export function lireLangues(val: unknown): { maternelle: string; autres: string[]; toutes: string[] } {
+  const liste = parseList(val)
+  const mat = liste.find((l) => l.startsWith(MARQUE_MATERNELLE))
+  const maternelle = mat ? mat.slice(MARQUE_MATERNELLE.length).trim() : ''
+  const autres = liste.filter((l) => !l.startsWith(MARQUE_MATERNELLE) && l.toLowerCase() !== maternelle.toLowerCase())
+  return { maternelle, autres, toutes: maternelle ? [maternelle, ...autres] : autres }
+}
+
+/** Inverse de `lireLangues` : la langue maternelle d'abord, avec sa marque. */
+export function ecrireLangues(maternelle: string, autres: string[]): string[] {
+  const m = maternelle.trim()
+  const reste = autres.filter((l) => l.toLowerCase() !== m.toLowerCase())
+  return m ? [MARQUE_MATERNELLE + m, ...reste] : reste
+}
+
+/** Centres d'intérêt proposés : l'agricole, mais aussi tout ce qui fait un membre (la liste libre complète). */
+export const CENTRES_INTERET_GROUPES = [
+  { titre: 'Agriculture', options: THEMATIQUES },
+  { titre: 'Sciences et technologie', options: ['Technologie', 'Numérique', 'Énergie', 'Sciences', 'Innovation'] },
+  { titre: 'Culture et loisirs', options: ['Lecture', 'Musique', 'Cinéma', 'Photographie', 'Cuisine', 'Voyage', 'Écriture'] },
+  { titre: 'Sport et bien-être', options: ['Football', 'Course à pied', 'Randonnée', 'Sport', 'Bien-être'] },
+  { titre: 'Engagement et société', options: ['Bénévolat', 'Entrepreneuriat', 'Jeunesse', 'Éducation', 'Développement durable'] },
 ] as const
 
 /** Grandes régions, uniquement pour les pays proposés à l'inscription (aucune région pour France et Canada). */

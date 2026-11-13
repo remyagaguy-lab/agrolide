@@ -6,7 +6,7 @@ import { and, eq, inArray } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
-import { LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES, parseList } from '@/lib/reseau/profil'
+import { PAYS, PAYS_AUTRE, THEMATIQUES, ecrireLangues, parseList } from '@/lib/reseau/profil'
 import { profilSchema } from '@/lib/reseau/profil-schema'
 import { CATEGORIES_ADHESION, libelleCategorie, type CategorieAdhesion } from '@/lib/adhesion'
 import type { ModeChangement } from '@/lib/categorie'
@@ -22,8 +22,8 @@ const vide = (v: string) => (v ? v : null)
 
 /**
  * Enregistre le profil. Toute la validation est refaite ici (le formulaire n'est qu'un confort) :
- * liens https uniquement, choix limités aux listes proposées (les valeurs déjà enregistrées restent acceptées,
- * pour ne rien perdre des profils existants).
+ * liens https uniquement, spécialités limitées à la liste proposée (les valeurs déjà enregistrées restent acceptées),
+ * centres d'intérêt et langues : liste ou ajout libre court.
  */
 export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   const { userId } = await auth()
@@ -41,7 +41,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   const v = parsed.data
 
   const [actuel] = await db
-    .select({ pays: users.pays, secteurs_expertise: users.secteurs_expertise, centres_interet: users.centres_interet, langues: users.langues })
+    .select({ pays: users.pays, secteurs_expertise: users.secteurs_expertise })
     .from(users)
     .where(eq(users.id, userId))
     .limit(1)
@@ -52,11 +52,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   if (!paysOk) champs.pays = 'Choisissez un pays dans la liste.'
   const themesAutorises = new Set<string>([...THEMATIQUES, ...parseList(actuel.secteurs_expertise)])
   if (v.thematiques.some((t) => !themesAutorises.has(t))) champs.thematiques = 'Choisissez des thématiques dans la liste.'
-  // Les centres d'intérêt reprennent la liste des thématiques (aucun libellé inventé) ; les valeurs déjà enregistrées sont conservées.
-  const interetsAutorises = new Set<string>([...THEMATIQUES, ...parseList(actuel.centres_interet)])
-  if (v.centres_interet.some((t) => !interetsAutorises.has(t))) champs.centres_interet = 'Choisissez des centres d’intérêt dans la liste.'
-  const languesAutorisees = new Set<string>([...LANGUES, ...parseList(actuel.langues)])
-  if (v.langues.some((l) => !languesAutorisees.has(l))) champs.langues = 'Choisissez des langues dans la liste.'
+  // Centres d'intérêt et langues : liste proposée ou ajout libre (validé par le schéma : texte court, sans emoji).
   if (Object.keys(champs).length > 0) return { success: false, error: 'Certains champs sont à corriger.', champs }
 
   await db
@@ -72,7 +68,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
       biographie: vide(v.biographie),
       secteurs_expertise: v.thematiques.length ? JSON.stringify(v.thematiques) : null,
       centres_interet: v.centres_interet.length ? JSON.stringify(v.centres_interet) : null,
-      langues: v.langues.length ? JSON.stringify(v.langues) : null,
+      langues: (() => { const l = ecrireLangues(v.langue_maternelle, v.langues); return l.length ? JSON.stringify(l) : null })(),
       linkedin_url: vide(v.linkedin_url),
       site_web_url: vide(v.site_web_url),
       updated_at: new Date().toISOString(),

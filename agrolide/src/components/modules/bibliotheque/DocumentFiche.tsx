@@ -73,7 +73,7 @@ export function DocumentFiche({
     <div className={mode === 'public' ? 'container pb-24 pt-8 md:pt-12' : 'pt-6'}>
       <Breadcrumb jsonLd={mode === 'public'} items={[{ label: 'Bibliothèque', href: racine }, { label: document.titre }]} />
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_340px] lg:gap-12">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-12">
         {/* Contenu */}
         <div className="min-w-0 space-y-6">
           <article className="overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest">
@@ -93,7 +93,7 @@ export function DocumentFiche({
                   {sujet ? ` · ${sujet}` : ''}
                 </p>
               ) : null}
-              <h1 className="mt-2 text-balance text-headline-sm font-bold text-on-surface md:text-headline-md">{document.titre}</h1>
+              <h1 className="mt-2 text-balance break-words text-headline-sm font-bold text-on-surface md:text-headline-md">{document.titre}</h1>
 
               <ul className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-body-md text-on-surface-variant">
                 <Repere Icone={UserRound}>{document.auteurs || 'Auteur inconnu'}</Repere>

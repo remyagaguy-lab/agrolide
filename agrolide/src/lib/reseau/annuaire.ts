@@ -2,7 +2,7 @@ import 'server-only'
 import { and, asc, count as countFn, desc, eq, inArray, isNull, notInArray, or, sql, type SQL } from 'drizzle-orm'
 import { db } from '@/db'
 import { user_connections, users } from '@/db/schema'
-import { PAYS, PAYS_AUTRE, parseList, type ConnectionState, type MemberSummary } from './profil'
+import { PAYS, PAYS_AUTRE, lireLangues, parseList, type ConnectionState, type MemberSummary } from './profil'
 import type { AnnuaireFilters } from './filtres'
 import { motifGlob, normaliser } from './texte'
 import { sansBloques } from './blocage.server'
@@ -238,7 +238,7 @@ async function fetchPertinence(viewerId: string, f: AnnuaireFilters, moi: Profil
 
   const candidats = rows.map((r) => ({
     ...profilDepuisLigne(r),
-    langues: parseList(r.langues),
+    langues: lireLangues(r.langues).toutes,
     id: r.id,
     profilRenseigne: Boolean(r.profilRenseigne),
     created_at: r.created_at,

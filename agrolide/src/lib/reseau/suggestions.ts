@@ -9,7 +9,7 @@
  *  - jamais de score à l'écran, seulement les 3 raisons les plus lourdes, toutes réellement calculées ;
  *  - départage stable : score, puis profil renseigné, puis inscription la plus récente, puis identifiant.
  */
-import { categorieLabel, parseList, regionDe } from './profil'
+import { categorieLabel, lireLangues, parseList, regionDe } from './profil'
 import { motsSignificatifs, normaliser } from './texte'
 
 export const SEUIL_SUGGESTION = 20
@@ -196,7 +196,7 @@ export function profilDepuisLigne(row: {
   return {
     specialite: row.specialite,
     thematiques: parseList(row.secteurs_expertise),
-    langues: parseList(row.langues),
+    langues: lireLangues(row.langues).toutes,
     pays: row.pays,
     ville: row.ville,
     categorie: row.categorie,

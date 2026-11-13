@@ -226,7 +226,10 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
               )}
               {membre.langues.length > 0 && (
                 <Groupe titre="Langues">
-                  {membre.langues.map((l) => (
+                  {membre.langue_maternelle && (
+                    <li><Badge variant="brand">{membre.langue_maternelle} · langue maternelle</Badge></li>
+                  )}
+                  {membre.langues.filter((l) => l !== membre.langue_maternelle).map((l) => (
                     <li key={l}><Badge variant="neutral">{l}</Badge></li>
                   ))}
                 </Groupe>

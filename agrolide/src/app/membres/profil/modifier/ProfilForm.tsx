@@ -6,14 +6,14 @@ import { Alert } from "@/components/ui/Alert"
 import { useToast } from "@/components/ui/Toast"
 import { Avatar } from "@/components/ui/Avatar"
 import { Button } from "@/components/ui/Button"
-import { ChoiceChip } from "@/components/ui/ChoiceChip"
 import { FormField } from "@/components/ui/FormField"
 import { Input } from "@/components/ui/Input"
+import { MultiSelect } from "@/components/ui/MultiSelect"
 import { NativeSelect } from "@/components/ui/Select"
 import { Textarea } from "@/components/ui/Textarea"
 import { uploadAvatarAction } from "@/app/actions/upload"
 import { updateAvatarUrl, updateProfil } from "@/app/actions/profil"
-import { LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES } from "@/lib/reseau/profil"
+import { CENTRES_INTERET_GROUPES, LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 
 import { Camera, Save } from "@/components/ui/icons"
@@ -28,6 +28,7 @@ export interface ProfilInitial {
   biographie: string
   thematiques: string[]
   centres_interet: string[]
+  langue_maternelle: string
   langues: string[]
   linkedin_url: string
   site_web_url: string
@@ -60,9 +61,6 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
   const maj = <K extends keyof Valeurs>(cle: K, valeur: Valeurs[K]) => {
     setValeurs((v) => ({ ...v, [cle]: valeur }))
   }
-
-  const bascule = (cle: "thematiques" | "centres_interet" | "langues", valeur: string) =>
-    maj(cle, valeurs[cle].includes(valeur) ? valeurs[cle].filter((x) => x !== valeur) : [...valeurs[cle], valeur])
 
   const completion = completionProfil({ ...valeurs, photo_url: photo })
   const optionsPays = avecExistantes([...PAYS, PAYS_AUTRE], valeurs.pays ? [valeurs.pays] : [])
@@ -100,7 +98,8 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
         const res = await updateProfil(valeurs)
         if (res.success) {
           toast({ title: "Profil enregistré", description: "Vos modifications sont prises en compte.", variant: "success" })
-          router.refresh()
+          // Retour automatique à la fiche : le cache de la page est déjà invalidé côté serveur.
+          router.push("/membres/profil")
         } else {
           setErreurs(res.champs ?? {})
           setErreurGenerale(res.error)
@@ -195,43 +194,62 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
         </FormField>
       </div>
 
-      <div role="group" aria-labelledby="themes-titre" className="space-y-4">
-        <h2 id="themes-titre" className="text-title-md text-on-surface">Spécialités et langues</h2>
-        <fieldset className="space-y-2" aria-describedby={erreurs.thematiques ? "erreur-thematiques" : undefined}>
-          <legend className="text-label-lg text-on-surface">Vos spécialités</legend>
-          <p className="text-body-sm text-on-surface-muted">Vos domaines de compétence : ils apparaissent sur votre carte et servent aux suggestions et à la recherche.</p>
-          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {avecExistantes(THEMATIQUES, valeurs.thematiques).map((t) => (
-              <li key={t}>
-                <ChoiceChip type="checkbox" checked={valeurs.thematiques.includes(t)} onChange={() => bascule("thematiques", t)}>{t}</ChoiceChip>
-              </li>
+      <div role="group" aria-labelledby="themes-titre" className="space-y-5">
+        <div>
+          <h2 id="themes-titre" className="text-title-md text-on-surface">Spécialités et centres d’intérêt</h2>
+          <p className="mt-1 text-body-sm text-on-surface-muted">Ils apparaissent sur votre fiche et servent aux suggestions de membres.</p>
+        </div>
+        <FormField label="Vos spécialités" id="champ-thematiques" error={erreurs.thematiques} hint="Vos domaines de compétence. Plusieurs choix possibles.">
+          <MultiSelect
+            ariaLabel="Spécialités"
+            placeholder="Choisir mes spécialités"
+            value={valeurs.thematiques}
+            onChange={(v) => maj("thematiques", v)}
+            groupes={[{ options: avecExistantes(THEMATIQUES, valeurs.thematiques) }]}
+          />
+        </FormField>
+        <FormField label="Centres d’intérêt" id="champ-centres_interet" error={erreurs.centres_interet} hint="Agriculture, mais aussi sport, musique, lecture, voyage… Ajoutez le vôtre s’il manque.">
+          <MultiSelect
+            ariaLabel="Centres d’intérêt"
+            placeholder="Choisir mes centres d’intérêt"
+            value={valeurs.centres_interet}
+            onChange={(v) => maj("centres_interet", v)}
+            groupes={CENTRES_INTERET_GROUPES}
+            ajoutLibre="Un autre centre d’intérêt"
+          />
+        </FormField>
+      </div>
+
+      <div role="group" aria-labelledby="langues-titre" className="space-y-5">
+        <div>
+          <h2 id="langues-titre" className="text-title-md text-on-surface">Langues</h2>
+          <p className="mt-1 text-body-sm text-on-surface-muted">Pour que le réseau sache dans quelle langue vous échanger le plus naturellement.</p>
+        </div>
+        <FormField label="Langue maternelle" id="champ-langue_maternelle" error={erreurs.langue_maternelle} hint="Choisissez dans la liste ou écrivez la vôtre (par exemple : Sérère, Éwé, Kikongo).">
+          <Input
+            value={valeurs.langue_maternelle}
+            onChange={(e) => maj("langue_maternelle", e.target.value)}
+            list="langues-proposees"
+            maxLength={40}
+            autoComplete="off"
+            placeholder="Ex. : Wolof"
+          />
+          <datalist id="langues-proposees">
+            {LANGUES.map((l) => (
+              <option key={l} value={l} />
             ))}
-          </ul>
-          {erreurs.thematiques && <p id="erreur-thematiques" role="alert" className="text-body-sm text-error">{erreurs.thematiques}</p>}
-        </fieldset>
-        <fieldset className="space-y-2" aria-describedby={erreurs.centres_interet ? "erreur-interets" : undefined}>
-          <legend className="text-label-lg text-on-surface">Centres d’intérêt</legend>
-          <p className="text-body-sm text-on-surface-muted">Ce que vous aimeriez apprendre ou suivre, même hors de vos spécialités. Visible sur votre fiche par les autres membres.</p>
-          <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {avecExistantes(THEMATIQUES, valeurs.centres_interet).map((t) => (
-              <li key={t}>
-                <ChoiceChip type="checkbox" checked={valeurs.centres_interet.includes(t)} onChange={() => bascule("centres_interet", t)}>{t}</ChoiceChip>
-              </li>
-            ))}
-          </ul>
-          {erreurs.centres_interet && <p id="erreur-interets" role="alert" className="text-body-sm text-error">{erreurs.centres_interet}</p>}
-        </fieldset>
-        <fieldset className="space-y-2" aria-describedby={erreurs.langues ? "erreur-langues" : undefined}>
-          <legend className="text-label-lg text-on-surface">Langues parlées</legend>
-          <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
-            {avecExistantes(LANGUES, valeurs.langues).map((l) => (
-              <li key={l}>
-                <ChoiceChip type="checkbox" checked={valeurs.langues.includes(l)} onChange={() => bascule("langues", l)}>{l}</ChoiceChip>
-              </li>
-            ))}
-          </ul>
-          {erreurs.langues && <p id="erreur-langues" role="alert" className="text-body-sm text-error">{erreurs.langues}</p>}
-        </fieldset>
+          </datalist>
+        </FormField>
+        <FormField label="Autres langues parlées" id="champ-langues" error={erreurs.langues} hint="Plusieurs choix possibles. Ajoutez une langue absente de la liste.">
+          <MultiSelect
+            ariaLabel="Autres langues parlées"
+            placeholder="Choisir les langues que je parle"
+            value={valeurs.langues}
+            onChange={(v) => maj("langues", v)}
+            groupes={[{ options: LANGUES }]}
+            ajoutLibre="Une autre langue"
+          />
+        </FormField>
       </div>
 
       <div role="group" aria-labelledby="liens-titre" className="space-y-4">

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
-import { categorieLabel, parseList, safeExternalUrl } from "@/lib/reseau/profil"
+import { categorieLabel, lireLangues, parseList, safeExternalUrl } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 import { Anneau } from "@/components/brand"
 import { Avatar } from "@/components/ui/Avatar"
@@ -23,6 +23,7 @@ export interface ProfilAffiche {
   biographie: string | null
   niveau_etudes: string | null
   secteurs_expertise: unknown
+  centres_interet?: unknown
   langues: unknown
   site_web_url: string | null
   linkedin_url: string | null
@@ -56,7 +57,8 @@ const NonRenseigne = () => <span className="text-on-surface-muted">Non renseign�
 /** Page « Mon profil » : identité et complétion, puis à propos, expertise et contact. */
 export function ProfilView({ profile }: { profile: ProfilAffiche }) {
   const thematiques = parseList(profile.secteurs_expertise)
-  const langues = parseList(profile.langues)
+  const { maternelle, autres: langues } = lireLangues(profile.langues)
+  const interets = parseList(profile.centres_interet)
   const { pourcentage: completion, manquants } = completionProfil({ ...profile, thematiques })
   const nom = [profile.prenom, profile.nom].filter(Boolean).join(" ") || "Mon profil"
   const lieu = [profile.ville, profile.pays].filter(Boolean).join(", ")
@@ -164,16 +166,30 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
                 </Info>
               </div>
               <div className="sm:col-span-2">
-                <Info libelle="Langues parlées">
-                  {langues.length > 0 ? (
-                    <span className="inline-flex items-center gap-2">
-                      <Languages className="size-4 text-on-surface-variant" aria-hidden /> {langues.join(", ")}
-                    </span>
+                <Info libelle="Centres d’intérêt">
+                  {interets.length > 0 ? (
+                    <ul className="flex flex-wrap gap-2">
+                      {interets.map((t) => (
+                        <li key={t}>
+                          <Badge variant="category">{t}</Badge>
+                        </li>
+                      ))}
+                    </ul>
                   ) : (
                     <NonRenseigne />
                   )}
                 </Info>
               </div>
+              <Info libelle="Langue maternelle">{maternelle || <NonRenseigne />}</Info>
+              <Info libelle="Autres langues parlées">
+                {langues.length > 0 ? (
+                  <span className="inline-flex items-center gap-2">
+                    <Languages className="size-4 text-on-surface-variant" aria-hidden /> {langues.join(", ")}
+                  </span>
+                ) : (
+                  <NonRenseigne />
+                )}
+              </Info>
             </dl>
           </Bloc>
         </div>

@@ -35,6 +35,20 @@ const liste = (max: number, libelle: string) =>
     .max(max, `${libelle} : ${max} choix au maximum.`)
     .transform((l) => Array.from(new Set(l)))
 
+/** Valeur saisie librement (centre d'intérêt, langue) : du texte, sans balise ni symbole étrange. */
+const valeurLibre = z
+  .string()
+  .trim()
+  .min(2, 'Chaque ajout compte 2 caractères au minimum.')
+  .max(40, 'Chaque ajout compte 40 caractères au maximum.')
+  .regex(/^[\p{L}\p{N}][\p{L}\p{N} '’.,&()/+-]*$/u, 'Utilisez uniquement des lettres, chiffres et espaces dans vos ajouts.')
+
+const listeLibre = (max: number, libelle: string) =>
+  z
+    .array(valeurLibre)
+    .max(max, `${libelle} : ${max} choix au maximum.`)
+    .transform((l) => Array.from(new Map(l.map((v) => [v.toLowerCase(), v])).values()))
+
 export const profilSchema = z.object({
   prenom: z.string().trim().min(2, 'Le prénom est requis (2 caractères au minimum).').max(60, 'Prénom : 60 caractères au maximum.'),
   nom: z.string().trim().min(2, 'Le nom est requis (2 caractères au minimum).').max(60, 'Nom : 60 caractères au maximum.'),
@@ -46,8 +60,10 @@ export const profilSchema = z.object({
   biographie: texte(500, 'Biographie'),
   thematiques: liste(12, 'Spécialités'),
   // Absent d'un formulaire ouvert avant la mise en ligne du champ : vide plutôt qu'une erreur.
-  centres_interet: liste(12, 'Centres d’intérêt').optional().default([]),
-  langues: liste(12, 'Langues'),
+  centres_interet: listeLibre(12, 'Centres d’intérêt').optional().default([]),
+  // Langue maternelle (liste ou saisie libre) et autres langues parlées (liste ou saisie libre).
+  langue_maternelle: z.union([valeurLibre, z.literal('')]).optional().default(''),
+  langues: listeLibre(12, 'Langues'),
   linkedin_url: lienHttps('Lien LinkedIn'),
   site_web_url: lienHttps('Site web'),
 })
