@@ -36,6 +36,10 @@ const cspReportOnly = [
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
+    // Les images optimisées restent un jour en cache (60 s par défaut) : moins de recalculs côté serveur,
+    // et le navigateur n'a plus à tout revérifier à chaque visite. Une image remplacée sous le même nom
+    // met donc jusqu'à un jour à changer : pour l'imposer, la renommer.
+    minimumCacheTTL: 86400,
     remotePatterns: [
       {
         protocol: 'https',
@@ -85,6 +89,14 @@ const nextConfig: NextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
           { key: 'Content-Security-Policy-Report-Only', value: cspReportOnly },
         ],
+      },
+      // Images du dossier public (logo, couvertures, photos d'équipe…) : Vercel les sert par défaut avec
+      // « max-age=0 », donc le navigateur les redemande à chaque visite. Ici : un jour, puis une semaine
+      // de rafraîchissement en arrière-plan. Ces fichiers gardent leur nom : pas de durée « à vie ».
+      // Les fichiers versionnés de /_next/ (JS, CSS, polices) ont déjà leur propre cache d'un an.
+      {
+        source: '/((?!_next/).*\\.(?:svg|jpg|jpeg|png|webp|avif|ico))',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }],
       },
     ]
   },
