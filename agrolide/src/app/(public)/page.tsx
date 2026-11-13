@@ -34,6 +34,9 @@ const masqueTerre: React.CSSProperties = {
   WebkitMaskRepeat: "no-repeat",
 }
 
+/** Trois échos de l'horizon (comme les trois échos du soleil) : du plus proche au plus lointain. */
+const ECHOS = [1, 2, 3]
+
 const ROLES = ["Étudiants en agronomie", "Ingénieurs agronomes", "Chercheurs", "Entreprises agricoles", "Investisseurs"]
 /** Nombre de ressources affiché si la base ne répond pas (dernier total connu). */
 const RESSOURCES_PAR_DEFAUT = 273
@@ -234,8 +237,8 @@ export default async function HomePage() {
             </h1>
             <p className="mt-3 text-body-md text-pretty text-on-surface-brand/90 md:mt-5 md:text-body-lg">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.
-              {/* sur mobile, la phrase des publics est retirée : le sous-titre tient en 3 lignes et la photo apparaît à l'ouverture */}
-              <span className="hidden md:inline">
+              {/* seulement sur petit téléphone (< 520 px), la phrase des publics est retirée : le sous-titre tient en 3 lignes et la photo apparaît à l'ouverture */}
+              <span className="hidden min-[520px]:inline">
                 {" "}
                 {ROLES.map((r, i) => (
                   <React.Fragment key={r}>
@@ -253,32 +256,52 @@ export default async function HomePage() {
           </div>
         </div>
 
-        {/* mobile : horizon horizontal, la photo sous le texte */}
-        <div className="relative h-[340px] [--horizon:4rem] sm:[--horizon:6rem] md:hidden" style={masqueTerre}>
-          <Image
-            src="/hero-accueil.webp"
-            alt={ALT_HERO}
-            fill
-            priority
-            sizes="(min-width: 768px) 0px, 100vw"
-            className="object-cover object-[78%_40%]"
-          />
+        {/* mobile : horizon horizontal, la photo sous le texte ; trois échos de l'horizon montent dans le ciel (comme ceux du soleil) */}
+        <div className="relative z-0 [--horizon:4rem] [--pas-echo:1rem] sm:[--horizon:6rem] sm:[--pas-echo:1.25rem] md:hidden">
+          {ECHOS.map((k) => (
+            <div
+              key={k}
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-on-surface-brand/5"
+              style={{ ...masqueTerre, translate: `0 calc(${-k} * var(--pas-echo))` }}
+            />
+          ))}
+          <div className="relative h-[340px]" style={masqueTerre}>
+            <Image
+              src="/hero-accueil.webp"
+              alt={ALT_HERO}
+              fill
+              priority
+              sizes="(min-width: 768px) 0px, 100vw"
+              className="object-cover object-[78%_40%]"
+            />
+          </div>
         </div>
 
         {/* bureau : horizon vertical. La zone est un cadre « container query » ; le calque de masque a la taille du cadre tourné
-            (longueur = hauteur de la zone, épaisseur = sa largeur), puis tourne de -90° autour du centre : la terre passe à droite. */}
-        <div className="absolute right-0 top-0 hidden h-full w-[52%] [--horizon:6rem] lg:w-[52%] xl:w-[44%] [container-type:size] md:block lg:[--horizon:8rem]">
+            (longueur = hauteur de la zone, épaisseur = sa largeur), puis tourne de -90° autour du centre : la terre passe à droite.
+            La zone est rognée de `--decale` à gauche (l'horizon recule vers la droite) ; la photo garde sa taille et sa place :
+            son cadre fait `100cqw + --decale`, ancré à droite. Trois échos (voiles) suivent la même ligne vers le ciel. */}
+        <div className="absolute right-0 top-0 z-0 hidden h-full w-[calc(52%-2rem)] [--decale:2rem] [--horizon:6rem] [--pas-echo:1.25rem] [container-type:size] md:block lg:w-[calc(52%-3rem)] lg:[--decale:3rem] lg:[--horizon:8rem] xl:w-[calc(44%-5rem)] xl:[--decale:5rem] xl:[--pas-echo:1.75rem]">
+          {ECHOS.map((k) => (
+            <div key={k} aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ translate: `calc(${-k} * var(--pas-echo)) 0` }}>
+              <div
+                className="absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90 bg-on-surface-brand/5"
+                style={masqueTerre}
+              />
+            </div>
+          ))}
           <div
             className="absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90"
             style={masqueTerre}
           >
-            <div className="absolute left-1/2 top-1/2 h-[100cqh] w-[100cqw] -translate-x-1/2 -translate-y-1/2 rotate-90">
+            <div className="absolute left-1/2 top-[calc(50%-var(--decale)/2)] h-[100cqh] w-[calc(100cqw+var(--decale))] -translate-x-1/2 -translate-y-1/2 rotate-90">
               <Image
                 src="/hero-accueil.webp"
                 alt={ALT_HERO}
                 fill
                 priority
-                sizes="(min-width: 1280px) 44vw, (min-width: 1024px) 52vw, (min-width: 768px) 52vw, 0px"
+                sizes="(min-width: 1280px) 44vw, 52vw"
                 className="object-cover object-[72%_20%]"
               />
             </div>
@@ -288,10 +311,10 @@ export default async function HomePage() {
       </section>
 
       {/* ── CHIFFRES : même fond que l'en-tête, sillons dans le coin haut droit ── */}
-      <section className="relative overflow-hidden py-0">
+      <section className="relative overflow-hidden border-t border-on-surface-brand/15 py-0">
         <Sillons coin="haut-droite" opacite={0.08} className="w-[30%] md:w-[18rem]" />
         {/* les chiffres laissent le coin aux sillons : sous eux sur mobile, à gauche du coin sur bureau */}
-        <div className="container relative z-10 pb-10 pt-24 md:py-14">
+        <div className="container relative z-10 pb-8 pt-20 md:py-8">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:max-w-[52rem] md:grid-cols-4">
             {CHIFFRES.map((c) => (
               <div key={c.label} className="text-center md:text-left">
