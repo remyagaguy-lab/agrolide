@@ -1,10 +1,12 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
-import { Briefcase, MapPin, CalendarDays, Coins, ExternalLink, Award, Megaphone, Telescope } from "@/components/ui/icons"
+import { Briefcase, MapPin, CalendarDays, Coins, ArrowRight, Award, Megaphone, Telescope } from "@/components/ui/icons"
 interface OpportunityCardProps {
   opp: any
 }
@@ -19,6 +21,8 @@ function IconeType({ type }: { type: string }) {
 
 export default function OpportunityCard({ opp }: OpportunityCardProps) {
 
+  // Même carte dans l'espace membre et sur le site public : la page de lecture se trouve au même endroit logique.
+  const base = (usePathname() ?? '').startsWith('/membres') ? '/membres/opportunites' : '/opportunites'
   const isExpired = opp.date_limite && new Date(opp.date_limite) < new Date()
 
   return (
@@ -75,20 +79,12 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
       </div>
       
       <div className="p-4 pt-0 mt-auto">
-        {opp.lien_externe ? (
-          <a 
-            href={opp.lien_externe}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-2 bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-label-sm transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider"
-          >
-            Voir l'offre <ExternalLink className="size-4" />
-          </a>
-        ) : (
-          <div className="bg-surface-container-low py-2 text-center rounded-lg text-label-sm text-on-surface-muted font-bold border border-outline-variant uppercase tracking-wider">
-            Contactez l'auteur
-          </div>
-        )}
+        <Link
+          href={`${base}/${opp.id}`}
+          className="w-full py-2 bg-surface-container-low hover:bg-primary-container hover:text-primary text-on-surface-variant font-bold rounded-lg text-label-sm transition-colors flex items-center justify-center gap-1.5 border border-outline-variant uppercase tracking-wider"
+        >
+          Lire l'offre <ArrowRight className="size-4" aria-hidden="true" />
+        </Link>
       </div>
     </div>
   )
