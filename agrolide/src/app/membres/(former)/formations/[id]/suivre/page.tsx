@@ -3,12 +3,15 @@ import { eq } from "drizzle-orm";
 import { db } from "@/db";
 import { formations, progression_lecons } from "@/db/schema";
 import { auth } from "@/lib/auth/server";
+import { peutSuivre } from "@/lib/formations/acces.server";
 
 /** « Reprendre » : ouvre la première leçon non validée (ou la première, si tout est validé ou rien n'est commencé). */
 export default async function SuivreRacinePage({ params }: { params: Promise<{ id: string }> }) {
   const { id: formationId } = await params;
   const { userId } = await auth();
   if (!userId) redirect(`/login?next=${encodeURIComponent(`/membres/formations/${formationId}/suivre`)}`);
+
+  if (!(await peutSuivre(formationId)).autorise) redirect(`/membres/formations/${formationId}`);
 
   const [formation, faites] = await Promise.all([
     db.query.formations.findFirst({

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/db";
 import { formation_lecons, formation_modules, formations, progression_lecons } from "@/db/schema";
 import { auth } from "@/lib/auth/server";
+import { peutSuivre } from "@/lib/formations/acces.server";
 import { notifier } from "@/lib/notifications.server";
 import { and, eq, inArray } from "drizzle-orm";
 
@@ -17,6 +18,9 @@ export async function POST(
 
     const { id: formationId, lecon_id: leconId } = await params;
     const userId = session.user.id;
+    if (!(await peutSuivre(formationId)).autorise) {
+      return NextResponse.json({ error: "Inscription requise" }, { status: 403 });
+    }
 
     // Check if already completed
     const existingCompletion = await db.query.progression_lecons.findFirst({

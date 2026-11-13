@@ -324,6 +324,23 @@ export const inscriptions_formation = sqliteTable("inscriptions_formation", {
   index("idx_inscriptions_formation_formation_id").on(t.formation_id),
 ]);
 
+/** Codes d'accès aux formations Agrolide (challenges) : un code = une personne, usage unique. */
+export const codes_acces_formation = sqliteTable("codes_acces_formation", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  code: text("code").notNull(),
+  /** Vide = valable pour toutes les formations Agrolide. */
+  formation_id: text("formation_id"),
+  /** Nom du challenge ou de la campagne d'origine. */
+  lot: text("lot"),
+  expire_le: text("expire_le"),
+  utilise_par: text("utilise_par"),
+  utilise_le: text("utilise_le"),
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
+}, (t) => [
+  uniqueIndex("idx_codes_acces_formation_code").on(t.code),
+  index("idx_codes_acces_formation_lot").on(t.lot),
+]);
+
 export const messages = sqliteTable("messages", {
   contenu: text("contenu").notNull(),
   created_at: text("created_at"),

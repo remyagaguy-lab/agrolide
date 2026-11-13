@@ -1,4 +1,5 @@
 import { auth } from "@/lib/auth/server";
+import { peutSuivre } from "@/lib/formations/acces.server";
 import { formation_lecons } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { structureFormation, leconsTerminees } from "@/lib/formations/suivre.server";
@@ -22,6 +23,7 @@ export default async function LeconPage({
     redirect(`/login?next=${encodeURIComponent(`/membres/formations/${formationId}/suivre/${leconId}`)}`);
   }
   const userId = session.user.id;
+  if (!(await peutSuivre(formationId)).autorise) redirect(`/membres/formations/${formationId}`);
 
   // Les trois lectures sont indépendantes : elles partent ensemble (un seul aller-retour D1 au lieu de trois).
   // Le sommaire et la progression sont partagés avec le layout (une seule lecture par affichage).

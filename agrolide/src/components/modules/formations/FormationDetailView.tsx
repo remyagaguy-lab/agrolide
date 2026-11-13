@@ -133,7 +133,16 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
               </div>
             ) : null}
 
-            <p className="text-body-lg leading-[1.8] text-on-surface-variant">{formation.description}</p>
+            {/* Résumé chiffré : visible d'emblée sur mobile (l'encart d'inscription vient après le contenu). */}
+            <dl className="grid grid-cols-2 gap-4 rounded-card border border-outline-variant bg-surface-container-lowest p-4 lg:hidden">
+              <Fait Icone={GraduationCap} libelle="Niveau">{formation.niveau || "Tous niveaux"}</Fait>
+              {isExternal ? (extProgramme?.duree ? <Fait Icone={Clock} libelle="Durée">{extProgramme.duree}</Fait> : null) : <Fait Icone={Clock} libelle="Durée">{formattedDuree}</Fait>}
+            </dl>
+
+            <section aria-labelledby="apropos" className="space-y-3">
+              <h2 id="apropos" className="text-title-lg font-bold text-on-surface">À propos de la formation</h2>
+              <p className="text-body-lg leading-[1.8] text-on-surface-variant">{formation.description}</p>
+            </section>
 
             <div className="space-y-3">
               {isExternal && extProgramme ? (
@@ -167,40 +176,56 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
                   )}
                 </>
               ) : (
-                <Rubrique titre="Structure du cours" ouverte>
+                <section aria-labelledby="programme" className="space-y-3">
+                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                    <h2 id="programme" className="text-title-lg font-bold text-on-surface">Programme</h2>
+                    {totalModules > 0 && (
+                      <p className="text-body-md text-on-surface-variant">
+                        {totalModules} module{totalModules > 1 ? "s" : ""} · {totalLecons} leçon{totalLecons > 1 ? "s" : ""} · {formattedDuree}
+                      </p>
+                    )}
+                  </div>
                   {formation.modules.length === 0 ? (
                     <p className={texte}>Le programme détaillé sera bientôt publié.</p>
                   ) : (
-                    <ol className="space-y-6">
-                      {formation.modules.map((mod, index) => (
-                        <li key={mod.id}>
-                          <div className="flex items-start gap-3">
+                    formation.modules.map((mod, index) => {
+                      const minutes = mod.lecons.reduce((acc, l) => acc + (l.duree_minutes || 0), 0);
+                      return (
+                        <details key={mod.id} className="group overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest">
+                          <summary className="flex min-h-14 cursor-pointer list-none items-center gap-3 px-4 py-3 transition-colors hover:bg-surface-container-low [&::-webkit-details-marker]:hidden">
                             <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-container text-label-lg font-bold text-on-primary-container">
                               {String(index + 1).padStart(2, "0")}
                             </span>
-                            <div className="min-w-0">
-                              <h3 className="text-title-md font-bold leading-snug text-on-surface">{mod.titre}</h3>
-                              {mod.description ? <p className="mt-1 text-body-md text-on-surface-variant">{mod.description}</p> : null}
-                            </div>
+                            <span className="min-w-0 flex-1">
+                              <span className="block text-title-md font-bold leading-snug text-on-surface">{mod.titre}</span>
+                              <span className="block text-label-md text-on-surface-variant">
+                                {mod.lecons.length} leçon{mod.lecons.length > 1 ? "s" : ""}{minutes ? ` · ${minutes} min` : ""}
+                              </span>
+                            </span>
+                            <span className="group-open:hidden"><Plus className="size-5 text-primary" aria-hidden /></span>
+                            <span className="hidden group-open:block"><Minus className="size-5 text-primary" aria-hidden /></span>
+                          </summary>
+                          <div className="space-y-3 px-4 pb-4">
+                            {mod.description ? <p className={texte}>{mod.description}</p> : null}
+                            {mod.lecons.length > 0 && (
+                              <ul className="space-y-2 border-l border-outline-variant pl-4">
+                                {mod.lecons.map((lecon) => (
+                                  <li key={lecon.id} className="flex items-start justify-between gap-3">
+                                    <span className="flex items-start gap-2 text-body-md text-on-surface">
+                                      <CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" aria-hidden />
+                                      {lecon.titre}
+                                    </span>
+                                    {lecon.duree_minutes ? <span className="shrink-0 text-label-md text-on-surface-variant">{lecon.duree_minutes} min</span> : null}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </div>
-                          {mod.lecons.length > 0 && (
-                            <ul className="ml-12 mt-3 space-y-2 border-l border-outline-variant pl-4">
-                              {mod.lecons.map((lecon) => (
-                                <li key={lecon.id} className="flex items-start justify-between gap-3">
-                                  <span className="flex items-start gap-2 text-body-md text-on-surface">
-                                    <CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" aria-hidden />
-                                    {lecon.titre}
-                                  </span>
-                                  {lecon.duree_minutes ? <span className="shrink-0 text-label-md text-on-surface-variant">{lecon.duree_minutes} min</span> : null}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </li>
-                      ))}
-                    </ol>
+                        </details>
+                      );
+                    })
                   )}
-                </Rubrique>
+                </section>
               )}
             </div>
           </div>
@@ -208,7 +233,7 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
           {/* Encart : résumé et inscription (reste visible en défilant) */}
           <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">
             <div className="space-y-5 rounded-card border border-outline-variant bg-surface-container-lowest p-6">
-              <p className="text-headline-sm font-bold text-on-surface">{gratuit ? "Gratuit" : `${formation.prix_fcfa?.toLocaleString("fr-FR")} FCFA`}</p>
+              <p className="text-headline-sm font-bold text-on-surface">{gratuit ? (isExternal ? "Gratuit" : "Sur invitation") : `${formation.prix_fcfa?.toLocaleString("fr-FR")} FCFA`}</p>
 
               <dl className="space-y-4">
                 <Fait Icone={GraduationCap} libelle="Niveau">{formation.niveau || "Tous niveaux"}</Fait>

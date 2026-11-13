@@ -4,6 +4,7 @@ import { formations, inscriptions_formation } from "@/db/schema";
 import { auth } from "@/lib/auth/server";
 import { notifier } from "@/lib/notifications.server";
 import { and, eq } from "drizzle-orm";
+import { consommerCode, formationExigeCode } from "@/lib/formations/acces.server";
 
 export async function POST(
   request: Request,
@@ -27,6 +28,15 @@ export async function POST(
     });
 
     if (!existingEnrollment) {
+      // Formation Agrolide : l'inscription exige un code d'accès (challenge). Les formations externes restent libres.
+      const exigeCode = await formationExigeCode(formationId);
+      if (exigeCode === null) return NextResponse.json({ error: "Formation introuvable" }, { status: 404 });
+      if (exigeCode) {
+        const corps = (await request.json().catch(() => ({}))) as { code?: unknown };
+        const resultat = await consommerCode(typeof corps.code === "string" ? corps.code : "", userId, formationId);
+        if (!resultat.ok) return NextResponse.json({ error: resultat.erreur }, { status: 400 });
+      }
+
       // Create new enrollment
       await db.insert(inscriptions_formation).values({
         membre_id: userId,

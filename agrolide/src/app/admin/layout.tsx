@@ -8,7 +8,7 @@ import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
 import { ClearCacheButton } from "./ClearCacheButton"
 
-import { LayoutDashboard, Users, FileText, FolderOpen, NotebookPen, CalendarDays, CreditCard, ExternalLink, Globe, Star, Handshake, Sprout, MessageCircle, ChevronDown, ShieldAlert } from "@/components/ui/icons"
+import { LayoutDashboard, Users, FileText, FolderOpen, NotebookPen, CalendarDays, CreditCard, ExternalLink, Globe, Star, Handshake, Sprout, MessageCircle, ChevronDown, ShieldAlert, Lock } from "@/components/ui/icons"
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const { userId } = await auth()
   const user = await currentUser()
@@ -83,6 +83,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           {navLink("/admin/contenus/articles", "Articles (Blog)", FileText)}
           {navLink("/admin/contenus/documents", "Documents", FolderOpen)}
           {navLink("/admin/contenus/formations", "Formations", NotebookPen)}
+          {navLink("/admin/contenus/formations/codes", "Codes d'accès", Lock)}
           {navLink("/admin/contenus/evenements", "Événements", CalendarDays)}
           {navLink("/admin/contenus/opportunites", "Opportunités", MessageCircle)}
           {navLink("/admin/forum", "Forum", MessageCircle)}

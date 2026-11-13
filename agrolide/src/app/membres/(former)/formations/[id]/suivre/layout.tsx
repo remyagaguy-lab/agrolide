@@ -2,7 +2,7 @@ import { structureFormation, leconsTerminees } from "@/lib/formations/suivre.ser
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 
-import { auth } from "@/lib/auth/server";
+import { peutSuivre } from "@/lib/formations/acces.server";
 import { ArrowLeft, CheckCircle2, ListOrdered, Lock } from "@/components/ui/icons"
 /**
  * Lecteur de cours dans l'espace membre : le sommaire reste à côté de la leçon,
@@ -17,10 +17,12 @@ export default async function SuivreLayout({
 }) {
   const { id: formationId } = await params;
 
-  const { userId } = await auth();
+  const { userId, autorise } = await peutSuivre(formationId);
   if (!userId) {
     redirect(`/login?next=${encodeURIComponent(`/membres/formations/${formationId}/suivre`)}`);
   }
+  // Pas d'inscription (donc pas de code utilisé) : retour à la fiche, où se fait l'inscription.
+  if (!autorise) redirect(`/membres/formations/${formationId}`);
 
   // Mêmes lectures que la page de la leçon : partagées (une seule fois par affichage).
   const [formation, userProgress] = await Promise.all([
