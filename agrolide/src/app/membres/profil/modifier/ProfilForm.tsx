@@ -11,12 +11,13 @@ import { Input } from "@/components/ui/Input"
 import { MultiSelect } from "@/components/ui/MultiSelect"
 import { NativeSelect } from "@/components/ui/Select"
 import { Textarea } from "@/components/ui/Textarea"
-import { uploadAvatarAction } from "@/app/actions/upload"
-import { updateAvatarUrl, updateProfil } from "@/app/actions/profil"
+import { retirerAvatarAction, uploadAvatarAction } from "@/app/actions/upload"
+import { updateProfil } from "@/app/actions/profil"
+import { FORMATS_PHOTO, PhotoProfilEditeur, POIDS_MAX_ORIGINE } from "@/components/modules/profil/PhotoProfilEditeur"
 import { CENTRES_INTERET_GROUPES, LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 
-import { Camera, Save } from "@/components/ui/icons"
+import { Camera, Save, Trash2 } from "@/components/ui/icons"
 export interface ProfilInitial {
   prenom: string
   nom: string
@@ -65,27 +66,59 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
   const completion = completionProfil({ ...valeurs, photo_url: photo })
   const optionsPays = avecExistantes([...PAYS, PAYS_AUTRE], valeurs.pays ? [valeurs.pays] : [])
 
-  const choisirPhoto = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const [fichierPhoto, setFichierPhoto] = React.useState<File | null>(null)
+  const [messagePhoto, setMessagePhoto] = React.useState<{ type: "success" | "error"; texte: string } | null>(null)
+
+  const choisirPhoto = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
+    e.target.value = "" // permet de rechoisir le même fichier
     if (!file) return
-    const apercu = URL.createObjectURL(file)
-    const ancienne = photo
-    setPhoto(apercu)
+    setMessagePhoto(null)
+    if (!FORMATS_PHOTO.includes(file.type)) {
+      setMessagePhoto({ type: "error", texte: "Format non pris en charge. Choisissez une image JPEG, PNG ou WebP." })
+      return
+    }
+    if (file.size > POIDS_MAX_ORIGINE) {
+      setMessagePhoto({ type: "error", texte: "Cette image est trop lourde (15 Mo au maximum). Choisissez-en une plus légère." })
+      return
+    }
+    setFichierPhoto(file)
+  }
+
+  /** Reçoit l'image recadrée, l'envoie et met à jour l'avatar partout. Renvoie un message d'erreur, ou null. */
+  const envoyerPhoto = async (image: Blob): Promise<string | null> => {
     setEnvoiPhoto(true)
-    setErreurGenerale("")
     try {
       const formData = new FormData()
-      formData.append("photo", file)
+      formData.append("photo", new File([image], "photo.jpg", { type: "image/jpeg" }))
       const res = await uploadAvatarAction(formData)
-      if (!res.success || !res.url) throw new Error(res.error || "L’envoi de la photo a échoué.")
+      if (!res.success || !res.url) return res.error || "L’envoi de la photo a échoué. Réessayez."
       setPhoto(res.url)
-      await updateAvatarUrl(res.url)
-    } catch (err) {
-      setErreurGenerale(err instanceof Error && err.message ? err.message : "L’envoi de la photo a échoué.")
-      setPhoto(ancienne)
+      setFichierPhoto(null)
+      setMessagePhoto({ type: "success", texte: "Photo enregistrée. Elle apparaît désormais sur tout le site." })
+      toast({ title: "Photo enregistrée", variant: "success" })
+      router.refresh() // menu du compte, en-tête, annuaire : rechargés avec la nouvelle photo
+      return null
+    } catch {
+      return "L’envoi de la photo a échoué. Vérifiez votre connexion et réessayez."
     } finally {
       setEnvoiPhoto(false)
-      URL.revokeObjectURL(apercu)
+    }
+  }
+
+  const retirerPhoto = async () => {
+    setEnvoiPhoto(true)
+    setMessagePhoto(null)
+    try {
+      const res = await retirerAvatarAction()
+      if (!res.success) throw new Error(res.error)
+      setPhoto("")
+      setMessagePhoto({ type: "success", texte: "Photo retirée." })
+      router.refresh()
+    } catch (err) {
+      setMessagePhoto({ type: "error", texte: err instanceof Error && err.message ? err.message : "La photo n’a pas pu être retirée." })
+    } finally {
+      setEnvoiPhoto(false)
     }
   }
 
@@ -144,15 +177,27 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
         <h2 id="photo-titre" className="text-title-md text-on-surface">Photo de profil</h2>
         <div className="flex items-center gap-4">
           <Avatar src={photo || null} name={`${valeurs.prenom} ${valeurs.nom}`.trim() || undefined} size="xl" />
-          <div>
+          <div className="min-w-0">
             <input ref={fileInputRef} type="file" accept="image/jpeg,image/png,image/webp" onChange={choisirPhoto} className="sr-only" tabIndex={-1} aria-label="Choisir une photo" />
-            <Button type="button" variant="outline" loading={envoiPhoto} onClick={() => fileInputRef.current?.click()}>
-              <Camera className="size-5" aria-hidden />
-              {photo ? "Changer la photo" : "Ajouter une photo"}
-            </Button>
-            <p className="mt-1.5 text-body-sm text-on-surface-muted">JPEG, PNG ou WebP, 2 Mo au maximum. La photo est enregistrée dès son envoi.</p>
+            <div className="flex flex-wrap gap-2">
+              <Button type="button" variant="outline" loading={envoiPhoto} onClick={() => fileInputRef.current?.click()}>
+                <Camera className="size-5" aria-hidden />
+                {photo ? "Changer la photo" : "Ajouter une photo"}
+              </Button>
+              {photo && (
+                <Button type="button" variant="text" disabled={envoiPhoto} onClick={retirerPhoto}>
+                  <Trash2 className="size-5" aria-hidden />
+                  Retirer
+                </Button>
+              )}
+            </div>
+            <p className="mt-1.5 text-body-sm text-on-surface-muted">JPEG, PNG ou WebP, 15 Mo au maximum. Vous recadrez la photo avant l’envoi ; elle est enregistrée dès que vous la validez.</p>
           </div>
         </div>
+        <div aria-live="polite" className="empty:hidden">
+          {messagePhoto && <Alert variant={messagePhoto.type}>{messagePhoto.texte}</Alert>}
+        </div>
+        <PhotoProfilEditeur fichier={fichierPhoto} onFermer={() => setFichierPhoto(null)} onValider={envoyerPhoto} />
       </div>
 
       <div role="group" aria-labelledby="identite-titre" className="space-y-4">

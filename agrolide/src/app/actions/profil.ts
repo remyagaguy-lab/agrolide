@@ -168,20 +168,6 @@ export async function annulerDemandeCategorie(): Promise<{ success: true } | { s
   return { success: true }
 }
 
-export async function updateAvatarUrl(url: string) {
-  const { userId } = await auth();
-  if (!userId) {
-    throw new Error("Non autorisé")
-  }
-
-  await db.update(users).set({
-    photo_url: url,
-    updated_at: new Date().toISOString()
-  }).where(eq(users.id, userId))
-
-  revalidatePath('/membres/profil')
-}
-
 export async function getCurrentUserCategory() {
   const { userId } = await auth();
   if (!userId) return null;
