@@ -70,7 +70,11 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
     icon: Telescope,
     // Les offres seulement : « Entreprendre » a sa propre rubrique (son préfixe, plus long, l'emporte).
     prefixes: ["/membres/opportunites"],
-    onglets: [],
+    // Sur mobile, Entreprendre n'a pas d'entrée dans la barre du bas : on y accède par cet onglet.
+    onglets: [
+      { label: "Offres", href: "/membres/opportunites" },
+      { label: "Entreprendre", href: "/membres/opportunites/entreprendre" },
+    ],
   },
   {
     key: "entreprendre",

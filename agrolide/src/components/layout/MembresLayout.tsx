@@ -12,7 +12,6 @@ import { COOKIE_BARRE_REPLIEE, MEMBRES_RUBRIQUES, afficherNombre, estPageImmersi
 import { Logo } from "@/components/ui/Logo"
 import { cn } from "@/lib/utils/formatters"
 import { Avatar } from "@/components/ui/Avatar"
-import { InvitationInstallation } from "@/components/pwa/InvitationInstallation"
 import NotificationBell from "@/components/shared/NotificationBell"
 
 import { ChevronLeft, ChevronRight, LogOut, Mail } from "@/components/ui/icons"
@@ -80,8 +79,8 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
   const rubriqueCourante = rubriqueActive(pathname)
   // Sur le tableau de bord, la cloche et le menu du compte sont dans le bandeau de bienvenue : pas de barre au-dessus.
   const surDashboard = pathname === "/membres/dashboard"
-  // Barre du bas : cinq entrées au plus (cibles lisibles à 360 px) ; Messages passe dans l'en-tête mobile.
-  const rubriquesBas = MEMBRES_RUBRIQUES.filter((r) => r.key !== "messages")
+  // Barre du bas : quatre entrées. Messages passe dans l'en-tête mobile ; Entreprendre est un onglet d'Opportunités.
+  const rubriquesBas = MEMBRES_RUBRIQUES.filter((r) => r.key !== "messages" && r.key !== "entreprendre")
   const nomProfil = [profile?.prenom, profile?.nom].filter(Boolean).join(" ") || "Mon compte"
   const photoProfil = profile?.photo_url || profile?.image || null
   const profilActif = !!pathname && (pathname === "/membres/profil" || pathname.startsWith("/membres/profil/"))
@@ -93,7 +92,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
   }
 
   const sidebarLink = (item: MembresRubrique) => {
-    const isActive = rubriqueCourante === item.key
+    const isActive = rubriqueCourante === item.key || (item.key === "opportunites" && rubriqueCourante === "entreprendre")
     const { n, label } = pastille(item)
     if (replie) {
       return (
@@ -141,7 +140,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
 
   return (
     <MembresBadgesProvider valeurs={{ invitations: pendingRequestsCount, messages: unreadMessagesCount }}>
-    <div className="flex h-screen overflow-hidden bg-surface-container-low">
+    <div className="flex h-dvh overflow-hidden bg-surface-container-low">
       {/* ================= VERTICAL SIDEBAR (DESKTOP) ================= */}
       <aside
         data-visite="navigation"
@@ -254,7 +253,6 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
         <main id="contenu" className="custom-scrollbar relative min-h-0 flex-1 overflow-y-auto p-3 pb-28 md:p-5 md:pb-28 lg:p-6 lg:pb-6">
           <div className="mx-auto h-full max-w-[1400px]">{children}</div>
         </main>
-        <InvitationInstallation />
       </div>
 
       {/* ================= BOTTOM NAVIGATION (MOBILE) ================= */}

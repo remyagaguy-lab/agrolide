@@ -1,131 +1,119 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
 import { IconButton } from '@/components/ui/IconButton'
-import { Share2, Smartphone, X } from '@/components/ui/icons'
-
-/** Événement Chrome / Android : l'invite d'installation, gardée pour être déclenchée par notre propre bouton. */
-interface InvitePrompt extends Event {
-  prompt: () => Promise<void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
-}
+import { Check, Share2, Smartphone, X } from '@/components/ui/icons'
+import { useInstallation } from '@/lib/pwa-installation'
 
 const CLE = 'ag-pwa-invitation'
-/** Après un refus, on ne redemande qu'au bout de 30 jours. */
-const REPOS_MS = 30 * 86_400_000
-/** Le temps de laisser la page et la bannière des cookies se poser. */
-const DELAI_MS = 20_000
+/** « Plus tard » : on repropose au bout de 3 jours. */
+const REPOS_MS = 3 * 86_400_000
+/** Laisse la page s'afficher avant de proposer. */
+const DELAI_MS = 4_000
 
-function repos(): boolean {
+/** Avantages de l'application installée (uniquement ce qu'elle fait réellement). */
+export const AVANTAGES_APPLICATION = [
+  "Un accès direct depuis l'écran d'accueil, en plein écran",
+  'Vos documents enregistrés, lisibles sans connexion',
+  'Vos formations, vos messages et les opportunités en un geste',
+]
+
+function enRepos(): boolean {
   try {
-    const v = localStorage.getItem(CLE)
-    if (v === 'installee') return true
-    return !!v && Date.now() - Number(v) < REPOS_MS
+    const v = Number(localStorage.getItem(CLE))
+    return !!v && Date.now() - v < REPOS_MS
   } catch {
     return false
   }
 }
-function memoriser(valeur: string) {
+/** Le choix sur les cookies est fait : la bannière des cookies ne se superpose pas à celle-ci. */
+function cookiesTranches(): boolean {
   try {
-    localStorage.setItem(CLE, valeur)
-  } catch {}
+    return localStorage.getItem('cookie-consent') !== null
+  } catch {
+    return true
+  }
 }
 
-const dejaInstallee = () =>
-  window.matchMedia('(display-mode: standalone)').matches || (navigator as Navigator & { standalone?: boolean }).standalone === true
-
-const surIos = () =>
-  /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+/** Pages de lecture ou de conversation : l'invitation ne gêne pas. */
+const PAGES_CALMES = [/\/lire(\/|$)/, /\/suivre(\/|$)/, /^\/membres\/messages/, /^\/hors-ligne/]
 
 /**
- * Invitation à installer l'application, discrète et fermable.
- * Android / Chrome : bouton « Installer » (événement beforeinstallprompt) ; iOS : explication « Partager, puis Sur l'écran
- * d'accueil » (Safari n'a pas d'invite programmable). Rien n'est affiché si l'application est déjà installée ou si
- * l'invitation a été fermée (mémorisé 30 jours).
+ * Invitation à installer l'application, sur toutes les pages, surtout sur mobile.
+ * Android / Chrome : bouton « Installer » ; iPhone : « Partager, puis Sur l'écran d'accueil ».
+ * « Plus tard » la ferme pour 3 jours. Elle revient si l'application a été désinstallée (le navigateur ne rend l'invite
+ * disponible que si elle n'est pas installée). Rien n'est affiché dans l'application installée.
  */
 export function InvitationInstallation() {
-  const [invite, setInvite] = useState<InvitePrompt | null>(null)
-  const [ios, setIos] = useState(false)
-  const [visible, setVisible] = useState(false)
+  const { peutProposer, invite, installer } = useInstallation()
+  const pathname = usePathname() ?? ''
+  const [pret, setPret] = useState(false)
+  const [ferme, setFerme] = useState(false)
 
   useEffect(() => {
-    if (dejaInstallee() || repos()) return
+    if (!peutProposer || enRepos()) return
     let minuteur: ReturnType<typeof setTimeout> | undefined
-    const apres = () => {
-      clearTimeout(minuteur)
-      minuteur = setTimeout(() => setVisible(true), DELAI_MS)
-    }
-    const surPrompt = (e: Event) => {
-      e.preventDefault()
-      setInvite(e as InvitePrompt)
-      apres()
-    }
-    const surInstallee = () => {
-      memoriser('installee')
-      setVisible(false)
-    }
-    window.addEventListener('beforeinstallprompt', surPrompt)
-    window.addEventListener('appinstalled', surInstallee)
-    if (surIos()) {
-      setIos(true)
-      apres()
-    }
+    const verifier = setInterval(() => {
+      if (!cookiesTranches()) return
+      clearInterval(verifier)
+      minuteur = setTimeout(() => setPret(true), DELAI_MS)
+    }, 1500)
     return () => {
+      clearInterval(verifier)
       clearTimeout(minuteur)
-      window.removeEventListener('beforeinstallprompt', surPrompt)
-      window.removeEventListener('appinstalled', surInstallee)
     }
-  }, [])
+  }, [peutProposer])
 
-  const fermer = useCallback(() => {
-    memoriser(String(Date.now()))
-    setVisible(false)
-  }, [])
-
-  const installer = useCallback(async () => {
-    if (!invite) return
-    setVisible(false)
+  const plusTard = () => {
     try {
-      await invite.prompt()
-      const { outcome } = await invite.userChoice
-      memoriser(outcome === 'accepted' ? 'installee' : String(Date.now()))
-    } catch {
-      memoriser(String(Date.now()))
-    }
-    setInvite(null)
-  }, [invite])
+      localStorage.setItem(CLE, String(Date.now()))
+    } catch {}
+    setFerme(true)
+  }
 
-  if (!visible || (!invite && !ios)) return null
+  if (!peutProposer || !pret || ferme || PAGES_CALMES.some((re) => re.test(pathname))) return null
 
+  const membre = pathname.startsWith('/membres')
   return (
     <section
       aria-label="Installer l'application"
-      className="fixed inset-x-3 bottom-24 z-40 flex items-start gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-4 shadow-elev-4 lg:inset-x-auto lg:bottom-6 lg:right-6 lg:w-[420px]"
+      className={`fixed inset-x-3 z-40 rounded-card border border-outline-variant bg-surface-container-lowest p-4 shadow-elev-4 lg:inset-x-auto lg:bottom-6 lg:right-6 lg:w-[420px] ${membre ? 'bottom-24' : 'bottom-3'}`}
     >
-      <Smartphone className="mt-0.5 size-6 shrink-0 text-primary" aria-hidden />
-      <div className="min-w-0 flex-1">
-        <p className="text-title-sm text-on-surface">Installer agrolide sur votre appareil</p>
-        {invite ? (
-          <>
-            <p className="mt-1 text-body-md text-on-surface-variant">
-              Un accès direct depuis l&apos;écran d&apos;accueil, et vos documents gardés lisibles sans connexion.
-            </p>
-            <Button variant="secondary" size="md" className="mt-3" onClick={installer}>
-              Installer
-            </Button>
-          </>
-        ) : (
-          <p className="mt-1 text-body-md text-on-surface-variant">
-            Touchez <Share2 className="inline size-4 align-text-bottom" aria-hidden />
-            <span className="font-medium text-on-surface"> Partager</span>, puis{' '}
-            <span className="font-medium text-on-surface">Sur l&apos;écran d&apos;accueil</span>.
-          </p>
-        )}
+      <div className="flex items-start gap-3">
+        <Smartphone className="mt-0.5 size-6 shrink-0 text-primary" aria-hidden />
+        <div className="min-w-0 flex-1">
+          <p className="text-title-sm text-on-surface">Installez agrolide sur votre téléphone</p>
+          <ul className="mt-2 space-y-1.5">
+            {AVANTAGES_APPLICATION.map((a) => (
+              <li key={a} className="flex items-start gap-2 text-body-md text-on-surface-variant">
+                <Check className="mt-0.5 size-4 shrink-0 text-success" aria-hidden />
+                {a}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <IconButton label="Plus tard" onClick={plusTard} className="-mr-2 -mt-2">
+          <X className="size-5" aria-hidden />
+        </IconButton>
       </div>
-      <IconButton label="Fermer" onClick={fermer} className="-mr-2 -mt-2">
-        <X className="size-5" aria-hidden />
-      </IconButton>
+      {invite ? (
+        <div className="mt-3 flex flex-wrap gap-2">
+          <Button variant="secondary" size="md" onClick={installer}>
+            Installer l&apos;application
+          </Button>
+          <Button variant="text" size="md" onClick={plusTard}>
+            Plus tard
+          </Button>
+        </div>
+      ) : (
+        <p className="mt-3 rounded-control bg-surface-container-low p-3 text-body-md text-on-surface-variant">
+          Touchez <Share2 className="inline size-4 align-text-bottom" aria-hidden />
+          <span className="font-medium text-on-surface"> Partager</span>, puis{' '}
+          <span className="font-medium text-on-surface">Sur l&apos;écran d&apos;accueil</span>.
+        </p>
+      )}
     </section>
   )
 }

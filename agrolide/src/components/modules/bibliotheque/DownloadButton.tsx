@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/lib/auth/client'
 import { Button } from '@/components/ui/Button'
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from '@/components/ui/Modal'
+import { InfoEnregistrement } from './InfoEnregistrement'
 import { AnneauProgression, useTelechargementHorsLigne } from './useTelechargementHorsLigne'
 
 import { Check, Download, Eye, Lock } from "@/components/ui/icons"
@@ -89,6 +90,8 @@ export function DownloadButton({ documentId, titre, mode = 'public' }: { documen
           </p>
         </div>
       )}
+
+      {mode === 'membre' && <InfoEnregistrement etat={etat} />}
 
       {/* Réservé aux membres */}
       <Modal open={showAuthModal} onOpenChange={setShowAuthModal}>
