@@ -10,6 +10,7 @@ const THEMATIQUES = ['Agrobusiness', 'Production Animale', 'Production Végétal
 const SOURCES = [
   { value: 'Agrolide', label: 'Agrolide' },
   { value: 'FAO elearning Academy', label: 'FAO' },
+  { value: 'GIZ atingi', label: 'GIZ atingi' },
   { value: 'FUN MOOC', label: 'FUN MOOC' },
 ];
 const NIVEAUX = ['Débutant', 'Intermédiaire', 'Avancé'];

@@ -317,6 +317,8 @@ export const inscriptions_formation = sqliteTable("inscriptions_formation", {
   formation_id: text("formation_id"), // Added for async formations
   session_id: text("session_id"), // Made optional
   statut: text("statut"),
+  /** Formations externes : date du premier clic sur « Accéder au cours » (vide tant que le membre n'a pas ouvert le cours). */
+  premier_acces_le: text("premier_acces_le"),
 }, (t) => [
   index("idx_inscriptions_formation_membre_id_formation_id").on(t.membre_id, t.formation_id),
   index("idx_inscriptions_formation_formation_id").on(t.formation_id),

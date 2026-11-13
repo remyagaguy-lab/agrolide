@@ -1,11 +1,11 @@
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import { db } from "@/db"
-import { users, articles, documents, cotisations, contributions, opportunites, evenements, inscriptions_formation, forum_messages } from "@/db/schema"
-import { eq, gte, lt, count, sum, desc } from "drizzle-orm"
+import { users, articles, documents, cotisations, contributions, opportunites, evenements, inscriptions_formation, formations, forum_messages } from "@/db/schema"
+import { eq, gte, lt, count, sum, desc, isNotNull } from "drizzle-orm"
 import { AdminRevenueChart, AdminDonutChart } from "@/components/admin/ChartsWrapper"
 
-import { ArrowRight, Users, UserPlus, TrendingUp, CreditCard, Library, FileText, MessageCircle, CalendarDays, Eye, Download, Target, Activity, Coins } from "@/components/ui/icons"
+import { ArrowRight, Users, UserPlus, TrendingUp, CreditCard, Library, FileText, MessageCircle, CalendarDays, Eye, Download, Target, Activity, Coins, GraduationCap } from "@/components/ui/icons"
 export const metadata = { title: "Tableau de bord" }
 export const dynamic = 'force-dynamic'
 
@@ -80,6 +80,7 @@ export default async function AdminDashboardPage() {
     evenementsAvenirRows,
     cotisationsRows,
     contributionsRows,
+    inscriptionsExternesRows,
   ] = await Promise.all([
     db.select().from(users),
     db.select({ id: users.id, prenom: users.prenom, nom: users.nom, categorie: users.categorie, statut_adhesion: users.statut_adhesion, pays: users.pays, created_at: users.created_at })
@@ -90,7 +91,24 @@ export default async function AdminDashboardPage() {
     db.select({ id: evenements.id }).from(evenements).where(eq(evenements.publie, true)),
     db.select({ montant_fcfa: cotisations.montant_fcfa, created_at: cotisations.created_at }).from(cotisations).where(eq(cotisations.statut, 'valide')),
     db.select({ montant_fcfa: contributions.montant_fcfa, created_at: contributions.created_at }).from(contributions).where(eq(contributions.statut, 'valide')),
+    // Formations externes : qui s'est inscrit sur Agrolide, et qui a ensuite ouvert le cours chez l'organisme.
+    db.select({ formation_id: inscriptions_formation.formation_id, titre: formations.titre, source: formations.source_externe, premier_acces_le: inscriptions_formation.premier_acces_le })
+      .from(inscriptions_formation)
+      .innerJoin(formations, eq(inscriptions_formation.formation_id, formations.id))
+      .where(isNotNull(formations.lien_externe)),
   ])
+
+  const parFormationExterne = new Map<string, { titre: string; source: string; inscrits: number; acces: number }>()
+  for (const r of inscriptionsExternesRows) {
+    const cle = r.formation_id ?? r.titre
+    const ligne = parFormationExterne.get(cle) ?? { titre: r.titre, source: r.source ?? "Partenaire", inscrits: 0, acces: 0 }
+    ligne.inscrits += 1
+    if (r.premier_acces_le) ligne.acces += 1
+    parFormationExterne.set(cle, ligne)
+  }
+  const formationsExternes = [...parFormationExterne.values()].sort((a, b) => b.inscrits - a.inscrits)
+  const totalInscritsExternes = inscriptionsExternesRows.length
+  const totalAccesExternes = inscriptionsExternesRows.filter((r) => r.premier_acces_le).length
 
   const totalMembres = totalMembresRows.length
   const totalActifs = totalMembresRows.filter(m => m.statut_adhesion === 'actif').length
@@ -178,6 +196,38 @@ export default async function AdminDashboardPage() {
           <KpiCard label="Opportunités publiées" value={opportunitesPubRows.length} icon={Target} color="bg-success-container text-success" />
           <KpiCard label="Événements à venir" value={evenementsAvenirRows.length} icon={CalendarDays} color="bg-error-container text-error" />
         </div>
+      </section>
+
+      <section>
+        <SectionHeader title="Formations partenaires" sub="Inscriptions sur Agrolide et premiers accès aux cours chez les organismes" icon={GraduationCap} />
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <KpiCard label="Inscriptions" value={totalInscritsExternes} icon={GraduationCap} color="bg-success-container text-success" />
+          <KpiCard label="Ont ouvert le cours" value={totalAccesExternes} sub={totalInscritsExternes ? `${Math.round((totalAccesExternes / totalInscritsExternes) * 100)} % des inscrits` : undefined} icon={Activity} color="bg-info-container text-info" />
+        </div>
+        {formationsExternes.length > 0 && (
+          <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-x-auto">
+            <table className="w-full text-sm text-left">
+              <thead className="bg-surface-container-low border-b border-outline-variant">
+                <tr>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Formation</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Source</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Inscrits</th>
+                  <th className="px-5 py-3 font-medium text-on-surface-muted text-xs uppercase tracking-wide">Ont ouvert le cours</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-outline-variant">
+                {formationsExternes.map((f) => (
+                  <tr key={f.titre}>
+                    <td className="px-5 py-3 text-on-surface">{f.titre}</td>
+                    <td className="px-5 py-3 text-on-surface-variant">{f.source}</td>
+                    <td className="px-5 py-3 text-on-surface">{f.inscrits}</td>
+                    <td className="px-5 py-3 text-on-surface">{f.acces}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </section>
 
       <section>

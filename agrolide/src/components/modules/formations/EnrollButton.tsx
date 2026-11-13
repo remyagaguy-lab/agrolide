@@ -35,7 +35,11 @@ export function EnrollButton({
 
     if (isEnrolled) {
       if (isExternal && lienExterne) {
-        window.open(lienExterne, "_blank");
+        // Ouverture immédiate (sinon le navigateur bloque la fenêtre) ; le premier accès est enregistré en parallèle.
+        window.open(lienExterne, "_blank", "noopener,noreferrer");
+        fetch(`/api/formations/${formationId}/acces`, { method: "POST", keepalive: true })
+          .then(() => router.refresh())
+          .catch(() => {});
       } else if (firstLeconId) {
         router.push(lecteur(firstLeconId));
       }
@@ -48,8 +52,8 @@ export function EnrollButton({
         method: "POST",
       });
       if (res.ok) {
-        if (isExternal && lienExterne) {
-          window.open(lienExterne, "_blank");
+        if (isExternal) {
+          // Formation externe : l'inscription Agrolide d'abord ; le bouton devient « Accéder au cours ».
           router.refresh();
         } else if (firstLeconId) {
           router.push(lecteur(firstLeconId));
@@ -71,12 +75,12 @@ export function EnrollButton({
     >
       {loading && <Loader2 className="size-4 mr-2 animate-spin" />}
       {!isLoggedIn 
-        ? (isExternal ? "Se connecter pour accéder" : "Se connecter pour commencer")
+        ? (isExternal ? "Se connecter pour s'inscrire" : "Se connecter pour commencer")
         : isEnrolled 
-          ? (isExternal ? "Accéder à la formation" : "Reprendre la formation")
-          : (isExternal ? "S'inscrire et accéder" : "S'inscrire et commencer")}
+          ? (isExternal ? "Accéder au cours" : "Reprendre la formation")
+          : (isExternal ? "S'inscrire au cours" : "S'inscrire et commencer")}
       
-      {isExternal && <ExternalLink className="ml-2 size-5 inline" />}
+      {isExternal && isEnrolled && <ExternalLink className="ml-2 size-5 inline" />}
     </button>
   );
 }

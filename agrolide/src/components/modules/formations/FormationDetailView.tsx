@@ -10,7 +10,7 @@ import { auth } from "@/lib/auth/server";
 import { EnrollButton } from "./EnrollButton";
 import { PartagerBouton } from "./PartagerBouton";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { CheckCircle2, Clock, ExternalLink, GraduationCap, Layers, MonitorPlay, Plus, Minus, Tag } from "@/components/ui/icons"
+import { Award, CheckCircle2, Clock, Languages, ExternalLink, GraduationCap, Layers, MonitorPlay, Plus, Minus, Tag } from "@/components/ui/icons"
 type Espace = "membre" | "public";
 
 /** Une rubrique repliable de la fiche (contexte, public, objectifs…). */
@@ -221,11 +221,24 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
                     </Fait>
                   </>
                 )}
+                {isExternal && extProgramme?.duree ? <Fait Icone={Clock} libelle="Durée">{extProgramme.duree}</Fait> : null}
+                {isExternal && extProgramme?.langue ? <Fait Icone={Languages} libelle="Langue">{extProgramme.langue}</Fait> : null}
+                {isExternal && extProgramme?.certificat ? <Fait Icone={Award} libelle="Certificat">{extProgramme.certificat}</Fait> : null}
                 {isExternal && (
                   <Fait Icone={ExternalLink} libelle="Source">{formation.source_externe || "Partenaire"}</Fait>
                 )}
                 {formation.thematique ? <Fait Icone={Tag} libelle="Thématique">{formation.thematique}</Fait> : null}
               </dl>
+
+              {isExternal ? (
+                <p className="rounded-control bg-surface-container-low p-3 text-body-md text-on-surface-variant">
+                  Formation hébergée par {formation.source_externe || "un organisme partenaire"}, {gratuit ? "gratuite" : "payante"}.
+                  {extProgramme?.certificat ? ` Certificat délivré par ${formation.source_externe || "l'organisme"}.` : ""}{" "}
+                  {isEnrolled
+                    ? "Vous êtes inscrit(e) sur Agrolide : le cours s'ouvre sur le site de l'organisme, où un compte gratuit peut vous être demandé."
+                    : "Inscrivez-vous d'abord sur Agrolide pour accéder au cours."}
+                </p>
+              ) : null}
 
               <div className="flex flex-col gap-3">
                 <EnrollButton
