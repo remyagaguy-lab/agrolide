@@ -5,6 +5,7 @@ import { Metadata } from "next"
 import { db } from "@/db"
 import { articles, documents } from "@/db/schema"
 import { eq, desc, count } from "drizzle-orm"
+import { cn } from "@/lib/utils/formatters"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
@@ -35,6 +36,8 @@ const masqueTerre: React.CSSProperties = {
 
 /** Trois échos de l'horizon (comme les trois échos du soleil) : du plus proche au plus lointain. */
 const ECHOS = [1, 2, 3]
+/** Opacité de chaque voile : les voiles se superposent, l'écho le plus proche de la photo est donc le plus dense (~0,30), le plus lointain le plus transparent (~0,08). */
+const VOILES = ["bg-on-surface-brand/[0.12]", "bg-on-surface-brand/[0.10]", "bg-on-surface-brand/[0.08]"]
 
 const ROLES = ["Étudiants en agronomie", "Ingénieurs agronomes", "Chercheurs", "Entreprises agricoles", "Investisseurs"]
 /** Nombre de ressources affiché si la base ne répond pas (dernier total connu). */
@@ -93,11 +96,11 @@ export default async function HomePage() {
 
       {/* ── HERO : le texte dans le ciel vert, la photo est la terre. Bureau : horizon VERTICAL (l'horizon de l'emblème tourné de 90°, terre à droite) ;
           mobile : horizon horizontal, la photo sous le texte. ── */}
-      {/* Un seul fond vert et un seul motif pour l'en-tête et les chiffres : pas de rupture entre les deux. */}
+      {/* Un seul fond vert pour l'en-tête et les chiffres, séparés par un filet ; le motif ne couvre que l'en-tête. */}
       <div className="relative isolate overflow-hidden bg-surface-brand text-on-surface-brand">
-        {/* texture du motif sur tout le ciel vert : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne */}
+      <section className="relative overflow-hidden py-0">
+        {/* texture du motif sur le ciel vert de l'en-tête : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne ; les chiffres, dessous, sont sans motif */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
-      <section className="relative py-0">
         <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
           <div className="md:w-[44%] md:max-w-[34rem] lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
             <h1 className="text-headline-md text-balance md:text-display-md">
@@ -127,11 +130,11 @@ export default async function HomePage() {
 
         {/* mobile : horizon horizontal, la photo sous le texte ; trois échos de l'horizon montent dans le ciel (comme ceux du soleil) */}
         <div className="relative z-0 [--horizon:4rem] [--pas-echo:1rem] sm:[--horizon:6rem] sm:[--pas-echo:1.25rem] md:hidden">
-          {ECHOS.map((k) => (
+          {ECHOS.map((k, i) => (
             <div
               key={k}
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-on-surface-brand/5"
+              className={cn("pointer-events-none absolute inset-0", VOILES[i])}
               style={{ ...masqueTerre, translate: `0 calc(${-k} * var(--pas-echo))` }}
             />
           ))}
@@ -149,13 +152,12 @@ export default async function HomePage() {
 
         {/* bureau : horizon vertical. La zone est un cadre « container query » ; le calque de masque a la taille du cadre tourné
             (longueur = hauteur de la zone, épaisseur = sa largeur), puis tourne de -90° autour du centre : la terre passe à droite.
-            La zone est rognée de `--decale` à gauche (l'horizon recule vers la droite) ; la photo garde sa taille et sa place :
-            son cadre fait `100cqw + --decale`, ancré à droite. Trois échos (voiles) suivent la même ligne vers le ciel. */}
-        <div className="absolute right-0 top-0 z-0 hidden h-full w-[calc(52%-2rem)] [--decale:2rem] [--horizon:6rem] [--pas-echo:1.25rem] [container-type:size] md:block lg:w-[calc(52%-3rem)] lg:[--decale:3rem] lg:[--horizon:8rem] xl:w-[calc(44%-5rem)] xl:[--decale:5rem] xl:[--pas-echo:1.75rem]">
-          {ECHOS.map((k) => (
+            Trois échos translucides (opacités différentes, qui s'additionnent) suivent la même ligne vers le ciel. */}
+        <div className="absolute right-0 top-0 z-0 hidden h-full w-[52%] [--horizon:6rem] [--pas-echo:1.5rem] [container-type:size] md:block lg:[--horizon:8rem] xl:w-[46%] xl:[--pas-echo:2.25rem]">
+          {ECHOS.map((k, i) => (
             <div key={k} aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ translate: `calc(${-k} * var(--pas-echo)) 0` }}>
               <div
-                className="absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90 bg-on-surface-brand/5"
+                className={cn("absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90", VOILES[i])}
                 style={masqueTerre}
               />
             </div>
@@ -164,13 +166,13 @@ export default async function HomePage() {
             className="absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90"
             style={masqueTerre}
           >
-            <div className="absolute left-1/2 top-[calc(50%-var(--decale)/2)] h-[100cqh] w-[calc(100cqw+var(--decale))] -translate-x-1/2 -translate-y-1/2 rotate-90">
+            <div className="absolute left-1/2 top-1/2 h-[100cqh] w-[100cqw] -translate-x-1/2 -translate-y-1/2 rotate-90">
               <Image
                 src="/hero-accueil.webp"
                 alt={ALT_HERO}
                 fill
                 priority
-                sizes="(min-width: 1280px) 44vw, 52vw"
+                sizes="(min-width: 1280px) 46vw, 52vw"
                 className="object-cover object-[72%_20%]"
               />
             </div>
@@ -179,7 +181,7 @@ export default async function HomePage() {
 
       </section>
 
-      {/* ── CHIFFRES : même fond que l'en-tête, sillons dans le coin haut droit ── */}
+      {/* ── CHIFFRES : même fond que l'en-tête (sans motif), sillons dans le coin haut droit ── */}
       <section className="relative overflow-hidden border-t border-on-surface-brand/15 py-0">
         <Sillons coin="haut-droite" opacite={0.08} className="w-[30%] md:w-[18rem]" />
         {/* les chiffres laissent le coin aux sillons : sous eux sur mobile, à gauche du coin sur bureau */}
