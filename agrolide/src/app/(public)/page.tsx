@@ -92,23 +92,23 @@ export default async function HomePage() {
           mobile : horizon horizontal, la photo sous le texte. ── */}
       {/* Un seul fond vert pour l'en-tête et les chiffres, séparés par un filet ; le motif ne couvre que l'en-tête. */}
       <div className="relative isolate overflow-hidden bg-surface-brand text-on-surface-brand">
-      <section className="relative overflow-hidden py-0">
-        {/* texture du motif sur le ciel vert de l'en-tête : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne ; les chiffres, dessous, sont sans motif */}
-        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
+      <section className="relative overflow-hidden bg-surface py-0 text-on-surface">
+        {/* texture du motif (vert de marque) sur le ciel clair de l'en-tête : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne ; les chiffres, dessous, sont sans motif */}
+        <Motif size={800} opacity={0.07} className="text-primary" />
         <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
           <div className="md:w-[44%] md:max-w-[34rem] lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
             <h1 className="text-headline-md text-balance md:text-display-md">
               Fédérer la chaîne <br className="hidden xl:block" />agricole, pour conquérir <br className="hidden xl:block" />
-              <span className="text-accent-sun xl:whitespace-nowrap">la souveraineté alimentaire</span>
+              <span className="text-primary xl:whitespace-nowrap">la souveraineté alimentaire</span>
             </h1>
-            <p className="mt-3 text-body-md text-pretty text-on-surface-brand/90 md:mt-5 md:text-body-lg">
+            <p className="mt-3 text-body-md text-pretty text-on-surface-variant md:mt-5 md:text-body-lg">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.
               {/* seulement sur petit téléphone (< 520 px), la phrase des publics est retirée : le sous-titre tient en 3 lignes et la photo apparaît à l'ouverture */}
               <span className="hidden min-[520px]:inline">
                 {" "}
                 {ROLES.map((r, i) => (
                   <React.Fragment key={r}>
-                    <strong className="font-bold text-accent-sun">{r}</strong>
+                    <strong className="font-bold text-primary">{r}</strong>
                     {i < ROLES.length - 1 ? ", " : " "}
                   </React.Fragment>
                 ))}
@@ -117,7 +117,7 @@ export default async function HomePage() {
             </p>
             <div className="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap md:mt-8">
               <Button variant="primary" href="/rejoindre">Rejoindre le réseau</Button>
-              <Button variant="ghost-dark" href="#actions">Nos actions</Button>
+              <Button variant="outline" href="#actions">Nos actions</Button>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── CHIFFRES : même fond que l'en-tête (sans motif), sillons dans le coin haut droit ── */}
-      <section className="relative overflow-hidden border-t border-on-surface-brand/15 py-0">
+      <section className="relative overflow-hidden py-0">
         <Sillons coin="haut-droite" opacite={0.08} className="w-[30%] md:w-[18rem]" />
         {/* les chiffres laissent le coin aux sillons : sous eux sur mobile, à gauche du coin sur bureau */}
         <div className="container relative z-10 pb-8 pt-20 md:py-8">
