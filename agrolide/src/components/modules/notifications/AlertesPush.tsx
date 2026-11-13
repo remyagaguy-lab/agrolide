@@ -60,14 +60,6 @@ export function AlertesPush() {
       setEtat({ ...etat, categories: enregistrees })
     })
 
-  const essai = () =>
-    executer(async () => {
-      const res = await fetch("/api/push/test", { method: "POST", credentials: "same-origin" })
-      const d = await res.json().catch(() => ({}))
-      if (!res.ok) throw new Error(d.error || "L’essai n’a pas pu être envoyé.")
-      setMessage({ type: "success", texte: "Alerte d’essai envoyée : elle doit apparaître dans quelques secondes." })
-    })
-
   return (
     <section id="alertes" aria-labelledby="alertes-titre" className="scroll-mt-4 rounded-2xl border border-outline-variant bg-surface-container-lowest p-5 shadow-sm">
       <div className="flex items-start gap-3">
@@ -128,7 +120,6 @@ export function AlertesPush() {
               ))}
             </fieldset>
             <div className="flex flex-wrap gap-2">
-              <Button type="button" variant="outline" onClick={essai} disabled={occupe}>Envoyer une alerte d’essai</Button>
               <Button type="button" variant="text" onClick={desactiver} disabled={occupe}>
                 Désactiver sur cet appareil
               </Button>
