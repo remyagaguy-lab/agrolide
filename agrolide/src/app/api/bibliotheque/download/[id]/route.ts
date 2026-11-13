@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse, after } from 'next/server'
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3'
 import { checkDocumentAccess } from '@/lib/documents/access'
 import { auth } from '@/lib/auth/server'
@@ -41,37 +41,37 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       used = admission.used
     }
 
-    const { db } = await import('@/db')
-    const { documents } = await import('@/db/schema')
-    const { eq } = await import('drizzle-orm')
+    // Le compteur de consultations est mis à jour après l'envoi de la réponse : il ne retarde pas la lecture.
+    if (userId || quotaCookie) {
+      const compteur = (document.nb_telechargements || 0) + 1
+      after(async () => {
+        const { db } = await import('@/db')
+        const { documents } = await import('@/db/schema')
+        const { eq } = await import('drizzle-orm')
+        await db.update(documents).set({ nb_telechargements: compteur }).where(eq(documents.id, id))
+      })
+    }
 
-    // Compteur de consultations (uniquement pour un accès autorisé, une fois par admission)
-    if (userId || quotaCookie) await db.update(documents)
-      .set({ nb_telechargements: (document.nb_telechargements || 0) + 1 })
-      .where(eq(documents.id, id))
-
-    // Utiliser le client S3 pour récupérer directement le flux depuis le bucket privé
+    // Le flux part directement du bucket privé vers le navigateur (pas de copie complète en mémoire d'abord).
     const command = new GetObjectCommand({
       Bucket: process.env.R2_BUCKET_NAME || 'agrolide-biblio',
       Key: document.fichier_r2_key,
     })
-    
     const s3Response = await s3Client.send(command)
-    
-    // Extraire les octets (Buffer) pour que Next.js puisse le renvoyer
-    const bytes = await s3Response.Body?.transformToByteArray()
-    if (!bytes) {
+    const corps = s3Response.Body?.transformToWebStream()
+    if (!corps) {
       throw new Error("Impossible de lire le fichier depuis le stockage")
     }
-    
+
     const contentDisposition = isDownload
       ? `attachment; filename="Document-${id}.pdf"`
       : 'inline'
 
     // Retourner le flux directement (Proxy bytes) pour éviter les erreurs CORS de react-pdf
-    const res = new NextResponse(Buffer.from(bytes), {
+    const res = new NextResponse(corps, {
       headers: {
         'Content-Type': 'application/pdf',
+        ...(s3Response.ContentLength ? { 'Content-Length': String(s3Response.ContentLength) } : {}),
         // Jamais de cache partagé : le quota se décide à chaque requête
         'Cache-Control': 'private, no-store',
         'Content-Disposition': contentDisposition,

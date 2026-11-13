@@ -157,8 +157,6 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   }, [])
 
   useEffect(() => {
-    if (!isLoaded) return // Attendre la vérification de session
-
     let objectUrl: string | null = null
     let cancelled = false
     const fetchSecureUrl = async () => {
@@ -190,7 +188,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       cancelled = true
       if (objectUrl) URL.revokeObjectURL(objectUrl)
     }
-  }, [documentId, userId, isLoaded])
+  }, [documentId])
 
   // Plein écran : vrai plein écran quand le navigateur le permet, sinon la zone occupe tout l'écran (iPhone).
   const basculerPlein = useCallback(() => {
