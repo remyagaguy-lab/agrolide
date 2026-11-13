@@ -22,6 +22,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     lieu: initialData?.lieu || '',
     pays: initialData?.pays || '',
     en_ligne: initialData?.en_ligne || false,
+    inscription_requise: initialData?.inscription_requise ?? true,
     lien_inscription: initialData?.lien_inscription || '',
     places_max: initialData?.places_max || '',
     publie: initialData?.publie ?? false,
@@ -169,6 +170,13 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
           <label className="flex items-center gap-2 cursor-pointer">
             <input type="checkbox" name="en_ligne" checked={formData.en_ligne} onChange={handleChange} className="w-4 h-4 text-primary rounded focus:ring-primary" />
             <span className="text-sm font-medium text-on-surface-variant">Événement en ligne</span>
+          </label>
+        </div>
+
+        <div className="space-y-2 flex flex-col justify-center">
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input type="checkbox" name="inscription_requise" checked={formData.inscription_requise} onChange={handleChange} className="w-4 h-4 text-primary rounded focus:ring-primary" />
+            <span className="text-sm font-medium text-on-surface-variant">Inscription requise (décocher pour une entrée libre)</span>
           </label>
         </div>
 

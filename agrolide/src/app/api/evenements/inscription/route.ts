@@ -43,12 +43,16 @@ export async function POST(request: NextRequest) {
     }
 
     const event = await db.query.evenements.findFirst({
-      columns: { titre: true, date_debut: true, lieu: true, en_ligne: true },
+      columns: { titre: true, date_debut: true, lieu: true, en_ligne: true, inscription_requise: true },
       where: eq(evenements.id, evenement_id)
     })
 
     if (!event) {
       return NextResponse.json({ error: "Événement introuvable." }, { status: 404 })
+    }
+
+    if (event.inscription_requise === false) {
+      return NextResponse.json({ error: "Cet événement est en entrée libre : aucune inscription n'est nécessaire." }, { status: 400 })
     }
 
     try {

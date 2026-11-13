@@ -162,6 +162,8 @@ export default async function EventPage({ params }: EventPageProps) {
                 Cet événement est terminé
               </Button>
             )
+          ) : event.inscription_requise === false ? (
+            <p className="text-body-md text-on-surface-variant">Entrée libre : aucune inscription n'est nécessaire.</p>
           ) : event.lien_inscription ? (
             <a
               href={event.lien_inscription}

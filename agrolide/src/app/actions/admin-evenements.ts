@@ -6,6 +6,7 @@ import { evenements, inscriptions_evenement, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 import { nettoyerTextes } from "@/lib/utils/sans-emoji"
+import { apresReponse, diffuserPush } from '@/lib/push/envoyer.server'
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();
@@ -64,12 +65,26 @@ export async function upsertAdminEvenement(brut: any, id?: string) {
   await checkAdmin()
   const payload = nettoyerTextes(brut)
   
+  let idEvenement = id
+  let dejaPublie = false
   if (id) {
+    const avant = await db.query.evenements.findFirst({ columns: { publie: true }, where: eq(evenements.id, id) })
+    dejaPublie = !!avant?.publie
     await db.update(evenements).set(payload).where(eq(evenements.id, id))
   } else {
-    await db.insert(evenements).values({ ...payload, id: crypto.randomUUID() })
+    idEvenement = crypto.randomUUID()
+    await db.insert(evenements).values({ ...payload, id: idEvenement })
   }
-  
+
+  // Annonce aux membres qui ont activé la catégorie « Formations, événements… » : seulement à la mise en ligne
+  // (création publiée ou passage de brouillon à publié) d'un événement à venir, jamais à une simple modification.
+  const aVenir = payload.date_debut && new Date(payload.date_debut).getTime() > Date.now()
+  if (payload.publie && !dejaPublie && aVenir && payload.titre) {
+    apresReponse(() =>
+      diffuserPush('activite', { titre: 'Nouvel événement', corps: payload.titre, lien: `/membres/evenements/${idEvenement}`, tag: `evenement-${idEvenement}` }),
+    )
+  }
+
   revalidatePath('/admin/contenus/evenements')
   revalidatePath('/evenements')
   revalidatePath('/webinaires')

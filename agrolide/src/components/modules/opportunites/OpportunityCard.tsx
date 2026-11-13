@@ -44,10 +44,17 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
         </p>
         
         <div className="space-y-1.5 text-xs text-on-surface-muted">
-          {opp.lieu && (
+          {opp.organisation && (
+            <div className="flex items-center gap-2">
+              <Briefcase className="size-4 text-on-surface-muted shrink-0" />
+              <span className="line-clamp-1 font-medium text-on-surface-variant">{opp.organisation}</span>
+            </div>
+          )}
+
+          {(opp.lieu || opp.pays) && (
             <div className="flex items-center gap-2">
               <MapPin className="size-4 text-on-surface-muted shrink-0" />
-              <span className="line-clamp-1">{opp.lieu}</span>
+              <span className="line-clamp-1">{opp.lieu || opp.pays}</span>
             </div>
           )}
           

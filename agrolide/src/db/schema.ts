@@ -173,6 +173,8 @@ export const evenements = sqliteTable("evenements", {
   en_ligne: integer("en_ligne", { mode: "boolean" }),
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   image_url: text("image_url"),
+  /** Faux : entrée libre, aucun processus d'inscription (ni bouton, ni mention « inscrit »). Vide ou vrai : inscription proposée. */
+  inscription_requise: integer("inscription_requise", { mode: "boolean" }),
   lien_inscription: text("lien_inscription"),
   /** Replay d'une séance passée : réservé aux inscrits (migration 0016) ; jamais envoyé aux pages publiques. */
   lien_replay: text("lien_replay"),

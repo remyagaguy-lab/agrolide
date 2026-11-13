@@ -157,6 +157,8 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
               </button>
             )}
           </div>
+        ) : event.inscription_requise === false ? (
+          <p className="w-full py-2.5 text-center text-sm text-on-surface-muted">Entrée libre, sans inscription</p>
         ) : (
           inscrit ? (
             <p className="w-full py-2.5 bg-success-container text-on-success-container border border-success/30 font-medium rounded-xl text-sm flex items-center justify-center gap-2">

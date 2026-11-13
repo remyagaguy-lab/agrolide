@@ -132,6 +132,8 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
               <p className="text-body-md text-on-surface-variant">Cet événement est terminé.</p>
             )}
           </div>
+        ) : event.inscription_requise === false ? (
+          <p className="text-body-md text-on-surface-variant">Entrée libre : aucune inscription n'est nécessaire.</p>
         ) : inscrit ? (
           <p role="status" className="flex items-center gap-2 text-label-lg text-success">
             <CheckCircle2 className="size-5" aria-hidden="true" /> Vous êtes inscrit(e) à cet événement
