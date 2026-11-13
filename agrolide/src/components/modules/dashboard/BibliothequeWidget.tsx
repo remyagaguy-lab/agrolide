@@ -2,7 +2,6 @@ import React from "react"
 import Link from "next/link"
 import { BookOpen, Search } from "lucide-react"
 import { Button } from "@/components/ui/Button"
-import { DOMAINES } from "@/lib/bibliotheque/taxonomie"
 import { Widget, WidgetHeader } from "./Widget"
 
 export interface DocumentRecent {
@@ -12,7 +11,7 @@ export interface DocumentRecent {
   categorie: string
 }
 
-/** Bloc principal du tableau de bord : la bibliothèque, avec son compteur, sa recherche, ses domaines et ses dernières entrées. */
+/** Bloc principal du tableau de bord : la bibliothèque, avec son compteur, sa recherche et ses derniers ajouts. */
 export function BibliothequeWidget({ total, documents }: { total: number; documents: DocumentRecent[] }) {
   return (
     <Widget>
@@ -33,19 +32,6 @@ export function BibliothequeWidget({ total, documents }: { total: number; docume
             <span className="hidden sm:inline">Rechercher</span>
           </Button>
         </form>
-
-        <ul className="flex flex-wrap gap-2" aria-label="Domaines">
-          {DOMAINES.map((d) => (
-            <li key={d.code}>
-              <Link
-                href={`/membres/bibliotheque?domaine=${d.code}`}
-                className="ag-state inline-flex min-h-11 items-center rounded-full border border-outline-variant bg-surface-container-low px-3.5 text-label-md text-on-surface-variant hover:text-primary"
-              >
-                {d.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
 
         <div>
           <h3 className="mb-1 text-label-md text-on-surface-variant">Derniers ajouts</h3>
