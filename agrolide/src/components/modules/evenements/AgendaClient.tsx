@@ -48,8 +48,8 @@ const MODES: Record<AgendaMode, { title: string; subtitle: string; empty: string
   },
 }
 
-export default function AgendaClient({ mode }: { mode: AgendaMode }) {
-  const { loading, error, items, fetchData } = useActualites()
+export default function AgendaClient({ mode, initialItems }: { mode: AgendaMode; initialItems?: any[] }) {
+  const { loading, error, items, fetchData } = useActualites(initialItems)
   const cfg = MODES[mode]
   const [filter, setFilter] = useState("tous")
 

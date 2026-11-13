@@ -1,10 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Script from 'next/script'
-import { db } from '@/db'
-import { evenements } from '@/db/schema'
-import { eq } from 'drizzle-orm'
 import AgendaClient from '@/components/modules/evenements/AgendaClient'
+import { chargerActualites } from '@/lib/actualites.server'
 
 export const metadata: Metadata = {
   title: "Événements du réseau agricole",
@@ -15,7 +13,10 @@ export const metadata: Metadata = {
 export const revalidate = 3600
 
 export default async function EvenementsPage() {
-  const eventsData = await db.select().from(evenements).where(eq(evenements.publie, true))
+  // Une seule lecture : elle alimente à la fois les données structurées (JSON-LD) et la liste affichée.
+  // Si elle échoue, la page se charge comme avant : le navigateur redemande la liste.
+  const initialItems = await chargerActualites('evenements').catch(() => undefined)
+  const eventsData = (initialItems ?? []).filter((i) => i._itemType === 'evenement')
 
   const jsonLdEvents = eventsData.map((evt) => ({
     "@context": "https://schema.org",
@@ -40,7 +41,7 @@ export default async function EvenementsPage() {
       {jsonLdEvents.length > 0 && (
         <Script id="json-ld-events" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdEvents) }} />
       )}
-      <AgendaClient mode="evenements" />
+      <AgendaClient mode="evenements" initialItems={initialItems} />
     </>
   )
 }

@@ -51,9 +51,10 @@ export async function deleteAdminEvenement(id: string) {
   
   await db.delete(inscriptions_evenement).where(eq(inscriptions_evenement.evenement_id, id))
   await db.delete(evenements).where(eq(evenements.id, id))
-  
+
   revalidatePath('/admin/contenus/evenements')
   revalidatePath('/evenements')
+  revalidatePath('/webinaires')
   
   return { success: true }
 }
@@ -69,6 +70,7 @@ export async function upsertAdminEvenement(payload: any, id?: string) {
   
   revalidatePath('/admin/contenus/evenements')
   revalidatePath('/evenements')
-  
+  revalidatePath('/webinaires')
+
   return { success: true }
 }
