@@ -58,7 +58,7 @@ export function OpportunitiesWidget({ opportunities }: { opportunities: Opportun
 /** Encart vers la rubrique Entreprendre (incubation, accompagnement). */
 export function EntreprendreEncart() {
   return (
-    <Widget>
+    <Widget data-visite="entreprendre">
       <WidgetHeader title="Entreprendre" tone="feuille" icon={<Rocket />} />
       <div className="flex flex-1 flex-col gap-3 p-5 pt-2">
         <p className="text-body-md text-on-surface-variant">

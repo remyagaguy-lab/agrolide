@@ -47,7 +47,7 @@ export function ProfileSummaryWidget({
       : "Cotisation annuelle requise"
 
   return (
-    <Widget>
+    <Widget data-visite="compte">
       <WidgetHeader title="Mon compte" icon={<UserRound />} />
 
       <div className="flex flex-col gap-4 p-5 pt-3">

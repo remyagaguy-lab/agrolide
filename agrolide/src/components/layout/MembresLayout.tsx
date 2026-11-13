@@ -76,7 +76,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
     <MembresBadgesProvider valeurs={{ invitations: pendingRequestsCount, messages: unreadMessagesCount }}>
     <div className="flex h-screen overflow-hidden bg-surface-container-low">
       {/* ================= VERTICAL SIDEBAR (DESKTOP) ================= */}
-      <aside className="relative z-30 hidden h-full w-[260px] shrink-0 flex-col bg-surface-container lg:flex">
+      <aside data-visite="navigation" className="relative z-30 hidden h-full w-[260px] shrink-0 flex-col bg-surface-container lg:flex">
         <div className="flex h-20 shrink-0 items-center px-6">
           <Logo href="/membres/dashboard" size="md" priority />
         </div>
@@ -154,6 +154,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
 
       {/* ================= BOTTOM NAVIGATION (MOBILE) ================= */}
       <nav
+        data-visite="navigation"
         aria-label="Navigation principale"
         className="fixed bottom-0 left-0 z-50 w-full border-t border-outline-variant bg-surface-container-lowest px-2 pb-[env(safe-area-inset-bottom)] lg:hidden"
       >

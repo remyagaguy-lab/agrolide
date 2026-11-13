@@ -774,3 +774,10 @@ export const lectures_membres = sqliteTable("lectures_membres", {
   uniqueIndex("uq_lectures_membres").on(t.membre_id, t.document_id),
   index("idx_lectures_membres_membre").on(t.membre_id, t.derniere_lecture),
 ]);
+
+// Visite guidée du tableau de bord : une ligne par membre qui l'a vue ou passée (migration drizzle/0011_visite_guidee.sql).
+export const visite_guidee = sqliteTable("visite_guidee", {
+  membre_id: text("membre_id").primaryKey().references(() => users.id, { onDelete: "cascade" }),
+  vue_le: text("vue_le").notNull(),
+  issue: text("issue").notNull(), // terminee | passee
+});

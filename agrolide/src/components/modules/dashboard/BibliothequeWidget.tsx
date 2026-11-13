@@ -23,7 +23,7 @@ export interface DocumentRecent {
  */
 export function BibliothequeWidget({ total, documents }: { total: number; documents: DocumentRecent[] }) {
   return (
-    <Widget>
+    <Widget data-visite="bibliotheque">
       <div className="bg-surface-brand p-5 text-on-surface-brand">
         <div className="mb-4 flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-3">

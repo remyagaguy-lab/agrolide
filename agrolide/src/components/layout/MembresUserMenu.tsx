@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Bell, ChevronDown, CreditCard, ExternalLink, LogOut, ShieldCheck, User } from "lucide-react"
+import { Bell, ChevronDown, CreditCard, ExternalLink, LogOut, Route, ShieldCheck, User } from "lucide-react"
 import { useClerk } from "@/lib/auth/client"
 import { Avatar } from "@/components/ui/Avatar"
 import { ThemeMenuItems } from "@/components/ui/ThemeToggle"
@@ -75,6 +75,9 @@ export function MembresUserMenu({ profile, compact = false, tone = "defaut" }: M
           <Link href="/membres/notifications"><Bell className="size-4 text-on-surface-muted" aria-hidden="true" /> Notifications</Link>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
+        <DropdownMenuItem asChild>
+          <Link href="/membres/dashboard?visite=1"><Route className="size-4 text-on-surface-muted" aria-hidden="true" /> Revoir la visite guidée</Link>
+        </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href="/"><ExternalLink className="size-4 text-on-surface-muted" aria-hidden="true" /> Retour au site</Link>
         </DropdownMenuItem>

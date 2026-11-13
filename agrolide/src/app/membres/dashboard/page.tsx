@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
-import { users, evenements, inscriptions_evenement, documents, opportunites, cotisations } from "@/db/schema"
+import { users, evenements, inscriptions_evenement, documents, opportunites, cotisations, visite_guidee } from "@/db/schema"
 import { and, asc, count, eq, desc, gte } from "drizzle-orm"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 import { parseList } from "@/lib/reseau/profil"
@@ -20,6 +20,7 @@ import {
   OpportunitiesWidget,
   EntreprendreEncart,
   ProfileSummaryWidget,
+  VisiteGuidee,
 } from "@/components/modules/dashboard"
 
 export const metadata = { title: "Tableau de bord | Agrolide" }
@@ -32,7 +33,8 @@ const SEUIL_PROFIL_COMPLET = 80
  * mes formations et événements (ou, à défaut, une vitrine), les dernières offres et l'accès à Entreprendre.
  * Un membre neuf voit des « premiers pas » et des vitrines ; un membre actif voit sa formation et son prochain événement.
  */
-export default async function DashboardPage() {
+export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ [cle: string]: string | string[] | undefined }> }) {
+  const { visite } = await searchParams
   const { userId } = await auth()
   if (!userId) redirect("/login")
 
@@ -52,6 +54,7 @@ export default async function DashboardPage() {
     formationsCatalogue,
     invitations,
     messagesNonLus,
+    visiteDejaVue,
   ] = await Promise.all([
     db.select({
       id: users.id,
@@ -140,6 +143,11 @@ export default async function DashboardPage() {
 
     compterInvitations(userId),
     compterMessagesNonLus(userId),
+
+    // Visite guidée déjà vue ou passée ? Table à part : si elle n'existe pas encore (migration 0011), on ne montre rien.
+    db.select({ id: visite_guidee.membre_id }).from(visite_guidee).where(eq(visite_guidee.membre_id, userId)).limit(1)
+      .then((rows) => rows.length > 0 ? "vue" as const : "jamais" as const)
+      .catch(() => "indisponible" as const),
   ])
 
   const profile = userRows[0] || null
@@ -237,7 +245,7 @@ export default async function DashboardPage() {
       </div>
 
       {/* Formations et événements : les miens, ou une vitrine */}
-      <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+      <div data-visite="apprendre" className="grid grid-cols-1 gap-5 lg:grid-cols-2">
         <FormationsWidget formation={formationEnCours} catalogue={catalogue} />
         <EventWidget mesEvenements={prochainesInscriptions} aVenir={evenementsOuverts} />
       </div>
@@ -250,6 +258,8 @@ export default async function DashboardPage() {
           <EntreprendreEncart />
         </div>
       </div>
+
+      <VisiteGuidee afficher={visite === "1" || visiteDejaVue === "jamais"} />
     </div>
   )
 }
