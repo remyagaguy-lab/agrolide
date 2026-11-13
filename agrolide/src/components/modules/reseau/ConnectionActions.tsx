@@ -23,6 +23,8 @@ export interface ConnectionActionsProps {
   ouvertContact: boolean | null
   /** Libellé du statut d'une invitation envoyée (« Invitation envoyée » par défaut). */
   libelleEnAttente?: string
+  /** Sur une fiche, « Se connecter » est le geste principal de la page : bouton plein plutôt que contour. */
+  principal?: boolean
 }
 
 /**
@@ -30,7 +32,7 @@ export interface ConnectionActionsProps {
  * Se connecter → Invitation envoyée (retirable) ; Accepter / Ignorer ; Message.
  * L'état est mis à jour tout de suite, sans recharger la page, et annoncé aux lecteurs d'écran.
  */
-export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact, libelleEnAttente = 'Invitation envoyée' }: ConnectionActionsProps) {
+export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact, libelleEnAttente = 'Invitation envoyée', principal = false }: ConnectionActionsProps) {
   const [state, setState] = React.useState<ConnectionState>(initialState)
   const [connectionId, setConnectionId] = React.useState<string | null>(initialId)
   const [pending, startTransition] = React.useTransition()
@@ -104,7 +106,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
         (ouvertContact === false ? (
           <p className="text-body-sm text-on-surface-muted">Ce membre ne reçoit pas d’invitations.</p>
         ) : (
-          <Button variant="outline" fullWidth onClick={() => { setError(''); setInviter(true) }} aria-label={`Se connecter à ${name}`}>
+          <Button variant={principal ? 'secondary' : 'outline'} fullWidth onClick={() => { setError(''); setInviter(true) }} aria-label={`Se connecter à ${name}`}>
             <UserPlus className="size-5" aria-hidden />
             Se connecter
           </Button>
