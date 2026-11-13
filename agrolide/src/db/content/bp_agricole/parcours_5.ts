@@ -36,17 +36,20 @@ Les ressources se divisent en deux :
 
 ### Le cas de Diap Touré
 
-Pour ses 10 hectares, voici le plan de financement simplifié de Diap :
+Cas pédagogique reconstitué : les chiffres sont des hypothèses cohérentes entre elles, à remplacer par les vôtres et par des devis. Pour ses 10 hectares, voici le plan de financement de Diap (en FCFA) :
 
 **EMPLOIS (Besoin) : 55 000 000 FCFA**
-- Frais d'établissement : 500 000 FCFA
+- Frais d'établissement : 600 000 FCFA
 - Aménagements & Forage : 12 000 000 FCFA
-- Matériel (Irrigation solaire, Hangar) : 34 500 000 FCFA
-- BFR initial (Trésorerie de départ) : 8 000 000 FCFA
+- Matériel (irrigation solaire, hangar ventilé de 150 tonnes, tricycle) : 26 000 000 FCFA
+- Imprévus (environ 5 % des investissements) : 2 400 000 FCFA
+- BFR initial (trésorerie de départ) : 14 000 000 FCFA
 
 **RESSOURCES (Origine) : 55 000 000 FCFA**
-- Apport personnel de Diap : 11 000 000 FCFA (soit 20%)
-- Emprunt bancaire demandé : 44 000 000 FCFA (soit 80%)
+- Apport personnel de Diap : 11 000 000 FCFA (soit 20 %)
+- Emprunt bancaire demandé : 44 000 000 FCFA (soit 80 %), au taux supposé de 9 %, sur 7 ans dont 1 an de différé sur le capital. L'année 1, Diap ne paie que les intérêts (environ 4,0 M) ; à partir de l'année 2, l'annuité constante est d'environ 9,8 M par an.
+
+Vérifiez toujours le taux, la durée, le différé et les garanties exigés par votre banque ou votre institution de financement : ce sont eux qui déterminent votre annuité, donc la solidité de tout le reste du dossier (chapitre 5.7).
 
 #### Ce qu'il faut retenir
 - Le coût total du projet additionne les frais d'établissement, les investissements durables et le besoin de trésorerie initial (BFR).
@@ -115,23 +118,27 @@ Sous-estimer son BFR est la première cause de faillite des projets agricoles.
 
 ### Comment calculer le BFR initial ?
 
-En agriculture, le BFR se calcule généralement sur la durée du premier cycle de production (jusqu'à ce que l'argent des clients rentre sur le compte bancaire).
+En agriculture, le BFR initial se calcule sur la période qui va du premier décaissement jusqu'aux premières grosses rentrées d'argent. Le montant à financer est le **creux de trésorerie** : le point le plus bas du cumul des dépenses avant les premières ventes (vous le retrouverez dans le plan de trésorerie mensuel, chapitre 5.5).
 
 **La formule simplifiée pour le premier cycle :**
-BFR = (Stock d'intrants pour le cycle + Total des salaires du cycle + Frais fixes du cycle) 
-*(auxquels on ajoute les créances clients si vous vendez à crédit, et on soustrait les dettes fournisseurs si vous achetez à crédit).*
+BFR = (Intrants + main-d'œuvre journalière + salaires + charges fixes de la période) − crédit fournisseurs obtenu + marge de sécurité
+*(on ajoute les créances clients si vous vendez à crédit).*
+
+Au sens comptable (SYSCOHADA), le BFR est (stocks + créances) − dettes à court terme. La méthode ci-dessus en est l'équivalent pratique pour une exploitation qui démarre.
 
 ### Le BFR de Diap Touré
 
-Le cycle de l'oignon dure environ 4 mois (1 mois de pépinière, 3 mois au champ) plus 1 mois de séchage avant la première grosse vente. Diap a donc besoin de faire vivre sa ferme pendant 5 mois sans revenus.
+Diap fait sa pépinière en octobre et vend ses premières pommes de terre en mars, son oignon en avril. Sa ferme vit donc environ 5 mois sans encaissement significatif.
 
-- Achat de semences, engrais et produits phytosanitaires pour le cycle : 4 500 000 FCFA
-- Salaires de l'équipe (5 mois) : 2 000 000 FCFA
-- Carburant, petite maintenance, électricité (5 mois) : 1 000 000 FCFA
-- Marge de sécurité (aléas) : 500 000 FCFA
+- Semences, plants, engrais et produits phytosanitaires (oignon + pomme de terre) : 11 300 000 FCFA
+- Main-d'œuvre journalière avant récolte (pépinière, repiquage, entretien) : 2 000 000 FCFA
+- Salaires de l'équipe permanente (5 mois) : 2 700 000 FCFA
+- Charges fixes, énergie, entretien (5 mois) : 1 900 000 FCFA
+- Crédit fournisseurs obtenu (40 % des intrants payés à 60 jours) : − 4 500 000 FCFA
+- Marge de sécurité (aléas) : 600 000 FCFA
 
-**BFR Initial = 8 000 000 FCFA.**
-Diap a donc ajouté cette somme colossale à sa demande de crédit (dans la ligne BFR de ses Emplois, vue au chapitre précédent). Ainsi, le jour où il lance sa ferme, il a l'esprit tranquille : il a l'argent sur le compte pour payer ses ouvriers jusqu'à la récolte.
+**BFR initial = 14 000 000 FCFA.**
+Diap a ajouté cette somme à ses besoins de financement (ligne BFR des Emplois, chapitre précédent). Ainsi, le jour où il lance sa ferme, il a l'argent sur le compte pour payer ses ouvriers et ses intrants jusqu'aux premières ventes.
 
 #### Ce qu'il faut retenir
 - Le BFR est l'argent nécessaire pour survivre entre le moment où vous commencez à dépenser pour produire et le moment où les clients vous paient.
@@ -164,12 +171,12 @@ Diap a donc ajouté cette somme colossale à sa demande de crédit (dans la lign
           question: "Sur quelle durée Diap Touré a-t-il calculé son BFR initial ?",
           options: [
             "1 mois",
-            "5 mois (durée du cycle de pépinière, croissance et séchage avant la vente)",
+            "Jusqu'au creux de trésorerie, soit environ 5 mois sans encaissement significatif",
             "1 an",
             "10 ans"
           ],
           correctAnswer: 1,
-          explanation: "En agriculture, le BFR se calcule généralement sur la durée du cycle d'exploitation, c'est-à-dire jusqu'à la première grosse rentrée d'argent."
+          explanation: "En agriculture, le BFR initial se calcule jusqu'aux premières grosses rentrées d'argent : c'est le creux de trésorerie qu'il faut financer dès le départ."
         },
         {
           question: "L'argent calculé pour le BFR doit figurer dans...",
@@ -205,19 +212,30 @@ Présenter un seul chiffre fixe au banquier (ex: "Je ferai 50 millions de CA") m
 Vous devez calculer trois niveaux de chiffre d'affaires.
 
 **1. Le Scénario Réaliste (Le scénario de base)**
-C'est celui que vous visez avec vos compétences et votre itinéraire technique.
-- *Le calcul de Diap :* 10 hectares × Rendement réaliste de 30 Tonnes/ha = 300 Tonnes récoltées. On enlève 10% de pertes = 270 Tonnes vendables. Prix de marché moyen constaté : 250 FCFA/kg.
-- *CA Réaliste = 270 000 kg × 250 FCFA = 67 500 000 FCFA.*
+C'est celui que vous visez avec vos compétences et votre itinéraire technique. Calcul de Diap pour une campagne de croisière :
 
-**2. Le Scénario Pessimiste (Le pire cas gérable)**
-C'est le scénario qui prouve à la banque que même si tout va mal (maladie, chute des cours), le projet survit et rembourse la dette.
-- *Le calcul de Diap :* Problème phytosanitaire faisant chuter le rendement à 22 T/ha, avec 15% de pertes post-récolte = 187 Tonnes vendables. Le marché est inondé, le prix chute à 180 FCFA/kg.
-- *CA Pessimiste = 187 000 kg × 180 FCFA = 33 660 000 FCFA.*
+| Culture | Surface | Rendement | Pertes | Volume vendable | Prix moyen | CA |
+|---|---|---|---|---|---|---|
+| Oignon | 7 ha | 28 t/ha | 10 % | 176 t | 200 FCFA/kg | 35,3 M |
+| Pomme de terre | 3 ha | 25 t/ha | 8 % | 69 t | 230 FCFA/kg | 15,9 M |
+| Gombo / maïs doux (hivernage) | 3 ha | 8 t/ha | 10 % | 22 t | 150 FCFA/kg | 3,2 M |
+| **Total** | | | | **267 t** | | **54,4 M** |
+
+- *Le prix de l'oignon (200 FCFA/kg) est un prix moyen pondéré :* 60 % du volume vendu à la récolte (environ 160 FCFA/kg) et 40 % stocké sous hangar puis vendu en juin-août (environ 260 FCFA/kg).
+- *Attention aux prix :* ils varient énormément d'une année à l'autre (de 105-110 FCFA/kg à la récolte 2025 à plus de 400 FCFA/kg en période de rupture début 2026, selon la presse économique). Votre prix doit être appuyé sur vos enquêtes de marché, daté et sourcé.
+- *Année 1 : montée en puissance.* Diap retient 85 % de la pleine production la première année, soit un CA de 46,2 M.
+
+**2. Le Scénario Pessimiste (Le mauvais cas gérable)**
+C'est le scénario qui mesure ce qui se passe quand tout va moins bien (maladie, chute des cours) : le projet résiste-t-il, et la dette est-elle encore couverte ? La réponse se calcule au chapitre 5.7, elle ne s'affirme pas.
+- *Hypothèses de Diap :* rendements − 10 %, pertes post-récolte + 3 points, prix − 10 %.
+- *CA Pessimiste de croisière ≈ 42,6 M FCFA* (36,2 M l'année 1).
 
 **3. Le Scénario Optimiste (Le meilleur cas)**
-C'est le scénario "Bonus", si la météo est parfaite et que les prix flambent à cause d'une pénurie. Il sert à montrer le potentiel maximal du projet à des investisseurs en capital.
-- *Le calcul de Diap :* Rendement excellent de 35 T/ha, pertes réduites à 5% grâce au hangar = 332 Tonnes vendables. Pénurie sur le marché, le prix monte à 350 FCFA/kg.
-- *CA Optimiste = 332 000 kg × 350 FCFA = 116 200 000 FCFA.*
+C'est le scénario « bonus » (météo parfaite, prix en hausse). Il sert à montrer le potentiel maximal aux investisseurs en capital.
+- *Hypothèses de Diap :* rendements + 10 %, pertes − 3 points grâce au hangar, prix + 20 %.
+- *CA Optimiste de croisière ≈ 74,2 M FCFA* (66,8 M l'année 1).
+
+Le test de crise (prix − 25 % sur toutes les cultures) est mené à part au chapitre 5.7.
 
 ### Quel scénario retenir pour la suite ?
 
@@ -226,7 +244,7 @@ Dans votre business plan, vous détaillerez la justification de ces 3 scénarios
 #### Ce qu'il faut retenir
 - Le chiffre d'affaires est le résultat de : (Surface × Rendement - Pertes) × Prix Unitaire.
 - Utilisez trois scénarios (Pessimiste, Réaliste, Optimiste) pour intégrer la volatilité agricole (climatique et marchande).
-- Le scénario pessimiste sert à rassurer le banquier sur la capacité de remboursement en cas de crise.
+- Le scénario pessimiste sert à mesurer la capacité de remboursement en cas de crise : il se calcule (DSCR, chapitre 5.7), il ne se proclame pas.
 - Le reste des états financiers se construit toujours sur la base du scénario Réaliste.`,
       quiz_json: [
         {
@@ -297,23 +315,31 @@ Généralement, on le présente sur 3 ans (Année 1, Année 2, Année 3) pour mo
 2. **Les Achats Consommés (Charges Variables) :** Ce sont les coûts qui augmentent avec votre production (semences, engrais, produits phytosanitaires, carburant des pompes, emballages, main-d'œuvre journalière pour la récolte).
 3. **Les Charges Externes (Charges Fixes) :** Ce sont les dépenses incompressibles, même si vous produisez peu. (Loyer du terrain, électricité, entretien des machines, assurances, frais de marketing).
 4. **Les Frais de Personnel :** Les salaires de votre équipe permanente et vos cotisations sociales.
-5. **L'Amortissement :** C'est un concept crucial ! Un tracteur acheté 10 millions et qui dure 5 ans perd 2 millions de sa valeur chaque année. Cette perte de valeur (2 millions) est inscrite comme une charge chaque année. C'est une charge *comptable* (vous ne décaissez pas d'argent), mais elle diminue votre bénéfice imposable et permet de mettre de l'argent de côté pour racheter le tracteur dans 5 ans.
+5. **L'Amortissement :** C'est un concept crucial ! Un tracteur acheté 10 millions et qui dure 5 ans perd 2 millions de sa valeur chaque année. Cette perte de valeur (2 millions) est inscrite comme une charge chaque année. C'est une charge *comptable* (vous ne décaissez pas d'argent), mais elle diminue votre bénéfice imposable. Attention : elle ne met pas d'argent de côté toute seule. Le cash qu'elle « libère » reste sur votre compte seulement si vous le conservez ; c'est à vous de le provisionner pour racheter le tracteur dans 5 ans.
 6. **Les Frais Financiers :** Les intérêts que vous payez sur votre emprunt bancaire.
 7. **Les Impôts sur les bénéfices.**
 
-### L'exemple (simplifié) de l'Année 1 de Diap Touré
+### L'exemple (simplifié) de Diap Touré : année 1 et année de croisière
 
-- **Chiffre d'affaires (Ventes d'oignons) :** + 67 500 000 FCFA
-- **Charges Variables (Semences, Engrais, Eau, Journaliers) :** - 22 000 000 FCFA
-- **Charges Fixes (Loyer, Frais fixes) :** - 4 000 000 FCFA
-- **Frais de personnel (Équipe permanente) :** - 6 500 000 FCFA
-- *On obtient l'EBE (Excédent Brut d'Exploitation) : 35 000 000 FCFA (L'argent généré par l'activité).*
-- **Amortissements (Usure du hangar et de l'irrigation) :** - 8 000 000 FCFA
-- **Frais financiers (Intérêts d'emprunt) :** - 3 500 000 FCFA
-- **Impôts (simplifié) :** - 3 500 000 FCFA
-- **RÉSULTAT NET DE L'ANNÉE 1 : + 20 000 000 FCFA (Bénéfice).**
+L'installation (année 0) ne produit aucun chiffre d'affaires. Voici ensuite les deux premières colonnes du compte de résultat prévisionnel (en millions de FCFA) :
 
-Ce tableau sur 3 ans montre à la banque que non seulement Diap vend beaucoup, mais qu'il génère assez de bénéfice net pour se payer, réinvestir, et être solvable.
+| Poste | Année 1 (85 % de la production) | Année 2 et suivantes (croisière) |
+|---|---|---|
+| Chiffre d'affaires (oignon, pomme de terre, hivernage) | 46,2 | 54,4 |
+| Charges variables (semences, engrais, eau, journaliers, emballages) | − 18,1 | − 18,1 |
+| Charges fixes (assurances, entretien, énergie, commercial, comptabilité) | − 4,5 | − 4,5 |
+| Frais de personnel (équipe permanente) | − 6,5 | − 6,5 |
+| **EBE (Excédent Brut d'Exploitation)** | **17,1** | **25,3** |
+| Amortissements | − 4,2 | − 4,2 |
+| Résultat d'exploitation | 12,9 | 21,1 |
+| Frais financiers (intérêts d'emprunt) | − 4,0 | − 4,0 (puis en baisse) |
+| Résultat avant impôt | 9,0 | 17,1 |
+| Impôt sur les bénéfices (30 % pris à titre d'exemple) | − 2,7 | − 5,1 |
+| **Résultat net** | **6,3** | **12,0** |
+
+Trois remarques : (1) les charges variables de culture sont engagées en totalité dès l'année 1, même si les rendements ne sont qu'à 85 % ; (2) le taux d'impôt (30 %), les exonérations agricoles possibles et l'impôt minimum varient selon le pays : vérifiez-les ; (3) le résultat de l'année 1 est positif mais mince, et il dépend fortement des prix : le chapitre 5.7 teste ce point.
+
+Présentez ce tableau sur 3 à 5 ans pour montrer à la banque non seulement que la ferme est rentable en croisière, mais aussi qu'elle reste solvable pendant la montée en puissance.
 
 #### Ce qu'il faut retenir
 - Le compte de résultat donne la rentabilité de l'entreprise sur une année (Produits - Charges).
@@ -378,10 +404,10 @@ Ce tableau sur 3 ans montre à la banque que non seulement Diap vend beaucoup, m
 
 Règle d'or de la finance d'entreprise : **Être rentable ne vous empêche pas de faire faillite.**
 
-Reprenons Diap Touré. Son compte de résultat prévoyait un bénéfice de 20 millions en Année 1. Il est très rentable. 
-Mais que se passe-t-il au 4ème mois de son activité ? Il a dû payer 15 millions de charges (semences, pompes, main-d'œuvre), mais ses oignons ne sont pas encore vendus (0 FCFA de chiffre d'affaires encaissé). S'il n'avait pas prévu ce trou d'air, il ne pourrait pas payer l'essence de la pompe au mois 5, les oignons mourraient de soif, et l'entreprise ferait faillite, malgré un projet très "rentable" sur le papier.
+Reprenons Diap Touré. Son compte de résultat prévoit un bénéfice de 6,3 millions en année 1 et de 12 millions en année de croisière. 
+Mais que se passe-t-il au 4ème mois de son activité ? Il a déjà dépensé près de 18 millions (intrants, journaliers, salaires, charges fixes), dont 4,5 millions restent dus à ses fournisseurs, mais ses cultures ne sont pas encore vendus (0 FCFA de chiffre d'affaires encaissé). S'il n'avait pas prévu ce trou d'air, il ne pourrait pas payer l'essence de la pompe au mois 5, les oignons mourraient de soif, et l'entreprise ferait faillite, malgré un projet très "rentable" sur le papier.
 
-Le **Plan de Trésorerie Mensuel** suit les flux réels d'argent sur votre compte bancaire, mois par mois.
+Le **Plan de Trésorerie Mensuel** suit les flux réels d'argent sur votre compte bancaire, mois par mois. Son creux (le solde cumulé le plus bas avant les premières ventes) est exactement le BFR initial à financer : environ 14 millions de FCFA pour Diap.
 
 ### Comment construire le tableau de trésorerie (Année 1)
 
@@ -468,7 +494,7 @@ Si le compte de résultat est un "film" de l'année, le **Bilan** est une "photo
 
 Il se divise en deux colonnes qui doivent toujours, absolument, être parfaitement équilibrées (Actif = Passif) :
 1. **L'Actif (Ce que possède l'entreprise) :** C'est la colonne de gauche.
-2. **Le Passif (Ce que doit l'entreprise) :** C'est la colonne de droite.
+2. **Le Passif (D'où vient l'argent) :** C'est la colonne de droite : capital apporté par les associés, résultat, dettes financières et dettes à court terme.
 
 ### L'Actif : Ce qui appartient à la ferme
 
@@ -486,12 +512,25 @@ Le passif explique comment les éléments de l'actif ont été financés. L'entr
 - **Les Dettes à long terme :** L'emprunt bancaire qu'il reste à rembourser. (Chaque année, cette ligne diminue au fur et à mesure que vous remboursez la banque).
 - **Les Dettes à court terme (Passif circulant) :** L'argent que vous devez à vos fournisseurs (l'engrais acheté à crédit) ou à l'État (impôts à payer).
 
+### Le bilan de Diap au 31 décembre de l'année 1 (en millions de FCFA)
+
+| ACTIF | M | PASSIF | M |
+|---|---|---|---|
+| Immobilisations nettes (41,0 − 4,2 d'amortissement) | 36,8 | Capital social (apport) | 11,0 |
+| Stocks | 0,0 | Résultat de l'année 1 | 6,3 |
+| Créances clients | 2,0 | Emprunt bancaire (différé : rien remboursé) | 44,0 |
+| Disponibilités | 26,2 | Dettes fournisseurs | 1,0 |
+| | | Dettes fiscales (impôt à payer) | 2,7 |
+| **TOTAL ACTIF** | **65,0** | **TOTAL PASSIF** | **65,0** |
+
+Hypothèse simplificatrice : toute la récolte est vendue avant le 31 décembre. Si vous stockez, c'est la valeur du stock invendu qui apparaît dans l'actif. Les 26,2 M de disponibilités sont élevés parce que l'emprunt n'est pas encore remboursé : ce coussin servira à l'annuité de 9,8 M de l'année 2.
+
 ### L'utilité du Bilan pour le banquier
 
 Le banquier scrute le Bilan Prévisionnel en fin d'Année 1 et d'Année 3 pour observer la santé de votre patrimoine :
 - Votre ferme s'enrichit-elle ? (Les capitaux propres augmentent-ils grâce aux bénéfices mis en réserve ?)
 - Votre ferme se désendette-t-elle ? (La dette bancaire diminue-t-elle correctement ?)
-- Avez-vous une "Trésorerie nette" positive ? (Est-ce que votre Actif circulant est supérieur à votre Passif circulant ?)
+- Votre trésorerie est-elle suffisante ? (Vos disponibilités couvrent-elles vos dettes à court terme, et vos ressources stables dépassent-elles vos immobilisations ?)
 
 #### Ce qu'il faut retenir
 - Le bilan est la photographie du patrimoine de l'entreprise à une date donnée.
@@ -547,103 +586,181 @@ Le banquier scrute le Bilan Prévisionnel en fin d'Année 1 et d'Année 3 pour o
     },
     {
       id: "lec_5_7",
-      titre: "Calculer votre Seuil de Rentabilité, la VAN et le TRI",
-      duree_minutes: 10,
+      titre: "Calculer votre seuil de rentabilité, la couverture de la dette, la VAN et le TRI",
+      duree_minutes: 15,
       contenu: `### Objectif du chapitre
-À la fin de ce chapitre, vous maîtriserez les trois indicateurs financiers stars exigés par tous les comités de crédit ou investisseurs professionnels : le Seuil de Rentabilité, la VAN et le TRI.
+À la fin de ce chapitre, vous saurez calculer et présenter les cinq indicateurs que regardent les comités de crédit : le seuil de rentabilité, la couverture du service de la dette (DSCR), la VAN, le TRI et le délai de récupération. Vous verrez aussi pourquoi un seul chiffre ne suffit jamais : il faut les calculer dans plusieurs scénarios.
 
-Ces indicateurs traduisent vos gros tableaux financiers en chiffres simples et décisifs.
+Toutes les valeurs ci-dessous viennent du cas de Diap Touré construit depuis le chapitre 5.1 : coût du projet 55 M FCFA, emprunt de 44 M à 9 % sur 7 ans dont 1 an de différé, montants en millions de FCFA (M). Les hypothèses sont pédagogiques : refaites chaque calcul avec VOS chiffres.
 
-### 1. Le Seuil de Rentabilité (Point Mort)
+### 1. Le seuil de rentabilité (point mort)
 
-Le seuil de rentabilité est le niveau de Chiffre d'Affaires exact pour lequel l'entreprise ne fait ni perte, ni bénéfice (Résultat = 0). Il vous dit à partir de combien de kilos vendus vous commencez réellement à gagner de l'argent.
+Le seuil de rentabilité est le niveau de chiffre d'affaires pour lequel le résultat est nul.
 
-**Comment le calculer :**
-Seuil de rentabilité = Charges Fixes / Taux de Marge sur Coûts Variables.
-(Le Taux de marge sur coûts variables = (CA - Charges Variables) / CA).
+**Seuil de rentabilité = Coûts fixes totaux ÷ Taux de marge sur coûts variables**
 
-*Exemple de Diap :* 
-Avec des charges fixes de 4M, et une marge sur coût variable de 67% (sur 67,5M de CA et 22M de charges variables), le seuil est atteint à environ 6 millions de FCFA de CA. Concrètement, Diap sait qu'une fois qu'il a vendu 24 tonnes d'oignon (à 250F/kg = 6M), toutes ses charges fixes sont couvertes. À partir de la 25ème tonne, c'est du pur bénéfice !
-Savoir répondre au banquier "Mon point mort est atteint au 4ème mois de vente avec seulement 24 tonnes" démontre une maîtrise absolue de votre rentabilité.
+*Le piège classique :* les « coûts fixes » ne sont pas seulement les charges fixes du tableau. Il faut y ajouter **le personnel permanent, les amortissements et les intérêts de l'emprunt**, car vous les payez ou les supportez quel que soit le volume vendu.
 
-### 2. La Valeur Actuelle Nette (VAN)
+Calcul pour l'année 2 (croisière) :
+- Taux de marge sur coûts variables = (54,4 − 18,1) ÷ 54,4 = **66,7 %**
+- Coûts fixes totaux = personnel 6,5 + charges fixes 4,5 + amortissements 4,2 + intérêts 4,0 = **19,2 M**
+- Seuil de rentabilité = 19,2 ÷ 0,667 = **28,8 M**, soit 53 % du CA réaliste (environ 141 tonnes sur les 267 tonnes vendables, à répartition de cultures constante)
+- Marge de sécurité = (54,4 − 28,8) ÷ 54,4 = **47 %** : les ventes peuvent reculer de près de la moitié avant la perte.
 
-La VAN répond à la question : "Le projet crée-t-il de la valeur par rapport à si j'avais laissé mon argent dormir dans une banque ?"
-C'est un calcul d'actualisation (que les tableurs comme Excel font avec la formule =VAN). On additionne tous les flux de trésorerie générés par le projet sur 5 ans, et on retire l'investissement initial, en appliquant un "taux d'actualisation" (le taux d'intérêt de l'argent).
+*L'erreur à ne pas faire :* si Diap n'avait compté que ses 4,5 M de charges fixes, il aurait annoncé un seuil de 6,7 M, plus de quatre fois trop bas.
 
-**La règle de décision :**
-- Si la VAN > 0 : Le projet crée de la valeur, il est financièrement viable et intéressant pour un investisseur.
-- Si la VAN < 0 : Le projet détruit de la valeur financière (même s'il fait un petit bénéfice comptable), l'investisseur refusera.
+*Limite à connaître :* ce calcul suppose que les charges variables suivent le chiffre d'affaires. En agriculture, la plupart des coûts de culture sont engagés avant que vous sachiez quelle sera la récolte : le seuil est un repère, pas une garantie.
 
-### 3. Le Taux de Rentabilité Interne (TRI)
+### 2. La couverture du service de la dette (DSCR)
 
-Le TRI est l'indicateur préféré des fonds d'investissement. Il répond à la question : "Combien d'intérêts cet investissement me rapporte-t-il chaque année ?"
-Le TRI est le taux en pourcentage (%) pour lequel la VAN est égale à zéro. 
+C'est l'indicateur n° 1 de votre banquier : l'argent généré par l'activité suffit-il à payer les échéances ?
 
-**La règle de décision :**
-- Si votre TRI est de 5%, le banquier vous dira : "Autant acheter des bons du trésor sans risque qui rapportent 6%".
-- Si votre TRI est de 25% (un chiffre fréquent pour un bon projet agricole bien structuré), le banquier ou l'investisseur verra que le risque agricole (élevé) est compensé par un rendement financier très attractif.
+**DSCR = Flux disponible avant dette ÷ (Intérêts + Capital remboursé dans l'année)**
+avec Flux disponible = EBE − impôt sur les bénéfices.
 
-### Présenter vos ratios
+*L'annuité de Diap :* l'année 1, il ne paie que les intérêts (44 × 9 % ≈ 4,0 M). Ensuite, l'annuité constante sur 6 ans est 44 × 0,09 ÷ (1 − 1,09⁻⁶) ≈ **9,8 M par an**.
 
-Dans la synthèse financière de votre business plan, intégrez un petit tableau :
-- Coût total du projet : 55 000 000 FCFA
-- Chiffre d'affaires annuel de croisière : 67 500 000 FCFA
-- Seuil de Rentabilité : Atteint avec 24 tonnes vendues.
-- VAN (à 10%) : 45 000 000 FCFA (Création de valeur positive)
-- TRI : 28% (Forte rentabilité)
-- Délai de récupération (Payback period) : 2,5 ans (Temps nécessaire pour rembourser l'investissement).
+| Scénario (année 2) | CA | EBE | Flux disponible | Service de la dette | DSCR |
+|---|---|---|---|---|---|
+| Réaliste | 54,4 | 25,3 | 20,2 | 9,8 | **2,05** |
+| Pessimiste (rendement − 10 %, prix − 10 %, pertes + 3 points) | 42,6 | 13,5 | 11,9 | 9,8 | **1,21** |
+| Crise de prix (− 25 % sur tous les prix) | 40,8 | 11,7 | 10,6 | 9,8 | **1,08** |
 
-Avec cette seule demi-page, un expert financier sait que votre projet est robuste.
+*Lecture :* les banques demandent en général un DSCR d'au moins 1,2 à 1,3 (à vérifier auprès de la vôtre). Le projet de Diap est solide dans le cas réaliste, juste à la limite dans le cas pessimiste, et trop fragile en cas de crise de prix. Le scénario pessimiste ne « prouve » donc pas que tout va bien : il montre où se trouve la limite.
+
+*Les leviers si le DSCR est trop bas :* allonger la durée du prêt (sur 8 ans, l'annuité tombe à 8,7 M et le DSCR pessimiste monte à 1,36), réduire l'emprunt grâce à une garantie ou à une subvention, constituer une réserve de trésorerie, sécuriser des contrats de vente à prix plancher, souscrire une assurance agricole. N'oubliez pas que l'année 1 est confortable (flux de 14,4 M pour 4,0 M d'intérêts) : ce coussin doit être conservé pour l'année 2.
+
+### 3. La Valeur Actuelle Nette (VAN)
+
+La VAN répond à la question : « Après avoir tenu compte du coût de l'argent et du temps, le projet crée-t-il de la valeur ? »
+
+*Les flux du projet* (avant financement) : année 0 = − 55,0 (coût du projet). Chaque année, flux = EBE − impôt sur le résultat d'exploitation (les intérêts sont exclus, car le financement est déjà dans les 55 M). L'année 5, on ajoute la **valeur résiduelle** : valeur nette comptable des immobilisations (20,0) + BFR récupéré (14,0) = 34,0.
+
+| Année | Flux | Facteur à 10 % | Flux actualisé |
+|---|---|---|---|
+| 0 | − 55,0 | 1,000 | − 55,0 |
+| 1 | 13,3 | 0,909 | 12,1 |
+| 2 | 19,0 | 0,826 | 15,7 |
+| 3 | 19,0 | 0,751 | 14,3 |
+| 4 | 19,0 | 0,683 | 13,0 |
+| 5 | 19,0 + 34,0 = 53,0 | 0,621 | 32,9 |
+| **VAN à 10 %** | | | **+ 33,0 M** |
+
+*Règle :* VAN > 0 → le projet rémunère l'argent investi au-delà du taux d'actualisation choisi (ici 10 %, un taux à justifier : coût de l'emprunt 9 % plus une prime de risque). VAN < 0 → il le détruit.
+*Astuce tableur :* la fonction VAN d'Excel n'actualise pas l'année 0. Calculez =VAN(taux ; flux année 1 à 5) puis ajoutez séparément l'investissement initial négatif.
+
+### 4. Le Taux de Rentabilité Interne (TRI)
+
+Le TRI est le taux d'actualisation pour lequel la VAN est nulle. Sur Excel : =TRI(flux année 0 à 5). Pour Diap : **TRI ≈ 26,9 %** (la VAN est encore de 20,6 M à 15 %).
+
+*Règle :* comparez le TRI au coût de l'argent et aux placements sans risque de votre pays (bons ou obligations du Trésor, taux de la banque). Un TRI de 5 % n'est pas intéressant face à un placement sans risque à 6 %. Un TRI très supérieur au coût de l'emprunt (ici 9 %) compense le risque agricole.
+
+*Ne présentez jamais ces indicateurs dans un seul scénario :*
+
+| | VAN à 10 % | TRI |
+|---|---|---|
+| Réaliste | + 33,0 M | 26,9 % |
+| Pessimiste | + 2,6 M | 11,4 % |
+| Crise de prix (− 25 %) | − 2,0 M | 9,0 % |
+
+Le message honnête au banquier : le projet résiste à un recul de 10 %, mais devient fragile si les prix reculent de 25 %. C'est justement pour cela que Diap prévoit le stockage, les contrats de vente et l'assurance (chapitre 6.1).
+
+### 5. Le délai de récupération (payback)
+
+Il indique en combien d'années les flux cumulés remboursent l'investissement. Cumul des flux de Diap (hors valeur résiduelle) : − 41,7 (année 1), − 22,7 (année 2), − 3,7 (année 3), + 15,3 (année 4). Le délai est donc de 3 + 3,7 ÷ 19,0 ≈ **3,2 ans**.
+
+### Le tableau de synthèse à intégrer au business plan
+
+- Coût total du projet : 55 M FCFA (apport 11 M, emprunt 44 M)
+- Chiffre d'affaires de croisière : 54,4 M ; EBE : 25,3 M ; résultat net : 12,0 M
+- Seuil de rentabilité : 28,8 M de CA (53 % du CA réaliste)
+- DSCR : 2,05 (réaliste), 1,21 (pessimiste), 1,08 (crise de prix)
+- VAN à 10 % sur 5 ans : + 33,0 M ; TRI : 26,9 % ; payback : 3,2 ans
+
+Ces ratios ne valent que ce que valent vos hypothèses : chaque chiffre doit renvoyer à un devis, une enquête ou une source datée.
 
 #### Ce qu'il faut retenir
-- Le Seuil de Rentabilité (Point Mort) indique le volume de vente exact pour commencer à faire des bénéfices.
-- La VAN prouve que votre projet crée de la richesse à long terme par rapport au coût de l'argent.
-- Le TRI donne la rentabilité financière en pourcentage (%) du projet. Il doit être supérieur au taux d'un placement sans risque pour être attractif.`,
+- Le seuil de rentabilité se calcule avec TOUS les coûts fixes (personnel, amortissements, intérêts compris), pas seulement les charges fixes.
+- Le DSCR (flux disponible ÷ service de la dette) est l'indicateur central du banquier ; visez au moins 1,2 à 1,3 et calculez-le en scénario pessimiste.
+- La VAN et le TRI se calculent à partir d'un tableau de flux sur 5 ans (investissement, flux annuels, valeur résiduelle), jamais « à l'estime ».
+- Présentez chaque indicateur dans plusieurs scénarios et dites honnêtement où se situe la limite du projet.`,
       quiz_json: [
         {
-          question: "Que signifie atteindre son Seuil de Rentabilité (ou Point Mort) ?",
+          question: "Une exploitation a 12 M de coûts fixes totaux et un taux de marge sur coûts variables de 60 %. Quel est son seuil de rentabilité ?",
           options: [
-            "Avoir remboursé totalement le crédit bancaire",
-            "Faire un bénéfice de 10 millions",
-            "Atteindre le niveau de chiffre d'affaires exact où l'entreprise ne fait ni perte ni bénéfice, car elle a couvert toutes ses charges",
-            "Vendre toute sa récolte"
+            "7,2 M de chiffre d'affaires",
+            "12,0 M de chiffre d'affaires",
+            "20,0 M de chiffre d'affaires",
+            "72,0 M de chiffre d'affaires"
           ],
           correctAnswer: 2,
-          explanation: "Au seuil de rentabilité, vos ventes couvrent exactement vos charges variables et fixes. Chaque vente supplémentaire génère alors du bénéfice net."
+          explanation: "Seuil = coûts fixes ÷ taux de marge = 12 ÷ 0,60 = 20 M de chiffre d'affaires."
         },
         {
-          question: "Pour qu'un projet soit jugé financièrement viable et créateur de valeur par un investisseur, comment doit être la VAN (Valeur Actuelle Nette) ?",
+          question: "Parmi ces postes, lesquels doivent entrer dans les coûts fixes totaux du calcul du seuil de rentabilité ?",
           options: [
-            "Inférieure à 0",
-            "Égale à 0",
-            "Supérieure à 0",
-            "Indépendante du taux d'actualisation"
+            "Le personnel permanent, les charges fixes, les amortissements et les intérêts de l'emprunt",
+            "Uniquement les charges fixes de l'exploitation (assurance, entretien)",
+            "Uniquement les amortissements et le loyer de la terre",
+            "Les semences et les engrais, car ils sont indispensables"
+          ],
+          correctAnswer: 0,
+          explanation: "Tous les coûts qui ne varient pas avec le volume vendu doivent figurer au numérateur ; en oublier fait annoncer un seuil beaucoup trop bas."
+        },
+        {
+          question: "Une ferme dégage 15 M de flux disponible avant dette et doit payer 12 M d'intérêts et de capital dans l'année. Quel est son DSCR ?",
+          options: [
+            "0,80",
+            "1,80",
+            "27,0",
+            "1,25"
+          ],
+          correctAnswer: 3,
+          explanation: "DSCR = 15 ÷ 12 = 1,25 : le flux couvre 1,25 fois l'échéance, ce qui est tout juste acceptable pour beaucoup de banques."
+        },
+        {
+          question: "Un projet affiche un TRI de 8 % alors que le taux d'actualisation retenu est de 10 %. Que peut-on dire de sa VAN à 10 % ?",
+          options: [
+            "Elle est positive, car le TRI est un pourcentage positif",
+            "Elle est négative, car le projet rapporte moins que le taux exigé",
+            "Elle est nulle, car TRI et VAN sont toujours égaux",
+            "On ne peut rien dire sans connaître le seuil de rentabilité"
+          ],
+          correctAnswer: 1,
+          explanation: "Le TRI est le taux qui annule la VAN : s'il est inférieur au taux d'actualisation, la VAN à ce taux est négative."
+        },
+        {
+          question: "Sur Excel, la fonction VAN(taux ; flux année 1 à 5) ne donne pas directement la VAN du projet. Pourquoi ?",
+          options: [
+            "Elle n'actualise pas l'investissement de l'année 0, qu'il faut ajouter à part",
+            "Elle ne fonctionne qu'avec des flux positifs",
+            "Elle calcule le TRI à la place de la VAN",
+            "Elle suppose toujours un taux de 10 %"
+          ],
+          correctAnswer: 0,
+          explanation: "La fonction actualise à partir de l'année 1 : il faut ajouter l'investissement initial (négatif) au résultat pour obtenir la VAN."
+        },
+        {
+          question: "Le cumul des flux d'un projet est de − 4 M à la fin de l'année 3 et le flux de l'année 4 est de + 16 M. Quel est le délai de récupération ?",
+          options: [
+            "3,00 ans",
+            "4,00 ans",
+            "3,25 ans",
+            "3,75 ans"
           ],
           correctAnswer: 2,
-          explanation: "Une VAN positive (VAN > 0) signifie que la somme des richesses générées dans le futur dépasse l'investissement initial, en tenant compte du coût du temps."
+          explanation: "Il reste 4 M à récupérer en année 4, où l'on gagne 16 M : 3 + 4 ÷ 16 = 3,25 ans."
         },
         {
-          question: "À quoi sert le TRI (Taux de Rentabilité Interne) pour un investisseur ?",
+          question: "Le DSCR de votre scénario pessimiste est de 0,9. Quelle est la meilleure réaction dans votre business plan ?",
           options: [
-            "À connaître le prix des tracteurs",
-            "À comparer la rentabilité (en pourcentage) de ce projet agricole avec d'autres placements financiers (ex: immobilier, bourse)",
-            "À calculer les impôts",
-            "À mesurer l'humidité du sol"
+            "Supprimer le scénario pessimiste pour ne pas inquiéter la banque",
+            "Garder uniquement le scénario optimiste, qui est plus convaincant",
+            "Augmenter le prix de vente dans tous les scénarios",
+            "Ajuster le projet (durée, différé, garantie, emprunt plus faible) et recalculer"
           ],
-          correctAnswer: 1,
-          explanation: "Le TRI s'exprime en %, ce qui permet de comparer le rendement du projet avec le rendement d'un placement financier sans risque."
-        },
-        {
-          question: "Si le TRI de votre projet agricole est de 3%, et que les obligations d'État sans risque rapportent 6%...",
-          options: [
-            "L'investisseur sera très intéressé",
-            "L'investisseur refusera, car le risque agricole n'est pas rémunéré (il vaut mieux investir dans l'État sans risque)",
-            "L'investisseur demandera une subvention",
-            "La banque prêtera plus d'argent"
-          ],
-          correctAnswer: 1,
-          explanation: "Un projet entrepreneurial comporte des risques (climat, maladies). Son TRI doit donc être nettement supérieur aux placements sans risque pour justifier la prise de risque."
+          correctAnswer: 3,
+          explanation: "Un DSCR inférieur à 1 signifie que la dette n'est pas payée : il faut agir sur la structure de financement ou sur le projet, puis recalculer, pas masquer le résultat."
         }
       ]
     }

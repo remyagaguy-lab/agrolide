@@ -13,13 +13,13 @@ export const parcours1: ParcoursSeed = {
 
 Bienvenue dans cette formation conçue par le réseau agrolide pour tous les acteurs de la chaîne agricole africaine qui portent, ou s'apprêtent à porter, un projet entrepreneurial.
 
-Le réseau agrolide est né d'un constat : de nombreux jeunes diplômés et porteurs de projets agricoles disposent d'une idée solide, parfois même d'une expérience de terrain réelle, mais manquent d'un accompagnement structuré pour transformer cette idée en dossier finançable. Cette formation répond directement à ce déficit d'accompagnement entrepreneurial. Elle s'inscrit dans le Domaine 3 du réseau, consacré au conseil et à l'incubation des agri-preneurs.
+Le réseau agrolide est né d'un constat : de nombreux jeunes diplômés et porteurs de projets agricoles disposent d'une idée solide, parfois même d'une expérience de terrain réelle, mais manquent d'un accompagnement structuré pour transformer cette idée en dossier finançable. Cette formation répond directement à ce déficit d'accompagnement entrepreneurial. Elle fait partie de l'offre d'accompagnement du réseau aux agri-preneurs (conseil et incubation).
 
 **Ce que vous allez obtenir.** À l'issue des modules de cette formation, vous saurez rédiger, section après section, un business plan agricole complet et réaliste : de la présentation de votre idée jusqu'aux prévisions financières, en passant par l'étude de marché, le plan de production et la stratégie commerciale. Chaque chapitre vous donnera les clés pour rédiger une section précise de votre propre dossier.
 
 **Comment fonctionne cette formation.** Elle est entièrement écrite afin d'être lue, relue, imprimée et consultée à votre rythme, y compris hors connexion. Elle est organisée en parcours, eux-mêmes divisés en chapitres. Chaque chapitre se termine par un quiz de quelques questions pour vérifier que les notions essentielles sont acquises avant de passer à la suite. Il n'y a pas de prérequis : vous pouvez commencer même si votre projet n'est encore qu'une idée.
 
-**Notre fil rouge pédagogique.** Tout au long des modules, nous nous appuyons sur un exemple réel et chiffré : le projet de Diap Touré, un gestionnaire commercial sénégalais qui a transformé une pratique de maraîchage familial en une exploitation horticole structurée de 10 hectares, spécialisée dans l'oignon et la pomme de terre, dans la zone des Niayes. Ce cas concret vous permet, à chaque notion nouvelle, de voir immédiatement à quoi ressemble une bonne réponse avant de rédiger la vôtre.
+**Notre fil rouge pédagogique.** Tout au long des modules, nous nous appuyons sur un exemple chiffré, inspiré de situations réelles (les noms et les montants sont reconstitués à des fins pédagogiques) : le projet de Diap Touré, un gestionnaire commercial sénégalais qui a transformé une pratique de maraîchage familial en une exploitation horticole structurée de 10 hectares, spécialisée dans l'oignon et la pomme de terre, dans la zone des Niayes. Ce cas concret vous permet, à chaque notion nouvelle, de voir immédiatement à quoi ressemble une bonne réponse avant de rédiger la vôtre.
 
 ---
 
@@ -46,7 +46,7 @@ Un business plan agricole partage l'essentiel de sa structure avec n'importe que
 
 ### Notre fil rouge : le cas de Diap Touré
 
-Tout au long de cette formation, nous suivrons un exemple réel : celui de Diap Touré, un gestionnaire commercial sénégalais qui, après plusieurs années de maraîchage artisanal pratiqué en famille pendant l'hivernage, a décidé de structurer son activité en une véritable exploitation horticole de 10 hectares, spécialisée dans l'oignon et la pomme de terre, dans la zone des Niayes. Pour obtenir un bail agricole et un financement de plus de 55 millions de FCFA face à un apport personnel de 8,6 millions, il a dû rédiger un business plan complet et convaincant. Nous verrons, chapitre après chapitre, comment il a construit chaque section de son dossier — et vous vous en inspirerez pour construire le vôtre.
+Tout au long de cette formation, nous suivrons un exemple inspiré de situations réelles, aux chiffres reconstitués : celui de Diap Touré, un gestionnaire commercial sénégalais qui, après plusieurs années de maraîchage artisanal pratiqué en famille pendant l'hivernage, a décidé de structurer son activité en une véritable exploitation horticole de 10 hectares, spécialisée dans l'oignon et la pomme de terre, dans la zone des Niayes. Pour sécuriser sa terre et obtenir un financement de 55 millions de FCFA (11 millions d'apport personnel et 44 millions d'emprunt), il doit rédiger un business plan complet et convaincant. Nous verrons, chapitre après chapitre, comment il a construit chaque section de son dossier — et vous vous en inspirerez pour construire le vôtre.
 
 #### Ce qu'il faut retenir
 
@@ -122,11 +122,11 @@ Le contexte et la justification forment la toute première section que va lire u
 **Version faible :** « Le pays a besoin de plus de production agricole. Je veux créer une exploitation de maraîchage pour produire des légumes. » — *Cette version reste abstraite : aucun chiffre, aucun problème précis, aucune preuve de connaissance du secteur.*
 
 **Version travaillée, construite sur le cas de Diap Touré :** 
-Le Sénégal importe chaque année plus de 100 000 tonnes de produits horticoles depuis l'Europe, essentiellement de l'oignon et de la pomme de terre, alors même que le pays dispose, dans des zones comme les Niayes ou la vallée du Fleuve Sénégal, de conditions naturelles particulièrement favorables à ces cultures *(constat)*. 
+La production sénégalaise d'oignon a dépassé 400 000 tonnes en 2024, mais une part importante (jusqu'à environ 100 000 tonnes selon les producteurs) se brade ou se perd à la récolte faute de stockage : en 2025, des producteurs de la vallée du Fleuve peinaient à vendre à 105-110 FCFA/kg, alors que les prix dépassent 400 FCFA/kg quand l'offre locale s'épuise *(constat — chiffres de la presse économique et du régulateur ARM, à actualiser chaque année)*. 
 
-Cette dépendance s'explique en grande partie par le sous-équipement des exploitations familiales, qui assurent l'essentiel de la production nationale, et par leur forte dépendance aux aléas pluviométriques *(problématique)*. 
+Ce déséquilibre s'explique en grande partie par le sous-équipement des exploitations familiales, qui assurent l'essentiel de la production : peu de séchage, de calibrage et de stockage, donc toute la récolte arrive en même temps sur le marché *(problématique)*. 
 
-Le projet propose la mise en exploitation professionnelle de 10 hectares en bail agricole, dédiés à la production d'oignon et de pomme de terre selon des méthodes modernes, pour approvisionner le marché local et réduire le recours aux importations *(solution)*. 
+Le projet propose la mise en exploitation professionnelle de 10 hectares sécurisés sur le plan foncier, dédiés à l'oignon et à la pomme de terre selon des méthodes modernes, avec un hangar de séchage et de stockage pour étaler les ventes sur toute la campagne *(solution)*. 
 
 Sa réalisation s'appuie sur un financement mixte associant apport personnel et emprunt, ainsi que sur l'expérience du promoteur en gestion et en maraîchage artisanal *(moyens)*.
 
@@ -162,7 +162,7 @@ Une fois le contexte posé, précisez vos objectifs à court terme (ce que vous 
             "Elle est trop longue"
           ],
           correctAnswer: 2,
-          explanation: "Un bon constat s'appuie sur des chiffres (ex: 100 000 tonnes importées) plutôt que sur des généralités non sourcées."
+          explanation: "Un bon constat s'appuie sur des chiffres (ex: plus de 400 000 tonnes produites, dont une part perdue faute de stockage) plutôt que sur des généralités non sourcées."
         },
         {
           question: "Un objectif écrit comme « produire davantage » pose problème parce que...",

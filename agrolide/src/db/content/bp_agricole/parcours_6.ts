@@ -38,9 +38,34 @@ Vous devez construire un tableau listant les risques selon 4 catégories, en y a
 - *Le risque :* Démission du chef de culture en plein cycle, ou vols sur l'exploitation.
 - *La mitigation de Diap :* "Le chef de culture est intéressé aux bénéfices (prime de rendement) pour le fidéliser. Le site est clôturé et surveillé par un gardien avec des chiens de garde."
 
+### Coter vos risques (probabilité × impact)
+
+Une matrice sans chiffres ne permet pas de choisir. Notez chaque risque de 1 à 3 pour sa probabilité et pour son impact, puis multipliez : traitez d'abord les risques dont le score est de 6 ou plus.
+
+| Risque | Probabilité | Impact | Score |
+|---|---|---|---|
+| Chute des prix à la récolte | 3 | 3 | 9 |
+| Ravageurs et maladies | 2 | 3 | 6 |
+| Revirement de la politique d'importation | 2 | 3 | 6 |
+| Panne de la pompe solaire | 2 | 2 | 4 |
+| Départ du chef de culture | 1 | 2 | 2 |
+| Vols sur l'exploitation | 2 | 1 | 2 |
+
+### Les risques qu'on oublie souvent
+
+- **Politiques et réglementaires :** ouverture ou suspension des importations, plafonds de prix, changement de règles sur les pesticides.
+- **De change :** semences et intrants importés, facturés en devises.
+- **De crédit client :** un grossiste qui ne paie pas ou paie en retard.
+- **Fonciers :** contestation de la terre, retrait d'une affectation.
+- **De financement :** retard de décaissement du prêt, qui décale tout le calendrier.
+
+### L'assurance agricole
+
+L'assurance est la mitigation la plus citée par les financeurs. Des assureurs, publics ou privés, proposent selon les pays des assurances multirisques de récolte ou des assurances indicielles (fondées sur la pluviométrie). Renseignez-vous dans votre pays, demandez un devis et budgétez la prime : Diap prévoit environ 0,9 M FCFA par an, inclus dans ses charges fixes.
+
 #### Ce qu'il faut retenir
 - Cacher les risques est la pire stratégie : un banquier sait que l'agriculture est risquée.
-- Dressez une matrice des risques (climatiques, techniques, commerciaux, humains).
+- Dressez une matrice des risques (climatiques, techniques, commerciaux, humains, politiques, financiers) et cotez-les : probabilité × impact.
 - Pour chaque risque identifié, vous devez proposer une action concrète et chiffrée de **mitigation** (solution de secours) pour prouver que vous maîtrisez la situation.`,
       quiz_json: [
         {
@@ -86,6 +111,28 @@ Vous devez construire un tableau listant les risques selon 4 catégories, en y a
           ],
           correctAnswer: 1,
           explanation: "En agriculture irriguée, la redondance (avoir un équipement de secours) est obligatoire pour sécuriser l'investissement, même si cela coûte un peu plus cher au départ."
+        },
+        {
+          question: "Un risque a une probabilité de 2 sur 3 et un impact de 3 sur 3. Quel est son score et que faut-il en faire ?",
+          options: [
+            "Score de 5 : on peut l'ignorer",
+            "Score de 6 : il faut le traiter en priorité",
+            "Score de 9 : il condamne le projet",
+            "Score de 1 : il se traite en dernier"
+          ],
+          correctAnswer: 1,
+          explanation: "Le score est la probabilité multipliée par l'impact (2 × 3 = 6). À partir de 6, le risque doit recevoir une mesure de mitigation chiffrée dans le dossier."
+        },
+        {
+          question: "Parmi ces mesures, laquelle transfère une partie du risque climatique vers un tiers ?",
+          options: [
+            "Souscrire une assurance récolte ou indicielle et budgétiser la prime",
+            "Planter plus de surface pour compenser",
+            "Retarder tous les semis d'un mois",
+            "Ne rien déclarer au banquier"
+          ],
+          correctAnswer: 0,
+          explanation: "L'assurance transfère à un assureur une part des pertes liées au climat. Sa prime est un coût fixe à intégrer dans les charges."
         }
       ]
     },
@@ -108,21 +155,21 @@ Un banquier reçoit des dizaines de dossiers par semaine. Il ne lira pas vos 40 
 Il doit répondre en quelques paragraphes aux questions fondamentales de l'investisseur (Le Qui, Quoi, Où, Comment, et Combien).
 
 1. **Le Pitch (L'opportunité) :**
-   "Le Sénégal importe chaque année X tonnes d'oignons. Le projet 'Touré Niayes' propose de réduire cette dépendance en produisant localement 270 tonnes d'oignons de haute qualité, stockables pour cibler la période de pénurie (contre-saison)."
+   "La filière oignon sénégalaise produit plus de 400 000 tonnes, mais une part se brade ou se perd à la récolte faute de stockage. Le projet 'Touré Niayes' produit 176 tonnes d'oignon et 69 tonnes de pomme de terre sur 10 hectares, et stocke 40 % de l'oignon pour le vendre quand les prix remontent (juin à août)."
 2. **Le Marché et l'Avantage concurrentiel :**
    "Notre avantage : un oignon calibré, trié et conditionné en filet, ciblant directement les syndicats de grossistes de Dakar, avec qui des contacts de pré-commande ont été établis."
 3. **L'Équipe (Le porteur) :**
-   "Le projet est porté par Diap Touré, ingénieur agronome justifiant de 5 ans d'expérience dans les Niayes, appuyé par un chef de culture spécialisé."
+   "Le projet est porté par Diap Touré, gestionnaire (licence en réseaux et sécurité informatique) et maraîcher en exploitation familiale depuis plusieurs années, appuyé par un chef de culture spécialisé."
 4. **Le Besoin de Financement (Le nerf de la guerre) :**
    "Pour réaliser ce projet sur 10 hectares sécurisés foncièrement, le besoin d'investissement total est de 55 000 000 FCFA."
 5. **La Rentabilité et le Retour sur investissement :**
-   "Le porteur apporte 11 000 000 FCFA (20%). Nous sollicitons un emprunt de 44 000 000 FCFA. Le chiffre d'affaires prévisionnel réaliste en Année 1 est de 67,5M FCFA, générant un résultat net de 20M FCFA. Le TRI financier estimé est de 28%, permettant un remboursement intégral du crédit sur 3 ans."
+   "Le porteur apporte 11 000 000 FCFA (20%). Nous sollicitons un emprunt de 44 000 000 FCFA. Le crédit (9 %, 7 ans dont 1 an de différé) est remboursé par des flux qui le couvrent 2,0 fois en scénario réaliste et 1,2 fois en scénario pessimiste. Le chiffre d'affaires prévisionnel réaliste est de 54,4M FCFA en année de croisière (46,2M en année 1), pour un résultat net de 12M FCFA. Le TRI du projet est de 26,9 % sur 5 ans (VAN de 33,0M FCFA à 10 %)."
 
 ### La règle de forme
 - Pas de jargon incompréhensible. 
 - Des phrases courtes et percutantes.
 - Des chiffres précis, tirés de vos tableaux financiers.
-- Un design épuré (utilisez le canevas agrolide).
+- Un design épuré (une mise en page simple, sans surcharge).
 
 #### Ce qu'il faut retenir
 - L'Executive Summary se place au début du document mais s'écrit à la toute fin du processus.
@@ -201,7 +248,7 @@ Pour cela, vous utilisez un **Pitch Deck**, une présentation (PowerPoint ou PDF
 
 **La structure type du Pitch Deck Agrolide :**
 - *Slide 1 :* La page de garde (Titre, logo, contact).
-- *Slide 2 :* Le problème identifié sur le marché (ex: Le pays manque d'oignons secs d'avril à septembre).
+- *Slide 2 :* Le problème identifié sur le marché (ex: toute la récolte d'oignon arrive en même temps, les prix s'effondrent à la récolte puis remontent quelques mois plus tard).
 - *Slide 3 :* La solution proposée (Le projet de la ferme et son produit phare).
 - *Slide 4 :* La taille du marché et la cible (Qui va acheter ?).
 - *Slide 5 :* Le modèle d'affaires (Comment vous fixez vos prix et faites vos marges).
@@ -210,11 +257,6 @@ Pour cela, vous utilisez un **Pitch Deck**, une présentation (PowerPoint ou PDF
 - *Slide 8 :* Le calendrier d'exécution (Mise en place de la ferme).
 - *Slide 9 :* Les données financières clés (Investissement, CA, Rentabilité sur 3 ans).
 - *Slide 10 :* La demande (Ce que vous attendez du jury/banquier : "Nous cherchons X millions").
-
-### Félicitations !
-
-Vous êtes arrivé au terme de la théorie de cette formation. Vous avez désormais toutes les clés, de l'étude de marché à la structuration financière, en passant par les aspects techniques culturaux.
-L'étape suivante ? Télécharger le canevas agrolide vierge, et commencer à rédiger VOS idées, module après module, pour donner vie à votre exploitation agricole !
 
 #### Ce qu'il faut retenir
 - Les annexes ne sont pas des pages poubelles, ce sont les preuves matérielles de vos affirmations (devis, foncier).
@@ -273,9 +315,38 @@ L'étape suivante ? Télécharger le canevas agrolide vierge, et commencer à r�
       duree_minutes: 5,
       contenu: `### Félicitations !
 
-Vous êtes arrivé au terme de la théorie de cette formation *Rédiger un business plan agricole qui convainc*. Vous avez désormais toutes les clés, de l'étude de marché à la structuration financière, en passant par les aspects techniques culturaux.
+Vous avez terminé la théorie de cette formation. Il reste l'essentiel : écrire VOTRE business plan.
 
-L'étape suivante ? Télécharger le canevas agrolide vierge, et commencer à rédiger VOS idées, module après module, pour donner vie à votre exploitation agricole !
+### Le plan type d'un business plan agricole (12 sections)
+
+1. Résumé opérationnel (Executive Summary) : 1 à 2 pages, écrit en dernier
+2. Contexte, problème et solution
+3. Le porteur de projet et l'équipe
+4. Étude de marché : environnement, clients, concurrence, FFOM
+5. Produits et itinéraire technique
+6. Calendrier d'installation et de production
+7. Forme juridique, organisation, autorisations
+8. Stratégie commerciale et plan de prospection
+9. Investissements, plan de financement et BFR
+10. Prévisions financières : chiffre d'affaires en 3 scénarios, compte de résultat, trésorerie, bilan
+11. Indicateurs : seuil de rentabilité, couverture de la dette (DSCR), VAN, TRI
+12. Risques, mitigation et annexes (devis, preuves foncières, lettres d'intention, CV)
+
+Le canevas agrolide téléchargeable (modèle de document et classeur financier) sera ajouté à la plateforme prochainement. En attendant, suivez ce plan type chapitre par chapitre.
+
+### Votre plan d'action en 90 jours
+
+- **Jours 1 à 30 :** enquêtes de terrain (au moins 10 acheteurs), prix relevés et datés, choix des cultures et de la surface, premiers devis.
+- **Jours 31 à 60 :** itinéraire technique chiffré, plan de financement, prévisions financières sur tableur, lettres d'intention d'achat, acte foncier.
+- **Jours 61 à 90 :** résumé opérationnel, pitch de 10 diapositives, relecture par un professionnel (banquier, comptable, agronome, mentor), dépôt des premiers dossiers.
+
+### Votre checklist avant d'envoyer le dossier
+
+- Chaque chiffre renvoie à un devis, une enquête ou une source datée.
+- Le même porteur, les mêmes montants et les mêmes hypothèses reviennent dans toutes les sections.
+- Les trois scénarios et la couverture de la dette (DSCR) sont calculés.
+- Les risques sont cotés et chacun a une mesure de mitigation.
+- L'acte foncier et les devis sont en annexe.
 
 N'oubliez pas : un bon business plan n'est jamais terminé. Il vit, s'adapte, et évolue au fur et à mesure que vous rencontrez le marché réel.
 

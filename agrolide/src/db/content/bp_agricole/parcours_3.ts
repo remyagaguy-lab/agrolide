@@ -23,7 +23,7 @@ Pour chaque produit, décrivez :
 
 ### L'itinéraire technique cultural (Le cœur du métier)
 
-C'est ici que l'ingénieur agronome ou le technicien de la banque va vérifier si vos rendements sont réalistes. Un rendement de 40 tonnes de pommes de terre à l'hectare ne s'obtient pas par miracle : il est le résultat d'un itinéraire technique rigoureux.
+C'est ici que l'ingénieur agronome ou le technicien de la banque va vérifier si vos rendements sont réalistes. Un rendement de 25 tonnes de pommes de terre à l'hectare ne s'obtient pas par miracle : il est le résultat d'un itinéraire technique rigoureux.
 
 L'itinéraire technique est la séquence logique et chronologique de toutes les opérations agricoles sur une parcelle. Vous devez détailler les étapes suivantes :
 
@@ -36,7 +36,7 @@ L'itinéraire technique est la séquence logique et chronologique de toutes les 
 
 ### L'itinéraire technique de Diap Touré
 
-Dans le business plan de l'exploitation de 10 ha dans les Niayes, l'itinéraire de l'oignon a été scrupuleusement détaillé pour justifier son rendement prévisionnel de 30 tonnes/hectare.
+Dans le business plan de l'exploitation de 10 ha dans les Niayes, l'itinéraire de l'oignon a été scrupuleusement détaillé pour justifier son rendement prévisionnel de 28 tonnes/hectare.
 
 - **Variétés :** Violet de Galmi et Orient F1.
 - **Pépinière :** 45 jours sous ombrière, avec désinfection du sol par solarisation (technique écologique rassurante pour le banquier).
@@ -130,10 +130,11 @@ C'est ici que la saisonnalité intervient. Vous devez répartir les cultures sur
 **Le cas Diap Touré (Le calendrier de rotation) :**
 Sur ses 10 hectares, Diap ne peut pas planter de l'oignon toute l'année, car il y a une saison des pluies (hivernage) très humide qui favorise les maladies fongiques. 
 
-Son calendrier est donc le suivant :
-- **Campagne 1 (Oignon - Contre-saison froide) :** Pépinière en octobre, repiquage en novembre/décembre, récolte en mars/avril. (Il vise la période où les importations seront gelées).
-- **Campagne 2 (Pomme de terre) :** Plantation fin décembre, récolte en mars.
-- **Campagne 3 (Gombo ou Maïs doux - Hivernage) :** De juillet à septembre. Il utilise des cultures à cycle court qui supportent bien la pluie pour rentabiliser le sol, payer la main-d'œuvre permanente, et casser les cycles parasitaires (rotation des cultures).
+Son calendrier est donc le suivant. Attention : les cinq mois d'installation constituent l'**année 0** du projet (aucun chiffre d'affaires). La première campagne complète ouvre l'**année 1**, dont les rendements sont prudemment fixés à 85 % de la pleine production (montée en puissance).
+- **Plan d'assolement :** 7 ha d'oignon et 3 ha de pomme de terre en contre-saison froide ; 3 ha de gombo ou de maïs doux en hivernage (les 7 autres hectares se reposent en engrais vert).
+- **Campagne 1 (Oignon, 7 ha - Contre-saison froide) :** Pépinière en octobre, repiquage en novembre/décembre, récolte en mars/avril, puis séchage et vente entre avril et août (environ 40 % du volume est stocké sous hangar pour être vendu quand les prix remontent).
+- **Campagne 2 (Pomme de terre, 3 ha) :** Plantation fin décembre, récolte en mars (cycle d'environ 90 jours).
+- **Campagne 3 (Gombo ou Maïs doux, 3 ha - Hivernage) :** De juillet à septembre. Il utilise des cultures à cycle court qui supportent bien la pluie pour rentabiliser le sol, payer la main-d'œuvre permanente, et casser les cycles parasitaires (rotation des cultures).
 
 Grâce à ce calendrier, Diap démontre qu'il fait une **rotation des cultures** (bonnes pratiques agricoles) et qu'il évite de laisser ses terres et son personnel inactifs pendant l'hivernage.
 
@@ -218,17 +219,20 @@ Une rupture de stock d'engrais en plein cycle de croissance peut ruiner une camp
 
 L'entreprise agricole est une entreprise comme une autre. Son choix juridique détermine ses impôts, la responsabilité de ses dirigeants, et sa capacité à lever des fonds. Bien que les lois diffèrent selon les pays de l'espace OHADA, on retrouve globalement les mêmes grandes catégories :
 
-1. **L'Entreprise Individuelle (EI) ou le Statut de l'Entreprenant :**
+1. **L'Entreprise Individuelle (EI) ou le Statut de l'Entreprenant (régime simplifié OHADA pour les petites activités, avec un plafond de chiffre d'affaires fixé par chaque pays) :**
    - *Avantages :* Simple et très peu coûteuse à créer. Décisions rapides (vous êtes le seul maître).
    - *Inconvénients :* Votre patrimoine personnel n'est pas protégé. En cas de faillite de la ferme, vos biens personnels peuvent être saisis. Très difficile de lever de gros financements bancaires.
-2. **La Société à Responsabilité Limitée (SARL / SUARL) :**
-   - *Avantages :* La forme la plus populaire. Votre responsabilité est limitée à vos apports (votre patrimoine personnel est protégé). Idéal pour s'associer à 2 ou plus, ou même seul (SUARL). Elle inspire plus confiance aux banques et fournisseurs.
+2. **La Société à Responsabilité Limitée (SARL, ou SARLU avec un associé unique ; SUARL au Sénégal) :**
+   - *Avantages :* La forme la plus populaire. Votre responsabilité est limitée à vos apports (votre patrimoine personnel est protégé). Idéal pour s'associer à 2 ou plus, ou même seul (SARLU). Elle inspire plus confiance aux banques et fournisseurs.
    - *Inconvénients :* Plus lourde à constituer, nécessite un capital social bloqué, et une comptabilité rigoureuse.
-3. **Le Groupement d'Intérêt Économique (GIE) ou la Coopérative :**
+3. **Le Groupement d'Intérêt Économique (GIE) ou la Société coopérative (régie dans l'espace OHADA par un Acte uniforme de 2010) :**
    - *Avantages :* Formes très utilisées en agriculture pour regrouper plusieurs producteurs afin d'acheter en gros ou de vendre ensemble. Souvent éligibles à des subventions de l'État.
    - *Inconvénients :* Solidarité des dettes dans le GIE. Gouvernance parfois complexe dans les grandes coopératives.
+4. **La Société par Actions Simplifiée (SAS ou SASU) :**
+   - *Avantages :* Statuts très libres, utile si vous prévoyez d'accueillir des investisseurs ou de signer un pacte d'associés.
+   - *Inconvénients :* Plus exigeante à tenir (obligations de contrôle des comptes selon les cas) : à envisager pour un projet qui change d'échelle.
 
-**Le choix de Diap Touré :** Pour un investissement de 55 millions de FCFA, le statut d'Entreprise Individuelle n'offre pas assez de garanties à la banque et met Diap en danger personnel. Il a opté pour la **SUARL (Société Unipersonnelle à Responsabilité Limitée)**, ce qui lui permet de gérer seul, de protéger ses biens, tout en offrant le sérieux d'une société commerciale.
+**Le choix de Diap Touré :** Pour un investissement de 55 millions de FCFA, le statut d'Entreprise Individuelle n'offre pas assez de garanties à la banque et met Diap en danger personnel. Il a opté pour la **SARL à associé unique (SARLU, appelée SUARL au Sénégal)**, ce qui lui permet de gérer seul, de protéger ses biens, tout en offrant le sérieux d'une société commerciale.
 
 ### L'organisation des Ressources Humaines (Organigramme)
 
@@ -250,9 +254,10 @@ Vous devez distinguer la main-d'œuvre permanente de la main-d'œuvre saisonniè
 ### Les aspects réglementaires supplémentaires
 
 N'oubliez pas d'inclure dans ce chapitre les éventuelles autorisations nécessaires :
-- Titre de propriété ou Bail emphytéotique (droit d'usage du sol).
+- Un acte foncier reconnu : titre de propriété, bail, acte d'affectation (au Sénégal, les terres du domaine national sont affectées par les communes), certificat foncier ou attestation de détention coutumière formalisée selon les pays. Renseignez-vous auprès du service foncier compétent.
 - Autorisation de forage / exploitation de l'eau (critique dans beaucoup de régions).
-- Inscription aux impôts (NINEA, NIF, etc.) et au registre du commerce.
+- Inscription aux impôts (identifiant fiscal propre à chaque pays : NINEA au Sénégal, NIF au Togo, IFU au Bénin et au Burkina Faso, numéro de compte contribuable en Côte d'Ivoire, TIN au Ghana et au Nigeria) et au registre du commerce.
+- Obligations fiscales et sociales : impôt sur les bénéfices, TVA et traitement des produits agricoles, cotisations sociales des salariés, code du travail. Elles diffèrent d'un pays à l'autre : demandez conseil à un expert-comptable local avant de chiffrer.
 
 #### Ce qu'il faut retenir
 - Choisissez une forme juridique adaptée à votre besoin de financement et de protection (la SARL est souvent le standard professionnel).

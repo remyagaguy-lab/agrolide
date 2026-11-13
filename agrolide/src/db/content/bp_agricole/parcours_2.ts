@@ -29,20 +29,24 @@ L'outil le plus utilisé pour structurer cette analyse est le modèle PESTEL. Vo
 5. **Environnemental (Crucial en agriculture) :** Quel est le régime pluviométrique ? Y a-t-il des risques de sécheresse, d'inondation, ou de dégradation des sols ? Comment le changement climatique affecte-t-il les dates de semis ?
 6. **Légal :** Quelles sont les réglementations foncières (lois sur le domaine national, baux emphytéotiques) ? Quelles sont les normes phytosanitaires exigées pour vendre en supermarché ou à l'export ?
 
+### Et dans votre pays ?
+
+Le cas ci-dessous est sénégalais : pour votre business plan, appliquez le PESTEL à VOTRE pays et à VOTRE zone. Pensez en particulier aux règles communes de l'espace UEMOA/CEDEAO (tarif extérieur commun, circulation des produits agricoles entre pays, comme l'oignon du Niger ou le maïs), aux mesures nationales d'ouverture ou de suspension des importations, aux subventions d'intrants et aux saisons : le sud du Togo, du Bénin, de la Côte d'Ivoire et du Ghana connaît deux saisons des pluies, le nord et le Sahel une seule.
+
 ### Le cas de Diap Touré : Le potentiel de la zone des Niayes
 
 Reprenons l'exemple de Diap Touré au Sénégal, avec son projet de 10 hectares d'oignon et de pomme de terre. Dans son business plan, il ne s'est pas contenté de dire "la terre est fertile". Il a structuré son analyse environnementale ainsi :
 
-- **Politique et Légal :** L'État sénégalais a mis en place des mesures de gel des importations d'oignons pendant la période de récolte locale pour protéger les producteurs. C'est une opportunité majeure qui garantit l'écoulement des stocks à un prix rémunérateur pendant quelques mois.
+- **Politique et Légal :** L'État sénégalais suspend régulièrement les importations d'oignon et de pomme de terre pendant la récolte locale pour protéger les producteurs (par exemple en janvier 2025 puis en janvier 2026). C'est une opportunité, mais instable : les dates changent d'une année à l'autre, le marché peut être rouvert par anticipation et des plafonds de prix peuvent être imposés. Diap ne bâtit donc pas son modèle sur cette protection : il la traite comme un bonus incertain.
 - **Environnemental :** La zone des Niayes bénéficie d'un microclimat côtier favorable à l'horticulture et de nappes phréatiques peu profondes (les céanes). Cependant, la menace de salinisation des terres due à l'avancée de la mer et la pression foncière due à l'urbanisation de Dakar sont des menaces identifiées.
-- **Économique :** Malgré une production locale en hausse, le Sénégal reste déficitaire sur l'oignon et la pomme de terre, entraînant des prix élevés en période de soudure. La demande est donc structurellement supérieure à l'offre.
+- **Économique :** La production d'oignon a dépassé 400 000 tonnes en 2024. Le marché connaît ainsi deux visages : surabondance à la récolte (des prix de 105-110 FCFA/kg ont été observés au bord des champs en 2025) et tensions quelques mois plus tard. Le gain se trouve donc dans l'étalement des ventes, pas dans une pénurie permanente.
 - **Technologique :** L'accès récent à des systèmes de pompage solaire abordables permet de réduire drastiquement la facture énergétique par rapport aux motopompes à essence classiques.
 
-En quelques paragraphes, Diap a prouvé que son projet s'inscrit dans une dynamique nationale favorable (le gel des importations), tout en identifiant clairement les risques naturels de sa zone d'implantation. 
+En quelques paragraphes, Diap a prouvé que son projet s'inscrit dans une dynamique nationale favorable (politique de protection des producteurs, mais instable), tout en identifiant clairement les risques naturels de sa zone d'implantation. 
 
 ### Les facteurs clés de succès
 
-De cette analyse environnementale, vous devez déduire les "Facteurs Clés de Succès" (FCS) de votre secteur. Ce sont les conditions obligatoires pour réussir. Pour Diap, les FCS identifiés étaient : la maîtrise absolue du calendrier agricole pour récolter pendant la période de gel des importations, et la sécurisation foncière via un bail enregistré, indispensable face à la spéculation immobilière dans les Niayes.
+De cette analyse environnementale, vous devez déduire les "Facteurs Clés de Succès" (FCS) de votre secteur. Ce sont les conditions obligatoires pour réussir. Pour Diap, les FCS identifiés étaient : la maîtrise du calendrier agricole et du stockage pour vendre en dehors du pic de récolte, quelle que soit la politique d'importation, et la sécurisation foncière par un acte reconnu (affectation ou bail selon le régime foncier), indispensable face à la spéculation immobilière dans les Niayes.
 
 #### Ce qu'il faut retenir
 - L'analyse PESTEL structure l'étude des contraintes et opportunités externes.
@@ -69,7 +73,7 @@ De cette analyse environnementale, vous devez déduire les "Facteurs Clés de Su
             "Environnemental"
           ],
           correctAnswer: 2,
-          explanation: "Une décision de protectionnisme prise par le gouvernement relève de l'environnement politique et légal."
+          explanation: "Une décision de protectionnisme prise par le gouvernement relève de l'environnement politique et légal. Comme elle peut changer d'une année à l'autre, elle ne doit jamais être l'unique base d'un modèle économique."
         },
         {
           question: "Pourquoi est-il indispensable d'analyser l'environnement avant de chiffrer son projet ?",
@@ -137,9 +141,9 @@ Pour remplir votre étude de marché, vous aurez besoin de deux types de donnée
 
 ### L'exemple de Diap Touré : Choix du B2B
 
-Diap Touré, avec ses 10 hectares, a une capacité de production d'environ 300 tonnes d'oignons par cycle. Il lui est strictement impossible de vendre cela kilo par kilo à des ménages.
+Diap Touré, avec ses 10 hectares, a une capacité de production d'environ 176 tonnes d'oignon vendable par campagne (7 hectares × 28 t/ha, après 10 % de pertes). Il lui est strictement impossible de vendre cela kilo par kilo à des ménages.
 
-**Ses données secondaires :** En consultant les rapports de l'Agence Nationale de la Statistique et de la Démographie (ANSD), il démontre que la consommation annuelle d'oignon au Sénégal est en croissance constante (environ 300 000 tonnes), poussée par la démographie et les habitudes culinaires (le fameux Ceebu Jën national).
+**Ses données secondaires :** En consultant les rapports de l'Agence Nationale de la Statistique et de la Démographie (ANSD), il démontre que la consommation annuelle d'oignon au Sénégal est en croissance constante (entre 380 000 et 480 000 tonnes selon les sources de 2023 à 2025), poussée par la démographie et les habitudes culinaires (le fameux Ceebu Jën national).
 **Ses données primaires :** Diap est allé interroger 5 bana-banas (grossistes) du marché Thiaroye et du marché d'intérêt national de Diamniadio.
 
 **Sa segmentation finale retenue :**
@@ -157,8 +161,8 @@ Diap Touré, avec ses 10 hectares, a une capacité de production d'environ 300 t
 Dans votre business plan, présentez ces informations sous forme de tableau clair :
 | Segment | Profil (Besoins) | Taille estimée | Volume ciblé par le projet |
 |---|---|---|---|
-| Grossistes | Prix compétitif, volume | Très grand | 240 tonnes/an |
-| Supermarchés | Calibre régulier, hygiène, emballage | Moyen en croissance | 60 tonnes/an |
+| Grossistes | Prix compétitif, volume | Très grand | 141 tonnes/an |
+| Supermarchés | Calibre régulier, hygiène, emballage | Moyen en croissance | 35 tonnes/an |
 
 #### Ce qu'il faut retenir
 - "Tout le monde" n'est pas une cible commerciale.
@@ -243,9 +247,9 @@ L'offre d'oignon au Sénégal se divise en deux. Diap a analysé ses deux blocs 
    - *Leurs forces :* Coûts de production faibles car main d'œuvre familiale. Forte présence pendant les 4 mois suivant la récolte.
    - *Leurs faiblesses :* Absence de zones de stockage modernes (l'oignon pourrit vite), absence de calibrage (les gros et petits oignons sont mélangés en vrac), forte dépendance aux intermédiaires (les "bana-banas" dictent les prix).
    
-2. **L'oignon importé des Pays-Bas (Concurrents indirects/directs selon la période) :**
+2. **L'oignon importé (Pays-Bas et autres origines), disponible quand l'État ouvre le marché (Concurrents indirects/directs selon la période) :**
    - *Leurs forces :* Qualité constante, séchage parfait, longue durée de conservation, disponibilité toute l'année, emballages en filets propres de 25 kg.
-   - *Leurs faiblesses :* Prix plus élevé en période de fermeture des frontières, et "manque de goût" reproché par certains consommateurs locaux préférant l'oignon de Galmi local.
+   - *Leurs faiblesses :* Accès au marché incertain (il dépend des décisions d'ouverture de l'État d'une année à l'autre), prix plus élevé en période de fermeture, et "manque de goût" reproché par certains consommateurs locaux préférant l'oignon de Galmi local. N'oubliez pas les autres concurrents que vous ne voyez pas depuis votre région : autres zones de production du pays et importations régionales (par exemple l'oignon du Niger, premier exportateur de la région).
 
 ### Trouver votre créneau (Proposition de Valeur)
 
@@ -254,9 +258,9 @@ Votre proposition de valeur doit être la réponse aux faiblesses de vos concurr
 
 **Le créneau trouvé par Diap Touré :** 
 Lui ne va pas faire de la quantité en vrac comme les producteurs familiaux. Fort de son analyse, il investit dans un **hangar de séchage et de stockage ventilé**. 
-*Sa proposition de valeur :* "Proposer de l'oignon local calibré et mis en filet de 25kg (comme l'oignon importé), disponible sur le marché deux mois après le pic des récoltes locales (grâce au stockage), au moment où les petits producteurs ont écoulé leurs stocks et où les prix remontent, mais avant la réouverture des frontières aux importations."
+*Sa proposition de valeur :* "Proposer de l'oignon local calibré et mis en filet de 25kg (comme l'oignon importé), disponible sur le marché deux mois après le pic des récoltes locales (grâce au stockage), au moment où les petits producteurs ont écoulé leurs stocks et où les prix remontent."
 
-C'est brillant, car il se glisse exactement dans l'espace vide laissé par ses deux concurrents majeurs.
+Le créneau est crédible : il répond aux faiblesses constatées de ses deux types de concurrents. Il ne tient toutefois que si le gain de prix obtenu par le stockage (environ 100 FCFA/kg dans le cas de Diap) dépasse le coût et les pertes du stockage : cela se vérifie dans les prévisions financières (chapitre 5.3).
 
 ### Le tableau de benchmarking
 
@@ -265,7 +269,7 @@ Présentez cela sous forme de tableau dans votre dossier :
 |---|---|---|---|
 | Qualité perçue (Goût) | Élevée (Local) | Moyenne | Élevée (Local) |
 | Calibrage / Emballage | Médiocre (Vrac) | Excellent (Filets) | Excellent (Filets) |
-| Période de disponibilité | Très courte (Surcharge du marché) | Toute l'année | Étendue (grâce au stockage) |
+| Période de disponibilité | Très courte (Surcharge du marché) | Selon les ouvertures du marché | Étendue (grâce au stockage) |
 | Prix | Bas puis très instable | Élevé | Milieu de gamme premium |
 
 #### Ce qu'il faut retenir
@@ -355,23 +359,26 @@ Voici comment Diap a présenté son FFOM dans son business plan :
 
 **FAIBLESSES (Interne)**
 - Budget initial élevé nécessitant un fort endettement.
-- Nouvelle marque sur le marché face à l'omniprésence de l'oignon hollandais.
+- Nouvelle marque sur le marché, face aux habitudes des grossistes (oignon importé ou vendu en vrac).
 - Dépendance technique aux équipements d'irrigation solaire (besoin de maintenance pointue).
 
 **OPPORTUNITÉS (Externe)**
-- Mesures étatiques de gel des importations pendant 6 à 8 mois par an.
-- Marché national largement déficitaire en oignon et pomme de terre (demande structurelle).
-- Subventions régionales sur les équipements d'irrigation économes en eau.
+- Politique de protection des producteurs : suspensions d'importations récurrentes depuis plusieurs années (instables, à ne pas traiter comme acquises).
+- Marché en surproduction à la récolte et plus tendu quelques mois plus tard : forte demande pour un stockage de qualité.
+- Dispositifs d'appui à l'irrigation économe en eau (à identifier et à nommer dans votre dossier : programme, bailleur, conditions).
 
 **MENACES (Externe)**
 - Changement climatique et risque de sécheresse prolongeant la saison sèche.
 - Volatilité des prix des semences importées (généralement facturées en devises étrangères).
-- Pression des maladies phytosanitaires spécifiques à la zone des Niayes (nématodes, mouches blanches).
+- Pression des ravageurs et maladies de l'oignon et de la pomme de terre (thrips, mildiou, fusariose, flétrissement bactérien).
+- Revirement de la politique d'importation (ouverture anticipée, plafonds de prix) et chute des prix à la récolte.
 
 ### L'utilisation croisée (L'étape supérieure)
 
 Un bon SWOT ne sert pas qu'à faire un joli tableau. L'objectif est de montrer comment vous allez croiser ces éléments dans la suite de votre business plan (votre stratégie).
-Par exemple, Diap croise une de ses *Forces* (irrigation moderne) avec une *Menace* (sécheresse) : "Grâce à notre système goutte-à-goutte sur nappe, nous sommes résilients face à la menace de la sécheresse qui affectera durement nos concurrents familiaux, ce qui nous garantira d'avoir de la production quand les prix seront au plus haut."
+Par exemple, Diap croise une de ses *Forces* (irrigation moderne) avec une *Menace* (sécheresse) : "Grâce à notre système goutte-à-goutte sur nappe, nous sommes résilients face à la menace de la sécheresse qui affectera durement nos concurrents familiaux, ce qui nous donne de bonnes chances d'avoir de la production quand les prix sont au plus haut."
+
+Faites de même avec les quatre combinaisons : Force + Opportunité (attaquer), Force + Menace (se protéger), Faiblesse + Opportunité (se corriger), Faiblesse + Menace (se défendre). Exemple de ce dernier cas : la faiblesse « fort endettement » face à la menace « chute des prix » appelle un différé de remboursement et des contrats de prévente.
 
 #### Ce qu'il faut retenir
 - L'analyse Interne (Forces/Faiblesses) concerne VOTRE entreprise.
@@ -421,7 +428,7 @@ Par exemple, Diap croise une de ses *Forces* (irrigation moderne) avec une *Mena
             "Une Menace"
           ],
           correctAnswer: 2,
-          explanation: "C'est un élément politique externe extrêmement favorable pour le projet, c'est donc une Opportunité."
+          explanation: "C'est un élément politique externe favorable au projet : une Opportunité. Comme elle est instable, le risque de revirement doit aussi figurer dans les Menaces."
         }
       ]
     }

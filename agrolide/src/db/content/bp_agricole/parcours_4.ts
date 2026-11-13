@@ -47,7 +47,7 @@ Comment faites-vous connaître votre produit ?
 Voici comment Diap a défini son Mix Marketing pour son oignon :
 
 - **Produit :** Oignon sec, trié sans pourriture, de calibre moyen à gros (45-70mm), conditionné dans des filets neufs rouges de 25 kg étiquetés "Ferme Touré Niayes".
-- **Prix :** Prix Premium (environ +10% par rapport au vrac du marché) justifié par l'absence de perte pour le grossiste (pas d'oignons pourris au fond du sac grâce au tri et au stockage ventilé).
+- **Prix :** Alignement sur le marché du jour à la récolte (environ 160 FCFA/kg pour 60 % du volume), puis vente différée de la part stockée (40 % du volume) à environ 260 FCFA/kg quand les prix remontent : soit un prix moyen pondéré d'environ 200 FCFA/kg. Le gain vient du stockage, pas d'une prime : le tri et la ventilation évitent seulement les oignons pourris au fond du sac.
 - **Distribution :** Circuit indirect court. Vente bord-champ, mais l'acheteur (le grossiste) doit venir chercher la marchandise avec son propre camion. Diap ne gère pas le transport pour limiter ses risques logistiques.
 - **Communication :** Prospection téléphonique directe des grands grossistes des marchés de Dakar avec envoi de photos via WhatsApp pendant le cycle de culture (pour "teaser" la récolte) et invitation à visiter le hangar de stockage.
 
@@ -68,15 +68,15 @@ Voici comment Diap a défini son Mix Marketing pour son oignon :
           explanation: "Le 'Produit' englobe tout ce qui constitue l'offre finale remise au client, de la variété jusqu'au sac d'emballage."
         },
         {
-          question: "Quelle est la stratégie de 'Prix d'écrémage' (Premium) choisie par Diap Touré ?",
+          question: "Comment Diap Touré construit-il son prix de vente de l'oignon ?",
           options: [
-            "Vendre beaucoup moins cher pour casser le marché",
-            "Vendre au prix exact fixé par l'État",
-            "Vendre plus cher que le marché en justifiant par un tri parfait et un conditionnement en filet",
-            "Donner les produits gratuitement la première année"
+            "Il vend tout au prix le plus bas possible pour écouler vite sa récolte",
+            "Il s'aligne sur le marché à la récolte, puis vend une part stockée plus cher quand les prix remontent",
+            "Il impose à tous les grossistes un prix unique fixé par l'État",
+            "Il donne gratuitement la première récolte pour se faire connaître"
           ],
-          correctAnswer: 2,
-          explanation: "Un prix Premium se justifie toujours par une qualité ou un service supérieur (ici, le tri et l'emballage évitant les pertes au grossiste)."
+          correctAnswer: 1,
+          explanation: "Son prix moyen (environ 200 FCFA/kg) combine une vente à la récolte au prix du marché et une vente différée de la part stockée : c'est le stockage qui crée la valeur."
         },
         {
           question: "En matière de Distribution, quel est le principal avantage de vendre à des grossistes (circuit indirect) ?",
@@ -141,7 +141,7 @@ Vous devez créer un petit tableau budgétaire prévoyant :
 - L'envoi d'échantillons gratuits.
 
 **Le budget de Diap Touré :** 
-Diap a budgétisé 300 000 FCFA pour sa première campagne : 150 000 FCFA pour la conception et l'impression d'étiquettes à coudre sur ses filets (pour créer sa marque "Touré Niayes"), 100 000 FCFA de frais de déplacement vers les marchés de Dakar pour rencontrer les syndicats de grossistes, et 50 000 FCFA de crédit téléphonique. 
+Diap a budgétisé 1 000 000 FCFA par an (inclus dans ses charges fixes) : 400 000 FCFA pour la conception et l'impression d'étiquettes à coudre sur ses filets (pour créer sa marque "Touré Niayes"), 350 000 FCFA de frais de déplacement vers les marchés de Dakar pour rencontrer les syndicats de grossistes, 150 000 FCFA de crédit téléphonique et d'internet, et 100 000 FCFA d'échantillons. 
 Ce budget modeste, inséré dans ses prévisions financières, a prouvé à la banque son grand pragmatisme.
 
 #### Ce qu'il faut retenir
