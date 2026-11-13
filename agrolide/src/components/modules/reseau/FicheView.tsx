@@ -158,13 +158,13 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
             <Bloc id="fiche-commun" titre="En commun avec vous" Icone={Heart}>
               <ul className="space-y-4">
                 {communs?.specialite && communs.specialite.length > 0 && (
-                  <Commun Icone={Briefcase} libelle="Spécialité proche">{communs.specialite.join(', ')}</Commun>
+                  <Commun Icone={Briefcase} libelle="Métier proche">{communs.specialite.join(', ')}</Commun>
                 )}
                 {communs?.pays && (
                   <Commun Icone={MapPin} libelle="Lieu">{communs.ville ? `${communs.ville} (${communs.pays})` : communs.pays}</Commun>
                 )}
                 {communs && communs.thematiques.length > 0 && (
-                  <Commun Icone={Tag} libelle={communs.thematiques.length > 1 ? 'Thématiques communes' : 'Thématique commune'}>
+                  <Commun Icone={Tag} libelle={communs.thematiques.length > 1 ? 'Spécialités communes' : 'Spécialité commune'}>
                     <span className="mt-1 flex flex-wrap gap-1.5">
                       {communs.thematiques.map((t) => (
                         <Badge key={t} variant="category">{t}</Badge>
@@ -211,7 +211,7 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
           <aside aria-label="Expertise, langues et liens" className="lg:sticky lg:top-6 lg:self-start">
             <div className="space-y-5 rounded-card border border-outline-variant bg-surface-container-lowest p-6">
               {membre.thematiques.length > 0 && (
-                <Groupe titre="Thématiques">
+                <Groupe titre="Spécialités">
                   {membre.thematiques.map((t) => (
                     <li key={t}><Badge variant="category">{t}</Badge></li>
                   ))}

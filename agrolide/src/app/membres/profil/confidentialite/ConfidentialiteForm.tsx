@@ -105,7 +105,7 @@ export function ConfidentialiteForm({ initial, apercu, carte }: Props) {
           <Reglage
             id="reglage-public"
             titre="Carte publique visible sans compte"
-            description="Si vous l’activez, une personne sans compte qui a le lien de votre fiche voit votre prénom, l’initiale de votre nom, votre photo, votre spécialité, votre pays et 3 thématiques au plus. Cette page n’est pas proposée aux moteurs de recherche. Désactivée par défaut."
+            description="Si vous l’activez, une personne sans compte qui a le lien de votre fiche voit votre prénom, l’initiale de votre nom, votre photo, votre métier, votre pays et 3 spécialités au plus. Cette page n’est pas proposée aux moteurs de recherche. Désactivée par défaut."
             checked={carteActive}
             onChange={(v) => { setPublicCard(v); setMessage(null) }}
           />
@@ -164,7 +164,7 @@ export function ConfidentialiteForm({ initial, apercu, carte }: Props) {
           <ul className="list-disc space-y-1.5 pl-5 text-body-md text-on-surface">
             <li>votre prénom et l’initiale de votre nom ;</li>
             <li>votre photo, votre spécialité et votre pays ;</li>
-            <li>3 thématiques au plus.</li>
+            <li>3 spécialités au plus.</li>
           </ul>
           <p className="text-body-sm text-on-surface-variant">Votre e-mail, votre téléphone, votre nom complet et le reste de votre fiche restent réservés aux membres. Vous pouvez désactiver la carte à tout moment dans cette page.</p>
           <ModalFooter>

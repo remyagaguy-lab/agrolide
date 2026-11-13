@@ -74,7 +74,7 @@ test('relations en commun : 8 chacune, plafonné à 24', () => {
 
 test('spécialité proche : mots communs affichés avec leur graphie d’origine', () => {
   const r = scoreSuggestion(moi, base('a', { specialite: 'Elevage' }))
-  assert.match(r.raisons[0], /^Spécialité proche : /)
+  assert.match(r.raisons[0], /^Métier proche : /)
   assert.ok(r.score > 0 && r.score <= 30)
 })
 
@@ -90,9 +90,9 @@ test('au plus 3 raisons, les plus lourdes d’abord, jamais de score dans le tex
   })
   const r = scoreSuggestion(moi, candidat, 1)
   assert.equal(r.raisons.length, 3)
-  assert.match(r.raisons[0], /Spécialité proche/)
+  assert.match(r.raisons[0], /Métier proche/)
   assert.match(r.raisons[1], /Même ville/)
-  assert.match(r.raisons[2], /Thématique commune/)
+  assert.match(r.raisons[2], /Spécialité commune/)
   for (const t of r.raisons) assert.doesNotMatch(t, /\bpoints?\b|\d{2,}/)
 })
 
@@ -177,7 +177,7 @@ test('completionProfil : calculée sur les champs réels', () => {
   const c = completionProfil({ prenom: 'A', nom: 'B', specialite: 'x', thematiques: '["Élevage"]', langues: '' })
   assert.equal(c.pourcentage, Math.round((4 / 13) * 100))
   assert.ok(c.manquants.includes('Langues'))
-  assert.ok(!c.manquants.includes('Thématiques'))
+  assert.ok(!c.manquants.includes('Spécialités'))
 })
 
 test('motifGlob : classes de caractères pour casse et accents, caractères spéciaux protégés', () => {

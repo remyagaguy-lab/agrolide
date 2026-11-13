@@ -1,5 +1,8 @@
+'use client'
+
 import * as React from 'react'
 import Image from 'next/image'
+import { Emblem } from '@/components/brand'
 import { cn } from '@/lib/utils/formatters'
 
 export type AvatarSize = 'sm' | 'md' | 'lg' | 'xl'
@@ -29,9 +32,18 @@ export interface AvatarProps {
   className?: string
 }
 
+/**
+ * Photo de profil. Sans photo (ou si elle ne se charge pas), l'avatar par défaut est l'emblème de la marque
+ * (règle du design system) ; aux petites tailles, où l'emblème serait illisible, on garde les initiales.
+ */
 export function Avatar({ src, name, alt, initials, size = 'md', className }: AvatarProps) {
   const { box, px } = sizes[size]
   const label = name || alt || undefined
+  const [echec, setEchec] = React.useState(false)
+  React.useEffect(() => setEchec(false), [src])
+  const photo = src && !echec
+  const lettres = initialsOf(name || alt, initials)
+  const emblemme = !photo && (size === 'lg' || size === 'xl' || !lettres)
   return (
     <span
       role="img"
@@ -42,10 +54,24 @@ export function Avatar({ src, name, alt, initials, size = 'md', className }: Ava
         className,
       )}
     >
-      {src ? (
-        <Image src={src} alt="" width={px * 2} height={px * 2} sizes={`${px}px`} className="size-full object-cover" />
+      {photo ? (
+        <Image
+          src={src}
+          alt=""
+          width={px * 2}
+          height={px * 2}
+          sizes={`${px}px`}
+          className="size-full object-cover"
+          onError={() => setEchec(true)}
+          ref={(img) => {
+            // L'erreur peut survenir avant l'hydratation : on revérifie à la mise en place.
+            if (img && img.complete && img.naturalWidth === 0) setEchec(true)
+          }}
+        />
+      ) : emblemme ? (
+        <Emblem variant="couleur" aria-hidden="true" className="w-3/5" />
       ) : (
-        <span aria-hidden="true">{initialsOf(name || alt, initials)}</span>
+        <span aria-hidden="true">{lettres}</span>
       )}
     </span>
   )

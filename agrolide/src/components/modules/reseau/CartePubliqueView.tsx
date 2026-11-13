@@ -19,7 +19,7 @@ export function CartePubliqueView({ carte, titre = 'h1' }: { carte: CartePubliqu
         <div className="min-w-0">
           <Titre className={grande ? 'text-headline-sm font-bold text-on-surface md:text-headline-md' : 'text-title-md font-bold text-on-surface'}>{carte.nom}</Titre>
           <p className={carte.specialite ? 'mt-1 text-body-md text-on-surface-variant' : 'mt-1 text-body-md text-on-surface-muted'}>
-            {carte.specialite ?? 'Spécialité non renseignée'}
+            {carte.specialite ?? 'Métier non renseigné'}
           </p>
           {carte.pays && (
             <p className="mt-1 flex items-center gap-1.5 text-body-md text-on-surface-variant">
@@ -29,7 +29,7 @@ export function CartePubliqueView({ carte, titre = 'h1' }: { carte: CartePubliqu
           )}
         </div>
         {carte.thematiques.length > 0 && (
-          <ul className="flex flex-wrap gap-1.5" aria-label={`Thématiques de ${carte.nom}`}>
+          <ul className="flex flex-wrap gap-1.5" aria-label={`Spécialités de ${carte.nom}`}>
             {carte.thematiques.map((t) => (
               <li key={t}>
                 <Badge variant="category">{t}</Badge>

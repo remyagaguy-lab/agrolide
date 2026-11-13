@@ -80,7 +80,7 @@ const pluriel = (n: number, un: string, plusieurs: string) => `${n} ${n > 1 ? pl
 export function scoreSuggestion(moi: ProfilPourScore, candidat: CandidatPourScore, relationsEnCommun = 0): ResultatScore {
   const raisons: Raison[] = []
 
-  // Spécialité proche : recouvrement des mots significatifs (radicaux, sans accents ni mots vides).
+  // Métier proche : recouvrement des mots significatifs (radicaux, sans accents ni mots vides).
   const mesMots = motsSignificatifs(moi.specialite)
   const sesMots = motsSignificatifs(candidat.specialite)
   if (mesMots.size > 0 && sesMots.size > 0) {
@@ -88,7 +88,7 @@ export function scoreSuggestion(moi: ProfilPourScore, candidat: CandidatPourScor
     if (communs.length > 0) {
       const recouvrement = communs.length / Math.min(mesMots.size, sesMots.size)
       const points = Math.max(1, Math.round(PTS_SPECIALITE_MAX * recouvrement))
-      raisons.push({ texte: `Spécialité proche : ${communs.map((r) => sesMots.get(r)).join(', ')}`, points })
+      raisons.push({ texte: `Métier proche : ${communs.map((r) => sesMots.get(r)).join(', ')}`, points })
     }
   }
 
@@ -96,7 +96,7 @@ export function scoreSuggestion(moi: ProfilPourScore, candidat: CandidatPourScor
   const themes = inter(candidat.thematiques, moi.thematiques)
   if (themes.length > 0) {
     raisons.push({
-      texte: `${themes.length > 1 ? 'Thématiques communes' : 'Thématique commune'} : ${themes.join(', ')}`,
+      texte: `${themes.length > 1 ? 'Spécialités communes' : 'Spécialité commune'} : ${themes.join(', ')}`,
       points: Math.min(PTS_THEMES_MAX, themes.length * PTS_THEME),
     })
   }

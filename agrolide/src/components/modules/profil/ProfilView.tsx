@@ -158,10 +158,10 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
 
           <Bloc titre="Expertise et parcours" Icone={GraduationCap}>
             <dl className="grid gap-5 sm:grid-cols-2">
-              <Info libelle="Spécialité">{profile.specialite || <NonRenseigne />}</Info>
+              <Info libelle="Métier ou fonction">{profile.specialite || <NonRenseigne />}</Info>
               <Info libelle="Niveau d'études">{profile.niveau_etudes || <NonRenseigne />}</Info>
               <div className="sm:col-span-2">
-                <Info libelle="Domaines d'expertise">
+                <Info libelle="Spécialités">
                   {thematiques.length > 0 ? (
                     <ul className="flex flex-wrap gap-2">
                       {thematiques.map((t) => (

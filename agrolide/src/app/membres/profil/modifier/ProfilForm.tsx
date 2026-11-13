@@ -166,7 +166,7 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
             <Input value={valeurs.nom} onChange={(e) => maj("nom", e.target.value)} autoComplete="family-name" maxLength={60} />
           </FormField>
         </div>
-        <FormField label="Spécialité" id="champ-specialite" error={erreurs.specialite} hint="Votre domaine ou votre métier, avec vos mots (par exemple : agronomie, élevage de volaille).">
+        <FormField label="Métier ou fonction" id="champ-specialite" error={erreurs.specialite} hint="Ce que vous faites, avec vos mots (par exemple : ingénieur agronome, éleveur de volaille).">
           <Input value={valeurs.specialite} onChange={(e) => maj("specialite", e.target.value)} maxLength={100} />
         </FormField>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -196,10 +196,10 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
       </div>
 
       <div role="group" aria-labelledby="themes-titre" className="space-y-4">
-        <h2 id="themes-titre" className="text-title-md text-on-surface">Thématiques et langues</h2>
+        <h2 id="themes-titre" className="text-title-md text-on-surface">Spécialités et langues</h2>
         <fieldset className="space-y-2" aria-describedby={erreurs.thematiques ? "erreur-thematiques" : undefined}>
-          <legend className="text-label-lg text-on-surface">Thématiques</legend>
-          <p className="text-body-sm text-on-surface-muted">Elles apparaissent sur votre carte et servent aux suggestions et à la recherche.</p>
+          <legend className="text-label-lg text-on-surface">Vos spécialités</legend>
+          <p className="text-body-sm text-on-surface-muted">Vos domaines de compétence : ils apparaissent sur votre carte et servent aux suggestions et à la recherche.</p>
           <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {avecExistantes(THEMATIQUES, valeurs.thematiques).map((t) => (
               <li key={t}>
@@ -211,7 +211,7 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
         </fieldset>
         <fieldset className="space-y-2" aria-describedby={erreurs.centres_interet ? "erreur-interets" : undefined}>
           <legend className="text-label-lg text-on-surface">Centres d’intérêt</legend>
-          <p className="text-body-sm text-on-surface-muted">Ce qui vous intéresse, même hors de votre spécialité. Visible sur votre fiche par les autres membres.</p>
+          <p className="text-body-sm text-on-surface-muted">Ce que vous aimeriez apprendre ou suivre, même hors de vos spécialités. Visible sur votre fiche par les autres membres.</p>
           <ul className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {avecExistantes(THEMATIQUES, valeurs.centres_interet).map((t) => (
               <li key={t}>

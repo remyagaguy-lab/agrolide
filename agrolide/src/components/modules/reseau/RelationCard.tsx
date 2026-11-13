@@ -54,7 +54,7 @@ export function RelationCard({ member }: { member: MemberSummary }) {
           {headline ? (
             <p className="mt-0.5 line-clamp-2 text-body-sm text-on-surface-variant">{headline}</p>
           ) : (
-            <p className="mt-0.5 text-body-sm text-on-surface-muted">Spécialité non renseignée</p>
+            <p className="mt-0.5 text-body-sm text-on-surface-muted">Métier non renseigné</p>
           )}
           {place && (
             <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-muted">

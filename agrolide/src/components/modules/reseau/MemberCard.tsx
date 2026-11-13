@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { Check, MapPin } from 'lucide-react'
+import { Sillons } from '@/components/brand'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge, type BadgeVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
@@ -45,11 +46,19 @@ export function MemberCard({
   const rest = member.thematiques.length - shown.length
 
   return (
-    <article className="relative flex h-full flex-col gap-4 rounded-card border border-outline-variant bg-surface-container-lowest p-5 transition-[border-color,box-shadow] duration-150 ease-standard hover:border-outline hover:shadow-elev-1">
-      <div className="flex items-start gap-4">
-        <Avatar src={member.photo_url} name={name} size="lg" />
-        <div className="min-w-0 flex-1">
-          <h3 className="text-title-md text-on-surface">
+    <article className="relative flex h-full flex-col overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest transition-[border-color,box-shadow] duration-150 ease-standard hover:border-primary hover:shadow-elev-1">
+      {/* Bandeau teinté : sillons dans le coin, la photo le chevauche */}
+      <div aria-hidden className="relative h-14 shrink-0 overflow-hidden bg-primary-container text-on-primary-container">
+        <Sillons coin="bas-droite" opacite={0.12} className="absolute bottom-0 right-0 w-32" />
+      </div>
+      <div className="flex flex-1 flex-col gap-4 px-5 pb-5">
+        <div className="-mt-8 flex items-end justify-between gap-3">
+          <Avatar src={member.photo_url} name={name} size="lg" className="relative size-16 ring-4 ring-surface-container-lowest" />
+          {category && <Badge variant={categoryVariant(member.categorie)} className="mb-1">{category}</Badge>}
+        </div>
+
+        <div className="min-w-0">
+          <h3 className="text-title-md font-bold text-on-surface">
             <Link
               href={`/membres/annuaire/${member.id}`}
               className="rounded-tag after:absolute after:inset-0 after:rounded-card focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-primary"
@@ -58,38 +67,32 @@ export function MemberCard({
             </Link>
           </h3>
           {headline ? (
-            <p className="mt-0.5 line-clamp-2 text-body-sm text-on-surface-variant">{headline}</p>
+            <p className="mt-0.5 line-clamp-2 text-body-md text-on-surface-variant">{headline}</p>
           ) : (
-            <p className="mt-0.5 text-body-sm text-on-surface-muted">Spécialité non renseignée</p>
+            <p className="mt-0.5 text-body-md text-on-surface-muted">Métier non renseigné</p>
           )}
           {place && (
-            <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-muted">
+            <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-variant">
               <MapPin className="size-4 shrink-0" aria-hidden />
               <span className="truncate">{place}</span>
             </p>
           )}
         </div>
-      </div>
 
-      {(category || shown.length > 0) && (
-        <ul className="flex flex-wrap gap-1.5" aria-label={`Profil de ${name}`}>
-          {category && (
-            <li>
-              <Badge variant={categoryVariant(member.categorie)}>{category}</Badge>
-            </li>
-          )}
-          {shown.map((t) => (
-            <li key={t}>
-              <Badge variant="category">{t}</Badge>
-            </li>
-          ))}
-          {rest > 0 && (
-            <li>
-              <Badge variant="category">+{rest}</Badge>
-            </li>
-          )}
-        </ul>
-      )}
+        {shown.length > 0 && (
+          <ul className="flex flex-wrap gap-1.5" aria-label={`Spécialités de ${name}`}>
+            {shown.map((t) => (
+              <li key={t}>
+                <Badge variant="category">{t}</Badge>
+              </li>
+            ))}
+            {rest > 0 && (
+              <li>
+                <Badge variant="category">+{rest}</Badge>
+              </li>
+            )}
+          </ul>
+        )}
 
       {member.state === 'pending_received' && member.note && (
         <blockquote className="rounded-control border-l-4 border-primary bg-surface-container px-3 py-2">
@@ -99,8 +102,8 @@ export function MemberCard({
       )}
 
       {member.raisons && member.raisons.length > 0 && (
-        <div>
-          <p className="text-label-md text-on-surface-variant">{titreRaisons}</p>
+        <div className="rounded-control bg-surface-container-low p-3">
+          <p className="text-label-md font-bold text-on-surface-variant">{titreRaisons}</p>
           <ul className="mt-1 space-y-1">
             {member.raisons.map((r) => (
               <li key={r} className="flex items-start gap-1.5 text-body-sm text-on-surface">
@@ -126,6 +129,7 @@ export function MemberCard({
             Ignorer
           </Button>
         )}
+      </div>
       </div>
     </article>
   )

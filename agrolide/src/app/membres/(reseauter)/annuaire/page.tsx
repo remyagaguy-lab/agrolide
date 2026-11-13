@@ -61,7 +61,7 @@ function ActiveFilters({ filters }: { filters: Filters }) {
   if (filters.pays) chips.push({ label: `Pays : ${filters.pays}`, next: { ...filters, pays: '', page: 1 } })
   if (filters.categorie) chips.push({ label: `Catégorie : ${categorieLabel(filters.categorie)}`, next: { ...filters, categorie: '', page: 1 } })
   if (filters.langue) chips.push({ label: `Langue : ${filters.langue}`, next: { ...filters, langue: '', page: 1 } })
-  if (filters.theme) chips.push({ label: `Thématique : ${filters.theme}`, next: { ...filters, theme: '', page: 1 } })
+  if (filters.theme) chips.push({ label: `Spécialité : ${filters.theme}`, next: { ...filters, theme: '', page: 1 } })
   if (chips.length === 0) return null
 
   return (
@@ -120,7 +120,7 @@ async function Results({ viewerId, filters, moi, profilSuffisant }: { viewerId: 
 
       {pertinence && !profilSuffisant && (
         <Alert variant="info" className="mb-4">
-          <p>Complétez votre profil pour recevoir de vraies suggestions : sans spécialité, thématiques, langues ou pays, rien ne permet de vous comparer aux autres membres.</p>
+          <p>Complétez votre profil pour recevoir de vraies suggestions : sans métier, spécialités, langues ou pays, rien ne permet de vous comparer aux autres membres.</p>
           <Button variant="secondary" href="/membres/profil/modifier" className="mt-3">Compléter mon profil</Button>
         </Alert>
       )}

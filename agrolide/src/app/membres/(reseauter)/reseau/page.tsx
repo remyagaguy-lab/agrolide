@@ -98,7 +98,7 @@ async function Suggestions({ viewerId }: { viewerId: string }) {
       <EmptyState arche
         icon={<Sparkles />}
         title="Complétez votre profil pour recevoir des suggestions"
-        description="Sans spécialité, thématiques, langues ou pays, rien ne permet de vous comparer aux autres membres."
+        description="Sans métier, spécialités, langues ou pays, rien ne permet de vous comparer aux autres membres."
         action={<Button variant="secondary" href="/membres/profil/modifier">Compléter mon profil</Button>}
       />
     )

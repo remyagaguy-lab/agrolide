@@ -81,9 +81,9 @@ export function AnnuaireFilters({ basePath, initial, triParDefaut }: { basePath:
             ))}
           </NativeSelect>
         </FormField>
-        <FormField label="Thématique">
+        <FormField label="Spécialité">
           <NativeSelect name="theme" defaultValue={initial.theme}>
-            <option value="">Toutes les thématiques</option>
+            <option value="">Toutes les spécialités</option>
             {THEMATIQUES.map((t) => (
               <option key={t} value={t}>{t}</option>
             ))}
