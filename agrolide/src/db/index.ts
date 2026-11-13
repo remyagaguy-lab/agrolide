@@ -1,5 +1,6 @@
 import { drizzle } from 'drizzle-orm/sqlite-proxy';
 import * as schema from './schema';
+import { noterMesureD1 } from './mesure-d1';
 
 export const db = drizzle(async (sql, params, method) => {
   const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
@@ -17,6 +18,7 @@ export const db = drizzle(async (sql, params, method) => {
 
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/d1/database/${dbId}/query`;
   
+  const debut = performance.now();
   const response = await fetch(url, {
     method: 'POST',
     headers: {
@@ -27,7 +29,16 @@ export const db = drizzle(async (sql, params, method) => {
   });
 
   const json = await response.json();
-  
+
+  // Chronomètre discret (voir mesure-d1.ts) : durée de l'aller-retour complet vu depuis le serveur.
+  noterMesureD1({
+    sql,
+    methode: method,
+    totalMs: performance.now() - debut,
+    sqlMs: typeof json?.result?.[0]?.meta?.duration === 'number' ? json.result[0].meta.duration : null,
+    lignes: Array.isArray(json?.result?.[0]?.results) ? json.result[0].results.length : null,
+  });
+
   if (!json.success) {
     console.error('D1 Error:', json.errors);
     throw new Error(json.errors?.[0]?.message || 'D1 API Error');
