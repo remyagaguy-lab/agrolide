@@ -77,5 +77,6 @@ export default {
      "Une conviction ancrée dans le projet : valoriser les terres de sa région, créer de l'emploi pour les jeunes, gagner son autonomie",
      ["Un simple objectif de gagner rapidement beaucoup d'argent sans lien avec le territoire visé", "Une motivation vague, du type « je veux entreprendre parce que c'est à la mode »", "Aucune motivation : un dossier sérieux ne doit contenir que des données chiffrées"],
      "Les motivations les plus solides ne sont pas seulement financières."],
+    ["Quelle formulation de preuve rend une compétence crédible dans la fiche porteur de projet ?","Un élément vérifiable : diplôme, expérience chiffrée, réalisation ou attestation",["Une affirmation générale du type « je suis motivé et sérieux » dans tous les domaines","Le nombre de personnes que le porteur dit connaître dans la profession agricole","Une liste de qualités personnelles sans rapport avec les besoins du projet"],"Chaque compétence annoncée doit s’appuyer sur une preuve concrète : c’est le critère de réussite de l’exercice."],
   ],
 };

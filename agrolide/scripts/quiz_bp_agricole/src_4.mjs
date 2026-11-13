@@ -54,5 +54,7 @@ export default {
      "Un intérêt réel d'un acheteur pour le volume, le calibre et la période : un argument fort, même s'il n'engage pas comme un contrat ferme",
      ["Une garantie légale de paiement, qui dispense de tout contrôle de solvabilité", "Une obligation pour la banque de financer l'emprunt demandé à 100 %", "Une preuve que le prix de vente est définitivement fixé pour la saison"],
      "La lettre d'intention rassure sur le débouché ; le contrat ferme ou le bon de commande va plus loin."],
+    ["Un grossiste signe une lettre d’intention d’achat. Comment l’utiliser dans le plan de trésorerie ?","Ne pas la compter comme un encaissement certain : seuls un contrat ou un bon de commande ferme le justifient",["La compter comme une vente certaine, puisque l’acheteur a signé et mis son cachet","La compter à 50 % du volume, comme un contrat à moitié ferme","La compter dans le chiffre d’affaires de l’année précédente"],"Une lettre d’intention prouve un débouché mais n’engage en général pas l’acheteur."],
+    ["Parmi ces clauses, laquelle protège le producteur en cas de sécheresse ou d’inondation ?","La clause de force majeure, qui encadre le défaut de livraison pour cause climatique",["La clause de prix fixé après la récolte, quel que soit le cours du jour","La clause d’exclusivité, qui interdit toute vente à un autre client","La clause de paiement à 90 jours sans acompte ni garantie"],"Les pénalités de non-livraison et la force majeure sont à lire attentivement avant de signer."],
   ],
 };

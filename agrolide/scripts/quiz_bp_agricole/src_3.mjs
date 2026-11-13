@@ -24,6 +24,8 @@ export default {
      "Les intrants, surtout le plant (semence) et la fertilisation, bien plus chers que pour l'oignon",
      ["Le carburant de la motopompe, qui représente l'essentiel des dépenses de culture", "L'assurance récolte, obligatoire dès la première campagne de production", "Les frais de commercialisation, payés avant même la plantation"],
      "La pomme de terre coûte plus cher à l'hectare que l'oignon, essentiellement à cause du plant et de la fertilisation ; d'où la nécessité de chiffrer chaque poste."],
+    ["Quel est le coût variable au kilo de l’oignon de Diap : 1 300 000 FCFA/ha pour 25,2 t vendables à l’hectare ?","Environ 52 FCFA/kg, très inférieur au prix moyen de vente de 200 FCFA/kg",["Environ 5,2 FCFA/kg, ce qui rend la culture presque gratuite à produire","Environ 130 FCFA/kg, proche du prix de vente moyen de 200 FCFA/kg","Environ 1 300 FCFA/kg, ce qui montre que la culture n’est pas rentable"],"1 300 000 ÷ 25 200 kg ≈ 52 FCFA/kg."],
+    ["Dans le tableau de coûts de Diap, quel est le total des charges variables des trois cultures (oignon, pomme de terre, hivernage) ?","18,1 M FCFA : 9,1 pour l’oignon, 7,2 pour la pomme de terre et 1,8 pour l’hivernage",["13,0 M FCFA, en comptant 10 ha à 1,3 M FCFA l’hectare pour toutes les cultures","16,3 M FCFA, en oubliant les coûts de la culture d’hivernage","25,3 M FCFA, ce qui correspond à l’EBE de la croisière"],"7 × 1,3 + 3 × 2,4 + 3 × 0,6 = 9,1 + 7,2 + 1,8 = 18,1."],
   ],
   lec_3_2: [
     ["Quelle est la différence entre le calendrier d'installation et le calendrier de production ?",
@@ -50,6 +52,8 @@ export default {
      "Pour éviter les ruptures d'engrais en plein cycle, qui peuvent ruiner une campagne entière",
      ["Pour obtenir une remise sur le prix du carburant de la motopompe solaire", "Pour avoir le droit de vendre sa production directement aux supermarchés", "Pour réduire le nombre d'ouvriers agricoles à recruter pendant l'hivernage"],
      "Le plan d'approvisionnement garantit que les intrants sont disponibles au bon moment sur la ferme."],
+    ["En zone subhumide bimodale (sud du Togo, du Bénin, de la Côte d’Ivoire), que doit montrer le calendrier de production ?","Deux campagnes pluviales par an, avec leurs deux pics de récolte et de main-d’œuvre",["Une seule campagne en hivernage, comme au Sahel, avec une longue période d’inactivité","Une absence totale de culture pendant la petite saison des pluies","Une seule récolte annuelle regroupant tous les produits en novembre"],"Le plan d’assolement et la trésorerie doivent refléter les deux cycles."],
+    ["Pourquoi préciser la source des dates du calendrier (service agricole, météo, producteurs voisins) ?","Parce que les dates varient selon l’année et le lieu : la source prouve qu’elles ont été vérifiées",["Parce que la banque impose un modèle de calendrier identique pour tous les pays","Parce que les dates de semis sont fixées par la loi dans chaque région","Parce que cela dispense de prévoir une marge pour les imprévus d’installation"],"Les calendriers de la leçon sont des repères indicatifs à confirmer localement."],
   ],
   lec_3_3: [
     ["Quel est le principal inconvénient de l'entreprise individuelle pour un investissement de 55 M FCFA ?",

@@ -128,12 +128,41 @@ Cette classification permet à l'évaluateur de voir immédiatement si votre éq
 
 Si vous travaillez seul, précisez-le et expliquez comment vous comptez recruter au fur et à mesure de la croissance. Si vous êtes plusieurs associés ou membres d'un groupement, présentez la répartition des tâches et responsabilités de chacun — un organigramme simple suffit à ce stade — ainsi que la répartition du capital social entre associés (apport financier, en nature, ou autre). Mentionnez enfin vos ressources externes potentielles : partenaires techniques, structures d'accompagnement, parrainages.
 
+### Exercice : rédigez votre fiche de porteur de projet
+
+**Consigne.** En une page (300 à 400 mots), rédigez la section « porteur de projet » de votre dossier :
+
+1. Votre parcours en cinq lignes, en soulignant ce qui sert le projet (même si le parcours est atypique).
+2. Vos trois motivations, dont au moins une qui n'est pas financière.
+3. Un tableau de vos compétences par famille, avec une preuve concrète pour chacune.
+4. Deux contraintes ou faiblesses, et pour chacune la façon de la compenser.
+5. L'organisation prévue : un organigramme simple et, si vous avez des associés, la répartition du capital.
+
+**Exemple de tableau (cas Diap Touré).**
+
+| Famille | Compétence | Preuve concrète |
+|---|---|---|
+| Techniques | Conduite d'une culture maraîchère | Plusieurs années de maraîchage familial en hivernage, appui d'un chef de culture embauché |
+| Gestion | Planifier, budgéter, suivre les coûts | Poste de gestionnaire commercial |
+| Commerciales | Négocier avec des grossistes, suivre les clients | Contacts pris avec des grossistes et lettres d'intention recherchées |
+| Transversales | Apprendre vite, utiliser les outils numériques | Licence en réseaux et sécurité informatique ; suivi de la culture par photos et tableur |
+
+**Critères de réussite : votre fiche est prête si :**
+
+- le lien entre votre parcours et le projet apparaît dès les trois premières lignes ;
+- chaque compétence annoncée est appuyée par une preuve (diplôme, expérience, réalisation, attestation) ;
+- les quatre familles de compétences sont couvertes, ou le manque est reconnu avec une solution précise ;
+- au moins une contrainte est nommée honnêtement et accompagnée d'une mesure de compensation ;
+- l'organisation (qui fait quoi, qui détient quelle part du capital) se comprend en moins d'une minute ;
+- aucune phrase ne pourrait s'appliquer à n'importe quel autre porteur de projet.
+
 #### Ce qu'il faut retenir
 
 - Présentez votre parcours en expliquant en quoi il sert le projet, même s'il semble atypique.
 - Classez vos compétences par catégorie (techniques, gestion, commerciales, transversales) pour prouver la couverture des besoins du projet.
 - Nommez vos contraintes avec transparence et expliquez comment vous comptez les compenser.
-- Décrivez l'organisation prévue de l'entreprise et la répartition du capital entre associés.`,
+- Décrivez l'organisation prévue de l'entreprise et la répartition du capital entre associés.
+- Appuyez chaque compétence sur une preuve concrète : un tableau par famille rend votre fiche lisible en une minute.`,
       quiz_json: QUIZ["lec_1_3"]
     }
   ]

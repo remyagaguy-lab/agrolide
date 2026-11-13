@@ -48,10 +48,85 @@ Dans le business plan de l'exploitation de 10 ha dans les Niayes, l'itinéraire 
 
 Grâce à cette description, la banque comprend immédiatement que Diap n'est pas un amateur. Il sait exactement comment mener sa culture de A à Z.
 
+### Chiffrer l'itinéraire technique : le coût par poste
+
+Un itinéraire technique qui ne dit pas ce qu'il coûte reste incomplet. Pour chaque culture, listez les postes de dépense **par hectare**, puis multipliez par la surface. C'est ce tableau qui alimente les charges variables du compte de résultat (chapitre 5.4) et le BFR (chapitre 5.2).
+
+Voici les coûts de Diap Touré (en FCFA par hectare ; hypothèses pédagogiques à remplacer par vos devis et vos relevés de prix).
+
+**Oignon : 1 300 000 FCFA/ha, soit 9,1 M FCFA pour 7 ha**
+
+| Poste | FCFA/ha |
+|---|---|
+| Semences et pépinière | 150 000 |
+| Fertilisation (fumure de fond, NPK, urée) | 400 000 |
+| Produits phytosanitaires | 150 000 |
+| Énergie et entretien de l'irrigation | 100 000 |
+| Journaliers avant la récolte (pépinière, repiquage, entretien) | 200 000 |
+| Journaliers de récolte, séchage et tri | 150 000 |
+| Filets, étiquettes et divers | 150 000 |
+| **Total** | **1 300 000** |
+
+**Pomme de terre : 2 400 000 FCFA/ha, soit 7,2 M FCFA pour 3 ha**
+
+| Poste | FCFA/ha |
+|---|---|
+| Plants (semences de pomme de terre) | 1 100 000 |
+| Fertilisation | 500 000 |
+| Produits phytosanitaires | 200 000 |
+| Énergie et entretien de l'irrigation | 100 000 |
+| Journaliers avant la récolte | 200 000 |
+| Journaliers de récolte et tri | 150 000 |
+| Sacs, transport interne et divers | 150 000 |
+| **Total** | **2 400 000** |
+
+**Gombo ou maïs doux en hivernage : 600 000 FCFA/ha, soit 1,8 M FCFA pour 3 ha**
+
+| Poste | FCFA/ha |
+|---|---|
+| Semences | 80 000 |
+| Fertilisation | 200 000 |
+| Produits phytosanitaires | 70 000 |
+| Énergie et entretien | 50 000 |
+| Journaliers | 150 000 |
+| Emballages et divers | 50 000 |
+| **Total** | **600 000** |
+
+**Total des charges variables : 9,1 + 7,2 + 1,8 = 18,1 M FCFA par campagne**, le chiffre utilisé au compte de résultat. On retrouve aussi le BFR : les intrants (semences, fertilisation, phytosanitaires, énergie) de l'oignon et de la pomme de terre font 7 × 0,80 + 3 × 1,90 = 11,3 M FCFA, et les journaliers avant la récolte 10 ha × 200 000 = 2,0 M FCFA.
+
+**Le test de bon sens : le coût variable au kilo.** On divise le coût à l'hectare par le volume vendable à l'hectare.
+
+| Culture | Coût variable/ha | Volume vendable/ha | Coût au kg | Prix de vente moyen |
+|---|---|---|---|---|
+| Oignon | 1 300 000 | 25,2 t (28 t − 10 %) | environ 52 FCFA | 200 FCFA |
+| Pomme de terre | 2 400 000 | 23 t (25 t − 8 %) | environ 104 FCFA | 230 FCFA |
+| Gombo / maïs doux | 600 000 | 7,2 t (8 t − 10 %) | environ 83 FCFA | 150 FCFA |
+
+Une culture dont le coût variable au kilo se rapproche du prix de vente ne laisse aucune marge pour payer le personnel, les amortissements et la dette : elle doit être revue ou abandonnée.
+
+### Exercice : l'itinéraire technique chiffré de votre culture principale
+
+**Consigne.** Pour votre culture principale :
+
+1. Décrivez les six étapes de l'itinéraire technique (préparation du sol, semis ou plantation, irrigation, entretien et fertilisation, protection phytosanitaire, récolte et post-récolte) en une à deux phrases chacune.
+2. Dressez le tableau des coûts par hectare, poste par poste, avec une source (devis, prix relevé au marché, prix d'un fournisseur) et la date du relevé.
+3. Calculez le coût de la surface prévue, le volume vendable à l'hectare et le coût variable au kilo.
+4. Comparez ce coût au prix de vente que vous retenez et commentez l'écart.
+
+**Critères de réussite :**
+
+- les six étapes sont présentes et dans l'ordre chronologique ;
+- le rendement annoncé est justifié par une pratique précise (variété, densité, irrigation) et non seulement par une affirmation ;
+- tous les postes ont un montant, une source et une date ; le total par hectare est exact ;
+- le coût au kilo est calculé et nettement inférieur au prix de vente ;
+- les montants se retrouvent à l'identique dans vos charges variables et dans votre BFR.
+
 #### Ce qu'il faut retenir
 - Présentez vos produits en décrivant clairement leur variété, conditionnement et niveau de qualité.
 - L'itinéraire technique est la suite logique de toutes les opérations de production.
-- Une bonne maîtrise de l'itinéraire technique est indispensable pour justifier les rendements que vous allez utiliser plus tard dans vos prévisions financières.`,
+- Une bonne maîtrise de l'itinéraire technique est indispensable pour justifier les rendements que vous allez utiliser plus tard dans vos prévisions financières.
+- Chiffrez chaque poste de l'itinéraire technique à l'hectare (semences, fertilisation, phytosanitaires, énergie, journaliers, emballages) : le total alimente le compte de résultat et le BFR.
+- Calculez le coût variable au kilo et comparez-le au prix de vente : c'est le premier test de rentabilité d'une culture.`,
       quiz_json: QUIZ["lec_3_1"]
     },
     {
@@ -101,11 +176,53 @@ Une rupture de stock d'engrais en plein cycle de croissance peut ruiner une camp
 
 **L'astuce de Diap :** Il précise dans son business plan qu'il contractualise avec un grand fournisseur local d'intrants certifiés, avec livraison programmée un mois avant chaque phase critique de la culture, évitant ainsi les pénuries fréquentes du marché.
 
+### Adapter le calendrier à votre zone agro-climatique
+
+Le calendrier de Diap vaut pour les Niayes. Le vôtre dépend de la **zone agro-climatique** où se trouve la parcelle, c'est-à-dire du régime des pluies. On distingue trois grandes situations en Afrique de l'Ouest.
+
+- **Zone sahélienne, une seule saison des pluies (unimodale)** : environ 3 à 4 mois de pluie (de juin-juillet à septembre). Exemples : nord du Sénégal, du Mali, du Niger, du Burkina Faso, du Togo.
+- **Zone soudanienne** : une saison des pluies plus longue (de mai-juin à octobre), avec une saison sèche marquée. Exemples : centre du Mali, du Burkina Faso, du Togo et du Bénin, nord de la Côte d'Ivoire.
+- **Zone subhumide / guinéenne, deux saisons des pluies (bimodale)** : une grande saison (mars à juillet) et une petite saison (septembre à novembre). Exemples : sud du Togo, du Bénin, de la Côte d'Ivoire et du Ghana.
+
+Les calendriers ci-dessous sont des **repères indicatifs**. Les dates réelles varient d'une année et d'un lieu à l'autre : confirmez-les avec le service agricole local, la météo nationale et les producteurs de votre voisinage, et notez la source dans votre dossier.
+
+| Période | Sahélienne unimodale | Soudanienne | Subhumide / guinéenne bimodale |
+|---|---|---|---|
+| Novembre à février | Contre-saison froide irriguée : oignon, pomme de terre, tomate, chou | Contre-saison irriguée en bas-fonds ou sur forage : tomate, oignon, piment | Maraîchage possible toute l'année en bas-fonds ; harmattan sec de décembre à février : irrigation indispensable |
+| Mars à mai | Contre-saison chaude : cultures résistantes à la chaleur, préparation des parcelles | Préparation des sols, premiers semis de maïs si la pluie s'installe | Grande saison : semis de maïs, manioc, légumes-feuilles |
+| Juin à septembre | Hivernage : mil, sorgho, maïs, arachide, niébé, gombo ; semis après les premières pluies utiles | Maïs, soja, coton, riz pluvial, igname ; récolte des premiers maïs à partir de septembre | Récolte de la grande saison (juillet), puis préparation de la petite saison ; semis en août-septembre |
+| Octobre à novembre | Récoltes de l'hivernage, pépinière de l'oignon et préparation de la contre-saison | Récoltes, séchage et stockage ; préparation de la contre-saison | Petite saison : deuxième cycle de maïs et de légumes, récolte en novembre-décembre |
+
+**Ce qu'il faut en retenir pour votre dossier :**
+
+- en zone unimodale, une seule campagne pluviale par an : la contre-saison irriguée est ce qui occupe les terres et le personnel hors hivernage ;
+- en zone bimodale, deux campagnes pluviales : le plan d'assolement et le plan de trésorerie doivent montrer les deux cycles et leurs deux pics de récolte ;
+- l'investissement dans l'eau (forage, irrigation) pèse plus lourd là où la saison sèche est longue ;
+- la période de stockage et de vente dépend de la période de récolte de votre zone : c'est elle qui détermine les prix que vous pouvez espérer.
+
+### Exercice : votre calendrier de production sur 12 mois
+
+**Consigne.**
+
+1. Indiquez votre zone agro-climatique et la source de vos dates (service agricole, météo nationale, producteurs voisins).
+2. Construisez un tableau de 12 colonnes (de janvier à décembre) avec, par culture : préparation, semis ou plantation, entretien, récolte, vente. Ajoutez les pics de main-d'œuvre.
+3. Ajoutez en dessous le calendrier d'installation, mois par mois, jusqu'au premier semis.
+4. Calculez, pour votre première année, le pourcentage de la pleine production que vous retenez (comme les 85 % de Diap) et justifiez-le.
+
+**Critères de réussite :**
+
+- la zone agro-climatique est nommée et les dates sont cohérentes avec son régime de pluies ;
+- aucune culture n'est planifiée en dehors de sa période réaliste, ou alors avec une irrigation prévue et chiffrée ;
+- les pics de travail (repiquage, récolte) sont repérés et reliés au budget des journaliers ;
+- le calendrier d'installation laisse une marge pour les imprévus (forage, bail, livraisons) ;
+- les périodes d'encaissement du calendrier correspondent à celles de votre plan de trésorerie.
+
 #### Ce qu'il faut retenir
 - Vous devez différencier le calendrier de mise en place (installation) du calendrier de production (cycles de culture).
 - Soyez réaliste sur les délais administratifs et d'installation des infrastructures (forage, clôture).
 - Utilisez la rotation des cultures pour occuper vos terres et votre personnel toute l'année.
-- Le plan d'approvisionnement doit garantir que les intrants seront disponibles au bon moment sur la ferme.`,
+- Le plan d'approvisionnement doit garantir que les intrants seront disponibles au bon moment sur la ferme.
+- Rattachez votre calendrier à votre zone agro-climatique (sahélienne unimodale, soudanienne, subhumide bimodale) et citez la source de vos dates.`,
       quiz_json: QUIZ["lec_3_2"]
     },
     {

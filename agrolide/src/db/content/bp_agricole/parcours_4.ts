@@ -100,10 +100,67 @@ Vous devez créer un petit tableau budgétaire prévoyant :
 Diap a budgétisé 1 000 000 FCFA par an (inclus dans ses charges fixes) : 400 000 FCFA pour la conception et l'impression d'étiquettes à coudre sur ses filets (pour créer sa marque "Touré Niayes"), 350 000 FCFA de frais de déplacement vers les marchés de Dakar pour rencontrer les syndicats de grossistes, 150 000 FCFA de crédit téléphonique et d'internet, et 100 000 FCFA d'échantillons. 
 Ce budget modeste, inséré dans ses prévisions financières, a prouvé à la banque son grand pragmatisme.
 
+### Sécuriser la vente : lettres d'intention et contrats
+
+Vendre avant de récolter suppose de transformer l'intérêt d'un acheteur en engagement écrit. Il en existe plusieurs niveaux, du plus souple au plus ferme.
+
+| Document | Ce que c'est | Force | Usage dans le dossier |
+|---|---|---|---|
+| Lettre d'intention d'achat | L'acheteur exprime son intérêt pour un produit, un volume et une période | Faible : en général non contraignante | Preuve d'un débouché, à joindre en annexe |
+| Bon de commande | Commande précise (quantité, calibre, date, prix) | Moyenne à forte, selon les conditions | Prouve la demande à court terme |
+| Contrat de vente ou de prévente | Engagement réciproque : le producteur livre, l'acheteur paie | Forte | Sécurise le prix et les volumes ; rassure fortement la banque |
+| Contrat de culture (agriculture contractuelle) | L'acheteur commande à l'avance une production, parfois avec des intrants ou une avance | Forte | Courant avec les transformateurs et les exportateurs |
+
+**Les clauses à prévoir dans un contrat de vente :**
+
+1. les parties (identité complète, statut juridique, représentants) ;
+2. le produit : variété, calibre, qualité, conditionnement ;
+3. la quantité et le calendrier des livraisons ;
+4. le prix : prix fixe, prix plancher, ou formule liée à un cours de référence, et sa date de révision ;
+5. le lieu et les modalités d'enlèvement ou de livraison, et qui supporte le transport ;
+6. les conditions de paiement : acompte, solde, délai ;
+7. les pénalités en cas de retard ou de défaut de livraison, et les cas de force majeure (sécheresse, inondation) ;
+8. la durée, les conditions de résiliation et le règlement des litiges.
+
+**Modèle de lettre d'intention d'achat** (à faire signer et tamponner par l'acheteur) :
+
+> **Objet : intention d'achat d'oignon de la campagne [année]**
+>
+> Nous, [nom de l'entreprise de l'acheteur], représentée par [nom, fonction], déclarons notre intention d'acheter à [nom de l'exploitation] les quantités suivantes : [produit, calibre, conditionnement], environ [quantité] tonnes, à livrer ou à enlever entre [mois] et [mois], au prix de référence de [prix] FCFA/kg, révisable selon les conditions du marché à la date de la récolte. Cette lettre exprime notre intérêt commercial ; elle sera suivie d'un contrat ou d'un bon de commande ferme au plus tard [délai] avant la récolte.
+>
+> Fait à [lieu], le [date]. Signature et cachet.
+
+**Les pièges à éviter :**
+
+- compter une lettre d'intention comme une vente certaine dans le plan de trésorerie ;
+- accepter un prix fixé uniquement après la récolte, sans plancher ni formule ;
+- ignorer la solvabilité de l'acheteur : demandez des références et limitez le crédit accordé ;
+- signer sans avoir lu les pénalités de non-livraison, alors que la récolte dépend du climat ;
+- oublier de faire relire le contrat par un juriste ou un conseiller local : les règles de la vente, de la preuve et des contrats varient selon les pays.
+
+### Exercice : vos lettres d'intention et votre contrat type
+
+**Consigne.**
+
+1. Identifiez trois acheteurs réels (ou potentiels) de votre segment principal, avec leur volume annuel et leurs exigences de qualité.
+2. Rédigez, pour chacun, une lettre d'intention adaptée (produit, volume, période, prix de référence) et faites-la signer.
+3. Rédigez un projet de contrat de vente d'une page avec les huit clauses de la liste.
+4. Dans votre plan de prospection, indiquez le pourcentage de votre production couvert par des engagements écrits, par niveau (lettre, bon de commande, contrat).
+
+**Critères de réussite :**
+
+- chaque lettre indique le produit, le volume, la période, un prix de référence, et elle est signée par une personne habilitée ;
+- le projet de contrat contient les huit clauses et prévoit un traitement de la force majeure ;
+- le total des volumes engagés est comparé à votre production prévisible, sans la dépasser ;
+- le plan de trésorerie ne traite comme encaissements certains que les ventes sous contrat ou bon de commande ferme ;
+- le budget de prospection couvre les déplacements et les relances nécessaires à ces signatures.
+
 #### Ce qu'il faut retenir
 - On ne cherche pas ses clients le jour de la récolte, on vend avant de récolter.
 - Segmentez votre prospection en 3 phases : Sécurisation (avant semis), Teasing (pendant la croissance) et Conclusion (avant la récolte).
-- La prospection commerciale génère des frais (déplacement, communication, emballage) qui doivent obligatoirement figurer dans votre budget prévisionnel.`,
+- La prospection commerciale génère des frais (déplacement, communication, emballage) qui doivent obligatoirement figurer dans votre budget prévisionnel.
+- Une lettre d'intention prouve un débouché sans engager l'acheteur ; seuls un bon de commande ferme ou un contrat sécurisent prix et volumes.
+- Un contrat de vente doit fixer produit, quantité, prix, enlèvement, paiement, pénalités et force majeure.`,
       quiz_json: QUIZ["lec_4_2"]
     }
   ]
