@@ -23,7 +23,19 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     }
 
     const pdfUrl = `${r2PublicUrl}/${document.fichier_r2_key}`
-    const pdfResponse = await fetch(pdfUrl)
+    // Délai maximum de 15 s pour que R2 commence à répondre. Il est levé dès l'arrivée de la réponse :
+    // le téléchargement d'un gros PDF sur une connexion lente n'est jamais coupé.
+    const controleur = new AbortController()
+    const minuteur = setTimeout(() => controleur.abort(), 15_000)
+    let pdfResponse: Response
+    try {
+      pdfResponse = await fetch(pdfUrl, { signal: controleur.signal })
+    } catch (e) {
+      if (controleur.signal.aborted) return new NextResponse('Le stockage des fichiers ne répond pas. Réessayez dans un instant.', { status: 504 })
+      throw e
+    } finally {
+      clearTimeout(minuteur)
+    }
 
     if (!pdfResponse.ok) {
       return new NextResponse('Erreur lors du téléchargement du PDF depuis R2', { status: 502 })

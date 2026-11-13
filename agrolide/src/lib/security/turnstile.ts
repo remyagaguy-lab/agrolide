@@ -22,7 +22,8 @@ export async function verifyTurnstile(request: NextRequest): Promise<NextRespons
     const body = new URLSearchParams({ secret, response: token })
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
     if (ip) body.set('remoteip', ip)
-    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body })
+    // Délai maximum de 5 s : au-delà, la réponse « anti-robot indisponible » (503) ci-dessous s'applique.
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', { method: 'POST', body, signal: AbortSignal.timeout(5000) })
     const data = (await res.json()) as { success?: boolean }
     if (!data.success) {
       return NextResponse.json({ error: 'Vérification anti-robot échouée. Réessayez.' }, { status: 400 })

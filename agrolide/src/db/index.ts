@@ -2,6 +2,9 @@ import { drizzle } from 'drizzle-orm/sqlite-proxy';
 import * as schema from './schema';
 import { noterMesureD1 } from './mesure-d1';
 
+/** Délai maximum d'un appel à D1 (millisecondes), réglable par D1_TIMEOUT_MS. */
+const DELAI_D1_MS = Number(process.env.D1_TIMEOUT_MS) > 0 ? Number(process.env.D1_TIMEOUT_MS) : 15000;
+
 export const db = drizzle(async (sql, params, method) => {
   const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
   const dbId = process.env.CLOUDFLARE_DATABASE_ID;
@@ -26,6 +29,9 @@ export const db = drizzle(async (sql, params, method) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({ sql, params }),
+    // Délai maximum : si l'API Cloudflare ne répond plus, la page échoue proprement (page d'erreur)
+    // au lieu de rester figée jusqu'à la limite de durée de Vercel. Un appel normal prend 60 à 125 ms.
+    signal: AbortSignal.timeout(DELAI_D1_MS),
   });
 
   const json = await response.json();

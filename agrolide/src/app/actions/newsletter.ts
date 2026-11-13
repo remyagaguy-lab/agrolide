@@ -26,6 +26,8 @@ export async function addEmailToBrevo(email: string) {
       listIds: [parseInt(listId, 10)],
       updateEnabled: true,
     }),
+    // Délai maximum : si Brevo ne répond pas, le visiteur reçoit une erreur claire au lieu d'attendre sans fin.
+    signal: AbortSignal.timeout(10_000),
   })
 
   if (!response.ok) {

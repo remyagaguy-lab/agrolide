@@ -66,7 +66,8 @@ export async function POST(request: NextRequest) {
     if (wsUrl) {
       fetch(`${wsUrl.replace(/^ws/, 'http')}/broadcast/msg_${destinataire_id}`, {
         method: 'POST',
-        body: JSON.stringify({ type: 'NEW_MESSAGE', message: msg })
+        body: JSON.stringify({ type: 'NEW_MESSAGE', message: msg }),
+        signal: AbortSignal.timeout(5000),
       }).catch(console.error)
     }
 

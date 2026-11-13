@@ -10,6 +10,9 @@ import { auth } from '@/lib/auth/server'
 const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
   apiKey: process.env.OPENROUTER_API_KEY || "dummy",
+  // Délai maximum de 30 s et une seule relance (par défaut : 10 minutes et 2 relances).
+  timeout: 30_000,
+  maxRetries: 1,
 })
 
 export async function POST(request: NextRequest) {

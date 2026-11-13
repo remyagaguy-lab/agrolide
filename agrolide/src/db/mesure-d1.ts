@@ -57,6 +57,7 @@ export function noterMesureD1(m: MesureD1) {
       const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${accountId}/d1/database/${dbId}/query`, {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+        signal: AbortSignal.timeout(5000),
         body: JSON.stringify({
           sql: 'INSERT INTO d1_mesures (created_at, total_ms, sql_ms, methode, table_nom, lignes, froid, region) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
           params: [
