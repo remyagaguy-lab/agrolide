@@ -148,6 +148,34 @@ def attieke():
     )
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# CAS 3 — Maraîchage irrigué (tomate et chou), Bénin — FCFA (point 11, module « Maraîchage »)
+# ----------------------------------------------------------------------------------------------------------------
+def maraichage():
+    ha_tomate, cycles_tomate, rdt_tomate, px_tomate = 1.5, 1, 25.0, 0.000250     # 1,5 ha, 1 cycle/an, 25 t/ha, 250 FCFA/kg
+    ha_chou, cycles_chou, rdt_chou, px_chou = 1.5, 2, 30.0, 0.000180             # 1,5 ha, 2 cycles/an, 30 t/ha, 180 FCFA/kg
+    perte = 0.10                                                                   # pertes après récolte (tri, transport, invendus)
+    intrants_ha = dict(tomate=1.6, chou=1.0)                                       # M FCFA par hectare et par cycle
+
+    def ca(s):
+        t = ha_tomate * cycles_tomate * rdt_tomate * s.get("rdt", 1.0)
+        c = ha_chou * cycles_chou * rdt_chou * s.get("rdt", 1.0)
+        pert = perte + s.get("perte", 0.0)
+        return (t * 1000 * px_tomate + c * 1000 * px_chou) * (1 - pert) * s.get("prix", 1.0)
+
+    def cv(s):
+        intr = (ha_tomate * cycles_tomate * intrants_ha["tomate"] + ha_chou * cycles_chou * intrants_ha["chou"]) * s.get("intrants", 1.0)
+        return intr + 4.0 + 1.6 + 1.2          # + main-d'œuvre saisonnière 4,0 + caisses et transport 1,6 + eau et énergie 1,2
+
+    return dict(
+        nom="Maraîchage irrigué (tomate, chou) — Bénin", monnaie="FCFA", ca=ca, cv=cv, personnel=3.0, fixes=1.2, montee=0.85, cv_suit_ca=True,
+        immos=[("Frais d'établissement", 0.3, 5), ("Forage, pompe solaire et goutte-à-goutte (3 ha)", 9.0, 8), ("Clôture", 2.0, 10),
+               ("Magasin et aire de conditionnement", 3.5, 20), ("Motoculteur et petit matériel", 3.0, 5), ("Imprévus (capitalisés)", 1.0, 10)],
+        bfr=4.0, pct_apport=0.30, taux=0.09, duree=7, differe=1, **{"is": 0.30}, act=0.10,
+        scen=dict(re=dict(), pe=dict(rdt=0.95, prix=0.95, perte=0.02), cr=dict(prix=0.85)),
+    )
+
+
 def rapport(c):
     out = {}
     for k, s in c["scen"].items():
@@ -171,7 +199,7 @@ def afficher(c, out):
 
 
 if __name__ == "__main__":
-    cas = {"poulet": poulet(), "attieke": attieke()}
+    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage()}
     res = {k: rapport(c) for k, c in cas.items()}
     for k, c in cas.items():
         afficher(c, res[k])

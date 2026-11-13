@@ -1,17 +1,11 @@
 import type { Filiere } from './types'
 import { elevage } from './elevage'
+import { maraichage } from './maraichage'
 
 /** Modules par filière : optionnels, hors de la séquence de 23 leçons (aucun effet sur la progression ni sur le certificat). */
 export const FILIERES: Filiere[] = [
   elevage,
-  {
-    slug: 'maraichage',
-    titre: 'Cultures vivrières et maraîchage',
-    resume: "Maïs, riz, soja et légumes : cycles courts, saisonnalité des prix, irrigation. S'appuie sur le cas Diap Touré.",
-    statut: 'a_venir',
-    lecons: [],
-    prevu: '15/12/2026',
-  },
+  maraichage,
   {
     slug: 'aquaculture',
     titre: 'Aquaculture',

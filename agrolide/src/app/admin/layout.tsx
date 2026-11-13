@@ -84,6 +84,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           {navLink("/admin/contenus/documents", "Documents", FolderOpen)}
           {navLink("/admin/contenus/formations", "Formations", NotebookPen)}
           {navLink("/admin/contenus/formations/codes", "Codes d'accès", Lock)}
+          {navLink("/admin/contenus/formations/livrables", "Livrables à corriger", NotebookPen)}
           {navLink("/admin/contenus/evenements", "Événements", CalendarDays)}
           {navLink("/admin/contenus/opportunites", "Opportunités", MessageCircle)}
           {navLink("/admin/forum", "Forum", MessageCircle)}

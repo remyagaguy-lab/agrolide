@@ -223,6 +223,10 @@ export async function livrablesValides(userId: string, formationId: string): Pro
 /** Délivre « Réussite » si l'examen est réussi, le parcours complet et le nombre de livrables exigé atteint. */
 export async function accorderReussite(userId: string, formationId: string) {
   if (!(await parcoursComplet(userId, formationId))) return null
+  const reussie = await db.query.tentatives_examen.findFirst({
+    where: and(eq(tentatives_examen.membre_id, userId), eq(tentatives_examen.formation_id, formationId), eq(tentatives_examen.reussi, true)),
+  })
+  if (!reussie) return null
   if (LIVRABLES_REQUIS_REUSSITE > 0 && (await livrablesValides(userId, formationId)) < LIVRABLES_REQUIS_REUSSITE) return null
   const deja = await db.query.certificats_formation.findFirst({
     where: and(eq(certificats_formation.membre_id, userId), eq(certificats_formation.formation_id, formationId), eq(certificats_formation.niveau, 'reussite')),

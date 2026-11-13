@@ -110,7 +110,7 @@ ${exo}
 `;
 }
 
-const P = J.poulet, A = J.attieke;
+const P = J.poulet, A = J.attieke, M = J.maraichage;
 const poulet = page({
   c: P, dev: 'FCFA', filiere: { pe: 'Pessimiste (mortalité + 2 pts, aliment + 4 %, prix − 3 %)', cr: 'Crise (aliment + 15 %, prix − 4 %)' },
   intro: `**Ama Koffi** (nom fictif), technicienne d'élevage, souhaite créer une ferme de poulets de chair en périphérie de Lomé, au Togo, après quatre ans d'expérience dans une ferme avicole. Elle vise une clientèle de rôtisseurs, de restaurants et de revendeurs du marché. Forme juridique envisagée : SARL à associé unique. Monnaie : FCFA.`,
@@ -158,20 +158,44 @@ const attieke = page({
 **Critères de réussite :** vos calculs sont reproductibles, chaque prix porte une source et une date, et le plan d'approvisionnement traite la saisonnalité du manioc.`,
 });
 
-const mk = (slug, titre, resume, contenu) => `import type { CasChiffre } from './types'
+
+const maraichage = page({
+  c: M, dev: 'FCFA', filiere: { pe: 'Pessimiste (rendement − 5 %, prix − 5 %, pertes + 2 points)', cr: 'Crise de prix (− 15 %)' },
+  intro: `**Rufine Agossou** (nom fictif) s'installe comme maraîchère sur 3 hectares irrigués au sud du Bénin, après plusieurs années de culture sur de petites parcelles familiales. Elle vend de la tomate et du chou à des grossistes de marché et à des restaurateurs. Forme juridique envisagée : SARL à associé unique. Monnaie : FCFA.`,
+  hyp: `- **Surfaces et cycles :** 1,5 ha de tomate (1 cycle par an, 25 t/ha) et 1,5 ha de chou (2 cycles par an, 30 t/ha), soit **37,5 t de tomate et 90 t de chou** par an.
+- **Prix de vente :** tomate **250 FCFA/kg**, chou **180 FCFA/kg** (prix moyens retenus par hypothèse ; à relever sur votre marché, avec la date).
+- **Pertes après récolte :** 10 % (tri, transport, invendus).
+- **Année 1 :** 85 % de la pleine production ; les coûts suivent la production.
+- **Chiffre d'affaires de croisière :** (37,5 t × 250 + 90 t × 180) × (1 − 10 %) = **${f1(M.re.ca)} M FCFA**.`,
+  charges: `Intrants par hectare et par cycle : tomate 1,6 M FCFA, chou 1,0 M FCFA, soit 1,5 × 1,6 + 3 × 1,0 = 5,4 M FCFA par an. S'y ajoutent la main-d'œuvre saisonnière (4,0), les caisses et le transport (1,6), l'eau et l'énergie (1,2) : **${f1(M.re.cv)} M FCFA** de charges variables. Charges fixes : ${f1(M.re.fixes)} M FCFA par an. Personnel permanent (chef de culture, gardien) : ${f1(M.re.personnel)} M FCFA par an.`,
+  specifique: `- **Une petite exploitation : les coûts fixes pèsent lourd.** Le taux de marge sur coûts variables est correct (${pc(M.re.tm)}), mais l'EBE de croisière (${f1(M.re.res[1].ebe)} M FCFA, ${pc(M.re.res[1].ebe / M.re.ca)} du CA) doit supporter ${f1(M.re.cf_tot)} M FCFA de coûts fixes totaux. Le seuil de rentabilité atteint ${pc(M.re.seuil / M.re.ca)} du chiffre d'affaires : la marge de sécurité n'est que de ${pc(1 - M.re.seuil / M.re.ca)}.
+- **DSCR :** ${f2(M.re.dscr)} en réaliste, ${f2(M.pe.dscr)} en pessimiste, ${f2(M.cr.dscr)} en crise de prix de 15 % : dès que les prix reculent un peu, l'exploitation ne couvre plus l'annuité.
+- **VAN :** ${sg(M.re.van)} M FCFA en réaliste (TRI ${pc(M.re.tri, 1)}, délai de récupération ${f1(M.re.payback)} ans) ; ${sg(M.pe.van)} M en pessimiste. Le projet est rentable mais fragile : il ne résisterait pas à deux mauvaises campagnes de suite.
+- **Leviers :** ajouter un troisième cycle de culture par an ou une culture à plus forte valeur, contrats avec des restaurateurs, calendrier décalé pour étaler les ventes, stockage frais ou conditionnement pour limiter les pertes, et une réserve de trésorerie. Chaque levier doit être chiffré avec le même modèle.`,
+  lecons: `Revoyez la leçon 3.2 (calendrier de production), la leçon 5.7 (seuil, DSCR, VAN, TRI) et la leçon 6.1 (risques). Pour le contexte béninois, voyez la fiche Cadre pays du Bénin.`,
+  exo: `1. Recalculez le chiffre d'affaires et les intrants avec **vos** rendements et **vos** prix relevés sur votre marché (avec la date).
+2. De combien de points faut-il réduire les pertes après récolte pour que le DSCR pessimiste passe au-dessus de 1,2 ?
+3. Que devient le seuil de rentabilité si vous ajoutez 1 ha de chou (même rendement, mêmes intrants par hectare, 1 500 000 FCFA d'investissement supplémentaire) ?
+4. Construisez un calendrier décalé de deux mois pour la tomate afin d'étaler les ventes.
+
+**Critères de réussite :** vos calculs sont reproductibles, chaque prix porte une source et une date, et chaque levier de mitigation est chiffré.`,
+});
+
+const mk = (slug, titre, resume, contenu, pays) => `import type { CasChiffre } from './types'
 
 export const ${slug.replace(/-/g, '_')}: CasChiffre = {
   slug: '${slug}',
   titre: ${JSON.stringify(titre)},
-  pays: ${JSON.stringify(slug.includes('togo') ? 'Togo' : "Côte d'Ivoire")},
+  pays: ${JSON.stringify(pays)},
   monnaie: 'FCFA',
   resume: ${JSON.stringify(resume)},
   contenu: ${JSON.stringify(contenu)},
 }
 `;
 fs.mkdirSync('src/content/cas-chiffres', { recursive: true });
-fs.writeFileSync('src/content/cas-chiffres/poulet-togo.ts', mk('poulet-togo', 'Poulet de chair au Togo', `Élevage de 36 000 poulets par an : marge fine, DSCR de ${f2(P.re.dscr)} en réaliste, ${f2(P.pe.dscr)} en pessimiste.`, poulet).replace(/\n/g, '\r\n'));
-fs.writeFileSync('src/content/cas-chiffres/attieke-cote-d-ivoire.ts', mk('attieke-cote-d-ivoire', "Transformation du manioc en attiéké en Côte d'Ivoire", `Unité de 300 t de manioc par an : DSCR de ${f2(A.re.dscr)} en réaliste, ${f2(A.pe.dscr)} en pessimiste.`, attieke).replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/poulet-togo.ts', mk('poulet-togo', 'Poulet de chair au Togo', `Élevage de 36 000 poulets par an : marge fine, DSCR de ${f2(P.re.dscr)} en réaliste, ${f2(P.pe.dscr)} en pessimiste.`, poulet, 'Togo').replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/attieke-cote-d-ivoire.ts', mk('attieke-cote-d-ivoire', "Transformation du manioc en attiéké en Côte d'Ivoire", `Unité de 300 t de manioc par an : DSCR de ${f2(A.re.dscr)} en réaliste, ${f2(A.pe.dscr)} en pessimiste.`, attieke, "Côte d'Ivoire").replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/maraichage-benin.ts', mk('maraichage-benin', 'Maraîchage irrigué (tomate, chou) au Bénin', `Exploitation de 3 ha : DSCR de ${f2(M.re.dscr)} en réaliste, ${f2(M.pe.dscr)} en pessimiste, marge de sécurité étroite.`, maraichage, 'Bénin').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/types.ts', `export interface CasChiffre {
   slug: string
   titre: string
@@ -184,9 +208,10 @@ fs.writeFileSync('src/content/cas-chiffres/types.ts', `export interface CasChiff
 fs.writeFileSync('src/content/cas-chiffres/index.ts', `import type { CasChiffre } from './types'
 import { poulet_togo } from './poulet-togo'
 import { attieke_cote_d_ivoire } from './attieke-cote-d-ivoire'
+import { maraichage_benin } from './maraichage-benin'
 
 /** Cas chiffrés complémentaires au cas fil rouge Diap Touré (calculés par scripts/modeles_bp/cas_chiffres.py). */
-export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire]
+export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin]
 
 export const trouverCas = (slug: string) => CAS_CHIFFRES.find((c) => c.slug === slug)
 `.replace(/\n/g, '\r\n'));
