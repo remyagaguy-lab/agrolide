@@ -7,7 +7,7 @@ import { documents } from '@/db/schema'
 import { desc } from 'drizzle-orm'
 import { colonnesCarteDocument, conditionsBibliotheque, TAILLE_PAGE } from '@/lib/bibliotheque/filtres'
 
-import { Heart } from "@/components/ui/icons"
+import { Heart, Save } from "@/components/ui/icons"
 export const metadata = {
   title: "Bibliothèque",
   description: 'Bibliothèque de documents pour les membres Agrolide',
@@ -41,9 +41,14 @@ export default async function MembresBibliothequePage({ searchParams }: { search
         titre="Bibliothèque"
         description="Recherchez et consultez nos ressources documentaires."
         action={
-          <Link href="/membres/formations#lectures" className={buttonVariants({ variant: 'tonal', size: 'sm' })}>
-            <Heart className="size-4" aria-hidden /> Mes lectures et favoris
-          </Link>
+          <div className="flex flex-wrap gap-2">
+            <Link href="/membres/formations#lectures" className={buttonVariants({ variant: 'tonal', size: 'sm' })}>
+              <Heart className="size-4" aria-hidden /> Mes lectures et favoris
+            </Link>
+            <Link href="/membres/bibliotheque/hors-ligne" className={buttonVariants({ variant: 'tonal', size: 'sm' })}>
+              <Save className="size-4" aria-hidden /> Hors ligne
+            </Link>
+          </div>
         }
       />
 

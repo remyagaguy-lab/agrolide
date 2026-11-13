@@ -1,11 +1,13 @@
 "use client"
 
 import { useClerk } from "@/lib/auth/client"
+import { viderHorsLigne } from "@/lib/bibliotheque/hors-ligne"
 import { LogOut } from "@/components/ui/icons"
 export function LogoutButton() {
   const { signOut } = useClerk()
 
   const handleLogout = async () => {
+    await viderHorsLigne()
     await signOut({ redirectUrl: "/" })
   }
 

@@ -74,7 +74,7 @@ export async function LectureDocumentView({ id, mode }: { id: string; mode: 'mem
       </header>
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start lg:gap-8">
-        <SecurePDFViewerWrapper documentId={id} />
+        <SecurePDFViewerWrapper documentId={id} titre={mode === 'membre' ? document?.titre : undefined} />
         <Suspense fallback={null}>
           <Suggestions id={id} mode={mode} />
         </Suspense>

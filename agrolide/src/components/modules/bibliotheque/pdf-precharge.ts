@@ -1,19 +1,30 @@
+import { lireHorsLigne } from '@/lib/bibliotheque/hors-ligne'
+
 /**
- * Préchargement du PDF : la requête part dès que la page est affichée, pendant que le code de la liseuse (lourd)
- * se télécharge encore. La liseuse récupère ensuite la réponse déjà en route au lieu de la demander à son tour.
+ * Préchargement du PDF : la copie gardée hors ligne si elle existe, sinon la requête réseau, lancée dès que la page
+ * est affichée, pendant que le code de la liseuse (lourd) se télécharge encore.
  */
-const enCours = new Map<string, Promise<Response>>()
+export type SourcePdf = { source: 'local'; fichier: Blob } | { source: 'reseau'; reponse: Response }
+
+const enCours = new Map<string, Promise<SourcePdf>>()
+
+function demander(documentId: string): Promise<SourcePdf> {
+  return lireHorsLigne(documentId).then(async (copie): Promise<SourcePdf> => {
+    if (copie) return { source: 'local', fichier: copie.fichier }
+    return { source: 'reseau', reponse: await fetch(`/api/bibliotheque/download/${documentId}`, { credentials: 'same-origin' }) }
+  })
+}
 
 export function precharger(documentId: string) {
   if (enCours.has(documentId)) return
-  const requete = fetch(`/api/bibliotheque/download/${documentId}`, { credentials: 'same-origin' })
+  const requete = demander(documentId)
   requete.catch(() => {})
   enCours.set(documentId, requete)
 }
 
-/** Réponse préchargée (à usage unique), ou une nouvelle requête si rien n'a été lancé. */
-export function obtenirPdf(documentId: string): Promise<Response> {
+/** Source préchargée (à usage unique), ou une nouvelle demande si rien n'a été lancé. */
+export function obtenirPdf(documentId: string): Promise<SourcePdf> {
   const prete = enCours.get(documentId)
   enCours.delete(documentId)
-  return prete ?? fetch(`/api/bibliotheque/download/${documentId}`, { credentials: 'same-origin' })
+  return prete ?? demander(documentId)
 }

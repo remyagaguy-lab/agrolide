@@ -9,11 +9,12 @@ import { cn } from '@/lib/utils/formatters'
 import { EncartInscription } from './EncartInscription'
 import { useAuth } from '@/lib/auth/client'
 import { obtenirPdf } from './pdf-precharge'
+import { enregistrerHorsLigne, supprimerHorsLigne } from '@/lib/bibliotheque/hors-ligne'
 
-import { AlertTriangle, ChevronLeft, ChevronRight, FileStack, FileText, Info, Loader2, Maximize, X, ZoomIn, ZoomOut } from '@/components/ui/icons'
+import { AlertTriangle, Check, ChevronLeft, ChevronRight, FileStack, FileText, Info, Loader2, Maximize, Save, X, ZoomIn, ZoomOut } from '@/components/ui/icons'
 
-// Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
-pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
+// Worker de pdf.js servi par le site (mouchard + fiabilité) ; en .js pour que le service worker le garde en cache (lecture hors ligne)
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js'
 
 /** Marge (en pixels) autour de la zone visible : une page est dessinée un peu avant d'arriver à l'écran. */
 const MARGE_PAGES = 1500
@@ -105,7 +106,7 @@ function Outil({ libelle, className, children, ...props }: { libelle: string } &
   )
 }
 
-export function SecurePDFViewer({ documentId }: { documentId: string }) {
+export function SecurePDFViewer({ documentId, titre }: { documentId: string; titre?: string }) {
   const { userId, isLoaded } = useAuth()
   const [numPages, setNumPages] = useState(0)
   const [pageNumber, setPageNumber] = useState(1)
@@ -121,6 +122,9 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   // Taille d'origine de chaque page (formats mixtes : portrait, paysage, très grands).
   const [tailles, setTailles] = useState<Taille[]>([])
   const racineRef = useRef<HTMLDivElement>(null)
+  // Lecture hors ligne : le fichier reçu est gardé en mémoire pour pouvoir être rangé dans le stockage de l'appareil.
+  const fichierRef = useRef<Blob | null>(null)
+  const [horsLigne, setHorsLigne] = useState<'non' | 'oui' | 'enCours' | 'echec'>('non')
   const defilRef = useRef<HTMLDivElement>(null)
 
   const [quotaReached, setQuotaReached] = useState(false)
@@ -163,23 +167,33 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     const fetchSecureUrl = async () => {
       try {
         // Le serveur décide (quota de lectures gratuites, cookie signé) : le navigateur ne fait que l'afficher.
-        const res = await obtenirPdf(documentId)
-        if (res.status === 402) {
-          setQuotaReached(true)
-          return
+        const src = await obtenirPdf(documentId)
+        let blob: Blob
+        if (src.source === 'local') {
+          // Copie gardée sur l'appareil : aucune requête, ouverture immédiate (même sans connexion).
+          blob = src.fichier
+          setHorsLigne('oui')
+        } else {
+          const res = src.reponse
+          if (res.status === 402) {
+            setQuotaReached(true)
+            return
+          }
+          if (!res.ok) throw new Error(res.status === 404 ? 'Document introuvable' : 'Erreur de chargement')
+          const used = res.headers.get('X-Quota-Used')
+          if (used) {
+            setReadCount(Number(used))
+            setReadLimit(Number(res.headers.get('X-Quota-Limit') || 3))
+          }
+          blob = await res.blob()
         }
-        if (!res.ok) throw new Error(res.status === 404 ? 'Document introuvable' : 'Erreur de chargement')
-        const used = res.headers.get('X-Quota-Used')
-        if (used) {
-          setReadCount(Number(used))
-          setReadLimit(Number(res.headers.get('X-Quota-Limit') || 3))
-        }
-        const blob = await res.blob()
         if (cancelled) return
+        fichierRef.current = blob
         objectUrl = URL.createObjectURL(blob)
         setPdfUrl(objectUrl)
       } catch (err) {
-        setError(err instanceof Error && err.message ? err.message : 'Erreur de chargement')
+        const horsConnexion = typeof navigator !== 'undefined' && navigator.onLine === false
+        setError(horsConnexion ? "Vous êtes hors ligne et ce document n'a pas été gardé sur cet appareil." : err instanceof Error && err.message ? err.message : 'Erreur de chargement')
       } finally {
         setLoading(false)
       }
@@ -317,6 +331,24 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
 
   const changerZoom = (delta: number) => setScale((s) => Math.round(Math.min(Math.max(ZOOM_MIN, s + delta), ZOOM_MAX) * 10) / 10)
 
+  const basculerHorsLigne = async () => {
+    if (!userId || !titre || horsLigne === 'enCours') return
+    if (horsLigne === 'oui') {
+      await supprimerHorsLigne(documentId)
+      setHorsLigne('non')
+      return
+    }
+    if (!fichierRef.current) return
+    setHorsLigne('enCours')
+    const ok = await enregistrerHorsLigne({ id: documentId, titre, membreId: userId, fichier: fichierRef.current })
+    setHorsLigne(ok ? 'oui' : 'echec')
+    if (ok) {
+      // Les pages nécessaires pour rouvrir le document sans connexion passent par le cache de l'application.
+      void fetch('/membres/bibliotheque/hors-ligne', { credentials: 'same-origin' }).catch(() => {})
+      void fetch(`/membres/bibliotheque/${documentId}/lire`, { credentials: 'same-origin' }).catch(() => {})
+    }
+  }
+
   const dpr = useMemo(() => (typeof window === 'undefined' ? 1 : Math.min(2, window.devicePixelRatio || 1)), [])
 
   if (loading) {
@@ -431,6 +463,19 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         </div>
 
         <div className="flex items-center">
+          {userId && titre ? (
+            <button
+              type="button"
+              onClick={basculerHorsLigne}
+              disabled={horsLigne === 'enCours'}
+              aria-pressed={horsLigne === 'oui'}
+              title={horsLigne === 'oui' ? 'Gardé sur cet appareil : cliquer pour le retirer' : 'Garder ce document pour le lire sans connexion'}
+              className="ag-state inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-control px-2.5 text-label-md font-medium text-on-surface-variant transition-colors hover:bg-surface-container disabled:opacity-60"
+            >
+              {horsLigne === 'enCours' ? <Loader2 className="size-5 animate-spin" aria-hidden /> : horsLigne === 'oui' ? <Check className="size-5 text-success" aria-hidden /> : <Save className="size-5" aria-hidden />}
+              <span className="max-sm:sr-only">{horsLigne === 'oui' ? 'Gardé hors ligne' : horsLigne === 'echec' ? 'Échec : réessayer' : 'Garder hors ligne'}</span>
+            </button>
+          ) : null}
           <Outil libelle={viewMode === 'single' ? 'Passer en défilement continu' : 'Passer en page par page'} onClick={changerMode}>
             {viewMode === 'single' ? <FileStack className="size-5" aria-hidden /> : <FileText className="size-5" aria-hidden />}
           </Outil>

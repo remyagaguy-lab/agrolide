@@ -12,9 +12,9 @@ const SecurePDFViewer = dynamic(
   }
 )
 
-export function SecurePDFViewerWrapper({ documentId }: { documentId: string }) {
+export function SecurePDFViewerWrapper({ documentId, titre }: { documentId: string; titre?: string }) {
   // Le document commence à arriver sans attendre le code de la liseuse (idempotent, côté navigateur seulement ;
   // lancé au rendu pour passer avant l'effet de la liseuse, afin qu'une seule requête soit faite).
   if (typeof window !== 'undefined') precharger(documentId)
-  return <SecurePDFViewer documentId={documentId} />
+  return <SecurePDFViewer documentId={documentId} titre={titre} />
 }

@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { viderHorsLigne } from "@/lib/bibliotheque/hors-ligne"
 import Link from "next/link"
 import { useClerk } from "@/lib/auth/client"
 import { Avatar } from "@/components/ui/Avatar"
@@ -34,6 +35,7 @@ export function MembresUserMenu({ profile, compact = false, tone = "defaut" }: M
 
   const handleLogout = async () => {
     setSigningOut(true)
+    await viderHorsLigne()
     await signOut({ redirectUrl: "/" })
   }
 

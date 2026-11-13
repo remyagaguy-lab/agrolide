@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { viderHorsLigne } from "@/lib/bibliotheque/hors-ligne"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useClerk } from "@/lib/auth/client"
@@ -40,6 +41,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
   const { signOut } = useClerk()
 
   const handleLogout = async () => {
+    await viderHorsLigne()
     await signOut({ redirectUrl: "/" })
   }
 
