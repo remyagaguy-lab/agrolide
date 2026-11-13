@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { useClerk } from "@/lib/auth/client"
 import { MembresUserMenu } from "./MembresUserMenu"
 import { MembresBadgesProvider } from "./MembresBadges"
+import { LienEnCours } from "./LienEnCours"
 import { MEMBRES_RUBRIQUES, afficherNombre, labelInvitations, labelMessages, rubriqueActive, type MembresRubrique } from "./membres-nav"
 import { Logo } from "@/components/ui/Logo"
 import { cn } from "@/lib/utils/formatters"
@@ -52,6 +53,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
       >
         <item.icon className={cn("size-[18px]", isActive ? "text-primary" : "text-on-surface-muted")} strokeWidth={isActive ? 2.5 : 2} aria-hidden />
         <span>{item.label}</span>
+        <LienEnCours className="inset-x-4" />
         {n > 0 ? (
           <span className="ml-auto rounded-full bg-error px-2 py-0.5 text-label-sm text-on-error">
             <span className="sr-only">{label} — </span>
@@ -138,6 +140,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
                   ) : null}
                 </span>
                 <span className="max-w-full truncate">{item.label}</span>
+                <LienEnCours className="inset-x-3 bottom-1" />
               </Link>
             )
           })}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { Search, Filter, X } from 'lucide-react'
 import { DocumentCard, DocumentType } from './DocumentCard'
@@ -52,8 +52,15 @@ export function BibliothequeClient({ initialData, publicView = false }: any) {
     setSousDomaine('') // un sous-domaine n'a de sens que dans son domaine
   }
 
-  // Debounce search
+  // Debounce search. Au premier affichage, la liste vient déjà du serveur (initialData) : on ne la redemande pas
+  // (avant, chaque ouverture relançait une requête + un router.replace qui refaisait tout le rendu de la page,
+  // et pouvait avaler le clic suivant de l'utilisateur).
+  const premierAffichage = useRef(true)
   useEffect(() => {
+    if (premierAffichage.current) {
+      premierAffichage.current = false
+      return
+    }
     const timer = setTimeout(() => {
       updateUrlAndFetch(true)
     }, 500)

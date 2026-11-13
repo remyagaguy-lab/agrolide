@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { BookOpen, GraduationCap, ChevronRight, ExternalLink } from 'lucide-react'
-import { db } from '@/db'
+import { getAllFormations } from '@/lib/cache/public-queries'
 import { Badge } from '@/components/ui/Badge'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { cn } from '@/lib/utils/formatters'
@@ -26,9 +26,9 @@ export async function CatalogueFormations({
   const prix = searchParams.prix as string | undefined;
   const thematique = searchParams.thematique as string | undefined;
 
-  let allFormations = await db.query.formations.findMany({
-    orderBy: (formations, { desc }) => [desc(formations.created_at)],
-  });
+  // Liste identique pour tout le monde : lue dans le cache de données (1 h, invalidé par les actions admin
+  // via revalidateTag('formations')) au lieu d'un appel D1 à chaque visite.
+  let allFormations = await getAllFormations();
 
   // Apply filters
   if (source) {

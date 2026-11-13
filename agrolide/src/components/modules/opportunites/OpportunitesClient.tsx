@@ -7,9 +7,10 @@ import SubmitOpportunityModal from './SubmitOpportunityModal'
 import { Plus, Search, Filter } from 'lucide-react'
 import { SkeletonGrid } from "@/components/ui/Skeleton"
 
-export default function OpportunitesClient() {
-  const [opportunites, setOpportunites] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+/** `initial` : opportunités publiées, lues côté serveur — la liste est déjà là au premier affichage. */
+export default function OpportunitesClient({ initial }: { initial?: any[] }) {
+  const [opportunites, setOpportunites] = useState<any[]>(initial ?? [])
+  const [loading, setLoading] = useState(initial === undefined)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const { user, isLoaded } = useUser()
   const currentUser = isLoaded ? user : null
@@ -18,9 +19,15 @@ export default function OpportunitesClient() {
   const [filterType, setFilterType] = useState('tous')
   const [search, setSearch] = useState('')
 
+  const premierAffichage = React.useRef(true)
   useEffect(() => {
+    // Les données du premier affichage viennent du serveur : on ne les redemande qu'au changement d'onglet.
+    if (premierAffichage.current) {
+      premierAffichage.current = false
+      if (initial !== undefined) return
+    }
     fetchData()
-  }, [activeTab])
+  }, [activeTab]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     setLoading(true)

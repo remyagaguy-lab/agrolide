@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Bell, CheckCheck } from 'lucide-react'
 import * as Popover from '@radix-ui/react-popover'
-import { getResumeNotifications, markAllAsReadAction, markAsReadAction } from '@/app/actions/notifications'
+import { markAllAsReadAction, markAsReadAction } from '@/app/actions/notifications'
 import { depuis, libelleType, lienSur, type NotificationItem } from '@/lib/notifications'
 import { cn } from '@/lib/utils/formatters'
 
@@ -35,7 +35,10 @@ export default function NotificationBell({ userId, className }: NotificationBell
     if (enCours.current) return
     enCours.current = true
     try {
-      const r = await getResumeNotifications(6)
+      // fetch ordinaire (et non Server Action) : ne met jamais une navigation en attente.
+      const res = await fetch('/api/notifications/resume', { cache: 'no-store', credentials: 'same-origin' })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      const r = (await res.json()) as { items: NotificationItem[]; nonLues: number }
       setItems(r.items)
       setNonLues(r.nonLues)
     } catch (e) {
@@ -48,17 +51,25 @@ export default function NotificationBell({ userId, className }: NotificationBell
   }, [])
 
   React.useEffect(() => {
-    void rafraichir()
-    const quandVisible = () => {
-      if (document.visibilityState === 'visible') void rafraichir()
+    // Premier chargement différé : la page demandée passe avant la cloche.
+    const premier = window.setTimeout(() => void rafraichir(), 1500)
+    let dernier = Date.now()
+    const quandVisible = (force = false) => {
+      if (document.visibilityState !== 'visible') return
+      // Retour sur l'onglet : on ne redemande pas si la dernière réponse a moins de 30 s.
+      if (!force && Date.now() - dernier < 30_000) return
+      dernier = Date.now()
+      void rafraichir()
     }
-    const minuteur = window.setInterval(quandVisible, RAFRAICHISSEMENT_MS)
-    document.addEventListener('visibilitychange', quandVisible)
-    window.addEventListener('focus', quandVisible)
+    const minuteur = window.setInterval(() => quandVisible(true), RAFRAICHISSEMENT_MS)
+    const auRetour = () => quandVisible()
+    document.addEventListener('visibilitychange', auRetour)
+    window.addEventListener('focus', auRetour)
     return () => {
+      window.clearTimeout(premier)
       window.clearInterval(minuteur)
-      document.removeEventListener('visibilitychange', quandVisible)
-      window.removeEventListener('focus', quandVisible)
+      document.removeEventListener('visibilitychange', auRetour)
+      window.removeEventListener('focus', auRetour)
     }
   }, [rafraichir])
 

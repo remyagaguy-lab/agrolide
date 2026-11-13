@@ -22,6 +22,20 @@ export default async function MembresRootLayout({
       redirect("/login?message=Veuillez+vous+connecter")
     }
 
+    // Pastilles de la barre latérale (invitations en attente, messages non lus) : deux COUNT qui ne dépendent que de
+    // userId. Lancés en même temps que le profil : chaque appel D1 passe par l'API REST (≈ 150 à 400 ms), les
+    // enchaîner coûtait un aller-retour de plus à chaque chargement de l'espace membre.
+    const pastilles = Promise.all([
+      compterInvitations(userId).catch((e) => {
+        console.error("[membres] Erreur comptage invitations:", e)
+        return 0
+      }),
+      compterMessagesNonLus(userId).catch((e) => {
+        console.error("[membres] Erreur comptage messages non lus:", e)
+        return 0
+      }),
+    ])
+
     // 2. Récupération du profil utilisateur
     let profile: any = null
     try {
@@ -65,17 +79,8 @@ export default async function MembresRootLayout({
     // 4. Gestion des statuts d'adhésion (RG-007, RG-008)
     const statut = profile?.statut_adhesion || "gratuit"
 
-    // 5-6. Pastilles de la barre latérale : invitations en attente et messages non lus (deux COUNT en parallèle).
-    const [pendingRequestsCount, unreadMessagesCount] = await Promise.all([
-      compterInvitations(userId).catch((e) => {
-        console.error("[membres] Erreur comptage invitations:", e)
-        return 0
-      }),
-      compterMessagesNonLus(userId).catch((e) => {
-        console.error("[membres] Erreur comptage messages non lus:", e)
-        return 0
-      }),
-    ])
+    // 5-6. Pastilles de la barre latérale (déjà en route depuis le début).
+    const [pendingRequestsCount, unreadMessagesCount] = await pastilles
 
     return (
       <div className="min-h-screen bg-surface-container-low flex flex-col">
