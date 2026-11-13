@@ -36,7 +36,7 @@ export default function SubmitOpportunityModal({ isOpen, onClose, onSuccess, isA
 
     try {
       const { submitOpportunity } = await import('@/app/actions/opportunites')
-      await submitOpportunity(formData, isAdmin)
+      await submitOpportunity(formData)
       
       setSuccess(true)
       setTimeout(() => {

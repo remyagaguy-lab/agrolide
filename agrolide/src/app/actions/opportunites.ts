@@ -2,7 +2,7 @@
 
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
-import { opportunites } from '@/db/schema'
+import { opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
@@ -28,22 +28,41 @@ export async function getOpportunites(activeTab: 'toutes' | 'mes_soumissions') {
   return data
 }
 
-export async function submitOpportunity(formData: any, isAdmin: boolean) {
-  const { userId } = await auth();
-  const user = userId ? { id: userId } : null;
-  const session = userId ? { user: { id: userId } } : null;
+const TYPES_OPPORTUNITE = ['emploi', 'stage', 'formation', 'bourse', 'appel', 'partenariat', 'financement', 'autre']
+const texte = (v: unknown, max: number) => (typeof v === 'string' ? v.trim().slice(0, max) : '')
 
-  if (!user || !user.id) throw new Error("Vous devez être connecté pour soumettre une opportunité.")
+/**
+ * Propose une opportunité. Le statut est décidé ICI, côté serveur : seule une personne dont le rôle de plateforme est
+ * admin ou super_admin publie directement ; toute autre proposition attend la validation d'un administrateur.
+ * Seuls les champs connus sont retenus (le navigateur ne peut imposer ni le statut, ni l'identifiant, ni l'auteur).
+ */
+export async function submitOpportunity(formData: Record<string, unknown>) {
+  const { userId } = await auth()
+  if (!userId) throw new Error("Vous devez être connecté pour soumettre une opportunité.")
 
-  const payload = {
-    ...nettoyerTextes(formData),
-    id: crypto.randomUUID(),
-    publie_par: user.id,
-    statut: isAdmin ? 'publie' : 'en_attente',
-    date_limite: formData.date_limite ? new Date(formData.date_limite).toISOString() : null
-  }
+  const profil = await db.query.users.findFirst({ columns: { role_plateforme: true }, where: eq(users.id, userId) })
+  const estAdmin = profil?.role_plateforme === 'admin' || profil?.role_plateforme === 'super_admin'
 
-  await db.insert(opportunites).values(payload)
+  const nettoye = nettoyerTextes(formData) as Record<string, unknown>
+  const titre = texte(nettoye.titre, 200)
+  if (!titre) throw new Error("Le titre est obligatoire.")
+  const type = texte(nettoye.type_opp, 40)
+  const lien = texte(nettoye.lien_externe, 500)
+  if (lien && !/^https:\/\//i.test(lien)) throw new Error("Le lien doit commencer par https://")
+  const limite = texte(nettoye.date_limite, 40)
+  const dateLimite = limite && !Number.isNaN(new Date(limite).getTime()) ? new Date(limite).toISOString() : null
 
-  return { success: true }
+  await db.insert(opportunites).values({
+    titre,
+    description: texte(nettoye.description, 5000) || null,
+    type_opp: TYPES_OPPORTUNITE.includes(type) ? type : 'autre',
+    pays: texte(nettoye.lieu, 120) || null,
+    lien_externe: lien || null,
+    date_limite: dateLimite,
+    poste_par: userId,
+    statut: estAdmin ? 'publie' : 'en_attente',
+    created_at: new Date().toISOString(),
+  })
+
+  return { success: true, publie: estAdmin }
 }
