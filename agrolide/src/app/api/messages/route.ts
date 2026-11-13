@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
-import { messages, user_blocks } from '@/db/schema'
+import { messages, user_blocks, users } from '@/db/schema'
 import { eq, or, and } from 'drizzle-orm'
 import { nettoyerTextes } from "@/lib/utils/sans-emoji"
+import { apresReponse, envoyerPush } from '@/lib/push/envoyer.server'
 
 export async function POST(request: NextRequest) {
   try {
@@ -61,6 +62,19 @@ export async function POST(request: NextRequest) {
 
     // Pas de ligne `notifications` pour un message : la pastille « Messages » de la barre de navigation
     // (messages non lus) joue ce rôle, et la cloche ne doit pas compter deux fois la même chose.
+
+    // Alerte push sur les appareils du destinataire (s'il l'a activée) : nom de l'expéditeur seulement, jamais le texte
+    // du message (il s'afficherait sur un écran verrouillé). Envoyée après la réponse.
+    apresReponse(async () => {
+      const [exp] = await db.select({ prenom: users.prenom, nom: users.nom }).from(users).where(eq(users.id, userId)).limit(1)
+      const nom = [exp?.prenom, exp?.nom].filter(Boolean).join(' ') || 'Un membre'
+      await envoyerPush(destinataire_id, 'messages', {
+        titre: 'Nouveau message',
+        corps: `${nom} vous a écrit.`,
+        lien: `/membres/messages?user=${userId}`,
+        tag: `message-${userId}`, // plusieurs messages du même membre : une seule alerte, mise à jour
+      })
+    })
 
     // Diffuser via le WebSocket Server (Durable Object), seulement s'il est configuré.
     const wsUrl = process.env.NEXT_PUBLIC_WS_URL

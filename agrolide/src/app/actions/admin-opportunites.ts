@@ -6,6 +6,7 @@ import { opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 import { notifier } from '@/lib/notifications.server'
+import { apresReponse, diffuserPush } from '@/lib/push/envoyer.server'
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();
@@ -39,6 +40,13 @@ export async function validateOpportunity(id: string) {
     contenu: `Votre opportunité « ${opp?.titre} » est publiée.`,
     lien: '/membres/opportunites',
   })
+
+  // Annonce aux membres qui ont activé « Opportunités » sur leur appareil (l'auteur est déjà prévenu ci-dessus).
+  if (opp?.titre) {
+    apresReponse(() =>
+      diffuserPush('opportunites', { titre: 'Nouvelle opportunité', corps: opp.titre, lien: '/membres/opportunites', tag: `opportunite-${id}` }, [opp.poste_par]),
+    )
+  }
 
   revalidatePath('/admin/contenus/opportunites')
   revalidatePath('/opportunites')

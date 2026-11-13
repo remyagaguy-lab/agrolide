@@ -341,6 +341,27 @@ export const codes_acces_formation = sqliteTable("codes_acces_formation", {
   index("idx_codes_acces_formation_lot").on(t.lot),
 ]);
 
+/**
+ * Abonnements aux notifications push (Web Push) : un appareil (navigateur ou application installée) = une ligne.
+ * `endpoint` est unique : se réabonner depuis le même appareil met la ligne à jour au lieu de la dupliquer.
+ * `categories` : catégories d'alertes choisies par le membre pour cet appareil, séparées par des virgules
+ * (messages, reseau, opportunites, activite, compte).
+ */
+export const abonnements_push = sqliteTable("abonnements_push", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  user_id: text("user_id").notNull(),
+  endpoint: text("endpoint").notNull(),
+  p256dh: text("p256dh").notNull(),
+  auth: text("auth").notNull(),
+  categories: text("categories").notNull().default("messages,reseau,opportunites,activite,compte"),
+  user_agent: text("user_agent"),
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
+  derniere_utilisation: text("derniere_utilisation"),
+}, (t) => [
+  uniqueIndex("idx_abonnements_push_endpoint").on(t.endpoint),
+  index("idx_abonnements_push_user_id").on(t.user_id),
+]);
+
 export const messages = sqliteTable("messages", {
   contenu: text("contenu").notNull(),
   created_at: text("created_at"),

@@ -7,6 +7,8 @@
  * copie ; cela n'est pas un DRM absolu (le code de la liseuse, lui, peut déchiffrer pour afficher).
  * Tout est protégé par try/catch : sans stockage (navigation privée…), la liseuse fonctionne comme avant.
  */
+import { desabonnerCetAppareil } from '@/lib/push/client'
+
 const BASE = 'agrolide-hors-ligne'
 const TABLE = 'documents'
 export const DUREE_JOURS = 30
@@ -145,6 +147,8 @@ export async function listerHorsLigne(membreId?: string | null): Promise<ResumeH
 
 /** À la déconnexion : plus aucune copie ne reste sur l'appareil (documents chiffrés et pages gardées par le service worker). */
 export async function viderHorsLigne(): Promise<void> {
+  // L'appareil ne reçoit plus les alertes de ce compte (le serveur est joint tant que la session est encore ouverte).
+  await desabonnerCetAppareil()
   try {
     for (const nom of await caches.keys()) if (nom.startsWith('ag-pages-') || nom === 'ag-images') await caches.delete(nom)
   } catch {}

@@ -3,6 +3,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { getNotifications, markAllAsReadAction, markAsReadAction } from '@/app/actions/notifications'
+import { AlertesPush } from '@/components/modules/notifications/AlertesPush'
 import { depuis, libelleType, lienSur, type NotificationItem } from '@/lib/notifications'
 
 import { Bell, CheckCircle2, Loader2 } from "@/components/ui/icons"
@@ -77,6 +78,8 @@ export default function NotificationsClient() {
           </button>
         )}
       </div>
+
+      <AlertesPush />
 
       <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (

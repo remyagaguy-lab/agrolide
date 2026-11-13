@@ -6,7 +6,8 @@
  *  1. page de repli « Vous êtes hors ligne » quand une navigation échoue sans réseau ;
  *  2. garde en cache les pages nécessaires à la lecture hors ligne (Documents hors ligne, page de lecture d'un document)
  *     avec leur code, pour que la liseuse s'ouvre en mode avion ;
- *  3. cache les fichiers versionnés de /_next/static (immuables) et le worker de pdf.js.
+ *  3. cache les fichiers versionnés de /_next/static (immuables) et le worker de pdf.js ;
+ *  4. notifications push (Web Push) : affiche l'alerte reçue et ouvre la bonne page au toucher.
  *
  * Ce qu'il ne fait JAMAIS : toucher à /api/*, /auth/*, /login, /admin, aux requêtes POST ou aux autres domaines ;
  * aucune donnée privée (profil, messages, réponses d'API) n'est mise en cache. Seules les pages ci-dessous le sont,
@@ -175,3 +176,73 @@ async function revalider(event, req, nom) {
   }
   return enLigne
 }
+
+/* ---------------------------------------------------------------------------------------------------------------
+ * Notifications push (Web Push). Le serveur envoie un petit JSON { titre, corps, lien, tag } chiffré ; aucune donnée
+ * n'est mise en cache ici. Le lien est toujours un chemin interne : tout autre chemin ramène aux notifications.
+ * ------------------------------------------------------------------------------------------------------------- */
+const LIEN_PAR_DEFAUT = '/membres/notifications'
+const lienInterne = (lien) => (typeof lien === 'string' && lien.startsWith('/') && !lien.startsWith('//') ? lien : LIEN_PAR_DEFAUT)
+
+self.addEventListener('push', (event) => {
+  let m = {}
+  try {
+    m = event.data ? event.data.json() : {}
+  } catch {
+    m = { corps: event.data ? event.data.text() : '' }
+  }
+  const titre = typeof m.titre === 'string' && m.titre ? m.titre : 'agrolide'
+  // Un navigateur exige qu'une alerte soit affichée à chaque push reçu : toujours showNotification.
+  event.waitUntil(
+    self.registration.showNotification(titre, {
+      body: typeof m.corps === 'string' ? m.corps : '',
+      icon: '/icons/icon-192.png',
+      badge: '/icons/icon-monochrome-512.png',
+      tag: typeof m.tag === 'string' ? m.tag : undefined,
+      lang: 'fr',
+      data: { lien: lienInterne(m.lien) },
+    }),
+  )
+})
+
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close()
+  const cible = new URL(lienInterne(event.notification.data && event.notification.data.lien), self.location.origin).href
+  event.waitUntil(
+    (async () => {
+      const fenetres = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+      for (const f of fenetres) {
+        if (new URL(f.url).origin !== self.location.origin) continue
+        // Application déjà ouverte : on la ramène au premier plan sur la bonne page.
+        try {
+          await f.focus()
+          if ('navigate' in f) await f.navigate(cible)
+          return
+        } catch {}
+      }
+      await self.clients.openWindow(cible)
+    })(),
+  )
+})
+
+// Le service de push a renouvelé l'abonnement : on le ré-enregistre pour ne pas perdre les alertes.
+self.addEventListener('pushsubscriptionchange', (event) => {
+  event.waitUntil(
+    (async () => {
+      try {
+        const options = (event.oldSubscription && event.oldSubscription.options) || (await (async () => {
+          const r = await fetch('/api/push/cle', { credentials: 'same-origin', cache: 'no-store' })
+          if (!r.ok) throw new Error('cle')
+          return { userVisibleOnly: true, applicationServerKey: (await r.json()).cle }
+        })())
+        const sub = event.newSubscription || (await self.registration.pushManager.subscribe(options))
+        await fetch('/api/push/abonnement', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ subscription: sub.toJSON() }),
+        })
+      } catch {}
+    })(),
+  )
+})

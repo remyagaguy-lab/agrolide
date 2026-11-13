@@ -18,6 +18,7 @@ export const AVANTAGES_APPLICATION = [
   "Un accès direct depuis l'écran d'accueil, en plein écran",
   'Vos documents enregistrés, lisibles sans connexion',
   'Vos formations, vos messages et les opportunités en un geste',
+  'Être alerté des nouvelles opportunités et de vos messages',
 ]
 
 function enRepos(): boolean {
