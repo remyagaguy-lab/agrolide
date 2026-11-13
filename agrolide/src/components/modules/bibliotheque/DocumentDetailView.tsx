@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import { Calendar, MapPin, Eye, Tag, FileText, User } from 'lucide-react'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton'
+import { FavoriButton } from '@/components/modules/bibliotheque/FavoriButton'
+import { estFavori } from '@/lib/bibliotheque/parcours.server'
 import { db } from '@/db'
 import { documents, users } from '@/db/schema'
 import { auth } from '@/lib/auth/server'
@@ -53,6 +55,10 @@ export async function DocumentDetailView({ id, mode }: { id: string; mode: Espac
       
     if (data) similarDocs = data as DocumentType[]
   }
+
+  // Cœur « favori » : réservé à l'espace membre (alimente Mon parcours).
+  const membreId = mode === 'membre' ? (await auth()).userId : null
+  const favori = membreId ? await estFavori(membreId, document.id) : false
 
   const tags = Array.from(new Set([...(document.mots_cles ?? []), document.filiere].filter(Boolean))) as string[]
   const sujet = document.sous_domaine ? labelSousDomaine(document.sous_domaine) : ''
@@ -172,6 +178,8 @@ export async function DocumentDetailView({ id, mode }: { id: string; mode: Espac
             </div>
             
             <DownloadButton documentId={document.id} mode={mode} />
+
+            {membreId && <FavoriButton documentId={document.id} initial={favori} className="mt-3 w-full [&>button]:w-full [&>button]:justify-center" />}
 
             {(document.source_organisation || document.licence) && (
               <div className="mt-4 pt-4 border-t border-outline-variant text-xs text-on-surface-muted space-y-1">

@@ -43,10 +43,10 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
     icon: GraduationCap,
     prefixes: ["/membres/formations", "/membres/bibliotheque", "/membres/webinaires"],
     onglets: [
-      { label: "Mes formations", href: "/membres/formations" },
-      { label: "Catalogue", href: "/membres/formations/catalogue" },
-      { label: "Certificats", href: "/membres/formations/mes-certificats" },
+      // « Mon parcours » réunit formations suivies, lectures, favoris et certificats.
+      { label: "Mon parcours", href: "/membres/formations" },
       { label: "Bibliothèque", href: "/membres/bibliotheque" },
+      { label: "Formations", href: "/membres/formations/catalogue" },
       { label: "Webinaires", href: "/membres/webinaires" },
     ],
   },

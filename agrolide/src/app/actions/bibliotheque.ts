@@ -2,8 +2,9 @@
 
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
-import { documents } from '@/db/schema'
+import { documents, documents_favoris, lectures_membres } from '@/db/schema'
 import { eq, and, count } from 'drizzle-orm'
+import { revalidatePath } from 'next/cache'
 import { conditionsBibliotheque, TAILLE_PAGE, type FiltresBibliotheque } from '@/lib/bibliotheque/filtres'
 
 export async function checkTrocEligibility() {
@@ -62,5 +63,44 @@ export async function fetchDocuments(filtres: FiltresBibliotheque) {
   } catch (error) {
     console.error("Erreur lors du fetch des documents:", error)
     throw new Error('Erreur de chargement')
+  }
+}
+
+/** Aime / n'aime plus un document. Renvoie le nouvel état. */
+export async function basculerFavori(documentId: string): Promise<{ favori?: boolean; error?: string }> {
+  const { userId } = await auth()
+  if (!userId) return { error: 'Connectez-vous pour aimer un document.' }
+  try {
+    const [existant] = await db.select({ id: documents_favoris.id }).from(documents_favoris)
+      .where(and(eq(documents_favoris.membre_id, userId), eq(documents_favoris.document_id, documentId))).limit(1)
+    if (existant) {
+      await db.delete(documents_favoris).where(eq(documents_favoris.id, existant.id))
+    } else {
+      await db.insert(documents_favoris)
+        .values({ membre_id: userId, document_id: documentId, created_at: new Date().toISOString() })
+        .onConflictDoNothing()
+    }
+    revalidatePath('/membres/formations')
+    return { favori: !existant }
+  } catch (e) {
+    console.error('basculerFavori :', e)
+    return { error: "Impossible d'enregistrer pour le moment." }
+  }
+}
+
+/** Marque un document comme terminé (ou de nouveau en cours) dans « Mes lectures ». */
+export async function basculerLectureTerminee(documentId: string): Promise<{ termine?: boolean; error?: string }> {
+  const { userId } = await auth()
+  if (!userId) return { error: 'Connectez-vous pour suivre vos lectures.' }
+  try {
+    const [ligne] = await db.select({ id: lectures_membres.id, termine: lectures_membres.termine }).from(lectures_membres)
+      .where(and(eq(lectures_membres.membre_id, userId), eq(lectures_membres.document_id, documentId))).limit(1)
+    if (!ligne) return { error: "Ouvrez d'abord le document en lecture." }
+    await db.update(lectures_membres).set({ termine: !ligne.termine }).where(eq(lectures_membres.id, ligne.id))
+    revalidatePath('/membres/formations')
+    return { termine: !ligne.termine }
+  } catch (e) {
+    console.error('basculerLectureTerminee :', e)
+    return { error: "Impossible d'enregistrer pour le moment." }
   }
 }

@@ -1,3 +1,7 @@
+import Link from 'next/link'
+import { Heart } from 'lucide-react'
+import { PageEntete } from '@/components/layout/PageEntete'
+import { buttonVariants } from '@/components/ui/Button'
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
 import { db } from '@/db'
 import { documents } from '@/db/schema'
@@ -32,11 +36,16 @@ export default async function MembresBibliothequePage({ searchParams }: { search
   }
 
   return (
-    <div className="max-w-[1600px] mx-auto px-2 md:px-4 py-4 space-y-6">
-      <div>
-        <h1 className="text-headline-lg font-extrabold tracking-tight text-on-surface">Bibliothèque</h1>
-        <p className="mt-2 text-on-surface-muted text-sm">Recherchez et consultez nos ressources documentaires.</p>
-      </div>
+    <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
+      <PageEntete
+        titre="Bibliothèque"
+        description="Recherchez et consultez nos ressources documentaires."
+        action={
+          <Link href="/membres/formations#lectures" className={buttonVariants({ variant: 'tonal', size: 'sm' })}>
+            <Heart className="size-4" aria-hidden /> Mes lectures et favoris
+          </Link>
+        }
+      />
 
       <BibliothequeClient
         initialData={initialData}

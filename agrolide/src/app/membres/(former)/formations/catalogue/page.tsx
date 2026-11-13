@@ -1,6 +1,7 @@
 import { CatalogueFormations } from "@/components/modules/formations/CatalogueFormations"
+import { PageEntete } from "@/components/layout/PageEntete"
 
-export const metadata = { title: "Catalogue des formations" }
+export const metadata = { title: "Formations" }
 
 export default async function CatalogueMembrePage(props: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
@@ -8,11 +9,13 @@ export default async function CatalogueMembrePage(props: {
   const searchParams = await props.searchParams
 
   return (
-    <div className="space-y-4 pt-6">
-      <header className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading">Catalogue des formations</h1>
-        <p className="mt-1 text-xs text-on-surface-muted">Parcours en ligne et formations de nos partenaires : inscrivez-vous en un clic.</p>
-      </header>
+    <div className="space-y-6 pt-6">
+      <div className="mx-auto max-w-[1200px] px-2 md:px-4">
+        <PageEntete
+          titre="Formations"
+          description="Parcours en ligne et formations de nos partenaires : inscrivez-vous en un clic."
+        />
+      </div>
       <CatalogueFormations searchParams={searchParams} mode="membre" />
     </div>
   )

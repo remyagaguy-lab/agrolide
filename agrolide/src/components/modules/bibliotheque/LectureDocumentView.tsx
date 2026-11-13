@@ -4,10 +4,17 @@ import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, and, ne } from 'drizzle-orm'
 import { AussiAimerColonne } from '@/components/modules/bibliotheque/AussiAimerColonne'
+import { auth } from '@/lib/auth/server'
+import { noterLecture } from '@/lib/bibliotheque/parcours.server'
 
 /** Lecteur sécurisé d'un document, partagé par le site public et l'espace membre (seuls les liens changent). */
 export async function LectureDocumentView({ id, mode }: { id: string; mode: 'membre' | 'public' }) {
   const racine = mode === 'membre' ? '/membres/bibliotheque' : '/bibliotheque'
+  // Dans l'espace membre, l'ouverture est gardée pour « Mes lectures » (Mon parcours).
+  if (mode === 'membre') {
+    const { userId } = await auth()
+    if (userId) await noterLecture(userId, id)
+  }
   const current = await db.query.documents.findFirst({
     columns: { thematique: true, domaine: true, sous_domaine: true },
     where: eq(documents.id, id),

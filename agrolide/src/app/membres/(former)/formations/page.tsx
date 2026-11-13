@@ -1,151 +1,179 @@
-import { Calendar, MapPin, CheckCircle, Clock, XCircle, BookOpen, PlayCircle, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
-import { auth } from '@/lib/auth/server'
 import { redirect } from 'next/navigation'
-import { suiviFormations, type SuiviFormation } from '@/lib/formations/suivi.server'
+import { eq } from 'drizzle-orm'
+import { Award, BookOpen, GraduationCap, Heart } from 'lucide-react'
+import { auth } from '@/lib/auth/server'
+import { db } from '@/db'
+import { users } from '@/db/schema'
+import { suiviFormations } from '@/lib/formations/suivi.server'
+import { favorisDuMembre, lecturesDuMembre } from '@/lib/bibliotheque/parcours.server'
+import { PageEntete } from '@/components/layout/PageEntete'
 import { buttonVariants } from '@/components/ui/Button'
+import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButtonLazy'
+import {
+  DocumentParcoursCarte,
+  FormationEnCours,
+  RubriqueParcours,
+  VideParcours,
+} from '@/components/modules/parcours/ParcoursBlocs'
 
-export const metadata = { title: "Mes formations" }
+export const metadata = { title: 'Mon parcours' }
 
-function StatutBadge({ suivi }: { suivi: SuiviFormation }) {
-  const base = "px-2 py-0.5 rounded text-label-sm font-bold flex items-center gap-1 uppercase tracking-wider border"
-  if (suivi.terminee) return <span className={`${base} bg-info-container text-info border-info/30`}><CheckCircle className="w-3 h-3" aria-hidden /> Terminée</span>
-  switch (suivi.statut) {
-    case 'en_attente_paiement':
-      return <span className={`${base} bg-tertiary-container text-on-warning-container border-warning/40`}><Clock className="w-3 h-3" aria-hidden /> En attente</span>
-    case 'annule':
-      return <span className={`${base} bg-error-container text-error border-error/30`}><XCircle className="w-3 h-3" aria-hidden /> Annulée</span>
-    case 'en_cours':
-    case 'inscrit':
-      return <span className={`${base} bg-primary-container text-primary border-outline-variant`}><CheckCircle className="w-3 h-3" aria-hidden /> {suivi.statut === 'inscrit' ? 'Inscrit' : 'En cours'}</span>
-    default:
-      return <span className={`${base} bg-surface-container-low text-on-surface-variant border-outline-variant`}>{suivi.statut || 'Inconnu'}</span>
-  }
-}
-
-export default async function MesFormationsPage() {
+/**
+ * « Mon parcours » : tout ce que le membre a entrepris, au même endroit.
+ * Formations en cours, lectures en cours, documents aimés, certificats obtenus.
+ */
+export default async function MonParcoursPage() {
   const { userId } = await auth()
   if (!userId) redirect('/login')
 
-  const data = await suiviFormations(userId)
+  const [profil, suivis, lectures, favoris] = await Promise.all([
+    db.query.users.findFirst({ where: eq(users.id, userId), columns: { nom: true, prenom: true } }),
+    suiviFormations(userId),
+    lecturesDuMembre(userId),
+    favorisDuMembre(userId),
+  ])
+
+  const enCours = suivis.filter((s) => !s.terminee && s.statut !== 'annule')
+  // Un certificat existe pour chaque formation terminée : parcours en leçons dont toutes les leçons sont validées,
+  // ou session (présentiel / classe virtuelle) marquée « terminée ».
+  const certifiees = suivis.filter((s) => s.terminee)
+
+  const repere = [
+    { href: '#en-cours', n: enCours.length, libelle: enCours.length > 1 ? 'formations en cours' : 'formation en cours', Icone: GraduationCap },
+    { href: '#lectures', n: lectures.length, libelle: lectures.length > 1 ? 'documents lus' : 'document lu', Icone: BookOpen },
+    { href: '#favoris', n: favoris.length, libelle: favoris.length > 1 ? 'favoris' : 'favori', Icone: Heart },
+    { href: '#certificats', n: certifiees.length, libelle: certifiees.length > 1 ? 'certificats' : 'certificat', Icone: Award },
+  ]
 
   return (
-    <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading">Mes formations</h1>
-          <p className="text-on-surface-muted mt-1 text-xs">Reprenez là où vous vous êtes arrêté(e) et retrouvez vos certificats.</p>
-        </div>
-        <Link href="/membres/formations/catalogue" className={buttonVariants({ variant: 'tonal' })}>
-          <BookOpen className="w-4 h-4" aria-hidden /> Parcourir le catalogue
-        </Link>
-      </div>
-
-      {data.length === 0 ? (
-        <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-8 text-center flex flex-col items-center">
-          <div className="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-3">
-            <Calendar className="w-6 h-6 text-outline" aria-hidden />
-          </div>
-          <h3 className="text-sm font-bold text-on-surface mb-1">Aucune inscription</h3>
-          <p className="text-xs text-on-surface-muted mb-4">Vous n'êtes inscrit(e) à aucune formation pour le moment.</p>
-          <Link href="/membres/formations/catalogue" className="inline-flex min-h-11 items-center text-primary text-sm font-bold hover:underline">
-            Parcourir le catalogue
+    <div className="mx-auto max-w-[1200px] space-y-10 px-2 py-6 md:px-4">
+      <PageEntete
+        titre="Mon parcours"
+        description="Vos formations, vos lectures et vos certificats, là où vous les avez laissés."
+        action={
+          <Link href="/membres/formations/catalogue" className={buttonVariants({ variant: 'tonal', size: 'sm' })}>
+            <GraduationCap className="size-4" aria-hidden /> Trouver une formation
           </Link>
-        </div>
-      ) : (
-        <ul className="space-y-6">
-          {data.map((s) => {
-            const aDesLecons = s.total > 0
-            const external = !!s.lienExterne
-            return (
-              <li key={s.inscriptionId} className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary transition-colors p-5 flex flex-col md:flex-row gap-6 items-start md:items-center group">
-                <div className="flex-1 min-w-0 w-full">
-                  <div className="flex items-center gap-2 mb-2">
-                    <StatutBadge suivi={s} />
-                    <span className="text-label-sm font-bold text-on-surface-muted uppercase tracking-wider">
-                      {external ? s.sourceExterne || 'Externe' : s.modalite}
-                    </span>
-                  </div>
+        }
+      />
 
-                  <h3 className="text-sm font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">
-                    <Link href={`/membres/formations/${s.formationId}`}>{s.titre}</Link>
-                  </h3>
-
-                  {aDesLecons && (
-                    <div className="max-w-sm">
-                      <div className="flex justify-between text-label-sm text-on-surface-variant mb-1">
-                        <span>{s.faites} / {s.total} leçon{s.total > 1 ? 's' : ''}</span>
-                        <span>{s.pourcent} %</span>
-                      </div>
-                      <div
-                        role="progressbar"
-                        aria-label={`Progression dans « ${s.titre} »`}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                        aria-valuenow={s.pourcent}
-                        className="h-2 w-full overflow-hidden rounded-full bg-surface-container"
-                      >
-                        <div className="h-full rounded-full bg-primary" style={{ width: `${s.pourcent}%` }} />
-                      </div>
-                    </div>
-                  )}
-
-                  {!aDesLecons && s.session && (
-                    <div className="flex flex-wrap items-center gap-4 text-xs text-on-surface-muted">
-                      <div className="flex items-center">
-                        <Calendar className="w-3.5 h-3.5 mr-1.5" aria-hidden />
-                        {new Date(s.session.dateDebut).toLocaleDateString('fr-FR')} au {new Date(s.session.dateFin).toLocaleDateString('fr-FR')}
-                      </div>
-                      {s.session.lieu && (
-                        <div className="flex items-center">
-                          <MapPin className="w-3.5 h-3.5 mr-1.5" aria-hidden />
-                          {s.session.lieu}
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  {!aDesLecons && !s.session && s.thematique && (
-                    <div className="flex items-center text-xs text-on-surface-muted">
-                      <BookOpen className="w-3.5 h-3.5 mr-1.5" aria-hidden />
-                      {s.thematique}
-                    </div>
-                  )}
-                </div>
-
-                <div className="w-full md:w-auto md:min-w-[200px] flex flex-col gap-2 border-t md:border-t-0 md:border-l border-outline-variant pt-4 md:pt-0 md:pl-5">
-                  {aDesLecons && !s.terminee && s.prochaineLeconId && (
-                    <Link href={`/membres/formations/${s.formationId}/suivre/${s.prochaineLeconId}`} className={buttonVariants({ variant: 'secondary' })}>
-                      <PlayCircle className="w-4 h-4" aria-hidden /> {s.faites > 0 ? 'Reprendre' : 'Commencer'}
-                    </Link>
-                  )}
-
-                  {s.terminee && (
-                    <Link href="/membres/formations/mes-certificats" className={buttonVariants({ variant: 'tonal' })}>
-                      Voir mon certificat
-                    </Link>
-                  )}
-
-                  {!aDesLecons && external && (
-                    <a
-                      href={s.lienExterne!}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={buttonVariants({ variant: 'secondary' })}
-                    >
-                      Accéder à la plateforme <ExternalLink className="w-4 h-4" aria-hidden />
-                    </a>
-                  )}
-
-                  {!aDesLecons && !external && s.statut === 'inscrit' && (
-                    <div className="text-center text-sm text-on-surface-muted font-medium">En attente de la formation</div>
-                  )}
-                </div>
-              </li>
-            )
-          })}
+      <nav aria-label="Aller à une rubrique de mon parcours">
+        <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+          {repere.map(({ href, n, libelle, Icone }) => (
+            <li key={href}>
+              <a
+                href={href}
+                className="ag-state flex min-h-16 items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest px-4 py-3 transition-colors hover:border-primary"
+              >
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-control bg-primary-container text-on-primary-container">
+                  <Icone className="size-5" aria-hidden />
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-headline-sm font-bold leading-none text-on-surface">{n}</span>
+                  <span className="mt-1 block truncate text-label-md text-on-surface-variant">{libelle}</span>
+                </span>
+              </a>
+            </li>
+          ))}
         </ul>
-      )}
+      </nav>
+
+      <RubriqueParcours id="en-cours" titre="Formations en cours" nombre={enCours.length} lien={{ href: '/membres/formations/catalogue', libelle: 'Voir le catalogue' }}>
+        {enCours.length === 0 ? (
+          <VideParcours
+            titre="Aucune formation en cours"
+            description="Inscrivez-vous à une formation : elle apparaîtra ici avec votre progression."
+            href="/membres/formations/catalogue"
+            libelle="Parcourir les formations"
+          />
+        ) : (
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {enCours.map((s) => (
+              <FormationEnCours key={s.inscriptionId} s={s} />
+            ))}
+          </ul>
+        )}
+      </RubriqueParcours>
+
+      <RubriqueParcours id="lectures" titre="Mes lectures" nombre={lectures.length} lien={{ href: '/membres/bibliotheque', libelle: 'Ouvrir la bibliothèque' }}>
+        {lectures.length === 0 ? (
+          <VideParcours
+            titre="Rien en cours de lecture"
+            description="Les documents que vous ouvrez dans la bibliothèque sont gardés ici pour les reprendre plus tard."
+            href="/membres/bibliotheque"
+            libelle="Explorer la bibliothèque"
+          />
+        ) : (
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {lectures.map((d) => (
+              <DocumentParcoursCarte key={d.id} d={d} reprise />
+            ))}
+          </ul>
+        )}
+      </RubriqueParcours>
+
+      <RubriqueParcours id="favoris" titre="Mes favoris" nombre={favoris.length}>
+        {favoris.length === 0 ? (
+          <VideParcours
+            titre="Aucun favori pour le moment"
+            description="Sur la fiche d'un document, touchez « Ajouter aux favoris » pour le retrouver ici."
+            href="/membres/bibliotheque"
+            libelle="Explorer la bibliothèque"
+          />
+        ) : (
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {favoris.map((d) => (
+              <DocumentParcoursCarte key={d.id} d={d} />
+            ))}
+          </ul>
+        )}
+      </RubriqueParcours>
+
+      <RubriqueParcours id="certificats" titre="Mes certificats" nombre={certifiees.length}>
+        {certifiees.length === 0 ? (
+          <VideParcours
+            titre="Aucun certificat pour le moment"
+            description={
+              enCours.length > 0
+                ? "Terminez toutes les leçons d'une formation pour obtenir votre premier certificat."
+                : "Menez une formation jusqu'au bout pour obtenir votre premier certificat."
+            }
+            href={enCours.length > 0 ? '#en-cours' : '/membres/formations/catalogue'}
+            libelle={enCours.length > 0 ? 'Reprendre une formation' : 'Parcourir les formations'}
+          />
+        ) : (
+          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {certifiees.map((s) => {
+              const date = s.session?.dateDebut ?? s.termineeLe
+              return (
+                <li key={s.inscriptionId} className="flex flex-col gap-4 rounded-card border border-outline-variant bg-surface-container-lowest p-5">
+                  <div className="flex items-start gap-3">
+                    <span className="flex size-11 shrink-0 items-center justify-center rounded-control bg-primary-container text-on-primary-container">
+                      <Award className="size-5" aria-hidden />
+                    </span>
+                    <div className="min-w-0">
+                      <h3 className="text-title-sm font-bold leading-snug text-on-surface">{s.titre}</h3>
+                      {date ? <p className="mt-0.5 text-label-md text-on-surface-variant">Terminée le {new Date(date).toLocaleDateString('fr-FR')}</p> : null}
+                    </div>
+                  </div>
+                  {profil?.nom && profil?.prenom && date ? (
+                    <DownloadCertificatButton nom={profil.nom} prenom={profil.prenom} formationTitre={s.titre} dateDebut={date} inscriptionId={s.inscriptionId} />
+                  ) : (
+                    <p className="text-body-sm text-on-surface-variant">
+                      Complétez votre nom et votre prénom dans{' '}
+                      <Link href="/membres/profil/modifier" className="font-bold text-primary underline-offset-2 hover:underline">
+                        votre profil
+                      </Link>{' '}
+                      pour générer le certificat.
+                    </p>
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        )}
+      </RubriqueParcours>
     </div>
   )
 }

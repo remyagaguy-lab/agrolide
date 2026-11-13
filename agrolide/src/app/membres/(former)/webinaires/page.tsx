@@ -3,6 +3,7 @@ import { and, asc, desc, eq, gte, isNotNull, lt } from 'drizzle-orm'
 import { Calendar, Clock, ExternalLink, Lock, Unlock, User, Video } from 'lucide-react'
 import { db } from '@/db'
 import { evenements, webinaires } from '@/db/schema'
+import { PageEntete } from '@/components/layout/PageEntete'
 import { Badge } from '@/components/ui/Badge'
 import { buttonVariants } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -76,10 +77,10 @@ export default async function WebinairesPage() {
 
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-8">
-      <div>
-        <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading mb-1">Webinaires Agrolide</h1>
-        <p className="text-xs text-on-surface-muted">Participez à nos sessions en direct ou revoyez les replays pour approfondir vos connaissances.</p>
-      </div>
+      <PageEntete
+        titre="Webinaires"
+        description="Participez à nos sessions en direct ou revoyez les replays pour approfondir vos connaissances."
+      />
 
       {/* Webinaires à venir */}
       <section aria-labelledby="webinaires-a-venir">

@@ -747,3 +747,30 @@ export const rappels_adhesion = sqliteTable("rappels_adhesion", {
 }, (t) => [
   uniqueIndex("uq_rappels_adhesion").on(t.user_id, t.type, t.echeance),
 ]);
+
+/**
+ * « Mon parcours » : documents aimés et documents ouverts en lecture par un membre
+ * (migration drizzle/0009_parcours_bibliotheque.sql).
+ */
+export const documents_favoris = sqliteTable("documents_favoris", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  membre_id: text("membre_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  document_id: text("document_id").notNull().references(() => documents.id, { onDelete: "cascade" }),
+  created_at: text("created_at").notNull(),
+}, (t) => [
+  uniqueIndex("uq_documents_favoris").on(t.membre_id, t.document_id),
+  index("idx_documents_favoris_membre").on(t.membre_id, t.created_at),
+]);
+
+export const lectures_membres = sqliteTable("lectures_membres", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  membre_id: text("membre_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  document_id: text("document_id").notNull().references(() => documents.id, { onDelete: "cascade" }),
+  premiere_lecture: text("premiere_lecture").notNull(),
+  derniere_lecture: text("derniere_lecture").notNull(),
+  nb_ouvertures: integer("nb_ouvertures").notNull().default(1),
+  termine: integer("termine", { mode: "boolean" }).notNull().default(false),
+}, (t) => [
+  uniqueIndex("uq_lectures_membres").on(t.membre_id, t.document_id),
+  index("idx_lectures_membres_membre").on(t.membre_id, t.derniere_lecture),
+]);

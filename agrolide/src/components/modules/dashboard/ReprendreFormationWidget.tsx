@@ -17,7 +17,7 @@ export interface FormationEnCours {
 export function ReprendreFormationWidget({ formation, className }: { formation: FormationEnCours | null; className?: string }) {
   return (
     <Widget className={className}>
-      <WidgetHeader title="Ma formation" tone="tertiary" href="/membres/formations" linkLabel="Mes formations" />
+      <WidgetHeader title="Ma formation" tone="tertiary" href="/membres/formations" linkLabel="Mon parcours" />
 
       {formation ? (
         <div className="flex flex-1 flex-col gap-4 p-5">
