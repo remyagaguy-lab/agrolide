@@ -18,13 +18,25 @@ export function Widget({ className, children, ...props }: React.HTMLAttributes<H
   )
 }
 
+/** Couleur du carré de pictogramme de chaque bloc (rôles du design system, une teinte par bloc). */
+export type WidgetTone = "primary" | "soleil" | "orange" | "info" | "feuille"
+
+export const widgetTones: Record<WidgetTone, string> = {
+  primary: "bg-primary-container text-on-primary-container",
+  soleil: "bg-accent-sun text-on-accent",
+  orange: "bg-tertiary-container text-on-tertiary-container",
+  info: "bg-info-container text-on-info-container",
+  feuille: "bg-success-container text-on-success-container",
+}
+
 /**
- * En-tête de bloc : pictogramme dans un carré pâle, titre en casse normale (jamais tronqué : il passe à la ligne),
- * lien « tout voir » discret à droite. Pas de capitales, pas de pastille de couleur.
+ * En-tête de bloc : pictogramme dans un carré coloré (une teinte par bloc), titre en casse normale (jamais tronqué :
+ * il passe à la ligne), lien « tout voir » discret à droite. Pas de capitales, pas de pastille de couleur.
  */
 export function WidgetHeader({
   title,
   icon,
+  tone = "primary",
   count,
   sousTitre,
   href,
@@ -32,6 +44,7 @@ export function WidgetHeader({
 }: {
   title: string
   icon?: React.ReactNode
+  tone?: WidgetTone
   count?: number
   /** Ligne discrète sous le titre (un compteur, par exemple). */
   sousTitre?: string
@@ -42,7 +55,7 @@ export function WidgetHeader({
     <div className="flex shrink-0 items-center justify-between gap-3 px-5 pb-1 pt-4">
       <div className="flex min-w-0 items-center gap-3">
         {icon ? (
-          <span aria-hidden="true" className="flex size-9 shrink-0 items-center justify-center rounded-control bg-primary-container text-on-primary-container [&>svg]:size-[18px]">
+          <span aria-hidden="true" className={cn("flex size-9 shrink-0 items-center justify-center rounded-control [&>svg]:size-[18px]", widgetTones[tone])}>
             {icon}
           </span>
         ) : null}

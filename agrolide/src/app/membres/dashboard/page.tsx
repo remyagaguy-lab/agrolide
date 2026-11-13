@@ -8,7 +8,7 @@ import { parseList } from "@/lib/reseau/profil"
 import { suiviFormations } from "@/lib/formations/suivi.server"
 import { compterInvitations, compterMessagesNonLus } from "@/lib/membres/compteurs.server"
 import { getAllFormations } from "@/lib/cache/public-queries"
-import { DOMAINES } from "@/lib/bibliotheque/taxonomie"
+import { labelDomaine, labelType } from "@/lib/bibliotheque/taxonomie"
 import { categorieSansCotisation, gratuiteEnCours } from "@/lib/adhesion"
 
 import {
@@ -171,17 +171,19 @@ export default async function DashboardPage() {
       }
     : null
 
-  const libelleDomaine = (code?: string | null) => DOMAINES.find((d) => d.code === code)?.label
   const documentsRecents = recentDocsData.map((doc) => ({
     id: doc.id,
     titre: doc.titre,
-    categorie: libelleDomaine(doc.domaine) || doc.thematique || doc.type_doc || "Document",
+    domaine: doc.domaine,
+    domaineLabel: labelDomaine(doc.domaine) || doc.thematique || "",
+    typeLabel: labelType(doc.type_doc),
   }))
 
   const catalogue = formationsCatalogue.slice(0, 3).map((f) => ({
     id: f.id,
     titre: f.titre,
-    detail: [f.niveau, f.prix_fcfa === 0 ? "Gratuite" : null].filter(Boolean).join(" · "),
+    niveau: f.niveau ?? "",
+    gratuite: f.prix_fcfa === 0,
   }))
 
   const profilCompletion = completionProfil({ ...profile, thematiques: parseList(profile.secteurs_expertise) })

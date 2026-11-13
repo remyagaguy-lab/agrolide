@@ -2,6 +2,7 @@ import React from "react"
 import Link from "next/link"
 import { Calendar as CalendarIcon, MapPin, ArrowRight, Video } from "lucide-react"
 import { ArcheBadge } from "@/components/brand"
+import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Widget, WidgetHeader } from "./Widget"
 
@@ -46,7 +47,7 @@ export function EventWidget({ mesEvenements, aVenir }: EventWidgetProps) {
   if (!prochain) {
     return (
       <Widget>
-        <WidgetHeader title="Prochains événements" icon={<CalendarIcon />} href="/membres/evenements" linkLabel="Agenda" />
+        <WidgetHeader title="Prochains événements" tone="orange" icon={<CalendarIcon />} href="/membres/evenements" linkLabel="Agenda" />
         {aVenir.length > 0 ? (
           <ul className="flex flex-col p-3 pt-1">
             {aVenir.map((e) => {
@@ -61,10 +62,10 @@ export function EventWidget({ mesEvenements, aVenir }: EventWidgetProps) {
                     <span className="min-w-0 flex-1">
                       <span className="line-clamp-2 block text-title-sm text-on-surface group-hover:text-primary">{e.titre}</span>
                       <span className="block text-label-md text-on-surface-muted">
-                        {e.lieu ? `${e.lieu} · ` : ""}{d.heure}
+                        {d.heure}{e.lieu && !enLigne(e.lieu) ? ` · ${e.lieu}` : ""}
                       </span>
                     </span>
-                    <span className="shrink-0 text-label-md text-primary">S'inscrire</span>
+                    {e.lieu && <Badge variant={enLigne(e.lieu) ? "info" : "neutral"} className="shrink-0">{enLigne(e.lieu) ? "En ligne" : "Sur place"}</Badge>}
                   </Link>
                 </li>
               )
@@ -83,7 +84,7 @@ export function EventWidget({ mesEvenements, aVenir }: EventWidgetProps) {
 
   return (
     <Widget>
-      <WidgetHeader title="Mon prochain événement" icon={<CalendarIcon />} href="/membres/evenements" linkLabel="Agenda" />
+      <WidgetHeader title="Mon prochain événement" tone="orange" icon={<CalendarIcon />} href="/membres/evenements" linkLabel="Agenda" />
       <div className="flex flex-1 flex-col gap-4 p-5 pt-3">
         <div className="flex items-start gap-4">
           <span className="flex w-14 shrink-0 flex-col items-center">

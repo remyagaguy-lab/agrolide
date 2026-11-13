@@ -1,6 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import { GraduationCap, PlayCircle, ArrowRight } from "lucide-react"
+import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Widget, WidgetHeader } from "./Widget"
 
@@ -17,7 +18,8 @@ export interface FormationEnCours {
 export interface FormationCatalogue {
   id: string
   titre: string
-  detail: string
+  niveau: string
+  gratuite: boolean
 }
 
 /**
@@ -28,14 +30,17 @@ export function FormationsWidget({ formation, catalogue }: { formation: Formatio
   if (!formation) {
     return (
       <Widget>
-        <WidgetHeader title="Formations à découvrir" icon={<GraduationCap />} href="/membres/formations/catalogue" linkLabel="Catalogue" />
+        <WidgetHeader title="Formations à découvrir" tone="soleil" icon={<GraduationCap />} href="/membres/formations/catalogue" linkLabel="Catalogue" />
         {catalogue.length > 0 ? (
           <ul className="flex flex-col p-3 pt-1">
             {catalogue.map((f) => (
               <li key={f.id}>
-                <Link href={`/membres/formations/${f.id}`} className="ag-state group flex min-h-14 flex-col justify-center rounded-control px-2.5 py-1.5">
-                  <span className="line-clamp-2 text-title-sm text-on-surface group-hover:text-primary">{f.titre}</span>
-                  {f.detail && <span className="text-label-md text-on-surface-muted">{f.detail}</span>}
+                <Link href={`/membres/formations/${f.id}`} className="ag-state group flex min-h-14 items-center gap-3 rounded-control px-2.5 py-1.5">
+                  <span className="min-w-0 flex-1">
+                    <span className="line-clamp-2 block text-title-sm text-on-surface group-hover:text-primary">{f.titre}</span>
+                    {f.niveau && <span className="block text-label-md text-on-surface-muted">{f.niveau}</span>}
+                  </span>
+                  {f.gratuite && <Badge variant="success" className="shrink-0">Gratuite</Badge>}
                 </Link>
               </li>
             ))}
@@ -49,7 +54,7 @@ export function FormationsWidget({ formation, catalogue }: { formation: Formatio
 
   return (
     <Widget>
-      <WidgetHeader title="Ma formation" icon={<GraduationCap />} href="/membres/formations" linkLabel="Mon parcours" />
+      <WidgetHeader title="Ma formation" tone="soleil" icon={<GraduationCap />} href="/membres/formations" linkLabel="Mon parcours" />
       <div className="flex flex-1 flex-col gap-4 p-5 pt-3">
         <div className="flex items-start gap-3">
           <span aria-hidden="true" className="flex size-10 shrink-0 items-center justify-center rounded-control bg-primary-container text-on-primary-container">

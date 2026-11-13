@@ -28,7 +28,7 @@ function contractVariant(contractType?: string | null): BadgeVariant {
 export function OpportunitiesWidget({ opportunities }: { opportunities: OpportunityItem[] }) {
   return (
     <Widget>
-      <WidgetHeader title="Dernières opportunités" icon={<Compass />} href="/membres/opportunites" linkLabel="Toutes les offres" />
+      <WidgetHeader title="Dernières opportunités" tone="info" icon={<Compass />} href="/membres/opportunites" linkLabel="Toutes les offres" />
       {opportunities.length > 0 ? (
         <ul className="flex flex-col p-3 pt-1">
           {opportunities.map((opp) => {
@@ -59,7 +59,7 @@ export function OpportunitiesWidget({ opportunities }: { opportunities: Opportun
 export function EntreprendreEncart() {
   return (
     <Widget>
-      <WidgetHeader title="Entreprendre" icon={<Rocket />} />
+      <WidgetHeader title="Entreprendre" tone="feuille" icon={<Rocket />} />
       <div className="flex flex-1 flex-col gap-3 p-5 pt-2">
         <p className="text-body-md text-on-surface-variant">
           Une idée de projet agricole ? Candidatez à l'incubation ou demandez un accompagnement sur mesure.
