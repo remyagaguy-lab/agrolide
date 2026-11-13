@@ -96,7 +96,7 @@ export default async function HomePage() {
         {/* texture du motif sur le ciel vert de l'en-tête : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne ; les chiffres, dessous, sont sans motif */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
         <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
-          <div className="md:w-[44%] md:max-w-[34rem] lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
+          <div className="md:w-[44%] md:max-w-[34rem] md:-translate-y-8 lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
             <h1 className="text-headline-md text-balance md:text-display-md">
               Fédérer la chaîne <br className="hidden xl:block" />agricole, pour conquérir <br className="hidden xl:block" />
               <span className="text-accent-sun xl:whitespace-nowrap">la souveraineté alimentaire</span>
