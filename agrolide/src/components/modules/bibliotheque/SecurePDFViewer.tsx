@@ -13,6 +13,57 @@ import { useAuth } from '@/lib/auth/client'
 // Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
 
+/** Marge (en pixels) autour de la zone visible : une page est dessinée un peu avant d'arriver à l'écran. */
+const MARGE_PAGES = 1500
+
+/**
+ * Page du défilement continu, dessinée seulement quand elle est proche de l'écran.
+ * Sans cela, un PDF de 150 pages créerait 150 toiles (et 1 800 images de filigrane) d'un coup : lent et gourmand
+ * en mémoire sur un petit téléphone. Hors de la zone, la page est remplacée par une case vide de même hauteur
+ * (le défilement et la barre de défilement restent justes) et sa mémoire est libérée.
+ */
+function PageParesseuse({
+  index,
+  hauteur,
+  largeur,
+  racine,
+  children,
+}: {
+  index: number
+  hauteur: number | undefined
+  largeur: number | undefined
+  racine: React.RefObject<HTMLDivElement | null>
+  children: React.ReactNode
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  // Les deux premières pages sont dessinées d'emblée : le lecteur n'attend pas la mesure de l'écran.
+  const [proche, setProche] = useState(index < 2)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el || typeof IntersectionObserver === 'undefined') {
+      setProche(true)
+      return
+    }
+    const observer = new IntersectionObserver(
+      ([entree]) => setProche(entree.isIntersecting),
+      { root: racine.current, rootMargin: `${MARGE_PAGES}px 0px` },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [racine])
+
+  return (
+    <div
+      ref={ref}
+      className="relative shadow-xl"
+      style={proche || !hauteur ? undefined : { height: hauteur, width: largeur }}
+    >
+      {proche ? children : null}
+    </div>
+  )
+}
+
 export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const { userId, isLoaded } = useAuth()
   const [numPages, setNumPages] = useState<number>(0)
@@ -23,6 +74,8 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   const [scale, setScale] = useState<number>(1.0)
   const [viewMode, setViewMode] = useState<'single' | 'continuous'>('continuous')
   const [containerWidth, setContainerWidth] = useState<number>()
+  // Taille d'origine de la première page : sert à réserver la place des pages pas encore dessinées.
+  const [taillePage, setTaillePage] = useState<{ largeur: number; hauteur: number } | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   
   const [quotaReached, setQuotaReached] = useState<boolean>(false)
@@ -252,14 +305,21 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
           <div className="flex flex-col gap-6 items-center w-full">
             {viewMode === 'continuous' ? (
               Array.from(new Array(numPages), (el, index) => (
-                <div key={`page_${index + 1}`} className="relative shadow-xl">
-                  <Page 
-                    pageNumber={index + 1} 
-                    scale={scale} 
+                <PageParesseuse
+                  key={`page_${index + 1}`}
+                  index={index}
+                  racine={containerRef}
+                  largeur={taillePage ? (containerWidth ?? taillePage.largeur) * scale : undefined}
+                  hauteur={taillePage ? (containerWidth ?? taillePage.largeur) * scale * (taillePage.hauteur / taillePage.largeur) : undefined}
+                >
+                  <Page
+                    pageNumber={index + 1}
+                    scale={scale}
                     width={containerWidth}
-                    renderTextLayer={false} 
+                    renderTextLayer={false}
                     renderAnnotationLayer={false}
-                    className="pointer-events-none" 
+                    className="pointer-events-none"
+                    onLoadSuccess={index === 0 ? (page) => setTaillePage({ largeur: page.originalWidth, hauteur: page.originalHeight }) : undefined}
                   />
                   
                   {/* Watermark Overlay (Transparent Logo) */}
@@ -274,7 +334,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
                   
                   {/* Transparent anti-drag overlay */}
                   <div className="absolute inset-0 z-40 bg-transparent pointer-events-auto" />
-                </div>
+                </PageParesseuse>
               )).flatMap((el, index) => [
                 el,
                 ...(showEncarts && index !== numPages - 1 && index % 3 === 0
