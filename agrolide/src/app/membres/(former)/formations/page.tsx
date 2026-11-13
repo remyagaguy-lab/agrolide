@@ -5,6 +5,7 @@ import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { users } from '@/db/schema'
 import { suiviFormations } from '@/lib/formations/suivi.server'
+import { certificatsDuMembre, delivrerCertificat, formationAUnExamen } from '@/lib/formations/examen.server'
 import { favorisDuMembre, lecturesDuMembre } from '@/lib/bibliotheque/parcours.server'
 import { PageEntete } from '@/components/layout/PageEntete'
 import { buttonVariants } from '@/components/ui/Button'
@@ -38,6 +39,16 @@ export default async function MonParcoursPage() {
   // Un certificat existe pour chaque formation terminée : parcours en leçons dont toutes les leçons sont validées,
   // ou session (présentiel / classe virtuelle) marquée « terminée ».
   const certifiees = suivis.filter((s) => s.terminee)
+  // Chaque certificat « Participation » reçoit un numéro public vérifiable (créé à la première visite, puis stable).
+  let certificats: Awaited<ReturnType<typeof certificatsDuMembre>> = []
+  try {
+    await Promise.all(certifiees.map((s) => delivrerCertificat(userId, s.formationId, 'participation')))
+    certificats = await certificatsDuMembre(userId)
+  } catch (e) {
+    // Tables de certificats absentes (migration 0014 pas encore lancée) : la page reste utilisable sans numéros.
+    console.error('Certificats indisponibles', e)
+  }
+  const numeroDe = (formationId: string, niveau: string) => certificats.find((c) => c.formation_id === formationId && c.niveau === niveau)?.numero
 
   const repere = [
     { href: '#en-cours', n: enCours.length, libelle: enCours.length > 1 ? 'formations en cours' : 'formation en cours', Icone: NotebookPen },
@@ -158,7 +169,16 @@ export default async function MonParcoursPage() {
                     </div>
                   </div>
                   {profil?.nom && profil?.prenom && date ? (
-                    <DownloadCertificatButton nom={profil.nom} prenom={profil.prenom} formationTitre={s.titre} dateDebut={date} inscriptionId={s.inscriptionId} />
+                    <div className="flex flex-col gap-2">
+                      <DownloadCertificatButton nom={profil.nom} prenom={profil.prenom} formationTitre={s.titre} dateDebut={date} inscriptionId={s.inscriptionId} numero={numeroDe(s.formationId, 'participation')} niveau="participation" />
+                      {numeroDe(s.formationId, 'reussite') ? (
+                        <DownloadCertificatButton nom={profil.nom} prenom={profil.prenom} formationTitre={s.titre} dateDebut={date} inscriptionId={s.inscriptionId} numero={numeroDe(s.formationId, 'reussite')} niveau="reussite" />
+                      ) : formationAUnExamen(s.formationId) ? (
+                        <Link href={`/membres/formations/${s.formationId}/examen`} className="text-sm font-bold text-primary underline-offset-2 hover:underline">
+                          Passer l’examen final pour le certificat de réussite
+                        </Link>
+                      ) : null}
+                    </div>
                   ) : (
                     <p className="text-body-sm text-on-surface-variant">
                       Complétez votre nom et votre prénom dans{' '}

@@ -10,9 +10,11 @@ interface Props {
   formationTitre: string
   dateDebut: string
   inscriptionId: string
+  numero?: string
+  niveau?: 'participation' | 'reussite'
 }
 
-export function DownloadCertificatButton({ nom, prenom, formationTitre, dateDebut, inscriptionId }: Props) {
+export function DownloadCertificatButton({ nom, prenom, formationTitre, dateDebut, inscriptionId, numero, niveau }: Props) {
   const [isClient, setIsClient] = useState(false)
 
   // @react-pdf/renderer ne marche qu'entièrement côté client, il faut attendre le montage
@@ -30,8 +32,8 @@ export function DownloadCertificatButton({ nom, prenom, formationTitre, dateDebu
 
   return (
     <PDFDownloadLink
-      document={<CertificatPDF nom={nom} prenom={prenom} formationTitre={formationTitre} dateDebut={dateDebut} inscriptionId={inscriptionId} />}
-      fileName={`certificat-${formationTitre.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`}
+      document={<CertificatPDF nom={nom} prenom={prenom} formationTitre={formationTitre} dateDebut={dateDebut} inscriptionId={inscriptionId} numero={numero} niveau={niveau} />}
+      fileName={`certificat-${niveau ?? 'participation'}-${formationTitre.replace(/[^a-z0-9]/gi, '_').toLowerCase()}.pdf`}
     >
       {({ blob, url, loading, error }) => (
         <button

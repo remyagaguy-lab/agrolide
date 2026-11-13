@@ -69,25 +69,28 @@ interface CertificatProps {
   formationTitre: string
   dateDebut: string
   inscriptionId: string
+  /** Numéro public vérifiable (page /verifier/<numero>). */
+  numero?: string
+  niveau?: 'participation' | 'reussite'
 }
 
-export const CertificatPDF = ({ nom, prenom, formationTitre, dateDebut, inscriptionId }: CertificatProps) => (
+export const CertificatPDF = ({ nom, prenom, formationTitre, dateDebut, inscriptionId, numero, niveau = 'participation' }: CertificatProps) => (
   <Document>
     <Page size="A4" orientation="landscape" style={styles.page}>
       <View style={styles.border}>
-        <Text style={styles.header}>CERTIFICAT DE PARTICIPATION</Text>
+        <Text style={styles.header}>{niveau === 'reussite' ? 'CERTIFICAT DE RÉUSSITE' : 'CERTIFICAT DE PARTICIPATION'}</Text>
         
         <Text style={styles.text}>Le réseau agrolide certifie que</Text>
         
         <Text style={styles.name}>{prenom} {nom}</Text>
         
-        <Text style={styles.text}>a participé avec succès à la formation</Text>
+        <Text style={styles.text}>{niveau === 'reussite' ? 'a réussi l’examen final de la formation' : 'a participé avec succès à la formation'}</Text>
         
         <Text style={styles.formationTitle}>"{formationTitre}"</Text>
         
         <Text style={styles.date}>Dispensée le {new Date(dateDebut).toLocaleDateString('fr-FR')}</Text>
         
-        <Text style={styles.numId}>N° {inscriptionId}</Text>
+        <Text style={styles.numId}>N° {numero ?? inscriptionId}{numero ? ` · Vérification : agrolide.org/verifier/${numero}` : ''}</Text>
       </View>
     </Page>
   </Document>

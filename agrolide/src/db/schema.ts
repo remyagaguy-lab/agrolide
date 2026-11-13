@@ -800,3 +800,51 @@ export const visite_guidee = sqliteTable("visite_guidee", {
   vue_le: text("vue_le").notNull(),
   issue: text("issue").notNull(), // terminee | passee
 });
+
+/** Examen final d'une formation : une ligne par tentative. `questions_json` = ids tirés, fixés à l'ouverture (le serveur corrige CE tirage). */
+export const tentatives_examen = sqliteTable("tentatives_examen", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  membre_id: text("membre_id").notNull(),
+  formation_id: text("formation_id").notNull(),
+  questions_json: text("questions_json").notNull(),
+  debut_le: text("debut_le").notNull(),
+  fin_le: text("fin_le"),
+  bonnes: integer("bonnes"),
+  total: integer("total"),
+  pourcent: integer("pourcent"),
+  reussi: integer("reussi", { mode: "boolean" }),
+}, (t) => [
+  index("idx_tentatives_examen_membre_formation").on(t.membre_id, t.formation_id),
+]);
+
+/** Livrables notés : un par module et par membre ; une nouvelle remise remplace la précédente. */
+export const livrables_formation = sqliteTable("livrables_formation", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  membre_id: text("membre_id").notNull(),
+  formation_id: text("formation_id").notNull(),
+  module_ordre: integer("module_ordre").notNull(),
+  contenu: text("contenu").notNull(),
+  /** soumis | valide | a_revoir */
+  statut: text("statut").notNull(),
+  note: integer("note"),
+  commentaire: text("commentaire"),
+  correcteur_id: text("correcteur_id"),
+  soumis_le: text("soumis_le").notNull(),
+  corrige_le: text("corrige_le"),
+}, (t) => [
+  uniqueIndex("idx_livrables_formation_unique").on(t.membre_id, t.formation_id, t.module_ordre),
+]);
+
+/** Certificats délivrés (numéro public vérifiable) : un par membre, formation et niveau. */
+export const certificats_formation = sqliteTable("certificats_formation", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  numero: text("numero").notNull(),
+  /** participation | reussite */
+  niveau: text("niveau").notNull(),
+  membre_id: text("membre_id").notNull(),
+  formation_id: text("formation_id").notNull(),
+  delivre_le: text("delivre_le").notNull(),
+}, (t) => [
+  uniqueIndex("idx_certificats_formation_numero").on(t.numero),
+  uniqueIndex("idx_certificats_formation_unique").on(t.membre_id, t.formation_id, t.niveau),
+]);

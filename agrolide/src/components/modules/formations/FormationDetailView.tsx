@@ -232,6 +232,7 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
                 <section aria-labelledby="ressources" className="mt-8 space-y-2">
                   <h2 id="ressources" className="text-title-lg font-bold text-on-surface">Pour aller plus loin (facultatif)</h2>
                   <ul className="space-y-1 text-body-md">
+                    <li><Link href={`/membres/formations/${id}/examen`} className="text-primary">Examen final et certificat de réussite</Link></li>
                     <li><Link href={`/membres/formations/${id}/cadre-pays`} className="text-primary">Cadre pays : Togo, Bénin, Côte d'Ivoire, Sénégal</Link></li>
                     <li><Link href={`/membres/formations/${id}/cas`} className="text-primary">Autres cas chiffrés</Link></li>
                     <li><Link href={`/membres/formations/${id}/filieres`} className="text-primary">Modules par filière (élevage, puis maraîchage, etc.)</Link></li>
