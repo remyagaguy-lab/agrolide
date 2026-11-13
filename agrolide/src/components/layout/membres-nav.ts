@@ -117,3 +117,18 @@ export function rubriqueActive(pathname: string | null | undefined): MembresRubr
 export const labelInvitations = (n: number) => `${n} ${n > 1 ? "demandes en attente" : "demande en attente"}`
 export const labelMessages = (n: number) => `${n} ${n > 1 ? "messages non lus" : "message non lu"}`
 export const afficherNombre = (n: number) => (n > 99 ? "99+" : String(n))
+
+/**
+ * Pages de lecture ou de conversation : la barre latérale s'y replie d'elle-même (le contenu a besoin de la place)
+ * et reprend l'état choisi par le membre dès qu'il en sort. Le membre peut quand même la rouvrir à la main.
+ */
+const ROUTES_IMMERSIVES = [
+  /^\/membres\/formations\/[^/]+\/suivre(\/|$)/, // lecteur de cours et ses leçons
+  /^\/membres\/bibliotheque\/[^/]+\/lire(\/|$)/, // lecteur de documents
+  /^\/membres\/messages(\/|$)/, // messagerie
+]
+export const estPageImmersive = (pathname: string | null | undefined) =>
+  !!pathname && ROUTES_IMMERSIVES.some((re) => re.test(pathname))
+
+/** Cookie du choix de repli : lu côté serveur pour rendre la barre dans le bon état dès le premier affichage (aucun saut). */
+export const COOKIE_BARRE_REPLIEE = "ag-barre-repliee"

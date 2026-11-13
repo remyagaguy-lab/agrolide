@@ -7,27 +7,72 @@ import { useClerk } from "@/lib/auth/client"
 import { MembresUserMenu } from "./MembresUserMenu"
 import { MembresBadgesProvider } from "./MembresBadges"
 import { LienEnCours } from "./LienEnCours"
-import { MEMBRES_RUBRIQUES, afficherNombre, labelInvitations, labelMessages, rubriqueActive, type MembresRubrique } from "./membres-nav"
+import { COOKIE_BARRE_REPLIEE, MEMBRES_RUBRIQUES, afficherNombre, estPageImmersive, labelInvitations, labelMessages, rubriqueActive, type MembresRubrique } from "./membres-nav"
 import { Logo } from "@/components/ui/Logo"
 import { cn } from "@/lib/utils/formatters"
 import { Avatar } from "@/components/ui/Avatar"
 import NotificationBell from "@/components/shared/NotificationBell"
 
-import { LogOut, Mail } from "@/components/ui/icons"
+import { ChevronLeft, ChevronRight, LogOut, Mail } from "@/components/ui/icons"
 interface MembresLayoutProps {
   children: React.ReactNode
   profile: any
   pendingRequestsCount?: number
   unreadMessagesCount?: number
+  /** Choix mémorisé (cookie) lu côté serveur : la barre s'affiche d'emblée dans le bon état, sans saut. */
+  barreRepliee?: boolean
 }
 
-export function MembresLayout({ children, profile, pendingRequestsCount = 0, unreadMessagesCount = 0 }: MembresLayoutProps) {
+/** Info-bulle de la barre repliée : visible au survol et au focus clavier, sans intercepter la souris. */
+function InfoBulle({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      aria-hidden
+      className="pointer-events-none absolute left-full top-1/2 z-50 ml-2 -translate-y-1/2 whitespace-nowrap rounded-control bg-inverse-surface px-3 py-1.5 text-label-md font-medium text-inverse-on-surface opacity-0 shadow-md transition-opacity duration-150 group-hover/info:opacity-100 group-focus-visible/info:opacity-100"
+    >
+      {children}
+    </span>
+  )
+}
+
+export function MembresLayout({ children, profile, pendingRequestsCount = 0, unreadMessagesCount = 0, barreRepliee = false }: MembresLayoutProps) {
   const pathname = usePathname()
   const { signOut } = useClerk()
 
   const handleLogout = async () => {
     await signOut({ redirectUrl: "/" })
   }
+
+  // Repli de la barre : choix du membre (mémorisé), sauf sur les pages de lecture où elle se replie d'elle-même.
+  // La rouvrir à la main sur une page de lecture ne vaut que pour cette page ; en la quittant, le choix du membre reprend.
+  const [choixRepli, setChoixRepli] = React.useState(barreRepliee)
+  const [forcage, setForcage] = React.useState<{ page: string | null; replie: boolean } | null>(null)
+  const immersive = estPageImmersive(pathname)
+  const replie = immersive ? (forcage && forcage.page === pathname ? forcage.replie : true) : choixRepli
+
+  const basculerBarre = React.useCallback(() => {
+    if (immersive) {
+      setForcage({ page: pathname, replie: !replie })
+      return
+    }
+    const suivant = !choixRepli
+    setChoixRepli(suivant)
+    try {
+      document.cookie = `${COOKIE_BARRE_REPLIEE}=${suivant ? "1" : "0"}; path=/; max-age=31536000; samesite=lax`
+    } catch {}
+  }, [immersive, pathname, replie, choixRepli])
+
+  // Raccourci « [ » (hors champ de saisie) : replier / déplier la barre.
+  React.useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "[" || e.ctrlKey || e.metaKey || e.altKey) return
+      const t = e.target as HTMLElement | null
+      if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return
+      basculerBarre()
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [basculerBarre])
 
   const rubriqueCourante = rubriqueActive(pathname)
   // Sur le tableau de bord, la cloche et le menu du compte sont dans le bandeau de bienvenue : pas de barre au-dessus.
@@ -47,6 +92,25 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
   const sidebarLink = (item: MembresRubrique) => {
     const isActive = rubriqueCourante === item.key
     const { n, label } = pastille(item)
+    if (replie) {
+      return (
+        <Link
+          key={item.key}
+          href={item.href}
+          aria-current={isActive ? "page" : undefined}
+          aria-label={n > 0 ? `${item.label} — ${label}` : item.label}
+          className={cn(
+            "group/info ag-state relative flex size-12 items-center justify-center rounded-control transition-colors duration-150 ease-standard",
+            isActive ? "bg-primary-container text-on-primary-container" : "text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface",
+          )}
+        >
+          <item.icon className="size-[20px]" strokeWidth={isActive ? 2.5 : 2} aria-hidden />
+          {n > 0 ? <span aria-hidden className="absolute right-1.5 top-1.5 size-2.5 rounded-full border-2 border-surface-container bg-error" /> : null}
+          <LienEnCours className="inset-x-2" />
+          <InfoBulle>{item.label}</InfoBulle>
+        </Link>
+      )
+    }
     return (
       <Link
         key={item.key}
@@ -76,37 +140,74 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
     <MembresBadgesProvider valeurs={{ invitations: pendingRequestsCount, messages: unreadMessagesCount }}>
     <div className="flex h-screen overflow-hidden bg-surface-container-low">
       {/* ================= VERTICAL SIDEBAR (DESKTOP) ================= */}
-      <aside data-visite="navigation" className="relative z-30 hidden h-full w-[260px] shrink-0 flex-col bg-surface-container lg:flex">
-        <div className="flex h-20 shrink-0 items-center px-6">
-          <Logo href="/membres/dashboard" size="md" priority />
+      <aside
+        data-visite="navigation"
+        data-replie={replie ? "oui" : "non"}
+        className={cn(
+          "relative z-30 hidden h-full shrink-0 flex-col bg-surface-container transition-[width] duration-200 ease-standard motion-reduce:transition-none lg:flex",
+          replie ? "w-[72px]" : "w-[240px]",
+        )}
+      >
+        <div className={cn("flex h-20 shrink-0 items-center", replie ? "justify-center" : "px-6")}>
+          <Logo href="/membres/dashboard" variant={replie ? "symbol" : "horizontal"} size={replie ? "sm" : "md"} priority />
         </div>
 
-        <nav aria-label="Navigation de l'espace membre" className="custom-scrollbar relative z-10 flex min-h-0 flex-1 flex-col gap-5 overflow-y-auto overflow-x-hidden py-4 pl-4">
-          <div className="flex flex-col gap-1">{MEMBRES_RUBRIQUES.map(sidebarLink)}</div>
+        <nav
+          aria-label="Navigation de l'espace membre"
+          className={cn(
+            "custom-scrollbar relative z-10 flex min-h-0 flex-1 flex-col gap-5 py-4",
+            replie ? "items-center" : "overflow-y-auto overflow-x-hidden pl-4",
+          )}
+        >
+          <div className={cn("flex flex-col gap-1", replie && "items-center")}>{MEMBRES_RUBRIQUES.map(sidebarLink)}</div>
         </nav>
 
-        <div className="mt-auto flex shrink-0 flex-col gap-1 p-4">
+        <div className={cn("mt-auto flex shrink-0 flex-col gap-1 p-4", replie && "items-center px-3")}>
           <Link
             href="/membres/profil"
             aria-current={profilActif ? "page" : undefined}
+            aria-label={replie ? nomProfil : undefined}
             className={cn(
-              "ag-state flex min-h-14 items-center gap-3 rounded-control px-3 py-2",
+              "group/info ag-state relative flex items-center gap-3 rounded-control",
+              replie ? "size-12 justify-center" : "min-h-14 px-3 py-2",
               profilActif ? "bg-surface-container-high text-primary" : "text-on-surface hover:bg-surface-container-high",
             )}
           >
             <Avatar src={photoProfil} name={nomProfil === "Mon compte" ? undefined : nomProfil} size="sm" />
-            <span className="min-w-0 flex-1">
-              <span className="block truncate text-label-lg font-medium">{nomProfil}</span>
-              <span className="block text-label-sm text-on-surface-muted">Mon profil</span>
-            </span>
+            {replie ? (
+              <InfoBulle>{nomProfil}</InfoBulle>
+            ) : (
+              <span className="min-w-0 flex-1">
+                <span className="block truncate text-label-lg font-medium">{nomProfil}</span>
+                <span className="block text-label-sm text-on-surface-muted">Mon profil</span>
+              </span>
+            )}
           </Link>
           <button
             type="button"
             onClick={handleLogout}
-            className="ag-state flex min-h-12 w-full items-center gap-3 rounded-control px-3 text-label-lg font-medium text-on-surface-variant hover:text-error"
+            aria-label={replie ? "Déconnexion" : undefined}
+            className={cn(
+              "group/info ag-state relative flex items-center gap-3 rounded-control text-label-lg font-medium text-on-surface-variant hover:text-error",
+              replie ? "size-12 justify-center" : "min-h-12 w-full px-3",
+            )}
           >
             <LogOut className="size-5" aria-hidden />
-            <span>Déconnexion</span>
+            {replie ? <InfoBulle>Déconnexion</InfoBulle> : <span>Déconnexion</span>}
+          </button>
+          <button
+            type="button"
+            onClick={basculerBarre}
+            aria-expanded={!replie}
+            aria-label={replie ? "Déplier la barre latérale" : "Replier la barre latérale"}
+            aria-keyshortcuts="["
+            className={cn(
+              "group/info ag-state relative flex items-center gap-3 rounded-control text-label-lg font-medium text-on-surface-variant hover:text-on-surface",
+              replie ? "size-12 justify-center" : "min-h-12 w-full px-3",
+            )}
+          >
+            {replie ? <ChevronRight className="size-5" aria-hidden /> : <ChevronLeft className="size-5" aria-hidden />}
+            {replie ? <InfoBulle>Déplier (touche [)</InfoBulle> : <span>Replier</span>}
           </button>
         </div>
       </aside>

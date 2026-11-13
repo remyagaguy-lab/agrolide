@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation"
+import { cookies } from "next/headers"
 import Link from "next/link"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
@@ -8,6 +9,7 @@ import { LogoutButton } from "@/components/ui/LogoutButton"
 import { MembresLayout } from "@/components/layout/MembresLayout"
 import { compterInvitations, compterMessagesNonLus } from "@/lib/membres/compteurs.server"
 import { paiementOuvert } from "@/lib/adhesion"
+import { COOKIE_BARRE_REPLIEE } from "@/components/layout/membres-nav"
 
 import { AlertTriangle } from "@/components/ui/icons"
 export default async function MembresRootLayout({
@@ -82,6 +84,8 @@ export default async function MembresRootLayout({
     // 5-6. Pastilles de la barre latérale (déjà en route depuis le début).
     const [pendingRequestsCount, unreadMessagesCount] = await pastilles
 
+    const barreRepliee = (await cookies()).get(COOKIE_BARRE_REPLIEE)?.value === "1"
+
     return (
       <div className="min-h-screen bg-surface-container-low flex flex-col">
         {/* Header moved to MembresLayout for client-side routing state */}
@@ -114,7 +118,7 @@ export default async function MembresRootLayout({
 
         {/* Si le compte est suspendu, on n'affiche pas le layout complet */}
         {statut !== "suspendu" && (
-          <MembresLayout profile={profile} pendingRequestsCount={pendingRequestsCount} unreadMessagesCount={unreadMessagesCount}>
+          <MembresLayout barreRepliee={barreRepliee} profile={profile} pendingRequestsCount={pendingRequestsCount} unreadMessagesCount={unreadMessagesCount}>
             <div className="container mx-auto px-4 py-8">
               {children}
             </div>
