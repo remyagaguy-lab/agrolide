@@ -64,6 +64,8 @@ Une matrice sans chiffres ne permet pas de choisir. Notez chaque risque de 1 à 
 
 L'assurance est la mitigation la plus citée par les financeurs. Des assureurs, publics ou privés, proposent selon les pays des assurances multirisques de récolte ou des assurances indicielles (fondées sur la pluviométrie). Renseignez-vous dans votre pays, demandez un devis et budgétez la prime : Diap prévoit environ 0,9 M FCFA par an, inclus dans ses charges fixes.
 
+**Assurance agricole selon les pays :** l'état de l'offre (assurance indicielle, produits couplés au crédit) est résumé dans chaque fiche du [cadre pays](/membres/formations/form_bp_agricole/cadre-pays).
+
 #### Ce qu'il faut retenir
 - Cacher les risques est la pire stratégie : un banquier sait que l'agriculture est risquée.
 - Dressez une matrice des risques (climatiques, techniques, commerciaux, humains, politiques, financiers) et cotez-les : probabilité × impact.

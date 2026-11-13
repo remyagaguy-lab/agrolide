@@ -52,6 +52,8 @@ Cas pédagogique reconstitué : les chiffres sont des hypothèses cohérentes en
 
 Vérifiez toujours le taux, la durée, le différé et les garanties exigés par votre banque ou votre institution de financement : ce sont eux qui déterminent votre annuité, donc la solidité de tout le reste du dossier (chapitre 5.7).
 
+**Financeurs et garanties :** les organismes qui financent ou garantissent l'agriculture dans votre pays, avec leur statut vérifié et daté, sont listés dans le [cadre pays](/membres/formations/form_bp_agricole/cadre-pays). N'écrivez jamais un taux ou un plafond de dispositif dans votre dossier sans l'avoir lu à la source, le jour même.
+
 #### Ce qu'il faut retenir
 - Le coût total du projet additionne les frais d'établissement, les investissements durables et le besoin de trésorerie initial (BFR).
 - Le plan de financement prouve que vous avez les ressources (fonds propres + emprunt) pour couvrir tous ces coûts.

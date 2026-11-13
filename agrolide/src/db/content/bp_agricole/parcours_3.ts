@@ -276,6 +276,8 @@ N'oubliez pas d'inclure dans ce chapitre les éventuelles autorisations nécessa
 - Inscription aux impôts (identifiant fiscal propre à chaque pays : NINEA au Sénégal, NIF au Togo, IFU au Bénin et au Burkina Faso, numéro de compte contribuable en Côte d'Ivoire, TIN au Ghana et au Nigeria) et au registre du commerce.
 - Obligations fiscales et sociales : impôt sur les bénéfices, TVA et traitement des produits agricoles, cotisations sociales des salariés, code du travail. Elles diffèrent d'un pays à l'autre : demandez conseil à un expert-comptable local avant de chiffrer.
 
+**Fiches par pays :** statuts, foncier, identifiants fiscaux et formalités sont détaillés pays par pays, avec la date de vérification, dans le [cadre pays](/membres/formations/form_bp_agricole/cadre-pays) (le Togo est disponible ; les autres pays suivent).
+
 #### Ce qu'il faut retenir
 - Choisissez une forme juridique adaptée à votre besoin de financement et de protection (la SARL est souvent le standard professionnel).
 - Dressez un organigramme distinguant les permanents (chef de culture, gardien) et les journaliers (repiquage, récolte).
