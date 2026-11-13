@@ -4,7 +4,8 @@ import React, { useState, useEffect } from "react"
 import FormationForm from "@/components/modules/admin/FormationForm"
 import { getAdminFormations, deleteFormation } from "@/app/actions/admin-formations"
 
-import { Plus, Pencil, Trash2, Library, Clock, Users } from "@/components/ui/icons"
+import Link from "next/link"
+import { Lock, Plus, Pencil, Trash2, Library, Clock, Users } from "@/components/ui/icons"
 export default function AdminFormationsPage() {
   const [formations, setFormations] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
@@ -70,12 +71,20 @@ export default function AdminFormationsPage() {
           <h1 className="text-2xl font-bold text-on-surface">Gestion des Formations</h1>
           <p className="text-on-surface-muted">Créez et administrez le catalogue de formations.</p>
         </div>
-        <button 
-          onClick={handleCreateNew}
-          className="bg-success hover:bg-success text-on-success px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium"
-        >
-          <Plus className="size-5" /> Nouvelle formation
-        </button>
+        <div className="flex flex-wrap items-center gap-3">
+          <Link
+            href="/admin/contenus/formations/codes"
+            className="min-h-11 px-4 py-2 rounded-xl flex items-center gap-2 border border-outline text-on-surface font-medium hover:bg-surface-container-low transition-colors"
+          >
+            <Lock className="size-5" aria-hidden /> Codes d&apos;accès
+          </Link>
+          <button 
+            onClick={handleCreateNew}
+            className="bg-success hover:bg-success text-on-success px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium"
+          >
+            <Plus className="size-5" /> Nouvelle formation
+          </button>
+        </div>
       </div>
 
       <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
