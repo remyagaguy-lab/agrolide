@@ -27,7 +27,7 @@ interface DocumentCardProps {
  * Un domaine = une teinte et un pictogramme : on reconnaît le sujet d'un document avant de lire son titre.
  * Couleurs par rôles du design system uniquement.
  */
-const DOMAINES_VISUELS: Record<string, { Icone: LucideIcon; fond: string }> = {
+export const DOMAINES_VISUELS: Record<string, { Icone: LucideIcon; fond: string }> = {
   production_vegetale: { Icone: Sprout, fond: 'bg-success-container text-on-success-container' },
   production_animale: { Icone: PawPrint, fond: 'bg-warning-container text-on-warning-container' },
   agroeconomie: { Icone: Coins, fond: 'bg-info-container text-on-info-container' },
@@ -35,14 +35,14 @@ const DOMAINES_VISUELS: Record<string, { Icone: LucideIcon; fond: string }> = {
   ressources_naturelles_environnement: { Icone: TreePine, fond: 'bg-primary-container text-on-primary-container' },
   transversal: { Icone: Layers, fond: 'bg-surface-container-high text-on-surface-variant' },
 }
-const PAR_DEFAUT = { Icone: FileText, fond: 'bg-surface-container-high text-on-surface-variant' }
+export const DOMAINE_PAR_DEFAUT = { Icone: FileText, fond: 'bg-surface-container-high text-on-surface-variant' }
 
 export function DocumentCard({ document, publicView = false }: DocumentCardProps) {
   // Le visiteur reste sur le site public ; un membre reste dans son espace.
   const href = publicView ? `/bibliotheque/${document.id}` : `/membres/bibliotheque/${document.id}`
   // Sur le site public, on signale ce qui demande un compte ; un membre peut tout lire.
   const reserveAuxMembres = publicView && document.acces && document.acces !== 'public'
-  const { Icone, fond } = (document.domaine && DOMAINES_VISUELS[document.domaine]) || PAR_DEFAUT
+  const { Icone, fond } = (document.domaine && DOMAINES_VISUELS[document.domaine]) || DOMAINE_PAR_DEFAUT
   const repere = [document.annee, document.pays].filter(Boolean).join(' · ')
   const lectures = document.nb_telechargements || 0
 

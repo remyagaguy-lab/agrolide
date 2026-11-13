@@ -46,15 +46,17 @@ export async function LectureDocumentView({ id, mode }: { id: string; mode: 'mem
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 sm:py-8">
+    <div className={mode === 'public' ? 'container pb-16 pt-8 md:pt-12' : 'pt-6'}>
       <Breadcrumb jsonLd={mode === 'public'} items={[{ label: 'Bibliothèque', href: racine }, { label: 'Document', href: `${racine}/${id}` }, { label: 'Lecture sécurisée' }]} />
-      
-      <div className="mb-4">
-        <h1 className="text-2xl font-bold text-on-surface">Lecture Sécurisée</h1>
-        <p className="text-on-surface-muted text-sm">Le téléchargement, la sélection et le clic droit sont désactivés pour protéger ce document.</p>
-      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-6">
+      <header className="mb-6">
+        <h1 className="text-headline-sm font-bold text-on-surface md:text-headline-md">Lecture sécurisée</h1>
+        <p className="mt-1 max-w-2xl text-body-md text-on-surface-variant">
+          Le téléchargement, la sélection et le clic droit sont désactivés pour protéger ce document.
+        </p>
+      </header>
+
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8">
         <SecurePDFViewerWrapper documentId={id} />
         <AussiAimerColonne docs={suggestions} mode={mode} />
       </div>
