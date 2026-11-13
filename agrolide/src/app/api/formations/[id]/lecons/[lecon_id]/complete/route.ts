@@ -1,13 +1,14 @@
 import { NextResponse } from "next/server";
-import { db } from "@/db";
-import { formation_lecons, formation_modules, formations, progression_lecons } from "@/db/schema";
 import { auth } from "@/lib/auth/server";
 import { peutSuivre } from "@/lib/formations/acces.server";
-import { notifier } from "@/lib/notifications.server";
-import { and, eq, inArray } from "drizzle-orm";
+import { leconAccessible, lireBanque, validerLecon } from "@/lib/formations/quiz.server";
 
+/**
+ * Validation « simple bouton » : réservée aux leçons SANS quiz (par exemple 6.4).
+ * Une leçon avec quiz ne se valide que par la route /quiz, qui vérifie le score réel côté serveur.
+ */
 export async function POST(
-  request: Request,
+  _request: Request,
   { params }: { params: Promise<{ id: string; lecon_id: string }> }
 ) {
   try {
@@ -22,49 +23,13 @@ export async function POST(
       return NextResponse.json({ error: "Inscription requise" }, { status: 403 });
     }
 
-    // Check if already completed
-    const existingCompletion = await db.query.progression_lecons.findFirst({
-      where: and(
-        eq(progression_lecons.membre_id, userId),
-        eq(progression_lecons.lecon_id, leconId)
-      ),
-    });
-
-    if (!existingCompletion) {
-      // Mark as completed
-      await db.insert(progression_lecons).values({
-        membre_id: userId,
-        lecon_id: leconId,
-      });
-
-      // Dernière leçon validée : on prévient le membre que la formation est terminée.
-      const lecons = await db
-        .select({ id: formation_lecons.id })
-        .from(formation_lecons)
-        .innerJoin(formation_modules, eq(formation_lecons.module_id, formation_modules.id))
-        .where(eq(formation_modules.formation_id, formationId));
-      if (lecons.length > 0) {
-        const faites = await db
-          .select({ id: progression_lecons.id })
-          .from(progression_lecons)
-          .where(and(
-            eq(progression_lecons.membre_id, userId),
-            inArray(progression_lecons.lecon_id, lecons.map((l) => l.id)),
-          ));
-        if (faites.length >= lecons.length) {
-          const formation = await db.query.formations.findFirst({
-            columns: { titre: true },
-            where: eq(formations.id, formationId),
-          });
-          await notifier(userId, {
-            type: "formation",
-            contenu: `Bravo ! Vous avez terminé la formation « ${formation?.titre ?? "Formation"} ».`,
-            lien: "/membres/formations/mes-certificats",
-          });
-        }
-      }
+    const acces = await leconAccessible(userId, formationId, leconId);
+    if ("erreur" in acces) return NextResponse.json({ error: acces.erreur }, { status: acces.status });
+    if (lireBanque(acces.lecon.quiz_json).length > 0) {
+      return NextResponse.json({ error: "Cette leçon se valide en réussissant son quiz" }, { status: 403 });
     }
 
+    await validerLecon(userId, formationId, leconId);
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Erreur lors de la validation:", error);

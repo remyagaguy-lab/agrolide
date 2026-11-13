@@ -9,7 +9,8 @@ import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import { db } from "@/db";
 
-import { Quiz } from "./Quiz";
+import { Quiz, ValiderLecon } from "./Quiz";
+import { lireBanque, seuilReussite, tirerQuestions } from "@/lib/formations/quiz.server";
 import { ChevronLeft, ChevronRight, CheckCircle2, Lock } from "@/components/ui/icons"
 export default async function LeconPage({
   params,
@@ -74,14 +75,10 @@ export default async function LeconPage({
   }
 
   // Check if there is a quiz
-  let quizData = null;
-  if (currentLeconFull.quiz_json) {
-    try {
-      quizData = JSON.parse(currentLeconFull.quiz_json as string);
-    } catch (e) {
-      console.error("Failed to parse quiz JSON", e);
-    }
-  }
+  // Les bonnes réponses et explications ne quittent jamais le serveur : on n'envoie que les questions tirées.
+  const banque = lireBanque(currentLeconFull.quiz_json);
+  const hasQuiz = banque.length > 0;
+  const quizQuestions = hasQuiz ? tirerQuestions(banque) : [];
 
   return (
     <div className="flex min-h-full flex-col bg-surface-container-lowest">
@@ -111,15 +108,23 @@ export default async function LeconPage({
         </div>
 
         {/* Quiz Section */}
-        {quizData && quizData.length > 0 && (
+        {hasQuiz ? (
           <div className="mt-16 pt-12 border-t border-outline-variant" id="quiz-section">
-            <h2 className="font-urbanist text-title-lg text-on-surface mb-8">Vérifiez vos connaissances</h2>
-            <Quiz 
-              questions={quizData} 
+            <h2 className="font-urbanist text-title-lg text-on-surface mb-2">Vérifiez vos connaissances</h2>
+            <p className="mb-8 text-on-surface-variant">
+              Il faut au moins {seuilReussite()} % de bonnes réponses pour valider la leçon. Vous pouvez recommencer autant de fois que nécessaire.
+            </p>
+            <Quiz
+              questions={quizQuestions}
+              seuil={seuilReussite()}
               formationId={formationId}
               leconId={leconId}
               isCompleted={isCompleted}
             />
+          </div>
+        ) : (
+          <div className="mt-16 pt-12 border-t border-outline-variant">
+            <ValiderLecon formationId={formationId} leconId={leconId} isCompleted={isCompleted} />
           </div>
         )}
       </main>
@@ -140,7 +145,7 @@ export default async function LeconPage({
           )}
           
           {nextLecon ? (
-            isCompleted || !quizData || quizData.length === 0 ? (
+            isCompleted ? (
               <Link 
                 href={`/membres/formations/${formationId}/suivre/${nextLecon.id}`}
                 className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-on-tertiary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
@@ -152,13 +157,13 @@ export default async function LeconPage({
               <button 
                 disabled
                 className="inline-flex items-center justify-center bg-surface-container text-on-surface-muted font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors cursor-not-allowed"
-                title="Validez le quiz pour passer à la suite"
+                title={hasQuiz ? "Réussissez le quiz pour passer à la suite" : "Validez la leçon pour passer à la suite"}
               >
                 Suivant bloqué
                 <Lock className="size-4 ml-2" />
               </button>
             )
-          ) : (
+          ) : isCompleted ? (
             <Link 
               href={`/membres/formations/${formationId}`}
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
@@ -166,6 +171,15 @@ export default async function LeconPage({
               <CheckCircle2 className="size-5 mr-2" />
               Terminer la formation
             </Link>
+          ) : (
+            <button
+              disabled
+              className="inline-flex items-center justify-center bg-surface-container text-on-surface-muted font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg cursor-not-allowed"
+              title="Validez la leçon pour terminer la formation"
+            >
+              Terminer la formation
+              <Lock className="size-4 ml-2" />
+            </button>
           )}
         </div>
       </div>
