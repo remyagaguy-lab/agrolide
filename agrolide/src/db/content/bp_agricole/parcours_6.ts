@@ -105,6 +105,8 @@ Il doit répondre en quelques paragraphes aux questions fondamentales de l'inves
 - Des chiffres précis, tirés de vos tableaux financiers.
 - Un design épuré (une mise en page simple, sans surcharge).
 
+**Ressource à télécharger :** le [canevas de business plan (Word, 12 sections)](/documents/bp-agricole/Agrolide-canevas-business-plan-agricole.docx) contient une trame de résumé et de chaque section ; les chiffres à y reporter viennent du [modèle financier (Excel, pré-rempli avec le cas Diap Touré)](/documents/bp-agricole/Agrolide-modele-financier-business-plan-agricole.xlsx).
+
 #### Ce qu'il faut retenir
 - L'Executive Summary se place au début du document mais s'écrit à la toute fin du processus.
 - C'est la seule partie que tous les décideurs (directeur de banque, membres du comité) liront en entier.
@@ -147,6 +149,8 @@ Pour cela, vous utilisez un **Pitch Deck**, une présentation (PowerPoint ou PDF
 - *Slide 9 :* Les données financières clés (Investissement, CA, Rentabilité sur 3 ans).
 - *Slide 10 :* La demande (Ce que vous attendez du jury/banquier : "Nous cherchons X millions").
 
+**Ressource à télécharger :** le [modèle de pitch deck (PowerPoint, 10 diapositives)](/documents/bp-agricole/Agrolide-modele-pitch-deck.pptx) reprend ces dix diapositives, avec des consignes pour chacune dans les notes de l'orateur.
+
 #### Ce qu'il faut retenir
 - Les annexes ne sont pas des pages poubelles, ce sont les preuves matérielles de vos affirmations (devis, foncier).
 - Ne soumettez jamais un projet si le foncier n'est pas légalement sécurisé par un document en annexe.
@@ -176,7 +180,13 @@ Vous avez terminé la théorie de cette formation. Il reste l'essentiel : écrir
 11. Indicateurs : seuil de rentabilité, couverture de la dette (DSCR), VAN, TRI
 12. Risques, mitigation et annexes (devis, preuves foncières, lettres d'intention, CV)
 
-Le canevas agrolide téléchargeable (modèle de document et classeur financier) sera ajouté à la plateforme prochainement. En attendant, suivez ce plan type chapitre par chapitre.
+### Les modèles à télécharger
+
+- [canevas de business plan (Word, 12 sections)](/documents/bp-agricole/Agrolide-canevas-business-plan-agricole.docx) : le plan type ci-dessus, section par section, avec trames à remplir, pièges à éviter et checklist finale.
+- [modèle financier (Excel, pré-rempli avec le cas Diap Touré)](/documents/bp-agricole/Agrolide-modele-financier-business-plan-agricole.xlsx) : investissements, amortissements, BFR, charges, chiffre d'affaires en trois scénarios, compte de résultat, trésorerie mensuelle, tableau de dette avec différé, bilan, seuil de rentabilité, DSCR, VAN et TRI. Remplacez les chiffres du cas par les vôtres (cellules bleues).
+- [modèle de pitch deck (PowerPoint, 10 diapositives)](/documents/bp-agricole/Agrolide-modele-pitch-deck.pptx) : dix diapositives (problème, solution, marché, modèle d'affaires, itinéraire technique, équipe, calendrier, chiffres, demande).
+
+Ces trois fichiers sont des modèles pédagogiques : adaptez-les à votre pays, vérifiez les taux (impôt, cotisations, intérêts) et faites relire votre dossier avant envoi.
 
 ### Votre plan d'action en 90 jours
 
