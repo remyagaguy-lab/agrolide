@@ -1,119 +1,117 @@
 import React from "react"
-import { ArrowRight, ShieldCheck, CreditCard } from "lucide-react"
-import { Avatar } from "@/components/ui/Avatar"
+import Link from "next/link"
+import { ArrowRight, ChevronRight, CreditCard, Eye, UserRound } from "lucide-react"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Anneau } from "@/components/brand"
-import { cn } from "@/lib/utils/formatters"
-import { Widget } from "./Widget"
+import { Widget, WidgetHeader } from "./Widget"
 import { DATE_FIN_GRATUITE_LISIBLE, categorieSansCotisation, gratuiteEnCours } from "@/lib/adhesion"
 
 interface ProfileSummaryWidgetProps {
-  prenom?: string | null
-  nom?: string | null
-  photo_url?: string | null
-  specialite?: string | null
-  organisation?: string | null
-  pays?: string | null
-  ville?: string | null
   categorie?: string | null
   isAdhesionActive?: boolean
   joursRestants?: number
   /** Valeur réelle de `annuaire_visible` (vide = visible, comme dans l’annuaire). */
   annuaireVisible?: boolean | null
-  /** Part du profil renseignée (0 à 100) : dessine l'anneau de progression autour de l'avatar. */
-  completion?: number
+  /** Part du profil renseignée (0 à 100). */
+  completion: number
+  /** Libellés des champs encore vides. */
+  manquants?: string[]
+  /** Ce bloc porte-t-il le bouton orange de la page ? (membre neuf au profil incomplet.) */
+  boutonPrincipal?: boolean
 }
 
+/**
+ * « Mon compte » : ce qu'il reste à compléter, l'adhésion, la visibilité. L'identité (avatar, nom) est dans le bandeau
+ * et la barre latérale : plus de doublon ici, un seul bouton.
+ */
 export function ProfileSummaryWidget({
-  prenom,
-  nom,
-  photo_url,
-  specialite,
-  organisation,
-  pays,
   categorie,
   isAdhesionActive = false,
   joursRestants = 0,
   annuaireVisible,
   completion,
+  manquants = [],
+  boutonPrincipal = false,
 }: ProfileSummaryWidgetProps) {
-  const displayName = prenom ? `${prenom}${nom ? ` ${nom}` : ""}` : "Membre"
   // Pendant l'année gratuite (ou pour un profil Passionné), un membre sans cotisation payée n'a rien à régler.
   const gratuit = !isAdhesionActive && (categorieSansCotisation(categorie) || gratuiteEnCours())
   const adhesionOk = isAdhesionActive || gratuit
-  const hasValidPhoto = Boolean(photo_url && (photo_url.startsWith("http") || photo_url.startsWith("/")))
+  const complet = completion >= 100
+  const visible = annuaireVisible !== false
+
+  const detailAdhesion = isAdhesionActive
+    ? `${joursRestants} jours restants`
+    : gratuit
+      ? categorieSansCotisation(categorie) ? "Gratuite, sans limite de durée" : `Gratuite jusqu'au ${DATE_FIN_GRATUITE_LISIBLE}`
+      : "Cotisation annuelle requise"
 
   return (
-    <Widget className="shrink-0 p-5">
-      <div className="mb-4 flex items-center gap-3.5">
-        {completion === undefined ? (
-          <Avatar src={hasValidPhoto ? photo_url : null} name={prenom ? displayName : undefined} size="lg" className="rounded-card" />
-        ) : (
-          /* Anneau de progression de l'emblème (ouvert en bas à gauche) autour de l'avatar. */
-          <span className="relative flex size-[4.5rem] shrink-0 items-center justify-center">
+    <Widget>
+      <WidgetHeader title="Mon compte" icon={<UserRound />} />
+
+      <div className="flex flex-col gap-4 p-5 pt-3">
+        <div className="flex items-center gap-4">
+          <span className="relative flex size-16 shrink-0 items-center justify-center">
             <Anneau mode="progression" valeur={completion / 100} label={`Profil complété à ${completion} %`} className="absolute inset-0 size-full text-primary" />
-            <Avatar src={hasValidPhoto ? photo_url : null} name={prenom ? displayName : undefined} size="lg" />
+            <span className="text-title-sm tabular-nums text-on-surface">{completion} %</span>
           </span>
-        )}
-        <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-1.5">
-            <h2 className="truncate text-title-md text-on-surface">{displayName}</h2>
-            <ShieldCheck className="size-4 shrink-0 text-success" aria-label="Profil vérifié" role="img" />
+          <div className="min-w-0">
+            <p className="text-title-sm text-on-surface">{complet ? "Profil complet" : `Profil complété à ${completion} %`}</p>
+            <p className="text-body-sm text-on-surface-variant">
+              {complet
+                ? "Vous êtes bien référencé dans l'annuaire."
+                : manquants.length > 0
+                  ? `À ajouter : ${manquants.slice(0, 3).join(", ")}${manquants.length > 3 ? "…" : ""}`
+                  : "Plus il est complet, mieux vous êtes suggéré."}
+            </p>
           </div>
-          <p className="truncate text-body-sm text-on-surface-muted">{specialite || organisation || "Expertise agricole"}</p>
         </div>
-      </div>
 
-      {/* Adhésion et cotisation */}
-      <div
-        className={cn(
-          "mb-3.5 rounded-card p-3.5",
-          adhesionOk ? "bg-success-container text-on-success-container" : "bg-warning-container text-on-warning-container",
-        )}
-      >
-        <div className="mb-2 flex items-center justify-between gap-2">
-          <p className="flex items-center gap-1.5 text-title-sm">
-            <CreditCard className="size-4" aria-hidden="true" />
-            Adhésion annuelle
-          </p>
-          <Badge variant={adhesionOk ? "success" : "warning"} className="bg-surface-container-lowest">
-            {isAdhesionActive ? "Active" : gratuit ? "Gratuite" : "En attente"}
-          </Badge>
+        <div className="border-t border-outline-variant pt-3">
+          <div className="flex items-center justify-between gap-2">
+            <p className="flex items-center gap-2 text-title-sm text-on-surface">
+              <CreditCard className="size-4 text-on-surface-muted" aria-hidden="true" />
+              Adhésion
+            </p>
+            <Badge variant={adhesionOk ? "success" : "warning"}>
+              {adhesionOk ? "À jour" : "À régulariser"}
+            </Badge>
+          </div>
+          <p className="mt-1 text-body-sm text-on-surface-variant">{detailAdhesion}</p>
+          {(!adhesionOk || isAdhesionActive) && (
+            <Button href="/membres/cotisation" variant={adhesionOk ? "text" : "secondary"} size="sm" className="mt-2 min-h-11">
+              {isAdhesionActive ? "Gérer ma cotisation" : "Régler ma cotisation"}
+              <ArrowRight className="size-3.5" aria-hidden="true" />
+            </Button>
+          )}
         </div>
-        <p className="mb-3 flex items-center justify-between gap-2 text-body-sm">
-          <span>
-            {isAdhesionActive
-              ? `${joursRestants} jours restants`
-              : gratuit
-                ? categorieSansCotisation(categorie) ? "Gratuite, sans limite de durée" : `Gratuite jusqu'au ${DATE_FIN_GRATUITE_LISIBLE}`
-                : "Cotisation annuelle requise"}
+
+        <Link
+          href="/membres/profil/confidentialite"
+          className="ag-state flex min-h-12 items-center justify-between gap-3 rounded-control border-t border-outline-variant pt-3"
+        >
+          <span className="flex items-center gap-2 text-body-md text-on-surface">
+            <Eye className="size-4 text-on-surface-muted" aria-hidden="true" />
+            {visible ? "Visible dans l'annuaire" : "Masqué dans l'annuaire"}
           </span>
-          <span className="shrink-0 font-semibold">{adhesionOk ? "À jour" : "À régulariser"}</span>
-        </p>
-        <Button href="/membres/cotisation" variant={adhesionOk ? "outline" : "secondary"} size="sm" fullWidth className={adhesionOk ? "bg-surface-container-lowest" : undefined}>
-          {isAdhesionActive ? "Gérer ma cotisation" : gratuit ? "Voir mon adhésion" : "Régler ma cotisation"}
-          <ArrowRight className="size-3.5" aria-hidden="true" />
-        </Button>
+          <span className="flex items-center gap-0.5 text-label-md text-primary">
+            Gérer
+            <ChevronRight className="size-4" aria-hidden="true" />
+          </span>
+        </Link>
+
+        {complet ? (
+          <Button href="/membres/profil" variant="text" size="sm" className="min-h-11 self-start">
+            Modifier mon profil
+          </Button>
+        ) : (
+          <Button href="/membres/profil" variant={boutonPrincipal ? "primary" : "tonal"} size="sm" fullWidth className="min-h-11">
+            Compléter mon profil
+            <ArrowRight className="size-3.5" aria-hidden="true" />
+          </Button>
+        )}
       </div>
-
-      {/* Visibilité dans l'annuaire */}
-      <div className="mb-3.5 flex items-center justify-between rounded-card bg-surface-container p-3 text-body-sm">
-        <span className="flex items-center gap-2 font-semibold text-on-surface">
-          <span aria-hidden="true" className={cn("size-2 rounded-full", annuaireVisible === false ? "bg-outline" : "bg-accent-leaf")} />
-          Annuaire des pairs
-        </span>
-        <Badge variant={annuaireVisible === false ? "neutral" : "success"}>{annuaireVisible === false ? "Masqué" : "Visible"}</Badge>
-      </div>
-
-      <Button href="/membres/profil/confidentialite" variant="text" size="sm" fullWidth className="mb-1">
-        Gérer ma visibilité
-      </Button>
-
-      <Button href="/membres/profil" variant="tonal" size="sm" fullWidth>
-        Modifier mon profil
-        <ArrowRight className="size-3.5" aria-hidden="true" />
-      </Button>
     </Widget>
   )
 }

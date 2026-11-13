@@ -1,7 +1,7 @@
-import { Compass, GraduationCap, LayoutDashboard, Mail, Users, type LucideIcon } from "lucide-react"
+import { Compass, GraduationCap, LayoutDashboard, Mail, Rocket, Users, type LucideIcon } from "lucide-react"
 
 /**
- * Navigation de l'espace membre : cinq rubriques, nommées d'après les verbes de la navigation publique
+ * Navigation de l'espace membre : six rubriques, nommées d'après les verbes de la navigation publique
  * (nav.ts : Réseauter / Se former / Entreprendre). Une rubrique regroupe plusieurs pages, présentées
  * en onglets par le layout de son groupe de routes — les URL, elles, ne changent pas.
  */
@@ -13,7 +13,7 @@ export interface MembresOnglet {
 }
 
 export interface MembresRubrique {
-  key: "accueil" | "former" | "reseauter" | "opportunites" | "messages"
+  key: "accueil" | "former" | "reseauter" | "opportunites" | "entreprendre" | "messages"
   label: string
   /** Destination du lien de la barre latérale (premier onglet). */
   href: string
@@ -69,11 +69,17 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
     label: "Opportunités",
     href: "/membres/opportunites",
     icon: Compass,
+    // Les offres seulement : « Entreprendre » a sa propre rubrique (son préfixe, plus long, l'emporte).
     prefixes: ["/membres/opportunites"],
-    onglets: [
-      { label: "Offres", href: "/membres/opportunites" },
-      { label: "Entreprendre", href: "/membres/opportunites/entreprendre" },
-    ],
+    onglets: [],
+  },
+  {
+    key: "entreprendre",
+    label: "Entreprendre",
+    href: "/membres/opportunites/entreprendre",
+    icon: Rocket,
+    prefixes: ["/membres/opportunites/entreprendre"],
+    onglets: [],
   },
   {
     key: "messages",
@@ -92,11 +98,21 @@ export function rubriqueParCle(key: MembresRubrique["key"]): MembresRubrique {
   return r
 }
 
-/** Une URL appartient à une rubrique si elle égale un de ses préfixes ou s'y trouve en dessous. */
+/**
+ * Une URL appartient à une rubrique si elle égale un de ses préfixes ou s'y trouve en dessous.
+ * Si plusieurs rubriques correspondent (Entreprendre vit sous /membres/opportunites), le préfixe le plus long l'emporte.
+ */
 export function rubriqueActive(pathname: string | null | undefined): MembresRubrique["key"] | null {
   if (!pathname) return null
-  const trouvee = MEMBRES_RUBRIQUES.find((r) => r.prefixes.some((p) => pathname === p || pathname.startsWith(`${p}/`)))
-  return trouvee?.key ?? null
+  let meilleure: { key: MembresRubrique["key"]; longueur: number } | null = null
+  for (const r of MEMBRES_RUBRIQUES) {
+    for (const p of r.prefixes) {
+      if ((pathname === p || pathname.startsWith(`${p}/`)) && (!meilleure || p.length > meilleure.longueur)) {
+        meilleure = { key: r.key, longueur: p.length }
+      }
+    }
+  }
+  return meilleure?.key ?? null
 }
 
 export const labelInvitations = (n: number) => `${n} ${n > 1 ? "demandes en attente" : "demande en attente"}`

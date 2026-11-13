@@ -20,10 +20,12 @@ interface MembresUserMenuProps {
   } | null
   /** Version compacte (avatar seul) pour l'en-tête mobile. */
   compact?: boolean
+  /** `marque` : déclencheur translucide à poser sur le bandeau vert du tableau de bord. */
+  tone?: "defaut" | "marque"
 }
 
 /** Menu du compte membre : toujours visible, avec la déconnexion. */
-export function MembresUserMenu({ profile, compact = false }: MembresUserMenuProps) {
+export function MembresUserMenu({ profile, compact = false, tone = "defaut" }: MembresUserMenuProps) {
   const { signOut } = useClerk()
   const [signingOut, setSigningOut] = React.useState(false)
 
@@ -39,13 +41,17 @@ export function MembresUserMenu({ profile, compact = false }: MembresUserMenuPro
     <DropdownMenu>
       <DropdownMenuTrigger
         aria-label="Menu du compte"
-        className="ag-state group flex min-h-11 items-center gap-2.5 rounded-control border border-outline-variant bg-surface-container-lowest px-2 py-1.5"
+        className={
+          tone === "marque"
+            ? "ag-state group flex min-h-11 items-center gap-2.5 rounded-control border border-on-surface-brand/30 bg-on-surface-brand/10 px-2 py-1.5 text-on-surface-brand"
+            : "ag-state group flex min-h-11 items-center gap-2.5 rounded-control border border-outline-variant bg-surface-container-lowest px-2 py-1.5"
+        }
       >
         <Avatar src={photo} name={fullName === "Mon compte" ? undefined : fullName} size="sm" className="rounded-control" />
         {!compact && (
           <>
-            <span className="hidden max-w-40 truncate text-label-lg text-on-surface xl:block">{fullName}</span>
-            <ChevronDown className="size-4 text-on-surface-muted transition-transform group-data-[state=open]:rotate-180" aria-hidden="true" />
+            <span className={tone === "marque" ? "hidden max-w-40 truncate text-label-lg xl:block" : "hidden max-w-40 truncate text-label-lg text-on-surface xl:block"}>{fullName}</span>
+            <ChevronDown className={tone === "marque" ? "size-4 transition-transform group-data-[state=open]:rotate-180" : "size-4 text-on-surface-muted transition-transform group-data-[state=open]:rotate-180"} aria-hidden="true" />
           </>
         )}
       </DropdownMenuTrigger>

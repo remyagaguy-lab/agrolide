@@ -4,6 +4,7 @@ import { Briefcase, Rocket } from "lucide-react"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
+import { PageEntete } from "@/components/layout/PageEntete"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs"
 import DemandeServiceForm from "@/components/modules/agrobusiness/DemandeServiceForm"
 import IncubationForm from "@/components/modules/agrobusiness/IncubationForm"
@@ -28,12 +29,10 @@ export default async function EntreprendreMembrePage() {
 
   return (
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
-      <header>
-        <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading">Entreprendre</h1>
-        <p className="mt-1 text-xs text-on-surface-muted">
-          Transformez votre idée agricole en projet viable : candidatez à l'incubation ou demandez un accompagnement sur mesure.
-        </p>
-      </header>
+      <PageEntete
+        titre="Entreprendre"
+        description="Transformez votre idée agricole en projet viable : candidatez à l'incubation ou demandez un accompagnement sur mesure."
+      />
 
       <Tabs defaultValue="incubation">
         <TabsList aria-label="Type d'accompagnement">
