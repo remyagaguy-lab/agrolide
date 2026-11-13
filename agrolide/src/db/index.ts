@@ -123,7 +123,9 @@ export const db = drizzle(async (sql, params, method) => {
   }
 
   if (method === 'get') {
-    return { rows: rows[0] || [] };
+    // Aucune ligne : `undefined` (et non `[]`, qui est « vrai » : drizzle en faisait un objet aux champs vides,
+    // si bien que findFirst() sans résultat était traité comme « trouvé » — ex. inscription inexistante = inscrit).
+    return { rows: rows[0] as any };
   }
 
   return { rows };
