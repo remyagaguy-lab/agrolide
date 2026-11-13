@@ -21,24 +21,25 @@ export default async function CotisationPage() {
   const { userId } = await auth()
   if (!userId) redirect("/login")
 
-  const userRows = await db.select({
-    id: users.id,
-    statut_adhesion: users.statut_adhesion,
-    categorie: users.categorie
-  })
-  .from(users)
-  .where(eq(users.id, userId))
-  .limit(1)
+  // Le profil et les cotisations sont indépendants : ils partent ensemble (un aller-retour D1 au lieu de deux).
+  const [userRows, cotisations] = await Promise.all([
+    db.select({
+      id: users.id,
+      statut_adhesion: users.statut_adhesion,
+      categorie: users.categorie
+    })
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1),
+    db.query.cotisations.findMany({
+      where: eq(cotisationsTable.membre_id, userId),
+      orderBy: [desc(cotisationsTable.created_at)]
+    }),
+  ])
 
   const profile = userRows[0] || null
 
   if (!profile) redirect("/login")
-
-  // Fetch cotisations
-  const cotisations = await db.query.cotisations.findMany({
-    where: eq(cotisationsTable.membre_id, userId),
-    orderBy: [desc(cotisationsTable.created_at)]
-  })
 
   const cotisationActive = cotisations?.find(c => c.statut === 'valide')
   

@@ -1,6 +1,4 @@
-import { db } from "@/db";
-import { formations, progression_lecons } from "@/db/schema";
-import { eq } from "drizzle-orm";
+import { structureFormation, leconsTerminees } from "@/lib/formations/suivre.server";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2, ListOrdered, Lock } from "lucide-react";
@@ -24,27 +22,10 @@ export default async function SuivreLayout({
     redirect(`/login?next=${encodeURIComponent(`/membres/formations/${formationId}/suivre`)}`);
   }
 
+  // Mêmes lectures que la page de la leçon : partagées (une seule fois par affichage).
   const [formation, userProgress] = await Promise.all([
-    db.query.formations.findFirst({
-      where: eq(formations.id, formationId),
-      columns: { id: true, titre: true },
-      with: {
-        modules: {
-          columns: { id: true, titre: true, ordre: true },
-          orderBy: (modules, { asc }) => [asc(modules.ordre)],
-          with: {
-            lecons: {
-              columns: { id: true, titre: true, ordre: true },
-              orderBy: (lecons, { asc }) => [asc(lecons.ordre)],
-            },
-          },
-        },
-      },
-    }),
-    db.query.progression_lecons.findMany({
-      columns: { lecon_id: true },
-      where: eq(progression_lecons.membre_id, userId),
-    }),
+    structureFormation(formationId),
+    leconsTerminees(userId),
   ]);
 
   if (!formation) {

@@ -17,7 +17,33 @@ export default async function ProfilModifierPage() {
   const { userId } = await auth()
   if (!userId) redirect("/login?next=/membres/profil/modifier")
 
-  const [row] = await db
+  // Demande de catégorie en cours et cotisation payée : la table peut manquer avant la migration, on affiche alors la page sans demande.
+  const lireDemandeOuverte = async (): Promise<DemandeOuverte | null> => {
+    try {
+      const [d] = await db
+        .select({ categorie: demandes_categorie.categorie_demandee, statut: demandes_categorie.statut, effetLe: demandes_categorie.effet_le })
+        .from(demandes_categorie)
+        .where(and(eq(demandes_categorie.user_id, userId), inArray(demandes_categorie.statut, ["en_attente", "programmee"])))
+        .orderBy(desc(demandes_categorie.created_at))
+        .limit(1)
+      return d ? { categorie: d.categorie, statut: d.statut as DemandeOuverte["statut"], effetLe: d.effetLe } : null
+    } catch (e) {
+      console.error("[profil/modifier] demandes de catégorie indisponibles :", e)
+      return null
+    }
+  }
+  const lireFinCotisation = async (): Promise<string | null> => {
+    try {
+      return await finCotisationPayee(userId)
+    } catch (e) {
+      console.error("[profil/modifier] cotisation illisible :", e)
+      return null
+    }
+  }
+
+  // Les trois lectures sont indépendantes : elles partent ensemble (un aller-retour D1 au lieu de trois).
+  const [[row], demandeOuverte, finCotisation] = await Promise.all([
+    db
     .select({
       prenom: users.prenom,
       nom: users.nom,
@@ -37,28 +63,11 @@ export default async function ProfilModifierPage() {
     })
     .from(users)
     .where(eq(users.id, userId))
-    .limit(1)
+    .limit(1),
+    lireDemandeOuverte(),
+    lireFinCotisation(),
+  ])
   if (!row) redirect("/login")
-
-  // Demande de catégorie en cours et cotisation payée : la table peut manquer avant la migration, on affiche alors la page sans demande.
-  let demandeOuverte: DemandeOuverte | null = null
-  let finCotisation: string | null = null
-  try {
-    const [d] = await db
-      .select({ categorie: demandes_categorie.categorie_demandee, statut: demandes_categorie.statut, effetLe: demandes_categorie.effet_le })
-      .from(demandes_categorie)
-      .where(and(eq(demandes_categorie.user_id, userId), inArray(demandes_categorie.statut, ["en_attente", "programmee"])))
-      .orderBy(desc(demandes_categorie.created_at))
-      .limit(1)
-    if (d) demandeOuverte = { categorie: d.categorie, statut: d.statut as DemandeOuverte["statut"], effetLe: d.effetLe }
-  } catch (e) {
-    console.error("[profil/modifier] demandes de catégorie indisponibles :", e)
-  }
-  try {
-    finCotisation = await finCotisationPayee(userId)
-  } catch (e) {
-    console.error("[profil/modifier] cotisation illisible :", e)
-  }
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">

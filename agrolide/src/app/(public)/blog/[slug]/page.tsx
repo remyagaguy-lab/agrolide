@@ -1,3 +1,4 @@
+import { cache } from "react"
 import { Metadata, ResolvingMetadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -17,17 +18,22 @@ import ImageExtension from '@tiptap/extension-image'
 
 export const revalidate = 3600
 
+// Le titre de la page (métadonnées) et la page lisent le même article : une seule lecture par affichage.
+const lireArticle = cache((slug: string) =>
+  db.query.articles.findFirst({
+    where: eq(articles.slug, slug),
+    with: { auteur: true }
+  })
+)
+
 // Dynamic metadata
 export async function generateMetadata(
   { params }: { params: Promise<{ slug: string }> },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const { slug } = await params;
-  
-  const article = await db.query.articles.findFirst({
-    where: eq(articles.slug, slug),
-    with: { auteur: true }
-  })
+
+  const article = await lireArticle(slug)
 
   if (!article) {
     return {
@@ -64,10 +70,7 @@ export default async function BlogPostPage({
   let article: any = null
   let error = false
   try {
-    article = await db.query.articles.findFirst({
-      where: eq(articles.slug, slug),
-      with: { auteur: true }
-    })
+    article = await lireArticle(slug)
   } catch (e) {
     error = true
   }

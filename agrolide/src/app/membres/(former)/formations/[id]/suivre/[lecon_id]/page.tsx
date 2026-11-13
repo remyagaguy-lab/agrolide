@@ -1,6 +1,7 @@
 import { auth } from "@/lib/auth/server";
-import { formation_lecons, formation_modules, formations, progression_lecons } from "@/db/schema";
-import { eq, and } from "drizzle-orm";
+import { formation_lecons } from "@/db/schema";
+import { eq } from "drizzle-orm";
+import { structureFormation, leconsTerminees } from "@/lib/formations/suivre.server";
 import { notFound, redirect } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -22,23 +23,16 @@ export default async function LeconPage({
   }
   const userId = session.user.id;
 
-  // Fetch the formation structure to determine previous/next
-  const formation = await db.query.formations.findFirst({
-    where: eq(formations.id, formationId),
-    columns: { id: true },
-    with: {
-      modules: {
-        columns: { id: true, titre: true, ordre: true },
-        orderBy: (modules, { asc }) => [asc(modules.ordre)],
-        with: {
-          lecons: {
-            columns: { id: true, titre: true, ordre: true, module_id: true },
-            orderBy: (lecons, { asc }) => [asc(lecons.ordre)],
-          },
-        },
-      },
-    },
-  });
+  // Les trois lectures sont indépendantes : elles partent ensemble (un seul aller-retour D1 au lieu de trois).
+  // Le sommaire et la progression sont partagés avec le layout (une seule lecture par affichage).
+  // Contenu complet de la leçon lu à part (limites de taille JSON de D1).
+  const [formation, userProgress, currentLeconFull] = await Promise.all([
+    structureFormation(formationId),
+    leconsTerminees(userId),
+    db.query.formation_lecons.findFirst({
+      where: eq(formation_lecons.id, leconId),
+    }),
+  ]);
 
   if (!formation) {
     notFound();
@@ -56,9 +50,6 @@ export default async function LeconPage({
   const nextLecon = currentIndex < allLecons.length - 1 ? allLecons[currentIndex + 1] : null;
 
   // Check progression
-  const userProgress = await db.query.progression_lecons.findMany({
-    where: eq(progression_lecons.membre_id, userId),
-  });
   const completedLeconIds = new Set(userProgress.map(p => p.lecon_id));
   
   // Verify if this lesson is unlocked
@@ -75,11 +66,6 @@ export default async function LeconPage({
   }
 
   const isCompleted = completedLeconIds.has(leconId);
-
-  // Fetch the full lesson content individually to avoid D1 JSON payload limits
-  const currentLeconFull = await db.query.formation_lecons.findFirst({
-    where: eq(formation_lecons.id, leconId)
-  });
 
   if (!currentLeconFull) {
     notFound();
