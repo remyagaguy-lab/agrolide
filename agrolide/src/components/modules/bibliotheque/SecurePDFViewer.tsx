@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils/formatters'
 import { EncartInscription } from './EncartInscription'
 import { useAuth } from '@/lib/auth/client'
+import { obtenirPdf } from './pdf-precharge'
 
 import { AlertTriangle, ChevronLeft, ChevronRight, FileStack, FileText, Info, Loader2, Maximize, X, ZoomIn, ZoomOut } from '@/components/ui/icons'
 
@@ -162,7 +163,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     const fetchSecureUrl = async () => {
       try {
         // Le serveur décide (quota de lectures gratuites, cookie signé) : le navigateur ne fait que l'afficher.
-        const res = await fetch(`/api/bibliotheque/download/${documentId}`, { credentials: 'same-origin' })
+        const res = await obtenirPdf(documentId)
         if (res.status === 402) {
           setQuotaReached(true)
           return

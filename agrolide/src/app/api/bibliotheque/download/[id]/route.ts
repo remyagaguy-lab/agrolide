@@ -24,6 +24,10 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     }
     const { document } = access
     const isDownload = request.nextUrl.searchParams.get('download') === 'true'
+    // Les documents se lisent dans la liseuse, ils ne se téléchargent pas.
+    if (isDownload) {
+      return NextResponse.json({ error: 'download_disabled' }, { status: 403 })
+    }
 
     // Visiteur non connecté : téléchargement réservé aux membres, lecture limitée à FREE_READS documents
     const { userId } = await auth()
