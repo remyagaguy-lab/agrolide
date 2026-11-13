@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { AuthProvider } from "@/lib/auth/client";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { ToastProvider } from "@/components/ui/Toast";
 import { themeInitScript } from "@/lib/theme";
@@ -75,6 +76,8 @@ export default function RootLayout({
             {children}
           </ToastProvider>
           <CookieBanner />
+          {/* Vitesse réelle des visiteurs (Core Web Vitals), sans cookie ni donnée personnelle. Résultats : Vercel > Speed Insights. */}
+          <SpeedInsights />
         </body>
       </html>
     </AuthProvider>
