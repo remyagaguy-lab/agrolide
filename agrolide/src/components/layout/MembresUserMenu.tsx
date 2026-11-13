@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Bell, ChevronDown, CreditCard, ExternalLink, LogOut, Route, ShieldCheck, User } from "lucide-react"
 import { useClerk } from "@/lib/auth/client"
 import { Avatar } from "@/components/ui/Avatar"
 import { ThemeMenuItems } from "@/components/ui/ThemeToggle"
@@ -10,6 +9,7 @@ import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu"
 
+import { Bell, ChevronDown, CreditCard, ExternalLink, LogOut, Route, ShieldCheck, UserRound } from "@/components/ui/icons"
 interface MembresUserMenuProps {
   profile: {
     prenom?: string | null
@@ -63,7 +63,7 @@ export function MembresUserMenu({ profile, compact = false, tone = "defaut" }: M
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <Link href="/membres/profil"><User className="size-4 text-on-surface-muted" aria-hidden="true" /> Mon profil</Link>
+          <Link href="/membres/profil"><UserRound className="size-4 text-on-surface-muted" aria-hidden="true" /> Mon profil</Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href="/membres/profil/confidentialite"><ShieldCheck className="size-4 text-on-surface-muted" aria-hidden="true" /> Confidentialité</Link>

@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react'
-import { X, Briefcase, MapPin, Calendar, DollarSign, Link as LinkIcon } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
+import { X, Briefcase, MapPin, CalendarDays, Coins, Link as LinkIcon } from "@/components/ui/icons"
 interface OpportunityAdmin {
   id: string
   titre: string
@@ -36,11 +36,11 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
       <div className="bg-surface-container-lowest rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
         <div className="flex justify-between items-center p-6 border-b border-outline-variant">
           <h2 className="text-xl font-bold flex items-center gap-2">
-            <Briefcase className="w-5 h-5 text-on-surface-muted" />
+            <Briefcase className="size-5 text-on-surface-muted" />
             Détails de l'opportunité
           </h2>
           <button onClick={onClose} className="p-2 text-on-surface-muted hover:text-on-surface rounded-full hover:bg-surface-container">
-            <X className="w-5 h-5" />
+            <X className="size-5" />
           </button>
         </div>
         
@@ -61,7 +61,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
             <div className="grid grid-cols-2 gap-4 bg-surface-container-low p-4 rounded-xl">
               {opportunity.lieu && (
                 <div className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-on-surface-muted mt-0.5" />
+                  <MapPin className="size-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Lieu</div>
                     <div className="text-sm font-medium text-on-surface">{opportunity.lieu}</div>
@@ -70,7 +70,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
               )}
               {opportunity.date_limite && (
                 <div className="flex items-start gap-2">
-                  <Calendar className="w-4 h-4 text-on-surface-muted mt-0.5" />
+                  <CalendarDays className="size-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Date Limite</div>
                     <div className="text-sm font-medium text-on-surface">
@@ -81,7 +81,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
               )}
               {opportunity.montant && (
                 <div className="flex items-start gap-2">
-                  <DollarSign className="w-4 h-4 text-on-surface-muted mt-0.5" />
+                  <Coins className="size-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Montant / Budget</div>
                     <div className="text-sm font-medium text-on-surface">{opportunity.montant}</div>
@@ -90,7 +90,7 @@ export function OpportunityDetailsModal({ isOpen, onClose, opportunity, onValida
               )}
               {opportunity.lien_externe && (
                 <div className="flex items-start gap-2">
-                  <LinkIcon className="w-4 h-4 text-on-surface-muted mt-0.5" />
+                  <LinkIcon className="size-4 text-on-surface-muted mt-0.5" />
                   <div>
                     <div className="text-xs font-medium text-on-surface-muted uppercase">Lien Externe</div>
                     <a href={opportunity.lien_externe} target="_blank" rel="noreferrer" className="text-sm font-medium text-info hover:underline line-clamp-1">

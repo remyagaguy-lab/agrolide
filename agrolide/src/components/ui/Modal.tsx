@@ -2,9 +2,9 @@
 
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { X } from 'lucide-react'
 import { cn } from '@/lib/utils/formatters'
 
+import { X } from "@/components/ui/icons"
 /**
  * Boîte de dialogue (Radix) : focus piégé, Échap pour fermer, retour du focus au déclencheur.
  * Sur mobile elle se présente comme une feuille ancrée en bas ; à partir de 640 px, centrée.

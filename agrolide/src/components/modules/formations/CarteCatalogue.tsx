@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { BookOpen, ChevronRight, ExternalLink, GraduationCap } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 
+import { NotebookPen, ChevronRight, ExternalLink } from "@/components/ui/icons"
 export interface FormationCatalogue {
   id: string
   titre: string
@@ -35,7 +35,7 @@ export function CarteCatalogue({ formation, href }: { formation: FormationCatalo
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-success-container text-on-success-container">
-            <BookOpen size={48} className="opacity-20" />
+            <NotebookPen size={24} className="opacity-20" />
           </div>
         )}
         <div className="absolute inset-x-3 top-3 flex items-start justify-between gap-2">
@@ -46,7 +46,7 @@ export function CarteCatalogue({ formation, href }: { formation: FormationCatalo
           ) : <span />}
           {isExternal && (
             <span className="shrink-0 rounded-full bg-surface-container-lowest/90 p-1.5 text-on-surface-variant backdrop-blur-sm" title="Formation d'un partenaire">
-              <ExternalLink size={14} aria-hidden />
+              <ExternalLink size={16} aria-hidden />
               <span className="sr-only">Formation d&apos;un partenaire</span>
             </span>
           )}
@@ -57,7 +57,7 @@ export function CarteCatalogue({ formation, href }: { formation: FormationCatalo
         <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5">
           {formation.niveau ? (
             <span className="inline-flex items-center gap-1.5 text-label-md font-bold text-primary">
-              <GraduationCap size={16} aria-hidden />
+              <NotebookPen size={16} aria-hidden />
               {formation.niveau}
             </span>
           ) : null}

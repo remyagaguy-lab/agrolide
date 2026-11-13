@@ -1,10 +1,10 @@
 'use client'
 
 import { useState, useTransition } from 'react'
-import { Heart } from 'lucide-react'
 import { basculerFavori } from '@/app/actions/bibliotheque'
 import { cn } from '@/lib/utils/formatters'
 
+import { Heart } from "@/components/ui/icons"
 /** Cœur « J'aime » d'un document : alimente la section Favoris de « Mon parcours ». */
 export function FavoriButton({ documentId, initial, className }: { documentId: string; initial: boolean; className?: string }) {
   const [favori, setFavori] = useState(initial)

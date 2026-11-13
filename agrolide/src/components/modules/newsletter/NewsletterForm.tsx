@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from "react"
 import { subscribeToNewsletter } from "@/app/actions/newsletter"
-import { X } from "lucide-react"
 import { Motif } from "@/components/brand"
 
+import { X } from "@/components/ui/icons"
 export function NewsletterForm() {
   const [isOpen, setIsOpen] = useState(false)
   const [email, setEmail] = useState("")
@@ -69,7 +69,7 @@ export function NewsletterForm() {
         className="absolute top-4 right-4 p-1.5 text-on-surface-muted hover:text-on-surface-variant hover:bg-surface-container rounded-full transition-colors z-20"
         aria-label="Fermer"
       >
-        <X className="w-5 h-5" />
+        <X className="size-5" />
       </button>
 
       {/* Motif Background (subtle) */}
@@ -80,7 +80,7 @@ export function NewsletterForm() {
         
         {status === "success" ? (
           <div className="bg-primary-container border border-outline-variant rounded-xl p-4 mt-4">
-            <h4 className="text-lg font-bold text-primary mb-1">🎉 Bienvenue !</h4>
+            <h4 className="text-lg font-bold text-primary mb-1">Bienvenue !</h4>
             <p className="text-on-surface-variant text-sm">{message}</p>
           </div>
         ) : (

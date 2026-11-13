@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { ArrowDown, ArrowUp, ChevronsUpDown } from 'lucide-react'
 import { cn } from '@/lib/utils/formatters'
 
+import { ArrowDown, ArrowUp, ChevronsUpDown } from "@/components/ui/icons"
 /**
  * Tableau de données. Toujours fournir un <TableCaption> (visible ou `sr-only`) : c'est le nom accessible du tableau.
  * Le conteneur défile horizontalement sur mobile au lieu de casser la mise en page.

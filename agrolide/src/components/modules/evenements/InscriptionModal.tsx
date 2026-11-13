@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
-import { X, CheckCircle, Loader2 } from 'lucide-react'
 import { useUser } from '@/lib/auth/client'
 
+import { X, CheckCircle2, Loader2 } from "@/components/ui/icons"
 interface InscriptionModalProps {
   isOpen: boolean
   onClose: () => void
@@ -76,17 +76,17 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
         <Dialog.Content className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-surface-container-lowest p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-2xl">
           
           <Dialog.Close aria-label="Fermer" className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-outline focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-surface-container data-[state=open]:text-on-surface-muted">
-            <X className="h-4 w-4" />
+            <X className="size-4" />
             <span className="sr-only">Fermer</span>
           </Dialog.Close>
           {!isLoaded ? (
             <div className="py-12 flex justify-center">
-              <Loader2 className="w-8 h-8 animate-spin text-primary" />
+              <Loader2 className="size-6 animate-spin text-primary" />
             </div>
           ) : success ? (
             <div className="py-8 text-center">
               <div className="mx-auto w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mb-4">
-                <CheckCircle className="w-8 h-8" />
+                <CheckCircle2 className="size-6" />
               </div>
               <Dialog.Title className="text-xl font-bold text-on-surface mb-2">
                 Inscription confirmée !
@@ -139,7 +139,7 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                       disabled={submitting}
                       className="px-6 py-2 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-lg transition-colors flex items-center gap-2"
                     >
-                      {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                      {submitting && <Loader2 className="size-4 animate-spin" />}
                       Confirmer l'inscription
                     </button>
                   </div>
@@ -197,7 +197,7 @@ export default function InscriptionModal({ isOpen, onClose, event }: Inscription
                       disabled={submitting}
                       className="px-6 py-2 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-lg transition-colors flex items-center gap-2"
                     >
-                      {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
+                      {submitting && <Loader2 className="size-4 animate-spin" />}
                       S'inscrire
                     </button>
                   </div>

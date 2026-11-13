@@ -1,7 +1,6 @@
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import React from 'react'
 import Link from 'next/link'
-import { Briefcase, ExternalLink, FileText, Globe, Heart, Languages, MapPin, Pencil, Sprout, Tag, Users } from 'lucide-react'
 import { Sillons } from '@/components/brand'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge, type BadgeVariant } from '@/components/ui/Badge'
@@ -12,6 +11,7 @@ import { ConnectionActions } from './ConnectionActions'
 import { MembreActionsMenu } from './MembreActionsMenu'
 import { MemberCard } from './MemberCard'
 
+import { Briefcase, ExternalLink, FileText, Globe, Heart, Languages, MapPin, Pencil, Sprout, Tag, Users } from "@/components/ui/icons"
 const categoryVariant = (c: string | null): BadgeVariant => {
   switch ((c ?? '').toLowerCase()) {
     case 'junior': return 'junior'

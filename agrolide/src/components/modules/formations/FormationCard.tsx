@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import { Calendar, Clock, MapPin, Users, ChevronRight } from 'lucide-react'
-
+import { CalendarDays, Clock, MapPin, Users, ChevronRight } from "@/components/ui/icons"
 export type SessionType = {
   id: string
   date_debut: string
@@ -70,7 +69,7 @@ export function FormationCard({ formation }: FormationCardProps) {
         
         <div className="space-y-2 mt-auto pt-3 border-t border-outline-variant">
           <div className="flex items-center text-label-sm text-on-surface-muted font-medium">
-            <Calendar className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
+            <CalendarDays className="size-4 mr-1.5 text-on-surface-muted shrink-0" />
             <span className="truncate">
               {nextSession 
                 ? `Prochaine : ${new Date(nextSession.date_debut).toLocaleDateString('fr-FR')}` 
@@ -80,11 +79,11 @@ export function FormationCard({ formation }: FormationCardProps) {
           {nextSession && (
             <div className="flex justify-between items-center text-label-sm text-on-surface-muted font-medium">
               <div className="flex items-center">
-                <MapPin className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
+                <MapPin className="size-4 mr-1.5 text-on-surface-muted shrink-0" />
                 <span className="truncate max-w-[100px]">{nextSession.lieu}</span>
               </div>
               <div className="flex items-center">
-                <Users className="w-3.5 h-3.5 mr-1.5 text-on-surface-muted shrink-0" />
+                <Users className="size-4 mr-1.5 text-on-surface-muted shrink-0" />
                 <span className={nextSession.places_restantes <= 0 ? "text-error" : ""}>
                   {nextSession.places_restantes} place{nextSession.places_restantes > 1 ? 's' : ''}
                 </span>
@@ -100,7 +99,7 @@ export function FormationCard({ formation }: FormationCardProps) {
           className="flex items-center justify-center w-full gap-1.5 text-label-sm font-bold text-primary uppercase tracking-wider hover:text-primary transition-colors"
         >
           En savoir plus
-          <ChevronRight className="w-3.5 h-3.5" />
+          <ChevronRight className="size-4" />
         </Link>
       </div>
     </div>

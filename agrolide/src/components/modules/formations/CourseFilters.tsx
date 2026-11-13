@@ -2,11 +2,10 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useState, useTransition } from 'react';
-import { SlidersHorizontal, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { FormField } from '@/components/ui/FormField';
 import { NativeSelect } from '@/components/ui/Select';
-
+import { SlidersHorizontal, X } from "@/components/ui/icons"
 const THEMATIQUES = ['Agrobusiness', 'Production Animale', 'Production Végétale', 'Financement', 'Agroécologie', 'Gestion des Sols'];
 const SOURCES = [
   { value: 'Agrolide', label: 'Agrolide' },

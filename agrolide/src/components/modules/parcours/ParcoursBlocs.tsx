@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { BookOpen, CheckCircle2, Clock, ExternalLink, FileText, PlayCircle } from 'lucide-react'
 import { cn } from '@/lib/utils/formatters'
 import { buttonVariants } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -8,6 +7,7 @@ import { labelDomaine, labelType } from '@/lib/bibliotheque/taxonomie'
 import type { SuiviFormation } from '@/lib/formations/suivi.server'
 import type { DocumentParcours } from '@/lib/bibliotheque/parcours.server'
 
+import { NotebookPen, CheckCircle2, Clock, ExternalLink, FileText, PlayCircle } from "@/components/ui/icons"
 /** Une rubrique de « Mon parcours » : titre, nombre, lien « tout voir » et contenu (ou état vide). */
 export function RubriqueParcours({
   id,
@@ -44,7 +44,7 @@ export function VideParcours({ titre, description, href, libelle }: { titre: str
   return (
     <EmptyState
       className="py-8"
-      icon={<BookOpen />}
+      icon={<NotebookPen />}
       title={titre}
       description={description}
       action={
@@ -69,7 +69,7 @@ export function FormationEnCours({ s }: { s: SuiviFormation }) {
       <div className="min-w-0 space-y-2">
         <p className="text-label-md font-bold uppercase tracking-wider text-on-surface-variant">
           {externe ? s.sourceExterne || 'Partenaire' : s.thematique || s.modalite}
-          {enAttente ? <span className="ml-2 inline-flex items-center gap-1 text-on-warning-container"><Clock className="size-3" aria-hidden />En attente</span> : null}
+          {enAttente ? <span className="ml-2 inline-flex items-center gap-1 text-on-warning-container"><Clock className="size-4" aria-hidden />En attente</span> : null}
         </p>
         <h3 className="text-title-md font-bold leading-snug text-on-surface">
           <Link href={`/membres/formations/${s.formationId}`} className="hover:text-primary">

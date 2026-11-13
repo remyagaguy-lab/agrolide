@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Lock } from 'lucide-react'
 import { Alert } from '@/components/ui/Alert'
 import { Button } from '@/components/ui/Button'
 import { ChoiceChip } from '@/components/ui/ChoiceChip'
@@ -9,6 +8,7 @@ import { FormField } from '@/components/ui/FormField'
 import { Input } from '@/components/ui/Input'
 import { Turnstile, turnstileEnabled } from '@/components/ui/Turnstile'
 
+import { Lock } from "@/components/ui/icons"
 const MONTANTS = [5000, 15000, 50000] as const
 const MONTANT_MIN = 1000
 const fcfa = (n: number) => n.toLocaleString('fr-FR')

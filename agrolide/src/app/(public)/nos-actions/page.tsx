@@ -1,13 +1,12 @@
 import Link from "next/link"
 import { Metadata } from "next"
-import type { LucideIcon } from "lucide-react"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { PageHero } from "@/components/ui/PageHero"
 import { buttonVariants, type ButtonVariant } from "@/components/ui/Button"
-import { Users, BookOpen, TrendingUp, Calendar, BookMarked, Briefcase, ArrowRight } from "lucide-react"
 import { ArchPhoto, Motif, Puce } from "@/components/brand"
 
+import { type LucideIcon, Users, NotebookPen, TrendingUp, CalendarDays, Library, Lightbulb, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Nos actions",
   description: "Découvrez les 3 piliers d'action du réseau Agrolide : Mobilisation, Formation et Agrobusiness.",
@@ -38,7 +37,7 @@ const piliers: Pilier[] = [
     points: ["Fédérer les agronomes, chercheurs et investisseurs", "Faciliter les synergies et le partage d'opportunités"],
     cartes: [
       { icon: Users, titre: "Annuaire", texte: "Cartographie des acteurs par pays et spécialité pour faciliter la mise en relation." },
-      { icon: Calendar, titre: "Événements", texte: "Meetups, webinaires et opportunités pour animer notre communauté dynamique." },
+      { icon: CalendarDays, titre: "Événements", texte: "Meetups, webinaires et opportunités pour animer notre communauté dynamique." },
     ],
     actions: [{ href: "/annuaire", texte: "Découvrir l'Annuaire", variant: "secondary" }],
     photo: { src: "/plateforme-annuaire.webp", alt: "Une agricultrice consulte sur sa tablette la carte du réseau, au milieu de ses cultures" },
@@ -46,14 +45,14 @@ const piliers: Pilier[] = [
   {
     id: "se-former",
     tone: "low",
-    icon: BookOpen,
+    icon: NotebookPen,
     label: "Formation et insertion professionnelle",
     titre: "2. Se former",
     intro: "Pour faire face au manque de documentation adaptée et aux défis de l'insertion, nous avons mis en place :",
     points: ["Une centralisation de la connaissance agronomique africaine", "Des parcours de montée en compétences et de certification"],
     cartes: [
-      { icon: BookMarked, titre: "Bibliothèque", texte: "Le répertoire de thèses, mémoires et fiches techniques adaptées à l'Afrique." },
-      { icon: BookOpen, titre: "Formations", texte: "Catalogue de montées en compétences techniques et webinaires exclusifs." },
+      { icon: Library, titre: "Bibliothèque", texte: "Le répertoire de thèses, mémoires et fiches techniques adaptées à l'Afrique." },
+      { icon: NotebookPen, titre: "Formations", texte: "Catalogue de montées en compétences techniques et webinaires exclusifs." },
     ],
     actions: [
       { href: "/bibliotheque", texte: "Bibliothèque", variant: "secondary" },
@@ -70,7 +69,7 @@ const piliers: Pilier[] = [
     intro: "Grâce à une expertise sectorielle pointue, nous soutenons le développement de projets pérennes :",
     points: ["Transformation des idées novatrices en entreprises viables", "Accompagnement opérationnel pour la croissance des structures existantes"],
     cartes: [
-      { icon: Briefcase, titre: "Consulting", texte: "Études de faisabilité, business plans et accompagnement technique sur mesure." },
+      { icon: Lightbulb, titre: "Consulting", texte: "Études de faisabilité, business plans et accompagnement technique sur mesure." },
       { icon: TrendingUp, titre: "Incubation", texte: "Un programme complet pour propulser les agripreneurs vers le succès commercial." },
     ],
     actions: [{ href: "/agrobusiness", texte: "Découvrir nos services", variant: "primary" }],
@@ -111,7 +110,7 @@ export default function NosActionsPage() {
               <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
                 <div className={photoFirst ? "md:order-2" : ""}>
                   <span aria-hidden="true" className="mb-6 flex size-16 items-center justify-center rounded-card bg-primary-container text-on-primary-container">
-                    <Icon className="size-8" strokeWidth={1.5} />
+                    <Icon className="size-6" />
                   </span>
                   <SectionLabel>{p.label}</SectionLabel>
                   <h2 id={`${p.id}-titre`} className="mb-4 text-headline-md text-on-surface">{p.titre}</h2>

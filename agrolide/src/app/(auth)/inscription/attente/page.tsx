@@ -1,12 +1,12 @@
 "use client"
 
 import { useSearchParams } from "next/navigation"
-import { Mail } from "lucide-react"
 import { Suspense } from "react"
 import { AuthCard } from "@/components/auth/AuthCard"
 import { Button } from "@/components/ui/Button"
 import { Spinner } from "@/components/ui/Spinner"
 
+import { Mail } from "@/components/ui/icons"
 function AttenteContent() {
   const searchParams = useSearchParams()
   const email = searchParams?.get('email')
@@ -15,7 +15,7 @@ function AttenteContent() {
     <AuthCard title="Vérifiez votre boîte mail" subtitle="Nous venons d’envoyer un lien de confirmation à :">
       <div className="text-center">
         <span aria-hidden="true" className="mx-auto mb-5 inline-flex size-16 items-center justify-center rounded-full bg-primary-container text-on-primary-container">
-          <Mail className="size-8" />
+          <Mail className="size-6" />
         </span>
         <p className="text-title-md text-on-surface">{email || "votre adresse e-mail"}</p>
         <div className="mt-6 rounded-card bg-surface-container p-4 text-left text-body-md text-on-surface-variant">

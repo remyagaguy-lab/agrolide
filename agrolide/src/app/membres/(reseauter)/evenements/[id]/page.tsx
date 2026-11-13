@@ -1,6 +1,5 @@
 import { notFound, redirect } from 'next/navigation'
 import Image from 'next/image'
-import { Calendar, Clock, Download, FileText, Globe, MapPin, CheckCircle } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { marked } from 'marked'
@@ -14,6 +13,7 @@ import { Card } from '@/components/ui/Card'
 import { buttonVariants } from '@/components/ui/Button'
 import { InscriptionEvenementBouton } from '@/components/modules/evenements/InscriptionEvenementBouton'
 
+import { CalendarDays, Clock, Download, FileText, Globe, MapPin, CheckCircle2 } from "@/components/ui/icons"
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
   const event = await db.query.evenements.findFirst({ columns: { titre: true }, where: eq(evenements.id, id) })
@@ -68,7 +68,7 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
 
       <Card variant="filled" className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="flex items-start gap-3">
-          <Calendar className="mt-0.5 size-5 text-primary" aria-hidden="true" />
+          <CalendarDays className="mt-0.5 size-5 text-primary" aria-hidden="true" />
           <div>
             <p className="text-body-sm text-on-surface-variant">Date</p>
             <p className="text-title-md capitalize text-on-surface">{format(dateDebut, 'EEEE d MMMM yyyy', { locale: fr })}</p>
@@ -123,7 +123,7 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
           </div>
         ) : inscrit ? (
           <p role="status" className="flex items-center gap-2 text-label-lg text-success">
-            <CheckCircle className="size-5" aria-hidden="true" /> Vous êtes inscrit(e) à cet événement
+            <CheckCircle2 className="size-5" aria-hidden="true" /> Vous êtes inscrit(e) à cet événement
           </p>
         ) : event.lien_inscription ? (
           <a href={event.lien_inscription} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'primary' })}>

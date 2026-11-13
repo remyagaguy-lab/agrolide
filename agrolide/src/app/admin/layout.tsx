@@ -6,13 +6,9 @@ import { auth, currentUser, isBootstrapAdminEmail } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
 import { eq } from "drizzle-orm"
-import { 
-  LayoutDashboard, Users, FileText, FolderOpen, BookOpen, Calendar, 
-  CreditCard, ExternalLink, Globe, Star, Handshake, Sprout, MessageSquare,
-  ChevronDown, ShieldAlert
-} from "lucide-react"
 import { ClearCacheButton } from "./ClearCacheButton"
 
+import { LayoutDashboard, Users, FileText, FolderOpen, NotebookPen, CalendarDays, CreditCard, ExternalLink, Globe, Star, Handshake, Sprout, MessageCircle, ChevronDown, ShieldAlert } from "@/components/ui/icons"
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const { userId } = await auth()
   const user = await currentUser()
@@ -57,7 +53,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           : "text-outline hover:bg-inverse-surface hover:text-inverse-on-surface"
       }`}
     >
-      <Icon size={18} />
+      <Icon size={20} />
       {label}
     </Link>
   )
@@ -86,10 +82,10 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           </div>
           {navLink("/admin/contenus/articles", "Articles (Blog)", FileText)}
           {navLink("/admin/contenus/documents", "Documents", FolderOpen)}
-          {navLink("/admin/contenus/formations", "Formations", BookOpen)}
-          {navLink("/admin/contenus/evenements", "Événements", Calendar)}
-          {navLink("/admin/contenus/opportunites", "Opportunités", MessageSquare)}
-          {navLink("/admin/forum", "Forum", MessageSquare)}
+          {navLink("/admin/contenus/formations", "Formations", NotebookPen)}
+          {navLink("/admin/contenus/evenements", "Événements", CalendarDays)}
+          {navLink("/admin/contenus/opportunites", "Opportunités", MessageCircle)}
+          {navLink("/admin/forum", "Forum", MessageCircle)}
           
           <div className="pt-4 pb-1 px-3">
             <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Vitrine</p>

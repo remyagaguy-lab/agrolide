@@ -1,11 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { Check, Monitor, Moon, Sun } from "lucide-react"
 import { applyThemePreference, DARK_MODE_ENABLED, readThemePreference, type ThemePreference } from "@/lib/theme"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./DropdownMenu"
 import { cn } from "@/lib/utils/formatters"
 
+import { Check, Monitor, Moon, Sun } from "@/components/ui/icons"
 const OPTIONS: { value: ThemePreference; label: string; Icon: typeof Sun }[] = [
   { value: "light", label: "Clair", Icon: Sun },
   { value: "dark", label: "Sombre", Icon: Moon },

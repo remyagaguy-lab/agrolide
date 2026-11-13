@@ -1,7 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Suspense } from "react"
-import { BookOpen, Building2, EyeOff, Mail, Server, ShieldCheck, Sprout } from "lucide-react"
 import MerciBanner from "@/components/modules/fonds/MerciBanner"
 import DonationForm from "@/components/modules/fonds/DonationForm"
 import { getCampagneData } from "@/lib/cache/public-queries"
@@ -11,6 +10,7 @@ import { FeatureCard } from "@/components/ui/FeatureCard"
 import { PageHero } from "@/components/ui/PageHero"
 import { Section } from "@/components/ui/Section"
 
+import { Library, Building2, EyeOff, Mail, Server, ShieldCheck, Sprout } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Nous soutenir - Faire un don",
   description: "Soutenez le développement de notre réseau agricole et investissez dans la souveraineté alimentaire africaine. Découvrez comment contribuer à nos actions sur le terrain.",
@@ -113,7 +113,7 @@ export default async function NousSoutenirPage() {
               <h2 className="text-headline-md text-on-surface">Ce que finance votre contribution</h2>
               <p className="mt-3 max-w-xl text-body-lg text-on-surface-variant">Votre don soutient trois axes du réseau.</p>
               <div className="mt-8 grid gap-4">
-                <FeatureCard icon={<BookOpen />} title="Vulgariser la science">
+                <FeatureCard icon={<Library />} title="Vulgariser la science">
                   Traduction et adaptation de recherches agronomiques en fiches techniques utilisables sur le terrain.
                 </FeatureCard>
                 <FeatureCard icon={<Sprout />} title="Accompagner les porteurs de projets">

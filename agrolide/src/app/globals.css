@@ -19,6 +19,11 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Icônes (src/components/ui/icons.ts) : un seul trait pour tout le site */
+  svg.lucide {
+    stroke-width: 1.75;
+  }
+
   ::selection {
     background-color: var(--ag-sys-color-primary);
     color: var(--ag-sys-color-on-primary);

@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import type { Metadata } from 'next'
-import { Search, Send, Sparkles, UserPlus, UsersRound } from 'lucide-react'
 import { auth } from '@/lib/auth/server'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -17,6 +16,7 @@ import { fetchInvitations, fetchRelations, type TriRelations } from '@/lib/resea
 import { profilSuffisant } from '@/lib/reseau/suggestions'
 import type { ProfilPourScore } from '@/lib/reseau/suggestions'
 
+import { Search, Send, UserPlus, Users } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: 'Mon réseau',
   robots: { index: false, follow: false },
@@ -96,7 +96,7 @@ async function Suggestions({ viewerId }: { viewerId: string }) {
   if (!moi || !profilSuffisant(moi)) {
     return (
       <EmptyState arche
-        icon={<Sparkles />}
+        icon={<UserPlus />}
         title="Complétez votre profil pour recevoir des suggestions"
         description="Sans métier, spécialités, langues ou pays, rien ne permet de vous comparer aux autres membres."
         action={<Button variant="secondary" href="/membres/profil/modifier">Compléter mon profil</Button>}
@@ -108,7 +108,7 @@ async function Suggestions({ viewerId }: { viewerId: string }) {
   if (suggeres.length === 0) {
     return (
       <EmptyState arche
-        icon={<Sparkles />}
+        icon={<UserPlus />}
         title="Aucune suggestion pour le moment"
         description="Les membres déjà en relation avec vous ou invités ne sont pas proposés ici. Parcourez l’annuaire pour en trouver d’autres."
         action={DECOUVRIR}
@@ -131,7 +131,7 @@ function Invitations({ recues, envoyees }: { recues: Awaited<ReturnType<typeof f
       <div role="region" aria-labelledby="titre-recues" className="space-y-4">
         <h2 id="titre-recues" className="text-title-lg text-on-surface">Reçues</h2>
         {recues.length === 0 ? (
-          <EmptyState arche icon={<UsersRound />} title="Aucune invitation en attente." description="Quand un membre vous invitera, vous pourrez l’accepter ou l’ignorer ici." />
+          <EmptyState arche icon={<Users />} title="Aucune invitation en attente." description="Quand un membre vous invitera, vous pourrez l’accepter ou l’ignorer ici." />
         ) : (
           <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {recues.map((m) => (
@@ -165,7 +165,7 @@ async function Relations({ viewerId, q, tri }: { viewerId: string; q: string; tr
   const { relations, total } = await fetchRelations(viewerId, q, tri)
 
   if (total === 0) {
-    return <EmptyState arche icon={<UsersRound />} title="Vous n’avez pas encore de relations." description="Invitez des membres : une fois l’invitation acceptée, ils apparaissent ici." action={DECOUVRIR} />
+    return <EmptyState arche icon={<Users />} title="Vous n’avez pas encore de relations." description="Invitez des membres : une fois l’invitation acceptée, ils apparaissent ici." action={DECOUVRIR} />
   }
 
   return (

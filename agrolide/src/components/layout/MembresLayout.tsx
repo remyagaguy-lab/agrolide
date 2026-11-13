@@ -10,10 +10,10 @@ import { LienEnCours } from "./LienEnCours"
 import { MEMBRES_RUBRIQUES, afficherNombre, labelInvitations, labelMessages, rubriqueActive, type MembresRubrique } from "./membres-nav"
 import { Logo } from "@/components/ui/Logo"
 import { cn } from "@/lib/utils/formatters"
-import { LogOut, Mail } from "lucide-react"
 import { Avatar } from "@/components/ui/Avatar"
 import NotificationBell from "@/components/shared/NotificationBell"
 
+import { LogOut, Mail } from "@/components/ui/icons"
 interface MembresLayoutProps {
   children: React.ReactNode
   profile: any
@@ -105,7 +105,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
             onClick={handleLogout}
             className="ag-state flex min-h-12 w-full items-center gap-3 rounded-control px-3 text-label-lg font-medium text-on-surface-variant hover:text-error"
           >
-            <LogOut className="size-[18px]" aria-hidden />
+            <LogOut className="size-5" aria-hidden />
             <span>Déconnexion</span>
           </button>
         </div>

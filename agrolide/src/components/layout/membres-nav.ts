@@ -1,5 +1,4 @@
-import { Compass, GraduationCap, LayoutDashboard, Mail, Rocket, Users, type LucideIcon } from "lucide-react"
-
+import { Telescope, NotebookPen, LayoutDashboard, MessageCircle, TrendingUp, Users, type LucideIcon } from "@/components/ui/icons"
 /**
  * Navigation de l'espace membre : six rubriques, nommées d'après les verbes de la navigation publique
  * (nav.ts : Réseauter / Se former / Entreprendre). Une rubrique regroupe plusieurs pages, présentées
@@ -40,7 +39,7 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
     key: "former",
     label: "Se former",
     href: "/membres/formations",
-    icon: GraduationCap,
+    icon: NotebookPen,
     prefixes: ["/membres/formations", "/membres/bibliotheque", "/membres/webinaires"],
     onglets: [
       // « Mon parcours » réunit formations suivies, lectures, favoris et certificats.
@@ -68,7 +67,7 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
     key: "opportunites",
     label: "Opportunités",
     href: "/membres/opportunites",
-    icon: Compass,
+    icon: Telescope,
     // Les offres seulement : « Entreprendre » a sa propre rubrique (son préfixe, plus long, l'emporte).
     prefixes: ["/membres/opportunites"],
     onglets: [],
@@ -77,7 +76,7 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
     key: "entreprendre",
     label: "Entreprendre",
     href: "/membres/opportunites/entreprendre",
-    icon: Rocket,
+    icon: TrendingUp,
     prefixes: ["/membres/opportunites/entreprendre"],
     onglets: [],
   },
@@ -85,7 +84,7 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
     key: "messages",
     label: "Messages",
     href: "/membres/messages",
-    icon: Mail,
+    icon: MessageCircle,
     prefixes: ["/membres/messages"],
     badge: "messages",
     onglets: [],

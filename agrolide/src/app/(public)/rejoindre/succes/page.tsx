@@ -1,8 +1,7 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/Button"
-import { PartyPopper } from "lucide-react"
-
+import { CheckCircle2 } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Bienvenue",
   description: "Votre inscription est validée. Bienvenue dans le réseau agrolide.",
@@ -14,7 +13,7 @@ export default function SuccesInscriptionPage() {
     <div className="flex flex-col min-h-screen bg-surface-container-low items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 bg-surface-container-lowest p-10 rounded-2xl shadow-sm border border-outline-variant text-center">
         <div className="mx-auto w-24 h-24 bg-success-container rounded-full flex items-center justify-center text-primary mb-6 shadow-sm">
-          <PartyPopper size={48} />
+          <CheckCircle2 size={24} />
         </div>
         
         <h2 className="text-3xl font-heading font-extrabold text-on-surface">

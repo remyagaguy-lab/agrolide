@@ -3,8 +3,6 @@ import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/Button'
 import { DocumentCard, DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
-import { ArrowRight, BookOpen } from 'lucide-react'
-
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -21,6 +19,7 @@ import { eq, desc, count } from 'drizzle-orm'
 import { Motif } from "@/components/brand"
 import { colonnesCarteDocument } from '@/lib/bibliotheque/filtres'
 
+import { ArrowRight, Library } from "@/components/ui/icons"
 async function getBibliothequeData() {
   try {
     // Compter le nombre de documents
@@ -76,7 +75,7 @@ export default async function BibliothequePublicPage() {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-accent-sun text-on-accent font-heading font-bold text-sm hover:bg-tertiary-hover transition-colors"
           >
             Devenir membre
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="size-4" />
           </Link>
         </div>
       </section>
@@ -115,7 +114,7 @@ export default async function BibliothequePublicPage() {
             Rejoignez Agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
           </p>
           <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>
-            Voir les offres d&apos;adhésion <ArrowRight className="w-4 h-4 ml-2" />
+            Voir les offres d&apos;adhésion <ArrowRight className="size-4 ml-2" />
           </Link>
         </div>
       </section>

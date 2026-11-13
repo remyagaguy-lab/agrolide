@@ -2,12 +2,12 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Save, CheckCircle, ArrowLeft } from "lucide-react"
 import dynamic from "next/dynamic"
 import Link from "next/link"
 import { revalidateEverything } from "@/app/actions/revalidate"
 import { useAuth } from "@/lib/auth/client"
 
+import { Save, CheckCircle2, ArrowLeft } from "@/components/ui/icons"
 const ArticleEditorForm = dynamic(
   () => import("@/app/admin/contenus/articles/[id]/ArticleEditorForm").then(m => m.ArticleEditorForm),
   { ssr: false, loading: () => <div className="h-64 bg-surface-container-low rounded-xl animate-pulse" /> }
@@ -62,7 +62,7 @@ export function PageEditor({ slug, titre, contenuJson }: Props) {
           {error && <p className="text-sm text-error">{error}</p>}
           {saved && (
             <span className="flex items-center gap-1.5 text-sm text-success font-medium">
-              <CheckCircle size={16} /> Sauvegardé !
+              <CheckCircle2 size={16} /> Sauvegardé !
             </span>
           )}
           <button

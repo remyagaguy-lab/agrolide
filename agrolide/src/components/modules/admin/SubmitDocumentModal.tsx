@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import * as Dialog from '@radix-ui/react-dialog'
-import { X, CheckCircle, Loader2, Upload } from 'lucide-react'
 import { DOMAINES, TYPES_DOCUMENT } from '@/lib/bibliotheque/taxonomie'
 
+import { X, CheckCircle2, Loader2, Upload } from "@/components/ui/icons"
 interface SubmitDocumentModalProps {
   isOpen: boolean
   onClose: () => void
@@ -116,13 +116,13 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
         <Dialog.Content className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-xl translate-x-[-50%] translate-y-[-50%] gap-4 border bg-surface-container-lowest p-6 shadow-lg duration-200 sm:rounded-2xl max-h-[90vh] overflow-y-auto">
           
           <Dialog.Close aria-label="Fermer" className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100">
-            <X className="h-4 w-4" />
+            <X className="size-4" />
           </Dialog.Close>
 
           {success ? (
             <div className="py-12 text-center">
               <div className="mx-auto w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mb-4">
-                <CheckCircle className="w-8 h-8" />
+                <CheckCircle2 className="size-6" />
               </div>
               <Dialog.Title className="text-xl font-bold text-on-surface mb-2">
                 Document publié !
@@ -187,7 +187,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                   <label className="text-sm font-medium text-on-surface-variant">Fichier PDF *</label>
                   <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-outline border-dashed rounded-xl cursor-pointer bg-surface-container-low hover:bg-surface-container transition-colors">
                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                      <Upload className="w-8 h-8 text-on-surface-muted mb-2" />
+                      <Upload className="size-6 text-on-surface-muted mb-2" />
                       <p className="text-sm text-on-surface-muted font-medium">
                         {file ? file.name : "Cliquez pour sélectionner un PDF"}
                       </p>
@@ -202,7 +202,7 @@ export default function SubmitDocumentModal({ isOpen, onClose, onSuccess }: Subm
                   disabled={loading}
                   className="w-full bg-primary hover:bg-primary/90 text-on-primary font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-6"
                 >
-                  {loading ? <Loader2 className="w-5 h-5 animate-spin" /> : "Publier le document"}
+                  {loading ? <Loader2 className="size-5 animate-spin" /> : "Publier le document"}
                 </button>
               </form>
             </>

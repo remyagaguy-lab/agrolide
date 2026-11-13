@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { ShieldAlert } from 'lucide-react'
 import { Badge } from '@/components/ui/Badge'
 import { Alert } from '@/components/ui/Alert'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -9,6 +8,7 @@ import { STATUTS_SIGNALEMENT, compterSignalements, estStatutSignalement, fetchSi
 import { motifLabel } from '@/lib/reseau/blocage'
 import { SignalementActions } from './SignalementActions'
 
+import { ShieldAlert } from "@/components/ui/icons"
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Signalements de membres', robots: { index: false, follow: false } }
 

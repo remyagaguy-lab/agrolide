@@ -2,7 +2,6 @@ import React, { Suspense } from 'react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { Metadata } from 'next'
-import { ChevronLeft, ChevronRight, Search, UserRound, X } from 'lucide-react'
 import { auth } from '@/lib/auth/server'
 import { buttonVariants, Button } from '@/components/ui/Button'
 import { Alert } from '@/components/ui/Alert'
@@ -17,6 +16,7 @@ import { profilSuffisant } from '@/lib/reseau/suggestions'
 import { categorieLabel } from '@/lib/reseau/profil'
 import type { ProfilPourScore } from '@/lib/reseau/suggestions'
 
+import { ChevronLeft, ChevronRight, Search, UserRound, X } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: 'Annuaire des membres',
   description: 'Retrouvez les membres du réseau agrolide et connectez-vous à eux.',

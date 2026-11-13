@@ -1,9 +1,9 @@
 import { structureFormation, leconsTerminees } from "@/lib/formations/suivre.server";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, ListOrdered, Lock } from "lucide-react";
-import { auth } from "@/lib/auth/server";
 
+import { auth } from "@/lib/auth/server";
+import { ArrowLeft, CheckCircle2, ListOrdered, Lock } from "@/components/ui/icons"
 /**
  * Lecteur de cours dans l'espace membre : le sommaire reste à côté de la leçon,
  * et le lien de retour ramène à la fiche de la formation, dans /membres.
@@ -74,7 +74,7 @@ export default async function SuivreLayout({
                   ) : (
                     <div className="flex min-h-11 cursor-not-allowed items-start gap-3 rounded-control px-3 py-2 text-sm text-on-surface-variant opacity-50" aria-disabled="true">
                       <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full border border-outline-variant bg-surface-container text-on-surface-muted">
-                        <Lock className="size-3" aria-label="Leçon verrouillée" />
+                        <Lock className="size-4" aria-label="Leçon verrouillée" />
                       </span>
                       <span className="mt-0.5 line-clamp-2">{lecon.titre}</span>
                     </div>

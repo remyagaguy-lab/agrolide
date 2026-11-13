@@ -5,8 +5,7 @@ import { users, cotisations, demandes_categorie } from "@/db/schema"
 import { eq, desc, inArray, like, or, and, count } from "drizzle-orm"
 import { MembresTable } from "./MembresTable"
 import Link from "next/link"
-import { Users, UserCog } from "lucide-react"
-
+import { Users, UserCog } from "@/components/ui/icons"
 export const metadata = { title: "Gestion des membres" }
 export const dynamic = 'force-dynamic'
 

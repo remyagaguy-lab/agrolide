@@ -3,11 +3,11 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, MapPin, Globe, Users, Clock, FileText, Download, CheckCircle } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { ArcheBadge } from '@/components/brand'
 
+import { CalendarDays, MapPin, Globe, Users, Clock, FileText, Download, CheckCircle2, Video, Wrench, Mic } from "@/components/ui/icons"
 type Evenement = {
   id: string
   titre: string
@@ -33,6 +33,14 @@ interface EventCardProps {
   inscrit?: boolean
 }
 
+const ICONES_TYPE_EVENEMENT = { webinaire: Video, atelier: Wrench, conference: Mic, rencontre_locale: MapPin } as const
+
+/** Pictogramme du type d'événement (une icône par type, CalendarDays par défaut). */
+function IconeType({ type }: { type: string }) {
+  const Icone = ICONES_TYPE_EVENEMENT[type as keyof typeof ICONES_TYPE_EVENEMENT] ?? CalendarDays
+  return <Icone className="inline size-4 align-text-bottom" aria-hidden />
+}
+
 export default function EventCard({ event, onInscrireClick, onDetailsClick, mode = 'public', inscrit = false }: EventCardProps) {
   const lienFiche = `${mode === 'membre' ? '/membres' : ''}/evenements/${event.id}`
   
@@ -40,15 +48,6 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
   const dateDebut = new Date(event.date_debut)
   const isPast = dateDebut < new Date()
   
-  const getEventIcon = (type: string) => {
-    switch (type) {
-      case 'webinaire': return '💻'
-      case 'atelier': return '🛠️'
-      case 'conference': return '🎤'
-      case 'rencontre_locale': return '🤝'
-      default: return '📅'
-    }
-  }
 
   const formatType = (type: string) => {
     return type.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
@@ -93,11 +92,11 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
           </div>
           <div className="flex min-w-0 flex-1 flex-wrap items-start justify-between gap-2">
           <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-container text-primary">
-            {getEventIcon(event.type_evt)} {formatType(event.type_evt)}
+            <IconeType type={event.type_evt} /> {formatType(event.type_evt)}
           </span>
           {event.en_ligne && (
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-info-container text-info border border-info/30">
-              <Globe className="w-3 h-3" /> En ligne
+              <Globe className="size-4" /> En ligne
             </span>
           )}
           </div>
@@ -111,25 +110,25 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
         
         <div className="space-y-2 mt-4 text-sm text-on-surface-variant">
           <div className="flex items-center gap-2">
-            <Calendar className="w-4 h-4 text-primary shrink-0" />
+            <CalendarDays className="size-4 text-primary shrink-0" />
             <span>{format(dateDebut, "EEEE d MMMM yyyy", { locale: fr })}</span>
           </div>
           
           <div className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-primary shrink-0" />
+            <Clock className="size-4 text-primary shrink-0" />
             <span>{format(dateDebut, "HH:mm")} {event.date_fin && `- ${format(new Date(event.date_fin), "HH:mm")}`}</span>
           </div>
           
           {!event.en_ligne && event.lieu && (
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-primary shrink-0" />
+              <MapPin className="size-4 text-primary shrink-0" />
               <span className="line-clamp-1">{event.lieu}</span>
             </div>
           )}
           
           {event.places_max && (
             <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-primary shrink-0" />
+              <Users className="size-4 text-primary shrink-0" />
               <span>Places limitées ({event.places_max})</span>
             </div>
           )}
@@ -143,12 +142,12 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
               <div className="flex flex-col gap-2">
                 {event.presentation_url && (
                   <a href={event.presentation_url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(event.presentation_url)}` : event.presentation_url} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-success-container hover:bg-success-container text-success border border-success/30 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
-                    <FileText className="w-4 h-4" /> Voir la présentation
+                    <FileText className="size-4" /> Voir la présentation
                   </a>
                 )}
                 {event.ressources_url && (
                   <a href={event.ressources_url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(event.ressources_url)}` : event.ressources_url} target="_blank" rel="noopener noreferrer" className="w-full py-2.5 bg-info-container hover:bg-info-container text-info border border-info/30 font-medium rounded-xl text-sm transition-colors flex items-center justify-center gap-2">
-                    <Download className="w-4 h-4" /> Accéder aux ressources
+                    <Download className="size-4" /> Accéder aux ressources
                   </a>
                 )}
               </div>
@@ -161,7 +160,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
         ) : (
           inscrit ? (
             <p className="w-full py-2.5 bg-success-container text-on-success-container border border-success/30 font-medium rounded-xl text-sm flex items-center justify-center gap-2">
-              <CheckCircle className="w-4 h-4" aria-hidden="true" /> Vous êtes inscrit(e)
+              <CheckCircle2 className="size-4" aria-hidden="true" /> Vous êtes inscrit(e)
             </p>
           ) : event.lien_inscription ? (
             <a 
@@ -170,7 +169,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
               rel="noopener noreferrer" 
               className="w-full py-2.5 bg-success-container hover:bg-success-container text-success border border-success/30 font-medium rounded-xl text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2"
             >
-              <Globe className="w-4 h-4" /> S'inscrire
+              <Globe className="size-4" /> S'inscrire
             </a>
           ) : (
             <button 

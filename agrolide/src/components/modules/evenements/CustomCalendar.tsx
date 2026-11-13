@@ -13,8 +13,7 @@ import {
   isToday 
 } from 'date-fns'
 import { fr } from 'date-fns/locale'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-
+import { ChevronLeft, ChevronRight } from "@/components/ui/icons"
 // Utilise le type du DDL
 type Evenement = {
   id: string
@@ -69,7 +68,7 @@ export default function CustomCalendar({
           onClick={prevMonth}
           className="p-2 hover:bg-surface-container-high rounded-full transition-colors"
         >
-          <ChevronLeft className="w-5 h-5 text-on-surface-variant" />
+          <ChevronLeft className="size-5 text-on-surface-variant" />
         </button>
         <h2 className="text-lg font-bold text-on-surface capitalize">
           {format(currentDate, dateFormat, { locale: fr })}
@@ -78,7 +77,7 @@ export default function CustomCalendar({
           onClick={nextMonth}
           className="p-2 hover:bg-surface-container-high rounded-full transition-colors"
         >
-          <ChevronRight className="w-5 h-5 text-on-surface-variant" />
+          <ChevronRight className="size-5 text-on-surface-variant" />
         </button>
       </div>
 

@@ -3,9 +3,9 @@ import { users, documents } from "@/db/schema"
 import { asc } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
-import { Users, BookOpen, Download, UserCheck } from "lucide-react"
 import { AdminLineChart } from "@/components/admin/ChartsWrapper"
 
+import { Lightbulb, Users, Library, Download, UserCheck } from "@/components/ui/icons"
 export const metadata = { title: "Analytiques" }
 export const dynamic = 'force-dynamic'
 
@@ -93,7 +93,7 @@ export default async function AdminAnalyticsPage() {
         <div className="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant shadow-sm flex flex-col gap-2">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-info-container text-info flex items-center justify-center">
-              <BookOpen size={20} />
+              <Library size={20} />
             </div>
             <p className="text-sm font-medium text-on-surface-muted">Ressources en ligne</p>
           </div>
@@ -107,7 +107,7 @@ export default async function AdminAnalyticsPage() {
       </div>
       
       <div className="bg-info-container border border-info/30 text-on-info-container p-6 rounded-2xl">
-        <h3 className="font-bold mb-2">💡 Suivi Analytique Avancé</h3>
+        <h3 className="font-bold mb-2"><Lightbulb className="mr-2 inline size-5 align-text-bottom" aria-hidden />Suivi Analytique Avancé</h3>
         <p className="text-sm">
           Les statistiques sont maintenant générées depuis Cloudflare D1. Pour suivre le trafic en temps réel (visiteurs uniques, pages les plus vues), intégrez Google Analytics ou Plausible.
         </p>

@@ -1,8 +1,8 @@
 import * as React from "react"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 import { cn } from "@/lib/utils/formatters"
 
+import { ArrowRight } from "@/components/ui/icons"
 /** Conteneur commun des widgets du tableau de bord : carte à bordure fine, en-tête et corps. */
 export function Widget({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
@@ -73,7 +73,7 @@ export function WidgetHeader({
           className="ag-state inline-flex min-h-11 shrink-0 items-center gap-1 rounded-control px-2 text-label-md text-primary"
         >
           {linkLabel}
-          <ArrowRight className="size-3.5" aria-hidden="true" />
+          <ArrowRight className="size-4" aria-hidden="true" />
         </Link>
       )}
     </div>

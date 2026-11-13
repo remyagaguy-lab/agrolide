@@ -3,12 +3,9 @@ import { redirect } from "next/navigation"
 import { db } from "@/db"
 import { users, articles, documents, cotisations, contributions, opportunites, evenements, inscriptions_formation, forum_messages } from "@/db/schema"
 import { eq, gte, lt, count, sum, desc } from "drizzle-orm"
-import { 
-  Users, UserPlus, TrendingUp, CreditCard, BookOpen, FileText, 
-  MessageCircle, Calendar, Eye, Download, Target, Activity, Coins
-} from "lucide-react"
 import { AdminRevenueChart, AdminDonutChart } from "@/components/admin/ChartsWrapper"
 
+import { ArrowRight, Users, UserPlus, TrendingUp, CreditCard, Library, FileText, MessageCircle, CalendarDays, Eye, Download, Target, Activity, Coins } from "@/components/ui/icons"
 export const metadata = { title: "Tableau de bord" }
 export const dynamic = 'force-dynamic'
 
@@ -36,7 +33,7 @@ function SectionHeader({ title, sub, icon: Icon }: { title: string; sub?: string
   return (
     <div className="mb-4">
       <h2 className="text-base font-semibold text-on-surface flex items-center gap-2">
-        {Icon && <Icon className="w-5 h-5 text-on-surface-muted" />}
+        {Icon && <Icon className="size-5 text-on-surface-muted" />}
         {title}
       </h2>
       {sub && <p className="text-xs text-on-surface-muted mt-1">{sub}</p>}
@@ -179,14 +176,14 @@ export default async function AdminDashboardPage() {
           <KpiCard label="Articles publiés" value={articlesPubliesRows.length} icon={FileText} color="bg-warning-container text-warning" />
           <KpiCard label="Documents bibliothèque" value={documentsApprouvesRows.length} icon={Eye} color="bg-info-container text-info" />
           <KpiCard label="Opportunités publiées" value={opportunitesPubRows.length} icon={Target} color="bg-success-container text-success" />
-          <KpiCard label="Événements à venir" value={evenementsAvenirRows.length} icon={Calendar} color="bg-error-container text-error" />
+          <KpiCard label="Événements à venir" value={evenementsAvenirRows.length} icon={CalendarDays} color="bg-error-container text-error" />
         </div>
       </section>
 
       <section>
         <div className="flex items-center justify-between mb-4">
           <SectionHeader title="Derniers membres inscrits" icon={UserPlus} />
-          <a href="/admin/membres" className="text-xs font-medium text-success hover:underline">Voir tous →</a>
+          <a href="/admin/membres" className="text-xs font-medium text-success hover:underline">Voir tous<ArrowRight className="ml-1 inline size-4" aria-hidden /></a>
         </div>
         <div className="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden">
           <div className="overflow-x-auto">

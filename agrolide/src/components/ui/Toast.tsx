@@ -2,9 +2,9 @@
 
 import * as React from 'react'
 import * as ToastPrimitive from '@radix-ui/react-toast'
-import { AlertCircle, AlertTriangle, CheckCircle2, Info, X } from 'lucide-react'
 import { cn } from '@/lib/utils/formatters'
 
+import { AlertTriangle, CheckCircle2, Info, X } from "@/components/ui/icons"
 export type ToastVariant = 'info' | 'success' | 'warning' | 'error'
 
 export interface ToastOptions {
@@ -28,7 +28,7 @@ export function useToast() {
   return ctx
 }
 
-const icons = { info: Info, success: CheckCircle2, warning: AlertTriangle, error: AlertCircle }
+const icons = { info: Info, success: CheckCircle2, warning: AlertTriangle, error: AlertTriangle }
 const iconTone: Record<ToastVariant, string> = {
   info: 'text-info',
   success: 'text-success',

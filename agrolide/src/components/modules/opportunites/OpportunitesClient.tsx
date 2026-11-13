@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react'
 import { useUser } from '@/lib/auth/client'
 import OpportunityCard from './OpportunityCard'
 import SubmitOpportunityModal from './SubmitOpportunityModal'
-import { Plus, Search, Filter } from 'lucide-react'
 import { SkeletonGrid } from "@/components/ui/Skeleton"
 
+import { Plus, Search, SlidersHorizontal } from "@/components/ui/icons"
 /** `initial` : opportunités publiées, lues côté serveur — la liste est déjà là au premier affichage. */
 export default function OpportunitesClient({ initial }: { initial?: any[] }) {
   const [opportunites, setOpportunites] = useState<any[]>(initial ?? [])
@@ -62,7 +62,7 @@ export default function OpportunitesClient({ initial }: { initial?: any[] }) {
           onClick={() => setIsModalOpen(true)}
           className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
         >
-          <Plus className="w-4 h-4" /> Proposer une opportunité
+          <Plus className="size-4" /> Proposer une opportunité
         </button>
       </div>
 
@@ -87,7 +87,7 @@ export default function OpportunitesClient({ initial }: { initial?: any[] }) {
       {/* Filters & Search */}
       <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-4 flex flex-col md:flex-row gap-4">
         <div className="flex-1 relative">
-          <Search className="w-4 h-4 text-on-surface-muted absolute left-3 top-1/2 -translate-y-1/2" />
+          <Search className="size-4 text-on-surface-muted absolute left-3 top-1/2 -translate-y-1/2" />
           <input 
             type="text" 
             placeholder="Rechercher par mot-clé..."
@@ -97,7 +97,7 @@ export default function OpportunitesClient({ initial }: { initial?: any[] }) {
           />
         </div>
         <div className="flex items-center gap-2 w-full md:w-auto">
-          <Filter className="w-4 h-4 text-on-surface-muted hidden md:block" />
+          <SlidersHorizontal className="size-4 text-on-surface-muted hidden md:block" />
           <select 
             value={filterType}
             onChange={e => setFilterType(e.target.value)}

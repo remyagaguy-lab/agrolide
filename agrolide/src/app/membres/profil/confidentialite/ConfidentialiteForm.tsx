@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { Eye, Save } from "lucide-react"
 import { Alert } from "@/components/ui/Alert"
 import { useToast } from "@/components/ui/Toast"
 import { Button } from "@/components/ui/Button"
@@ -12,6 +11,7 @@ import type { CartePublique } from "@/lib/reseau/carte-publique"
 import { updateConfidentialite } from "@/app/actions/profil"
 import type { MemberSummary } from "@/lib/reseau/profil"
 
+import { Eye, Save } from "@/components/ui/icons"
 interface Props {
   initial: { annuaireVisible: boolean; ouvertContact: boolean; profilPublic: boolean }
   apercu: MemberSummary

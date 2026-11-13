@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react'
 
 import Link from 'next/link'
-import { MessageSquare, Clock, Plus } from 'lucide-react'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import { formatDistanceToNow, format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
+import { MessageCircle, Clock, Plus } from "@/components/ui/icons"
 interface CategorieClientProps {
   categorieId: string
 }
@@ -65,7 +65,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
               href={`/membres/forum/nouveau?cat=${categorieId}`} 
               className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors shadow-sm"
             >
-              <Plus className="w-4 h-4" /> Nouveau sujet
+              <Plus className="size-4" /> Nouveau sujet
             </Link>
           </div>
 
@@ -104,7 +104,7 @@ export default function CategorieClient({ categorieId }: CategorieClientProps) {
                         </td>
                         <td className="px-4 py-3 text-label-sm text-on-surface-muted">
                           <div className="flex items-center gap-1.5">
-                            <Clock className="w-3.5 h-3.5 text-on-surface-muted" />
+                            <Clock className="size-4 text-on-surface-muted" />
                             {formatDistanceToNow(new Date(thread.last_activity_at), { addSuffix: true, locale: fr })}
                           </div>
                         </td>

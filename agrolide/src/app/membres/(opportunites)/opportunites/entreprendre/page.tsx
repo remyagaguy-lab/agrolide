@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation"
 import { eq } from "drizzle-orm"
-import { Briefcase, Rocket } from "lucide-react"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users } from "@/db/schema"
@@ -9,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs"
 import DemandeServiceForm from "@/components/modules/agrobusiness/DemandeServiceForm"
 import IncubationForm from "@/components/modules/agrobusiness/IncubationForm"
 
+import { Lightbulb, TrendingUp } from "@/components/ui/icons"
 export const metadata = { title: "Entreprendre" }
 
 export default async function EntreprendreMembrePage() {
@@ -36,8 +36,8 @@ export default async function EntreprendreMembrePage() {
 
       <Tabs defaultValue="incubation">
         <TabsList aria-label="Type d'accompagnement">
-          <TabsTrigger value="incubation"><Rocket className="mr-2 size-4" aria-hidden /> Lancer mon projet</TabsTrigger>
-          <TabsTrigger value="accompagnement"><Briefcase className="mr-2 size-4" aria-hidden /> Être accompagné</TabsTrigger>
+          <TabsTrigger value="incubation"><TrendingUp className="mr-2 size-4" aria-hidden /> Lancer mon projet</TabsTrigger>
+          <TabsTrigger value="accompagnement"><Lightbulb className="mr-2 size-4" aria-hidden /> Être accompagné</TabsTrigger>
         </TabsList>
 
         <TabsContent value="incubation" className="max-w-3xl">

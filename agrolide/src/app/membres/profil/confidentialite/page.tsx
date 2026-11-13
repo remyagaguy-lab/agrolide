@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { ChevronLeft } from "lucide-react"
 import { eq } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
@@ -12,6 +11,7 @@ import { MembresBloquesListe } from "@/components/modules/reseau/MembresBloquesL
 import { buttonVariants } from "@/components/ui/Button"
 import { ConfidentialiteForm } from "./ConfidentialiteForm"
 
+import { ChevronLeft } from "@/components/ui/icons"
 export const metadata = { title: "Confidentialité du profil", robots: { index: false, follow: false } }
 
 export default async function ConfidentialitePage() {

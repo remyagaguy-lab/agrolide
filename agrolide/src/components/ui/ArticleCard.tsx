@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils/formatters"
 import Link from "next/link"
 import Image from "next/image"
 import { Feuille } from "@/components/brand"
-
+import { ChevronRight } from "@/components/ui/icons"
 export interface ArticleCardProps {
   slug: string;
   title: string;
@@ -57,7 +57,7 @@ export function ArticleCard({
             <Feuille className="w-3 text-accent-leaf" />
             {category}
           </span>
-          <span className="text-outline">•</span>
+          <span className="text-outline">·</span>
           <span className="text-on-surface-muted text-xs font-medium">
             {new Date(date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}
           </span>
@@ -74,7 +74,7 @@ export function ArticleCard({
           </span>
           <div className="flex items-center text-sm font-bold text-primary group-hover:translate-x-1 transition-transform duration-300">
             Lire l'article 
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+            <ChevronRight className="ml-1 size-4" aria-hidden />
           </div>
         </div>
       </div>

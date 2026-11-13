@@ -1,12 +1,12 @@
 import React from "react"
 import Link from "next/link"
-import { ArrowRight, ChevronRight, CreditCard, Eye, UserRound } from "lucide-react"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Anneau } from "@/components/brand"
 import { Widget, WidgetHeader } from "./Widget"
 import { DATE_FIN_GRATUITE_LISIBLE, categorieSansCotisation, gratuiteEnCours } from "@/lib/adhesion"
 
+import { ArrowRight, ChevronRight, CreditCard, Eye, UserRound } from "@/components/ui/icons"
 interface ProfileSummaryWidgetProps {
   categorie?: string | null
   isAdhesionActive?: boolean
@@ -82,7 +82,7 @@ export function ProfileSummaryWidget({
           {(!adhesionOk || isAdhesionActive) && (
             <Button href="/membres/cotisation" variant={adhesionOk ? "text" : "secondary"} size="sm" className="mt-2 min-h-11">
               {isAdhesionActive ? "Gérer ma cotisation" : "Régler ma cotisation"}
-              <ArrowRight className="size-3.5" aria-hidden="true" />
+              <ArrowRight className="size-4" aria-hidden="true" />
             </Button>
           )}
         </div>
@@ -108,7 +108,7 @@ export function ProfileSummaryWidget({
         ) : (
           <Button href="/membres/profil" variant={boutonPrincipal ? "primary" : "tonal"} size="sm" fullWidth className="min-h-11">
             Compléter mon profil
-            <ArrowRight className="size-3.5" aria-hidden="true" />
+            <ArrowRight className="size-4" aria-hidden="true" />
           </Button>
         )}
       </div>

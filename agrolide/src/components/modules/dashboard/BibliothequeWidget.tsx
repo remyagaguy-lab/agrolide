@@ -1,10 +1,10 @@
 import React from "react"
 import Link from "next/link"
-import { ArrowRight, BookOpen, Search } from "lucide-react"
 import { DOMAINES_VISUELS, DOMAINE_PAR_DEFAUT } from "@/components/modules/bibliotheque/DocumentCard"
 import { cn } from "@/lib/utils/formatters"
 import { Widget } from "./Widget"
 
+import { ArrowRight, Library, Search } from "@/components/ui/icons"
 export interface DocumentRecent {
   id: string
   titre: string
@@ -28,7 +28,7 @@ export function BibliothequeWidget({ total, documents }: { total: number; docume
         <div className="mb-4 flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-3">
             <span aria-hidden="true" className="flex size-9 shrink-0 items-center justify-center rounded-control bg-accent-sun text-on-accent [&>svg]:size-[18px]">
-              <BookOpen />
+              <Library />
             </span>
             <div className="min-w-0">
               <h2 className="text-title-md">Explorer la bibliothèque</h2>
@@ -37,7 +37,7 @@ export function BibliothequeWidget({ total, documents }: { total: number; docume
           </div>
           <Link href="/membres/bibliotheque" className="ag-state inline-flex min-h-11 shrink-0 items-center gap-1 rounded-control px-2 text-label-md">
             Tout voir
-            <ArrowRight className="size-3.5" aria-hidden="true" />
+            <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
 

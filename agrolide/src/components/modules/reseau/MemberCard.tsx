@@ -1,6 +1,5 @@
 import * as React from 'react'
 import Link from 'next/link'
-import { Check, MapPin } from 'lucide-react'
 import { Sillons } from '@/components/brand'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge, type BadgeVariant } from '@/components/ui/Badge'
@@ -8,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { categorieLabel, displayName, type MemberSummary } from '@/lib/reseau/profil'
 import { ConnectionActions } from './ConnectionActions'
 
+import { Check, MapPin } from "@/components/ui/icons"
 const MAX_THEMES = 3
 
 const categoryVariant = (c: string | null): BadgeVariant => {

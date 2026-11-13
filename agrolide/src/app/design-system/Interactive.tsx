@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-import { Download, Inbox, Plus, Search, Trash2 } from 'lucide-react'
 import {
   Alert, Badge, Button, Card, CardDescription, CardTitle, EmptyState, FormField, IconButton, Input,
   Modal, ModalClose, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle, ModalTrigger,
@@ -9,6 +8,7 @@ import {
   TabsList, TabsTrigger, Textarea, useToast,
 } from '@/components/ui'
 
+import { Download, Inbox, Plus, Search, Trash2 } from "@/components/ui/icons"
 /** Zone interactive de la page /design-system : états, modale, onglets, toasts. */
 export function Interactive() {
   const { toast } = useToast()

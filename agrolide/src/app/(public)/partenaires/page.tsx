@@ -4,7 +4,6 @@ import Image from "next/image"
 import { db } from "@/db"
 import { partenaires as partenairesTable } from "@/db/schema"
 import { eq, asc } from "drizzle-orm"
-import { Briefcase, ExternalLink, Handshake, Megaphone, MessageSquarePlus, Sprout, Wallet, Wrench } from "lucide-react"
 import PartenariatForm from "@/components/modules/fonds/PartenariatForm"
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
@@ -13,6 +12,7 @@ import { PageHero } from "@/components/ui/PageHero"
 import { Section } from "@/components/ui/Section"
 import { StepList } from "@/components/ui/StepList"
 
+import { Users, ExternalLink, Handshake, Megaphone, MessageSquarePlus, Sprout, Coins, Wrench } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Devenir partenaire",
   description: "Associez votre organisation aux actions du réseau agrolide en faveur de l'agriculture africaine : sponsoring, partenariat technique, financement de l'incubation ou partenariat média.",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 export const revalidate = 3600 // ISR toutes les heures
 
 const FORMES = [
-  { icon: <Wallet />, title: "Sponsoring financier", text: "Soutenir financièrement les actions ou un événement du réseau." },
+  { icon: <Coins />, title: "Sponsoring financier", text: "Soutenir financièrement les actions ou un événement du réseau." },
   { icon: <Wrench />, title: "Partenariat technique", text: "Apporter une expertise, des outils ou un accompagnement technique." },
   { icon: <Sprout />, title: "Financement de l'incubation", text: "Contribuer au financement du programme d'incubation des agripreneurs." },
   { icon: <Megaphone />, title: "Partenariat média", text: "Relayer les actions du réseau ou produire des contenus ensemble." },
@@ -64,7 +64,7 @@ export default async function PartenairesPage() {
           <FeatureCard icon={<Megaphone />} title="Être visible auprès du réseau">
             Votre organisation est présentée aux membres et aux visiteurs du réseau, selon la forme de collaboration convenue.
           </FeatureCard>
-          <FeatureCard icon={<Briefcase />} title="Rencontrer les talents du secteur">
+          <FeatureCard icon={<Users />} title="Rencontrer les talents du secteur">
             Échangez avec les professionnels et les jeunes diplômés du secteur agricole qui composent le réseau.
           </FeatureCard>
         </div>
@@ -132,7 +132,7 @@ export default async function PartenairesPage() {
                     >
                       {content}
                       <span className="mt-3 inline-flex items-center gap-1 text-label-md text-primary">
-                        Visiter le site <ExternalLink className="size-3.5" aria-hidden="true" />
+                        Visiter le site <ExternalLink className="size-4" aria-hidden="true" />
                         <span className="sr-only">de {p.nom} (s&apos;ouvre dans un nouvel onglet)</span>
                       </span>
                     </a>

@@ -1,14 +1,14 @@
 import * as React from 'react'
-import { AlertCircle, AlertTriangle, CheckCircle2, Info } from 'lucide-react'
 import { cn } from '@/lib/utils/formatters'
 
+import { AlertTriangle, CheckCircle2, Info } from "@/components/ui/icons"
 export type AlertVariant = 'info' | 'success' | 'warning' | 'error'
 
 const tones: Record<AlertVariant, { box: string; Icon: React.ComponentType<{ className?: string; 'aria-hidden'?: boolean }> }> = {
   info: { box: 'border-info/30 bg-info-container text-on-info-container', Icon: Info },
   success: { box: 'border-success/30 bg-success-container text-on-success-container', Icon: CheckCircle2 },
   warning: { box: 'border-warning/30 bg-warning-container text-on-warning-container', Icon: AlertTriangle },
-  error: { box: 'border-error/30 bg-error-container text-on-error-container', Icon: AlertCircle },
+  error: { box: 'border-error/30 bg-error-container text-on-error-container', Icon: AlertTriangle },
 }
 
 export interface AlertProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {

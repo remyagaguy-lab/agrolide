@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import { ArrowRight, Coins, FileText, Layers, Lock, PawPrint, Sprout, TreePine, Wheat, type LucideIcon } from 'lucide-react'
 import { Sillons } from '@/components/brand'
 import { labelType, labelDomaine } from '@/lib/bibliotheque/taxonomie'
 
+import { ArrowRight, Coins, FileText, Layers, Lock, PawPrint, Flower2, TreePine, Wheat, type LucideIcon } from "@/components/ui/icons"
 export interface DocumentType {
   id: string
   titre: string
@@ -28,7 +28,7 @@ interface DocumentCardProps {
  * Couleurs par rôles du design system uniquement.
  */
 export const DOMAINES_VISUELS: Record<string, { Icone: LucideIcon; fond: string }> = {
-  production_vegetale: { Icone: Sprout, fond: 'bg-success-container text-on-success-container' },
+  production_vegetale: { Icone: Flower2, fond: 'bg-success-container text-on-success-container' },
   production_animale: { Icone: PawPrint, fond: 'bg-warning-container text-on-warning-container' },
   agroeconomie: { Icone: Coins, fond: 'bg-info-container text-on-info-container' },
   agroalimentaire: { Icone: Wheat, fond: 'bg-tertiary-container text-on-tertiary-container' },
@@ -54,13 +54,13 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
       {/* Couverture : teinte du domaine, pictogramme, sillons dans le coin (jamais sous un texte) */}
       <div className={`relative h-24 overflow-hidden ${fond}`}>
         <Sillons coin="bas-droite" opacite={0.12} className="absolute bottom-0 right-0 w-40" />
-        <Icone className="absolute left-4 top-4 size-8" strokeWidth={1.6} aria-hidden />
+        <Icone className="absolute left-4 top-4 size-6" aria-hidden />
         <span className="absolute right-3 top-3 max-w-[60%] truncate rounded-full bg-surface-container-lowest/90 px-2.5 py-1 text-label-md font-medium text-on-surface">
           {labelType(document.type_doc)}
         </span>
         {reserveAuxMembres && (
           <span className="absolute bottom-3 left-4 inline-flex items-center gap-1 rounded-full bg-surface-container-lowest/90 px-2.5 py-1 text-label-md font-medium text-on-surface" title="Lecture réservée aux membres inscrits">
-            <Lock className="size-3" aria-hidden /> Inscrits
+            <Lock className="size-4" aria-hidden /> Inscrits
           </span>
         )}
       </div>

@@ -1,10 +1,10 @@
 'use client'
 
 import React from 'react'
-import { X, FileText, Download } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { labelType } from '@/lib/bibliotheque/taxonomie'
 
+import { X, FileText, Download } from "@/components/ui/icons"
 interface DocumentAdmin {
   id: string
   titre: string
@@ -57,11 +57,11 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
       <div className="bg-surface-container-lowest rounded-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden shadow-xl">
         <div className="flex justify-between items-center p-6 border-b border-outline-variant">
           <h2 className="text-xl font-bold flex items-center gap-2">
-            <FileText className="w-5 h-5 text-on-surface-muted" />
+            <FileText className="size-5 text-on-surface-muted" />
             Détails du document
           </h2>
           <button onClick={onClose} className="p-2 text-on-surface-muted hover:text-on-surface rounded-full hover:bg-surface-container">
-            <X className="w-5 h-5" />
+            <X className="size-5" />
           </button>
         </div>
         
@@ -130,7 +130,7 @@ export function DocumentDetailsModal({ isOpen, onClose, document, onValidate, on
         <div className="p-6 border-t border-outline-variant bg-surface-container-low flex justify-between items-center">
           <div>
              <a href={`/membres/bibliotheque/${document.id}`} target="_blank" rel="noreferrer" className="text-sm font-medium text-primary hover:underline flex items-center gap-1">
-                <FileText className="w-4 h-4" /> Voir la page du document
+                <FileText className="size-4" /> Voir la page du document
              </a>
           </div>
           <div className="flex gap-3">

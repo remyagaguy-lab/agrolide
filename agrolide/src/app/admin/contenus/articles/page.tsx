@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { Plus, Edit2 } from "lucide-react"
 import { db } from "@/db"
 import { articles } from "@/db/schema"
 import { desc } from "drizzle-orm"
 import { ArticleDeleteButton } from "./ArticleDeleteButton"
 
+import { Plus, Pencil } from "@/components/ui/icons"
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
@@ -27,7 +27,7 @@ export default async function ArticlesListPage() {
           href="/admin/contenus/articles/nouveau" 
           className="flex items-center gap-2 bg-surface-brand text-on-surface-brand px-4 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors"
         >
-          <Plus size={18} /> Nouvel article
+          <Plus size={20} /> Nouvel article
         </Link>
       </div>
 
@@ -74,7 +74,7 @@ export default async function ArticlesListPage() {
                           className="p-2 text-info hover:bg-info-container rounded-lg transition-colors"
                           title="Modifier"
                         >
-                          <Edit2 size={16} />
+                          <Pencil size={16} />
                         </Link>
                         <ArticleDeleteButton articleId={article.id} />
                       </div>

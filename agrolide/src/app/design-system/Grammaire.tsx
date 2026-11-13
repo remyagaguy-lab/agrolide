@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { BookOpen, Search } from 'lucide-react'
 import { CarteSoleil } from '@/components/ui/CarteSoleil'
 import { Anneau, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
 
+import { Library, Search } from "@/components/ui/icons"
 const R = GEOMETRIE.rayons
 const pct = (v: number) => `×${v.toFixed(2).replace('.', ',')}`
 

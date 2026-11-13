@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { submitOnboarding } from '@/app/actions/onboarding'
-import { CheckCircle2, User, Building, Briefcase, GraduationCap, Heart } from 'lucide-react'
 import { AuthCard } from '@/components/auth/AuthCard'
 import { Alert } from '@/components/ui/Alert'
 import { Button } from '@/components/ui/Button'
@@ -13,11 +12,12 @@ import { NativeSelect } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
 import { cn } from '@/lib/utils/formatters'
 
+import { CheckCircle2, UserRound, Building2, Briefcase, GraduationCap, Heart } from "@/components/ui/icons"
 const profiles = [
   { id: 'passionne', label: 'Passionné', icon: Heart, desc: 'Curieux ou non-professionnel' },
   { id: 'junior', label: 'Junior / Étudiant', icon: GraduationCap, desc: 'Vous débutez dans le secteur' },
-  { id: 'professionnel', label: 'Professionnel', icon: User, desc: 'Vous êtes un acteur du secteur' },
-  { id: 'partenaire', label: 'Partenaire', icon: Building, desc: 'Entreprise, ONG, Coopérative' },
+  { id: 'professionnel', label: 'Professionnel', icon: UserRound, desc: 'Vous êtes un acteur du secteur' },
+  { id: 'partenaire', label: 'Partenaire', icon: Building2, desc: 'Entreprise, ONG, Coopérative' },
   { id: 'senior', label: 'Sénior', icon: Briefcase, desc: 'Vous avez une forte expérience' },
 ]
 
@@ -83,7 +83,7 @@ export default function OnboardingPage() {
                     className="sr-only"
                   />
                   {isSelected && <CheckCircle2 className="absolute right-2 top-2 size-5 text-primary" aria-hidden="true" />}
-                  <Icon className={cn('mb-2 size-8', isSelected ? 'text-primary' : 'text-on-surface-muted')} aria-hidden="true" />
+                  <Icon className={cn('mb-2 size-6', isSelected ? 'text-primary' : 'text-on-surface-muted')} aria-hidden="true" />
                   <span className="text-title-sm">{p.label}</span>
                   <span className={cn('mt-1 text-body-sm', isSelected ? 'text-on-primary-container' : 'text-on-surface-muted')}>{p.desc}</span>
                 </label>

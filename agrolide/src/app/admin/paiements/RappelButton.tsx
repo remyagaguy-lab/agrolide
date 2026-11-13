@@ -1,8 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Send, CheckCircle } from "lucide-react"
-
+import { Send, CheckCircle2 } from "@/components/ui/icons"
 interface Props {
   membreId: string
   email: string
@@ -30,7 +29,7 @@ export default function RappelButton({ membreId, email, nom }: Props) {
   if (status === "done") {
     return (
       <span className="flex items-center gap-1 text-xs text-success font-medium">
-        <CheckCircle size={13} /> Envoyé
+        <CheckCircle2 size={16} /> Envoyé
       </span>
     )
   }
@@ -41,7 +40,7 @@ export default function RappelButton({ membreId, email, nom }: Props) {
       disabled={status === "loading"}
       className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-on-warning-container bg-warning-container hover:bg-warning-container rounded-lg transition-colors disabled:opacity-50"
     >
-      <Send size={12} />
+      <Send size={16} />
       {status === "loading" ? "Envoi..." : "Envoyer rappel"}
     </button>
   )

@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ExternalLink, MapPin } from 'lucide-react'
-
+import { ExternalLink, MapPin } from "@/components/ui/icons"
 interface AgripreneurProps {
   agripreneur: {
     id: string
@@ -41,7 +40,7 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
           <h3 className="font-bold text-on-surface text-lg">{nom}</h3>
           {agripreneur.pays && (
             <div className="flex items-center text-sm text-on-surface-muted mt-1">
-              <MapPin className="w-3.5 h-3.5 mr-1" /> {agripreneur.pays}
+              <MapPin className="size-4 mr-1" /> {agripreneur.pays}
             </div>
           )}
         </div>
@@ -64,7 +63,7 @@ export default function AgripreneurCard({ agripreneur }: AgripreneurProps) {
       {agripreneur.lien_web && (
         <div className="px-6 py-4 border-t border-outline-variant bg-surface-container-low group-hover:bg-primary-container transition-colors">
           <a href={agripreneur.lien_web} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 text-primary font-semibold text-sm">
-            Découvrir le projet <ExternalLink className="w-4 h-4" />
+            Découvrir le projet <ExternalLink className="size-4" />
           </a>
         </div>
       )}

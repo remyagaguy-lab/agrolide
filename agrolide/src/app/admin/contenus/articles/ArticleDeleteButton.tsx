@@ -1,9 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { Trash2, Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
+import { Trash2, Loader2 } from "@/components/ui/icons"
 export function ArticleDeleteButton({ articleId }: { articleId: string }) {
   const [isDeleting, setIsDeleting] = useState(false)
   const router = useRouter()

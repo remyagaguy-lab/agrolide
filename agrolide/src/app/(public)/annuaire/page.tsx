@@ -1,12 +1,12 @@
 import React from 'react'
 import { Metadata } from 'next'
-import { EyeOff, Mail, MessageCircle, Search, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { FeatureCard } from '@/components/ui/FeatureCard'
 import { PageHero } from '@/components/ui/PageHero'
 import { Section } from '@/components/ui/Section'
 import { StepList } from '@/components/ui/StepList'
 
+import { EyeOff, Mail, MessageCircle, Search, UserPlus } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Annuaire du réseau",
   description:

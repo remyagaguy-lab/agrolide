@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react"
 import Image from "next/image"
-import { Plus, AlertCircle } from "lucide-react"
 import { useActualites } from "@/hooks/useActualites"
 import { SkeletonGrid } from "@/components/ui/Skeleton"
 import { Button } from "@/components/ui/Button"
@@ -14,6 +13,7 @@ import OpportunityCard from "@/components/modules/opportunites/OpportunityCard"
 import InscriptionModal from "@/components/modules/evenements/InscriptionModal"
 import SubmitOpportunityModal from "@/components/modules/opportunites/SubmitOpportunityModal"
 
+import { Plus, AlertTriangle, X } from "@/components/ui/icons"
 export type AgendaMode = "evenements" | "webinaires" | "opportunites"
 
 const MODES: Record<AgendaMode, { title: string; subtitle: string; empty: string; options: { value: string; label: string }[] }> = {
@@ -92,7 +92,7 @@ export default function AgendaClient({ mode, initialItems }: { mode: AgendaMode;
   ) : error ? (
     <EmptyState
       arche
-      icon={<AlertCircle />}
+      icon={<AlertTriangle />}
       title="Impossible de charger cette page"
       description={error}
       action={<Button variant="outline" onClick={fetchData}>Réessayer</Button>}
@@ -198,7 +198,7 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
         <div className="sticky top-0 bg-surface-container-lowest border-b border-outline-variant p-4 flex justify-between items-center z-10">
           <h2 id="event-modal-title" className="text-xl font-bold text-on-surface pr-8">{event.titre}</h2>
           <button aria-label="Fermer les détails" onClick={onClose} className="p-2 min-h-11 min-w-11 bg-surface-container hover:bg-surface-container-high rounded-full transition-colors text-on-surface-variant">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+            <X className="size-5" aria-hidden />
           </button>
         </div>
 

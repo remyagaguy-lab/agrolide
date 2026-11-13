@@ -1,12 +1,12 @@
 import Link from "next/link"
 import { desc, eq, ne } from "drizzle-orm"
-import { ArrowLeft, UserCog } from "lucide-react"
 import { db } from "@/db"
 import { demandes_categorie, users } from "@/db/schema"
 import { Badge } from "@/components/ui/Badge"
 import { formaterDate, libelleCategorie } from "@/lib/adhesion"
 import { DecisionDemande } from "./DecisionDemande"
 
+import { ArrowLeft, UserCog } from "@/components/ui/icons"
 export const metadata = { title: "Demandes de changement de catégorie" }
 export const dynamic = "force-dynamic"
 

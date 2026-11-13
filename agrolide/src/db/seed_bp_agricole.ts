@@ -227,13 +227,13 @@ Nous avons analysé 4 modèles institutionnels différents. Voici leurs points c
 
 | Section | Canevas ANPGF (Togo) | BP Exploitation Agricole (Sénégal) | Template Entreprise (Guinée) | Guide Bellomar (Cameroun) |
 |---------|----------------------|-----------------------------------|-----------------------------|--------------------------|
-| Fiche synthétique | ✅ Très détaillée (VAN, TRI, IP) | ✅ Complète | ✅ Basique | ✅ Complète |
-| Étude de marché | ✅ | ✅ Approfondie (données CDH) | ✅ Guidée | ✅ Avec FFOM |
-| Stratégie marketing | ✅ | ✅ (4P détaillés) | ✅ (5P) | ✅ Avec plan de prospection |
-| Étude technique | ✅ | ✅ Fiches culturales détaillées | ✅ Processus guidé | ✅ Avec contrôle qualité |
-| Juridique | ✅ | ✅ (SARL, foncier) | ✅ | ✅ Très détaillé |
-| Financière | ✅ Complète | ✅ Très complète | ✅ 11 tableaux | ✅ Avec bilan et BFR |
-| Gestion des risques | ⚠️ Basique | ✅ | ⚠️ | ✅ |
+| Fiche synthétique | Très détaillée (VAN, TRI, IP) | Complète | Basique | Complète |
+| Étude de marché | Oui | Approfondie (données CDH) | Guidée | Avec FFOM |
+| Stratégie marketing | Oui | (4P détaillés) | (5P) | Avec plan de prospection |
+| Étude technique | Oui | Fiches culturales détaillées | Processus guidé | Avec contrôle qualité |
+| Juridique | Oui | (SARL, foncier) | Oui | Très détaillé |
+| Financière | Complète | Très complète | 11 tableaux | Avec bilan et BFR |
+| Gestion des risques | Basique | Oui | Partielle | Oui |
 
 > **Conseil pratique** : Aucun modèle n'est parfait seul. La formation que vous suivez combine les forces de ces 4 modèles pour vous donner la structure la plus complète possible.
 
@@ -942,20 +942,20 @@ Le SWOT (ou FFOM en français) est un outil d'analyse stratégique qui croise de
 | | **Éléments Positifs** | **Éléments Négatifs** |
 |---|---|---|
 | **Facteurs INTERNES** | **FORCES** | **FAIBLESSES** |
-| | ✅ Bonne expérience de production du promoteur | ❌ Sous-équipement des exploitations agricoles en phase de démarrage |
-| | ✅ Main-d'œuvre abondante et compétitive | ❌ Faible niveau de mécanisation initiale |
-| | ✅ Disponibilité d'aménagements hydro-agricoles | ❌ Budget limité (15 % d'apport personnel seulement) |
-| | ✅ Choix de variétés hybrides à haut rendement | ❌ Manque de main-d'œuvre qualifiée (techniciens) |
-| | ✅ Système d'irrigation moderne (goutte-à-goutte) | ❌ Insuffisance des semences de qualité certifiée |
-| | ✅ Compétitivité des prix de production | ❌ Dégradation et appauvrissement des sols |
+| | Bonne expérience de production du promoteur | Sous-équipement des exploitations agricoles en phase de démarrage |
+| | Main-d'œuvre abondante et compétitive | Faible niveau de mécanisation initiale |
+| | Disponibilité d'aménagements hydro-agricoles | Budget limité (15 % d'apport personnel seulement) |
+| | Choix de variétés hybrides à haut rendement | Manque de main-d'œuvre qualifiée (techniciens) |
+| | Système d'irrigation moderne (goutte-à-goutte) | Insuffisance des semences de qualité certifiée |
+| | Compétitivité des prix de production | Dégradation et appauvrissement des sols |
 | **Facteurs EXTERNES** | **OPPORTUNITÉS** | **MENACES** |
-| | 🌟 Forte demande urbaine en fruits et légumes | ⚠️ Aléas climatiques (irrégularité pluviométrique) |
-| | 🌟 Politique d'autosuffisance alimentaire de l'État | ⚠️ Concurrence des importations européennes subventionnées |
-| | 🌟 Programme de désenclavement routier | ⚠️ Volatilité des prix sur le marché mondial |
-| | 🌟 Facteurs climatiques favorables (Niayes) | ⚠️ Maladies et ravageurs (mildiou, thrips, chenilles) |
-| | 🌟 Hausse des prix de l'importé (avantage compétitif) | ⚠️ Surexploitation de la nappe phréatique |
-| | 🌟 Filières à forte valeur ajoutée (export) | ⚠️ Difficultés d'accès au foncier |
-| | 🌟 Volonté politique affichée par les pouvoirs publics | ⚠️ Barrières non tarifaires des pays du Nord |
+| | Forte demande urbaine en fruits et légumes | Aléas climatiques (irrégularité pluviométrique) |
+| | Politique d'autosuffisance alimentaire de l'État | Concurrence des importations européennes subventionnées |
+| | Programme de désenclavement routier | Volatilité des prix sur le marché mondial |
+| | Facteurs climatiques favorables (Niayes) | Maladies et ravageurs (mildiou, thrips, chenilles) |
+| | Hausse des prix de l'importé (avantage compétitif) | Surexploitation de la nappe phréatique |
+| | Filières à forte valeur ajoutée (export) | Difficultés d'accès au foncier |
+| | Volonté politique affichée par les pouvoirs publics | Barrières non tarifaires des pays du Nord |
 
 ---
 
@@ -1037,15 +1037,15 @@ En agriculture, le site d'implantation conditionne directement :
 
 | Critère | Description | Évaluation (exemple Niayes) |
 |---------|-------------|---------------------------|
-| **Qualité du sol** | Sol léger, riche en matière organique, bon drainage | ✅ Sols de type « fondé » excellents pour le maraîchage |
-| **Accès à l'eau** | Profondeur de la nappe, débit possible, qualité de l'eau | ✅ Nappe à 0,5 - 5 mètres de profondeur |
-| **Climat** | Températures, ensoleillement, pluviométrie, vents | ✅ Climat « des Canaries », favorable à la production horticole |
-| **Accès routier** | État des routes pour l'évacuation des récoltes | ⚠️ Pistes latéritiques parfois impraticables en hivernage |
-| **Énergie** | Accès au réseau électrique ou potentiel solaire | ✅ Bon ensoleillement pour panneaux solaires |
-| **Main-d'œuvre** | Disponibilité et coût de la main-d'œuvre locale | ✅ Main-d'œuvre abondante dans les villages environnants |
-| **Proximité des marchés** | Distance aux centres de consommation (Dakar, Thiès) | ✅ Moins de 80 km de Dakar pour la zone des Niayes |
-| **Sécurité foncière** | Titre foncier, bail emphytéotique, délibération | ⚠️ Bail emphytéotique recommandé (18 à 99 ans) |
-| **Pression urbaine** | Risque d'expropriation ou de conflit d'usage | ⚠️ Forte pression urbaine près de Dakar |
+| **Qualité du sol** | Sol léger, riche en matière organique, bon drainage | Sols de type « fondé » excellents pour le maraîchage |
+| **Accès à l'eau** | Profondeur de la nappe, débit possible, qualité de l'eau | Nappe à 0,5 - 5 mètres de profondeur |
+| **Climat** | Températures, ensoleillement, pluviométrie, vents | Climat « des Canaries », favorable à la production horticole |
+| **Accès routier** | État des routes pour l'évacuation des récoltes | Pistes latéritiques parfois impraticables en hivernage |
+| **Énergie** | Accès au réseau électrique ou potentiel solaire | Bon ensoleillement pour panneaux solaires |
+| **Main-d'œuvre** | Disponibilité et coût de la main-d'œuvre locale | Main-d'œuvre abondante dans les villages environnants |
+| **Proximité des marchés** | Distance aux centres de consommation (Dakar, Thiès) | Moins de 80 km de Dakar pour la zone des Niayes |
+| **Sécurité foncière** | Titre foncier, bail emphytéotique, délibération | Bail emphytéotique recommandé (18 à 99 ans) |
+| **Pression urbaine** | Risque d'expropriation ou de conflit d'usage | Forte pression urbaine près de Dakar |
 
 ---
 
@@ -1457,9 +1457,9 @@ L'étude technique est la section qui prouve que votre projet est **techniquemen
 
 | Type | Description | Avantages | Inconvénients | Accepté comme garantie bancaire ? |
 |------|-----------|-----------|---------------|----------------------------------|
-| **Titre foncier** | Propriété définitive et inattaquable | Peut être hypothéqué, sécurité maximale | Procédure longue et coûteuse (1 à 3 ans) | ✅ Oui (hypothèque) |
-| **Bail emphytéotique** | Location longue durée (18 à 99 ans) par l'État | Bonne sécurité, durée suffisante pour amortir les investissements | Pas de propriété, renégociation à l'échéance | ✅ Souvent accepté |
-| **Délibération du Conseil Municipal** | Droit d'usage attribué par le conseil rural | Procédure simple et rapide, faible coût | Révocable, pas de garantie bancaire | ❌ Généralement refusé |
+| **Titre foncier** | Propriété définitive et inattaquable | Peut être hypothéqué, sécurité maximale | Procédure longue et coûteuse (1 à 3 ans) | Oui (hypothèque) |
+| **Bail emphytéotique** | Location longue durée (18 à 99 ans) par l'État | Bonne sécurité, durée suffisante pour amortir les investissements | Pas de propriété, renégociation à l'échéance | Souvent accepté |
+| **Délibération du Conseil Municipal** | Droit d'usage attribué par le conseil rural | Procédure simple et rapide, faible coût | Révocable, pas de garantie bancaire | Généralement refusé |
 
 ---
 
@@ -1741,7 +1741,7 @@ Dressez un tableau détaillé de vos fournisseurs :
 | **Direction** | Gérant (associé ou non) | Administrateur | Président du CA | PDG ou DG |
 | **Fiscalité** | IS (30 % du bénéfice net) | IS ou IR selon activité | Régime fiscal avantageux | IS (30 %) |
 | **Adapté à** | Projets avec investissements importants | Groupements paysans, mutualisation | Coopératives de producteurs | Grands projets industriels |
-| **Facilité bancaire** | ✅ Bonne | ⚠️ Moyenne | ⚠️ Variable | ✅ Très bonne |
+| **Facilité bancaire** | Bonne | Moyenne | Variable | Très bonne |
 
 ### Recommandation
 Pour un projet maraîcher avec des investissements supérieurs à 10 millions FCFA, **la SARL est le statut le plus adapté** car :
@@ -2667,7 +2667,7 @@ Passez le quiz final ci-dessous pour valider votre certification.
     }
   }
 
-  console.log('✅ Ultra-detailed Business Plan course (8 modules, 28 leçons) seeded successfully!');
+  console.log('Ultra-detailed Business Plan course (8 modules, 28 leçons) seeded successfully!');
 }
 
 seedBusinessPlan().catch(console.error).finally(() => process.exit(0));

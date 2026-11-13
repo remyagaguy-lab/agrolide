@@ -4,9 +4,9 @@ import { buttonVariants } from "@/components/ui/Button"
 import { FeatureCard } from "@/components/ui/FeatureCard"
 import { PageHero } from "@/components/ui/PageHero"
 import { Section } from "@/components/ui/Section"
-import { Briefcase, LineChart, FileText, ArrowRight } from "lucide-react"
 import DemandeServiceForm from "@/components/modules/agrobusiness/DemandeServiceForm"
 
+import { TrendingUp, LineChart, FileText, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Agrobusiness & Consulting - Accompagnement",
   description: "Conseil stratégique et incubation pour les projets agricoles en Afrique. Notre réseau agricole vous accompagne de l'idée au marché pour bâtir des entreprises viables.",
@@ -33,7 +33,7 @@ export default function AgrobusinessPage() {
             Appui technique aux exploitations, optimisation des processus de production et structuration de chaînes de valeur.
           </FeatureCard>
 
-          <FeatureCard icon={<Briefcase />} title="Incubation & Accélération" className="flex flex-col border-2 border-primary">
+          <FeatureCard icon={<TrendingUp />} title="Incubation & Accélération" className="flex flex-col border-2 border-primary">
             <span className="block">
               Programmes complets pour les agripreneurs : mentorat, coaching au pitch et préparation du dossier de financement.
             </span>

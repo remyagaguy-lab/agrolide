@@ -1,8 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
-import { Loader2 } from "lucide-react"
-
+import { Loader2 } from "@/components/ui/icons"
 interface FormationFormProps {
   initialData?: any
   onSuccess: () => void
@@ -116,7 +115,7 @@ export default function FormationForm({ initialData, onSuccess, onCancel }: Form
           Annuler
         </button>
         <button type="submit" disabled={loading} className="px-6 py-2 bg-success hover:bg-success text-on-success font-medium rounded-xl transition-colors flex items-center gap-2">
-          {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : "Enregistrer"}
+          {loading ? <Loader2 className="size-4 animate-spin" /> : "Enregistrer"}
         </button>
       </div>
     </form>

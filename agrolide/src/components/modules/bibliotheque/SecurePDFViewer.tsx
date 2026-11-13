@@ -4,12 +4,12 @@ import { useState, useEffect, useRef } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
-import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack, AlertCircle, Info } from 'lucide-react'
 import { EncartInscription } from './EncartInscription'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useAuth } from '@/lib/auth/client'
 
+import { Loader2, ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize, FileStack, AlertTriangle, Info } from "@/components/ui/icons"
 // Configurer le worker pour pdf.js avec un fichier local (mouchard + fiabilité)
 pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.mjs'
 
@@ -174,7 +174,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-[600px] bg-surface-container-low rounded-xl">
-        <Loader2 className="w-10 h-10 animate-spin text-success mb-4" />
+        <Loader2 className="size-6 animate-spin text-success mb-4" />
         <p className="text-on-surface-muted font-medium">Sécurisation et chargement du document...</p>
       </div>
     )
@@ -184,9 +184,9 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
     return (
       <div className="flex flex-col items-center justify-center h-[600px] bg-surface-container-low rounded-xl border border-outline-variant p-6 text-center">
         <div className="w-16 h-16 bg-warning-container text-warning rounded-full flex items-center justify-center mb-6">
-          <AlertCircle className="w-8 h-8" />
+          <AlertTriangle className="size-6" />
         </div>
-        <h3 className="text-2xl font-bold text-on-surface mb-3">Vous avez lu vos 5 documents gratuits 🎉</h3>
+        <h3 className="text-2xl font-bold text-on-surface mb-3">Vous avez lu vos 5 documents gratuits</h3>
         <p className="text-on-surface-variant mb-8 max-w-md">
           Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte Agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
         </p>
@@ -217,7 +217,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
       {showEncarts && (
         <div className="sticky top-0 w-full bg-success text-on-success px-3 py-2 flex items-center justify-between gap-3 z-20 text-xs sm:text-sm">
           <span className="flex items-center min-w-0">
-            <Info className="w-4 h-4 mr-2 flex-shrink-0" />
+            <Info className="size-4 mr-2 flex-shrink-0" />
             <span className="truncate">
               Mode visiteur{readCount > 0 && <> : <strong>{readCount}/{readLimit}</strong> documents gratuits</>} · Lisez sans pub en créant un compte
             </span>
@@ -236,7 +236,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
             className="p-1 sm:p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors"
             title="Dézoomer"
           >
-            <ZoomOut className="w-5 h-5" />
+            <ZoomOut className="size-5" />
           </button>
           <span className="text-xs sm:text-sm font-medium text-on-surface-variant w-10 sm:w-12 text-center">{Math.round(scale * 100)}%</span>
           <button 
@@ -244,7 +244,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
             className="p-1 sm:p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors"
             title="Zoomer"
           >
-            <ZoomIn className="w-5 h-5" />
+            <ZoomIn className="size-5" />
           </button>
         </div>
 
@@ -254,7 +254,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
             className="p-1 sm:p-2 hover:bg-surface-container rounded-lg text-on-surface-variant transition-colors flex items-center gap-2 text-xs sm:text-sm font-medium mr-2"
             title="Changer le mode d'affichage"
           >
-            {viewMode === 'single' ? <FileStack className="w-4 h-4 sm:w-5 sm:h-5" /> : <Maximize className="w-4 h-4 sm:w-5 sm:h-5" />}
+            {viewMode === 'single' ? <FileStack className="size-4 sm:w-5 sm:h-5" /> : <Maximize className="size-4 sm:w-5 sm:h-5" />}
             <span className="hidden sm:inline">{viewMode === 'single' ? 'Défilement continu' : 'Page par page'}</span>
           </button>
           
@@ -265,7 +265,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
                 onClick={() => changePage(-1)}
                 className="p-1 sm:p-2 hover:bg-surface-container rounded-lg disabled:opacity-50 text-on-surface-variant transition-colors"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="size-5" />
               </button>
               <span className="text-xs sm:text-sm font-medium text-on-surface-variant">
                 Page {pageNumber} / {numPages || '--'}
@@ -275,7 +275,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
                 onClick={() => changePage(1)}
                 className="p-1 sm:p-2 hover:bg-surface-container rounded-lg disabled:opacity-50 text-on-surface-variant transition-colors"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="size-5" />
               </button>
             </>
           ) : (
@@ -295,7 +295,7 @@ export function SecurePDFViewer({ documentId }: { documentId: string }) {
         <Document
           file={pdfUrl}
           onLoadSuccess={onDocumentLoadSuccess}
-          loading={<Loader2 className="w-10 h-10 animate-spin text-success mx-auto mt-20" />}
+          loading={<Loader2 className="size-6 animate-spin text-success mx-auto mt-20" />}
           onLoadError={(err) => {
             console.error("Erreur détaillée react-pdf:", err)
             setError(`Erreur: ${err.message || 'Impossible de charger le PDF'}`)

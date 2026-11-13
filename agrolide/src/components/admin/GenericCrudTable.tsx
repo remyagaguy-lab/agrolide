@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { Plus, Pencil, Trash2, Eye, EyeOff, Save, X, CheckCircle } from "lucide-react"
-
+import { Plus, Pencil, Trash2, Eye, EyeOff, Save, X, CheckCircle2 } from "@/components/ui/icons"
 type Item = {
   id: string
   [key: string]: any
@@ -117,7 +116,7 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
       <div className="flex items-center justify-between">
         {message && (
           <span className="flex items-center gap-1.5 text-sm text-success">
-            <CheckCircle size={15} /> {message}
+            <CheckCircle2 size={16} /> {message}
           </span>
         )}
         <div className="ml-auto">
@@ -159,10 +158,10 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
           </div>
           <div className="flex gap-3 pt-2">
             <button onClick={handleSave} disabled={loading} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-primary bg-primary rounded-lg hover:bg-primary/90 disabled:opacity-50">
-              <Save size={14} /> {loading ? "..." : "Créer"}
+              <Save size={16} /> {loading ? "..." : "Créer"}
             </button>
             <button onClick={cancel} className="flex items-center gap-2 px-4 py-2 text-sm text-on-surface-variant border border-outline-variant rounded-lg hover:bg-surface-container-low">
-              <X size={14} /> Annuler
+              <X size={16} /> Annuler
             </button>
           </div>
         </div>
@@ -203,10 +202,10 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
                     </div>
                     <div className="flex gap-3">
                       <button onClick={handleSave} disabled={loading} className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-surface-brand bg-info rounded-lg hover:bg-info disabled:opacity-50">
-                        <Save size={14} /> {loading ? "..." : "Enregistrer"}
+                        <Save size={16} /> {loading ? "..." : "Enregistrer"}
                       </button>
                       <button onClick={cancel} className="flex items-center gap-2 px-4 py-2 text-sm text-on-surface-variant border border-outline-variant rounded-lg hover:bg-surface-container-low">
-                        <X size={14} /> Annuler
+                        <X size={16} /> Annuler
                       </button>
                     </div>
                   </div>
@@ -214,7 +213,7 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
                   <div className="flex items-center gap-4 px-5 py-4 hover:bg-surface-container-low transition-colors">
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-on-surface truncate">{item[labelField]}</p>
-                      {item.poste && <p className="text-xs text-on-surface-muted">{item.poste}{item.organisation ? ` • ${item.organisation}` : ""}</p>}
+                      {item.poste && <p className="text-xs text-on-surface-muted">{item.poste}{item.organisation ? ` · ${item.organisation}` : ""}</p>}
                       {item.nom && item[labelField] !== item.nom && <p className="text-xs text-on-surface-muted">{item.nom}</p>}
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
@@ -224,14 +223,14 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
                           className={`p-1.5 rounded-lg transition-colors ${item[togglePublieKey] ? "text-success bg-success-container hover:bg-success-container" : "text-on-surface-muted bg-surface-container-low hover:bg-surface-container"}`}
                           title={item[togglePublieKey] ? "Publié — cliquer pour dépublier" : "Non publié — cliquer pour publier"}
                         >
-                          {item[togglePublieKey] ? <Eye size={15} /> : <EyeOff size={15} />}
+                          {item[togglePublieKey] ? <Eye size={16} /> : <EyeOff size={16} />}
                         </button>
                       )}
                       <button onClick={() => startEdit(item)} className="p-1.5 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors" title="Modifier">
-                        <Pencil size={15} />
+                        <Pencil size={16} />
                       </button>
                       <button onClick={() => handleDelete(item.id)} className="p-1.5 text-on-surface-muted hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
-                        <Trash2 size={15} />
+                        <Trash2 size={16} />
                       </button>
                     </div>
                   </div>

@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { Lock } from 'lucide-react'
 import { auth } from '@/lib/auth/server'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -9,6 +8,7 @@ import { CartePubliqueView } from '@/components/modules/reseau/CartePubliqueView
 import { fetchFiche } from '@/lib/reseau/fiche'
 import { fetchCartePublique } from '@/lib/reseau/carte-publique.server'
 
+import { Lock } from "@/components/ui/icons"
 // Fiche réservée aux membres connectés. Un visiteur ne voit que la carte publique d'un membre qui l'a activée
 // (`profil_public`) ; le titre de la page ne révèle jamais le nom et la page n'est jamais indexée.
 export async function generateMetadata(): Promise<Metadata> {

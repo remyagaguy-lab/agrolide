@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { Camera, Save } from "lucide-react"
 import { Alert } from "@/components/ui/Alert"
 import { useToast } from "@/components/ui/Toast"
 import { Avatar } from "@/components/ui/Avatar"
@@ -17,6 +16,7 @@ import { updateAvatarUrl, updateProfil } from "@/app/actions/profil"
 import { LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 
+import { Camera, Save } from "@/components/ui/icons"
 export interface ProfilInitial {
   prenom: string
   nom: string

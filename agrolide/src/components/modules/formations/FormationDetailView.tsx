@@ -4,14 +4,13 @@ import { db } from "@/db";
 import { formations, inscriptions_formation } from "@/db/schema";
 import { and, eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
-import { CheckCircle2, Clock, ExternalLink, GraduationCap, Layers, MonitorPlay, Plus, Minus, Tag } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { DetailHero } from "@/components/ui/DetailHero";
 import { auth } from "@/lib/auth/server";
 import { EnrollButton } from "./EnrollButton";
 import { PartagerBouton } from "./PartagerBouton";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-
+import { CheckCircle2, Clock, ExternalLink, GraduationCap, Layers, MonitorPlay, Plus, Minus, Tag } from "@/components/ui/icons"
 type Espace = "membre" | "public";
 
 /** Une rubrique repliable de la fiche (contexte, public, objectifs…). */

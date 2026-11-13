@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react'
 
-import { Loader2, Upload, FileText, Image as ImageIcon } from 'lucide-react'
-
+import { Loader2, Upload, FileText, Image as ImageIcon } from "@/components/ui/icons"
 interface EventFormProps {
   initialData?: any
   onSuccess: () => void
@@ -200,7 +199,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               ) : (
                 <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer relative">
                   <div className="space-y-1 text-center">
-                    {uploadingField === 'image_url' ? <Loader2 className="mx-auto h-8 w-8 text-on-surface-muted animate-spin" /> : <ImageIcon className="mx-auto h-8 w-8 text-on-surface-muted" />}
+                    {uploadingField === 'image_url' ? <Loader2 className="mx-auto size-6 text-on-surface-muted animate-spin" /> : <ImageIcon className="mx-auto size-6 text-on-surface-muted" />}
                     <div className="flex text-sm text-on-surface-variant justify-center">
                       <label className="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary focus-within:outline-none">
                         <span>Téléverser l'affiche</span>
@@ -218,7 +217,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               {formData.presentation_url ? (
                 <div className="p-4 border border-success/30 bg-success-container rounded-xl flex flex-col justify-between h-32">
                   <div className="flex items-center gap-2 text-success font-medium break-all text-sm line-clamp-2">
-                    <FileText className="w-5 h-5 flex-shrink-0" />
+                    <FileText className="size-5 flex-shrink-0" />
                     <span>Document de présentation lié</span>
                   </div>
                   <button type="button" onClick={() => setFormData({...formData, presentation_url: ''})} className="text-xs text-error hover:underline self-end">Retirer</button>
@@ -226,7 +225,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               ) : (
                 <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer relative">
                   <div className="space-y-1 text-center">
-                    {uploadingField === 'presentation_url' ? <Loader2 className="mx-auto h-8 w-8 text-on-surface-muted animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-on-surface-muted" />}
+                    {uploadingField === 'presentation_url' ? <Loader2 className="mx-auto size-6 text-on-surface-muted animate-spin" /> : <Upload className="mx-auto size-6 text-on-surface-muted" />}
                     <div className="flex text-sm text-on-surface-variant justify-center">
                       <label className="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary focus-within:outline-none">
                         <span>Téléverser présentation</span>
@@ -244,7 +243,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               {formData.ressources_url ? (
                 <div className="p-4 border border-info/30 bg-info-container rounded-xl flex flex-col justify-between h-32">
                   <div className="flex items-center gap-2 text-info font-medium break-all text-sm line-clamp-2">
-                    <FileText className="w-5 h-5 flex-shrink-0" />
+                    <FileText className="size-5 flex-shrink-0" />
                     <span>Ressources liées</span>
                   </div>
                   <button type="button" onClick={() => setFormData({...formData, ressources_url: ''})} className="text-xs text-error hover:underline self-end">Retirer</button>
@@ -252,7 +251,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
               ) : (
                 <div className="flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer relative">
                   <div className="space-y-1 text-center">
-                    {uploadingField === 'ressources_url' ? <Loader2 className="mx-auto h-8 w-8 text-on-surface-muted animate-spin" /> : <Upload className="mx-auto h-8 w-8 text-on-surface-muted" />}
+                    {uploadingField === 'ressources_url' ? <Loader2 className="mx-auto size-6 text-on-surface-muted animate-spin" /> : <Upload className="mx-auto size-6 text-on-surface-muted" />}
                     <div className="flex text-sm text-on-surface-variant justify-center">
                       <label className="relative cursor-pointer rounded-md font-medium text-primary hover:text-primary focus-within:outline-none">
                         <span>Téléverser ressource</span>
@@ -273,7 +272,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
           Annuler
         </button>
         <button type="submit" disabled={loading} className="px-6 py-2 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-xl transition-colors flex items-center gap-2">
-          {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Enregistrer'}
+          {loading ? <Loader2 className="size-4 animate-spin" /> : 'Enregistrer'}
         </button>
       </div>
     </form>

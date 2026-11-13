@@ -2,11 +2,7 @@
 
 import { useState, useTransition, useCallback } from "react"
 import { useRouter } from "next/navigation"
-import { 
-  Search, Filter, Download, Eye, CheckCircle, Ban, ShieldCheck,
-  ChevronLeft, ChevronRight, X
-} from "lucide-react"
-
+import { Search, SlidersHorizontal, Download, Eye, CheckCircle2, Ban, ShieldCheck, ChevronLeft, ChevronRight, X } from "@/components/ui/icons"
 type Membre = {
   id: string
   prenom: string
@@ -149,7 +145,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
               onClick={() => startTransition(() => router.push("/admin/membres"))}
               className="flex items-center gap-1 text-xs text-on-surface-muted hover:text-error transition-colors"
             >
-              <X size={14} /> Réinitialiser
+              <X size={16} /> Réinitialiser
             </button>
           )}
           <div className="ml-auto">
@@ -231,7 +227,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                         className="p-1.5 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors"
                         title="Voir profil"
                       >
-                        <Eye size={15} />
+                        <Eye size={16} />
                       </a>
                       {m.statut_adhesion !== "actif" ? (
                         <button
@@ -240,7 +236,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                           title="Activer"
                           disabled={!!actionLoading}
                         >
-                          <CheckCircle size={15} />
+                          <CheckCircle2 size={16} />
                         </button>
                       ) : (
                         <button
@@ -249,7 +245,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                           title="Suspendre"
                           disabled={!!actionLoading}
                         >
-                          <Ban size={15} />
+                          <Ban size={16} />
                         </button>
                       )}
                       <button
@@ -258,7 +254,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                         title="Promouvoir admin"
                         disabled={!!actionLoading}
                       >
-                        <ShieldCheck size={15} />
+                        <ShieldCheck size={16} />
                       </button>
                     </div>
                   </td>

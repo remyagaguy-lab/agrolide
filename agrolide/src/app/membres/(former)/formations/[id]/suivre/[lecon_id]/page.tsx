@@ -7,9 +7,9 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import { db } from "@/db";
-import { ChevronLeft, ChevronRight, CheckCircle2, Lock } from "lucide-react";
-import { Quiz } from "./Quiz";
 
+import { Quiz } from "./Quiz";
+import { ChevronLeft, ChevronRight, CheckCircle2, Lock } from "@/components/ui/icons"
 export default async function LeconPage({
   params,
 }: {
@@ -130,7 +130,7 @@ export default async function LeconPage({
               href={`/membres/formations/${formationId}/suivre/${previousLecon.id}`}
               className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-outline-variant hover:border-primary hover:text-primary hover:bg-primary-container text-on-surface font-urbanist font-semibold text-body-md px-[28px] min-h-[48px] rounded-lg transition-all"
             >
-              <ChevronLeft className="w-5 h-5 mr-2" />
+              <ChevronLeft className="size-5 mr-2" />
               Précédent
             </Link>
           ) : (
@@ -144,7 +144,7 @@ export default async function LeconPage({
                 className="inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-on-tertiary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
               >
                 Suivant
-                <ChevronRight className="w-5 h-5 ml-2" />
+                <ChevronRight className="size-5 ml-2" />
               </Link>
             ) : (
               <button 
@@ -153,7 +153,7 @@ export default async function LeconPage({
                 title="Validez le quiz pour passer à la suite"
               >
                 Suivant bloqué
-                <Lock className="w-4 h-4 ml-2" />
+                <Lock className="size-4 ml-2" />
               </button>
             )
           ) : (
@@ -161,7 +161,7 @@ export default async function LeconPage({
               href={`/membres/formations/${formationId}`}
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
-              <CheckCircle2 className="w-5 h-5 mr-2" />
+              <CheckCircle2 className="size-5 mr-2" />
               Terminer la formation
             </Link>
           )}

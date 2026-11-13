@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Loader2, ExternalLink } from "lucide-react";
-
+import { Loader2, ExternalLink } from "@/components/ui/icons"
 export function EnrollButton({ 
   formationId, 
   firstLeconId, 
@@ -70,14 +69,14 @@ export function EnrollButton({
       disabled={loading}
       className={`inline-flex items-center justify-center bg-tertiary hover:bg-accent-sun text-on-tertiary font-heading font-bold text-body-md px-[28px] py-[12px] rounded-lg transition-colors min-h-[48px] disabled:opacity-70 ${className || ''}`}
     >
-      {loading && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
+      {loading && <Loader2 className="size-4 mr-2 animate-spin" />}
       {!isLoggedIn 
         ? (isExternal ? "Se connecter pour accéder" : "Se connecter pour commencer")
         : isEnrolled 
           ? (isExternal ? "Accéder à la formation" : "Reprendre la formation")
           : (isExternal ? "S'inscrire et accéder" : "S'inscrire et commencer")}
       
-      {isExternal && <ExternalLink className="ml-2 w-5 h-5 inline" />}
+      {isExternal && <ExternalLink className="ml-2 size-5 inline" />}
     </button>
   );
 }

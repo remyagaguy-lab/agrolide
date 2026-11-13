@@ -2,10 +2,10 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/Button"
-import { CreditCard, Smartphone, Loader2 } from "lucide-react"
 import { sendGAEvent } from "@next/third-parties/google"
 import { DATE_FIN_GRATUITE_LISIBLE, paiementOuvert } from "@/lib/adhesion"
 
+import { CreditCard, Smartphone, Loader2 } from "@/components/ui/icons"
 export function PaiementBoutons({ categorie }: { categorie: string }) {
   const [isLoading, setIsLoading] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)

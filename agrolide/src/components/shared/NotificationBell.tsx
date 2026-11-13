@@ -3,12 +3,12 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { Bell, CheckCheck } from 'lucide-react'
 import * as Popover from '@radix-ui/react-popover'
 import { markAllAsReadAction, markAsReadAction } from '@/app/actions/notifications'
 import { depuis, libelleType, lienSur, type NotificationItem } from '@/lib/notifications'
 import { cn } from '@/lib/utils/formatters'
 
+import { Bell, CheckCheck } from "@/components/ui/icons"
 /** Intervalle de rafraîchissement quand l'onglet est visible. Le temps réel (WebSocket) n'est qu'un bonus. */
 const RAFRAICHISSEMENT_MS = 60_000
 

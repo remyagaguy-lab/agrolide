@@ -4,8 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { PageHero } from "@/components/ui/PageHero"
 import { DATE_FIN_GRATUITE_LISIBLE, TARIFS_ANNUELS_FCFA, formaterFcfa, tarifMensuel } from "@/lib/adhesion"
-import { Check, X, UserPlus, ArrowRight, GraduationCap, Briefcase, Building2, Award, Lock } from "lucide-react"
-
+import { Check, X, UserPlus, ArrowRight, GraduationCap, Briefcase, Building2, Award, Lock } from "@/components/ui/icons"
 export default function PricingSection() {
   const [isAnnual, setIsAnnual] = useState(true)
 
@@ -77,10 +76,10 @@ export default function PricingSection() {
               <div className="text-label-sm text-on-surface-muted">Accès gratuit, pour toujours</div>
               <div className="flex items-center flex-wrap gap-[12px] mt-[16px]">
                 <Link href="/inscription?categorie=passionne" className="inline-flex items-center gap-[6px] bg-primary text-on-primary text-xs font-bold px-[20px] py-[10px] rounded-[7px] hover:bg-primary/90 transition-colors">
-                  <UserPlus size={14} /> Rejoindre gratuitement
+                  <UserPlus size={16} /> Rejoindre gratuitement
                 </Link>
                 <button className="inline-flex items-center gap-[6px] text-primary text-xs font-semibold underline decoration-transparent hover:decoration-primary transition-colors">
-                  Voir les avantages <ArrowRight size={13} />
+                  Voir les avantages <ArrowRight size={16} />
                 </button>
               </div>
             </div>
@@ -97,7 +96,7 @@ export default function PricingSection() {
               ].map((feat, i) => (
                 <div key={i} className="flex items-start gap-[8px] text-xs">
                   <div className="mt-[2px] flex-shrink-0">
-                    {feat.included ? <Check size={14} className="text-primary" /> : <X size={14} className="text-outline" />}
+                    {feat.included ? <Check size={16} className="text-primary" /> : <X size={16} className="text-outline" />}
                   </div>
                   <span className={feat.included ? "text-on-surface" : "text-on-surface-muted"}>{feat.text}</span>
                 </div>
@@ -119,7 +118,7 @@ export default function PricingSection() {
           {/* Junior */}
           <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-surface-container-lowest">
             <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-success-container text-primary">
-              <GraduationCap size={18} />
+              <GraduationCap size={20} />
             </div>
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Junior</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Étudiants en agronomie, jeunes diplômés et passionnés en phase d'insertion.</div>
@@ -143,14 +142,14 @@ export default function PricingSection() {
               ].map((feat, i) => (
                 <div key={i} className="flex items-start gap-[7px] text-label-sm leading-[1.45]">
                   <div className="mt-[1px] flex-shrink-0">
-                    {feat.included ? <Check size={13} className="text-primary" /> : <X size={13} className="text-outline" />}
+                    {feat.included ? <Check size={16} className="text-primary" /> : <X size={16} className="text-outline" />}
                   </div>
                   <span className={feat.included ? "text-on-surface" : "text-on-surface-muted"}>{feat.text}</span>
                 </div>
               ))}
             </div>
             <div className="text-label-sm font-semibold text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
-              Voir tous les avantages <ArrowRight size={12} />
+              Voir tous les avantages <ArrowRight size={16} />
             </div>
           </div>
 
@@ -160,7 +159,7 @@ export default function PricingSection() {
               Le plus populaire
             </div>
             <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-primary text-on-primary">
-              <Briefcase size={18} />
+              <Briefcase size={20} />
             </div>
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Professionnel</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Agronomes, ingénieurs, chercheurs, consultants et entrepreneurs actifs.</div>
@@ -184,21 +183,21 @@ export default function PricingSection() {
               ].map((feat, i) => (
                 <div key={i} className="flex items-start gap-[7px] text-label-sm leading-[1.45] text-on-surface">
                   <div className="mt-[1px] flex-shrink-0">
-                    <Check size={13} className="text-primary" />
+                    <Check size={16} className="text-primary" />
                   </div>
                   <span>{feat.text}</span>
                 </div>
               ))}
             </div>
             <div className="text-label-sm font-semibold text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
-              Voir tous les avantages <ArrowRight size={12} />
+              Voir tous les avantages <ArrowRight size={16} />
             </div>
           </div>
 
           {/* Partenaire */}
           <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-surface-container-lowest mt-[6px] md:mt-0">
             <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-primary-container text-primary">
-              <Building2 size={18} />
+              <Building2 size={20} />
             </div>
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Partenaire</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Entreprises agricoles, coopératives, ONG, agritech et institutions de recherche.</div>
@@ -222,21 +221,21 @@ export default function PricingSection() {
               ].map((text, i) => (
                 <div key={i} className="flex items-start gap-[7px] text-label-sm leading-[1.45] text-on-surface">
                   <div className="mt-[1px] flex-shrink-0">
-                    <Check size={13} className="text-primary" />
+                    <Check size={16} className="text-primary" />
                   </div>
                   <span>{text}</span>
                 </div>
               ))}
             </div>
             <div className="text-label-sm font-semibold text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
-              Voir tous les avantages <ArrowRight size={12} />
+              Voir tous les avantages <ArrowRight size={16} />
             </div>
           </div>
 
           {/* Sénior */}
           <div className="border border-outline-variant rounded-xl p-[20px] flex flex-col bg-surface-container-lowest mt-[6px] md:mt-0">
             <div className="w-[36px] h-[36px] rounded-[8px] flex items-center justify-center mb-[10px] bg-tertiary-container text-on-tertiary-container">
-              <Award size={18} />
+              <Award size={20} />
             </div>
             <div className="font-extrabold text-body-md text-on-surface mb-[3px]">Sénior</div>
             <div className="text-label-sm text-on-surface-muted leading-[1.5] mb-[12px]">Experts, chercheurs émérites, mentors et investisseurs qui contribuent bénévolement.</div>
@@ -260,14 +259,14 @@ export default function PricingSection() {
               ].map((text, i) => (
                 <div key={i} className="flex items-start gap-[7px] text-label-sm leading-[1.45] text-on-surface">
                   <div className="mt-[1px] flex-shrink-0">
-                    <Check size={13} className="text-primary" />
+                    <Check size={16} className="text-primary" />
                   </div>
                   <span>{text}</span>
                 </div>
               ))}
             </div>
             <div className="text-label-sm font-semibold text-primary mt-[14px] flex items-center gap-[4px] cursor-pointer hover:underline">
-              Voir les critères de sélection <ArrowRight size={12} />
+              Voir les critères de sélection <ArrowRight size={16} />
             </div>
           </div>
 
@@ -275,7 +274,7 @@ export default function PricingSection() {
 
         {/* Payment Note */}
         <div className="flex items-center justify-center gap-[6px] text-center mt-[32px] text-label-sm text-on-surface-muted">
-          <Lock size={14} className="flex-shrink-0" />
+          <Lock size={16} className="flex-shrink-0" />
           <span>Aucun paiement avant le {DATE_FIN_GRATUITE_LISIBLE}, nous vous préviendrons bien avant · Ensuite : Mobile Money ou carte bancaire, engagement annuel résiliable</span>
         </div>
 

@@ -5,8 +5,7 @@ import React, { useState, useEffect } from 'react'
 import CustomCalendar from './CustomCalendar'
 import EventCard from './EventCard'
 import InscriptionModal from './InscriptionModal'
-import { List, Calendar as CalendarIcon, Filter, X } from 'lucide-react'
-
+import { List, CalendarDays as CalendarIcon, SlidersHorizontal, X } from "@/components/ui/icons"
 export default function EventsClient() {
   const [events, setEvents] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
@@ -71,13 +70,13 @@ export default function EventsClient() {
             onClick={() => setView('list')}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'list' ? 'bg-surface-container-lowest shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
-            <List className="w-4 h-4" /> Liste
+            <List className="size-4" /> Liste
           </button>
           <button 
             onClick={() => setView('calendar')}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${view === 'calendar' ? 'bg-surface-container-lowest shadow-sm text-on-surface' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
           >
-            <CalendarIcon className="w-4 h-4" /> Calendrier
+            <CalendarIcon className="size-4" /> Calendrier
           </button>
         </div>
       </div>
@@ -86,7 +85,7 @@ export default function EventsClient() {
       {view === 'list' && (
         <div className="bg-surface-container-lowest p-4 rounded-2xl border border-outline-variant shadow-sm mb-8 flex flex-wrap gap-4 items-center">
           <div className="flex items-center gap-2 text-on-surface-muted">
-            <Filter className="w-4 h-4" />
+            <SlidersHorizontal className="size-4" />
             <span className="text-sm font-medium">Filtres :</span>
           </div>
           
@@ -117,7 +116,7 @@ export default function EventsClient() {
               onClick={() => { setFilterType('tous'); setFilterFormat('tous'); }}
               className="text-sm text-error hover:bg-error-container px-2 py-1.5 rounded-lg transition-colors flex items-center gap-1"
             >
-              <X className="w-3 h-3" /> Réinitialiser
+              <X className="size-4" /> Réinitialiser
             </button>
           )}
         </div>

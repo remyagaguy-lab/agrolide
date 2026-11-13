@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, XCircle, ChevronRight, Loader2 } from "lucide-react";
-import { useRouter } from "next/navigation";
 
+import { useRouter } from "next/navigation";
+import { CheckCircle2, XCircle, ChevronRight, Loader2 } from "@/components/ui/icons"
 const cn = (...classes: (string | undefined | null | false)[]) => classes.filter(Boolean).join(" ");
 
 type Question = {
@@ -79,13 +79,13 @@ export function Quiz({
         <div className="pt-4 space-y-4">
           {isSubmittingCompletion && (
             <p className="text-on-tertiary-container font-urbanist font-medium flex items-center justify-center">
-              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              <Loader2 className="size-4 mr-2 animate-spin" />
               Validation de la leçon en cours...
             </p>
           )}
           {isCompleted && !isSubmittingCompletion && (
             <p className="text-primary font-urbanist font-bold flex items-center justify-center">
-              <CheckCircle2 className="w-5 h-5 mr-2 text-primary" />
+              <CheckCircle2 className="size-5 mr-2 text-primary" />
               Leçon validée avec succès ! Vous pouvez passer à la suite.
             </p>
           )}
@@ -146,8 +146,8 @@ export function Quiz({
                     hasSubmitted && isSelected && !isCorrect ? "border-error bg-error text-on-error" :
                     isSelected ? "border-accent-leaf bg-accent-leaf text-on-accent" : "border-outline text-on-surface-muted"
                   )}>
-                    {hasSubmitted && isCorrect ? <CheckCircle2 className="w-4 h-4" /> : 
-                     hasSubmitted && isSelected && !isCorrect ? <XCircle className="w-4 h-4" /> :
+                    {hasSubmitted && isCorrect ? <CheckCircle2 className="size-4" /> : 
+                     hasSubmitted && isSelected && !isCorrect ? <XCircle className="size-4" /> :
                      <span className="text-xs font-bold">{String.fromCharCode(65 + index)}</span>}
                   </div>
                   <span className="flex-1 font-medium">{option}</span>
@@ -172,7 +172,7 @@ export function Quiz({
               className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-on-primary font-urbanist font-bold text-body-md px-[28px] min-h-[48px] rounded-lg transition-colors"
             >
               {currentQuestionIndex < questions.length - 1 ? "Question suivante" : "Terminer le quiz"}
-              <ChevronRight className="ml-2 w-5 h-5" />
+              <ChevronRight className="ml-2 size-5" />
             </button>
           )}
         </div>

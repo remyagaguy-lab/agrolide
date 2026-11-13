@@ -12,12 +12,9 @@ import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
 import { revalidateEverything } from "@/app/actions/revalidate"
-import { 
-  Bold, Italic, List, ListOrdered, Link as LinkIcon, 
-  Image as ImageIcon, Heading2, Heading3, Loader2, Save, Send 
-} from "lucide-react"
 import { useAuth } from "@/lib/auth/client"
 
+import { Bold, Italic, List, ListOrdered, Link as LinkIcon, Image as ImageIcon, Heading2, Heading3, Loader2, Save, Send } from "@/components/ui/icons"
 export function ArticleEditorForm({ initialData }: { initialData?: any }) {
   const router = useRouter()
   const { getToken } = useAuth()
@@ -248,7 +245,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
             {imageUrl ? (
               <img src={imageUrl} alt="Image à la une" className="w-full h-full object-cover" />
             ) : (
-              <ImageIcon className="text-on-surface-muted" size={32} />
+              <ImageIcon className="text-on-surface-muted" size={24} />
             )}
           </div>
           <div>

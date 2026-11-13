@@ -13,7 +13,7 @@ export const db = drizzle(async (sql, params, method) => {
   // En développement local (si pas de token Cloudflare), on pourrait utiliser un mock ou laisser l'erreur
   if (!accountId || !dbId || !token) {
     if (process.env.NODE_ENV === 'development') {
-      console.warn('⚠️ Variables Cloudflare D1 manquantes. Requête annulée.');
+      console.warn('Variables Cloudflare D1 manquantes. Requête annulée.');
       return { rows: [] };
     }
     throw new Error('Cloudflare D1 credentials missing in environment variables');

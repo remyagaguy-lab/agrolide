@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { Plus, Trash2, Loader2, MessageCircle, ExternalLink } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { deleteThread, createAdminThread } from '@/app/actions/admin-forum-extended'
 
+import { Plus, Trash2, Loader2, MessageCircle, ExternalLink } from "@/components/ui/icons"
 export default function ThreadsManager() {
   const [threads, setThreads] = useState<any[]>([])
   const [categories, setCategories] = useState<any[]>([])
@@ -113,7 +113,7 @@ export default function ThreadsManager() {
               Annuler
             </button>
             <button type="submit" disabled={processing==='new'} className="px-4 py-2 bg-primary hover:bg-primary/90 text-on-primary rounded-xl font-medium flex items-center gap-2">
-              {processing === 'new' ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Créer et publier'}
+              {processing === 'new' ? <Loader2 className="size-4 animate-spin" /> : 'Créer et publier'}
             </button>
           </div>
         </form>
@@ -126,7 +126,7 @@ export default function ThreadsManager() {
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold text-on-surface">Discussions</h2>
         <button onClick={() => setIsFormOpen(true)} className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-xl flex items-center gap-2 text-sm font-medium">
-          <Plus className="w-4 h-4" /> Nouvelle discussion
+          <Plus className="size-4" /> Nouvelle discussion
         </button>
       </div>
 
@@ -150,7 +150,7 @@ export default function ThreadsManager() {
               <tr key={thread.id} className="hover:bg-surface-container-low transition-colors">
                 <td className="p-4 font-bold text-on-surface max-w-xs truncate" title={thread.titre}>
                   <div className="flex items-center gap-2">
-                    <MessageCircle className="w-4 h-4 text-on-surface-muted" /> {thread.titre}
+                    <MessageCircle className="size-4 text-on-surface-muted" /> {thread.titre}
                   </div>
                 </td>
                 <td className="p-4 text-on-surface-variant">{thread.categorie?.nom}</td>
@@ -158,10 +158,10 @@ export default function ThreadsManager() {
                 <td className="p-4 text-on-surface-muted">{format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}</td>
                 <td className="p-4 flex justify-end gap-2">
                   <Link href={`/membres/forum/fil/${thread.id}`} target="_blank" className="p-2 text-info bg-info-container hover:bg-info-container rounded-lg transition-colors" title="Voir sur le site">
-                    <ExternalLink className="w-4 h-4" />
+                    <ExternalLink className="size-4" />
                   </Link>
                   <button onClick={() => handleDelete(thread.id)} disabled={processing===thread.id} className="p-2 text-error bg-error-container hover:bg-error-container rounded-lg transition-colors" title="Supprimer la discussion">
-                    {processing === thread.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                    {processing === thread.id ? <Loader2 className="size-4 animate-spin" /> : <Trash2 className="size-4" />}
                   </button>
                 </td>
               </tr>

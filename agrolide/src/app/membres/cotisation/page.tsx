@@ -3,7 +3,6 @@ import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { users, cotisations as cotisationsTable } from "@/db/schema"
 import { eq, desc } from "drizzle-orm"
-import { CheckCircle, Clock, AlertTriangle, Gift } from "lucide-react"
 import { PaiementBoutons } from "./PaiementBoutons"
 import {
   DATE_FIN_GRATUITE_LISIBLE,
@@ -15,6 +14,7 @@ import {
   tarifAnnuel,
 } from "@/lib/adhesion"
 
+import { CheckCircle2, Clock, AlertTriangle, CreditCard } from "@/components/ui/icons"
 export const metadata = { title: "Ma Cotisation" }
 
 export default async function CotisationPage() {
@@ -64,7 +64,7 @@ export default async function CotisationPage() {
         <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-warning/40 overflow-hidden relative">
           <div className="bg-gradient-to-r from-warning-container to-warning-container p-6 border-b border-warning/40 flex items-start gap-4">
             <div className="w-10 h-10 bg-warning-container rounded-lg flex items-center justify-center shrink-0 border border-warning/40">
-               <AlertTriangle className="text-warning w-5 h-5" strokeWidth={2.5} />
+               <AlertTriangle className="text-warning size-5" />
             </div>
             <div>
               <h2 className="text-lg font-bold text-on-surface">
@@ -85,7 +85,7 @@ export default async function CotisationPage() {
             />
             
             <div className="mt-6 flex items-center justify-center gap-1.5 text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
-              <CheckCircle size={14} className="text-success" /> Paiements 100% sécurisés
+              <CheckCircle2 size={16} className="text-success" /> Paiements 100% sécurisés
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default async function CotisationPage() {
       {showGratuitBlock && (
         <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6 flex items-start gap-4">
           <div className="w-12 h-12 bg-success-container border border-outline-variant rounded-full flex items-center justify-center text-primary shrink-0">
-            <Gift size={24} aria-hidden="true" />
+            <CreditCard size={24} aria-hidden="true" />
           </div>
           <div className="space-y-1.5">
             {sansCotisation ? (
@@ -124,7 +124,7 @@ export default async function CotisationPage() {
         <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 bg-primary-container border border-outline-variant rounded-full flex items-center justify-center text-primary shrink-0 shadow-sm">
-              <CheckCircle size={24} strokeWidth={2.5} />
+              <CheckCircle2 size={24} />
             </div>
             <div>
               <h2 className="text-lg font-bold text-on-surface mb-0.5">Adhésion active</h2>

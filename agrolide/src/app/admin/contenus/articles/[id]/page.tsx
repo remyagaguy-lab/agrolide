@@ -5,8 +5,7 @@ import { articles } from "@/db/schema"
 import { eq } from "drizzle-orm"
 import { ArticleEditorForm } from "./DynamicEditorWrapper"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
-
+import { ArrowLeft } from "@/components/ui/icons"
 export default async function ArticleEditPage({ params }: { params: Promise<{ id: string }> }) {
   const { userId } = await auth()
   if (!userId) redirect("/login")

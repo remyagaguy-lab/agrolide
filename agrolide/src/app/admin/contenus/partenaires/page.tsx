@@ -3,9 +3,9 @@ import { partenaires, contacts_partenariat } from "@/db/schema"
 import { desc, asc } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
-import { Handshake, Mail } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
+import { Handshake, Mail } from "@/components/ui/icons"
 export const metadata = { title: "Gestion des partenaires" }
 export const dynamic = 'force-dynamic'
 

@@ -7,7 +7,7 @@ import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
 import { PageHero } from "@/components/ui/PageHero"
-
+import { ChevronRight, Search } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Blog & Actualités",
   description: "Découvrez les analyses, récits et conseils de notre réseau agricole. Des ressources concrètes pour transformer l'agriculture africaine et innover sur le terrain.",
@@ -99,7 +99,7 @@ export default async function BlogPage({
                           <span className="font-bold text-primary uppercase tracking-wider text-xs">
                             {featuredMain.categorie || "Général"}
                           </span>
-                          <span className="text-outline">•</span>
+                          <span className="text-outline">·</span>
                           <span className="text-on-surface-muted font-medium text-xs">
                             {format(new Date(featuredMain.published_at || ''), 'dd MMMM yyyy', { locale: fr })}
                           </span>
@@ -116,7 +116,7 @@ export default async function BlogPage({
                           </span>
                           <div className="flex items-center text-sm font-bold text-primary group-hover:translate-x-1 transition-transform duration-300">
                             Lire l'article 
-                            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                            <ChevronRight className="ml-1 size-4" aria-hidden />
                           </div>
                         </div>
                       </div>
@@ -149,7 +149,7 @@ export default async function BlogPage({
                           <span className="font-bold text-primary uppercase tracking-wider text-xs">
                             {article.categorie || "Général"}
                           </span>
-                          <span className="text-outline">•</span>
+                          <span className="text-outline">·</span>
                           <span className="text-on-surface-muted font-medium text-xs">
                             {format(new Date(article.published_at || ''), 'dd MMM yyyy', { locale: fr })}
                           </span>
@@ -184,7 +184,7 @@ export default async function BlogPage({
                   placeholder="Rechercher un article..." 
                   className="w-full pl-11 pr-4 py-2.5 border border-outline rounded-full text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-shadow" 
                 />
-                <svg className="w-4 h-4 absolute left-4 top-3.5 text-on-surface-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <Search className="absolute left-4 top-3.5 size-4 text-on-surface-muted" aria-hidden />
               </form>
             </div>
 

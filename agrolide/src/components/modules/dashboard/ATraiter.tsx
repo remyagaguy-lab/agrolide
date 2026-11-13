@@ -1,9 +1,9 @@
 import React from "react"
 import Link from "next/link"
-import { CreditCard, Mail, UserPlus, UserRound } from "lucide-react"
 import { cn } from "@/lib/utils/formatters"
 import { labelInvitations, labelMessages } from "@/components/layout/membres-nav"
 
+import { CreditCard, Mail, UserPlus, UserRound } from "@/components/ui/icons"
 interface ATraiterProps {
   invitations: number
   messages: number

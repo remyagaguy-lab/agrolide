@@ -1,8 +1,8 @@
 import * as React from 'react'
-import type { LucideIcon } from 'lucide-react'
 import { Card } from './Card'
 import { cn } from '@/lib/utils/formatters'
 
+import { type LucideIcon } from "@/components/ui/icons"
 export interface ValueCardProps {
   /** Icône lucide-react (décorative). */
   icon: LucideIcon

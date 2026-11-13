@@ -3,9 +3,9 @@ import { agripreneurs } from "@/db/schema"
 import { desc } from "drizzle-orm"
 import { redirect } from "next/navigation"
 import { auth } from "@/lib/auth/server"
-import { Sprout } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
+import { Sprout } from "@/components/ui/icons"
 export const metadata = { title: "Agripreneurs" }
 export const dynamic = 'force-dynamic'
 

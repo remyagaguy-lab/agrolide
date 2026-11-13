@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-
+import { Check, Share2 } from "@/components/ui/icons"
 /** Partage la formation : feuille de partage du système si elle existe, sinon copie du lien. */
 export function PartagerBouton({ titre }: { titre: string }) {
   const [copie, setCopie] = useState(false);

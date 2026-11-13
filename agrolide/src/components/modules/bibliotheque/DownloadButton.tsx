@@ -2,12 +2,12 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Eye, Download, AlertCircle, Lock } from 'lucide-react'
 import { checkTrocEligibility, getDocumentUrl } from '@/app/actions/bibliotheque'
 import { useAuth } from '@/lib/auth/client'
 import { Button } from '@/components/ui/Button'
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from '@/components/ui/Modal'
 
+import { Eye, Download, AlertTriangle, Lock } from "@/components/ui/icons"
 /**
  * Gestes de la fiche : lire en ligne (le geste principal, gratuit) et télécharger (réservé aux membres, avec le troc).
  * Le bouton orange de la vue, c'est la lecture.
@@ -97,7 +97,7 @@ export function DownloadButton({ documentId, mode = 'public' }: { documentId: st
         <ModalContent>
           <ModalHeader>
             <span className="mb-1 flex size-12 items-center justify-center rounded-full bg-warning-container text-on-warning-container">
-              <AlertCircle className="size-6" aria-hidden />
+              <AlertTriangle className="size-6" aria-hidden />
             </span>
             <ModalTitle>Le téléchargement s’obtient par le troc</ModalTitle>
             <ModalDescription>

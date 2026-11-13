@@ -5,8 +5,7 @@ import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
 import { Turnstile, turnstileEnabled } from "@/components/ui/Turnstile"
-import { Loader2 } from "lucide-react"
-
+import { Loader2, Check } from "@/components/ui/icons"
 /** Coordonnées préremplies quand le formulaire est ouvert par un membre connecté. */
 export interface CoordonneesInitiales {
   prenom?: string
@@ -89,7 +88,7 @@ export default function IncubationForm({ initial }: { initial?: CoordonneesIniti
     return (
       <div className="bg-success-container p-8 rounded-2xl border border-success/30 text-center">
         <div className="w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+          <Check className="size-6" aria-hidden />
         </div>
         <h3 className="text-2xl font-bold text-on-success-container mb-2">Candidature envoyée !</h3>
         <p className="text-success">Merci {formData.prenom}, votre projet "{formData.titre_projet}" a bien été soumis. Notre comité l'évaluera prochainement.</p>
@@ -188,7 +187,7 @@ export default function IncubationForm({ initial }: { initial?: CoordonneesIniti
         <div className="pt-6">
           <Turnstile onToken={setTurnstileToken} resetSignal={isSubmitting} />
           <Button type="submit" variant="primary" disabled={isSubmitting || (turnstileEnabled && !turnstileToken)} className="w-full text-lg h-14">
-            {isSubmitting ? <><Loader2 className="mr-2 h-5 w-5 animate-spin" /> Envoi en cours...</> : "Soumettre ma candidature"}
+            {isSubmitting ? <><Loader2 className="mr-2 size-5 animate-spin" /> Envoi en cours...</> : "Soumettre ma candidature"}
           </Button>
           <p className="text-center text-xs text-on-surface-muted mt-4">
             Vos données sont traitées de manière confidentielle et ne seront pas partagées avec des tiers sans votre accord.

@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react'
 
 import Link from 'next/link'
 import { buttonVariants } from '@/components/ui/Button'
-import { MessageSquare, Clock, Plus } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
+import { MessageCircle, Clock, Plus } from "@/components/ui/icons"
 export default function ForumClient() {
   const [categories, setCategories] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
@@ -40,7 +40,7 @@ export default function ForumClient() {
           href="/membres/forum/nouveau" 
           className={buttonVariants({ variant: 'secondary' })}
         >
-          <Plus className="w-5 h-5" /> Nouveau sujet
+          <Plus className="size-5" /> Nouveau sujet
         </Link>
       </div>
 
@@ -78,15 +78,15 @@ export default function ForumClient() {
                             <span className="font-semibold text-on-surface-variant">
                               {thread.auteur?.prenom}
                             </span>
-                            <span>•</span>
+                            <span>·</span>
                             <div className="flex items-center gap-1">
-                              <Clock className="w-3 h-3" />
+                              <Clock className="size-4" />
                               {formatDistanceToNow(new Date(thread.last_activity_at), { addSuffix: true, locale: fr })}
                             </div>
                           </div>
                         </div>
                         <div className="flex items-center gap-1 text-primary bg-primary-container px-2 py-0.5 rounded text-label-sm font-bold shrink-0 border border-outline-variant">
-                          <MessageSquare className="w-3 h-3" />
+                          <MessageCircle className="size-4" />
                           {thread.nb_reponses}
                         </div>
                       </div>

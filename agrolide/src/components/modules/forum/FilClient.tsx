@@ -3,12 +3,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Clock, AlertTriangle, Send, User } from 'lucide-react'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import { formatDistanceToNow, format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { marked } from 'marked'
 
+import { Lock, Clock, AlertTriangle, Send, UserRound } from "@/components/ui/icons"
 interface FilClientProps {
   filId: string
 }
@@ -98,7 +98,7 @@ export default function FilClient({ filId }: FilClientProps) {
         </div>
         <div className="flex items-center gap-2 text-label-sm font-medium text-on-surface-muted">
           <span>Par <span className="font-bold text-on-surface-variant">{thread.auteur?.prenom} {thread.auteur?.nom}</span></span>
-          <span>•</span>
+          <span>·</span>
           <span>{format(new Date(thread.created_at), "dd MMM yyyy", { locale: fr })}</span>
         </div>
       </div>
@@ -113,7 +113,7 @@ export default function FilClient({ filId }: FilClientProps) {
                 {msg.auteur?.avatar_url ? (
                   <Image src={msg.auteur.avatar_url} alt="Avatar" fill sizes="48px" className="object-cover" />
                 ) : (
-                  <User className="w-6 h-6 text-on-surface-muted" />
+                  <UserRound className="size-6 text-on-surface-muted" />
                 )}
               </div>
               <div className="font-bold text-on-surface text-xs truncate w-full">{msg.auteur?.prenom}</div>
@@ -124,13 +124,13 @@ export default function FilClient({ filId }: FilClientProps) {
             <div className="p-5 flex-1 flex flex-col">
               <div className="flex justify-between items-center mb-3 text-label-sm text-on-surface-muted font-bold uppercase tracking-wider">
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5" />
+                  <Clock className="size-4" />
                   {formatDistanceToNow(new Date(msg.created_at), { addSuffix: true, locale: fr })}
                 </div>
                 <div className="flex items-center gap-2">
                   <span>#{index + 1}</span>
                   <button onClick={() => handleReport(msg.id)} className="text-on-surface-muted hover:text-error transition-colors p-1" title="Signaler">
-                    <AlertTriangle className="w-3.5 h-3.5" />
+                    <AlertTriangle className="size-4" />
                   </button>
                 </div>
               </div>
@@ -168,7 +168,7 @@ export default function FilClient({ filId }: FilClientProps) {
                   disabled={replying || !replyContent.trim()}
                   className="bg-primary hover:bg-primary/90 disabled:opacity-50 text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5 transition-colors"
                 >
-                  <Send className="w-3.5 h-3.5" /> Publier
+                  <Send className="size-4" /> Publier
                 </button>
               </div>
             </form>
@@ -180,7 +180,7 @@ export default function FilClient({ filId }: FilClientProps) {
         </div>
       ) : (
         <div className="bg-surface-container-low p-4 rounded-xl text-center text-xs text-on-surface-muted font-medium border border-outline-variant">
-          🔒 Ce sujet a été fermé. Il n'est plus possible d'y répondre.
+          <Lock className="mr-1 inline size-4 align-text-bottom" aria-hidden /> Ce sujet a été fermé. Il n'est plus possible d'y répondre.
         </div>
       )}
     </div>

@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useState, useEffect } from "react"
-import { Plus, Edit2, Trash2, BookOpen, Clock, Users } from "lucide-react"
 import FormationForm from "@/components/modules/admin/FormationForm"
 import { getAdminFormations, deleteFormation } from "@/app/actions/admin-formations"
 
+import { Plus, Pencil, Trash2, Library, Clock, Users } from "@/components/ui/icons"
 export default function AdminFormationsPage() {
   const [formations, setFormations] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
@@ -74,7 +74,7 @@ export default function AdminFormationsPage() {
           onClick={handleCreateNew}
           className="bg-success hover:bg-success text-on-success px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium"
         >
-          <Plus className="w-5 h-5" /> Nouvelle formation
+          <Plus className="size-5" /> Nouvelle formation
         </button>
       </div>
 
@@ -116,7 +116,7 @@ export default function AdminFormationsPage() {
                     </td>
                     <td className="px-6 py-4 text-center">
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium">
-                        <Users className="w-4 h-4" />
+                        <Users className="size-4" />
                         {f.sessions_formation[0]?.count || 0}
                       </div>
                     </td>
@@ -128,10 +128,10 @@ export default function AdminFormationsPage() {
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
                         <button onClick={() => handleEdit(f)} className="p-2 text-on-surface-muted hover:text-success hover:bg-success-container rounded-lg transition-colors" title="Modifier">
-                          <Edit2 className="w-4 h-4" />
+                          <Pencil className="size-4" />
                         </button>
                         <button onClick={() => handleDelete(f.id)} className="p-2 text-on-surface-muted hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
-                          <Trash2 className="w-4 h-4" />
+                          <Trash2 className="size-4" />
                         </button>
                       </div>
                     </td>

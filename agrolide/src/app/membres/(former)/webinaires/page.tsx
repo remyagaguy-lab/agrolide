@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { and, asc, desc, eq, gte, isNotNull, lt } from 'drizzle-orm'
-import { Calendar, Clock, ExternalLink, Lock, Unlock, User, Video } from 'lucide-react'
 import { db } from '@/db'
 import { evenements, webinaires } from '@/db/schema'
 import { PageEntete } from '@/components/layout/PageEntete'
@@ -8,6 +7,7 @@ import { Badge } from '@/components/ui/Badge'
 import { buttonVariants } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
 
+import { CalendarDays, Clock, ExternalLink, Lock, Unlock, UserRound, Video } from "@/components/ui/icons"
 export const metadata = { title: "Webinaires" }
 
 /** Une séance à venir, qu'elle vienne de la table des webinaires ou du calendrier des événements. */
@@ -86,7 +86,7 @@ export default async function WebinairesPage() {
       <section aria-labelledby="webinaires-a-venir">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-8 h-8 rounded-lg bg-primary-container border border-outline-variant flex items-center justify-center">
-            <Calendar size={14} className="text-primary" aria-hidden="true" />
+            <CalendarDays size={16} className="text-primary" aria-hidden="true" />
           </div>
           <h2 id="webinaires-a-venir" className="text-lg font-bold text-on-surface font-heading">À venir</h2>
         </div>
@@ -97,11 +97,11 @@ export default async function WebinairesPage() {
               <li key={s.cle} className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5 flex flex-col hover:border-primary/30 transition-colors">
                 <div className="flex justify-between items-start mb-3 gap-2">
                   {s.acces === 'public' ? (
-                    <Badge variant="neutral" className="uppercase tracking-wider"><Unlock size={10} aria-hidden="true" /> Public</Badge>
+                    <Badge variant="neutral" className="uppercase tracking-wider"><Unlock size={16} aria-hidden="true" /> Public</Badge>
                   ) : s.acces ? (
-                    <Badge variant="info" className="uppercase tracking-wider"><Lock size={10} aria-hidden="true" /> Membres</Badge>
+                    <Badge variant="info" className="uppercase tracking-wider"><Lock size={16} aria-hidden="true" /> Membres</Badge>
                   ) : <span />}
-                  <Badge variant="success" className="uppercase tracking-wider"><Video size={10} aria-hidden="true" /> En direct</Badge>
+                  <Badge variant="success" className="uppercase tracking-wider"><Video size={16} aria-hidden="true" /> En direct</Badge>
                 </div>
 
                 <h3 className="text-sm font-bold text-on-surface mb-1.5">{s.titre}</h3>
@@ -109,18 +109,18 @@ export default async function WebinairesPage() {
 
                 <div className="space-y-2 pt-3 mt-auto border-t border-outline-variant">
                   <p className="flex items-center text-label-sm font-medium text-on-surface-variant first-letter:capitalize">
-                    <Calendar size={12} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
+                    <CalendarDays size={16} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
                     {formaterDate(s.date)}
                   </p>
                   {s.dureeMinutes ? (
                     <p className="flex items-center text-label-sm font-medium text-on-surface-variant">
-                      <Clock size={12} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
+                      <Clock size={16} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
                       Durée estimée : {s.dureeMinutes} minutes
                     </p>
                   ) : null}
                   {s.intervenant ? (
                     <p className="flex items-center text-label-sm font-medium text-on-surface-variant">
-                      <User size={12} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
+                      <UserRound size={16} className="mr-1.5 text-on-surface-muted shrink-0" aria-hidden="true" />
                       {s.intervenant}
                     </p>
                   ) : null}
@@ -129,7 +129,7 @@ export default async function WebinairesPage() {
                 {s.action && (
                   s.action.externe ? (
                     <a href={s.action.href} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'secondary', size: 'sm', fullWidth: true, className: 'mt-4' })}>
-                      {s.action.libelle} <ExternalLink size={14} aria-hidden="true" />
+                      {s.action.libelle} <ExternalLink size={16} aria-hidden="true" />
                     </a>
                   ) : (
                     <Link href={s.action.href} className={buttonVariants({ variant: 'secondary', size: 'sm', fullWidth: true, className: 'mt-4' })}>
@@ -142,7 +142,7 @@ export default async function WebinairesPage() {
           </ul>
         ) : (
           <EmptyState
-            icon={<Calendar />}
+            icon={<CalendarDays />}
             title="Aucun webinaire programmé"
             description="Les prochaines séances en direct apparaîtront ici dès qu'elles seront annoncées."
           />
@@ -153,7 +153,7 @@ export default async function WebinairesPage() {
       <section aria-labelledby="webinaires-replays">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-8 h-8 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center">
-            <Video size={14} className="text-on-surface-muted" aria-hidden="true" />
+            <Video size={16} className="text-on-surface-muted" aria-hidden="true" />
           </div>
           <h2 id="webinaires-replays" className="text-lg font-bold text-on-surface font-heading">Replays récents</h2>
         </div>

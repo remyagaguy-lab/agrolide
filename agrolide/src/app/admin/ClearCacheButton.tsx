@@ -1,10 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { RefreshCw, Check } from "lucide-react"
 import { revalidateEverything } from "@/app/actions/revalidate"
 import { useRouter } from "next/navigation"
 
+import { RefreshCw, Check } from "@/components/ui/icons"
 export function ClearCacheButton() {
   const [loading, setLoading] = useState(false)
   const [done, setDone] = useState(false)

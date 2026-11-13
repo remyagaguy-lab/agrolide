@@ -1,5 +1,4 @@
-import { Briefcase, CalendarDays, GraduationCap, Handshake, HeartHandshake, Library, Compass, Newspaper, Rocket, Users, Video, type LucideIcon } from "lucide-react"
-
+import { Lightbulb, CalendarDays, NotebookPen, Handshake, HeartHandshake, Library, Telescope, Newspaper, TrendingUp, Users, Video, type LucideIcon } from "@/components/ui/icons"
 /**
  * Navigation publique : trois domaines d'action, nommés par le verbe de ce que le visiteur veut faire.
  * Règles de rédaction : verbe à l'infinitif (ou « mon / mes » quand c'est l'objectif de la personne),
@@ -52,11 +51,11 @@ export const NAV_MEGA: NavMega[] = [
     promise: "Montez en compétences et préparez votre insertion professionnelle dans l'agriculture.",
     allHref: "/nos-actions#se-former",
     items: [
-      { label: "Suivre une formation", description: "Parcours pratiques et certifiants animés par des experts de terrain.", href: "/formations", Icon: GraduationCap },
+      { label: "Suivre une formation", description: "Parcours pratiques et certifiants animés par des experts de terrain.", href: "/formations", Icon: NotebookPen },
       { label: "Consulter la bibliothèque", description: "Thèses, mémoires, guides et fiches techniques adaptés à l'Afrique.", href: "/bibliotheque", Icon: Library },
       { label: "Lire le blog", description: "Analyses, récits et conseils venus du terrain.", href: "/blog", Icon: Newspaper },
       { label: "Participer à un webinaire", description: "Échangez sur les thématiques agricoles avec la communauté.", href: "/webinaires", Icon: Video },
-      { label: "Saisir une opportunité", description: "Bourses, appels à projets et offres d'emploi.", href: "/opportunites", Icon: Compass },
+      { label: "Saisir une opportunité", description: "Bourses, appels à projets et offres d'emploi.", href: "/opportunites", Icon: Telescope },
     ],
   },
   {
@@ -65,8 +64,8 @@ export const NAV_MEGA: NavMega[] = [
     promise: "Transformez votre idée agricole en projet viable, avec un accompagnement sur mesure.",
     allHref: "/nos-actions#entreprendre",
     items: [
-      { label: "Lancer mon projet", description: "Un programme d'incubation pour les agripreneurs.", href: "/agrobusiness/incubation", Icon: Rocket },
-      { label: "Être accompagné", description: "Études, business plans et conseil technique.", href: "/agrobusiness", Icon: Briefcase },
+      { label: "Lancer mon projet", description: "Un programme d'incubation pour les agripreneurs.", href: "/agrobusiness/incubation", Icon: TrendingUp },
+      { label: "Être accompagné", description: "Études, business plans et conseil technique.", href: "/agrobusiness", Icon: Lightbulb },
     ],
   },
 ]

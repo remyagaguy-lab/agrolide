@@ -3,10 +3,10 @@
 import React, { useState, useEffect } from 'react'
 
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Loader2 } from 'lucide-react'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import Link from 'next/link'
 
+import { Loader2 } from "@/components/ui/icons"
 export default function NouveauFilClient() {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -130,7 +130,7 @@ export default function NouveauFilClient() {
             disabled={submitting || !formData.titre.trim() || !formData.contenu.trim()}
             className="bg-primary hover:bg-primary/90 text-on-primary px-6 py-2.5 rounded-xl flex items-center gap-2 font-medium transition-colors disabled:opacity-50"
           >
-            {submitting ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Publier le sujet'}
+            {submitting ? <Loader2 className="size-4 animate-spin" /> : 'Publier le sujet'}
           </button>
         </div>
       </form>

@@ -3,9 +3,9 @@ import { temoignages } from "@/db/schema"
 import { asc } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
-import { Star } from "lucide-react"
 import { GenericCrudTable } from "@/components/admin/GenericCrudTable"
 
+import { Star } from "@/components/ui/icons"
 export const metadata = { title: "Témoignages" }
 export const dynamic = 'force-dynamic'
 

@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { CheckCircle, XCircle, Clock, Eye, Trash2, Loader2, Plus } from 'lucide-react'
 import { validateOpportunity, rejectOpportunity, deleteOpportunityAdmin } from '@/app/actions/admin-opportunites'
 import SubmitOpportunityModal from '@/components/modules/opportunites/SubmitOpportunityModal'
 import { OpportunityDetailsModal } from '@/components/modules/admin/OpportunityDetailsModal'
 
+import { CheckCircle2, XCircle, Clock, Eye, Trash2, Loader2, Plus } from "@/components/ui/icons"
 export const dynamic = 'force-dynamic';
 
 export default function AdminOpportunitesPage() {
@@ -93,14 +93,14 @@ export default function AdminOpportunitesPage() {
           onClick={() => setIsSubmitModalOpen(true)}
           className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
         >
-          <Plus className="w-5 h-5" /> Nouvelle opportunité
+          <Plus className="size-5" /> Nouvelle opportunité
         </button>
       </div>
 
       <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
           <div className="p-12 text-center flex flex-col items-center">
-            <Loader2 className="w-8 h-8 animate-spin text-on-surface-muted mb-2" />
+            <Loader2 className="size-6 animate-spin text-on-surface-muted mb-2" />
             <span className="text-on-surface-muted">Chargement...</span>
           </div>
         ) : opportunites.length === 0 ? (
@@ -134,9 +134,9 @@ export default function AdminOpportunitesPage() {
                         opp.statut === 'rejete' ? 'bg-error-container text-error' :
                         'bg-warning-container text-on-warning-container'
                       }`}>
-                        {opp.statut === 'publie' && <CheckCircle className="w-3.5 h-3.5" />}
-                        {opp.statut === 'rejete' && <XCircle className="w-3.5 h-3.5" />}
-                        {opp.statut === 'en_attente' && <Clock className="w-3.5 h-3.5" />}
+                        {opp.statut === 'publie' && <CheckCircle2 className="size-4" />}
+                        {opp.statut === 'rejete' && <XCircle className="size-4" />}
+                        {opp.statut === 'en_attente' && <Clock className="size-4" />}
                         {opp.statut.replace('_', ' ').toUpperCase()}
                       </span>
                     </td>
@@ -147,7 +147,7 @@ export default function AdminOpportunitesPage() {
                           className="p-2 text-info hover:text-info bg-info-container hover:bg-info-container rounded-lg transition-colors"
                           title="Voir les détails et modérer"
                         >
-                          <Eye className="w-4 h-4" />
+                          <Eye className="size-4" />
                         </button>
                         
                         {(opp.statut === 'en_attente' || opp.statut === 'rejete') && (
@@ -157,7 +157,7 @@ export default function AdminOpportunitesPage() {
                             className="p-2 text-on-surface-muted hover:text-error bg-surface-container-low hover:bg-error-container rounded-lg transition-colors"
                             title="Supprimer définitivement"
                           >
-                            {processing === opp.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                            {processing === opp.id ? <Loader2 className="size-4 animate-spin" /> : <Trash2 className="size-4" />}
                           </button>
                         )}
                       </div>

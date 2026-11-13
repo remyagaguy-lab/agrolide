@@ -4,8 +4,7 @@ import { asc } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { FileEdit, Globe } from "lucide-react"
-
+import { Pencil, Globe } from "@/components/ui/icons"
 export const metadata = { title: "Pages statiques" }
 export const dynamic = 'force-dynamic'
 
@@ -55,7 +54,7 @@ export default async function AdminPagesPage() {
                 <p className="text-xs text-on-surface-muted mt-1">/{page.slug}</p>
               </div>
               <div className="w-8 h-8 bg-surface-container-low group-hover:bg-info-container text-on-surface-muted group-hover:text-info rounded-lg flex items-center justify-center transition-colors">
-                <FileEdit size={16} />
+                <Pencil size={16} />
               </div>
             </div>
             {page.updated_at && (

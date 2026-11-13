@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Heart } from 'lucide-react'
 import { PageEntete } from '@/components/layout/PageEntete'
 import { buttonVariants } from '@/components/ui/Button'
 import { BibliothequeClient } from '@/components/modules/bibliotheque/BibliothequeClient'
@@ -8,6 +7,7 @@ import { documents } from '@/db/schema'
 import { desc } from 'drizzle-orm'
 import { colonnesCarteDocument, conditionsBibliotheque, TAILLE_PAGE } from '@/lib/bibliotheque/filtres'
 
+import { Heart } from "@/components/ui/icons"
 export const metadata = {
   title: "Bibliothèque",
   description: 'Bibliothèque de documents pour les membres Agrolide',

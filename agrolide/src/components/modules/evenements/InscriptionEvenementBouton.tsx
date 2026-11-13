@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { CheckCircle, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
+import { CheckCircle2, Loader2 } from "@/components/ui/icons"
 /** Inscription en un clic d'un membre connecté, depuis la fiche d'un événement de son espace. */
 export function InscriptionEvenementBouton({ evenementId }: { evenementId: string }) {
   const router = useRouter()
@@ -35,7 +35,7 @@ export function InscriptionEvenementBouton({ evenementId }: { evenementId: strin
   if (fait) {
     return (
       <p role="status" className="flex items-center gap-2 text-label-lg text-success">
-        <CheckCircle className="size-5" aria-hidden="true" /> Inscription confirmée
+        <CheckCircle2 className="size-5" aria-hidden="true" /> Inscription confirmée
       </p>
     )
   }

@@ -4,7 +4,6 @@ import { Badge } from '@/components/ui/Badge'
 import { Button, buttonVariants } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { DetailHero } from '@/components/ui/DetailHero'
-import { Calendar, Clock, MapPin, Globe } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import Link from 'next/link'
@@ -13,6 +12,7 @@ import { db } from '@/db'
 import { evenements } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 
+import { CalendarDays, Clock, MapPin, Globe } from "@/components/ui/icons"
 interface EventPageProps {
   params: Promise<{ id: string }>
 }
@@ -110,7 +110,7 @@ export default async function EventPage({ params }: EventPageProps) {
       <div className="container max-w-4xl py-10 md:py-14">
         <Card variant="filled" className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="flex items-start gap-3">
-            <Calendar className="mt-0.5 size-5 text-primary" aria-hidden="true" />
+            <CalendarDays className="mt-0.5 size-5 text-primary" aria-hidden="true" />
             <div>
               <p className="text-body-sm text-on-surface-variant">Date</p>
               <p className="text-title-md text-on-surface">{format(dateDebut, "EEEE d MMMM yyyy", { locale: fr })}</p>

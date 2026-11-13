@@ -1,10 +1,10 @@
 import React from "react"
-import { UserCheck } from "lucide-react"
 import { Badge, type BadgeVariant } from "@/components/ui/Badge"
 import { Sillons } from "@/components/brand"
 import NotificationBell from "@/components/shared/NotificationBell"
 import { MembresUserMenu } from "@/components/layout/MembresUserMenu"
 
+import { UserCheck } from "@/components/ui/icons"
 interface DashboardHeaderProps {
   userId: string
   prenom?: string | null
@@ -59,7 +59,7 @@ export function DashboardHeader({ userId, prenom, nom, email, photo_url, image, 
             </h1>
             {badge && (
               <Badge variant={badge.variant} className="rounded-full border border-on-surface-brand/40 px-3 uppercase tracking-wider">
-                <UserCheck className="size-3" aria-hidden="true" />
+                <UserCheck className="size-4" aria-hidden="true" />
                 {badge.label}
               </Badge>
             )}
@@ -69,7 +69,7 @@ export function DashboardHeader({ userId, prenom, nom, email, photo_url, image, 
             {metaItems.length > 0 ? (
               metaItems.map((item, idx) => (
                 <React.Fragment key={idx}>
-                  {idx > 0 && <span aria-hidden="true" className="text-on-surface-brand/50">•</span>}
+                  {idx > 0 && <span aria-hidden="true" className="text-on-surface-brand/50">·</span>}
                   <span>{item}</span>
                 </React.Fragment>
               ))

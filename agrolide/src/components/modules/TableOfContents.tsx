@@ -1,8 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { ChevronDown } from "lucide-react"
-
+import { ChevronDown } from "@/components/ui/icons"
 export function TableOfContents() {
   const [headings, setHeadings] = React.useState<{ id: string; text: string; level: number }[]>([])
   const [isOpen, setIsOpen] = React.useState(false)

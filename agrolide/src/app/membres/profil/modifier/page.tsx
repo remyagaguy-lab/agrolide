@@ -1,6 +1,5 @@
 import { redirect } from "next/navigation"
 import Link from "next/link"
-import { ShieldCheck } from "lucide-react"
 import { and, desc, eq, inArray } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
@@ -11,6 +10,7 @@ import { finCotisationPayee } from "@/lib/categorie.server"
 import { CategorieSection, type DemandeOuverte } from "./CategorieSection"
 import { ProfilForm } from "./ProfilForm"
 
+import { ShieldCheck } from "@/components/ui/icons"
 export const metadata = { title: "Modifier mon profil" }
 
 export default async function ProfilModifierPage() {

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
-import { Calendar, Eye, FileType, GraduationCap, HardDrive, MapPin, Scale, ScrollText, Tag, User, Users } from 'lucide-react'
 import type { documents } from '@/db/schema'
 import Breadcrumb from '@/components/ui/Breadcrumb'
 import { Sillons } from '@/components/brand'
@@ -9,6 +8,7 @@ import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton
 import { FavoriButton } from '@/components/modules/bibliotheque/FavoriButton'
 import { labelType, labelDomaine, labelSousDomaine, labelPublic, labelNiveau } from '@/lib/bibliotheque/taxonomie'
 
+import { CalendarDays, Eye, FileType, GraduationCap, HardDrive, MapPin, Scale, ScrollText, Tag, UserRound, Users } from "@/components/ui/icons"
 type Espace = 'membre' | 'public'
 export type DocumentFicheData = typeof documents.$inferSelect
 
@@ -80,7 +80,7 @@ export function DocumentFiche({
             {/* Couverture : teinte du domaine, pictogramme, sillons dans le coin (jamais sous un texte) */}
             <div className={`relative h-32 overflow-hidden sm:h-40 ${fond}`}>
               <Sillons coin="bas-droite" opacite={0.12} className="absolute bottom-0 right-0 w-56" />
-              <Icone className="absolute left-6 top-6 size-12" strokeWidth={1.5} aria-hidden />
+              <Icone className="absolute left-6 top-6 size-6" aria-hidden />
               <span className="absolute right-4 top-4 max-w-[60%] truncate rounded-full bg-surface-container-lowest/90 px-3 py-1 text-label-md font-medium text-on-surface">
                 {labelType(document.type_doc)}
               </span>
@@ -96,8 +96,8 @@ export function DocumentFiche({
               <h1 className="mt-2 text-balance text-headline-sm font-bold text-on-surface md:text-headline-md">{document.titre}</h1>
 
               <ul className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-body-md text-on-surface-variant">
-                <Repere Icone={User}>{document.auteurs || 'Auteur inconnu'}</Repere>
-                {document.annee ? <Repere Icone={Calendar}>{document.annee}</Repere> : null}
+                <Repere Icone={UserRound}>{document.auteurs || 'Auteur inconnu'}</Repere>
+                {document.annee ? <Repere Icone={CalendarDays}>{document.annee}</Repere> : null}
                 {document.pays ? <Repere Icone={MapPin}>{document.pays}</Repere> : null}
               </ul>
 

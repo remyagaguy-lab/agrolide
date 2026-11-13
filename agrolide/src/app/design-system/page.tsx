@@ -278,7 +278,7 @@ export default function DesignSystemPage() {
               <div className="flex flex-col items-center gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Emblem variant="creux" className="w-32 text-on-surface" /><code className="text-label-sm text-on-surface-muted">variant=&quot;creux&quot;</code></div>
             </div>
 
-            <h3 className="mb-3 mt-10 text-title-md">Tailles et fonds (16 → 96 px)</h3>
+            <h3 className="mb-3 mt-10 text-title-md">Tailles et fonds (de 16 à 96 px)</h3>
             <p className="mb-4 max-w-3xl text-body-md text-on-surface-variant">
               Sur vert profond, la version couleur n’est pas adaptée (le trait vert s’y confond) : utiliser le blanc. Le contour est réservé aux tailles de 48 px et plus.
             </p>

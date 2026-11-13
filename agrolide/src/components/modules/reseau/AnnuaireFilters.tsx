@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import { useRouter } from 'next/navigation'
-import { Search, SlidersHorizontal } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { FormField } from '@/components/ui/FormField'
 import { Input } from '@/components/ui/Input'
@@ -10,6 +9,7 @@ import { NativeSelect } from '@/components/ui/Select'
 import { filtersToQuery, type AnnuaireFilters as Filters, type Tri } from '@/lib/reseau/filtres'
 import { CATEGORIES, LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES } from '@/lib/reseau/profil'
 
+import { Search, SlidersHorizontal } from "@/components/ui/icons"
 /**
  * Recherche et filtres de l'annuaire. Un vrai formulaire (méthode GET) : fonctionne sans JavaScript,
  * et l'état vit dans l'adresse de la page (lien partageable, bouton Précédent fonctionnel).

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { eq } from 'drizzle-orm'
-import { Award, BookOpen, GraduationCap, Heart } from 'lucide-react'
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { users } from '@/db/schema'
@@ -17,6 +16,7 @@ import {
   VideParcours,
 } from '@/components/modules/parcours/ParcoursBlocs'
 
+import { Award, Library, NotebookPen, Heart } from "@/components/ui/icons"
 export const metadata = { title: 'Mon parcours' }
 
 /**
@@ -40,8 +40,8 @@ export default async function MonParcoursPage() {
   const certifiees = suivis.filter((s) => s.terminee)
 
   const repere = [
-    { href: '#en-cours', n: enCours.length, libelle: enCours.length > 1 ? 'formations en cours' : 'formation en cours', Icone: GraduationCap },
-    { href: '#lectures', n: lectures.length, libelle: lectures.length > 1 ? 'documents lus' : 'document lu', Icone: BookOpen },
+    { href: '#en-cours', n: enCours.length, libelle: enCours.length > 1 ? 'formations en cours' : 'formation en cours', Icone: NotebookPen },
+    { href: '#lectures', n: lectures.length, libelle: lectures.length > 1 ? 'documents lus' : 'document lu', Icone: Library },
     { href: '#favoris', n: favoris.length, libelle: favoris.length > 1 ? 'favoris' : 'favori', Icone: Heart },
     { href: '#certificats', n: certifiees.length, libelle: certifiees.length > 1 ? 'certificats' : 'certificat', Icone: Award },
   ]
@@ -53,7 +53,7 @@ export default async function MonParcoursPage() {
         description="Vos formations, vos lectures et vos certificats, là où vous les avez laissés."
         action={
           <Link href="/membres/formations/catalogue" className={buttonVariants({ variant: 'tonal', size: 'sm' })}>
-            <GraduationCap className="size-4" aria-hidden /> Trouver une formation
+            <NotebookPen className="size-4" aria-hidden /> Trouver une formation
           </Link>
         }
       />

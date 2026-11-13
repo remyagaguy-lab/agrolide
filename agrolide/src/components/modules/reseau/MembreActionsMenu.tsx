@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import { useRouter } from 'next/navigation'
-import { Ban, Flag, MoreVertical } from 'lucide-react'
 import { Alert } from '@/components/ui/Alert'
 import { Button } from '@/components/ui/Button'
 import { ChoiceChip } from '@/components/ui/ChoiceChip'
@@ -13,6 +12,7 @@ import { useToast } from '@/components/ui/Toast'
 import { bloquerMembre, signalerMembre } from '@/app/actions/blocages'
 import { MOTIFS_SIGNALEMENT, type MotifSignalement } from '@/lib/reseau/blocage'
 
+import { Ban, Flag, MoreVertical } from "@/components/ui/icons"
 /**
  * Menu « Bloquer / Signaler » d'un membre (fiche et messagerie). Chaque action passe par une confirmation (`Modal`) ;
  * le motif d'un signalement se choisit dans une liste fermée. Après un blocage, `apresBlocage` est appelé

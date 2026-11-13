@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
-import { Search, SlidersHorizontal, X } from 'lucide-react'
 import { DocumentCard, DocumentType } from './DocumentCard'
 import { SkeletonGrid } from '@/components/ui/Skeleton'
 import { Button } from '@/components/ui/Button'
@@ -14,6 +13,7 @@ import {
   labelDomaine, labelSousDomaine, labelType, labelPublic, labelNiveau, type Option,
 } from '@/lib/bibliotheque/taxonomie'
 
+import { Search, SlidersHorizontal, X } from "@/components/ui/icons"
 function Filtre({ label, value, onChange, options, tous }: { label: string; value: string; onChange: (v: string) => void; options: Option[]; tous: string }) {
   return (
     <FormField label={label}>

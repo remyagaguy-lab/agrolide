@@ -2,8 +2,7 @@
 
 import React from 'react'
 import { useRouter } from 'next/navigation'
-import { Filter } from 'lucide-react'
-
+import { SlidersHorizontal } from "@/components/ui/icons"
 export default function BlogFilter({ 
   currentCategory, 
   categories 
@@ -15,7 +14,7 @@ export default function BlogFilter({
 
   return (
     <div className="flex items-center gap-2 bg-surface-container-lowest p-2 rounded-xl shadow-sm border border-outline-variant max-w-sm">
-      <Filter className="w-5 h-5 text-on-surface-muted ml-2 shrink-0" />
+      <SlidersHorizontal className="size-5 text-on-surface-muted ml-2 shrink-0" />
       <select 
         value={currentCategory || 'tous'}
         onChange={(e) => {

@@ -1,12 +1,12 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Check, X, Eye, FileText, Loader2, AlertCircle, Trash2, Plus } from 'lucide-react'
 import { validateDocument, rejectDocument, deleteDocumentAdmin, getAdminDocuments } from '@/app/actions/admin-documents'
 import { DocumentDetailsModal } from '@/components/modules/admin/DocumentDetailsModal'
 import SubmitDocumentModal from '@/components/modules/admin/SubmitDocumentModal'
 import { labelType } from '@/lib/bibliotheque/taxonomie'
 
+import { Check, X, Eye, FileText, Loader2, AlertTriangle, Trash2, Plus } from "@/components/ui/icons"
 export const dynamic = 'force-dynamic';
 
 type DocumentAdmin = {
@@ -127,13 +127,13 @@ export default function AdminDocumentsPage() {
           onClick={() => setIsSubmitModalOpen(true)}
           className="bg-info hover:bg-info text-on-surface-brand px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium shrink-0"
         >
-          <Plus className="w-5 h-5" /> Nouveau document
+          <Plus className="size-5" /> Nouveau document
         </button>
       </div>
 
       {error && (
         <div className="mb-6 p-4 bg-error-container text-error rounded-lg flex items-start gap-3 text-sm">
-          <AlertCircle className="w-5 h-5 flex-shrink-0" />
+          <AlertTriangle className="size-5 flex-shrink-0" />
           <p>{error}</p>
         </div>
       )}
@@ -154,7 +154,7 @@ export default function AdminDocumentsPage() {
               {loading ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-12 text-center">
-                    <Loader2 className="w-8 h-8 animate-spin text-on-surface-muted mx-auto" />
+                    <Loader2 className="size-6 animate-spin text-on-surface-muted mx-auto" />
                   </td>
                 </tr>
               ) : documents.length === 0 ? (
@@ -168,7 +168,7 @@ export default function AdminDocumentsPage() {
                   <tr key={doc.id} className={doc.statut === 'en_attente_validation' ? 'bg-warning-container/30' : ''}>
                     <td className="px-6 py-4">
                       <div className="flex items-start gap-3">
-                        <FileText className="w-5 h-5 text-on-surface-muted mt-0.5 flex-shrink-0" />
+                        <FileText className="size-5 text-on-surface-muted mt-0.5 flex-shrink-0" />
                         <div>
                           <div className="text-sm font-medium text-on-surface line-clamp-1">{doc.titre}</div>
                           <div className="text-sm text-on-surface-muted">{doc.auteurs}</div>
@@ -191,7 +191,7 @@ export default function AdminDocumentsPage() {
                           className="p-2 text-info hover:text-info bg-info-container hover:bg-info-container rounded-lg transition-colors"
                           title="Voir les détails et modérer"
                         >
-                          <Eye className="w-4 h-4" />
+                          <Eye className="size-4" />
                         </button>
                         
                         {(doc.statut === 'rejete' || doc.statut === 'en_attente_validation') && (
@@ -201,7 +201,7 @@ export default function AdminDocumentsPage() {
                              className="p-2 text-on-surface-muted hover:text-error bg-surface-container-low hover:bg-error-container rounded-lg transition-colors"
                              title="Supprimer définitivement"
                            >
-                             {processing === doc.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                             {processing === doc.id ? <Loader2 className="size-4 animate-spin" /> : <Trash2 className="size-4" />}
                            </button>
                         )}
                       </div>

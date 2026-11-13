@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import { useUser } from '@/lib/auth/client'
-import { ArrowLeft, Send, MessageCircle, Users } from 'lucide-react'
 import { format } from 'date-fns'
 import { Avatar } from '@/components/ui/Avatar'
 import { Button } from '@/components/ui/Button'
@@ -13,6 +12,7 @@ import { Spinner } from '@/components/ui/Spinner'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { cn } from '@/lib/utils/formatters'
 
+import { ArrowLeft, Send, MessageCircle, Users } from "@/components/ui/icons"
 /** Ce que la page serveur sait du contact ouvert : nom, photo et spécialité (jamais d'e-mail ni de téléphone). */
 export interface ContactMessagerie {
   id: string
@@ -368,7 +368,7 @@ export default function MessagesClient({ contact, refus }: MessagesClientProps) 
         ) : (
           <div className="flex flex-1 flex-col items-center justify-center p-6 text-center">
             <span aria-hidden className="mb-4 inline-flex size-16 items-center justify-center rounded-full bg-surface-container text-on-surface-muted">
-              <MessageCircle className="size-8" strokeWidth={1.5} />
+              <MessageCircle className="size-6" />
             </span>
             <h3 className="text-title-lg text-on-surface">Vos messages</h3>
             <p className="mt-1 text-body-md text-on-surface-variant">Sélectionnez une conversation pour écrire.</p>

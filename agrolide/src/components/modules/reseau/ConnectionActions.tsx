@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import Link from 'next/link'
-import { Check, Clock, MessageCircle, UserPlus } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from '@/components/ui/Modal'
 import { Textarea } from '@/components/ui/Textarea'
@@ -10,6 +9,7 @@ import { useToast } from '@/components/ui/Toast'
 import { acceptConnectionRequest, declineConnectionRequest, sendConnectionRequest } from '@/app/actions/connections'
 import type { ConnectionState } from '@/lib/reseau/profil'
 
+import { Check, Clock, MessageCircle, UserPlus } from "@/components/ui/icons"
 /** Même plafond que l'action serveur (qui reste la seule source de vérité). */
 const NOTE_MAX = 300
 

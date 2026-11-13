@@ -3,10 +3,10 @@ import Link from "next/link"
 import { Button } from "@/components/ui/Button"
 import { Input } from "@/components/ui/Input"
 import { Textarea } from "@/components/ui/Textarea"
-import { Rocket, Target, Users, BookOpen } from "lucide-react"
 import IncubationForm from "@/components/modules/agrobusiness/IncubationForm"
 import { Puce } from "@/components/brand"
 
+import { Target, Users, NotebookPen } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Programme d'Incubation",
   description: "Rejoignez le programme d'incubation d'agrolide pour transformer votre idée en entreprise agricole florissante.",
@@ -43,7 +43,7 @@ export default function IncubationPage() {
               <div className="space-y-6 mt-8">
                 <div className="flex gap-4">
                   <div className="mt-1 w-10 h-10 rounded-full bg-info-container text-info flex flex-shrink-0 items-center justify-center">
-                    <BookOpen size={20} />
+                    <NotebookPen size={20} />
                   </div>
                   <div>
                     <h4 className="font-bold text-on-surface">Formations pratiques</h4>
@@ -74,9 +74,6 @@ export default function IncubationPage() {
             </div>
             
             <div className="bg-surface-container-low p-8 rounded-2xl border border-outline-variant relative">
-              <div className="absolute -top-6 -right-6 text-on-tertiary-container opacity-20">
-                <Rocket size={120} />
-              </div>
               <h3 className="text-xl font-heading font-bold text-on-surface mb-6 relative z-10">Critères d'éligibilité</h3>
               <ul className="space-y-4 relative z-10 text-on-surface-variant">
                 <li className="flex items-start gap-3">

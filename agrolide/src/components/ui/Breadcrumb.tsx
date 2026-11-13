@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { ChevronRight, Home } from 'lucide-react'
 import { cn } from '@/lib/utils/formatters'
 
+import { ChevronRight, Home } from "@/components/ui/icons"
 export interface BreadcrumbItem {
   label: string
   href?: string

@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { MapPin } from 'lucide-react'
 import { Sillons } from '@/components/brand'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge } from '@/components/ui/Badge'
 import type { CartePublique } from '@/lib/reseau/carte-publique'
 
+import { MapPin } from "@/components/ui/icons"
 /** Carte vue par un visiteur sans compte (et dans l'aperçu « Voir comme un visiteur »). Ni e-mail ni téléphone. */
 export function CartePubliqueView({ carte, titre = 'h1' }: { carte: CartePublique; titre?: 'h1' | 'h3' }) {
   const Titre = titre

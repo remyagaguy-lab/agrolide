@@ -138,17 +138,17 @@ Une fois le contexte posé, précisez vos objectifs à court terme (ce que vous 
 
 #### Ce qu'il faut retenir
 
-- Structurez votre contexte en 4 temps : constat → problématique → solution → moyens.
+- Structurez votre contexte en 4 temps : constat, problématique, solution, moyens.
 - Appuyez le constat sur des données, même approximatives, plutôt que sur des généralités.
 - Vos objectifs doivent être chiffrés et datés, à court et à long terme.`,
       quiz_json: [
         {
           question: "Quelle est la bonne séquence pour rédiger un contexte de projet ?",
           options: [
-            "Solution → constat → moyens → problématique",
-            "Constat → problématique → solution → moyens",
-            "Moyens → solution → constat → problématique",
-            "Problématique → moyens → constat → solution"
+            "Solution, constat, moyens, problématique",
+            "Constat, problématique, solution, moyens",
+            "Moyens, solution, constat, problématique",
+            "Problématique, moyens, constat, solution"
           ],
           correctAnswer: 1,
           explanation: "Il faut aller du général (le constat) vers le particulier (le problème) pour aboutir à votre proposition (solution) et sa réalisation (moyens)."

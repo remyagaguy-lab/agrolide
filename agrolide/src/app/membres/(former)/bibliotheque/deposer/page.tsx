@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
-import { Upload, FileText, AlertCircle, Loader2 } from 'lucide-react'
 import { useAuth } from '@/lib/auth/client'
 import { DOMAINES, TYPES_DOCUMENT } from '@/lib/bibliotheque/taxonomie'
 
+import { Upload, FileText, AlertTriangle, Loader2 } from "@/components/ui/icons"
 const formSchema = z.object({
   titre: z.string().min(3, 'Le titre est requis'),
   auteur: z.string().min(2, "L'auteur est requis"),
@@ -164,7 +164,7 @@ export default function DeposerDocumentPage() {
   if (isAuthorized === null) {
     return (
       <div className="flex items-center justify-center min-h-[50vh]">
-        <Loader2 className="w-8 h-8 animate-spin text-success" />
+        <Loader2 className="size-6 animate-spin text-success" />
       </div>
     )
   }
@@ -173,7 +173,7 @@ export default function DeposerDocumentPage() {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center">
         <div className="w-16 h-16 bg-error-container rounded-full flex items-center justify-center mx-auto mb-4">
-          <AlertCircle className="w-8 h-8 text-error" />
+          <AlertTriangle className="size-6 text-error" />
         </div>
         <h1 className="text-2xl font-bold text-on-surface mb-2">Accès restreint</h1>
         <p className="text-on-surface-variant mb-6">
@@ -191,7 +191,7 @@ export default function DeposerDocumentPage() {
     return (
       <div className="max-w-2xl mx-auto px-4 py-16 text-center">
         <div className="w-16 h-16 bg-success-container rounded-full flex items-center justify-center mx-auto mb-4">
-          <Upload className="w-8 h-8 text-success" />
+          <Upload className="size-6 text-success" />
         </div>
         <h1 className="text-2xl font-bold text-on-surface mb-2">Document déposé avec succès !</h1>
         <p className="text-on-surface-variant mb-6">
@@ -212,7 +212,7 @@ export default function DeposerDocumentPage() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant shadow-sm">
         {error && (
           <div className="p-4 bg-error-container text-error rounded-lg flex items-start gap-3 text-sm">
-            <AlertCircle className="w-5 h-5 flex-shrink-0" />
+            <AlertTriangle className="size-5 flex-shrink-0" />
             <p>{error}</p>
           </div>
         )}
@@ -224,7 +224,7 @@ export default function DeposerDocumentPage() {
             <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-outline border-dashed rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer"
                  onClick={() => document.getElementById('file-upload')?.click()}>
               <div className="space-y-1 text-center">
-                <FileText className="mx-auto h-12 w-12 text-on-surface-muted" />
+                <FileText className="mx-auto size-6 text-on-surface-muted" />
                 <div className="flex text-sm text-on-surface-variant justify-center">
                   <span className="relative rounded-md font-medium text-success hover:text-success focus-within:outline-none">
                     <span>Téléverser un fichier</span>
@@ -236,7 +236,7 @@ export default function DeposerDocumentPage() {
             </div>
             {file && (
               <div className="mt-2 text-sm text-success flex items-center gap-2 bg-success-container p-2 rounded">
-                <FileText className="w-4 h-4" /> {file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)
+                <FileText className="size-4" /> {file.name} ({(file.size / 1024 / 1024).toFixed(2)} MB)
               </div>
             )}
           </div>
@@ -314,7 +314,7 @@ export default function DeposerDocumentPage() {
             disabled={loading}
             className="flex items-center gap-2 px-6 py-3 bg-success text-on-primary rounded-lg font-medium hover:bg-primary/90 disabled:opacity-70"
           >
-            {loading && <Loader2 className="w-5 h-5 animate-spin" />}
+            {loading && <Loader2 className="size-5 animate-spin" />}
             {loading ? 'Dépôt en cours...' : 'Soumettre le document'}
           </button>
         </div>

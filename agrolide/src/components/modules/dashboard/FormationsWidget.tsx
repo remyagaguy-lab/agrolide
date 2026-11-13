@@ -1,10 +1,10 @@
 import React from "react"
 import Link from "next/link"
-import { GraduationCap, PlayCircle, ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Widget, WidgetHeader } from "./Widget"
 
+import { NotebookPen, PlayCircle, ArrowRight } from "@/components/ui/icons"
 export interface FormationEnCours {
   formationId: string
   titre: string
@@ -30,7 +30,7 @@ export function FormationsWidget({ formation, catalogue }: { formation: Formatio
   if (!formation) {
     return (
       <Widget>
-        <WidgetHeader title="Formations à découvrir" tone="soleil" icon={<GraduationCap />} href="/membres/formations/catalogue" linkLabel="Catalogue" />
+        <WidgetHeader title="Formations à découvrir" tone="soleil" icon={<NotebookPen />} href="/membres/formations/catalogue" linkLabel="Catalogue" />
         {catalogue.length > 0 ? (
           <ul className="flex flex-col p-3 pt-1">
             {catalogue.map((f) => (
@@ -54,7 +54,7 @@ export function FormationsWidget({ formation, catalogue }: { formation: Formatio
 
   return (
     <Widget>
-      <WidgetHeader title="Ma formation" tone="soleil" icon={<GraduationCap />} href="/membres/formations" linkLabel="Mon parcours" />
+      <WidgetHeader title="Ma formation" tone="soleil" icon={<NotebookPen />} href="/membres/formations" linkLabel="Mon parcours" />
       <div className="flex flex-1 flex-col gap-4 p-5 pt-3">
         <div className="flex items-start gap-3">
           <span aria-hidden="true" className="flex size-10 shrink-0 items-center justify-center rounded-control bg-primary-container text-on-primary-container">
@@ -93,7 +93,7 @@ export function FormationsWidget({ formation, catalogue }: { formation: Formatio
           className="mt-auto min-h-11"
         >
           {formation.faites > 0 ? "Reprendre" : "Commencer"}
-          <ArrowRight className="size-3.5" aria-hidden="true" />
+          <ArrowRight className="size-4" aria-hidden="true" />
         </Button>
       </div>
     </Widget>

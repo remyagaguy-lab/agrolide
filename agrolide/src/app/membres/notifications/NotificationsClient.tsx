@@ -2,10 +2,10 @@
 
 import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { Bell, CheckCircle, Loader2 } from 'lucide-react'
 import { getNotifications, markAllAsReadAction, markAsReadAction } from '@/app/actions/notifications'
 import { depuis, libelleType, lienSur, type NotificationItem } from '@/lib/notifications'
 
+import { Bell, CheckCircle2, Loader2 } from "@/components/ui/icons"
 export default function NotificationsClient() {
   const router = useRouter()
   const [notifications, setNotifications] = useState<NotificationItem[]>([])
@@ -53,7 +53,7 @@ export default function NotificationsClient() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-primary-container text-primary flex items-center justify-center border border-outline-variant shadow-sm">
-            <Bell size={18} aria-hidden />
+            <Bell size={20} aria-hidden />
           </div>
           <div>
             <h1 className="text-xl font-bold text-on-surface font-heading">Notifications</h1>
@@ -72,7 +72,7 @@ export default function NotificationsClient() {
             disabled={markingAll}
             className="bg-surface-container-lowest border border-outline-variant text-on-surface-variant px-3 py-1.5 rounded-lg text-xs font-bold hover:border-primary transition-colors flex items-center gap-1.5 shadow-sm min-h-11"
           >
-            {markingAll ? <Loader2 className="w-3.5 h-3.5 animate-spin" aria-hidden /> : <CheckCircle className="w-3.5 h-3.5" aria-hidden />}
+            {markingAll ? <Loader2 className="size-4 animate-spin" aria-hidden /> : <CheckCircle2 className="size-4" aria-hidden />}
             Tout marquer comme lu
           </button>
         )}
@@ -80,11 +80,11 @@ export default function NotificationsClient() {
 
       <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
-          <div className="p-8 text-center text-on-surface-muted"><Loader2 className="w-5 h-5 animate-spin mx-auto" aria-label="Chargement" /></div>
+          <div className="p-8 text-center text-on-surface-muted"><Loader2 className="size-5 animate-spin mx-auto" aria-label="Chargement" /></div>
         ) : notifications.length === 0 ? (
           <div className="p-12 text-center flex flex-col items-center justify-center gap-3">
             <div className="w-12 h-12 rounded-full bg-surface-container-low text-outline flex items-center justify-center border border-outline-variant">
-              <Bell className="w-5 h-5" aria-hidden />
+              <Bell className="size-5" aria-hidden />
             </div>
             <div>
               <h3 className="text-sm font-bold text-on-surface">Aucune notification</h3>

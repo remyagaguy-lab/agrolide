@@ -7,9 +7,9 @@ import { PageHero } from "@/components/ui/PageHero"
 import { Section } from "@/components/ui/Section"
 import { ValueCard } from "@/components/ui/ValueCard"
 import { SectionLabel } from "@/components/ui/SectionLabel"
-import { Users, Crown, Star, Lightbulb, Target, ArrowRight } from "lucide-react"
 import { ArchPhoto, Emblem, Motif } from "@/components/brand"
 
+import { Users, Flag, Star, Lightbulb, Target, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Qui sommes-nous ?",
   description: "Découvrez l'histoire, la mission et les valeurs d'agrolide. Apprenez comment notre réseau agricole continental rassemble les acteurs de l'agriculture africaine.",
@@ -47,7 +47,7 @@ const equipe = [
 
 const valeurs = [
   { icon: Users, title: "Solidarité", desc: "Le réseau est notre première ressource. La réussite de chacun passe par la force du collectif et la mutualisation des compétences entre membres." },
-  { icon: Crown, title: "Leadership", desc: "agrolide forge des leaders agricoles. Chaque acteur accompagné est un futur moteur de la chaîne agricole et de la souveraineté alimentaire africaine." },
+  { icon: Flag, title: "Leadership", desc: "agrolide forge des leaders agricoles. Chaque acteur accompagné est un futur moteur de la chaîne agricole et de la souveraineté alimentaire africaine." },
   { icon: Star, title: "Excellence", desc: "Rigueur et professionnalisme dans chaque formation, chaque accompagnement et chaque service proposé aux membres." },
   { icon: Lightbulb, title: "Innovation africaine", desc: "Des solutions pensées pour et par les réalités africaines — adaptées aux terroirs, aux marchés et aux contraintes du continent." },
   { icon: Target, title: "Impact", desc: "Chaque action est évaluée à l'aune de sa contribution concrète à la souveraineté alimentaire africaine." },
@@ -200,7 +200,7 @@ export default function QuiSommesNousPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <Card variant="dark" className="p-8 md:p-10">
               <span aria-hidden="true" className="mb-5 flex size-14 items-center justify-center rounded-control bg-accent-sun/20 text-accent-sun">
-                <Target className="size-7" />
+                <Target className="size-6" />
               </span>
               <h3 className="text-headline-sm mb-3">Notre Mission</h3>
               <p className="text-body-md text-on-surface-brand/85">
@@ -210,7 +210,7 @@ export default function QuiSommesNousPage() {
 
             <Card variant="dark" className="p-8 md:p-10">
               <span aria-hidden="true" className="mb-5 flex size-14 items-center justify-center rounded-control bg-accent-sun/20 text-accent-sun">
-                <Lightbulb className="size-7" />
+                <Lightbulb className="size-6" />
               </span>
               <h3 className="text-headline-sm mb-3">Notre Vision</h3>
               <p className="text-body-md text-on-surface-brand/85">
@@ -275,7 +275,7 @@ export default function QuiSommesNousPage() {
             Prêt à faire partie de l'histoire&nbsp;?
           </h2>
           <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>
-            Rejoindre le réseau <ArrowRight className="w-4 h-4 ml-2" />
+            Rejoindre le réseau <ArrowRight className="size-4 ml-2" />
           </Link>
         </div>
       </section>

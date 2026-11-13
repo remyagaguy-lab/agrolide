@@ -1,4 +1,3 @@
-import { Calendar } from 'lucide-react'
 import { redirect } from 'next/navigation'
 import { db } from '@/db'
 import { evenements, inscriptions_evenement } from '@/db/schema'
@@ -7,6 +6,7 @@ import { auth } from '@/lib/auth/server'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { EvenementsMembreClient } from '@/components/modules/evenements/EvenementsMembreClient'
 
+import { CalendarDays } from "@/components/ui/icons"
 export const metadata = { title: "Événements" }
 
 export default async function EvenementsPage() {
@@ -53,7 +53,7 @@ export default async function EvenementsPage() {
           <EvenementsMembreClient evenements={aVenir} inscritsIds={inscritsIds} />
         ) : (
           <EmptyState
-            icon={<Calendar />}
+            icon={<CalendarDays />}
             title="Aucun événement programmé"
             description="Revenez bientôt pour découvrir les prochains événements du réseau."
           />

@@ -1,9 +1,9 @@
 import React from 'react'
-import { FileText, Download, CheckCircle, XCircle, Clock } from 'lucide-react'
 import { db } from "@/db"
 import { demandes_service, candidatures_incubation } from "@/db/schema"
 import { desc } from "drizzle-orm"
 
+import { FileText, Download, CheckCircle2, XCircle, Clock } from "@/components/ui/icons"
 export const revalidate = 0
 
 export default async function AdminAgrobusinessPage() {
@@ -38,7 +38,7 @@ export default async function AdminAgrobusinessPage() {
         <div className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-on-surface flex items-center gap-2">
-              <FileText className="w-5 h-5 text-primary" />
+              <FileText className="size-5 text-primary" />
               Demandes de Service
             </h2>
             <span className="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-sm font-medium">
@@ -52,7 +52,7 @@ export default async function AdminAgrobusinessPage() {
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="font-bold text-on-surface">{d.prenom} {d.nom}</h3>
-                    <p className="text-sm text-on-surface-muted">{d.organisation ? `${d.organisation} • ` : ''}{d.pays}</p>
+                    <p className="text-sm text-on-surface-muted">{d.organisation ? `${d.organisation} · ` : ''}{d.pays}</p>
                   </div>
                   {renderStatus(d.statut)}
                 </div>
@@ -65,7 +65,7 @@ export default async function AdminAgrobusinessPage() {
                   <div className="flex gap-2">
                     {d.fichier_url && (
                       <a href={d.fichier_url} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-info hover:text-on-info-container bg-info-container px-2 py-1 rounded">
-                        <Download className="w-3 h-3" /> Fichier
+                        <Download className="size-4" /> Fichier
                       </a>
                     )}
                     <button className="text-xs flex items-center gap-1 text-on-surface-variant hover:text-on-surface bg-surface-container px-2 py-1 rounded">
@@ -85,7 +85,7 @@ export default async function AdminAgrobusinessPage() {
         <div className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-on-surface flex items-center gap-2">
-              <Clock className="w-5 h-5 text-warning" />
+              <Clock className="size-5 text-warning" />
               Candidatures Incubation
             </h2>
             <span className="bg-surface-container text-on-surface-variant px-3 py-1 rounded-full text-sm font-medium">
@@ -99,7 +99,7 @@ export default async function AdminAgrobusinessPage() {
                 <div className="flex justify-between items-start mb-2">
                   <div>
                     <h3 className="font-bold text-on-surface">{c.titre_projet}</h3>
-                    <p className="text-sm text-on-surface-muted">Par {c.prenom} {c.nom} • {c.pays}</p>
+                    <p className="text-sm text-on-surface-muted">Par {c.prenom} {c.nom} · {c.pays}</p>
                   </div>
                   {renderStatus(c.statut)}
                 </div>
@@ -112,7 +112,7 @@ export default async function AdminAgrobusinessPage() {
                   <div className="flex gap-2">
                     {c.cv_url && (
                       <a href={c.cv_url} target="_blank" rel="noreferrer" className="text-xs flex items-center gap-1 text-info hover:text-on-info-container bg-info-container px-2 py-1 rounded">
-                        <Download className="w-3 h-3" /> CV
+                        <Download className="size-4" /> CV
                       </a>
                     )}
                     <button className="text-xs flex items-center gap-1 text-on-surface-variant hover:text-on-surface bg-surface-container px-2 py-1 rounded">

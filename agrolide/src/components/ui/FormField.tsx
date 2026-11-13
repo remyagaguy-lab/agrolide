@@ -1,9 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import { AlertCircle } from 'lucide-react'
 import { cn } from '@/lib/utils/formatters'
 
+import { AlertTriangle } from "@/components/ui/icons"
 interface FieldContextValue {
   id: string
   hintId: string
@@ -87,7 +87,7 @@ export function FormField({ label, hint, error, required, id, className, childre
         )}
         {error && (
           <p id={ctx.errorId} role="alert" className="mt-1.5 flex items-start gap-1.5 text-body-sm text-error">
-            <AlertCircle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+            <AlertTriangle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
             <span>{error}</span>
           </p>
         )}

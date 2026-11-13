@@ -2,11 +2,11 @@
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ArrowRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { Logo } from "@/components/ui/Logo"
 import { Horizon, HORIZON_MASQUE_TERRE_BORD, Motif, PlanSoleil } from "@/components/brand"
 
+import { ArrowRight, Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Youtube } from "@/components/ui/icons"
 /*
  * Pictogrammes des réseaux sociaux : un seul jeu au trait (24 × 24, trait de 1,75, bouts arrondis, sans remplissage),
  * dans le style des pictogrammes Lucide du reste du site. Décoratifs : le lien porte le nom accessible.

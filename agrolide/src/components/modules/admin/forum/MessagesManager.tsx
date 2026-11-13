@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { Trash2, Loader2, MessageSquare, Search } from 'lucide-react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { deleteMessage } from '@/app/actions/admin-forum'
 
+import { Trash2, Loader2, MessageCircle, Search } from "@/components/ui/icons"
 export default function MessagesManager() {
   const [messages, setMessages] = useState<any[]>([])
   const [loading, setLoading] = useState(false)
@@ -64,7 +64,7 @@ export default function MessagesManager() {
           className="flex-1 px-4 py-2 border border-outline rounded-xl outline-none focus:ring-2 focus:ring-primary"
         />
         <button type="submit" className="px-4 py-2 bg-primary hover:bg-primary/90 text-on-primary rounded-xl flex items-center gap-2">
-          <Search className="w-5 h-5" /> Rechercher
+          <Search className="size-5" /> Rechercher
         </button>
       </form>
 
@@ -72,7 +72,7 @@ export default function MessagesManager() {
         <div className="divide-y divide-outline-variant">
           {loading ? (
             <div className="p-8 text-center text-on-surface-muted flex flex-col items-center">
-              <Loader2 className="w-8 h-8 animate-spin mb-2" />
+              <Loader2 className="size-6 animate-spin mb-2" />
               Chargement...
             </div>
           ) : messages.length === 0 ? (
@@ -82,9 +82,9 @@ export default function MessagesManager() {
               <div className="flex-1 space-y-1">
                 <div className="flex items-center gap-2 text-sm text-on-surface-muted">
                   <span className="font-bold text-on-surface">{msg.auteur?.prenom} {msg.auteur?.nom}</span>
-                  <span>•</span>
+                  <span>·</span>
                   <span>{format(new Date(msg.created_at), "dd MMM yyyy HH:mm", { locale: fr })}</span>
-                  <span>•</span>
+                  <span>·</span>
                   <span className="bg-surface-container px-2 py-0.5 rounded text-xs">Fil : {msg.fil?.titre}</span>
                 </div>
                 <div className="text-on-surface text-sm whitespace-pre-wrap font-sans">
@@ -92,7 +92,7 @@ export default function MessagesManager() {
                 </div>
               </div>
               <button onClick={() => handleDelete(msg.id)} disabled={processing===msg.id} className="p-2 text-error bg-error-container hover:bg-error-container rounded-lg transition-colors shrink-0">
-                {processing === msg.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <Trash2 className="w-4 h-4" />}
+                {processing === msg.id ? <Loader2 className="size-4 animate-spin" /> : <Trash2 className="size-4" />}
               </button>
             </div>
           ))}

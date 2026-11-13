@@ -3,13 +3,13 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { MapPin, MessageCircle, UserMinus } from 'lucide-react'
 import { Avatar } from '@/components/ui/Avatar'
 import { Button } from '@/components/ui/Button'
 import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from '@/components/ui/Modal'
 import { removeConnection } from '@/app/actions/connections'
 import { displayName, type MemberSummary } from '@/lib/reseau/profil'
 
+import { MapPin, MessageCircle, UserMinus } from "@/components/ui/icons"
 /**
  * Une relation : qui, ce qu'elle fait, un message en un geste, et le retrait de la relation après confirmation.
  * Le nom ouvre la fiche ; les deux boutons restent des cibles distinctes de 48 px.

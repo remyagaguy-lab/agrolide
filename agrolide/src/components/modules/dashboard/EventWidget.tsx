@@ -1,11 +1,11 @@
 import React from "react"
 import Link from "next/link"
-import { Calendar as CalendarIcon, MapPin, ArrowRight, Video } from "lucide-react"
 import { ArcheBadge } from "@/components/brand"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Widget, WidgetHeader } from "./Widget"
 
+import { CalendarDays as CalendarIcon, MapPin, ArrowRight, Video } from "@/components/ui/icons"
 export interface EventData {
   id: string | number
   titre: string
@@ -125,7 +125,7 @@ export function EventWidget({ mesEvenements, aVenir }: EventWidgetProps) {
 
         <Button href={`/membres/evenements/${prochain.id}`} variant="tonal" size="sm" fullWidth className="mt-auto min-h-11">
           Voir les détails
-          <ArrowRight className="size-3.5" aria-hidden="true" />
+          <ArrowRight className="size-4" aria-hidden="true" />
         </Button>
       </div>
     </Widget>

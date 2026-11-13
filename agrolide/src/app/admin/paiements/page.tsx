@@ -3,9 +3,9 @@ import { cotisations, contributions } from "@/db/schema"
 import { desc, gte, lte, eq, and } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
-import { CreditCard, AlertCircle, Clock } from "lucide-react"
 import RappelButton from "./RappelButton"
 
+import { CreditCard, AlertTriangle, Clock } from "@/components/ui/icons"
 export const metadata = { title: "Paiements & Cotisations" }
 export const dynamic = 'force-dynamic'
 
@@ -63,7 +63,7 @@ export default async function AdminPaiementsPage() {
       {expirationsBientot.length > 0 && (
         <section>
           <div className="flex items-center gap-2 mb-4">
-            <AlertCircle size={18} className="text-warning" />
+            <AlertTriangle size={20} className="text-warning" />
             <h2 className="text-base font-semibold text-on-surface">
               Expirations dans 30 jours ({expirationsBientot.length})
             </h2>
@@ -82,7 +82,7 @@ export default async function AdminPaiementsPage() {
                     <td className="px-5 py-3 font-medium text-on-surface">{c.membre_id}</td>
                     <td className="px-5 py-3">
                       <span className="flex items-center gap-1.5 text-on-warning-container font-medium text-xs">
-                        <Clock size={12} />
+                        <Clock size={16} />
                         {c.date_fin ? new Date(c.date_fin).toLocaleDateString("fr-FR") : "—"}
                       </span>
                     </td>

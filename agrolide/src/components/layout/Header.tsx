@@ -2,7 +2,6 @@
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { ChevronDown, Menu, X } from "lucide-react"
 import { Show, UserButton } from "@/lib/auth/client"
 import { Button } from "@/components/ui/Button"
 import { IconButton } from "@/components/ui/IconButton"
@@ -11,6 +10,7 @@ import { ThemeMenu, ThemeToggle } from "@/components/ui/ThemeToggle"
 import { cn } from "@/lib/utils/formatters"
 import { NAV_DIRECT, NAV_MEGA, type NavMega } from "./nav"
 
+import { ChevronDown, Menu, X } from "@/components/ui/icons"
 const navLink = "whitespace-nowrap rounded-tag text-label-lg transition-colors duration-150 ease-standard"
 
 /** Panneau d'un méga menu : promesse du domaine à gauche, actions à droite. */

@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { Plus, Edit2, Trash2, Calendar, Globe, MapPin, Users } from 'lucide-react'
 import EventForm from '@/components/modules/admin/EventForm'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
+import { Plus, Pencil, Trash2, CalendarDays, Globe, MapPin, Users } from "@/components/ui/icons"
 export default function AdminEvenementsPage() {
   const [events, setEvents] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
@@ -80,7 +80,7 @@ export default function AdminEvenementsPage() {
           onClick={handleCreateNew}
           className="bg-primary hover:bg-primary/90 text-on-primary px-4 py-2 rounded-xl flex items-center gap-2 transition-colors font-medium"
         >
-          <Plus className="w-5 h-5" /> Nouvel événement
+          <Plus className="size-5" /> Nouvel événement
         </button>
       </div>
 
@@ -111,25 +111,25 @@ export default function AdminEvenementsPage() {
                     </td>
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2 text-on-surface-variant">
-                        <Calendar className="w-4 h-4 text-on-surface-muted" />
+                        <CalendarDays className="size-4 text-on-surface-muted" />
                         {format(new Date(evt.date_debut), "dd MMM yyyy à HH:mm", { locale: fr })}
                       </div>
                     </td>
                     <td className="px-6 py-4">
                       {evt.en_ligne ? (
                         <div className="flex items-center gap-2 text-info">
-                          <Globe className="w-4 h-4" /> En ligne
+                          <Globe className="size-4" /> En ligne
                         </div>
                       ) : (
                         <div className="flex items-center gap-2 text-on-surface-variant">
-                          <MapPin className="w-4 h-4 text-on-surface-muted" />
+                          <MapPin className="size-4 text-on-surface-muted" />
                           <span className="truncate max-w-[150px]">{evt.lieu || 'Non spécifié'}</span>
                         </div>
                       )}
                     </td>
                     <td className="px-6 py-4 text-center">
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-medium">
-                        <Users className="w-4 h-4" />
+                        <Users className="size-4" />
                         {evt.inscriptions[0]?.count || 0}
                         {evt.places_max && <span className="text-on-surface-muted font-normal">/ {evt.places_max}</span>}
                       </div>
@@ -142,10 +142,10 @@ export default function AdminEvenementsPage() {
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
                         <button onClick={() => handleEdit(evt)} className="p-2 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors" title="Modifier">
-                          <Edit2 className="w-4 h-4" />
+                          <Pencil className="size-4" />
                         </button>
                         <button onClick={() => handleDelete(evt.id)} className="p-2 text-on-surface-muted hover:text-error hover:bg-error-container rounded-lg transition-colors" title="Supprimer">
-                          <Trash2 className="w-4 h-4" />
+                          <Trash2 className="size-4" />
                         </button>
                       </div>
                     </td>

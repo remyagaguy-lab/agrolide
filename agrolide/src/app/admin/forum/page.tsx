@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 
-import { ShieldAlert, CheckCircle, Trash2, ArrowRight, UserX, Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
@@ -11,6 +10,7 @@ import CategoriesManager from '@/components/modules/admin/forum/CategoriesManage
 import ThreadsManager from '@/components/modules/admin/forum/ThreadsManager'
 import MessagesManager from '@/components/modules/admin/forum/MessagesManager'
 
+import { ShieldAlert, CheckCircle2, Trash2, ArrowRight, UserX, Loader2 } from "@/components/ui/icons"
 export const dynamic = 'force-dynamic';
 
 export default function AdminForumPage() {
@@ -123,13 +123,13 @@ export default function AdminForumPage() {
         <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
           <div className="p-12 text-center flex flex-col items-center">
-            <Loader2 className="w-8 h-8 animate-spin text-on-surface-muted mb-2" />
+            <Loader2 className="size-6 animate-spin text-on-surface-muted mb-2" />
             <span className="text-on-surface-muted">Chargement...</span>
           </div>
         ) : reportedMessages.length === 0 ? (
           <div className="p-12 text-center flex flex-col items-center justify-center space-y-3">
             <div className="w-16 h-16 bg-success-container text-success rounded-full flex items-center justify-center mb-2">
-              <CheckCircle className="w-8 h-8" />
+              <CheckCircle2 className="size-6" />
             </div>
             <h3 className="text-lg font-bold text-on-surface">Aucun signalement</h3>
             <p className="text-on-surface-muted">Tout est en ordre sur le forum !</p>
@@ -142,11 +142,11 @@ export default function AdminForumPage() {
                   <div className="flex-1 space-y-2 min-w-0">
                     <div className="flex flex-wrap items-center gap-2 text-sm">
                       <span className="font-bold text-on-surface">{msg.auteur?.prenom} {msg.auteur?.nom}</span>
-                      <span className="text-on-surface-muted">•</span>
+                      <span className="text-on-surface-muted">·</span>
                       <span className="text-on-surface-muted">{format(new Date(msg.created_at), "dd MMM yyyy HH:mm", { locale: fr })}</span>
-                      <span className="text-on-surface-muted">•</span>
+                      <span className="text-on-surface-muted">·</span>
                       <Link href={`/membres/forum/fil/${msg.fil?.id}`} target="_blank" className="text-info hover:underline flex items-center gap-1 font-medium truncate">
-                        Sujet : {msg.fil?.titre} <ArrowRight className="w-3 h-3" />
+                        Sujet : {msg.fil?.titre} <ArrowRight className="size-4" />
                       </Link>
                     </div>
                     <div className="bg-tertiary-container/50 p-4 rounded-xl border border-warning/40 text-on-surface text-sm whitespace-pre-wrap font-sans break-words">
@@ -160,14 +160,14 @@ export default function AdminForumPage() {
                       disabled={processing === msg.id}
                       className="px-4 py-2 bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-medium rounded-lg text-sm transition-colors border border-outline-variant w-full flex justify-center items-center h-10"
                     >
-                      {processing === msg.id ? <Loader2 className="w-4 h-4 animate-spin" /> : 'Ignorer (Republier)'}
+                      {processing === msg.id ? <Loader2 className="size-4 animate-spin" /> : 'Ignorer (Republier)'}
                     </button>
                     <button 
                       onClick={() => handleDelete(msg.id)}
                       disabled={processing === msg.id}
                       className="px-4 py-2 bg-tertiary-container hover:bg-warning-container text-on-warning-container font-medium rounded-lg text-sm transition-colors border border-warning/40 flex items-center gap-2 justify-center w-full h-10"
                     >
-                      {processing === msg.id ? <Loader2 className="w-4 h-4 animate-spin" /> : <><Trash2 className="w-4 h-4" /> Supprimer le message</>}
+                      {processing === msg.id ? <Loader2 className="size-4 animate-spin" /> : <><Trash2 className="size-4" /> Supprimer le message</>}
                     </button>
                     {msg.auteur_id && (
                       <button 
@@ -176,7 +176,7 @@ export default function AdminForumPage() {
                         className="px-4 py-2 bg-error-container hover:bg-error-container text-error font-medium rounded-lg text-sm transition-colors border border-error/30 flex items-center gap-2 justify-center w-full mt-2 h-10"
                         title="Suspendre l'utilisateur définitivement"
                       >
-                         <UserX className="w-4 h-4" /> Bannir l'auteur
+                         <UserX className="size-4" /> Bannir l'auteur
                       </button>
                     )}
                   </div>

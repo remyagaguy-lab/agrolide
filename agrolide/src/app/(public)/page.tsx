@@ -8,9 +8,8 @@ import { eq, desc, count } from "drizzle-orm"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
-import { Users, BookOpen, TrendingUp, MessageSquare, Library } from "lucide-react"
 import { Feuille, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
-
+import { Users, Library, TrendingUp, MessageCircle, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: {
     absolute: "Réseau Agricole Africain | agrolide",
@@ -47,136 +46,6 @@ const CHIFFRES = [
   { valeur: "100", suffixe: " %", label: "Dédiés à l’Afrique" },
 ]
 
-// --- Icônes SVG inline ---
-
-function IconGlobe({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10"/>
-      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
-      <path d="M2 12h20"/>
-    </svg>
-  )
-}
-
-function IconUsers({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-      <circle cx="9" cy="7" r="4"/>
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-    </svg>
-  )
-}
-
-function IconLibrary({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
-    </svg>
-  )
-}
-
-function IconArrowRight({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-    </svg>
-  )
-}
-
-function IconNetwork({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect width="6" height="6" x="9" y="3" rx="1"/>
-      <rect width="6" height="6" x="3" y="15" rx="1"/>
-      <rect width="6" height="6" x="15" y="15" rx="1"/>
-      <path d="M12 9v3m-3 3H6m12 0h-3M12 12l-3 3m6-3-3 3"/>
-    </svg>
-  )
-}
-
-function IconGraduation({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-      <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-    </svg>
-  )
-}
-
-function IconBriefcase({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <rect width="20" height="14" x="2" y="7" rx="2"/>
-      <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-    </svg>
-  )
-}
-
-function IconCheck({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M20 6L9 17l-5-5"/>
-    </svg>
-  )
-}
-
-function IconUsersGroup({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-      <circle cx="9" cy="7" r="4"/>
-      <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-      <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-    </svg>
-  )
-}
-
-function IconBookOpen({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-    </svg>
-  )
-}
-
-function IconSeedling({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M7 20h10"/>
-      <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
-      <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
-      <path d="M14.1 6a7 7 0 0 1 1.1 7.17c-2.1-.1-3.6-.6-4.8-1.3-1.2-.7-2-1.9-2.4-4.4 2.7-.5 4.7-.2 6.1 1.6z"/>
-    </svg>
-  )
-}
-
-function IconStar({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-    </svg>
-  )
-}
-
-function IconTrendingUp({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
-    </svg>
-  )
-}
-
-function IconHandshake({ className = "" }: { className?: string }) {
-  return (
-    <svg className={className} width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l1.06 1.06L12 21.23l7.77-7.77 1.06-1.06a5.4 5.4 0 0 0-.41-7.82z"/>
-    </svg>
-  )
-}
 
 // --- Page ---
 
@@ -336,7 +205,7 @@ export default async function HomePage() {
           <div className="flex flex-col items-center justify-between gap-8 rounded-panel border border-outline-variant bg-surface-container-lowest p-8 shadow-elev-2 md:flex-row md:p-12">
             <div className="md:w-1/2">
               <div className="mb-4 inline-flex items-center gap-2 rounded-tag bg-tertiary-container px-3 py-1 text-label-sm uppercase tracking-[0.1em] text-on-tertiary-container">
-                <BookOpen className="w-4 h-4" /> Guide Gratuit
+                <Library className="size-4" /> Guide Gratuit
               </div>
               <h2 className="mb-4 text-headline-md text-on-surface">
                 Le Manuel de l'Agroécologie en Afrique de l'Ouest
@@ -386,7 +255,7 @@ export default async function HomePage() {
                 agrolide est né d'une ambition collective : doter l'Afrique d'un écosystème professionnel intégré, capable de mobiliser les ressources, renforcer les compétences et incuber les projets qui feront notre souveraineté alimentaire.
               </p>
               <Link href="/qui-sommes-nous" className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary">
-                En savoir plus <IconArrowRight />
+                En savoir plus <ArrowRight className="size-4" aria-hidden />
               </Link>
             </div>
 
@@ -464,34 +333,34 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[20px]">
             <Link href="/annuaire" className="block group">
               <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
-                <Users aria-hidden="true" className="mb-4 size-10 text-primary" strokeWidth={1.75} />
+                <Users aria-hidden="true" className="mb-4 size-6 text-primary" />
                 <h3 className="text-title-lg text-on-surface mb-2">Mobilisation & Réseautage</h3>
                 <p className="mb-6 text-body-md text-on-surface-variant">
                   Un annuaire exclusif pour fédérer les compétences, connecter les pairs et développer des synergies panafricaines.
                 </p>
-                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
+                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <ArrowRight className="size-4" aria-hidden /></div>
               </Card>
             </Link>
 
             <Link href="/formations" className="block group">
               <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
-                <BookOpen aria-hidden="true" className="mb-4 size-10 text-primary" strokeWidth={1.75} />
+                <Library aria-hidden="true" className="mb-4 size-6 text-primary" />
                 <h3 className="text-title-lg text-on-surface mb-2">Formation & Insertion</h3>
                 <p className="mb-6 text-body-md text-on-surface-variant">
                   Des programmes de renforcement de capacités techniques et managériales, ancrés dans les réalités du terrain africain.
                 </p>
-                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
+                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <ArrowRight className="size-4" aria-hidden /></div>
               </Card>
             </Link>
 
             <Link href="/agrobusiness" className="block group">
               <Card variant="feature" className="flex h-full flex-col transition-shadow group-hover:shadow-elev-2">
-                <TrendingUp aria-hidden="true" className="mb-4 size-10 text-primary" strokeWidth={1.75} />
+                <TrendingUp aria-hidden="true" className="mb-4 size-6 text-primary" />
                 <h3 className="text-title-lg text-on-surface mb-2">Agrobusiness & Consulting</h3>
                 <p className="mb-6 text-body-md text-on-surface-variant">
                   Un accompagnement stratégique pour structurer vos projets, accéder aux financements et conquérir les marchés.
                 </p>
-                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <IconArrowRight /></div>
+                <div className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary mt-auto">Découvrir <ArrowRight className="size-4" aria-hidden /></div>
               </Card>
             </Link>
           </div>
@@ -517,13 +386,13 @@ export default async function HomePage() {
             <div className="lg:col-span-12 group bg-primary-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2">
               <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
                 <div className="p-10 md:p-16 flex flex-col justify-center">
-                  <MessageSquare aria-hidden="true" className="mb-6 size-10 text-primary" strokeWidth={1.75} />
+                  <MessageCircle aria-hidden="true" className="mb-6 size-6 text-primary" />
                   <h3 className="mb-4 text-headline-md text-on-surface">Espace d'échange agricole</h3>
                   <p className="mb-8 max-w-[400px] text-body-lg text-on-surface-variant">
                     Un véritable carrefour de discussion réunissant passionnés, professionnels et acteurs du secteur. Restez informé des dernières actualités et découvrez de nouvelles opportunités.
                   </p>
                   <Link href="/rejoindre" className="inline-flex w-fit items-center gap-2 text-label-lg text-primary underline decoration-transparent transition-colors hover:decoration-primary">
-                    Rejoindre les discussions <IconArrowRight />
+                    Rejoindre les discussions <ArrowRight className="size-4" aria-hidden />
                   </Link>
                 </div>
                 <div className="relative min-h-[300px] lg:min-h-[400px] bg-surface-container-lowest/40 overflow-hidden">
@@ -535,13 +404,13 @@ export default async function HomePage() {
             {/* Bloc 2 : Annuaire (Moitié gauche) */}
             <div className="lg:col-span-6 group bg-tertiary-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2 flex flex-col">
               <div className="p-10 flex-1">
-                <Users aria-hidden="true" className="mb-6 size-10 text-primary" strokeWidth={1.75} />
+                <Users aria-hidden="true" className="mb-6 size-6 text-primary" />
                 <h3 className="mb-4 text-headline-sm text-on-surface">Annuaire Panafricain</h3>
                 <p className="mb-8 text-body-md text-on-surface-variant">
                   Recherchez et connectez-vous avec des experts, des agronomes et des partenaires sur tout le continent.
                 </p>
                 <Link href="/annuaire" className="inline-flex items-center gap-2 text-label-lg text-on-tertiary-container underline decoration-transparent transition-colors hover:decoration-on-tertiary-container">
-                  Explorer le réseau <IconArrowRight />
+                  Explorer le réseau <ArrowRight className="size-4" aria-hidden />
                 </Link>
               </div>
               <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-surface-container-lowest/40 overflow-hidden">
@@ -552,13 +421,13 @@ export default async function HomePage() {
             {/* Bloc 3 : Bibliothèque (Moitié droite) */}
             <div className="lg:col-span-6 group bg-surface-container overflow-hidden rounded-panel border border-outline-variant transition-shadow duration-500 hover:shadow-elev-2 flex flex-col">
               <div className="p-10 flex-1">
-                <Library aria-hidden="true" className="mb-6 size-10 text-primary" strokeWidth={1.75} />
+                <Library aria-hidden="true" className="mb-6 size-6 text-primary" />
                 <h3 className="mb-4 text-headline-sm text-on-surface">Bibliothèque de Ressources</h3>
                 <p className="mb-8 text-body-md text-on-surface-variant">
                   Accédez à des centaines de documents techniques, thèses et guides pratiques spécifiquement adaptés aux sols africains.
                 </p>
                 <Link href="/bibliotheque" className="inline-flex items-center gap-2 text-label-lg text-primary underline decoration-transparent transition-colors hover:decoration-primary">
-                  Consulter les guides <IconArrowRight />
+                  Consulter les guides <ArrowRight className="size-4" aria-hidden />
                 </Link>
               </div>
               <div className="relative h-[250px] md:h-[300px] w-full mt-auto bg-surface-container-lowest/40 overflow-hidden">
@@ -623,7 +492,7 @@ export default async function HomePage() {
               </h2>
             </div>
             <Link href="/blog" className="inline-flex items-center gap-1.5 text-label-lg font-semibold text-primary underline decoration-transparent transition-colors hover:decoration-primary self-start md:self-auto mb-2 md:mb-0">
-              Tous les articles <IconArrowRight />
+              Tous les articles <ArrowRight className="size-4" aria-hidden />
             </Link>
           </div>
 

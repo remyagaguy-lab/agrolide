@@ -1,8 +1,5 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
-import {
-  Briefcase, Edit, Globe, GraduationCap, Languages, Mail, MapPin, ShieldCheck, Sparkles, User,
-} from "lucide-react"
 import { categorieLabel, parseList, safeExternalUrl } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 import { Anneau } from "@/components/brand"
@@ -11,6 +8,7 @@ import { Badge } from "@/components/ui/Badge"
 import { buttonVariants } from "@/components/ui/Button"
 import { PageEntete } from "@/components/layout/PageEntete"
 
+import { Briefcase, Pencil, Globe, GraduationCap, Languages, Mail, MapPin, ShieldCheck, Lightbulb, UserRound, Linkedin } from "@/components/ui/icons"
 /** Les champs de la table `user` que la page lit. */
 export interface ProfilAffiche {
   prenom: string | null
@@ -31,18 +29,8 @@ export interface ProfilAffiche {
   [cle: string]: unknown
 }
 
-function IconLinkedIn() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-      <rect width="4" height="12" x="2" y="9" />
-      <circle cx="4" cy="4" r="2" />
-    </svg>
-  )
-}
-
 /** Bloc de la page : titre, pictogramme, contenu. */
-function Bloc({ titre, Icone, children }: { titre: string; Icone: typeof User; children: ReactNode }) {
+function Bloc({ titre, Icone, children }: { titre: string; Icone: typeof UserRound; children: ReactNode }) {
   return (
     <section className="rounded-card border border-outline-variant bg-surface-container-lowest p-6">
       <h2 className="mb-4 flex items-center gap-2 text-title-md font-bold text-on-surface">
@@ -86,7 +74,7 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
               <ShieldCheck className="size-4" aria-hidden /> Confidentialité
             </Link>
             <Link href="/membres/profil/modifier" className={buttonVariants({ variant: "secondary", size: "sm" })}>
-              <Edit className="size-4" aria-hidden /> Modifier mon profil
+              <Pencil className="size-4" aria-hidden /> Modifier mon profil
             </Link>
           </div>
         }
@@ -128,7 +116,7 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
         {manquants.length > 0 && (
           <div className="mt-6 rounded-control border border-outline-variant bg-surface-container-low p-4">
             <p className="flex items-center gap-2 text-label-lg font-bold text-on-surface">
-              <Sparkles className="size-4 text-primary" aria-hidden /> Pour un profil plus visible, ajoutez :
+              <Lightbulb className="size-4 text-primary" aria-hidden /> Pour un profil plus visible, ajoutez :
             </p>
             <ul className="mt-2 flex flex-wrap gap-2">
               {manquants.map((m) => (
@@ -146,7 +134,7 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <div className="space-y-6 lg:col-span-2">
-          <Bloc titre="À propos" Icone={User}>
+          <Bloc titre="À propos" Icone={UserRound}>
             {profile.biographie ? (
               <p className="whitespace-pre-line text-body-md leading-relaxed text-on-surface-variant">{profile.biographie}</p>
             ) : (
@@ -207,7 +195,7 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
               {linkedin ? (
                 <Info libelle="LinkedIn">
                   <a href={linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 font-medium text-primary hover:underline">
-                    <IconLinkedIn /> Voir le profil
+                    <Linkedin className="size-4" aria-hidden /> Voir le profil
                   </a>
                 </Info>
               ) : null}

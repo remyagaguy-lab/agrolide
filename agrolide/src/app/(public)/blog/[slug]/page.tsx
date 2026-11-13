@@ -10,12 +10,12 @@ import { ArticleCard } from "@/components/ui/ArticleCard"
 import { Button } from "@/components/ui/Button"
 import Breadcrumb from "@/components/ui/Breadcrumb"
 import { TableOfContents } from "@/components/modules/TableOfContents"
-import { Clock, User, Calendar, Share2, MessageCircle } from "lucide-react"
 import { generateHTML } from '@tiptap/html'
 import StarterKit from '@tiptap/starter-kit'
 import LinkExtension from '@tiptap/extension-link'
 import ImageExtension from '@tiptap/extension-image'
 
+import { ArrowRight, Clock, UserRound, CalendarDays, Share2, MessageCircle } from "@/components/ui/icons"
 export const revalidate = 3600
 
 // Le titre de la page (métadonnées) et la page lisent le même article : une seule lecture par affichage.
@@ -189,7 +189,7 @@ export default async function BlogPostPage({
                   {article.auteur?.photo_url ? (
                     <Image src={article.auteur.photo_url} alt={authorName} width={24} height={24} className="rounded-full" />
                   ) : (
-                    <User size={16} />
+                    <UserRound size={16} />
                   )}
                   {article.auteur_id ? (
                     <Link href={`/annuaire/${article.auteur_id}`} className="hover:text-primary transition-colors">
@@ -319,7 +319,7 @@ export default async function BlogPostPage({
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-surface-container-low border border-outline-variant text-on-surface-variant flex items-center justify-center hover:bg-success-container hover:text-success transition-colors"
                   >
-                    <MessageCircle size={18} />
+                    <MessageCircle size={20} />
                   </a>
                 </div>
               </div>
@@ -335,7 +335,7 @@ export default async function BlogPostPage({
                   </p>
                   <Link href="/rejoindre">
                     <Button variant="primary" className="text-sm md:text-base px-6">
-                      Découvrir les avantages membres →
+                      Découvrir les avantages membres <ArrowRight className="ml-1 inline size-4" aria-hidden />
                     </Button>
                   </Link>
                 </div>
