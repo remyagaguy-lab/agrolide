@@ -3,8 +3,8 @@ import Link from "next/link"
 import Image from "next/image"
 import { Metadata } from "next"
 import { db } from "@/db"
-import { articles } from "@/db/schema"
-import { eq, desc } from "drizzle-orm"
+import { articles, documents } from "@/db/schema"
+import { eq, desc, count } from "drizzle-orm"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
@@ -35,10 +35,12 @@ const masqueTerre: React.CSSProperties = {
 }
 
 const ROLES = ["Étudiants en agronomie", "Ingénieurs agronomes", "Chercheurs", "Entreprises agricoles", "Investisseurs"]
+/** Nombre de ressources affiché si la base ne répond pas (dernier total connu). */
+const RESSOURCES_PAR_DEFAUT = 273
 const CHIFFRES = [
-  { valeur: "500", suffixe: "+", label: "Membres actifs" },
+  { valeur: "1000", suffixe: "+", label: "Abonnés" },
   { valeur: "5", suffixe: " pays", label: "Pays africains" },
-  { valeur: "700", suffixe: "+", label: "Ressources techniques" },
+  { valeur: "__RESSOURCES__", suffixe: "+", label: "Ressources techniques" },
   { valeur: "100", suffixe: " %", label: "Dédiés à l’Afrique" },
 ]
 
@@ -197,6 +199,15 @@ export default async function HomePage() {
     console.error('Erreur fetch articles homepage:', e)
   }
 
+  // Nombre de documents publiés de la bibliothèque : le chiffre suit les ajouts (page régénérée toutes les heures)
+  let nbRessources = RESSOURCES_PAR_DEFAUT
+  try {
+    const [res] = await db.select({ value: count() }).from(documents).where(eq(documents.statut, 'publie'))
+    if (res?.value) nbRessources = res.value
+  } catch (e) {
+    console.error('Erreur comptage ressources homepage:', e)
+  }
+
   const fallbackArticles = [
     { slug: "pratiques-agroecologiques", categorie: "Production Végétal", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", published_at: "2024-10-12T00:00:00Z" },
     { slug: "financer-projet-agricole", categorie: "Agrobusiness", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", published_at: "2024-10-05T00:00:00Z" },
@@ -210,9 +221,11 @@ export default async function HomePage() {
 
       {/* ── HERO : le texte dans le ciel vert, la photo est la terre. Bureau : horizon VERTICAL (l'horizon de l'emblème tourné de 90°, terre à droite) ;
           mobile : horizon horizontal, la photo sous le texte. ── */}
-      <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
+      {/* Un seul fond vert et un seul motif pour l'en-tête et les chiffres : pas de rupture entre les deux. */}
+      <div className="relative isolate overflow-hidden bg-surface-brand text-on-surface-brand">
         {/* texture du motif sur tout le ciel vert : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
+      <section className="relative py-0">
         <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
           <div className="md:w-[44%] md:max-w-[34rem] lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
             <h1 className="text-headline-md text-balance md:text-display-md">
@@ -274,8 +287,8 @@ export default async function HomePage() {
 
       </section>
 
-      {/* ── CHIFFRES : sur vert, sillons dans le coin haut droit ── */}
-      <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
+      {/* ── CHIFFRES : même fond que l'en-tête, sillons dans le coin haut droit ── */}
+      <section className="relative overflow-hidden py-0">
         <Sillons coin="haut-droite" opacite={0.08} className="w-[30%] md:w-[18rem]" />
         {/* les chiffres laissent le coin aux sillons : sous eux sur mobile, à gauche du coin sur bureau */}
         <div className="container relative z-10 pb-10 pt-24 md:py-14">
@@ -284,7 +297,7 @@ export default async function HomePage() {
               <div key={c.label} className="text-center md:text-left">
                 <dt className="sr-only">{c.label}</dt>
                 <dd className="text-display-md tabular-nums text-accent-sun">
-                  {c.valeur}<span className="text-headline-sm">{c.suffixe}</span>
+                  {c.valeur === "__RESSOURCES__" ? nbRessources : c.valeur}<span className="text-headline-sm">{c.suffixe}</span>
                 </dd>
                 <dd aria-hidden="true" className="mt-1 text-label-md uppercase tracking-[0.08em] text-on-surface-brand/85">{c.label}</dd>
               </div>
@@ -292,6 +305,7 @@ export default async function HomePage() {
           </dl>
         </div>
       </section>
+      </div>
 
       {/* ── LEAD MAGNET (CRO) ── */}
       <section className="bg-tertiary-container py-12 border-b border-tertiary/30">
