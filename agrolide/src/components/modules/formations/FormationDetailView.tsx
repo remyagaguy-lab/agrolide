@@ -280,6 +280,8 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
               <div className="flex flex-col gap-3">
                 <EnrollButton
                   mode={mode}
+                  titre={formation.titre}
+                  resume={`${totalModules} module${totalModules > 1 ? "s" : ""} · ${totalLecons} leçon${totalLecons > 1 ? "s" : ""} · ${formattedDuree}`}
                   formationId={formation.id}
                   firstLeconId={firstLeconId}
                   isEnrolled={isEnrolled}

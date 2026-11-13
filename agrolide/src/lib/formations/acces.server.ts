@@ -3,31 +3,29 @@ import { and, eq, gt, isNull, or } from 'drizzle-orm'
 import { db } from '@/db'
 import { codes_acces_formation, formations, inscriptions_formation, users } from '@/db/schema'
 import { auth, isBootstrapAdminEmail } from '@/lib/auth/server'
+import { diagnostiquerCode, genererCode, MESSAGES_CODE, normaliserCode } from './code-acces'
 
-/** Sans I, O, 0, 1 : un code se lit et se recopie sans confusion. */
-const ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-
-/** Forme canonique d'un code saisi : majuscules, sans espaces. « agro-ab12-cd34 » = « AGRO-AB12-CD34 ». */
-export function normaliserCode(saisie: string): string {
-  return saisie.toUpperCase().replace(/\s+/g, '')
-}
-
-/** AGRO-XXXX-XXXX (8 caractères tirés au hasard cryptographique : environ 10^12 combinaisons). */
-export function genererCode(): string {
-  const octets = crypto.getRandomValues(new Uint8Array(8))
-  const c = Array.from(octets, (o) => ALPHABET[o % ALPHABET.length]).join('')
-  return `AGRO-${c.slice(0, 4)}-${c.slice(4)}`
-}
+export { normaliserCode, genererCode }
 
 export type ResultatCode = { ok: true } | { ok: false; erreur: string }
+
+/** Vérifie un code sans le consommer (étape « saisie du code » du parcours). */
+export async function verifierCode(saisie: string, formationId: string): Promise<ResultatCode> {
+  const code = normaliserCode(saisie)
+  if (code.length < 6) return { ok: false, erreur: MESSAGES_CODE.trop_court }
+  const existant = await db.query.codes_acces_formation.findFirst({ where: eq(codes_acces_formation.code, code) })
+  return diagnostiquerCode(existant, formationId, new Date().toISOString())
+}
+
+export type ResultatConsommation = { ok: true; codeId: string } | { ok: false; erreur: string }
 
 /**
  * Consomme un code pour ce membre et cette formation. Une seule requête atomique :
  * deux personnes qui saisissent le même code au même instant ne peuvent pas toutes deux l'obtenir.
  */
-export async function consommerCode(saisie: string, userId: string, formationId: string): Promise<ResultatCode> {
+export async function consommerCode(saisie: string, userId: string, formationId: string): Promise<ResultatConsommation> {
   const code = normaliserCode(saisie)
-  if (code.length < 6) return { ok: false, erreur: "Saisissez le code reçu (il commence par AGRO)." }
+  if (code.length < 6) return { ok: false, erreur: MESSAGES_CODE.trop_court }
   const maintenant = new Date().toISOString()
 
   const pris = await db
@@ -42,14 +40,20 @@ export async function consommerCode(saisie: string, userId: string, formationId:
       ),
     )
     .returning({ id: codes_acces_formation.id })
-  if (pris.length > 0) return { ok: true }
+  if (pris.length > 0) return { ok: true, codeId: pris[0].id }
 
-  // Échec : on dit pourquoi, sans rien révéler d'un code inexistant.
+  // Échec : on dit pourquoi.
   const existant = await db.query.codes_acces_formation.findFirst({ where: eq(codes_acces_formation.code, code) })
-  if (!existant) return { ok: false, erreur: "Ce code n'existe pas. Vérifiez-le et réessayez." }
-  if (existant.utilise_par) return { ok: false, erreur: "Ce code a déjà été utilisé." }
-  if (existant.expire_le && existant.expire_le <= maintenant) return { ok: false, erreur: "Ce code a expiré." }
-  return { ok: false, erreur: "Ce code n'est pas valable pour cette formation." }
+  const verdict = diagnostiquerCode(existant, formationId, maintenant)
+  return verdict.ok ? { ok: false, erreur: "Ce code vient d'être utilisé." } : verdict
+}
+
+/** Rend un code consommé (l'inscription a échoué après coup : le code ne doit pas être perdu). */
+export async function libererCode(codeId: string, userId: string): Promise<void> {
+  await db
+    .update(codes_acces_formation)
+    .set({ utilise_par: null, utilise_le: null })
+    .where(and(eq(codes_acces_formation.id, codeId), eq(codes_acces_formation.utilise_par, userId)))
 }
 
 /** Une formation est « externe » quand elle est hébergée chez un organisme (accès libre, sans code Agrolide). */

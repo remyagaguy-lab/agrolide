@@ -4,7 +4,7 @@ import { formations, inscriptions_formation } from "@/db/schema";
 import { auth } from "@/lib/auth/server";
 import { notifier } from "@/lib/notifications.server";
 import { and, eq } from "drizzle-orm";
-import { consommerCode, formationExigeCode } from "@/lib/formations/acces.server";
+import { consommerCode, formationExigeCode, libererCode, verifierCode } from "@/lib/formations/acces.server";
 
 export async function POST(
   request: Request,
@@ -29,20 +29,45 @@ export async function POST(
 
     if (!existingEnrollment) {
       // Formation Agrolide : l'inscription exige un code d'accès (challenge). Les formations externes restent libres.
+      // Ce contrôle est ici, côté serveur : il ne dépend pas du bouton affiché.
       const exigeCode = await formationExigeCode(formationId);
       if (exigeCode === null) return NextResponse.json({ error: "Formation introuvable" }, { status: 404 });
+      let codeId: string | null = null;
       if (exigeCode) {
-        const corps = (await request.json().catch(() => ({}))) as { code?: unknown };
-        const resultat = await consommerCode(typeof corps.code === "string" ? corps.code : "", userId, formationId);
+        const corps = (await request.json().catch(() => ({}))) as { code?: unknown; verifier?: unknown };
+        const saisie = typeof corps.code === "string" ? corps.code : "";
+        if (corps.verifier === true) {
+          // Étape « saisie du code » : on vérifie sans consommer.
+          const verdict = await verifierCode(saisie, formationId);
+          if (!verdict.ok) return NextResponse.json({ error: verdict.erreur }, { status: 400 });
+          return NextResponse.json({ success: true, verifie: true });
+        }
+        const resultat = await consommerCode(saisie, userId, formationId);
         if (!resultat.ok) return NextResponse.json({ error: resultat.erreur }, { status: 400 });
+        codeId = resultat.codeId;
       }
 
-      // Create new enrollment
-      await db.insert(inscriptions_formation).values({
-        membre_id: userId,
-        formation_id: formationId,
-        statut: "en_cours",
-      });
+      try {
+        // Deux requêtes simultanées du même membre : la seconde ne crée pas de doublon et rend son code.
+        const doublon = await db.query.inscriptions_formation.findFirst({
+          columns: { id: true },
+          where: and(eq(inscriptions_formation.membre_id, userId), eq(inscriptions_formation.formation_id, formationId)),
+        });
+        if (doublon) {
+          if (codeId) await libererCode(codeId, userId);
+          return NextResponse.json({ success: true });
+        }
+        await db.insert(inscriptions_formation).values({
+          membre_id: userId,
+          formation_id: formationId,
+          statut: "en_cours",
+          created_at: new Date().toISOString(),
+        });
+      } catch (e) {
+        // L'inscription a échoué : le code n'est pas perdu.
+        if (codeId) await libererCode(codeId, userId).catch(() => {});
+        throw e;
+      }
 
       const formation = await db.query.formations.findFirst({
         columns: { titre: true },

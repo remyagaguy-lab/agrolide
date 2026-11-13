@@ -118,7 +118,7 @@ Réduire les pertes de 10 % à 7 % ajoute environ 0,8 M FCFA de chiffre d'affair
 La main-d'œuvre est le deuxième grand poste après les intrants. Distinguez le **personnel permanent** (chef de culture, gardien : 3,0 M FCFA dans le cas) du **personnel saisonnier** (4,0 M FCFA) qui suit le calendrier de plantation et de récolte. Le décalage des plantations lisse les besoins et réduit le recours aux pointes de main-d'œuvre.
 
 ### Du ratio au budget
-Faites toujours la boucle : fiche par hectare → charges variables annuelles → comparaison avec le chiffre d'affaires. Dans le cas : 12,2 M FCFA de charges pour 23,0 M de chiffre d'affaires, soit un taux de marge de 47 %.
+Faites toujours la boucle : fiche par hectare puis charges variables annuelles puis comparaison avec le chiffre d'affaires. Dans le cas : 12,2 M FCFA de charges pour 23,0 M de chiffre d'affaires, soit un taux de marge de 47 %.
 
 #### Ce qu'il faut retenir
 - Une fiche par culture, par hectare et par cycle.
