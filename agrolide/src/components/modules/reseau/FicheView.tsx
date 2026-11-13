@@ -273,7 +273,7 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
           <h2 id="fiche-proches" className="text-title-lg font-bold text-on-surface">
             Profils proches de {prenom}
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-4 lg:grid-cols-3">
             {proches.map((m) => (
               <MemberCard key={m.id} member={m} titreRaisons={`Points communs avec ${prenom}`} />
             ))}

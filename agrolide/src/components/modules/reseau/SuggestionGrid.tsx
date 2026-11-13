@@ -53,7 +53,7 @@ export function SuggestionGrid({ members }: { members: MemberSummary[] }) {
   const nouveaux = members.filter((m) => !m.suggere)
 
   const grille = (liste: MemberSummary[], avecIgnorer: boolean) => (
-    <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+    <ul className="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-3">
       {liste.map((m) => (
         <li key={m.id}>
           <MemberCard

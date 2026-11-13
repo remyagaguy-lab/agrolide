@@ -133,7 +133,7 @@ async function Results({ viewerId, filters, moi, profilSuffisant }: { viewerId: 
       {pertinence ? (
         <SuggestionGrid members={result.members} />
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-3">
           {result.members.map((m) => (
             <li key={m.id}>
               <MemberCard member={m} />

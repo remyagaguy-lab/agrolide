@@ -42,22 +42,24 @@ export function RelationCard({ member }: { member: MemberSummary }) {
   }
 
   return (
-    <article className="flex h-full flex-col gap-4 rounded-card border border-outline-variant bg-surface-container-lowest p-5">
-      <div className="flex items-start gap-4">
+    // Conteneur de requête : sur téléphone, en grille à deux colonnes (< 17 rem), la carte devient compacte.
+    <div className="@container h-full">
+    <article className="flex h-full flex-col gap-4 rounded-card border border-outline-variant bg-surface-container-lowest p-5 @max-[17rem]:gap-2 @max-[17rem]:p-3">
+      <div className="flex items-start gap-4 @max-[17rem]:flex-col @max-[17rem]:items-center @max-[17rem]:gap-1.5 @max-[17rem]:text-center">
         <Avatar src={member.photo_url} name={name} size="lg" />
-        <div className="min-w-0 flex-1">
-          <h3 className="text-title-md text-on-surface">
-            <Link href={`/membres/annuaire/${member.id}`} className="inline-flex min-h-11 items-center rounded-tag">
+        <div className="min-w-0 flex-1 @max-[17rem]:w-full">
+          <h3 className="text-title-md text-on-surface @max-[17rem]:text-label-lg">
+            <Link href={`/membres/annuaire/${member.id}`} className="inline-flex min-h-11 items-center rounded-tag @max-[17rem]:line-clamp-2 @max-[17rem]:justify-center">
               {name}
             </Link>
           </h3>
           {headline ? (
-            <p className="mt-0.5 line-clamp-2 text-body-sm text-on-surface-variant">{headline}</p>
+            <p className="mt-0.5 line-clamp-2 text-body-sm text-on-surface-variant @max-[17rem]:line-clamp-1">{headline}</p>
           ) : (
             <p className="mt-0.5 text-body-sm text-on-surface-muted">Métier non renseigné</p>
           )}
           {place && (
-            <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-muted">
+            <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-muted @max-[17rem]:justify-center @max-[17rem]:text-label-sm">
               <MapPin className="size-4 shrink-0" aria-hidden />
               <span className="truncate">{place}</span>
             </p>
@@ -66,13 +68,14 @@ export function RelationCard({ member }: { member: MemberSummary }) {
       </div>
 
       <div className="mt-auto flex flex-col gap-1">
-        <Button variant="secondary" fullWidth href={`/membres/messages?user=${member.id}`} aria-label={`Écrire un message à ${name}`}>
+        <Button variant="secondary" fullWidth className="@max-[17rem]:px-2" href={`/membres/messages?user=${member.id}`} aria-label={`Écrire un message à ${name}`}>
           <MessageCircle className="size-5" aria-hidden />
           Message
         </Button>
-        <Button variant="text" fullWidth onClick={() => setOpen(true)} aria-label={`Retirer ${name} de mes relations`}>
+        <Button variant="text" fullWidth className="@max-[17rem]:px-1" onClick={() => setOpen(true)} aria-label={`Retirer ${name} de mes relations`}>
           <UserMinus className="size-5" aria-hidden />
-          Retirer de mes relations
+          <span className="@max-[17rem]:hidden">Retirer de mes relations</span>
+          <span className="hidden @max-[17rem]:inline">Retirer</span>
         </Button>
       </div>
 
@@ -100,5 +103,6 @@ export function RelationCard({ member }: { member: MemberSummary }) {
         </ModalContent>
       </Modal>
     </article>
+    </div>
   )
 }

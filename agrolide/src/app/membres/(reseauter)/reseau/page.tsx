@@ -133,7 +133,7 @@ function Invitations({ recues, envoyees }: { recues: Awaited<ReturnType<typeof f
         {recues.length === 0 ? (
           <EmptyState arche icon={<Users />} title="Aucune invitation en attente." description="Quand un membre vous invitera, vous pourrez l’accepter ou l’ignorer ici." />
         ) : (
-          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <ul className="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-3">
             {recues.map((m) => (
               <li key={m.connectionId ?? m.id}>
                 <MemberCard member={m} />
@@ -148,7 +148,7 @@ function Invitations({ recues, envoyees }: { recues: Awaited<ReturnType<typeof f
         {envoyees.length === 0 ? (
           <EmptyState arche icon={<Send />} title="Vous n’avez envoyé aucune invitation." action={DECOUVRIR} />
         ) : (
-          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+          <ul className="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-3">
             {envoyees.map((m) => (
               <li key={m.connectionId ?? m.id}>
                 <MemberCard member={m} libelleEnAttente="En attente" />
@@ -199,7 +199,7 @@ async function Relations({ viewerId, q, tri }: { viewerId: string; q: string; tr
           action={<Button variant="secondary" href={`${BASE}?onglet=relations`}>Effacer la recherche</Button>}
         />
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <ul className="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-3">
           {relations.map((m) => (
             <li key={m.id}>
               <RelationCard member={m} />

@@ -106,7 +106,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
         (ouvertContact === false ? (
           <p className="text-body-sm text-on-surface-muted">Ce membre ne reçoit pas d’invitations.</p>
         ) : (
-          <Button variant={principal ? 'secondary' : 'outline'} fullWidth onClick={() => { setError(''); setInviter(true) }} aria-label={`Se connecter à ${name}`}>
+          <Button variant={principal ? 'secondary' : 'outline'} fullWidth className="@max-[17rem]:px-2" onClick={() => { setError(''); setInviter(true) }} aria-label={`Se connecter à ${name}`}>
             <UserPlus className="size-5" aria-hidden />
             Se connecter
           </Button>
@@ -114,12 +114,12 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
 
       {state === 'pending_sent' && (
         <>
-          <p className="flex min-h-12 items-center justify-center gap-2 rounded-control bg-surface-container text-label-lg text-on-surface-variant">
+          <p className="flex min-h-12 items-center justify-center gap-2 rounded-control bg-surface-container text-label-lg text-on-surface-variant @max-[17rem]:text-label-md">
             <Clock className="size-5" aria-hidden />
             {libelleEnAttente}
           </p>
           {connectionId && (
-            <Button variant="text" fullWidth onClick={withdraw} loading={pending} aria-label={`Retirer l’invitation envoyée à ${name}`}>
+            <Button variant="text" fullWidth className="@max-[17rem]:px-1" onClick={withdraw} loading={pending} aria-label={`Retirer l’invitation envoyée à ${name}`}>
               Retirer l’invitation
             </Button>
           )}
@@ -127,19 +127,19 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
       )}
 
       {state === 'pending_received' && (
-        <div className="grid grid-cols-2 gap-2">
-          <Button variant="secondary" onClick={accept} loading={pending} disabled={!connectionId} aria-label={`Accepter l’invitation de ${name}`}>
+        <div className="grid grid-cols-2 gap-2 @max-[17rem]:grid-cols-1">
+          <Button variant="secondary" className="@max-[17rem]:px-2" onClick={accept} loading={pending} disabled={!connectionId} aria-label={`Accepter l’invitation de ${name}`}>
             <Check className="size-5" aria-hidden />
             Accepter
           </Button>
-          <Button variant="outline" onClick={ignore} disabled={pending || !connectionId} aria-label={`Ignorer l’invitation de ${name}`}>
+          <Button variant="outline" className="@max-[17rem]:px-2" onClick={ignore} disabled={pending || !connectionId} aria-label={`Ignorer l’invitation de ${name}`}>
             Ignorer
           </Button>
         </div>
       )}
 
       {state === 'accepted' && (
-        <Button variant="secondary" fullWidth href={`/membres/messages?user=${memberId}`} aria-label={`Écrire un message à ${name}`}>
+        <Button variant="secondary" fullWidth className="@max-[17rem]:px-2" href={`/membres/messages?user=${memberId}`} aria-label={`Écrire un message à ${name}`}>
           <MessageCircle className="size-5" aria-hidden />
           Message
         </Button>

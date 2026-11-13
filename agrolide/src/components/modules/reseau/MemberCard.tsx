@@ -46,19 +46,22 @@ export function MemberCard({
   const rest = member.thematiques.length - shown.length
 
   return (
+    // Conteneur de requête : dans une grille à deux colonnes sur téléphone (< 17 rem de large), la carte devient compacte
+    // (photo, nom, métier, lieu, un geste) ; en pleine largeur ou sur grand écran, elle garde sa forme complète.
+    <div className="@container h-full">
     <article className="relative flex h-full flex-col overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest transition-[border-color,box-shadow] duration-150 ease-standard hover:border-primary hover:shadow-elev-1">
       {/* Bandeau teinté : sillons dans le coin, la photo le chevauche */}
-      <div aria-hidden className="relative h-14 shrink-0 overflow-hidden bg-primary-container text-on-primary-container">
+      <div aria-hidden className="relative h-14 shrink-0 overflow-hidden bg-primary-container text-on-primary-container @max-[17rem]:h-10">
         <Sillons coin="bas-droite" opacite={0.12} className="absolute bottom-0 right-0 w-32" />
       </div>
-      <div className="flex flex-1 flex-col gap-4 px-5 pb-5">
-        <div className="-mt-8 flex items-end justify-between gap-3">
-          <Avatar src={member.photo_url} name={name} size="lg" className="relative size-16 ring-4 ring-surface-container-lowest" />
-          {category && <Badge variant={categoryVariant(member.categorie)} className="mb-1">{category}</Badge>}
+      <div className="flex flex-1 flex-col gap-4 px-5 pb-5 @max-[17rem]:gap-2 @max-[17rem]:px-3 @max-[17rem]:pb-3">
+        <div className="-mt-8 flex items-end justify-between gap-3 @max-[17rem]:-mt-7">
+          <Avatar src={member.photo_url} name={name} size="lg" className="relative size-16 ring-4 ring-surface-container-lowest @max-[17rem]:size-14" />
+          {category && <Badge variant={categoryVariant(member.categorie)} className="mb-1 @max-[17rem]:hidden">{category}</Badge>}
         </div>
 
         <div className="min-w-0">
-          <h3 className="text-title-md font-bold text-on-surface">
+          <h3 className="text-title-md font-bold text-on-surface @max-[17rem]:line-clamp-2 @max-[17rem]:break-words @max-[17rem]:text-label-lg">
             <Link
               href={`/membres/annuaire/${member.id}`}
               className="rounded-tag after:absolute after:inset-0 after:rounded-card focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-2 focus-visible:after:outline-primary"
@@ -67,12 +70,12 @@ export function MemberCard({
             </Link>
           </h3>
           {headline ? (
-            <p className="mt-0.5 line-clamp-2 text-body-md text-on-surface-variant">{headline}</p>
+            <p className="mt-0.5 line-clamp-2 text-body-md text-on-surface-variant @max-[17rem]:line-clamp-1 @max-[17rem]:text-body-sm">{headline}</p>
           ) : (
-            <p className="mt-0.5 text-body-md text-on-surface-muted">Métier non renseigné</p>
+            <p className="mt-0.5 text-body-md text-on-surface-muted @max-[17rem]:text-body-sm">Métier non renseigné</p>
           )}
           {place && (
-            <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-variant">
+            <p className="mt-1 flex items-center gap-1.5 text-body-sm text-on-surface-variant @max-[17rem]:text-label-sm">
               <MapPin className="size-4 shrink-0" aria-hidden />
               <span className="truncate">{place}</span>
             </p>
@@ -80,7 +83,7 @@ export function MemberCard({
         </div>
 
         {shown.length > 0 && (
-          <ul className="flex flex-wrap gap-1.5" aria-label={`Spécialités de ${name}`}>
+          <ul className="flex flex-wrap gap-1.5 @max-[17rem]:hidden" aria-label={`Spécialités de ${name}`}>
             {shown.map((t) => (
               <li key={t}>
                 <Badge variant="category">{t}</Badge>
@@ -95,14 +98,14 @@ export function MemberCard({
         )}
 
       {member.state === 'pending_received' && member.note && (
-        <blockquote className="rounded-control border-l-4 border-primary bg-surface-container px-3 py-2">
-          <p className="text-label-md text-on-surface-variant">Note de {member.prenom?.trim() || name}</p>
-          <p className="mt-0.5 whitespace-pre-wrap break-words text-body-sm text-on-surface">{member.note}</p>
+        <blockquote className="rounded-control border-l-4 border-primary bg-surface-container px-3 py-2 @max-[17rem]:px-2 @max-[17rem]:py-1.5">
+          <p className="text-label-md text-on-surface-variant @max-[17rem]:hidden">Note de {member.prenom?.trim() || name}</p>
+          <p className="mt-0.5 whitespace-pre-wrap break-words text-body-sm text-on-surface @max-[17rem]:line-clamp-2 @max-[17rem]:text-label-sm">{member.note}</p>
         </blockquote>
       )}
 
       {member.raisons && member.raisons.length > 0 && (
-        <div className="rounded-control bg-surface-container-low p-3">
+        <div className="rounded-control bg-surface-container-low p-3 @max-[17rem]:hidden">
           <p className="text-label-md font-bold text-on-surface-variant">{titreRaisons}</p>
           <ul className="mt-1 space-y-1">
             {member.raisons.map((r) => (
@@ -132,5 +135,6 @@ export function MemberCard({
       </div>
       </div>
     </article>
+    </div>
   )
 }
