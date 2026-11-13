@@ -1,21 +1,49 @@
+import Image from "next/image";
+import type { ReactNode } from "react";
 import { db } from "@/db";
-import { formations } from "@/db/schema";
-import { eq } from "drizzle-orm";
+import { formations, inscriptions_formation } from "@/db/schema";
+import { and, eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import { CheckCircle2, Clock, ExternalLink, GraduationCap, Layers, MonitorPlay, Plus, Minus, Tag } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { DetailHero } from "@/components/ui/DetailHero";
-import { CheckCircle2, Clock, BookOpen, GraduationCap, ExternalLink, Plus, Minus, Share2 } from "lucide-react";
-import ReactMarkdown from "react-markdown";
 import { auth } from "@/lib/auth/server";
-import { inscriptions_formation } from "@/db/schema";
-import { and } from "drizzle-orm";
 import { EnrollButton } from "./EnrollButton";
+import { PartagerBouton } from "./PartagerBouton";
 import Breadcrumb from "@/components/ui/Breadcrumb";
-import { Badge as BadgeFormation } from "@/components/ui/Badge";
 
 type Espace = "membre" | "public";
+
+/** Une rubrique repliable de la fiche (contexte, public, objectifs…). */
+function Rubrique({ titre, ouverte = false, children }: { titre: string; ouverte?: boolean; children: ReactNode }) {
+  return (
+    <details open={ouverte} className="group overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest">
+      <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-title-md font-bold text-on-surface transition-colors hover:bg-surface-container-low [&::-webkit-details-marker]:hidden">
+        {titre}
+        <span className="group-open:hidden"><Plus className="size-5 text-primary" aria-hidden /></span>
+        <span className="hidden group-open:block"><Minus className="size-5 text-primary" aria-hidden /></span>
+      </summary>
+      <div className="px-5 pb-5">{children}</div>
+    </details>
+  );
+}
+
+/** Une ligne du résumé : pictogramme, intitulé discret, valeur. */
+function Fait({ Icone, libelle, children }: { Icone: typeof Clock; libelle: string; children: ReactNode }) {
+  return (
+    <div className="flex items-start gap-3">
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-control bg-primary-container text-on-primary-container">
+        <Icone className="size-5" aria-hidden />
+      </span>
+      <div className="min-w-0">
+        <dt className="text-label-md font-bold uppercase tracking-wider text-on-surface-variant">{libelle}</dt>
+        <dd className="text-body-md font-medium text-on-surface">{children}</dd>
+      </div>
+    </div>
+  );
+}
+
+const texte = "text-body-md leading-relaxed text-on-surface-variant";
 
 /**
  * Fiche d'une formation, partagée par le site public (/formations/[id]) et l'espace membre
@@ -24,280 +52,197 @@ type Espace = "membre" | "public";
 export async function FormationDetailView({ id, mode }: { id: string; mode: Espace }) {
   // Formation, session et inscription sont indépendantes : une seule attente.
   const [formation, { userId }, existing] = await Promise.all([
-  db.query.formations.findFirst({
-    where: eq(formations.id, id),
-    with: {
-      modules: {
-        orderBy: (modules, { asc }) => [asc(modules.ordre)],
-        with: {
-          lecons: {
-            orderBy: (lecons, { asc }) => [asc(lecons.ordre)],
-          },
+    db.query.formations.findFirst({
+      where: eq(formations.id, id),
+      with: {
+        modules: {
+          orderBy: (modules, { asc }) => [asc(modules.ordre)],
+          with: { lecons: { orderBy: (lecons, { asc }) => [asc(lecons.ordre)] } },
         },
       },
-    },
-  }),
+    }),
     auth(),
     auth().then(({ userId: uid }) =>
       uid
         ? db.query.inscriptions_formation.findFirst({
-            where: and(
-              eq(inscriptions_formation.membre_id, uid),
-              eq(inscriptions_formation.formation_id, id)
-            ),
+            where: and(eq(inscriptions_formation.membre_id, uid), eq(inscriptions_formation.formation_id, id)),
           })
-        : null
+        : null,
     ),
   ]);
 
-  if (!formation) {
-    notFound();
-  }
+  if (!formation) notFound();
 
   const totalModules = formation.modules.length;
-  const allLecons = formation.modules.flatMap(m => m.lecons);
+  const allLecons = formation.modules.flatMap((m) => m.lecons);
   const totalLecons = allLecons.length;
   const totalDuree = allLecons.reduce((acc, curr) => acc + (curr.duree_minutes || 0), 0);
-  const formattedDuree = totalDuree >= 60 
-    ? `${Math.floor(totalDuree / 60)}h${totalDuree % 60 > 0 ? ` ${totalDuree % 60}min` : ''}` 
-    : `${totalDuree} min`;
+  const formattedDuree =
+    totalDuree >= 60 ? `${Math.floor(totalDuree / 60)} h${totalDuree % 60 > 0 ? ` ${totalDuree % 60} min` : ""}` : `${totalDuree} min`;
 
   const isLoggedIn = !!userId;
-  let isEnrolled = false;
-
-  if (isLoggedIn && userId) {
-    if (existing) {
-      isEnrolled = true;
-    }
-  }
-
+  const isEnrolled = isLoggedIn && !!existing;
   const firstLeconId = allLecons[0]?.id || "";
   const isExternal = !!formation.lien_externe;
+  const etiquette = isExternal ? `Formation externe${formation.source_externe ? ` · ${formation.source_externe}` : ""}` : "Formation";
+  const gratuit = !formation.prix_fcfa;
 
   let extProgramme: any = null;
   if (isExternal && formation.programme_json) {
     try {
-      extProgramme = typeof formation.programme_json === "string" 
-        ? JSON.parse(formation.programme_json)
-        : formation.programme_json;
+      extProgramme = typeof formation.programme_json === "string" ? JSON.parse(formation.programme_json) : formation.programme_json;
     } catch (e) {
       console.error("Failed to parse programme_json", e);
     }
   }
 
   return (
-    <div className={mode === "public" ? "min-h-screen bg-surface-container-lowest" : "rounded-card bg-surface-container-lowest"}>
+    <div className={mode === "public" ? "min-h-screen bg-surface-container-lowest" : ""}>
       {mode === "public" ? (
         <DetailHero
-          label={isExternal ? `Formation externe${formation.source_externe ? ` · ${formation.source_externe}` : ""}` : "Formation"}
+          label={etiquette}
           title={formation.titre}
           image={formation.cover_image_url ? { src: formation.cover_image_url, alt: `Couverture de la formation « ${formation.titre} »` } : null}
           breadcrumb={[{ label: "Formations", href: "/formations" }, { label: formation.titre }]}
         />
       ) : (
-        <header className="space-y-3 px-1 pt-2">
-          <Breadcrumb jsonLd={false} className="mb-0" items={[{ label: "Catalogue", href: "/membres/formations/catalogue" }, { label: formation.titre }]} />
-          <BadgeFormation variant="neutral">
-            {isExternal ? `Formation externe${formation.source_externe ? ` · ${formation.source_externe}` : ""}` : "Formation"}
-          </BadgeFormation>
-          <h1 className="text-headline-sm md:text-headline-md text-on-surface">{formation.titre}</h1>
+        <header className="space-y-4">
+          <Breadcrumb jsonLd={false} className="mb-0" items={[{ label: "Formations", href: "/membres/formations/catalogue" }, { label: formation.titre }]} />
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge variant="neutral">{etiquette}</Badge>
+            {formation.thematique ? <Badge variant="category">{formation.thematique}</Badge> : null}
+            {isEnrolled ? <Badge variant="success">Vous êtes inscrit(e)</Badge> : null}
+          </div>
+          <h1 className="text-headline-sm text-on-surface md:text-headline-md">{formation.titre}</h1>
         </header>
       )}
 
-      <div className={mode === "public" ? "container pt-10 pb-24 md:pt-14" : "px-4 pb-10 pt-6 md:px-6"}>
+      <div className={mode === "public" ? "container pb-24 pt-10 md:pt-14" : "pt-6"}>
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_340px] lg:gap-12">
+          {/* Contenu */}
+          <div className="min-w-0 space-y-8">
+            {mode === "membre" && formation.cover_image_url ? (
+              <div className="relative aspect-[16/7] w-full overflow-hidden rounded-card bg-surface-container">
+                <Image
+                  src={formation.cover_image_url}
+                  alt={`Couverture de la formation « ${formation.titre} »`}
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 800px"
+                  className="object-cover"
+                />
+              </div>
+            ) : null}
 
+            <p className="text-body-lg leading-[1.8] text-on-surface-variant">{formation.description}</p>
 
-        {/* Content & Sidebar Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-12 lg:gap-16">
-          
-          {/* LEFT COLUMN: Main Content */}
-          <div className="space-y-10">
-            {/* Description intro */}
-            <div>
-              <p className="font-body text-body-md md:text-body-lg leading-[1.8] text-on-surface-variant">
-                {formation.description}
-              </p>
-            </div>
-
-            {/* Accordions Container */}
             <div className="space-y-3">
               {isExternal && extProgramme ? (
                 <>
                   {extProgramme.contexte && (
-                    <details open className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
-                        Contexte
-                        <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
-                        <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
-                      </summary>
-                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-body-md leading-[1.75] text-on-surface-variant">
-                        <div className="pt-2">{extProgramme.contexte}</div>
-                      </div>
-                    </details>
+                    <Rubrique titre="Contexte" ouverte>
+                      <p className={texte}>{extProgramme.contexte}</p>
+                    </Rubrique>
                   )}
-
                   {extProgramme.public_cible && (
-                    <details className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
-                        Public cible
-                        <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
-                        <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
-                      </summary>
-                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-body-md leading-[1.75] text-on-surface-variant">
-                        <div className="pt-2">{extProgramme.public_cible}</div>
-                      </div>
-                    </details>
+                    <Rubrique titre="Public cible">
+                      <p className={texte}>{extProgramme.public_cible}</p>
+                    </Rubrique>
                   )}
-
                   {extProgramme.objectifs && extProgramme.objectifs.length > 0 && (
-                    <details className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
-                        Ce que vous allez apprendre
-                        <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
-                        <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
-                      </summary>
-                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low">
-                        <div className="grid grid-cols-1 gap-3 pt-2">
-                          {extProgramme.objectifs.map((obj: string, i: number) => (
-                            <div key={i} className="flex items-start gap-3">
-                              <CheckCircle2 className="w-[18px] h-[18px] text-primary mt-[3px] flex-shrink-0" />
-                              <span className="font-heading text-body-sm font-medium text-on-surface leading-[1.5]">{obj}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </details>
+                    <Rubrique titre="Ce que vous allez apprendre">
+                      <ul className="grid grid-cols-1 gap-3">
+                        {extProgramme.objectifs.map((obj: string, i: number) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden />
+                            <span className="text-body-md text-on-surface">{obj}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </Rubrique>
                   )}
-
                   {extProgramme.presentation_structure && (
-                    <details className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                      <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
-                        À propos du partenaire
-                        <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
-                        <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
-                      </summary>
-                      <div className="p-4 md:p-5 pt-0 bg-surface-container-low font-body text-body-md leading-[1.75] text-on-surface-variant">
-                        <div className="pt-2">{extProgramme.presentation_structure}</div>
-                      </div>
-                    </details>
+                    <Rubrique titre="À propos du partenaire">
+                      <p className={texte}>{extProgramme.presentation_structure}</p>
+                    </Rubrique>
                   )}
                 </>
               ) : (
-                /* Programme for internal formations */
-                <details open className="group border border-outline-variant bg-surface-container-low rounded-[8px] overflow-hidden">
-                  <summary className="flex items-center justify-between cursor-pointer p-4 md:p-5 font-heading font-extrabold text-body-md text-on-surface list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container transition-colors">
-                    Structure du cours
-                    <span className="group-open:hidden"><Plus className="w-5 h-5 text-primary" /></span>
-                    <span className="hidden group-open:block"><Minus className="w-5 h-5 text-primary" /></span>
-                  </summary>
-                  <div className="p-4 md:p-5 pt-0 bg-surface-container-low">
-                    <div className="space-y-6 pt-2">
+                <Rubrique titre="Structure du cours" ouverte>
+                  {formation.modules.length === 0 ? (
+                    <p className={texte}>Le programme détaillé sera bientôt publié.</p>
+                  ) : (
+                    <ol className="space-y-6">
                       {formation.modules.map((mod, index) => (
-                        <div key={mod.id}>
-                          <div className="flex items-start gap-3 mb-2">
-                            <div className="w-8 h-8 rounded-full bg-surface-container-lowest border border-outline-variant flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
-                              <span className="font-heading text-primary font-bold text-xs">
-                                {String(index + 1).padStart(2, '0')}
-                              </span>
-                            </div>
-                            <div>
-                              <h3 className="font-heading text-body-md font-bold leading-[1.3] text-on-surface mb-1">
-                                {mod.titre}
-                              </h3>
-                              <p className="font-heading text-body-sm font-normal leading-[1.5] text-on-surface-variant">
-                                {mod.description}
-                              </p>
+                        <li key={mod.id}>
+                          <div className="flex items-start gap-3">
+                            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-container text-label-lg font-bold text-on-primary-container">
+                              {String(index + 1).padStart(2, "0")}
+                            </span>
+                            <div className="min-w-0">
+                              <h3 className="text-title-md font-bold leading-snug text-on-surface">{mod.titre}</h3>
+                              {mod.description ? <p className="mt-1 text-body-md text-on-surface-variant">{mod.description}</p> : null}
                             </div>
                           </div>
-                          
-                          <div className="pl-11 space-y-2.5 pt-2">
-                            {mod.lecons.map((lecon) => (
-                              <div key={lecon.id} className="flex items-start gap-2.5">
-                                <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                                <div>
-                                  <p className="font-heading font-medium text-[13.5px] leading-[1.4] text-on-surface">
+                          {mod.lecons.length > 0 && (
+                            <ul className="ml-12 mt-3 space-y-2 border-l border-outline-variant pl-4">
+                              {mod.lecons.map((lecon) => (
+                                <li key={lecon.id} className="flex items-start justify-between gap-3">
+                                  <span className="flex items-start gap-2 text-body-md text-on-surface">
+                                    <CheckCircle2 className="mt-1 size-4 shrink-0 text-primary" aria-hidden />
                                     {lecon.titre}
-                                  </p>
-                                  {lecon.duree_minutes && (
-                                    <p className="font-heading font-normal text-xs text-on-surface-muted mt-0.5">
-                                      {lecon.duree_minutes} min
-                                    </p>
-                                  )}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
+                                  </span>
+                                  {lecon.duree_minutes ? <span className="shrink-0 text-label-md text-on-surface-variant">{lecon.duree_minutes} min</span> : null}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
                       ))}
-                    </div>
-                  </div>
-                </details>
+                    </ol>
+                  )}
+                </Rubrique>
               )}
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Sidebar */}
-          <div className="space-y-6">
-            
-            {/* Metadata Block (Grey box) */}
-            <div className="bg-surface-container-low border border-outline-variant p-6 md:p-7 rounded-[12px]">
-              <h3 className="font-heading font-extrabold text-xs uppercase tracking-wide text-on-surface mb-5">
-                Détails du cours
-              </h3>
-              
-              <div className="space-y-5">
+          {/* Encart : résumé et inscription (reste visible en défilant) */}
+          <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">
+            <div className="space-y-5 rounded-card border border-outline-variant bg-surface-container-lowest p-6">
+              <p className="text-headline-sm font-bold text-on-surface">{gratuit ? "Gratuit" : `${formation.prix_fcfa?.toLocaleString("fr-FR")} FCFA`}</p>
+
+              <dl className="space-y-4">
+                <Fait Icone={GraduationCap} libelle="Niveau">{formation.niveau || "Tous niveaux"}</Fait>
+                <Fait Icone={MonitorPlay} libelle="Modalité">{formation.modalite || "En ligne"}</Fait>
                 {!isExternal && (
-                  <div>
-                    <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Durée d'apprentissage</span>
-                    <span className="font-heading text-body-md text-on-surface font-medium">{formattedDuree}</span>
-                  </div>
+                  <>
+                    <Fait Icone={Clock} libelle="Durée">{formattedDuree}</Fait>
+                    <Fait Icone={Layers} libelle="Contenu">
+                      {totalModules} module{totalModules > 1 ? "s" : ""} · {totalLecons} leçon{totalLecons > 1 ? "s" : ""}
+                    </Fait>
+                  </>
                 )}
-                
-                <div>
-                  <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Niveau</span>
-                  <span className="font-heading text-body-md text-on-surface font-medium">{formation.niveau || "Tous niveaux"}</span>
-                </div>
-
-                <div>
-                  <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Modalité</span>
-                  <span className="font-heading text-body-md text-on-surface font-medium">{formation.modalite || "En ligne"}</span>
-                </div>
-
                 {isExternal && (
-                  <div>
-                    <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Domaine / Source</span>
-                    <span className="font-heading text-body-md text-primary font-semibold">{formation.source_externe || "Partenaire"}</span>
-                  </div>
+                  <Fait Icone={ExternalLink} libelle="Source">{formation.source_externe || "Partenaire"}</Fait>
                 )}
-                
-                {!isExternal && (
-                  <div>
-                    <span className="block font-heading text-xs uppercase text-on-surface-muted mb-1 font-bold tracking-wide">Modules</span>
-                    <span className="font-heading text-body-md text-on-surface font-medium">{totalModules} modules</span>
-                  </div>
-                )}
+                {formation.thematique ? <Fait Icone={Tag} libelle="Thématique">{formation.thematique}</Fait> : null}
+              </dl>
+
+              <div className="flex flex-col gap-3">
+                <EnrollButton
+                  mode={mode}
+                  formationId={formation.id}
+                  firstLeconId={firstLeconId}
+                  isEnrolled={isEnrolled}
+                  isLoggedIn={isLoggedIn}
+                  isExternal={isExternal}
+                  lienExterne={formation.lien_externe || ""}
+                  className="w-full"
+                />
+                <PartagerBouton titre={formation.titre} />
               </div>
             </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col gap-3">
-              <EnrollButton 
-                mode={mode}
-                formationId={formation.id}
-                firstLeconId={firstLeconId}
-                isEnrolled={isEnrolled}
-                isLoggedIn={isLoggedIn}
-                isExternal={isExternal}
-                lienExterne={formation.lien_externe || ""}
-                className="w-full"
-              />
-              <button className="w-full h-[48px] flex items-center justify-center gap-2 rounded-[8px] border-2 border-primary/20 bg-transparent text-primary font-heading font-bold text-body-md hover:bg-primary/5 transition-colors">
-                <Share2 className="w-4 h-4" />
-                Partager ce cours
-              </button>
-            </div>
-
-          </div>
+          </aside>
         </div>
       </div>
     </div>
