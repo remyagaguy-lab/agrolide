@@ -9,7 +9,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp, MessageSquare, Library } from "lucide-react"
-import { Feuille, Horizon, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
+import { Feuille, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: {
@@ -209,15 +209,15 @@ export default async function HomePage() {
     <div className="flex flex-col min-h-screen">
 
       {/* ── HERO : le texte dans le ciel vert, la photo est la terre. Bureau : horizon VERTICAL (l'horizon de l'emblème tourné de 90°, terre à droite) ;
-          mobile : horizon horizontal, la photo sous le texte. Le dernier horizon (vert des chiffres) remonte sur le bas de la photo. ── */}
+          mobile : horizon horizontal, la photo sous le texte. ── */}
       <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
         {/* texture du motif sur tout le ciel vert : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
-        <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:pb-24 md:pt-14 lg:min-h-[38rem] lg:pb-28">
-          <div className="md:w-[44%] md:max-w-[34rem] lg:w-[46%]">
+        <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
+          <div className="md:w-[44%] md:max-w-[34rem] lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
             <h1 className="text-headline-md text-balance md:text-display-md">
-              Fédérer la chaîne agricole, pour conquérir <br className="hidden xl:block" />
-              <span className="text-accent-sun">la souveraineté alimentaire</span>
+              Fédérer la chaîne <br className="hidden xl:block" />agricole, pour conquérir <br className="hidden xl:block" />
+              <span className="text-accent-sun xl:whitespace-nowrap">la souveraineté alimentaire</span>
             </h1>
             <p className="mt-3 text-body-md text-pretty text-on-surface-brand/90 md:mt-5 md:text-body-lg">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.
@@ -254,7 +254,7 @@ export default async function HomePage() {
 
         {/* bureau : horizon vertical. La zone est un cadre « container query » ; le calque de masque a la taille du cadre tourné
             (longueur = hauteur de la zone, épaisseur = sa largeur), puis tourne de -90° autour du centre : la terre passe à droite. */}
-        <div className="absolute right-0 top-0 hidden h-full w-[52%] [--horizon:6rem] lg:w-[58%] [container-type:size] md:block lg:[--horizon:8rem]">
+        <div className="absolute right-0 top-0 hidden h-full w-[52%] [--horizon:6rem] lg:w-[52%] xl:w-[44%] [container-type:size] md:block lg:[--horizon:8rem]">
           <div
             className="absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90"
             style={masqueTerre}
@@ -265,22 +265,20 @@ export default async function HomePage() {
                 alt={ALT_HERO}
                 fill
                 priority
-                sizes="(min-width: 1024px) 58vw, (min-width: 768px) 52vw, 0px"
+                sizes="(min-width: 1280px) 44vw, (min-width: 1024px) 52vw, (min-width: 768px) 52vw, 0px"
                 className="object-cover object-[72%_20%]"
               />
             </div>
           </div>
         </div>
 
-        {/* le vert des chiffres remonte sur le bas de la photo */}
-        <Horizon className="absolute inset-x-0 bottom-0 z-10 text-surface-brand" />
       </section>
 
       {/* ── CHIFFRES : sur vert, sillons dans le coin haut droit ── */}
       <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
         <Sillons coin="haut-droite" opacite={0.08} className="w-[30%] md:w-[18rem]" />
         {/* les chiffres laissent le coin aux sillons : sous eux sur mobile, à gauche du coin sur bureau */}
-        <div className="container relative z-10 pb-6 pt-24 md:py-14">
+        <div className="container relative z-10 pb-10 pt-24 md:py-14">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:max-w-[52rem] md:grid-cols-4">
             {CHIFFRES.map((c) => (
               <div key={c.label} className="text-center md:text-left">
@@ -293,8 +291,6 @@ export default async function HomePage() {
             ))}
           </dl>
         </div>
-        {/* le guide gratuit monte en collines sur le vert (couleur de la section du dessous) */}
-        <Horizon className="relative z-10 mt-6 text-tertiary-container" />
       </section>
 
       {/* ── LEAD MAGNET (CRO) ── */}
