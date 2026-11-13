@@ -126,11 +126,12 @@ export default async function HomePage() {
         <div className="relative z-0 [--horizon:4rem] sm:[--horizon:6rem] md:hidden">
           <div className="relative h-[340px]" style={masqueTerre}>
             <Image
-              src="/hero-accueil.webp"
+              src="/hero-accueil-hd.webp"
               alt={ALT_HERO}
               fill
               priority
-              sizes="(min-width: 768px) 0px, 100vw"
+              sizes="(min-width: 768px) 0px, 135vw"
+              quality={80}
               className="object-cover object-[78%_40%]"
             />
           </div>
@@ -146,11 +147,12 @@ export default async function HomePage() {
           >
             <div className="absolute left-1/2 top-[calc(50%+var(--decale)/2)] h-[100cqh] w-[calc(100cqw-var(--decale))] -translate-x-1/2 -translate-y-1/2 rotate-90">
               <Image
-                src="/hero-accueil.webp"
+                src="/hero-accueil-hd.webp"
                 alt={ALT_HERO}
                 fill
                 priority
-                sizes="(min-width: 1280px) 46vw, 52vw"
+                sizes="(min-width: 1280px) 70vw, 140vw"
+                quality={90}
                 className="object-cover object-[72%_20%]"
               />
             </div>

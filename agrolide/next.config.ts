@@ -36,6 +36,8 @@ const cspReportOnly = [
 const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
+    // 75 par défaut ; 90 pour la photo de l'en-tête d'accueil (grande, au premier plan, où la compression se voit).
+    qualities: [75, 80, 90],
     // Les images optimisées restent un jour en cache (60 s par défaut) : moins de recalculs côté serveur,
     // et le navigateur n'a plus à tout revérifier à chaque visite. Une image remplacée sous le même nom
     // met donc jusqu'à un jour à changer : pour l'imposer, la renommer.
