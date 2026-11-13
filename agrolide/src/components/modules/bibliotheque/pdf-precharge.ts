@@ -9,6 +9,9 @@ export type SourcePdf = { source: 'local'; fichier: Blob } | { source: 'reseau';
 const enCours = new Map<string, Promise<SourcePdf>>()
 
 function demander(documentId: string): Promise<SourcePdf> {
+  // Requête déjà lancée par la page elle-même (script en tête de page, voir LectureDocumentView) : on la reprend.
+  const tot = (window as unknown as { __agPdf?: Record<string, Promise<Response>> }).__agPdf?.[documentId]
+  if (tot) return tot.then((reponse): SourcePdf => ({ source: 'reseau', reponse }))
   return lireHorsLigne(documentId).then(async (copie): Promise<SourcePdf> => {
     if (copie) return { source: 'local', fichier: copie.fichier }
     return { source: 'reseau', reponse: await fetch(`/api/bibliotheque/download/${documentId}`, { credentials: 'same-origin' }) }

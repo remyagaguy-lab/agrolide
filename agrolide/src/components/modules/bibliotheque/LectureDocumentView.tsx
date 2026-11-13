@@ -61,8 +61,13 @@ export async function LectureDocumentView({ id, mode }: { id: string; mode: 'mem
   }
   const document = await getDocumentLecture(id)
 
+  // Chargement direct de la page : la requête du PDF part tout de suite, sans attendre le code de la liseuse (lourd).
+  // Seulement pour un membre (pas de quota à compter) et si le document n'est pas déjà gardé sur l'appareil.
+  const amorce = `(function(){try{var id=${JSON.stringify(id).replace(/</g, '\u003c')};if(localStorage.getItem('ag-hl:'+id))return;var w=window;w.__agPdf=w.__agPdf||{};w.__agPdf[id]=fetch('/api/bibliotheque/download/'+id,{credentials:'same-origin'});w.__agPdf[id].catch(function(){});fetch('/pdf.worker.min.js').catch(function(){})}catch(e){}})()`
+
   return (
     <div className={mode === 'public' ? 'container pb-16 pt-8 md:pt-12' : 'pt-6'}>
+      {mode === 'membre' && /^[\w-]+$/.test(id) && <script dangerouslySetInnerHTML={{ __html: amorce }} />}
       <Breadcrumb jsonLd={mode === 'public'} items={[{ label: 'Bibliothèque', href: racine }, { label: 'Document', href: `${racine}/${id}` }, { label: 'Lecture sécurisée' }]} />
 
       <header className="mb-4">

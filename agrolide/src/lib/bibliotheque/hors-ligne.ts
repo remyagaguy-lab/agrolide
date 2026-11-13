@@ -7,6 +7,17 @@
 const BASE = 'agrolide-hors-ligne'
 const TABLE = 'documents'
 export const DUREE_JOURS = 30
+/**
+ * Repère léger (localStorage) « ce document est gardé sur l'appareil » : la page sait, avant même de charger son code,
+ * si elle doit demander le PDF au réseau ou l'ouvrir depuis l'appareil.
+ */
+const REPERE = 'ag-hl:'
+const repere = (id: string, present: boolean) => {
+  try {
+    if (present) localStorage.setItem(REPERE + id, '1')
+    else localStorage.removeItem(REPERE + id)
+  } catch {}
+}
 
 export interface DocumentHorsLigne {
   id: string
@@ -68,6 +79,7 @@ export async function enregistrerHorsLigne(doc: { id: string; titre: string; mem
       expireLe: maintenant + DUREE_JOURS * 86_400_000,
     }
     await transaction('readwrite', (t) => t.put(entree))
+    repere(doc.id, true)
     return true
   } catch {
     return false
@@ -75,6 +87,7 @@ export async function enregistrerHorsLigne(doc: { id: string; titre: string; mem
 }
 
 export async function supprimerHorsLigne(id: string): Promise<void> {
+  repere(id, false)
   try {
     await transaction('readwrite', (t) => t.delete(id))
   } catch {}
@@ -96,6 +109,9 @@ export async function listerHorsLigne(membreId?: string | null): Promise<ResumeH
 
 /** À la déconnexion : plus aucune copie ne reste sur l'appareil. */
 export async function viderHorsLigne(): Promise<void> {
+  try {
+    for (const k of Object.keys(localStorage)) if (k.startsWith(REPERE)) localStorage.removeItem(k)
+  } catch {}
   try {
     await transaction('readwrite', (t) => t.clear())
   } catch {}
