@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight, Search, UserRound, X } from 'lucide-react'
 import { auth } from '@/lib/auth/server'
 import { buttonVariants, Button } from '@/components/ui/Button'
 import { Alert } from '@/components/ui/Alert'
+import { PageEntete } from '@/components/layout/PageEntete'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { SkeletonGrid } from '@/components/ui/Skeleton'
 import { AnnuaireFilters } from '@/components/modules/reseau/AnnuaireFilters'
@@ -38,14 +39,11 @@ export default async function AnnuaireMembresPage({ searchParams }: { searchPara
   const effectifs: Filters = { ...filters, tri: filters.tri ?? parDefaut }
 
   return (
-    <div className="space-y-6">
-      <header>
-        <h1 className="text-headline-md text-on-surface">Annuaire des membres</h1>
-        <p className="mt-1 text-body-md text-on-surface-variant">
-          Retrouvez des membres du réseau, invitez-les à se connecter, puis échangez par la messagerie.
-        </p>
-      </header>
-
+    <div className="mx-auto max-w-[1200px] space-y-6 px-2 py-6 md:px-4">
+      <PageEntete
+        titre="Annuaire des membres"
+        description="Retrouvez des membres du réseau, invitez-les à se connecter, puis échangez par la messagerie."
+      />
       <AnnuaireFilters basePath={BASE} initial={effectifs} triParDefaut={parDefaut} />
       <ActiveFilters filters={filters} />
 

@@ -1,244 +1,130 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useCallback, useState } from 'react';
-import { Filter, X } from 'lucide-react';
+import { useState, useTransition } from 'react';
+import { SlidersHorizontal, X } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+import { FormField } from '@/components/ui/FormField';
+import { NativeSelect } from '@/components/ui/Select';
 
+const THEMATIQUES = ['Agrobusiness', 'Production Animale', 'Production Végétale', 'Financement', 'Agroécologie', 'Gestion des Sols'];
+const SOURCES = [
+  { value: 'Agrolide', label: 'Agrolide' },
+  { value: 'FAO elearning Academy', label: 'FAO' },
+  { value: 'FUN MOOC', label: 'FUN MOOC' },
+];
+const NIVEAUX = ['Débutant', 'Intermédiaire', 'Avancé'];
+const PRIX = [
+  { value: 'gratuit', label: 'Gratuit' },
+  { value: 'payant', label: 'Payant' },
+];
+
+/**
+ * Filtres du catalogue : une barre de listes (comme la bibliothèque et l'annuaire), l'état vit dans l'adresse.
+ * Sur mobile, ils se replient derrière un bouton « Filtres ».
+ */
 export default function CourseFilters() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [isOpen, setIsOpen] = useState(false);
+  const [, startTransition] = useTransition();
 
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-      if (value) {
-        params.set(name, value);
-      } else {
-        params.delete(name);
-      }
-      return params.toString();
-    },
-    [searchParams]
-  );
+  const valeur = (cle: string) => searchParams.get(cle) || '';
+  const thematique = valeur('thematique');
+  const source = valeur('source');
+  const niveau = valeur('niveau');
+  const prix = valeur('prix');
 
-  const handleFilterChange = (name: string, value: string) => {
-    router.push(`?${createQueryString(name, value)}`);
+  const puces = [
+    thematique && { cle: 'thematique', libelle: thematique },
+    source && { cle: 'source', libelle: SOURCES.find((s) => s.value === source)?.label ?? source },
+    niveau && { cle: 'niveau', libelle: niveau },
+    prix && { cle: 'prix', libelle: PRIX.find((p) => p.value === prix)?.label ?? prix },
+  ].filter(Boolean) as Array<{ cle: string; libelle: string }>;
+
+  const [ouvert, setOuvert] = useState(puces.length > 0);
+
+  const changer = (nom: string, value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (value) params.set(nom, value);
+    else params.delete(nom);
+    startTransition(() => router.push(`?${params.toString()}`, { scroll: false }));
   };
-
-  const clearFilters = () => {
-    router.push('?');
-  };
-
-  const source = searchParams.get('source') || '';
-  const niveau = searchParams.get('niveau') || '';
-  const prix = searchParams.get('prix') || '';
-
-  const thematique = searchParams.get('thematique') || '';
-
-  const hasFilters = source || niveau || prix || thematique;
 
   return (
-    <div className="bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant p-6">
-      <div className="flex items-center justify-between mb-6 md:hidden">
-        <h2 className="text-lg font-bold text-on-surface flex items-center gap-2">
-          <Filter size={20} className="text-primary" /> Filtres
-        </h2>
-        <button onClick={() => setIsOpen(!isOpen)} className="text-on-surface-muted">
-          {isOpen ? <X size={24} /> : <Filter size={24} />}
-        </button>
+    <div className="space-y-4">
+      <div className="flex items-center justify-between md:hidden">
+        <p className="text-label-lg font-bold text-on-surface">Filtrer les formations</p>
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          aria-expanded={ouvert}
+          aria-controls="filtres-formations"
+          onClick={() => setOuvert((v) => !v)}
+        >
+          <SlidersHorizontal className="size-4" aria-hidden />
+          Filtres{puces.length > 0 ? ` (${puces.length})` : ''}
+        </Button>
       </div>
 
-      <div className={`md:block ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="mb-6 hidden md:flex items-center justify-between">
-          <h2 className="text-lg font-bold text-on-surface flex items-center gap-2">
-            <Filter size={20} className="text-primary" /> Filtres
-          </h2>
-          {hasFilters && (
-            <button 
-              onClick={clearFilters}
-              className="text-sm text-on-tertiary-container font-medium hover:underline flex items-center gap-1"
+      <div
+        id="filtres-formations"
+        className={ouvert ? 'grid gap-4 sm:grid-cols-2 lg:grid-cols-4' : 'hidden gap-4 md:grid md:grid-cols-2 lg:grid-cols-4'}
+      >
+        <FormField label="Thématique">
+          <NativeSelect value={thematique} onChange={(e) => changer('thematique', e.target.value)}>
+            <option value="">Toutes les thématiques</option>
+            {THEMATIQUES.map((t) => (
+              <option key={t} value={t}>{t}</option>
+            ))}
+          </NativeSelect>
+        </FormField>
+        <FormField label="Source">
+          <NativeSelect value={source} onChange={(e) => changer('source', e.target.value)}>
+            <option value="">Toutes les sources</option>
+            {SOURCES.map((s) => (
+              <option key={s.value} value={s.value}>{s.label}</option>
+            ))}
+          </NativeSelect>
+        </FormField>
+        <FormField label="Niveau">
+          <NativeSelect value={niveau} onChange={(e) => changer('niveau', e.target.value)}>
+            <option value="">Tous les niveaux</option>
+            {NIVEAUX.map((n) => (
+              <option key={n} value={n}>{n}</option>
+            ))}
+          </NativeSelect>
+        </FormField>
+        <FormField label="Accès">
+          <NativeSelect value={prix} onChange={(e) => changer('prix', e.target.value)}>
+            <option value="">Gratuit et payant</option>
+            {PRIX.map((p) => (
+              <option key={p.value} value={p.value}>{p.label}</option>
+            ))}
+          </NativeSelect>
+        </FormField>
+      </div>
+
+      {puces.length > 0 && (
+        <div className="flex flex-wrap items-center gap-2">
+          <p className="sr-only">Filtres appliqués</p>
+          {puces.map((p) => (
+            <button
+              key={p.cle}
+              type="button"
+              onClick={() => changer(p.cle, '')}
+              aria-label={`Retirer le filtre ${p.libelle}`}
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-full bg-primary-container px-4 text-label-md text-on-primary-container hover:bg-primary-container/80"
             >
-              <X size={14} /> Effacer
+              {p.libelle}
+              <X className="size-4" aria-hidden />
             </button>
-          )}
+          ))}
+          <Button type="button" variant="text" size="sm" onClick={() => startTransition(() => router.push('?', { scroll: false }))}>
+            Tout effacer
+          </Button>
         </div>
-
-        <div className="space-y-6">
-          {/* Thématique */}
-          <div>
-            <h3 className="font-semibold text-on-surface mb-3 text-sm uppercase tracking-wider">Thématique</h3>
-            <div className="space-y-2">
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="thematique" 
-                  checked={!searchParams.get('thematique')} 
-                  onChange={() => handleFilterChange('thematique', '')}
-                  className="text-primary focus:ring-primary"
-                />
-                Toutes les thématiques
-              </label>
-              {[
-                "Agrobusiness",
-                "Production Animale",
-                "Production Végétale",
-                "Financement",
-                "Agroécologie",
-                "Gestion des Sols"
-              ].map((theme) => (
-                <label key={theme} className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                  <input 
-                    type="radio" 
-                    name="thematique" 
-                    checked={searchParams.get('thematique') === theme} 
-                    onChange={() => handleFilterChange('thematique', theme)}
-                    className="text-primary focus:ring-primary"
-                  />
-                  {theme}
-                </label>
-              ))}
-            </div>
-          </div>
-
-          <div className="h-px bg-surface-container"></div>
-
-          {/* Source */}
-          <div>
-            <h3 className="font-semibold text-on-surface mb-3 text-sm uppercase tracking-wider">Source</h3>
-            <div className="space-y-2">
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === ''} 
-                  onChange={() => handleFilterChange('source', '')}
-                  className="text-primary focus:ring-primary"
-                />
-                Toutes les sources
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === 'Agrolide'} 
-                  onChange={() => handleFilterChange('source', 'Agrolide')}
-                  className="text-primary focus:ring-primary"
-                />
-                Agrolide
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === 'FAO elearning Academy'} 
-                  onChange={() => handleFilterChange('source', 'FAO elearning Academy')}
-                  className="text-primary focus:ring-primary"
-                />
-                FAO
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="source" 
-                  checked={source === 'FUN MOOC'} 
-                  onChange={() => handleFilterChange('source', 'FUN MOOC')}
-                  className="text-primary focus:ring-primary"
-                />
-                FUN MOOC
-              </label>
-            </div>
-          </div>
-
-          <div className="h-px bg-surface-container"></div>
-
-          {/* Niveau */}
-          <div>
-            <h3 className="font-semibold text-on-surface mb-3 text-sm uppercase tracking-wider">Niveau</h3>
-            <div className="space-y-2">
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="niveau" 
-                  checked={niveau === ''} 
-                  onChange={() => handleFilterChange('niveau', '')}
-                  className="text-primary focus:ring-primary"
-                />
-                Tous niveaux
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="niveau" 
-                  checked={niveau === 'Débutant'} 
-                  onChange={() => handleFilterChange('niveau', 'Débutant')}
-                  className="text-primary focus:ring-primary"
-                />
-                Débutant
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="niveau" 
-                  checked={niveau === 'Intermédiaire'} 
-                  onChange={() => handleFilterChange('niveau', 'Intermédiaire')}
-                  className="text-primary focus:ring-primary"
-                />
-                Intermédiaire
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="niveau" 
-                  checked={niveau === 'Avancé'} 
-                  onChange={() => handleFilterChange('niveau', 'Avancé')}
-                  className="text-primary focus:ring-primary"
-                />
-                Avancé
-              </label>
-            </div>
-          </div>
-
-          <div className="h-px bg-surface-container"></div>
-
-          {/* Prix */}
-          <div>
-            <h3 className="font-semibold text-on-surface mb-3 text-sm uppercase tracking-wider">Accès</h3>
-            <div className="space-y-2">
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="prix" 
-                  checked={prix === ''} 
-                  onChange={() => handleFilterChange('prix', '')}
-                  className="text-primary focus:ring-primary"
-                />
-                Tous
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="prix" 
-                  checked={prix === 'gratuit'} 
-                  onChange={() => handleFilterChange('prix', 'gratuit')}
-                  className="text-primary focus:ring-primary"
-                />
-                Gratuit
-              </label>
-              <label className="flex items-center gap-2 text-on-surface-variant cursor-pointer">
-                <input 
-                  type="radio" 
-                  name="prix" 
-                  checked={prix === 'payant'} 
-                  onChange={() => handleFilterChange('prix', 'payant')}
-                  className="text-primary focus:ring-primary"
-                />
-                Payant
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { FileText, Eye, Calendar, MapPin, Lock } from 'lucide-react'
-import { labelType, labelDomaine, couleurType } from '@/lib/bibliotheque/taxonomie'
+import { ArrowRight, Coins, FileText, Layers, Lock, PawPrint, Sprout, TreePine, Wheat, type LucideIcon } from 'lucide-react'
+import { Sillons } from '@/components/brand'
+import { labelType, labelDomaine } from '@/lib/bibliotheque/taxonomie'
 
 export interface DocumentType {
   id: string
@@ -22,73 +23,65 @@ interface DocumentCardProps {
   publicView?: boolean
 }
 
+/**
+ * Un domaine = une teinte et un pictogramme : on reconnaît le sujet d'un document avant de lire son titre.
+ * Couleurs par rôles du design system uniquement.
+ */
+const DOMAINES_VISUELS: Record<string, { Icone: LucideIcon; fond: string }> = {
+  production_vegetale: { Icone: Sprout, fond: 'bg-success-container text-on-success-container' },
+  production_animale: { Icone: PawPrint, fond: 'bg-warning-container text-on-warning-container' },
+  agroeconomie: { Icone: Coins, fond: 'bg-info-container text-on-info-container' },
+  agroalimentaire: { Icone: Wheat, fond: 'bg-tertiary-container text-on-tertiary-container' },
+  ressources_naturelles_environnement: { Icone: TreePine, fond: 'bg-primary-container text-on-primary-container' },
+  transversal: { Icone: Layers, fond: 'bg-surface-container-high text-on-surface-variant' },
+}
+const PAR_DEFAUT = { Icone: FileText, fond: 'bg-surface-container-high text-on-surface-variant' }
+
 export function DocumentCard({ document, publicView = false }: DocumentCardProps) {
   // Le visiteur reste sur le site public ; un membre reste dans son espace.
   const href = publicView ? `/bibliotheque/${document.id}` : `/membres/bibliotheque/${document.id}`
-  const reserveAuxMembres = document.acces && document.acces !== 'public'
+  // Sur le site public, on signale ce qui demande un compte ; un membre peut tout lire.
+  const reserveAuxMembres = publicView && document.acces && document.acces !== 'public'
+  const { Icone, fond } = (document.domaine && DOMAINES_VISUELS[document.domaine]) || PAR_DEFAUT
+  const repere = [document.annee, document.pays].filter(Boolean).join(' · ')
+  const lectures = document.nb_telechargements || 0
 
   return (
-    <Link href={href} className={`group flex flex-col h-full bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all overflow-hidden`}>
-      {/* En-tête miniature */}
-      <div className="h-32 bg-surface-container-low flex items-center justify-center border-b border-outline-variant relative group-hover:bg-surface-container transition-colors">
-        <FileText className="w-12 h-12 text-on-surface-muted" strokeWidth={1.5} />
-        <span className={`absolute top-3 right-3 text-xs font-medium px-2.5 py-1 rounded-full ${couleurType(document.type_doc)}`}>
+    <Link
+      href={href}
+      className="group flex h-full flex-col overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest transition-[border-color,box-shadow] duration-150 ease-standard hover:border-primary hover:shadow-elev-1"
+    >
+      {/* Couverture : teinte du domaine, pictogramme, sillons dans le coin (jamais sous un texte) */}
+      <div className={`relative h-24 overflow-hidden ${fond}`}>
+        <Sillons coin="bas-droite" opacite={0.12} className="absolute bottom-0 right-0 w-40" />
+        <Icone className="absolute left-4 top-4 size-8" strokeWidth={1.6} aria-hidden />
+        <span className="absolute right-3 top-3 max-w-[60%] truncate rounded-full bg-surface-container-lowest/90 px-2.5 py-1 text-label-md font-medium text-on-surface">
           {labelType(document.type_doc)}
         </span>
-        {document.domaine && (
-          <span className="absolute bottom-3 left-3 max-w-[70%] truncate text-xs font-medium text-on-surface-muted">
-            {labelDomaine(document.domaine)}
-          </span>
-        )}
         {reserveAuxMembres && (
-          <span className="absolute top-3 left-3 inline-flex items-center gap-1 text-xs font-medium px-2 py-1 rounded-full bg-surface-container text-on-surface-variant" title="Lecture réservée aux membres inscrits">
-            <Lock className="w-3 h-3" /> Inscrits
+          <span className="absolute bottom-3 left-4 inline-flex items-center gap-1 rounded-full bg-surface-container-lowest/90 px-2.5 py-1 text-label-md font-medium text-on-surface" title="Lecture réservée aux membres inscrits">
+            <Lock className="size-3" aria-hidden /> Inscrits
           </span>
         )}
       </div>
 
-      {/* Contenu */}
-      <div className="p-4 flex flex-col flex-1">
-        <h3 className="font-bold text-on-surface text-sm line-clamp-2 mb-1 group-hover:text-primary transition-colors">
+      <div className="flex flex-1 flex-col p-4">
+        {document.domaine ? (
+          <p className="text-label-md font-bold uppercase tracking-wider text-on-surface-variant">{labelDomaine(document.domaine)}</p>
+        ) : null}
+        <h3 className="mt-1 line-clamp-3 text-title-md font-bold leading-snug text-on-surface transition-colors group-hover:text-primary">
           {document.titre}
         </h3>
-        
-        <p className="text-sm text-on-surface-muted mb-4 line-clamp-1">
-          {document.auteurs || 'Auteur inconnu'}
-        </p>
-        
-        <div className="mt-auto space-y-2">
-          <div className="flex items-center text-xs text-on-surface-muted gap-4">
-            {document.annee && (
-              <div className="flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5" />
-                <span>{document.annee}</span>
-              </div>
-            )}
-            {document.pays && (
-              <div className="flex items-center gap-1.5">
-                <MapPin className="w-3.5 h-3.5" />
-                <span className="line-clamp-1">{document.pays}</span>
-              </div>
-            )}
-          </div>
-          
-          <div className="flex items-center justify-between pt-3 mt-3 border-t border-outline-variant">
-            <div className="flex items-center gap-1.5 text-xs font-medium text-on-surface-muted">
-              <Eye className="w-3.5 h-3.5" />
-              <span>{document.nb_telechargements || 0}</span>
-            </div>
-            
-            {publicView ? (
-              <span className="text-xs font-medium text-success opacity-0 group-hover:opacity-100 transition-opacity">
-                Consulter →
-              </span>
-            ) : (
-              <span className="text-xs font-medium text-success opacity-0 group-hover:opacity-100 transition-opacity">
-                Consulter →
-              </span>
-            )}
-          </div>
+        <p className="mt-1 line-clamp-1 text-body-sm text-on-surface-variant">{document.auteurs || 'Auteur inconnu'}</p>
+
+        <div className="mt-auto flex items-center justify-between gap-3 pt-4 text-label-md text-on-surface-variant">
+          <span className="truncate">
+            {repere}
+            {lectures >= 5 ? `${repere ? ' · ' : ''}${lectures} lectures` : ''}
+          </span>
+          <span className="inline-flex shrink-0 items-center gap-1 font-bold text-primary">
+            Consulter <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
+          </span>
         </div>
       </div>
     </Link>
