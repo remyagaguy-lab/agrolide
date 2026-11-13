@@ -166,7 +166,17 @@ export default async function HomePage() {
   // Fetch 3 derniers articles publiés depuis Cloudflare D1
   let latestArticles: any[] = []
   try {
-    latestArticles = await db.select().from(articles)
+    // Seulement ce que les cartes affichent (pas le texte complet des articles).
+    latestArticles = await db.select({
+      id: articles.id,
+      slug: articles.slug,
+      titre: articles.titre,
+      extrait: articles.extrait,
+      categorie: articles.categorie,
+      image_une_url: articles.image_une_url,
+      published_at: articles.published_at,
+      auteur_externe: articles.auteur_externe,
+    }).from(articles)
       .where(eq(articles.statut, 'publie'))
       .orderBy(desc(articles.published_at))
       .limit(3)

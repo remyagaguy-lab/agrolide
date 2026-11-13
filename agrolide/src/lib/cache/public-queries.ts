@@ -26,9 +26,21 @@ export const getPublishedArticles = unstable_cache(
     db.query.articles.findMany({
       where: eq(articles.statut, "publie"),
       orderBy: [desc(articles.published_at)],
-      with: { auteur: true },
+      // Liste du blog : ni le texte complet des articles, ni la fiche complète de l'auteur (e-mail, etc.).
+      columns: {
+        id: true,
+        slug: true,
+        titre: true,
+        extrait: true,
+        categorie: true,
+        image_une_url: true,
+        published_at: true,
+        auteur_externe: true,
+        auteur_id: true,
+      },
+      with: { auteur: { columns: { prenom: true, nom: true } } },
     }),
-  ["published-articles"],
+  ["published-articles-v2"],
   { revalidate: ONE_HOUR, tags: [CACHE_TAGS.articles] }
 )
 

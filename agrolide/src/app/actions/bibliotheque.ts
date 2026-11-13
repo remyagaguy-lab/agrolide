@@ -5,7 +5,7 @@ import { db } from '@/db'
 import { documents, documents_favoris, lectures_membres } from '@/db/schema'
 import { eq, and, count } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
-import { conditionsBibliotheque, TAILLE_PAGE, type FiltresBibliotheque } from '@/lib/bibliotheque/filtres'
+import { colonnesCarteDocument, conditionsBibliotheque, TAILLE_PAGE, type FiltresBibliotheque } from '@/lib/bibliotheque/filtres'
 
 export async function checkTrocEligibility() {
   const { userId } = await auth();
@@ -51,7 +51,7 @@ export async function getDocumentUrl(documentId: string) {
 export async function fetchDocuments(filtres: FiltresBibliotheque) {
   try {
     const { desc } = await import('drizzle-orm')
-    const data = await db.select().from(documents)
+    const data = await db.select(colonnesCarteDocument).from(documents)
       .where(conditionsBibliotheque(filtres))
       .orderBy(desc(documents.created_at))
       .limit(TAILLE_PAGE)

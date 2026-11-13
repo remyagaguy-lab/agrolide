@@ -13,6 +13,26 @@ export interface FiltresBibliotheque {
 
 export const TAILLE_PAGE = 20
 
+/**
+ * Colonnes lues pour les cartes de la liste (celles que `DocumentCard` affiche, plus `created_at` qui sert de curseur).
+ * Évite de ramener résumé, mots-clés, clés de fichier… pour chaque carte, à chaque recherche et chaque « charger plus ».
+ * Si la carte affiche un nouveau champ, l'ajouter ici.
+ */
+export const colonnesCarteDocument = {
+  id: documents.id,
+  titre: documents.titre,
+  auteurs: documents.auteurs,
+  type_doc: documents.type_doc,
+  annee: documents.annee,
+  pays: documents.pays,
+  nb_telechargements: documents.nb_telechargements,
+  statut: documents.statut,
+  created_at: documents.created_at,
+  acces: documents.acces,
+  domaine: documents.domaine,
+  sous_domaine: documents.sous_domaine,
+}
+
 const liste = (v?: string) => (v ? v.split(',').map((s) => s.trim()).filter(Boolean).slice(0, 20) : [])
 
 /** Échappe % et _ pour qu'une recherche « 100% » ne soit pas lue comme un joker SQL. */

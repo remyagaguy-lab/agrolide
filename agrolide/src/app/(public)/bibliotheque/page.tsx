@@ -19,6 +19,7 @@ import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { eq, desc, count } from 'drizzle-orm'
 import { Motif } from "@/components/brand"
+import { colonnesCarteDocument } from '@/lib/bibliotheque/filtres'
 
 async function getBibliothequeData() {
   try {
@@ -28,11 +29,10 @@ async function getBibliothequeData() {
       .where(eq(documents.statut, 'publie'))
 
     // Récupérer les derniers documents (ex: les 6 plus récents)
-    const docs = await db.query.documents.findMany({
-      where: eq(documents.statut, 'publie'),
-      orderBy: [desc(documents.created_at)],
-      limit: 6
-    })
+    const docs = await db.select(colonnesCarteDocument).from(documents)
+      .where(eq(documents.statut, 'publie'))
+      .orderBy(desc(documents.created_at))
+      .limit(6)
 
     return {
       count: countResult[0].value || 0,

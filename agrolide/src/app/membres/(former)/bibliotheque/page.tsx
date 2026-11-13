@@ -6,7 +6,7 @@ import { BibliothequeClient } from '@/components/modules/bibliotheque/Bibliotheq
 import { db } from '@/db'
 import { documents } from '@/db/schema'
 import { desc } from 'drizzle-orm'
-import { conditionsBibliotheque, TAILLE_PAGE } from '@/lib/bibliotheque/filtres'
+import { colonnesCarteDocument, conditionsBibliotheque, TAILLE_PAGE } from '@/lib/bibliotheque/filtres'
 
 export const metadata = {
   title: "Bibliothèque",
@@ -18,7 +18,7 @@ export default async function MembresBibliothequePage({ searchParams }: { search
   const params = await searchParams
   const lire = (cle: string) => (typeof params[cle] === 'string' ? (params[cle] as string) : '')
 
-  const data = await db.select().from(documents)
+  const data = await db.select(colonnesCarteDocument).from(documents)
     .where(conditionsBibliotheque({
       search: lire('search'),
       type: lire('type'),
