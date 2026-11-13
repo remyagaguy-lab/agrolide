@@ -3,7 +3,7 @@
  * (le public sert à découvrir, le membre sert à utiliser). Seules les fiches de détail sont concernées :
  * les listes (/formations, /annuaire…) restent publiques.
  */
-const FICHE_PUBLIQUE = /^\/(formations|bibliotheque|evenements|annuaire)\/([^/]+)(\/lire)?\/?$/
+const FICHE_PUBLIQUE = /^\/(formations|bibliotheque|evenements|opportunites|annuaire)\/([^/]+)(\/lire)?\/?$/
 
 /** URL membre équivalente à une fiche publique, ou null si ce n'en est pas une. */
 export function ficheMembre(pathname: string): string | null {
