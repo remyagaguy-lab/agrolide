@@ -9,7 +9,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
 import { Users, BookOpen, TrendingUp, MessageSquare, Library } from "lucide-react"
-import { Emblem, Feuille, HORIZON_CREUX, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
+import { Feuille, Horizon, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
 
 export const metadata: Metadata = {
   title: {
@@ -20,6 +20,19 @@ export const metadata: Metadata = {
 }
 
 export const revalidate = 3600;
+
+const ALT_HERO = "Une agricultrice souriante s'accroupit près d'un énorme chou dans son champ"
+/** Masque de la terre (photo) selon l'horizon de l'emblème : la bande `--horizon` suit la ligne, le reste est plein. */
+const masqueTerre: React.CSSProperties = {
+  maskImage: `${HORIZON_MASQUE_TERRE}, linear-gradient(black, black)`,
+  WebkitMaskImage: `${HORIZON_MASQUE_TERRE}, linear-gradient(black, black)`,
+  maskSize: "100% var(--horizon), 100% calc(100% - var(--horizon) + 1px)",
+  WebkitMaskSize: "100% var(--horizon), 100% calc(100% - var(--horizon) + 1px)",
+  maskPosition: "top, bottom",
+  WebkitMaskPosition: "top, bottom",
+  maskRepeat: "no-repeat",
+  WebkitMaskRepeat: "no-repeat",
+}
 
 const ROLES = ["Étudiants en agronomie", "Ingénieurs agronomes", "Chercheurs", "Entreprises agricoles", "Investisseurs"]
 const CHIFFRES = [
@@ -195,76 +208,79 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      {/* ── HERO (H2) : le titre dans le ciel vert, la photo est la terre ; l'emblème blanc au creux de l'horizon ── */}
+      {/* ── HERO : le texte dans le ciel vert, la photo est la terre. Bureau : horizon VERTICAL (l'horizon de l'emblème tourné de 90°, terre à droite) ;
+          mobile : horizon horizontal, la photo sous le texte. Le dernier horizon (vert des chiffres) remonte sur le bas de la photo. ── */}
       <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
         {/* texture du motif sur tout le ciel vert : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
-        <div className="relative z-10 mx-auto max-w-[78rem] px-5 pb-8 pt-8 text-left sm:px-6 md:px-10 md:pt-14 md:text-center">
-          {/* Mesuré : bureau (≥ 1024) ligne 1 = 915 px, ligne 2 = la phrase jaune seule (603 px), puis le sous-titre sur 3 lignes
-              d'environ 650 px : le bloc s'affine vers le bouton. Mobile : headline-md équilibré sur 3 lignes, la phrase jaune d'un tenant. */}
-          <h1 className="mx-auto text-headline-md text-balance md:text-display-md">
-            Fédérer la chaîne agricole, pour conquérir <br className="hidden lg:block" />
-            <span className="whitespace-nowrap text-accent-sun">la souveraineté alimentaire</span>
-          </h1>
-          <p className="mx-auto mt-3 max-w-[44rem] text-body-md text-pretty text-on-surface-brand/90 md:mt-5 md:text-body-lg md:text-balance">
-            Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.
-            {/* sur mobile, la phrase des publics est retirée : le sous-titre tient en 3 lignes et la photo apparaît à l'ouverture */}
-            <span className="hidden md:inline">
-              {" "}
-              {ROLES.map((r, i) => (
-                <React.Fragment key={r}>
-                  <strong className="font-bold text-accent-sun">{r}</strong>
-                  {i < ROLES.length - 1 ? ", " : " "}
-                </React.Fragment>
-              ))}
-              : construisons ensemble l&apos;agriculture africaine que nous voulons.
-            </span>
-          </p>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap md:mt-8 md:justify-center">
-            <Button variant="primary" href="/rejoindre">Rejoindre le réseau</Button>
-            <Button variant="ghost-dark" href="#actions">Nos actions</Button>
+        <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:pb-24 md:pt-14 lg:min-h-[38rem] lg:pb-28">
+          <div className="md:w-[44%] md:max-w-[34rem] lg:w-[46%]">
+            <h1 className="text-headline-md text-balance md:text-display-md">
+              Fédérer la chaîne agricole, pour conquérir <br className="hidden xl:block" />
+              <span className="text-accent-sun">la souveraineté alimentaire</span>
+            </h1>
+            <p className="mt-3 text-body-md text-pretty text-on-surface-brand/90 md:mt-5 md:text-body-lg">
+              Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.
+              {/* sur mobile, la phrase des publics est retirée : le sous-titre tient en 3 lignes et la photo apparaît à l'ouverture */}
+              <span className="hidden md:inline">
+                {" "}
+                {ROLES.map((r, i) => (
+                  <React.Fragment key={r}>
+                    <strong className="font-bold text-accent-sun">{r}</strong>
+                    {i < ROLES.length - 1 ? ", " : " "}
+                  </React.Fragment>
+                ))}
+                : construisons ensemble l&apos;agriculture africaine que nous voulons.
+              </span>
+            </p>
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap md:mt-8">
+              <Button variant="primary" href="/rejoindre">Rejoindre le réseau</Button>
+              <Button variant="ghost-dark" href="#actions">Nos actions</Button>
+            </div>
           </div>
         </div>
-        <div
-          className="relative h-[340px] [--horizon:4rem] sm:[--horizon:6rem] md:h-[440px] lg:[--horizon:9rem]"
-          style={{
-            maskImage: `${HORIZON_MASQUE_TERRE}, linear-gradient(black, black)`,
-            WebkitMaskImage: `${HORIZON_MASQUE_TERRE}, linear-gradient(black, black)`,
-            maskSize: "100% var(--horizon), 100% calc(100% - var(--horizon) + 1px)",
-            WebkitMaskSize: "100% var(--horizon), 100% calc(100% - var(--horizon) + 1px)",
-            maskPosition: "top, bottom",
-            WebkitMaskPosition: "top, bottom",
-            maskRepeat: "no-repeat",
-            WebkitMaskRepeat: "no-repeat",
-          }}
-        >
+
+        {/* mobile : horizon horizontal, la photo sous le texte */}
+        <div className="relative h-[340px] [--horizon:4rem] sm:[--horizon:6rem] md:hidden" style={masqueTerre}>
           <Image
-            src="/hero-background.webp"
-            alt="Une agricultrice souriante tient une caisse de laitues fraîchement récoltées dans une serre"
+            src="/hero-accueil.webp"
+            alt={ALT_HERO}
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-[100%_50%] md:object-[50%_12%]"
+            sizes="(min-width: 768px) 0px, 100vw"
+            className="object-cover object-[78%_40%]"
           />
         </div>
-        {/* le sceau au creux de l'horizon (hors du masque, pour ne pas être découpé) */}
-        <div className="pointer-events-none absolute inset-x-0 bottom-[340px] z-10 [--horizon:4rem] sm:[--horizon:6rem] md:bottom-[440px] lg:[--horizon:9rem]">
-          <div className="absolute inset-x-0 top-0 h-[var(--horizon)]">
-            <span
-              className="absolute flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-surface-brand md:size-20"
-              style={{ left: `${HORIZON_CREUX.x}%`, top: `${HORIZON_CREUX.y}%` }}
-            >
-              <Emblem variant="blanc" title="agrolide" className="w-[66%]" />
-            </span>
+
+        {/* bureau : horizon vertical. La zone est un cadre « container query » ; le calque de masque a la taille du cadre tourné
+            (longueur = hauteur de la zone, épaisseur = sa largeur), puis tourne de -90° autour du centre : la terre passe à droite. */}
+        <div className="absolute right-0 top-0 hidden h-full w-[52%] [--horizon:6rem] lg:w-[58%] [container-type:size] md:block lg:[--horizon:8rem]">
+          <div
+            className="absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90"
+            style={masqueTerre}
+          >
+            <div className="absolute left-1/2 top-1/2 h-[100cqh] w-[100cqw] -translate-x-1/2 -translate-y-1/2 rotate-90">
+              <Image
+                src="/hero-accueil.webp"
+                alt={ALT_HERO}
+                fill
+                priority
+                sizes="(min-width: 1024px) 58vw, (min-width: 768px) 52vw, 0px"
+                className="object-cover object-[72%_20%]"
+              />
+            </div>
           </div>
         </div>
+
+        {/* le vert des chiffres remonte sur le bas de la photo */}
+        <Horizon className="absolute inset-x-0 bottom-0 z-10 text-surface-brand" />
       </section>
 
       {/* ── CHIFFRES : sur vert, sillons dans le coin haut droit ── */}
       <section className="relative isolate overflow-hidden bg-surface-brand py-0 text-on-surface-brand">
         <Sillons coin="haut-droite" opacite={0.08} className="w-[30%] md:w-[18rem]" />
         {/* les chiffres laissent le coin aux sillons : sous eux sur mobile, à gauche du coin sur bureau */}
-        <div className="container relative z-10 pb-10 pt-24 md:py-14">
+        <div className="container relative z-10 pb-6 pt-24 md:py-14">
           <dl className="grid grid-cols-2 gap-x-6 gap-y-8 md:max-w-[52rem] md:grid-cols-4">
             {CHIFFRES.map((c) => (
               <div key={c.label} className="text-center md:text-left">
@@ -277,6 +293,8 @@ export default async function HomePage() {
             ))}
           </dl>
         </div>
+        {/* le guide gratuit monte en collines sur le vert (couleur de la section du dessous) */}
+        <Horizon className="relative z-10 mt-6 text-tertiary-container" />
       </section>
 
       {/* ── LEAD MAGNET (CRO) ── */}

@@ -306,6 +306,11 @@ export function Grammaire() {
           directement sur la carte ou la section, en trait de 1,75, couleur de marque. L’arche (le dôme) garde les chiffres : date d’événement, numéro d’étape (décision confirmée).
         </p>
         <p>
+          <strong className="text-on-surface">En-tête d’accueil</strong> : texte dans le ciel vert à gauche, photo à droite (la terre), <code>Horizon</code> posé à la
+          verticale (le masque <code>HORIZON_MASQUE_TERRE</code> tourné de 90°), sans emblème au creux ; sur mobile, horizon horizontal sous le texte.{' '}
+          <code>Horizon</code> sépare ensuite l’en-tête, les chiffres et le guide gratuit, aux couleurs de la section du dessous.
+        </p>
+        <p>
           <strong className="text-on-surface">Pied de page</strong> : <code>Horizon</code> aux couleurs du vert de marque ; le motif remonte jusqu’à la ligne
           de l’horizon (masque <code>HORIZON_MASQUE_TERRE_BORD</code>). <strong className="text-on-surface">404</strong> : l’emblème éclaté entier (<code>EmblemEclate variante=&quot;soleil&quot;</code>)
           au-dessus du texte, jamais coupé. <strong className="text-on-surface">État vide</strong> : soleil pâle qui descend du bord haut.{' '}

@@ -81,7 +81,7 @@ Règles : une seule grande forme par vue ; texte DANS le plan ; jamais de visage
 **Décisions de l'utilisateur à ne pas remettre en cause**
 1. Emblème « plein » (silhouette) **supprimé** partout. Restent : couleur, noir, blanc, mono, creux. Arche = le **dôme seul**.
 2. Onglet-signature abandonné. Carte « titre dans le soleil » : soleil blanc + échos, en quart de cercle bas gauche ou centré bas (`CarteSoleil`).
-3. En-tête d'accueil : **H2** (texte dans le ciel vert, photo = la terre, horizon), titre et sous-titre sur 2 lignes sans réduire le corps, sous-titre plus étroit que le titre, motif continu jusqu'à l'horizon (masque, pas aplat).
+3. En-tête d'accueil (décision révisée le 13/11/2026) : texte dans le ciel vert à gauche, photo à droite = la terre, **horizon VERTICAL** (le vrai `Horizon` tourné de 90° : masque `HORIZON_MASQUE_TERRE`, mêmes proportions que le pied de page) sur ordinateur (≥ 768 px) ; sur mobile, horizon horizontal et photo sous le texte. **Pas d'emblème** au creux de l'horizon. Motif continu jusqu'à la ligne (masque, pas aplat). Séparateurs `Horizon` (couleur de la section du dessous) : hero → chiffres (bas du hero, vert) et chiffres → guide gratuit (`text-tertiary-container`). Photo : `/hero-accueil.webp`.
 4. En-têtes de rubrique : **P2 partout** (12 pages `PageHero` : bandeau vert, `Sillons` haut droite à 10 %, `Horizon`). P1 (grand soleil dans fond clair) **abandonné**.
 5. **Icônes libres** : on n'insère plus de pictogrammes dans l'arche. **Les dômes sont gardés pour les chiffres** (date d'événement, numéro d'étape `StepList`).
 6. 404 = **emblème éclaté entier** au-dessus du texte (jamais coupé). État vide = soleil pâle qui descend du bord. Chargement = `Anneau mode="chargement"` (`Spinner`).
