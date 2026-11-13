@@ -5,6 +5,7 @@ import { db } from '@/db'
 import { forum_categories, forum_fils, forum_messages, users } from '@/db/schema'
 import { eq, desc, asc, and, count } from 'drizzle-orm'
 import { notifier } from '@/lib/notifications.server'
+import { retirerEmojis } from "@/lib/utils/sans-emoji"
 
 export async function getForumCategories() {
   return await db.query.forum_categories.findMany({
@@ -68,7 +69,8 @@ export async function getThreadDetails(filId: string) {
   return { fil, messages }
 }
 
-export async function addReplyToThread(filId: string, contenu: string) {
+export async function addReplyToThread(filId: string, contenuBrut: string) {
+  const contenu = retirerEmojis(contenuBrut)
   const { userId } = await auth();
   const user = userId ? { id: userId } : null;
   const session = userId ? { user: { id: userId } } : null;

@@ -4,6 +4,7 @@ import { revalidatePath, revalidateTag } from "next/cache"
 import { db } from "@/db"
 import { articles } from "@/db/schema"
 import { eq } from "drizzle-orm"
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 export async function PATCH(
   request: NextRequest,
@@ -13,7 +14,7 @@ export async function PATCH(
   if (!admin.ok) return admin.response
 
   const { id } = await params
-  const payload = await request.json()
+  const payload = nettoyerTextes(await request.json())
 
   try {
     await db.update(articles)

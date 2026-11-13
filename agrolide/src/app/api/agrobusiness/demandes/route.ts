@@ -7,6 +7,7 @@ import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
 import { getSignedUrl } from '@aws-sdk/s3-request-presigner'
 import crypto from 'crypto'
 import { envoyerApresLaReponse } from '@/lib/email/apres-la-reponse'
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 const resend = new Resend(process.env.RESEND_API_KEY || 're_dummy')
 
@@ -40,7 +41,7 @@ export async function POST(request: NextRequest) {
     const bot = await verifyTurnstile(request)
     if (bot) return bot
 
-    const body = await request.json()
+    const body = nettoyerTextes(await request.json())
     const result = demandeSchema.safeParse(body)
     
     if (!result.success) {

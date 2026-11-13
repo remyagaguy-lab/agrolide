@@ -12,6 +12,7 @@ import { CATEGORIES_ADHESION, libelleCategorie, type CategorieAdhesion } from '@
 import type { ModeChangement } from '@/lib/categorie'
 import { appliquerChangement, notifierAdminsDemandeCategorie } from '@/lib/categorie.server'
 import { notifier } from '@/lib/notifications.server'
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 export type ResultatProfil =
   | { success: true }
@@ -28,7 +29,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   const { userId } = await auth()
   if (!userId) return { success: false, error: 'Votre session a expiré. Reconnectez-vous pour enregistrer votre profil.' }
 
-  const parsed = profilSchema.safeParse(payload)
+  const parsed = profilSchema.safeParse(nettoyerTextes(payload))
   if (!parsed.success) {
     const champs: Record<string, string> = {}
     for (const issue of parsed.error.issues) {

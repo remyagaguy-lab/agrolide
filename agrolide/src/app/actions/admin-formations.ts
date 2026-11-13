@@ -5,6 +5,7 @@ import { formations, sessions_formation, users } from '@/db/schema'
 import { eq, desc } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
 import { revalidatePath, revalidateTag } from 'next/cache'
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();
@@ -49,8 +50,9 @@ export async function deleteFormation(id: string) {
   revalidatePath('/formations')
 }
 
-export async function upsertFormation(id: string | null, payload: any) {
+export async function upsertFormation(id: string | null, brut: any) {
   await checkAdmin()
+  const payload = nettoyerTextes(brut)
   
   const mappedPayload = {
     titre: payload.titre,

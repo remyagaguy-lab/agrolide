@@ -3,6 +3,7 @@ import { requireAdmin } from '@/lib/auth/admin'
 import { db } from "@/db"
 import { temoignages } from "@/db/schema"
 import { asc } from "drizzle-orm"
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 // GET : liste tous les témoignages
 export async function GET() {
@@ -24,7 +25,7 @@ export async function POST(request: NextRequest) {
   if (!admin.ok) return admin.response
 
   try {
-    const body = await request.json()
+    const body = nettoyerTextes(await request.json())
     const { prenom, nom, pays, citation, photo_url, publie, ordre } = body
 
     if (!nom || !citation) return NextResponse.json({ error: "Nom et citation requis" }, { status: 400 })

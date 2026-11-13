@@ -3,6 +3,7 @@ import { requireAdmin } from "@/lib/auth/admin"
 import { db } from "@/db"
 import { partenaires } from "@/db/schema"
 import { asc } from "drizzle-orm"
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 // GET : liste tous les partenaires
 export async function GET(request: NextRequest) {
@@ -21,7 +22,7 @@ export async function POST(request: NextRequest) {
   const admin = await requireAdmin()
   if (!admin.ok) return admin.response
 
-  const body = await request.json()
+  const body = nettoyerTextes(await request.json())
   const { nom, description, site_web, logo_url, temoignage, contact_nom, contact_titre, publie, ordre } = body
 
   if (!nom) return NextResponse.json({ error: "Le nom est requis" }, { status: 400 })

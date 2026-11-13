@@ -3,10 +3,11 @@ import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { forum_fils, forum_messages } from '@/db/schema'
 import { eq } from 'drizzle-orm'
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 export async function POST(request: NextRequest) {
   try {
-    const { categorie_id, titre, contenu } = await request.json()
+    const { categorie_id, titre, contenu } = nettoyerTextes(await request.json())
     
     if (!categorie_id || !titre || !contenu) {
       return NextResponse.json({ error: "Tous les champs sont requis." }, { status: 400 })

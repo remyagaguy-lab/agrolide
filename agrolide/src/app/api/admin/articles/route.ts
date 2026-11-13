@@ -4,6 +4,7 @@ import { revalidatePath, revalidateTag } from "next/cache"
 import { db } from "@/db"
 import { users, articles } from "@/db/schema"
 import { eq } from "drizzle-orm"
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 export async function POST(request: NextRequest) {
   const { userId } = await auth()
@@ -17,7 +18,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Accès refusé" }, { status: 403 })
   }
 
-  const payload = await request.json()
+  const payload = nettoyerTextes(await request.json())
 
   try {
     const inserted = await db.insert(articles).values({

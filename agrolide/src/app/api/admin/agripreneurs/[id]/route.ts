@@ -3,13 +3,14 @@ import { requireAdmin } from "@/lib/auth/admin"
 import { db } from "@/db"
 import { agripreneurs } from "@/db/schema"
 import { eq } from "drizzle-orm"
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const admin = await requireAdmin()
   if (!admin.ok) return admin.response
 
   const { id } = await params
-  const body = await request.json()
+  const body = nettoyerTextes(await request.json())
   try {
     await db.update(agripreneurs).set(body).where(eq(agripreneurs.id, id))
     return NextResponse.json({ success: true })

@@ -62,7 +62,7 @@ for (const file of walk(join(root, 'src'))) {
   }
 
   lines.forEach((line, i) => {
-    if (/ds-icons:ignore/.test(line)) return
+    if (/ds-icons:ignore/.test(line) || rel.startsWith('src/lib/utils/sans-emoji')) return
     const t = line.trim()
     if (!/^(\/\/|\*|\/\*)/.test(t)) {
       // Contenu pédagogique en base (src/db) : les flèches y notent un enchaînement dans le texte, les emojis restent bannis.

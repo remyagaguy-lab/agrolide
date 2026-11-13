@@ -5,6 +5,7 @@ import { db } from '@/db'
 import { evenements, inscriptions_evenement, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();
@@ -59,8 +60,9 @@ export async function deleteAdminEvenement(id: string) {
   return { success: true }
 }
 
-export async function upsertAdminEvenement(payload: any, id?: string) {
+export async function upsertAdminEvenement(brut: any, id?: string) {
   await checkAdmin()
+  const payload = nettoyerTextes(brut)
   
   if (id) {
     await db.update(evenements).set(payload).where(eq(evenements.id, id))

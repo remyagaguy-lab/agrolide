@@ -4,6 +4,7 @@ import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { opportunites } from '@/db/schema'
 import { eq } from 'drizzle-orm'
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 export async function getOpportunites(activeTab: 'toutes' | 'mes_soumissions') {
   const { userId } = await auth();
@@ -35,7 +36,7 @@ export async function submitOpportunity(formData: any, isAdmin: boolean) {
   if (!user || !user.id) throw new Error("Vous devez être connecté pour soumettre une opportunité.")
 
   const payload = {
-    ...formData,
+    ...nettoyerTextes(formData),
     id: crypto.randomUUID(),
     publie_par: user.id,
     statut: isAdmin ? 'publie' : 'en_attente',

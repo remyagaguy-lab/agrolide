@@ -3,10 +3,11 @@ import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { messages, user_blocks } from '@/db/schema'
 import { eq, or, and } from 'drizzle-orm'
+import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 export async function POST(request: NextRequest) {
   try {
-    const { destinataire_id, contenu } = await request.json()
+    const { destinataire_id, contenu } = nettoyerTextes(await request.json())
     
     if (!destinataire_id || !contenu) {
       return NextResponse.json({ error: "Champs manquants." }, { status: 400 })
