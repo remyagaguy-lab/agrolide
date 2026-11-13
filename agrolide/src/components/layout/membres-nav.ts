@@ -9,6 +9,8 @@ export interface MembresOnglet {
   href: string
   /** Pastille portée par l'onglet. */
   badge?: "invitations" | "messages"
+  /** Page toujours existante mais retirée de la barre d'onglets (accessible depuis le tableau de bord et le menu du compte). */
+  masque?: boolean
 }
 
 export interface MembresRubrique {
@@ -38,12 +40,14 @@ export const MEMBRES_RUBRIQUES: MembresRubrique[] = [
   {
     key: "former",
     label: "Se former",
-    href: "/membres/formations",
+    // Arrivée par défaut sur la Bibliothèque (barre du bas, barre latérale).
+    href: "/membres/bibliotheque",
     icon: NotebookPen,
     prefixes: ["/membres/formations", "/membres/bibliotheque", "/membres/webinaires"],
     onglets: [
-      // « Mon parcours » réunit formations suivies, lectures, favoris et certificats.
-      { label: "Mon parcours", href: "/membres/formations" },
+      // « Mon parcours » (formations suivies, lectures, favoris, certificats) est masqué des onglets pour l'instant :
+      // trois onglets tiennent sur 360 px. La page existe toujours ; on y va depuis le tableau de bord et le menu du compte.
+      { label: "Mon parcours", href: "/membres/formations", masque: true },
       { label: "Bibliothèque", href: "/membres/bibliotheque" },
       { label: "Formations", href: "/membres/formations/catalogue" },
       { label: "Webinaires", href: "/membres/webinaires" },

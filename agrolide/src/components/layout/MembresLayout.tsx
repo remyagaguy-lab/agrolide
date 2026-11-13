@@ -250,8 +250,14 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
         )}
 
         {/* SCROLLABLE PAGE CONTENT */}
-        <main id="contenu" className="custom-scrollbar relative min-h-0 flex-1 overflow-y-auto p-3 pb-28 md:p-5 md:pb-28 lg:p-6 lg:pb-6">
-          <div className="mx-auto h-full max-w-[1400px]">{children}</div>
+        {/* Marge du bas = barre du bas (h-20) + zone de sécurité de l'appareil + 1,5 rem de respiration.
+            Le conteneur est une colonne flex et le contenu un `flex-1` (et non plus `h-full`) : avec une hauteur
+            fixe, le contenu débordait du bloc et la marge basse disparaissait, laissant le bas des pages sous la barre. */}
+        <main
+          id="contenu"
+          className="custom-scrollbar relative flex min-h-0 flex-1 flex-col overflow-y-auto p-3 pb-[calc(5rem+env(safe-area-inset-bottom)+1.5rem)] md:p-5 md:pb-[calc(5rem+env(safe-area-inset-bottom)+1.5rem)] lg:p-6 lg:pb-6"
+        >
+          <div className="mx-auto w-full max-w-[1400px] flex-1">{children}</div>
         </main>
       </div>
 

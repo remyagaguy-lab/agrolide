@@ -22,8 +22,8 @@ export function SectionTabs({ rubrique }: { rubrique: MembresRubrique["key"] }) 
 
   return (
     <nav aria-label={`Rubrique ${label}`} className="mx-auto w-full max-w-[1200px] px-2 pt-2 md:px-4">
-      <ul className="flex gap-1 overflow-x-auto border-b border-outline-variant [scrollbar-width:none]">
-        {onglets.map((o) => {
+      <ul className="flex gap-0.5 overflow-x-auto border-b border-outline-variant [scrollbar-width:none]">
+        {onglets.filter((o) => !o.masque).map((o) => {
           const actif = o.href === chemin
           const n = o.badge === "invitations" ? badges.invitations : o.badge === "messages" ? badges.messages : 0
           return (
@@ -32,7 +32,7 @@ export function SectionTabs({ rubrique }: { rubrique: MembresRubrique["key"] }) 
                 href={o.href}
                 aria-current={actif ? "page" : undefined}
                 className={cn(
-                  "ag-state relative -mb-px inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-t-control border-b-2 px-4 text-label-lg transition-colors duration-150 ease-standard",
+                  "ag-state relative -mb-px inline-flex min-h-12 items-center justify-center gap-2 whitespace-nowrap rounded-t-control border-b-2 px-3 sm:px-4 text-label-lg transition-colors duration-150 ease-standard",
                   actif ? "border-primary font-bold text-primary" : "border-transparent text-on-surface-variant hover:text-on-surface",
                 )}
               >

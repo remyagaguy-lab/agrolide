@@ -10,7 +10,7 @@ import {
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
 } from "@/components/ui/DropdownMenu"
 
-import { Bell, ChevronDown, CreditCard, ExternalLink, LogOut, Route, ShieldCheck, UserRound } from "@/components/ui/icons"
+import { Bell, ChevronDown, CreditCard, ExternalLink, LogOut, NotebookPen, Route, ShieldCheck, UserRound } from "@/components/ui/icons"
 interface MembresUserMenuProps {
   profile: {
     prenom?: string | null
@@ -66,6 +66,9 @@ export function MembresUserMenu({ profile, compact = false, tone = "defaut" }: M
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link href="/membres/profil"><UserRound className="size-4 text-on-surface-muted" aria-hidden="true" /> Mon profil</Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <Link href="/membres/formations"><NotebookPen className="size-4 text-on-surface-muted" aria-hidden="true" /> Mon parcours</Link>
         </DropdownMenuItem>
         <DropdownMenuItem asChild>
           <Link href="/membres/profil/confidentialite"><ShieldCheck className="size-4 text-on-surface-muted" aria-hidden="true" /> Confidentialité</Link>
