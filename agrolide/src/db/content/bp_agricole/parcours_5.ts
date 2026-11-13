@@ -414,6 +414,8 @@ Ces ratios ne valent que ce que valent vos hypothèses : chaque chiffre doit ren
 
 **Ressource à télécharger :** le [modèle financier (Excel, pré-rempli avec le cas Diap Touré)](/documents/bp-agricole/Agrolide-modele-financier-business-plan-agricole.xlsx) calcule tous ces indicateurs en quatre scénarios et vous permet de refaire chaque calcul avec vos chiffres.
 
+**Pour vous entraîner :** deux autres [cas chiffrés complets](/membres/formations/form_bp_agricole/cas) (poulet de chair au Togo, transformation du manioc en attiéké en Côte d'Ivoire) appliquent exactement cette méthode, avec un DSCR et une VAN calculés dans trois scénarios.
+
 #### Ce qu'il faut retenir
 - Le seuil de rentabilité se calcule avec TOUS les coûts fixes (personnel, amortissements, intérêts compris), pas seulement les charges fixes.
 - Le DSCR (flux disponible ÷ service de la dette) est l'indicateur central du banquier ; visez au moins 1,2 à 1,3 et calculez-le en scénario pessimiste.
