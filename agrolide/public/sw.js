@@ -17,9 +17,10 @@
 const VERSION = 'v1'
 const PAGES = `ag-pages-${VERSION}`
 const STATIQUE = 'ag-static' // fichiers à empreinte : jamais obsolètes, conservés d'une version à l'autre
+const IMAGES = 'ag-images' // logo, couvertures, photos : affichées hors ligne comme en ligne
 const OFFLINE = '/hors-ligne'
 const MAX_PAGES = 40
-const MAX_STATIQUE = 200
+const MAX_STATIQUE = 400
 
 /** Pages gardées pour la lecture hors ligne (chemin exact, sans paramètres). */
 const PAGES_GARDEES = [/^\/hors-ligne$/, /^\/membres\/bibliotheque\/hors-ligne$/, /^\/membres\/bibliotheque\/[\w-]+\/lire$/]
@@ -32,22 +33,40 @@ async function elaguer(nom, max) {
   await Promise.all(cles.slice(0, Math.max(0, cles.length - max)).map((k) => cache.delete(k)))
 }
 
-/** Fichiers JS / CSS / polices cités par une page (balises <script>, <link> et données Next), mis en cache avec elle. */
+const MOTIF_FICHIER = /(?:\/_next\/)?static\/(?:chunks|css|media)\/[\w\-~.%[\]]+\.(?:js|css|woff2)/g
+const fichiersCites = (texte) => [...texte.matchAll(MOTIF_FICHIER)].map((m) => '/_next/' + m[0].replace(/^\/_next\//, ''))
+
+/**
+ * Fichiers JS / CSS / polices cités par une page (balises <script>, <link>, données Next), mis en cache avec elle.
+ * Un fichier JS cite à son tour ceux qu'il charge à la demande (Turbopack : fichiers d'icônes, de la liseuse…) :
+ * on suit ces renvois sur trois niveaux, avec un plafond, pour que la page s'ouvre complète sans réseau.
+ */
 async function garderFichiers(html) {
-  const trouves = new Set()
-  for (const m of html.matchAll(/(?:\/_next\/)?static\/(?:chunks|css|media)\/[\w\-~.%[\]]+\.(?:js|css|woff2)/g)) {
-    trouves.add('/_next/' + m[0].replace(/^\/_next\//, ''))
-  }
   const cache = await caches.open(STATIQUE)
-  await Promise.all(
-    [...trouves].map(async (u) => {
-      if (await cache.match(u)) return
-      try {
-        const r = await reseau(u)
-        if (r.ok) await cache.put(u, r)
-      } catch {}
-    }),
-  )
+  const vus = new Set()
+  let niveau = new Set(fichiersCites(html))
+  let restant = 150
+  for (let profondeur = 0; profondeur < 3 && niveau.size && restant > 0; profondeur++) {
+    const suivant = new Set()
+    await Promise.all(
+      [...niveau].map(async (u) => {
+        if (vus.has(u) || restant <= 0) return
+        vus.add(u)
+        restant--
+        try {
+          let r = await cache.match(u)
+          if (!r) {
+            const net = await reseau(u)
+            if (!net.ok) return
+            await cache.put(u, net.clone())
+            r = net
+          }
+          if (u.endsWith('.js')) for (const c of fichiersCites(await r.clone().text())) if (!vus.has(c)) suivant.add(c)
+        } catch {}
+      }),
+    )
+    niveau = suivant
+  }
   await elaguer(STATIQUE, MAX_STATIQUE)
 }
 
@@ -103,7 +122,11 @@ self.addEventListener('fetch', (event) => {
     return
   }
   if (p === '/pdf.worker.min.js') {
-    event.respondWith(revalider(event, req))
+    event.respondWith(revalider(event, req, STATIQUE))
+    return
+  }
+  if (p === '/_next/image') {
+    event.respondWith(revalider(event, req, IMAGES))
     return
   }
   // Page gardée demandée par le code de l'application (préparation hors ligne, déplacement RSC) : on garde la copie réseau.
@@ -132,19 +155,21 @@ async function navigation(event, req, url) {
 }
 
 async function cacheDAbord(req) {
+  // Les fichiers de /_next/static portent un nom à empreinte : le contenu ne change jamais. Le navigateur peut ajouter
+  // un paramètre de version (?dpl=…) au chargement : on l'ignore pour retrouver la copie gardée depuis la page.
   const cache = await caches.open(STATIQUE)
-  const deja = await cache.match(req)
+  const deja = await cache.match(req, { ignoreSearch: true })
   if (deja) return deja
   const r = await reseau(req)
-  if (r.ok) await cache.put(req, r.clone())
+  if (r.ok) await cache.put(new URL(req.url).origin + new URL(req.url).pathname, r.clone())
   return r
 }
 
-async function revalider(event, req) {
-  const cache = await caches.open(STATIQUE)
+async function revalider(event, req, nom) {
+  const cache = await caches.open(nom)
   const deja = await cache.match(req)
   const enLigne = reseau(req).then((r) => {
-    if (r.ok) cache.put(req, r.clone())
+    if (r.ok) cache.put(req, r.clone()).then(() => elaguer(nom, nom === IMAGES ? 80 : MAX_STATIQUE))
     return r
   })
   if (deja) {
