@@ -13,7 +13,7 @@
  * et leur cache est vidé à la déconnexion (voir src/lib/bibliotheque/hors-ligne.ts).
  * Mise à jour : ce fichier change → le nouveau worker s'installe, prend la main tout de suite et supprime les anciens caches.
  */
-/* TEST-TEMPORAIRE */ let SIM=false; const reseau=(r)=>SIM?Promise.reject(new TypeError('simule')):fetch(r); self.addEventListener('message',(e)=>{if(e.data&&e.data.sim!==undefined)SIM=!!e.data.sim; if(e.source)e.source.postMessage({sim:SIM})});
+/* TEST-TEMPORAIRE */ let SIM=false; const BLOQUES=[]; const reseau=(r)=>SIM?Promise.reject(new TypeError('simule')):fetch(r); self.addEventListener('message',(e)=>{if(e.data&&e.data.sim!==undefined)SIM=!!e.data.sim; if(e.data&&e.data.dump&&e.source){e.source.postMessage({bloques:BLOQUES.slice(-60)});return} if(e.source)e.source.postMessage({sim:SIM})});
 const VERSION = 'v1'
 const PAGES = `ag-pages-${VERSION}`
 const STATIQUE = 'ag-static' // fichiers à empreinte : jamais obsolètes, conservés d'une version à l'autre
@@ -111,7 +111,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return
   const p = url.pathname
   // Jamais de cache pour les API, l'authentification, l'administration : le navigateur et le réseau décident seuls.
-  if (p.startsWith('/api/') || p.startsWith('/auth/') || p.startsWith('/admin') || p === '/login' || p === '/logout') { if (SIM) event.respondWith(Response.error()); return }
+  if (p.startsWith('/api/') || p.startsWith('/auth/') || p.startsWith('/admin') || p === '/login' || p === '/logout') { if (SIM) { BLOQUES.push('API '+p); event.respondWith(Response.error()) } return }
 
   if (req.mode === 'navigate') {
     event.respondWith(navigation(event, req, url))
@@ -125,7 +125,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(revalider(event, req, STATIQUE))
     return
   }
-  if (p === '/_next/image') {
+  if (p === '/_next/image' || req.destination === 'image') {
     event.respondWith(revalider(event, req, IMAGES))
     return
   }
@@ -134,7 +134,7 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(navigation(event, req, url))
     return
   }
-  if (SIM) event.respondWith(Response.error())
+  if (SIM) { BLOQUES.push(req.destination+' '+p); event.respondWith(Response.error()) }
 })
 
 async function navigation(event, req, url) {
