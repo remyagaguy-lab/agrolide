@@ -1,4 +1,5 @@
 import { ParcoursSeed } from './types';
+import { QUIZ } from './quiz_banque';
 
 export const parcours1: ParcoursSeed = {
   id: "bp_agri_p1",
@@ -54,52 +55,7 @@ Tout au long de cette formation, nous suivrons un exemple inspiré de situations
 - L'optimisme non justifié est le piège le plus fréquent et le plus vite repéré par les évaluateurs.
 - L'agriculture ajoute des contraintes spécifiques : climat, cycles longs, foncier, saisonnalité.
 - Tout au long de la formation, l'exemple de Diap Touré (maraîchage oignon/pomme de terre, Sénégal) illustrera chaque notion.`,
-      quiz_json: [
-        {
-          question: "Une élaboration basée sur des hypothèses optimistes et des conclusions positives garantit-elle la viabilité d'un projet ?",
-          options: [
-            "Oui, si les chiffres sont bons",
-            "Non, un business plan reste un exercice de validation d'informations qui doit rester réaliste",
-            "Oui, si le bailleur l'accepte",
-            "Cela dépend du secteur"
-          ],
-          correctAnswer: 1,
-          explanation: "Un bon business plan n'est pas celui qui promet le plus, c'est celui qui identifie ses propres risques et repose sur des informations réalistes."
-        },
-        {
-          question: "Parmi les trois fonctions d'un business plan, laquelle correspond à « comparer, mois après mois, le prévisionnel au réel » ?",
-          options: [
-            "Outil de réflexion personnelle",
-            "Outil de pilotage",
-            "Outil de négociation",
-            "Outil de communication publicitaire"
-          ],
-          correctAnswer: 1,
-          explanation: "Une fois le projet lancé, le business plan sert de feuille de route (pilotage) pour comparer le prévu et le réel."
-        },
-        {
-          question: "Complétez : une exploitation agricole est particulièrement exposée aux risques ______ et aux cycles de production ______.",
-          options: [
-            "financiers / courts",
-            "climatiques / longs",
-            "juridiques / instantanés",
-            "commerciaux / flexibles"
-          ],
-          correctAnswer: 1,
-          explanation: "L'agriculture possède des contraintes propres : forte dépendance climatique et cycles de production longs."
-        },
-        {
-          question: "Pourquoi un évaluateur se méfie-t-il d'un dossier trop optimiste ?",
-          options: [
-            "Parce que les bailleurs préfèrent les projets modestes",
-            "Parce qu'un dossier sans risque identifié laisse penser que le porteur n'a pas anticipé les difficultés réelles",
-            "Parce que les chiffres élevés sont toujours faux",
-            "Parce que la loi l'interdit"
-          ],
-          correctAnswer: 1,
-          explanation: "Ne présenter aucun risque prouve souvent un manque de réalisme et d'anticipation des problèmes de terrain."
-        }
-      ]
+      quiz_json: QUIZ["lec_1_1"]
     },
     {
       id: "lec_1_2",
@@ -141,52 +97,7 @@ Une fois le contexte posé, précisez vos objectifs à court terme (ce que vous 
 - Structurez votre contexte en 4 temps : constat, problématique, solution, moyens.
 - Appuyez le constat sur des données, même approximatives, plutôt que sur des généralités.
 - Vos objectifs doivent être chiffrés et datés, à court et à long terme.`,
-      quiz_json: [
-        {
-          question: "Quelle est la bonne séquence pour rédiger un contexte de projet ?",
-          options: [
-            "Solution, constat, moyens, problématique",
-            "Constat, problématique, solution, moyens",
-            "Moyens, solution, constat, problématique",
-            "Problématique, moyens, constat, solution"
-          ],
-          correctAnswer: 1,
-          explanation: "Il faut aller du général (le constat) vers le particulier (le problème) pour aboutir à votre proposition (solution) et sa réalisation (moyens)."
-        },
-        {
-          question: "Que reproche-t-on principalement à une phrase comme « le pays a besoin de plus de production agricole » ?",
-          options: [
-            "Elle est fausse",
-            "Elle est trop technique",
-            "Elle reste abstraite et ne démontre aucune connaissance précise du secteur",
-            "Elle est trop longue"
-          ],
-          correctAnswer: 2,
-          explanation: "Un bon constat s'appuie sur des chiffres (ex: plus de 400 000 tonnes produites, dont une part perdue faute de stockage) plutôt que sur des généralités non sourcées."
-        },
-        {
-          question: "Un objectif écrit comme « produire davantage » pose problème parce que...",
-          options: [
-            "il est trop ambitieux",
-            "il n'est ni chiffré ni daté, donc impossible à piloter",
-            "il ne concerne pas l'agriculture",
-            "il n'intéresse pas les bailleurs"
-          ],
-          correctAnswer: 1,
-          explanation: "Pour être mesurable et pilotable, un objectif doit comporter un volume (ex: X tonnes), une durée (ex: en année 3) et une métrique."
-        },
-        {
-          question: "Complétez : un bon contexte de projet va du ______ vers le ______.",
-          options: [
-            "particulier / général",
-            "général / particulier",
-            "passé / futur",
-            "local / international"
-          ],
-          correctAnswer: 1,
-          explanation: "On part du constat macro-économique général pour redescendre vers le problème précis et votre solution locale."
-        }
-      ]
+      quiz_json: QUIZ["lec_1_2"]
     },
     {
       id: "lec_1_3",
@@ -223,63 +134,7 @@ Si vous travaillez seul, précisez-le et expliquez comment vous comptez recruter
 - Classez vos compétences par catégorie (techniques, gestion, commerciales, transversales) pour prouver la couverture des besoins du projet.
 - Nommez vos contraintes avec transparence et expliquez comment vous comptez les compenser.
 - Décrivez l'organisation prévue de l'entreprise et la répartition du capital entre associés.`,
-      quiz_json: [
-        {
-          question: "Pourquoi Diap Touré met-il en avant à la fois son diplôme en informatique et son expérience de maraîchage familial ?",
-          options: [
-            "Pour montrer qu'il a plusieurs diplômes",
-            "Parce que les deux, combinés, démontrent des compétences de gestion et une expérience de terrain utiles au projet",
-            "Parce que le diplôme en informatique est indispensable en agriculture",
-            "Ce n'est pas pertinent, il ne devrait mentionner que l'agriculture"
-          ],
-          correctAnswer: 1,
-          explanation: "L'expérience en gestion couplée à la pratique agricole démontre une double compétence idéale pour diriger une exploitation professionnelle."
-        },
-        {
-          question: "Comment est-il recommandé de présenter une contrainte réelle (par exemple des ressources financières limitées) dans votre dossier ?",
-          options: [
-            "Ne jamais la mentionner",
-            "La mentionner sans donner de solution",
-            "La nommer et expliquer comment vous comptez la compenser",
-            "La minimiser en donnant des chiffres inexacts"
-          ],
-          correctAnswer: 2,
-          explanation: "Nommer une contrainte tout en proposant sa solution montre la maturité du porteur et rassure l'évaluateur."
-        },
-        {
-          question: "Parmi les catégories de compétences suivantes, laquelle regroupe « négociation, prospection, suivi client » ?",
-          options: [
-            "Compétences techniques",
-            "Compétences de gestion",
-            "Compétences commerciales",
-            "Compétences transversales"
-          ],
-          correctAnswer: 2,
-          explanation: "Ces actions sont directement liées à l'écoulement des produits et constituent le cœur des compétences commerciales."
-        },
-        {
-          question: "Que doit inclure la présentation de la structure organisationnelle lorsqu'il y a plusieurs associés ?",
-          options: [
-            "Uniquement les diplômes de chacun",
-            "La répartition des tâches, des responsabilités et du capital social entre associés",
-            "Le nombre d'enfants de chaque associé",
-            "La liste des concurrents"
-          ],
-          correctAnswer: 1,
-          explanation: "Les rôles clairs et la part dans le capital social préviennent les conflits et clarifient la gouvernance de l'entreprise."
-        },
-        {
-          question: "Vrai ou faux : un parcours professionnel éloigné de l'agriculture disqualifie automatiquement un porteur de projet agricole.",
-          options: [
-            "Vrai, il faut un diplôme agricole",
-            "Faux — un parcours atypique peut être valorisé s'il est relié explicitement aux besoins du projet",
-            "Faux, l'agriculture ne demande aucune compétence",
-            "Vrai, les banques ne financent que les agronomes"
-          ],
-          correctAnswer: 1,
-          explanation: "La gestion, la vente ou la logistique acquises dans d'autres secteurs sont des compétences extrêmement valorisées dans la création d'une ferme."
-        }
-      ]
+      quiz_json: QUIZ["lec_1_3"]
     }
   ]
 };

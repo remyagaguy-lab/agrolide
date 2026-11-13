@@ -1,4 +1,5 @@
 import { ParcoursSeed } from './types';
+import { QUIZ } from './quiz_banque';
 
 export const parcours6: ParcoursSeed = {
   id: "bp_agri_p6",
@@ -67,74 +68,7 @@ L'assurance est la mitigation la plus citée par les financeurs. Des assureurs, 
 - Cacher les risques est la pire stratégie : un banquier sait que l'agriculture est risquée.
 - Dressez une matrice des risques (climatiques, techniques, commerciaux, humains, politiques, financiers) et cotez-les : probabilité × impact.
 - Pour chaque risque identifié, vous devez proposer une action concrète et chiffrée de **mitigation** (solution de secours) pour prouver que vous maîtrisez la situation.`,
-      quiz_json: [
-        {
-          question: "Pourquoi est-il crucial d'inclure une analyse des risques dans un business plan agricole ?",
-          options: [
-            "Pour faire peur aux concurrents",
-            "Pour prouver au banquier que vous êtes conscient des dangers de l'agriculture et que vous avez prévu des solutions de secours",
-            "Pour expliquer pourquoi le projet va sûrement échouer",
-            "C'est optionnel, mieux vaut ne montrer que les aspects positifs"
-          ],
-          correctAnswer: 1,
-          explanation: "Les banquiers financent des entrepreneurs qui anticipent les problèmes, pas des rêveurs qui croient que tout sera facile."
-        },
-        {
-          question: "Qu'est-ce que la 'mitigation' d'un risque ?",
-          options: [
-            "L'action de nier le risque",
-            "L'ensemble des mesures prises pour empêcher le risque de se réaliser ou pour en limiter les conséquences",
-            "Le fait de transférer la responsabilité aux employés",
-            "Le nom d'une maladie de l'oignon"
-          ],
-          correctAnswer: 1,
-          explanation: "La mitigation (ou atténuation), c'est la solution apportée. Exemple : avoir un groupe électrogène de secours mitige le risque de coupure de courant."
-        },
-        {
-          question: "Quelle est la meilleure mitigation pour un risque commercial de chute des prix à la récolte dans le cas de l'oignon ?",
-          options: [
-            "Brûler la récolte pour créer une pénurie",
-            "Faire un procès aux concurrents",
-            "Avoir investi dans une infrastructure de stockage (hangar) pour conserver le produit jusqu'à la remontée des cours",
-            "Demander à la banque d'effacer la dette"
-          ],
-          correctAnswer: 2,
-          explanation: "Le stockage est l'arme commerciale la plus puissante en agriculture pour échapper à la volatilité des prix au moment des récoltes massives."
-        },
-        {
-          question: "Un panneau solaire qui tombe en panne au milieu de la saison sèche menace toute la culture. Quelle est la mitigation opérationnelle appropriée ?",
-          options: [
-            "Attendre le retour de la pluie",
-            "Prévoir une motopompe diesel de secours dans les investissements initiaux",
-            "Arroser 10 hectares à l'arrosoir",
-            "Prier très fort"
-          ],
-          correctAnswer: 1,
-          explanation: "En agriculture irriguée, la redondance (avoir un équipement de secours) est obligatoire pour sécuriser l'investissement, même si cela coûte un peu plus cher au départ."
-        },
-        {
-          question: "Un risque a une probabilité de 2 sur 3 et un impact de 3 sur 3. Quel est son score et que faut-il en faire ?",
-          options: [
-            "Score de 5 : on peut l'ignorer",
-            "Score de 6 : il faut le traiter en priorité",
-            "Score de 9 : il condamne le projet",
-            "Score de 1 : il se traite en dernier"
-          ],
-          correctAnswer: 1,
-          explanation: "Le score est la probabilité multipliée par l'impact (2 × 3 = 6). À partir de 6, le risque doit recevoir une mesure de mitigation chiffrée dans le dossier."
-        },
-        {
-          question: "Parmi ces mesures, laquelle transfère une partie du risque climatique vers un tiers ?",
-          options: [
-            "Souscrire une assurance récolte ou indicielle et budgétiser la prime",
-            "Planter plus de surface pour compenser",
-            "Retarder tous les semis d'un mois",
-            "Ne rien déclarer au banquier"
-          ],
-          correctAnswer: 0,
-          explanation: "L'assurance transfère à un assureur une part des pertes liées au climat. Sa prime est un coût fixe à intégrer dans les charges."
-        }
-      ]
+      quiz_json: QUIZ["lec_6_1"]
     },
     {
       id: "lec_6_2",
@@ -175,52 +109,7 @@ Il doit répondre en quelques paragraphes aux questions fondamentales de l'inves
 - L'Executive Summary se place au début du document mais s'écrit à la toute fin du processus.
 - C'est la seule partie que tous les décideurs (directeur de banque, membres du comité) liront en entier.
 - Il doit résumer l'opportunité de marché, l'équipe, le montant demandé, votre apport personnel, et la rentabilité financière.`,
-      quiz_json: [
-        {
-          question: "À quel moment de la préparation du business plan doit-on rédiger l'Executive Summary ?",
-          options: [
-            "En tout premier, avant l'étude de marché",
-            "Au milieu du processus",
-            "À la toute fin, car il résume les données de tous les autres modules (y compris financiers)",
-            "On ne l'écrit jamais, c'est l'expert comptable qui le fait"
-          ],
-          correctAnswer: 2,
-          explanation: "Même s'il est placé au début du document final, vous ne pouvez le rédiger qu'une fois que tous vos tableaux financiers, votre stratégie et vos coûts sont définitifs."
-        },
-        {
-          question: "Pourquoi l'Executive Summary est-il souvent considéré comme la partie la plus importante du document ?",
-          options: [
-            "Parce qu'il comporte le plus de pages",
-            "Parce que c'est la première impression de l'investisseur ; si ce résumé ne le convainc pas, il ne lira pas le reste",
-            "Parce qu'il coûte cher à imprimer",
-            "Ce n'est pas la partie la plus importante"
-          ],
-          correctAnswer: 1,
-          explanation: "Un décideur financier manque de temps. Le résumé de 2 pages détermine s'il accepte de plonger dans les détails de votre projet ou s'il le rejette."
-        },
-        {
-          question: "Quelles données financières DOIVENT impérativement figurer dans l'Executive Summary ?",
-          options: [
-            "Le prix du litre d'essence",
-            "Le détail des salaires des ouvriers agricoles",
-            "Le besoin d'investissement total, l'apport personnel, le montant du crédit demandé et le chiffre d'affaires prévisionnel",
-            "La facture de la clôture"
-          ],
-          correctAnswer: 2,
-          explanation: "Le résumé doit donner une image macro-économique claire : Combien coûte le projet, d'où vient l'argent, et combien il va rapporter globalement."
-        },
-        {
-          question: "Quel ton doit-on adopter dans l'Executive Summary ?",
-          options: [
-            "Très technique, avec beaucoup de mots latins pour les plantes",
-            "Romantique, pour raconter son rêve d'enfant",
-            "Clair, percutant, orienté 'business' et compréhensible par un non-agriculteur",
-            "Plaintif, pour demander de la pitié"
-          ],
-          correctAnswer: 2,
-          explanation: "Le banquier n'est pas un agronome. Il faut utiliser un langage 'business' clair qui met en évidence l'opportunité de marché et la rentabilité."
-        }
-      ]
+      quiz_json: QUIZ["lec_6_2"]
     },
     {
       id: "lec_6_3",
@@ -262,52 +151,7 @@ Pour cela, vous utilisez un **Pitch Deck**, une présentation (PowerPoint ou PDF
 - Les annexes ne sont pas des pages poubelles, ce sont les preuves matérielles de vos affirmations (devis, foncier).
 - Ne soumettez jamais un projet si le foncier n'est pas légalement sécurisé par un document en annexe.
 - Le Pitch Deck est l'outil visuel de 10 slides qui servira de support à votre présentation orale pour séduire les investisseurs en quelques minutes.`,
-      quiz_json: [
-        {
-          question: "À quoi servent les documents en Annexe d'un business plan ?",
-          options: [
-            "À alourdir le document pour qu'il ait l'air plus sérieux",
-            "À apporter les preuves matérielles des affirmations faites dans le texte (devis justifiant les coûts, preuves foncières)",
-            "À y mettre les brouillons de l'étude de marché",
-            "À y écrire les CV des concurrents"
-          ],
-          correctAnswer: 1,
-          explanation: "L'annexe est le lieu de la preuve. Si vous annoncez un besoin de 12 millions pour l'irrigation, la banque veut voir le devis (facture proforma) en annexe."
-        },
-        {
-          question: "Quel document en annexe est une condition sine qua non (obligatoire) pour qu'une banque étudie un financement agricole ?",
-          options: [
-            "Le diplôme de baccalauréat",
-            "La preuve de sécurisation du foncier (titre foncier, bail, délibération locale)",
-            "Une lettre de recommandation du chef du village",
-            "Le devis d'achat d'un ordinateur"
-          ],
-          correctAnswer: 1,
-          explanation: "Sans preuve irréfutable que vous avez le droit d'exploiter la terre sur le long terme, aucune banque ne financera d'infrastructures dessus."
-        },
-        {
-          question: "Qu'est-ce qu'un Pitch Deck ?",
-          options: [
-            "Un logiciel de gestion de ferme",
-            "Une présentation visuelle courte (environ 10 diapositives) utilisée pour soutenir la présentation orale du projet face à des investisseurs",
-            "Le plan de masse du terrain",
-            "Un contrat de vente"
-          ],
-          correctAnswer: 1,
-          explanation: "Le Pitch Deck est l'outil de communication (type PowerPoint) pour l'oral, résumant de manière très visuelle l'opportunité de votre projet."
-        },
-        {
-          question: "Dans un Pitch Deck, que doit impérativement contenir la dernière diapositive (la demande) ?",
-          options: [
-            "Des remerciements basiques",
-            "La demande claire et chiffrée (ex: 'Nous recherchons un financement de 44 millions contre X garanties ou parts de capital')",
-            "La bibliographie de l'étude de marché",
-            "Le menu du déjeuner"
-          ],
-          correctAnswer: 1,
-          explanation: "Ne finissez jamais une présentation sans énoncer clairement votre 'Call to action' : ce que vous attendez concrètement de votre auditoire (l'argent !)."
-        }
-      ]
+      quiz_json: QUIZ["lec_6_3"]
     },
     {
       id: "lec_6_4",

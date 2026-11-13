@@ -1,4 +1,5 @@
 import { ParcoursSeed } from './types';
+import { QUIZ } from './quiz_banque';
 
 export const parcours3: ParcoursSeed = {
   id: "bp_agri_p3",
@@ -51,52 +52,7 @@ Grâce à cette description, la banque comprend immédiatement que Diap n'est pa
 - Présentez vos produits en décrivant clairement leur variété, conditionnement et niveau de qualité.
 - L'itinéraire technique est la suite logique de toutes les opérations de production.
 - Une bonne maîtrise de l'itinéraire technique est indispensable pour justifier les rendements que vous allez utiliser plus tard dans vos prévisions financières.`,
-      quiz_json: [
-        {
-          question: "Qu'est-ce qu'un itinéraire technique en agriculture ?",
-          options: [
-            "Le plan GPS pour que les camions arrivent à la ferme",
-            "La séquence logique et chronologique de toutes les opérations agricoles sur une parcelle",
-            "Le manuel d'utilisation du tracteur",
-            "La route pour transporter les produits au marché"
-          ],
-          correctAnswer: 1,
-          explanation: "C'est l'ensemble des étapes techniques (préparation, semis, irrigation, traitements, récolte) pour mener à bien une culture."
-        },
-        {
-          question: "Pourquoi est-il important de détailler le conditionnement (emballage) de vos produits dans la fiche produit ?",
-          options: [
-            "Pour augmenter artificiellement le nombre de pages du business plan",
-            "Parce que le conditionnement détermine en grande partie le prix de vente et la cible commerciale",
-            "Ce n'est pas important, seul le produit brut compte",
-            "Pour prouver qu'on aime le plastique"
-          ],
-          correctAnswer: 1,
-          explanation: "Un produit vendu calibré en filet étiqueté de 5kg se vend plus cher et à une cible différente qu'un produit vendu en vrac dans des sacs de 100kg recyclés."
-        },
-        {
-          question: "Quelle étape de l'itinéraire technique de Diap Touré permet de justifier son positionnement de stockage stratégique (son créneau) ?",
-          options: [
-            "Le labour profond",
-            "L'étape de Post-récolte (fanaison et séchage sous hangar)",
-            "Le semis",
-            "Le désherbage manuel"
-          ],
-          correctAnswer: 1,
-          explanation: "C'est l'étape de séchage post-récolte rigoureux sous hangar ventilé qui permet à Diap de conserver ses oignons plusieurs mois pour les vendre plus cher."
-        },
-        {
-          question: "Dans le business plan, si vous choisissez une technologie coûteuse comme l'irrigation goutte-à-goutte, vous devez :",
-          options: [
-            "Le cacher au banquier pour ne pas l'effrayer avec les coûts",
-            "L'expliquer dans votre itinéraire technique pour justifier son impact positif sur les rendements et l'économie d'eau",
-            "Ne pas l'inclure dans vos coûts de production",
-            "L'acheter sans facture"
-          ],
-          correctAnswer: 1,
-          explanation: "Les choix technologiques coûteux doivent être techniquement argumentés dans le business plan pour justifier le besoin de financement important."
-        }
-      ]
+      quiz_json: QUIZ["lec_3_1"]
     },
     {
       id: "lec_3_2",
@@ -150,63 +106,7 @@ Une rupture de stock d'engrais en plein cycle de croissance peut ruiner une camp
 - Soyez réaliste sur les délais administratifs et d'installation des infrastructures (forage, clôture).
 - Utilisez la rotation des cultures pour occuper vos terres et votre personnel toute l'année.
 - Le plan d'approvisionnement doit garantir que les intrants seront disponibles au bon moment sur la ferme.`,
-      quiz_json: [
-        {
-          question: "Quel est l'objectif principal du calendrier de production annuel ?",
-          options: [
-            "Programmer les vacances du personnel",
-            "Répartir stratégiquement les cycles de cultures sur l'année en tenant compte des saisons",
-            "Déterminer la date de création de l'entreprise",
-            "Planifier uniquement la construction des bâtiments"
-          ],
-          correctAnswer: 1,
-          explanation: "Le calendrier annuel organise les semis, entretiens et récoltes en fonction du climat, assurant une rotation et une rentabilité optimales."
-        },
-        {
-          question: "Pourquoi est-il risqué de sous-estimer la durée du calendrier d'installation (forage, clôture, etc.) ?",
-          options: [
-            "Parce que vous risquez de rater la fenêtre optimale de semis et de devoir retarder la production d'un an",
-            "Parce que les ouvriers s'ennuieront",
-            "Ce n'est pas risqué, cela montre qu'on est rapide",
-            "Parce que le gouvernement l'interdit"
-          ],
-          correctAnswer: 0,
-          explanation: "L'agriculture exige de respecter les saisons. Si vos infrastructures sont en retard, vous ratez la date de semis, ruinant les prévisions de l'année 1."
-        },
-        {
-          question: "Dans le cas de Diap Touré, à quoi sert la culture du gombo ou du maïs doux pendant l'hivernage ?",
-          options: [
-            "À concurrencer l'oignon hollandais",
-            "À utiliser le sol, payer la main-d'œuvre et pratiquer une rotation des cultures pendant la saison des pluies",
-            "À nourrir uniquement sa famille",
-            "Ce n'est qu'un passe-temps"
-          ],
-          correctAnswer: 1,
-          explanation: "Les cultures d'hivernage rentabilisent l'exploitation en saison des pluies, où l'oignon est difficile à produire, et cassent les cycles des maladies."
-        },
-        {
-          question: "Qu'est-ce qu'un plan d'approvisionnement ?",
-          options: [
-            "La liste des banques à contacter",
-            "L'organisation des achats et des livraisons des intrants (semences, engrais) pour éviter les ruptures",
-            "La carte du marché pour vendre les produits",
-            "Un plan architectural de la ferme"
-          ],
-          correctAnswer: 1,
-          explanation: "Le plan d'approvisionnement garantit que vous aurez les bons intrants, en bonne quantité, au bon moment pour votre cycle de production."
-        },
-        {
-          question: "Quelle pratique agricole permet de ne pas appauvrir le sol et de casser les cycles parasitaires ?",
-          options: [
-            "La monoculture",
-            "L'utilisation massive d'insecticides",
-            "La rotation des cultures",
-            "L'arrosage intensif"
-          ],
-          correctAnswer: 2,
-          explanation: "Alterner différentes familles de plantes (comme les alliacées et les graminées) est une bonne pratique agricole essentielle appelée rotation des cultures."
-        }
-      ]
+      quiz_json: QUIZ["lec_3_2"]
     },
     {
       id: "lec_3_3",
@@ -263,63 +163,7 @@ N'oubliez pas d'inclure dans ce chapitre les éventuelles autorisations nécessa
 - Choisissez une forme juridique adaptée à votre besoin de financement et de protection (la SARL est souvent le standard professionnel).
 - Dressez un organigramme distinguant les permanents (chef de culture, gardien) et les journaliers (repiquage, récolte).
 - Listez les autorisations légales spécifiques (eau, foncier) qui prouvent que votre projet est conforme à la loi.`,
-      quiz_json: [
-        {
-          question: "Quel est l'inconvénient majeur de l'Entreprise Individuelle (EI) pour un gros projet agricole ?",
-          options: [
-            "Elle est très coûteuse à créer",
-            "Elle ne protège pas le patrimoine personnel de l'entrepreneur en cas de faillite",
-            "Elle oblige à avoir plusieurs associés",
-            "Elle est interdite en agriculture"
-          ],
-          correctAnswer: 1,
-          explanation: "En EI, le patrimoine personnel et professionnel sont confondus, ce qui est très risqué pour les projets nécessitant de lourds investissements."
-        },
-        {
-          question: "Quel statut juridique Diap Touré a-t-il choisi pour protéger ses biens tout en gérant seul son entreprise de 55 millions de FCFA ?",
-          options: [
-            "Entreprise Individuelle",
-            "Groupement d'Intérêt Économique (GIE)",
-            "Société Unipersonnelle à Responsabilité Limitée (SUARL)",
-            "Coopérative"
-          ],
-          correctAnswer: 2,
-          explanation: "La SUARL (variante de la SARL pour un seul associé) permet de limiter la responsabilité financière au montant du capital apporté, tout en restant l'unique décideur."
-        },
-        {
-          question: "Comment doit-on gérer la main-d'œuvre pour les opérations massives et ponctuelles comme la récolte ?",
-          options: [
-            "Embaucher 30 personnes en CDI (contrat permanent) toute l'année",
-            "Faire appel à de la main-d'œuvre saisonnière (journaliers) uniquement pendant les pics d'activité",
-            "Faire travailler uniquement le gérant",
-            "Ne pas prévoir de main-d'œuvre et automatiser à 100%"
-          ],
-          correctAnswer: 1,
-          explanation: "Le recours aux journaliers permet d'avoir la main-d'œuvre massive nécessaire aux travaux des champs tout en limitant les coûts fixes du personnel permanent."
-        },
-        {
-          question: "Outre le registre du commerce, quelle autorisation légale est particulièrement critique pour une ferme irriguée de 10 hectares ?",
-          options: [
-            "La licence de vente d'alcool",
-            "L'autorisation de forage / d'exploitation de la ressource en eau",
-            "Le permis de transport de passagers",
-            "L'autorisation de publicité à la télévision"
-          ],
-          correctAnswer: 1,
-          explanation: "L'eau est une ressource vitale et souvent réglementée. Avoir le droit de réaliser un forage est indispensable avant de lancer un tel projet."
-        },
-        {
-          question: "Quel rôle est indispensable parmi le personnel permanent d'une exploitation agricole moderne ?",
-          options: [
-            "Le directeur marketing",
-            "L'avocat de l'entreprise",
-            "Le chef de culture expérimenté",
-            "Le community manager"
-          ],
-          correctAnswer: 2,
-          explanation: "Le chef de culture est la cheville ouvrière de la ferme ; c'est lui qui possède l'expertise technique quotidienne pour mener la production à terme."
-        }
-      ]
+      quiz_json: QUIZ["lec_3_3"]
     }
   ]
 };

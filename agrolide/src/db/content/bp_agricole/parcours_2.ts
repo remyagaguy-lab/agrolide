@@ -1,4 +1,5 @@
 import { ParcoursSeed } from './types';
+import { QUIZ } from './quiz_banque';
 
 export const parcours2: ParcoursSeed = {
   id: "bp_agri_p2",
@@ -52,63 +53,7 @@ De cette analyse environnementale, vous devez déduire les "Facteurs Clés de Su
 - L'analyse PESTEL structure l'étude des contraintes et opportunités externes.
 - En agriculture, l'aspect "Environnemental" (climat, eau, sols) et "Politique/Légal" (foncier, subventions, taxes) sont souvent les plus déterminants.
 - L'analyse de l'environnement doit déboucher sur l'identification des facteurs clés de succès de votre projet.`,
-      quiz_json: [
-        {
-          question: "Que signifie l'acronyme PESTEL dans l'analyse de l'environnement ?",
-          options: [
-            "Projet, Économie, Secteur, Technologie, Équipe, Logistique",
-            "Politique, Économique, Socioculturel, Technologique, Environnemental, Légal",
-            "Production, Écologie, Savoir-faire, Temps, Espace, Loi",
-            "Planification, Évaluation, Stratégie, Travail, Équilibre, Lancement"
-          ],
-          correctAnswer: 1,
-          explanation: "PESTEL est un modèle d'analyse macro-environnementale qui étudie ces 6 dimensions externes influençant l'entreprise."
-        },
-        {
-          question: "Dans le cas de Diap Touré, le gel des importations d'oignons par l'État pendant la récolte locale est un facteur :",
-          options: [
-            "Technologique",
-            "Socioculturel",
-            "Politique",
-            "Environnemental"
-          ],
-          correctAnswer: 2,
-          explanation: "Une décision de protectionnisme prise par le gouvernement relève de l'environnement politique et légal. Comme elle peut changer d'une année à l'autre, elle ne doit jamais être l'unique base d'un modèle économique."
-        },
-        {
-          question: "Pourquoi est-il indispensable d'analyser l'environnement avant de chiffrer son projet ?",
-          options: [
-            "Pour faire un document plus long",
-            "Parce que la loi l'exige pour créer une entreprise",
-            "Pour identifier les opportunités et les menaces externes qui auront un impact direct sur la rentabilité",
-            "Pour trouver des idées de noms pour son entreprise"
-          ],
-          correctAnswer: 2,
-          explanation: "Anticiper les risques climatiques ou les opportunités réglementaires permet de construire un modèle financier beaucoup plus réaliste et sécurisé."
-        },
-        {
-          question: "Qu'est-ce qu'un Facteur Clé de Succès (FCS) ?",
-          options: [
-            "Un élément obligatoire que l'entreprise doit maîtriser pour réussir dans son secteur",
-            "Le nom du diplôme nécessaire pour être agriculteur",
-            "Le montant minimum du crédit bancaire",
-            "Le nombre d'employés de la ferme"
-          ],
-          correctAnswer: 0,
-          explanation: "Les FCS sont les éléments stratégiques indispensables (ex: la maîtrise de l'irrigation en zone aride) sans lesquels le projet échouera inévitablement."
-        },
-        {
-          question: "La salinisation des terres et l'avancée de la mer dans la zone des Niayes sont à classer dans l'environnement :",
-          options: [
-            "Technologique",
-            "Politique",
-            "Économique",
-            "Environnemental"
-          ],
-          correctAnswer: 3,
-          explanation: "Tout ce qui touche au climat, à la qualité des sols et à l'eau relève du facteur Environnemental (le 1er 'E' de PESTEL)."
-        }
-      ]
+      quiz_json: QUIZ["lec_2_1"]
     },
     {
       id: "lec_2_2",
@@ -169,52 +114,7 @@ Dans votre business plan, présentez ces informations sous forme de tableau clai
 - Segmentez en choisissant clairement entre les modèles B2B et B2C, ou en les mixant intelligemment.
 - Croisez les données macro-économiques (secondaires) avec vos propres enquêtes de terrain (primaires).
 - Présentez vos cibles sous forme de tableau pour faciliter la lecture du banquier.`,
-      quiz_json: [
-        {
-          question: "Pourquoi l'affirmation « tout le monde est mon client » est-elle dangereuse dans un business plan ?",
-          options: [
-            "Parce qu'elle prouve un manque de stratégie commerciale ciblée",
-            "Parce qu'elle montre que vous êtes trop ambitieux",
-            "Parce que les gens mangent moins aujourd'hui",
-            "Parce qu'il est interdit de vendre à tout le monde"
-          ],
-          correctAnswer: 0,
-          explanation: "Ne pas cibler de segment précis indique à l'investisseur que vous ne savez ni où ni comment vous allez écouler vos produits de manière concrète."
-        },
-        {
-          question: "Qu'est-ce qu'une donnée « primaire » dans une étude de marché ?",
-          options: [
-            "Une information trouvée dans un rapport de la Banque Mondiale",
-            "Une information collectée directement par vous-même sur le terrain (interviews, enquêtes)",
-            "Le tout premier chiffre de votre prévisionnel",
-            "Une donnée concernant l'école primaire"
-          ],
-          correctAnswer: 1,
-          explanation: "Les données primaires sont récoltées par l'entrepreneur lui-même pour son projet spécifique, contrairement aux données secondaires déjà publiées par des tiers."
-        },
-        {
-          question: "Lequel de ces éléments caractérise généralement le modèle de vente B2B (grossistes, industrie) en agriculture ?",
-          options: [
-            "Volumes de vente très faibles mais marges énormes",
-            "Prix de vente plus bas, mais volumes écoulés massifs",
-            "Temps de logistique et de livraison très important pour chaque kilo vendu",
-            "Contact direct quotidien avec le consommateur final"
-          ],
-          correctAnswer: 1,
-          explanation: "En B2B, l'agriculteur vend de gros tonnages à un acheteur professionnel, souvent à un prix de gros (inférieur au prix de détail) mais en sécurisant des volumes importants."
-        },
-        {
-          question: "Quelle est la cible secondaire retenue par Diap Touré pour valoriser ses meilleurs calibres d'oignons ?",
-          options: [
-            "L'exportation vers l'Europe",
-            "Les marchés de quartier",
-            "Les supermarchés locaux et internationaux",
-            "La vente directe à la ferme"
-          ],
-          correctAnswer: 2,
-          explanation: "Diap réserve 20% de sa production, celle avec le meilleur calibrage et emballage, aux supermarchés qui offrent de meilleurs prix d'achat."
-        }
-      ]
+      quiz_json: QUIZ["lec_2_2"]
     },
     {
       id: "lec_2_3",
@@ -277,52 +177,7 @@ Présentez cela sous forme de tableau dans votre dossier :
 - Identifiez les forces et surtout les faiblesses de vos concurrents.
 - Votre proposition de valeur doit exploiter ces faiblesses pour justifier pourquoi les clients vous choisiront vous.
 - Synthétisez votre analyse concurrentielle dans un tableau comparatif (benchmark).`,
-      quiz_json: [
-        {
-          question: "Qu'est-ce qu'un concurrent indirect (produit de substitution) pour un producteur de viande de poulet ?",
-          options: [
-            "Un producteur de poulet situé dans une autre ville",
-            "Un vendeur de matériel avicole",
-            "Un producteur de viande de bœuf ou de poisson répondant au même besoin de protéines",
-            "Un supermarché"
-          ],
-          correctAnswer: 2,
-          explanation: "Un concurrent indirect propose un produit différent (bœuf, poisson) qui répond cependant au même besoin du consommateur (manger de la viande/des protéines)."
-        },
-        {
-          question: "Pourquoi affirmer dans un business plan que l'on n'a 'aucun concurrent' est-il déconseillé ?",
-          options: [
-            "Parce que c'est de l'arrogance",
-            "Parce que cela signifie que le marché n'existe pas ou que vous avez mal étudié l'offre existante",
-            "Parce que l'État l'interdit",
-            "Ce n'est pas déconseillé, c'est très bien vu"
-          ],
-          correctAnswer: 1,
-          explanation: "Tout besoin (se nourrir, se vêtir) est déjà satisfait par une solution existante. Si vous ne trouvez pas de concurrents, c'est que votre étude est incomplète."
-        },
-        {
-          question: "Quel est le créneau majeur exploité par Diap Touré face aux producteurs familiaux locaux ?",
-          options: [
-            "Vendre moins cher qu'eux",
-            "Produire une variété secrète",
-            "Le calibrage, la mise en filet et le stockage post-récolte pour vendre quand les prix remontent",
-            "Importer ses oignons de Hollande"
-          ],
-          correctAnswer: 2,
-          explanation: "Diap attaque la faiblesse des producteurs familiaux : l'absence de stockage et de tri, ce qui l'oblige à vendre tout en même temps à bas prix."
-        },
-        {
-          question: "À quoi sert un tableau de benchmarking concurrentiel dans un business plan ?",
-          options: [
-            "À montrer que l'on sait utiliser Excel",
-            "À lister l'adresse et le numéro de téléphone des autres producteurs",
-            "À synthétiser visuellement vos avantages (votre créneau) par rapport aux forces et faiblesses des concurrents",
-            "À déterminer le statut juridique de l'entreprise"
-          ],
-          correctAnswer: 2,
-          explanation: "Le benchmark permet au lecteur d'évaluer en un coup d'œil le positionnement de votre offre par rapport à ce qui existe déjà."
-        }
-      ]
+      quiz_json: QUIZ["lec_2_3"]
     },
     {
       id: "lec_2_4",
@@ -385,52 +240,7 @@ Faites de même avec les quatre combinaisons : Force + Opportunité (attaquer), 
 - L'analyse Externe (Opportunités/Menaces) concerne l'ENVIRONNEMENT et le MARCHÉ.
 - Soyez honnête sur vos Faiblesses et vos Menaces : c'est le gage de votre crédibilité.
 - Un bon SWOT permet d'élaborer des stratégies croisées (utiliser une Force pour contrer une Menace).`,
-      quiz_json: [
-        {
-          question: "Dans une matrice FFOM/SWOT, dans quelle catégorie doit-on classer 'Une sécheresse annoncée' ?",
-          options: [
-            "Force",
-            "Faiblesse",
-            "Opportunité",
-            "Menace"
-          ],
-          correctAnswer: 3,
-          explanation: "Le climat est un élément externe négatif, il s'agit donc d'une Menace."
-        },
-        {
-          question: "Dans quelle catégorie doit-on classer 'L'absence d'expérience commerciale du porteur de projet' ?",
-          options: [
-            "Force",
-            "Faiblesse",
-            "Opportunité",
-            "Menace"
-          ],
-          correctAnswer: 1,
-          explanation: "C'est un handicap interne propre à l'équipe dirigeante, donc une Faiblesse."
-        },
-        {
-          question: "L'analyse Interne de la matrice FFOM se compose des :",
-          options: [
-            "Opportunités et Menaces",
-            "Forces et Menaces",
-            "Forces et Faiblesses",
-            "Faiblesses et Opportunités"
-          ],
-          correctAnswer: 2,
-          explanation: "Les Forces et les Faiblesses concernent les capacités propres à l'entreprise (Interne)."
-        },
-        {
-          question: "Dans le FFOM de Diap Touré, le 'gel des importations par l'État' est classé comme :",
-          options: [
-            "Une Force",
-            "Une Faiblesse",
-            "Une Opportunité",
-            "Une Menace"
-          ],
-          correctAnswer: 2,
-          explanation: "C'est un élément politique externe favorable au projet : une Opportunité. Comme elle est instable, le risque de revirement doit aussi figurer dans les Menaces."
-        }
-      ]
+      quiz_json: QUIZ["lec_2_4"]
     }
   ]
 };

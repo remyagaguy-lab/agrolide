@@ -1,4 +1,5 @@
 import { ParcoursSeed } from './types';
+import { QUIZ } from './quiz_banque';
 
 export const parcours4: ParcoursSeed = {
   id: "bp_agri_p4",
@@ -55,52 +56,7 @@ Voici comment Diap a défini son Mix Marketing pour son oignon :
 - Le marketing agricole est indispensable : produire ne sert à rien si on ne sait pas vendre.
 - Déclinez votre offre en 4 piliers : Produit (qualité/emballage), Prix (stratégie), Distribution (circuits) et Communication (visibilité).
 - Justifiez toujours un prix de vente supérieur par une valeur ajoutée réelle (tri, emballage, certification).`,
-      quiz_json: [
-        {
-          question: "Que regroupe le 'Produit' dans la méthode des 4P en agriculture ?",
-          options: [
-            "Uniquement la plante qui pousse dans le champ",
-            "La variété, le calibrage, l'emballage et l'éventuelle certification",
-            "Le prix de vente de la récolte",
-            "La publicité faite autour du produit"
-          ],
-          correctAnswer: 1,
-          explanation: "Le 'Produit' englobe tout ce qui constitue l'offre finale remise au client, de la variété jusqu'au sac d'emballage."
-        },
-        {
-          question: "Comment Diap Touré construit-il son prix de vente de l'oignon ?",
-          options: [
-            "Il vend tout au prix le plus bas possible pour écouler vite sa récolte",
-            "Il s'aligne sur le marché à la récolte, puis vend une part stockée plus cher quand les prix remontent",
-            "Il impose à tous les grossistes un prix unique fixé par l'État",
-            "Il donne gratuitement la première récolte pour se faire connaître"
-          ],
-          correctAnswer: 1,
-          explanation: "Son prix moyen (environ 200 FCFA/kg) combine une vente à la récolte au prix du marché et une vente différée de la part stockée : c'est le stockage qui crée la valeur."
-        },
-        {
-          question: "En matière de Distribution, quel est le principal avantage de vendre à des grossistes (circuit indirect) ?",
-          options: [
-            "La marge bénéficiaire est la plus élevée possible",
-            "L'agriculteur écoule de gros volumes d'un coup, simplifiant la logistique",
-            "On connaît personnellement chaque consommateur final",
-            "C'est obligatoire par la loi"
-          ],
-          correctAnswer: 1,
-          explanation: "Bien que la marge soit plus faible qu'en vente directe, le grossiste prend de gros volumes, ce qui libère rapidement les hangars de l'agriculteur."
-        },
-        {
-          question: "Laquelle de ces actions relève de la 'Communication' pour une ferme B2B ?",
-          options: [
-            "Acheter un tracteur neuf",
-            "Envoyer des photos régulières des cultures via WhatsApp aux grossistes pour préparer la vente",
-            "Mettre de l'engrais bio",
-            "Réduire le prix de 10%"
-          ],
-          correctAnswer: 1,
-          explanation: "Communiquer, c'est maintenir le lien avec le marché et susciter l'intérêt des acheteurs avant même que le produit ne soit disponible."
-        }
-      ]
+      quiz_json: QUIZ["lec_4_1"]
     },
     {
       id: "lec_4_2",
@@ -148,52 +104,7 @@ Ce budget modeste, inséré dans ses prévisions financières, a prouvé à la b
 - On ne cherche pas ses clients le jour de la récolte, on vend avant de récolter.
 - Segmentez votre prospection en 3 phases : Sécurisation (avant semis), Teasing (pendant la croissance) et Conclusion (avant la récolte).
 - La prospection commerciale génère des frais (déplacement, communication, emballage) qui doivent obligatoirement figurer dans votre budget prévisionnel.`,
-      quiz_json: [
-        {
-          question: "Quelle est la 'règle d'or' de la prospection commerciale en agriculture ?",
-          options: [
-            "Attendre que la récolte soit terminée pour inviter les acheteurs",
-            "Ne jamais contacter les supermarchés",
-            "On vend (ou on sécurise la vente) avant de récolter",
-            "Toujours confier la vente au chauffeur du camion"
-          ],
-          correctAnswer: 2,
-          explanation: "Les produits agricoles étant périssables, attendre la récolte pour trouver des acheteurs vous place en position de faiblesse et entraîne des pertes physiques."
-        },
-        {
-          question: "Que fait-on pendant la Phase 2 (pendant la croissance des cultures) du plan de prospection ?",
-          options: [
-            "On ne fait rien, on attend",
-            "On envoie des photos de l'évolution des champs aux acheteurs pour faire du 'teasing' et maintenir leur intérêt",
-            "On demande le paiement total de la marchandise",
-            "On détruit les cultures invendues"
-          ],
-          correctAnswer: 1,
-          explanation: "Informer régulièrement l'acheteur de la bonne santé des cultures le rassure sur votre capacité à le livrer le jour J."
-        },
-        {
-          question: "Pourquoi est-il crucial d'inclure un budget marketing dans votre business plan ?",
-          options: [
-            "Pour avoir plus d'argent pour soi-même",
-            "Parce que prospecter coûte de l'argent (téléphone, déplacements, échantillons) qu'il faut financer avant de faire la première vente",
-            "Pour payer les impôts",
-            "Parce que les banques l'exigent pour la forme"
-          ],
-          correctAnswer: 1,
-          explanation: "Les actions commerciales génèrent des frais bien avant que l'argent des ventes ne rentre. Ce besoin de trésorerie doit être financé."
-        },
-        {
-          question: "Qu'a prévu Diap Touré dans son budget marketing pour se différencier de ses concurrents ?",
-          options: [
-            "L'achat de spots publicitaires à la télévision",
-            "L'impression d'étiquettes à sa marque à coudre sur ses filets d'oignons",
-            "L'achat d'une voiture de luxe",
-            "La création d'une application mobile"
-          ],
-          correctAnswer: 1,
-          explanation: "Avec un budget modeste, Diap a créé une identité visuelle (étiquettes) qui professionnalise son produit et fidélise les grossistes."
-        }
-      ]
+      quiz_json: QUIZ["lec_4_2"]
     }
   ]
 };
