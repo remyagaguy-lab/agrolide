@@ -307,7 +307,7 @@ export function Grammaire() {
         </p>
         <p>
           <strong className="text-on-surface">En-tête d’accueil</strong> : texte dans le ciel vert à gauche, photo à droite (la terre), <code>Horizon</code> posé à la
-          verticale (le masque <code>HORIZON_MASQUE_TERRE</code> tourné de 90°), sans emblème au creux ; sur mobile, horizon horizontal sous le texte.Trois échos translucides suivent la ligne de l’horizon vers le ciel (comme ceux du soleil) ; un filet fin sépare l’en-tête des chiffres, qui partagent son fond (le motif ne couvre que l’en-tête). Aucun séparateur <code>Horizon</code> ensuite : les chiffres et le guide gratuit s’enchaînent à plat. Titre sur 3 lignes dès 1280 px.
+          verticale (le masque <code>HORIZON_MASQUE_TERRE</code> tourné de 90°), sans emblème au creux ; sur mobile, horizon horizontal sous le texte.un filet fin sépare l’en-tête des chiffres, qui partagent son fond (le motif ne couvre que l’en-tête). Aucun séparateur <code>Horizon</code> ensuite : les chiffres et le guide gratuit s’enchaînent à plat. Titre sur 3 lignes dès 1280 px.
         </p>
         <p>
           <strong className="text-on-surface">Pied de page</strong> : <code>Horizon</code> aux couleurs du vert de marque ; le motif remonte jusqu’à la ligne

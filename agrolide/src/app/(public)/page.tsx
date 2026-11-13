@@ -5,7 +5,6 @@ import { Metadata } from "next"
 import { db } from "@/db"
 import { articles, documents } from "@/db/schema"
 import { eq, desc, count } from "drizzle-orm"
-import { cn } from "@/lib/utils/formatters"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
@@ -33,11 +32,6 @@ const masqueTerre: React.CSSProperties = {
   maskRepeat: "no-repeat",
   WebkitMaskRepeat: "no-repeat",
 }
-
-/** Trois échos de l'horizon (comme les trois échos du soleil) : du plus proche au plus lointain. */
-const ECHOS = [1, 2, 3]
-/** Opacité de chaque voile : les voiles se superposent, l'écho le plus proche de la photo est donc le plus dense (~0,30), le plus lointain le plus transparent (~0,08). */
-const VOILES = ["bg-on-surface-brand/[0.12]", "bg-on-surface-brand/[0.10]", "bg-on-surface-brand/[0.08]"]
 
 const ROLES = ["Étudiants en agronomie", "Ingénieurs agronomes", "Chercheurs", "Entreprises agricoles", "Investisseurs"]
 /** Nombre de ressources affiché si la base ne répond pas (dernier total connu). */
@@ -128,16 +122,8 @@ export default async function HomePage() {
           </div>
         </div>
 
-        {/* mobile : horizon horizontal, la photo sous le texte ; trois échos de l'horizon montent dans le ciel (comme ceux du soleil) */}
-        <div className="relative z-0 [--horizon:4rem] [--pas-echo:1rem] sm:[--horizon:6rem] sm:[--pas-echo:1.25rem] md:hidden">
-          {ECHOS.map((k, i) => (
-            <div
-              key={k}
-              aria-hidden="true"
-              className={cn("pointer-events-none absolute inset-0", VOILES[i])}
-              style={{ ...masqueTerre, translate: `0 calc(${-k} * var(--pas-echo))` }}
-            />
-          ))}
+        {/* mobile : horizon horizontal, la photo sous le texte */}
+        <div className="relative z-0 [--horizon:4rem] sm:[--horizon:6rem] md:hidden">
           <div className="relative h-[340px]" style={masqueTerre}>
             <Image
               src="/hero-accueil.webp"
@@ -152,21 +138,13 @@ export default async function HomePage() {
 
         {/* bureau : horizon vertical. La zone est un cadre « container query » ; le calque de masque a la taille du cadre tourné
             (longueur = hauteur de la zone, épaisseur = sa largeur), puis tourne de -90° autour du centre : la terre passe à droite.
-            Trois échos translucides (opacités différentes, qui s'additionnent) suivent la même ligne vers le ciel. */}
-        <div className="absolute right-0 top-0 z-0 hidden h-full w-[52%] [--horizon:6rem] [--pas-echo:1.5rem] [container-type:size] md:block lg:[--horizon:8rem] xl:w-[46%] xl:[--pas-echo:2.25rem]">
-          {ECHOS.map((k, i) => (
-            <div key={k} aria-hidden="true" className="pointer-events-none absolute inset-0" style={{ translate: `calc(${-k} * var(--pas-echo)) 0` }}>
-              <div
-                className={cn("absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90", VOILES[i])}
-                style={masqueTerre}
-              />
-            </div>
-          ))}
+            La zone est élargie de `--decale` vers la gauche (l'horizon recule) ; la photo garde sa taille et sa place : son cadre fait `100cqw - --decale`, ancré à droite, et on voit simplement plus de photo. */}
+        <div className="absolute right-0 top-0 z-0 hidden h-full w-[calc(52%+3rem)] [--decale:3rem] [--horizon:6rem] [container-type:size] md:block lg:[--horizon:8rem] xl:w-[calc(46%+4.5rem)] xl:[--decale:4.5rem]">
           <div
             className="absolute left-1/2 top-1/2 h-[100cqw] w-[100cqh] -translate-x-1/2 -translate-y-1/2 -rotate-90"
             style={masqueTerre}
           >
-            <div className="absolute left-1/2 top-1/2 h-[100cqh] w-[100cqw] -translate-x-1/2 -translate-y-1/2 rotate-90">
+            <div className="absolute left-1/2 top-[calc(50%+var(--decale)/2)] h-[100cqh] w-[calc(100cqw-var(--decale))] -translate-x-1/2 -translate-y-1/2 rotate-90">
               <Image
                 src="/hero-accueil.webp"
                 alt={ALT_HERO}
