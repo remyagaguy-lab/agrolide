@@ -12,6 +12,7 @@ import { COOKIE_BARRE_REPLIEE, MEMBRES_RUBRIQUES, afficherNombre, estPageImmersi
 import { Logo } from "@/components/ui/Logo"
 import { cn } from "@/lib/utils/formatters"
 import { Avatar } from "@/components/ui/Avatar"
+import { InvitationInstallation } from "@/components/pwa/InvitationInstallation"
 import NotificationBell from "@/components/shared/NotificationBell"
 
 import { ChevronLeft, ChevronRight, LogOut, Mail } from "@/components/ui/icons"
@@ -253,6 +254,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
         <main id="contenu" className="custom-scrollbar relative min-h-0 flex-1 overflow-y-auto p-3 pb-28 md:p-5 md:pb-28 lg:p-6 lg:pb-6">
           <div className="mx-auto h-full max-w-[1400px]">{children}</div>
         </main>
+        <InvitationInstallation />
       </div>
 
       {/* ================= BOTTOM NAVIGATION (MOBILE) ================= */}

@@ -11,6 +11,7 @@ export default function robots(): MetadataRoute.Robots {
           '/membres/',
           '/auth/',
           '/_next/',
+          '/hors-ligne',
         ],
       }
     ],

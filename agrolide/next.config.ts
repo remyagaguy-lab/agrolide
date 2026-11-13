@@ -1,15 +1,13 @@
 import type { NextConfig } from "next";
-import withPWAInit from "@ducanh2912/next-pwa";
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const withAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const withPWA = withPWAInit({
-  dest: "public",
-  disable: process.env.NODE_ENV === "development",
-});
+// PWA : le service worker est écrit à la main (public/sw.js) et enregistré par src/components/pwa/EnregistrementSW.tsx.
+// L'ancien plugin @ducanh2912/next-pwa ne fonctionne qu'avec webpack : avec Turbopack (build par défaut de Next 16)
+// il ne produisait aucun service worker en production.
 
 // CSP en mode « report-only » : elle signale (console du navigateur) sans rien bloquer.
 // Après une période d'observation sans alerte, renommer l'en-tête en Content-Security-Policy.
@@ -92,6 +90,9 @@ const nextConfig: NextConfig = {
           { key: 'Content-Security-Policy-Report-Only', value: cspReportOnly },
         ],
       },
+      // Le service worker et le manifeste ne doivent jamais rester en cache : une mise à jour doit être vue tout de suite.
+      { source: '/sw.js', headers: [{ key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' }, { key: 'Service-Worker-Allowed', value: '/' }] },
+      { source: '/manifest.json', headers: [{ key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' }] },
       // Images du dossier public (logo, couvertures, photos d'équipe…) : Vercel les sert par défaut avec
       // « max-age=0 », donc le navigateur les redemande à chaque visite. Ici : un jour, puis une semaine
       // de rafraîchissement en arrière-plan. Ces fichiers gardent leur nom : pas de durée « à vie ».
@@ -110,4 +111,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withAnalyzer(withPWA(nextConfig));
+export default withAnalyzer(nextConfig);

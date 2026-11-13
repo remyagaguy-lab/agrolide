@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { AuthProvider } from "@/lib/auth/client";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CookieBanner } from "@/components/layout/CookieBanner";
+import { EnregistrementSW } from "@/components/pwa/EnregistrementSW";
 import { ToastProvider } from "@/components/ui/Toast";
+import { darkColors, lightColors } from "@/styles/tokens";
 import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
@@ -36,6 +38,18 @@ export const metadata: Metadata = {
   description: 'Fédérer la chaîne agricole africaine pour conquérir la souveraineté alimentaire. Annuaire, bibliothèque, formations et accompagnement pour agronomes, chercheurs et agripreneurs africains.',
   openGraph: { type: 'website', locale: 'fr_FR', siteName: 'agrolide', images: [{ url: '/og-image.jpg', width: 1200, height: 630 }] },
   twitter: { card: 'summary_large_image' },
+  // Application installable : manifeste, et titre sous l'icône d'écran d'accueil sur iOS (l'icône vient de apple-icon.png).
+  manifest: '/manifest.json',
+  appleWebApp: { capable: true, title: 'agrolide', statusBarStyle: 'default' },
+  formatDetection: { telephone: false },
+};
+
+// Couleur de la barre du navigateur / de l'application installée : surface claire ou sombre des jetons de marque.
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: lightColors.surface },
+    { media: '(prefers-color-scheme: dark)', color: darkColors.surface },
+  ],
 };
 
 export default function RootLayout({
@@ -76,6 +90,7 @@ export default function RootLayout({
             {children}
           </ToastProvider>
           <CookieBanner />
+          <EnregistrementSW />
           {/* Vitesse réelle des visiteurs (Core Web Vitals), sans cookie ni donnée personnelle. Résultats : Vercel > Speed Insights. */}
           <SpeedInsights />
         </body>

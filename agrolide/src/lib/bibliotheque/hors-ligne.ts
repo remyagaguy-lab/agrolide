@@ -143,8 +143,11 @@ export async function listerHorsLigne(membreId?: string | null): Promise<ResumeH
   }
 }
 
-/** À la déconnexion : plus aucune copie ne reste sur l'appareil. */
+/** À la déconnexion : plus aucune copie ne reste sur l'appareil (documents chiffrés et pages gardées par le service worker). */
 export async function viderHorsLigne(): Promise<void> {
+  try {
+    for (const nom of await caches.keys()) if (nom.startsWith('ag-pages-')) await caches.delete(nom)
+  } catch {}
   try {
     for (const k of Object.keys(localStorage)) if (k.startsWith(REPERE)) localStorage.removeItem(k)
   } catch {}

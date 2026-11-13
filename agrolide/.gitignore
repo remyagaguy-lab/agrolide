@@ -65,3 +65,7 @@ scripts/users-export.json
 /scripts/forme/verification/
 /scripts/forme/__pycache__/
 __pycache__/
+
+# ancien plugin PWA (Workbox) : fichiers générés, jamais versionnés. public/sw.js, lui, est écrit à la main et versionné.
+/public/workbox-*.js
+/public/sw.js.map
