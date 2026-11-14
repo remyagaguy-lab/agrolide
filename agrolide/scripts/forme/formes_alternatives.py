@@ -34,6 +34,8 @@ HERE = Path(__file__).resolve().parent
 APP = HERE.parents[1]
 SVG_DIR = APP / "public" / "design-assets" / "formes-alternatives"
 TS_OUT = APP / "src" / "app" / "design-system" / "formes" / "formes-alternatives.ts"
+# forme retenue le 14/11/2026 (encoche solaire) : tracés consommés par les composants de marque
+TS_ENCOCHE = APP / "src" / "components" / "brand" / "encoche-paths.ts"
 JSON_OUT = HERE / "formes-alternatives.json"
 
 FORMATS = {
@@ -223,17 +225,28 @@ def colline(w: float, h: float) -> dict:
 def encoche(w: float, h: float) -> dict:
     """Rectangle aux coins doux dont le coin bas droit est mordu par un quart de cercle concave : le soleil
     qui se lève derrière la parcelle (même langage que l'anneau et le soleil de l'emblème). Un petit disque
-    de soleil peut se loger dans l'encoche (`compagnon`)."""
+    de soleil peut se loger dans l'encoche (`compagnon`).
+    Les deux pointes que laisse la morsure (là où l'arc concave rencontre le bord droit et le bord bas) sont
+    adoucies par un raccord de rayon f, tangent au bord et à l'arc : demande du 14/11/2026, « un tout petit peu »."""
     m = min(w, h)
     r = 0.09 * m
     b = 0.30 * m
+    f = 0.035 * m
+    s = math.sqrt(b * b + 2 * b * f)  # distance (selon l'axe) entre le centre de la morsure et le centre du raccord
+    # raccord haut (bord droit) : centre (w - f, h - s) ; raccord bas (bord bas) : centre (w - s, h - f)
+    a1 = math.degrees(math.atan2(s, f))  # angle, vu du centre du raccord haut, vers le centre de la morsure
+    b1 = 360 + math.degrees(math.atan2(-s, -f))  # angle, vu du centre de la morsure, vers le raccord haut
+    b2 = 360 + math.degrees(math.atan2(-f, -s))  # angle, vu du centre de la morsure, vers le raccord bas
+    a2 = math.degrees(math.atan2(f, s))  # angle, vu du centre du raccord bas, vers le centre de la morsure
     p = Path()
     p.start_on_arc(r, r, r, r, 180)
     p.arc(r, r, r, r, 180, 270)
     p.L(w - r, 0)
     p.arc(w - r, r, r, r, 270, 360)
-    p.L(w, h - b)
-    p.arc(w, h, b, b, 270, 180)
+    p.L(w, h - s)
+    p.arc(w - f, h - s, f, f, 0, a1)
+    p.arc(w, h, b, b, b1, b2)
+    p.arc(w - s, h - f, f, f, a2, 90)
     p.L(r, h)
     p.arc(r, h - r, r, r, 90, 180)
     p.L(0, r)
@@ -402,6 +415,23 @@ def main() -> None:
         + "\n"
     )
     TS_OUT.write_text(ts, encoding="utf-8")
+    ts_enc = (
+        "// Fichier généré par scripts/forme/formes_alternatives.py — NE PAS ÉDITER À LA MAIN.\n"
+        "// Encoche solaire (forme retenue le 14/11/2026) : un tracé par format, rayons proportionnels au petit côté.\n"
+        "// `inscrit` = centre optique du texte (centre du plus grand cercle inscrit), en % de la boîte ;\n"
+        "// `compagnon` = disque du quart de soleil logé dans l'encoche, en unités du viewBox.\n\n"
+        "export interface EncocheFormat {\n  w: number\n  h: number\n  d: string\n  inscrit: [number, number]\n"
+        "  compagnon: { cx: number; cy: number; r: number }\n}\n\n"
+        "export type EncocheFormatId = " + " | ".join(f"'{k}'" for k in FORMATS) + "\n\n"
+        "export const ENCOCHE: Record<EncocheFormatId, EncocheFormat> = "
+        + json.dumps(
+            {k: {x: v for x, v in out["encoche"][k].items() if x in ("w", "h", "d", "inscrit", "compagnon")} for k in FORMATS},
+            ensure_ascii=False,
+            indent=1,
+        )
+        + "\n"
+    )
+    TS_ENCOCHE.write_text(ts_enc, encoding="utf-8")
     JSON_OUT.write_text(json.dumps(mesures, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"{len(FORMES)} formes x {len(FORMATS)} formats -> {SVG_DIR}, {TS_OUT.relative_to(APP)}")
     for nom in FORMES:

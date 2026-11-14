@@ -2,6 +2,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils/formatters"
 import { GEOMETRIE } from "./geometrie"
 
+/** @deprecated Remplacé par `EnchochePhoto` (décision du 14/11/2026). Conservé jusqu'à la suppression de l'arche. */
 export interface ArchPhotoProps {
   /** Chemin de l'image (de préférence WebP, format paysage). */
   src: string

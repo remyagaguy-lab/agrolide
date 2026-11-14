@@ -261,6 +261,9 @@ export default function PageFormes() {
           Six propositions pour remplacer l’arche, rendues sur les usages réels du site, en thème clair et en thème sombre, avec les vraies photos et les jetons du design system.
           <strong className="text-on-surface"> Rien n’est remplacé sur le site</strong> : cette page sert à choisir. Les tracés sont générés par un script (<code>scripts/forme/formes_alternatives.py</code>) et les SVG sont téléchargeables en bas de chaque proposition.
         </p>
+        <p className="mt-4 rounded-card border border-primary bg-primary-container p-4 text-body-md text-on-primary-container">
+          <strong>Décision du 14/11/2026 : l’encoche solaire est retenue</strong> (chiffres, fenêtres de photo et filigranes, pointes légèrement arrondies, fenêtre qui déborde du bandeau des fiches, filigrane à 7 %). Elle est migrée sur le site ; cette page garde le comparatif pour mémoire.
+        </p>
         <nav aria-label="Propositions" className="mt-6 flex flex-wrap gap-2">
           <a href="#usages" className="rounded-tag border border-outline-variant px-3 py-2 text-label-lg">Usages actuels</a>
           <a href="#arche-actuelle" className="rounded-tag border border-outline-variant px-3 py-2 text-label-lg">Arche actuelle</a>

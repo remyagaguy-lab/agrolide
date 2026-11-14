@@ -1,6 +1,6 @@
 import React from "react"
 import Link from "next/link"
-import { ArcheBadge } from "@/components/brand"
+import { EncocheBadge } from "@/components/brand"
 import { Badge } from "@/components/ui/Badge"
 import { Button } from "@/components/ui/Button"
 import { Widget, WidgetHeader } from "./Widget"
@@ -56,7 +56,7 @@ export function EventWidget({ mesEvenements, aVenir }: EventWidgetProps) {
                 <li key={e.id}>
                   <Link href={`/membres/evenements/${e.id}`} className="ag-state group flex min-h-14 items-center gap-3 rounded-control px-2.5 py-1.5">
                     <span className="flex w-11 shrink-0 flex-col items-center">
-                      <ArcheBadge className="w-10">{d.jour}</ArcheBadge>
+                      <EncocheBadge className="w-10">{d.jour}</EncocheBadge>
                       <span className="mt-0.5 text-label-sm uppercase text-on-surface-muted">{d.mois}</span>
                     </span>
                     <span className="min-w-0 flex-1">
@@ -88,7 +88,7 @@ export function EventWidget({ mesEvenements, aVenir }: EventWidgetProps) {
       <div className="flex flex-1 flex-col gap-4 p-5 pt-3">
         <div className="flex items-start gap-4">
           <span className="flex w-14 shrink-0 flex-col items-center">
-            <ArcheBadge className="w-14">{d.jour}</ArcheBadge>
+            <EncocheBadge className="w-14">{d.jour}</EncocheBadge>
             <span className="mt-1 text-label-md uppercase text-on-surface-variant">{d.mois}</span>
           </span>
           <div className="min-w-0 flex-1">

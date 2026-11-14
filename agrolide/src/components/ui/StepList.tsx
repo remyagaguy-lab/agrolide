@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ArcheBadge } from "@/components/brand/ArcheBadge"
+import { EncocheBadge } from "@/components/brand/Encoche"
 import { cn } from '@/lib/utils/formatters'
 
 export interface StepListItem {
@@ -18,9 +18,9 @@ export function StepList({ items, className }: StepListProps) {
     <ol className={cn('grid gap-8 md:gap-6', items.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3', className)}>
       {items.map((item, i) => (
         <li key={item.title} className="flex gap-4 md:flex-col">
-          {/* Puce : le dôme de la marque, numéroté au centre optique (décoratif : l'ordre est porté par la liste ordonnée). */}
+          {/* Puce : l'encoche solaire de la marque, numérotée au centre optique (décoratif : l'ordre est porté par la liste ordonnée). */}
           <span aria-hidden="true" className="flex shrink-0 self-start">
-            <ArcheBadge className="w-20">{i + 1}</ArcheBadge>
+            <EncocheBadge className="w-20">{i + 1}</EncocheBadge>
           </span>
           <div>
             <h3 className="text-title-lg text-on-surface">{item.title}</h3>

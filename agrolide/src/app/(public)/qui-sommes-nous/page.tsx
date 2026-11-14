@@ -7,7 +7,7 @@ import { PageHero } from "@/components/ui/PageHero"
 import { Section } from "@/components/ui/Section"
 import { ValueCard } from "@/components/ui/ValueCard"
 import { SectionLabel } from "@/components/ui/SectionLabel"
-import { ArchPhoto, Emblem, Motif } from "@/components/brand"
+import { Emblem, EnchochePhoto, Motif } from "@/components/brand"
 
 import { Users, Flag, Star, Lightbulb, Target, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
@@ -109,7 +109,7 @@ export default function QuiSommesNousPage() {
         </div>
       </Section>
 
-      {/* ── NOTRE HISTOIRE (photo en arche : une seule par écran) ──────────────────────────── */}
+      {/* ── NOTRE HISTOIRE (photo en encoche solaire : une seule par écran) ──────────────────────────── */}
       <section className="bg-surface-container-low pb-14 md:pb-20">
         <div className="container grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div className="order-2 lg:order-1">
@@ -126,10 +126,10 @@ export default function QuiSommesNousPage() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <ArchPhoto
+            <EnchochePhoto
               src="/raison-detre.webp"
               alt="Une équipe d'agronomes en polos verts et jaunes consulte une tablette au milieu d'un champ"
-              className="mx-auto max-w-[520px] text-primary lg:max-w-none"
+              className="mx-auto max-w-[520px] lg:max-w-none"
             />
           </div>
         </div>

@@ -85,6 +85,10 @@ Sorties : `public/design-assets/formes-alternatives/<forme>-<format>.svg` (portr
 à ouvrir dans Illustrator ou à coller dans Photoshop), `src/app/design-system/formes/formes-alternatives.ts` (généré),
 `scripts/forme/formes-alternatives.json` (mesures). Ajouter une forme = ajouter une fonction dans `FORMES`.
 
+**Forme retenue (14/11/2026) : l'encoche solaire**, avec des pointes légèrement arrondies (raccord de 3,5 % du petit côté). Le script écrit aussi
+`src/components/brand/encoche-paths.ts` (généré), consommé par `Encoche`, `EnchochePhoto` et `EncocheBadge` (`src/components/brand/Encoche.tsx`).
+Pour retoucher la forme : changer `encoche()` puis relancer le script ; ne jamais éditer les fichiers générés.
+
 ## Formes retirées (12/11/2026)
 L'emblème « plein » (silhouette, le « cercle à sillons ») et l'arche des marqueurs (dôme + sillon accolé) sont retirés du design
 system : la silhouette pleine se confondait avec l'identité d'une autre marque et le marqueur ne coïncidait qu'à 85 % avec l'emblème.

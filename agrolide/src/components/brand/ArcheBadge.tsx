@@ -2,6 +2,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils/formatters"
 import { Arche, ARCHE } from "./Arche"
 
+/** @deprecated Remplacé par `EncocheBadge` (décision du 14/11/2026). Conservé jusqu'à la suppression de l'arche. */
 export interface ArcheBadgeProps {
   /** Court texte : jour d'une date, chiffre d'étape. Pas de pictogramme : les icônes restent libres (décision du 12/11/2026). */
   children: React.ReactNode

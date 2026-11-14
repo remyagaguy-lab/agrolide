@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
-import { ArcheBadge } from '@/components/brand'
+import { EncocheBadge } from '@/components/brand'
 
 import { CalendarDays, MapPin, Globe, Users, Clock, FileText, Download, CheckCircle2, Video, Wrench, Mic } from "@/components/ui/icons"
 type Evenement = {
@@ -85,9 +85,9 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
       )}
       <div className="p-6 flex-grow">
         <div className="flex items-start gap-4 mb-4">
-          {/* Date : le jour au centre optique du dôme de la marque, le mois dessous. */}
+          {/* Date : le jour au centre optique de l'encoche solaire de la marque, le mois dessous. */}
           <div className="w-14 shrink-0 text-center">
-            <ArcheBadge ton={isPast ? 'marque' : 'soleil'} className="w-14">{format(dateDebut, 'd')}</ArcheBadge>
+            <EncocheBadge ton={isPast ? 'marque' : 'soleil'} className="w-14">{format(dateDebut, 'd')}</EncocheBadge>
             <p className="mt-1 text-label-sm uppercase text-on-surface-variant">{format(dateDebut, 'MMM', { locale: fr })}</p>
           </div>
           <div className="flex min-w-0 flex-1 flex-wrap items-start justify-between gap-2">

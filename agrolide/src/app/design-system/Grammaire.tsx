@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CarteSoleil } from '@/components/ui/CarteSoleil'
-import { Anneau, ArcheBadge, ArchPhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
+import { Anneau, EncocheBadge, EnchochePhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
 
 import { Library, Search } from "@/components/ui/icons"
 const R = GEOMETRIE.rayons
@@ -43,24 +43,24 @@ const LIGNES: Ligne[] = [
     ),
   },
   {
-    forme: 'Arche (le dôme)',
-    composant: '<Arche variant="plein">, <ArcheBadge>',
-    origine: 'La silhouette de l’emblème au-dessus de sa 1re ligne blanche (anneau, ciel, collines), IoU 0,991. Le sillon autrefois accolé dessous est retiré (12/11/2026).',
+    forme: 'Encoche solaire (pastille)',
+    composant: '<EncocheBadge>, <Encoche>',
+    origine: 'Forme de cadre retenue le 14/11/2026 : un rectangle aux coins doux dont le coin bas droit est mordu par un quart de cercle concave (le soleil qui se lève derrière la parcelle), pointes arrondies. Tracée par scripts/forme/formes_alternatives.py ; elle remplace l’arche (le dôme de l’emblème reste une pièce du logo).',
     role: 'PORTEUR de CHIFFRES à taille moyenne : date d’événement, numéro d’étape. Les pictogrammes n’y sont plus insérés (décision du 12/11/2026) : ils restent libres, posés directement sur la carte ou la section.',
-    tailles: 'Badge 40 à 112 px, contenu au centre optique du dôme (axe de symétrie, mi-hauteur de la corde verticale).',
+    tailles: 'Badge 40 à 112 px, contenu au centre optique de la forme (centre du plus grand cercle inscrit, mesuré par le script).',
     couleurs: 'Jaune soleil + chiffre vert ; vert + chiffre blanc.',
-    interdit: 'Y insérer un pictogramme, lui recoller un sillon, le poser sur une photo pour porter un titre (c’est le rôle du soleil), le poser seul en onglet sur un bord, l’utiliser comme cadre photo au trait, le centrer sous un titre, empiler plusieurs dômes.',
-    demo: <ArcheBadge className="w-14">3</ArcheBadge>,
+    interdit: 'Y insérer un pictogramme, lui recoller un sillon, le poser sur une photo pour porter un titre (c’est le rôle du soleil), le poser seul en onglet sur un bord, l’utiliser comme cadre photo au trait, le centrer sous un titre, empiler plusieurs formes à encoche.',
+    demo: <EncocheBadge className="w-14">3</EncocheBadge>,
   },
   {
-    forme: 'Fenêtre',
-    composant: '<ArchPhoto>',
-    origine: 'Le ciel de l’emblème : disque intérieur de l’anneau au-dessus des deux collines (IoU 0,985). Son point le plus bas est le creux en V.',
+    forme: 'Fenêtre à encoche',
+    composant: '<EnchochePhoto>',
+    origine: 'La même encoche solaire en fenêtre de photo (paysage 3:2 ou portrait 4:5), avec un quart de soleil jaune logé dans l’encoche. Dans l’en-tête des fiches, la fenêtre déborde du bandeau : son bord bas est coupé par le bord bas du bandeau.',
     role: 'PHOTO de terrain ou de groupe, grande (50 à 60 % de la largeur), sujet tourné vers le texte ; une capture d’écran peut en sortir.',
     tailles: '320 px de large au minimum.',
-    couleurs: 'Échos pâles de la fenêtre (même ouverture, agrandie) sur fond clair.',
-    interdit: 'Portraits d’équipe (visages trop petits), cadre au trait, deux fenêtres côte à côte.',
-    demo: <ArchPhoto src="/hero-background.webp" alt="" className="w-24" />,
+    couleurs: 'Quart de soleil en jaune de marque ; photo inchangée en thème sombre.',
+    interdit: 'Visages ou texte dans le coin bas droit (l’encoche), cadre au trait, deux fenêtres côte à côte.',
+    demo: <EnchochePhoto src="/hero-background.webp" alt="" className="w-24" />,
   },
   {
     forme: 'Emblème éclaté',
@@ -157,7 +157,7 @@ export function Grammaire() {
           <li><strong className="text-on-surface">Horizon</strong> : deux collines, creux en V à 56 % de la largeur.</li>
           <li><strong className="text-on-surface">Sillons</strong> : trois traits d’épaisseur constante, foyers sous la feuille.</li>
           <li><strong className="text-on-surface">Feuille</strong> : lentille entre le disque et le dernier sillon.</li>
-          <li><strong className="text-on-surface">Arche</strong> : le dôme, silhouette au-dessus de la 1re ligne blanche.</li>
+          <li><strong className="text-on-surface">Encoche solaire</strong> : forme de cadre (fenêtre, chiffre, filigrane) ; <strong className="text-on-surface">Arche</strong> : le dôme, silhouette au-dessus de la 1re ligne blanche, désormais réservé au logo et à l’éclaté.</li>
           <li><strong className="text-on-surface">Fenêtre</strong> : le ciel (disque intérieur au-dessus des collines).</li>
           <li><strong className="text-on-surface">Éclaté</strong> : le dôme + colline, grand sillon et feuille détachés.</li>
         </ol>
@@ -243,10 +243,10 @@ export function Grammaire() {
         </div>
         <div className="flex items-center gap-4 rounded-card border border-outline-variant bg-surface-container-lowest p-5">
           <div className="w-20 shrink-0">
-            <ArcheBadge className="w-20">18</ArcheBadge>
+            <EncocheBadge className="w-20">18</EncocheBadge>
             <p className="mt-1 text-center text-label-md uppercase text-on-surface-variant">nov.</p>
           </div>
-          <p className="text-body-sm text-on-surface-variant">Date d’événement : le jour au centre optique du dôme (chiffre centré sur la hauteur des capitales), le mois dessous.</p>
+          <p className="text-body-sm text-on-surface-variant">Date d’événement : le jour au centre optique de l’encoche solaire (chiffre centré sur la hauteur des capitales), le mois dessous.</p>
         </div>
         <ul className="space-y-2 rounded-card border border-outline-variant bg-surface-container-lowest p-5 text-body-md text-on-surface-variant">
           {['Puce de liste', 'Pastille de catégorie', 'Signature de témoignage, sur deux lignes si le texte est long'].map((t) => (
@@ -303,7 +303,7 @@ export function Grammaire() {
         <h3 className="text-title-md text-on-surface">Applications dans les composants</h3>
         <p>
           <strong className="text-on-surface">Pictogrammes libres</strong> : les icônes ne sont pas insérées dans l’arche (décision du 12/11/2026) ; elles se posent
-          directement sur la carte ou la section, en trait de 1,75, couleur de marque. L’arche (le dôme) garde les chiffres : date d’événement, numéro d’étape (décision confirmée).
+          directement sur la carte ou la section, en trait de 1,75, couleur de marque. L’encoche solaire (qui remplace l’arche depuis le 14/11/2026) garde les chiffres : date d’événement, numéro d’étape.
         </p>
         <p>
           <strong className="text-on-surface">En-tête d’accueil</strong> : texte dans le ciel vert à gauche, photo à droite (la terre), <code>Horizon</code> posé à la
@@ -314,7 +314,7 @@ export function Grammaire() {
           de l’horizon (masque <code>HORIZON_MASQUE_TERRE_BORD</code>). <strong className="text-on-surface">404</strong> : l’emblème éclaté entier (<code>EmblemEclate variante=&quot;soleil&quot;</code>)
           au-dessus du texte, jamais coupé. <strong className="text-on-surface">État vide</strong> : soleil pâle qui descend du bord haut.{' '}
           <strong className="text-on-surface">Chargement</strong> : <code>Spinner</code> = <code>Anneau mode=&quot;chargement&quot;</code>.{' '}
-          <strong className="text-on-surface">Carte d’article</strong> : <code>Feuille</code> devant la catégorie. <strong className="text-on-surface">Carte d’événement</strong> : jour dans le dôme, mois dessous.
+          <strong className="text-on-surface">Carte d’article</strong> : <code>Feuille</code> devant la catégorie. <strong className="text-on-surface">Carte d’événement</strong> : jour dans l’encoche solaire, mois dessous.
         </p>
       </div>
       <p className="mt-4 max-w-3xl text-body-sm text-on-surface-muted">

@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Logo } from '@/components/ui/Logo'
-import { Arche, Emblem, Motif } from '@/components/brand'
+import { Emblem, Encoche, Motif } from '@/components/brand'
 
 /** Page commune aux écrans de connexion, d'inscription, de mot de passe et d'accueil des nouveaux membres. */
 export function AuthCard({ title, subtitle, children, footer, wide }: {
@@ -13,10 +13,10 @@ export function AuthCard({ title, subtitle, children, footer, wide }: {
 }) {
   return (
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-surface-container-low px-4 py-12 sm:px-6 lg:px-8">
-      {/* Décor de marque : motif discret, emblème en contour en haut à gauche, arche pleine en filigrane en bas à droite. */}
+      {/* Décor de marque : motif discret, emblème en contour en haut à gauche, encoche solaire pleine en filigrane en bas à droite. */}
       <Motif size={800} opacity={0.04} className="text-primary" />
       <Emblem variant="creux" aria-hidden="true" className="pointer-events-none absolute -left-16 -top-16 z-0 hidden w-72 text-primary/15 md:block" />
-      <Arche variant="plein" className="pointer-events-none absolute -bottom-20 -right-20 z-0 hidden w-[28rem] text-primary/[0.07] md:block" />
+      <Encoche className="pointer-events-none absolute -bottom-12 -right-12 z-0 hidden w-[28rem] text-primary/[0.07] md:block" />
       <div className="relative z-10 text-center sm:mx-auto sm:w-full sm:max-w-md">
         <div className="mb-6 flex justify-center">
           <Logo href="/" size="lg" priority />

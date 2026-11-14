@@ -4,7 +4,7 @@ import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { PageHero } from "@/components/ui/PageHero"
 import { buttonVariants, type ButtonVariant } from "@/components/ui/Button"
-import { ArchPhoto, Motif, Puce } from "@/components/brand"
+import { EnchochePhoto, Motif, Puce } from "@/components/brand"
 
 import { type LucideIcon, Users, NotebookPen, TrendingUp, CalendarDays, Library, Lightbulb, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
@@ -143,9 +143,9 @@ export default function NosActionsPage() {
                   </div>
                 </div>
 
-                {/* Une seule photo en arche par écran : une par pilier */}
+                {/* Une seule photo en encoche solaire par écran : une par pilier */}
                 <div className={photoFirst ? "md:order-1" : ""}>
-                  <ArchPhoto src={p.photo.src} alt={p.photo.alt} className="mx-auto max-w-[520px] text-primary md:max-w-none" />
+                  <EnchochePhoto src={p.photo.src} alt={p.photo.alt} className="mx-auto max-w-[520px] md:max-w-none" />
                 </div>
               </div>
             </div>

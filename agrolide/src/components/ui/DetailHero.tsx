@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ArchPhoto, Arche, Motif } from '@/components/brand'
+import { Encoche, EnchochePhoto, Motif } from '@/components/brand'
 import Breadcrumb, { type BreadcrumbItem } from './Breadcrumb'
 import { cn } from '@/lib/utils/formatters'
 
@@ -9,7 +9,7 @@ export interface DetailHeroProps {
   label?: string
   /** Titre de la fiche : le seul <h1>. */
   title: React.ReactNode
-  /** Visuel de la fiche (couverture) : affiché à travers l'arche de la marque. Sans visuel : arche pleine en filigrane. */
+  /** Visuel de la fiche (couverture) : affiché à travers l'encoche solaire de la marque. Sans visuel : encoche pleine en filigrane. */
   image?: { src: string; alt: string } | null
   breadcrumb?: BreadcrumbItem[]
   className?: string
@@ -19,12 +19,12 @@ export interface DetailHeroProps {
 
 /**
  * En-tête d'une fiche de détail (formation, événement, membre…) : bandeau vert profond, motif discret,
- * titre à gauche et visuel vu à travers l'arche à droite (l'arche repose sur le bord bas du bandeau, comme au héros de l'accueil).
- * Une seule photo en arche par écran : ce composant est le visuel fort de la fiche.
+ * titre à gauche et visuel vu à travers l'encoche solaire à droite (la fenêtre déborde du bandeau : son bord bas est coupé par le bord bas du bandeau,
+ * l'encoche et son soleil restent visibles). Une seule photo en encoche par écran : ce composant est le visuel fort de la fiche.
  */
 export function DetailHero({ label, title, image, breadcrumb, className, children }: DetailHeroProps) {
   return (
-    <section className={cn('relative overflow-hidden bg-surface-brand pt-8 text-on-surface-brand md:pt-12', className)}>
+    <section className={cn('relative overflow-hidden bg-surface-brand pb-0 pt-8 text-on-surface-brand md:pb-0 md:pt-12', className)}>
       <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
       <div className="container relative z-10">
         {breadcrumb && <Breadcrumb items={breadcrumb} tone="dark" />}
@@ -35,13 +35,13 @@ export function DetailHero({ label, title, image, breadcrumb, className, childre
             {children && <div className="mt-5 flex flex-wrap items-center gap-3">{children}</div>}
           </div>
           {image ? (
-            <ArchPhoto
+            <EnchochePhoto
               src={image.src}
               alt={image.alt}
-              className="mx-auto w-full max-w-[420px] text-on-surface-brand md:mx-0 md:max-w-none md:translate-y-px"
+              className="mx-auto w-full max-w-[420px] translate-y-[6%] md:mx-0 md:max-w-none"
             />
           ) : (
-            <Arche variant="plein" className="mx-auto hidden w-full max-w-[420px] text-on-surface-brand/10 md:block md:max-w-none md:translate-y-px" />
+            <Encoche className="mx-auto hidden w-full max-w-[420px] translate-y-[6%] text-on-surface-brand/[0.07] md:block md:max-w-none" />
           )}
         </div>
       </div>

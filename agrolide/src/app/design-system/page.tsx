@@ -4,7 +4,7 @@ import {
   TableCaption, TableCell, TableHead, TableHeader, TableRow, ToastProvider,
 } from '@/components/ui'
 import { brand, darkColors, lightColors, refPalette, type ColorRole } from '@/styles/tokens'
-import { Arche, ArchPhoto, Emblem, EmblemEclate, HorizonDivider, Motif } from '@/components/brand'
+import { Arche, Encoche, EnchochePhoto, Emblem, EmblemEclate, HorizonDivider, Motif } from '@/components/brand'
 import { Interactive } from './Interactive'
 import { Grammaire } from './Grammaire'
 
@@ -303,18 +303,19 @@ export default function DesignSystemPage() {
               </div>
             </div>
 
-            <h3 className="mb-3 mt-10 text-title-md">L’arche (le dôme), la fenêtre et l’emblème éclaté</h3>
-            <p className="mb-4 text-body-sm"><a href="/design-system/formes" className="underline">Comparatif de formes alternatives à l’arche</a> (en cours de décision).</p>
+            <h3 className="mb-3 mt-10 text-title-md">L’encoche solaire, le dôme et l’emblème éclaté</h3>
+            <p className="mb-4 text-body-sm">Depuis le 14/11/2026, la forme de cadre (fenêtre de photo, chiffre, filigrane) est l’<strong>encoche solaire</strong>, choisie dans le <a href="/design-system/formes" className="underline">comparatif de formes</a>. Le dôme ci-dessous reste une pièce du logo et de l’emblème éclaté.</p>
             <p className="mb-4 max-w-3xl text-body-md text-on-surface-variant">
-              L’<strong>arche</strong> est le dôme de l’emblème : sa silhouette au-dessus de la première ligne blanche. La <strong>fenêtre</strong> est son ciel.
+              L’<strong>arche</strong> est le dôme de l’emblème : sa silhouette au-dessus de la première ligne blanche (le ciel de l’emblème n’est plus utilisé en fenêtre de photo).
               L’<strong>éclaté</strong> pose sous le dôme les trois pièces du bas (la colline, le grand sillon, la feuille), détachées de l’anneau : chaque pièce
               est son aplat intérieur entouré d’un demi-trait, et toutes s’inscrivent dans le même cercle que l’emblème (le cercle extérieur de l’anneau) :
               les aplats que bordait l’anneau s’arrêtent sur son axe, les deux bouts du grand sillon sont tangents au cercle. Il est réservé aux grands formats (404, en-tête).
             </p>
-            <div className="grid gap-4 md:grid-cols-4">
+            <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-5">
               <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="plein" className="w-40 text-primary" /><code className="text-label-sm text-on-surface-muted">Arche variant=&quot;plein&quot;</code></div>
               <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Arche variant="creux" className="w-40 text-primary" /><code className="text-label-sm text-on-surface-muted">Arche variant=&quot;creux&quot;</code></div>
-              <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><ArchPhoto src="/hero-background.webp" alt="Une agricultrice dans une serre" className="w-44" /><code className="text-label-sm text-on-surface-muted">ArchPhoto (fenêtre)</code></div>
+              <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><EnchochePhoto src="/hero-background.webp" alt="Une agricultrice dans une serre" className="w-44" /><code className="text-label-sm text-on-surface-muted">EnchochePhoto (fenêtre)</code></div>
+              <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Encoche className="w-44 text-primary" /><code className="text-label-sm text-on-surface-muted">Encoche (aplat, filigrane)</code></div>
               <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><EmblemEclate className="w-40 text-primary" /><code className="text-label-sm text-on-surface-muted">EmblemEclate</code></div>
             </div>
 
