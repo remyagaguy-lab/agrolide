@@ -6,6 +6,9 @@ import { documents, users } from '@/db/schema'
 import { eq, desc } from 'drizzle-orm'
 import { Resend } from 'resend'
 import { notifier } from '@/lib/notifications.server'
+import { apresReponse } from '@/lib/push/envoyer.server'
+import { annoncerPublication } from '@/lib/suivi/annonce.server'
+import { AGROLIDE_ID } from '@/lib/suivi/organisation'
 import { revalidatePath } from 'next/cache'
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
@@ -44,6 +47,13 @@ export async function validateDocument(documentId: string) {
       contenu: `Votre document « ${doc.titre} » a été publié dans la bibliothèque.`,
       lien: `/membres/bibliotheque/${documentId}`,
     })
+  }
+
+  // Nouveau document en ligne : les abonnés d'agrolide sont prévenus.
+  if (doc?.titre) {
+    apresReponse(() =>
+      annoncerPublication({ auteurId: AGROLIDE_ID, type: 'document', categorie: 'activite', titreAlerte: 'Nouveau document', titre: doc.titre, lien: `/membres/bibliotheque/${documentId}`, tag: `document-${documentId}` }),
+    )
   }
 
   revalidatePath('/admin/contenus/documents')

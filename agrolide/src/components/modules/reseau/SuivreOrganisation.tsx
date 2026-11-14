@@ -16,8 +16,8 @@ export interface SuivreOrganisationProps {
 }
 
 /**
- * Le seul geste proposé pour une organisation : « Suivre », puis « Abonné ».
- * Se désabonner demande une confirmation qui rappelle les alertes perdues. Une organisation ne reçoit pas d'invitation de
+ * Le seul geste proposé pour une organisation : « Suivre ». Une fois abonné, un état « Abonné » (information) et un bouton
+ * distinct « Ne plus suivre ». Se désabonner demande une confirmation qui rappelle les alertes perdues. Une organisation ne reçoit pas d'invitation de
  * connexion ; ses abonnés ne sont visibles que d'elle.
  */
 export function SuivreOrganisation({ organisationId, name, suivi: initial, principal = false }: SuivreOrganisationProps) {
@@ -64,10 +64,15 @@ export function SuivreOrganisation({ organisationId, name, suivi: initial, princ
           Suivre
         </Button>
       ) : (
-        <Button variant="outline" fullWidth className="@max-[17rem]:px-2" onClick={() => { setError(''); setConfirmer(true) }} aria-label={`Abonné à ${name} : ne plus suivre`}>
-          <Check className="size-5" aria-hidden />
-          Abonné
-        </Button>
+        <>
+          <p className="flex min-h-12 items-center justify-center gap-2 rounded-control bg-surface-container text-label-lg text-on-surface-variant @max-[17rem]:text-label-md">
+            <Check className="size-5" aria-hidden />
+            Abonné
+          </p>
+          <Button variant="text" fullWidth className="@max-[17rem]:px-1" onClick={() => { setError(''); setConfirmer(true) }} aria-label={`Ne plus suivre ${name}`}>
+            Ne plus suivre
+          </Button>
+        </>
       )}
       {error && !confirmer && (
         <p role="alert" className="text-body-sm text-error">

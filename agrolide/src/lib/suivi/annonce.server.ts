@@ -9,7 +9,7 @@ import { AGROLIDE_ID, estOrganisation } from './organisation'
 export interface Publication {
   /** Qui publie : `poste_par` d'une opportunité ; le compte agrolide pour un événement publié depuis l'administration. */
   auteurId: string | null | undefined
-  type: 'evenement' | 'opportunite'
+  type: 'evenement' | 'opportunite' | 'formation' | 'document'
   categorie: CategoriePush
   /** Message d'alerte d'intérêt général (inchangé pour les publications d'un simple membre). */
   titreAlerte: string
