@@ -73,6 +73,18 @@ Sorties : `src/components/brand/geometrie.ts` (consommé par `PlanSoleil`, `Sill
 `public/design-assets/{soleil,anneau,horizon,sillons,feuille,arche,fenetre,emblem-eclate,emblem-noir,emblem-blanc,emblem-contour}.svg`, `scripts/forme/primitives.json` (mesures, résidus, IoU).
 Résidus moyens 0,2 à 0,9 px ; IoU de contrôle 0,95 à 0,99. Règles d'usage : page `/design-system#grammaire`.
 
+## Formes alternatives à l'arche (`formes_alternatives.py`)
+Six propositions (pétale, goutte, alvéole, colline, encoche solaire, galet) comparées sur la page `/design-system/formes`, sans rien
+remplacer sur le site. Python standard uniquement (pas de venv) : chaque forme est une fonction (largeur, hauteur) qui produit un
+tracé SVG propre (lignes, arcs, Bézier), échantillonné pour mesurer la part de photo conservée, le centre optique du chiffre
+(plus grand cercle inscrit) et la plage sûre d'un titre dans la vignette.
+```bash
+python scripts/forme/formes_alternatives.py
+```
+Sorties : `public/design-assets/formes-alternatives/<forme>-<format>.svg` (portrait, paysage, pastille, vignette ; `currentColor`,
+à ouvrir dans Illustrator ou à coller dans Photoshop), `src/app/design-system/formes/formes-alternatives.ts` (généré),
+`scripts/forme/formes-alternatives.json` (mesures). Ajouter une forme = ajouter une fonction dans `FORMES`.
+
 ## Formes retirées (12/11/2026)
 L'emblème « plein » (silhouette, le « cercle à sillons ») et l'arche des marqueurs (dôme + sillon accolé) sont retirés du design
 system : la silhouette pleine se confondait avec l'identité d'une autre marque et le marqueur ne coïncidait qu'à 85 % avec l'emblème.

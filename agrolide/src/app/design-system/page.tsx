@@ -304,6 +304,7 @@ export default function DesignSystemPage() {
             </div>
 
             <h3 className="mb-3 mt-10 text-title-md">L’arche (le dôme), la fenêtre et l’emblème éclaté</h3>
+            <p className="mb-4 text-body-sm"><a href="/design-system/formes" className="underline">Comparatif de formes alternatives à l’arche</a> (en cours de décision).</p>
             <p className="mb-4 max-w-3xl text-body-md text-on-surface-variant">
               L’<strong>arche</strong> est le dôme de l’emblème : sa silhouette au-dessus de la première ligne blanche. La <strong>fenêtre</strong> est son ciel.
               L’<strong>éclaté</strong> pose sous le dôme les trois pièces du bas (la colline, le grand sillon, la feuille), détachées de l’anneau : chaque pièce
