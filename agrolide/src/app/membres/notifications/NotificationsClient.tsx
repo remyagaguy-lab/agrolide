@@ -146,7 +146,7 @@ export default function NotificationsClient() {
           <div className="min-w-0 flex-1">
             <h1 className="font-heading text-title-lg font-bold leading-tight text-on-surface">agrolide</h1>
             <p className="truncate text-label-md text-on-surface-variant" aria-live="polite">
-              {loading ? 'Chargement…' : nonLues > 0 ? `${nonLues} nouveau${nonLues > 1 ? 'x' : ''} message${nonLues > 1 ? 's' : ''}` : 'Messages du réseau agrolide'}
+              {loading ? 'Chargement…' : nonLues > 0 ? `${nonLues} nouveau${nonLues > 1 ? 'x' : ''} message${nonLues > 1 ? 's' : ''}` : 'Notifications'}
             </p>
           </div>
           <Link
