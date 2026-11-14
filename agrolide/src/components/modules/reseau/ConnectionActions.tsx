@@ -29,7 +29,6 @@ export interface ConnectionActionsProps {
   /** Organisation (Partenaire, compte agrolide) : seul « Suivre » est proposé, ni invitation ni message. */
   organisation?: boolean
   suivi?: boolean
-  alertes?: boolean
 }
 
 /**
@@ -37,7 +36,7 @@ export interface ConnectionActionsProps {
  * Se connecter → Invitation envoyée (retirable) ; Accepter / Ignorer ; Message.
  * L'état est mis à jour tout de suite, sans recharger la page, et annoncé aux lecteurs d'écran.
  */
-export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact, libelleEnAttente = 'Invitation envoyée', principal = false, organisation = false, suivi = false, alertes = true }: ConnectionActionsProps) {
+export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact, libelleEnAttente = 'Invitation envoyée', principal = false, organisation = false, suivi = false }: ConnectionActionsProps) {
   const [state, setState] = React.useState<ConnectionState>(initialState)
   const [connectionId, setConnectionId] = React.useState<string | null>(initialId)
   const [pending, startTransition] = React.useTransition()
@@ -105,7 +104,7 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
       notify(`Invitation de ${name} ignorée.`)
     })
 
-  if (organisation) return <SuivreOrganisation organisationId={memberId} name={name} suivi={suivi} alertes={alertes} principal={principal} />
+  if (organisation) return <SuivreOrganisation organisationId={memberId} name={name} suivi={suivi} principal={principal} />
 
   return (
     <div className="flex flex-col gap-2">

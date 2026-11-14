@@ -2,29 +2,31 @@
 
 import * as React from 'react'
 import { Button } from '@/components/ui/Button'
+import { Modal, ModalContent, ModalDescription, ModalFooter, ModalHeader, ModalTitle } from '@/components/ui/Modal'
 import { useToast } from '@/components/ui/Toast'
-import { nePlusSuivreOrganisation, reglerAlertesOrganisation, suivreOrganisation } from '@/app/actions/suivi'
-import { Bell, Check, UserPlus } from '@/components/ui/icons'
+import { nePlusSuivreOrganisation, suivreOrganisation } from '@/app/actions/suivi'
+import { AGROLIDE_ID } from '@/lib/suivi/organisation'
+import { Check, UserPlus } from '@/components/ui/icons'
 
 export interface SuivreOrganisationProps {
   organisationId: string
   name: string
   suivi: boolean
-  /** Alertes de publication activées pour cette organisation (vrai par défaut). */
-  alertes: boolean
   principal?: boolean
 }
 
 /**
- * Le seul geste proposé pour une organisation : Suivre / Abonné, avec « Ne plus suivre » et un réglage des alertes.
- * Une organisation ne reçoit pas d'invitation de connexion ; ses abonnés ne sont visibles que d'elle.
+ * Le seul geste proposé pour une organisation : « Suivre », puis « Abonné ».
+ * Se désabonner demande une confirmation qui rappelle les alertes perdues. Une organisation ne reçoit pas d'invitation de
+ * connexion ; ses abonnés ne sont visibles que d'elle.
  */
-export function SuivreOrganisation({ organisationId, name, suivi: initial, alertes: alertesInitiales, principal = false }: SuivreOrganisationProps) {
+export function SuivreOrganisation({ organisationId, name, suivi: initial, principal = false }: SuivreOrganisationProps) {
   const [suivi, setSuivi] = React.useState(initial)
-  const [alertes, setAlertes] = React.useState(alertesInitiales)
+  const [confirmer, setConfirmer] = React.useState(false)
   const [pending, startTransition] = React.useTransition()
   const [error, setError] = React.useState('')
   const { toast } = useToast()
+  const estAgrolide = organisationId === AGROLIDE_ID
 
   const run = (task: () => Promise<void>) => {
     setError('')
@@ -42,8 +44,7 @@ export function SuivreOrganisation({ organisationId, name, suivi: initial, alert
       const res = await suivreOrganisation(organisationId)
       if ('error' in res) return setError(res.error)
       setSuivi(true)
-      setAlertes(true)
-      toast({ title: `Vous suivez ${name}.`, variant: 'success' })
+      toast({ title: estAgrolide ? `Vous suivez ${name} : vous recevrez ses alertes.` : `Vous suivez ${name}.`, variant: 'success' })
     })
 
   const arreter = () =>
@@ -51,15 +52,8 @@ export function SuivreOrganisation({ organisationId, name, suivi: initial, alert
       const res = await nePlusSuivreOrganisation(organisationId)
       if ('error' in res) return setError(res.error)
       setSuivi(false)
+      setConfirmer(false)
       toast({ title: `Vous ne suivez plus ${name}.`, variant: 'success' })
-    })
-
-  const regler = () =>
-    run(async () => {
-      const res = await reglerAlertesOrganisation(organisationId, !alertes)
-      if ('error' in res) return setError(res.error)
-      setAlertes(!alertes)
-      toast({ title: alertes ? `Alertes de ${name} coupées.` : `Alertes de ${name} rétablies.`, variant: 'success' })
     })
 
   return (
@@ -70,27 +64,42 @@ export function SuivreOrganisation({ organisationId, name, suivi: initial, alert
           Suivre
         </Button>
       ) : (
-        <>
-          <p className="flex min-h-12 items-center justify-center gap-2 rounded-control bg-surface-container text-label-lg text-on-surface-variant @max-[17rem]:text-label-md">
-            <Check className="size-5" aria-hidden />
-            Abonné
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-2">
-            <Button variant="text" className="@max-[17rem]:px-1" onClick={regler} disabled={pending} aria-label={alertes ? `Couper les alertes de ${name}` : `Rétablir les alertes de ${name}`}>
-              <Bell className="size-4" aria-hidden />
-              {alertes ? 'Couper les alertes' : 'Rétablir les alertes'}
-            </Button>
-            <Button variant="text" className="@max-[17rem]:px-1" onClick={arreter} disabled={pending} aria-label={`Ne plus suivre ${name}`}>
-              Ne plus suivre
-            </Button>
-          </div>
-        </>
+        <Button variant="outline" fullWidth className="@max-[17rem]:px-2" onClick={() => { setError(''); setConfirmer(true) }} aria-label={`Abonné à ${name} : ne plus suivre`}>
+          <Check className="size-5" aria-hidden />
+          Abonné
+        </Button>
       )}
-      {error && (
+      {error && !confirmer && (
         <p role="alert" className="text-body-sm text-error">
           {error}
         </p>
       )}
+
+      <Modal open={confirmer} onOpenChange={(v) => !pending && setConfirmer(v)}>
+        <ModalContent>
+          <ModalHeader>
+            <ModalTitle>Ne plus suivre {name} ?</ModalTitle>
+            <ModalDescription>
+              {estAgrolide
+                ? 'Vous ne recevrez plus les alertes d’opportunités, d’événements ni les autres notifications de la plateforme. Vous pourrez vous réabonner à tout moment.'
+                : `Vous ne recevrez plus les alertes liées aux publications de ${name}. Vous pourrez vous réabonner à tout moment.`}
+            </ModalDescription>
+          </ModalHeader>
+          {error && (
+            <p role="alert" className="text-body-sm text-error">
+              {error}
+            </p>
+          )}
+          <ModalFooter>
+            <Button variant="outline" onClick={() => setConfirmer(false)} disabled={pending}>
+              Rester abonné
+            </Button>
+            <Button variant="danger" onClick={arreter} loading={pending}>
+              Ne plus suivre
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </div>
   )
 }

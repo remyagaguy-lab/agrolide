@@ -1,7 +1,7 @@
 import 'server-only'
 import { and, desc, eq, inArray, isNull, or } from 'drizzle-orm'
 import { db } from '@/db'
-import { user_connections, users } from '@/db/schema'
+import { suivis_organisations, user_connections, users } from '@/db/schema'
 import { type ConnectionState, type MemberSummary } from './profil'
 import { carte, SELECT_CARTE, type LigneCarte } from './annuaire'
 import { normaliser } from './texte'
@@ -55,6 +55,18 @@ export async function fetchInvitations(viewerId: string) {
     recues: recues.map((r) => versLigne(r, 'pending_received')),
     envoyees: envoyees.map((r) => versLigne(r, 'pending_sent')),
   }
+}
+
+/** Organisations que je suis (Partenaires, compte agrolide), les plus récemment suivies d'abord. Seules mes propres lignes sont lues. */
+export async function fetchOrganisationsSuivies(viewerId: string): Promise<MemberSummary[]> {
+  const rows = await db
+    .select({ notifier: suivis_organisations.notifier, ...SELECT_CARTE })
+    .from(suivis_organisations)
+    .innerJoin(users, eq(users.id, suivis_organisations.organisation_id))
+    .where(eq(suivis_organisations.suiveur_id, viewerId))
+    .orderBy(desc(suivis_organisations.created_at))
+    .limit(LIMITE)
+  return rows.map(({ notifier, ...ligne }) => ({ ...carte(ligne, 'none', null), suivi: true, alertes: notifier }))
 }
 
 export type TriRelations = 'recentes' | 'nom'

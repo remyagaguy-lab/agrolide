@@ -12,7 +12,7 @@ import { MemberCard } from '@/components/modules/reseau/MemberCard'
 import { RelationCard } from '@/components/modules/reseau/RelationCard'
 import { SuggestionGrid } from '@/components/modules/reseau/SuggestionGrid'
 import { fetchAnnuaire, fetchMonProfil, parseFilters } from '@/lib/reseau/annuaire'
-import { fetchInvitations, fetchRelations, type TriRelations } from '@/lib/reseau/mon-reseau'
+import { fetchInvitations, fetchOrganisationsSuivies, fetchRelations, type TriRelations } from '@/lib/reseau/mon-reseau'
 import { profilSuffisant } from '@/lib/reseau/suggestions'
 import type { ProfilPourScore } from '@/lib/reseau/suggestions'
 
@@ -79,7 +79,12 @@ export default async function MonReseauPage({ searchParams }: { searchParams: Se
 
       {onglet === 'suggestions' && <Suggestions viewerId={userId} />}
       {onglet === 'invitations' && <Invitations recues={invitations.recues} envoyees={invitations.envoyees} />}
-      {onglet === 'relations' && <Relations viewerId={userId} q={premier(brut.q).trim().slice(0, 80)} tri={premier(brut.tri) === 'nom' ? 'nom' : 'recentes'} />}
+      {onglet === 'relations' && (
+        <>
+          <Relations viewerId={userId} q={premier(brut.q).trim().slice(0, 80)} tri={premier(brut.tri) === 'nom' ? 'nom' : 'recentes'} />
+          <OrganisationsSuivies viewerId={userId} />
+        </>
+      )}
     </div>
   )
 }
@@ -158,6 +163,24 @@ function Invitations({ recues, envoyees }: { recues: Awaited<ReturnType<typeof f
         )}
       </div>
     </div>
+  )
+}
+
+/** Organisations suivies : une carte chacune, avec le même bouton « Abonné » que dans l'annuaire. Rien si je n'en suis aucune. */
+async function OrganisationsSuivies({ viewerId }: { viewerId: string }) {
+  const organisations = await fetchOrganisationsSuivies(viewerId)
+  if (organisations.length === 0) return null
+  return (
+    <section aria-labelledby="orgs-suivies" className="mt-10 space-y-4">
+      <h2 id="orgs-suivies" className="text-title-md font-bold text-on-surface">Organisations suivies</h2>
+      <ul className="grid grid-cols-2 gap-2.5 sm:gap-4 xl:grid-cols-3">
+        {organisations.map((m) => (
+          <li key={m.id}>
+            <MemberCard member={m} />
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }
 

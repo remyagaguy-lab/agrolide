@@ -3,10 +3,11 @@
 import { and, eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 import { db } from '@/db'
-import { suivis_organisations, users } from '@/db/schema'
+import { abonnements_push, suivis_organisations, users } from '@/db/schema'
+import { serialiserCategories, TOUTES_CATEGORIES } from '@/lib/push/categories'
 import { auth } from '@/lib/auth/server'
 import { existeBlocage } from '@/lib/reseau/blocage.server'
-import { estOrganisation } from '@/lib/suivi/organisation'
+import { AGROLIDE_ID, estOrganisation } from '@/lib/suivi/organisation'
 
 type Resultat = { success: true } | { error: string }
 
@@ -25,6 +26,10 @@ export async function suivreOrganisation(organisationId: string): Promise<Result
   const refus = await organisationSuivable(userId, organisationId)
   if (refus) return { error: refus }
   await db.insert(suivis_organisations).values({ suiveur_id: userId, organisation_id: organisationId, notifier: true }).onConflictDoNothing()
+  // Suivre agrolide, c'est recevoir toutes les alertes de la plateforme : les alertes sont activées sur les appareils déjà enregistrés.
+  if (organisationId === AGROLIDE_ID) {
+    await db.update(abonnements_push).set({ categories: serialiserCategories(TOUTES_CATEGORIES) }).where(eq(abonnements_push.user_id, userId))
+  }
   revalidatePath('/membres', 'layout')
   return { success: true }
 }

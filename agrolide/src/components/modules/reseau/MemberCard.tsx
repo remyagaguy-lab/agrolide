@@ -137,9 +137,8 @@ export function MemberCard({
           libelleEnAttente={libelleEnAttente}
           organisation={estOrganisation(member.id, member.categorie)}
           suivi={member.suivi}
-          alertes={member.alertes}
         />
-        {onIgnore && (
+        {onIgnore && !estOrganisation(member.id, member.categorie) && (
           <Button variant="text" fullWidth onClick={onIgnore} aria-label={`Ignorer la suggestion : ${name}`}>
             Ignorer
           </Button>

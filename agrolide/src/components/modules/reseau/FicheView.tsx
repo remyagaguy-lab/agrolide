@@ -135,7 +135,6 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
                     ouvertContact={membre.ouvert_contact}
                     organisation={estOrganisation(membre.id, membre.categorie)}
                     suivi={fiche.suivi}
-                    alertes={fiche.alertes}
                   />
                 </div>
                 <MembreActionsMenu memberId={membre.id} name={name} />
