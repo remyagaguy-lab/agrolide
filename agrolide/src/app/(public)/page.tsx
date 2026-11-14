@@ -86,7 +86,7 @@ export default async function HomePage() {
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
         {/* le soleil du design system remplace l'horizon : même vert que le ciel, il se lève de la gauche (bureau) ou surplombe la photo (mobile) ; un écho clair le cerne */}
         <div className="absolute inset-0 z-[1] [--R:100vw] md:[--R:min(44vw,40rem)]">
-          <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="50%" y="calc(100% - 276px - var(--R))" rayon="var(--R)" className="md:hidden" />
+          <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="50%" y="calc(100% - 322px - var(--R))" rayon="var(--R)" className="md:hidden" />
           <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="calc(var(--R) * 0.3)" y="50%" rayon="var(--R)" className="hidden md:block" />
         </div>
         <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
@@ -126,7 +126,7 @@ export default async function HomePage() {
               priority
               sizes="(min-width: 768px) 0px, 135vw"
               quality={80}
-              className="object-cover object-[78%_40%]"
+              className="object-cover object-[78%_0%]"
             />
           </div>
         </div>
