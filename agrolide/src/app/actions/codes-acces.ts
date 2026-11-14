@@ -2,7 +2,7 @@
 
 import { desc, eq, isNull, and } from 'drizzle-orm'
 import { db } from '@/db'
-import { codes_acces_formation, formations, users } from '@/db/schema'
+import { codes_acces_formation, formations, reponses_inscription_formation, users } from '@/db/schema'
 import { requireAdmin } from '@/lib/auth/admin'
 import { genererCode } from '@/lib/formations/acces.server'
 import { nettoyerTextes } from '@/lib/utils/sans-emoji'
@@ -91,4 +91,42 @@ export async function genererLot(entree: { lot: string; formationId: string | nu
 export async function supprimerCode(id: string) {
   await exigerAdmin()
   await db.delete(codes_acces_formation).where(and(eq(codes_acces_formation.id, id), isNull(codes_acces_formation.utilise_par)))
+}
+
+export interface ReponseInscription {
+  id: string
+  membre: string
+  formationTitre: string | null
+  projet: string | null
+  domaine: string | null
+  objectif: string | null
+  attentes: string | null
+  le: string | null
+}
+
+/** Réponses des membres au questionnaire d'inscription (lecture admin). Liste vide tant que la migration 0017 n'est pas appliquée. */
+export async function listerReponsesInscription(): Promise<ReponseInscription[]> {
+  await exigerAdmin()
+  try {
+    const l = await db
+      .select({
+        id: reponses_inscription_formation.id,
+        prenom: users.prenom,
+        nom: users.nom,
+        formationTitre: formations.titre,
+        projet: reponses_inscription_formation.projet,
+        domaine: reponses_inscription_formation.domaine,
+        objectif: reponses_inscription_formation.objectif,
+        attentes: reponses_inscription_formation.attentes,
+        le: reponses_inscription_formation.created_at,
+      })
+      .from(reponses_inscription_formation)
+      .leftJoin(users, eq(reponses_inscription_formation.membre_id, users.id))
+      .leftJoin(formations, eq(reponses_inscription_formation.formation_id, formations.id))
+      .orderBy(desc(reponses_inscription_formation.created_at))
+      .limit(500)
+    return l.map((r) => ({ ...r, membre: [r.prenom, r.nom].filter(Boolean).join(' ') || 'Membre' }))
+  } catch {
+    return []
+  }
 }

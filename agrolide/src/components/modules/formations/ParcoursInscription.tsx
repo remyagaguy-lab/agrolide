@@ -3,16 +3,19 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Loader2, CheckCircle2, Lock } from "@/components/ui/icons";
+import { DOMAINES, LONGUEUR_MAX, PROJETS, validerReponses } from "@/lib/formations/questionnaire";
 
-const ETAPES = ["Conditions", "Code", "Confirmation", "Accès"] as const;
+const ETAPES = ["Conditions", "Profil", "Code", "Confirmation", "Accès"] as const;
 
+const champ =
+  "w-full min-h-12 rounded-lg border border-outline bg-surface-container-lowest px-3 text-body-md text-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary";
 const principal =
   "inline-flex w-full items-center justify-center rounded-lg bg-tertiary px-[28px] py-[12px] font-heading text-body-md font-bold text-on-tertiary transition-colors hover:bg-accent-sun min-h-[48px] disabled:opacity-70";
 const secondaire =
   "inline-flex w-full items-center justify-center rounded-lg border border-outline px-[28px] py-[12px] font-heading text-body-md font-bold text-on-surface transition-colors hover:bg-surface-container-low min-h-[48px] disabled:opacity-70";
 
 /**
- * Inscription à une formation Agrolide, en quatre étapes : conditions, code d'accès, confirmation, accès.
+ * Inscription à une formation Agrolide, en cinq étapes : conditions, questionnaire, code d'accès, confirmation, accès.
  * Le code n'est consommé qu'à la confirmation (étape 3) ; la vérification de l'étape 2 ne le consomme pas.
  * Tout contrôle réel est refait côté serveur par /api/formations/[id]/enroll.
  */
@@ -32,6 +35,7 @@ export function ParcoursInscription({
   const [etape, setEtape] = useState(0);
   const [accepte, setAccepte] = useState(false);
   const [code, setCode] = useState("");
+  const [reponses, setReponses] = useState({ projet: "", domaine: "", objectif: "", attentes: "" });
   const [erreur, setErreur] = useState("");
   const [occupe, setOccupe] = useState(false);
 
@@ -42,7 +46,7 @@ export function ParcoursInscription({
       const res = await fetch(`/api/formations/${formationId}/enroll`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ code, verifier }),
+        body: JSON.stringify({ code, verifier, reponses }),
       });
       if (res.ok) return true;
       const corps = (await res.json().catch(() => ({}))) as { error?: string };
@@ -101,10 +105,53 @@ export function ParcoursInscription({
         <form
           className="space-y-3"
           noValidate
+          onSubmit={(e) => {
+            e.preventDefault();
+            const v = validerReponses(reponses);
+            if (!v.ok) return setErreur(v.erreur);
+            setReponses(v.reponses);
+            setErreur("");
+            setEtape(2);
+          }}
+        >
+          <p className="text-body-md font-bold text-on-surface">Parlez-nous de votre projet</p>
+          <p className="text-body-sm text-on-surface-variant">Quelques questions pour adapter votre accompagnement. Toutes sont obligatoires.</p>
+          <div className="space-y-1">
+            <label htmlFor={`projet-${formationId}`} className="text-label-lg font-bold text-on-surface">Avez-vous un projet agricole ?</label>
+            <select id={`projet-${formationId}`} value={reponses.projet} onChange={(e) => setReponses({ ...reponses, projet: e.target.value })} className={champ}>
+              <option value="">Choisir…</option>
+              {PROJETS.map((p) => <option key={p.valeur} value={p.valeur}>{p.libelle}</option>)}
+            </select>
+          </div>
+          <div className="space-y-1">
+            <label htmlFor={`domaine-${formationId}`} className="text-label-lg font-bold text-on-surface">Dans quel domaine ?</label>
+            <select id={`domaine-${formationId}`} value={reponses.domaine} onChange={(e) => setReponses({ ...reponses, domaine: e.target.value })} className={champ}>
+              <option value="">Choisir…</option>
+              {DOMAINES.map((d) => <option key={d} value={d}>{d}</option>)}
+            </select>
+          </div>
+          <div className="space-y-1">
+            <label htmlFor={`objectif-${formationId}`} className="text-label-lg font-bold text-on-surface">Quel est votre objectif avec cette formation ?</label>
+            <textarea id={`objectif-${formationId}`} rows={3} maxLength={LONGUEUR_MAX} value={reponses.objectif} onChange={(e) => setReponses({ ...reponses, objectif: e.target.value })} className={`${champ} py-2`} />
+          </div>
+          <div className="space-y-1">
+            <label htmlFor={`attentes-${formationId}`} className="text-label-lg font-bold text-on-surface">Qu&apos;attendez-vous à la fin de la formation ?</label>
+            <textarea id={`attentes-${formationId}`} rows={3} maxLength={LONGUEUR_MAX} value={reponses.attentes} onChange={(e) => setReponses({ ...reponses, attentes: e.target.value })} className={`${champ} py-2`} />
+          </div>
+          {erreur ? <p role="alert" className="text-body-sm text-error">{erreur}</p> : null}
+          <button type="submit" className={principal}>Continuer</button>
+          <button type="button" onClick={() => { setErreur(""); setEtape(0); }} className={secondaire}>Retour</button>
+        </form>
+      )}
+
+      {etape === 2 && (
+        <form
+          className="space-y-3"
+          noValidate
           onSubmit={async (e) => {
             e.preventDefault();
             if (occupe) return;
-            if (await appeler(true)) setEtape(2);
+            if (await appeler(true)) setEtape(3);
           }}
         >
           <label htmlFor={`code-${formationId}`} className="flex items-center gap-2 text-label-lg font-bold text-on-surface">
@@ -134,11 +181,11 @@ export function ParcoursInscription({
             {occupe && <Loader2 className="mr-2 size-4 animate-spin" aria-hidden />}
             {occupe ? "Vérification du code…" : "Vérifier le code"}
           </button>
-          <button type="button" onClick={() => { setErreur(""); setEtape(0); }} className={secondaire}>Retour</button>
+          <button type="button" onClick={() => { setErreur(""); setEtape(1); }} className={secondaire}>Retour</button>
         </form>
       )}
 
-      {etape === 2 && (
+      {etape === 3 && (
         <div className="space-y-3">
           <p className="text-body-md font-bold text-on-surface">Confirmer votre inscription</p>
           <p className="text-body-sm text-on-surface-variant">
@@ -151,7 +198,7 @@ export function ParcoursInscription({
             onClick={async () => {
               if (occupe) return;
               if (await appeler(false)) {
-                setEtape(3);
+                setEtape(4);
                 router.refresh();
               }
             }}
@@ -160,11 +207,11 @@ export function ParcoursInscription({
             {occupe && <Loader2 className="mr-2 size-4 animate-spin" aria-hidden />}
             {occupe ? "Inscription en cours…" : "Confirmer mon inscription"}
           </button>
-          <button type="button" disabled={occupe} onClick={() => { setErreur(""); setEtape(1); }} className={secondaire}>Retour</button>
+          <button type="button" disabled={occupe} onClick={() => { setErreur(""); setEtape(2); }} className={secondaire}>Retour</button>
         </div>
       )}
 
-      {etape === 3 && (
+      {etape === 4 && (
         <div className="space-y-4" role="status">
           <p className="flex items-start gap-3 text-body-md font-bold text-on-surface">
             <CheckCircle2 className="mt-0.5 size-6 shrink-0 text-primary" aria-hidden />

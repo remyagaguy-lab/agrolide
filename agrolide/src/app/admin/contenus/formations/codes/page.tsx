@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react"
 import Link from "next/link"
 import { Download, Lock } from "@/components/ui/icons"
-import { formationsPourCodes, genererLot, listerCodes, supprimerCode, type CodeAcces } from "@/app/actions/codes-acces"
+import { formationsPourCodes, genererLot, listerCodes, listerReponsesInscription, supprimerCode, type CodeAcces, type ReponseInscription } from "@/app/actions/codes-acces"
 
 const champ = "min-h-11 w-full rounded-lg border border-outline bg-surface-container-lowest px-3 text-body-md text-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
 const date = (iso: string | null) => (iso ? new Date(iso).toLocaleDateString("fr-FR") : "")
@@ -16,6 +16,7 @@ function statut(c: CodeAcces) {
 
 export default function CodesAccesPage() {
   const [codes, setCodes] = useState<CodeAcces[]>([])
+  const [reponses, setReponses] = useState<ReponseInscription[]>([])
   const [formations, setFormations] = useState<{ id: string; titre: string }[]>([])
   const [lot, setLot] = useState("")
   const [formationId, setFormationId] = useState("")
@@ -26,8 +27,9 @@ export default function CodesAccesPage() {
   const [occupe, setOccupe] = useState(false)
 
   const charger = useCallback(async () => {
-    const [c, f] = await Promise.all([listerCodes(), formationsPourCodes()])
+    const [c, f, r] = await Promise.all([listerCodes(), formationsPourCodes(), listerReponsesInscription()])
     setCodes(c)
+    setReponses(r)
     setFormations(f)
   }, [])
   useEffect(() => { charger().catch(() => setMessage("Chargement impossible.")) }, [charger])
@@ -141,6 +143,24 @@ export default function CodesAccesPage() {
             </tbody>
           </table>
         </div>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-title-md font-bold text-on-surface">Réponses au questionnaire d&apos;inscription</h2>
+        {reponses.length === 0 ? (
+          <p className="text-body-md text-on-surface-variant">Aucune réponse pour l&apos;instant.</p>
+        ) : (
+          <ul className="space-y-3">
+            {reponses.map((r) => (
+              <li key={r.id} className="space-y-1 rounded-card border border-outline-variant bg-surface-container-lowest p-4 text-body-sm">
+                <p className="font-bold text-on-surface">{r.membre} · {r.formationTitre ?? "Formation"} · {date(r.le)}</p>
+                <p className="text-on-surface-variant">Projet : {r.projet === "oui" ? "en cours" : r.projet === "idee" ? "idée" : "aucun"} · Domaine : {r.domaine}</p>
+                <p className="text-on-surface-variant">Objectif : {r.objectif}</p>
+                <p className="text-on-surface-variant">Attentes : {r.attentes}</p>
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
     </div>
   )

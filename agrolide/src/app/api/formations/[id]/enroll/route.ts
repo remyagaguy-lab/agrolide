@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/db";
-import { formations, inscriptions_formation } from "@/db/schema";
+import { formations, inscriptions_formation, reponses_inscription_formation } from "@/db/schema";
+import { validerReponses, type Reponses } from "@/lib/formations/questionnaire";
 import { auth } from "@/lib/auth/server";
 import { notifier } from "@/lib/notifications.server";
 import { and, eq } from "drizzle-orm";
@@ -33,9 +34,14 @@ export async function POST(
       const exigeCode = await formationExigeCode(formationId);
       if (exigeCode === null) return NextResponse.json({ error: "Formation introuvable" }, { status: 404 });
       let codeId: string | null = null;
+      let reponses: Reponses | null = null;
       if (exigeCode) {
-        const corps = (await request.json().catch(() => ({}))) as { code?: unknown; verifier?: unknown };
+        const corps = (await request.json().catch(() => ({}))) as { code?: unknown; verifier?: unknown; reponses?: unknown };
         const saisie = typeof corps.code === "string" ? corps.code : "";
+        // Le questionnaire est obligatoire et validé ici, pas seulement dans le formulaire.
+        const rep = validerReponses(corps.reponses);
+        if (!rep.ok) return NextResponse.json({ error: rep.erreur }, { status: 400 });
+        reponses = rep.reponses;
         if (corps.verifier === true) {
           // Étape « saisie du code » : on vérifie sans consommer.
           const verdict = await verifierCode(saisie, formationId);
@@ -67,6 +73,14 @@ export async function POST(
         // L'inscription a échoué : le code n'est pas perdu.
         if (codeId) await libererCode(codeId, userId).catch(() => {});
         throw e;
+      }
+
+      if (reponses) {
+        // Les réponses sont un plus : si leur enregistrement échoue (table absente), l'inscription reste valable.
+        await db
+          .insert(reponses_inscription_formation)
+          .values({ membre_id: userId, formation_id: formationId, ...reponses, created_at: new Date().toISOString() })
+          .catch((e) => console.error("Réponses d'inscription non enregistrées:", e));
       }
 
       const formation = await db.query.formations.findFirst({
