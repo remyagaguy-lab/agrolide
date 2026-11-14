@@ -111,6 +111,7 @@ ${exo}
 }
 
 const P = J.poulet, A = J.attieke, M = J.maraichage;
+// (l'aquaculture est définie plus bas : const Q)
 const poulet = page({
   c: P, dev: 'FCFA', filiere: { pe: 'Pessimiste (mortalité + 2 pts, aliment + 4 %, prix − 3 %)', cr: 'Crise (aliment + 15 %, prix − 4 %)' },
   intro: `**Ama Koffi** (nom fictif), technicienne d'élevage, souhaite créer une ferme de poulets de chair en périphérie de Lomé, au Togo, après quatre ans d'expérience dans une ferme avicole. Elle vise une clientèle de rôtisseurs, de restaurants et de revendeurs du marché. Forme juridique envisagée : SARL à associé unique. Monnaie : FCFA.`,
@@ -181,6 +182,32 @@ const maraichage = page({
 **Critères de réussite :** vos calculs sont reproductibles, chaque prix porte une source et une date, et chaque levier de mitigation est chiffré.`,
 });
 
+const Q = J.aquaculture;
+const aqVendus = 36000 * 0.85, aqKg = aqVendus * 0.42, aqAliment = (aqKg * 1.6 * 580) / 1e6;
+const aquaculture = page({
+  c: Q, dev: 'FCFA', filiere: { pe: 'Pessimiste (mortalité + 5 points, aliment + 8 %, prix − 5 %)', cr: "Crise de l'aliment (aliment + 20 %, prix − 5 %)" },
+  intro: `**Abdou Sarr** (nom fictif) crée une ferme de tilapia en étangs dans la région de Thiès, au Sénégal, après quelques années comme technicien dans une station piscicole. Il vend du poisson frais entier à des grossistes, à des restaurants et à des poissonneries de Dakar et de Thiès. Forme juridique envisagée : SARL à associé unique. Monnaie : FCFA.`,
+  hyp: `- **Capacité :** 12 étangs de 500 m² (6 000 m²), **3 alevins par m²**, soit 18 000 alevins par cycle ; **2 cycles par an** (environ 6 mois chacun, vide et assec compris), soit **36 000 alevins mis en charge par an**.
+- **Performance :** survie de 85 %, poids de vente de 420 g, indice de conversion de 1,6 kg d'aliment par kg de poisson produit.
+- **Volumes :** 36 000 × 85 % = ${fr(aqVendus)} poissons vendus, soit environ **${fr(aqKg)} kg** par an.
+- **Prix :** alevin 50 FCFA ; aliment 580 FCFA/kg ; poisson frais vendu **2 600 FCFA/kg** en gros (prix par hypothèse, à relever sur votre marché avec la date).
+- **Année 1 :** 70 % de la pleine production (mise en eau et premier cycle décalé) ; les coûts suivent la production.
+- **Chiffre d'affaires de croisière :** ${fr(aqKg)} kg × 2 600 FCFA = **${f1(Q.re.ca)} M FCFA**.`,
+  charges: `Aliment : ${fr(aqKg)} kg × 1,6 × 580 FCFA = **${f1(aqAliment)} M FCFA**, soit **${pc(aqAliment / Q.re.cv)} des charges variables** ; alevins : 36 000 × 50 FCFA = 1,8 M ; main-d'œuvre saisonnière (nourrissage de pointe, pêche) 1,2 M ; énergie et pompage 2,0 M ; glace et transport 1,2 M ; chaux, fertilisation et soins 0,6 M, soit **${f1(Q.re.cv)} M FCFA** au total. Charges fixes : ${f1(Q.re.fixes)} M FCFA par an. Personnel permanent (chef de ferme, ouvrier, gardien) : ${f1(Q.re.personnel)} M FCFA par an.`,
+  specifique: `- **L'aliment mène le résultat.** Il pèse ${pc(aqAliment / Q.re.cv)} des charges variables : une hausse de 20 % du prix de l'aliment (avec un prix de vente en recul de 5 %) fait tomber le DSCR à ${f2(Q.cr.dscr)}. C'est la première variable à suivre, avant même le prix de vente.
+- **Une marge de sécurité étroite.** Taux de marge sur coûts variables de ${pc(Q.re.tm)}, mais ${f1(Q.re.cf_tot)} M FCFA de coûts fixes totaux : le seuil de rentabilité atteint ${pc(Q.re.seuil / Q.re.ca)} du chiffre d'affaires, soit une marge de sécurité de ${pc(1 - Q.re.seuil / Q.re.ca)}.
+- **DSCR :** ${f2(Q.re.dscr)} en réaliste, ${f2(Q.pe.dscr)} en pessimiste, ${f2(Q.cr.dscr)} en crise de l'aliment : dès que la survie baisse de cinq points ou que l'aliment renchérit, l'annuité n'est plus couverte.
+- **VAN :** ${sg(Q.re.van)} M FCFA en réaliste (TRI ${pc(Q.re.tri, 1)}, délai de récupération au-delà de 5 ans) ; ${sg(Q.pe.van)} M en pessimiste. L'aquaculture immobilise beaucoup (étangs, eau) pour un retour lent : un financement à durée longue ou une subvention d'équipement change le projet.
+- **Leviers :** réduire la mortalité (qualité de l'eau, alevins de station reconnue, densité maîtrisée), améliorer l'indice de conversion (aliment adapté, rationnement), contrats avec des restaurateurs, vente de poisson de plus de 500 g à meilleur prix, plan de repli en cas de manque d'eau. Chaque levier doit être chiffré avec le même modèle.`,
+  lecons: `Revoyez la leçon 5.7 (seuil, DSCR, VAN, TRI) et la leçon 6.1 (risques). Pour le contexte sénégalais (statuts, foncier, financeurs), voyez la fiche Cadre pays du Sénégal ; vérifiez en outre les autorisations propres à l'aquaculture (prélèvement d'eau, rejets, agrément sanitaire) auprès de l'administration compétente, avec date et source.`,
+  exo: `1. Recalculez la production et le chiffre d'affaires avec **votre** densité, **votre** survie et **votre** poids de vente.
+2. De combien de points faut-il améliorer l'indice de conversion pour que le DSCR pessimiste dépasse 1,0 ?
+3. Que devient le seuil de rentabilité si vous ajoutez 4 étangs (investissement de 3,3 M FCFA, mêmes performances, même personnel) ?
+4. Proposez deux mesures chiffrées pour réduire la mortalité et en estimer l'effet sur le chiffre d'affaires.
+
+**Critères de réussite :** vos calculs sont reproductibles, chaque hypothèse porte une source et une date, et chaque mesure de mitigation est chiffrée.`,
+});
+
 const mk = (slug, titre, resume, contenu, pays) => `import type { CasChiffre } from './types'
 
 export const ${slug.replace(/-/g, '_')}: CasChiffre = {
@@ -196,6 +223,7 @@ fs.mkdirSync('src/content/cas-chiffres', { recursive: true });
 fs.writeFileSync('src/content/cas-chiffres/poulet-togo.ts', mk('poulet-togo', 'Poulet de chair au Togo', `Élevage de 36 000 poulets par an : marge fine, DSCR de ${f2(P.re.dscr)} en réaliste, ${f2(P.pe.dscr)} en pessimiste.`, poulet, 'Togo').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/attieke-cote-d-ivoire.ts', mk('attieke-cote-d-ivoire', "Transformation du manioc en attiéké en Côte d'Ivoire", `Unité de 300 t de manioc par an : DSCR de ${f2(A.re.dscr)} en réaliste, ${f2(A.pe.dscr)} en pessimiste.`, attieke, "Côte d'Ivoire").replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/maraichage-benin.ts', mk('maraichage-benin', 'Maraîchage irrigué (tomate, chou) au Bénin', `Exploitation de 3 ha : DSCR de ${f2(M.re.dscr)} en réaliste, ${f2(M.pe.dscr)} en pessimiste, marge de sécurité étroite.`, maraichage, 'Bénin').replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/aquaculture-senegal.ts', mk('aquaculture-senegal', 'Pisciculture de tilapia en étangs au Sénégal', `Ferme de 12 étangs : DSCR de ${f2(Q.re.dscr)} en réaliste, ${f2(Q.pe.dscr)} en pessimiste, l'aliment pèse ${pc(aqAliment / Q.re.cv)} des charges variables.`, aquaculture, 'Sénégal').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/types.ts', `export interface CasChiffre {
   slug: string
   titre: string
@@ -209,9 +237,10 @@ fs.writeFileSync('src/content/cas-chiffres/index.ts', `import type { CasChiffre 
 import { poulet_togo } from './poulet-togo'
 import { attieke_cote_d_ivoire } from './attieke-cote-d-ivoire'
 import { maraichage_benin } from './maraichage-benin'
+import { aquaculture_senegal } from './aquaculture-senegal'
 
 /** Cas chiffrés complémentaires au cas fil rouge Diap Touré (calculés par scripts/modeles_bp/cas_chiffres.py). */
-export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin]
+export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal]
 
 export const trouverCas = (slug: string) => CAS_CHIFFRES.find((c) => c.slug === slug)
 `.replace(/\n/g, '\r\n'));

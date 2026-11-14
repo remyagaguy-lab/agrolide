@@ -176,6 +176,37 @@ def maraichage():
     )
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# CAS 4 — Pisciculture de tilapia en étangs, Sénégal — FCFA (point 11, module « Aquaculture »)
+# ----------------------------------------------------------------------------------------------------------------
+def aquaculture():
+    etangs, surface_etang, densite, cycles = 12, 500, 3.0, 2        # 12 étangs de 500 m², 3 alevins/m², 2 cycles/an
+    alevins_cycle = etangs * surface_etang * densite                 # 18 000 alevins par cycle
+    alevins_an = alevins_cycle * cycles                              # 36 000 alevins par an
+    survie, poids, fcr = 0.85, 0.42, 1.6                             # survie 85 %, 420 g à la vente, indice de conversion 1,6
+    px_kg, px_alevin, px_aliment = 0.002600, 0.000050, 0.000580      # M FCFA : 2 600 FCFA/kg de poisson, 50 FCFA/alevin, 580 FCFA/kg d'aliment
+
+    def ca(s):
+        vendus = alevins_an * (survie - s.get("mort", 0.0))
+        return vendus * poids * px_kg * 1000 * s.get("prix", 1.0) / 1000
+
+    def cv(s):
+        vendus = alevins_an * survie                                  # l'aliment est acheté pour la production attendue
+        aliment = vendus * poids * fcr * px_aliment * 1000 * s.get("aliment", 1.0) / 1000
+        return aliment + alevins_an * px_alevin + 1.2 + 2.0 + 1.2 + 0.6   # + main-d'œuvre saisonnière, énergie, glace et transport, chaux et santé
+
+    return dict(
+        nom="Pisciculture de tilapia en étangs — Sénégal", monnaie="FCFA", etangs=etangs, surface_etang=surface_etang, densite=densite,
+        cycles=cycles, alevins_an=alevins_an, survie=survie, poids=poids, fcr=fcr, px_kg=px_kg, px_alevin=px_alevin, px_aliment=px_aliment,
+        ca=ca, cv=cv, personnel=4.8, fixes=1.8, montee=0.7, cv_suit_ca=True,
+        immos=[("Frais d'établissement et autorisations", 0.5, 5), ("Creusement et aménagement de 12 étangs (6 000 m²)", 10.0, 20),
+               ("Forage, pompe et réseau d'eau", 4.5, 10), ("Magasin d'aliment et local de conditionnement", 4.0, 20),
+               ("Équipements (filets, balance, aérateurs, glacières)", 3.5, 5), ("Clôture et gardiennage", 1.5, 10), ("Imprévus (capitalisés)", 1.5, 10)],
+        bfr=5.0, pct_apport=0.30, taux=0.09, duree=7, differe=1, **{"is": 0.30}, act=0.10,
+        scen=dict(re=dict(), pe=dict(mort=0.05, aliment=1.08, prix=0.95), cr=dict(aliment=1.20, prix=0.95)),
+    )
+
+
 def rapport(c):
     out = {}
     for k, s in c["scen"].items():
@@ -199,7 +230,7 @@ def afficher(c, out):
 
 
 if __name__ == "__main__":
-    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage()}
+    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage(), "aquaculture": aquaculture()}
     res = {k: rapport(c) for k, c in cas.items()}
     for k, c in cas.items():
         afficher(c, res[k])

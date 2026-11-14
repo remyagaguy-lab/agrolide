@@ -1,19 +1,13 @@
 import type { Filiere } from './types'
 import { elevage } from './elevage'
 import { maraichage } from './maraichage'
+import { aquaculture } from './aquaculture'
 
 /** Modules par filière : optionnels, hors de la séquence de 23 leçons (aucun effet sur la progression ni sur le certificat). */
 export const FILIERES: Filiere[] = [
   elevage,
   maraichage,
-  {
-    slug: 'aquaculture',
-    titre: 'Aquaculture',
-    resume: "Étangs, cages et bacs : alevinage, croissance, aliment, débouchés.",
-    statut: 'a_venir',
-    lecons: [],
-    prevu: '31/01/2027',
-  },
+  aquaculture,
   {
     slug: 'transformation',
     titre: 'Transformation et conditionnement',
