@@ -22,6 +22,17 @@ export const revalidate = 3600;
 
 const ALT_HERO = "Une agricultrice souriante s'accroupit près d'un énorme chou dans son champ"
 
+/** Masques selon le disque du soleil (centre --sx --sy, rayon --R, définis sur la section) : la photo n'apparaît que HORS du disque, le motif que DANS le disque. */
+const DISQUE = "radial-gradient(circle at var(--sx) var(--sy), "
+const masqueHorsSoleil: React.CSSProperties = {
+  maskImage: `${DISQUE}transparent calc(var(--R) - 2px), black calc(var(--R) - 1px))`,
+  WebkitMaskImage: `${DISQUE}transparent calc(var(--R) - 2px), black calc(var(--R) - 1px))`,
+}
+const masqueDansSoleil: React.CSSProperties = {
+  maskImage: `${DISQUE}black var(--R), transparent calc(var(--R) + 1px))`,
+  WebkitMaskImage: `${DISQUE}black var(--R), transparent calc(var(--R) + 1px))`,
+}
+
 const ROLES = ["Étudiants en agronomie", "Ingénieurs agronomes", "Chercheurs", "Entreprises agricoles", "Investisseurs"]
 /** Nombre de ressources affiché si la base ne répond pas (dernier total connu). */
 const RESSOURCES_PAR_DEFAUT = 273
@@ -81,13 +92,27 @@ export default async function HomePage() {
           mobile : horizon horizontal, la photo sous le texte. ── */}
       {/* Un seul fond vert pour l'en-tête et les chiffres, séparés par un filet ; le motif ne couvre que l'en-tête. */}
       <div className="relative isolate overflow-hidden bg-surface-brand text-on-surface-brand">
-      <section className="relative overflow-hidden py-0">
-        {/* texture du motif sur le ciel vert de l'en-tête : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne ; les chiffres, dessous, sont sans motif */}
-        <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
+      <section className="relative overflow-hidden py-0 [--R:180vw] [--sx:50%] [--sy:calc(100%_-_332px_-_var(--R))] md:[--R:max(min(44vw,40rem),20rem)] md:[--sx:calc(var(--R)*0.3)] md:[--sy:50%]">
+        {/* la photo : un seul calque de la taille de l'en-tête, découpé par le disque du soleil (le masque suit le soleil à toutes les largeurs, aucun coin de photo ne dépasse) */}
+        <div className="absolute inset-0 z-0" style={masqueHorsSoleil}>
+          {/* mobile : bande sous le texte ; bureau : tout l'espace à droite du centre du soleil */}
+          <div className="absolute inset-x-0 bottom-0 h-[380px] md:inset-y-0 md:left-[var(--sx)] md:right-0 md:h-auto">
+            <Image
+              src="/hero-accueil-hd.webp"
+              alt={ALT_HERO}
+              fill
+              priority
+              sizes="(min-width: 768px) 100vw, 135vw"
+              quality={90}
+              className="object-cover object-[78%_0%] md:object-[72%_20%]"
+            />
+          </div>
+        </div>
         {/* le soleil du design system remplace l'horizon : même vert que le ciel, il se lève de la gauche (bureau) ou surplombe la photo (mobile) ; un écho clair le cerne */}
-        <div className="absolute inset-0 z-[1] [--R:100vw] md:[--R:min(44vw,40rem)]">
-          <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="50%" y="calc(100% - 322px - var(--R))" rayon="var(--R)" className="md:hidden" />
-          <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="calc(var(--R) * 0.3)" y="50%" rayon="var(--R)" className="hidden md:block" />
+        <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="var(--sx)" y="var(--sy)" rayon="var(--R)" className="z-[1]" />
+        {/* texture du motif : sur le vert du soleil seulement (comme avant, sur le ciel vert, jamais sur la photo) ; les chiffres, dessous, sont sans motif */}
+        <div className="absolute inset-0 z-[2]" style={masqueDansSoleil}>
+          <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
         </div>
         <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
           <div className="md:w-[44%] md:max-w-[34rem] md:-translate-y-8 lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
@@ -116,33 +141,8 @@ export default async function HomePage() {
           </div>
         </div>
 
-        {/* mobile : la photo sous le texte, le soleil la surplombe (arc en bas) */}
-        <div className="relative z-0 md:hidden">
-          <div className="relative h-[340px]">
-            <Image
-              src="/hero-accueil-hd.webp"
-              alt={ALT_HERO}
-              fill
-              priority
-              sizes="(min-width: 768px) 0px, 135vw"
-              quality={80}
-              className="object-cover object-[78%_0%]"
-            />
-          </div>
-        </div>
-
-        {/* bureau : la photo à droite ; le soleil (calque ci-dessus) la recouvre à gauche */}
-        <div className="absolute right-0 top-0 z-0 hidden h-full w-[calc(60%+3rem)] md:block xl:w-[calc(54%+4.5rem)]">
-          <Image
-            src="/hero-accueil-hd.webp"
-            alt={ALT_HERO}
-            fill
-            priority
-            sizes="(min-width: 1280px) 70vw, 140vw"
-            quality={90}
-            className="object-cover object-[72%_20%]"
-          />
-        </div>
+        {/* mobile : espace réservé à la photo sous le texte (la photo est le calque ci-dessus) */}
+        <div className="h-[340px] md:hidden" aria-hidden="true" />
 
       </section>
 
