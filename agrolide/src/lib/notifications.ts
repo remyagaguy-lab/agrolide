@@ -65,3 +65,33 @@ export function estMasquee(n: Pick<NotificationItem, 'lu' | 'created_at'>, maint
   if (!n.lu || !n.created_at) return false
   return n.created_at < limiteMasquageLues(maintenant)
 }
+
+/** Clé de jour locale (AAAA-MM-JJ) d'une date ISO ; vide si la date est absente ou invalide. */
+function cleJour(iso: string | null | undefined): string {
+  if (!iso) return ''
+  const d = new Date(iso)
+  if (Number.isNaN(d.getTime())) return ''
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
+/** « Aujourd'hui », « Hier » ou « 12 novembre 2026 » ; « Plus ancien » sans date. */
+export function libelleJour(iso: string | null | undefined, maintenant: Date = new Date()): string {
+  const cle = cleJour(iso)
+  if (!cle) return 'Plus ancien'
+  if (cle === cleJour(maintenant.toISOString())) return "Aujourd'hui"
+  const hier = new Date(maintenant.getTime() - 86_400_000)
+  if (cle === cleJour(hier.toISOString())) return 'Hier'
+  return new Date(iso as string).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+}
+
+/** Regroupe les notifications par jour, dans l'ordre de la liste reçue (la plus récente d'abord). */
+export function grouperParJour<T extends { created_at: string | null }>(items: T[], maintenant: Date = new Date()): Array<{ jour: string; items: T[] }> {
+  const groupes: Array<{ cle: string; jour: string; items: T[] }> = []
+  for (const it of items) {
+    const cle = cleJour(it.created_at)
+    const dernier = groupes[groupes.length - 1]
+    if (dernier && dernier.cle === cle) dernier.items.push(it)
+    else groupes.push({ cle, jour: libelleJour(it.created_at, maintenant), items: [it] })
+  }
+  return groupes.map(({ jour, items }) => ({ jour, items }))
+}

@@ -1,21 +1,104 @@
 'use client'
 
-import React, { useCallback, useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { getNotifications, markAllAsReadAction, markAsReadAction } from '@/app/actions/notifications'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { depuis, libelleType, lienSur, type NotificationItem } from '@/lib/notifications'
+import { useRouter } from 'next/navigation'
+import { getNotifications, markAsReadAction } from '@/app/actions/notifications'
+import { Emblem } from '@/components/brand'
+import { depuis, grouperParJour, libelleType, lienSur, type NotificationItem } from '@/lib/notifications'
 
-import { Bell, CheckCircle2, Loader2, Settings } from "@/components/ui/icons"
+import { ArrowRight, Check, CheckCheck, Loader2, Settings } from '@/components/ui/icons'
+
+const heure = (iso: string | null) => {
+  if (!iso) return ''
+  const d = new Date(iso)
+  return Number.isNaN(d.getTime()) ? '' : d.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })
+}
+
+/** Coches de lecture : une grise = reçu, deux vertes = vu. */
+function Coches({ lu }: { lu: boolean }) {
+  return lu ? (
+    <span className="inline-flex items-center gap-0.5 text-success">
+      <CheckCheck className="size-4" aria-hidden />
+      <span className="sr-only">Vu</span>
+    </span>
+  ) : (
+    <span className="inline-flex items-center text-on-surface-muted">
+      <Check className="size-4" aria-hidden />
+      <span className="sr-only">Reçu, pas encore vu</span>
+    </span>
+  )
+}
+
+/**
+ * Notifications présentées comme une messagerie à sens unique : l'expéditeur est agrolide, il n'y a aucune zone de réponse.
+ * Une bulle affichée à l'écran est marquée comme vue (deux coches vertes), sans action du membre.
+ */
+function Bulle({ n, nouveau, onVue, onOuvrir }: { n: NotificationItem; nouveau: boolean; onVue: (id: string) => void; onOuvrir: (n: NotificationItem) => void }) {
+  const ref = useRef<HTMLLIElement>(null)
+
+  useEffect(() => {
+    if (n.lu) return
+    const el = ref.current
+    if (!el || typeof IntersectionObserver === 'undefined') return
+    let minuteur: number | undefined
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        window.clearTimeout(minuteur)
+        // Vue = bien affichée (au moins 60 %) pendant une seconde : un simple défilement rapide ne compte pas.
+        if (e.isIntersecting) minuteur = window.setTimeout(() => onVue(n.id), 1000)
+      },
+      { threshold: 0.6 },
+    )
+    obs.observe(el)
+    return () => {
+      window.clearTimeout(minuteur)
+      obs.disconnect()
+    }
+  }, [n.id, n.lu, onVue])
+
+  return (
+    <li ref={ref} className="flex items-end gap-2">
+      <span className="mb-1 flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-container" aria-hidden>
+        <Emblem variant="couleur" className="size-5" />
+      </span>
+      <div className="max-w-[85%] sm:max-w-[70%]">
+        <div className={`rounded-2xl rounded-bl-sm border px-4 py-3 shadow-sm ${nouveau ? 'border-primary bg-primary-container' : 'border-outline-variant bg-surface-container-lowest'}`}>
+          <p className="text-label-sm font-bold uppercase tracking-wider text-primary">{libelleType(n.type)}</p>
+          <p className="mt-1 whitespace-pre-line text-body-md text-on-surface">{n.contenu}</p>
+          {n.lien && (
+            <button
+              type="button"
+              onClick={() => onOuvrir(n)}
+              className="ag-state mt-2 inline-flex min-h-11 items-center gap-1.5 rounded-control text-label-lg font-bold text-primary"
+            >
+              Ouvrir <ArrowRight className="size-4" aria-hidden />
+            </button>
+          )}
+          <p className="mt-1 flex items-center justify-end gap-1.5 text-label-sm text-on-surface-muted">
+            <time dateTime={n.created_at ?? undefined} title={depuis(n.created_at)}>
+              {heure(n.created_at)}
+            </time>
+            <Coches lu={n.lu} />
+          </p>
+        </div>
+      </div>
+    </li>
+  )
+}
+
 export default function NotificationsClient() {
   const router = useRouter()
   const [notifications, setNotifications] = useState<NotificationItem[]>([])
+  const [nouvelles, setNouvelles] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
-  const [markingAll, setMarkingAll] = useState(false)
 
   const fetchData = useCallback(async () => {
     try {
-      setNotifications(await getNotifications())
+      const liste = await getNotifications()
+      setNotifications(liste)
+      // Les messages non lus à l'ouverture restent surlignés jusqu'à la fin de la visite.
+      setNouvelles((prev) => new Set([...prev, ...liste.filter((n) => !n.lu).map((n) => n.id)]))
     } catch (e) {
       console.error('[notifications] chargement impossible :', e)
     } finally {
@@ -27,111 +110,65 @@ export default function NotificationsClient() {
     void fetchData()
   }, [fetchData])
 
-  const markAllAsRead = async () => {
-    setMarkingAll(true)
-    try {
-      await markAllAsReadAction()
-      await fetchData()
-    } finally {
-      setMarkingAll(false)
-    }
-  }
+  const marquerVue = useCallback((id: string) => {
+    setNotifications((prev) => prev.map((x) => (x.id === id ? { ...x, lu: true } : x)))
+    void markAsReadAction(id).catch(() => {})
+  }, [])
 
-  const handleNotifClick = async (n: NotificationItem) => {
-    if (!n.lu) {
-      setNotifications((prev) => prev.map((x) => (x.id === n.id ? { ...x, lu: true } : x)))
-      void markAsReadAction(n.id).catch(() => fetchData())
-    }
-    // Sans lien propre à la notification, on reste sur cette page : elle vient juste d'être marquée comme lue.
+  const ouvrir = (n: NotificationItem) => {
+    if (!n.lu) marquerVue(n.id)
     if (n.lien) router.push(lienSur(n.lien))
   }
 
-  const unreadCount = notifications.filter((n) => !n.lu).length
+  // Du plus ancien au plus récent, comme une conversation : le plus récent en bas.
+  const groupes = grouperParJour([...notifications].reverse())
+  const nonLues = notifications.filter((n) => !n.lu).length
 
   return (
-    <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-6">
-
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant p-5">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-primary-container text-primary flex items-center justify-center border border-outline-variant shadow-sm">
-            <Bell size={20} aria-hidden />
-          </div>
-          <div>
-            <h1 className="text-xl font-bold text-on-surface font-heading">Notifications</h1>
-            <p className="text-xs text-on-surface-muted mt-0.5" aria-live="polite">
-              {loading
-                ? 'Chargement…'
-                : `Vous avez ${unreadCount} notification${unreadCount !== 1 ? 's' : ''} non lue${unreadCount !== 1 ? 's' : ''}`}
-            </p>
-          </div>
+    <div className="mx-auto max-w-[720px] space-y-4 px-2 py-6 md:px-4">
+      <header className="flex items-center gap-3 rounded-2xl border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
+        <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary-container" aria-hidden>
+          <Emblem variant="couleur" className="size-7" />
+        </span>
+        <div className="min-w-0 flex-1">
+          <h1 className="font-heading text-title-lg font-bold text-on-surface">agrolide</h1>
+          <p className="text-label-md text-on-surface-variant" aria-live="polite">
+            {loading ? 'Chargement…' : nonLues > 0 ? `${nonLues} nouveau${nonLues > 1 ? 'x' : ''} message${nonLues > 1 ? 's' : ''}` : 'Messages du réseau, à sens unique'}
+          </p>
         </div>
-
-        <div className="flex items-center gap-2">
         <Link
           href="/membres/notifications/reglages"
           aria-label="Réglages des notifications"
-          className="ag-state inline-flex size-11 items-center justify-center rounded-full border border-outline-variant text-on-surface-variant"
+          className="ag-state inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-outline-variant text-on-surface-variant"
         >
           <Settings className="size-5" aria-hidden />
         </Link>
-        {unreadCount > 0 && (
-          <button
-            type="button"
-            onClick={markAllAsRead}
-            disabled={markingAll}
-            className="bg-surface-container-lowest border border-outline-variant text-on-surface-variant px-3 py-1.5 rounded-lg text-xs font-bold hover:border-primary transition-colors flex items-center gap-1.5 shadow-sm min-h-11"
-          >
-            {markingAll ? <Loader2 className="size-4 animate-spin" aria-hidden /> : <CheckCircle2 className="size-4" aria-hidden />}
-            Tout marquer comme lu
-          </button>
-        )}
+      </header>
+
+      {loading ? (
+        <div className="p-8 text-center text-on-surface-muted">
+          <Loader2 className="mx-auto size-5 animate-spin" aria-label="Chargement" />
         </div>
-      </div>
-
-      <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
-        {loading ? (
-          <div className="p-8 text-center text-on-surface-muted"><Loader2 className="size-5 animate-spin mx-auto" aria-label="Chargement" /></div>
-        ) : notifications.length === 0 ? (
-          <div className="p-12 text-center flex flex-col items-center justify-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-surface-container-low text-outline flex items-center justify-center border border-outline-variant">
-              <Bell className="size-5" aria-hidden />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-on-surface">Aucune notification</h3>
-              <p className="text-xs text-on-surface-muted">Vous êtes à jour !</p>
-            </div>
-          </div>
-        ) : (
-          <ul className="divide-y divide-outline-variant">
-            {notifications.map((notif) => (
-              <li key={notif.id}>
-                <button
-                  type="button"
-                  onClick={() => handleNotifClick(notif)}
-                  className={`w-full text-left p-4 hover:bg-surface-container-low transition-colors flex gap-3 ${!notif.lu ? 'bg-surface-container-low' : ''}`}
-                >
-                  <div className="mt-1.5 shrink-0" aria-hidden>
-                    <div className={notif.lu ? 'size-2 rounded-full bg-outline-variant' : 'size-2 rounded-full bg-primary'} />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-label-sm uppercase tracking-wider text-on-surface-muted">
-                      {libelleType(notif.type)}
-                      {!notif.lu && <span className="sr-only">, non lue</span>}
-                    </p>
-                    <p className={`mt-0.5 text-sm ${!notif.lu ? 'font-bold text-on-surface' : 'font-medium text-on-surface-variant'}`}>
-                      {notif.contenu}
-                    </p>
-                    {depuis(notif.created_at) && (
-                      <p className="text-label-sm text-on-surface-muted mt-1.5">{depuis(notif.created_at)}</p>
-                    )}
-                  </div>
-                </button>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-
+      ) : notifications.length === 0 ? (
+        <div className="rounded-2xl border border-outline-variant bg-surface-container-lowest p-10 text-center">
+          <p className="text-title-sm font-bold text-on-surface">Aucun message pour le moment</p>
+          <p className="mt-1 text-body-sm text-on-surface-variant">Les nouveautés du réseau apparaîtront ici.</p>
+        </div>
+      ) : (
+        <div className="space-y-5 rounded-2xl bg-surface-container-low p-3 sm:p-4">
+          {groupes.map((g) => (
+            <section key={g.jour} aria-label={g.jour} className="space-y-3">
+              <h2 className="mx-auto w-fit rounded-full bg-surface-container-high px-3 py-1 text-label-md font-medium text-on-surface-variant">{g.jour}</h2>
+              <ul className="space-y-3">
+                {g.items.map((n) => (
+                  <Bulle key={n.id} n={n} nouveau={nouvelles.has(n.id) && !n.lu} onVue={marquerVue} onOuvrir={ouvrir} />
+                ))}
+              </ul>
+            </section>
+          ))}
+          <p className="text-center text-label-sm text-on-surface-muted">Ces messages ne permettent pas de répondre.</p>
+        </div>
+      )}
     </div>
   )
 }
