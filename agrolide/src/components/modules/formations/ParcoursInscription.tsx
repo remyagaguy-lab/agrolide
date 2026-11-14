@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { Loader2, CheckCircle2, Lock } from "@/components/ui/icons";
 import { DOMAINES, LONGUEUR_MAX, PROJETS, validerReponses } from "@/lib/formations/questionnaire";
 
-const ETAPES = ["Conditions", "Profil", "Code", "Confirmation", "Accès"] as const;
+const ETAPES = ["Conditions", "Code", "Profil", "Confirmation", "Accès"] as const;
 
 const champ =
   "w-full min-h-12 rounded-lg border border-outline bg-surface-container-lowest px-3 text-body-md text-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary";
@@ -15,7 +15,7 @@ const secondaire =
   "inline-flex w-full items-center justify-center rounded-lg border border-outline px-[28px] py-[12px] font-heading text-body-md font-bold text-on-surface transition-colors hover:bg-surface-container-low min-h-[48px] disabled:opacity-70";
 
 /**
- * Inscription à une formation Agrolide, en cinq étapes : conditions, questionnaire, code d'accès, confirmation, accès.
+ * Inscription à une formation Agrolide, en cinq étapes : conditions, code d'accès, questionnaire, confirmation, accès.
  * Le code n'est consommé qu'à la confirmation (étape 3) ; la vérification de l'étape 2 ne le consomme pas.
  * Tout contrôle réel est refait côté serveur par /api/formations/[id]/enroll.
  */
@@ -105,13 +105,54 @@ export function ParcoursInscription({
         <form
           className="space-y-3"
           noValidate
+          onSubmit={async (e) => {
+            e.preventDefault();
+            if (occupe) return;
+            if (await appeler(true)) setEtape(2);
+          }}
+        >
+          <label htmlFor={`code-${formationId}`} className="flex items-center gap-2 text-label-lg font-bold text-on-surface">
+            <Lock className="size-4 text-on-surface-variant" aria-hidden />
+            Code d&apos;accès
+          </label>
+          <input
+            id={`code-${formationId}`}
+            value={code}
+            onChange={(e) => {
+              setCode(e.target.value.toUpperCase());
+              setErreur("");
+            }}
+            placeholder="AGRO-XXXX-XXXX"
+            autoComplete="off"
+            autoCapitalize="characters"
+            spellCheck={false}
+            aria-invalid={!!erreur}
+            aria-describedby={`aide-${formationId}`}
+            className="min-h-12 w-full rounded-lg border border-outline bg-surface-container-lowest px-4 font-mono text-body-md tracking-wider text-on-surface placeholder:text-on-surface-variant focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+          />
+          {erreur ? <p role="alert" className="text-body-sm text-error">{erreur}</p> : null}
+          <p id={`aide-${formationId}`} className="text-body-sm text-on-surface-variant">
+            Saisissez le code reçu. Il n&apos;est pas encore utilisé à cette étape : seule la confirmation finale l&apos;utilise.
+          </p>
+          <button type="submit" disabled={occupe || code.trim().length < 6} className={principal}>
+            {occupe && <Loader2 className="mr-2 size-4 animate-spin" aria-hidden />}
+            {occupe ? "Vérification du code…" : "Vérifier le code"}
+          </button>
+          <button type="button" onClick={() => { setErreur(""); setEtape(0); }} className={secondaire}>Retour</button>
+        </form>
+      )}
+
+      {etape === 2 && (
+        <form
+          className="space-y-3"
+          noValidate
           onSubmit={(e) => {
             e.preventDefault();
             const v = validerReponses(reponses);
             if (!v.ok) return setErreur(v.erreur);
             setReponses(v.reponses);
             setErreur("");
-            setEtape(2);
+            setEtape(3);
           }}
         >
           <p className="text-body-md font-bold text-on-surface">Parlez-nous de votre projet</p>
@@ -140,47 +181,6 @@ export function ParcoursInscription({
           </div>
           {erreur ? <p role="alert" className="text-body-sm text-error">{erreur}</p> : null}
           <button type="submit" className={principal}>Continuer</button>
-          <button type="button" onClick={() => { setErreur(""); setEtape(0); }} className={secondaire}>Retour</button>
-        </form>
-      )}
-
-      {etape === 2 && (
-        <form
-          className="space-y-3"
-          noValidate
-          onSubmit={async (e) => {
-            e.preventDefault();
-            if (occupe) return;
-            if (await appeler(true)) setEtape(3);
-          }}
-        >
-          <label htmlFor={`code-${formationId}`} className="flex items-center gap-2 text-label-lg font-bold text-on-surface">
-            <Lock className="size-4 text-on-surface-variant" aria-hidden />
-            Code d&apos;accès
-          </label>
-          <input
-            id={`code-${formationId}`}
-            value={code}
-            onChange={(e) => {
-              setCode(e.target.value.toUpperCase());
-              setErreur("");
-            }}
-            placeholder="AGRO-XXXX-XXXX"
-            autoComplete="off"
-            autoCapitalize="characters"
-            spellCheck={false}
-            aria-invalid={!!erreur}
-            aria-describedby={`aide-${formationId}`}
-            className="min-h-12 w-full rounded-lg border border-outline bg-surface-container-lowest px-4 font-mono text-body-md tracking-wider text-on-surface placeholder:text-on-surface-variant focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
-          />
-          {erreur ? <p role="alert" className="text-body-sm text-error">{erreur}</p> : null}
-          <p id={`aide-${formationId}`} className="text-body-sm text-on-surface-variant">
-            Saisissez le code reçu. Il n&apos;est pas encore utilisé à cette étape : seule la confirmation l&apos;utilise.
-          </p>
-          <button type="submit" disabled={occupe || code.trim().length < 6} className={principal}>
-            {occupe && <Loader2 className="mr-2 size-4 animate-spin" aria-hidden />}
-            {occupe ? "Vérification du code…" : "Vérifier le code"}
-          </button>
           <button type="button" onClick={() => { setErreur(""); setEtape(1); }} className={secondaire}>Retour</button>
         </form>
       )}

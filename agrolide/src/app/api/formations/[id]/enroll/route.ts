@@ -38,16 +38,16 @@ export async function POST(
       if (exigeCode) {
         const corps = (await request.json().catch(() => ({}))) as { code?: unknown; verifier?: unknown; reponses?: unknown };
         const saisie = typeof corps.code === "string" ? corps.code : "";
-        // Le questionnaire est obligatoire et validé ici, pas seulement dans le formulaire.
-        const rep = validerReponses(corps.reponses);
-        if (!rep.ok) return NextResponse.json({ error: rep.erreur }, { status: 400 });
-        reponses = rep.reponses;
         if (corps.verifier === true) {
           // Étape « saisie du code » : on vérifie sans consommer.
           const verdict = await verifierCode(saisie, formationId);
           if (!verdict.ok) return NextResponse.json({ error: verdict.erreur }, { status: 400 });
           return NextResponse.json({ success: true, verifie: true });
         }
+        // Le questionnaire est obligatoire à la confirmation et validé ici, pas seulement dans le formulaire.
+        const rep = validerReponses(corps.reponses);
+        if (!rep.ok) return NextResponse.json({ error: rep.erreur }, { status: 400 });
+        reponses = rep.reponses;
         const resultat = await consommerCode(saisie, userId, formationId);
         if (!resultat.ok) return NextResponse.json({ error: resultat.erreur }, { status: 400 });
         codeId = resultat.codeId;
