@@ -210,8 +210,8 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false, modeOrga
               <Input value={valeurs.nom} onChange={(e) => maj("nom", e.target.value)} autoComplete="organization" maxLength={120} />
             </FormField>
             <TypeOrganisationChamp valeur={valeurs.type_organisation} onChange={(t) => maj("type_organisation", t)} erreur={erreurs.type_organisation} required />
-            <FormField label="Mission ou activité principale" id="champ-specialite" error={erreurs.specialite} hint="Ce que fait votre organisation, en une phrase (par exemple : appui aux coopératives de producteurs de cacao).">
-              <Input value={valeurs.specialite} onChange={(e) => maj("specialite", e.target.value)} maxLength={150} />
+            <FormField label="Mission ou activité principale" id="champ-specialite" error={erreurs.specialite} hint={`Ce que fait votre organisation, en quelques phrases. ${valeurs.specialite.length} / 500 caractères.`}>
+              <Textarea value={valeurs.specialite} onChange={(e) => maj("specialite", e.target.value)} maxLength={500} rows={3} />
             </FormField>
           </>
         ) : (

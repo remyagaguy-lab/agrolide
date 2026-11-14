@@ -4,7 +4,7 @@ import { db } from "@/db"
 import { users, evenements, inscriptions_evenement, documents, opportunites, cotisations, visite_guidee } from "@/db/schema"
 import { and, asc, count, eq, desc, gte } from "drizzle-orm"
 import { completionProfil } from "@/lib/reseau/profil-schema"
-import { parseList } from "@/lib/reseau/profil"
+import { parseList, porteUnType } from "@/lib/reseau/profil"
 import { suiviFormations } from "@/lib/formations/suivi.server"
 import { compterInvitations, compterMessagesNonLus } from "@/lib/membres/compteurs.server"
 import { getAllFormations } from "@/lib/cache/public-queries"
@@ -65,6 +65,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
       photo_url: users.photo_url,
       categorie: users.categorie,
       est_organisation: users.est_organisation,
+      type_organisation: users.type_organisation,
       specialite: users.specialite,
       organisation: users.organisation,
       ville: users.ville,
@@ -195,7 +196,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
     gratuite: f.prix_fcfa === 0,
   }))
 
-  const profilCompletion = completionProfil({ ...profile, thematiques: parseList(profile.secteurs_expertise) })
+  const profilCompletion = completionProfil({ ...profile, thematiques: parseList(profile.secteurs_expertise) }, porteUnType(profile))
   const completion = profilCompletion.pourcentage
 
   // Membre neuf : rien de commencé (ni formation, ni inscription à un événement à venir).

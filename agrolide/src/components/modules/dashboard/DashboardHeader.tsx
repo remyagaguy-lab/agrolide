@@ -36,7 +36,7 @@ function categoryBadge(cat?: string | null): { label: string; variant: BadgeVari
  * jamais sous le texte, à gauche.
  */
 export function DashboardHeader({ userId, prenom, nom, email, photo_url, image, categorie, specialite, organisation, pays, ville }: DashboardHeaderProps) {
-  const displayName = prenom ? `${prenom}${nom ? ` ${nom}` : ""}` : "Membre"
+  const displayName = [prenom, nom].filter(Boolean).join(" ") || "Membre"
 
   const formattedDate = new Date().toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long" })
   const capitalizedDate = formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)

@@ -81,7 +81,7 @@ export const profilSchema = z.object({
 export const profilOrganisationSchema = z.object({
   nom: z.string().trim().min(2, "Le nom de l'organisation est requis (2 caractères au minimum).").max(120, "Nom de l'organisation : 120 caractères au maximum."),
   type_organisation: valeurLibre,
-  specialite: texte(150, 'Mission'),
+  specialite: texte(500, 'Mission'),
   pays: texte(60, 'Pays'),
   ville: texte(80, 'Ville'),
   biographie: texte(800, 'Présentation'),
