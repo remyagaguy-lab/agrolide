@@ -36,12 +36,12 @@ Voir le rapport du garde-fou : `npm run ed:check`.
 | Pas de ton institutionnel par défaut | La voix est celle d'un collègue qui connaît le sujet. Le registre Partenariat seul est plus sobre et factuel |
 | Citer n'est pas systématique | On source toujours, on cite selon le public et le contenu (voir `10-preuves-et-sources.md`) |
 | Chaque contenu vise un public et un registre | Les publics et les niveaux sont ceux de la taxonomie de la bibliothèque |
+| Quatre registres validés : Terrain, Parcours, Expertise, Partenariat | Regroupent les six publics de la bibliothèque en quatre façons d'écrire (validé par Remyaga le 2026-11-14) |
 
 ## Propositions à valider
 
 | Proposition | Pourquoi |
 |---|---|
-| Quatre registres : Terrain, Parcours, Expertise, Partenariat | Regroupe les six publics de la bibliothèque en quatre façons d'écrire |
 | Deux personas à créer : le producteur ou l'éleveur, le technicien ou conseiller | Manquaient. Le texte fondateur vise les producteurs. Fiches en brouillon dans `07-personas.md` |
 | Pilier 4 renommé « Recherche et plaidoyer » | Colle au quatrième frein du texte fondateur (sous-valorisation des connaissances scientifiques). L'ancien nom était « Souveraineté alimentaire et plaidoyer » |
 | Orthographe « agripreneur » | Le texte fondateur écrit « agri-preneur » avec un trait d'union. La charte et le site écrivent « agripreneur » |
