@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils/formatters'
 import { EncartInscription } from './EncartInscription'
 import { useAuth } from '@/lib/auth/client'
 import { obtenirPdf } from './pdf-precharge'
+import { estAuBas, pageCourante } from '@/lib/bibliotheque/lecteur'
 import { AnneauProgression, useTelechargementHorsLigne } from './useTelechargementHorsLigne'
 
 import { AlertTriangle, Check, ChevronLeft, ChevronRight, FileStack, FileText, Info, Download, Loader2, Maximize, X, ZoomIn, ZoomOut } from '@/components/ui/icons'
@@ -277,6 +278,8 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
       const cible = Math.min(Math.max(1, Math.round(n) || 1), Math.max(1, numPages))
       setPageNumber(cible)
       setSaisiePage(String(cible))
+      // Le défilement déclenché par ce saut ne doit pas écraser la page choisie (les dernières pages ne peuvent pas remonter en haut).
+      verrouJusqua.current = Date.now() + 800
       const zoneEl = defilRef.current
       if (!zoneEl) return
       if (viewMode === 'single') {
@@ -291,6 +294,7 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
 
   // Défilement continu : la page affichée dans la barre suit le défilement.
   const attente = useRef(false)
+  const verrouJusqua = useRef(0)
   const surDefilement = useCallback(() => {
     if (viewMode !== 'continuous' || attente.current) return
     attente.current = true
@@ -298,12 +302,10 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
       attente.current = false
       const zoneEl = defilRef.current
       if (!zoneEl) return
+      if (Date.now() < verrouJusqua.current) return
       const seuil = zoneEl.getBoundingClientRect().top + zoneEl.clientHeight * 0.35
-      let courante = 1
-      for (const p of zoneEl.querySelectorAll<HTMLElement>('[data-page]')) {
-        if (p.getBoundingClientRect().top <= seuil) courante = Number(p.dataset.page)
-        else break
-      }
+      const hauts = [...zoneEl.querySelectorAll<HTMLElement>('[data-page]')].map((p) => p.getBoundingClientRect().top)
+      const courante = pageCourante(hauts, seuil, estAuBas(zoneEl.scrollTop, zoneEl.clientHeight, zoneEl.scrollHeight))
       setPageNumber(courante)
       setSaisiePage(String(courante))
     })

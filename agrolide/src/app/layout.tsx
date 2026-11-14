@@ -1,3 +1,4 @@
+import { startupImages } from '@/lib/pwa-splash'
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { AuthProvider } from "@/lib/auth/client";
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image' },
   // Application installable : manifeste, et titre sous l'icône d'écran d'accueil sur iOS (l'icône vient de apple-icon.png).
   manifest: '/manifest.json',
-  appleWebApp: { capable: true, title: 'agrolide', statusBarStyle: 'default' },
+  appleWebApp: { capable: true, title: 'agrolide', statusBarStyle: 'default', startupImage: startupImages },
   formatDetection: { telephone: false },
 };
 

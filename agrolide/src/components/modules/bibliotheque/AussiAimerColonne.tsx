@@ -4,17 +4,17 @@ import { labelType, labelDomaine } from '@/lib/bibliotheque/taxonomie'
 
 export type DocSuggere = { id: string; titre: string; type_doc: string; thematique: string; domaine?: string | null }
 
-/** « Vous aimerez peut-être aussi » : colonne à droite sur ordinateur, bande défilante sous le lecteur sur téléphone. */
+/** « Documents similaires » : rangée défilante à l'horizontale (accroche à chaque carte), sous le lecteur. */
 export function AussiAimerColonne({ docs, mode = 'public' }: { docs: DocSuggere[]; mode?: 'membre' | 'public' }) {
   if (docs.length === 0) return null
   return (
-    <section aria-label="Vous aimerez peut-être aussi">
-      <h2 className="mb-3 text-title-md font-bold text-on-surface">Vous aimerez peut-être aussi</h2>
-      <ul className="flex snap-x gap-3 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">
+    <section aria-label="Documents similaires">
+      <h2 className="mb-3 text-title-md font-bold text-on-surface">Documents similaires</h2>
+      <ul className="-mx-3 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-3 px-3 pb-3 [scrollbar-width:none] sm:mx-0 sm:px-0 sm:scroll-px-0">
         {docs.map((d) => {
           const { Icone, fond } = (d.domaine && DOMAINES_VISUELS[d.domaine]) || DOMAINE_PAR_DEFAUT
           return (
-            <li key={d.id} className="w-[70%] shrink-0 snap-start sm:w-[45%] lg:w-auto">
+            <li key={d.id} className="w-[78%] shrink-0 snap-start sm:w-[45%] lg:w-[30%]">
               <Link
                 href={`${mode === 'membre' ? '/membres' : ''}/bibliotheque/${d.id}`}
                 className="group flex h-full min-h-14 items-start gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-3 transition-[border-color,box-shadow] duration-150 ease-standard hover:border-primary hover:shadow-elev-1"

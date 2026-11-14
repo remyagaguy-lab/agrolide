@@ -1021,7 +1021,7 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
         "Le TRI et la VAN ne permettent aucune conclusion"
       ],
       "correctAnswer": 0,
-      "explanation": "TRI > taux d'actualisation ⇔ VAN > 0 ; la fragilité apparaît dans les scénarios de crise."
+      "explanation": "TRI > taux d'actualisation équivaut à VAN > 0 ; la fragilité apparaît dans les scénarios de crise."
     }
   ],
   "cp_1": [

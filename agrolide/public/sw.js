@@ -196,7 +196,7 @@ self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification(titre, {
       body: typeof m.corps === 'string' ? m.corps : '',
-      icon: '/icons/icon-192.png',
+      icon: '/icons/icon-maskable-192.png',
       badge: '/icons/icon-monochrome-512.png',
       tag: typeof m.tag === 'string' ? m.tag : undefined,
       lang: 'fr',

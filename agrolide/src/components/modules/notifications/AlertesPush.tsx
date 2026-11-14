@@ -3,6 +3,7 @@
 import * as React from "react"
 import { Alert } from "@/components/ui/Alert"
 import { Button } from "@/components/ui/Button"
+import { ExplicationPermission } from "@/components/ui/ExplicationPermission"
 import { CATEGORIES_PUSH, TOUTES_CATEGORIES, type CategoriePush } from "@/lib/push/categories"
 import { activerPush, changerCategoriesPush, desactiverPush, lireEtatPush, type EtatPush } from "@/lib/push/client"
 
@@ -15,6 +16,7 @@ import { Bell, Loader2 } from "@/components/ui/icons"
 export function AlertesPush() {
   const [etat, setEtat] = React.useState<EtatPush | null>(null)
   const [occupe, setOccupe] = React.useState(false)
+  const [explication, setExplication] = React.useState(false)
   const [message, setMessage] = React.useState<{ type: "success" | "error" | "info"; texte: string } | null>(null)
 
   React.useEffect(() => {
@@ -94,7 +96,7 @@ export function AlertesPush() {
         )}
 
         {etat?.etat === "inactif" && (
-          <Button type="button" variant="secondary" onClick={activer} loading={occupe}>
+          <Button type="button" variant="secondary" onClick={() => setExplication(true)} loading={occupe}>
             <Bell className="size-5" aria-hidden />
             Activer les alertes
           </Button>
@@ -126,6 +128,14 @@ export function AlertesPush() {
             </div>
           </>
         )}
+
+        <ExplicationPermission
+          open={explication}
+          onOpenChange={setExplication}
+          titre="Recevoir les alertes ?"
+          pourquoi="Votre téléphone vous prévient quand un membre vous écrit ou qu’une opportunité est publiée, même application fermée. Il va vous demander l’autorisation d’afficher des notifications."
+          onAutoriser={() => void activer()}
+        />
 
         <div aria-live="polite" className="empty:hidden">
           {message && <Alert variant={message.type}>{message.texte}</Alert>}

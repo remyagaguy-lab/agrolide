@@ -4,7 +4,8 @@ import Breadcrumb from '@/components/ui/Breadcrumb'
 import { SecurePDFViewerWrapper } from '@/components/modules/bibliotheque/SecurePDFViewerWrapper'
 import { db } from '@/db'
 import { documents } from '@/db/schema'
-import { eq, and, ne } from 'drizzle-orm'
+import { eq, and, ne, or } from 'drizzle-orm'
+import { choisirSimilaires } from '@/lib/bibliotheque/lecteur'
 import { AussiAimerColonne } from '@/components/modules/bibliotheque/AussiAimerColonne'
 import { auth } from '@/lib/auth/server'
 import { noterLecture } from '@/lib/bibliotheque/parcours.server'
@@ -18,35 +19,23 @@ export const getDocumentLecture = cache((id: string) =>
   }),
 )
 
-/** Suggestions (même sujet, sinon même domaine, sinon les plus récentes) : chargées à part, elles ne retardent pas le lecteur. */
+/** Documents similaires (même sous-domaine, domaine ou thématique, jamais le document lu) : chargés à part, ils ne retardent pas le lecteur. */
 async function Suggestions({ id, mode }: { id: string; mode: 'membre' | 'public' }) {
   const current = await getDocumentLecture(id)
-  const memeSujet = current?.sous_domaine
-    ? eq(documents.sous_domaine, current.sous_domaine)
-    : current?.domaine
-      ? eq(documents.domaine, current.domaine)
-      : current?.thematique
-        ? eq(documents.thematique, current.thematique)
-        : null
-  const colonnes = { id: true, titre: true, type_doc: true, thematique: true, domaine: true } as const
-  let suggestions = memeSujet
-    ? await db.query.documents.findMany({
-        columns: colonnes,
-        where: and(eq(documents.statut, 'publie'), memeSujet, ne(documents.id, id)),
-        limit: 5,
-      })
-    : []
-  if (suggestions.length < 3) {
-    const more = await db.query.documents.findMany({
-      columns: colonnes,
-      where: and(eq(documents.statut, 'publie'), ne(documents.id, id)),
-      orderBy: (d, { desc }) => [desc(d.published_at)],
-      limit: 5,
-    })
-    const seen = new Set(suggestions.map((d) => d.id))
-    suggestions = [...suggestions, ...more.filter((d) => !seen.has(d.id))].slice(0, 5)
-  }
-  return <AussiAimerColonne docs={suggestions} mode={mode} />
+  const criteres = [
+    current?.sous_domaine ? eq(documents.sous_domaine, current.sous_domaine) : undefined,
+    current?.domaine ? eq(documents.domaine, current.domaine) : undefined,
+    current?.thematique ? eq(documents.thematique, current.thematique) : undefined,
+  ].filter((c) => c !== undefined)
+  const colonnes = { id: true, titre: true, type_doc: true, thematique: true, domaine: true, sous_domaine: true, published_at: true } as const
+  const [proches, recents] = await Promise.all([
+    criteres.length
+      ? db.query.documents.findMany({ columns: colonnes, where: and(eq(documents.statut, 'publie'), ne(documents.id, id), or(...criteres)), limit: 40 })
+      : Promise.resolve([]),
+    db.query.documents.findMany({ columns: colonnes, where: and(eq(documents.statut, 'publie'), ne(documents.id, id)), orderBy: (d, { desc }) => [desc(d.published_at)], limit: 10 }),
+  ])
+  const similaires = choisirSimilaires({ id, thematique: current?.thematique ?? '', domaine: current?.domaine, sous_domaine: current?.sous_domaine }, [...proches, ...recents])
+  return <AussiAimerColonne docs={similaires} mode={mode} />
 }
 
 /** Lecteur sécurisé d'un document, partagé par le site public et l'espace membre (seuls les liens changent). */
@@ -78,8 +67,9 @@ export async function LectureDocumentView({ id, mode }: { id: string; mode: 'mem
         </p>
       </header>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:items-start lg:gap-8">
-        <SecurePDFViewerWrapper documentId={id} titre={mode === 'membre' ? document?.titre : undefined} />
+      <SecurePDFViewerWrapper documentId={id} titre={mode === 'membre' ? document?.titre : undefined} />
+      {/* En fin de lecture : rangée de documents similaires, à faire défiler au doigt. */}
+      <div className="mt-8 pb-6">
         <Suspense fallback={null}>
           <Suggestions id={id} mode={mode} />
         </Suspense>

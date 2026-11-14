@@ -106,8 +106,12 @@ export default function MessagesClient({ contact, refus }: MessagesClientProps) 
   useEffect(() => {
     if (!currentUser) return
 
-    const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8787';
-    const ws = new WebSocket(`${WS_URL}/ws/msg_${currentUser.id}`);
+    // Jamais de repli sur localhost : une connexion vers l'appareil lui-même déclenche, sur Chrome (Android),
+    // la demande « accéder à d'autres applications et appareils sur cet appareil ». Sans serveur configuré,
+    // on rafraîchit par interrogation périodique (voir plus bas).
+    const base = process.env.NEXT_PUBLIC_WS_URL
+    if (!base) return
+    const ws = new WebSocket(`${base.replace(/^http/, 'ws')}/ws/msg_${currentUser.id}`);
 
     ws.onmessage = (event) => {
       try {
@@ -132,6 +136,26 @@ export default function MessagesClient({ contact, refus }: MessagesClientProps) 
     return () => {
       ws.close();
     }
+  }, [currentUser, activeConvId])
+
+  // Sans serveur temps réel : on vérifie les nouveaux messages toutes les 20 s, uniquement onglet visible.
+  useEffect(() => {
+    if (!currentUser || process.env.NEXT_PUBLIC_WS_URL) return
+    const minuteur = window.setInterval(async () => {
+      if (document.visibilityState !== 'visible') return
+      try {
+        if (activeConvId) {
+          const res = await fetch(`/api/messages/${activeConvId}`)
+          const data = await res.json()
+          if (Array.isArray(data)) setMessages((prev) => (data.length !== prev.length ? data : prev))
+        }
+        fetchConversations()
+      } catch {
+        /* réseau indisponible : prochain passage */
+      }
+    }, 20000)
+    return () => window.clearInterval(minuteur)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser, activeConvId])
 
   const scrollToBottom = () => {

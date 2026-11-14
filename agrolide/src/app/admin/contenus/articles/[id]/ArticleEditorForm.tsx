@@ -75,7 +75,7 @@ export function ArticleEditorForm({ initialData }: { initialData?: any }) {
     formData.append("file", file)
     
     // Simuler l'upload ou utiliser un vrai endpoint
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8787"
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? ""
     
     try {
       const token = await getToken()

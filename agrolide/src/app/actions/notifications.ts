@@ -3,8 +3,8 @@
 import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { notifications } from '@/db/schema'
-import { and, count, desc, eq, isNull, notInArray, or } from 'drizzle-orm'
-import { TYPES_HORS_CLOCHE, type NotificationItem } from '@/lib/notifications'
+import { and, count, desc, eq, gte, isNull, notInArray, or } from 'drizzle-orm'
+import { TYPES_HORS_CLOCHE, limiteMasquageLues, type NotificationItem } from '@/lib/notifications'
 
 // `lu` est nullable en base : une valeur vide compte comme « non lue » (comme pour les messages).
 const nonLue = or(eq(notifications.lu, false), isNull(notifications.lu))
@@ -19,7 +19,12 @@ const colonnes = {
 }
 
 function visiblesPour(userId: string) {
-  return and(eq(notifications.user_id, userId), notInArray(notifications.type, TYPES_HORS_CLOCHE))
+  // Les notifications lues depuis plus de 30 jours sont masquées (voir limiteMasquageLues).
+  return and(
+    eq(notifications.user_id, userId),
+    notInArray(notifications.type, TYPES_HORS_CLOCHE),
+    or(nonLue, isNull(notifications.created_at), gte(notifications.created_at, limiteMasquageLues())),
+  )
 }
 
 function enItem(r: { id: string; type: string; contenu: string; lien: string | null; lu: boolean | null; created_at: string | null }): NotificationItem {

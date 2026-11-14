@@ -48,3 +48,20 @@ export function depuis(date: string | null | undefined): string {
   if (Number.isNaN(d.getTime())) return ''
   return formatDistanceToNow(d, { addSuffix: true, locale: fr })
 }
+
+/**
+ * Cycle de vie : une notification LUE disparaît de la liste et de la cloche au bout de 30 jours (elle reste en base,
+ * rien n'est supprimé). Une notification non lue reste affichée tant qu'elle n'est pas lue.
+ */
+export const JOURS_AVANT_MASQUAGE_LUES = 30
+
+/** Date limite (ISO) : les notifications lues créées avant sont masquées. */
+export function limiteMasquageLues(maintenant: Date = new Date()): string {
+  return new Date(maintenant.getTime() - JOURS_AVANT_MASQUAGE_LUES * 86_400_000).toISOString()
+}
+
+/** Vrai si la notification doit être masquée (lue et plus ancienne que la limite ; sans date : jamais masquée). */
+export function estMasquee(n: Pick<NotificationItem, 'lu' | 'created_at'>, maintenant: Date = new Date()): boolean {
+  if (!n.lu || !n.created_at) return false
+  return n.created_at < limiteMasquageLues(maintenant)
+}

@@ -6,20 +6,8 @@ import { opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
-export async function getOpportunites(activeTab: 'toutes' | 'mes_soumissions') {
-  const { userId } = await auth();
-  const user = userId ? { id: userId } : null;
-  const session = userId ? { user: { id: userId } } : null;
-
-  if (activeTab === 'mes_soumissions') {
-    if (!user || !user.id) return []
-    const data = await db.query.opportunites.findMany({
-      where: eq(opportunites.poste_par, user.id),
-      orderBy: (opportunites, { desc }) => [desc(opportunites.created_at)]
-    })
-    return data
-  }
-
+/** Les opportunités publiées, les plus récentes d'abord. */
+export async function getOpportunites() {
   const data = await db.query.opportunites.findMany({
     where: eq(opportunites.statut, 'publie'),
     orderBy: (opportunites, { desc }) => [desc(opportunites.created_at)]

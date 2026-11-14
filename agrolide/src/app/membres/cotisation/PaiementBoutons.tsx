@@ -21,7 +21,7 @@ export function PaiementBoutons({ categorie }: { categorie: string }) {
     })
 
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8787"
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL ?? ""
       
       const response = await fetch(`${apiUrl}/api/paiements/checkout`, {
         method: "POST",

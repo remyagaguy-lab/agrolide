@@ -22,7 +22,7 @@ function IconeType({ type }: { type: string }) {
 /** Aperçu de la carte : premier paragraphe, sans la mise en forme (gras, listes) de la page de lecture. */
 function apercu(texte: string | null | undefined): string {
   const premier = (texte ?? '').split(/\n\s*\n/)[0] ?? ''
-  return premier.replace(/[*_#>]/g, '').replace(/^\s*[-•]\s+/gm, '').replace(/\s+/g, ' ').trim()
+  return premier.replace(/[*_#>]/g, '').replace(/^\s*[-\u2022]\s+/gm, '').replace(/\s+/g, ' ').trim()
 }
 
 export default function OpportunityCard({ opp }: OpportunityCardProps) {

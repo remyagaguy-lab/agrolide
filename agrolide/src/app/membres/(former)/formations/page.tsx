@@ -7,6 +7,8 @@ import { users } from '@/db/schema'
 import { suiviFormations } from '@/lib/formations/suivi.server'
 import { certificatsDuMembre, delivrerCertificat, formationAUnExamen } from '@/lib/formations/examen.server'
 import { favorisDuMembre, lecturesDuMembre } from '@/lib/bibliotheque/parcours.server'
+import { bilanParcours } from '@/lib/parcours/bilan.server'
+import { BilanActivite } from '@/components/modules/parcours/BilanActivite'
 import { PageEntete } from '@/components/layout/PageEntete'
 import { buttonVariants } from '@/components/ui/Button'
 import { DownloadCertificatButton } from '@/components/modules/formations/DownloadCertificatButtonLazy'
@@ -28,11 +30,12 @@ export default async function MonParcoursPage() {
   const { userId } = await auth()
   if (!userId) redirect('/login')
 
-  const [profil, suivis, lectures, favoris] = await Promise.all([
+  const [profil, suivis, lectures, favoris, bilan] = await Promise.all([
     db.query.users.findFirst({ where: eq(users.id, userId), columns: { nom: true, prenom: true } }),
     suiviFormations(userId),
     lecturesDuMembre(userId),
     favorisDuMembre(userId),
+    bilanParcours(userId),
   ])
 
   const enCours = suivis.filter((s) => !s.terminee && s.statut !== 'annule')
@@ -89,6 +92,8 @@ export default async function MonParcoursPage() {
           ))}
         </ul>
       </nav>
+
+      <BilanActivite bilan={bilan} lectures={lectures.length} lecturesTerminees={lectures.filter((d) => d.termine).length} />
 
       <RubriqueParcours id="en-cours" titre="Formations en cours" nombre={enCours.length} lien={{ href: '/membres/formations/catalogue', libelle: 'Voir le catalogue' }}>
         {enCours.length === 0 ? (

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { useUser } from '@/lib/auth/client'
 import OpportunityCard from './OpportunityCard'
 import SubmitOpportunityModal from './SubmitOpportunityModal'
 import { SkeletonGrid } from "@/components/ui/Skeleton"
@@ -12,28 +11,20 @@ export default function OpportunitesClient({ initial }: { initial?: any[] }) {
   const [opportunites, setOpportunites] = useState<any[]>(initial ?? [])
   const [loading, setLoading] = useState(initial === undefined)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { user, isLoaded } = useUser()
-  const currentUser = isLoaded ? user : null
 
-  const [activeTab, setActiveTab] = useState<'toutes' | 'mes_soumissions'>('toutes')
   const [filterType, setFilterType] = useState('tous')
   const [search, setSearch] = useState('')
 
-  const premierAffichage = React.useRef(true)
+  // La liste du premier affichage vient du serveur ; sans elle (ou après une proposition), on la lit ici.
   useEffect(() => {
-    // Les données du premier affichage viennent du serveur : on ne les redemande qu'au changement d'onglet.
-    if (premierAffichage.current) {
-      premierAffichage.current = false
-      if (initial !== undefined) return
-    }
-    fetchData()
-  }, [activeTab]) // eslint-disable-line react-hooks/exhaustive-deps
+    if (initial === undefined) void fetchData()
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchData = async () => {
     setLoading(true)
     try {
       const { getOpportunites } = await import('@/app/actions/opportunites')
-      const data = await getOpportunites(activeTab)
+      const data = await getOpportunites()
       if (data) setOpportunites(data)
     } catch (err) {
       console.error(err)
@@ -65,24 +56,6 @@ export default function OpportunitesClient({ initial }: { initial?: any[] }) {
           <Plus className="size-4" /> Proposer une opportunité
         </button>
       </div>
-
-      {/* Tabs */}
-      {currentUser && (
-        <div className="flex bg-surface-container-low/50 p-1 rounded-full w-fit border border-outline-variant">
-          <button
-            onClick={() => setActiveTab('toutes')}
-            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'toutes' ? 'bg-surface-container-lowest text-primary shadow-sm' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
-          >
-            Toutes les opportunités
-          </button>
-          <button
-            onClick={() => setActiveTab('mes_soumissions')}
-            className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all ${activeTab === 'mes_soumissions' ? 'bg-surface-container-lowest text-primary shadow-sm' : 'text-on-surface-muted hover:text-on-surface-variant'}`}
-          >
-            Mes soumissions
-          </button>
-        </div>
-      )}
 
       {/* Filters & Search */}
       <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm p-4 flex flex-col md:flex-row gap-4">
@@ -125,17 +98,6 @@ export default function OpportunitesClient({ initial }: { initial?: any[] }) {
           {filteredOpp.map(opp => (
             <div key={opp.id} className="relative">
               <OpportunityCard opp={opp} />
-              {activeTab === 'mes_soumissions' && (
-                <div className="absolute top-4 right-4 z-10">
-                  <span className={`px-2 py-1 rounded text-xs font-bold ${
-                    opp.statut === 'publie' ? 'bg-success-container text-success' :
-                    opp.statut === 'rejete' ? 'bg-error-container text-error' :
-                    'bg-warning-container text-on-warning-container'
-                  }`}>
-                    {opp.statut.replace('_', ' ').toUpperCase()}
-                  </span>
-                </div>
-              )}
             </div>
           ))}
         </div>

@@ -3,10 +3,10 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { getNotifications, markAllAsReadAction, markAsReadAction } from '@/app/actions/notifications'
-import { AlertesPush } from '@/components/modules/notifications/AlertesPush'
+import Link from 'next/link'
 import { depuis, libelleType, lienSur, type NotificationItem } from '@/lib/notifications'
 
-import { Bell, CheckCircle2, Loader2 } from "@/components/ui/icons"
+import { Bell, CheckCircle2, Loader2, Settings } from "@/components/ui/icons"
 export default function NotificationsClient() {
   const router = useRouter()
   const [notifications, setNotifications] = useState<NotificationItem[]>([])
@@ -66,6 +66,14 @@ export default function NotificationsClient() {
           </div>
         </div>
 
+        <div className="flex items-center gap-2">
+        <Link
+          href="/membres/notifications/reglages"
+          aria-label="Réglages des notifications"
+          className="ag-state inline-flex size-11 items-center justify-center rounded-full border border-outline-variant text-on-surface-variant"
+        >
+          <Settings className="size-5" aria-hidden />
+        </Link>
         {unreadCount > 0 && (
           <button
             type="button"
@@ -77,9 +85,8 @@ export default function NotificationsClient() {
             Tout marquer comme lu
           </button>
         )}
+        </div>
       </div>
-
-      <AlertesPush />
 
       <div className="bg-surface-container-lowest rounded-2xl shadow-sm border border-outline-variant overflow-hidden">
         {loading ? (
