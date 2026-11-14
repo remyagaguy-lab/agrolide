@@ -91,14 +91,15 @@ export default function NotificationsClient() {
   const [loading, setLoading] = useState(true)
   // Barre d'en-tête « soudée » à la barre du haut dès qu'on a défilé.
   const [collee, setCollee] = useState(false)
-  const reperRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const el = reperRef.current
-    if (!el || typeof IntersectionObserver === 'undefined') return
-    const obs = new IntersectionObserver(([e]) => setCollee(!e.isIntersecting))
-    obs.observe(el)
-    return () => obs.disconnect()
+    // Zone de défilement de l'espace membre : l'ombre apparaît dès que le contenu glisse sous l'en-tête.
+    const zone = document.getElementById('contenu')
+    if (!zone) return
+    const surDefilement = () => setCollee(zone.scrollTop > 2)
+    surDefilement()
+    zone.addEventListener('scroll', surDefilement, { passive: true })
+    return () => zone.removeEventListener('scroll', surDefilement)
   }, [])
 
   const fetchData = useCallback(async () => {
@@ -134,14 +135,13 @@ export default function NotificationsClient() {
 
   return (
     <div>
-      {/* Repère : quand il sort de l'écran, l'en-tête est collé à la barre du haut. */}
-      <div ref={reperRef} aria-hidden className="h-px" />
+      {/* L'espace autour de la page (marge de l'espace membre + conteneur : 28 / 36 / 40 px sur les côtés, 44 / 52 / 56 px en haut) est repris par des marges négatives : l'en-tête touche la barre du haut et les bords de l'écran. */}
       <header
-        className={`sticky top-0 z-20 -mx-3 -mt-3 mb-3 border-b bg-surface-container-lowest transition-shadow duration-200 md:-mx-5 md:-mt-5 lg:-mx-6 lg:-mt-6 ${collee ? 'border-outline-variant shadow-elev-2' : 'border-transparent'}`}
+        className={`sticky z-20 -top-3 -mx-7 -mt-11 mb-4 border-b bg-surface-container-lowest transition-shadow duration-200 md:-top-5 md:-mx-9 md:-mt-[52px] lg:-top-6 lg:-mx-10 lg:-mt-14 ${collee ? 'border-outline-variant shadow-elev-2' : 'border-transparent'}`}
       >
-        <div className={`mx-auto flex max-w-[720px] items-center gap-3 px-4 transition-[padding] duration-200 ${collee ? 'py-2' : 'py-4'}`}>
-          <span className={`flex shrink-0 items-center justify-center rounded-full bg-primary-container transition-[width,height] duration-200 ${collee ? 'size-9' : 'size-11'}`} aria-hidden>
-            <Emblem variant="couleur" className={collee ? 'size-6' : 'size-7'} />
+        <div className="mx-auto flex max-w-[720px] items-center gap-3 px-4 py-3">
+          <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary-container" aria-hidden>
+            <Emblem variant="couleur" className="size-7" />
           </span>
           <div className="min-w-0 flex-1">
             <h1 className="font-heading text-title-lg font-bold leading-tight text-on-surface">agrolide</h1>
