@@ -2,6 +2,18 @@
 export const urlAffiche = (url: string) =>
   url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(url)}` : url
 
+/** Toutes les affiches d'une fiche : l'affiche principale, puis les affiches supplémentaires (liste JSON). */
+export function listeAffiches(event: { image_url?: string | null; affiches_supplementaires?: string | null }): string[] {
+  let autres: string[] = []
+  try {
+    const v = event.affiches_supplementaires ? JSON.parse(event.affiches_supplementaires) : []
+    if (Array.isArray(v)) autres = v.filter((x): x is string => typeof x === 'string' && x.length > 0)
+  } catch {
+    autres = []
+  }
+  return [event.image_url, ...autres].filter((x): x is string => !!x)
+}
+
 /**
  * Affiche d'un événement ou d'un webinaire, montrée EN ENTIER (sans recadrage) sur la page de lecture.
  * Un clic l'ouvre en grand dans un nouvel onglet. Les cartes des listes n'en montrent qu'un extrait.

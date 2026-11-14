@@ -173,6 +173,8 @@ export const evenements = sqliteTable("evenements", {
   en_ligne: integer("en_ligne", { mode: "boolean" }),
   id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
   image_url: text("image_url"),
+  /** Autres affiches (liste JSON d'adresses), montrées à la suite de l'affiche principale (migration 0018). */
+  affiches_supplementaires: text("affiches_supplementaires"),
   /** Faux : entrée libre, aucun processus d'inscription (ni bouton, ni mention « inscrit »). Vide ou vrai : inscription proposée. */
   inscription_requise: integer("inscription_requise", { mode: "boolean" }),
   lien_inscription: text("lien_inscription"),

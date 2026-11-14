@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { Card } from '@/components/ui/Card'
-import AfficheEvenement from '@/components/modules/evenements/AfficheEvenement'
+import AfficheEvenement, { listeAffiches } from '@/components/modules/evenements/AfficheEvenement'
 import { CalendarDays, Clock, Globe, MapPin, Users, CheckCircle2 } from '@/components/ui/icons'
 
 type Evenement = {
@@ -14,6 +14,7 @@ type Evenement = {
   pays: string | null
   places_max: number | null
   image_url: string | null
+  affiches_supplementaires?: string | null
   inscription_requise: boolean | null
 }
 
@@ -56,11 +57,12 @@ function PointsEssentiels({ event }: { event: Evenement }) {
 /**
  * Page de lecture d'un événement ou d'un webinaire : le CENTRE est réservé au texte ; la colonne de DROITE porte
  * d'abord les points essentiels, puis l'affiche, puis les actions (inscription, replay, documents).
+ * Largeurs : 3/5 pour le texte, 2/5 pour la colonne de droite. Plusieurs affiches s'empilent dans cette colonne.
  * Sur téléphone : points essentiels, texte, puis affiche et actions.
  */
 export default function MiseEnPageEvenement({ event, children, actions }: { event: Evenement; children: ReactNode; actions?: ReactNode }) {
   return (
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-12">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-12">
       <div className="min-w-0 space-y-6">
         <div className="lg:hidden">
           <PointsEssentiels event={event} />
@@ -71,7 +73,9 @@ export default function MiseEnPageEvenement({ event, children, actions }: { even
         <div className="hidden lg:block">
           <PointsEssentiels event={event} />
         </div>
-        {event.image_url && <AfficheEvenement src={event.image_url} titre={event.titre} />}
+        {listeAffiches(event).map((src) => (
+          <AfficheEvenement key={src} src={src} titre={event.titre} />
+        ))}
         {actions}
       </aside>
     </div>

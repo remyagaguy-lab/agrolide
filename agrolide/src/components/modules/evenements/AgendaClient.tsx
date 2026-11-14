@@ -227,7 +227,7 @@ function EventDetailsModal({ isOpen, onClose, event, onInscrire }: { isOpen: boo
             Fermer
           </button>
 
-          {new Date(event.date_debut) >= new Date() && (
+          {new Date(event.date_debut) >= new Date() && event.inscription_requise !== false && (
             <button
               onClick={onInscrire}
               className="px-6 py-2 min-h-11 bg-primary hover:bg-primary/90 text-on-primary font-medium rounded-xl transition-colors shadow-sm"

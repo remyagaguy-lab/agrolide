@@ -9,6 +9,16 @@ interface EventFormProps {
   onCancel: () => void
 }
 
+/** Liste JSON enregistrée en base -> tableau d'adresses (tolère une valeur vide ou abîmée). */
+function lireAffiches(brut: unknown): string[] {
+  try {
+    const v = typeof brut === 'string' ? JSON.parse(brut) : brut
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+
 export default function EventForm({ initialData, onSuccess, onCancel }: EventFormProps) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -27,6 +37,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     places_max: initialData?.places_max || '',
     publie: initialData?.publie ?? false,
     image_url: initialData?.image_url || '',
+    affiches_supplementaires: lireAffiches(initialData?.affiches_supplementaires),
     presentation_url: initialData?.presentation_url || '',
     ressources_url: initialData?.ressources_url || '',
     lien_replay: initialData?.lien_replay || '',
@@ -81,6 +92,30 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
     }
   }
 
+  const ajouterAffiche = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    e.target.value = ''
+    if (!file) return
+    setUploadingField('affiches_supplementaires')
+    setError('')
+    try {
+      const res = await fetch('/api/admin/upload', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ filename: file.name, contentType: file.type, folder: 'evenements/affiches' }),
+      })
+      if (!res.ok) throw new Error("Erreur lors de la génération de l'URL d'upload")
+      const { presignedUrl, publicUrl } = await res.json()
+      const up = await fetch(presignedUrl, { method: 'PUT', headers: { 'Content-Type': file.type }, body: file })
+      if (!up.ok) throw new Error("Erreur lors de l'upload du fichier")
+      setFormData((prev) => ({ ...prev, affiches_supplementaires: [...prev.affiches_supplementaires, publicUrl] }))
+    } catch (err: any) {
+      setError(err.message || "Erreur d'upload")
+    } finally {
+      setUploadingField(null)
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
@@ -90,6 +125,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
       ...formData,
       places_max: formData.places_max ? parseInt(formData.places_max as string) : null,
       date_fin: formData.date_fin || null,
+      affiches_supplementaires: formData.affiches_supplementaires.length ? JSON.stringify(formData.affiches_supplementaires) : null,
     }
 
     try {
@@ -230,6 +266,24 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
                   </div>
                 </div>
               )}
+            </div>
+
+            {/* Autres affiches */}
+            <div className="space-y-2 md:col-span-3">
+              <label className="text-sm font-medium text-on-surface-variant block">Autres affiches (affichées à la suite de la première)</label>
+              <div className="flex flex-wrap gap-3">
+                {formData.affiches_supplementaires.map((url: string, i: number) => (
+                  <div key={url} className="relative w-28 overflow-hidden rounded-xl border border-outline-variant">
+                    <img src={url} alt={`Affiche ${i + 2}`} className="h-32 w-full object-cover" />
+                    <button type="button" onClick={() => setFormData({ ...formData, affiches_supplementaires: formData.affiches_supplementaires.filter((u: string) => u !== url) })} className="absolute top-1 right-1 bg-surface-container-lowest rounded-full px-2 py-0.5 shadow hover:bg-surface-container text-xs">Retirer</button>
+                  </div>
+                ))}
+                <label className="flex h-32 w-28 cursor-pointer flex-col items-center justify-center gap-1 rounded-xl border-2 border-dashed border-outline text-center text-xs font-medium text-primary hover:bg-surface-container-low">
+                  {uploadingField === 'affiches_supplementaires' ? <Loader2 className="size-5 animate-spin text-on-surface-muted" /> : <ImageIcon className="size-5 text-on-surface-muted" />}
+                  <span>Ajouter une affiche</span>
+                  <input type="file" accept="image/*" className="sr-only" disabled={uploadingField !== null} onChange={ajouterAffiche} />
+                </label>
+              </div>
             </div>
 
             {/* Présentation */}
