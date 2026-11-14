@@ -452,7 +452,7 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
         "Le dispositif est-il à la mode, le voisin y a-t-il postulé ?",
         "Le logo est-il connu, le site est-il récent ?",
         "Le dossier est-il le plus long possible ?",
-        "Suis-je éligible, que finance le dispositif, le délai convient-il ?"
+        "L'éligibilité, l'objet financé et le délai"
       ],
       "correctAnswer": 3,
       "explanation": "Les trois réponses se lisent dans le texte et auprès du guichet."

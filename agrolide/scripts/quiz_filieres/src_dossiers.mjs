@@ -41,7 +41,7 @@ export default {
      ["Inventer une liste plausible", "Reprendre la liste d'un autre dispositif", "Déposer sans aucune pièce"],
      "Notez-la « à demander au guichet » dans le registre."],
     ["Quelles questions poser avant de décider de déposer ?",
-     "Suis-je éligible, que finance le dispositif, le délai convient-il ?",
+     "L'éligibilité, l'objet financé et le délai",
      ["Le dispositif est-il à la mode, le voisin y a-t-il postulé ?", "Le logo est-il connu, le site est-il récent ?", "Le dossier est-il le plus long possible ?"],
      "Les trois réponses se lisent dans le texte et auprès du guichet."],
     ["Pourquoi déposer à un guichet auquel on n'est pas éligible est-il un problème ?",
