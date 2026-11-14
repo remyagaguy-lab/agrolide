@@ -55,6 +55,15 @@ Erreur bloquante : tiret long ou demi-cadratin, « Agrolide » avec majuscule, B
 Avertissement : première personne du singulier, tutoiement, « entrepreneur agricole ».
 Ligne légitime exceptionnelle : commentaire `editorial:ignore` sur la même ligne.
 
+## Mise en ligne d'un article
+
+```bash
+cd agrolide && npm run ed:publier -- <slug>            # brouillon
+cd agrolide && npm run ed:publier -- <slug> --publie   # publié
+```
+
+Le script ne touche jamais à la base : il écrit `03-publication.sql` dans le dossier de l'article. Ce fichier s'exécute dans le terminal connecté à Cloudflare : `npx wrangler d1 execute agrolide-d1 --remote --file=editorial/articles/<slug>/03-publication.sql`. Un brouillon est consultable à l'adresse `/blog/<slug>` sans apparaître dans la liste. Il ne passe en `publie` qu'après la validation technique du référent.
+
 ## À construire ensuite
 
 Skills par format (fiche technique, portrait, newsletter, posts par réseau, leçon de formation, e-book, livre), agent de relecture éditoriale, contrôle du contenu en base de données (articles, événements, documents).

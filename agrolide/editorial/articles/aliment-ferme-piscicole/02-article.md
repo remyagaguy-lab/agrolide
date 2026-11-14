@@ -3,6 +3,7 @@ statut: redaction
 sujet: Chiffrer le poids de l'aliment dans le coût d'une ferme piscicole avant d'investir
 persona: Ama
 pilier: Formation et savoirs
+categorie: Production Animal
 objectif: Crédibiliser
 cta: Téléchargez le manuel de la CTOP Togo
 cta_cible: DOC-01005
