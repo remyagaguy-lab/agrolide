@@ -39,8 +39,12 @@ let corps = m[2].trim()
 const titre = corps.match(/^# (.+)$/m)?.[1]
 if (!titre) throw new Error('Titre (# ...) introuvable')
 corps = corps.replace(/^# .+\n+/, '')
-const [avantSources] = corps.split(/\n\s*Sources :\s*\n/)
-const sources = corps.includes('Sources :') ? corps.split(/Sources :\s*\n/)[1] : ''
+// Bloc final de sources : « Sources : » ou « D'où ça vient : » (registre Terrain).
+const reSources = /\n\s*(Sources|D'où ça vient) :\s*\n/
+const [avantSources] = corps.split(reSources)
+const marqueSources = corps.match(reSources)
+const titreSources = marqueSources ? marqueSources[1] : 'Sources'
+const sources = marqueSources ? corps.split(reSources)[2] : ''
 
 // Chapô = premier paragraphe, utilisé aussi comme extrait des cartes.
 const paragraphes = avantSources.split(/\n{2,}/)
@@ -61,7 +65,7 @@ if (iCta >= 0) {
 
 const html =
   marked.parse(paragraphes.join('\n\n'), { async: false }).replace('<p>@@CTA@@</p>', ctaHtml) +
-  (sources ? `\n<h2>Sources</h2>\n${marked.parse(sources, { async: false })}` : '')
+  (sources ? `\n<h2>${titreSources}</h2>\n${marked.parse(sources, { async: false })}` : '')
 
 const q = (s) => `'${String(s).replace(/'/g, "''")}'`
 const maintenant = new Date().toISOString()
