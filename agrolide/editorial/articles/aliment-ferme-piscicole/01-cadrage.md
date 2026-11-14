@@ -1,5 +1,5 @@
 ---
-statut: cadrage
+statut: retire (conservé comme exemple du registre Parcours, retiré du site le 2026-11-14)
 sujet: Chiffrer le poids de l'aliment dans le coût d'une ferme piscicole avant d'investir
 persona: Ama
 public: entrepreneur_porteur_projet

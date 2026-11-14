@@ -67,4 +67,4 @@ Sujet : le poids de l'aliment dans le coût d'une ferme piscicole.
 | Expertise | Ce que mesure l'enquête sur la part de l'aliment dans le coût | Le protocole, l'échantillon, ce que l'enquête ne dit pas |
 | Partenariat | Un poste qui pèse 60 à 75 % du coût : où soutenir | Des chiffres sourcés, des leviers, un projet à financer |
 
-Les deux premières lignes existent en vrai : `aliment-ferme-piscicole` (registre Parcours) et `aliment-poisson-sacs-par-bassin` (registre Terrain). Le second est le modèle de référence de la charte : en cas de doute sur le ton, on le relit.
+Les deux premières lignes existent en vrai : `aliment-ferme-piscicole` (registre Parcours, retiré du site et conservé dans le dépôt comme exemple) et `aliment-poisson-sacs-par-bassin` (registre Terrain, en brouillon sur le site). Le second est le modèle de référence de la charte : en cas de doute sur le ton, on le relit.
