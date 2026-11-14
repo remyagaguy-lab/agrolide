@@ -3,6 +3,7 @@ import { elevage } from './elevage'
 import { maraichage } from './maraichage'
 import { aquaculture } from './aquaculture'
 import { transformation } from './transformation'
+import { culturesPerennes } from './cultures-perennes'
 
 /** Modules par filière : optionnels, hors de la séquence de 23 leçons (aucun effet sur la progression ni sur le certificat). */
 export const FILIERES: Filiere[] = [
@@ -10,14 +11,7 @@ export const FILIERES: Filiere[] = [
   maraichage,
   aquaculture,
   transformation,
-  {
-    slug: 'cultures-perennes',
-    titre: 'Cultures pérennes et de rente',
-    resume: "Anacarde, cacao, café, palmier : un horizon de 10 à 20 ans, un financement à long terme.",
-    statut: 'a_venir',
-    lecons: [],
-    prevu: '31/03/2027',
-  },
+  culturesPerennes,
   {
     slug: 'services-agricoles',
     titre: 'Services agricoles',

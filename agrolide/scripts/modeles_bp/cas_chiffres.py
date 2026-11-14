@@ -237,6 +237,96 @@ def mangue_sechee():
     )
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# CAS 6 — Cacaoyère de 20 ha, Côte d'Ivoire — FCFA (point 11, module « Cultures pérennes et de rente »)
+# Horizon de 15 ans : plusieurs années sans récolte, financement long avec différé, flux sur 15 ans.
+# ----------------------------------------------------------------------------------------------------------------
+HORIZON = 15
+
+
+def perenne_eval(c, scen):
+    ha, rdt, px = c["ha"], c["rdt"] * scen.get("rdt", 1.0), c["px"] * scen.get("prix", 1.0)
+    ent_mat = c["entretien_ha"] * scen.get("entretien", 1.0)
+    years = []
+    for y in range(1, HORIZON + 1):
+        vol = ha * rdt * c["rampe"][min(y, len(c["rampe"])) - 1]             # kg
+        ca_cacao = vol * px / 1e6                                              # M FCFA
+        ca_assoc = c["assoc"] if y <= c["ans_assoc"] else 0.0
+        entretien = ha * (c["entretien_inst_ha"] if y <= c["ans_install"] else ent_mat)
+        recolte = vol * c["recolte_kg"] / 1e6
+        ebe = ca_cacao + ca_assoc - entretien - recolte - c["personnel"] - c["fixes"]
+        years.append(dict(an=y, vol=vol, ca_cacao=ca_cacao, ca_assoc=ca_assoc, ca=ca_cacao + ca_assoc, entretien=entretien, recolte=recolte, ebe=ebe))
+    immos = sum(m for _, m, d in c["immos"])
+    amort = sum(m / d for _, m, d in c["immos"])
+    deficits = sum(-y["ebe"] for y in years if y["ebe"] < 0 and y["an"] <= c["ans_deficit"])
+    # coût du projet = immobilisations + déficits d'exploitation des premières années + intérêts du différé (résolu par itération)
+    cout, taux = immos + deficits, c["taux"]
+    for _ in range(100):
+        emprunt = cout * (1 - c["pct_apport"])
+        interets_differe = emprunt * taux * c["differe"]
+        cout_new = immos + deficits + interets_differe
+        if abs(cout_new - cout) < 1e-9:
+            break
+        cout = cout_new
+    emprunt = cout * (1 - c["pct_apport"])
+    apport = cout - emprunt
+    n_remb = c["duree"] - c["differe"]
+    ann = pmt(taux, n_remb, emprunt)
+    cap, perte_reportable = emprunt, 0.0
+    flux_projet = []
+    for y in years:
+        i = y["an"]
+        inte = cap * taux
+        remb = 0.0 if i <= c["differe"] or i > c["duree"] else ann - inte
+        service = inte + remb
+        cap -= remb
+        rex = y["ebe"] - amort
+        rai = rex - inte
+        base = rai - perte_reportable
+        if base < 0:
+            perte_reportable = -base
+            is_ = 0.0
+        else:
+            perte_reportable = 0.0
+            is_ = base * c["is"]
+        rex_is = max(0.0, rex * c["is"])
+        y.update(interets=inte, capital=remb, service=service, is_=is_, rai=rai, rn=rai - is_, dscr=(y["ebe"] - is_) / service if remb > 1e-6 else None)
+        flux_projet.append(y["ebe"] - rex_is)
+    vnc = sum(max(0.0, m - HORIZON * (m / d)) for _, m, d in c["immos"])
+    flux_projet[-1] += vnc
+    flux = [-immos] + flux_projet
+    van = sum(f / (1 + c["act"]) ** t for t, f in enumerate(flux))
+    tri = irr(flux)
+    cum, payback = flux[0], None
+    for t in range(1, HORIZON + 1):
+        nxt = cum + flux[t]
+        if nxt >= 0 and payback is None and flux[t] > 0:
+            payback = (t - 1) + (-cum) / flux[t]
+        cum = nxt
+    dscrs = [y["dscr"] for y in years if y["dscr"] is not None]
+    mat = years[-1]
+    return dict(years=years, immos=immos, deficits=deficits, interets_differe=interets_differe, cout=cout, apport=apport, emprunt=emprunt, annuite=ann,
+                amort=amort, flux=flux, van=van, tri=tri, payback=payback, vnc=vnc, dscr_min=min(dscrs), dscr_an7=years[6]["dscr"],
+                ca_mat=mat["ca"], ebe_mat=mat["ebe"], vol_mat=mat["vol"], taux=taux, duree=c["duree"], differe=c["differe"], immos_list=c["immos"],
+                pct_is=c["is"], act=c["act"], pct_apport=c["pct_apport"])
+
+
+def cacao():
+    return dict(
+        nom="Cacaoyère de 20 ha — Côte d'Ivoire", monnaie="FCFA", ha=20, rdt=900.0, px=1800.0, rampe=[0, 0, 0, 0.25, 0.5, 0.75, 1.0],
+        entretien_inst_ha=0.25, entretien_ha=0.30, recolte_kg=250.0, assoc=3.0, ans_assoc=3, ans_install=3, ans_deficit=5,
+        personnel=3.6, fixes=1.2,
+        immos=[("Frais d'établissement et agréments", 0.5, 5), ("Installation de la plantation (préparation, plants, ombrage, pare-feu)", 18.0, 25),
+               ("Fermentoir, séchoir et magasin", 4.0, 20), ("Forage, outillage et petit matériel", 3.0, 8), ("Imprévus (capitalisés)", 1.5, 10)],
+        pct_apport=0.40, taux=0.09, duree=14, differe=5, **{"is": 0.25}, act=0.10,
+        scen=dict(re=dict(), pe=dict(rdt=0.90, prix=0.90, entretien=1.10), cr=dict(prix=0.70)),
+    )
+
+
+def perenne_rapport(c):
+    return {k: perenne_eval(c, s) for k, s in c["scen"].items()}
+
+
 def rapport(c):
     out = {}
     for k, s in c["scen"].items():
@@ -264,6 +354,14 @@ if __name__ == "__main__":
     res = {k: rapport(c) for k, c in cas.items()}
     for k, c in cas.items():
         afficher(c, res[k])
+    res["cacao"] = perenne_rapport(cacao())
+    x = res["cacao"]["re"]
+    print("=" * 78)
+    print(cacao()["nom"])
+    print(f"Coût du projet {x['cout']:.1f} = immobilisations {x['immos']:.1f} + déficits d'exploitation {x['deficits']:.1f} + intérêts du différé {x['interets_differe']:.1f} ; emprunt {x['emprunt']:.1f} ; annuité {x['annuite']:.2f}")
+    for k in ("re", "pe", "cr"):
+        z = res["cacao"][k]
+        print(f"  {k}: EBE mature {z['ebe_mat']:.1f} DSCR min {z['dscr_min']:.2f} VAN {z['van']:.1f} TRI {100 * z['tri']:.1f} % payback {z['payback']}")
     if "--json" in sys.argv:
         def clean(o):
             if isinstance(o, dict):

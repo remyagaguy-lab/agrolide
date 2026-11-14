@@ -232,6 +232,81 @@ const mangue = page({
 **Critères de réussite :** vos calculs sont reproductibles, chaque rendement et chaque prix porte une source et une date, et l'étalement de la saisonnalité est chiffré.`,
 });
 
+// ---- Cacaoyère (cultures pérennes) : horizon de 15 ans, structure de page propre
+const K = J.cacao, KR = K.re, KP = K.pe, KC = K.cr;
+const lignesAn = KR.years.map((y) => `| ${y.an} | ${y.vol ? f1(y.vol / 1000) : '–'} | ${f1(y.ca)} | ${sg(y.ebe)} | ${y.service ? f1(y.service) : '–'} | ${y.dscr ? f2(y.dscr) : '–'} |`).join('\n');
+const cacao = `### À propos de ce cas
+
+**Aïcha Traoré** (nom fictif) planifie une cacaoyère de 20 hectares dans le centre-ouest de la Côte d'Ivoire, sur une terre familiale dont elle dispose depuis plusieurs années. Elle vend ses fèves fermentées et séchées à un acheteur local. Forme juridique envisagée : SARL. Monnaie : FCFA.
+
+**Les chiffres sont des hypothèses pédagogiques reconstituées** : ils sont cohérents entre eux (calculés par script, avec la même méthode que le cas Diap Touré, mais sur 15 ans) et ne sont pas des données de marché. Le prix du cacao varie beaucoup d'une campagne à l'autre et, dans certains pays, il est fixé par l'administration : remplacez chaque prix, chaque rendement et chaque coût par vos devis et vos relevés datés avant de les utiliser dans un dossier.
+
+### Le projet
+
+- **Surface :** 20 hectares de cacaoyers, plantés la même année ; cultures associées (plantain, vivrier) les 3 premières années, pour 3,0 M FCFA de recettes par an.
+- **Montée en production :** aucune récolte les années 1 à 3 ; 25 % du rendement de croisière l'année 4, 50 % l'année 5, 75 % l'année 6, 100 % à partir de l'année 7.
+- **Rendement de croisière :** 900 kg de fèves sèches par hectare, soit **${f1(KR.vol_mat / 1000)} t** par an.
+- **Prix :** **1 800 FCFA/kg** de fèves (hypothèse pédagogique ; à relever sur votre marché et auprès de votre acheteur, avec la date).
+- **Chiffre d'affaires de croisière :** ${f1(KR.vol_mat / 1000)} t × 1 800 FCFA = **${f1(KR.ca_mat)} M FCFA** par an.
+
+### Charges
+
+- **Entretien de la plantation :** 0,25 M FCFA par hectare les années 1 à 3 (5,0 M FCFA par an), 0,30 M FCFA par hectare ensuite (6,0 M FCFA par an) : désherbage, taille, fertilisation, traitements.
+- **Récolte et post-récolte :** 250 FCFA par kg (cueillette, écabossage, fermentation, séchage, sacs, transport), soit ${f1(KR.vol_mat * 250 / 1e6)} M FCFA en croisière.
+- **Personnel permanent** (chef de plantation, gardien) : 3,6 M FCFA par an ; **charges fixes** : 1,2 M FCFA par an.
+
+### Coût du projet et financement (en millions de FCFA)
+
+| Poste | Montant | Durée d'amortissement |
+|---|---|---|
+${KR.immos_list.map(([n, m, d]) => `| ${n} | ${f1(m)} | ${d} ans |`).join('\n')}
+| **Total immobilisations** | **${f1(KR.immos)}** | |
+| Déficits d'exploitation des années 1 à 5 (avant que la récolte couvre les charges) | ${f1(KR.deficits)} | |
+| Intérêts payés pendant le différé de ${KR.differe} ans | ${f1(KR.interets_differe)} | |
+| **Coût total du projet** | **${f1(KR.cout)}** | |
+
+**Ressources :** apport ${f1(KR.apport)} (${pc(KR.apport / KR.cout)}) + emprunt ${f1(KR.emprunt)} à ${pc(KR.taux)} sur ${KR.duree} ans dont **${KR.differe} ans de différé** (seuls les intérêts sont payés). À partir de l'année ${KR.differe + 1}, l'annuité constante est d'environ ${f1(KR.annuite)} par an. Les déficits des premières années et les intérêts du différé sont financés par ce montage : une cacaoyère n'est pas un projet où l'on emprunte seulement pour planter.
+
+### Les 15 premières années (scénario réaliste)
+
+| Année | Récolte (t) | Chiffre d'affaires | EBE | Service de la dette | DSCR |
+|---|---|---|---|---|---|
+${lignesAn}
+
+Lecture : l'EBE est négatif les quatre premières années, positif dès l'année 5 et atteint ${f1(KR.ebe_mat)} M FCFA en croisière. Le DSCR n'a de sens qu'à partir du premier remboursement de capital (année ${KR.differe + 1}).
+
+### Indicateurs sur 15 ans
+
+| Scénario | EBE de croisière | DSCR le plus bas | VAN (${pc(KR.act)}) | TRI | Récupération |
+|---|---|---|---|---|---|
+| Réaliste | ${f1(KR.ebe_mat)} | ${f2(KR.dscr_min)} | ${sg(KR.van)} | ${pc(KR.tri, 1)} | ${f1(KR.payback)} ans |
+| Pessimiste (rendement − 10 %, prix − 10 %, entretien + 10 %) | ${f1(KP.ebe_mat)} | ${f2(KP.dscr_min)} | ${sg(KP.van)} | ${pc(KP.tri, 1)} | ${f1(KP.payback)} ans |
+| Crise de prix (− 30 %) | ${f1(KC.ebe_mat)} | ${f2(KC.dscr_min)} | ${sg(KC.van)} | ${pc(KC.tri, 1)} | ${f1(KC.payback)} ans |
+
+Flux avant financement : année 0 = − ${f1(KR.immos)} (immobilisations) ; chaque année, EBE moins l'impôt sur le résultat d'exploitation ; année 15, ajout de la valeur nette comptable restante (${f1(KR.vnc)}). Les déficits d'exploitation des premières années sont dans les flux des années 1 à 4.
+
+### Lecture du cas
+
+- **Un projet de patience.** L'argent sort pendant ${KR.differe} ans avant que la plantation ne le rembourse ; le délai de récupération est de ${f1(KR.payback)} ans. Le plan doit prouver que vous tenez financièrement jusque-là, et pas seulement que le projet est bon en croisière.
+- **Le rendement et le prix décident de tout.** Le TRI de ${pc(KR.tri, 1)} dépasse à peine le taux d'actualisation de ${pc(KR.act)}. En pessimiste (rendement et prix en baisse de 10 %, entretien en hausse de 10 %), la VAN devient très négative et le DSCR tombe à ${f2(KP.dscr_min)} : l'annuité n'est plus couverte.
+- **Une vraie marge de sécurité, mais seulement en croisière.** Une fois la plantation en production (DSCR de ${f2(KR.dscr_an7)} dès l'année 7), les remboursements sont couverts avec une marge. Les années 6 et suivantes dépendent du rendement atteint.
+- **Leviers :** cultures associées plus longtemps, plants sélectionnés et bien entretenus (le rendement est le premier levier), ombrage et taille adaptés, vente à un acheteur qui paie la qualité (fermentation, séchage), réduction de l'emprunt par un apport plus élevé ou une aide à l'investissement si elle existe (voir la fiche Cadre pays de la Côte d'Ivoire), échelonnement de la plantation sur plusieurs années pour étaler les besoins.
+- **Risques propres aux cultures pérennes :** maladies et ravageurs, sécheresse, vieillissement de la plantation, prix mondial ou prix administré, sécurité foncière sur la durée du projet.
+
+### Pour aller plus loin
+
+Revoyez la leçon 5.7 (seuil, DSCR, VAN, TRI), la leçon 6.1 (risques) et la fiche Cadre pays de la Côte d'Ivoire (certificat foncier, identifiant unique, financeurs). Sur un projet de 15 ans, vérifiez en particulier la sécurité de votre droit sur la terre pour toute la durée.
+
+### Exercice
+
+1. Recalculez le chiffre d'affaires de croisière avec **votre** rendement et **votre** prix (avec la date et la source).
+2. De combien de points faut-il augmenter le rendement pour que la VAN du scénario pessimiste devienne positive ? Testez avec le classeur joint.
+3. Que devient le coût du projet si vous plantez 10 hectares la première année et 10 hectares la troisième ?
+4. Proposez un plan de financement qui tient pendant la période sans récolte (apport, différé, cultures associées) et chiffrez-le.
+
+**Critères de réussite :** vos calculs sont reproductibles, chaque hypothèse porte une source et une date, et votre plan montre comment vous financez les années sans récolte.
+`;
+
 const mk = (slug, titre, resume, contenu, pays) => `import type { CasChiffre } from './types'
 
 export const ${slug.replace(/-/g, '_')}: CasChiffre = {
@@ -249,6 +324,7 @@ fs.writeFileSync('src/content/cas-chiffres/attieke-cote-d-ivoire.ts', mk('attiek
 fs.writeFileSync('src/content/cas-chiffres/maraichage-benin.ts', mk('maraichage-benin', 'Maraîchage irrigué (tomate, chou) au Bénin', `Exploitation de 3 ha : DSCR de ${f2(M.re.dscr)} en réaliste, ${f2(M.pe.dscr)} en pessimiste, marge de sécurité étroite.`, maraichage, 'Bénin').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/aquaculture-senegal.ts', mk('aquaculture-senegal', 'Pisciculture de tilapia en étangs au Sénégal', `Ferme de 12 étangs : DSCR de ${f2(Q.re.dscr)} en réaliste, ${f2(Q.pe.dscr)} en pessimiste, l'aliment pèse ${pc(aqAliment / Q.re.cv)} des charges variables.`, aquaculture, 'Sénégal').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/mangue-sechee-benin.ts', mk('mangue-sechee-benin', 'Séchage de mangues au Bénin', `Unité de 180 t de fruits par campagne : DSCR de ${f2(G.re.dscr)} en réaliste, ${f2(G.pe.dscr)} en pessimiste, activité saisonnière.`, mangue, 'Bénin').replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/cacao-cote-d-ivoire.ts', mk('cacao-cote-d-ivoire', "Cacaoyère de 20 hectares en Côte d'Ivoire", `Projet sur 15 ans : ${KR.differe} ans de différé, délai de récupération de ${f1(KR.payback)} ans, TRI de ${pc(KR.tri, 1)} en réaliste.`, cacao, "Côte d'Ivoire").replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/types.ts', `export interface CasChiffre {
   slug: string
   titre: string
@@ -264,9 +340,10 @@ import { attieke_cote_d_ivoire } from './attieke-cote-d-ivoire'
 import { maraichage_benin } from './maraichage-benin'
 import { aquaculture_senegal } from './aquaculture-senegal'
 import { mangue_sechee_benin } from './mangue-sechee-benin'
+import { cacao_cote_d_ivoire } from './cacao-cote-d-ivoire'
 
 /** Cas chiffrés complémentaires au cas fil rouge Diap Touré (calculés par scripts/modeles_bp/cas_chiffres.py). */
-export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal, mangue_sechee_benin]
+export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal, mangue_sechee_benin, cacao_cote_d_ivoire]
 
 export const trouverCas = (slug: string) => CAS_CHIFFRES.find((c) => c.slug === slug)
 `.replace(/\n/g, '\r\n'));
