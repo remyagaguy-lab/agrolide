@@ -52,8 +52,14 @@ export async function CatalogueFormations({
     }
   }
 
+  // Une seule liste : formations Agrolide et partenaires alternées (comme la bibliothèque), le filtre « source » sépare au besoin.
   const partenaires = allFormations.filter((f) => !!f.lien_externe)
   const propres = allFormations.filter((f) => !f.lien_externe)
+  const melangees: typeof allFormations = []
+  for (let i = 0; i < Math.max(propres.length, partenaires.length); i++) {
+    if (propres[i]) melangees.push(propres[i])
+    if (partenaires[i]) melangees.push(partenaires[i])
+  }
 
   return (
     <section
@@ -75,31 +81,11 @@ export async function CatalogueFormations({
             <p role="status" className="mb-4 text-body-md text-on-surface-variant">
               {allFormations.length} {allFormations.length > 1 ? 'formations' : 'formation'}
             </p>
-            {propres.length > 0 && (
-              <section aria-labelledby="formations-agrolide" className="mb-10">
-                {partenaires.length > 0 && (
-                  <h2 id="formations-agrolide" className="mb-4 text-title-lg font-bold text-on-surface">Formations Agrolide</h2>
-                )}
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {propres.map((formation) => (
-                    <CarteCatalogue key={formation.id} formation={formation} href={`${base}/${formation.id}`} />
-                  ))}
-                </div>
-              </section>
-            )}
-            {partenaires.length > 0 && (
-              <section aria-labelledby="formations-partenaires">
-                <h2 id="formations-partenaires" className="text-title-lg font-bold text-on-surface">Formations partenaires</h2>
-                <p className="mb-4 mt-1 text-body-md text-on-surface-variant">
-                  Cours gratuits hébergés par des organismes reconnus (FAO, GIZ atingi, FUN MOOC). Inscrivez-vous sur Agrolide, puis suivez le cours chez l&apos;organisme, qui délivre le certificat.
-                </p>
-                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-                  {partenaires.map((formation) => (
-                    <CarteCatalogue key={formation.id} formation={formation} href={`${base}/${formation.id}`} />
-                  ))}
-                </div>
-              </section>
-            )}
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {melangees.map((formation) => (
+                <CarteCatalogue key={formation.id} formation={formation} href={`${base}/${formation.id}`} />
+              ))}
+            </div>
           </div>
         )}
       </div>
