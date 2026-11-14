@@ -2383,5 +2383,481 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "correctAnswer": 0,
       "explanation": "Chaque levier doit être chiffré avec le modèle avant d'entrer dans le plan."
     }
+  ],
+  "ct_1": [
+    {
+      "question": "Quel référentiel comptable commun appliquent les pays de l'OHADA ?",
+      "options": [
+        "Les normes comptables américaines",
+        "Un référentiel différent dans chaque ville",
+        "Aucun référentiel : chaque entreprise choisit",
+        "Le SYSCOHADA révisé"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Un banquier de la région y est habitué : présentez vos états dans cet ordre."
+    },
+    {
+      "question": "Quels états présente-t-on dans un dossier ?",
+      "options": [
+        "Seulement le compte de résultat",
+        "Compte de résultat, bilan, tableau de trésorerie, notes annexes",
+        "Seulement un relevé de compte bancaire",
+        "Uniquement une liste de clients"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Chaque état répond à une question du financeur."
+    },
+    {
+      "question": "Quel solde du compte de résultat sert à calculer la couverture de la dette ?",
+      "options": [
+        "L'EBE",
+        "Le capital social",
+        "Le nombre de salariés",
+        "La valeur de la terre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'excédent brut d'exploitation avant amortissements, intérêts et impôt."
+    },
+    {
+      "question": "Quels éléments agricoles demandent un traitement comptable précis ?",
+      "options": [
+        "Les couleurs des emballages",
+        "Les actifs biologiques et les subventions d'investissement",
+        "Le nom du produit seulement",
+        "Le prix du gasoil seulement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Plantations, animaux de production : demandez à votre expert-comptable."
+    },
+    {
+      "question": "Que fait le système minimal de trésorerie ?",
+      "options": [
+        "Il supprime l'obligation de payer les impôts",
+        "Il remplace le business plan",
+        "Il simplifie la tenue des comptes des très petites entités",
+        "Il s'applique à toutes les grandes sociétés"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les seuils dépendent du pays : lisez-les avec leur date."
+    },
+    {
+      "question": "Où lire les seuils d'une comptabilité allégée dans votre pays ?",
+      "options": [
+        "Dans la première leçon de la formation uniquement",
+        "Sur un blog sans date",
+        "Dans un message d'un ami",
+        "Dans le code général des impôts et auprès de l'ordre des experts-comptables"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Notez toujours la date de lecture."
+    }
+  ],
+  "ct_2": [
+    {
+      "question": "Combien coûte par an un tracteur de 22,0 M FCFA amorti sur 8 ans ?",
+      "options": [
+        "22,0 M FCFA",
+        "0,275 M FCFA",
+        "2,75 M FCFA",
+        "176 M FCFA"
+      ],
+      "correctAnswer": 2,
+      "explanation": "22,0 ÷ 8 = 2,75."
+    },
+    {
+      "question": "Pourquoi dire que l'amortissement permet de mettre de l'argent de côté est faux ?",
+      "options": [
+        "C'est une charge sans décaissement, pas une épargne",
+        "Parce qu'il est interdit par la loi",
+        "Parce qu'il augmente automatiquement le compte bancaire",
+        "Parce qu'il n'existe pas en agriculture"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pour renouveler un équipement, il faut épargner réellement."
+    },
+    {
+      "question": "Pourquoi un projet peut-il être bénéficiaire tout en manquant de trésorerie ?",
+      "options": [
+        "Parce que les impôts sont nuls",
+        "L'achat sort une fois, l'amortissement se répartit sur des années",
+        "Parce que le bénéfice est toujours encaissé",
+        "Parce que les clients paient toujours d'avance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dans le tableau de trésorerie, on voit l'achat l'année où il a lieu."
+    },
+    {
+      "question": "À quoi sert une provision pour impayés ?",
+      "options": [
+        "À augmenter le chiffre d'affaires",
+        "À payer les impôts de l'année suivante",
+        "À rembourser le prêt plus vite",
+        "À anticiper une perte probable sur des créances"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Elle montre que vous connaissez votre risque."
+    },
+    {
+      "question": "Comment une subvention d'investissement est-elle traitée en comptabilité ?",
+      "options": [
+        "Reprise au résultat au rythme de l'amortissement de l'actif financé",
+        "Entièrement en produit l'année du versement",
+        "Ignorée dans le plan",
+        "Rendue au financeur chaque année"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Demandez à votre comptable la présentation exacte."
+    },
+    {
+      "question": "Que faut-il faire pour remplacer un équipement dans huit ans ?",
+      "options": [
+        "Compter sur l'amortissement seulement",
+        "Épargner chaque année une somme sur un compte distinct",
+        "Attendre une subvention automatique",
+        "Ne rien prévoir"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Inscrivez cette somme dans votre budget de trésorerie."
+    }
+  ],
+  "ct_3": [
+    {
+      "question": "Pourquoi ne pas citer de taux d'impôt de mémoire dans votre dossier ?",
+      "options": [
+        "Parce qu'ils sont toujours identiques partout",
+        "Parce que les impôts n'existent pas en agriculture",
+        "Parce que le banquier les connaît déjà",
+        "Ils changent d'un pays et d'une année à l'autre"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Chaque valeur porte une source et une date de lecture."
+    },
+    {
+      "question": "Que doit porter chaque valeur fiscale de votre modèle ?",
+      "options": [
+        "Rien, seulement le chiffre",
+        "Le nom de votre ami comptable",
+        "Sa source et sa date de lecture",
+        "Le prix d'achat du terrain"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Article du code ou site de l'administration."
+    },
+    {
+      "question": "Année 1 : perte de 10. Année 2 : bénéfice de 25. Si la perte est reportable, quel bénéfice est imposable l'année 2 ?",
+      "options": [
+        "15",
+        "25",
+        "35",
+        "10"
+      ],
+      "correctAnswer": 0,
+      "explanation": "25 − 10 = 15 ; avec un taux d'exemple de 30 %, l'impôt est de 4,5 au lieu de 7,5."
+    },
+    {
+      "question": "Peut-on compter sur une exonération dans le scénario réaliste sans l'avoir vérifiée ?",
+      "options": [
+        "Oui, toujours",
+        "Oui, si un blog en parle",
+        "Non : présentez le plan avec et sans exonération",
+        "Oui, si elle existe dans un autre pays"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Une exonération non confirmée par écrit ne se compte pas."
+    },
+    {
+      "question": "Où lire les cotisations sociales employeur ?",
+      "options": [
+        "Dans un message d'un voisin",
+        "Sur le site de la caisse de sécurité sociale du pays",
+        "Dans les statuts d'une coopérative d'un autre pays",
+        "Sur une publicité"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Elles alimentent la ligne cotisations sociales du modèle."
+    },
+    {
+      "question": "Quand faire relire ses hypothèses fiscales par un professionnel ?",
+      "options": [
+        "Jamais",
+        "Seulement après un refus",
+        "Seulement après un contrôle",
+        "Avant le dépôt du dossier de financement"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Un expert-comptable ou un centre de gestion agréé."
+    }
+  ],
+  "ct_4": [
+    {
+      "question": "Pourquoi séparer les comptes de l'entreprise et ceux de la famille ?",
+      "options": [
+        "Sans séparation, on ne peut pas lire les comptes de l'entreprise",
+        "Pour payer moins d'impôt",
+        "Parce que la loi l'interdit autrement",
+        "Pour augmenter le prix de vente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un compte bancaire ou de mobile money par usage."
+    },
+    {
+      "question": "Quelles lignes un tableau de bord mensuel compare-t-il au plan ?",
+      "options": [
+        "La météo et le prix du pétrole",
+        "Le nombre de visiteurs d'un site",
+        "Le salaire du directeur de la banque",
+        "Chiffre d'affaires, charges variables, EBE, trésorerie, créances clients"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Cinq lignes suffisent pour piloter."
+    },
+    {
+      "question": "Quel écart mérite une explication écrite sur une ligne du tableau de bord ?",
+      "options": [
+        "Moins de 1 %",
+        "Plus de 10 %",
+        "Aucun écart",
+        "Seulement plus de 90 %"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Et, si besoin, une action corrective."
+    },
+    {
+      "question": "Que contient le registre des ventes ?",
+      "options": [
+        "La météo du jour seulement",
+        "Le nom de l'expert-comptable",
+        "Date, client, quantité, prix, paiement",
+        "Le montant de l'apport seulement"
+      ],
+      "correctAnswer": 2,
+      "explanation": "À renseigner à chaque vente."
+    },
+    {
+      "question": "Quand faire appel à un expert-comptable ?",
+      "options": [
+        "Jamais, c'est inutile",
+        "Seulement pour acheter du matériel",
+        "Uniquement pour choisir le nom de l'entreprise",
+        "Pour les états de fin d'année, les déclarations, un dossier de financement"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Ses honoraires entrent dans vos charges fixes."
+    },
+    {
+      "question": "Que faut-il mettre dans l'agenda partagé avec le comptable ?",
+      "options": [
+        "Les anniversaires des clients",
+        "Les échéances de déclarations et de cotisations",
+        "Les prix du marché mondial",
+        "Les dates de pleine lune"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Avec les dates lues dans les textes du pays."
+    }
+  ],
+  "im_1": [
+    {
+      "question": "Pourquoi les financeurs évaluent-ils l'impact social ?",
+      "options": [
+        "Parce que c'est interdit de ne pas en parler",
+        "Parce que cela remplace le business plan",
+        "Beaucoup de programmes le demandent avec des indicateurs",
+        "Parce que les banques ne regardent que cela"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un dossier chiffré se démarque."
+    },
+    {
+      "question": "Quel est un bon indicateur d'emploi ?",
+      "options": [
+        "Emplois permanents et saisonniers créés, par sexe et par âge",
+        "Le nombre de réunions tenues",
+        "La couleur de l'uniforme",
+        "Le nombre de kilomètres parcourus"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Vérifiable dans le registre du personnel."
+    },
+    {
+      "question": "Quelle formulation d'objectif est la plus crédible ?",
+      "options": [
+        "Changer la vie de tous les jeunes",
+        "Réduire la pauvreté dans le monde",
+        "6 emplois permanents dont 2 occupés par des femmes, dès la deuxième année",
+        "Faire de notre mieux"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un objectif doit être daté, chiffré et correspondre à des moyens."
+    },
+    {
+      "question": "Quel risque faut-il anticiper pour l'accès des femmes à la terre ?",
+      "options": [
+        "Il est souvent plus difficile : à traiter dans le plan foncier",
+        "Aucun risque",
+        "Il est toujours automatique",
+        "Il ne concerne que les villes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ne l'ignorez pas dans votre plan."
+    },
+    {
+      "question": "Comment vérifier le revenu des producteurs fournisseurs avant et après le projet ?",
+      "options": [
+        "En supposant un chiffre",
+        "En copiant un autre pays",
+        "Sans aucune mesure",
+        "Par une enquête simple avec deux relevés datés"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Un revenu sans date n'est pas mesurable."
+    },
+    {
+      "question": "Les conditions de travail sont-elles seulement un engagement moral ?",
+      "options": [
+        "Oui, uniquement morales",
+        "Non, ce sont aussi des exigences légales",
+        "Non, elles ne concernent que l'État",
+        "Oui, sauf pour les petites exploitations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sécurité, âge minimal, paiement à temps."
+    }
+  ],
+  "im_2": [
+    {
+      "question": "Quels sont les deux sens à ne pas confondre en matière d'environnement ?",
+      "options": [
+        "Le prix de l'eau et celui du gasoil",
+        "L'impact du projet sur l'environnement et l'effet du climat sur le projet",
+        "La saison sèche et la saison humide seulement",
+        "Le sol et le ciel uniquement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'un est ce que vous causez, l'autre ce que vous subissez."
+    },
+    {
+      "question": "Que faut-il vérifier d'abord sur l'eau ?",
+      "options": [
+        "La couleur de l'eau seulement",
+        "Le prix d'un seau",
+        "L'origine, la quantité et l'autorisation éventuelle",
+        "Le nom du fournisseur de la pompe"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L'autorisation dépend du pays."
+    },
+    {
+      "question": "D'où doivent venir les données climatiques d'un dossier ?",
+      "options": [
+        "D'un souvenir d'un voisin",
+        "D'une publicité",
+        "D'un autre pays au hasard",
+        "De sources datées : service météo, institut de recherche"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Avec la date et la source."
+    },
+    {
+      "question": "Qu'est-ce qu'une mesure d'adaptation au climat ?",
+      "options": [
+        "Variétés adaptées, irrigation maîtrisée, calendrier, couverture du sol",
+        "Attendre la pluie",
+        "Vendre toute la récolte d'avance",
+        "Supprimer le scénario pessimiste"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Elle a un coût et un effet à chiffrer."
+    },
+    {
+      "question": "Quand une étude d'impact environnemental est-elle exigée ?",
+      "options": [
+        "Toujours pour tous les projets",
+        "Jamais, nulle part",
+        "Selon le pays, la taille et la nature du projet",
+        "Uniquement en saison sèche"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Vérifiez les seuils auprès de l'administration."
+    },
+    {
+      "question": "Quel intérêt peut avoir une mesure environnementale pour le plan ?",
+      "options": [
+        "Aucun, c'est seulement un coût",
+        "Elle remplace l'assurance",
+        "Elle supprime les risques",
+        "Économiser eau et intrants ou améliorer la couverture de la dette"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Mettez le coût et le gain dans le modèle."
+    }
+  ],
+  "im_3": [
+    {
+      "question": "Pourquoi la conformité compte-t-elle pour un financeur ?",
+      "options": [
+        "Il refuse d'assumer le risque d'une activité hors des règles",
+        "Parce que les banques aiment les formulaires",
+        "Parce que cela remplace les garanties",
+        "Parce que cela réduit les taux à zéro"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Foncier, autorisations, droit du travail."
+    },
+    {
+      "question": "Où trouver les exigences de votre pays ?",
+      "options": [
+        "Dans un forum sans date",
+        "Dans la fiche Cadre pays, puis auprès des administrations",
+        "Dans une publicité",
+        "Nulle part, elles n'existent pas"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Notez la date de vérification."
+    },
+    {
+      "question": "Que faut-il joindre pour prouver le droit sur la terre ?",
+      "options": [
+        "Une simple promesse orale",
+        "Une photo du terrain",
+        "Titre, attestation ou bail valable pour la durée du projet",
+        "Rien"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un droit sûr sur toute la durée est une condition de base."
+    },
+    {
+      "question": "Pourquoi tenir un cahier de culture ou d'élevage ?",
+      "options": [
+        "Pour décorer le bureau",
+        "Pour remplacer le business plan",
+        "Pour éviter de payer des impôts",
+        "Il prouve l'origine et les traitements, utile pour la traçabilité"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les supermarchés et l'export le demandent souvent."
+    },
+    {
+      "question": "Où placer le coût des autorisations, analyses et formations ?",
+      "options": [
+        "Nulle part",
+        "Dans les investissements ou les charges fixes du plan",
+        "Dans le chiffre d'affaires",
+        "Dans l'apport"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un plan qui les oublie sous-estime ses besoins."
+    },
+    {
+      "question": "Une fiche Cadre pays signale un point non confirmé : que faire ?",
+      "options": [
+        "Le vérifier auprès de l'administration avant de l'utiliser",
+        "Le considérer comme confirmé",
+        "L'ignorer",
+        "Le copier tel quel dans le dossier"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Une information non confirmée n'est jamais acquise."
+    }
   ]
 };
