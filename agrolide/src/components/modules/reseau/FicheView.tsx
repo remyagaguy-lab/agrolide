@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/Button'
 import { categorieAffichee, categorieLabel, displayName, safeExternalUrl, typeOrganisationAffiche } from '@/lib/reseau/profil'
 import type { Fiche } from '@/lib/reseau/fiche'
 import { ConnectionActions } from './ConnectionActions'
+import { estOrganisation } from '@/lib/suivi/organisation'
 import { MembreActionsMenu } from './MembreActionsMenu'
 import { MemberCard } from './MemberCard'
 
@@ -132,6 +133,9 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
                     state={state}
                     connectionId={fiche.connectionId}
                     ouvertContact={membre.ouvert_contact}
+                    organisation={estOrganisation(membre.id, membre.categorie)}
+                    suivi={fiche.suivi}
+                    alertes={fiche.alertes}
                   />
                 </div>
                 <MembreActionsMenu memberId={membre.id} name={name} />

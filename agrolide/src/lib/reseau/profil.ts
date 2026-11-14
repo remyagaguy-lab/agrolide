@@ -59,6 +59,9 @@ export interface MemberSummary {
   raisons?: string[]
   /** Tri « pertinence » : `true` = suggéré (seuil atteint), `false` = simple nouveau membre. */
   suggere?: boolean
+  /** Organisation seulement : le membre qui consulte la suit-il, et reçoit-il ses alertes ? (jamais les abonnés des autres) */
+  suivi?: boolean
+  alertes?: boolean
 }
 
 export function displayName(m: { prenom?: string | null; nom?: string | null }) {

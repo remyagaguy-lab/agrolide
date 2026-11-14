@@ -4,6 +4,8 @@ import { auth } from '@/lib/auth/server'
 import { db } from '@/db'
 import { opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
+import { apresReponse } from '@/lib/push/envoyer.server'
+import { annoncerPublication } from '@/lib/suivi/annonce.server'
 import { nettoyerTextes } from "@/lib/utils/sans-emoji"
 
 /** Les opportunités publiées, les plus récentes d'abord. */
@@ -40,7 +42,7 @@ export async function submitOpportunity(formData: Record<string, unknown>) {
   const limite = texte(nettoye.date_limite, 40)
   const dateLimite = limite && !Number.isNaN(new Date(limite).getTime()) ? new Date(limite).toISOString() : null
 
-  await db.insert(opportunites).values({
+  const [creee] = await db.insert(opportunites).values({
     titre,
     description: texte(nettoye.description, 5000) || null,
     type_opp: TYPES_OPPORTUNITE.includes(type) ? type : 'autre',
@@ -50,7 +52,14 @@ export async function submitOpportunity(formData: Record<string, unknown>) {
     poste_par: userId,
     statut: estAdmin ? 'publie' : 'en_attente',
     created_at: new Date().toISOString(),
-  })
+  }).returning({ id: opportunites.id })
+
+  // Publication directe par un administrateur : si l'auteur est une organisation, ses abonnés sont prévenus.
+  if (estAdmin && creee) {
+    apresReponse(() =>
+      annoncerPublication({ auteurId: userId, type: 'opportunite', categorie: 'opportunites', titreAlerte: 'Nouvelle opportunité', titre, lien: '/membres/opportunites', tag: `opportunite-${creee.id}`, seulementOrganisation: true }),
+    )
+  }
 
   return { success: true, publie: estAdmin }
 }

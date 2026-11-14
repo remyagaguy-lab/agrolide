@@ -8,6 +8,7 @@ import { and, count, eq, inArray } from 'drizzle-orm';
 import { revalidatePath } from 'next/cache';
 import { existeBlocage } from '@/lib/reseau/blocage.server';
 import { decideInvitation } from '@/lib/reseau/invitation';
+import { estOrganisation } from '@/lib/suivi/organisation';
 
 /** Invitations envoyées en attente au plus (freine le démarchage en masse). */
 const MAX_INVITATIONS_EN_ATTENTE = 20;
@@ -47,10 +48,12 @@ export async function sendConnectionRequest(receiverId: string, note?: string) {
   if (receiverId === userId) return { error: "Vous ne pouvez pas vous inviter vous-même." };
 
   const receiver = await db.query.users.findFirst({
-    columns: { id: true, annuaire_visible: true, ouvert_contact: true },
+    columns: { id: true, annuaire_visible: true, ouvert_contact: true, categorie: true },
     where: (u, { eq }) => eq(u.id, receiverId),
   });
   if (!receiver || receiver.annuaire_visible === false) return { error: "Ce membre est introuvable." };
+  // Une organisation se suit, on ne s'y connecte pas (voir « Suivre » dans l'annuaire).
+  if (estOrganisation(receiver.id, receiver.categorie)) return { error: "Les organisations se suivent : utilisez « Suivre »." };
   // Décision D2 : seul un refus explicite ferme les invitations (valeur vide = ouvert).
   if (receiver.ouvert_contact === false) return { error: "Ce membre ne reçoit pas d’invitations." };
 

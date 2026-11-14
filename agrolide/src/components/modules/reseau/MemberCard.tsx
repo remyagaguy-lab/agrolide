@@ -6,6 +6,7 @@ import { Badge, type BadgeVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
 import { categorieAffichee, categorieLabel, displayName, typeOrganisationAffiche, type MemberSummary } from '@/lib/reseau/profil'
 import { ConnectionActions } from './ConnectionActions'
+import { estOrganisation } from '@/lib/suivi/organisation'
 
 import { Check, MapPin } from "@/components/ui/icons"
 const MAX_THEMES = 3
@@ -134,6 +135,9 @@ export function MemberCard({
           connectionId={member.connectionId}
           ouvertContact={member.ouvert_contact}
           libelleEnAttente={libelleEnAttente}
+          organisation={estOrganisation(member.id, member.categorie)}
+          suivi={member.suivi}
+          alertes={member.alertes}
         />
         {onIgnore && (
           <Button variant="text" fullWidth onClick={onIgnore} aria-label={`Ignorer la suggestion : ${name}`}>

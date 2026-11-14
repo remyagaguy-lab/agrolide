@@ -5,7 +5,8 @@ import { db } from '@/db'
 import { evenements, opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { clesVapid } from '@/lib/push/webpush'
-import { diffuserPush } from '@/lib/push/envoyer.server'
+import { annoncerPublication } from '@/lib/suivi/annonce.server'
+import { AGROLIDE_ID } from '@/lib/suivi/organisation'
 
 /**
  * Alerte push manuelle, pour un contenu déjà publié (inséré en base ou publié sans passer par le formulaire).
@@ -35,13 +36,13 @@ export async function envoyerAlertePush(type: 'evenement' | 'opportunite', id: s
     if (!e.publie) return { ok: false, message: "L'événement n'est pas publié." }
     const fin = new Date(e.date_fin || e.date_debut).getTime()
     if (!(fin > Date.now())) return { ok: false, message: "L'événement est terminé : l'alerte n'a plus d'intérêt." }
-    const n = await diffuserPush('activite', { titre: 'Nouvel événement', corps: e.titre, lien: `/membres/evenements/${id}`, tag: `evenement-${id}` })
+    const n = await annoncerPublication({ auteurId: AGROLIDE_ID, type: 'evenement', categorie: 'activite', titreAlerte: 'Nouvel événement', titre: e.titre, lien: `/membres/evenements/${id}`, tag: `evenement-${id}`, cloche: false })
     return { ok: true, envoyes: n, message: `Alerte envoyée à ${n} appareil${n > 1 ? 's' : ''}.` }
   }
 
   const o = await db.query.opportunites.findFirst({ columns: { titre: true, statut: true, poste_par: true }, where: eq(opportunites.id, id) })
   if (!o) return { ok: false, message: 'Opportunité introuvable.' }
   if (o.statut !== 'publie') return { ok: false, message: "L'opportunité n'est pas publiée." }
-  const n = await diffuserPush('opportunites', { titre: 'Nouvelle opportunité', corps: o.titre, lien: '/membres/opportunites', tag: `opportunite-${id}` }, [o.poste_par])
+  const n = await annoncerPublication({ auteurId: o.poste_par, type: 'opportunite', categorie: 'opportunites', titreAlerte: 'Nouvelle opportunité', titre: o.titre, lien: '/membres/opportunites', tag: `opportunite-${id}`, cloche: false })
   return { ok: true, envoyes: n, message: `Alerte envoyée à ${n} appareil${n > 1 ? 's' : ''}.` }
 }

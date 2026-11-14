@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/Textarea'
 import { useToast } from '@/components/ui/Toast'
 import { acceptConnectionRequest, declineConnectionRequest, sendConnectionRequest } from '@/app/actions/connections'
 import type { ConnectionState } from '@/lib/reseau/profil'
+import { SuivreOrganisation } from './SuivreOrganisation'
 
 import { Check, Clock, MessageCircle, UserPlus } from "@/components/ui/icons"
 /** Même plafond que l'action serveur (qui reste la seule source de vérité). */
@@ -25,6 +26,10 @@ export interface ConnectionActionsProps {
   libelleEnAttente?: string
   /** Sur une fiche, « Se connecter » est le geste principal de la page : bouton plein plutôt que contour. */
   principal?: boolean
+  /** Organisation (Partenaire, compte agrolide) : seul « Suivre » est proposé, ni invitation ni message. */
+  organisation?: boolean
+  suivi?: boolean
+  alertes?: boolean
 }
 
 /**
@@ -32,7 +37,7 @@ export interface ConnectionActionsProps {
  * Se connecter → Invitation envoyée (retirable) ; Accepter / Ignorer ; Message.
  * L'état est mis à jour tout de suite, sans recharger la page, et annoncé aux lecteurs d'écran.
  */
-export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact, libelleEnAttente = 'Invitation envoyée', principal = false }: ConnectionActionsProps) {
+export function ConnectionActions({ memberId, name, state: initialState, connectionId: initialId, ouvertContact, libelleEnAttente = 'Invitation envoyée', principal = false, organisation = false, suivi = false, alertes = true }: ConnectionActionsProps) {
   const [state, setState] = React.useState<ConnectionState>(initialState)
   const [connectionId, setConnectionId] = React.useState<string | null>(initialId)
   const [pending, startTransition] = React.useTransition()
@@ -99,6 +104,8 @@ export function ConnectionActions({ memberId, name, state: initialState, connect
       setConnectionId(null)
       notify(`Invitation de ${name} ignorée.`)
     })
+
+  if (organisation) return <SuivreOrganisation organisationId={memberId} name={name} suivi={suivi} alertes={alertes} principal={principal} />
 
   return (
     <div className="flex flex-col gap-2">

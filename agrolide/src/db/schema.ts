@@ -384,6 +384,21 @@ export const abonnements_push = sqliteTable("abonnements_push", {
   index("idx_abonnements_push_user_id").on(t.user_id),
 ]);
 
+/**
+ * Abonnements à une organisation (profil Partenaire ou compte « agrolide »), migration drizzle/0019_suivis_organisations.sql.
+ * `notifier` : faux = le suiveur reste abonné mais ne reçoit plus d'alerte. Jamais exposé aux autres membres.
+ */
+export const suivis_organisations = sqliteTable("suivis_organisations", {
+  id: text("id").primaryKey().$defaultFn(() => crypto.randomUUID()),
+  suiveur_id: text("suiveur_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  organisation_id: text("organisation_id").notNull().references(() => users.id, { onDelete: "cascade" }),
+  notifier: integer("notifier", { mode: "boolean" }).notNull().default(true),
+  created_at: text("created_at").$defaultFn(() => new Date().toISOString()),
+}, (t) => [
+  uniqueIndex("uq_suivis_organisations_paire").on(t.suiveur_id, t.organisation_id),
+  index("idx_suivis_organisations_organisation").on(t.organisation_id),
+]);
+
 export const messages = sqliteTable("messages", {
   contenu: text("contenu").notNull(),
   created_at: text("created_at"),

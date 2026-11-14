@@ -6,7 +6,8 @@ import { opportunites, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 import { notifier } from '@/lib/notifications.server'
-import { apresReponse, diffuserPush } from '@/lib/push/envoyer.server'
+import { apresReponse } from '@/lib/push/envoyer.server'
+import { annoncerPublication } from '@/lib/suivi/annonce.server'
 
 /** Assistant admin (admin_content) : gère et valide les opportunités ; la suppression reste réservée aux administrateurs. */
 async function checkAdmin(avecAssistant = true) {
@@ -46,7 +47,7 @@ export async function validateOpportunity(id: string) {
   // Annonce aux membres qui ont activé « Opportunités » sur leur appareil (l'auteur est déjà prévenu ci-dessus).
   if (opp?.titre) {
     apresReponse(() =>
-      diffuserPush('opportunites', { titre: 'Nouvelle opportunité', corps: opp.titre, lien: '/membres/opportunites', tag: `opportunite-${id}` }, [opp.poste_par]),
+      annoncerPublication({ auteurId: opp.poste_par, type: 'opportunite', categorie: 'opportunites', titreAlerte: 'Nouvelle opportunité', titre: opp.titre, lien: '/membres/opportunites', tag: `opportunite-${id}` }),
     )
   }
 

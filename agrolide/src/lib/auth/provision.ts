@@ -4,6 +4,7 @@ import type { User } from '@supabase/supabase-js'
 import { db } from '@/db'
 import { users } from '@/db/schema'
 import { createSupabaseAdmin } from '@/lib/supabase/admin'
+import { suivreAgrolide } from '@/lib/suivi/suivis.server'
 
 /**
  * Garantit qu'un compte Supabase a une ligne dans la table `user` (D1).
@@ -73,6 +74,9 @@ export async function provisionProfile(authUser: User) {
   await admin.auth.admin.updateUserById(authUser.id, {
     app_metadata: { ...appMeta, role: 'membre' },
   })
+
+  // Tout nouveau membre suit agrolide (il peut se désabonner depuis la fiche d'agrolide).
+  await suivreAgrolide(authUser.id)
 
   // Inscription newsletter (consentement affiché sur la page d'inscription)
   import('@/app/actions/newsletter')

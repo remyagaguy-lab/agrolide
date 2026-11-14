@@ -6,6 +6,7 @@ import { PAYS, PAYS_AUTRE, lireLangues, parseList, type ConnectionState, type Me
 import type { AnnuaireFilters } from './filtres'
 import { motifGlob, normaliser } from './texte'
 import { sansBloques } from './blocage.server'
+import { avecEtatSuivi } from '@/lib/suivi/suivis.server'
 import { classerSuggestions, profilDepuisLigne, type CandidatPourScore, type ProfilPourScore } from './suggestions'
 
 export const PAGE_SIZE = 12
@@ -172,7 +173,7 @@ export async function fetchAnnuaire(
         )
     : []
 
-  const members = rows.map((r) => {
+  const membresBruts = rows.map((r) => {
     const link = links.find((l) => l.requester_id === r.id || l.receiver_id === r.id)
     let state: ConnectionState = 'none'
     if (link?.status === 'accepted') state = 'accepted'
@@ -181,6 +182,7 @@ export async function fetchAnnuaire(
     else if (link?.status === 'rejected' && link.requester_id === viewerId) state = 'pending_sent'
     return carte(r, state, link?.id ?? null)
   })
+  const members = await avecEtatSuivi(viewerId, membresBruts)
 
   return { members, total, reachable, page, pageCount }
 }
@@ -258,11 +260,11 @@ async function fetchPertinence(viewerId: string, f: AnnuaireFilters, moi: Profil
   const reachable = Math.min(total, MAX_RESULTS)
   const pageCount = Math.max(1, Math.ceil(reachable / PAGE_SIZE))
   const page = Math.min(f.page, pageCount)
-  const members = tous.slice((page - 1) * PAGE_SIZE, Math.min(page * PAGE_SIZE, reachable)).map((n) => ({
+  const members = await avecEtatSuivi(viewerId, tous.slice((page - 1) * PAGE_SIZE, Math.min(page * PAGE_SIZE, reachable)).map((n) => ({
     ...carte(n.membre.ligne, 'none', null),
     raisons: n.raisons,
     suggere: n.suggere,
-  }))
+  })))
 
   return { members, total, reachable, page, pageCount, tronque: rows.length >= MAX_CANDIDATS }
 }

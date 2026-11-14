@@ -5,6 +5,8 @@ import { documents, user_connections, users } from '@/db/schema'
 import { lireLangues, parseList, type ConnectionState, type MemberSummary } from './profil'
 import { carte, fetchMonProfil, SELECT_CARTE, type LigneCarte } from './annuaire'
 import { existeBlocage, sansBloques } from './blocage.server'
+import { estOrganisation } from '@/lib/suivi/organisation'
+import { avecEtatSuivi, suivisParMembre } from '@/lib/suivi/suivis.server'
 import { aDesPointsCommuns, pointsCommuns, type PointsCommuns } from './en-commun'
 import { classerSuggestions, profilDepuisLigne, profilSuffisant, type CandidatPourScore, type ProfilPourScore } from './suggestions'
 
@@ -58,6 +60,9 @@ export interface Fiche {
   communs: PointsCommuns | null
   relationsCommunes: { total: number; noms: RelationCommune[] }
   proches: MemberSummary[]
+  /** Organisation seulement : suivie par moi, et alertes actives. */
+  suivi?: boolean
+  alertes?: boolean
 }
 
 /** Même lecture de l'état d'une ligne `user_connections` que l'annuaire : un refus reste « en attente » pour l'invitant. */
@@ -203,14 +208,17 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
   // Profils proches de ce membre (et non de moi) : même algorithme que les suggestions, appliqué à son profil.
   const proches = profilSuffisant(profilMembre) ? await profilsProches(viewerId, id, profilMembre) : []
 
+  const etatSuivi = estOrganisation(id, row.categorie) ? (await suivisParMembre(viewerId, [id])).get(id) : undefined
+
   return {
     ...vide,
+    ...(estOrganisation(id, row.categorie) ? { suivi: !!etatSuivi, alertes: etatSuivi?.notifier ?? true } : {}),
     state,
     connectionId,
     noteInvitation: state === 'pending_received' ? (lien?.message ?? null) : null,
     communs: communs && aDesPointsCommuns(communs) ? communs : null,
     relationsCommunes: { total: communsIds.length, noms },
-    proches,
+    proches: await avecEtatSuivi(viewerId, proches),
   }
 }
 

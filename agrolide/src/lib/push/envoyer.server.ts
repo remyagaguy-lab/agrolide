@@ -1,8 +1,8 @@
 import 'server-only'
 import { after } from 'next/server'
-import { and, eq, inArray, like, notInArray } from 'drizzle-orm'
+import { and, eq, inArray, like, notInArray, sql } from 'drizzle-orm'
 import { db } from '@/db'
-import { abonnements_push } from '@/db/schema'
+import { abonnements_push, suivis_organisations } from '@/db/schema'
 import { lienSur } from '@/lib/notifications'
 import { clesVapid, envoyerWebPush, type ClesVapid } from './webpush'
 import { normaliserCategories, type CategoriePush } from './categories'
@@ -78,13 +78,25 @@ export async function envoyerPush(userId: string | null | undefined, categorie: 
 /**
  * Alerte push à tous les appareils ayant activé la catégorie, sauf ceux des membres de `sauf` (par exemple l'auteur).
  * Réservé aux annonces d'intérêt général (nouvelle opportunité publiée). Ne lève jamais d'erreur ; renvoie le nombre d'appareils joints.
+ * `abonnesDe` : se limite aux membres qui suivent cette organisation et ont gardé ses alertes.
  */
-export async function diffuserPush(categorie: CategoriePush, message: MessagePush, sauf: Array<string | null | undefined> = []): Promise<number> {
+export async function diffuserPush(
+  categorie: CategoriePush,
+  message: MessagePush,
+  sauf: Array<string | null | undefined> = [],
+  options: { abonnesDe?: string } = {},
+): Promise<number> {
   try {
     const vapid = cles()
     if (!vapid) return 0
     const exclus = sauf.filter((x): x is string => !!x)
-    const condition = and(like(abonnements_push.categories, `%${categorie}%`), exclus.length ? notInArray(abonnements_push.user_id, exclus) : undefined)
+    const condition = and(
+      like(abonnements_push.categories, `%${categorie}%`),
+      exclus.length ? notInArray(abonnements_push.user_id, exclus) : undefined,
+      options.abonnesDe
+        ? sql`${abonnements_push.user_id} in (select ${suivis_organisations.suiveur_id} from ${suivis_organisations} where ${suivis_organisations.organisation_id} = ${options.abonnesDe} and ${suivis_organisations.notifier} = 1)`
+        : undefined,
+    )
     const lignes = await db.select(colonnes).from(abonnements_push).where(condition).limit(MAX_DIFFUSION)
     return lignes.length ? await envoyerAuxAbonnements(lignes, categorie, message, vapid) : 0
   } catch (e) {

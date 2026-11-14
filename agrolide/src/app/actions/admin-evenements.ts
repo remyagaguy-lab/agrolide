@@ -6,7 +6,9 @@ import { evenements, inscriptions_evenement, users } from '@/db/schema'
 import { eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
 import { nettoyerTextes } from "@/lib/utils/sans-emoji"
-import { apresReponse, diffuserPush } from '@/lib/push/envoyer.server'
+import { apresReponse } from '@/lib/push/envoyer.server'
+import { annoncerPublication } from '@/lib/suivi/annonce.server'
+import { AGROLIDE_ID } from '@/lib/suivi/organisation'
 
 async function checkAdmin() {
   const { userId: currentUserId } = await auth();
@@ -81,7 +83,8 @@ export async function upsertAdminEvenement(brut: any, id?: string) {
   const aVenir = payload.date_debut && new Date(payload.date_debut).getTime() > Date.now()
   if (payload.publie && !dejaPublie && aVenir && payload.titre) {
     apresReponse(() =>
-      diffuserPush('activite', { titre: 'Nouvel événement', corps: payload.titre, lien: `/membres/evenements/${idEvenement}`, tag: `evenement-${idEvenement}` }),
+      // Les événements de l'administration sont publiés au nom du compte agrolide : ses abonnés sont prévenus.
+      annoncerPublication({ auteurId: AGROLIDE_ID, type: 'evenement', categorie: 'activite', titreAlerte: 'Nouvel événement', titre: payload.titre, lien: `/membres/evenements/${idEvenement}`, tag: `evenement-${idEvenement}` }),
     )
   }
 
