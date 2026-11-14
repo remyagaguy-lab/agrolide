@@ -7,8 +7,9 @@ import { Avatar } from "@/components/ui/Avatar"
 import { Badge } from "@/components/ui/Badge"
 import { buttonVariants } from "@/components/ui/Button"
 import { PageEntete } from "@/components/layout/PageEntete"
+import { estOrganisation } from "@/lib/suivi/organisation"
 
-import { Briefcase, Pencil, Globe, GraduationCap, Languages, Mail, MapPin, ShieldCheck, Lightbulb, UserRound, Linkedin } from "@/components/ui/icons"
+import { Briefcase, Bell, Pencil, Globe, GraduationCap, Languages, Mail, MapPin, ShieldCheck, Lightbulb, UserRound, Linkedin } from "@/components/ui/icons"
 /** Les champs de la table `user` que la page lit. */
 export interface ProfilAffiche {
   prenom: string | null
@@ -66,6 +67,8 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
   const lieu = [profile.ville, profile.pays].filter(Boolean).join(", ")
   const siteWeb = safeExternalUrl(profile.site_web_url)
   const linkedin = safeExternalUrl(profile.linkedin_url)
+  // Une organisation (ou un administrateur, pour agrolide) consulte la liste de ses abonnés ; elle reste privée.
+  const voitAbonnes = estOrganisation(typeof profile.id === "string" ? profile.id : null, profile.categorie) || profile.role_plateforme === "admin" || profile.role_plateforme === "super_admin"
 
   return (
     <div className="mx-auto max-w-[1000px] space-y-6 pb-10">
@@ -74,6 +77,11 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
         description="Ce que les autres membres voient de vous, et ce que vous pouvez encore compléter."
         action={
           <div className="flex flex-wrap gap-3">
+            {voitAbonnes && (
+              <Link href="/membres/profil/abonnes" className={buttonVariants({ variant: "outline", size: "sm" })}>
+                <Bell className="size-4" aria-hidden /> Mes abonnés
+              </Link>
+            )}
             <Link href="/membres/profil/confidentialite" className={buttonVariants({ variant: "outline", size: "sm" })}>
               <ShieldCheck className="size-4" aria-hidden /> Confidentialité
             </Link>
