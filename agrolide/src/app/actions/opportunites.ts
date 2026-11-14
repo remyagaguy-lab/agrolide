@@ -29,7 +29,7 @@ export async function submitOpportunity(formData: Record<string, unknown>) {
   if (!userId) throw new Error("Vous devez être connecté pour soumettre une opportunité.")
 
   const profil = await db.query.users.findFirst({ columns: { role_plateforme: true }, where: eq(users.id, userId) })
-  const estAdmin = profil?.role_plateforme === 'admin' || profil?.role_plateforme === 'super_admin'
+  const estAdmin = ['admin', 'super_admin', 'admin_content'].includes(profil?.role_plateforme ?? '')
 
   const nettoye = nettoyerTextes(formData) as Record<string, unknown>
   const titre = texte(nettoye.titre, 200)

@@ -8,7 +8,8 @@ import { revalidatePath } from 'next/cache'
 import { notifier } from '@/lib/notifications.server'
 import { apresReponse, diffuserPush } from '@/lib/push/envoyer.server'
 
-async function checkAdmin() {
+/** Assistant admin (admin_content) : gère et valide les opportunités ; la suppression reste réservée aux administrateurs. */
+async function checkAdmin(avecAssistant = true) {
   const { userId: currentUserId } = await auth();
   const user = currentUserId ? { id: currentUserId } : null;
   const session = currentUserId ? { user: { id: currentUserId } } : null;
@@ -20,7 +21,8 @@ async function checkAdmin() {
     where: eq(users.id, currentUserId)
   })
 
-  if (!profile || (profile.role_plateforme !== 'admin' && profile.role_plateforme !== 'super_admin')) {
+  const rolesAutorises = avecAssistant ? ['admin', 'super_admin', 'admin_content'] : ['admin', 'super_admin']
+  if (!profile || !rolesAutorises.includes(profile.role_plateforme ?? '')) {
     throw new Error("Privilèges insuffisants")
   }
 }
@@ -76,7 +78,7 @@ export async function rejectOpportunity(id: string) {
 }
 
 export async function deleteOpportunityAdmin(id: string) {
-  await checkAdmin()
+  await checkAdmin(false)
 
   await db.delete(opportunites).where(eq(opportunites.id, id))
 
