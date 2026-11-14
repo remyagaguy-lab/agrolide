@@ -127,6 +127,13 @@ const rules = [
     test: (l) => /entrepreneurs?\s+agricoles?/i.test(l),
     scope: 'strict',
   },
+  {
+    id: 'registre-absent',
+    level: 'error',
+    msg: 'en-tête sans « registre » (Terrain, Parcours, Expertise ou Partenariat) : voir editorial/charte/06-publics-et-registres.md',
+    test: () => false, // contrôle fait fichier par fichier, plus bas
+    scope: 'strict',
+  },
 ]
 
 const hits = new Map(rules.map((r) => [r.id, []]))
@@ -136,6 +143,11 @@ for (const file of files) {
   const isMd = file.endsWith('.md')
   const strictMd = rel.startsWith('editorial/articles/')
   const lines = readFileSync(file, 'utf8').split('\n')
+  if (/^editorial\/articles\/[^/]+\/(01-cadrage|02-article)\.md$/.test(rel)) {
+    const entete = readFileSync(file, 'utf8').split(/\r?\n---\r?\n/)[0]
+    if (!/^registre:\s*(Terrain|Parcours|Expertise|Partenariat)\s*$/m.test(entete))
+      hits.get('registre-absent').push({ rel, n: 1, text: 'en-tête : registre manquant ou invalide' })
+  }
   let inFence = false
   lines.forEach((raw, i) => {
     if (/editorial:ignore/.test(raw)) return

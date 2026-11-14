@@ -2,6 +2,10 @@
 statut: redaction
 sujet: Chiffrer le poids de l'aliment dans le coût d'une ferme piscicole avant d'investir
 persona: Ama
+public: entrepreneur_porteur_projet
+registre: Parcours
+niveau: initiation
+domaine: production_animale (aquaculture_peche)
 pilier: Formation et savoirs
 categorie: Production Animal
 objectif: Crédibiliser

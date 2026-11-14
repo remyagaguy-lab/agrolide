@@ -1,6 +1,17 @@
-# Les quatre personas
+# Les personas
 
-Un contenu s'écrit pour un seul persona. Le choix du persona règle le niveau de vocabulaire, les preuves à apporter et le canal.
+Un persona est un lecteur type. Il rattache un public de contenu (voir `06-publics-et-registres.md`) à des besoins, des peurs et des canaux précis. Un contenu s'écrit pour un seul persona, et son registre en découle.
+
+| Persona | Public de contenu | Registre | Statut |
+|---|---|---|---|
+| Kodjo, l'agronome en quête de réseau | technicien_conseiller, enseignant_chercheur | Expertise | Validé (Membre Professionnel) |
+| Ama, l'agripreneure en devenir | etudiant, entrepreneur_porteur_projet | Parcours | Validé (Membre Junior) |
+| Kwame, représentant d'un Membre Partenaire | decideur_institution | Partenariat | Validé |
+| Akouvi, la mentore engagée | enseignant_chercheur (mentor, expert) | Expertise | Validé (Membre Sénior) |
+| Le producteur ou l'éleveur | producteur | Terrain | Brouillon à valider |
+| Le technicien ou conseiller agricole | technicien_conseiller | Terrain | Brouillon à valider |
+
+Les quatre premiers personas viennent du travail initial. Les deux derniers manquaient : la charte parlait de vulgariser auprès des producteurs sans leur donner de visage. Leur fiche ci-dessous est une base de travail à corriger.
 
 ## Persona 1, cible principale : Kodjo, l'agronome en quête de réseau
 
@@ -80,3 +91,37 @@ L'experte reconnue, souvent de la diaspora ou en fin de carrière, qui veut tran
 | Citation | « J'ai des décennies d'expérience et l'envie de transmettre, mais je veux le faire dans un cadre sérieux et structuré, pas de façon informelle et dispersée. » |
 
 Ton à adopter : institutionnel, structuré, respectueux de l'expertise.
+
+## Persona 5, brouillon à valider : le producteur ou l'éleveur
+
+Celui qui fait pousser, élève ou transforme, et qui décide au quotidien. Ni forcément membre, ni forcément diplômé en agronomie. Registre Terrain.
+
+| Champ | Détail |
+|---|---|
+| Qui | Agriculteur, éleveur, pisciculteur, transformateur artisanal, souvent en coopérative ou en groupement. À préciser : âge, langue de travail, niveau de lecture |
+| Besoin fondamental | Produire mieux et vendre mieux avec ce qu'il a, sans prendre de risque qu'il ne comprend pas |
+| Ce qu'il cherche | Un geste précis, une dose, un calendrier, un prix de référence, une façon de s'y prendre un cran plus simple |
+| Peurs | Perdre une récolte ou un cheptel, dépenser pour rien, se faire expliquer par quelqu'un qui n'a jamais travaillé la terre |
+| Comment il décide | Il essaie sur un petit lot, il regarde ce que font ses voisins, il se fie à ceux qui ont déjà réussi chez lui |
+| Ce qui le convainc | Un exemple de chez lui, des chiffres qu'il reconnaît (le prix du sac, la durée d'un cycle), un résultat visible |
+| Canaux à confirmer | WhatsApp, Facebook, radio, vidéo courte, fiche imprimée, relais par son technicien |
+| Ton | Très proche, concret, sans jargon, sans leçon |
+
+À valider avec Remyaga : langues, niveau de lecture, canaux réels, filières prioritaires.
+
+## Persona 6, brouillon à valider : le technicien ou conseiller agricole
+
+Celui qui accompagne les producteurs et relaie le savoir. Un lecteur et un vulgarisateur à la fois. Registre Terrain.
+
+| Champ | Détail |
+|---|---|
+| Qui | Technicien d'appui, agent de vulgarisation, conseiller d'une coopérative ou d'une ONG. À préciser : formation, zone, outils |
+| Besoin fondamental | Disposer de contenus fiables et simples qu'il peut réutiliser auprès des producteurs |
+| Ce qu'il cherche | Des fiches claires, des explications qui tiennent en quelques minutes, des chiffres à jour pour sa zone |
+| Peurs | Transmettre une information fausse, être pris en défaut devant les producteurs, manquer de supports adaptés |
+| Comment il décide | Il vérifie la source et l'auteur, puis il teste auprès de quelques producteurs |
+| Ce qui le convainc | Un contenu précis, daté, validé par un référent, qu'il peut montrer tel quel |
+| Canaux à confirmer | WhatsApp, LinkedIn, Facebook, bibliothèque, formations courtes |
+| Ton | Proche et précis : un pair qui partage un outil |
+
+À valider avec Remyaga : zones couvertes, supports utilisés, ce qui lui manque le plus.

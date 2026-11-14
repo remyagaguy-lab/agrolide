@@ -58,4 +58,4 @@ La source technique est `agrolide/src/styles/tokens/theme.css`.
 
 ## Emojis
 
-Aucun emoji ni pictogramme Unicode sur le site. Les icônes passent par `icons.ts` (garde-fou `ds-icons.mjs`). Sur les réseaux sociaux, quelques emojis sont permis, avec parcimonie (voir `06-formats.md`).
+Aucun emoji ni pictogramme Unicode sur le site. Les icônes passent par `icons.ts` (garde-fou `ds-icons.mjs`). Sur les réseaux sociaux, quelques emojis sont permis, avec parcimonie (voir `11-formats.md`).

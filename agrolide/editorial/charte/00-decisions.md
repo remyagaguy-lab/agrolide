@@ -27,3 +27,22 @@ Chaque ligne est une décision prise. Pour la changer, on ajoute une nouvelle li
 ## Écarts connus entre le site et la charte (état au 2026-11-14)
 
 Voir le rapport du garde-fou : `npm run ed:check`.
+
+## Décisions du 2026-11-14 (cadrage éditorial par public)
+
+| Décision | Détail |
+|---|---|
+| La vulgarisation est le fil conducteur, pas la seule fonction | agrolide rend le savoir agricole compréhensible et utilisable par tous les acteurs de la chaîne. Un contenu peut aussi présenter un parcours, un dispositif ou mobiliser des partenaires |
+| Pas de ton institutionnel par défaut | La voix est celle d'un collègue qui connaît le sujet. Le registre Partenariat seul est plus sobre et factuel |
+| Citer n'est pas systématique | On source toujours, on cite selon le public et le contenu (voir `10-preuves-et-sources.md`) |
+| Chaque contenu vise un public et un registre | Les publics et les niveaux sont ceux de la taxonomie de la bibliothèque |
+
+## Propositions à valider
+
+| Proposition | Pourquoi |
+|---|---|
+| Quatre registres : Terrain, Parcours, Expertise, Partenariat | Regroupe les six publics de la bibliothèque en quatre façons d'écrire |
+| Deux personas à créer : le producteur ou l'éleveur, le technicien ou conseiller | Manquaient. Le texte fondateur vise les producteurs. Fiches en brouillon dans `07-personas.md` |
+| Pilier 4 renommé « Recherche et plaidoyer » | Colle au quatrième frein du texte fondateur (sous-valorisation des connaissances scientifiques). L'ancien nom était « Souveraineté alimentaire et plaidoyer » |
+| Orthographe « agripreneur » | Le texte fondateur écrit « agri-preneur » avec un trait d'union. La charte et le site écrivent « agripreneur » |
+| Longueur par registre | Terrain 400 à 800 mots, Parcours 800 à 1 500 (décision du 2026-11-14), Expertise 1 000 à 1 800, Partenariat 600 à 1 200 |

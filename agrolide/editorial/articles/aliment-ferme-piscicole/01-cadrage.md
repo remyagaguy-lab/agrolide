@@ -2,6 +2,10 @@
 statut: cadrage
 sujet: Chiffrer le poids de l'aliment dans le coût d'une ferme piscicole avant d'investir
 persona: Ama
+public: entrepreneur_porteur_projet
+registre: Parcours
+niveau: initiation
+domaine: production_animale (aquaculture_peche)
 pilier: Formation et savoirs
 objectif: Crédibiliser
 documents_lies: [DOC-01005, DOC-00459, DOC-00584]

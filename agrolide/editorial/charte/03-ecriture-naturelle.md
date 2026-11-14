@@ -44,7 +44,7 @@ Remplacer le vague par un chiffre, un exemple, un nom, une source. Une donnée v
 
 ## Mises en forme interdites
 
-- Pas de tiret d'aucune sorte pour une incise (règle du 2026-11-14, voir `03-vocabulaire-et-typographie.md`). Reformuler avec une virgule, des parenthèses, un deux-points ou deux phrases.
+- Pas de tiret d'aucune sorte pour une incise (règle du 2026-11-14, voir `02-langue-et-typographie.md`). Reformuler avec une virgule, des parenthèses, un deux-points ou deux phrases.
 - Pas de gras dans le corps du texte pour faire ressortir une idée. La phrase porte l'emphase.
 - Pas d'emoji dans un article ou une page du site.
 - Pas de « En conclusion » ni « En résumé » : la conclusion enchaîne vers le CTA.
