@@ -77,58 +77,73 @@ export default async function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      {/* ── HERO : le soleil centré du design system (PlanSoleil clair + échos) se lève du bord GAUCHE et porte le titre ; la photo reste visible à droite,
-          sous les échos translucides. Fond vert profond et motif conservés (ils se voient autour du soleil). Mobile : soleil plus large, photo en bande sous le texte. ── */}
+      {/* ── HERO : le texte dans le ciel vert, la photo est la terre. Bureau : horizon VERTICAL (l'horizon de l'emblème tourné de 90°, terre à droite) ;
+          mobile : horizon horizontal, la photo sous le texte. ── */}
       {/* Un seul fond vert pour l'en-tête et les chiffres, séparés par un filet ; le motif ne couvre que l'en-tête. */}
       <div className="relative isolate overflow-hidden bg-surface-brand text-on-surface-brand">
-      <section className="relative overflow-hidden py-0 [--bas:16rem] [--R:100vw] sm:[--bas:18rem] md:[--bas:0rem] md:[--R:min(50vw,38rem)]">
+      <section className="relative overflow-hidden py-0">
+        {/* texture du motif sur le ciel vert de l'en-tête : la photo est découpée par l'horizon (masque), le motif continue jusqu'à la ligne ; les chiffres, dessous, sont sans motif */}
         <Motif size={800} opacity={0.05} className="text-on-surface-brand" />
-
-        {/* la photo : bande en bas sur mobile, moitié droite sur bureau ; son bord gauche s'efface dans le vert */}
-        <div
-          className="absolute inset-x-0 bottom-0 z-0 h-[calc(var(--bas)+4rem)] md:inset-y-0 md:left-[calc(var(--R)*0.55)] md:h-auto"
-          style={{ maskImage: "linear-gradient(to right, transparent, black 18%)", WebkitMaskImage: "linear-gradient(to right, transparent, black 18%)" }}
-        >
-          <Image
-            src="/hero-accueil-hd.webp"
-            alt={ALT_HERO}
-            fill
-            priority
-            sizes="(min-width: 768px) 70vw, 100vw"
-            quality={85}
-            className="object-cover object-[78%_0%] md:object-[72%_20%]"
-          />
+        {/* le soleil du design system remplace l'horizon : même vert que le ciel, il se lève de la gauche (bureau) ou surplombe la photo (mobile) ; un écho clair le cerne */}
+        <div className="absolute inset-0 z-[1] [--R:100vw] md:[--R:min(44vw,40rem)]">
+          <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="50%" y="calc(100% - 276px - var(--R))" rayon="var(--R)" className="md:hidden" />
+          <PlanSoleil ton="marque" fond="photo" echos={1} pas={18} x="calc(var(--R) * 0.3)" y="50%" rayon="var(--R)" className="hidden md:block" />
         </div>
-
-        {/* le soleil se lève de la gauche : centre sur le bord gauche, à mi-hauteur de la zone du texte ; échos concentriques vers la droite */}
-        <PlanSoleil ton="clair" x="-4%" y="calc((100% - var(--bas)) * 0.3)" rayon="var(--R)" pas={22} className="z-[1]" />
-
-        <div className="container relative z-10 pt-8 pb-[calc(var(--bas)+2rem)] md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
-          <div className="text-on-surface md:max-w-[min(28rem,calc(var(--R)*0.8))] xl:max-w-[32rem]">
+        <div className="container relative z-10 pt-8 pb-8 md:flex md:min-h-[34rem] md:items-center md:py-14 lg:min-h-[38rem]">
+          <div className="md:w-[44%] md:max-w-[34rem] md:-translate-y-8 lg:w-[46%] xl:w-[56%] xl:max-w-[40rem]">
             <h1 className="text-headline-md text-balance md:text-display-md">
-              Fédérer la chaîne agricole, pour conquérir{" "}
-              <span className="text-primary">la souveraineté alimentaire</span>
+              Fédérer la chaîne <br className="hidden xl:block" />agricole, pour conquérir <br className="hidden xl:block" />
+              <span className="text-accent-sun xl:whitespace-nowrap">la souveraineté alimentaire</span>
             </h1>
-            <p className="mt-3 text-body-md text-pretty text-on-surface-variant md:mt-5 md:max-w-[24rem]">
+            <p className="mt-3 text-body-md text-pretty text-on-surface-brand/90 md:mt-5 md:text-body-lg">
               Rejoignez le mouvement qui connecte, forme et propulse les acteurs de l&apos;agriculture africaine.
-              {/* seulement sur petit téléphone (< 520 px), la phrase des publics est retirée */}
-              <span className="hidden min-[520px]:inline md:hidden">
+              {/* seulement sur petit téléphone (< 520 px), la phrase des publics est retirée : le sous-titre tient en 3 lignes et la photo apparaît à l'ouverture */}
+              <span className="hidden min-[520px]:inline">
                 {" "}
                 {ROLES.map((r, i) => (
                   <React.Fragment key={r}>
-                    <strong className="font-bold text-primary">{r}</strong>
+                    <strong className="font-bold text-accent-sun">{r}</strong>
                     {i < ROLES.length - 1 ? ", " : " "}
                   </React.Fragment>
                 ))}
                 : construisons ensemble l&apos;agriculture africaine que nous voulons.
               </span>
             </p>
-            <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
+            <div className="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap md:mt-8">
               <Button variant="primary" href="/rejoindre">Rejoindre le réseau</Button>
-              <Button variant="outline" href="#actions">Nos actions</Button>
+              <Button variant="ghost-dark" href="#actions">Nos actions</Button>
             </div>
           </div>
         </div>
+
+        {/* mobile : la photo sous le texte, le soleil la surplombe (arc en bas) */}
+        <div className="relative z-0 md:hidden">
+          <div className="relative h-[340px]">
+            <Image
+              src="/hero-accueil-hd.webp"
+              alt={ALT_HERO}
+              fill
+              priority
+              sizes="(min-width: 768px) 0px, 135vw"
+              quality={80}
+              className="object-cover object-[78%_40%]"
+            />
+          </div>
+        </div>
+
+        {/* bureau : la photo à droite ; le soleil (calque ci-dessus) la recouvre à gauche */}
+        <div className="absolute right-0 top-0 z-0 hidden h-full w-[calc(60%+3rem)] md:block xl:w-[calc(54%+4.5rem)]">
+          <Image
+            src="/hero-accueil-hd.webp"
+            alt={ALT_HERO}
+            fill
+            priority
+            sizes="(min-width: 1280px) 70vw, 140vw"
+            quality={90}
+            className="object-cover object-[72%_20%]"
+          />
+        </div>
+
       </section>
 
       {/* ── CHIFFRES : même fond que l'en-tête (sans motif), sillons dans le coin haut droit ── */}
