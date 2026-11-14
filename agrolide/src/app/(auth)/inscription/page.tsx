@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { createSupabaseBrowser } from '@/lib/supabase/client'
 import { GoogleButton } from '@/components/auth/GoogleButton'
 import { ResendConfirmation } from '@/components/auth/ResendConfirmation'
+import { ChoixProfil, estProfilInscription, libelleProfil } from '@/components/auth/ChoixProfil'
 import { safeNext } from '@/lib/auth/safe-next'
 import { AuthCard, authLinkClass, translateAuthError } from '@/components/auth/AuthCard'
 import { Alert } from '@/components/ui/Alert'
@@ -13,15 +14,26 @@ import { FormField } from '@/components/ui/FormField'
 import { Input } from '@/components/ui/Input'
 
 export default function InscriptionPage() {
-  const [form, setForm] = useState({ prenom: '', nom: '', email: '', password: '' })
+  // Étape 1 : le profil. Étape 2 : le compte (Google ou e-mail). Une organisation saisit son nom, pas un prénom et un nom.
+  const [profil, setProfil] = useState('')
+  const [etape, setEtape] = useState<'profil' | 'compte'>('profil')
+  const [form, setForm] = useState({ prenom: '', nom: '', organisation: '', email: '', password: '' })
   const [error, setError] = useState('')
   const [sent, setSent] = useState(false)
   const [loading, setLoading] = useState(false)
   const [nextParam, setNextParam] = useState('/membres/dashboard')
   useEffect(() => {
-    setNextParam(safeNext(new URLSearchParams(window.location.search).get('next')))
+    const params = new URLSearchParams(window.location.search)
+    setNextParam(safeNext(params.get('next')))
+    // Lien « Rejoindre » d'une formule (?categorie=…) : le profil est déjà choisi, on passe directement au compte.
+    const demande = params.get('categorie')
+    if (estProfilInscription(demande)) {
+      setProfil(demande)
+      setEtape('compte')
+    }
   }, [])
 
+  const estOrganisation = profil === 'partenaire'
   const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm((f) => ({ ...f, [k]: e.target.value }))
 
@@ -29,11 +41,14 @@ export default function InscriptionPage() {
     e.preventDefault()
     setLoading(true)
     setError('')
+    const identite = estOrganisation
+      ? { prenom: '', nom: form.organisation.trim(), full_name: form.organisation.trim() }
+      : { prenom: form.prenom.trim(), nom: form.nom.trim(), full_name: `${form.prenom} ${form.nom}`.trim() }
     const { data, error } = await createSupabaseBrowser().auth.signUp({
       email: form.email,
       password: form.password,
       options: {
-        data: { prenom: form.prenom.trim(), nom: form.nom.trim(), full_name: `${form.prenom} ${form.nom}`.trim() },
+        data: { ...identite, profil },
         emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(safeNext(new URLSearchParams(window.location.search).get('next')))}`,
       },
     })
@@ -57,24 +72,42 @@ export default function InscriptionPage() {
     )
   }
 
+  const pied = <>Déjà membre ? <Link href="/login" className={authLinkClass}>Se connecter</Link></>
+
+  if (etape === 'profil') {
+    return (
+      <AuthCard wide title="Rejoindre le réseau" subtitle="Commencez par choisir le profil qui vous correspond" footer={pied}>
+        <div className="space-y-6">
+          <ChoixProfil valeur={profil} onChange={setProfil} />
+          <Button type="button" variant="secondary" fullWidth disabled={!profil} onClick={() => setEtape('compte')}>Continuer</Button>
+        </div>
+      </AuthCard>
+    )
+  }
+
   return (
-    <AuthCard
-      title="Rejoindre le réseau"
-      subtitle="Créez votre compte membre gratuitement"
-      footer={<>Déjà membre ? <Link href="/login" className={authLinkClass}>Se connecter</Link></>}
-    >
-      <GoogleButton next={nextParam} />
+    <AuthCard title="Créer votre compte" subtitle={`Profil ${libelleProfil(profil)} : création gratuite`} footer={pied}>
+      <p className="mb-5 text-center text-body-sm text-on-surface-variant">
+        <button type="button" onClick={() => setEtape('profil')} className={authLinkClass}>Changer de profil</button>
+      </p>
+      <GoogleButton next={nextParam} profil={profil} />
       <form onSubmit={onSubmit} className="space-y-5">
         {error && <Alert variant="error">{error}</Alert>}
-        <div className="grid gap-4 sm:grid-cols-2">
-          <FormField label="Prénom" required>
-            <Input required autoComplete="given-name" value={form.prenom} onChange={set('prenom')} />
+        {estOrganisation ? (
+          <FormField label="Nom de l'organisation" required>
+            <Input required minLength={2} maxLength={120} autoComplete="organization" value={form.organisation} onChange={set('organisation')} />
           </FormField>
-          <FormField label="Nom" required>
-            <Input required autoComplete="family-name" value={form.nom} onChange={set('nom')} />
-          </FormField>
-        </div>
-        <FormField label="Adresse e-mail" required>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2">
+            <FormField label="Prénom" required>
+              <Input required autoComplete="given-name" value={form.prenom} onChange={set('prenom')} />
+            </FormField>
+            <FormField label="Nom" required>
+              <Input required autoComplete="family-name" value={form.nom} onChange={set('nom')} />
+            </FormField>
+          </div>
+        )}
+        <FormField label={estOrganisation ? 'Adresse e-mail de l\'organisation' : 'Adresse e-mail'} required>
           <Input type="email" required autoComplete="email" value={form.email} onChange={set('email')} />
         </FormField>
         <FormField label="Mot de passe" hint="8 caractères minimum." required>

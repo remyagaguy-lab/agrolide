@@ -64,6 +64,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
       nom: users.nom,
       photo_url: users.photo_url,
       categorie: users.categorie,
+      est_organisation: users.est_organisation,
       specialite: users.specialite,
       organisation: users.organisation,
       ville: users.ville,
@@ -161,7 +162,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
     : 0
   const isAdhesionActive = !!dateFinCotisation && joursRestants > 0
   // Pendant l'année gratuite (ou pour un profil Passionné), rien à régler.
-  const gratuit = !isAdhesionActive && (categorieSansCotisation(profile.categorie) || gratuiteEnCours())
+  const gratuit = !isAdhesionActive && (categorieSansCotisation(profile.categorie, profile.est_organisation) || gratuiteEnCours())
   const cotisationARegler = !isAdhesionActive && !gratuit
 
   // Formation à reprendre : la plus récemment suivie parmi celles qui ne sont pas terminées ni annulées.
@@ -234,6 +235,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
         <div className="xl:col-span-4">
           <ProfileSummaryWidget
             categorie={profile.categorie}
+            estOrganisation={profile.est_organisation}
             isAdhesionActive={isAdhesionActive}
             joursRestants={joursRestants}
             annuaireVisible={profile.annuaire_visible}

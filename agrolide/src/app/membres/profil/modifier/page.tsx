@@ -84,11 +84,12 @@ export default async function ProfilModifierPage() {
         </Link>
       </header>
 
-      <CategorieSection actuelle={row.categorie} finCotisationPayee={finCotisation} demandeOuverte={demandeOuverte} />
+      {/* Le compte du réseau n'a pas de catégorie à choisir. */}
+      {!row.est_organisation && <CategorieSection actuelle={row.categorie} finCotisationPayee={finCotisation} demandeOuverte={demandeOuverte} />}
 
       <div className="rounded-card border border-outline-variant bg-surface-container-lowest p-5 md:p-6">
         <ProfilForm
-          modeOrganisation={porteUnType(row)}
+          modeOrganisation={porteUnType(row) || demandeOuverte?.categorie === "partenaire"}
           afficherTypeOrganisation={porteUnType(row) || demandeOuverte?.categorie === "partenaire"}
           initial={{
             prenom: row.prenom ?? "",

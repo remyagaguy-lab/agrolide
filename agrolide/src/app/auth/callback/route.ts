@@ -34,6 +34,11 @@ export async function GET(request: NextRequest) {
 
   try {
     const { isNew, needsRefresh } = await provisionProfile(data.user)
+    // Profil choisi avant la connexion Google : retenu sur le compte pour que l'onboarding ne le redemande pas.
+    const profil = searchParams.get('profil')
+    if (isNew && profil && ['passionne', 'junior', 'professionnel', 'partenaire', 'senior'].includes(profil)) {
+      await supabase.auth.updateUser({ data: { profil } })
+    }
     if (needsRefresh) await supabase.auth.refreshSession()
     return NextResponse.redirect(`${origin}${isNew ? '/onboarding' : next}`)
   } catch (err) {

@@ -78,7 +78,7 @@ export const tarifMensuel = (categorie: CategorieAdhesion): number => Math.round
 export const formaterFcfa = (montant: number): string => `${montant.toLocaleString('fr-FR')} FCFA`
 
 /** Passionné est gratuit sans limite de durée : aucune échéance, aucun rappel, aucune expiration. */
-export const categorieSansCotisation = (categorie: string | null | undefined): boolean => categorie === 'passionne'
+export const categorieSansCotisation = (categorie: string | null | undefined, estOrganisation?: boolean | null): boolean => categorie === 'passionne' || !!estOrganisation
 
 /** Nombre de jours calendaires (UTC) entre `depuis` et une échéance AAAA-MM-JJ ; négatif si l'échéance est passée. */
 export function joursAvant(echeance: string, depuis: Date = new Date()): number {

@@ -31,7 +31,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
 
   // Fiche d'une organisation (Partenaire ou compte du réseau) : un autre formulaire, enregistré dans les mêmes colonnes.
   const [moi] = await db.select({ categorie: users.categorie, est_organisation: users.est_organisation }).from(users).where(eq(users.id, userId)).limit(1)
-  if (moi && porteUnType(moi)) return updateProfilOrganisation(userId, payload)
+  if (moi && (porteUnType(moi) || (await demandePartenaireEnCours(userId)))) return updateProfilOrganisation(userId, payload)
 
   const parsed = profilSchema.safeParse(nettoyerTextes(payload))
   if (!parsed.success) {
@@ -99,6 +99,20 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   revalidatePath('/membres/dashboard')
   revalidatePath('/membres/annuaire')
   return { success: true }
+}
+
+/** Demande de profil Partenaire en attente de validation (le membre remplit déjà la fiche de son organisation). */
+async function demandePartenaireEnCours(userId: string): Promise<boolean> {
+  try {
+    const [d] = await db
+      .select({ id: demandes_categorie.id })
+      .from(demandes_categorie)
+      .where(and(eq(demandes_categorie.user_id, userId), eq(demandes_categorie.categorie_demandee, 'partenaire'), inArray(demandes_categorie.statut, ['en_attente', 'programmee'])))
+      .limit(1)
+    return !!d
+  } catch {
+    return false
+  }
 }
 
 async function updateProfilOrganisation(userId: string, payload: unknown): Promise<ResultatProfil> {

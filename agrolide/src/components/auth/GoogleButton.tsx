@@ -6,7 +6,7 @@ import { Alert } from '@/components/ui/Alert'
 import { Button } from '@/components/ui/Button'
 
 /** Bouton « Continuer avec Google » + séparateur. Le retour passe par /auth/callback (création/liaison du profil). */
-export function GoogleButton({ next = '/membres/dashboard' }: { next?: string }) {
+export function GoogleButton({ next = '/membres/dashboard', profil }: { next?: string; profil?: string }) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -15,7 +15,7 @@ export function GoogleButton({ next = '/membres/dashboard' }: { next?: string })
     setError('')
     const { error } = await createSupabaseBrowser().auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}` },
+      options: { redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(next)}${profil ? `&profil=${encodeURIComponent(profil)}` : ''}` },
     })
     if (error) {
       setError('Connexion Google indisponible pour le moment.')

@@ -9,6 +9,8 @@ import { DATE_FIN_GRATUITE_LISIBLE, categorieSansCotisation, gratuiteEnCours } f
 import { ArrowRight, ChevronRight, CreditCard, Eye, UserRound } from "@/components/ui/icons"
 interface ProfileSummaryWidgetProps {
   categorie?: string | null
+  /** Compte du réseau : jamais de cotisation. */
+  estOrganisation?: boolean | null
   isAdhesionActive?: boolean
   joursRestants?: number
   /** Valeur réelle de `annuaire_visible` (vide = visible, comme dans l’annuaire). */
@@ -27,6 +29,7 @@ interface ProfileSummaryWidgetProps {
  */
 export function ProfileSummaryWidget({
   categorie,
+  estOrganisation,
   isAdhesionActive = false,
   joursRestants = 0,
   annuaireVisible,
@@ -35,7 +38,7 @@ export function ProfileSummaryWidget({
   boutonPrincipal = false,
 }: ProfileSummaryWidgetProps) {
   // Pendant l'année gratuite (ou pour un profil Passionné), un membre sans cotisation payée n'a rien à régler.
-  const gratuit = !isAdhesionActive && (categorieSansCotisation(categorie) || gratuiteEnCours())
+  const gratuit = !isAdhesionActive && (categorieSansCotisation(categorie, estOrganisation) || gratuiteEnCours())
   const adhesionOk = isAdhesionActive || gratuit
   const complet = completion >= 100
   const visible = annuaireVisible !== false
@@ -43,7 +46,7 @@ export function ProfileSummaryWidget({
   const detailAdhesion = isAdhesionActive
     ? `${joursRestants} jours restants`
     : gratuit
-      ? categorieSansCotisation(categorie) ? "Gratuite, sans limite de durée" : `Gratuite jusqu'au ${DATE_FIN_GRATUITE_LISIBLE}`
+      ? categorieSansCotisation(categorie, estOrganisation) ? "Gratuite, sans limite de durée" : `Gratuite jusqu'au ${DATE_FIN_GRATUITE_LISIBLE}`
       : "Cotisation annuelle requise"
 
   return (

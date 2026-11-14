@@ -1,5 +1,5 @@
 import "server-only"
-import { and, eq, inArray, isNotNull, lte, ne, sql } from "drizzle-orm"
+import { and, eq, inArray, isNotNull, isNull, lte, ne, or, sql } from "drizzle-orm"
 import { Resend } from "resend"
 import { db } from "@/db"
 import { cotisations, demandes_categorie, rappels_adhesion, users } from "@/db/schema"
@@ -88,7 +88,7 @@ export async function executerRappelsAdhesion(maintenant: Date = new Date()): Pr
   const membres = await db
     .select({ id: users.id, email: users.email, prenom: users.prenom, categorie: users.categorie, statut: users.statut_adhesion })
     .from(users)
-    .where(and(inArray(users.statut_adhesion, ["gratuit", "actif"]), isNotNull(users.categorie), ne(users.categorie, "passionne")))
+    .where(and(inArray(users.statut_adhesion, ["gratuit", "actif"]), isNotNull(users.categorie), ne(users.categorie, "passionne"), or(isNull(users.est_organisation), eq(users.est_organisation, false))))
   const payees = await db
     .select({ membre_id: cotisations.membre_id, fin: sql<string | null>`max(${cotisations.date_fin})` })
     .from(cotisations)

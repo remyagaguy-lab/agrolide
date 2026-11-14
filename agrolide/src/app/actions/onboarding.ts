@@ -37,7 +37,12 @@ export async function submitOnboarding(formData: FormData) {
     
     // Partenaire : le type d'organisation est demandé (liste proposée ou saisie libre) ; les autres catégories n'en ont pas.
     let typeOrganisation: string | null = null
+    let nomOrganisation: string | null = null
     if (categorie === 'partenaire') {
+      nomOrganisation = String(formData.get("nom_organisation") ?? "").trim()
+      if (nomOrganisation.length < 2 || nomOrganisation.length > 120) {
+        return { success: false, error: "Indiquez le nom de votre organisation (2 à 120 caractères)." }
+      }
       const saisi = String(formData.get("type_organisation") ?? "").trim()
       const ok = typeOrganisationSchema.safeParse(saisi)
       if (!ok.success) {
@@ -57,6 +62,8 @@ export async function submitOnboarding(formData: FormData) {
         biographie: biographie || null,
         specialite: specialite || null,
         type_organisation: typeOrganisation,
+        // Une organisation s'inscrit sous son nom : pas de prénom.
+        ...(nomOrganisation ? { prenom: null, nom: nomOrganisation, name: nomOrganisation, organisation: nomOrganisation } : {}),
         pays: pays,
         ville: ville,
         updated_at: new Date().toISOString()

@@ -49,14 +49,17 @@ export async function provisionProfile(authUser: User) {
   const now = new Date().toISOString()
   const fullName = meta.full_name ?? meta.name ?? null
   // Google ne fournit que le nom complet : on le découpe (1er mot = prénom).
-  const prenom = meta.prenom ?? meta.given_name ?? meta.first_name ?? (fullName?.split(' ')[0] || null)
-  const nom = meta.nom ?? meta.family_name ?? meta.last_name ?? (fullName?.split(' ').slice(1).join(' ') || null)
+  // Un Partenaire s'inscrit sous le nom de son organisation : pas de prénom.
+  const nomOrganisation = meta.profil === 'partenaire' ? meta.nom?.trim() || null : null
+  const prenom = nomOrganisation ? null : (meta.prenom || meta.given_name || meta.first_name || (fullName?.split(' ')[0] || null))
+  const nom = nomOrganisation ?? (meta.nom ?? meta.family_name ?? meta.last_name ?? (fullName?.split(' ').slice(1).join(' ') || null))
   await db.insert(users).values({
     id: authUser.id,
     email,
     name: `${prenom ?? ''} ${nom ?? ''}`.trim() || fullName,
     prenom,
     nom,
+    organisation: nomOrganisation,
     image: meta.avatar_url ?? meta.picture ?? null,
     photo_url: meta.avatar_url ?? meta.picture ?? null,
     emailVerified: authUser.email_confirmed_at ? new Date(authUser.email_confirmed_at) : null,

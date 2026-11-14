@@ -26,7 +26,8 @@ export default async function CotisationPage() {
     db.select({
       id: users.id,
       statut_adhesion: users.statut_adhesion,
-      categorie: users.categorie
+      categorie: users.categorie,
+      est_organisation: users.est_organisation
     })
     .from(users)
     .where(eq(users.id, userId))
@@ -43,7 +44,7 @@ export default async function CotisationPage() {
 
   const cotisationActive = cotisations?.find(c => c.statut === 'valide')
   
-  const sansCotisation = categorieSansCotisation(profile.categorie)
+  const sansCotisation = categorieSansCotisation(profile.categorie, profile.est_organisation)
   const gratuite = gratuiteEnCours()
   // Le paiement n'est proposé que lorsqu'il est ouvert (fin de la gratuité ou ouverture volontaire) : jamais de bouton inactif.
   const showPaymentBlock =
