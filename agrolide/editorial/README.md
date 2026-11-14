@@ -3,6 +3,8 @@
 Source de vérité de tout ce qu'agrolide écrit : site, articles, réseaux sociaux, formations, e-books, livres.
 C'est l'équivalent éditorial du design system : des règles écrites une seule fois, organisées en couches, appliquées partout, contrôlées par script.
 
+À lire en premier : `ROADMAP.md` (objectif, bilan, architecture cible, phases, règles de travail pour tout agent).
+
 ## L'idée en une phrase
 
 agrolide rend le savoir agricole compréhensible et utilisable par tous les acteurs de la chaîne. Le lecteur change d'un contenu à l'autre, la voix de fond reste la même. Pour garder la cohérence, chaque contenu suit une chaîne de décisions : un public, un registre, un format, un canal.
