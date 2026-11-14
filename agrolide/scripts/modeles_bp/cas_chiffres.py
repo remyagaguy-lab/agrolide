@@ -207,6 +207,36 @@ def aquaculture():
     )
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# CAS 5 — Séchage de mangues, Bénin — FCFA (point 11, module « Transformation et conditionnement »)
+# ----------------------------------------------------------------------------------------------------------------
+def mangue_sechee():
+    jours, t_jour = 100, 1.8                      # campagne de 100 jours, 1,8 t de mangues fraîches traitées par jour
+    mangue_t = jours * t_jour                      # 180 t/an
+    rdt = 0.11                                     # kg de mangue séchée pour 1 kg de fruits frais
+    px_mangue, px_sec = 0.000110, 0.004000         # M FCFA/kg : 110 FCFA/kg de fruits frais, 4 000 FCFA/kg de mangue séchée
+    emballage_kg = 0.000300                        # 300 FCFA par kg de produit emballé
+
+    def ca(s):
+        vol = mangue_t * 1000 * rdt * s.get("rdt", 1.0) * (1 - s.get("perte", 0.04))
+        return vol * px_sec * s.get("prix", 1.0)
+
+    def cv(s):
+        fruits = mangue_t * 1000 * px_mangue * s.get("mangue", 1.0)
+        emball = mangue_t * 1000 * rdt * emballage_kg
+        return fruits + emball + 5.0 + 11.0 + 3.0       # + énergie de séchage 5,0 + main-d'œuvre saisonnière 11,0 + transport et contrôles 3,0
+
+    return dict(
+        nom="Séchage de mangues — Bénin", monnaie="FCFA", mangue_t=mangue_t, rdt=rdt, px_mangue=px_mangue, px_sec=px_sec,
+        ca=ca, cv=cv, personnel=7.2, fixes=3.6, montee=0.75, cv_suit_ca=True,
+        immos=[("Frais d'établissement, agréments et certification", 2.0, 5), ("Local de transformation et magasin", 16.0, 20),
+               ("Séchoirs (solaires et à gaz)", 22.0, 8), ("Lavage, épluchage, découpe et emballage", 11.0, 8),
+               ("Véhicule utilitaire", 6.0, 5), ("Imprévus (capitalisés)", 3.0, 10)],
+        bfr=14.0, pct_apport=0.30, taux=0.09, duree=7, differe=1, **{"is": 0.30}, act=0.10,
+        scen=dict(re=dict(), pe=dict(rdt=0.97, perte=0.06, prix=0.95, mangue=1.08), cr=dict(prix=0.85)),
+    )
+
+
 def rapport(c):
     out = {}
     for k, s in c["scen"].items():
@@ -230,7 +260,7 @@ def afficher(c, out):
 
 
 if __name__ == "__main__":
-    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage(), "aquaculture": aquaculture()}
+    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage(), "aquaculture": aquaculture(), "mangue": mangue_sechee()}
     res = {k: rapport(c) for k, c in cas.items()}
     for k, c in cas.items():
         afficher(c, res[k])

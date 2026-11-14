@@ -2,20 +2,14 @@ import type { Filiere } from './types'
 import { elevage } from './elevage'
 import { maraichage } from './maraichage'
 import { aquaculture } from './aquaculture'
+import { transformation } from './transformation'
 
 /** Modules par filière : optionnels, hors de la séquence de 23 leçons (aucun effet sur la progression ni sur le certificat). */
 export const FILIERES: Filiere[] = [
   elevage,
   maraichage,
   aquaculture,
-  {
-    slug: 'transformation',
-    titre: 'Transformation et conditionnement',
-    resume: "Huile, farine, gari, séchage, jus : de la matière première au produit vendu. Prolonge le cas attiéké.",
-    statut: 'a_venir',
-    lecons: [],
-    prevu: '28/02/2027',
-  },
+  transformation,
   {
     slug: 'cultures-perennes',
     titre: 'Cultures pérennes et de rente',

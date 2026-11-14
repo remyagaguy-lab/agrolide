@@ -208,6 +208,30 @@ const aquaculture = page({
 **Critères de réussite :** vos calculs sont reproductibles, chaque hypothèse porte une source et une date, et chaque mesure de mitigation est chiffrée.`,
 });
 
+const G = J.mangue;
+const mangue = page({
+  c: G, dev: 'FCFA', filiere: { pe: 'Pessimiste (rendement − 3 %, pertes 6 %, prix − 5 %, fruits + 8 %)', cr: 'Crise de prix (− 15 %)' },
+  intro: `**Fatimath Dossou** (nom fictif) crée une petite unité de séchage de mangues dans le nord du Bénin, là où la production de fruits dépasse largement ce que le marché frais absorbe en saison. Elle achète les fruits à des producteurs, les lave, les découpe, les sèche, les emballe et les vend à des grossistes, des supermarchés et un exportateur. Forme juridique envisagée : SARL. Monnaie : FCFA.`,
+  hyp: `- **Campagne :** **100 jours par an**, **1,8 tonne de fruits frais par jour**, soit **180 tonnes de mangues** traitées dans l'année. La matière première est saisonnière : l'unité ne tourne qu'en saison.
+- **Rendement :** 0,11 kg de mangue séchée pour 1 kg de fruits frais (environ 9 kg de fruits pour 1 kg de produit sec) ; pertes de 4 % au conditionnement ; volume vendable d'environ ${fr(180000 * 0.11 * 0.96)} kg.
+- **Prix :** fruits achetés 110 FCFA/kg ; mangue séchée vendue **4 000 FCFA/kg** en gros (hypothèse à remplacer par vos relevés datés et vos devis d'acheteurs).
+- **Année 1 :** 70 % de la pleine capacité (rodage, premiers contrats) ; les coûts de production suivent le volume.
+- **Chiffre d'affaires de croisière :** **${f1(G.re.ca)} M FCFA**.`,
+  charges: `Charges variables de croisière : fruits 19,8 M FCFA, emballage 5,9 (300 FCFA par kg de produit emballé), énergie de séchage 5,0, main-d'œuvre saisonnière (tri, épluchage, découpe) 11,0, transport et contrôles de qualité 3,0, soit **${f1(G.re.cv)} M FCFA**. Charges fixes : ${f1(G.re.fixes)} M FCFA par an. Personnel permanent : ${f1(G.re.personnel)} M FCFA par an.`,
+  specifique: `- **Le rendement matière décide tout.** Il faut environ 9 kg de fruits pour 1 kg de produit : le prix des fruits ne pèse que ${pc(19.8 / G.re.cv)} des charges variables, mais le rendement, les pertes et la qualité déterminent le volume vendable. Mesurez-les sur vos propres lots avant tout engagement.
+- **Une activité saisonnière.** L'investissement (${f1(G.re.immos)} M FCFA) travaille 100 jours par an. Seuil de rentabilité à ${pc(G.re.seuil / G.re.ca)} du chiffre d'affaires, marge de sécurité de ${pc(1 - G.re.seuil / G.re.ca)} : la rentabilité repose sur l'étalement des coûts fixes et sur un bon taux d'utilisation de la campagne.
+- **DSCR :** ${f2(G.re.dscr)} en réaliste, ${f2(G.pe.dscr)} en pessimiste (la dette est tout juste couverte), ${f2(G.cr.dscr)} en crise de prix de 15 %.
+- **VAN :** ${sg(G.re.van)} M FCFA en réaliste (TRI ${pc(G.re.tri, 1)}, délai de récupération ${f1(G.re.payback)} ans) ; ${sg(G.pe.van)} M en pessimiste : le projet ne rémunère plus l'argent investi au taux de ${pc(G.re.act)}.
+- **Leviers :** contrats d'achat des fruits à prix et calendrier connus, contrats de vente (supermarchés, exportateur) avant d'investir, certification et normes d'hygiène exigées par les acheteurs, usage d'un autre produit en dehors de la saison de la mangue pour amortir les séchoirs, énergie de secours. Chaque levier doit être chiffré avec le même modèle.`,
+  lecons: `Revoyez la leçon 5.7 (seuil, DSCR, VAN, TRI), la leçon 4.2 (contrats et lettres d'intention) et la leçon 6.1 (risques). Pour le contexte béninois (statuts, normes, financeurs), voyez la fiche Cadre pays du Bénin ; vérifiez aussi les normes sanitaires et d'étiquetage de vos acheteurs, avec date et source.`,
+  exo: `1. Recalculez le chiffre d'affaires et le coût des fruits avec **votre** rendement mesuré et **vos** prix relevés (avec la date).
+2. À partir de quel prix d'achat des fruits le DSCR passe-t-il sous 1,2 ? Testez par pas de 10 FCFA/kg.
+3. Que devient le seuil de rentabilité si vous traitez aussi un second produit pendant 60 jours (mêmes séchoirs, 40 tonnes de fruits, mêmes marges) ?
+4. Rédigez une lettre d'intention d'achat pour 5 tonnes de produit sec par an (modèle de la leçon 4.2).
+
+**Critères de réussite :** vos calculs sont reproductibles, chaque rendement et chaque prix porte une source et une date, et l'étalement de la saisonnalité est chiffré.`,
+});
+
 const mk = (slug, titre, resume, contenu, pays) => `import type { CasChiffre } from './types'
 
 export const ${slug.replace(/-/g, '_')}: CasChiffre = {
@@ -224,6 +248,7 @@ fs.writeFileSync('src/content/cas-chiffres/poulet-togo.ts', mk('poulet-togo', 'P
 fs.writeFileSync('src/content/cas-chiffres/attieke-cote-d-ivoire.ts', mk('attieke-cote-d-ivoire', "Transformation du manioc en attiéké en Côte d'Ivoire", `Unité de 300 t de manioc par an : DSCR de ${f2(A.re.dscr)} en réaliste, ${f2(A.pe.dscr)} en pessimiste.`, attieke, "Côte d'Ivoire").replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/maraichage-benin.ts', mk('maraichage-benin', 'Maraîchage irrigué (tomate, chou) au Bénin', `Exploitation de 3 ha : DSCR de ${f2(M.re.dscr)} en réaliste, ${f2(M.pe.dscr)} en pessimiste, marge de sécurité étroite.`, maraichage, 'Bénin').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/aquaculture-senegal.ts', mk('aquaculture-senegal', 'Pisciculture de tilapia en étangs au Sénégal', `Ferme de 12 étangs : DSCR de ${f2(Q.re.dscr)} en réaliste, ${f2(Q.pe.dscr)} en pessimiste, l'aliment pèse ${pc(aqAliment / Q.re.cv)} des charges variables.`, aquaculture, 'Sénégal').replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/mangue-sechee-benin.ts', mk('mangue-sechee-benin', 'Séchage de mangues au Bénin', `Unité de 180 t de fruits par campagne : DSCR de ${f2(G.re.dscr)} en réaliste, ${f2(G.pe.dscr)} en pessimiste, activité saisonnière.`, mangue, 'Bénin').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/types.ts', `export interface CasChiffre {
   slug: string
   titre: string
@@ -238,9 +263,10 @@ import { poulet_togo } from './poulet-togo'
 import { attieke_cote_d_ivoire } from './attieke-cote-d-ivoire'
 import { maraichage_benin } from './maraichage-benin'
 import { aquaculture_senegal } from './aquaculture-senegal'
+import { mangue_sechee_benin } from './mangue-sechee-benin'
 
 /** Cas chiffrés complémentaires au cas fil rouge Diap Touré (calculés par scripts/modeles_bp/cas_chiffres.py). */
-export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal]
+export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal, mangue_sechee_benin]
 
 export const trouverCas = (slug: string) => CAS_CHIFFRES.find((c) => c.slug === slug)
 `.replace(/\n/g, '\r\n'));

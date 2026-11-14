@@ -1023,5 +1023,345 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "correctAnswer": 0,
       "explanation": "TRI > taux d'actualisation ⇔ VAN > 0 ; la fragilité apparaît dans les scénarios de crise."
     }
+  ],
+  "tr_1": [
+    {
+      "question": "Une unité traite 180 t de fruits, rendement 0,11, pertes de conditionnement de 4 %. Quel volume vendable ?",
+      "options": [
+        "19 800 kg, en oubliant les pertes",
+        "19 008 kg",
+        "1 901 kg, en divisant par dix",
+        "172 800 kg, en oubliant le rendement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "180 000 × 0,11 × 0,96 = 19 008 kg."
+    },
+    {
+      "question": "Avec un rendement de 0,11, combien de kilos de fruits faut-il environ pour 1 kg de produit sec ?",
+      "options": [
+        "Environ 1 kg",
+        "Environ 0,9 kg",
+        "Environ 9 kg",
+        "Environ 110 kg"
+      ],
+      "correctAnswer": 2,
+      "explanation": "1 ÷ 0,11 ≈ 9,1."
+    },
+    {
+      "question": "Dans le cas attiéké, le rendement est de 0,55. Combien de kg de manioc frais par kg d'attiéké ?",
+      "options": [
+        "Environ 0,55 kg",
+        "Environ 5,5 kg",
+        "Exactement 2,5 kg",
+        "Environ 1,8 kg"
+      ],
+      "correctAnswer": 3,
+      "explanation": "1 ÷ 0,55 ≈ 1,8."
+    },
+    {
+      "question": "Que vaut un point de rendement matière en plus (0,11 devient 0,12) dans le cas du Bénin ?",
+      "options": [
+        "Environ 69 000 FCFA, car un point de rendement est négligeable",
+        "Environ 6,9 millions de FCFA de CA",
+        "Environ 0,7 million de FCFA, soit le coût d'un sac de fruits",
+        "Rien du tout, car le rendement ne change pas le volume vendu"
+      ],
+      "correctAnswer": 1,
+      "explanation": "180 000 × 0,01 × 0,96 × 4 000 ≈ 6,9 millions."
+    },
+    {
+      "question": "Comment établir le rendement matière de votre unité ?",
+      "options": [
+        "Reprendre celui de la brochure du fabricant de matériel",
+        "Le fixer à 100 % pour simplifier",
+        "Le mesurer sur vos propres lots, pesée à l'appui",
+        "Copier celui d'un autre pays"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le rendement dépend de votre matière première et de votre procédé."
+    },
+    {
+      "question": "Que faire des épluchures et résidus dans le plan d'affaires ?",
+      "options": [
+        "Les noter, avec leur valeur ou coût",
+        "Les ignorer car ils n'ont aucune valeur",
+        "Les compter comme du produit fini",
+        "Les vendre au prix du produit fini"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un sous-produit peut rapporter un revenu ou coûter à évacuer."
+    }
+  ],
+  "tr_2": [
+    {
+      "question": "Une unité traite 1,8 t de fruits par jour pendant 100 jours. Quelle capacité annuelle ?",
+      "options": [
+        "18 t",
+        "1 800 t",
+        "180 t",
+        "100 t"
+      ],
+      "correctAnswer": 2,
+      "explanation": "1,8 × 100 = 180 t."
+    },
+    {
+      "question": "Dans le cas attiéké, 1,2 t de manioc par jour et 250 jours. Quelle capacité annuelle ?",
+      "options": [
+        "300 t",
+        "30 t",
+        "250 t",
+        "1 200 t"
+      ],
+      "correctAnswer": 0,
+      "explanation": "1,2 × 250 = 300 t."
+    },
+    {
+      "question": "Que devient le coût fixe de l'unité si elle ne tourne que 70 jours au lieu de 100 ?",
+      "options": [
+        "Il baisse de 30 % comme le chiffre d'affaires",
+        "Il reste le même, mais le CA baisse",
+        "Il disparaît dès que l'unité cesse de produire",
+        "Il double automatiquement dans le calcul du seuil"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personnel permanent, amortissements et intérêts ne dépendent pas des jours travaillés."
+    },
+    {
+      "question": "Que mesure le taux d'utilisation ?",
+      "options": [
+        "Le prix de vente rapporté au prix d'achat de la matière",
+        "La part de produit fini perdue au conditionnement",
+        "Le nombre de clients actifs sur la dernière année",
+        "Jours travaillés rapportés aux jours possibles"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Plus il est bas, plus les coûts fixes pèsent par kilo produit."
+    },
+    {
+      "question": "Quel moyen étale la saison d'une unité de séchage de mangues ?",
+      "options": [
+        "Acheter plus de séchoirs pour traiter la même quantité de fruits plus vite",
+        "Vendre moins cher pour écouler plus vite le stock de produit sec",
+        "Traiter un second produit hors saison",
+        "Réduire le personnel permanent à zéro pendant toute la campagne"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Chaque jour de fonctionnement en plus dilue les coûts fixes."
+    },
+    {
+      "question": "Pourquoi l'année 1 du cas retient-elle 70 % de la pleine capacité ?",
+      "options": [
+        "Parce que la loi limite la production de l'année 1 à 70 % pour toutes les unités",
+        "Parce que les séchoirs neufs ne fonctionnent qu'à 70 % de leur capacité nominale",
+        "Parce que les fruits sont fournis gratuitement par l'État cette année-là",
+        "Rodage de l'unité et premiers contrats : la production monte progressivement"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Une montée en charge réaliste évite un plan trop optimiste."
+    }
+  ],
+  "tr_3": [
+    {
+      "question": "Quelle part des charges variables représentent les fruits dans le cas du Bénin (19,8 sur 44,7 M FCFA) ?",
+      "options": [
+        "Environ 44 %",
+        "Environ 4 %",
+        "Environ 80 %",
+        "Environ 100 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "19,8 ÷ 44,7 ≈ 44 %."
+    },
+    {
+      "question": "Quelle est la limite principale d'un contrat d'approvisionnement avec des producteurs ?",
+      "options": [
+        "Le contrat supprime toute variation de qualité des fruits livrés pendant la campagne",
+        "Il peut vendre ailleurs si le prix monte",
+        "Le contrat dispense l'unité de tout contrôle à l'arrivée des lots de fruits",
+        "Le contrat interdit à l'unité de payer le producteur avant la fin de la campagne"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un contrat équilibré est mieux respecté qu'un contrat trop dur."
+    },
+    {
+      "question": "Combien de fournisseurs de matière première faut-il prévoir au minimum ?",
+      "options": [
+        "Un seul, afin de négocier un meilleur prix sur tout le volume annuel",
+        "Aucun, puisque l'achat se fait au marché au jour le jour",
+        "Au moins deux",
+        "Cinquante, un par village de la zone de collecte"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un plan B limite le risque en cas de mauvaise récolte chez l'un d'eux."
+    },
+    {
+      "question": "Que doit préciser un bon contrat d'approvisionnement ?",
+      "options": [
+        "Uniquement le prix au kilo de la matière première livrée",
+        "Prix, qualité, calendrier de livraison et modalités de paiement et de refus d'un lot",
+        "Uniquement la quantité totale livrée sur l'année entière",
+        "La couleur des sacs et le nom du chauffeur de livraison"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ces éléments évitent les litiges à la livraison."
+    },
+    {
+      "question": "Que faire à l'arrivée de chaque lot de matière première ?",
+      "options": [
+        "Contrôler, peser, enregistrer, trier",
+        "Tout accepter pour ne pas perdre le fournisseur",
+        "Mélanger tous les lots sans trace",
+        "Attendre la fin de la campagne pour trier"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La qualité du produit fini dépend d'abord de celle de la matière première."
+    },
+    {
+      "question": "Dans le scénario pessimiste du cas, comment évolue le prix des fruits ?",
+      "options": [
+        "Il baisse de 8 %",
+        "Il reste identique",
+        "Il est multiplié par deux",
+        "Il augmente de 8 %"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Un scénario pessimiste teste une matière première plus chère."
+    }
+  ],
+  "tr_4": [
+    {
+      "question": "Quel est le total des immobilisations du cas du Bénin, avant le fonds de roulement ?",
+      "options": [
+        "74,0 millions de FCFA",
+        "60,0 millions de FCFA",
+        "14,0 millions de FCFA",
+        "22,0 millions de FCFA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les 74,0 millions du coût du projet incluent 14,0 de besoin en fonds de roulement."
+    },
+    {
+      "question": "Quel est le premier poste d'équipement du cas, et sa dotation annuelle (22,0 M FCFA sur 8 ans) ?",
+      "options": [
+        "Les séchoirs, 2,75 M FCFA par an",
+        "Le véhicule, environ 22 millions par an",
+        "Le local, environ 2,75 millions par an",
+        "L'emballage, environ 275 000 FCFA par an"
+      ],
+      "correctAnswer": 0,
+      "explanation": "22,0 ÷ 8 = 2,75."
+    },
+    {
+      "question": "Quel est le coût d'emballage retenu dans le cas ?",
+      "options": [
+        "3 000 FCFA par kg de produit, soit environ 59 millions par an",
+        "30 FCFA par kg de produit, soit environ 0,6 million par an",
+        "300 FCFA par kg emballé, soit 5,9 M par an",
+        "Aucun coût, l'emballage étant fourni par l'acheteur"
+      ],
+      "correctAnswer": 2,
+      "explanation": "19 800 kg × 300 FCFA ≈ 5,9 millions."
+    },
+    {
+      "question": "Que faire avant d'investir à propos des normes sanitaires et d'étiquetage ?",
+      "options": [
+        "Les ignorer, elles ne concernent que les grandes unités",
+        "Attendre le premier contrôle",
+        "Copier celles d'un autre produit",
+        "Vérifier ce qui s'applique, avec date et source"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les acheteurs exigent souvent des règles précises."
+    },
+    {
+      "question": "Pourquoi prévoir une énergie de secours ?",
+      "options": [
+        "La loi l'impose partout pour toute unité de transformation sans exception",
+        "Elle double le rendement matière en séchant plus longtemps chaque lot",
+        "Elle remplace les séchoirs pendant la saison des pluies et la nuit",
+        "Une coupure peut arrêter le séchage et faire perdre un lot"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Un plan de secours chiffré rassure les financeurs."
+    },
+    {
+      "question": "Que faire avant d'acheter des séchoirs ?",
+      "options": [
+        "Prendre le moins cher sans autre vérification",
+        "Comparer les devis et la capacité réelle",
+        "Acheter la capacité maximale proposée",
+        "Se fier uniquement à la brochure"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les équipements sont le premier poste d'investissement."
+    }
+  ],
+  "tr_5": [
+    {
+      "question": "Quel est le seuil de rentabilité du cas, rapporté au chiffre d'affaires ?",
+      "options": [
+        "Environ 71 %",
+        "Environ 25 %",
+        "Environ 50 %",
+        "Environ 100 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "54,1 ÷ 76,0 ≈ 71 %, soit une marge de sécurité de 29 %."
+    },
+    {
+      "question": "Que signifie un DSCR de 0,99 en scénario pessimiste ?",
+      "options": [
+        "La banque est remboursée avec 99 % de marge",
+        "Le projet gagne 99 % de plus",
+        "L'annuité est à peine couverte",
+        "Le scénario est sans risque"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Les banques demandent généralement un DSCR nettement supérieur à 1."
+    },
+    {
+      "question": "Quel est le DSCR du scénario de crise de prix (− 15 %) ?",
+      "options": [
+        "0,79",
+        "1,54",
+        "0,99",
+        "2,00"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Il tombe sous 1 : l'annuité n'est plus couverte."
+    },
+    {
+      "question": "Pourquoi obtenir des lettres d'intention d'achat avant d'investir ?",
+      "options": [
+        "Pour remplacer l'agrément sanitaire et les démarches auprès de l'administration",
+        "Pour éviter de calculer le seuil de rentabilité et le DSCR du projet",
+        "Parce que la banque n'en veut jamais et préfère des promesses orales",
+        "Pour avoir des acheteurs identifiés avant d'investir"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Une unité sans acheteurs avant la première campagne est exposée."
+    },
+    {
+      "question": "Pourquoi le prix de 4 000 FCFA/kg est-il à remplacer dans votre dossier ?",
+      "options": [
+        "Le prix est fixé chaque année par l'État pour tous les produits séchés",
+        "C'est une hypothèse : il faut vos relevés datés",
+        "Le prix ne change jamais, quelle que soit la saison ou la qualité du produit",
+        "Le prix est toujours de 2 000 FCFA/kg, quel que soit l'acheteur"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Chaque prix d'un plan porte une source et une date."
+    },
+    {
+      "question": "Quel levier est le plus utile pour améliorer la marge d'une unité saisonnière ?",
+      "options": [
+        "Acheter plus de fruits avant d'avoir trouvé des acheteurs",
+        "Réduire l'emballage à zéro pour gagner quelques points",
+        "Améliorer le rendement et allonger la saison",
+        "Supprimer le scénario de crise pour rassurer la banque"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Chaque levier doit être chiffré avec le modèle avant d'entrer dans le plan."
+    }
   ]
 };
