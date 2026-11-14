@@ -45,7 +45,7 @@ export function MemberCard({
   const category = categorieLabel(categorieBadge)
   const typeOrg = typeOrganisationAffiche(member)
   const place = [member.ville, member.pays].filter(Boolean).join(', ')
-  const headline = [member.specialite, member.organisation].filter(Boolean).join(' · ')
+  const headline = [member.specialite, member.organisation && member.organisation !== name ? member.organisation : null].filter(Boolean).join(' · ')
   const shown = member.thematiques.slice(0, MAX_THEMES)
   const rest = member.thematiques.length - shown.length
 

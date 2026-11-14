@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
-import { categorieAffichee, categorieLabel, lireLangues, typeOrganisationAffiche, parseList, safeExternalUrl } from "@/lib/reseau/profil"
+import { categorieAffichee, categorieLabel, lireLangues, porteUnType, typeOrganisationAffiche, parseList, safeExternalUrl } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 import { Anneau } from "@/components/brand"
 import { Avatar } from "@/components/ui/Avatar"
@@ -62,9 +62,10 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
   const thematiques = parseList(profile.secteurs_expertise)
   const { maternelle, autres: langues } = lireLangues(profile.langues)
   const interets = parseList(profile.centres_interet)
-  const { pourcentage: completion, manquants } = completionProfil({ ...profile, thematiques })
+  const { pourcentage: completion, manquants } = completionProfil({ ...profile, thematiques }, porteUnType(profile))
   const nom = [profile.prenom, profile.nom].filter(Boolean).join(" ") || "Mon profil"
   const lieu = [profile.ville, profile.pays].filter(Boolean).join(", ")
+  const estOrg = porteUnType(profile)
   const siteWeb = safeExternalUrl(profile.site_web_url)
   const linkedin = safeExternalUrl(profile.linkedin_url)
   // Une organisation (ou un administrateur, pour agrolide) consulte la liste de ses abonnés ; elle reste privée.
@@ -107,7 +108,7 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
             <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
               {profile.categorie ? <Badge variant="brand">{categorieLabel(categorieAffichee(profile))}</Badge> : null}
               {typeOrganisationAffiche(profile) ? <Badge variant="category">{typeOrganisationAffiche(profile)}</Badge> : null}
-              {profile.organisation ? (
+              {profile.organisation && profile.organisation !== nom ? (
                 <span className="inline-flex items-center gap-1.5 text-body-md text-on-surface-variant">
                   <Briefcase className="size-4" aria-hidden /> {profile.organisation}
                 </span>
@@ -147,22 +148,22 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
 
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
         <div className="space-y-6 lg:col-span-2">
-          <Bloc titre="À propos" Icone={UserRound}>
+          <Bloc titre={estOrg ? "Présentation" : "À propos"} Icone={UserRound}>
             {profile.biographie ? (
               <p className="whitespace-pre-line text-body-md leading-relaxed text-on-surface-variant">{profile.biographie}</p>
             ) : (
               <p className="text-body-md text-on-surface-muted">
-                Présentez-vous en quelques lignes : votre parcours, ce que vous cherchez dans le réseau.
+                {estOrg ? "Présentez votre organisation : sa mission, ses actions, ce qu'elle cherche dans le réseau." : "Présentez-vous en quelques lignes : votre parcours, ce que vous cherchez dans le réseau."}
               </p>
             )}
           </Bloc>
 
-          <Bloc titre="Expertise et parcours" Icone={GraduationCap}>
+          <Bloc titre={estOrg ? "Activités" : "Expertise et parcours"} Icone={GraduationCap}>
             <dl className="grid gap-5 sm:grid-cols-2">
-              <Info libelle="Métier ou fonction">{profile.specialite || <NonRenseigne />}</Info>
-              <Info libelle="Niveau d'études">{profile.niveau_etudes || <NonRenseigne />}</Info>
+              <Info libelle={estOrg ? "Mission" : "Métier ou fonction"}>{profile.specialite || <NonRenseigne />}</Info>
+              {!estOrg && <Info libelle="Niveau d'études">{profile.niveau_etudes || <NonRenseigne />}</Info>}
               <div className="sm:col-span-2">
-                <Info libelle="Spécialités">
+                <Info libelle={estOrg ? "Domaines d’activité" : "Spécialités"}>
                   {thematiques.length > 0 ? (
                     <ul className="flex flex-wrap gap-2">
                       {thematiques.map((t) => (
@@ -176,6 +177,7 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
                   )}
                 </Info>
               </div>
+              {!estOrg && (
               <div className="sm:col-span-2">
                 <Info libelle="Centres d’intérêt">
                   {interets.length > 0 ? (
@@ -191,8 +193,9 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
                   )}
                 </Info>
               </div>
-              <Info libelle="Langue maternelle">{maternelle || <NonRenseigne />}</Info>
-              <Info libelle="Autres langues parlées">
+              )}
+              {!estOrg && <Info libelle="Langue maternelle">{maternelle || <NonRenseigne />}</Info>}
+              <Info libelle={estOrg ? "Langues de travail" : "Autres langues parlées"}>
                 {langues.length > 0 ? (
                   <span className="inline-flex items-center gap-2">
                     <Languages className="size-4 text-on-surface-variant" aria-hidden /> {langues.join(", ")}

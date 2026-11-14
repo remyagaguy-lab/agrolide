@@ -46,7 +46,7 @@ const avecExistantes = (proposees: readonly string[], choisies: string[]) => [
   ...choisies.filter((c) => !proposees.includes(c)),
 ]
 
-export function ProfilForm({ initial, afficherTypeOrganisation = false }: { initial: ProfilInitial; afficherTypeOrganisation?: boolean }) {
+export function ProfilForm({ initial, afficherTypeOrganisation = false, modeOrganisation = false }: { initial: ProfilInitial; afficherTypeOrganisation?: boolean; modeOrganisation?: boolean }) {
   const router = useRouter()
   const { toast } = useToast()
   const fileInputRef = React.useRef<HTMLInputElement>(null)
@@ -65,7 +65,7 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
     setValeurs((v) => ({ ...v, [cle]: valeur }))
   }
 
-  const completion = completionProfil({ ...valeurs, photo_url: photo })
+  const completion = completionProfil({ ...valeurs, photo_url: photo }, modeOrganisation)
   const optionsPays = avecExistantes([...PAYS, PAYS_AUTRE], valeurs.pays ? [valeurs.pays] : [])
 
   const [fichierPhoto, setFichierPhoto] = React.useState<File | null>(null)
@@ -176,7 +176,7 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
       </div>
 
       <div role="group" aria-labelledby="photo-titre" className="space-y-3">
-        <h2 id="photo-titre" className="text-title-md text-on-surface">Photo de profil</h2>
+        <h2 id="photo-titre" className="text-title-md text-on-surface">{modeOrganisation ? "Logo de l’organisation" : "Photo de profil"}</h2>
         <div className="flex items-center gap-4">
           <Avatar src={photo || null} name={`${valeurs.prenom} ${valeurs.nom}`.trim() || undefined} size="xl" />
           <div className="min-w-0">
@@ -204,6 +204,18 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
 
       <div role="group" aria-labelledby="identite-titre" className="space-y-4">
         <h2 id="identite-titre" className="text-title-md text-on-surface">Identité</h2>
+        {modeOrganisation ? (
+          <>
+            <FormField label="Nom de l’organisation" required id="champ-nom" error={erreurs.nom}>
+              <Input value={valeurs.nom} onChange={(e) => maj("nom", e.target.value)} autoComplete="organization" maxLength={120} />
+            </FormField>
+            <TypeOrganisationChamp valeur={valeurs.type_organisation} onChange={(t) => maj("type_organisation", t)} erreur={erreurs.type_organisation} required />
+            <FormField label="Mission ou activité principale" id="champ-specialite" error={erreurs.specialite} hint="Ce que fait votre organisation, en une phrase (par exemple : appui aux coopératives de producteurs de cacao).">
+              <Input value={valeurs.specialite} onChange={(e) => maj("specialite", e.target.value)} maxLength={150} />
+            </FormField>
+          </>
+        ) : (
+        <>
         <div className="grid gap-4 sm:grid-cols-2">
           <FormField label="Prénom" required id="champ-prenom" error={erreurs.prenom}>
             <Input value={valeurs.prenom} onChange={(e) => maj("prenom", e.target.value)} autoComplete="given-name" maxLength={60} />
@@ -226,6 +238,8 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
             <Input value={valeurs.niveau_etudes} onChange={(e) => maj("niveau_etudes", e.target.value)} maxLength={80} />
           </FormField>
         </div>
+        </>
+        )}
         <div className="grid gap-4 sm:grid-cols-2">
           <FormField label="Pays" id="champ-pays" error={erreurs.pays}>
             <NativeSelect value={valeurs.pays} onChange={(e) => maj("pays", e.target.value)}>
@@ -239,17 +253,17 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
             <Input value={valeurs.ville} onChange={(e) => maj("ville", e.target.value)} autoComplete="address-level2" maxLength={80} />
           </FormField>
         </div>
-        <FormField label="Biographie" id="champ-biographie" error={erreurs.biographie} hint={`Présentez-vous aux autres membres. ${valeurs.biographie.length} / 500 caractères.`}>
-          <Textarea value={valeurs.biographie} onChange={(e) => maj("biographie", e.target.value)} maxLength={500} rows={5} />
+        <FormField label={modeOrganisation ? "Présentation" : "Biographie"} id="champ-biographie" error={erreurs.biographie} hint={`${modeOrganisation ? "Présentez votre organisation aux membres du réseau." : "Présentez-vous aux autres membres."} ${valeurs.biographie.length} / ${modeOrganisation ? 800 : 500} caractères.`}>
+          <Textarea value={valeurs.biographie} onChange={(e) => maj("biographie", e.target.value)} maxLength={modeOrganisation ? 800 : 500} rows={5} />
         </FormField>
       </div>
 
       <div role="group" aria-labelledby="themes-titre" className="space-y-5">
         <div>
-          <h2 id="themes-titre" className="text-title-md text-on-surface">Spécialités et centres d’intérêt</h2>
+          <h2 id="themes-titre" className="text-title-md text-on-surface">{modeOrganisation ? "Domaines d’activité" : "Spécialités et centres d’intérêt"}</h2>
           <p className="mt-1 text-body-sm text-on-surface-muted">Ils apparaissent sur votre fiche et servent aux suggestions de membres.</p>
         </div>
-        <FormField label="Vos spécialités" id="champ-thematiques" error={erreurs.thematiques} hint="Vos domaines de compétence. Plusieurs choix possibles.">
+        <FormField label={modeOrganisation ? "Vos domaines d’activité" : "Vos spécialités"} id="champ-thematiques" error={erreurs.thematiques} hint="Vos domaines de compétence. Plusieurs choix possibles.">
           <MultiSelect
             ariaLabel="Spécialités"
             placeholder="Choisir mes spécialités"
@@ -258,6 +272,7 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
             groupes={[{ options: avecExistantes(THEMATIQUES, valeurs.thematiques) }]}
           />
         </FormField>
+        {!modeOrganisation && (
         <FormField label="Centres d’intérêt" id="champ-centres_interet" error={erreurs.centres_interet} hint="Agriculture, mais aussi sport, musique, lecture, voyage… Ajoutez le vôtre s’il manque.">
           <MultiSelect
             ariaLabel="Centres d’intérêt"
@@ -268,13 +283,15 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
             ajoutLibre="Un autre centre d’intérêt"
           />
         </FormField>
+        )}
       </div>
 
       <div role="group" aria-labelledby="langues-titre" className="space-y-5">
         <div>
-          <h2 id="langues-titre" className="text-title-md text-on-surface">Langues</h2>
+          <h2 id="langues-titre" className="text-title-md text-on-surface">{modeOrganisation ? "Langues de travail" : "Langues"}</h2>
           <p className="mt-1 text-body-sm text-on-surface-muted">Pour que le réseau sache dans quelle langue vous échanger le plus naturellement.</p>
         </div>
+        {!modeOrganisation && (
         <FormField label="Langue maternelle" id="champ-langue_maternelle" error={erreurs.langue_maternelle} hint="Choisissez dans la liste ou écrivez la vôtre (par exemple : Sérère, Éwé, Kikongo).">
           <Input
             value={valeurs.langue_maternelle}
@@ -290,7 +307,8 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
             ))}
           </datalist>
         </FormField>
-        <FormField label="Autres langues parlées" id="champ-langues" error={erreurs.langues} hint="Plusieurs choix possibles. Ajoutez une langue absente de la liste.">
+        )}
+        <FormField label={modeOrganisation ? "Langues de travail" : "Autres langues parlées"} id="champ-langues" error={erreurs.langues} hint="Plusieurs choix possibles. Ajoutez une langue absente de la liste.">
           <MultiSelect
             ariaLabel="Autres langues parlées"
             placeholder="Choisir les langues que je parle"
@@ -304,7 +322,7 @@ export function ProfilForm({ initial, afficherTypeOrganisation = false }: { init
 
       <div role="group" aria-labelledby="liens-titre" className="space-y-4">
         <h2 id="liens-titre" className="text-title-md text-on-surface">Liens</h2>
-        <FormField label="Profil LinkedIn" id="champ-linkedin_url" error={erreurs.linkedin_url} hint="Adresse complète commençant par https://">
+        <FormField label={modeOrganisation ? "Page LinkedIn" : "Profil LinkedIn"} id="champ-linkedin_url" error={erreurs.linkedin_url} hint="Adresse complète commençant par https://">
           <Input type="url" inputMode="url" value={valeurs.linkedin_url} onChange={(e) => maj("linkedin_url", e.target.value)} maxLength={300} placeholder="https://www.linkedin.com/in/…" />
         </FormField>
         <FormField label="Site web" id="champ-site_web_url" error={erreurs.site_web_url} hint="Adresse complète commençant par https://">

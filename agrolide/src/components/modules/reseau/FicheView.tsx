@@ -101,10 +101,10 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
                 {typeOrg && <Badge variant="category">{typeOrg}</Badge>}
               </div>
               <ul className="flex flex-col gap-x-5 gap-y-1 text-body-md text-on-surface-variant sm:flex-row sm:flex-wrap">
-                {(membre.specialite || membre.organisation) && (
+                {(membre.specialite || (membre.organisation && membre.organisation !== name)) && (
                   <li className="flex items-start gap-1.5">
                     <Briefcase className="mt-1 size-4 shrink-0" aria-hidden />
-                    <span>{[membre.specialite, membre.organisation].filter(Boolean).join(' · ')}</span>
+                    <span>{[membre.specialite, membre.organisation && membre.organisation !== name ? membre.organisation : null].filter(Boolean).join(' · ')}</span>
                   </li>
                 )}
                 {place && (

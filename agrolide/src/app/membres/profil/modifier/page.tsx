@@ -88,10 +88,11 @@ export default async function ProfilModifierPage() {
 
       <div className="rounded-card border border-outline-variant bg-surface-container-lowest p-5 md:p-6">
         <ProfilForm
+          modeOrganisation={porteUnType(row)}
           afficherTypeOrganisation={porteUnType(row) || demandeOuverte?.categorie === "partenaire"}
           initial={{
             prenom: row.prenom ?? "",
-            nom: row.nom ?? "",
+            nom: row.nom || row.organisation || "",
             organisation: row.organisation ?? "",
             type_organisation: row.type_organisation ?? "",
             specialite: row.specialite ?? "",

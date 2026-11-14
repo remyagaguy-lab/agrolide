@@ -73,6 +73,24 @@ export const profilSchema = z.object({
   site_web_url: lienHttps('Site web'),
 })
 
+/**
+ * Fiche d'une organisation (Partenaire ou compte du réseau) : un nom d'organisation à la place de prénom et nom,
+ * un type obligatoire, une mission, une présentation, des domaines d'activité, des langues de travail et des liens.
+ * Enregistrée dans les mêmes colonnes que le profil personnel : `nom` et `organisation` portent le nom de l'organisation.
+ */
+export const profilOrganisationSchema = z.object({
+  nom: z.string().trim().min(2, "Le nom de l'organisation est requis (2 caractères au minimum).").max(120, "Nom de l'organisation : 120 caractères au maximum."),
+  type_organisation: valeurLibre,
+  specialite: texte(150, 'Mission'),
+  pays: texte(60, 'Pays'),
+  ville: texte(80, 'Ville'),
+  biographie: texte(800, 'Présentation'),
+  thematiques: liste(12, 'Domaines d’activité'),
+  langues: listeLibre(12, 'Langues').optional().default([]),
+  linkedin_url: lienHttps('Lien LinkedIn'),
+  site_web_url: lienHttps('Site web'),
+})
+
 export type ProfilInput = z.input<typeof profilSchema>
 export type ProfilValeurs = z.output<typeof profilSchema>
 
@@ -93,14 +111,29 @@ const CHAMPS_COMPLETION: ReadonlyArray<{ cle: string; libelle: string }> = [
   { cle: 'site_web_url', libelle: 'Site web' },
 ]
 
+const CHAMPS_COMPLETION_ORGANISATION: ReadonlyArray<{ cle: string; libelle: string }> = [
+  { cle: 'nom', libelle: "Nom de l'organisation" },
+  { cle: 'photo_url', libelle: 'Logo' },
+  { cle: 'type_organisation', libelle: "Type d'organisation" },
+  { cle: 'specialite', libelle: 'Mission' },
+  { cle: 'pays', libelle: 'Pays' },
+  { cle: 'ville', libelle: 'Ville' },
+  { cle: 'biographie', libelle: 'Présentation' },
+  { cle: 'thematiques', libelle: "Domaines d'activité" },
+  { cle: 'langues', libelle: 'Langues de travail' },
+  { cle: 'site_web_url', libelle: 'Site web' },
+  { cle: 'linkedin_url', libelle: 'Lien LinkedIn' },
+]
+
 /** Pourcentage de profil complété et libellés des champs encore vides. Fonction pure. */
-export function completionProfil(valeurs: Record<string, unknown>): { pourcentage: number; manquants: string[] } {
-  const manquants = CHAMPS_COMPLETION.filter(({ cle }) => {
+export function completionProfil(valeurs: Record<string, unknown>, organisation = false): { pourcentage: number; manquants: string[] } {
+  const champs = organisation ? CHAMPS_COMPLETION_ORGANISATION : CHAMPS_COMPLETION
+  const manquants = champs.filter(({ cle }) => {
     const v = valeurs[cle]
     if (Array.isArray(v)) return v.length === 0
     if (cle === 'langues' || cle === 'thematiques') return parseList(v).length === 0
     return !(typeof v === 'string' ? v.trim() : v)
   }).map((c) => c.libelle)
-  const remplis = CHAMPS_COMPLETION.length - manquants.length
-  return { pourcentage: Math.round((remplis / CHAMPS_COMPLETION.length) * 100), manquants }
+  const remplis = champs.length - manquants.length
+  return { pourcentage: Math.round((remplis / champs.length) * 100), manquants }
 }

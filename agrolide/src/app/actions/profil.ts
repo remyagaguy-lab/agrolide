@@ -6,8 +6,8 @@ import { and, eq, inArray } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
-import { PAYS, PAYS_AUTRE, THEMATIQUES, ecrireLangues, parseList, porteUnType } from '@/lib/reseau/profil'
-import { profilSchema } from '@/lib/reseau/profil-schema'
+import { PAYS, PAYS_AUTRE, THEMATIQUES, ecrireLangues, lireLangues, parseList, porteUnType } from '@/lib/reseau/profil'
+import { profilOrganisationSchema, profilSchema } from '@/lib/reseau/profil-schema'
 import { CATEGORIES_ADHESION, libelleCategorie, type CategorieAdhesion } from '@/lib/adhesion'
 import type { ModeChangement } from '@/lib/categorie'
 import { appliquerChangement, notifierAdminsDemandeCategorie } from '@/lib/categorie.server'
@@ -28,6 +28,10 @@ const vide = (v: string) => (v ? v : null)
 export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   const { userId } = await auth()
   if (!userId) return { success: false, error: 'Votre session a expiré. Reconnectez-vous pour enregistrer votre profil.' }
+
+  // Fiche d'une organisation (Partenaire ou compte du réseau) : un autre formulaire, enregistré dans les mêmes colonnes.
+  const [moi] = await db.select({ categorie: users.categorie, est_organisation: users.est_organisation }).from(users).where(eq(users.id, userId)).limit(1)
+  if (moi && porteUnType(moi)) return updateProfilOrganisation(userId, payload)
 
   const parsed = profilSchema.safeParse(nettoyerTextes(payload))
   if (!parsed.success) {
@@ -85,6 +89,53 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
       secteurs_expertise: v.thematiques.length ? JSON.stringify(v.thematiques) : null,
       centres_interet: v.centres_interet.length ? JSON.stringify(v.centres_interet) : null,
       langues: (() => { const l = ecrireLangues(v.langue_maternelle, v.langues); return l.length ? JSON.stringify(l) : null })(),
+      linkedin_url: vide(v.linkedin_url),
+      site_web_url: vide(v.site_web_url),
+      updated_at: new Date().toISOString(),
+    })
+    .where(eq(users.id, userId))
+
+  revalidatePath('/membres/profil')
+  revalidatePath('/membres/dashboard')
+  revalidatePath('/membres/annuaire')
+  return { success: true }
+}
+
+async function updateProfilOrganisation(userId: string, payload: unknown): Promise<ResultatProfil> {
+  const parsed = profilOrganisationSchema.safeParse(nettoyerTextes(payload))
+  if (!parsed.success) {
+    const champs: Record<string, string> = {}
+    for (const issue of parsed.error.issues) {
+      const cle = String(issue.path[0] ?? '')
+      if (cle && !champs[cle]) champs[cle] = issue.message
+    }
+    return { success: false, error: 'Certains champs sont à corriger.', champs }
+  }
+  const v = parsed.data
+
+  const [actuel] = await db.select({ pays: users.pays, secteurs_expertise: users.secteurs_expertise, langues: users.langues }).from(users).where(eq(users.id, userId)).limit(1)
+  if (!actuel) return { success: false, error: 'Profil introuvable.' }
+  const champs: Record<string, string> = {}
+  const paysOk = !v.pays || v.pays === PAYS_AUTRE || (PAYS as readonly string[]).includes(v.pays) || v.pays === actuel.pays
+  if (!paysOk) champs.pays = 'Choisissez un pays dans la liste.'
+  const themesAutorises = new Set<string>([...THEMATIQUES, ...parseList(actuel.secteurs_expertise)])
+  if (v.thematiques.some((t) => !themesAutorises.has(t))) champs.thematiques = 'Choisissez des domaines dans la liste.'
+  if (Object.keys(champs).length > 0) return { success: false, error: 'Certains champs sont à corriger.', champs }
+
+  await db
+    .update(users)
+    .set({
+      // Une organisation n'a ni prénom ni nom de personne : `nom` porte son nom, `organisation` le répète pour la recherche.
+      prenom: null,
+      nom: v.nom,
+      organisation: v.nom,
+      type_organisation: v.type_organisation,
+      specialite: vide(v.specialite),
+      pays: vide(v.pays),
+      ville: vide(v.ville),
+      biographie: vide(v.biographie),
+      secteurs_expertise: v.thematiques.length ? JSON.stringify(v.thematiques) : null,
+      langues: (() => { const l = ecrireLangues(lireLangues(actuel.langues).maternelle, v.langues); return l.length ? JSON.stringify(l) : null })(),
       linkedin_url: vide(v.linkedin_url),
       site_web_url: vide(v.site_web_url),
       updated_at: new Date().toISOString(),
