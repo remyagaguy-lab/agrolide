@@ -1,5 +1,5 @@
 import { notFound, redirect } from 'next/navigation'
-import AfficheEvenement from '@/components/modules/evenements/AfficheEvenement'
+import MiseEnPageEvenement from '@/components/modules/evenements/MiseEnPageEvenement'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { marked } from 'marked'
@@ -42,7 +42,7 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
   const inscrit = !!inscription
 
   return (
-    <div className="max-w-4xl mx-auto px-2 md:px-4 py-6 space-y-6">
+    <div className="max-w-6xl mx-auto px-2 md:px-4 py-6 space-y-6">
       <Breadcrumb jsonLd={false} className="mb-0" items={[{ label: 'Événements', href: '/membres/evenements' }, { label: event.titre }]} />
 
       <header className="space-y-3">
@@ -54,49 +54,10 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
         <h1 className="text-headline-sm md:text-headline-md text-on-surface">{event.titre}</h1>
       </header>
 
-      {event.image_url && <AfficheEvenement src={event.image_url} titre={event.titre} />}
-
-      <Card variant="filled" className="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div className="flex items-start gap-3">
-          <CalendarDays className="mt-0.5 size-5 text-primary" aria-hidden="true" />
-          <div>
-            <p className="text-body-sm text-on-surface-variant">Date</p>
-            <p className="text-title-md capitalize text-on-surface">{format(dateDebut, 'EEEE d MMMM yyyy', { locale: fr })}</p>
-          </div>
-        </div>
-        <div className="flex items-start gap-3">
-          <Clock className="mt-0.5 size-5 text-primary" aria-hidden="true" />
-          <div>
-            <p className="text-body-sm text-on-surface-variant">Heure</p>
-            <p className="text-title-md text-on-surface">
-              {format(dateDebut, 'HH:mm')}
-              {event.date_fin && ` - ${format(new Date(event.date_fin), 'HH:mm')}`}
-            </p>
-          </div>
-        </div>
-        {!event.en_ligne && event.lieu && (
-          <div className="flex items-start gap-3">
-            <MapPin className="mt-0.5 size-5 text-primary" aria-hidden="true" />
-            <div>
-              <p className="text-body-sm text-on-surface-variant">Lieu</p>
-              <p className="text-title-md text-on-surface">{event.lieu}</p>
-            </div>
-          </div>
-        )}
-      </Card>
-
-      <section className="prose prose-green max-w-none text-on-surface-variant" aria-labelledby="evt-apropos">
-        <h2 id="evt-apropos" className="text-title-lg text-on-surface mb-3">À propos de l'événement</h2>
-        {event.description ? (
-          <div dangerouslySetInnerHTML={{ __html: marked.parse(event.description, { async: false }) as string }} />
-        ) : (
-          <p className="italic">Aucune description détaillée n'a été fournie pour le moment.</p>
-        )}
-      </section>
-
-      <div className="border-t border-outline-variant pt-6">
+      <MiseEnPageEvenement event={event} actions={
+      <div className="space-y-3">
         {passe ? (
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="flex flex-col gap-3">
             {event.lien_replay && (
               <a href={event.lien_replay} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: 'secondary' })}>
                 <Video className="size-4" aria-hidden="true" /> Revoir le replay
@@ -135,6 +96,16 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
           <InscriptionEvenementBouton evenementId={event.id} />
         )}
       </div>
+      }>
+      <section className="prose prose-green max-w-none text-on-surface-variant" aria-labelledby="evt-apropos">
+        <h2 id="evt-apropos" className="text-title-lg text-on-surface mb-3">À propos de l'événement</h2>
+        {event.description ? (
+          <div dangerouslySetInnerHTML={{ __html: marked.parse(event.description, { async: false }) as string }} />
+        ) : (
+          <p className="italic">Aucune description détaillée n'a été fournie pour le moment.</p>
+        )}
+      </section>
+      </MiseEnPageEvenement>
     </div>
   )
 }

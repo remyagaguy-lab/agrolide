@@ -7,7 +7,7 @@ import { DetailHero } from '@/components/ui/DetailHero'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import Link from 'next/link'
-import AfficheEvenement from '@/components/modules/evenements/AfficheEvenement'
+import MiseEnPageEvenement from '@/components/modules/evenements/MiseEnPageEvenement'
 import { marked } from 'marked'
 import { db } from '@/db'
 import { evenements } from '@/db/schema'
@@ -108,54 +108,9 @@ export default async function EventPage({ params }: EventPageProps) {
         )}
       </DetailHero>
 
-      <div className="container max-w-4xl py-10 md:py-14">
-        {imageSrc && (
-          <div className="mb-10">
-            <AfficheEvenement src={event.image_url as string} titre={event.titre} />
-          </div>
-        )}
-
-        <Card variant="filled" className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="flex items-start gap-3">
-            <CalendarDays className="mt-0.5 size-5 text-primary" aria-hidden="true" />
-            <div>
-              <p className="text-body-sm text-on-surface-variant">Date</p>
-              <p className="text-title-md text-on-surface">{format(dateDebut, "EEEE d MMMM yyyy", { locale: fr })}</p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3">
-            <Clock className="mt-0.5 size-5 text-primary" aria-hidden="true" />
-            <div>
-              <p className="text-body-sm text-on-surface-variant">Heure</p>
-              <p className="text-title-md text-on-surface">
-                {format(dateDebut, "HH:mm")}
-                {event.date_fin && ` - ${format(new Date(event.date_fin), "HH:mm")}`}
-              </p>
-            </div>
-          </div>
-
-          {!event.en_ligne && event.lieu && (
-            <div className="flex items-start gap-3">
-              <MapPin className="mt-0.5 size-5 text-primary" aria-hidden="true" />
-              <div>
-                <p className="text-body-sm text-on-surface-variant">Lieu</p>
-                <p className="text-title-md text-on-surface">{event.lieu}</p>
-              </div>
-            </div>
-          )}
-        </Card>
-
-        <div className="prose prose-green max-w-none text-on-surface-variant mb-12">
-          <h2 className="text-headline-sm text-on-surface mb-4">À propos de l'événement</h2>
-          {event.description ? (
-            <div dangerouslySetInnerHTML={{ __html: marked.parse(event.description, { async: false }) as string }} />
-          ) : (
-            <p className="italic">Aucune description détaillée n'a été fournie pour le moment.</p>
-          )}
-        </div>
-
-        <div className="flex justify-center border-t border-outline-variant pt-8">
+      <div className="container max-w-6xl py-10 md:py-14">
+        <MiseEnPageEvenement event={event} actions={
+        <div className="space-y-3">
           {isPast ? (
             event.lien_replay ? (
               <div className="flex flex-col items-center gap-3 text-center">
@@ -186,6 +141,16 @@ export default async function EventPage({ params }: EventPageProps) {
             </Link>
           )}
         </div>
+        }>
+        <div className="prose prose-green max-w-none text-on-surface-variant">
+          <h2 className="text-headline-sm text-on-surface mb-4">À propos de l'événement</h2>
+          {event.description ? (
+            <div dangerouslySetInnerHTML={{ __html: marked.parse(event.description, { async: false }) as string }} />
+          ) : (
+            <p className="italic">Aucune description détaillée n'a été fournie pour le moment.</p>
+          )}
+        </div>
+        </MiseEnPageEvenement>
       </div>
     </div>
   )
