@@ -7,6 +7,7 @@ import { DetailHero } from '@/components/ui/DetailHero'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import Link from 'next/link'
+import AfficheEvenement from '@/components/modules/evenements/AfficheEvenement'
 import { marked } from 'marked'
 import { db } from '@/db'
 import { evenements } from '@/db/schema'
@@ -96,7 +97,7 @@ export default async function EventPage({ params }: EventPageProps) {
       <DetailHero
         label="Événement"
         title={event.titre}
-        image={imageSrc ? { src: imageSrc, alt: `Visuel de l'événement « ${event.titre} »` } : null}
+        image={null}
         breadcrumb={[{ label: "Événements", href: "/evenements" }, { label: event.titre }]}
       >
         <Badge variant="neutral" className="capitalize">{event.type_evt.replace('_', ' ')}</Badge>
@@ -108,6 +109,12 @@ export default async function EventPage({ params }: EventPageProps) {
       </DetailHero>
 
       <div className="container max-w-4xl py-10 md:py-14">
+        {imageSrc && (
+          <div className="mb-10">
+            <AfficheEvenement src={event.image_url as string} titre={event.titre} />
+          </div>
+        )}
+
         <Card variant="filled" className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="flex items-start gap-3">
             <CalendarDays className="mt-0.5 size-5 text-primary" aria-hidden="true" />

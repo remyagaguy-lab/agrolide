@@ -19,6 +19,12 @@ function IconeType({ type }: { type: string }) {
   return <Icone className="inline size-4 align-text-bottom" aria-hidden />
 }
 
+/** Aperçu de la carte : premier paragraphe, sans la mise en forme (gras, listes) de la page de lecture. */
+function apercu(texte: string | null | undefined): string {
+  const premier = (texte ?? '').split(/\n\s*\n/)[0] ?? ''
+  return premier.replace(/[*_#>]/g, '').replace(/^\s*[-•]\s+/gm, '').replace(/\s+/g, ' ').trim()
+}
+
 export default function OpportunityCard({ opp }: OpportunityCardProps) {
 
   // Même carte dans l'espace membre et sur le site public : la page de lecture se trouve au même endroit logique.
@@ -47,7 +53,7 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
         </h3>
         
         <p className="text-xs text-on-surface-muted line-clamp-2 mb-4">
-          {opp.description}
+          {apercu(opp.description)}
         </p>
         
         <div className="space-y-1.5 text-xs text-on-surface-muted">

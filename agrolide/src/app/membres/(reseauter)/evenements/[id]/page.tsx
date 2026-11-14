@@ -1,5 +1,5 @@
 import { notFound, redirect } from 'next/navigation'
-import Image from 'next/image'
+import AfficheEvenement from '@/components/modules/evenements/AfficheEvenement'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 import { marked } from 'marked'
@@ -54,18 +54,7 @@ export default async function EvenementMembrePage({ params }: { params: Promise<
         <h1 className="text-headline-sm md:text-headline-md text-on-surface">{event.titre}</h1>
       </header>
 
-      {event.image_url && (
-        <div className="relative h-56 w-full overflow-hidden rounded-card bg-surface-container md:h-72">
-          <Image
-            src={proxyR2(event.image_url)}
-            alt={`Visuel de l'événement « ${event.titre} »`}
-            fill
-            sizes="(max-width: 896px) 100vw, 896px"
-            className="object-cover"
-            unoptimized={event.image_url.includes('r2.cloudflarestorage.com')}
-          />
-        </div>
-      )}
+      {event.image_url && <AfficheEvenement src={event.image_url} titre={event.titre} />}
 
       <Card variant="filled" className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="flex items-start gap-3">

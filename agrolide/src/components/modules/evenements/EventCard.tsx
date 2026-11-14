@@ -65,7 +65,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
             alt={`Affiche ${event.titre}`} 
             fill 
             sizes="(max-width: 768px) 100vw, 33vw" 
-            className="object-cover" 
+            className="object-cover object-top" 
             unoptimized={event.image_url.includes('r2.cloudflarestorage.com')}
           />
           
