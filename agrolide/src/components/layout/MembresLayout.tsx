@@ -100,7 +100,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
           key={item.key}
           href={item.href}
           aria-current={isActive ? "page" : undefined}
-          aria-label={n > 0 ? `${item.label} — ${label}` : item.label}
+          aria-label={n > 0 ? `${item.label}, ${label}` : item.label}
           className={cn(
             "group/info ag-state relative flex size-12 items-center justify-center rounded-control transition-colors duration-150 ease-standard",
             isActive ? "bg-primary-container text-on-primary-container" : "text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface",
@@ -130,7 +130,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
         <LienEnCours className="inset-x-4" />
         {n > 0 ? (
           <span className="ml-auto rounded-full bg-error px-2 py-0.5 text-label-sm text-on-error">
-            <span className="sr-only">{label} — </span>
+            <span className="sr-only">{label}, </span>
             <span aria-hidden>{afficherNombre(n)}</span>
           </span>
         ) : null}
@@ -229,7 +229,7 @@ export function MembresLayout({ children, profile, pendingRequestsCount = 0, unr
               )}
             >
               <Mail className="size-5" aria-hidden />
-              <span className="sr-only">Messages{unreadMessagesCount > 0 ? ` — ${labelMessages(unreadMessagesCount)}` : ""}</span>
+              <span className="sr-only">Messages{unreadMessagesCount > 0 ? `, ${labelMessages(unreadMessagesCount)}` : ""}</span>
               {unreadMessagesCount > 0 ? (
                 <span aria-hidden className="absolute right-1 top-1 flex min-w-5 items-center justify-center rounded-full bg-error px-1 text-label-sm font-bold text-on-error">
                   {afficherNombre(unreadMessagesCount)}

@@ -102,7 +102,7 @@ export function DownloadButton({ documentId, titre, mode = 'public' }: { documen
             </span>
             <ModalTitle>Ce document vous plaît ? Gardez-le.</ModalTitle>
             <ModalDescription>
-              Le téléchargement est réservé aux membres du réseau Agrolide. Créez votre compte gratuit en 1&nbsp;minute : vous
+              Le téléchargement est réservé aux membres du réseau agrolide. Créez votre compte gratuit en 1&nbsp;minute : vous
               pourrez enregistrer ce document dans l&apos;application et le relire plus tard, même sans connexion.
             </ModalDescription>
           </ModalHeader>

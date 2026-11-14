@@ -62,9 +62,9 @@ async function seedBusinessPlan() {
 
 Le **plan d'affaires** (ou Business Plan, BP) est un document stratégique écrit qui décrit de manière exhaustive votre projet d'entreprise. Il couvre tous les aspects de votre future exploitation agricole : de la vision du promoteur jusqu'aux projections financières sur 3 à 5 ans, en passant par l'analyse du marché, la stratégie commerciale, l'organisation technique et les ressources humaines.
 
-Ce n'est pas un simple exercice académique ou un formulaire administratif à remplir pour obtenir un prêt. C'est votre **feuille de route opérationnelle** — le document qui vous accompagnera tout au long de l'aventure entrepreneuriale.
+Ce n'est pas un simple exercice académique ou un formulaire administratif à remplir pour obtenir un prêt. C'est votre **feuille de route opérationnelle** : le document qui vous accompagnera tout au long de l'aventure entrepreneuriale.
 
-> *« Le secret de la réussite est la planification. Tout ce qui est planifié a toujours du succès, et même les obstacles et les imprévus deviennent à ce moment des opportunités à saisir. »* — Guide Bellomar Learning
+> *« Le secret de la réussite est la planification. Tout ce qui est planifié a toujours du succès, et même les obstacles et les imprévus deviennent à ce moment des opportunités à saisir. »*, Guide Bellomar Learning
 
 ---
 
@@ -73,7 +73,7 @@ Ce n'est pas un simple exercice académique ou un formulaire administratif à re
 ### 1. Opportunité financière
 L'autofinancement est souvent insuffisant en agriculture. Les coûts d'un forage (2 500 000 FCFA), d'un système d'irrigation goutte-à-goutte (près de 3 000 000 FCFA), d'un tracteur (plus de 7 000 000 FCFA) et de la clôture d'un champ de 10 hectares (5 000 000 FCFA) dépassent largement les économies personnelles de la plupart des entrepreneurs.
 
-La présentation d'un plan d'affaires solide aux banques, aux organismes publics (ANPGF, APIX, BAD) ou aux investisseurs privés est **la condition sine qua non** pour obtenir un financement. Les banquiers ne financent pas des idées — ils financent des plans chiffrés et crédibles.
+La présentation d'un plan d'affaires solide aux banques, aux organismes publics (ANPGF, APIX, BAD) ou aux investisseurs privés est **la condition sine qua non** pour obtenir un financement. Les banquiers ne financent pas des idées, ils financent des plans chiffrés et crédibles.
 
 **Exemple concret** : Le projet « BEUGUE BAMBA » au Sénégal avait un coût total de 55 859 820 FCFA. L'apport personnel du promoteur ne couvrait que 8 600 000 FCFA (15 %). C'est le plan d'affaires détaillé qui a permis de justifier l'emprunt de 47 259 820 FCFA auprès d'une banque, avec un remboursement sur 5 ans à 8 % d'intérêt.
 
@@ -276,7 +276,7 @@ Nous avons analysé 4 modèles institutionnels différents. Voici leurs points c
 D'après les études sectorielles menées en Afrique de l'Ouest, les facteurs déterminants pour la création d'une exploitation agricole rentable sont :
 
 ### 1. La demande
-Il doit exister une demande forte, réelle et mesurable pour les produits que vous envisagez de cultiver. Cette demande peut être locale (marchés urbains en forte croissance) ou à l'export (Europe, sous-région). Par exemple, la demande nationale sénégalaise en oignons et pommes de terre dépasse largement la production locale, ce qui entraîne des importations massives depuis l'Europe — une opportunité directe pour les producteurs locaux.
+Il doit exister une demande forte, réelle et mesurable pour les produits que vous envisagez de cultiver. Cette demande peut être locale (marchés urbains en forte croissance) ou à l'export (Europe, sous-région). Par exemple, la demande nationale sénégalaise en oignons et pommes de terre dépasse largement la production locale, ce qui entraîne des importations massives depuis l'Europe, une opportunité directe pour les producteurs locaux.
 
 ### 2. L'accès à l'eau
 C'est **le facteur le plus critique** en agriculture subsaharienne. Les exploitations situées dans des zones où la nappe phréatique est accessible (0,5 à 5 mètres de profondeur, comme dans la zone des Niayes au Sénégal) ou le long de fleuves ont un avantage concurrentiel considérable. L'irrigation goutte-à-goutte, alimentée par un forage et des panneaux solaires, permet de produire en contre-saison quand les prix sont les plus élevés.
@@ -302,7 +302,7 @@ En prenant l'exemple du Sénégal, voici les principales zones et leurs caracté
 |------|-----------|-------------|-------------------|-----------------|
 | **Zone des Niayes** | 8 883 km² | Maraîchage (80 % de la production nationale), légumes frais | Nappe peu profonde (0,5 à 5m), climat favorable | Pression urbaine, surexploitation de la nappe |
 | **Vallée du Fleuve** | 44 127 km² | Riziculture, maraîchage de décrue | Eau du fleuve, aménagements hydro-agricoles | Culture pluviale tributaire des pluies |
-| **Bassin Arachidier** | — | Arachide, mil, sorgho | Tradition agricole forte | Dégradation des sols, érosion |
+| **Bassin Arachidier** | n.d. | Arachide, mil, sorgho | Tradition agricole forte | Dégradation des sols, érosion |
 | **Casamance** | 16 632 km² | Riz pluvial, fruitiers, coton | Pluviométrie abondante | Insécurité dans certaines zones |
 | **Sénégal Oriental** | 73 718 km² | Coton, céréales, élevage | Énormes potentiels inexploités | Enclavement, manque d'infrastructures |
 
@@ -313,7 +313,7 @@ En prenant l'exemple du Sénégal, voici les principales zones et leurs caracté
 Malgré les opportunités, l'agriculture reste un secteur à risques. Voici les principaux freins identifiés :
 
 1. **Aléas climatiques** : Irrégularité pluviométrique, sécheresses, inondations.
-2. **Maladies et ravageurs** : Mildiou, thrips, chenilles, fusariose — peuvent détruire une récolte entière.
+2. **Maladies et ravageurs** : Mildiou, thrips, chenilles, fusariose, peuvent détruire une récolte entière.
 3. **Volatilité des prix** : Les prix peuvent varier du simple au triple selon la saison (ex : oignon de 150 à 450 FCFA/kg).
 4. **Accès au foncier** : Difficultés d'obtention de titres fonciers, concurrence avec l'urbanisation.
 5. **Insuffisance du financement** : Les banques perçoivent l'agriculture comme un secteur à risque élevé.
@@ -330,17 +330,17 @@ Malgré les opportunités, l'agriculture reste un secteur à risques. Voici les 
           `
         },
         {
-          titre: "1.4 Quiz — Module 1",
+          titre: "1.4 Quiz : Module 1",
           ordre: 4,
           duree_minutes: 10,
           contenu: `
-# Quiz du Module 1 — Introduction et Fondamentaux
+# Quiz du Module 1 : Introduction et Fondamentaux
 
 Félicitations ! Vous avez terminé le Module 1. Testez vos connaissances avec ce quiz récapitulatif.
 
 ## Ce que vous avez appris dans ce module :
 
-1. **Le Business Plan est votre feuille de route** — pas un simple document administratif. Il remplit 4 fonctions : financière, commerciale, référence, amélioration continue.
+1. **Le Business Plan est votre feuille de route** : pas un simple document administratif. Il remplit 4 fonctions : financière, commerciale, référence, amélioration continue.
 
 2. **La structure type d'un BP agricole** comporte 11 sections dans un ordre logique, du résumé opérationnel (écrit en dernier) jusqu'aux annexes.
 
@@ -452,7 +452,7 @@ Voici le modèle de fiche synoptique le plus complet, qui combine les exigences 
 | Apport personnel | 8 600 000 FCFA (15 %) |
 | Financement sollicité | 47 259 820 FCFA (85 %) |
 | Nombre d'emplois créés | 22 (permanents + saisonniers) |
-| Indicateurs clés | VAN : 10 603 231 FCFA — TRI : 7 % — IP : 1,19 |
+| Indicateurs clés | VAN : 10 603 231 FCFA, TRI : 7 %, IP : 1,19 |
 
 ### Bloc 4 : Partenaires et appui
 
@@ -598,7 +598,7 @@ Rédigez votre propre résumé opérationnel en suivant le modèle des 7 paragra
 
 ## Pourquoi le profil du promoteur est crucial
 
-Les financeurs ne financent pas seulement un projet — ils financent un **homme ou une femme**. La question implicite est toujours : « Cette personne est-elle capable de mener ce projet à bien ? ». Votre section « Présentation du promoteur » doit démontrer que vous avez les compétences, la motivation et la détermination nécessaires.
+Les financeurs ne financent pas seulement un projet, ils financent un **homme ou une femme**. La question implicite est toujours : « Cette personne est-elle capable de mener ce projet à bien ? ». Votre section « Présentation du promoteur » doit démontrer que vous avez les compétences, la motivation et la détermination nécessaires.
 
 ---
 
@@ -806,7 +806,7 @@ Vous ne vendez pas à « tout le monde ». Vous devez identifier vos segments de
 ## Comment estimer la demande future
 
 ### Méthode 1 : Extrapolation des tendances
-Si la demande nationale en oignons croît de 5 % par an et que la production locale ne suit pas, le déficit se creuse — ce qui valide votre projet.
+Si la demande nationale en oignons croît de 5 % par an et que la production locale ne suit pas, le déficit se creuse, ce qui valide votre projet.
 
 ### Méthode 2 : Analyse de la politique publique
 Les engagements gouvernementaux (autosuffisance en oignons, réduction des importations) créent une demande structurelle prévisible.
@@ -908,7 +908,7 @@ Pourquoi les clients achèteront-ils VOTRE produit plutôt que celui de la concu
 
 ## Points clés à retenir
 
-- La production locale est majoritairement familiale avec des rendements sous-optimaux — votre exploitation moderne sera plus compétitive.
+- La production locale est majoritairement familiale avec des rendements sous-optimaux, votre exploitation moderne sera plus compétitive.
 - Les importations massives représentent une opportunité de substitution.
 - Analysez chaque concurrent sur 6 critères : volume, effectif, ancienneté, couverture, forces, faiblesses.
 - Identifiez clairement votre avantage compétitif (qualité, régularité, prix, service).
@@ -961,7 +961,7 @@ Le SWOT (ou FFOM en français) est un outil d'analyse stratégique qui croise de
 
 ## Du SWOT aux actions stratégiques
 
-Le SWOT n'est pas une fin en soi — c'est un **outil de décision**. Voici comment transformer chaque quadrant en actions concrètes :
+Le SWOT n'est pas une fin en soi, c'est un **outil de décision**. Voici comment transformer chaque quadrant en actions concrètes :
 
 ### Forces → Maximiser
 - Main-d'œuvre compétitive → Embaucher des ouvriers permanents pour assurer la qualité.
@@ -986,7 +986,7 @@ Le SWOT n'est pas une fin en soi — c'est un **outil de décision**. Voici comm
 
 - Le SWOT distingue les facteurs internes (maîtrisables) des facteurs externes (non maîtrisables).
 - Chaque élément du SWOT doit être transformé en une action stratégique concrète.
-- Les menaces climatiques et sanitaires sont les plus critiques en agriculture — elles exigent des investissements préventifs (forage, stockage, assurance).
+- Les menaces climatiques et sanitaires sont les plus critiques en agriculture, elles exigent des investissements préventifs (forage, stockage, assurance).
           `,
           quiz_json: [
             {
@@ -1069,11 +1069,11 @@ En agriculture, le site d'implantation conditionne directement :
           `
         },
         {
-          titre: "3.6 Quiz — Module 3",
+          titre: "3.6 Quiz : Module 3",
           ordre: 6,
           duree_minutes: 10,
           contenu: `
-# Quiz du Module 3 — L'Étude de Marché Approfondie
+# Quiz du Module 3 : L'Étude de Marché Approfondie
 
 Vous avez terminé le module le plus dense de la formation. Testez vos connaissances !
 
@@ -1695,7 +1695,7 @@ Dressez un tableau détaillé de vos fournisseurs :
 | Fumure organique | 1 000 sacs | 1 000 FCFA/sac | 1 000 000 | Éleveurs locaux |
 | Fongicides (Manèbe) | 40 kg | 5 000 FCFA/kg | 200 000 | Agro-fournisseurs |
 | Herbicides (Gallant) | 20 L | 13 000 FCFA/L | 260 000 | Agro-fournisseurs |
-| Insecticides divers | — | — | 750 000 | Agro-fournisseurs |
+| Insecticides divers | n.d. | n.d. | 750 000 | Agro-fournisseurs |
 | Sacs vides | 4 000 | 1 000 FCFA | 4 000 000 | Grossistes emballage |
 | Carburant et lubrifiants | 500 L | 695 FCFA/L | 347 500 | Station-service |
 
@@ -1843,7 +1843,7 @@ Pour un projet maraîcher avec des investissements supérieurs à 10 millions FC
 | Charges sociales (20 %) | | | | 5 352 000 |
 | **TOTAL MASSE SALARIALE** | | | | **32 112 000** |
 
-> **La masse salariale représente environ 40 % des charges d'exploitation** — c'est le poste le plus important après les intrants. Il est crucial de bien le budgétiser.
+> **La masse salariale représente environ 40 % des charges d'exploitation** : c'est le poste le plus important après les intrants. Il est crucial de bien le budgétiser.
 
 ---
 
@@ -1997,7 +1997,7 @@ Ce sont les dépenses de démarrage qui n'ont pas de valeur matérielle :
 - Frais d'ouverture de compte bancaire.
 
 ### 2. Investissements corporels
-C'est le cœur de votre projet — les biens matériels :
+C'est le cœur de votre projet, les biens matériels :
 - Infrastructures : bâtiment, clôture, forage, irrigation.
 - Matériel semi-lourd : tracteur, herse, pulvérisateur.
 - Matériel léger : outils, bascules, cageots.
@@ -2038,7 +2038,7 @@ Toujours prévoir une marge de 2 à 5 % pour les imprévus.
 ## Points clés à retenir
 - Le total des investissements pour 10 hectares de maraîchage est d'environ 55 à 60 millions FCFA.
 - Le matériel semi-lourd est le poste le plus important (40 %).
-- Le BFR est souvent sous-estimé — calculez-le soigneusement (Module 7.2).
+- Le BFR est souvent sous-estimé, calculez-le soigneusement (Module 7.2).
 - Prévoyez toujours une ligne « divers et imprévus » (2 à 5 %).
           `
         },
@@ -2198,9 +2198,9 @@ Hypothèses : Emprunt de 47 259 820 FCFA, taux d'intérêt annuel de 8 %, durée
 
 ### Les soldes intermédiaires expliqués
 
-- **Marge de Production** = CA - Coût des intrants. C'est ce qu'il reste après avoir payé les semences et engrais.
-- **Valeur Ajoutée** = Marge - Charges externes. C'est la richesse créée par votre exploitation.
-- **EBE (Excédent Brut d'Exploitation)** = VA - Personnel. C'est la performance économique **pure** de la ferme, indépendamment du financement et des amortissements.
+- **Marge de Production** = CA − Coût des intrants. C'est ce qu'il reste après avoir payé les semences et engrais.
+- **Valeur Ajoutée** = Marge − Charges externes. C'est la richesse créée par votre exploitation.
+- **EBE (Excédent Brut d'Exploitation)** = VA − Personnel. C'est la performance économique **pure** de la ferme, indépendamment du financement et des amortissements.
 - **Résultat Net** = Ce qu'il reste après TOUT (charges, amortissements, intérêts, impôts). C'est votre bénéfice.
 
 ---
@@ -2378,7 +2378,7 @@ Le **seuil de rentabilité** est le chiffre d'affaires minimum pour couvrir tout
 | Rentabilité financière | RN / Fonds propres | 184 % | > 15 % |
 | Poids de l'endettement | Charges financières / CA | 4,7 % | < 5 % |
 | Capacité de remboursement | Dettes MLT / CAF | 1,98 ans | < 3-4 ans |
-| Délai de récupération | — | 3 ans et 4 mois | < 5 ans |
+| Délai de récupération | n.d. | 3 ans et 4 mois | < 5 ans |
 
 ---
 
@@ -2398,7 +2398,7 @@ Le **seuil de rentabilité** est le chiffre d'affaires minimum pour couvrir tout
                 "Le taux d'intérêt de l'emprunt est trop élevé"
               ],
               "correctAnswer": 1,
-              "explanation": "Une VAN positive signifie que la somme actualisée de tous les flux de trésorerie futurs dépasse l'investissement initial. Le projet crée de la richesse — il est rentable."
+              "explanation": "Une VAN positive signifie que la somme actualisée de tous les flux de trésorerie futurs dépasse l'investissement initial. Le projet crée de la richesse, il est rentable."
             },
             {
               "question": "En agriculture, pourquoi le plan de trésorerie mensuel est-il critique ?",
@@ -2445,7 +2445,7 @@ Le **seuil de rentabilité** est le chiffre d'affaires minimum pour couvrir tout
 3. **Table des matières** : Générée automatiquement, avec les numéros de pages.
 4. **Références des tableaux** : Créez un index de tous les tableaux financiers avec leurs numéros de pages.
 5. **En-tête/pied de page** : Nom du projet + numéro de page.
-6. **Mention de confidentialité** : « Document confidentiel — Ne pas reproduire sans l'accord du promoteur ».
+6. **Mention de confidentialité** : « Document confidentiel : Ne pas reproduire sans l'accord du promoteur ».
 
 ### La longueur idéale
 - **Corps du document** : 30 à 60 pages.
@@ -2474,7 +2474,7 @@ Le **seuil de rentabilité** est le chiffre d'affaires minimum pour couvrir tout
 
 La conclusion doit résumer en **10 lignes maximum** les points forts du projet :
 
-> *Exemple : « Le projet d'exploitation agricole est financièrement et économiquement rentable. La VAN au taux de 25 % est de 10 603 231 FCFA, le TRI est de 7 % et l'indice de profitabilité est de 1,19 — le projet est rentable. Le délai de récupération du capital investi est le 26 avril de la 4e année. Le projet crée 22 emplois directs, contribue à la réduction des importations horticoles et s'inscrit pleinement dans la politique d'autosuffisance alimentaire du pays. »*
+> *Exemple : « Le projet d'exploitation agricole est financièrement et économiquement rentable. La VAN au taux de 25 % est de 10 603 231 FCFA, le TRI est de 7 % et l'indice de profitabilité est de 1,19, le projet est rentable. Le délai de récupération du capital investi est le 26 avril de la 4e année. Le projet crée 22 emplois directs, contribue à la réduction des importations horticoles et s'inscrit pleinement dans la politique d'autosuffisance alimentaire du pays. »*
 
 ---
 
@@ -2561,28 +2561,28 @@ Vous avez terminé la formation **« Rédaction de Business Plan Agricole »** e
 
 ## Récapitulatif de vos acquis
 
-### Module 1 — Introduction et Fondamentaux
+### Module 1 : Introduction et Fondamentaux
 Vous savez pourquoi un BP est indispensable, quelle est sa structure et quels sont les facteurs clés de succès.
 
-### Module 2 — Résumé Opérationnel
+### Module 2 : Résumé Opérationnel
 Vous savez rédiger un Executive Summary percutant et présenter votre profil de promoteur.
 
-### Module 3 — Étude de Marché
+### Module 3 : Étude de Marché
 Vous maîtrisez l'analyse de la demande, de l'offre, de la concurrence, le SWOT et le choix du site.
 
-### Module 4 — Stratégie Commerciale
+### Module 4 : Stratégie Commerciale
 Vous savez définir votre stratégie produit, prix, distribution et communication.
 
-### Module 5 — Étude Technique
+### Module 5 : Étude Technique
 Vous maîtrisez les itinéraires techniques (oignon, pomme de terre), le choix des équipements et la sécurisation foncière.
 
-### Module 6 — Organisation Juridique
+### Module 6 : Organisation Juridique
 Vous savez choisir la bonne forme juridique, construire un organigramme et calculer la masse salariale.
 
-### Module 7 — Ingénierie Financière
+### Module 7 : Ingénierie Financière
 Vous maîtrisez le tableau des investissements, le BFR, l'amortissement de l'emprunt, le compte de résultat, la trésorerie mensuelle et les indicateurs VAN/TRI.
 
-### Module 8 — Finalisation
+### Module 8 : Finalisation
 Vous savez mettre en forme votre BP, préparer les annexes et pitcher devant un comité de financement.
 
 ---
@@ -2600,7 +2600,7 @@ Passez le quiz final ci-dessous pour valider votre certification.
               "question": "Un projet avec une VAN positive et un IP de 1,19 signifie que :",
               "options": [
                 "Le projet perd 19 % de sa valeur chaque année",
-                "Pour chaque 1 000 FCFA investi, le projet génère 1 190 FCFA de valeur — il est rentable",
+                "Pour chaque 1 000 FCFA investi, le projet génère 1 190 FCFA de valeur, il est rentable",
                 "Le taux d'intérêt est de 19 %",
                 "Le projet atteint sa rentabilité au 19e mois"
               ],

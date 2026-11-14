@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
       () => resend.emails.send({
         from: 'agrolide <contact@agrolide.org>',
         to: data.email,
-        subject: 'Accusé de réception - Candidature Incubation',
+        subject: 'Accusé de réception : candidature à l\'incubation',
         html: `<p>Bonjour ${data.prenom},</p><p>Votre candidature pour le programme d'incubation agrolide avec le projet "${data.titre_projet}" a bien été enregistrée.</p><p>L'équipe agrolide</p>`
       }),
       // Alerte équipe

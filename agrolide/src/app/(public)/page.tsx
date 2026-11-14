@@ -440,7 +440,7 @@ export default async function HomePage() {
               { initials: "FD", name: "Fatou D.", role: "Chercheuse", country: "Sénégal",
                 quote: "Grâce au réseau, mes travaux de recherche ont trouvé une audience et des applications concrètes. Un espace unique pour valoriser la science africaine." },
               { initials: "EM", name: "Emmanuel M.", role: "Agripreneur", country: "Cameroun",
-                quote: "L'accompagnement d'Agrolide m'a aidé à passer de l'idée au marché en moins de six mois. Le réseau de mentors est exceptionnel." },
+                quote: "L'accompagnement d'agrolide m'a aidé à passer de l'idée au marché en moins de six mois. Le réseau de mentors est exceptionnel." },
             ].map((t) => (
               <Card key={t.initials} className="flex flex-col h-full">
                 <Feuille className="mt-1 w-6 text-accent-leaf" />
@@ -484,7 +484,7 @@ export default async function HomePage() {
                 year: 'numeric', month: 'short', day: 'numeric'
               }) : "Récemment";
               
-              const auteurName = item.profiles ? `${item.profiles.prenom} ${item.profiles.nom}` : (item.auteur_externe || "Équipe Agrolide");
+              const auteurName = item.profiles ? `${item.profiles.prenom} ${item.profiles.nom}` : (item.auteur_externe || "Équipe agrolide");
 
               return (
               <Link href={`/blog/${item.slug}`} key={i} className="block group">

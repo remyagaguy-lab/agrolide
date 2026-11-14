@@ -108,19 +108,19 @@ export async function rejectDocument(documentId: string, reason: string) {
   if (resend && authorProfile?.email) {
     try {
       await resend.emails.send({
-        from: 'Agrolide <contact@agrolide.org>',
+        from: 'agrolide <contact@agrolide.org>',
         to: authorProfile.email,
-        subject: 'Mise à jour concernant votre document - Agrolide',
+        subject: 'Mise à jour concernant votre document sur agrolide',
         html: `
           <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
             <h2>Bonjour ${authorProfile.prenom || ''},</h2>
-            <p>Nous vous remercions d'avoir partagé le document <strong>"${doc.titre}"</strong> sur Agrolide.</p>
+            <p>Nous vous remercions d'avoir partagé le document <strong>"${doc.titre}"</strong> sur agrolide.</p>
             <p>Après examen par notre équipe de modération, nous ne pouvons malheureusement pas publier ce document pour la raison suivante :</p>
             <div style="background-color: #f9fafb; padding: 15px; border-left: 4px solid #ef4444; margin: 20px 0;">
               ${reason}
             </div>
             <p>N'hésitez pas à proposer d'autres documents respectant nos critères de publication.</p>
-            <p>Cordialement,<br>L'équipe de modération Agrolide</p>
+            <p>Cordialement,<br>L'équipe de modération agrolide</p>
           </div>
         `
       })

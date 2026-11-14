@@ -3,7 +3,7 @@ import { QUIZ } from './quiz_banque';
 
 export const parcours3: ParcoursSeed = {
   id: "bp_agri_p3",
-  titre: "Parcours 3 — Construisez l'offre et l'exploitation",
+  titre: "Parcours 3 : Construisez l'offre et l'exploitation",
   description: "Décrire concrètement ce que vous produisez, comment vous le produisez (itinéraire technique), et l'organisation légale et humaine de votre entreprise.",
   lecons: [
     {
@@ -163,9 +163,9 @@ Sur ses 10 hectares, Diap ne peut pas planter de l'oignon toute l'année, car il
 
 Son calendrier est donc le suivant. Attention : les cinq mois d'installation constituent l'**année 0** du projet (aucun chiffre d'affaires). La première campagne complète ouvre l'**année 1**, dont les rendements sont prudemment fixés à 85 % de la pleine production (montée en puissance).
 - **Plan d'assolement :** 7 ha d'oignon et 3 ha de pomme de terre en contre-saison froide ; 3 ha de gombo ou de maïs doux en hivernage (les 7 autres hectares se reposent en engrais vert).
-- **Campagne 1 (Oignon, 7 ha - Contre-saison froide) :** Pépinière en octobre, repiquage en novembre/décembre, récolte en mars/avril, puis séchage et vente entre avril et août (environ 40 % du volume est stocké sous hangar pour être vendu quand les prix remontent).
+- **Campagne 1 (Oignon, 7 ha, contre-saison froide) :** Pépinière en octobre, repiquage en novembre/décembre, récolte en mars/avril, puis séchage et vente entre avril et août (environ 40 % du volume est stocké sous hangar pour être vendu quand les prix remontent).
 - **Campagne 2 (Pomme de terre, 3 ha) :** Plantation fin décembre, récolte en mars (cycle d'environ 90 jours).
-- **Campagne 3 (Gombo ou Maïs doux, 3 ha - Hivernage) :** De juillet à septembre. Il utilise des cultures à cycle court qui supportent bien la pluie pour rentabiliser le sol, payer la main-d'œuvre permanente, et casser les cycles parasitaires (rotation des cultures).
+- **Campagne 3 (Gombo ou Maïs doux, 3 ha, hivernage) :** De juillet à septembre. Il utilise des cultures à cycle court qui supportent bien la pluie pour rentabiliser le sol, payer la main-d'œuvre permanente, et casser les cycles parasitaires (rotation des cultures).
 
 Grâce à ce calendrier, Diap démontre qu'il fait une **rotation des cultures** (bonnes pratiques agricoles) et qu'il évite de laisser ses terres et son personnel inactifs pendant l'hivernage.
 

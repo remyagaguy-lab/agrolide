@@ -51,7 +51,7 @@ async function seedBusinessPlanV2() {
   await db.insert(formations).values({
     id: formationId,
     titre: "Rédiger un business plan agricole qui convainc",
-    description: "De l'idée au dossier de financement — 23 modules pour construire, chiffrer et défendre votre projet agricole. Une méthode pas à pas basée sur le cas réel de l'exploitation de Diap Touré (Niayes, Sénégal).",
+    description: "De l'idée au dossier de financement : 23 modules pour construire, chiffrer et défendre votre projet agricole. Une méthode pas à pas basée sur le cas réel de l'exploitation de Diap Touré (Niayes, Sénégal).",
     thematique: "Agrobusiness",
     niveau: "Débutant à Intermédiaire",
     modalite: "En ligne",

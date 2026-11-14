@@ -179,7 +179,7 @@ export default function NotificationBell({ userId, className }: NotificationBell
                       <span className="min-w-0 flex-1">
                         <span className="block text-label-sm uppercase tracking-wider text-on-surface-muted">
                           {libelleType(n.type)}
-                          {!n.lu && <span className="sr-only"> — non lue</span>}
+                          {!n.lu && <span className="sr-only">, non lue</span>}
                         </span>
                         <span className={cn('mt-0.5 line-clamp-2 block text-body-sm', n.lu ? 'text-on-surface-variant' : 'font-semibold text-on-surface')}>
                           {n.contenu}

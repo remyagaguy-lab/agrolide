@@ -206,7 +206,7 @@ export default function DeposerDocumentPage() {
     <div className="max-w-3xl mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-on-surface">Déposer un document</h1>
-        <p className="text-on-surface-variant">Partagez vos connaissances avec la communauté Agrolide.</p>
+        <p className="text-on-surface-variant">Partagez vos connaissances avec la communauté agrolide.</p>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-surface-container-lowest p-6 sm:p-8 rounded-2xl border border-outline-variant shadow-sm">

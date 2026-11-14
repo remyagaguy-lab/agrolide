@@ -40,7 +40,7 @@ export function SectionTabs({ rubrique }: { rubrique: MembresRubrique["key"] }) 
                 <LienEnCours className="inset-x-3" />
                 {n > 0 ? (
                   <span className="rounded-full bg-error px-2 py-0.5 text-label-sm text-on-error">
-                    <span className="sr-only">{(o.badge === "invitations" ? labelInvitations : labelMessages)(n)} — </span>
+                    <span className="sr-only">{(o.badge === "invitations" ? labelInvitations : labelMessages)(n)}, </span>
                     <span aria-hidden>{afficherNombre(n)}</span>
                   </span>
                 ) : null}

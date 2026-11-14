@@ -78,7 +78,7 @@ const LIGNES: Ligne[] = [
     origine: 'Les trois traits verts de droite : même épaisseur que l’anneau (61,8 à 62,7 px), axes circulaires aux centres décalés sous la feuille ; les bandes blanches entre eux s’affinent de 68 à 45 px. Cadre = coin bas-droit de l’emblème.',
     role: 'MOUVEMENT DE COIN : bandeau de chiffres, en-tête vert, coin d’un bandeau large.',
     tailles: '30 % de la largeur sur mobile, 18 à 26 rem sur bureau ; proportions fixes (726 × 490).',
-    couleurs: 'Couleur du texte à 8–12 % d’opacité sur vert ; vert à 12 % sur clair.',
+    couleurs: 'Couleur du texte à 8 à 12 % d’opacité sur vert ; vert à 12 % sur clair.',
     interdit: 'Au milieu, derrière un paragraphe ou un chiffre, en contact avec l’horizon, dans deux coins de la même vue.',
     demo: (
       <div className="relative h-16 w-24 overflow-hidden rounded-tag bg-surface-brand text-on-surface-brand">

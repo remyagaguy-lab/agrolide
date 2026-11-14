@@ -87,7 +87,7 @@ export function construireRappel(c: ContexteRappel): TexteRappel {
         Si vous avez des questions, contactez-nous à <a href="mailto:contact@agrolide.org">contact@agrolide.org</a>
       </p>
       <p style="color: #6b7280; font-size: 12px; margin-top: 24px;">
-        L'équipe agrolide — Réseau africain de l'agriculture
+        L'équipe agrolide, Réseau africain de l'agriculture
       </p>
     </div>
   `

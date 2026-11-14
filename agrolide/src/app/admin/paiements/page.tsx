@@ -83,7 +83,7 @@ export default async function AdminPaiementsPage() {
                     <td className="px-5 py-3">
                       <span className="flex items-center gap-1.5 text-on-warning-container font-medium text-xs">
                         <Clock size={16} />
-                        {c.date_fin ? new Date(c.date_fin).toLocaleDateString("fr-FR") : "—"}
+                        {c.date_fin ? new Date(c.date_fin).toLocaleDateString("fr-FR") : "Non renseigné"}
                       </span>
                     </td>
                   </tr>
@@ -119,11 +119,11 @@ export default async function AdminPaiementsPage() {
                     <td className="px-5 py-3 text-on-surface-muted capitalize text-xs">{c.methode?.replace(/_/g, " ")}</td>
                     <td className="px-5 py-3">
                       <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${statutBadge[c.statut || ''] || "bg-surface-container text-on-surface-muted"}`}>
-                        {c.statut || "—"}
+                        {c.statut || "Non renseigné"}
                       </span>
                     </td>
                     <td className="px-5 py-3 text-on-surface-muted text-xs">
-                      {c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}
+                      {c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "Non renseigné"}
                     </td>
                   </tr>
                 ))}
@@ -161,11 +161,11 @@ export default async function AdminPaiementsPage() {
                     <td className="px-5 py-3 text-on-surface-muted capitalize text-xs">{c.methode?.replace(/_/g, " ")}</td>
                     <td className="px-5 py-3">
                       <span className={`px-2 py-0.5 rounded-full text-xs font-semibold ${statutBadge[c.statut || ''] || "bg-surface-container text-on-surface-muted"}`}>
-                        {c.statut || "—"}
+                        {c.statut || "Non renseigné"}
                       </span>
                     </td>
                     <td className="px-5 py-3 text-on-surface-muted text-xs">
-                      {c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}
+                      {c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "Non renseigné"}
                     </td>
                   </tr>
                 ))}

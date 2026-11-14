@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       () => resend.emails.send({
         from: 'agrolide Partenariats <partenaires@agrolide.org>',
         to: data.email,
-        subject: 'Accusé de réception - Demande de partenariat agrolide',
+        subject: 'Accusé de réception : demande de partenariat agrolide',
         html: `<p>Bonjour,</p><p>Nous avons bien reçu votre demande de partenariat pour ${data.raison_sociale}.</p><p>Notre équipe en charge des relations institutionnelles prendra contact avec vous dans les plus brefs délais.</p><p>L'équipe agrolide</p>`
       }),
       // Alerte interne

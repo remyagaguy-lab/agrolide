@@ -3,7 +3,7 @@ import { QUIZ } from './quiz_banque';
 
 export const parcours2: ParcoursSeed = {
   id: "bp_agri_p2",
-  titre: "Parcours 2 — Étudiez votre marché",
+  titre: "Parcours 2 : Étudiez votre marché",
   description: "Prouver qu'il existe une demande réelle pour votre projet. De l'analyse de l'environnement macroéconomique jusqu'au diagnostic SWOT.",
   lecons: [
     {

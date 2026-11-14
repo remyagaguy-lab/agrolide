@@ -11,7 +11,7 @@ test('retire les emojis et l’espace qui les suit', () => {
 })
 
 test('garde le texte courant : accents, ponctuation, © ® ™, flèches, chiffres', () => {
-  const t = 'Éléments à vérifier – 100 % © agrolide® → étape 2 #1 *gras*'
+  const t = 'Éléments à vérifier : 100 % © agrolide® → étape 2 #1 *gras*'
   assert.equal(retirerEmojis(t), t)
 })
 

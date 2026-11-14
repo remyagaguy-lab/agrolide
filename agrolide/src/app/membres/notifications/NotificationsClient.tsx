@@ -116,7 +116,7 @@ export default function NotificationsClient() {
                   <div className="min-w-0">
                     <p className="text-label-sm uppercase tracking-wider text-on-surface-muted">
                       {libelleType(notif.type)}
-                      {!notif.lu && <span className="sr-only"> — non lue</span>}
+                      {!notif.lu && <span className="sr-only">, non lue</span>}
                     </p>
                     <p className={`mt-0.5 text-sm ${!notif.lu ? 'font-bold text-on-surface' : 'font-medium text-on-surface-variant'}`}>
                       {notif.contenu}

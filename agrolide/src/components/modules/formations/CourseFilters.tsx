@@ -8,7 +8,7 @@ import { NativeSelect } from '@/components/ui/Select';
 import { SlidersHorizontal, X } from "@/components/ui/icons"
 const THEMATIQUES = ['Agrobusiness', 'Production Animale', 'Production Végétale', 'Financement', 'Agroécologie', 'Gestion des Sols'];
 const SOURCES = [
-  { value: 'Agrolide', label: 'Agrolide' },
+  { value: 'Agrolide', label: 'agrolide' }, // editorial:ignore valeur stockée en base
   { value: 'FAO elearning Academy', label: 'FAO' },
   { value: 'GIZ atingi', label: 'GIZ atingi' },
   { value: 'FUN MOOC', label: 'FUN MOOC' },

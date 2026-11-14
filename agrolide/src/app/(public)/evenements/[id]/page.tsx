@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: EventPageProps) {
   return {
     title: event.titre,
     alternates: { canonical: `/evenements/${event.id}` },
-    description: event.description ? event.description.substring(0, 160).replace(/<[^>]+>/g, '') : `Participez à l'événement ${event.titre} organisé par le réseau Agrolide.`,
+    description: event.description ? event.description.substring(0, 160).replace(/<[^>]+>/g, '') : `Participez à l'événement ${event.titre} organisé par le réseau agrolide.`,
     openGraph: {
       title: event.titre,
       description: event.description ? event.description.substring(0, 160).replace(/<[^>]+>/g, '') : undefined,
@@ -76,7 +76,7 @@ export default async function EventPage({ params }: EventPageProps) {
     description: event.description ? event.description.replace(/<[^>]+>/g, '') : "",
     organizer: {
       "@type": "Organization",
-      name: "Agrolide",
+      name: "agrolide",
       url: "https://agrolide.org"
     }
   }

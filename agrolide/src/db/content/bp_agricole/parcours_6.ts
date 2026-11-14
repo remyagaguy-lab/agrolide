@@ -3,7 +3,7 @@ import { QUIZ } from './quiz_banque';
 
 export const parcours6: ParcoursSeed = {
   id: "bp_agri_p6",
-  titre: "Parcours 6 — Sécurisez et finalisez le dossier",
+  titre: "Parcours 6 : Sécurisez et finalisez le dossier",
   description: "Dernière étape : prouver que vous maîtrisez les risques, rédiger le résumé exécutif (la partie la plus lue) et préparer les documents annexes.",
   lecons: [
     {

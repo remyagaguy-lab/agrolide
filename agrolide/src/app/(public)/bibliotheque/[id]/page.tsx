@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     where: eq(documents.id, id)
   })
   
-  return { title: data?.titre ? `${data.titre} | Bibliothèque Agrolide` : "Document | Bibliothèque Agrolide" }
+  return { title: data?.titre ? `${data.titre} | Bibliothèque agrolide` : "Document | Bibliothèque agrolide" }
 }
 
 // Un membre connecté qui ouvre cette URL est redirigé vers /membres/bibliotheque/[id] par le middleware.

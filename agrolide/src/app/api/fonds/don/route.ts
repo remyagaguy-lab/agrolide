@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
             currency: 'xof',
             product_data: {
               name: 'Donation pour la souveraineté alimentaire',
-              description: `Campagne Agrolide`,
+              description: `Campagne agrolide`,
             },
             unit_amount: amount,
           },

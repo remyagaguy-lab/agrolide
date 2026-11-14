@@ -60,7 +60,7 @@ export default function CodesAccesPage() {
   }
 
   const exporter = () => {
-    const lignes = [["code", "challenge", "formation", "expire_le", "statut"], ...visibles.map((c) => [c.code, c.lot ?? "", c.formationTitre ?? "Toutes les formations Agrolide", date(c.expireLe), statut(c).texte])]
+    const lignes = [["code", "challenge", "formation", "expire_le", "statut"], ...visibles.map((c) => [c.code, c.lot ?? "", c.formationTitre ?? "Toutes les formations agrolide", date(c.expireLe), statut(c).texte])]
     const csv = lignes.map((l) => l.map((v) => `"${v.replace(/"/g, '""')}"`).join(";")).join("\n")
     const a = document.createElement("a")
     a.href = URL.createObjectURL(new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8" }))
@@ -74,7 +74,7 @@ export default function CodesAccesPage() {
         <Link href="/admin/contenus/formations" className="text-label-md font-medium text-success hover:underline">Formations</Link>
         <h1 className="mt-1 flex items-center gap-2 text-2xl font-bold text-on-surface"><Lock className="size-6" aria-hidden />Codes d&apos;accès</h1>
         <p className="mt-1 text-sm text-on-surface-variant">
-          Un code donne accès à une formation Agrolide. Il est à usage unique : une fois utilisé, il est lié au membre. À remettre aux participants sélectionnés lors d&apos;un challenge.
+          Un code donne accès à une formation agrolide. Il est à usage unique : une fois utilisé, il est lié au membre. À remettre aux participants sélectionnés lors d&apos;un challenge.
         </p>
       </div>
 
@@ -84,7 +84,7 @@ export default function CodesAccesPage() {
         </label>
         <label className="space-y-1 text-label-lg font-bold text-on-surface">Formation concernée
           <select value={formationId} onChange={(e) => setFormationId(e.target.value)} className={champ}>
-            <option value="">Toutes les formations Agrolide</option>
+            <option value="">Toutes les formations agrolide</option>
             {formations.map((f) => <option key={f.id} value={f.id}>{f.titre}</option>)}
           </select>
         </label>

@@ -209,7 +209,7 @@ export const formations = sqliteTable("formations", {
   statut: text("statut"),
   cover_image_url: text("cover_image_url"), // Added for course display
   lien_externe: text("lien_externe"),
-  source_externe: text("source_externe").default("Agrolide"),
+  source_externe: text("source_externe").default("Agrolide"), // editorial:ignore valeur stockée en base
 }, (t) => [
   index("idx_formations_created_at").on(t.created_at),
 ]);

@@ -36,7 +36,7 @@ export default async function ArticleEditPage({ params }: { params: Promise<{ id
           <h1 className="text-2xl font-bold text-on-surface">
             {isNew ? "Nouvel Article" : "Modifier l'article"}
           </h1>
-          <p className="text-on-surface-muted text-sm">Créez du contenu riche pour le blog Agrolide.</p>
+          <p className="text-on-surface-muted text-sm">Créez du contenu riche pour le blog agrolide.</p>
         </div>
       </div>
 

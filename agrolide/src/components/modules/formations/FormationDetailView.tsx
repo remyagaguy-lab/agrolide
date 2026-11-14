@@ -272,8 +272,8 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
                   Formation hébergée par {formation.source_externe || "un organisme partenaire"}, {gratuit ? "gratuite" : "payante"}.
                   {extProgramme?.certificat ? ` Certificat délivré par ${formation.source_externe || "l'organisme"}.` : ""}{" "}
                   {isEnrolled
-                    ? "Vous êtes inscrit(e) sur Agrolide : le cours s'ouvre sur le site de l'organisme, où un compte gratuit peut vous être demandé."
-                    : "Inscrivez-vous d'abord sur Agrolide pour accéder au cours."}
+                    ? "Vous êtes inscrit(e) sur agrolide : le cours s'ouvre sur le site de l'organisme, où un compte gratuit peut vous être demandé."
+                    : "Inscrivez-vous d'abord sur agrolide pour accéder au cours."}
                 </p>
               ) : null}
 

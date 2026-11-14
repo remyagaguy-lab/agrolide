@@ -81,7 +81,7 @@ export function ParcoursInscription({
           <p className="text-body-md font-bold text-on-surface">Avant de commencer</p>
           <p className="text-body-sm text-on-surface-variant">{titre} · {resume}</p>
           <ul className="list-disc space-y-1 pl-5 text-body-sm text-on-surface-variant">
-            <li>L&apos;accès se fait sur invitation, avec un code remis par l&apos;équipe Agrolide.</li>
+            <li>L&apos;accès se fait sur invitation, avec un code remis par l&apos;équipe agrolide.</li>
             <li>Le code est personnel et à usage unique : il ne peut servir qu&apos;à une seule personne.</li>
             <li>Une fois utilisé, le code ne peut plus être réutilisé ni transmis.</li>
             <li>L&apos;examen final et le certificat sont réservés aux personnes inscrites.</li>

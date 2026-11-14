@@ -10,7 +10,7 @@ import { colonnesCarteDocument, conditionsBibliotheque, TAILLE_PAGE } from '@/li
 import { Heart, Save } from "@/components/ui/icons"
 export const metadata = {
   title: "Bibliothèque",
-  description: 'Bibliothèque de documents pour les membres Agrolide',
+  description: 'Bibliothèque de documents pour les membres agrolide',
 }
 
 export default async function MembresBibliothequePage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {

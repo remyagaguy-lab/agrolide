@@ -28,8 +28,8 @@ export default async function VerifierPage({ params }: { params: Promise<{ numer
         <div className="space-y-2 rounded-xl border border-accent-leaf bg-success-container p-6">
           <p className="font-bold text-primary">Certificat authentique</p>
           <p>Numéro : <strong>{cert.numero}</strong></p>
-          <p>Délivré à : <strong>{[membre?.prenom, membre?.nom].filter(Boolean).join(" ") || "—"}</strong></p>
-          <p>Formation : <strong>{formation?.titre ?? "—"}</strong></p>
+          <p>Délivré à : <strong>{[membre?.prenom, membre?.nom].filter(Boolean).join(" ") || "Non renseigné"}</strong></p>
+          <p>Formation : <strong>{formation?.titre ?? "Non renseigné"}</strong></p>
           <p>Niveau : <strong>{NIVEAUX[cert.niveau] ?? cert.niveau}</strong></p>
           <p>Date : <strong>{new Date(cert.delivre_le).toLocaleDateString("fr-FR")}</strong></p>
         </div>
@@ -39,7 +39,7 @@ export default async function VerifierPage({ params }: { params: Promise<{ numer
           <p className="mt-2 text-on-surface-variant">Vérifiez le numéro (par exemple AGR-BPA-2026-7K3Q9X) et réessayez.</p>
         </div>
       )}
-      <p className="mt-8 text-sm"><Link href="/" className="text-primary">Retour à l’accueil Agrolide</Link></p>
+      <p className="mt-8 text-sm"><Link href="/" className="text-primary">Retour à l’accueil agrolide</Link></p>
     </main>
   );
 }

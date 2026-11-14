@@ -3,7 +3,7 @@ import { QUIZ } from './quiz_banque';
 
 export const parcours4: ParcoursSeed = {
   id: "bp_agri_p4",
-  titre: "Parcours 4 — Élaborez votre stratégie commerciale",
+  titre: "Parcours 4 : Élaborez votre stratégie commerciale",
   description: "Définir comment vous allez vendre votre production et à qui, en structurant votre marketing mix et votre plan de prospection.",
   lecons: [
     {
@@ -77,7 +77,7 @@ Votre plan de prospection est un calendrier qui indique quand et comment vous al
 
 **Phase 1 : Avant le semis (La sécurisation)**
 - Objectif : Tester le marché et, si possible, signer des contrats de culture ou des lettres d'intention d'achat.
-- Actions : Rencontre physique avec les gérants de supermarchés, les usines de transformation ou les grands grossistes. On leur demande : "Si je vous produis telle quantité, avec tel calibre, à telle période, seriez-vous prêt à l'acheter ?"
+- Actions : Rencontre physique avec les gérants de supermarchés, les usines de transformation ou les grands grossistes. On leur demande : « Si je vous produis telle quantité, avec tel calibre, à telle période, seriez-vous prêt à l'acheter ? »
 
 **Phase 2 : Pendant la croissance (Le teasing)**
 - Objectif : Maintenir l'intérêt de l'acheteur et prouver que la récolte sera au rendez-vous.

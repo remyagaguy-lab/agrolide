@@ -67,10 +67,10 @@ export default async function AdminPartenairesPage() {
                 <tbody className="divide-y divide-outline-variant">
                   {contacts.map(c => (
                     <tr key={c.id} className="hover:bg-surface-container-low transition-colors">
-                      <td className="px-5 py-3 font-medium text-on-surface">{c.raison_sociale || "—"}</td>
+                      <td className="px-5 py-3 font-medium text-on-surface">{c.raison_sociale || "Non renseigné"}</td>
                       <td className="px-5 py-3 text-on-surface-muted text-xs"><a href={`mailto:${c.email}`} className="hover:text-info">{c.email}</a></td>
-                      <td className="px-5 py-3 text-on-surface-muted text-xs">{c.nature_collaboration || "—"}</td>
-                      <td className="px-5 py-3 text-on-surface-muted text-xs">{c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "—"}</td>
+                      <td className="px-5 py-3 text-on-surface-muted text-xs">{c.nature_collaboration || "Non renseigné"}</td>
+                      <td className="px-5 py-3 text-on-surface-muted text-xs">{c.created_at ? new Date(c.created_at).toLocaleDateString("fr-FR") : "Non renseigné"}</td>
                     </tr>
                   ))}
                 </tbody>

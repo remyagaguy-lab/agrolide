@@ -23,7 +23,7 @@ import {
   VisiteGuidee,
 } from "@/components/modules/dashboard"
 
-export const metadata = { title: "Tableau de bord | Agrolide" }
+export const metadata = { title: "Tableau de bord | agrolide" }
 
 /** En dessous de ce pourcentage, « Compléter mon profil » apparaît dans la bande « À traiter ». */
 const SEUIL_PROFIL_COMPLET = 80

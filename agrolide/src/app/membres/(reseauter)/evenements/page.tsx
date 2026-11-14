@@ -44,7 +44,7 @@ export default async function EvenementsPage() {
     <div className="max-w-[1200px] mx-auto px-2 md:px-4 py-6 space-y-8">
       <div>
         <h1 className="text-xl md:text-2xl font-bold text-on-surface font-heading">Événements</h1>
-        <p className="mt-1 text-on-surface-muted text-xs">Participez aux rencontres, conférences et ateliers du réseau Agrolide.</p>
+        <p className="mt-1 text-on-surface-muted text-xs">Participez aux rencontres, conférences et ateliers du réseau agrolide.</p>
       </div>
 
       <section aria-labelledby="evt-a-venir">

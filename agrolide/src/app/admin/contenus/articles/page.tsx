@@ -21,7 +21,7 @@ export default async function ArticlesListPage() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold text-on-surface">Articles (Blog)</h1>
-          <p className="text-on-surface-muted text-sm">Gérez les articles du blog Agrolide.</p>
+          <p className="text-on-surface-muted text-sm">Gérez les articles du blog agrolide.</p>
         </div>
         <Link 
           href="/admin/contenus/articles/nouveau" 

@@ -199,7 +199,7 @@ export default async function AdminDashboardPage() {
       </section>
 
       <section>
-        <SectionHeader title="Formations partenaires" sub="Inscriptions sur Agrolide et premiers accès aux cours chez les organismes" icon={GraduationCap} />
+        <SectionHeader title="Formations partenaires" sub="Inscriptions sur agrolide et premiers accès aux cours chez les organismes" icon={GraduationCap} />
         <div className="grid grid-cols-2 gap-4 mb-4">
           <KpiCard label="Inscriptions" value={totalInscritsExternes} icon={GraduationCap} color="bg-success-container text-success" />
           <KpiCard label="Ont ouvert le cours" value={totalAccesExternes} sub={totalInscritsExternes ? `${Math.round((totalAccesExternes / totalInscritsExternes) * 100)} % des inscrits` : undefined} icon={Activity} color="bg-info-container text-info" />
@@ -272,7 +272,7 @@ export default async function AdminDashboardPage() {
                     </td>
                     <td className="px-5 py-3 text-on-surface-muted">{m.pays}</td>
                     <td className="px-5 py-3 text-on-surface-muted text-xs">
-                      {m.created_at ? new Date(m.created_at).toLocaleDateString("fr-FR") : "—"}
+                      {m.created_at ? new Date(m.created_at).toLocaleDateString("fr-FR") : "Non renseigné"}
                     </td>
                   </tr>
                 ))}

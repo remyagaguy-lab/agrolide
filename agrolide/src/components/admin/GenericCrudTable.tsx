@@ -221,7 +221,7 @@ export function GenericCrudTable({ items: initialItems, fields, title, apiBase, 
                         <button
                           onClick={() => togglePublie(item)}
                           className={`p-1.5 rounded-lg transition-colors ${item[togglePublieKey] ? "text-success bg-success-container hover:bg-success-container" : "text-on-surface-muted bg-surface-container-low hover:bg-surface-container"}`}
-                          title={item[togglePublieKey] ? "Publié — cliquer pour dépublier" : "Non publié — cliquer pour publier"}
+                          title={item[togglePublieKey] ? "Publié : cliquer pour dépublier" : "Non publié : cliquer pour publier"}
                         >
                           {item[togglePublieKey] ? <Eye size={16} /> : <EyeOff size={16} />}
                         </button>

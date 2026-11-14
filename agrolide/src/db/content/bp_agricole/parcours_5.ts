@@ -3,7 +3,7 @@ import { QUIZ } from './quiz_banque';
 
 export const parcours5: ParcoursSeed = {
   id: "bp_agri_p5",
-  titre: "Parcours 5 — Chiffrez votre projet",
+  titre: "Parcours 5 : Chiffrez votre projet",
   description: "Le cœur technique du business plan. Sept chapitres courts et très progressifs pour construire des prévisions financières solides et convaincre les bailleurs.",
   lecons: [
     {
@@ -118,7 +118,7 @@ Or, en agriculture, ces deux variables sont très instables :
 - Le volume vendu dépend du rendement (qui dépend du climat, des ravageurs).
 - Le prix de vente dépend de l'offre sur le marché le jour de la récolte.
 
-Présenter un seul chiffre fixe au banquier (ex: "Je ferai 50 millions de CA") montre que vous n'avez pas pris conscience des risques de l'agriculture. C'est ici que la méthode des 3 scénarios (empruntée au cas de Diap Touré) s'avère redoutable d'efficacité.
+Présenter un seul chiffre fixe au banquier (ex : « Je ferai 50 millions de CA ») montre que vous n'avez pas pris conscience des risques de l'agriculture. C'est ici que la méthode des 3 scénarios (empruntée au cas de Diap Touré) s'avère redoutable d'efficacité.
 
 ### La méthode des 3 scénarios
 
@@ -155,7 +155,7 @@ Le test de crise (prix − 25 % sur toutes les cultures) est mené à part au ch
 Dans votre business plan, vous détaillerez la justification de ces 3 scénarios dans le texte. Ensuite, pour construire tous vos tableaux financiers finaux (compte de résultat, trésorerie), vous utiliserez exclusivement les chiffres du **Scénario Réaliste** (ou un point milieu entre le Pessimiste et le Réaliste si vous êtes très prudent). Ne construisez jamais un business plan sur le scénario optimiste.
 
 #### Ce qu'il faut retenir
-- Le chiffre d'affaires est le résultat de : (Surface × Rendement - Pertes) × Prix Unitaire.
+- Le chiffre d'affaires est le résultat de : (Surface × Rendement − Pertes) × Prix Unitaire.
 - Utilisez trois scénarios (Pessimiste, Réaliste, Optimiste) pour intégrer la volatilité agricole (climatique et marchande).
 - Le scénario pessimiste sert à mesurer la capacité de remboursement en cas de crise : il se calcule (DSCR, chapitre 5.7), il ne se proclame pas.
 - Le reste des états financiers se construit toujours sur la base du scénario Réaliste.`,
@@ -210,7 +210,7 @@ Trois remarques : (1) les charges variables de culture sont engagées en totalit
 Présentez ce tableau sur 3 à 5 ans pour montrer à la banque non seulement que la ferme est rentable en croisière, mais aussi qu'elle reste solvable pendant la montée en puissance.
 
 #### Ce qu'il faut retenir
-- Le compte de résultat donne la rentabilité de l'entreprise sur une année (Produits - Charges).
+- Le compte de résultat donne la rentabilité de l'entreprise sur une année (Produits − Charges).
 - Différenciez les charges variables (liées à la quantité produite) des charges fixes (à payer quoi qu'il arrive).
 - N'oubliez pas les amortissements : c'est la perte de valeur annuelle de vos investissements.
 - Le document se présente sur 3 à 5 ans pour montrer la progression financière du projet.`,
@@ -239,7 +239,7 @@ Ce tableau comprend 12 colonnes (de Janvier à Décembre). Pour chaque mois, vou
 1. **Solde Initial :** Combien d'argent y a-t-il sur le compte le 1er du mois ? (Au Mois 1, c'est votre apport + l'emprunt).
 2. **Encaissements (Entrées d'argent) :** Les ventes payées *réellement* par les clients, les subventions reçues. En agriculture, cette ligne est souvent à 0 pendant les 3 ou 4 premiers mois du cycle.
 3. **Décaissements (Sorties d'argent) :** Les paiements effectifs (achats comptant, loyers, salaires, remboursement de l'emprunt mensuel).
-4. **Solde Final du mois :** (Solde initial + Encaissements - Décaissements). Ce solde devient le Solde Initial du mois suivant.
+4. **Solde Final du mois :** (Solde initial + Encaissements − Décaissements). Ce solde devient le Solde Initial du mois suivant.
 
 ### L'alerte : Le solde de fin de mois négatif
 

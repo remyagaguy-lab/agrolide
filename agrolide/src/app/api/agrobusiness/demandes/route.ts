@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
       () => resend.emails.send({
         from: 'agrolide <contact@agrolide.org>',
         to: email,
-        subject: 'Accusé de réception - Votre demande de service agrolide',
+        subject: 'Accusé de réception : votre demande de service agrolide',
         html: `<p>Bonjour ${prenom},</p><p>Nous avons bien reçu votre demande concernant "${type_service}". Notre équipe l'étudie et vous recontactera sous peu.</p><p>L'équipe agrolide</p>`
       }),
       // Alerte équipe

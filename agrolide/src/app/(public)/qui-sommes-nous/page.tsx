@@ -26,12 +26,12 @@ const freins = [
 const etapes = [
   { date: "21 Octobre 2025", text: "Création du groupe WhatsApp \"Bibliothèque Agricole\"", colorClass: "text-primary", borderClass: "border-primary" },
   { date: "26 Novembre 2025", text: "Début des réflexions pour trouver des solutions défis du monde agricole", colorClass: "text-on-tertiary-container", borderClass: "border-accent-sun" },
-  { date: "2 Déc. 2025", text: "La \"Bibliothèque Agricole\" devient BIFERA", colorClass: "text-on-surface", borderClass: "border-on-surface" },
+  { date: "2 Déc. 2025", text: "La \"Bibliothèque Agricole\" devient BIFERA, ex-nom d'agrolide", colorClass: "text-on-surface", borderClass: "border-on-surface" },
   { date: "20 Déc. 2025", text: "Premier webinaire sur la gestion de projet agricole", colorClass: "text-primary", borderClass: "border-primary" },
   { date: "Janvier 2026", text: "Mise en place d'une équipe d'appui", colorClass: "text-on-tertiary-container", borderClass: "border-accent-sun" },
   { date: "31 Janvier 2026", text: "2ème Webinaire sur la commercialisation des produits agricoles", colorClass: "text-primary", borderClass: "border-primary" },
-  { date: "Février - Avril 2026", text: "Structuration de BIFERA en un réseau : Gouvernance, activités stratégiques, pilotes...", colorClass: "text-on-surface", borderClass: "border-on-surface" },
-  { date: "Mai - Juin 2026", text: "Relance des activités, BIFERA devient agrolide", colorClass: "text-on-tertiary-container", borderClass: "border-accent-sun" },
+  { date: "Février à avril 2026", text: "Structuration de BIFERA (ex-nom d'agrolide) en un réseau : Gouvernance, activités stratégiques, pilotes...", colorClass: "text-on-surface", borderClass: "border-on-surface" },
+  { date: "Mai à juin 2026", text: "Relance des activités : le réseau, anciennement BIFERA, devient agrolide", colorClass: "text-on-tertiary-container", borderClass: "border-accent-sun" },
   { date: "Juil à Déc. 2026", text: "Mise en place de l'organe de gouvernance, création formelle et lancement officiel des activités du réseau agrolide", colorClass: "text-on-surface", borderClass: "border-on-surface" },
 ]
 
@@ -49,7 +49,7 @@ const valeurs = [
   { icon: Users, title: "Solidarité", desc: "Le réseau est notre première ressource. La réussite de chacun passe par la force du collectif et la mutualisation des compétences entre membres." },
   { icon: Flag, title: "Leadership", desc: "agrolide forge des leaders agricoles. Chaque acteur accompagné est un futur moteur de la chaîne agricole et de la souveraineté alimentaire africaine." },
   { icon: Star, title: "Excellence", desc: "Rigueur et professionnalisme dans chaque formation, chaque accompagnement et chaque service proposé aux membres." },
-  { icon: Lightbulb, title: "Innovation africaine", desc: "Des solutions pensées pour et par les réalités africaines — adaptées aux terroirs, aux marchés et aux contraintes du continent." },
+  { icon: Lightbulb, title: "Innovation africaine", desc: "Des solutions pensées pour et par les réalités africaines, adaptées aux terroirs, aux marchés et aux contraintes du continent." },
   { icon: Target, title: "Impact", desc: "Chaque action est évaluée à l'aune de sa contribution concrète à la souveraineté alimentaire africaine." },
 ]
 

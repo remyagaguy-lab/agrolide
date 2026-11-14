@@ -14,7 +14,7 @@ export async function LatestArticles() {
   // Pour les auteurs, on pourrait faire un map ou le charger via relations, on va simplifier pour le MVP.
   // On gère manuellement la récupération des noms.
   const articlesWithAuthors = await Promise.all(articles.map(async (article) => {
-    let authorName = "Équipe Agrolide"
+    let authorName = "Équipe agrolide"
     if (article.auteur_id) {
       const user = await db.query.users.findFirst({
         where: eq(users.id, article.auteur_id),

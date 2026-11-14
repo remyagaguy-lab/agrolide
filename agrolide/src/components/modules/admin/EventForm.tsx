@@ -226,7 +226,7 @@ export default function EventForm({ initialData, onSuccess, onCancel }: EventFor
         <div className="space-y-2 md:col-span-2">
           <label className="text-sm font-medium text-on-surface-variant">Lien d'inscription externe (Optionnel, ex: Zoom, Eventbrite)</label>
           <input type="url" name="lien_inscription" value={formData.lien_inscription} onChange={handleChange} className="w-full px-4 py-2 border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary outline-none" placeholder="https://" />
-          <p className="text-xs text-on-surface-muted">Si vide, l'inscription se fera en interne sur Agrolide.</p>
+          <p className="text-xs text-on-surface-muted">Si vide, l'inscription se fera en interne sur agrolide.</p>
         </div>
 
         <div className="space-y-2 md:col-span-2">

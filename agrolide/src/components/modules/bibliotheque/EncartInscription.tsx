@@ -35,7 +35,7 @@ export function EncartInscription({
       <p className="text-label-sm uppercase tracking-[0.2em] text-on-surface-muted mb-1">Un petit message</p>
       <h3 className="text-lg font-bold text-on-surface">Envie de lire sans pub ni interruption&nbsp;?</h3>
       <p className="mt-1 text-sm text-on-surface-variant">
-        Créez votre compte Agrolide en 1&nbsp;minute : c&apos;est gratuit, et toute la bibliothèque s&apos;ouvre à vous.
+        Créez votre compte agrolide en 1&nbsp;minute : c&apos;est gratuit, et toute la bibliothèque s&apos;ouvre à vous.
       </p>
       <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-2">
         <Link href={href} className="inline-flex items-center gap-2 rounded-lg bg-success px-5 py-2.5 text-sm font-semibold text-on-primary hover:bg-primary/90">

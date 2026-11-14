@@ -3,7 +3,7 @@ import { QUIZ } from './quiz_banque';
 
 export const parcours1: ParcoursSeed = {
   id: "bp_agri_p1",
-  titre: "Parcours 1 — Cadrez votre projet",
+  titre: "Parcours 1 : Cadrez votre projet",
   description: "Ce premier module pose les fondations de votre business plan. Avant d'étudier votre marché ou de chiffrer votre projet, il faut comprendre pourquoi vous rédigez ce document, savoir présenter votre idée avec clarté, et savoir vous présenter vous-même comme porteur de projet crédible.",
   lecons: [
     {
@@ -29,25 +29,25 @@ Le réseau agrolide est né d'un constat : de nombreux jeunes diplômés et port
 
 ### À quoi sert le business plan ?
 
-Beaucoup de porteurs de projet abordent le business plan comme une formalité administrative : un document qu'on rédige parce qu'une banque ou un programme de financement l'exige, et qu'on referme une fois le dossier déposé. C'est une erreur qui coûte cher — souvent bien plus cher que le temps passé à le rédiger sérieusement.
+Beaucoup de porteurs de projet abordent le business plan comme une formalité administrative : un document qu'on rédige parce qu'une banque ou un programme de financement l'exige, et qu'on referme une fois le dossier déposé. C'est une erreur qui coûte cher, souvent bien plus cher que le temps passé à le rédiger sérieusement.
 
 Un business plan agricole remplit en réalité trois fonctions bien distinctes.
 
-1. **Un outil de réflexion personnelle.** Rédiger un business plan vous oblige à répondre, noir sur blanc, à des questions que vous avez peut-être évitées jusqu'ici : qui va acheter ma production, à quel prix, face à quels concurrents, avec quel besoin de trésorerie entre le moment où je sème et le moment où je vends ? C'est un exercice de recherche et de validation d'informations qui vous permet, à vous en premier lieu, d'apprécier la viabilité réelle de votre projet — avant d'y engager votre argent et votre temps.
+1. **Un outil de réflexion personnelle.** Rédiger un business plan vous oblige à répondre, noir sur blanc, à des questions que vous avez peut-être évitées jusqu'ici : « qui va acheter ma production, à quel prix, face à quels concurrents, avec quel besoin de trésorerie entre le moment où je sème et le moment où je vends ? » C'est un exercice de recherche et de validation d'informations qui vous permet, à vous en premier lieu, d'apprécier la viabilité réelle de votre projet, avant d'y engager votre argent et votre temps.
 2. **Un outil de pilotage.** Une fois le projet lancé, le business plan devient votre feuille de route : vous pouvez comparer, mois après mois, ce que vous aviez prévu à ce qui se passe réellement, et corriger le tir à temps plutôt que de découvrir un problème de trésorerie quand il est trop tard.
-3. **Un outil de négociation.** C'est le document qui va convaincre une structure financière — banque, système financier décentralisé, mécanisme de financement de l'État, réseau d'investisseurs — que votre projet mérite d'être soutenu. C'est cette fonction que nous travaillerons en priorité tout au long de cette formation, sans jamais perdre de vue les deux premières : un dossier qui convainc un bailleur mais qui repose sur des hypothèses irréalistes finit toujours par se retourner contre son porteur.
+3. **Un outil de négociation.** C'est le document qui va convaincre une structure financière, banque, système financier décentralisé, mécanisme de financement de l'État, réseau d'investisseurs, que votre projet mérite d'être soutenu. C'est cette fonction que nous travaillerons en priorité tout au long de cette formation, sans jamais perdre de vue les deux premières : un dossier qui convainc un bailleur mais qui repose sur des hypothèses irréalistes finit toujours par se retourner contre son porteur.
 
 ### Le piège de l'optimisme
 
-C'est le piège numéro un dans la rédaction d'un business plan : un plan d'affaires bâti sur des hypothèses optimistes et n'affichant que des conclusions positives ne constitue en aucun cas une garantie de viabilité et de rentabilité à long terme. Un bon business plan n'est pas celui qui promet le plus, c'est celui qui identifie ses propres risques et explique comment vous comptez les gérer. Un évaluateur expérimenté repère en quelques minutes un dossier trop optimiste — et il s'en méfie immédiatement.
+C'est le piège numéro un dans la rédaction d'un business plan : un plan d'affaires bâti sur des hypothèses optimistes et n'affichant que des conclusions positives ne constitue en aucun cas une garantie de viabilité et de rentabilité à long terme. Un bon business plan n'est pas celui qui promet le plus, c'est celui qui identifie ses propres risques et explique comment vous comptez les gérer. Un évaluateur expérimenté repère en quelques minutes un dossier trop optimiste, et il s'en méfie immédiatement.
 
 ### Ce qui rend un business plan agricole différent
 
-Un business plan agricole partage l'essentiel de sa structure avec n'importe quel plan d'affaires : présentation du projet, étude de marché, plan opérationnel, prévisions financières. Mais il doit composer avec des contraintes propres au secteur : une forte dépendance aux conditions climatiques et pluviométriques, des cycles de production longs entre l'investissement et la première récolte, une saisonnalité qui pèse directement sur la trésorerie, et souvent des enjeux fonciers — propriété, bail, sécurisation des droits sur la terre — qui n'existent pas de la même façon dans un commerce ou un service.
+Un business plan agricole partage l'essentiel de sa structure avec n'importe quel plan d'affaires : présentation du projet, étude de marché, plan opérationnel, prévisions financières. Mais il doit composer avec des contraintes propres au secteur : une forte dépendance aux conditions climatiques et pluviométriques, des cycles de production longs entre l'investissement et la première récolte, une saisonnalité qui pèse directement sur la trésorerie, et souvent des enjeux fonciers, propriété, bail, sécurisation des droits sur la terre, qui n'existent pas de la même façon dans un commerce ou un service.
 
 ### Notre fil rouge : le cas de Diap Touré
 
-Tout au long de cette formation, nous suivrons un exemple inspiré de situations réelles, aux chiffres reconstitués : celui de Diap Touré, un gestionnaire commercial sénégalais qui, après plusieurs années de maraîchage artisanal pratiqué en famille pendant l'hivernage, a décidé de structurer son activité en une véritable exploitation horticole de 10 hectares, spécialisée dans l'oignon et la pomme de terre, dans la zone des Niayes. Pour sécuriser sa terre et obtenir un financement de 55 millions de FCFA (11 millions d'apport personnel et 44 millions d'emprunt), il doit rédiger un business plan complet et convaincant. Nous verrons, chapitre après chapitre, comment il a construit chaque section de son dossier — et vous vous en inspirerez pour construire le vôtre.
+Tout au long de cette formation, nous suivrons un exemple inspiré de situations réelles, aux chiffres reconstitués : celui de Diap Touré, un gestionnaire commercial sénégalais qui, après plusieurs années de maraîchage artisanal pratiqué en famille pendant l'hivernage, a décidé de structurer son activité en une véritable exploitation horticole de 10 hectares, spécialisée dans l'oignon et la pomme de terre, dans la zone des Niayes. Pour sécuriser sa terre et obtenir un financement de 55 millions de FCFA (11 millions d'apport personnel et 44 millions d'emprunt), il doit rédiger un business plan complet et convaincant. Nous verrons, chapitre après chapitre, comment il a construit chaque section de son dossier, et vous vous en inspirerez pour construire le vôtre.
 
 #### Ce qu'il faut retenir
 
@@ -68,17 +68,17 @@ Le contexte et la justification forment la toute première section que va lire u
 
 ### La méthode en quatre temps
 
-1. **Le constat général** — la situation macro de votre secteur ou de votre filière, avec si possible des données chiffrées.
-2. **La problématique ou le besoin identifié** — le problème précis que vous avez repéré, celui que votre projet va résoudre.
-3. **La proposition de valeur / solution** — ce que vous proposez, et en quoi cela répond au problème identifié.
-4. **Les moyens mis en œuvre** — comment vous comptez concrètement réaliser cette solution.
+1. **Le constat général** : la situation macro de votre secteur ou de votre filière, avec si possible des données chiffrées.
+2. **La problématique ou le besoin identifié** : le problème précis que vous avez repéré, celui que votre projet va résoudre.
+3. **La proposition de valeur / solution** : ce que vous proposez, et en quoi cela répond au problème identifié.
+4. **Les moyens mis en œuvre** : comment vous comptez concrètement réaliser cette solution.
 
 ### Un exemple avant / après
 
 **Version faible :** « Le pays a besoin de plus de production agricole. Je veux créer une exploitation de maraîchage pour produire des légumes. » — *Cette version reste abstraite : aucun chiffre, aucun problème précis, aucune preuve de connaissance du secteur.*
 
 **Version travaillée, construite sur le cas de Diap Touré :** 
-La production sénégalaise d'oignon a dépassé 400 000 tonnes en 2024, mais une part importante (jusqu'à environ 100 000 tonnes selon les producteurs) se brade ou se perd à la récolte faute de stockage : en 2025, des producteurs de la vallée du Fleuve peinaient à vendre à 105-110 FCFA/kg, alors que les prix dépassent 400 FCFA/kg quand l'offre locale s'épuise *(constat — chiffres de la presse économique et du régulateur ARM, à actualiser chaque année)*. 
+La production sénégalaise d'oignon a dépassé 400 000 tonnes en 2024, mais une part importante (jusqu'à environ 100 000 tonnes selon les producteurs) se brade ou se perd à la récolte faute de stockage : en 2025, des producteurs de la vallée du Fleuve peinaient à vendre à 105-110 FCFA/kg, alors que les prix dépassent 400 FCFA/kg quand l'offre locale s'épuise *(constat, chiffres de la presse économique et du régulateur ARM, à actualiser chaque année)*. 
 
 Ce déséquilibre s'explique en grande partie par le sous-équipement des exploitations familiales, qui assurent l'essentiel de la production : peu de séchage, de calibrage et de stockage, donc toute la récolte arrive en même temps sur le marché *(problématique)*. 
 
@@ -106,7 +106,7 @@ Une fois le contexte posé, précisez vos objectifs à court terme (ce que vous 
       contenu: `### Objectif du chapitre
 À la fin de ce chapitre, vous serez capable de rédiger votre profil de porteur de projet, de présenter les compétences de votre équipe, et d'esquisser la structure organisationnelle de votre future entreprise.
 
-Un bailleur ne finance jamais seulement une idée : il finance une idée portée par quelqu'un en qui il peut avoir confiance. Cette section est l'une des plus scrutées d'un dossier, et pourtant l'une des plus mal rédigées — souvent réduite à quelques lignes biographiques sans lien avec le projet.
+Un bailleur ne finance jamais seulement une idée : il finance une idée portée par quelqu'un en qui il peut avoir confiance. Cette section est l'une des plus scrutées d'un dossier, et pourtant l'une des plus mal rédigées, souvent réduite à quelques lignes biographiques sans lien avec le projet.
 
 ### Quatre éléments à couvrir
 
@@ -120,13 +120,13 @@ Un bailleur ne finance jamais seulement une idée : il finance une idée portée
 - Les compétences commerciales (négociation, prospection, suivi client)
 - Les compétences transversales (travailler en réseau, s'adapter, apprendre vite)
 
-Cette classification permet à l'évaluateur de voir immédiatement si votre équipe couvre l'ensemble des besoins du projet — ou s'il manque un maillon, auquel cas mieux vaut le dire et expliquer comment vous comptez le combler.
+Cette classification permet à l'évaluateur de voir immédiatement si votre équipe couvre l'ensemble des besoins du projet, ou s'il manque un maillon, auquel cas mieux vaut le dire et expliquer comment vous comptez le combler.
 
 **4. Votre situation et vos contraintes, présentées avec transparence.** Beaucoup de porteurs de projet hésitent à mentionner leurs contraintes — ressources financières limitées, réseau de partenaires encore restreint. C'est pourtant un signe de maturité de les nommer, à condition d'expliquer comment vous comptez les compenser : par un apport en nature, par l'intégration à un réseau professionnel structuré (c'est exactement le rôle qu'un réseau comme agrolide peut jouer pour vous), par un partenariat technique. Un porteur de projet qui prétend n'avoir aucune faiblesse est moins crédible que celui qui les identifie et les anticipe.
 
 ### L'organisation de l'entreprise
 
-Si vous travaillez seul, précisez-le et expliquez comment vous comptez recruter au fur et à mesure de la croissance. Si vous êtes plusieurs associés ou membres d'un groupement, présentez la répartition des tâches et responsabilités de chacun — un organigramme simple suffit à ce stade — ainsi que la répartition du capital social entre associés (apport financier, en nature, ou autre). Mentionnez enfin vos ressources externes potentielles : partenaires techniques, structures d'accompagnement, parrainages.
+Si vous travaillez seul, précisez-le et expliquez comment vous comptez recruter au fur et à mesure de la croissance. Si vous êtes plusieurs associés ou membres d'un groupement, présentez la répartition des tâches et responsabilités de chacun, un organigramme simple suffit à ce stade, ainsi que la répartition du capital social entre associés (apport financier, en nature, ou autre). Mentionnez enfin vos ressources externes potentielles : partenaires techniques, structures d'accompagnement, parrainages.
 
 ### Exercice : rédigez votre fiche de porteur de projet
 

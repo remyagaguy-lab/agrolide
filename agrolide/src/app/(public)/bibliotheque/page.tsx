@@ -111,7 +111,7 @@ export default async function BibliothequePublicPage() {
             Accédez à la bibliothèque complète
           </h2>
           <p className="font-sans font-normal text-body-sm text-on-surface-variant mb-[28px]">
-            Rejoignez Agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
+            Rejoignez agrolide pour consulter, télécharger et même partager vos propres documents avec la communauté.
           </p>
           <Link href="/rejoindre" className={buttonVariants({ variant: 'primary' })}>
             Voir les offres d&apos;adhésion <ArrowRight className="size-4 ml-2" />

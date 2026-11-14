@@ -87,7 +87,7 @@ export function ExamenClient({ formationId, seuil }: { formationId: string; seui
                   {d.juste ? <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-primary" /> : <XCircle className="mt-0.5 size-5 shrink-0 text-error" />}
                   <span>{n + 1}. {q.question}</span>
                 </p>
-                {!d.juste && <p className="text-sm text-error">Votre réponse : {q.options[d.choix] ?? "—"}</p>}
+                {!d.juste && <p className="text-sm text-error">Votre réponse : {q.options[d.choix] ?? "Aucune réponse"}</p>}
                 <p className="text-sm text-primary">Bonne réponse : {q.options[d.correctAnswer]}</p>
                 {d.explanation && <p className="text-sm text-on-surface-variant">{d.explanation}</p>}
               </li>

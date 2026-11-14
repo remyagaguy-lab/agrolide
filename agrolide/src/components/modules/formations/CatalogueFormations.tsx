@@ -29,8 +29,8 @@ export async function CatalogueFormations({
 
   // Apply filters
   if (source) {
-    if (source === 'Agrolide') {
-      allFormations = allFormations.filter(f => !f.source_externe || f.source_externe === 'Agrolide');
+    if (source === 'Agrolide') { // editorial:ignore valeur stockée en base
+      allFormations = allFormations.filter(f => !f.source_externe || f.source_externe === 'Agrolide'); // editorial:ignore valeur stockée en base
     } else {
       allFormations = allFormations.filter(f => f.source_externe === source);
     }

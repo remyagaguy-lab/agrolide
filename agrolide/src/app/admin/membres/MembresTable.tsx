@@ -211,14 +211,14 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                   </td>
                   <td className="px-5 py-3 text-on-surface-muted text-xs">{m.pays}</td>
                   <td className="px-5 py-3 text-on-surface-muted text-xs">
-                    {m.created_at ? new Date(m.created_at).toLocaleDateString("fr-FR") : "—"}
+                    {m.created_at ? new Date(m.created_at).toLocaleDateString("fr-FR") : "Non renseigné"}
                   </td>
                   <td className="px-5 py-3 text-xs">
                     {m.cotisation_expiry ? (
                       <span className={new Date(m.cotisation_expiry) < new Date() ? "text-error font-medium" : "text-on-surface-muted"}>
                         {new Date(m.cotisation_expiry).toLocaleDateString("fr-FR")}
                       </span>
-                    ) : "—"}
+                    ) : "Non renseigné"}
                   </td>
                   <td className="px-5 py-3">
                     <div className="flex items-center justify-end gap-2">

@@ -12,7 +12,7 @@ import { Section } from "@/components/ui/Section"
 
 import { Library, Building2, EyeOff, Mail, Server, ShieldCheck, Sprout } from "@/components/ui/icons"
 export const metadata: Metadata = {
-  title: "Nous soutenir - Faire un don",
+  title: "Nous soutenir : faire un don",
   description: "Soutenez le développement de notre réseau agricole et investissez dans la souveraineté alimentaire africaine. Découvrez comment contribuer à nos actions sur le terrain.",
   alternates: { canonical: '/nous-soutenir' }
 }

@@ -5,7 +5,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   
   const data = await getDocumentLecture(id)
   
-  return { title: data?.titre ? `Lecture : ${data.titre} | Bibliothèque Agrolide` : "Lecture Sécurisée | Agrolide" }
+  return { title: data?.titre ? `Lecture : ${data.titre} | Bibliothèque agrolide` : "Lecture Sécurisée | agrolide" }
 }
 
 // Un membre connecté qui ouvre cette URL est redirigé vers /membres/bibliotheque/[id]/lire par le middleware.

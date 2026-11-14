@@ -123,7 +123,7 @@ export function Quiz({
                   <span>{n + 1}. {q.question}</span>
                 </p>
                 {!d.juste && (
-                  <p className="text-sm text-error">Votre réponse : {q.options[d.choix] ?? "—"}</p>
+                  <p className="text-sm text-error">Votre réponse : {q.options[d.choix] ?? "Aucune réponse"}</p>
                 )}
                 <p className="text-sm text-primary">Bonne réponse : {q.options[d.correctAnswer]}</p>
                 {d.explanation && <p className="text-sm text-on-surface-variant">{d.explanation}</p>}

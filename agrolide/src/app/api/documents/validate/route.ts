@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     // dans l'environnement Vercel Serverless.
     // L'IA se basera uniquement sur le "titre" et le "resume" fournis par l'utilisateur, ce qui 
     // est suffisant pour juger de la pertinence (Agriculture) et vérifier les doublons.
-    const extractedText = "(Texte intégral non extrait - L'analyse se base sur le résumé)"
+    const extractedText = "(Texte intégral non extrait : l'analyse se base sur le résumé)"
 
     // 2. Fetch existing documents to check duplicates
     const existingDocs = await db.query.documents.findMany({
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     const existingDocsContext = existingDocs?.map(d => `- Titre: ${d.titre}\n  Résumé: ${d.resume}`).join('\n') || "Aucun document existant."
 
     // 3. AI Validation via OpenRouter
-    const systemPrompt = `Tu es un expert agronome et modérateur pour Agrolide, une bibliothèque agricole panafricaine.
+    const systemPrompt = `Vous êtes un expert agronome et modérateur pour agrolide, une bibliothèque agricole panafricaine.
 Ta mission est d'analyser un nouveau document soumis et de décider s'il doit être publié.
 
 Règles de validation :

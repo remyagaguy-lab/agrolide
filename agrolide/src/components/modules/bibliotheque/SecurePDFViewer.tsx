@@ -351,7 +351,7 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
         </div>
         <h3 className="mb-3 text-title-lg font-bold text-on-surface">Vous avez lu vos {readLimit} documents gratuits</h3>
         <p className="mb-8 max-w-md text-on-surface-variant">
-          Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte Agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
+          Bravo, vous avez bien exploré ! Pour continuer à lire sans limite (et sans pub), créez votre compte agrolide : c&apos;est gratuit et ça prend 1&nbsp;minute.
         </p>
         <div className="flex w-full max-w-sm flex-col gap-3 sm:flex-row">
           <Link href={`/inscription?next=${encodeURIComponent(nextPath)}`} className="flex min-h-11 flex-1 items-center justify-center rounded-control bg-success px-4 py-2 font-medium text-on-primary transition-colors hover:bg-primary/90">
@@ -420,7 +420,7 @@ export function SecurePDFViewer({ documentId, titre }: { documentId: string; tit
               }}
               className="h-11 w-12 rounded-control border border-outline bg-surface-container-lowest text-center text-label-lg text-on-surface"
             />
-            <span aria-hidden>/ {numPages || '–'}</span>
+            <span aria-hidden>/ {numPages || '…'}</span>
           </label>
           <Outil libelle="Page suivante" className={viewMode === 'continuous' ? 'max-sm:hidden' : undefined} disabled={pageNumber >= numPages} onClick={() => allerA(pageNumber + 1)}>
             <ChevronRight className="size-5" aria-hidden />

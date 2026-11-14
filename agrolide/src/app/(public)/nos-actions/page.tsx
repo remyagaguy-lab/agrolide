@@ -9,7 +9,7 @@ import { ArchPhoto, Motif, Puce } from "@/components/brand"
 import { type LucideIcon, Users, NotebookPen, TrendingUp, CalendarDays, Library, Lightbulb, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Nos actions",
-  description: "Découvrez les 3 piliers d'action du réseau Agrolide : Mobilisation, Formation et Agrobusiness.",
+  description: "Découvrez les 3 piliers d'action du réseau agrolide : Mobilisation, Formation et Agrobusiness.",
   alternates: { canonical: '/nos-actions' }
 }
 
@@ -73,7 +73,7 @@ const piliers: Pilier[] = [
       { icon: TrendingUp, titre: "Incubation", texte: "Un programme complet pour propulser les agripreneurs vers le succès commercial." },
     ],
     actions: [{ href: "/agrobusiness", texte: "Découvrir nos services", variant: "primary" }],
-    photo: { src: "/images/formations/cover_bp_agricole.webp", alt: "Un entrepreneur agricole en costume travaille sur son dossier, des cultures en arrière-plan" },
+    photo: { src: "/images/formations/cover_bp_agricole.webp", alt: "Un agripreneur en costume travaille sur son dossier, des cultures en arrière-plan" },
   },
 ]
 
@@ -84,7 +84,7 @@ export default function NosActionsPage() {
         nextTone="lowest"
         label="Notre approche"
         title={<>Un écosystème intégré en <span className="text-accent-sun">3 piliers d'action</span></>}
-        description="Le réseau Agrolide déploie une stratégie d'accompagnement complète pour :"
+        description="Le réseau agrolide déploie une stratégie d'accompagnement complète pour :"
       >
         <ul className="mt-4 max-w-2xl space-y-2 text-body-lg text-on-surface-brand/85">
           {["Briser l'isolement des professionnels de l'agriculture", "Renforcer les compétences techniques et managériales", "Catalyser la réussite des projets agricoles africains"].map((t) => (

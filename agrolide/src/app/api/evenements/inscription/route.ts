@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
       })
       const client = resend
       envoyerApresLaReponse('inscription à un événement', () => client.emails.send({
-        from: 'Agrolide <contact@agrolide.org>',
+        from: 'agrolide <contact@agrolide.org>',
         to: [emailDestinataire],
         subject: `Confirmation d'inscription : ${event.titre}`,
         html: `
@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
 
             <p>Un email de rappel vous sera envoyé à l'approche de l'événement.</p>
             <br>
-            <p>À très bientôt,<br>L'équipe Agrolide</p>
+            <p>À très bientôt,<br>L'équipe agrolide</p>
           </div>
         `
       }))

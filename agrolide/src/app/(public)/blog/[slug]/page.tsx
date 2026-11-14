@@ -41,7 +41,7 @@ export async function generateMetadata(
     }
   }
 
-  const authorName = article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe Agrolide")
+  const authorName = article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe agrolide")
 
   return {
     title: article.titre,
@@ -76,9 +76,9 @@ export default async function BlogPostPage({
   }
 
   const fallbackArticles = [
-    { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", categorie: "Production Végétal", auteur_externe: "Équipe Agrolide", published_at: "2024-10-12T00:00:00Z" },
-    { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe Agrolide", published_at: "2024-10-05T00:00:00Z" },
-    { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Agroeconomie", auteur_externe: "Équipe Agrolide", published_at: "2024-09-28T00:00:00Z" }
+    { id: "1", slug: "pratiques-agroecologiques", titre: "Pratiques agroécologiques pour sols tropicaux", extrait: "Comment adapter les techniques de conservation des sols aux conditions climatiques de l'Afrique subsaharienne.", categorie: "Production Végétal", auteur_externe: "Équipe agrolide", published_at: "2024-10-12T00:00:00Z" },
+    { id: "2", slug: "financer-projet-agricole", titre: "Financer son projet agricole : les clés", extrait: "Tour d'horizon des instruments financiers accessibles aux agripreneurs africains en 2024.", categorie: "Agrobusiness", auteur_externe: "Équipe agrolide", published_at: "2024-10-05T00:00:00Z" },
+    { id: "3", slug: "competences-agronomes", titre: "Compétences du futur pour les agronomes", extrait: "Panorama des formations techniques et managériales qui font la différence sur le terrain africain.", categorie: "Agroeconomie", auteur_externe: "Équipe agrolide", published_at: "2024-09-28T00:00:00Z" }
   ]
 
   if (error || !article) {
@@ -130,7 +130,7 @@ export default async function BlogPostPage({
     { label: article.titre }
   ]
 
-  const authorName = article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe Agrolide")
+  const authorName = article.auteur ? `${article.auteur.prenom} ${article.auteur.nom}` : (article.auteur_externe || "Équipe agrolide")
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -146,7 +146,7 @@ export default async function BlogPostPage({
       }],
     publisher: {
       "@type": "Organization",
-      name: "Agrolide",
+      name: "agrolide",
       logo: {
         "@type": "ImageObject",
         url: "https://agrolide.org/icon.png"
@@ -360,7 +360,7 @@ export default async function BlogPostPage({
                   title={simArticle.titre}
                   excerpt={simArticle.extrait || ""}
                   category={simArticle.categorie || "Général"}
-                  author={simArticle.auteur ? `${simArticle.auteur.prenom} ${simArticle.auteur.nom}` : (simArticle.auteur_externe || "Équipe Agrolide")}
+                  author={simArticle.auteur ? `${simArticle.auteur.prenom} ${simArticle.auteur.nom}` : (simArticle.auteur_externe || "Équipe agrolide")}
                   date={simArticle.published_at || ''}
                   readTime={"5 min"}
                   imageUrl={simArticle.image_une_url || undefined}

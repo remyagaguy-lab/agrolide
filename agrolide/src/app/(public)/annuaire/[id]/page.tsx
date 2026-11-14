@@ -13,7 +13,7 @@ import { Lock } from "@/components/ui/icons"
 // (`profil_public`) ; le titre de la page ne révèle jamais le nom et la page n'est jamais indexée.
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Profil membre | Agrolide',
+    title: 'Profil membre | agrolide',
     robots: { index: false, follow: false },
   }
 }
