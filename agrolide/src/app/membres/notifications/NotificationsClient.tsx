@@ -58,11 +58,8 @@ function Bulle({ n, nouveau, onVue, onOuvrir }: { n: NotificationItem; nouveau: 
   }, [n.id, n.lu, onVue])
 
   return (
-    <li ref={ref} className="flex items-end gap-2">
-      <span className="mb-1 flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-container" aria-hidden>
-        <Emblem variant="couleur" className="size-5" />
-      </span>
-      <div className="max-w-[85%] sm:max-w-[70%]">
+    <li ref={ref} className="flex">
+      <div className="max-w-[94%] sm:max-w-[75%]">
         <div className={`rounded-2xl rounded-bl-sm border px-4 py-3 shadow-sm ${nouveau ? 'border-primary bg-primary-container' : 'border-outline-variant bg-surface-container-lowest'}`}>
           <p className="text-label-sm font-bold uppercase tracking-wider text-primary">{libelleType(n.type)}</p>
           <p className="mt-1 whitespace-pre-line text-body-md text-on-surface">{n.contenu}</p>
@@ -92,6 +89,17 @@ export default function NotificationsClient() {
   const [notifications, setNotifications] = useState<NotificationItem[]>([])
   const [nouvelles, setNouvelles] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
+  // Barre d'en-tête « soudée » à la barre du haut dès qu'on a défilé.
+  const [collee, setCollee] = useState(false)
+  const reperRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = reperRef.current
+    if (!el || typeof IntersectionObserver === 'undefined') return
+    const obs = new IntersectionObserver(([e]) => setCollee(!e.isIntersecting))
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
 
   const fetchData = useCallback(async () => {
     try {
@@ -125,26 +133,33 @@ export default function NotificationsClient() {
   const nonLues = notifications.filter((n) => !n.lu).length
 
   return (
-    <div className="mx-auto max-w-[720px] space-y-4 px-2 py-6 md:px-4">
-      <header className="flex items-center gap-3 rounded-2xl border border-outline-variant bg-surface-container-lowest p-4 shadow-sm">
-        <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-primary-container" aria-hidden>
-          <Emblem variant="couleur" className="size-7" />
-        </span>
-        <div className="min-w-0 flex-1">
-          <h1 className="font-heading text-title-lg font-bold text-on-surface">agrolide</h1>
-          <p className="text-label-md text-on-surface-variant" aria-live="polite">
-            {loading ? 'Chargement…' : nonLues > 0 ? `${nonLues} nouveau${nonLues > 1 ? 'x' : ''} message${nonLues > 1 ? 's' : ''}` : 'Messages du réseau, à sens unique'}
-          </p>
+    <div>
+      {/* Repère : quand il sort de l'écran, l'en-tête est collé à la barre du haut. */}
+      <div ref={reperRef} aria-hidden className="h-px" />
+      <header
+        className={`sticky top-0 z-20 -mx-3 -mt-3 mb-3 border-b bg-surface-container-lowest transition-shadow duration-200 md:-mx-5 md:-mt-5 lg:-mx-6 lg:-mt-6 ${collee ? 'border-outline-variant shadow-elev-2' : 'border-transparent'}`}
+      >
+        <div className={`mx-auto flex max-w-[720px] items-center gap-3 px-4 transition-[padding] duration-200 ${collee ? 'py-2' : 'py-4'}`}>
+          <span className={`flex shrink-0 items-center justify-center rounded-full bg-primary-container transition-[width,height] duration-200 ${collee ? 'size-9' : 'size-11'}`} aria-hidden>
+            <Emblem variant="couleur" className={collee ? 'size-6' : 'size-7'} />
+          </span>
+          <div className="min-w-0 flex-1">
+            <h1 className="font-heading text-title-lg font-bold leading-tight text-on-surface">agrolide</h1>
+            <p className="truncate text-label-md text-on-surface-variant" aria-live="polite">
+              {loading ? 'Chargement…' : nonLues > 0 ? `${nonLues} nouveau${nonLues > 1 ? 'x' : ''} message${nonLues > 1 ? 's' : ''}` : 'Messages du réseau agrolide'}
+            </p>
+          </div>
+          <Link
+            href="/membres/notifications/reglages"
+            aria-label="Réglages des notifications"
+            className="ag-state inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-outline-variant text-on-surface-variant"
+          >
+            <Settings className="size-5" aria-hidden />
+          </Link>
         </div>
-        <Link
-          href="/membres/notifications/reglages"
-          aria-label="Réglages des notifications"
-          className="ag-state inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-outline-variant text-on-surface-variant"
-        >
-          <Settings className="size-5" aria-hidden />
-        </Link>
       </header>
 
+      <div className="mx-auto max-w-[720px] space-y-4">
       {loading ? (
         <div className="p-8 text-center text-on-surface-muted">
           <Loader2 className="mx-auto size-5 animate-spin" aria-label="Chargement" />
@@ -155,7 +170,7 @@ export default function NotificationsClient() {
           <p className="mt-1 text-body-sm text-on-surface-variant">Les nouveautés du réseau apparaîtront ici.</p>
         </div>
       ) : (
-        <div className="space-y-5 rounded-2xl bg-surface-container-low p-3 sm:p-4">
+        <div className="space-y-5">
           {groupes.map((g) => (
             <section key={g.jour} aria-label={g.jour} className="space-y-3">
               <h2 className="mx-auto w-fit rounded-full bg-surface-container-high px-3 py-1 text-label-md font-medium text-on-surface-variant">{g.jour}</h2>
@@ -169,6 +184,7 @@ export default function NotificationsClient() {
           <p className="text-center text-label-sm text-on-surface-muted">Ces messages ne permettent pas de répondre.</p>
         </div>
       )}
+      </div>
     </div>
   )
 }
