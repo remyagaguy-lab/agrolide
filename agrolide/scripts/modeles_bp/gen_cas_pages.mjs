@@ -232,9 +232,37 @@ const mangue = page({
 **Critères de réussite :** vos calculs sont reproductibles, chaque rendement et chaque prix porte une source et une date, et l'étalement de la saisonnalité est chiffré.`,
 });
 
+const S = J.mecanisation;
+const sHa = 2 * 480, sT = 2 * 900;
+const sLabour = sHa * 0.035, sBattage = sT * 0.017, sBrut = sLabour + sBattage;
+const sGasoil = (sHa * 12 + sT * 4) * 0.00075;
+const mecanisation = page({
+  c: S, dev: 'FCFA', filiere: { pe: 'Pessimiste (activité − 15 %, impayés 10 %, gasoil + 10 %, entretien + 15 %)', cr: 'Mauvaise saison (activité − 30 %, impayés 15 %)' },
+  intro: `**Moussa Ouédraogo** (nom fictif) monte une entreprise de services de mécanisation dans l'ouest du Burkina Faso, dans une zone où beaucoup de petits producteurs de maïs, de riz et de sorgho labourent encore à la main ou à la traction animale et ne peuvent pas acheter un tracteur. Il leur vend un **service** : le labour à l'hectare et le battage à la tonne. Les producteurs paient en partie à la prestation, en partie à la récolte. Forme juridique envisagée : SARL. Monnaie : FCFA.`,
+  hyp: `- **Labour :** **2 tracteurs de 75 CV**, chacun **480 hectares par an** (deux campagnes), soit **${fr(sHa)} ha** à **35 000 FCFA/ha** : ${f1(sLabour)} M FCFA.
+- **Battage :** **2 batteuses**, chacune **900 tonnes par an**, soit **${fr(sT)} t** à **17 000 FCFA/t** : ${f1(sBattage)} M FCFA.
+- **Chiffre d'affaires brut :** ${f1(sBrut)} M FCFA. **Impayés et rabais :** 5 % du brut, soit ${f1(sBrut * 0.05)} M FCFA : le chiffre d'affaires encaissé de croisière est de **${f1(S.re.ca)} M FCFA**.
+- **Année 1 :** 65 % de l'activité de croisière (clientèle à constituer, premières saisons) ; les charges variables suivent l'activité.
+- **Tarifs et rendements horaires :** hypothèses pédagogiques, à remplacer par vos devis et par les tarifs relevés auprès des prestataires de votre zone (avec la date).`,
+  charges: `Charges variables de croisière : gasoil ${f1(sGasoil)} M FCFA (12 litres par hectare labouré et 4 litres par tonne battue, à 750 FCFA le litre), pièces et entretien 6,8 (10 % de la valeur du matériel, 68,0 M FCFA), opérateurs saisonniers 3,0, transport du matériel et petits frais 1,5, soit **${f1(S.re.cv)} M FCFA**. Charges fixes : ${f1(S.re.fixes)} M FCFA par an (assurance, local, gestion). Personnel permanent (deux mécaniciens et un gestionnaire) : ${f1(S.re.personnel)} M FCFA par an.`,
+  specifique: `- **Le matériel ne rapporte que s'il travaille.** L'investissement (${f1(S.re.immos)} M FCFA) est dominé par les machines. Chaque hectare ou tonne de moins ne fait baisser que le chiffre d'affaires, pas les amortissements ni les mensualités : le taux d'utilisation est le premier levier. Seuil de rentabilité à ${pc(S.re.seuil / S.re.ca)} du chiffre d'affaires, marge de sécurité de ${pc(1 - S.re.seuil / S.re.ca)}.
+- **Un service à crédit.** Les producteurs paient souvent à la récolte, pas au labour : besoin en fonds de roulement de ${f1(S.re.bfr)} M FCFA, et impayés à provisionner dans le plan (5 % ici). Un service sans suivi des créances se finance sur les fonds du prestataire.
+- **Le gasoil et les pannes.** Le gasoil pèse ${pc(sGasoil / S.re.cv)} des charges variables, l'entretien ${pc(6.8 / S.re.cv)}. Une panne en pleine saison coûte du chiffre d'affaires que l'on ne rattrape pas, car la fenêtre de labour est courte.
+- **DSCR :** ${f2(S.re.dscr)} en réaliste, ${f2(S.pe.dscr)} en pessimiste (la dette est couverte, de peu), ${f2(S.cr.dscr)} en mauvaise saison : l'annuité n'est plus couverte.
+- **VAN :** ${sg(S.re.van)} M FCFA en réaliste (TRI ${pc(S.re.tri, 1)}, délai de récupération ${f1(S.re.payback)} ans) ; ${sg(S.pe.van)} M en pessimiste : le projet ne rémunère plus l'argent investi au taux de ${pc(S.re.act)}.
+- **Leviers :** calendrier des chantiers et réservations avant la saison, acomptes ou paiement à la prestation, contrats avec des coopératives, entretien préventif et pièces en stock, formation des opérateurs, activité hors saison (transport, location). Chaque levier doit être chiffré avec le même modèle.`,
+  lecons: `Revoyez la leçon 5.7 (seuil, DSCR, VAN, TRI), la leçon 4.2 (contrats et lettres d'intention) et la leçon 6.1 (risques). Pour le contexte du Burkina Faso (statuts, financeurs, dispositifs d'appui), voyez la fiche Cadre pays ; vérifiez les droits et taxes sur l'importation du matériel et les conditions d'immatriculation des engins, avec date et source.`,
+  exo: `1. Recalculez le chiffre d'affaires de croisière avec **vos** surfaces à labourer et **vos** tarifs relevés (avec la date).
+2. Quel nombre d'hectares par tracteur et par an donne un DSCR de 1,2 ? Testez par pas de 20 ha.
+3. Que devient le DSCR si les impayés passent de 5 % à 10 % ? Quelles mesures chiffrées les ramènent à 5 % ?
+4. Rédigez une lettre d'intention d'une coopérative pour 150 ha de labour par an (modèle de la leçon 4.2).
+
+**Critères de réussite :** vos calculs sont reproductibles, chaque tarif et chaque hypothèse d'activité porte une source et une date, et les impayés sont chiffrés.`,
+});
+
 // ---- Cacaoyère (cultures pérennes) : horizon de 15 ans, structure de page propre
 const K = J.cacao, KR = K.re, KP = K.pe, KC = K.cr;
-const lignesAn = KR.years.map((y) => `| ${y.an} | ${y.vol ? f1(y.vol / 1000) : '–'} | ${f1(y.ca)} | ${sg(y.ebe)} | ${y.service ? f1(y.service) : '–'} | ${y.dscr ? f2(y.dscr) : '–'} |`).join('\n');
+const lignesAn = KR.years.map((y) => `| ${y.an} | ${y.vol ? f1(y.vol / 1000) : 'n.d.'} | ${f1(y.ca)} | ${sg(y.ebe)} | ${y.service ? f1(y.service) : '0,0'} | ${y.dscr ? f2(y.dscr) : 'n.d.'} |`).join('\n');
 const cacao = `### À propos de ce cas
 
 **Aïcha Traoré** (nom fictif) planifie une cacaoyère de 20 hectares dans le centre-ouest de la Côte d'Ivoire, sur une terre familiale dont elle dispose depuis plusieurs années. Elle vend ses fèves fermentées et séchées à un acheteur local. Forme juridique envisagée : SARL. Monnaie : FCFA.
@@ -324,6 +352,7 @@ fs.writeFileSync('src/content/cas-chiffres/attieke-cote-d-ivoire.ts', mk('attiek
 fs.writeFileSync('src/content/cas-chiffres/maraichage-benin.ts', mk('maraichage-benin', 'Maraîchage irrigué (tomate, chou) au Bénin', `Exploitation de 3 ha : DSCR de ${f2(M.re.dscr)} en réaliste, ${f2(M.pe.dscr)} en pessimiste, marge de sécurité étroite.`, maraichage, 'Bénin').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/aquaculture-senegal.ts', mk('aquaculture-senegal', 'Pisciculture de tilapia en étangs au Sénégal', `Ferme de 12 étangs : DSCR de ${f2(Q.re.dscr)} en réaliste, ${f2(Q.pe.dscr)} en pessimiste, l'aliment pèse ${pc(aqAliment / Q.re.cv)} des charges variables.`, aquaculture, 'Sénégal').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/mangue-sechee-benin.ts', mk('mangue-sechee-benin', 'Séchage de mangues au Bénin', `Unité de 180 t de fruits par campagne : DSCR de ${f2(G.re.dscr)} en réaliste, ${f2(G.pe.dscr)} en pessimiste, activité saisonnière.`, mangue, 'Bénin').replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/mecanisation-burkina-faso.ts', mk('mecanisation-burkina-faso', 'Prestation de mécanisation (labour et battage) au Burkina Faso', `Un service à 2 tracteurs et 2 batteuses : DSCR de ${f2(S.re.dscr)} en réaliste, ${f2(S.pe.dscr)} en pessimiste, le taux d'utilisation du matériel décide de tout.`, mecanisation, 'Burkina Faso').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/cacao-cote-d-ivoire.ts', mk('cacao-cote-d-ivoire', "Cacaoyère de 20 hectares en Côte d'Ivoire", `Projet sur 15 ans : ${KR.differe} ans de différé, délai de récupération de ${f1(KR.payback)} ans, TRI de ${pc(KR.tri, 1)} en réaliste.`, cacao, "Côte d'Ivoire").replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/types.ts', `export interface CasChiffre {
   slug: string
@@ -341,9 +370,10 @@ import { maraichage_benin } from './maraichage-benin'
 import { aquaculture_senegal } from './aquaculture-senegal'
 import { mangue_sechee_benin } from './mangue-sechee-benin'
 import { cacao_cote_d_ivoire } from './cacao-cote-d-ivoire'
+import { mecanisation_burkina_faso } from './mecanisation-burkina-faso'
 
 /** Cas chiffrés complémentaires au cas fil rouge Diap Touré (calculés par scripts/modeles_bp/cas_chiffres.py). */
-export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal, mangue_sechee_benin, cacao_cote_d_ivoire]
+export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal, mangue_sechee_benin, cacao_cote_d_ivoire, mecanisation_burkina_faso]
 
 export const trouverCas = (slug: string) => CAS_CHIFFRES.find((c) => c.slug === slug)
 `.replace(/\n/g, '\r\n'));

@@ -75,7 +75,7 @@ Le prix d'une culture de rente est exposé à deux sources d'incertitude :
 - **le marché mondial**, qui fluctue d'une campagne à l'autre ;
 - **le dispositif national** : dans certains pays, un prix est garanti ou fixé par l'administration ; dans d'autres, le prix est libre. Vérifiez-le pour votre pays et votre produit, avec date et source.
 
-Le prix retenu dans un plan sur 15 ans est une hypothèse **prudente** et **testée**. Dans le cas, le scénario pessimiste retient un rendement et un prix inférieurs de 10 % chacun, soit un chiffre d'affaires de croisière de 26,2 M FCFA au lieu de 32,4 M (− 19 %).
+Le prix retenu dans un plan sur 15 ans est une hypothèse **sourcée** et **testée**. Dans le cas, le scénario pessimiste retient un rendement et un prix inférieurs de 10 % chacun, soit un chiffre d'affaires de croisière de 26,2 M FCFA au lieu de 32,4 M (− 19 %).
 
 ### La qualité
 Pour beaucoup de cultures de rente, la qualité détermine l'accès à un acheteur et parfois une prime : fermentation et séchage du cacao, triage de l'anacarde, tri des cerises de café. La post-récolte est donc une partie de l'investissement, pas un détail (voir la leçon suivante).

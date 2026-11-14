@@ -323,6 +323,42 @@ def cacao():
     )
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# CAS 7 — Prestation de mécanisation (labour et battage), Burkina Faso — FCFA (point 11, module « Services agricoles »)
+# ----------------------------------------------------------------------------------------------------------------
+def mecanisation():
+    tracteurs, ha_tr, tarif_ha = 2, 480, 0.035000          # 2 tracteurs, 480 ha de labour chacun par an (deux campagnes), 35 000 FCFA/ha
+    batteuses, t_bat, tarif_t = 2, 900, 0.017000           # 2 batteuses, 900 t chacune par an, 17 000 FCFA/t
+    l_ha, px_gasoil = 12.0, 0.000750                       # 12 L de gasoil par ha labouré, 750 FCFA/L
+    l_t = 4.0                                              # 4 L par tonne battue
+    entretien_pct = 0.10                                   # pièces et entretien : 10 % de la valeur du matériel par an
+    mat = 68.0                                             # valeur des tracteurs, charrues, batteuses (M FCFA)
+
+    def ha(s):
+        return tracteurs * ha_tr * s.get("act", 1.0)
+
+    def tonnes(s):
+        return batteuses * t_bat * s.get("act", 1.0)
+
+    def ca(s):
+        brut = ha(s) * tarif_ha + tonnes(s) * tarif_t
+        return brut * (1 - s.get("impayes", 0.05))
+
+    def cv(s):
+        gasoil = (ha(s) * l_ha + tonnes(s) * l_t) * px_gasoil * s.get("carb", 1.0)
+        return gasoil + mat * entretien_pct * s.get("entretien", 1.0) + 3.0 + 1.5   # + opérateurs saisonniers 3,0 ; transport du matériel et petits frais 1,5
+
+    return dict(
+        nom="Prestation de mécanisation (labour et battage) — Burkina Faso", monnaie="FCFA", tracteurs=tracteurs, ha_tr=ha_tr, tarif_ha=tarif_ha,
+        batteuses=batteuses, t_bat=t_bat, tarif_t=tarif_t, l_ha=l_ha, px_gasoil=px_gasoil, entretien_pct=entretien_pct, mat=mat, impayes=0.05,
+        ca=ca, cv=cv, personnel=6.0, fixes=2.6, montee=0.65, cv_suit_ca=True,
+        immos=[("Frais d'établissement et immatriculation", 0.5, 5), ("2 tracteurs de 75 CV avec charrues à disques", 44.0, 8),
+               ("2 batteuses", 24.0, 8), ("Hangar d'abri et atelier", 6.0, 20), ("Remorque et outillage d'atelier", 4.0, 5), ("Imprévus (capitalisés)", 2.5, 10)],
+        bfr=10.0, pct_apport=0.30, taux=0.09, duree=8, differe=1, **{"is": 0.30}, act=0.10,
+        scen=dict(re=dict(), pe=dict(act=0.85, impayes=0.10, carb=1.10, entretien=1.15), cr=dict(act=0.70, impayes=0.15)),
+    )
+
+
 def perenne_rapport(c):
     return {k: perenne_eval(c, s) for k, s in c["scen"].items()}
 
@@ -350,7 +386,7 @@ def afficher(c, out):
 
 
 if __name__ == "__main__":
-    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage(), "aquaculture": aquaculture(), "mangue": mangue_sechee()}
+    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage(), "aquaculture": aquaculture(), "mangue": mangue_sechee(), "mecanisation": mecanisation()}
     res = {k: rapport(c) for k, c in cas.items()}
     for k, c in cas.items():
         afficher(c, res[k])

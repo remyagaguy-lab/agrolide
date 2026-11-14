@@ -1364,6 +1364,346 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "explanation": "Le DSCR passe à 0,71 en pessimiste et 0,37 en crise de prix."
     }
   ],
+  "sa_1": [
+    {
+      "question": "Que vend un prestataire de services agricoles ?",
+      "options": [
+        "Des kilos de produits agricoles récoltés",
+        "Des terres cultivables en location à long terme",
+        "L'usage d'une machine ou d'un savoir-faire",
+        "Des plants issus de sa propre pépinière"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Le même matériel peut servir de nombreux clients, mais sa capacité est limitée."
+    },
+    {
+      "question": "Qu'est-ce qui limite le chiffre d'affaires d'un service à machines ?",
+      "options": [
+        "Le nombre de pays où la machine est vendue",
+        "La capacité de la machine et la durée de la saison",
+        "Le prix du gasoil sur le marché mondial uniquement",
+        "La couleur et la marque du tracteur"
+      ],
+      "correctAnswer": 1,
+      "explanation": "On ne laboure pas toute l'année : la fenêtre de travail est courte."
+    },
+    {
+      "question": "Quel est le tarif de labour du cas ?",
+      "options": [
+        "3 500 FCFA par hectare",
+        "350 000 FCFA par hectare",
+        "35 000 FCFA par tonne",
+        "35 000 FCFA par hectare"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Le tarif de battage est de 17 000 FCFA par tonne."
+    },
+    {
+      "question": "Pourquoi connaître ce que le client paie aujourd'hui pour le même service ?",
+      "options": [
+        "Pour fixer un tarif acceptable et comparer",
+        "Pour copier le prix du voisin sans réfléchir",
+        "Parce que la loi interdit de vendre moins cher",
+        "Pour éviter d'écrire un contrat"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le client compare toujours avec ce qu'il paie ou ce qu'il perd en n'ayant pas le service."
+    },
+    {
+      "question": "Quels éléments un contrat de service doit-il préciser ?",
+      "options": [
+        "Prestation, prix, paiement, panne, intempéries, dégâts",
+        "Uniquement le nom des deux parties",
+        "Uniquement le prix, sans aucune autre condition",
+        "Seulement la couleur du matériel utilisé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un contrat écrit, même court, évite la plupart des litiges."
+    },
+    {
+      "question": "Quelle famille de services le cas étudié illustre-t-il ?",
+      "options": [
+        "Le stockage au froid",
+        "La distribution d'intrants",
+        "La mécanisation",
+        "Le transport de personnes"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La méthode vaut aussi pour le stockage, les intrants et la logistique."
+    }
+  ],
+  "sa_2": [
+    {
+      "question": "Quel est le chiffre d'affaires brut de croisière du cas (labour et battage) ?",
+      "options": [
+        "6,42 millions de FCFA",
+        "64,2 millions de FCFA",
+        "642 millions de FCFA",
+        "33,6 millions de FCFA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "33,6 de labour + 30,6 de battage."
+    },
+    {
+      "question": "Combien d'hectares sont labourés en croisière (2 tracteurs de 480 ha) ?",
+      "options": [
+        "480 ha",
+        "96 ha",
+        "1 440 ha",
+        "960 ha"
+      ],
+      "correctAnswer": 3,
+      "explanation": "2 × 480 = 960 ha, à 35 000 FCFA l'hectare : 33,6 M FCFA."
+    },
+    {
+      "question": "Quel est le chiffre d'affaires encaissé après 5 % d'impayés ?",
+      "options": [
+        "64,2 millions de FCFA",
+        "57,8 millions de FCFA",
+        "3,2 millions de FCFA",
+        "61,0 millions de FCFA"
+      ],
+      "correctAnswer": 3,
+      "explanation": "64,2 − 3,2 = 61,0."
+    },
+    {
+      "question": "Pourquoi ne pas retenir la capacité maximale annoncée par un fabricant ?",
+      "options": [
+        "Parce que les fabricants publient des chiffres toujours trop bas pour des raisons de modestie",
+        "Elle ignore pannes, déplacements, calendrier et clients",
+        "Parce que la capacité n'a aucun lien avec le chiffre d'affaires",
+        "Parce que la loi interdit de citer un fabricant dans un dossier"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Retenez ce que vous traiterez réellement, avec des clients identifiés."
+    },
+    {
+      "question": "Quelle part de l'activité de croisière retient l'année 1 du cas ?",
+      "options": [
+        "100 %",
+        "30 %",
+        "65 %",
+        "5 %"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La clientèle se constitue : le chiffre d'affaires de l'année 1 est de 39,6 M FCFA."
+    },
+    {
+      "question": "Quel outil aide le plus à remplir le calendrier d'un service ?",
+      "options": [
+        "Un calendrier de réservations avant la saison",
+        "Une publicité sans rendez-vous fixé",
+        "L'achat de machines plus nombreuses",
+        "L'attente des premiers appels en pleine saison"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les fenêtres de labour et de battage sont courtes."
+    }
+  ],
+  "sa_3": [
+    {
+      "question": "Quel est le total des charges variables de croisière dans le cas ?",
+      "options": [
+        "2,53 millions de FCFA",
+        "253 millions de FCFA",
+        "14,0 millions de FCFA",
+        "25,3 millions de FCFA"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Gasoil 14,0 + entretien 6,8 + opérateurs 3,0 + transport et petits frais 1,5."
+    },
+    {
+      "question": "Combien coûte le gasoil d'un hectare labouré (12 litres à 750 FCFA) ?",
+      "options": [
+        "9 000 FCFA",
+        "900 FCFA",
+        "90 000 FCFA",
+        "12 750 FCFA"
+      ],
+      "correctAnswer": 0,
+      "explanation": "12 × 750 = 9 000 FCFA, soit 26 % du tarif de 35 000 FCFA."
+    },
+    {
+      "question": "Comment le cas chiffre-t-il l'entretien du matériel ?",
+      "options": [
+        "Un montant nul, le matériel étant neuf",
+        "Un forfait de 100 000 FCFA par an",
+        "10 % de la valeur du matériel par an",
+        "Le double du prix d'achat"
+      ],
+      "correctAnswer": 2,
+      "explanation": "10 % de 68,0 M FCFA, soit 6,8 M FCFA par an."
+    },
+    {
+      "question": "Lequel de ces coûts reste fixe même si les hectares labourés baissent ?",
+      "options": [
+        "Le gasoil",
+        "Les amortissements du matériel",
+        "Les pièces d'entretien utilisées",
+        "Les opérateurs saisonniers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Amortissements : 9,95 M FCFA par an."
+    },
+    {
+      "question": "Quel est le taux de marge sur coûts variables du cas ?",
+      "options": [
+        "Environ 58,5 %",
+        "Environ 5,8 %",
+        "Environ 85 %",
+        "Environ 25 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "(61,0 − 25,3) ÷ 61,0."
+    },
+    {
+      "question": "Pourquoi le taux de marge est-il élevé alors que le service reste exigeant ?",
+      "options": [
+        "Parce que le gasoil est gratuit pour les prestataires",
+        "Parce que les machines ne s'usent pas",
+        "Pas de matière première, mais de lourdes charges fixes",
+        "Parce que les clients paient toujours d'avance"
+      ],
+      "correctAnswer": 2,
+      "explanation": "L'utilisation de la machine fait toute la différence."
+    }
+  ],
+  "sa_4": [
+    {
+      "question": "Quel est le total des immobilisations du cas ?",
+      "options": [
+        "91,0 millions de FCFA",
+        "81,0 millions de FCFA",
+        "44,0 millions de FCFA",
+        "10,0 millions de FCFA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les 91,0 millions du coût du projet incluent 10,0 de besoin en fonds de roulement."
+    },
+    {
+      "question": "Quelle part de l'investissement représentent les tracteurs et les batteuses (68,0 sur 81,0) ?",
+      "options": [
+        "Environ 8 %",
+        "Environ 50 %",
+        "Environ 100 %",
+        "Environ 84 %"
+      ],
+      "correctAnswer": 3,
+      "explanation": "C'est le matériel qui porte le projet."
+    },
+    {
+      "question": "À quoi correspond le besoin en fonds de roulement d'un prestataire ?",
+      "options": [
+        "Au prix d'achat des tracteurs",
+        "Au salaire du gestionnaire uniquement",
+        "Au crédit accordé aux clients et aux frais avancés",
+        "À l'impôt payé en fin d'année"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Il se finance : 10,0 M FCFA dans le cas."
+    },
+    {
+      "question": "Quel est le coût total du projet du cas ?",
+      "options": [
+        "91,0 millions de FCFA",
+        "81,0 millions de FCFA",
+        "27,3 millions de FCFA",
+        "63,7 millions de FCFA"
+      ],
+      "correctAnswer": 0,
+      "explanation": "81,0 d'immobilisations + 10,0 de besoin en fonds de roulement."
+    },
+    {
+      "question": "Quelle est l'annuité constante à partir de l'année 2 ?",
+      "options": [
+        "Environ 1,3 million de FCFA par an",
+        "Environ 12,7 millions de FCFA par an",
+        "Environ 63,7 millions de FCFA par an",
+        "Environ 5,7 millions de FCFA par an"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Emprunt de 63,7 à 9 % sur 8 ans dont 1 an de différé ; 5,7 M FCFA d'intérêts l'année 1."
+    },
+    {
+      "question": "Que faire avant d'acheter le matériel ?",
+      "options": [
+        "Acheter au plus vite le matériel le moins cher",
+        "Se fier à la seule brochure du fabricant",
+        "Choisir la solution sans regarder les conditions",
+        "Comparer l'achat, la location et le crédit-bail sur devis"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Chaque solution a un coût : demandez des devis écrits et datés."
+    }
+  ],
+  "sa_5": [
+    {
+      "question": "Quel est le seuil de rentabilité du cas, en part du chiffre d'affaires ?",
+      "options": [
+        "Environ 68 %",
+        "Environ 6,8 %",
+        "Environ 100 %",
+        "Environ 30 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "41,5 ÷ 61,0, soit une marge de sécurité de 32 %."
+    },
+    {
+      "question": "Quel est le DSCR du scénario réaliste (année 2) ?",
+      "options": [
+        "0,87",
+        "18,7",
+        "1,87",
+        "1,19"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Flux disponible d'environ 23,6 pour une annuité de 12,7."
+    },
+    {
+      "question": "Que signifie un DSCR de 0,67 en mauvaise saison ?",
+      "options": [
+        "La banque est remboursée avec 67 % de marge",
+        "L'annuité n'est pas couverte",
+        "Le projet gagne 67 % de plus",
+        "La saison a été excellente"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Activité en baisse de 30 % et impayés de 15 %."
+    },
+    {
+      "question": "Quel est le DSCR du scénario pessimiste ?",
+      "options": [
+        "1,87",
+        "0,67",
+        "2,19",
+        "1,19"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Activité − 15 %, impayés 10 %, gasoil + 10 %, entretien + 15 %."
+    },
+    {
+      "question": "Quelle activité minimale garde le DSCR au-dessus de 1 dans le cas ?",
+      "options": [
+        "Environ 10 % de l'activité prévue",
+        "Environ 99 % de l'activité prévue",
+        "Aucune activité n'est nécessaire",
+        "Environ 70 % de l'activité prévue"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Environ 672 ha de labour et 1 260 t de battage."
+    },
+    {
+      "question": "Quel risque propre au service est le plus difficile à rattraper ?",
+      "options": [
+        "Une panne en pleine saison",
+        "Un changement de couleur du matériel",
+        "Un excès de clients en hiver",
+        "Une baisse du prix des machines neuves"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un chantier perdu ne se rattrape pas : prévoyez entretien préventif et pièces en stock."
+    }
+  ],
   "tr_1": [
     {
       "question": "Une unité traite 180 t de fruits, rendement 0,11, pertes de conditionnement de 4 %. Quel volume vendable ?",
@@ -1401,12 +1741,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que vaut un point de rendement matière en plus (0,11 devient 0,12) dans le cas du Bénin ?",
       "options": [
-        "Environ 6,9 millions de FCFA de CA",
         "Environ 69 000 FCFA, car un point de rendement est négligeable",
+        "Environ 6,9 millions de FCFA de CA",
         "Environ 0,7 million de FCFA, soit le coût d'un sac de fruits",
         "Rien du tout, car le rendement ne change pas le volume vendu"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "180 000 × 0,01 × 0,96 × 4 000 ≈ 6,9 millions."
     },
     {
@@ -1449,10 +1789,10 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "30 t",
         "250 t",
-        "1 200 t",
-        "300 t"
+        "300 t",
+        "1 200 t"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "1,2 × 250 = 300 t."
     },
     {
@@ -1469,34 +1809,34 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que mesure le taux d'utilisation ?",
       "options": [
-        "Le prix de vente rapporté au prix d'achat de la matière",
         "Jours travaillés rapportés aux jours possibles",
+        "Le prix de vente rapporté au prix d'achat de la matière",
         "La part de produit fini perdue au conditionnement",
         "Le nombre de clients actifs sur la dernière année"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Plus il est bas, plus les coûts fixes pèsent par kilo produit."
     },
     {
       "question": "Quel moyen étale la saison d'une unité de séchage de mangues ?",
       "options": [
         "Acheter plus de séchoirs pour traiter la même quantité de fruits plus vite",
-        "Vendre moins cher pour écouler plus vite le stock de produit sec",
         "Traiter un second produit hors saison",
+        "Vendre moins cher pour écouler plus vite le stock de produit sec",
         "Réduire le personnel permanent à zéro pendant toute la campagne"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Chaque jour de fonctionnement en plus dilue les coûts fixes."
     },
     {
       "question": "Pourquoi l'année 1 du cas retient-elle 70 % de la pleine capacité ?",
       "options": [
-        "Rodage de l'unité et premiers contrats : la production monte progressivement",
         "Parce que la loi limite la production de l'année 1 à 70 % pour toutes les unités",
         "Parce que les séchoirs neufs ne fonctionnent qu'à 70 % de leur capacité nominale",
+        "Rodage de l'unité et premiers contrats : la production monte progressivement",
         "Parce que les fruits sont fournis gratuitement par l'État cette année-là"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Une montée en charge réaliste évite un plan trop optimiste."
     }
   ],
@@ -1504,67 +1844,67 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quelle part des charges variables représentent les fruits dans le cas du Bénin (19,8 sur 44,7 M FCFA) ?",
       "options": [
+        "Environ 44 %",
         "Environ 4 %",
         "Environ 80 %",
-        "Environ 100 %",
-        "Environ 44 %"
+        "Environ 100 %"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "19,8 ÷ 44,7 ≈ 44 %."
     },
     {
       "question": "Quelle est la limite principale d'un contrat d'approvisionnement avec des producteurs ?",
       "options": [
-        "Il peut vendre ailleurs si le prix monte",
         "Le contrat supprime toute variation de qualité des fruits livrés pendant la campagne",
         "Le contrat dispense l'unité de tout contrôle à l'arrivée des lots de fruits",
-        "Le contrat interdit à l'unité de payer le producteur avant la fin de la campagne"
+        "Le contrat interdit à l'unité de payer le producteur avant la fin de la campagne",
+        "Il peut vendre ailleurs si le prix monte"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Un contrat équilibré est mieux respecté qu'un contrat trop dur."
     },
     {
       "question": "Combien de fournisseurs de matière première faut-il prévoir au minimum ?",
       "options": [
+        "Au moins deux",
         "Un seul, afin de négocier un meilleur prix sur tout le volume annuel",
         "Aucun, puisque l'achat se fait au marché au jour le jour",
-        "Au moins deux",
         "Cinquante, un par village de la zone de collecte"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Un plan B limite le risque en cas de mauvaise récolte chez l'un d'eux."
     },
     {
       "question": "Que doit préciser un bon contrat d'approvisionnement ?",
       "options": [
         "Uniquement le prix au kilo de la matière première livrée",
-        "Prix, qualité, calendrier de livraison et modalités de paiement et de refus d'un lot",
         "Uniquement la quantité totale livrée sur l'année entière",
-        "La couleur des sacs et le nom du chauffeur de livraison"
+        "La couleur des sacs et le nom du chauffeur de livraison",
+        "Prix, qualité, calendrier de livraison et modalités de paiement et de refus d'un lot"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Ces éléments évitent les litiges à la livraison."
     },
     {
       "question": "Que faire à l'arrivée de chaque lot de matière première ?",
       "options": [
-        "Contrôler, peser, enregistrer, trier",
         "Tout accepter pour ne pas perdre le fournisseur",
         "Mélanger tous les lots sans trace",
+        "Contrôler, peser, enregistrer, trier",
         "Attendre la fin de la campagne pour trier"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "La qualité du produit fini dépend d'abord de celle de la matière première."
     },
     {
       "question": "Dans le scénario pessimiste du cas, comment évolue le prix des fruits ?",
       "options": [
         "Il baisse de 8 %",
-        "Il reste identique",
         "Il augmente de 8 %",
+        "Il reste identique",
         "Il est multiplié par deux"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Un scénario pessimiste teste une matière première plus chère."
     }
   ],
@@ -1573,44 +1913,44 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Quel est le total des immobilisations du cas du Bénin, avant le fonds de roulement ?",
       "options": [
         "74,0 millions de FCFA",
-        "60,0 millions de FCFA",
         "14,0 millions de FCFA",
-        "22,0 millions de FCFA"
+        "22,0 millions de FCFA",
+        "60,0 millions de FCFA"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Les 74,0 millions du coût du projet incluent 14,0 de besoin en fonds de roulement."
     },
     {
       "question": "Quel est le premier poste d'équipement du cas, et sa dotation annuelle (22,0 M FCFA sur 8 ans) ?",
       "options": [
+        "Les séchoirs, 2,75 M FCFA par an",
         "Le véhicule, environ 22 millions par an",
         "Le local, environ 2,75 millions par an",
-        "L'emballage, environ 275 000 FCFA par an",
-        "Les séchoirs, 2,75 M FCFA par an"
+        "L'emballage, environ 275 000 FCFA par an"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "22,0 ÷ 8 = 2,75."
     },
     {
       "question": "Quel est le coût d'emballage retenu dans le cas ?",
       "options": [
         "3 000 FCFA par kg de produit, soit environ 59 millions par an",
-        "30 FCFA par kg de produit, soit environ 0,6 million par an",
         "300 FCFA par kg emballé, soit 5,9 M par an",
+        "30 FCFA par kg de produit, soit environ 0,6 million par an",
         "Aucun coût, l'emballage étant fourni par l'acheteur"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "19 800 kg × 300 FCFA ≈ 5,9 millions."
     },
     {
       "question": "Que faire avant d'investir à propos des normes sanitaires et d'étiquetage ?",
       "options": [
-        "Vérifier ce qui s'applique, avec date et source",
         "Les ignorer, elles ne concernent que les grandes unités",
         "Attendre le premier contrôle",
+        "Vérifier ce qui s'applique, avec date et source",
         "Copier celles d'un autre produit"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Les acheteurs exigent souvent des règles précises."
     },
     {
@@ -1627,12 +1967,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que faire avant d'acheter des séchoirs ?",
       "options": [
+        "Comparer les devis et la capacité réelle",
         "Prendre le moins cher sans autre vérification",
         "Acheter la capacité maximale proposée",
-        "Se fier uniquement à la brochure",
-        "Comparer les devis et la capacité réelle"
+        "Se fier uniquement à la brochure"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Les équipements sont le premier poste d'investissement."
     }
   ],
@@ -1640,12 +1980,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel est le seuil de rentabilité du cas, rapporté au chiffre d'affaires ?",
       "options": [
-        "Environ 71 %",
         "Environ 25 %",
         "Environ 50 %",
+        "Environ 71 %",
         "Environ 100 %"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "54,1 ÷ 76,0 ≈ 71 %, soit une marge de sécurité de 29 %."
     },
     {
@@ -1653,21 +1993,21 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "La banque est remboursée avec 99 % de marge",
         "Le projet gagne 99 % de plus",
-        "L'annuité est à peine couverte",
-        "Le scénario est sans risque"
+        "Le scénario est sans risque",
+        "L'annuité est à peine couverte"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Les banques demandent généralement un DSCR nettement supérieur à 1."
     },
     {
       "question": "Quel est le DSCR du scénario de crise de prix (− 15 %) ?",
       "options": [
         "1,54",
-        "0,79",
         "0,99",
+        "0,79",
         "2,00"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Il tombe sous 1 : l'annuité n'est plus couverte."
     },
     {
@@ -1685,11 +2025,11 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Pourquoi le prix de 4 000 FCFA/kg est-il à remplacer dans votre dossier ?",
       "options": [
         "Le prix est fixé chaque année par l'État pour tous les produits séchés",
+        "C'est une hypothèse : il faut vos relevés datés",
         "Le prix ne change jamais, quelle que soit la saison ou la qualité du produit",
-        "Le prix est toujours de 2 000 FCFA/kg, quel que soit l'acheteur",
-        "C'est une hypothèse : il faut vos relevés datés"
+        "Le prix est toujours de 2 000 FCFA/kg, quel que soit l'acheteur"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "Chaque prix d'un plan porte une source et une date."
     },
     {
