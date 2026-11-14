@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 /** Adresse affichable d'une affiche (les fichiers du stockage privé passent par le relais). */
 export const urlAffiche = (url: string) =>
   url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(url)}` : url
@@ -23,8 +25,17 @@ export default function AfficheEvenement({ src, titre }: { src: string; titre: s
   return (
     <figure className="space-y-2">
       <a href={adresse} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-card border border-outline-variant bg-surface-container">
-        {/* eslint-disable-next-line @next/next/no-img-element -- dimensions inconnues : l'affiche garde ses proportions */}
-        <img src={adresse} alt={`Affiche de l'événement « ${titre} »`} loading="lazy" className="mx-auto h-auto max-h-[80vh] w-auto max-w-full object-contain" />
+        {/* Version réduite servie par l'optimiseur d'images (quelques dizaines de Ko au lieu de plusieurs Mo) ;
+            l'original n'est ouvert qu'au clic. Dimensions inconnues : l'affiche garde ses proportions. */}
+        <Image
+          src={adresse}
+          alt={`Affiche de l'événement « ${titre} »`}
+          width={0}
+          height={0}
+          sizes="(max-width: 1024px) 100vw, 40vw"
+          unoptimized={src.includes('r2.cloudflarestorage.com')}
+          className="mx-auto h-auto w-full"
+        />
       </a>
       <figcaption className="text-center text-body-sm text-on-surface-variant">
         <a href={adresse} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2">Voir l'affiche en grand</a>
