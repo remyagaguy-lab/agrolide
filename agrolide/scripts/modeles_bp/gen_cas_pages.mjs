@@ -260,6 +260,35 @@ const mecanisation = page({
 **Critères de réussite :** vos calculs sont reproductibles, chaque tarif et chaque hypothèse d'activité porte une source et une date, et les impayés sont chiffrés.`,
 });
 
+const Z = J.riz, ZE = Z.extras, zp = ZE.par_ha, zn = ZE.ha_camp;
+const zTonnes = ZE.tonnes;
+const f3 = (x) => x.toFixed(3).replace('.', ',');
+const zLig = (lab, k) => `${lab} ${f1(zn * zp[k])}`;
+const zHaussePt = (1 + ZE.cout_stock + ZE.taux_argent * ZE.mois / 12) / (1 - ZE.perte_stock) - 1;
+const riz = page({
+  c: Z, dev: 'FCFA', filiere: { pe: 'Pessimiste (rendement − 5 %, prix − 4 %, engrais + 10 %, labour et battage + 5 %)', cr: 'Mauvaise campagne (rendement − 20 %, prix − 5 %)' },
+  intro: `**Fanta Coulibaly** (nom fictif) cultive du riz sur 15 hectares aménagés avec maîtrise de l'eau, dans le centre du Mali, sur une terre dont elle dispose par un accord écrit avec sa famille. Elle réalise **deux campagnes par an** (hivernage et contre-saison) et vend son paddy à des transformateurs et à des commerçants de la région. Forme juridique envisagée : SARL à associé unique. Monnaie : FCFA.`,
+  hyp: `- **Surface et campagnes :** 15 ha, 2 campagnes par an, soit **${zn} hectares-campagnes**.
+- **Rendement :** ${fr(ZE.rdt_kg)} kg de paddy par hectare et par campagne (hypothèse pédagogique pour un périmètre bien conduit ; à remplacer par les rendements mesurés dans votre zone, avec la date) ; pertes de ${pc(ZE.perte)} à la récolte et au séchage ; volume vendable d'environ **${f1(zTonnes)} t** par an.
+- **Prix :** paddy vendu **190 FCFA/kg** à la récolte (hypothèse pédagogique ; à relever sur votre marché, avec la date).
+- **Année 1 :** 80 % de la pleine production (mise en route de l'aménagement, première campagne décalée) ; les coûts suivent la production.
+- **Chiffre d'affaires de croisière :** ${f1(zTonnes)} t × 190 FCFA/kg = **${f1(Z.re.ca)} M FCFA**.`,
+  charges: `Par hectare et par campagne : semences ${f3(zp.semences)} M FCFA, engrais ${f3(zp.engrais)}, produits phytosanitaires ${f3(zp.phyto)}, eau et énergie de pompage ${f3(zp.eau)}, labour et battage en prestation ${f3(zp.labour_battage)}, main-d'œuvre (repiquage, entretien, récolte) ${f3(zp.main_oeuvre)}, sacs et transport ${f3(zp.sacs_transport)}. Pour ${zn} hectares-campagnes : ${zLig('semences', 'semences')}, ${zLig('engrais', 'engrais')}, ${zLig('phytosanitaires', 'phyto')}, ${zLig('eau et énergie', 'eau')}, ${zLig('labour et battage', 'labour_battage')}, ${zLig('main-d\'œuvre', 'main_oeuvre')}, ${zLig('sacs et transport', 'sacs_transport')}, soit **${f1(Z.re.cv)} M FCFA** de charges variables. Charges fixes : ${f1(Z.re.fixes)} M FCFA par an. Personnel permanent (chef de culture, gardien) : ${f1(Z.re.personnel)} M FCFA par an.`,
+  specifique: `- **Le rendement porte le projet.** Le taux de marge sur coûts variables est de ${pc(Z.re.tm)} et l'EBE de croisière de ${f1(Z.re.res[1].ebe)} M FCFA (${pc(Z.re.res[1].ebe / Z.re.ca)} du CA). Les charges de la campagne sont engagées avant la récolte : avec un rendement inférieur d'un cinquième et un prix en recul de 5 %, l'EBE de l'année 2 tombe à ${f1(Z.cr.res[1].ebe)} M FCFA.
+- **Un seuil assez haut.** Seuil de rentabilité à ${pc(Z.re.seuil / Z.re.ca)} du chiffre d'affaires, soit une marge de sécurité de ${pc(1 - Z.re.seuil / Z.re.ca)} : l'aménagement et les remboursements pèsent dans les coûts fixes totaux (${f1(Z.re.cf_tot)} M FCFA).
+- **DSCR :** ${f2(Z.re.dscr)} en réaliste, ${f2(Z.pe.dscr)} en pessimiste (la dette est tout juste couverte), ${f2(Z.cr.dscr)} en mauvaise campagne : une campagne dont le rendement baisse d'un cinquième ne couvre pas l'annuité.
+- **VAN :** ${sg(Z.re.van)} M FCFA en réaliste (TRI ${pc(Z.re.tri, 1)}, délai de récupération au-delà de 5 ans) ; ${sg(Z.pe.van)} M en pessimiste : le projet ne rémunère plus l'argent investi au taux de ${pc(Z.re.act)}.
+- **Vendre à la récolte ou plus tard.** En stockant ${pc(ZE.part_stockee)} de la récolte (${f1(ZE.vendu_recolte_equiv)} M FCFA) pendant ${ZE.mois} mois, avec une hausse de prix supposée de ${pc(ZE.hausse)} (hypothèse pédagogique), des pertes de stockage de ${pc(ZE.perte_stock)}, des frais de ${pc(ZE.cout_stock)} et un coût de l'argent de ${pc(ZE.taux_argent)} par an, le gain net est de ${f1(ZE.gain_stock)} M FCFA. Il tombe à zéro si la hausse de prix n'atteint que ${pc(zHaussePt, 1)} : le calcul doit se faire avec vos relevés de prix de plusieurs années, pas avec une seule bonne année.
+- **Leviers :** semences de qualité et calendrier cultural tenu, maîtrise de l'eau, engrais appliqué aux bons stades, contrats d'achat avec des transformateurs, achat groupé des intrants, séchage et stockage corrects, assurance récolte si une offre existe (voir la fiche Cadre pays du Mali). Chaque levier doit être chiffré avec le même modèle.`,
+  lecons: `Revoyez la leçon 5.7 (seuil, DSCR, VAN, TRI), la leçon 4.2 (contrats et lettres d'intention) et la leçon 6.1 (risques). Pour le contexte malien (statuts, foncier, financeurs), voyez la fiche Cadre pays du Mali ; vérifiez en outre les règles d'accès à l'eau et au périmètre aménagé auprès de la structure gestionnaire, avec date et source.`,
+  exo: `1. Recalculez le chiffre d'affaires et les charges avec **vos** rendements mesurés, **vos** prix relevés et **vos** doses d'engrais (avec la date).
+2. De combien de kilogrammes par hectare le rendement peut-il baisser avant que le DSCR passe sous 1 ? Testez par pas de 100 kg/ha avec le classeur joint.
+3. À partir de quelle hausse de prix le stockage de 40 % de la récolte devient-il rentable avec vos propres frais ?
+4. Proposez deux mesures chiffrées pour ramener le DSCR de mauvaise campagne au-dessus de 0,8.
+
+**Critères de réussite :** vos calculs sont reproductibles, chaque rendement et chaque prix porte une source et une date, et le choix de vendre à la récolte ou plus tard est chiffré.`,
+});
+
 // ---- Cacaoyère (cultures pérennes) : horizon de 15 ans, structure de page propre
 const K = J.cacao, KR = K.re, KP = K.pe, KC = K.cr;
 const lignesAn = KR.years.map((y) => `| ${y.an} | ${y.vol ? f1(y.vol / 1000) : 'n.d.'} | ${f1(y.ca)} | ${sg(y.ebe)} | ${y.service ? f1(y.service) : '0,0'} | ${y.dscr ? f2(y.dscr) : 'n.d.'} |`).join('\n');
@@ -353,6 +382,7 @@ fs.writeFileSync('src/content/cas-chiffres/maraichage-benin.ts', mk('maraichage-
 fs.writeFileSync('src/content/cas-chiffres/aquaculture-senegal.ts', mk('aquaculture-senegal', 'Pisciculture de tilapia en étangs au Sénégal', `Ferme de 12 étangs : DSCR de ${f2(Q.re.dscr)} en réaliste, ${f2(Q.pe.dscr)} en pessimiste, l'aliment pèse ${pc(aqAliment / Q.re.cv)} des charges variables.`, aquaculture, 'Sénégal').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/mangue-sechee-benin.ts', mk('mangue-sechee-benin', 'Séchage de mangues au Bénin', `Unité de 180 t de fruits par campagne : DSCR de ${f2(G.re.dscr)} en réaliste, ${f2(G.pe.dscr)} en pessimiste, activité saisonnière.`, mangue, 'Bénin').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/mecanisation-burkina-faso.ts', mk('mecanisation-burkina-faso', 'Prestation de mécanisation (labour et battage) au Burkina Faso', `Un service à 2 tracteurs et 2 batteuses : DSCR de ${f2(S.re.dscr)} en réaliste, ${f2(S.pe.dscr)} en pessimiste, le taux d'utilisation du matériel décide de tout.`, mecanisation, 'Burkina Faso').replace(/\n/g, '\r\n'));
+fs.writeFileSync('src/content/cas-chiffres/riz-irrigue-mali.ts', mk('riz-irrigue-mali', 'Riz irrigué en deux campagnes au Mali', `Exploitation de 15 ha en deux campagnes : DSCR de ${f2(Z.re.dscr)} en réaliste, ${f2(Z.pe.dscr)} en pessimiste, le rendement et le prix du paddy décident de tout.`, riz, 'Mali').replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/cacao-cote-d-ivoire.ts', mk('cacao-cote-d-ivoire', "Cacaoyère de 20 hectares en Côte d'Ivoire", `Projet sur 15 ans : ${KR.differe} ans de différé, délai de récupération de ${f1(KR.payback)} ans, TRI de ${pc(KR.tri, 1)} en réaliste.`, cacao, "Côte d'Ivoire").replace(/\n/g, '\r\n'));
 fs.writeFileSync('src/content/cas-chiffres/types.ts', `export interface CasChiffre {
   slug: string
@@ -371,9 +401,10 @@ import { aquaculture_senegal } from './aquaculture-senegal'
 import { mangue_sechee_benin } from './mangue-sechee-benin'
 import { cacao_cote_d_ivoire } from './cacao-cote-d-ivoire'
 import { mecanisation_burkina_faso } from './mecanisation-burkina-faso'
+import { riz_irrigue_mali } from './riz-irrigue-mali'
 
 /** Cas chiffrés complémentaires au cas fil rouge Diap Touré (calculés par scripts/modeles_bp/cas_chiffres.py). */
-export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal, mangue_sechee_benin, cacao_cote_d_ivoire, mecanisation_burkina_faso]
+export const CAS_CHIFFRES: CasChiffre[] = [poulet_togo, attieke_cote_d_ivoire, maraichage_benin, aquaculture_senegal, mangue_sechee_benin, cacao_cote_d_ivoire, mecanisation_burkina_faso, riz_irrigue_mali]
 
 export const trouverCas = (slug: string) => CAS_CHIFFRES.find((c) => c.slug === slug)
 `.replace(/\n/g, '\r\n'));

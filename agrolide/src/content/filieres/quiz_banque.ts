@@ -2859,5 +2859,345 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "correctAnswer": 0,
       "explanation": "Une information non confirmée n'est jamais acquise."
     }
+  ],
+  "vi_1": [
+    {
+      "question": "Par quoi doit commencer le choix d'une culture ?",
+      "options": [
+        "Par le marché : qui achète, à quel prix, à quelle saison",
+        "Par la culture que tous les voisins plantent cette année",
+        "Par le rendement annoncé sur l'emballage des semences",
+        "Par la machine qu'on aimerait acheter"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Une culture sans acheteur identifié est un risque, quel que soit le rendement."
+    },
+    {
+      "question": "Quel est le principal avantage d'un système irrigué ?",
+      "options": [
+        "Aucun investissement initial",
+        "Aucune charge d'eau ni d'énergie",
+        "L'absence totale de risque de prix",
+        "Un rendement plus stable et deux campagnes possibles"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Mais l'investissement et les charges d'eau sont élevés."
+    },
+    {
+      "question": "Combien d'hectares-campagnes compte le cas étudié ?",
+      "options": [
+        "15 (une seule campagne par an)",
+        "300 (dix campagnes par an)",
+        "30 (15 hectares, deux campagnes par an)",
+        "45 (trois campagnes par an)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un hectare cultivé deux fois dans l'année compte pour deux hectares-campagnes."
+    },
+    {
+      "question": "D'où doivent venir les ordres de grandeur agronomiques d'un plan (cycle, variété, besoins) ?",
+      "options": [
+        "D'un souvenir approximatif de la saison passée",
+        "D'un conseiller ou d'un institut local, avec la source et la date",
+        "D'une publicité du fournisseur de semences",
+        "De ce qui se pratique dans un autre continent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Les variétés et les besoins dépendent de votre zone."
+    },
+    {
+      "question": "Pourquoi le soja demande-t-il en général moins d'engrais azoté que le maïs ?",
+      "options": [
+        "Il pousse sans aucune eau",
+        "La plante fixe elle-même une partie de l'azote",
+        "Il ne se vend qu'à l'exportation",
+        "Il n'a aucun besoin en semences de qualité"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il reste sensible à la qualité des semences et au manque d'eau au remplissage des graines."
+    },
+    {
+      "question": "Pourquoi un droit écrit sur la parcelle est-il demandé dans le plan ?",
+      "options": [
+        "Parce que le banquier choisit les variétés",
+        "Pour éviter de payer l'eau",
+        "Pour supprimer le besoin d'un contrat de vente",
+        "Pour sécuriser la terre pendant toute la durée de l'emprunt"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Sans droit sûr sur la terre, l'aménagement et l'emprunt sont menacés."
+    }
+  ],
+  "vi_2": [
+    {
+      "question": "Comment s'exprime correctement un rendement dans un plan ?",
+      "options": [
+        "En kilogrammes par hectare et par campagne, avec source et date",
+        "En tonnes pour toute l'exploitation, sans surface",
+        "En chiffre d'affaires par mois",
+        "En pourcentage du prix de vente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sans la surface ni la campagne, le chiffre ne se vérifie pas."
+    },
+    {
+      "question": "Quel rendement le cas retient-il, comme hypothèse pédagogique ?",
+      "options": [
+        "600 kg de paddy par hectare et par campagne",
+        "60 000 kg de paddy par hectare et par campagne",
+        "6 000 kg de paddy par hectare et par campagne",
+        "6 000 kg de paddy par hectare et par an"
+      ],
+      "correctAnswer": 2,
+      "explanation": "C'est une hypothèse à remplacer par vos mesures datées."
+    },
+    {
+      "question": "Quel est le budget total d'une campagne à l'hectare dans le cas ?",
+      "options": [
+        "0,059 M FCFA",
+        "5,90 M FCFA",
+        "0,590 M FCFA",
+        "1,083 M FCFA"
+      ],
+      "correctAnswer": 2,
+      "explanation": "1,083 M FCFA est le chiffre d'affaires par hectare et par campagne, pas le budget."
+    },
+    {
+      "question": "Quelles sont les charges variables de croisière du cas ?",
+      "options": [
+        "1,77 M FCFA",
+        "32,5 M FCFA",
+        "27,7 M FCFA",
+        "17,7 M FCFA"
+      ],
+      "correctAnswer": 3,
+      "explanation": "30 hectares-campagnes × 0,590 M FCFA."
+    },
+    {
+      "question": "Quel est le coût variable du paddy par kilogramme dans le cas ?",
+      "options": [
+        "Environ 10,3 FCFA par kilogramme",
+        "Environ 103,5 FCFA par kilogramme",
+        "Environ 190 FCFA par kilogramme",
+        "Environ 1 035 FCFA par kilogramme"
+      ],
+      "correctAnswer": 1,
+      "explanation": "17,7 M FCFA pour 171 tonnes. Le coût complet monte à environ 162 FCFA/kg."
+    },
+    {
+      "question": "Parmi ces variations, laquelle ramène le plus le DSCR du cas ?",
+      "options": [
+        "Un rendement inférieur de 10 % (DSCR 1,07)",
+        "Un engrais plus cher de 20 % (DSCR 1,36)",
+        "Un labour et battage plus chers de 10 % (DSCR 1,42)",
+        "Une eau plus chère de 20 % (DSCR 1,42)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le rendement et le prix pèsent plus lourd que chaque charge prise seule."
+    }
+  ],
+  "vi_3": [
+    {
+      "question": "Pourquoi les prix des céréales sont-ils souvent plus bas juste après la récolte ?",
+      "options": [
+        "Parce que tous les producteurs vendent en même temps",
+        "Parce que la loi fixe un prix plancher après la récolte",
+        "Parce que la demande disparaît totalement",
+        "Parce que le grain est toujours de mauvaise qualité"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'écart avec la période de soudure existe mais varie d'une année à l'autre."
+    },
+    {
+      "question": "Quel prix de base un plan prudent retient-il pour la vente de la récolte ?",
+      "options": [
+        "Le prix le plus haut observé de l'année",
+        "Le prix de soudure, supposé garanti",
+        "Le prix à la récolte, avec le stockage en option chiffrée",
+        "Le prix annoncé par un futur acheteur sans contrat"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un banquier se méfie d'un plan qui compte sur la hausse de prix."
+    },
+    {
+      "question": "Quelle part de la récolte le cas imagine-t-il de stocker pendant 4 mois ?",
+      "options": [
+        "4 %",
+        "100 %",
+        "14 %",
+        "40 %"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Soit 13,0 M FCFA au prix de récolte."
+    },
+    {
+      "question": "Quel est le gain net du stockage dans le cas (hausse de prix de 15 %) ?",
+      "options": [
+        "Environ 9 M FCFA",
+        "Environ 0,9 M FCFA",
+        "Environ 1,7 M FCFA",
+        "Aucun gain, la perte est de 0,9 M FCFA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le gain est faible face aux 13,0 M FCFA immobilisés."
+    },
+    {
+      "question": "À partir de quelle hausse de prix le stockage du cas devient-il rentable ?",
+      "options": [
+        "À partir de 0 %",
+        "À partir d'environ 15 %",
+        "À partir d'environ 30 %",
+        "À partir d'environ 8,2 %"
+      ],
+      "correctAnswer": 3,
+      "explanation": "En dessous, les pertes, les frais et le coût de l'argent mangent la hausse."
+    },
+    {
+      "question": "Que faut-il vérifier avant de compter sur un crédit sur stock ou un système de stockage collectif ?",
+      "options": [
+        "Son existence et ses conditions réelles, à la source et à la date",
+        "Rien : ces dispositifs existent partout aux mêmes conditions",
+        "Uniquement le nom du dispositif cité par un voisin",
+        "Seulement le taux annoncé sur une affiche ancienne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Ne citez jamais un dispositif ou un taux sans vérification datée."
+    }
+  ],
+  "vi_4": [
+    {
+      "question": "À quels moments une culture annuelle demande-t-elle le plus de bras ?",
+      "options": [
+        "Toute l'année, de manière constante",
+        "Uniquement le jour de la vente",
+        "Aux pointes : préparation, semis ou repiquage, désherbage, récolte, battage",
+        "Uniquement pendant la saison sèche"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Placez ces pointes sur un calendrier avant de chiffrer le personnel."
+    },
+    {
+      "question": "Comment le cas se procure-t-il le labour et le battage ?",
+      "options": [
+        "Il achète deux tracteurs et deux batteuses",
+        "En prestation, sans acheter de tracteur ni de batteuse",
+        "Il emprunte du matériel sans aucun coût",
+        "Il laboure et bat à la main uniquement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le poste labour et battage coûte 4,5 M FCFA par an."
+    },
+    {
+      "question": "Pourquoi acheter une machine pour 30 hectares-campagnes se justifie rarement ?",
+      "options": [
+        "La machine ne travaillerait pas assez d'hectares pour s'amortir",
+        "Les machines sont interdites sur les petites surfaces",
+        "Une machine ne peut jamais labourer du riz",
+        "Le banquier refuse tout achat de matériel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'achat en commun ou la prestation sont souvent préférables."
+    },
+    {
+      "question": "Combien le cas retient-il pour la main-d'œuvre saisonnière par an ?",
+      "options": [
+        "0,27 M FCFA",
+        "2,7 M FCFA",
+        "27 M FCFA",
+        "4,5 M FCFA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "0,090 M FCFA par hectare et par campagne, pour 30 hectares-campagnes."
+    },
+    {
+      "question": "Que fait-on du travail familial dans le plan ?",
+      "options": [
+        "On le compte pour zéro",
+        "On le supprime du calendrier",
+        "On le chiffre au prix de la journée",
+        "On le remplace par un emprunt"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un travail non payé reste un coût du projet."
+    },
+    {
+      "question": "Que faut-il prévoir si le plan dépend d'une prestation de labour ?",
+      "options": [
+        "Rien : la machine sera forcément disponible",
+        "Un seul appel téléphonique la veille",
+        "Un second emprunt, par précaution",
+        "Une réservation ou un contrat écrit avant la campagne, et un plan de repli"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Un labour tardif décale le semis et réduit le rendement."
+    }
+  ],
+  "vi_5": [
+    {
+      "question": "Quel est le coût total du projet du cas ?",
+      "options": [
+        "27,9 M FCFA",
+        "8,0 M FCFA",
+        "35,9 M FCFA",
+        "25,1 M FCFA"
+      ],
+      "correctAnswer": 2,
+      "explanation": "27,9 M FCFA d'immobilisations plus 8,0 M FCFA de besoin de fonds de roulement."
+    },
+    {
+      "question": "Pourquoi le besoin de fonds de roulement existe-t-il dans une culture annuelle ?",
+      "options": [
+        "Parce que la récolte est payée d'avance",
+        "Les semences, l'engrais et la main-d'œuvre se paient avant la récolte",
+        "Parce que l'eau est gratuite",
+        "Parce qu'il n'y a aucune charge avant la vente"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le cas retient 8,0 M FCFA."
+    },
+    {
+      "question": "Quels sont le montant de l'emprunt et l'annuité du cas ?",
+      "options": [
+        "35,9 M FCFA et environ 2,3 M FCFA par an",
+        "10,8 M FCFA et environ 5,6 M FCFA par an",
+        "25,1 M FCFA et environ 12,7 M FCFA par an",
+        "25,1 M FCFA et environ 5,6 M FCFA par an"
+      ],
+      "correctAnswer": 3,
+      "explanation": "À 9 % sur 7 ans dont 1 an de différé, avec 30 % d'apport."
+    },
+    {
+      "question": "Quel est le seuil de rentabilité du cas, en part du chiffre d'affaires ?",
+      "options": [
+        "68 %, soit une marge de sécurité de 32 %",
+        "32 %, soit une marge de sécurité de 68 %",
+        "100 %, soit aucune marge de sécurité",
+        "15 %, soit une marge de sécurité de 85 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Coûts fixes totaux de 10,0 M FCFA divisés par un taux de marge de 45,5 %."
+    },
+    {
+      "question": "Quels sont les trois DSCR du cas (réaliste, pessimiste, mauvaise campagne) ?",
+      "options": [
+        "1,47 puis 1,03 puis 0,34",
+        "1,03 puis 1,47 puis 0,34",
+        "2,47 puis 2,03 puis 1,34",
+        "0,47 puis 0,03 puis 0,34"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dans la mauvaise campagne, l'annuité n'est pas couverte."
+    },
+    {
+      "question": "De combien le rendement peut-il baisser avant que le DSCR passe sous 1, dans le cas ?",
+      "options": [
+        "D'environ 50 %",
+        "D'environ 1 %",
+        "D'environ 11 %",
+        "D'aucun pourcentage : la dette est toujours couverte"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La marge est mince : rendement et prix décident du projet."
+    }
   ]
 };

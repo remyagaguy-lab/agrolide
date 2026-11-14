@@ -8,11 +8,13 @@ import { servicesAgricoles } from './services-agricoles'
 import { financement } from './financement'
 import { comptabiliteFiscalite } from './comptabilite-fiscalite'
 import { impactConformite } from './impact-conformite'
+import { culturesVivrieres } from './cultures-vivrieres'
 
 /** Modules par filière : optionnels, hors de la séquence de 23 leçons (aucun effet sur la progression ni sur le certificat). */
 export const FILIERES: Filiere[] = [
   elevage,
   maraichage,
+  culturesVivrieres,
   aquaculture,
   transformation,
   culturesPerennes,

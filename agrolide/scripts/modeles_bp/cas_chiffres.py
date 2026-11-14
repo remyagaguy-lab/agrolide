@@ -359,6 +359,49 @@ def mecanisation():
     )
 
 
+# ----------------------------------------------------------------------------------------------------------------
+# CAS 8 — Riz irrigué, deux campagnes, Mali — FCFA (point 11, module « Cultures vivrières : maïs, riz, soja »)
+# ----------------------------------------------------------------------------------------------------------------
+def riz():
+    ha, camp = 15, 2                                        # 15 ha aménagés, 2 campagnes par an (hivernage et contre-saison)
+    ha_camp = ha * camp                                     # 30 hectares-campagnes
+    rdt_kg, px = 6000.0, 0.000190                           # 6,0 t de paddy par ha et par campagne ; 190 FCFA/kg de paddy (M FCFA/kg)
+    perte = 0.05                                            # pertes à la récolte et au séchage
+    # charges par hectare et par campagne (M FCFA)
+    par_ha = dict(semences=0.045, engrais=0.150, phyto=0.045, eau=0.070, labour_battage=0.150, main_oeuvre=0.090, sacs_transport=0.040)
+
+    def ca(s):
+        t = ha_camp * rdt_kg * s.get("rdt", 1.0) * (1 - perte - s.get("perte", 0.0))
+        return t * px * s.get("prix", 1.0)
+
+    def cv(s):
+        base = ha_camp * (par_ha["semences"] + par_ha["phyto"] + par_ha["main_oeuvre"] + par_ha["sacs_transport"])
+        engrais = ha_camp * par_ha["engrais"] * s.get("engrais", 1.0)
+        eau = ha_camp * par_ha["eau"] * s.get("eau", 1.0)
+        meca = ha_camp * par_ha["labour_battage"] * s.get("meca", 1.0)
+        return base + engrais + eau + meca
+
+    # stockage : vendre une part de la récolte plus tard (hypothèses pédagogiques, à relever sur votre marché)
+    part_stockee, hausse, mois, cout_stock, perte_stock, taux_argent = 0.40, 0.15, 4, 0.03, 0.02, 0.09
+    tonnes = ha_camp * rdt_kg * (1 - perte) / 1000
+    valeur_recolte = tonnes * 1000 * px
+    vendu_tard = valeur_recolte * part_stockee * (1 - perte_stock) * (1 + hausse)
+    vendu_recolte_equiv = valeur_recolte * part_stockee
+    couts = vendu_recolte_equiv * (cout_stock + taux_argent * mois / 12)
+    gain_stock = vendu_tard - vendu_recolte_equiv - couts
+    extras = dict(ha=ha, camp=camp, ha_camp=ha_camp, rdt_kg=rdt_kg, px=px, perte=perte, par_ha=par_ha, tonnes=tonnes, part_stockee=part_stockee,
+                  hausse=hausse, mois=mois, cout_stock=cout_stock, perte_stock=perte_stock, taux_argent=taux_argent,
+                  vendu_recolte_equiv=vendu_recolte_equiv, vendu_tard=vendu_tard, couts_stock=couts, gain_stock=gain_stock)
+    return dict(
+        nom="Riz irrigué, deux campagnes — Mali", monnaie="FCFA", extras=extras, ca=ca, cv=cv, personnel=3.6, fixes=1.5, montee=0.8, cv_suit_ca=True,
+        immos=[("Frais d'établissement et accord foncier", 0.4, 5), ("Aménagement des parcelles (planage, diguettes, canaux, 15 ha)", 12.0, 15),
+               ("Pompe, groupe et réseau d'irrigation", 6.0, 8), ("Magasin de stockage et aire de séchage", 5.0, 20),
+               ("Petit matériel et motoculteur", 3.0, 5), ("Imprévus (capitalisés)", 1.5, 10)],
+        bfr=8.0, pct_apport=0.30, taux=0.09, duree=7, differe=1, **{"is": 0.30}, act=0.10,
+        scen=dict(re=dict(), pe=dict(rdt=0.95, prix=0.96, engrais=1.10, meca=1.05), cr=dict(rdt=0.80, prix=0.95)),
+    )
+
+
 def perenne_rapport(c):
     return {k: perenne_eval(c, s) for k, s in c["scen"].items()}
 
@@ -386,8 +429,9 @@ def afficher(c, out):
 
 
 if __name__ == "__main__":
-    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage(), "aquaculture": aquaculture(), "mangue": mangue_sechee(), "mecanisation": mecanisation()}
+    cas = {"poulet": poulet(), "attieke": attieke(), "maraichage": maraichage(), "aquaculture": aquaculture(), "mangue": mangue_sechee(), "mecanisation": mecanisation(), "riz": riz()}
     res = {k: rapport(c) for k, c in cas.items()}
+    res["riz"]["extras"] = cas["riz"]["extras"]
     for k, c in cas.items():
         afficher(c, res[k])
     res["cacao"] = perenne_rapport(cacao())
