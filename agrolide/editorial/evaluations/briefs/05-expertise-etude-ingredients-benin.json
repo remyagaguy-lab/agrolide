@@ -1,0 +1,55 @@
+{
+  "id": "05-expertise-etude-ingredients-benin",
+  "titre": "Expertise : étude commentée sur les ingrédients locaux d'aliment pour poisson au Bénin",
+  "brief": "Rédige une étude commentée pour les enseignants et chercheurs. Sujet : l'inventaire des ingrédients locaux utilisables pour fabriquer de l'aliment pour le poisson-chat et le tilapia au Bénin (Adéyèmi et coll., Aquaculture Reports, 2020). Explique la question posée, la méthode, les résultats, ce que l'étude ne dit pas, et ce que cela change en pratique. Lis l'étude à sa source. Le lecteur est invité à consulter la bibliothèque numérique (chemin /bibliotheque).",
+  "entete": {
+    "public": "enseignant_chercheur",
+    "registre": "Expertise",
+    "objectif": "Crédibiliser",
+    "domaine": "production_animale",
+    "cta_cible": "/bibliotheque"
+  },
+  "niveaux": [
+    "intermediaire",
+    "expert"
+  ],
+  "documents_lies_obligatoires": [],
+  "doit_contenir": [
+    {
+      "nom": "Bénin",
+      "un_parmi": [
+        "Bénin"
+      ]
+    },
+    {
+      "nom": "méthode ou échantillon",
+      "un_parmi": [
+        "méthode",
+        "échantillon",
+        "enquête"
+      ]
+    },
+    {
+      "nom": "limites",
+      "un_parmi": [
+        "limites?",
+        "ne dit pas",
+        "ne mesure pas"
+      ]
+    },
+    {
+      "nom": "ingrédients",
+      "un_parmi": [
+        "ingrédients"
+      ]
+    }
+  ],
+  "sources_minimum": 2,
+  "format": "article",
+  "ne_doit_pas": [
+    {
+      "nom": "promesse de résultat non garanti",
+      "motif": "\\b(garanti[st]?|garantissons|garantissez|sans aucun risque|résultats? assurés?)\\b"
+    }
+  ]
+}

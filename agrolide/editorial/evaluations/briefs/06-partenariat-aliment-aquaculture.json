@@ -1,0 +1,48 @@
+{
+  "id": "06-partenariat-aliment-aquaculture",
+  "titre": "Partenariat : le poids de l'aliment dans l'aquaculture africaine, où soutenir",
+  "brief": "Rédige un article pour les décideurs, bailleurs et partenaires potentiels. Sujet : l'aliment est le premier poste de coût de l'élevage de poisson en Afrique, et ce que des partenaires peuvent soutenir pour le faire baisser. Chiffres sourcés avec leur périmètre, ce que fait le réseau, comment s'associer. Objectif : mobiliser des partenaires. Le lecteur est invité à devenir partenaire ou sponsor (page /nous-soutenir).",
+  "entete": {
+    "public": "decideur_institution",
+    "registre": "Partenariat",
+    "objectif": "Mobiliser",
+    "domaine": "production_animale",
+    "cta_cible": "/nous-soutenir"
+  },
+  "niveaux": [
+    "intermediaire"
+  ],
+  "documents_lies_obligatoires": [],
+  "doit_contenir": [
+    {
+      "nom": "aliment",
+      "un_parmi": [
+        "aliment"
+      ]
+    },
+    {
+      "nom": "partenaire",
+      "un_parmi": [
+        "partenaires?",
+        "partenariat"
+      ]
+    },
+    {
+      "nom": "soutien",
+      "un_parmi": [
+        "soutien",
+        "soutenir",
+        "financer",
+        "financement"
+      ]
+    }
+  ],
+  "sources_minimum": 2,
+  "format": "article",
+  "ne_doit_pas": [
+    {
+      "nom": "promesse de résultat non garanti",
+      "motif": "\\b(garanti[st]?|garantissons|garantissez|sans aucun risque|résultats? assurés?)\\b"
+    }
+  ]
+}

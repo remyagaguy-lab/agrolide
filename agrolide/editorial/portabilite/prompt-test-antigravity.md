@@ -26,6 +26,10 @@ Réponse attendue si Antigravity charge AGENTS.md et les skills :
 |---|---|
 | Section Système éditorial de AGENTS.md | ED-AGENTS-7K3Q |
 | agrolide-cadrage-article | ED-9DD292 |
+| agrolide-fiche-technique | ED-3EC44D |
+| agrolide-newsletter | ED-C0FE70 |
+| agrolide-portrait | ED-525D5D |
+| agrolide-post-reseau | ED-38EF6C |
 | agrolide-redaction-article | ED-E6FCE8 |
 
 ## Prompt 2 : à coller dans la même conversation

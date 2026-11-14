@@ -151,7 +151,7 @@ const hits = new Map(rules.map((r) => [r.id, []]))
 for (const file of files) {
   const rel = relative(appRoot, file).replace(/\\/g, '/')
   const isMd = file.endsWith('.md')
-  const strictMd = fichiersDemandes.length > 0 || rel.startsWith('editorial/articles/')
+  const strictMd = fichiersDemandes.length > 0 || rel.startsWith('editorial/articles/') || rel.startsWith('editorial/declinaisons/')
   const lines = readFileSync(file, 'utf8').split('\n')
   const estContenu = fichiersDemandes.length ? /(?:^|\/)(01-cadrage|02-article)\.md$/.test(rel) : /^editorial\/articles\/[^/]+\/(01-cadrage|02-article)\.md$/.test(rel)
   if (estContenu) {

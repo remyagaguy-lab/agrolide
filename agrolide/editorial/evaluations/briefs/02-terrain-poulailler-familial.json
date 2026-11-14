@@ -1,0 +1,49 @@
+{
+  "id": "02-terrain-poulailler-familial",
+  "titre": "Terrain : bien préparer un poulailler familial en matériaux locaux",
+  "brief": "Rédige un article pour les petits éleveurs de volailles (producteurs). Sujet : ce qu'il faut décider et prévoir avant de construire un poulailler familial avec des matériaux trouvés sur place. Un exemple concret, des étapes courtes, les pièges. Le lecteur doit pouvoir télécharger le guide pratique du poulailler familial en matériaux locaux hébergé dans la bibliothèque (DOC-00487).",
+  "entete": {
+    "public": "producteur",
+    "registre": "Terrain",
+    "objectif": "Crédibiliser",
+    "domaine": "production_animale",
+    "cta_cible": "DOC-00487"
+  },
+  "niveaux": [
+    "initiation",
+    "intermediaire"
+  ],
+  "documents_lies_obligatoires": [
+    "DOC-00487"
+  ],
+  "doit_contenir": [
+    {
+      "nom": "poulailler",
+      "un_parmi": [
+        "poulaillers?"
+      ]
+    },
+    {
+      "nom": "matériaux",
+      "un_parmi": [
+        "matériaux"
+      ]
+    },
+    {
+      "nom": "volailles ou poules",
+      "un_parmi": [
+        "poules?",
+        "volailles?",
+        "poulets?"
+      ]
+    }
+  ],
+  "sources_minimum": 1,
+  "format": "article",
+  "ne_doit_pas": [
+    {
+      "nom": "promesse de résultat non garanti",
+      "motif": "\\b(garanti[st]?|garantissons|garantissez|sans aucun risque|résultats? assurés?)\\b"
+    }
+  ]
+}

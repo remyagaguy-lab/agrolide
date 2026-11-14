@@ -1,0 +1,51 @@
+{
+  "id": "04-parcours-plan-affaires",
+  "titre": "Parcours : les chiffres à poser avant le plan d'affaires d'un projet agricole",
+  "brief": "Rédige un article pour les porteurs de projet et entrepreneurs agricoles qui préparent leur premier plan d'affaires. Sujet : les chiffres à réunir et à vérifier avant de rédiger le plan d'affaires, avec un cas chiffré qu'ils peuvent refaire. Objectif : accompagner leur démarche. Le lecteur doit pouvoir télécharger le modèle simplifié de plan d'affaires hébergé dans la bibliothèque (DOC-00004).",
+  "entete": {
+    "public": "entrepreneur_porteur_projet",
+    "registre": "Parcours",
+    "objectif": "Insérer et accompagner",
+    "domaine": "agroeconomie",
+    "cta_cible": "DOC-00004"
+  },
+  "niveaux": [
+    "initiation",
+    "intermediaire"
+  ],
+  "documents_lies_obligatoires": [
+    "DOC-00004"
+  ],
+  "doit_contenir": [
+    {
+      "nom": "plan d'affaires",
+      "un_parmi": [
+        "plan d['’]affaires",
+        "business plan"
+      ]
+    },
+    {
+      "nom": "cas chiffré annoncé comme fictif ou exemple",
+      "un_parmi": [
+        "fictif",
+        "hypothèse",
+        "exemple"
+      ]
+    },
+    {
+      "nom": "erreurs de débutant",
+      "un_parmi": [
+        "erreurs?",
+        "pièges?"
+      ]
+    }
+  ],
+  "sources_minimum": 2,
+  "format": "article",
+  "ne_doit_pas": [
+    {
+      "nom": "promesse de résultat non garanti",
+      "motif": "\\b(garanti[st]?|garantissons|garantissez|sans aucun risque|résultats? assurés?)\\b"
+    }
+  ]
+}

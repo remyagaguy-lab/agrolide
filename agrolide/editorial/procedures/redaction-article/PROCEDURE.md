@@ -72,7 +72,7 @@ Le contrôle automatique lit la forme. Elle est la même quel que soit l'agent :
 1. En-tête repris du cadrage (statut `redaction`), entre deux lignes `---`.
 2. Un titre `# ...`, puis le chapô (3 phrases au plus), puis l'introduction.
 3. Deux à quatre intertitres `## ...`, selon le gabarit.
-4. Une conclusion qui enchaîne vers le CTA. Le paragraphe du CTA contient mot pour mot le texte du champ `cta` de l'en-tête et ne contient aucun autre appel à l'action. Il est suivi d'une ligne de lien `[libellé → /chemin]` vers la destination (pour un document hébergé, `/bibliotheque/<identifiant>`).
+4. Une conclusion qui enchaîne vers le CTA. Le paragraphe du CTA contient mot pour mot le texte du champ `cta` de l'en-tête et ne contient aucun autre appel à l'action. Il est suivi d'une ligne de lien `[libellé → /chemin]` vers la destination. Pour un document hébergé, le site ne l'ouvre que par son identifiant base : `/bibliotheque/<identifiant base>`. Cet identifiant n'est pas dans l'index local. S'il n'est pas connu (le cadrage ou un article déjà publié le donne parfois), écrire le lien provisoire `/bibliotheque/DOC-xxxxx` : le contrôle de sources le signale en avertissement avec la requête qui récupère l'identifiant, et refuse le statut `valide` ou `publie` tant qu'il reste. Ne jamais pointer vers `/bibliotheque` seul ni inventer un identifiant.
 5. Au moins un lien interne.
 6. Un bloc final : `D'où ça vient :` pour le registre Terrain, `Sources :` pour les autres. Une liste de sources, chacune avec son éditeur, sa date et son lien.
 7. Un exemple fictif est annoncé comme tel dans la section qui l'utilise.

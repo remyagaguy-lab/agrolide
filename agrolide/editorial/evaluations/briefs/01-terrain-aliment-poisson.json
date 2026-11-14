@@ -1,0 +1,55 @@
+{
+  "id": "01-terrain-aliment-poisson",
+  "titre": "Terrain : compter les sacs d'aliment d'un bassin de poissons",
+  "brief": "Rédige un article pour les éleveurs de poisson (producteurs). Sujet : combien de sacs d'aliment prévoir pour un bassin de poissons avant d'acheter les alevins, avec un exemple chiffré qu'ils peuvent refaire chez eux. Objectif : montrer que le réseau rend la recherche utilisable. Le lecteur doit pouvoir télécharger le manuel de la CTOP Togo hébergé dans la bibliothèque (DOC-01005).",
+  "entete": {
+    "public": "producteur",
+    "registre": "Terrain",
+    "objectif": "Crédibiliser",
+    "domaine": "production_animale",
+    "cta_cible": "DOC-01005"
+  },
+  "niveaux": [
+    "initiation",
+    "intermediaire"
+  ],
+  "documents_lies_obligatoires": [
+    "DOC-01005"
+  ],
+  "doit_contenir": [
+    {
+      "nom": "indice de conversion",
+      "un_parmi": [
+        "indice de conversion"
+      ]
+    },
+    {
+      "nom": "sac",
+      "un_parmi": [
+        "\\bsacs?\\b"
+      ]
+    },
+    {
+      "nom": "bassin ou étang",
+      "un_parmi": [
+        "\\bbassins?\\b",
+        "\\bétangs?\\b"
+      ]
+    },
+    {
+      "nom": "exemple annoncé comme fictif",
+      "un_parmi": [
+        "fictif",
+        "hypothèse"
+      ]
+    }
+  ],
+  "sources_minimum": 2,
+  "format": "article",
+  "ne_doit_pas": [
+    {
+      "nom": "promesse de résultat non garanti",
+      "motif": "\\b(garanti[st]?|garantissons|garantissez|sans aucun risque|résultats? assurés?)\\b"
+    }
+  ]
+}

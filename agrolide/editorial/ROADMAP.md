@@ -24,15 +24,17 @@ Ce qui est demandé, mot pour mot dans l'esprit :
 | Analyse du site existant | Partiel | Audit mécanique fait (tirets, marque, BIFERA, tutoiement) et corrigé dans le code. Pas d'analyse de voix ni de registre des pages, des quatre articles du blog, des formations. La base de données n'est pas contrôlée |
 | Skill existant de Remyaga | Intégré | Repris en `agrolide-redaction-article`, enrichi |
 | Process article | Fait | Cadrage en 11 points, rédaction, contrôle, mise en ligne par SQL. Deux articles test, un modèle de référence retenu |
-| Process réseaux sociaux | Non commencé | Six canaux décrits dans `12-canaux.md`, aucun skill, aucun modèle |
-| Process fiche technique, leçon, newsletter, portrait | Non commencé | Formats décrits dans `11-formats.md`, aucun skill, aucun modèle |
+| Process réseaux sociaux | Fait (v1) | Procédure `agrolide-post-reseau`, six posts modèles tirés de l'article Terrain, contrôles dans `ed:valider`. Limites par canal à valider (journal des décisions) |
+| Process fiche technique, newsletter | Fait (v1) | Procédures `agrolide-fiche-technique` et `agrolide-newsletter`, modèles, contrôles |
+| Process portrait | Procédure écrite, sans modèle | `agrolide-portrait` exige un consentement écrit et une vraie personne. Aucun modèle tant qu'un portrait réel n'est pas validé |
+| Process leçon | Non commencé | Phase 4 |
 | Process e-book et livre | Non commencé | Seulement cités dans la charte |
 | Process page du site | Non commencé | Le texte des pages est écrit dans le code |
-| Agents | Non commencé | Aucun rôle défini : ni relecteur, ni vérificateur de sources, ni rédacteur en chef |
-| Portabilité entre agents | Non commencé | Les skills n'existent qu'au format Claude Code (`.claude/skills`). Rien ne garantit le même résultat avec Antigravity |
-| Contrôle automatique | Partiel | `ed:check` couvre les règles mesurables du code et du Markdown. Rien sur le contenu en base, le schéma d'en-tête, les sources, la structure d'un article |
-| Tests de qualité (évaluations) | Non commencé | Aucun jeu de briefs avec résultat attendu |
-| Sources et bibliothèque | Conçu | Règles écrites (`10-preuves-et-sources.md`). Aucun outil : pas de vérification des liens, pas de recherche automatique dans l'index de la bibliothèque |
+| Agents | Cadré | `roles/README.md` fixe le format de description. Aucun rôle écrit encore (phase 3) |
+| Portabilité entre agents | Fait côté dépôt, non vérifié côté Antigravity | Procédures dans `procedures/`, skills générés par `ed:sync` dans `.agents/skills` et `.claude/skills`, section dans `AGENTS.md`, prompt de test prêt. Antigravity n'a pas encore été testé : voir `portabilite/prompt-test-antigravity.md` |
+| Contrôle automatique | Partiel | `ed:check` (règles), `ed:valider` (en-tête et structure), `ed:sources` (liens, DOC, chiffres). Rien encore sur le contenu stocké en base |
+| Tests de qualité (évaluations) | Fait (v1) | Six briefs, `ed:eval`, `ed:test`. Ils mesurent des règles, pas la clarté : relecture humaine toujours requise |
+| Sources et bibliothèque | Partiel | Règles écrites (`10-preuves-et-sources.md`). `ed:sources` vérifie liens et identifiants DOC contre `INDEX.csv`. Pas encore de recherche automatique par sujet |
 | Import de documents sans doublon | Conçu | Réflexion dans `chantiers/01-import-documents-sans-doublon.md`. Rien développé |
 | Pilotage (calendrier, indicateurs, mise à jour) | Non commencé | |
 
@@ -92,13 +94,13 @@ Une procédure par tâche. Chaque procédure est terminée quand elle a : un fic
 
 | Procédure | État |
 |---|---|
-| Cadrage d'article | Fait (à migrer vers `procedures/`) |
-| Rédaction d'article | Fait (à migrer) |
+| Cadrage d'article | Fait, migré dans `procedures/cadrage-article/` |
+| Rédaction d'article | Fait, migré dans `procedures/redaction-article/` |
 | Recherche de sources | À faire (aujourd'hui incluse dans le cadrage) |
-| Fiche technique vulgarisée | À faire |
-| Post pour chaque canal : LinkedIn, Facebook, Instagram, TikTok, YouTube, WhatsApp | À faire |
-| Newsletter | À faire |
-| Portrait et parcours | À faire |
+| Fiche technique vulgarisée | Fait, `procedures/fiche-technique/` |
+| Post pour chaque canal : LinkedIn, Facebook, Instagram, TikTok, YouTube, WhatsApp | Fait, `procedures/post-reseau/` (une procédure, six canaux) |
+| Newsletter | Fait, `procedures/newsletter/` |
+| Portrait et parcours | Procédure écrite, sans modèle, `procedures/portrait/` |
 | Leçon de formation | À faire |
 | Page du site | À faire |
 | E-book | À faire |
@@ -114,11 +116,12 @@ Une procédure par tâche. Chaque procédure est terminée quand elle a : un fic
 | Commande | Rôle | État |
 |---|---|---|
 | `ed:check` | Règles mesurables : tirets, marque, BIFERA, tutoiement, « je », registre | Fait |
+| `ed:test` | Test de portabilité : adaptateurs à jour, modèles intacts, contrôles qui refusent un mauvais contenu, sorties de plusieurs agents comparables, jeu de déclinaisons conforme | Fait |
 | `ed:publier` | Prépare le SQL de mise en ligne d'un article | Fait |
-| `ed:valider` | Valide l'en-tête (champs, valeurs autorisées) et la structure (longueur, intertitres, CTA unique, lien interne) | À faire |
-| `ed:sources` | Vérifie que les liens répondent, que les identifiants DOC-xxxxx existent et sont publiés, que chaque chiffre a une source | À faire |
-| `ed:sync` | Génère les adaptateurs de chaque outil depuis `procedures/` et `roles/` | À faire |
-| `ed:eval` | Rejoue des briefs d'évaluation et note les sorties | À faire |
+| `ed:valider` | Valide l'en-tête (champs, valeurs autorisées) et la structure (longueur, intertitres, CTA unique, lien interne) | Fait |
+| `ed:sources` | Vérifie que les liens répondent, que les identifiants DOC-xxxxx existent et sont publiés, que chaque chiffre a une source | Fait |
+| `ed:sync` | Génère les adaptateurs de chaque outil depuis `procedures/` (et `roles/` en phase 3) | Fait |
+| `ed:eval` | Note les sorties d'agents sur des briefs fixes et compare deux agents | Fait |
 | `ed:audit` | Passe en revue les pages, les articles, les formations et la base de données contre la charte | À faire |
 | `ed:chiffres` | Tient le registre des chiffres (valeur, périmètre, source, date, prochaine vérification) | À faire |
 | `ed:doublon` | Détection de doublons de documents (voir le chantier d'import) | À faire |

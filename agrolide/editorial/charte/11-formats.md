@@ -7,15 +7,15 @@ Un format est un contenant (article, fiche, post). Un gabarit est la façon d'or
 | Format | Registres naturels | Longueur | Fréquence | Vigilance | Skill |
 |---|---|---|---|---|---|
 | Article de fond | Tous, selon le cadrage | Selon le registre (800 à 1 500 mots en Parcours) | 2 par mois | Un CTA unique, un lien interne | `agrolide-cadrage-article` puis `agrolide-redaction-article` |
-| Fiche technique vulgarisée | Terrain, Parcours | 400 à 600 mots, pas à pas, encart « à retenir » | 2 par mois | Validée par un référent technique | à créer |
-| Portrait et parcours | Parcours, Partenariat | 600 à 800 mots ou vidéo de 2 à 3 minutes | 1 par mois | Relier le parcours à l'accompagnement du réseau. Consentement écrit | à créer |
-| Newsletter réseau | Tous | Courte | Mensuelle | Un seul appel à l'action principal | à créer |
+| Fiche technique vulgarisée | Terrain, Parcours | 400 à 600 mots, pas à pas, encart « à retenir » | 2 par mois | Validée par un référent technique | `agrolide-fiche-technique` |
+| Portrait et parcours | Parcours, Partenariat | 600 à 800 mots ou vidéo de 2 à 3 minutes | 1 par mois | Relier le parcours à l'accompagnement du réseau. Consentement écrit | `agrolide-portrait` (sans modèle) |
+| Newsletter réseau | Tous | Courte | Mensuelle | Un seul appel à l'action principal | `agrolide-newsletter` |
 | Webinaire et replay | Expertise, Parcours, Terrain | Vidéo | 1 par mois minimum | Annoncé 2 semaines avant, republié en fiche condensée | à créer |
 | Leçon de formation | Parcours | Voir `agrolide/src/content/filieres/` | Par module | Objectif, tableau, « Ce qu'il faut retenir », quiz | à créer |
 | E-book | Selon le sujet | À définir | À définir | Plan par chapitres, relecture technique | à créer |
 | Livre | Selon le sujet | À définir | À définir | Plan, chapitre, relecture, par étapes | à créer |
 | Page du site | Selon la page | Selon la page | Selon besoin | Une seule action principale par section | à créer |
-| Post de réseau social | Selon le canal (voir `12-canaux.md`) | Court | Selon le calendrier | Renvoie vers le contenu source | à créer |
+| Post de réseau social | Selon le canal (voir `12-canaux.md`) | Court | Selon le calendrier | Renvoie vers le contenu source | `agrolide-post-reseau` |
 
 ## Les quatre gabarits d'article
 

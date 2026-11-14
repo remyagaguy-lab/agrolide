@@ -1,0 +1,50 @@
+{
+  "id": "03-terrain-manioc-technicien",
+  "titre": "Terrain : un technicien explique la production du manioc",
+  "brief": "Rédige un article pour les techniciens et conseillers agricoles qui accompagnent des producteurs de manioc. Sujet : les points de l'itinéraire technique du manioc à vérifier avec un producteur avant la plantation. Le lecteur doit pouvoir télécharger le guide de formation IFATI sur la technologie de production du manioc, hébergé dans la bibliothèque (DOC-00575).",
+  "entete": {
+    "public": "technicien_conseiller",
+    "registre": "Terrain",
+    "objectif": "Crédibiliser",
+    "domaine": "production_vegetale",
+    "cta_cible": "DOC-00575"
+  },
+  "niveaux": [
+    "initiation",
+    "intermediaire"
+  ],
+  "documents_lies_obligatoires": [
+    "DOC-00575"
+  ],
+  "doit_contenir": [
+    {
+      "nom": "manioc",
+      "un_parmi": [
+        "manioc"
+      ]
+    },
+    {
+      "nom": "plantation",
+      "un_parmi": [
+        "plantation",
+        "planter",
+        "boutures?"
+      ]
+    },
+    {
+      "nom": "technicien ou conseiller",
+      "un_parmi": [
+        "techniciens?",
+        "conseill"
+      ]
+    }
+  ],
+  "sources_minimum": 1,
+  "format": "article",
+  "ne_doit_pas": [
+    {
+      "nom": "promesse de résultat non garanti",
+      "motif": "\\b(garanti[st]?|garantissons|garantissez|sans aucun risque|résultats? assurés?)\\b"
+    }
+  ]
+}

@@ -144,12 +144,20 @@ export async function verifierSources(chemin, { horsLigne = false, strict = fals
   const internes = [...new Set([...(c.corps.matchAll(/\[[^\]]+ → (\/[^\]\s]+)\]/g)), ...(c.corps.matchAll(/\]\((\/[^)\s]+)\)/g))].map((m) => m[1]))]
   const routes = routesDuSite()
   const uuids = []
+  const provisoires = []
   for (const l of internes) {
     const premier = l.split(/[/?#]/)[1]
     if (!premier || !routes.has(premier)) e('lien-interne-inconnu', `${l} : « ${premier} » n'est pas une route du site`)
     const m = l.match(/^\/bibliotheque\/([0-9a-f-]{36})/)
+    const prov = l.match(/^\/bibliotheque\/(DOC-\d{5})(?![\d])/)
     if (m) uuids.push(m[1])
-    else if (l.startsWith('/bibliotheque/')) e('lien-bibliotheque', `${l} : l'adresse d'un document est /bibliotheque/<identifiant base>, pas la référence DOC`)
+    else if (prov) provisoires.push(prov[1])
+    else if (l.startsWith('/bibliotheque/')) e('lien-bibliotheque', `${l} : l'adresse d'un document est /bibliotheque/<identifiant base> (ou /bibliotheque/DOC-xxxxx en lien provisoire), rien d'autre`)
+  }
+  if (provisoires.length) {
+    const msg = `lien provisoire /bibliotheque/${provisoires.join(', /bibliotheque/')} : le site n'ouvre un document que par son identifiant base. Récupérer les identifiants : npx wrangler d1 execute agrolide-d1 --remote --command "SELECT id, reference FROM documents WHERE reference IN (${provisoires.map((u) => `'${u}'`).join(', ')})" puis remplacer chaque DOC-xxxxx dans les liens`
+    if (['valide', 'publie'].includes(c.entete?.statut)) e('lien-provisoire', `${msg}. Interdit au statut ${c.entete.statut}`)
+    else w('lien-provisoire', msg)
   }
   if (uuids.length)
     w('documents-non-verifiables', `${uuids.length} lien(s) /bibliotheque/<id> non vérifiable(s) hors base. À contrôler : npx wrangler d1 execute agrolide-d1 --remote --command "SELECT id, reference, statut, acces FROM documents WHERE id IN (${uuids.map((u) => `'${u}'`).join(', ')})" (statut publie attendu)`)

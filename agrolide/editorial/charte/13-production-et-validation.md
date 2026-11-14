@@ -56,6 +56,8 @@ validation_technique: a faire | non requise | faite par <nom>
 - Avertissements : première personne du singulier, tutoiement, tiret espacé, « entrepreneur agricole ».
 - Ligne légitime exceptionnelle : commentaire `editorial:ignore` sur la même ligne.
 
+`npm run ed:valider -- <slug>` contrôle l'en-tête (champs et valeurs autorisées ci-dessus, domaine lu dans la taxonomie du site) et la structure : longueur du registre, deux à quatre intertitres, chapô de trois phrases au plus, CTA unique suivi de son lien, au moins un lien interne, bloc de sources, typographie, tics d'écriture. `npm run ed:sources -- <slug>` contrôle les liens web, les identifiants DOC (publiés seulement) et que chaque chiffre a une source nommée ou un exemple fictif annoncé. La procédure de rédaction demande les trois contrôles avant de livrer.
+
 Le contrôle ne dit pas si le texte est clair ni juste. Il ne remplace ni la relecture technique ni la lecture d'un humain du public visé.
 
 ## Un test de lecture

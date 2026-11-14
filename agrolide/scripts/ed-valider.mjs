@@ -3,7 +3,7 @@
  * Validation d'un cadrage ou d'un article : lancé par `npm run ed:valider`.
  *
  *   node scripts/ed-valider.mjs <slug|fichier> [...]     un ou plusieurs contenus
- *   node scripts/ed-valider.mjs --tous                   tous les cadrages et articles de editorial/articles/
+ *   node scripts/ed-valider.mjs --tous                   tous les cadrages, articles et formats courts (editorial/declinaisons/)
  *   Option : --json (sortie lisible par machine)
  *
  * Contrôle ce que `ed:check` ne voit pas : l'en-tête (champs et valeurs autorisées de charte/13-production-et-validation.md)
@@ -18,6 +18,7 @@ import {
   analyserCorps, compterMots, compterPhrases, edDir, lireContenu, lireTaxonomie, relApp, resoudreArticle,
   CATEGORIES, LONGUEURS, NIVEAUX, OBJECTIFS, PILIERS, PUBLICS, REGISTRES, REGISTRES_PAR_PUBLIC, STATUTS_ARTICLE, VERBES_CTA,
 } from './lib/ed-commun.mjs'
+import { validerCourt } from './lib/ed-formats-courts.mjs'
 
 const CHAMPS = ['statut', 'sujet', 'public', 'registre', 'niveau', 'domaine', 'pilier', 'objectif', 'categorie', 'cta', 'cta_cible', 'documents_lies', 'validation_technique']
 const CHAMPS_FACULTATIFS = ['persona']
@@ -227,6 +228,11 @@ export function valider(chemin) {
   const c = lireContenu(chemin)
   const erreurs = []
   const avertissements = []
+  // Un fichier dont l'en-tête porte « format » est un format court (post, fiche, newsletter) : autres règles.
+  if (c.entete?.format) {
+    validerCourt(c, chemin, erreurs, avertissements)
+    return { fichier: relApp(chemin), type: 'court', erreurs, avertissements, mots: compterMots(c.corps), entete: c.entete }
+  }
   validerEntete(c.entete, type, erreurs, avertissements)
   if (c.entete) {
     if (type === 'cadrage') validerCadrage(c.corps, erreurs, avertissements)
@@ -240,10 +246,21 @@ export function valider(chemin) {
 
 function tousLesContenus() {
   const dir = join(edDir, 'articles')
+  const articles = !existsSync(dir)
+    ? []
+    : readdirSync(dir, { withFileTypes: true })
+        .filter((d) => d.isDirectory())
+        .flatMap((d) => ['01-cadrage.md', '02-article.md'].map((f) => join(dir, d.name, f)).filter(existsSync))
+  return [...articles, ...tousLesCourts()]
+}
+
+/** Tous les formats courts : editorial/declinaisons/<slug>/*.md (hors README). */
+export function tousLesCourts() {
+  const dir = join(edDir, 'declinaisons')
   if (!existsSync(dir)) return []
   return readdirSync(dir, { withFileTypes: true })
     .filter((d) => d.isDirectory())
-    .flatMap((d) => ['01-cadrage.md', '02-article.md'].map((f) => join(dir, d.name, f)).filter(existsSync))
+    .flatMap((d) => readdirSync(join(dir, d.name)).filter((f) => f.endsWith('.md')).map((f) => join(dir, d.name, f)))
 }
 
 function main() {

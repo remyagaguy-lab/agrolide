@@ -48,3 +48,32 @@ Voir le rapport du garde-fou : `npm run ed:check`.
 | Pilier 4 renommé « Recherche et plaidoyer » | Colle au quatrième frein du texte fondateur (sous-valorisation des connaissances scientifiques). L'ancien nom était « Souveraineté alimentaire et plaidoyer » |
 | Orthographe « agripreneur » | Le texte fondateur écrit « agri-preneur » avec un trait d'union. La charte et le site écrivent « agripreneur » |
 | Longueur par registre | Terrain 400 à 800 mots, Parcours 800 à 1 500 (décision du 2026-11-14), Expertise 1 000 à 1 800, Partenariat 600 à 1 200 |
+
+## Décisions techniques du 2026-11-14 (phase 1, portabilité et garde-fous)
+
+| Décision | Détail |
+|---|---|
+| Les procédures sont la seule source des skills | `editorial/procedures/<nom>/PROCEDURE.md`, écrites sans nom d'outil. `npm run ed:sync` génère `.agents/skills/agrolide-*` et `.claude/skills/agrolide-*`. Ces dossiers ne s'éditent jamais à la main. Les skills installés par l'outil `skills` (clerk-*) et les règles de `.agents/AGENTS.md` ne sont pas touchés |
+| Point d'entrée universel | `.agents/AGENTS.md` porte une section « Système éditorial » qui renvoie à `ROADMAP.md`, `README.md` et à la charte |
+| Contrôles en trois temps | `ed:check` (règles), `ed:valider` (en-tête et structure), `ed:sources` (liens, identifiants DOC, chiffres). Un contenu passe les trois avant d'être livré |
+| Le registre Expertise admet aussi le technicien | Lecture de « professionnels du métier » dans `06-publics-et-registres.md`. À confirmer |
+| Contenu retiré | Un contenu au statut `retire` (exemple conservé, retiré du site) ne bloque pas les contrôles : ses écarts sont signalés en avertissement |
+| Lien vers un document hébergé | Le site n'ouvre un document que par son identifiant base (`/bibliotheque/<id>`), qui n'est pas dans l'index local. Tant qu'il manque, le lien provisoire `/bibliotheque/DOC-xxxxx` est toléré au statut `redaction` (avertissement avec la requête de récupération), interdit aux statuts `valide` et `publie` |
+| Antigravity | Non vérifié. Le test est dans `portabilite/prompt-test-antigravity.md`. Tant qu'il n'a pas été joué avec succès, on n'affirme pas qu'Antigravity lit `AGENTS.md` ni les skills |
+| Ce que prouve le test de portabilité | Que des sorties de plusieurs agents passent les mêmes contrôles et sont comparables sur des règles mesurables. Pas qu'elles se valent en clarté ni en justesse : la relecture humaine reste obligatoire |
+
+## Propositions à valider (phase 2, formats courts)
+
+Les limites suivantes ne sont pas dans la charte. Elles sont fixées dans `scripts/lib/ed-formats-courts.mjs` pour que les contrôles tournent, et se changent à cet endroit seul.
+
+| Format ou canal | Proposition |
+|---|---|
+| WhatsApp | 20 à 120 mots, aucun hashtag, 2 emojis au plus |
+| Facebook | 50 à 180 mots, 3 hashtags et 3 emojis au plus |
+| Instagram | 40 à 150 mots, 15 hashtags au plus (charte), 3 emojis au plus |
+| TikTok | Script de 40 à 150 mots, sections Accroche, Script, Légende, 5 hashtags au plus |
+| YouTube | Titre de 70 caractères au plus, description de 80 à 250 mots, liens vers les autres réseaux en fin |
+| LinkedIn | 100 à 260 mots, accroche de 140 caractères au plus en première ligne, 3 hashtags au plus |
+| Newsletter | 150 à 450 mots, aucun emoji, un seul CTA |
+| Fiche technique | 400 à 600 mots (charte), trois étapes numérotées au moins, encart « À retenir », validation par un référent avant le statut valide |
+| Déclinaison | Aucune suite de plus de 12 mots identique à l'article source, aucun chiffre absent de l'article source |
