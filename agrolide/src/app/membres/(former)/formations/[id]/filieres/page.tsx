@@ -15,10 +15,10 @@ export default async function FilieresPage({ params }: { params: Promise<{ id: s
       <Link href={`/membres/formations/${id}`} className="mb-6 inline-flex items-center gap-2 text-sm text-primary">
         <ArrowLeft className="size-4" /> Retour à la formation
       </Link>
-      <h1 className="font-urbanist text-headline-md text-on-surface mb-3">Modules par filière</h1>
+      <h1 className="font-urbanist text-headline-md text-on-surface mb-3">Modules facultatifs</h1>
       <p className="mb-8 text-on-surface-variant">
-        Facultatifs : ils ne comptent ni dans votre progression ni dans votre certificat. Chaque module reprend la méthode de la formation pour une filière précise,
-        avec un cas chiffré et un gabarit à télécharger.
+        Facultatifs : ils ne comptent ni dans votre progression ni dans votre certificat. Chaque module reprend la méthode de la formation pour une filière précise (ou, pour le financement, pour tous les projets),
+        avec un cas chiffré et un gabarit à télécharger quand le sujet s'y prête.
       </p>
       <ul className="space-y-3">
         {FILIERES.map((f) => {
@@ -29,7 +29,7 @@ export default async function FilieresPage({ params }: { params: Promise<{ id: s
                 <p className="font-urbanist font-semibold text-on-surface">{f.titre}</p>
                 <p className="text-sm text-on-surface-variant">{f.resume}</p>
                 <p className="mt-1 text-label-md text-on-surface-muted">
-                  {dispo ? `${f.lecons.length} leçons · cas chiffré · gabarit` : `Prévu le ${f.prevu}`}
+                  {dispo ? `${f.lecons.length} leçons${f.casSlug ? ' · cas chiffré' : ''}${f.gabarit ? ' · gabarit' : ''}` : `Prévu le ${f.prevu}`}
                 </p>
               </div>
               {dispo && <ChevronRight className="size-5 shrink-0 text-primary" />}

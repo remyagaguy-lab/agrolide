@@ -684,16 +684,356 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "explanation": "Une panne prolongée peut perdre une bande : l'énergie de secours est un investissement du plan."
     }
   ],
+  "fi_1": [
+    {
+      "question": "Quels sont les deux types de besoins d'un projet qu'il ne faut pas mélanger ?",
+      "options": [
+        "L'investissement et le besoin en fonds de roulement",
+        "Le chiffre d'affaires et le résultat net",
+        "Le personnel et les associés",
+        "L'apport et la subvention"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'un se finance sur plusieurs années, l'autre sur quelques mois."
+    },
+    {
+      "question": "Pourquoi financer des intrants par un prêt de sept ans est-il une erreur de montage ?",
+      "options": [
+        "Parce que les intrants sont toujours gratuits",
+        "Parce que les banques interdisent les prêts de sept ans",
+        "La durée du financement ne correspond pas à celle du besoin",
+        "Parce qu'une subvention remplace tout prêt"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Un besoin de campagne se finance sur la durée de la campagne."
+    },
+    {
+      "question": "Que fait un fonds de garantie ?",
+      "options": [
+        "Il verse l'argent du prêt à votre place",
+        "Il rembourse le prêt à votre place sans condition",
+        "Il fixe le taux d'intérêt de toutes les banques",
+        "Il couvre une partie de la perte de la banque en cas de défaut"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Il n'apporte pas d'argent : il facilite l'accès au prêt."
+    },
+    {
+      "question": "Que permet un warrant ou un récépissé d'entrepôt ?",
+      "options": [
+        "Un crédit sans aucun stock ni garantie",
+        "Un crédit gagé sur un stock stocké dans un entrepôt agréé",
+        "Une subvention automatique de l'État",
+        "L'achat de matériel agricole à crédit"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Il évite de vendre à bas prix au moment de la récolte."
+    },
+    {
+      "question": "Où trouver les dispositifs de financement de votre pays avec leur date de vérification ?",
+      "options": [
+        "Dans la première leçon de la formation uniquement",
+        "Dans le classeur Excel, onglet Calendrier",
+        "Auprès d'un ami qui a déjà eu un prêt",
+        "Dans la fiche Cadre pays"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les plafonds, taux et conditions changent : vérifiez toujours la date."
+    },
+    {
+      "question": "Que faut-il écrire pour chaque besoin de votre plan ?",
+      "options": [
+        "Seulement le montant",
+        "Seulement le nom de la banque",
+        "Montant, durée, source envisagée, conditions et délai de réponse",
+        "Rien, avant d'avoir l'accord"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Deux besoins de durées différentes n'ont pas la même source."
+    }
+  ],
+  "fi_2": [
+    {
+      "question": "Quel est le coût total du projet pris comme exemple ?",
+      "options": [
+        "8,0 millions de FCFA",
+        "80,0 millions de FCFA",
+        "800 millions de FCFA",
+        "60,0 millions de FCFA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "70,0 d'investissements dont 60,0 de matériel, plus 10,0 de besoin en fonds de roulement."
+    },
+    {
+      "question": "Quel montage a le DSCR de l'année 2 le plus élevé ?",
+      "options": [
+        "D, subvention et prêt, avec 1,68",
+        "A, prêt bancaire seul, avec 1,56",
+        "B, prêt avec garantie, avec 1,36",
+        "C, crédit-bail, avec 1,20"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La subvention réduit le prêt, donc l'annuité."
+    },
+    {
+      "question": "Pourquoi le DSCR du crédit-bail est-il le plus faible (1,20) ?",
+      "options": [
+        "Parce que le matériel ne vaut rien",
+        "Pas de différé et remboursement sur seulement 5 ans",
+        "Parce que les loyers sont nuls",
+        "Parce que l'EBE est négatif"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Loyer de 16,6 M FCFA par an pendant 5 ans."
+    },
+    {
+      "question": "Quel est le prêt du montage A (apport de 30 %) ?",
+      "options": [
+        "24,0 millions de FCFA",
+        "80,0 millions de FCFA",
+        "56,0 millions de FCFA",
+        "5,6 millions de FCFA"
+      ],
+      "correctAnswer": 2,
+      "explanation": "70 % de 80,0."
+    },
+    {
+      "question": "Pourquoi le coût du financement du montage C (23,2) est-il le plus bas ?",
+      "options": [
+        "Parce que sa durée est plus courte",
+        "Parce que le crédit-bail est toujours gratuit",
+        "Parce que le taux est de 0 %",
+        "Parce que la banque paie une partie du matériel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un coût plus bas ne fait pas un meilleur montage."
+    },
+    {
+      "question": "Que montre le montage B (garantie de 1,5 % du prêt) ?",
+      "options": [
+        "Un apport plus élevé que le montage A",
+        "Une annuité plus faible que le montage A",
+        "Aucun frais supplémentaire",
+        "Moins d'apport demandé, mais une annuité plus lourde"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Prêt de 64,0 au lieu de 56,0 : annuité de 14,7 au lieu de 12,9."
+    }
+  ],
+  "fi_3": [
+    {
+      "question": "Quels frais la garantie du montage B ajoute-t-elle ?",
+      "options": [
+        "0,96 million de FCFA, payé une fois",
+        "9,6 millions de FCFA par an",
+        "0 FCFA",
+        "96 millions de FCFA"
+      ],
+      "correctAnswer": 0,
+      "explanation": "1,5 % d'un prêt de 64,0 M FCFA."
+    },
+    {
+      "question": "Pourquoi ne pas bâtir un plan qui dépend d'une subvention non encore accordée ?",
+      "options": [
+        "Parce que les subventions sont interdites",
+        "Parce qu'une subvention se rembourse toujours le jour même",
+        "Parce que la banque refuse toute subvention",
+        "Elle peut être refusée, retardée ou versée par tranches"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Présentez le plan avec et sans subvention."
+    },
+    {
+      "question": "Que faut-il comparer pour juger un crédit-bail ?",
+      "options": [
+        "Seulement la couleur du matériel",
+        "Seulement le montant d'un loyer",
+        "Le coût total et le prix d'achat comptant",
+        "Seulement le nom du financeur"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Loyers, frais et valeur de l'option d'achat entrent dans le coût."
+    },
+    {
+      "question": "Quel est le loyer annuel du crédit-bail du cas ?",
+      "options": [
+        "Environ 1,7 million de FCFA",
+        "Environ 16,6 millions de FCFA",
+        "Environ 60 millions de FCFA",
+        "Environ 83 millions de FCFA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "60,0 M FCFA de matériel, 12 % implicite, 5 ans."
+    },
+    {
+      "question": "Qu'est-ce qu'un contrat de culture avec préfinancement ?",
+      "options": [
+        "Un contrat où l'État achète toute la récolte",
+        "Une subvention sans contrepartie",
+        "Un prêt sans aucun remboursement",
+        "Un acheteur finance des intrants contre une livraison"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Vérifiez prix, qualité exigée et pénalités."
+    },
+    {
+      "question": "Que doit-on prévoir quand une subvention est versée après une partie des dépenses ?",
+      "options": [
+        "De quoi préfinancer ces dépenses",
+        "Rien, l'argent arrive toujours avant",
+        "Une deuxième subvention automatique",
+        "L'abandon du projet"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Elle est souvent versée par tranches, sur justificatifs."
+    }
+  ],
+  "fi_4": [
+    {
+      "question": "Quelle question un financeur se pose-t-il en priorité sur le remboursement ?",
+      "options": [
+        "Aimez-vous l'agriculture ?",
+        "Avez-vous déjà voyagé ?",
+        "Pouvez-vous rembourser, y compris en scénario pessimiste ?",
+        "Avez-vous un site web ?"
+      ],
+      "correctAnswer": 2,
+      "explanation": "La couverture de la dette en scénario réaliste et pessimiste."
+    },
+    {
+      "question": "Pourquoi l'apport montre-t-il votre engagement ?",
+      "options": [
+        "Parce que l'apport remplace le business plan",
+        "Vous risquez votre propre argent dans le projet",
+        "Parce qu'il est toujours remboursé par l'État",
+        "Parce qu'il dispense de garanties"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L'apport doit exister sur un compte, pas seulement dans le plan."
+    },
+    {
+      "question": "Pourquoi le droit sur la terre doit-il être valable pour toute la durée du prêt ?",
+      "options": [
+        "Pour augmenter le taux d'intérêt",
+        "Parce que la terre se vend avec le prêt",
+        "Le financeur doit être sûr que vous pourrez exploiter",
+        "Parce que la banque cultive à votre place"
+      ],
+      "correctAnswer": 2,
+      "explanation": "C'est une condition de base d'un dossier."
+    },
+    {
+      "question": "Que faire en cas de refus ?",
+      "options": [
+        "Demander la raison par écrit pour corriger le dossier",
+        "Redéposer le même dossier sans rien changer",
+        "Abandonner le projet immédiatement",
+        "Menacer le financeur"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La raison indique ce qu'il faut améliorer avant de redéposer ailleurs."
+    },
+    {
+      "question": "Quelle erreur est fréquente dans un dossier ?",
+      "options": [
+        "Un résumé de deux pages",
+        "Des devis datés en annexe",
+        "Un scénario pessimiste calculé",
+        "Des chiffres qui changent d'une section à l'autre"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Les mêmes chiffres doivent revenir dans tout le dossier."
+    },
+    {
+      "question": "Que faut-il demander au financeur avant de préparer le dossier ?",
+      "options": [
+        "Son numéro de téléphone personnel",
+        "Sa liste exacte de pièces et sa date limite",
+        "Son avis sur la météo",
+        "Rien : un dossier type suffit pour tous"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Chaque dispositif a sa propre liste."
+    }
+  ],
+  "fi_5": [
+    {
+      "question": "Que fait une assurance sur indice climatique ?",
+      "options": [
+        "Elle paie toujours exactement vos pertes",
+        "Elle paie selon un indice de zone, pas selon vos pertes réelles",
+        "Elle rembourse le prêt de la banque",
+        "Elle garantit un prix de vente"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Elle couvre une pluviométrie ou une température hors seuil."
+    },
+    {
+      "question": "Où placer la prime d'assurance dans votre plan ?",
+      "options": [
+        "Nulle part, elle est gratuite",
+        "Dans l'apport",
+        "Dans les produits",
+        "Dans les charges, puis tester l'effet sur le DSCR"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Demandez un devis écrit et daté."
+    },
+    {
+      "question": "Quel est le risque d'une assurance dont on n'a pas lu les exclusions ?",
+      "options": [
+        "Un faux sentiment de sécurité",
+        "Aucun, car l'assureur paie toujours tout",
+        "Une baisse automatique du taux de prêt",
+        "Une subvention supplémentaire"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Lisez ce qui est couvert et ce qui est exclu."
+    },
+    {
+      "question": "Quand existe un risque de change ?",
+      "options": [
+        "Quand le plan est en FCFA et que tout reste en FCFA",
+        "Quand la banque est locale",
+        "Quand des coûts ou des ventes sont dans une autre monnaie que celle du plan",
+        "Quand le projet est de petite taille"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Intrants importés, matériel étranger, vente dans un pays voisin."
+    },
+    {
+      "question": "Quelle mesure limite le risque de change ?",
+      "options": [
+        "Ne rien prévoir et espérer",
+        "Supprimer le scénario pessimiste",
+        "Vendre uniquement à crédit",
+        "Indexer les prix ou acheter à l'avance une partie des intrants importés"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Testez aussi une variation défavorable de 10 à 20 %."
+    },
+    {
+      "question": "Pourquoi une assurance est-elle une mesure de mitigation ?",
+      "options": [
+        "Elle transfère un risque important à un assureur",
+        "Elle supprime toute possibilité de sinistre",
+        "Elle remplace le business plan",
+        "Elle augmente le prix de vente"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Voir la leçon 6.1 sur les risques."
+    }
+  ],
   "ma_1": [
     {
       "question": "Un porteur cultive 1,5 ha de tomate (1 cycle) et 1,5 ha de chou (2 cycles). Combien d'hectares-cycles par an ?",
       "options": [
-        "4,5 hectares-cycles",
         "3 hectares-cycles, soit la surface seule",
+        "4,5 hectares-cycles",
         "2,25 hectares-cycles, en divisant par deux",
         "6 hectares-cycles, en comptant deux cycles partout"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "1,5 × 1 + 1,5 × 2 = 4,5."
     },
     {
@@ -734,21 +1074,21 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "30 t, en ne comptant qu'un cycle de gombo",
         "20 t, en ne comptant que la tomate",
-        "60 t, en comptant trois cycles de gombo",
-        "40 t"
+        "40 t",
+        "60 t, en comptant trois cycles de gombo"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "20 + (2 × 10) = 40 t."
     },
     {
       "question": "Quelle erreur courante gonfle un plan de cultures ?",
       "options": [
+        "Compter plus de cycles que le calendrier n'en permet réellement",
         "Répartir les surfaces sur plusieurs cultures",
         "Alterner les familles de plantes d'un cycle à l'autre",
-        "Compter plus de cycles que le calendrier n'en permet réellement",
         "Prévoir un engrais vert en période de repos"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Entre deux cultures, il faut le temps de préparer la parcelle."
     }
   ],
@@ -757,11 +1097,11 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Le forage, la pompe solaire et le goutte-à-goutte coûtent 9,0 M FCFA sur 18,8 M d'immobilisations. Quelle part ?",
       "options": [
         "Environ 21 %",
-        "Environ 48 %",
         "Environ 9 %",
+        "Environ 48 %",
         "Environ 90 %"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "9,0 ÷ 18,8 ≈ 0,48 : l'irrigation est près de la moitié de l'investissement."
     },
     {
@@ -791,21 +1131,21 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "Arroser uniquement avec la pluie",
         "Réduire la surface de moitié dès le départ",
-        "Une pompe de secours ou des pièces de rechange, et un contrat d'entretien",
-        "Attendre la réparation sans rien prévoir"
+        "Attendre la réparation sans rien prévoir",
+        "Une pompe de secours ou des pièces de rechange, et un contrat d'entretien"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Sans eau, il n'y a pas de culture de contre-saison : la solution de secours est chiffrée."
     },
     {
       "question": "Que faut-il vérifier avant de forer ?",
       "options": [
-        "Les règles de prélèvement d'eau de son pays, avec la date et la source",
         "Uniquement le prix du mètre foré",
         "La couleur des tuyaux autorisés",
+        "Les règles de prélèvement d'eau de son pays, avec la date et la source",
         "Le nombre d'employés prévus dans l'équipe"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Un forage demande souvent une étude et une autorisation."
     },
     {
@@ -836,11 +1176,11 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Aux intrants de 5,4 s'ajoutent main-d'œuvre saisonnière 4,0, caisses et transport 1,6, eau et énergie 1,2 (M FCFA). Quelles charges variables ?",
       "options": [
         "5,4 M FCFA, soit les intrants seuls",
+        "12,2 M FCFA",
         "6,8 M FCFA, en omettant la main-d'œuvre",
-        "23,0 M FCFA, qui est le chiffre d'affaires",
-        "12,2 M FCFA"
+        "23,0 M FCFA, qui est le chiffre d'affaires"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "5,4 + 4,0 + 1,6 + 1,2 = 12,2."
     },
     {
@@ -868,23 +1208,23 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quels rendements retenir dans un plan ?",
       "options": [
+        "Ceux que l'on a mesurés ou que des voisins ont obtenus, avec source et date",
         "Ceux du catalogue du fournisseur de semences",
         "Les meilleurs rendements jamais observés dans le pays",
-        "Des rendements arrondis à la dizaine supérieure",
-        "Ceux que l'on a mesurés ou que des voisins ont obtenus, avec source et date"
+        "Des rendements arrondis à la dizaine supérieure"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Un rendement de station n'est pas le vôtre."
     },
     {
       "question": "CA de 23,0 M FCFA et charges variables de 12,2 M FCFA : quel taux de marge sur coûts variables ?",
       "options": [
-        "Environ 47 %",
         "Environ 53 %",
         "Environ 12 %",
-        "Environ 90 %"
+        "Environ 90 %",
+        "Environ 47 %"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "(23,0 − 12,2) ÷ 23,0 ≈ 0,47."
     }
   ],
@@ -893,22 +1233,22 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "L'oignon de Diap : 60 % vendus à 160 F à la récolte, 40 % à 260 F après stockage. Quel prix moyen ?",
       "options": [
         "210 F/kg, moyenne simple des deux prix",
-        "260 F/kg, le prix le plus élevé",
         "200 F/kg",
+        "260 F/kg, le prix le plus élevé",
         "100 F/kg, la différence entre les deux prix"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "0,6 × 160 + 0,4 × 260 = 200 : la moyenne est pondérée."
     },
     {
       "question": "Sur quelle durée relever les prix de son marché pour construire un prix de plan ?",
       "options": [
-        "Un seul jour, le jour de la récolte",
         "Au moins douze mois, avec la date de chaque relevé",
+        "Un seul jour, le jour de la récolte",
         "Une semaine, en saison sèche",
         "Aucune durée : les statistiques publiques suffisent"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Les prix varient avec la saison : il faut couvrir un cycle annuel."
     },
     {
@@ -925,12 +1265,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel produit se stocke assez bien pour vendre plus tard à meilleur prix ?",
       "options": [
-        "L'oignon ou la pomme de terre, contrairement à la tomate ou au chou frais",
         "La tomate fraîche, plusieurs mois en magasin",
         "Le chou frais, sans aucune installation",
-        "Tous les légumes frais, de la même manière"
+        "Tous les légumes frais, de la même manière",
+        "L'oignon ou la pomme de terre, contrairement à la tomate ou au chou frais"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Pour la tomate et le chou, ce sont le calendrier et le débouché qui comptent."
     },
     {
@@ -960,12 +1300,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Immobilisations 18,8 M FCFA et BFR 4,0 M FCFA : quel coût du projet ?",
       "options": [
-        "14,8 M FCFA, en soustrayant le BFR",
         "22,8 M FCFA",
+        "14,8 M FCFA, en soustrayant le BFR",
         "18,8 M FCFA, en oubliant le BFR",
         "75,2 M FCFA, en multipliant les deux"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "18,8 + 4,0 = 22,8."
     },
     {
@@ -973,10 +1313,10 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "Environ 3,7 M FCFA, en multipliant",
         "Environ 7,9 M FCFA, soit les coûts fixes seuls",
-        "Environ 23,0 M FCFA, soit le CA",
-        "Environ 16,8 M FCFA, soit 73 % du CA de 23,0"
+        "Environ 16,8 M FCFA, soit 73 % du CA de 23,0",
+        "Environ 23,0 M FCFA, soit le CA"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "7,9 ÷ 0,47 ≈ 16,8 ; 16,8 ÷ 23,0 ≈ 73 %."
     },
     {
@@ -995,33 +1335,33 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "Les flux couvrent l'annuité avec une grande marge",
         "L'annuité est déjà remboursée en totalité",
-        "Les flux ne couvrent pas l'annuité : il faut une réserve, une garantie ou un report",
-        "Le DSCR ne peut pas être inférieur à 1"
+        "Le DSCR ne peut pas être inférieur à 1",
+        "Les flux ne couvrent pas l'annuité : il faut une réserve, une garantie ou un report"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "En dessous de 1, l'exploitation ne rembourse pas la dette avec ses seuls flux."
     },
     {
       "question": "Quel levier améliore la marge d'une petite exploitation sans alourdir les coûts fixes ?",
       "options": [
         "Embaucher un deuxième chef de culture",
+        "Un cycle supplémentaire par an ou une culture à plus forte valeur sur les mêmes surfaces",
         "Construire un second magasin de stockage",
-        "Doubler le montant de l'emprunt",
-        "Un cycle supplémentaire par an ou une culture à plus forte valeur sur les mêmes surfaces"
+        "Doubler le montant de l'emprunt"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "Chaque hectare-cycle ajouté apporte du CA pour des coûts fixes quasi inchangés."
     },
     {
       "question": "Dans le cas du Bénin, la VAN à 10 % est de +3,4 M FCFA et le TRI de 14,6 %. Que conclure ?",
       "options": [
-        "Le projet rapporte plus que le taux exigé, mais avec une marge de sécurité étroite",
         "Le projet est sans risque, car la VAN est positive",
         "Le projet détruit de la valeur, car le TRI est supérieur à 10 %",
+        "Le projet rapporte plus que le taux exigé, mais avec une marge de sécurité étroite",
         "Le TRI et la VAN ne permettent aucune conclusion"
       ],
-      "correctAnswer": 0,
-      "explanation": "TRI > taux d'actualisation équivaut à VAN > 0 ; la fragilité apparaît dans les scénarios de crise."
+      "correctAnswer": 2,
+      "explanation": "TRI > taux d'actualisation ⇔ VAN > 0 ; la fragilité apparaît dans les scénarios de crise."
     }
   ],
   "cp_1": [
@@ -1029,22 +1369,22 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Sur quel horizon se lit le plan d'une culture pérenne ?",
       "options": [
         "1 à 2 ans, comme une culture annuelle",
-        "10 à 20 ans",
         "3 mois, le temps d'une campagne",
+        "10 à 20 ans",
         "Uniquement l'année de la première récolte"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "L'investissement précède la récolte de plusieurs années et la plantation produit ensuite longtemps."
     },
     {
       "question": "Dans le cas, quelles sont les trois phases de vie de la cacaoyère ?",
       "options": [
         "Semis, récolte, vente seulement",
-        "Plantation, abandon, renouvellement",
         "Installation, montée en production, croisière",
+        "Plantation, abandon, renouvellement",
         "Pépinière, exportation, liquidation"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Années 1 à 3, 4 à 6, puis 7 à 15."
     },
     {
@@ -1061,34 +1401,34 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel est l'intérêt des cultures associées pendant l'installation ?",
       "options": [
-        "Elles augmentent le prix des fèves",
         "Elles apportent des recettes sans récolte d'arbres",
+        "Elles augmentent le prix des fèves",
         "Elles dispensent d'entretenir les arbres",
         "Elles remplacent l'emprunt"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "À condition de ne pas concurrencer les jeunes arbres pour l'eau et la lumière."
     },
     {
       "question": "Quelle est l'erreur la plus fréquente sur la montée en production ?",
       "options": [
+        "Une rampe trop optimiste, sans source",
         "Prendre une rampe prudente et documentée",
         "Demander l'avis d'un technicien de la filière",
-        "Une rampe trop optimiste, sans source",
         "Comparer avec des producteurs de la zone"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "La rampe de production doit être documentée avec source et date."
     },
     {
       "question": "Combien de tonnes de fèves par an en croisière (20 ha, 900 kg/ha) ?",
       "options": [
-        "18 t",
         "1,8 t",
         "180 t",
+        "18 t",
         "9 t"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "20 × 900 = 18 000 kg."
     }
   ],
@@ -1097,44 +1437,44 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Quel est le chiffre d'affaires de croisière du cas (18 000 kg à 1 800 FCFA/kg) ?",
       "options": [
         "3,24 millions de FCFA",
-        "324 millions de FCFA",
         "32,4 millions de FCFA",
+        "324 millions de FCFA",
         "18 millions de FCFA"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "18 000 × 1 800 = 32,4 millions."
     },
     {
       "question": "Pourquoi retenir un rendement mesuré plutôt que celui d'un fournisseur de plants ?",
       "options": [
-        "C'est un potentiel, pas le vôtre",
         "Parce que les fournisseurs sont interdits de publier",
         "Parce que le rendement n'influe pas sur le chiffre d'affaires",
-        "Parce que le rendement est fixé par la loi"
+        "Parce que le rendement est fixé par la loi",
+        "C'est un potentiel, pas le vôtre"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Un rendement surestimé de 10 % déforme tout le plan."
     },
     {
       "question": "Dans le scénario pessimiste (rendement − 10 %, prix − 10 %), de combien baisse le chiffre d'affaires de croisière ?",
       "options": [
         "Environ 10 %",
-        "Environ 19 %",
         "Environ 20 millions de FCFA",
-        "Environ 50 %"
+        "Environ 50 %",
+        "Environ 19 %"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "0,9 × 0,9 = 0,81, soit une baisse de 19 % (26,2 au lieu de 32,4)."
     },
     {
       "question": "Quelles sont les deux sources d'incertitude du prix d'une culture de rente ?",
       "options": [
         "La couleur des sacs et la saison des pluies",
+        "Marché mondial et dispositif national",
         "Le prix des plants et la taille du bureau",
-        "Le nom du pays et le nom de l'acheteur",
-        "Marché mondial et dispositif national"
+        "Le nom du pays et le nom de l'acheteur"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "Vérifiez le dispositif de votre pays et produit, avec date et source."
     },
     {
@@ -1151,12 +1491,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Qu'est-ce qui vaut mieux qu'une promesse orale d'un acheteur ?",
       "options": [
+        "Une lettre d'intention ou un contrat d'achat",
         "Une photo de l'acheteur",
         "Un prix relevé il y a dix ans",
-        "Un message d'un ami",
-        "Une lettre d'intention ou un contrat d'achat"
+        "Un message d'un ami"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Voir la leçon 4.2 de la formation."
     }
   ],
@@ -1164,23 +1504,23 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel est le total des immobilisations de la cacaoyère du cas ?",
       "options": [
-        "27,0 millions de FCFA",
         "70,2 millions de FCFA",
         "18,0 millions de FCFA",
-        "24,2 millions de FCFA"
+        "24,2 millions de FCFA",
+        "27,0 millions de FCFA"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Les 70,2 millions du coût du projet incluent déficits d'exploitation et intérêts du différé."
     },
     {
       "question": "Quelle part des immobilisations représente l'installation de la plantation (18,0 sur 27,0) ?",
       "options": [
-        "Environ 10 %",
         "Les deux tiers",
+        "Environ 10 %",
         "Environ un quart",
         "La totalité"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "18,0 ÷ 27,0 ≈ 67 %."
     },
     {
@@ -1221,10 +1561,10 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "Planter plus vite sans entretenir",
         "Acheter des plants moins chers sans regarder la qualité",
-        "Supprimer toute charge fixe",
-        "Planter par tranches et garder des cultures associées plus longtemps"
+        "Planter par tranches et garder des cultures associées plus longtemps",
+        "Supprimer toute charge fixe"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "Une plantation ratée coûte plus cher qu'un plant de qualité."
     }
   ],
@@ -1243,12 +1583,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Pourquoi le différé est-il long (5 ans) dans le cas ?",
       "options": [
-        "Pas assez de production avant l'année 6",
         "Parce que la banque ne prête jamais plus court",
         "Parce que la loi interdit de rembourser avant 5 ans",
-        "Pour éviter de payer des intérêts"
+        "Pour éviter de payer des intérêts",
+        "Pas assez de production avant l'année 6"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Un essai avec 4 ans de différé donnait un DSCR de 0,44 la première année de remboursement."
     },
     {
@@ -1265,34 +1605,34 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel est le DSCR de la première année de remboursement (année 6) dans le cas ?",
       "options": [
+        "1,44",
         "0,44",
         "2,43",
-        "4,60",
-        "1,44"
+        "4,60"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "C'est l'année la plus tendue : la banque la regardera de près."
     },
     {
       "question": "Pourquoi les intérêts du différé font-ils partie du coût du projet ?",
       "options": [
         "Parce qu'ils sont déductibles de tout impôt",
+        "Ils sont payés avant les premiers gains",
         "Parce qu'ils sont remboursés par l'acheteur",
-        "Parce qu'ils sont toujours nuls",
-        "Ils sont payés avant les premiers gains"
+        "Parce qu'ils sont toujours nuls"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "Environ 18,9 millions dans le cas."
     },
     {
       "question": "Quelle part d'apport retient le cas ?",
       "options": [
         "10 %",
-        "40 %",
         "100 %",
-        "0 %"
+        "0 %",
+        "40 %"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Le risque d'un projet pérenne étant long, les banques demandent souvent un apport plus élevé."
     }
   ],
@@ -1322,12 +1662,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que devient la VAN en scénario pessimiste (rendement et prix − 10 %, entretien + 10 %) ?",
       "options": [
-        "Négative, environ − 16,1 M FCFA",
         "Elle reste positive à 4,6 millions de FCFA, comme en réaliste",
+        "Négative, environ − 16,1 M FCFA",
         "Elle double grâce au prix plus bas",
         "Elle est nulle, quelle que soit l'hypothèse retenue"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le projet ne rémunère plus l'argent investi à 10 %."
     },
     {
@@ -1345,22 +1685,22 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Quel risque propre aux cultures pérennes concerne le droit sur la terre ?",
       "options": [
         "Aucun, le foncier n'a pas d'importance",
-        "Un droit foncier sûr pour 15 ans",
         "Le foncier ne concerne que les cultures annuelles",
-        "Il suffit d'un accord oral de dix jours"
+        "Il suffit d'un accord oral de dix jours",
+        "Un droit foncier sûr pour 15 ans"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Voir la fiche Cadre pays."
     },
     {
       "question": "Quel scénario faut-il toujours présenter, en plus du réaliste ?",
       "options": [
+        "Un scénario pessimiste et un scénario de crise",
         "Un scénario optimiste seulement",
         "Aucun scénario",
-        "Un scénario pessimiste et un scénario de crise",
         "Un scénario où le prix double"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Le DSCR passe à 0,71 en pessimiste et 0,37 en crise de prix."
     }
   ],
@@ -1401,12 +1741,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Pourquoi connaître ce que le client paie aujourd'hui pour le même service ?",
       "options": [
-        "Pour fixer un tarif acceptable et comparer",
         "Pour copier le prix du voisin sans réfléchir",
+        "Pour fixer un tarif acceptable et comparer",
         "Parce que la loi interdit de vendre moins cher",
         "Pour éviter d'écrire un contrat"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Le client compare toujours avec ce qu'il paie ou ce qu'il perd en n'ayant pas le service."
     },
     {
@@ -1449,10 +1789,10 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "480 ha",
         "96 ha",
-        "1 440 ha",
-        "960 ha"
+        "960 ha",
+        "1 440 ha"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "2 × 480 = 960 ha, à 35 000 FCFA l'hectare : 33,6 M FCFA."
     },
     {
@@ -1469,34 +1809,34 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Pourquoi ne pas retenir la capacité maximale annoncée par un fabricant ?",
       "options": [
-        "Parce que les fabricants publient des chiffres toujours trop bas pour des raisons de modestie",
         "Elle ignore pannes, déplacements, calendrier et clients",
+        "Parce que les fabricants publient des chiffres toujours trop bas pour des raisons de modestie",
         "Parce que la capacité n'a aucun lien avec le chiffre d'affaires",
         "Parce que la loi interdit de citer un fabricant dans un dossier"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Retenez ce que vous traiterez réellement, avec des clients identifiés."
     },
     {
       "question": "Quelle part de l'activité de croisière retient l'année 1 du cas ?",
       "options": [
         "100 %",
-        "30 %",
         "65 %",
+        "30 %",
         "5 %"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "La clientèle se constitue : le chiffre d'affaires de l'année 1 est de 39,6 M FCFA."
     },
     {
       "question": "Quel outil aide le plus à remplir le calendrier d'un service ?",
       "options": [
-        "Un calendrier de réservations avant la saison",
         "Une publicité sans rendez-vous fixé",
         "L'achat de machines plus nombreuses",
+        "Un calendrier de réservations avant la saison",
         "L'attente des premiers appels en pleine saison"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Les fenêtres de labour et de battage sont courtes."
     }
   ],
@@ -1504,67 +1844,67 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel est le total des charges variables de croisière dans le cas ?",
       "options": [
+        "25,3 millions de FCFA",
         "2,53 millions de FCFA",
         "253 millions de FCFA",
-        "14,0 millions de FCFA",
-        "25,3 millions de FCFA"
+        "14,0 millions de FCFA"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Gasoil 14,0 + entretien 6,8 + opérateurs 3,0 + transport et petits frais 1,5."
     },
     {
       "question": "Combien coûte le gasoil d'un hectare labouré (12 litres à 750 FCFA) ?",
       "options": [
-        "9 000 FCFA",
         "900 FCFA",
         "90 000 FCFA",
-        "12 750 FCFA"
+        "12 750 FCFA",
+        "9 000 FCFA"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "12 × 750 = 9 000 FCFA, soit 26 % du tarif de 35 000 FCFA."
     },
     {
       "question": "Comment le cas chiffre-t-il l'entretien du matériel ?",
       "options": [
+        "10 % de la valeur du matériel par an",
         "Un montant nul, le matériel étant neuf",
         "Un forfait de 100 000 FCFA par an",
-        "10 % de la valeur du matériel par an",
         "Le double du prix d'achat"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "10 % de 68,0 M FCFA, soit 6,8 M FCFA par an."
     },
     {
       "question": "Lequel de ces coûts reste fixe même si les hectares labourés baissent ?",
       "options": [
         "Le gasoil",
-        "Les amortissements du matériel",
         "Les pièces d'entretien utilisées",
-        "Les opérateurs saisonniers"
+        "Les opérateurs saisonniers",
+        "Les amortissements du matériel"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Amortissements : 9,95 M FCFA par an."
     },
     {
       "question": "Quel est le taux de marge sur coûts variables du cas ?",
       "options": [
-        "Environ 58,5 %",
         "Environ 5,8 %",
         "Environ 85 %",
+        "Environ 58,5 %",
         "Environ 25 %"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "(61,0 − 25,3) ÷ 61,0."
     },
     {
       "question": "Pourquoi le taux de marge est-il élevé alors que le service reste exigeant ?",
       "options": [
         "Parce que le gasoil est gratuit pour les prestataires",
-        "Parce que les machines ne s'usent pas",
         "Pas de matière première, mais de lourdes charges fixes",
+        "Parce que les machines ne s'usent pas",
         "Parce que les clients paient toujours d'avance"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "L'utilisation de la machine fait toute la différence."
     }
   ],
@@ -1573,44 +1913,44 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Quel est le total des immobilisations du cas ?",
       "options": [
         "91,0 millions de FCFA",
-        "81,0 millions de FCFA",
         "44,0 millions de FCFA",
-        "10,0 millions de FCFA"
+        "10,0 millions de FCFA",
+        "81,0 millions de FCFA"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Les 91,0 millions du coût du projet incluent 10,0 de besoin en fonds de roulement."
     },
     {
       "question": "Quelle part de l'investissement représentent les tracteurs et les batteuses (68,0 sur 81,0) ?",
       "options": [
+        "Environ 84 %",
         "Environ 8 %",
         "Environ 50 %",
-        "Environ 100 %",
-        "Environ 84 %"
+        "Environ 100 %"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "C'est le matériel qui porte le projet."
     },
     {
       "question": "À quoi correspond le besoin en fonds de roulement d'un prestataire ?",
       "options": [
         "Au prix d'achat des tracteurs",
-        "Au salaire du gestionnaire uniquement",
         "Au crédit accordé aux clients et aux frais avancés",
+        "Au salaire du gestionnaire uniquement",
         "À l'impôt payé en fin d'année"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Il se finance : 10,0 M FCFA dans le cas."
     },
     {
       "question": "Quel est le coût total du projet du cas ?",
       "options": [
-        "91,0 millions de FCFA",
         "81,0 millions de FCFA",
         "27,3 millions de FCFA",
+        "91,0 millions de FCFA",
         "63,7 millions de FCFA"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "81,0 d'immobilisations + 10,0 de besoin en fonds de roulement."
     },
     {
@@ -1627,12 +1967,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que faire avant d'acheter le matériel ?",
       "options": [
+        "Comparer l'achat, la location et le crédit-bail sur devis",
         "Acheter au plus vite le matériel le moins cher",
         "Se fier à la seule brochure du fabricant",
-        "Choisir la solution sans regarder les conditions",
-        "Comparer l'achat, la location et le crédit-bail sur devis"
+        "Choisir la solution sans regarder les conditions"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Chaque solution a un coût : demandez des devis écrits et datés."
     }
   ],
@@ -1640,12 +1980,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel est le seuil de rentabilité du cas, en part du chiffre d'affaires ?",
       "options": [
-        "Environ 68 %",
         "Environ 6,8 %",
         "Environ 100 %",
+        "Environ 68 %",
         "Environ 30 %"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "41,5 ÷ 61,0, soit une marge de sécurité de 32 %."
     },
     {
@@ -1653,21 +1993,21 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "0,87",
         "18,7",
-        "1,87",
-        "1,19"
+        "1,19",
+        "1,87"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Flux disponible d'environ 23,6 pour une annuité de 12,7."
     },
     {
       "question": "Que signifie un DSCR de 0,67 en mauvaise saison ?",
       "options": [
         "La banque est remboursée avec 67 % de marge",
-        "L'annuité n'est pas couverte",
         "Le projet gagne 67 % de plus",
+        "L'annuité n'est pas couverte",
         "La saison a été excellente"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Activité en baisse de 30 % et impayés de 15 %."
     },
     {
@@ -1685,11 +2025,11 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Quelle activité minimale garde le DSCR au-dessus de 1 dans le cas ?",
       "options": [
         "Environ 10 % de l'activité prévue",
+        "Environ 70 % de l'activité prévue",
         "Environ 99 % de l'activité prévue",
-        "Aucune activité n'est nécessaire",
-        "Environ 70 % de l'activité prévue"
+        "Aucune activité n'est nécessaire"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "Environ 672 ha de labour et 1 260 t de battage."
     },
     {
@@ -1741,23 +2081,23 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que vaut un point de rendement matière en plus (0,11 devient 0,12) dans le cas du Bénin ?",
       "options": [
-        "Environ 69 000 FCFA, car un point de rendement est négligeable",
         "Environ 6,9 millions de FCFA de CA",
+        "Environ 69 000 FCFA, car un point de rendement est négligeable",
         "Environ 0,7 million de FCFA, soit le coût d'un sac de fruits",
         "Rien du tout, car le rendement ne change pas le volume vendu"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "180 000 × 0,01 × 0,96 × 4 000 ≈ 6,9 millions."
     },
     {
       "question": "Comment établir le rendement matière de votre unité ?",
       "options": [
-        "Le mesurer sur vos propres lots, pesée à l'appui",
         "Reprendre celui de la brochure du fabricant de matériel",
         "Le fixer à 100 % pour simplifier",
+        "Le mesurer sur vos propres lots, pesée à l'appui",
         "Copier celui d'un autre pays"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Le rendement dépend de votre matière première et de votre procédé."
     },
     {
@@ -1765,10 +2105,10 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "Les ignorer car ils n'ont aucune valeur",
         "Les compter comme du produit fini",
-        "Les noter, avec leur valeur ou coût",
-        "Les vendre au prix du produit fini"
+        "Les vendre au prix du produit fini",
+        "Les noter, avec leur valeur ou coût"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Un sous-produit peut rapporter un revenu ou coûter à évacuer."
     }
   ],
@@ -1787,12 +2127,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Dans le cas attiéké, 1,2 t de manioc par jour et 250 jours. Quelle capacité annuelle ?",
       "options": [
+        "300 t",
         "30 t",
         "250 t",
-        "300 t",
         "1 200 t"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "1,2 × 250 = 300 t."
     },
     {
@@ -1809,34 +2149,34 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que mesure le taux d'utilisation ?",
       "options": [
-        "Jours travaillés rapportés aux jours possibles",
         "Le prix de vente rapporté au prix d'achat de la matière",
+        "Jours travaillés rapportés aux jours possibles",
         "La part de produit fini perdue au conditionnement",
         "Le nombre de clients actifs sur la dernière année"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Plus il est bas, plus les coûts fixes pèsent par kilo produit."
     },
     {
       "question": "Quel moyen étale la saison d'une unité de séchage de mangues ?",
       "options": [
         "Acheter plus de séchoirs pour traiter la même quantité de fruits plus vite",
-        "Traiter un second produit hors saison",
         "Vendre moins cher pour écouler plus vite le stock de produit sec",
+        "Traiter un second produit hors saison",
         "Réduire le personnel permanent à zéro pendant toute la campagne"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Chaque jour de fonctionnement en plus dilue les coûts fixes."
     },
     {
       "question": "Pourquoi l'année 1 du cas retient-elle 70 % de la pleine capacité ?",
       "options": [
+        "Rodage de l'unité et premiers contrats : la production monte progressivement",
         "Parce que la loi limite la production de l'année 1 à 70 % pour toutes les unités",
         "Parce que les séchoirs neufs ne fonctionnent qu'à 70 % de leur capacité nominale",
-        "Rodage de l'unité et premiers contrats : la production monte progressivement",
         "Parce que les fruits sont fournis gratuitement par l'État cette année-là"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Une montée en charge réaliste évite un plan trop optimiste."
     }
   ],
@@ -1844,45 +2184,45 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quelle part des charges variables représentent les fruits dans le cas du Bénin (19,8 sur 44,7 M FCFA) ?",
       "options": [
-        "Environ 44 %",
         "Environ 4 %",
         "Environ 80 %",
+        "Environ 44 %",
         "Environ 100 %"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "19,8 ÷ 44,7 ≈ 44 %."
     },
     {
       "question": "Quelle est la limite principale d'un contrat d'approvisionnement avec des producteurs ?",
       "options": [
         "Le contrat supprime toute variation de qualité des fruits livrés pendant la campagne",
+        "Il peut vendre ailleurs si le prix monte",
         "Le contrat dispense l'unité de tout contrôle à l'arrivée des lots de fruits",
-        "Le contrat interdit à l'unité de payer le producteur avant la fin de la campagne",
-        "Il peut vendre ailleurs si le prix monte"
+        "Le contrat interdit à l'unité de payer le producteur avant la fin de la campagne"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 1,
       "explanation": "Un contrat équilibré est mieux respecté qu'un contrat trop dur."
     },
     {
       "question": "Combien de fournisseurs de matière première faut-il prévoir au minimum ?",
       "options": [
-        "Au moins deux",
         "Un seul, afin de négocier un meilleur prix sur tout le volume annuel",
         "Aucun, puisque l'achat se fait au marché au jour le jour",
-        "Cinquante, un par village de la zone de collecte"
+        "Cinquante, un par village de la zone de collecte",
+        "Au moins deux"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Un plan B limite le risque en cas de mauvaise récolte chez l'un d'eux."
     },
     {
       "question": "Que doit préciser un bon contrat d'approvisionnement ?",
       "options": [
+        "Prix, qualité, calendrier de livraison et modalités de paiement et de refus d'un lot",
         "Uniquement le prix au kilo de la matière première livrée",
         "Uniquement la quantité totale livrée sur l'année entière",
-        "La couleur des sacs et le nom du chauffeur de livraison",
-        "Prix, qualité, calendrier de livraison et modalités de paiement et de refus d'un lot"
+        "La couleur des sacs et le nom du chauffeur de livraison"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Ces éléments évitent les litiges à la livraison."
     },
     {
@@ -1899,12 +2239,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Dans le scénario pessimiste du cas, comment évolue le prix des fruits ?",
       "options": [
-        "Il baisse de 8 %",
         "Il augmente de 8 %",
+        "Il baisse de 8 %",
         "Il reste identique",
         "Il est multiplié par deux"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Un scénario pessimiste teste une matière première plus chère."
     }
   ],
@@ -1923,34 +2263,34 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Quel est le premier poste d'équipement du cas, et sa dotation annuelle (22,0 M FCFA sur 8 ans) ?",
       "options": [
-        "Les séchoirs, 2,75 M FCFA par an",
         "Le véhicule, environ 22 millions par an",
+        "Les séchoirs, 2,75 M FCFA par an",
         "Le local, environ 2,75 millions par an",
         "L'emballage, environ 275 000 FCFA par an"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "22,0 ÷ 8 = 2,75."
     },
     {
       "question": "Quel est le coût d'emballage retenu dans le cas ?",
       "options": [
         "3 000 FCFA par kg de produit, soit environ 59 millions par an",
-        "300 FCFA par kg emballé, soit 5,9 M par an",
         "30 FCFA par kg de produit, soit environ 0,6 million par an",
+        "300 FCFA par kg emballé, soit 5,9 M par an",
         "Aucun coût, l'emballage étant fourni par l'acheteur"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "19 800 kg × 300 FCFA ≈ 5,9 millions."
     },
     {
       "question": "Que faire avant d'investir à propos des normes sanitaires et d'étiquetage ?",
       "options": [
+        "Vérifier ce qui s'applique, avec date et source",
         "Les ignorer, elles ne concernent que les grandes unités",
         "Attendre le premier contrôle",
-        "Vérifier ce qui s'applique, avec date et source",
         "Copier celles d'un autre produit"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Les acheteurs exigent souvent des règles précises."
     },
     {
@@ -1967,12 +2307,12 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
     {
       "question": "Que faire avant d'acheter des séchoirs ?",
       "options": [
-        "Comparer les devis et la capacité réelle",
         "Prendre le moins cher sans autre vérification",
         "Acheter la capacité maximale proposée",
-        "Se fier uniquement à la brochure"
+        "Se fier uniquement à la brochure",
+        "Comparer les devis et la capacité réelle"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Les équipements sont le premier poste d'investissement."
     }
   ],
@@ -1981,11 +2321,11 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "question": "Quel est le seuil de rentabilité du cas, rapporté au chiffre d'affaires ?",
       "options": [
         "Environ 25 %",
-        "Environ 50 %",
         "Environ 71 %",
+        "Environ 50 %",
         "Environ 100 %"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "54,1 ÷ 76,0 ≈ 71 %, soit une marge de sécurité de 29 %."
     },
     {
@@ -1993,10 +2333,10 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "La banque est remboursée avec 99 % de marge",
         "Le projet gagne 99 % de plus",
-        "Le scénario est sans risque",
-        "L'annuité est à peine couverte"
+        "L'annuité est à peine couverte",
+        "Le scénario est sans risque"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "Les banques demandent généralement un DSCR nettement supérieur à 1."
     },
     {
@@ -2004,32 +2344,32 @@ export const QUIZ_FILIERES: Record<string, QuizQuestionFiliere[]> = {
       "options": [
         "1,54",
         "0,99",
-        "0,79",
-        "2,00"
+        "2,00",
+        "0,79"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Il tombe sous 1 : l'annuité n'est plus couverte."
     },
     {
       "question": "Pourquoi obtenir des lettres d'intention d'achat avant d'investir ?",
       "options": [
+        "Pour avoir des acheteurs identifiés avant d'investir",
         "Pour remplacer l'agrément sanitaire et les démarches auprès de l'administration",
         "Pour éviter de calculer le seuil de rentabilité et le DSCR du projet",
-        "Parce que la banque n'en veut jamais et préfère des promesses orales",
-        "Pour avoir des acheteurs identifiés avant d'investir"
+        "Parce que la banque n'en veut jamais et préfère des promesses orales"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Une unité sans acheteurs avant la première campagne est exposée."
     },
     {
       "question": "Pourquoi le prix de 4 000 FCFA/kg est-il à remplacer dans votre dossier ?",
       "options": [
         "Le prix est fixé chaque année par l'État pour tous les produits séchés",
-        "C'est une hypothèse : il faut vos relevés datés",
         "Le prix ne change jamais, quelle que soit la saison ou la qualité du produit",
+        "C'est une hypothèse : il faut vos relevés datés",
         "Le prix est toujours de 2 000 FCFA/kg, quel que soit l'acheteur"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Chaque prix d'un plan porte une source et une date."
     },
     {
