@@ -50,6 +50,8 @@ Règle d'or : une règle n'existe qu'à un seul endroit. Si un skill et la chart
 
 ## Contenus produits
 
+Article modèle de référence pour le ton : `articles/aliment-poisson-sacs-par-bassin/02-article.md` (registre Terrain).
+
 Chaque article vit dans `editorial/articles/<slug>/` : `01-cadrage.md`, `02-article.md`, puis `03-publication.sql` généré.
 
 ## Commandes

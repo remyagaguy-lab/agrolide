@@ -28,6 +28,7 @@ Lis avant d'écrire (dossier `agrolide/editorial/charte/`) :
 - `06-publics-et-registres.md` (le registre du cadrage et ses réglages)
 - `07-personas.md` (le persona du cadrage)
 - `02-langue-et-typographie.md`
+- l'article modèle `agrolide/editorial/articles/aliment-poisson-sacs-par-bassin/02-article.md` : le ton à viser (phrases courtes, un exemple avant la règle, unités du terrain, une ligne « d'où ça vient »). Les autres registres gardent leurs réglages mais restent aussi simples à lire que possible
 - `10-preuves-et-sources.md` (quoi citer, comment)
 - `11-formats.md` (le gabarit du registre)
 - `03-ecriture-naturelle.md`

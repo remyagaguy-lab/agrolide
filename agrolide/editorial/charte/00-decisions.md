@@ -37,6 +37,7 @@ Voir le rapport du garde-fou : `npm run ed:check`.
 | Citer n'est pas systématique | On source toujours, on cite selon le public et le contenu (voir `10-preuves-et-sources.md`) |
 | Chaque contenu vise un public et un registre | Les publics et les niveaux sont ceux de la taxonomie de la bibliothèque |
 | Quatre registres validés : Terrain, Parcours, Expertise, Partenariat | Regroupent les six publics de la bibliothèque en quatre façons d'écrire (validé par Remyaga le 2026-11-14) |
+| Le texte Terrain est le modèle de référence | Entre deux versions du même sujet (Parcours et Terrain), Remyaga retient `aliment-poisson-sacs-par-bassin` comme modèle de ton pour agrolide : simple, concret, imagé, en unités du terrain (2026-11-14) |
 
 ## Propositions à valider
 
