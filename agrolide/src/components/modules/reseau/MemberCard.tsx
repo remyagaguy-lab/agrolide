@@ -4,7 +4,7 @@ import { Sillons } from '@/components/brand'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge, type BadgeVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { categorieLabel, displayName, type MemberSummary } from '@/lib/reseau/profil'
+import { categorieAffichee, categorieLabel, displayName, typeOrganisationAffiche, type MemberSummary } from '@/lib/reseau/profil'
 import { ConnectionActions } from './ConnectionActions'
 
 import { Check, MapPin } from "@/components/ui/icons"
@@ -14,7 +14,8 @@ const categoryVariant = (c: string | null): BadgeVariant => {
   switch ((c ?? '').toLowerCase()) {
     case 'junior': return 'junior'
     case 'professionnel': return 'professionnel'
-    case 'partenaire': return 'partenaire'
+    case 'partenaire':
+    case 'organisation': return 'partenaire'
     case 'senior': return 'senior'
     default: return 'neutral'
   }
@@ -39,7 +40,9 @@ export function MemberCard({
   titreRaisons?: string
 }) {
   const name = displayName(member)
-  const category = categorieLabel(member.categorie)
+  const categorieBadge = categorieAffichee(member)
+  const category = categorieLabel(categorieBadge)
+  const typeOrg = typeOrganisationAffiche(member)
   const place = [member.ville, member.pays].filter(Boolean).join(', ')
   const headline = [member.specialite, member.organisation].filter(Boolean).join(' · ')
   const shown = member.thematiques.slice(0, MAX_THEMES)
@@ -57,7 +60,12 @@ export function MemberCard({
       <div className="flex flex-1 flex-col gap-4 px-5 pb-5 @max-[17rem]:gap-2 @max-[17rem]:px-3 @max-[17rem]:pb-3">
         <div className="-mt-8 flex items-end justify-between gap-3 @max-[17rem]:-mt-7">
           <Avatar src={member.photo_url} name={name} size="lg" className="relative size-16 ring-4 ring-surface-container-lowest @max-[17rem]:size-14" />
-          {category && <Badge variant={categoryVariant(member.categorie)} className="mb-1 @max-[17rem]:hidden">{category}</Badge>}
+          {category && (
+            <div className="mb-1 flex flex-wrap justify-end gap-1.5 @max-[17rem]:hidden">
+              <Badge variant={categoryVariant(categorieBadge)}>{category}</Badge>
+              {typeOrg && <Badge variant="category">{typeOrg}</Badge>}
+            </div>
+          )}
         </div>
 
         <div className="min-w-0">

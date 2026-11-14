@@ -4,7 +4,7 @@ import { and, desc, eq, inArray } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { db } from "@/db"
 import { demandes_categorie, users } from "@/db/schema"
-import { lireLangues, parseList } from "@/lib/reseau/profil"
+import { lireLangues, parseList, porteUnType } from "@/lib/reseau/profil"
 import { buttonVariants } from "@/components/ui/Button"
 import { finCotisationPayee } from "@/lib/categorie.server"
 import { CategorieSection, type DemandeOuverte } from "./CategorieSection"
@@ -48,6 +48,8 @@ export default async function ProfilModifierPage() {
       prenom: users.prenom,
       nom: users.nom,
       organisation: users.organisation,
+      type_organisation: users.type_organisation,
+      est_organisation: users.est_organisation,
       specialite: users.specialite,
       pays: users.pays,
       ville: users.ville,
@@ -86,10 +88,12 @@ export default async function ProfilModifierPage() {
 
       <div className="rounded-card border border-outline-variant bg-surface-container-lowest p-5 md:p-6">
         <ProfilForm
+          afficherTypeOrganisation={porteUnType(row) || demandeOuverte?.categorie === "partenaire"}
           initial={{
             prenom: row.prenom ?? "",
             nom: row.nom ?? "",
             organisation: row.organisation ?? "",
+            type_organisation: row.type_organisation ?? "",
             specialite: row.specialite ?? "",
             pays: row.pays ?? "",
             ville: row.ville ?? "",

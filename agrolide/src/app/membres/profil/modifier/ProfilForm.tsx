@@ -16,12 +16,14 @@ import { updateProfil } from "@/app/actions/profil"
 import { FORMATS_PHOTO, PhotoProfilEditeur, POIDS_MAX_ORIGINE } from "@/components/modules/profil/PhotoProfilEditeur"
 import { CENTRES_INTERET_GROUPES, LANGUES, PAYS, PAYS_AUTRE, THEMATIQUES } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
+import { TypeOrganisationChamp } from "@/components/modules/profil/TypeOrganisationChamp"
 
 import { Camera, Save, Trash2 } from "@/components/ui/icons"
 export interface ProfilInitial {
   prenom: string
   nom: string
   organisation: string
+  type_organisation: string
   specialite: string
   pays: string
   ville: string
@@ -44,7 +46,7 @@ const avecExistantes = (proposees: readonly string[], choisies: string[]) => [
   ...choisies.filter((c) => !proposees.includes(c)),
 ]
 
-export function ProfilForm({ initial }: { initial: ProfilInitial }) {
+export function ProfilForm({ initial, afficherTypeOrganisation = false }: { initial: ProfilInitial; afficherTypeOrganisation?: boolean }) {
   const router = useRouter()
   const { toast } = useToast()
   const fileInputRef = React.useRef<HTMLInputElement>(null)
@@ -213,6 +215,9 @@ export function ProfilForm({ initial }: { initial: ProfilInitial }) {
         <FormField label="Métier ou fonction" id="champ-specialite" error={erreurs.specialite} hint="Ce que vous faites, avec vos mots (par exemple : ingénieur agronome, éleveur de volaille).">
           <Input value={valeurs.specialite} onChange={(e) => maj("specialite", e.target.value)} maxLength={100} />
         </FormField>
+        {afficherTypeOrganisation && (
+          <TypeOrganisationChamp valeur={valeurs.type_organisation} onChange={(t) => maj("type_organisation", t)} erreur={erreurs.type_organisation} />
+        )}
         <div className="grid gap-4 sm:grid-cols-2">
           <FormField label="Entreprise ou organisation" id="champ-organisation" error={erreurs.organisation}>
             <Input value={valeurs.organisation} onChange={(e) => maj("organisation", e.target.value)} autoComplete="organization" maxLength={120} />

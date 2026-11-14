@@ -514,6 +514,10 @@ export const users = sqliteTable("user", {
   annuaire_visible: integer("annuaire_visible", { mode: "boolean" }),
   biographie: text("biographie"),
   categorie: text("categorie"),
+  // Compte de l'organisation elle-même (ex. le compte « agrolide ») : affiche « Organisation » au lieu de la catégorie technique.
+  est_organisation: integer("est_organisation", { mode: "boolean" }).default(false),
+  // Type d'organisation (Partenaire ou compte organisation) : valeur de la liste proposée ou saisie libre.
+  type_organisation: text("type_organisation"),
   langues: text("langues"),
   linkedin_url: text("linkedin_url"),
   newsletter_brevo: integer("newsletter_brevo", { mode: "boolean" }),

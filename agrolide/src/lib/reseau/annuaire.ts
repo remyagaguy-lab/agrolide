@@ -80,6 +80,8 @@ export const SELECT_CARTE = {
   pays: users.pays,
   ville: users.ville,
   categorie: users.categorie,
+  est_organisation: users.est_organisation,
+  type_organisation: users.type_organisation,
   secteurs_expertise: users.secteurs_expertise,
   ouvert_contact: users.ouvert_contact,
 }
@@ -94,6 +96,8 @@ export type LigneCarte = {
   pays: string | null
   ville: string | null
   categorie: string | null
+  est_organisation: boolean | null
+  type_organisation: string | null
   secteurs_expertise: string | null
   ouvert_contact: boolean | null
 }
@@ -108,6 +112,8 @@ export const carte = (r: LigneCarte, state: ConnectionState, connectionId: strin
   pays: r.pays,
   ville: r.ville,
   categorie: r.categorie,
+  est_organisation: r.est_organisation,
+  type_organisation: r.type_organisation,
   thematiques: parseList(r.secteurs_expertise),
   ouvert_contact: r.ouvert_contact,
   state,

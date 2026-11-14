@@ -6,7 +6,7 @@ import { and, eq, inArray } from 'drizzle-orm'
 import { auth } from '@/lib/auth/server'
 import { revalidatePath } from 'next/cache'
 import { z } from 'zod'
-import { PAYS, PAYS_AUTRE, THEMATIQUES, ecrireLangues, parseList } from '@/lib/reseau/profil'
+import { PAYS, PAYS_AUTRE, THEMATIQUES, ecrireLangues, parseList, porteUnType } from '@/lib/reseau/profil'
 import { profilSchema } from '@/lib/reseau/profil-schema'
 import { CATEGORIES_ADHESION, libelleCategorie, type CategorieAdhesion } from '@/lib/adhesion'
 import type { ModeChangement } from '@/lib/categorie'
@@ -41,11 +41,26 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
   const v = parsed.data
 
   const [actuel] = await db
-    .select({ pays: users.pays, secteurs_expertise: users.secteurs_expertise })
+    .select({ pays: users.pays, secteurs_expertise: users.secteurs_expertise, categorie: users.categorie, est_organisation: users.est_organisation })
     .from(users)
     .where(eq(users.id, userId))
     .limit(1)
   if (!actuel) return { success: false, error: 'Profil introuvable.' }
+
+  // Le type d'organisation n'existe que pour un Partenaire (ou une demande Partenaire en attente) et le compte organisation.
+  let peutTypeOrganisation = porteUnType(actuel)
+  if (!peutTypeOrganisation) {
+    try {
+      const [demande] = await db
+        .select({ id: demandes_categorie.id })
+        .from(demandes_categorie)
+        .where(and(eq(demandes_categorie.user_id, userId), eq(demandes_categorie.categorie_demandee, 'partenaire'), inArray(demandes_categorie.statut, ['en_attente', 'programmee'])))
+        .limit(1)
+      peutTypeOrganisation = !!demande
+    } catch {
+      peutTypeOrganisation = false
+    }
+  }
 
   const champs: Record<string, string> = {}
   const paysOk = !v.pays || v.pays === PAYS_AUTRE || (PAYS as readonly string[]).includes(v.pays) || v.pays === actuel.pays
@@ -61,6 +76,7 @@ export async function updateProfil(payload: unknown): Promise<ResultatProfil> {
       prenom: v.prenom,
       nom: v.nom,
       organisation: vide(v.organisation),
+      ...(peutTypeOrganisation ? { type_organisation: vide(v.type_organisation) } : {}),
       specialite: vide(v.specialite),
       pays: vide(v.pays),
       ville: vide(v.ville),

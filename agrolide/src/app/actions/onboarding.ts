@@ -9,6 +9,7 @@ import { estCategorie, libelleCategorie } from "@/lib/adhesion"
 import { demandeValidation } from "@/lib/categorie"
 import { appliquerChangement, notifierAdminsDemandeCategorie } from "@/lib/categorie.server"
 import { notifier } from "@/lib/notifications.server"
+import { typeOrganisationSchema } from "@/lib/reseau/profil-schema"
 
 export async function submitOnboarding(formData: FormData) {
   try {
@@ -34,6 +35,17 @@ export async function submitOnboarding(formData: FormData) {
       return { success: false, error: "Catégorie invalide." }
     }
     
+    // Partenaire : le type d'organisation est demandé (liste proposée ou saisie libre) ; les autres catégories n'en ont pas.
+    let typeOrganisation: string | null = null
+    if (categorie === 'partenaire') {
+      const saisi = String(formData.get("type_organisation") ?? "").trim()
+      const ok = typeOrganisationSchema.safeParse(saisi)
+      if (!ok.success) {
+        return { success: false, error: saisi ? "Type d'organisation : " + ok.error.issues[0].message : "Choisissez le type de votre organisation (association, ONG, coopérative, autre…)." }
+      }
+      typeOrganisation = ok.data
+    }
+
     if (!pays || !ville) {
       return { success: false, error: "Le pays et la ville sont obligatoires." }
     }
@@ -44,6 +56,7 @@ export async function submitOnboarding(formData: FormData) {
         categorie: estCategorie(categorie) && demandeValidation(categorie) ? "professionnel" : categorie,
         biographie: biographie || null,
         specialite: specialite || null,
+        type_organisation: typeOrganisation,
         pays: pays,
         ville: ville,
         updated_at: new Date().toISOString()

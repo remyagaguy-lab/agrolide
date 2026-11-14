@@ -45,6 +45,8 @@ export interface MemberSummary {
   pays: string | null
   ville: string | null
   categorie: string | null
+  est_organisation?: boolean | null
+  type_organisation?: string | null
   thematiques: string[]
   /** `false` = le membre ne souhaite pas recevoir d'invitations ; `null`/`true` = ouvert (décision D2). */
   ouvert_contact: boolean | null
@@ -64,7 +66,44 @@ export function displayName(m: { prenom?: string | null; nom?: string | null }) 
 }
 
 export function categorieLabel(value: string | null | undefined) {
+  if ((value ?? '').toLowerCase() === CATEGORIE_ORGANISATION) return 'Organisation'
   return CATEGORIES.find((c) => c.value === (value ?? '').toLowerCase())?.label ?? null
+}
+
+/**
+ * Valeur d'affichage « Organisation » : jamais une catégorie d'adhésion (pas de cotisation, pas de choix à l'inscription,
+ * pas dans le filtre de l'annuaire). Elle ne sert qu'à l'étiquette d'un compte marqué `est_organisation`.
+ */
+export const CATEGORIE_ORGANISATION = 'organisation'
+
+/** Types d'organisation courants proposés aux Partenaires ; « Autre » ouvre une saisie libre. */
+export const TYPES_ORGANISATION = [
+  'Entreprise',
+  'Association',
+  'ONG',
+  'Coopérative',
+  'Organisation paysanne',
+  'Institution publique',
+  'Centre de recherche',
+  'Établissement de formation',
+  'Institution financière',
+] as const
+
+export const TYPE_ORGANISATION_AUTRE = 'Autre'
+
+/** Seules les organisations (Partenaires et compte du réseau) portent un type d'organisation. */
+export function porteUnType(m: { categorie?: string | null; est_organisation?: boolean | null }): boolean {
+  return !!m.est_organisation || (m.categorie ?? '').toLowerCase() === 'partenaire'
+}
+
+/** Catégorie à afficher en badge : « organisation » pour le compte du réseau, sinon la catégorie d'adhésion. */
+export function categorieAffichee(m: { categorie?: string | null; est_organisation?: boolean | null }): string | null {
+  return m.est_organisation ? CATEGORIE_ORGANISATION : (m.categorie ?? null)
+}
+
+/** Second badge : type d'organisation, seulement pour une organisation et si renseigné. */
+export function typeOrganisationAffiche(m: { categorie?: string | null; est_organisation?: boolean | null; type_organisation?: string | null }): string | null {
+  return porteUnType(m) ? m.type_organisation?.trim() || null : null
 }
 
 /** Lit une liste stockée en JSON (`["a","b"]`) ou en texte séparé par des virgules. */

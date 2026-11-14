@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
-import { categorieLabel, lireLangues, parseList, safeExternalUrl } from "@/lib/reseau/profil"
+import { categorieAffichee, categorieLabel, lireLangues, typeOrganisationAffiche, parseList, safeExternalUrl } from "@/lib/reseau/profil"
 import { completionProfil } from "@/lib/reseau/profil-schema"
 import { Anneau } from "@/components/brand"
 import { Avatar } from "@/components/ui/Avatar"
@@ -18,6 +18,8 @@ export interface ProfilAffiche {
   specialite: string | null
   organisation: string | null
   categorie: string | null
+  est_organisation?: boolean | null
+  type_organisation?: string | null
   ville: string | null
   pays: string | null
   biographie: string | null
@@ -95,7 +97,8 @@ export function ProfilView({ profile }: { profile: ProfilAffiche }) {
             <h2 className="text-headline-sm font-bold text-on-surface">{nom}</h2>
             {profile.specialite ? <p className="mt-1 text-body-lg text-on-surface-variant">{profile.specialite}</p> : null}
             <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
-              {profile.categorie ? <Badge variant="brand">{categorieLabel(profile.categorie)}</Badge> : null}
+              {profile.categorie ? <Badge variant="brand">{categorieLabel(categorieAffichee(profile))}</Badge> : null}
+              {typeOrganisationAffiche(profile) ? <Badge variant="category">{typeOrganisationAffiche(profile)}</Badge> : null}
               {profile.organisation ? (
                 <span className="inline-flex items-center gap-1.5 text-body-md text-on-surface-variant">
                   <Briefcase className="size-4" aria-hidden /> {profile.organisation}

@@ -49,10 +49,15 @@ const listeLibre = (max: number, libelle: string) =>
     .max(max, `${libelle} : ${max} choix au maximum.`)
     .transform((l) => Array.from(new Map(l.map((v) => [v.toLowerCase(), v])).values()))
 
+/** Type d'organisation saisi (non vide) : texte court, sans balise ni symbole étrange. */
+export const typeOrganisationSchema = valeurLibre
+
 export const profilSchema = z.object({
   prenom: z.string().trim().min(2, 'Le prénom est requis (2 caractères au minimum).').max(60, 'Prénom : 60 caractères au maximum.'),
   nom: z.string().trim().min(2, 'Le nom est requis (2 caractères au minimum).').max(60, 'Nom : 60 caractères au maximum.'),
   organisation: texte(120, 'Organisation'),
+  // Type d'organisation (liste proposée ou saisie libre) ; ignoré côté serveur hors Partenaire et compte organisation.
+  type_organisation: z.union([valeurLibre, z.literal('')]).optional().default(''),
   specialite: texte(100, 'Spécialité'),
   pays: texte(60, 'Pays'),
   ville: texte(80, 'Ville'),

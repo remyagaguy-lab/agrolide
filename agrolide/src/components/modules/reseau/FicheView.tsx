@@ -5,7 +5,7 @@ import { Sillons } from '@/components/brand'
 import { Avatar } from '@/components/ui/Avatar'
 import { Badge, type BadgeVariant } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import { categorieLabel, displayName, safeExternalUrl } from '@/lib/reseau/profil'
+import { categorieAffichee, categorieLabel, displayName, safeExternalUrl, typeOrganisationAffiche } from '@/lib/reseau/profil'
 import type { Fiche } from '@/lib/reseau/fiche'
 import { ConnectionActions } from './ConnectionActions'
 import { MembreActionsMenu } from './MembreActionsMenu'
@@ -16,7 +16,8 @@ const categoryVariant = (c: string | null): BadgeVariant => {
   switch ((c ?? '').toLowerCase()) {
     case 'junior': return 'junior'
     case 'professionnel': return 'professionnel'
-    case 'partenaire': return 'partenaire'
+    case 'partenaire':
+    case 'organisation': return 'partenaire'
     case 'senior': return 'senior'
     default: return 'neutral'
   }
@@ -64,7 +65,9 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
   const { membre, estMoi, state, communs, relationsCommunes, proches } = fiche
   const name = displayName(membre)
   const prenom = membre.prenom?.trim() || name
-  const category = categorieLabel(membre.categorie)
+  const categorieBadge = categorieAffichee(membre)
+  const category = categorieLabel(categorieBadge)
+  const typeOrg = typeOrganisationAffiche(membre)
   const place = [membre.ville, membre.pays].filter(Boolean).join(', ')
 
   // Liens externes : visibles par le propriétaire et par ses relations seulement (règles de visibilité, §6.2).
@@ -93,7 +96,8 @@ export function FicheView({ fiche }: { fiche: Fiche }) {
             <div className="min-w-0 space-y-2">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <h1 className="text-headline-sm font-bold text-on-surface md:text-headline-md">{name}</h1>
-                {category && <Badge variant={categoryVariant(membre.categorie)}>{category}</Badge>}
+                {category && <Badge variant={categoryVariant(categorieBadge)}>{category}</Badge>}
+                {typeOrg && <Badge variant="category">{typeOrg}</Badge>}
               </div>
               <ul className="flex flex-col gap-x-5 gap-y-1 text-body-md text-on-surface-variant sm:flex-row sm:flex-wrap">
                 {(membre.specialite || membre.organisation) && (

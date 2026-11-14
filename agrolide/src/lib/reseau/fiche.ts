@@ -26,6 +26,8 @@ export interface FicheMembre {
   pays: string | null
   ville: string | null
   categorie: string | null
+  est_organisation: boolean | null
+  type_organisation: string | null
   biographie: string | null
   thematiques: string[]
   centres_interet: string[]
@@ -99,6 +101,8 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
       pays: users.pays,
       ville: users.ville,
       categorie: users.categorie,
+      est_organisation: users.est_organisation,
+      type_organisation: users.type_organisation,
       biographie: users.biographie,
       secteurs_expertise: users.secteurs_expertise,
       centres_interet: users.centres_interet,
@@ -129,6 +133,8 @@ export async function fetchFiche(viewerId: string, id: string): Promise<Fiche | 
     pays: row.pays,
     ville: row.ville,
     categorie: row.categorie,
+    est_organisation: row.est_organisation,
+    type_organisation: row.type_organisation,
     biographie: row.biographie,
     thematiques: parseList(row.secteurs_expertise),
     centres_interet: parseList(row.centres_interet),

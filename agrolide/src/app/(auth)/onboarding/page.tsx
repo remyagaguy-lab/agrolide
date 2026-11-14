@@ -10,6 +10,7 @@ import { FormField } from '@/components/ui/FormField'
 import { Input } from '@/components/ui/Input'
 import { NativeSelect } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
+import { TypeOrganisationChamp } from '@/components/modules/profil/TypeOrganisationChamp'
 import { cn } from '@/lib/utils/formatters'
 
 import { CheckCircle2, UserRound, Building2, Briefcase, GraduationCap, Heart } from "@/components/ui/icons"
@@ -28,6 +29,7 @@ export default function OnboardingPage() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [categorie, setCategorie] = useState('professionnel')
+  const [typeOrganisation, setTypeOrganisation] = useState('')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -36,6 +38,7 @@ export default function OnboardingPage() {
 
     const formData = new FormData(e.currentTarget)
     formData.set('categorie', categorie)
+    formData.set('type_organisation', categorie === 'partenaire' ? typeOrganisation : '')
 
     const res = await submitOnboarding(formData)
 
@@ -91,6 +94,10 @@ export default function OnboardingPage() {
             })}
           </div>
         </fieldset>
+
+        {categorie === 'partenaire' && (
+          <TypeOrganisationChamp valeur={typeOrganisation} onChange={setTypeOrganisation} required />
+        )}
 
         <FormField label="Spécialité / Fonction">
           <Input name="specialite" type="text" placeholder="Ex : ingénieur agronome, consultant…" />
