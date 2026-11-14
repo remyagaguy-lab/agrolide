@@ -26,7 +26,7 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
   const isExpired = opp.date_limite && new Date(opp.date_limite) < new Date()
 
   return (
-    <div className={`group bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
+    <div className={`group relative bg-surface-container-lowest border border-outline-variant rounded-2xl shadow-sm hover:border-primary hover:shadow-md transition-all flex flex-col h-full overflow-hidden ${isExpired ? 'opacity-60 grayscale-[0.3]' : ''}`}>
       <div className="p-5 flex-grow">
         <div className="flex justify-between items-start mb-3">
           <span className="bg-primary-container text-primary border border-outline-variant px-2 py-0.5 rounded text-label-sm font-bold uppercase tracking-wider">
@@ -40,7 +40,10 @@ export default function OpportunityCard({ opp }: OpportunityCardProps) {
         </div>
         
         <h3 className="text-sm font-bold text-on-surface mb-2 group-hover:text-primary transition-colors leading-snug">
-          {opp.titre}
+          {/* Lien étiré : toute la carte est cliquable et mène à la page de lecture. */}
+          <Link href={`${base}/${opp.id}`} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none">
+            {opp.titre}
+          </Link>
         </h3>
         
         <p className="text-xs text-on-surface-muted line-clamp-2 mb-4">
