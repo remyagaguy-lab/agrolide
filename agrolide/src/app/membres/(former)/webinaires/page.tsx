@@ -34,7 +34,7 @@ const FILTRES: { valeur: string; libelle: string }[] = [
   { valeur: 'tous', libelle: 'Tous' },
   { valeur: 'a_venir', libelle: 'À venir' },
   { valeur: 'replay', libelle: 'Replays disponibles' },
-  { valeur: 'passe', libelle: 'Passés sans replay' },
+  { valeur: 'passe', libelle: 'Documents seuls' },
 ]
 
 const formaterDate = (iso: string) =>
@@ -80,6 +80,8 @@ export default async function WebinairesPage(props: { searchParams: Promise<{ [c
         }
       }),
     ]
+    // Une séance passée sans replay ni document n'a rien à offrir : on ne l'affiche pas.
+    seances = seances.filter((s) => s.statut === 'a_venir' || s.statut === 'replay' || s.documentId)
     // À venir d'abord (le plus proche en premier), puis les séances passées, la plus récente en premier.
     seances.sort((a, b) => {
       if ((a.statut === 'a_venir') !== (b.statut === 'a_venir')) return a.statut === 'a_venir' ? -1 : 1

@@ -104,6 +104,15 @@ export function DocumentFiche({
                 {document.pays ? <Repere Icone={MapPin}>{document.pays}</Repere> : null}
               </ul>
 
+              {webinaire && (
+          <p className="mt-6 text-body-md text-on-surface-variant">
+            Diaporama du webinaire :{' '}
+            <Link href={`${mode === 'membre' ? '/membres' : ''}/evenements/${webinaire.id}`} className="font-semibold text-primary underline">
+                    {webinaire.titre}
+            </Link>
+          </p>
+        )}
+
               <h2 className="mt-8 text-title-md font-bold text-on-surface">Résumé</h2>
               <p className="mt-3 whitespace-pre-line text-body-lg leading-[1.8] text-on-surface-variant">
                 {document.resume || 'Aucun résumé disponible pour ce document.'}
@@ -156,15 +165,6 @@ export function DocumentFiche({
             </section>
           )}
         </div>
-
-        {webinaire && (
-          <p className="text-body-md text-on-surface-variant lg:col-span-full">
-            Diaporama du webinaire :{' '}
-            <Link href={`${mode === 'membre' ? '/membres' : ''}/evenements/${webinaire.id}`} className="font-semibold text-primary underline">
-              {webinaire.titre}
-            </Link>
-          </p>
-        )}
 
         {/* Encart : repères et gestes (reste visible en défilant) */}
         <aside className="space-y-4 lg:sticky lg:top-6 lg:self-start">
