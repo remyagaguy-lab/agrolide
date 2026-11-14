@@ -6,7 +6,7 @@ import { validateOpportunity, rejectOpportunity, deleteOpportunityAdmin } from '
 import SubmitOpportunityModal from '@/components/modules/opportunites/SubmitOpportunityModal'
 import { OpportunityDetailsModal } from '@/components/modules/admin/OpportunityDetailsModal'
 
-import { CheckCircle2, XCircle, Clock, Eye, Trash2, Loader2, Plus } from "@/components/ui/icons"
+import { CheckCircle2, XCircle, Clock, Eye, Trash2, Loader2, Plus, Bell } from "@/components/ui/icons"
 export const dynamic = 'force-dynamic';
 
 export default function AdminOpportunitesPage() {
@@ -70,6 +70,24 @@ export default function AdminOpportunitesPage() {
       await deleteOpportunityAdmin(id)
       setOpportunites(opps => opps.filter(o => o.id !== id))
       alert("L'opportunité a été supprimée.")
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    } finally {
+      setProcessing(null)
+    }
+  }
+
+  const handleAlerte = async (opp: any) => {
+    if (!window.confirm(`Envoyer maintenant l'alerte « Nouvelle opportunité » sur les appareils des membres qui l'ont activée ?
+
+${opp.titre}
+
+L'envoi est réel et ne peut pas être annulé.`)) return
+    setProcessing(opp.id)
+    try {
+      const { envoyerAlertePush } = await import('@/app/actions/admin-alertes-push')
+      const r = await envoyerAlertePush('opportunite', opp.id)
+      alert(r.message)
     } catch (err: any) {
       alert("Erreur: " + err.message)
     } finally {
@@ -150,6 +168,17 @@ export default function AdminOpportunitesPage() {
                           <Eye className="size-4" />
                         </button>
                         
+                        {opp.statut === 'publie' && (
+                          <button
+                            onClick={() => handleAlerte(opp)}
+                            disabled={processing === opp.id}
+                            className="p-2 text-on-surface-muted hover:text-primary bg-surface-container-low hover:bg-surface-container rounded-lg transition-colors"
+                            title="Envoyer l'alerte sur les appareils"
+                          >
+                            {processing === opp.id ? <Loader2 className="size-4 animate-spin" /> : <Bell className="size-4" />}
+                          </button>
+                        )}
+
                         {(opp.statut === 'en_attente' || opp.statut === 'rejete') && (
                           <button 
                             onClick={() => handleDelete(opp.id)}

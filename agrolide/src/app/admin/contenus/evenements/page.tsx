@@ -6,7 +6,7 @@ import EventForm from '@/components/modules/admin/EventForm'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
 
-import { Plus, Pencil, Trash2, CalendarDays, Globe, MapPin, Users } from "@/components/ui/icons"
+import { Plus, Pencil, Trash2, CalendarDays, Globe, MapPin, Users, Bell } from "@/components/ui/icons"
 export default function AdminEvenementsPage() {
   const [events, setEvents] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
@@ -37,6 +37,21 @@ export default function AdminEvenementsPage() {
       const { deleteAdminEvenement } = await import('@/app/actions/admin-evenements')
       await deleteAdminEvenement(id)
       fetchEvents()
+    } catch (err: any) {
+      alert("Erreur: " + err.message)
+    }
+  }
+
+  const handleAlerte = async (evt: any) => {
+    if (!window.confirm(`Envoyer maintenant l'alerte « Nouvel événement » sur les appareils des membres qui l'ont activée ?
+
+${evt.titre}
+
+L'envoi est réel et ne peut pas être annulé.`)) return
+    try {
+      const { envoyerAlertePush } = await import('@/app/actions/admin-alertes-push')
+      const r = await envoyerAlertePush('evenement', evt.id)
+      alert(r.message)
     } catch (err: any) {
       alert("Erreur: " + err.message)
     }
@@ -141,6 +156,11 @@ export default function AdminEvenementsPage() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
+                        {evt.publie && new Date(evt.date_fin || evt.date_debut).getTime() > Date.now() && (
+                          <button onClick={() => handleAlerte(evt)} className="p-2 text-on-surface-muted hover:text-primary hover:bg-surface-container rounded-lg transition-colors" title="Envoyer l'alerte sur les appareils">
+                            <Bell className="size-4" />
+                          </button>
+                        )}
                         <button onClick={() => handleEdit(evt)} className="p-2 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors" title="Modifier">
                           <Pencil className="size-4" />
                         </button>
