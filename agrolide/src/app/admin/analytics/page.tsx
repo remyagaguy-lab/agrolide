@@ -2,6 +2,7 @@ import { db } from "@/db"
 import { users, documents } from "@/db/schema"
 import { asc } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
+import { exigerSuperAdmin } from "@/lib/auth/roles"
 import { redirect } from "next/navigation"
 import { AdminLineChart } from "@/components/admin/ChartsWrapper"
 
@@ -10,6 +11,7 @@ export const metadata = { title: "Analytiques" }
 export const dynamic = 'force-dynamic'
 
 export default async function AdminAnalyticsPage() {
+  await exigerSuperAdmin()
   const { userId } = await auth()
   if (!userId) redirect("/login")
 

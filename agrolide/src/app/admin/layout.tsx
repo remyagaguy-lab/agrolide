@@ -40,6 +40,8 @@ export default async function AdminLayout({ children }: { children: React.ReactN
 
   const headersList = await headers()
   const pathname = headersList.get("x-pathname") || ""
+  // Super administrateur : supervision complète. Administrateur : le réseau au quotidien (sans paiements, analytics, outils techniques).
+  const estSuper = isSuperAdminEmail || profile?.role_plateforme === "super_admin"
 
   const isActive = (href: string) => pathname.startsWith(href)
 
@@ -63,19 +65,19 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       <aside className="w-[240px] bg-inverse-surface text-inverse-on-surface flex flex-col shrink-0 overflow-y-auto">
         <div className="h-16 flex items-center px-6 border-b border-inverse-surface shrink-0">
           <span className="font-heading font-bold text-xl text-inverse-primary">
-            agrolide <span className="text-on-surface-brand text-sm font-normal">ADMIN</span>
+            agrolide <span className="text-on-surface-brand text-sm font-normal">{estSuper ? "SUPER ADMIN" : "ADMIN"}</span>
           </span>
         </div>
         
         <nav className="flex-1 py-4 px-3 space-y-0.5">
-          {navLink("/admin/dashboard", "Dashboard", LayoutDashboard)}
+          {navLink("/admin/dashboard", estSuper ? "Dashboard" : "Tableau de bord", LayoutDashboard)}
           
           <div className="pt-4 pb-1 px-3">
             <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Membres</p>
           </div>
           {navLink("/admin/membres", "Gestion membres", Users)}
           {navLink("/admin/signalements", "Signalements", ShieldAlert)}
-          {navLink("/admin/paiements", "Paiements", CreditCard)}
+          {estSuper && navLink("/admin/paiements", "Paiements", CreditCard)}
 
           <div className="pt-4 pb-1 px-3">
             <p className="text-label-sm font-semibold text-on-surface-muted uppercase tracking-widest">Contenu</p>
@@ -101,7 +103,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           </div>
           {navLink("/admin/pages", "Pages statiques", Globe)}
           {navLink("/admin/agrobusiness", "Agrobusiness", FolderOpen)}
-          {navLink("/admin/analytics", "Analytiques", LayoutDashboard)}
+          {estSuper && navLink("/admin/analytics", "Analytiques", LayoutDashboard)}
         </nav>
       </aside>
 
@@ -109,7 +111,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
         <header className="h-16 bg-surface-container-lowest border-b border-outline-variant flex items-center justify-between px-8 shrink-0">
           <h2 className="font-semibold text-on-surface">Panneau d'administration</h2>
           <div className="flex items-center gap-4">
-            <ClearCacheButton />
+            {estSuper && <ClearCacheButton />}
             <Link 
               href="/" target="_blank"
               className="flex items-center gap-2 text-sm font-medium text-success hover:text-on-success-container transition-colors bg-success-container px-3 py-1.5 rounded-md"

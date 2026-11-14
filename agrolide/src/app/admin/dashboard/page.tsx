@@ -1,4 +1,6 @@
 import { auth } from "@/lib/auth/server"
+import { roleAdmin } from "@/lib/auth/roles"
+import { TableauDeBordReseau } from "@/components/admin/TableauDeBordReseau"
 import { redirect } from "next/navigation"
 import { db } from "@/db"
 import { users, articles, documents, cotisations, contributions, opportunites, evenements, inscriptions_formation, formations, forum_messages } from "@/db/schema"
@@ -65,6 +67,9 @@ const statutColors: Record<string, string> = {
 export default async function AdminDashboardPage() {
   const { userId } = await auth()
   if (!userId) redirect("/login")
+
+  // L'administrateur du réseau a son tableau de bord ; celui-ci (chiffres, revenus) est celui du super administrateur.
+  if ((await roleAdmin()) === 'admin') return <TableauDeBordReseau />
 
   const now = new Date()
   const firstDayOfMonth = new Date(now.getFullYear(), now.getMonth(), 1).toISOString()

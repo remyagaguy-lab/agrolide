@@ -4,6 +4,7 @@ import { db } from "@/db"
 import { users, cotisations, demandes_categorie } from "@/db/schema"
 import { eq, desc, inArray, like, or, and, count } from "drizzle-orm"
 import { MembresTable } from "./MembresTable"
+import { roleAdmin } from "@/lib/auth/roles"
 import Link from "next/link"
 import { Users, UserCog } from "@/components/ui/icons"
 export const metadata = { title: "Gestion des membres" }
@@ -108,6 +109,7 @@ export default async function AdminMembresPage({
         page={page}
         perPage={PER_PAGE}
         searchParams={params}
+        superAdmin={(await roleAdmin()) === "super_admin"}
       />
     </div>
   )

@@ -4,12 +4,14 @@ import { desc, gte, lte, eq, and } from "drizzle-orm"
 import { auth } from "@/lib/auth/server"
 import { redirect } from "next/navigation"
 import RappelButton from "./RappelButton"
+import { exigerSuperAdmin } from "@/lib/auth/roles"
 
 import { CreditCard, AlertTriangle, Clock } from "@/components/ui/icons"
 export const metadata = { title: "Paiements & Cotisations" }
 export const dynamic = 'force-dynamic'
 
 export default async function AdminPaiementsPage() {
+  await exigerSuperAdmin()
   const { userId } = await auth()
   if (!userId) redirect("/login")
 

@@ -15,7 +15,7 @@ export async function PATCH(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const admin = await requireAdmin()
+  const admin = await requireAdmin(['super_admin'])
   if (!admin.ok) return admin.response
 
   const { id } = await params

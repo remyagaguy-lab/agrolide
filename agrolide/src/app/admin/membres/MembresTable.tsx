@@ -37,9 +37,11 @@ interface Props {
   page: number
   perPage: number
   searchParams: { q?: string; categorie?: string; statut?: string; pays?: string }
+  /** Suspension, promotion et export : réservés au super administrateur. */
+  superAdmin?: boolean
 }
 
-export function MembresTable({ membres, total, page, perPage, searchParams }: Props) {
+export function MembresTable({ membres, total, page, perPage, searchParams, superAdmin = false }: Props) {
   const router = useRouter()
   const [isPending, startTransition] = useTransition()
   const [actionLoading, setActionLoading] = useState<string | null>(null)
@@ -148,14 +150,14 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
               <X size={16} /> Réinitialiser
             </button>
           )}
-          <div className="ml-auto">
+          {superAdmin && <div className="ml-auto">
             <button
               onClick={exportCSV}
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-on-primary bg-primary rounded-lg hover:bg-primary/90 transition-colors"
             >
               <Download size={16} /> Export CSV
             </button>
-          </div>
+          </div>}
         </div>
       </div>
 
@@ -229,7 +231,7 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                       >
                         <Eye size={16} />
                       </a>
-                      {m.statut_adhesion !== "actif" ? (
+                      {superAdmin && (m.statut_adhesion !== "actif" ? (
                         <button
                           onClick={() => setConfirmDialog({ id: m.id, action: "activer", label: `Activer le compte de ${m.prenom} ${m.nom} ?` })}
                           className="p-1.5 text-on-surface-muted hover:text-success hover:bg-success-container rounded-lg transition-colors"
@@ -247,15 +249,15 @@ export function MembresTable({ membres, total, page, perPage, searchParams }: Pr
                         >
                           <Ban size={16} />
                         </button>
-                      )}
-                      <button
+                      ))}
+                      {superAdmin && <button
                         onClick={() => setConfirmDialog({ id: m.id, action: "admin", label: `Promouvoir ${m.prenom} ${m.nom} comme administrateur de contenu ?` })}
                         className="p-1.5 text-on-surface-muted hover:text-info hover:bg-info-container rounded-lg transition-colors"
                         title="Promouvoir admin"
                         disabled={!!actionLoading}
                       >
                         <ShieldCheck size={16} />
-                      </button>
+                      </button>}
                     </div>
                   </td>
                 </tr>

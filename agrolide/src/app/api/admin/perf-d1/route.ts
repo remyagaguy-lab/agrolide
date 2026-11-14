@@ -24,7 +24,7 @@ const resume = (valeurs: number[]) => ({
 })
 
 export async function GET(request: Request) {
-  const admin = await requireAdmin()
+  const admin = await requireAdmin(['super_admin'])
   if (!admin.ok) return admin.response
 
   const jours = Math.min(Math.max(Number(new URL(request.url).searchParams.get('jours')) || 7, 1), 30)

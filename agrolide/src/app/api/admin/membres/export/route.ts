@@ -6,7 +6,7 @@ import { users } from "@/db/schema"
 import { eq, asc } from "drizzle-orm"
 
 export async function GET(request: NextRequest) {
-  const admin = await requireAdmin()
+  const admin = await requireAdmin(['super_admin'])
   if (!admin.ok) return admin.response
 
   const url = new URL(request.url)
