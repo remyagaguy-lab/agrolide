@@ -3,20 +3,23 @@ import { togo } from './togo'
 import { benin } from './benin'
 import { cote_d_ivoire } from './cote-d-ivoire'
 import { senegal } from './senegal'
+import { burkina_faso } from './burkina-faso'
+import { mali } from './mali'
+import { niger } from './niger'
 
 const aVenir = (slug: string, nom: string, devise: string, resume: string, prevuLe: string): FichePays => ({
   slug, nom, devise, resume, prevuLe, disponible: false, verifieLe: '', prochaineRevision: '', contenu: '',
 })
 
-/** Plan de publication : Togo d'abord (projet mené au Togo), puis Bénin, Côte d'Ivoire, Sénégal, puis le Sahel ; Ghana et Nigeria en anglais ensuite. */
+/** Plan de publication : Togo d'abord (projet mené au Togo), puis Bénin, Côte d'Ivoire, Sénégal, puis le Burkina Faso, le Mali et le Niger (publiés le 14/11/2026, moins détaillés). */
 export const FICHES_PAYS: FichePays[] = [
   togo,
   benin,
   cote_d_ivoire,
   senegal,
-  aVenir('burkina-faso', 'Burkina Faso', 'FCFA', 'Réforme agraire et foncière, IFU, financeurs.', '2027-01-29'),
-  aVenir('mali', 'Mali', 'FCFA', 'Foncier agricole, NIF, BNDA, financeurs.', '2027-02-19'),
-  aVenir('niger', 'Niger', 'FCFA', 'Foncier rural, NIF, BAGRI, financeurs.', '2027-02-19'),
+  burkina_faso,
+  mali,
+  niger,
 ]
 
 export const trouverFiche = (slug: string) => FICHES_PAYS.find((f) => f.slug === slug)
