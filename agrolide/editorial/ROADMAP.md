@@ -239,8 +239,8 @@ Terminé quand : un rapport mensuel propose les sujets et les mises à jour du m
 | Phase | État | Dernière mise à jour |
 |---|---|---|
 | Socle v1 (charte, registres, deux skills, `ed:check`, `ed:publier`) | Terminé | 2026-11-14 |
-| 1. Portabilité et garde-fous | À faire | |
-| 2. Formats courts | À faire | |
+| 1. Portabilité et garde-fous | Terminé côté dépôt (Antigravity non testé). Preuve : brief 02 traité par deux agents (claude-sonnet, claude-haiku), les deux passent tous les contrôles et sont comparables. `npm run ed:test` : 9 tests sur 9 | 2026-11-14 |
+| 2. Formats courts | v1 faite : posts six canaux, fiche, newsletter (procédures, jeu modèle, contrôles). Portrait sans modèle. Limites par canal à valider | 2026-11-14 |
 | 3. Rôles | À faire | |
 | 4. Site, formations, existant | À faire | |
 | 5. Formats longs | À faire | |
