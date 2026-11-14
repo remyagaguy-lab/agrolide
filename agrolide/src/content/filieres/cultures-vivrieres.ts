@@ -113,7 +113,7 @@ Vous saurez calculer si le stockage d'une partie de la récolte rapporte réelle
 ### Le prix bouge avec la saison
 Les céréales et le soja se vendent souvent moins cher juste après la récolte, quand tous les producteurs vendent en même temps, et plus cher quelques mois après. Cet écart est la raison d'être du stockage, mais **il n'est pas garanti** : il varie d'une année et d'un marché à l'autre.
 
-Relevez le prix de votre produit, sur votre marché, **à intervalles réguliers et avec la date**, pendant au moins une campagne. Une série de relevés vaut mieux qu'un prix isolé ; voyez à ce sujet la leçon sur les prix et la saisonnalité quand elle est disponible.
+Relevez le prix de votre produit, sur votre marché, **à intervalles réguliers et avec la date**, pendant au moins une campagne. Une série de relevés vaut mieux qu'un prix isolé ; voyez à ce sujet le module Prix et saisonnalité.
 
 ### Le calcul du cas
 Le cas vend le paddy à la récolte à 190 FCFA/kg. On compare avec le stockage de **40 % de la récolte** (13,0 M FCFA au prix de récolte) pendant **4 mois** :

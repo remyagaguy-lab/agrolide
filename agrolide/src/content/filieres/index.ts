@@ -9,6 +9,7 @@ import { financement } from './financement'
 import { comptabiliteFiscalite } from './comptabilite-fiscalite'
 import { impactConformite } from './impact-conformite'
 import { culturesVivrieres } from './cultures-vivrieres'
+import { prixSaisonnalite } from './prix-saisonnalite'
 
 /** Modules par filière : optionnels, hors de la séquence de 23 leçons (aucun effet sur la progression ni sur le certificat). */
 export const FILIERES: Filiere[] = [
@@ -22,6 +23,7 @@ export const FILIERES: Filiere[] = [
   financement,
   comptabiliteFiscalite,
   impactConformite,
+  prixSaisonnalite,
 ]
 
 export const trouverFiliere = (slug: string) => FILIERES.find((f) => f.slug === slug)
