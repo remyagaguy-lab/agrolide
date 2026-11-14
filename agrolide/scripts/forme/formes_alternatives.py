@@ -11,7 +11,9 @@ courbes restent des vrais arcs (jamais un cercle étiré) dans les quatre format
     portrait   400 x 500   fenêtre d'image verticale (fiche, portrait)
     paysage    600 x 400   fenêtre d'image horizontale (en-tête de fiche, pilier)
     pastille   240 x 240   chiffre ou date (jour d'événement, numéro d'étape)
-    vignette   640 x 360   grande vignette (carte article, formation à la une)
+    vignette   640 x 360   grande vignette 16:9 (carte article, formation, événement, couverture d'article)
+    bandeau    840 x 360   bandeau 21:9 (couverture large d'une fiche, bandeau d'un document dans une carte)
+    ruban      960 x 240   ruban 4:1 (bandeau teinté pleine largeur, sans photo : en-tête de la fiche d'un document)
 
 Méthode (comme les autres scripts de ce dossier : tout est calculé, rien n'est posé à la main sur la page) :
   - un tracé SVG propre (lignes, arcs de cercle ou d'ellipse, courbes de Bézier cubiques), importable tel quel
@@ -43,6 +45,8 @@ FORMATS = {
     "paysage": (600, 400),
     "pastille": (240, 240),
     "vignette": (640, 360),
+    "bandeau": (840, 360),
+    "ruban": (960, 240),
 }
 
 
@@ -388,7 +392,7 @@ def main() -> None:
                 # diamètre du plus grand cercle inscrit, en % du petit côté
                 "diametre": round(2 * d_in / min(w, h) * 100, 1),
             }
-            if fmt == "vignette":
+            if fmt in ("vignette", "bandeau", "ruban"):
                 entree["texte"] = bande_texte(p.pts, w, h)
             if "compagnon" in res:
                 c = res["compagnon"]
@@ -406,7 +410,7 @@ def main() -> None:
         "  /** Centre de gravité, en % de la boîte */\n  gravite: [number, number]\n"
         "  /** Centre du plus grand cercle inscrit (centre optique du texte), en % de la boîte */\n  inscrit: [number, number]\n"
         "  /** Diamètre du plus grand cercle inscrit, en % du petit côté */\n  diametre: number\n"
-        "  /** Vignette : plage horizontale sûre pour un titre (bande de 60 à 92 % de la hauteur), en % */\n  texte?: [number, number]\n"
+        "  /** Vignette ou bandeau : plage horizontale sûre pour un titre (bande de 60 à 92 % de la hauteur), en % */\n  texte?: [number, number]\n"
         "  compagnon?: { cx: number; cy: number; r: number }\n}\n\n"
         "export type FormeId = " + " | ".join(f"'{k}'" for k in FORMES) + "\n"
         "export type FormatId = " + " | ".join(f"'{k}'" for k in FORMATS) + "\n\n"

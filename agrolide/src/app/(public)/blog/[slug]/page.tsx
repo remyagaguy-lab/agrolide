@@ -7,6 +7,7 @@ import { db } from "@/db"
 import { articles, users } from "@/db/schema"
 import { eq, ne, and } from "drizzle-orm"
 import { ArticleCard } from "@/components/ui/ArticleCard"
+import { EncocheCadre } from "@/components/brand"
 import { Button } from "@/components/ui/Button"
 import Breadcrumb from "@/components/ui/Breadcrumb"
 import { TableOfContents } from "@/components/modules/TableOfContents"
@@ -222,19 +223,20 @@ export default async function BlogPostPage({
             {/* Colonne Droite : Image */}
             <div className="w-full">
               {article.image_une_url ? (
-                <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-surface-container shadow-sm">
+                <EncocheCadre>
                   <Image 
                     src={article.image_une_url} 
                     alt={article.titre}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                     priority
                   />
-                </div>
+                </EncocheCadre>
               ) : (
-                <div className="relative w-full aspect-video rounded-xl bg-surface-container border border-outline-variant flex items-center justify-center">
+                <EncocheCadre soleil={false} fenetreClassName="flex items-center justify-center bg-surface-container">
                   <span className="text-on-surface-muted">Image indisponible</span>
-                </div>
+                </EncocheCadre>
               )}
             </div>
           </div>

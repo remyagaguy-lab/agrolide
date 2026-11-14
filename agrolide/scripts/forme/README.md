@@ -81,13 +81,18 @@ tracé SVG propre (lignes, arcs, Bézier), échantillonné pour mesurer la part 
 ```bash
 python scripts/forme/formes_alternatives.py
 ```
-Sorties : `public/design-assets/formes-alternatives/<forme>-<format>.svg` (portrait, paysage, pastille, vignette ; `currentColor`,
+Sorties : `public/design-assets/formes-alternatives/<forme>-<format>.svg` (portrait 4:5, paysage 3:2, pastille 1:1, vignette 16:9, bandeau 21:9, ruban 4:1 ; `currentColor`,
 à ouvrir dans Illustrator ou à coller dans Photoshop), `src/app/design-system/formes/formes-alternatives.ts` (généré),
 `scripts/forme/formes-alternatives.json` (mesures). Ajouter une forme = ajouter une fonction dans `FORMES`.
 
 **Forme retenue (14/11/2026) : l'encoche solaire**, avec des pointes légèrement arrondies (raccord de 3,5 % du petit côté). Le script écrit aussi
-`src/components/brand/encoche-paths.ts` (généré), consommé par `Encoche`, `EnchochePhoto` et `EncocheBadge` (`src/components/brand/Encoche.tsx`).
+`src/components/brand/encoche-paths.ts` (généré), consommé par `Encoche`, `EnchochePhoto`, `EncocheBadge` et `EncocheCadre` (`src/components/brand/Encoche.tsx`).
 Pour retoucher la forme : changer `encoche()` puis relancer le script ; ne jamais éditer les fichiers générés.
+
+**Ajouter un rapport** (ex. une vignette 3:1) : ajouter une entrée à `FORMATS` dans `formes_alternatives.py` (largeur x hauteur ; les rayons suivent le petit côté),
+relancer le script, puis utiliser `format="..."` sur `EnchochePhoto` ou `EncocheCadre` (le type `EncocheFormatId` est régénéré). `EncocheCadre` découpe la fenêtre par un masque CSS
+construit sur le même tracé et prend le rapport exact du format : le masque n'est jamais déformé. Vignette, bandeau et ruban portent aussi `texte` (plage horizontale sûre pour un titre, en % de la largeur)
+dans `formes-alternatives.ts`. Règles d'application : `/design-system#grammaire`.
 
 ## Formes retirées (12/11/2026)
 L'emblème « plein » (silhouette, le « cercle à sillons ») et l'arche des marqueurs (dôme + sillon accolé) sont retirés du design

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import * as React from 'react'
-import { Arche, ArcheBadge, ArchPhoto, Motif } from '@/components/brand'
+import { Encoche, EncocheBadge, EnchochePhoto, Motif } from '@/components/brand'
 import { FORMES_ALTERNATIVES, type FormeId } from './formes-alternatives'
 import { FenetreForme, PastilleForme, PHOTOS, VignetteForme } from './Demo'
 
@@ -29,7 +29,7 @@ const FICHES: Fiche[] = [
     forces: ['Garde plus de 92 % de la photo.', 'La diagonale donne du mouvement sans geste décoratif.', 'Le chiffre se centre exactement : plus grand cercle inscrit de 100 % du côté.'],
     limites: [
       'Les deux coins vifs restent nets : ne pas placer un visage à moins de 8 % de ces coins.',
-      'Posée sur le bord bas d’un bandeau (comme l’arche dans l’en-tête de fiche), le coin arrondi bas droit laisse un creux : prévoir une marge ou faire déborder la forme.',
+      'Posée sur le bord bas d’un bandeau (comme l’ancienne arche dans l’en-tête de fiche), le coin arrondi bas droit laisse un creux : prévoir une marge ou faire déborder la forme.',
       'À 40 px de large, les deux coins arrondis se lisent encore comme une feuille, pas comme un carré.',
     ],
   },
@@ -62,7 +62,7 @@ const FICHES: Fiche[] = [
     nom: 'Colline',
     intention: 'Un bord supérieur en colline douce (deux paliers raccordés par une courbe en S, crête décalée à droite), coins du bas arrondis.',
     echo: 'Reprend l’horizon du pied de page et de l’en-tête d’accueil : le même vocabulaire de collines, ici à l’échelle d’un cadre.',
-    forces: ['Pose le texte naturellement sous la crête : idéale pour la grande vignette.', 'Repose à plat sur le bord bas d’un bandeau, comme l’arche actuelle.', 'Se lit tout de suite comme un paysage.'],
+    forces: ['Pose le texte naturellement sous la crête : idéale pour la grande vignette.', 'Repose à plat sur le bord bas d’un bandeau.', 'Se lit tout de suite comme un paysage.'],
     limites: [
       'La crête coupe le haut de la photo : garder les têtes sous la courbe, mauvais choix pour un portrait cadré serré.',
       'En pastille, elle se lit comme une maison ou un pentagone : à éviter pour les chiffres.',
@@ -115,7 +115,7 @@ function BandeauFiche({ fiche }: { fiche: Fiche }) {
         <div className="pb-2 md:pb-10">
           <p className="mb-3 text-label-md uppercase tracking-[0.12em] text-accent-sun">Formation</p>
           <p className="text-headline-md text-balance">Cultures maraîchères sous serre : de la plantation à la vente</p>
-          <p className="mt-4 text-body-md text-on-surface-brand/80">Simulation de l’en-tête de fiche : la fenêtre se pose sur le bord bas du bandeau, comme l’arche aujourd’hui.</p>
+          <p className="mt-4 text-body-md text-on-surface-brand/80">Simulation de l’en-tête de fiche : la fenêtre se pose sur le bord bas du bandeau.</p>
         </div>
         <div className="mx-auto w-full max-w-[420px] pb-6 md:pb-0 md:translate-y-[18%]">
           <FenetreForme forme={fiche.id} format="paysage" photo={PHOTOS.paysage} soleil={fiche.soleil} />
@@ -196,7 +196,7 @@ function Section({ fiche, rang }: { fiche: Fiche; rang: number }) {
       </div>
       <p className="mt-3 text-label-sm text-on-surface-muted">
         SVG pour Illustrator et Photoshop :{' '}
-        {(['portrait', 'paysage', 'pastille', 'vignette'] as const).map((f, i) => (
+        {(['portrait', 'paysage', 'pastille', 'vignette', 'bandeau', 'ruban'] as const).map((f, i) => (
           <React.Fragment key={f}>
             {i > 0 && ', '}
             <a className="underline" href={`/design-assets/formes-alternatives/${fiche.id}-${f}.svg`}>{f}</a>
@@ -208,34 +208,34 @@ function Section({ fiche, rang }: { fiche: Fiche; rang: number }) {
   )
 }
 
-/** Référence : l'arche actuelle, avec les vrais composants du site. */
+/** Référence : la forme retenue (encoche solaire), avec les vrais composants du site. */
 function Reference() {
   return (
-    <section id="arche-actuelle" className="scroll-mt-24 py-0">
-      <h2 className="mb-2 text-headline-md">Pour mémoire : l’arche actuelle</h2>
+    <section id="forme-retenue" className="scroll-mt-24 py-0">
+      <h2 className="mb-2 text-headline-md">Pour mémoire : la forme retenue, telle qu’elle est appliquée</h2>
       <p className="mb-5 max-w-3xl text-body-md text-on-surface-variant">
-        Le dôme de l’emblème (silhouette au-dessus de la première ligne blanche) et son ciel pour la fenêtre. Rendus avec les composants réels du site. Elle ne se décline qu’en un format très large (environ 1,7 pour 1) : en portrait, la photo reste paysage dans une fenêtre qui ne s’y prête pas.
+        L’encoche solaire avec les composants réels du site : fenêtre de photo (EnchochePhoto), couverture de carte (EncocheCadre), pastille de chiffre (EncocheBadge) et filigrane (Encoche à 7 % d’opacité). L’arche ne subsiste que comme dôme du logo et de l’emblème éclaté.
       </p>
       <div className="grid gap-5 xl:grid-cols-2">
         {(['light', 'dark'] as const).map((theme) => (
           <div key={theme} data-theme={theme} className="rounded-panel border border-outline-variant bg-surface p-5 text-on-surface">
             <p className="mb-4 text-label-md uppercase tracking-[0.12em] text-on-surface-muted">{theme === 'light' ? 'Thème clair' : 'Thème sombre'}</p>
-            <p className="mb-2 text-label-lg text-on-surface-variant">Fenêtre d’image (ArchPhoto), avec la même photo</p>
+            <p className="mb-2 text-label-lg text-on-surface-variant">Fenêtre d’image (EnchochePhoto), avec la même photo</p>
             <div className="grid grid-cols-[minmax(0,5fr)_minmax(0,7fr)] items-end gap-4">
-              <ArchPhoto src={PHOTOS.portrait.src} alt={PHOTOS.portrait.alt} cadrage={PHOTOS.portrait.cadrage} className="text-primary" />
-              <ArchPhoto src={PHOTOS.paysage.src} alt={PHOTOS.paysage.alt} className="text-primary" />
+              <EnchochePhoto src={PHOTOS.portrait.src} alt={PHOTOS.portrait.alt} cadrage={PHOTOS.portrait.cadrage} format="portrait" />
+              <EnchochePhoto src={PHOTOS.paysage.src} alt={PHOTOS.paysage.alt} />
             </div>
-            <p className="mb-2 mt-6 text-label-lg text-on-surface-variant">Pastilles de chiffre (ArcheBadge)</p>
+            <p className="mb-2 mt-6 text-label-lg text-on-surface-variant">Pastilles de chiffre (EncocheBadge)</p>
             <div className="flex flex-wrap items-end gap-4">
-              <ArcheBadge className="w-10">8</ArcheBadge>
-              <ArcheBadge className="w-14">24</ArcheBadge>
-              <ArcheBadge className="w-20">3</ArcheBadge>
-              <ArcheBadge ton="marque" className="w-10">8</ArcheBadge>
-              <ArcheBadge ton="marque" className="w-14">24</ArcheBadge>
-              <ArcheBadge ton="marque" className="w-20">3</ArcheBadge>
+              <EncocheBadge className="w-10">8</EncocheBadge>
+              <EncocheBadge className="w-14">24</EncocheBadge>
+              <EncocheBadge className="w-20">3</EncocheBadge>
+              <EncocheBadge ton="marque" className="w-10">8</EncocheBadge>
+              <EncocheBadge ton="marque" className="w-14">24</EncocheBadge>
+              <EncocheBadge ton="marque" className="w-20">3</EncocheBadge>
             </div>
-            <p className="mb-2 mt-6 text-label-lg text-on-surface-variant">Filigrane (Arche pleine à 7 % d’opacité)</p>
-            <Arche variant="plein" className="w-48 text-primary/[0.07]" />
+            <p className="mb-2 mt-6 text-label-lg text-on-surface-variant">Filigrane (Encoche à 7 % d’opacité)</p>
+            <Encoche className="w-48 text-primary/[0.07]" />
           </div>
         ))}
       </div>
@@ -244,11 +244,11 @@ function Reference() {
 }
 
 const USAGES: [string, string, string][] = [
-  ['Fenêtre d’image', 'ArchPhoto : en-tête des fiches (DetailHero : formation, événement), Qui sommes-nous (histoire), Nos actions (une photo par pilier).', 'Photo paysage, une seule par écran, posée sur le bord bas d’un bandeau vert.'],
-  ['Pastille de chiffre', 'ArcheBadge : jour dans EventCard et dans le widget d’événements du tableau de bord (40 et 56 px), numéro d’étape dans StepList (80 px).', 'Un ou deux chiffres, lisibles à 40 px, en deux tons (soleil, marque).'],
-  ['Filigrane', 'Arche pleine à 7 à 10 % d’opacité : en-tête de fiche sans visuel, fond des pages de connexion et d’inscription.', 'Grande taille, décor sans texte, doit s’effacer.'],
-  ['Pièce de l’emblème', 'Le dôme est aussi une pièce de l’emblème éclaté (EmblemEclate) et de ses SVG : c’est une partie du logo.', 'Hors périmètre : le logo ne change pas.'],
-  ['État vide', 'La propriété `arche` des états vides est un reste de nom : ils affichent déjà un soleil pâle (PlanSoleil), pas l’arche.', 'Aucun changement attendu.'],
+  ['Fenêtre d’image', 'EnchochePhoto (en-tête des fiches, Qui sommes-nous, Nos actions) et EncocheCadre (couvertures de cartes : article, formation, événement, document ; couverture de la fiche formation et de l’article).', 'Photo paysage, vignette 16:9, bandeau 21:9 ou portrait ; une seule grande fenêtre par écran, jamais de visage dans le coin.'],
+  ['Pastille de chiffre', 'EncocheBadge : jour des événements, numéro d’étape (StepList) et de module, monogramme d’un partenaire sans logo.', 'Un ou deux caractères, lisibles à 40 px, en deux tons (soleil, marque).'],
+  ['Filigrane', 'Encoche à 7 % d’opacité : en-tête de fiche sans visuel, pages de connexion et d’inscription.', 'Grande taille, décor sans texte, doit s’effacer.'],
+  ['Pièce de l’emblème', 'Le dôme (Arche) reste une pièce du logo et de l’emblème éclaté (EmblemEclate).', 'Hors périmètre : le logo ne change pas.'],
+  ['Inchangés', 'Avatars de personnes (ronds : reconnaissance du visage), affiches d’événements et logos (montrés en entier), lecteurs vidéo, captures d’écran, icônes, boutons, champs, puces de statut.', 'Une photo de visage ou une image porteuse de texte n’est jamais découpée par l’encoche.'],
 ]
 
 export default function PageFormes() {
@@ -258,15 +258,15 @@ export default function PageFormes() {
         <p className="mb-2 text-label-md uppercase tracking-[0.12em] text-on-surface-muted">Design system · page interne</p>
         <h1 className="text-display-md">Formes alternatives à l’arche</h1>
         <p className="mt-4 text-body-lg text-on-surface-variant">
-          Six propositions pour remplacer l’arche, rendues sur les usages réels du site, en thème clair et en thème sombre, avec les vraies photos et les jetons du design system.
-          <strong className="text-on-surface"> Rien n’est remplacé sur le site</strong> : cette page sert à choisir. Les tracés sont générés par un script (<code>scripts/forme/formes_alternatives.py</code>) et les SVG sont téléchargeables en bas de chaque proposition.
+          Six propositions qui étaient candidates pour remplacer l’arche, rendues sur les usages réels du site, en thème clair et en thème sombre, avec les vraies photos et les jetons du design system.
+          La page garde le comparatif pour mémoire. Les tracés sont générés par un script (<code>scripts/forme/formes_alternatives.py</code>) et les SVG sont téléchargeables en bas de chaque proposition.
         </p>
         <p className="mt-4 rounded-card border border-primary bg-primary-container p-4 text-body-md text-on-primary-container">
-          <strong>Décision du 14/11/2026 : l’encoche solaire est retenue</strong> (chiffres, fenêtres de photo et filigranes, pointes légèrement arrondies, fenêtre qui déborde du bandeau des fiches, filigrane à 7 %). Elle est migrée sur le site ; cette page garde le comparatif pour mémoire.
+          <strong>Décision du 14/11/2026 : l’encoche solaire est retenue</strong> (chiffres, fenêtres de photo et filigranes, pointes légèrement arrondies, fenêtre qui déborde du bandeau des fiches, filigrane à 7 %). Elle est appliquée partout sur le site (pages publiques, espace membre) ; règles d’usage dans /design-system#grammaire.
         </p>
         <nav aria-label="Propositions" className="mt-6 flex flex-wrap gap-2">
           <a href="#usages" className="rounded-tag border border-outline-variant px-3 py-2 text-label-lg">Usages actuels</a>
-          <a href="#arche-actuelle" className="rounded-tag border border-outline-variant px-3 py-2 text-label-lg">Arche actuelle</a>
+          <a href="#forme-retenue" className="rounded-tag border border-outline-variant px-3 py-2 text-label-lg">Forme retenue</a>
           {FICHES.map((f) => (
             <a key={f.id} href={`#${f.id}`} className="rounded-tag border border-outline-variant px-3 py-2 text-label-lg">{f.nom}</a>
           ))}
@@ -330,18 +330,9 @@ export default function PageFormes() {
         <p className="mb-6 text-label-sm text-on-surface-muted">Pourcentages mesurés par le script : part de la photo conservée (fenêtres) et diamètre du plus grand cercle inscrit en % du côté (chiffre). Les mentions qualitatives sont un jugement visuel à confirmer par le propriétaire.</p>
 
         <div className="max-w-3xl space-y-4 text-body-md">
-          <h3 className="text-title-lg">Recommandation : le Pétale</h3>
-          <p>Il couvre les quatre besoins avec une seule géométrie : fenêtre portrait et paysage (plus de 92 % de la photo), pastille de chiffre parfaitement centrée, grande vignette et filigrane. C’est aussi la forme la plus cohérente avec la marque : l’emblème contient déjà une feuille, et le pétale en est la version cadre, sans retrouver l’arche (ni la silhouette pleine retirée le 12/11/2026).</p>
-          <p>Deuxième choix si l’on veut une signature plus forte sur les visuels de grand format : l’Encoche solaire, réservée à la fenêtre des fiches (une par écran), avec le Pétale pour les pastilles et vignettes. La Colline est la meilleure vignette mais la plus risquée en portrait.</p>
-          <h3 className="pt-2 text-title-lg">Questions pour le propriétaire</h3>
-          <ol className="list-decimal space-y-2 pl-5 text-on-surface-variant">
-            <li>Quelle forme retenez-vous, ou quelle combinaison (par exemple Pétale partout, ou Pétale plus Encoche pour la fenêtre des fiches) ?</li>
-            <li>Les chiffres (jour d’événement, numéro d’étape) restent-ils dans la forme retenue, ou préférez-vous un simple disque ? La décision du 12/11/2026 réservait l’arche aux chiffres.</li>
-            <li>Dans l’en-tête des fiches, la fenêtre doit-elle toujours reposer sur le bord bas du bandeau (alors le Pétale déborde ou flotte avec une marge), ou peut-elle flotter ?</li>
-            <li>Que devient le filigrane (fiches sans visuel, connexion) : la forme retenue à 7 % d’opacité, ou le soleil pâle déjà utilisé ailleurs ?</li>
-            <li>Le dôme de l’emblème (logo et emblème éclaté) reste inchangé : confirmez-vous ?</li>
-          </ol>
-          <p className="text-body-sm text-on-surface-muted">Étape suivante, après votre choix : migrer ArchPhoto, ArcheBadge, le filigrane de DetailHero et d’AuthCard, mettre à jour /design-system#grammaire et le script de génération ; l’arche actuelle n’est supprimée qu’à ce moment-là.</p>
+          <h3 className="text-title-lg">Décision du 14/11/2026 : l’encoche solaire</h3>
+          <p>Le propriétaire a retenu l’encoche solaire pour les quatre besoins : fenêtre de photo (portrait, paysage, vignette, bandeau), pastille de chiffre ou de date, couverture de carte et filigrane. Elle conserve de 92 à 97 % de la photo et son centre optique est mesuré par le script, ce qui centre parfaitement les chiffres.</p>
+          <p>Les cinq autres propositions restent visibles ci-dessus pour mémoire, et leurs SVG téléchargeables. L’arche n’existe plus que comme dôme du logo et de l’emblème éclaté.</p>
         </div>
       </section>
     </main>

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { format } from 'date-fns'
 import { fr } from 'date-fns/locale'
-import { EncocheBadge } from '@/components/brand'
+import { EncocheBadge, EncocheCadre } from '@/components/brand'
 
 import { CalendarDays, MapPin, Globe, Users, Clock, FileText, Download, CheckCircle2, Video, Wrench, Mic } from "@/components/ui/icons"
 type Evenement = {
@@ -58,8 +58,10 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
       {event.image_url && (
         <Link 
           href={lienFiche}
-          className="w-full h-40 bg-surface-container relative cursor-pointer block"
+          className="block cursor-pointer p-3 pb-0"
         >
+          {/* Vignette en encoche : l'affiche est recadrée par le haut ; elle est montrée en entier sur la fiche. */}
+          <EncocheCadre>
           <Image 
             src={event.image_url.includes('r2.cloudflarestorage.com') ? `/api/r2-proxy?url=${encodeURIComponent(event.image_url)}` : event.image_url} 
             alt={`Affiche ${event.titre}`} 
@@ -81,6 +83,7 @@ export default function EventCard({ event, onInscrireClick, onDetailsClick, mode
               </span>
             )}
           </div>
+          </EncocheCadre>
         </Link>
       )}
       <div className="p-6 flex-grow">

@@ -4,7 +4,7 @@ import {
   TableCaption, TableCell, TableHead, TableHeader, TableRow, ToastProvider,
 } from '@/components/ui'
 import { brand, darkColors, lightColors, refPalette, type ColorRole } from '@/styles/tokens'
-import { Arche, Encoche, EnchochePhoto, Emblem, EmblemEclate, HorizonDivider, Motif } from '@/components/brand'
+import { Arche, Encoche, EncocheBadge, EncocheCadre, EnchochePhoto, Emblem, EmblemEclate, HorizonDivider, Motif } from '@/components/brand'
 import { Interactive } from './Interactive'
 import { Grammaire } from './Grammaire'
 
@@ -317,6 +317,24 @@ export default function DesignSystemPage() {
               <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><EnchochePhoto src="/hero-background.webp" alt="Une agricultrice dans une serre" className="w-44" /><code className="text-label-sm text-on-surface-muted">EnchochePhoto (fenêtre)</code></div>
               <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><Encoche className="w-44 text-primary" /><code className="text-label-sm text-on-surface-muted">Encoche (aplat, filigrane)</code></div>
               <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6"><EmblemEclate className="w-40 text-primary" /><code className="text-label-sm text-on-surface-muted">EmblemEclate</code></div>
+            </div>
+
+            <div className="mt-4 grid gap-4 md:grid-cols-3">
+              <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6">
+                <EncocheCadre format="vignette" className="w-56" fenetreClassName="bg-surface-container">
+                  <img src="/hero-background.webp" alt="Une agricultrice dans une serre" className="absolute inset-0 size-full object-cover" />
+                </EncocheCadre>
+                <code className="text-label-sm text-on-surface-muted">EncocheCadre vignette 16:9 (carte)</code>
+              </div>
+              <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6">
+                <EncocheCadre format="bandeau" className="w-56" fenetreClassName="bg-success-container text-on-success-container" />
+                <code className="text-label-sm text-on-surface-muted">EncocheCadre bandeau 21:9 (teinté)</code>
+              </div>
+              <div className="flex flex-col items-center justify-end gap-3 rounded-card border border-outline-variant bg-surface-container-lowest p-6">
+                <EncocheCadre format="ruban" className="w-56" fenetreClassName="bg-info-container text-on-info-container" />
+                <div className="flex items-end gap-3"><EncocheBadge className="w-10">8</EncocheBadge><EncocheBadge ton="marque" className="w-10">AG</EncocheBadge></div>
+                <code className="text-label-sm text-on-surface-muted">EncocheCadre ruban 4:1, EncocheBadge</code>
+              </div>
             </div>
 
             <h3 className="mb-3 mt-10 text-title-md">Motif de marque (Motif) : tuile vectorielle</h3>

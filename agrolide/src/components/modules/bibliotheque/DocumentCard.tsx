@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Sillons } from '@/components/brand'
+import { EncocheCadre } from '@/components/brand'
 import { labelType, labelDomaine } from '@/lib/bibliotheque/taxonomie'
 
 import { ArrowRight, Coins, FileText, Layers, Lock, PawPrint, Flower2, TreePine, Wheat, type LucideIcon } from "@/components/ui/icons"
@@ -51,9 +51,9 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
       href={href}
       className="group flex h-full flex-col overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest transition-[border-color,box-shadow] duration-150 ease-standard hover:border-primary hover:shadow-elev-1"
     >
-      {/* Couverture : teinte du domaine, pictogramme, sillons dans le coin (jamais sous un texte) */}
-      <div className={`relative h-24 overflow-hidden ${fond}`}>
-        <Sillons coin="bas-droite" opacite={0.12} className="absolute bottom-0 right-0 w-40" />
+      {/* Couverture : fenêtre à encoche teintée par le domaine, pictogramme ; le soleil loge dans l'encoche (rien dans ce coin) */}
+      <div className="p-3 pb-0">
+      <EncocheCadre format="bandeau" fenetreClassName={fond}>
         <Icone className="absolute left-4 top-4 size-6" aria-hidden />
         <span className="absolute right-3 top-3 max-w-[60%] truncate rounded-full bg-surface-container-lowest/90 px-2.5 py-1 text-label-md font-medium text-on-surface">
           {labelType(document.type_doc)}
@@ -63,6 +63,7 @@ export function DocumentCard({ document, publicView = false }: DocumentCardProps
             <Lock className="size-4" aria-hidden /> Inscrits
           </span>
         )}
+      </EncocheCadre>
       </div>
 
       <div className="flex flex-1 flex-col p-4">

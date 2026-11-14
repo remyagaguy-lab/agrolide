@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { CarteSoleil } from '@/components/ui/CarteSoleil'
-import { Anneau, EncocheBadge, EnchochePhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
+import { Anneau, EncocheBadge, EncocheCadre, EnchochePhoto, Emblem, EmblemEclate, Feuille, GEOMETRIE, Horizon, Motif, PlanSoleil, Puce, RAPPORTS_ECHOS, Sillons } from '@/components/brand'
 
 import { Library, Search } from "@/components/ui/icons"
 const R = GEOMETRIE.rayons
@@ -54,8 +54,8 @@ const LIGNES: Ligne[] = [
   },
   {
     forme: 'Fenêtre à encoche',
-    composant: '<EnchochePhoto>',
-    origine: 'La même encoche solaire en fenêtre de photo (paysage 3:2 ou portrait 4:5), avec un quart de soleil jaune logé dans l’encoche. Dans l’en-tête des fiches, la fenêtre déborde du bandeau : son bord bas est coupé par le bord bas du bandeau.',
+    composant: '<EnchochePhoto>, <EncocheCadre>',
+    origine: 'La même encoche solaire en fenêtre de photo (paysage 3:2, portrait 4:5, vignette 16:9, bandeau 21:9, ruban 4:1, pastille 1:1), avec un quart de soleil jaune logé dans l’encoche. EnchochePhoto (SVG) pour les grandes fenêtres, EncocheCadre (masque CSS, accepte next/image, zoom au survol) pour les couvertures de cartes et de fiches ; formats générés par le script, jamais tracés à la main. Dans l’en-tête des fiches, la fenêtre déborde du bandeau : son bord bas est coupé par le bord bas du bandeau.',
     role: 'PHOTO de terrain ou de groupe, grande (50 à 60 % de la largeur), sujet tourné vers le texte ; une capture d’écran peut en sortir.',
     tailles: '320 px de large au minimum.',
     couleurs: 'Quart de soleil en jaune de marque ; photo inchangée en thème sombre.',
@@ -209,6 +209,35 @@ export function Grammaire() {
           </li>
         ))}
       </ol>
+
+      <h3 className="mb-3 mt-10 text-title-md">Appliquer l’encoche solaire (décision du 14/11/2026)</h3>
+      <div className="overflow-x-auto rounded-card border border-outline-variant">
+        <table className="w-full min-w-[40rem] text-left text-body-sm">
+          <thead className="bg-surface-container text-label-md text-on-surface">
+            <tr><th className="p-3">Cas</th><th className="p-3">Composant et format</th><th className="p-3">Remarque</th></tr>
+          </thead>
+          <tbody>
+            {[
+              ['Photo de couverture d’une fiche (en-tête vert)', 'EnchochePhoto paysage 3:2 ou portrait 4:5', 'La seule grande fenêtre de l’écran ; elle déborde du bandeau.'],
+              ['Couverture d’une fiche ou d’un article sans bandeau', 'EncocheCadre bandeau 21:9 ou vignette 16:9', 'Photo à la une de l’article de blog, couverture de la formation côté membre.'],
+              ['Vignette de carte (article, formation, événement)', 'EncocheCadre vignette 16:9, en retrait de 12 px dans la carte', 'Une par carte : la règle « une seule » vise les grandes fenêtres, pas les grilles.'],
+              ['Couverture sans photo (document de la bibliothèque)', 'EncocheCadre bandeau 21:9 (carte) ou ruban 4:1 (fiche), teinté par le domaine', 'Le soleil de l’encoche remplace les sillons du coin.'],
+              ['Jour d’une date, numéro d’étape ou de module, monogramme d’une organisation', 'EncocheBadge, 40 à 112 px', 'Un ou deux caractères, deux tons.'],
+              ['Filigrane', 'Encoche à 7 % d’opacité, sans texte dessus', 'Fiche sans visuel, connexion et inscription.'],
+              ['Avatars de personnes', 'Restent ronds', 'Reconnaître un visage prime ; sauf décision contraire du propriétaire.'],
+              ['Affiches, logos, captures d’écran, lecteurs vidéo', 'Montrés en entier, coins doux ordinaires', 'L’encoche en masquerait le bas droit (texte, commandes).'],
+              ['Icônes, boutons, champs, puces de statut, barres de progression', 'Inchangés', 'Aucun cadre à encoche.'],
+            ].map(([a, b, c]) => (
+              <tr key={a} className="border-t border-outline-variant align-top"><td className="p-3 text-on-surface">{a}</td><td className="p-3">{b}</td><td className="p-3 text-on-surface-variant">{c}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="mt-3 max-w-3xl text-body-sm text-on-surface-variant">
+        Jamais de visage, de texte ni de bouton dans le coin bas droit : recadrer avec <code>cadrage</code> (EnchochePhoto) ou <code>object-position</code> (EncocheCadre).
+        Pour un titre posé dans une vignette, la plage sûre est mesurée par le script (champ <code>texte</code> de <code>formes-alternatives.ts</code>).
+        Les tracés viennent de <code>scripts/forme/formes_alternatives.py</code> : pour un nouveau rapport, ajouter le format au script et le régénérer.
+      </p>
 
       <h3 className="mb-3 mt-10 text-title-md">Exemples</h3>
       <div className="grid gap-4 md:grid-cols-3">

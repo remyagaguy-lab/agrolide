@@ -11,7 +11,7 @@ export interface EncocheFormat {
   compagnon: { cx: number; cy: number; r: number }
 }
 
-export type EncocheFormatId = 'portrait' | 'paysage' | 'pastille' | 'vignette'
+export type EncocheFormatId = 'portrait' | 'paysage' | 'pastille' | 'vignette' | 'bandeau' | 'ruban'
 
 export const ENCOCHE: Record<EncocheFormatId, EncocheFormat> = {
  "portrait": {
@@ -68,6 +68,34 @@ export const ENCOCHE: Record<EncocheFormatId, EncocheFormat> = {
    "cx": 640,
    "cy": 360,
    "r": 72.0
+  }
+ },
+ "bandeau": {
+  "w": 840,
+  "h": 360,
+  "d": "M0 32.4A32.4 32.4 0 0 1 32.4 0L807.6 0A32.4 32.4 0 0 1 840 32.4L840 240.06A12.6 12.6 0 0 1 828.72 252.59A108 108 0 0 0 732.59 348.72A12.6 12.6 0 0 1 720.06 360L32.4 360A32.4 32.4 0 0 1 0 327.6L0 32.4Z",
+  "inscrit": [
+   21.4,
+   50.0
+  ],
+  "compagnon": {
+   "cx": 840,
+   "cy": 360,
+   "r": 72.0
+  }
+ },
+ "ruban": {
+  "w": 960,
+  "h": 240,
+  "d": "M0 21.6A21.6 21.6 0 0 1 21.6 0L938.4 0A21.6 21.6 0 0 1 960 21.6L960 160.04A8.4 8.4 0 0 1 952.48 168.39A72 72 0 0 0 888.39 232.48A8.4 8.4 0 0 1 880.04 240L21.6 240A21.6 21.6 0 0 1 0 218.4L0 21.6Z",
+  "inscrit": [
+   12.5,
+   50.0
+  ],
+  "compagnon": {
+   "cx": 960,
+   "cy": 240,
+   "r": 48.0
   }
  }
 }

@@ -7,7 +7,7 @@ import { PageHero } from "@/components/ui/PageHero"
 import { Section } from "@/components/ui/Section"
 import { ValueCard } from "@/components/ui/ValueCard"
 import { SectionLabel } from "@/components/ui/SectionLabel"
-import { Emblem, EnchochePhoto, Motif } from "@/components/brand"
+import { Emblem, EncocheBadge, EnchochePhoto, Motif } from "@/components/brand"
 
 import { Users, Flag, Star, Lightbulb, Target, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
@@ -79,9 +79,7 @@ export default function QuiSommesNousPage() {
             </p>
 
             <Card variant="elevated" className="relative mt-4 md:mt-0">
-              <span aria-hidden="true" className="absolute -left-3 -top-5 flex size-14 -rotate-12 items-center justify-center rounded-full bg-accent-sun text-headline-sm text-on-accent shadow-elev-2">
-                ?
-              </span>
+              <EncocheBadge className="absolute -left-3 -top-5 w-14 -rotate-12 drop-shadow-md">?</EncocheBadge>
               <p className="text-body-md text-on-surface-variant mb-6">
                 Et pourtant... elle n'arrive pas encore à nourrir tous ses enfants, elle dépense <strong className="text-on-tertiary-container font-extrabold underline decoration-accent-sun/30 decoration-4">65 milliards de dollars par an</strong> pour importer sa nourriture. Une dépendance en hausse depuis 3 ans consécutifs.
               </p>

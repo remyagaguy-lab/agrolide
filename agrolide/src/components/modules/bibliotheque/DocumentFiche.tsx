@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import type { documents } from '@/db/schema'
 import Breadcrumb from '@/components/ui/Breadcrumb'
-import { Sillons } from '@/components/brand'
+import { EncocheCadre } from '@/components/brand'
 import { DocumentCard, DOMAINES_VISUELS, DOMAINE_PAR_DEFAUT, type DocumentType } from '@/components/modules/bibliotheque/DocumentCard'
 import { DownloadButton } from '@/components/modules/bibliotheque/DownloadButton'
 import { FavoriButton } from '@/components/modules/bibliotheque/FavoriButton'
@@ -80,13 +80,14 @@ export function DocumentFiche({
         {/* Contenu */}
         <div className="min-w-0 space-y-6">
           <article className="overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest">
-            {/* Couverture : teinte du domaine, pictogramme, sillons dans le coin (jamais sous un texte) */}
-            <div className={`relative h-32 overflow-hidden sm:h-40 ${fond}`}>
-              <Sillons coin="bas-droite" opacite={0.12} className="absolute bottom-0 right-0 w-56" />
+            {/* Couverture : ruban à encoche teinté par le domaine, pictogramme ; le soleil loge dans l'encoche */}
+            <div className="p-3 pb-0 sm:p-4 sm:pb-0">
+            <EncocheCadre format="ruban" fenetreClassName={fond}>
               <Icone className="absolute left-6 top-6 size-6" aria-hidden />
               <span className="absolute right-4 top-4 max-w-[60%] truncate rounded-full bg-surface-container-lowest/90 px-3 py-1 text-label-md font-medium text-on-surface">
                 {labelType(document.type_doc)}
               </span>
+            </EncocheCadre>
             </div>
 
             <div className="p-6 md:p-8">

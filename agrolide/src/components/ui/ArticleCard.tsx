@@ -2,7 +2,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils/formatters"
 import Link from "next/link"
 import Image from "next/image"
-import { Feuille } from "@/components/brand"
+import { EncocheCadre, Feuille } from "@/components/brand"
 import { ChevronRight } from "@/components/ui/icons"
 export interface ArticleCardProps {
   slug: string;
@@ -37,12 +37,14 @@ export function ArticleCard({
         className
       )}
     >
-      <div className="relative w-full aspect-[16/10] overflow-hidden bg-surface-container rounded-t-2xl">
+      <div className="p-3 pb-0">
+      <EncocheCadre fenetreClassName="bg-surface-container">
         {imageUrl ? (
           <Image 
             src={imageUrl} 
             alt={title} 
             fill 
+            sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-700 group-hover:scale-105" 
           />
         ) : (
@@ -50,6 +52,7 @@ export function ArticleCard({
             <span className="text-sm font-medium">Sans image</span>
           </div>
         )}
+      </EncocheCadre>
       </div>
       <div className="p-6 md:p-8 flex flex-col flex-grow">
         <div className="flex items-center gap-3 text-sm mb-3">

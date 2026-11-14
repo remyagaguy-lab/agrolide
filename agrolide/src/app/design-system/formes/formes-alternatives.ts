@@ -13,13 +13,13 @@ export interface FormeFormat {
   inscrit: [number, number]
   /** Diamètre du plus grand cercle inscrit, en % du petit côté */
   diametre: number
-  /** Vignette : plage horizontale sûre pour un titre (bande de 60 à 92 % de la hauteur), en % */
+  /** Vignette ou bandeau : plage horizontale sûre pour un titre (bande de 60 à 92 % de la hauteur), en % */
   texte?: [number, number]
   compagnon?: { cx: number; cy: number; r: number }
 }
 
 export type FormeId = 'petale' | 'goutte' | 'alveole' | 'colline' | 'encoche' | 'galet'
-export type FormatId = 'portrait' | 'paysage' | 'pastille' | 'vignette'
+export type FormatId = 'portrait' | 'paysage' | 'pastille' | 'vignette' | 'bandeau' | 'ruban'
 
 export const FORMES_ALTERNATIVES: Record<FormeId, Record<FormatId, FormeFormat>> = {
  "petale": {
@@ -85,6 +85,44 @@ export const FORMES_ALTERNATIVES: Record<FormeId, Record<FormatId, FormeFormat>>
    "texte": [
     4.0,
     84.7
+   ]
+  },
+  "bandeau": {
+   "w": 840,
+   "h": 360,
+   "d": "M0 165.6A165.6 165.6 0 0 1 165.6 0L814.8 0A25.2 25.2 0 0 1 840 25.2L840 194.4A165.6 165.6 0 0 1 674.4 360L25.2 360A25.2 25.2 0 0 1 0 334.8L0 165.6Z",
+   "conserve": 96.0,
+   "gravite": [
+    50.0,
+    50.0
+   ],
+   "inscrit": [
+    21.4,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    87.2
+   ]
+  },
+  "ruban": {
+   "w": 960,
+   "h": 240,
+   "d": "M0 110.4A110.4 110.4 0 0 1 110.4 0L943.2 0A16.8 16.8 0 0 1 960 16.8L960 129.6A110.4 110.4 0 0 1 849.6 240L16.8 240A16.8 16.8 0 0 1 0 223.2L0 110.4Z",
+   "conserve": 97.7,
+   "gravite": [
+    50.0,
+    50.0
+   ],
+   "inscrit": [
+    12.5,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    91.0
    ]
   }
  },
@@ -152,6 +190,44 @@ export const FORMES_ALTERNATIVES: Record<FormeId, Record<FormatId, FormeFormat>>
     4.0,
     83.1
    ]
+  },
+  "bandeau": {
+   "w": 840,
+   "h": 360,
+   "d": "M0 180A180 180 0 0 1 180 0L660 0A180 180 0 0 1 840 180A180 180 0 0 1 660 360L18 360A18 18 0 0 1 0 342L0 180Z",
+   "conserve": 93.0,
+   "gravite": [
+    48.9,
+    51.0
+   ],
+   "inscrit": [
+    23.2,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    86.0
+   ]
+  },
+  "ruban": {
+   "w": 960,
+   "h": 240,
+   "d": "M0 120A120 120 0 0 1 120 0L840 0A120 120 0 0 1 960 120A120 120 0 0 1 840 240L12 240A12 12 0 0 1 0 228L0 120Z",
+   "conserve": 95.9,
+   "gravite": [
+    49.3,
+    50.5
+   ],
+   "inscrit": [
+    14.3,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    90.2
+   ]
   }
  },
  "alveole": {
@@ -218,6 +294,44 @@ export const FORMES_ALTERNATIVES: Record<FormeId, Record<FormatId, FormeFormat>>
     24.8,
     75.2
    ]
+  },
+  "bandeau": {
+   "w": 840,
+   "h": 360,
+   "d": "M201.41 7.37A30.6 30.6 0 0 1 221.32 0L618.68 0A30.6 30.6 0 0 1 638.59 7.37L812.89 156.77A30.6 30.6 0 0 1 812.89 203.23L638.59 352.63A30.6 30.6 0 0 1 618.68 360L221.32 360A30.6 30.6 0 0 1 201.41 352.63L27.11 203.23A30.6 30.6 0 0 1 27.11 156.77Z",
+   "conserve": 74.8,
+   "gravite": [
+    50.0,
+    50.0
+   ],
+   "inscrit": [
+    33.9,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    24.8,
+    75.2
+   ]
+  },
+  "ruban": {
+   "w": 960,
+   "h": 240,
+   "d": "M235.69 2.15A20.4 20.4 0 0 1 244.82 0L715.18 0A20.4 20.4 0 0 1 724.31 2.15L923.51 101.75A20.4 20.4 0 0 1 923.51 138.25L724.31 237.85A20.4 20.4 0 0 1 715.18 240L244.82 240A20.4 20.4 0 0 1 235.69 237.85L36.49 138.25A20.4 20.4 0 0 1 36.49 101.75Z",
+   "conserve": 74.7,
+   "gravite": [
+    50.0,
+    50.0
+   ],
+   "inscrit": [
+    28.6,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    24.8,
+    75.2
+   ]
   }
  },
  "colline": {
@@ -274,6 +388,44 @@ export const FORMES_ALTERNATIVES: Record<FormeId, Record<FormatId, FormeFormat>>
    "gravite": [
     51.9,
     55.3
+   ],
+   "inscrit": [
+    64.0,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    96.0
+   ]
+  },
+  "bandeau": {
+   "w": 840,
+   "h": 360,
+   "d": "M25.2 360L814.8 360A25.2 25.2 0 0 0 840 334.8L840 79.2A25.2 25.2 0 0 0 814.8 54C722.4 54 655.2 0 537.6 0C319.2 0 168 100.8 25.2 100.8A25.2 25.2 0 0 0 0 126L0 334.8A25.2 25.2 0 0 0 25.2 360Z",
+   "conserve": 88.4,
+   "gravite": [
+    51.8,
+    55.2
+   ],
+   "inscrit": [
+    64.0,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    96.0
+   ]
+  },
+  "ruban": {
+   "w": 960,
+   "h": 240,
+   "d": "M16.8 240L943.2 240A16.8 16.8 0 0 0 960 223.2L960 52.8A16.8 16.8 0 0 0 943.2 36C825.6 36 748.8 0 614.4 0C364.8 0 192 67.2 16.8 67.2A16.8 16.8 0 0 0 0 84L0 223.2A16.8 16.8 0 0 0 16.8 240Z",
+   "conserve": 88.6,
+   "gravite": [
+    51.8,
+    55.2
    ],
    "inscrit": [
     64.0,
@@ -370,6 +522,54 @@ export const FORMES_ALTERNATIVES: Record<FormeId, Record<FormatId, FormeFormat>>
     "cy": 360,
     "r": 72.0
    }
+  },
+  "bandeau": {
+   "w": 840,
+   "h": 360,
+   "d": "M0 32.4A32.4 32.4 0 0 1 32.4 0L807.6 0A32.4 32.4 0 0 1 840 32.4L840 240.06A12.6 12.6 0 0 1 828.72 252.59A108 108 0 0 0 732.59 348.72A12.6 12.6 0 0 1 720.06 360L32.4 360A32.4 32.4 0 0 1 0 327.6L0 32.4Z",
+   "conserve": 96.7,
+   "gravite": [
+    48.6,
+    48.9
+   ],
+   "inscrit": [
+    21.4,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    83.5
+   ],
+   "compagnon": {
+    "cx": 840,
+    "cy": 360,
+    "r": 72.0
+   }
+  },
+  "ruban": {
+   "w": 960,
+   "h": 240,
+   "d": "M0 21.6A21.6 21.6 0 0 1 21.6 0L938.4 0A21.6 21.6 0 0 1 960 21.6L960 160.04A8.4 8.4 0 0 1 952.48 168.39A72 72 0 0 0 888.39 232.48A8.4 8.4 0 0 1 880.04 240L21.6 240A21.6 21.6 0 0 1 0 218.4L0 21.6Z",
+   "conserve": 98.1,
+   "gravite": [
+    49.2,
+    49.3
+   ],
+   "inscrit": [
+    12.5,
+    50.0
+   ],
+   "diametre": 100.0,
+   "texte": [
+    4.0,
+    88.9
+   ],
+   "compagnon": {
+    "cx": 960,
+    "cy": 240,
+    "r": 48.0
+   }
   }
  },
  "galet": {
@@ -432,6 +632,44 @@ export const FORMES_ALTERNATIVES: Record<FormeId, Record<FormatId, FormeFormat>>
     50.0
    ],
    "diametre": 99.3,
+   "texte": [
+    26.9,
+    69.8
+   ]
+  },
+  "bandeau": {
+   "w": 840,
+   "h": 360,
+   "d": "M0 165.6A487.2 165.6 0 0 1 487.2 0A352.8 144 0 0 1 840 144A436.8 216 0 0 1 403.2 360A403.2 194.4 0 0 1 0 165.6Z",
+   "conserve": 78.3,
+   "gravite": [
+    50.3,
+    49.0
+   ],
+   "inscrit": [
+    52.3,
+    50.0
+   ],
+   "diametre": 99.4,
+   "texte": [
+    26.9,
+    69.8
+   ]
+  },
+  "ruban": {
+   "w": 960,
+   "h": 240,
+   "d": "M0 110.4A556.8 110.4 0 0 1 556.8 0A403.2 96 0 0 1 960 96A499.2 144 0 0 1 460.8 240A460.8 129.6 0 0 1 0 110.4Z",
+   "conserve": 78.3,
+   "gravite": [
+    50.3,
+    49.0
+   ],
+   "inscrit": [
+    52.1,
+    50.0
+   ],
+   "diametre": 99.5,
    "texte": [
     26.9,
     69.8

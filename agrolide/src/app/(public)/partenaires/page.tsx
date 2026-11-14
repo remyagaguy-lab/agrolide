@@ -5,6 +5,7 @@ import { db } from "@/db"
 import { partenaires as partenairesTable } from "@/db/schema"
 import { eq, asc } from "drizzle-orm"
 import PartenariatForm from "@/components/modules/fonds/PartenariatForm"
+import { EncocheBadge } from "@/components/brand"
 import { Button } from "@/components/ui/Button"
 import { Card } from "@/components/ui/Card"
 import { FeatureCard } from "@/components/ui/FeatureCard"
@@ -109,12 +110,7 @@ export default async function PartenairesPage() {
                     {p.logo_url ? (
                       <Image src={p.logo_url} alt="" fill sizes="(max-width: 640px) 80vw, 240px" className="object-contain" />
                     ) : (
-                      <span
-                        aria-hidden="true"
-                        className="flex size-16 items-center justify-center rounded-full bg-primary-container text-title-lg text-on-primary-container"
-                      >
-                        {p.nom.substring(0, 2).toUpperCase()}
-                      </span>
+                      <EncocheBadge ton="marque" className="w-16">{p.nom.substring(0, 2).toUpperCase()}</EncocheBadge>
                     )}
                   </div>
                   <h3 className="mt-4 text-title-md text-on-surface">{p.nom}</h3>

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/Badge'
+import { EncocheCadre } from '@/components/brand'
 
 import { NotebookPen, ChevronRight, ExternalLink } from "@/components/ui/icons"
 export interface FormationCatalogue {
@@ -24,7 +25,8 @@ export function CarteCatalogue({ formation, href }: { formation: FormationCatalo
       href={href}
       className="group flex flex-col overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest shadow-sm transition-all duration-300 hover:border-primary hover:shadow-md"
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-surface-container">
+      <div className="p-3 pb-0">
+      <EncocheCadre>
         {formation.cover_image_url ? (
           <Image
             src={formation.cover_image_url}
@@ -51,6 +53,7 @@ export function CarteCatalogue({ formation, href }: { formation: FormationCatalo
             </span>
           )}
         </div>
+      </EncocheCadre>
       </div>
 
       <div className="flex flex-1 flex-col p-5">

@@ -5,6 +5,7 @@ import { formations, inscriptions_formation } from "@/db/schema";
 import { and, eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { Badge } from "@/components/ui/Badge";
+import { EncocheBadge, EncocheCadre } from "@/components/brand";
 import { DetailHero } from "@/components/ui/DetailHero";
 import { auth } from "@/lib/auth/server";
 import { EnrollButton } from "./EnrollButton";
@@ -122,7 +123,7 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
           {/* Contenu */}
           <div className="min-w-0 space-y-8">
             {mode === "membre" && formation.cover_image_url ? (
-              <div className="relative aspect-[16/7] w-full overflow-hidden rounded-card bg-surface-container">
+              <EncocheCadre format="bandeau">
                 <Image
                   src={formation.cover_image_url}
                   alt={`Couverture de la formation « ${formation.titre} »`}
@@ -131,7 +132,7 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
                   sizes="(max-width: 1024px) 100vw, 800px"
                   className="object-cover"
                 />
-              </div>
+              </EncocheCadre>
             ) : null}
 
             {/* Résumé chiffré : visible d'emblée sur mobile (l'encart d'inscription vient après le contenu). */}
@@ -194,9 +195,7 @@ export async function FormationDetailView({ id, mode }: { id: string; mode: Espa
                       return (
                         <details key={mod.id} className="group overflow-hidden rounded-card border border-outline-variant bg-surface-container-lowest">
                           <summary className="flex min-h-14 cursor-pointer list-none items-center gap-3 px-4 py-3 transition-colors hover:bg-surface-container-low [&::-webkit-details-marker]:hidden">
-                            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-container text-label-lg font-bold text-on-primary-container">
-                              {String(index + 1).padStart(2, "0")}
-                            </span>
+                            <EncocheBadge ton="marque" className="w-12">{String(index + 1).padStart(2, "0")}</EncocheBadge>
                             <span className="min-w-0 flex-1">
                               <span className="block text-title-md font-bold leading-snug text-on-surface">{mod.titre}</span>
                               <span className="block text-label-md text-on-surface-variant">

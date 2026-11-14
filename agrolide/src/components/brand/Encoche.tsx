@@ -11,7 +11,7 @@ import { ENCOCHE, type EncocheFormatId } from "./encoche-paths"
  */
 
 export interface EncocheProps extends Omit<React.SVGAttributes<SVGSVGElement>, "viewBox"> {
-  /** portrait 4:5, paysage 3:2 (défaut), pastille 1:1, vignette 16:9. */
+  /** portrait 4:5, paysage 3:2 (défaut), pastille 1:1, vignette 16:9, bandeau 21:9, ruban 4:1. */
   format?: EncocheFormatId
   /** Alternative textuelle. Sans elle, la forme est décorative (masquée aux lecteurs d'écran). */
   title?: string
@@ -40,8 +40,8 @@ export interface EnchochePhotoProps {
   src: string
   /** Description de la photo (obligatoire : elle porte l'information). */
   alt: string
-  /** Format de la fenêtre : paysage 3:2 (défaut) ou portrait 4:5. */
-  format?: "paysage" | "portrait"
+  /** Format de la fenêtre : paysage 3:2 (défaut), portrait 4:5, vignette 16:9, bandeau 21:9 ou pastille 1:1. */
+  format?: EncocheFormatId
   /** Cadrage de l'image dans la fenêtre (`preserveAspectRatio`), ex. `xMaxYMid slice`. */
   cadrage?: string
   /** Quart de soleil jaune logé dans l'encoche (défaut : oui). */
@@ -67,6 +67,59 @@ export function EnchochePhoto({ src, alt, format = "paysage", cadrage = "xMidYMi
       <image href={src} x={0} y={0} width={F.w} height={F.h} preserveAspectRatio={cadrage} clipPath={`url(#${id}-fenetre)`} />
       {soleil && <circle cx={F.compagnon.cx} cy={F.compagnon.cy} r={F.compagnon.r} className="fill-accent-sun" />}
     </svg>
+  )
+}
+
+/** Masque CSS d'un format : le tracé généré, en image SVG intégrée (un seul par format, calculé une fois). */
+const MASQUES = Object.fromEntries(
+  (Object.keys(ENCOCHE) as EncocheFormatId[]).map((id) => {
+    const F = ENCOCHE[id]
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${F.w} ${F.h}'><path d='${F.d}'/></svg>`
+    return [id, `url("data:image/svg+xml,${svg.replace(/</g, "%3C").replace(/>/g, "%3E")}")`]
+  }),
+) as Record<EncocheFormatId, string>
+
+export interface EncocheCadreProps {
+  /** Format : vignette 16:9 (défaut, cartes), bandeau 21:9, paysage 3:2, portrait 4:5, pastille 1:1. Le cadre prend ce rapport exact. */
+  format?: EncocheFormatId
+  /** Quart de soleil jaune logé dans l'encoche (défaut : oui). */
+  soleil?: boolean
+  /** Classes du cadre (marges, largeur) : la hauteur vient du format. */
+  className?: string
+  /** Classes de la fenêtre elle-même : teinte de fond d'une couverture sans photo, couleur du texte. */
+  fenetreClassName?: string
+  /** Contenu de la fenêtre : `<Image fill />`, ou pictogramme et pastilles pour une couverture sans photo. Rien dans le coin bas droit. */
+  children?: React.ReactNode
+}
+
+/**
+ * Couverture à encoche pour les CARTES et les fiches : la fenêtre est découpée par un masque CSS (même tracé que `EnchochePhoto`,
+ * donc mêmes rayons), ce qui permet `next/image` (`fill`, optimisation, zoom au survol) là où le SVG ne le permet pas.
+ * Le cadre prend le rapport exact du format : le masque n'est jamais déformé. Garder visages, texte et boutons hors du coin bas droit.
+ */
+export function EncocheCadre({ format = "vignette", soleil = true, className, fenetreClassName, children }: EncocheCadreProps) {
+  const F = ENCOCHE[format]
+  const masque: React.CSSProperties = {
+    WebkitMaskImage: MASQUES[format],
+    maskImage: MASQUES[format],
+    WebkitMaskSize: "100% 100%",
+    maskSize: "100% 100%",
+    WebkitMaskRepeat: "no-repeat",
+    maskRepeat: "no-repeat",
+  }
+  return (
+    <div className={cn("relative w-full", className)} style={{ aspectRatio: `${F.w} / ${F.h}` }}>
+      <div className={cn("absolute inset-0 overflow-hidden bg-surface-container-high", fenetreClassName)} style={masque}>
+        {children}
+      </div>
+      {soleil && (
+        <span
+          aria-hidden="true"
+          className="absolute bottom-0 right-0 rounded-tl-full bg-accent-sun"
+          style={{ width: `${(F.compagnon.r / F.w) * 100}%`, height: `${(F.compagnon.r / F.h) * 100}%` }}
+        />
+      )}
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@ import { eq, desc, count } from "drizzle-orm"
 import { SectionLabel } from "@/components/ui/SectionLabel"
 import { Card } from "@/components/ui/Card"
 import { Button } from "@/components/ui/Button"
-import { Feuille, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
+import { EncocheCadre, Feuille, HORIZON_MASQUE_TERRE, Motif, Sillons } from "@/components/brand"
 import { Users, Library, TrendingUp, MessageCircle, ArrowRight } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: {
@@ -242,7 +242,7 @@ export default async function HomePage() {
             </div>
 
             {/* Colonne droite */}
-            <div className="hidden md:block relative bg-surface-container rounded-card aspect-[4/3] overflow-hidden shadow-lg">
+            <EncocheCadre format="paysage" className="hidden md:block" fenetreClassName="bg-surface-container">
               <Image 
                 src="/raison-detre.webp" 
                 alt="Cohésion continentale en agriculture africaine" 
@@ -250,7 +250,7 @@ export default async function HomePage() {
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className="object-cover"
               />
-            </div>
+            </EncocheCadre>
           </div>
         </div>
       </section>
@@ -489,15 +489,18 @@ export default async function HomePage() {
               return (
               <Link href={`/blog/${item.slug}`} key={i} className="block group">
                 <Card className="p-0 h-full flex flex-col overflow-hidden">
-                  <div className="relative w-full h-48 bg-surface-container">
-                    {item.image_une_url && (
-                      <Image 
-                        src={item.image_une_url} 
-                        alt={item.titre} 
-                        fill 
-                        className="object-cover transition-transform duration-700 group-hover:scale-105" 
-                      />
-                    )}
+                  <div className="p-3 pb-0">
+                    <EncocheCadre fenetreClassName="bg-surface-container">
+                      {item.image_une_url && (
+                        <Image 
+                          src={item.image_une_url} 
+                          alt={item.titre} 
+                          fill 
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105" 
+                        />
+                      )}
+                    </EncocheCadre>
                   </div>
                   <div className="flex flex-1 flex-col p-6">
                     <p className="mb-2 flex items-center gap-1.5 text-label-sm uppercase tracking-[0.08em] text-primary">

@@ -7,6 +7,7 @@ import BlogFilter from "./BlogFilter"
 import { format } from "date-fns"
 import { fr } from "date-fns/locale"
 import { PageHero } from "@/components/ui/PageHero"
+import { EncocheCadre } from "@/components/brand"
 import { ChevronRight, Search } from "@/components/ui/icons"
 export const metadata: Metadata = {
   title: "Blog & Actualités",
@@ -81,18 +82,21 @@ export default async function BlogPage({
                       href={`/blog/${featuredMain.slug}`} 
                       className="group flex flex-col h-full bg-surface-container-lowest rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
                     >
-                      <div className="relative w-full aspect-[16/9] overflow-hidden bg-surface-container">
+                      <div className="p-3 pb-0">
+                      <EncocheCadre fenetreClassName="bg-surface-container">
                         {featuredMain.image_une_url ? (
                           <Image 
                             src={featuredMain.image_une_url} 
                             alt={featuredMain.titre} 
                             fill 
                             priority
+                            sizes="(max-width: 1024px) 100vw, 66vw"
                             className="object-cover transition-transform duration-700 group-hover:scale-105" 
                           />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center text-on-surface-muted">Sans image</div>
                         )}
+                      </EncocheCadre>
                       </div>
                       <div className="p-8 flex flex-col flex-grow">
                         <div className="flex items-center gap-3 text-sm mb-4">
@@ -132,17 +136,20 @@ export default async function BlogPage({
                       key={article.id} 
                       className="group flex flex-col flex-1 bg-surface-container-lowest rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-transparent hover:border-outline-variant"
                     >
-                      <div className="relative w-full h-48 overflow-hidden bg-surface-container">
+                      <div className="p-3 pb-0">
+                      <EncocheCadre fenetreClassName="bg-surface-container">
                         {article.image_une_url ? (
                           <Image 
                             src={article.image_une_url} 
                             alt={article.titre} 
                             fill 
+                            sizes="(max-width: 1024px) 100vw, 33vw"
                             className="object-cover transition-transform duration-700 group-hover:scale-105" 
                           />
                         ) : (
                           <div className="absolute inset-0 flex items-center justify-center text-on-surface-muted">Sans image</div>
                         )}
+                      </EncocheCadre>
                       </div>
                       <div className="p-6 flex flex-col flex-grow">
                         <div className="flex items-center gap-3 text-sm mb-3">
