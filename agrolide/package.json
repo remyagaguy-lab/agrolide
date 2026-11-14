@@ -12,6 +12,11 @@
     "ds:check": "node scripts/ds-check.mjs && node scripts/ds-icons.mjs",
     "ed:check": "node scripts/editorial-check.mjs",
     "ed:publier": "node scripts/editorial-publier.mjs",
+    "ed:valider": "node scripts/ed-valider.mjs",
+    "ed:sources": "node scripts/ed-sources.mjs",
+    "ed:sync": "node scripts/ed-sync.mjs",
+    "ed:eval": "node scripts/ed-eval.mjs",
+    "ed:test": "node --test scripts/ed-tests/",
     "test:unit": "tsx --test src/lib/reseau/*.test.ts src/lib/*.test.ts src/lib/utils/*.test.ts src/lib/push/*.test.ts"
   },
   "dependencies": {

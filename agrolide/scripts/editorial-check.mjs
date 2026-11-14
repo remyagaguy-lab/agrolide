@@ -12,7 +12,8 @@
  *  - tutoiement (la voix du réseau vouvoie) ;
  *  - « entrepreneur agricole » (préférer « agripreneur »).
  *
- * Périmètre : src/**\/*.ts(x), editorial/**\/*.md, .claude/skills/agrolide-*\/*.md.
+ * Périmètre : src/**\/*.ts(x), editorial/**\/*.md, .claude/skills/agrolide-*\/*.md et .agents/skills/agrolide-*\/*.md (skills générés).
+ * Option --fichier <chemin> [...] : contrôle strict (toutes les règles) de ces seuls fichiers, utilisé par ed:eval.
  * Dans les dossiers editorial/articles/, toutes les règles s'appliquent. Dans les autres fichiers Markdown (charte, skills,
  * qui citent les règles), seule la règle des tirets s'applique.
  * Ligne légitime exceptionnelle : commentaire `editorial:ignore` sur la même ligne.
@@ -38,13 +39,22 @@ const walk = (dir, test, acc = []) => {
   return acc
 }
 
-const files = [
-  ...walk(join(appRoot, 'src'), (p) => /\.tsx?$/.test(p)),
-  ...walk(join(appRoot, 'editorial'), (p) => p.endsWith('.md')),
-  ...readdirSync(join(appRoot, '.claude', 'skills'), { withFileTypes: true })
-    .filter((d) => d.isDirectory() && d.name.startsWith('agrolide-'))
-    .flatMap((d) => walk(join(appRoot, '.claude', 'skills', d.name), (p) => p.endsWith('.md'))),
-]
+// --fichier <chemin> [...] : contrôle strict (toutes les règles) de ces seuls fichiers Markdown, utilisé par ed:eval.
+const iFichier = process.argv.indexOf('--fichier')
+const fichiersDemandes = iFichier < 0 ? [] : process.argv.slice(iFichier + 1).filter((a) => !a.startsWith('--')).map((f) => resolve(f))
+
+const dossiersSkills = ['.claude', '.agents'].map((d) => join(appRoot, d, 'skills')).filter((d) => existsSync(d))
+const files = fichiersDemandes.length
+  ? fichiersDemandes
+  : [
+      ...walk(join(appRoot, 'src'), (p) => /\.tsx?$/.test(p)),
+      ...walk(join(appRoot, 'editorial'), (p) => p.endsWith('.md')),
+      ...dossiersSkills.flatMap((dir) =>
+        readdirSync(dir, { withFileTypes: true })
+          .filter((d) => d.isDirectory() && d.name.startsWith('agrolide-'))
+          .flatMap((d) => walk(join(dir, d.name), (p) => p.endsWith('.md'))),
+      ),
+    ]
 
 const EX_NOM = /ex[-\s‑]?nom|ancien(?:ne)?\s+nom|anciennement|ex[-\s]BIFERA|ex\s*:\s*BIFERA/i
 const STOP = /\b(de|la|le|les|des|du|un|une|et|pour|vous|votre|vos|nous)\b/i
@@ -141,9 +151,10 @@ const hits = new Map(rules.map((r) => [r.id, []]))
 for (const file of files) {
   const rel = relative(appRoot, file).replace(/\\/g, '/')
   const isMd = file.endsWith('.md')
-  const strictMd = rel.startsWith('editorial/articles/')
+  const strictMd = fichiersDemandes.length > 0 || rel.startsWith('editorial/articles/')
   const lines = readFileSync(file, 'utf8').split('\n')
-  if (/^editorial\/articles\/[^/]+\/(01-cadrage|02-article)\.md$/.test(rel)) {
+  const estContenu = fichiersDemandes.length ? /(?:^|\/)(01-cadrage|02-article)\.md$/.test(rel) : /^editorial\/articles\/[^/]+\/(01-cadrage|02-article)\.md$/.test(rel)
+  if (estContenu) {
     const entete = readFileSync(file, 'utf8').split(/\r?\n---\r?\n/)[0]
     if (!/^registre:\s*(Terrain|Parcours|Expertise|Partenariat)\s*$/m.test(entete))
       hits.get('registre-absent').push({ rel, n: 1, text: 'en-tête : registre manquant ou invalide' })
